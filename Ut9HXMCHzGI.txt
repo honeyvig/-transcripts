@@ -1,0 +1,2099 @@
+1
+00:00:01,020 --> 00:00:05,640
+[Music]
+
+2
+00:00:14,420 --> 00:00:17,010
+now before I begin I would like to say a
+
+3
+00:00:17,010 --> 00:00:19,109
+big thank you to dr. Anna fan for
+
+4
+00:00:19,109 --> 00:00:20,820
+actually being a part of this video and
+
+5
+00:00:20,820 --> 00:00:22,650
+of course taking me more in depth into
+
+6
+00:00:22,650 --> 00:00:24,750
+one of my favorite topics quantum
+
+7
+00:00:24,750 --> 00:00:27,140
+computing and now let's get into it so
+
+8
+00:00:27,140 --> 00:00:29,550
+hello there and welcome to another
+
+9
+00:00:29,550 --> 00:00:32,250
+tutorial my name is Tammy Bakshi and
+
+10
+00:00:32,250 --> 00:00:33,570
+this time we're going to be going over
+
+11
+00:00:33,570 --> 00:00:36,870
+well an entirely new series that the
+
+12
+00:00:36,870 --> 00:00:38,760
+first video in a new series about
+
+13
+00:00:38,760 --> 00:00:40,469
+quantum mechanics from physics
+
+14
+00:00:40,469 --> 00:00:43,200
+especially quantum computing before we
+
+15
+00:00:43,200 --> 00:00:45,780
+begin I want introduce even Anna's was
+
+16
+00:00:45,780 --> 00:00:48,180
+actually a part of IEM research lab in
+
+17
+00:00:48,180 --> 00:00:50,340
+Melbourne so for begin with just meet
+
+18
+00:00:50,340 --> 00:00:52,379
+yourself hi I'm Anna one of the
+
+19
+00:00:52,379 --> 00:00:54,719
+researchers at IBM Research Affiliate I
+
+20
+00:00:54,719 --> 00:00:57,539
+am looking into clone computing that is
+
+21
+00:00:57,539 --> 00:01:00,000
+absolutely great and now let's run off
+
+22
+00:01:00,000 --> 00:01:01,680
+but a little bit about what cloud
+
+23
+00:01:01,680 --> 00:01:03,539
+computing is and really what quantum in
+
+24
+00:01:03,539 --> 00:01:04,860
+the first place
+
+25
+00:01:04,860 --> 00:01:07,290
+so before we again which one feels a
+
+26
+00:01:07,290 --> 00:01:09,360
+quick introduction to quantum mechanics
+
+27
+00:01:09,360 --> 00:01:11,549
+but for example it was a beginner who's
+
+28
+00:01:11,549 --> 00:01:13,170
+never heard of quantum physics before
+
+29
+00:01:13,170 --> 00:01:15,900
+how would you explain quantum to me so
+
+30
+00:01:15,900 --> 00:01:18,750
+quantum mechanics is a theory that
+
+31
+00:01:18,750 --> 00:01:21,810
+explains how things interact with each
+
+32
+00:01:21,810 --> 00:01:26,850
+other on a very very small scale so it's
+
+33
+00:01:26,850 --> 00:01:29,100
+very interesting very interesting thing
+
+34
+00:01:29,100 --> 00:01:31,350
+is at a very very small scale things act
+
+35
+00:01:31,350 --> 00:01:33,390
+very differently yeah you would expect
+
+36
+00:01:33,390 --> 00:01:34,890
+compared to the real world
+
+37
+00:01:34,890 --> 00:01:36,900
+for example if you had a bunch of pool
+
+38
+00:01:36,900 --> 00:01:38,880
+ball you expect them to hit off each
+
+39
+00:01:38,880 --> 00:01:40,740
+other and weave around and you can press
+
+40
+00:01:40,740 --> 00:01:42,990
+well with them sort of a set of quantum
+
+41
+00:01:42,990 --> 00:01:44,939
+pool balls may not act like that
+
+42
+00:01:44,939 --> 00:01:46,140
+sometimes they'll go through each other
+
+43
+00:01:46,140 --> 00:01:47,670
+sometimes they'll hit each other some
+
+44
+00:01:47,670 --> 00:01:49,470
+builders ignore each other
+
+45
+00:01:49,470 --> 00:01:52,590
+it's exactly now that's basically the
+
+46
+00:01:52,590 --> 00:01:55,619
+where world of quantum mechanics and so
+
+47
+00:01:55,619 --> 00:01:57,270
+today we're going to show you a little
+
+48
+00:01:57,270 --> 00:01:58,860
+bit more into the world of quantum
+
+49
+00:01:58,860 --> 00:02:00,600
+mechanics and quantum physics with a
+
+50
+00:02:00,600 --> 00:02:02,520
+bunch of different experiments including
+
+51
+00:02:02,520 --> 00:02:03,869
+proving static
+
+52
+00:02:03,869 --> 00:02:05,609
+mechanics or more specifically
+
+53
+00:02:05,609 --> 00:02:08,429
+entanglement actually exists using the
+
+54
+00:02:08,429 --> 00:02:10,319
+audience to experience we'll talk about
+
+55
+00:02:10,319 --> 00:02:12,780
+that it just on as well but before that
+
+56
+00:02:12,780 --> 00:02:14,489
+let's talk a little bit more about
+
+57
+00:02:14,489 --> 00:02:17,190
+duality quantum mechanics is absolutely
+
+58
+00:02:17,190 --> 00:02:19,410
+great for something knows dualities yeah
+
+59
+00:02:19,410 --> 00:02:21,930
+so the start of corner case really came
+
+60
+00:02:21,930 --> 00:02:24,840
+about in amount of 1900s where they were
+
+61
+00:02:24,840 --> 00:02:26,819
+looking at light the line was really
+
+62
+00:02:26,819 --> 00:02:29,700
+confusing because in some stages what
+
+63
+00:02:29,700 --> 00:02:32,670
+acted like a particle it's like a bunch
+
+64
+00:02:32,670 --> 00:02:34,530
+of protons little discreet packets of
+
+65
+00:02:34,530 --> 00:02:36,540
+life but then in other experiments it
+
+66
+00:02:36,540 --> 00:02:39,569
+acted as if another wave yeah so one of
+
+67
+00:02:39,569 --> 00:02:40,920
+the experiments that that looked in was
+
+68
+00:02:40,920 --> 00:02:43,170
+they've done a flip one yeah yeah looks
+
+69
+00:02:43,170 --> 00:02:44,489
+a little bit more about the double slit
+
+70
+00:02:44,489 --> 00:02:46,920
+experiment actually oh sure so now
+
+71
+00:02:46,920 --> 00:02:49,410
+imagine that you've got essentially one
+
+72
+00:02:49,410 --> 00:02:51,329
+world water right so this is just a
+
+73
+00:02:51,329 --> 00:02:53,700
+liquid and so if you're a little board
+
+74
+00:02:53,700 --> 00:02:56,459
+with two slits beside each other in the
+
+75
+00:02:56,459 --> 00:02:59,129
+water and if you were to throw a pebble
+
+76
+00:02:59,129 --> 00:03:01,440
+in the water just in from the board the
+
+77
+00:03:01,440 --> 00:03:03,900
+very middle and at the very end you have
+
+78
+00:03:03,900 --> 00:03:05,849
+a little sort of measurement board where
+
+79
+00:03:05,849 --> 00:03:08,459
+the higher the higher whole wave that
+
+80
+00:03:08,459 --> 00:03:10,440
+touches the board it'll make a brighter
+
+81
+00:03:10,440 --> 00:03:13,739
+line and it the way is this sure they're
+
+82
+00:03:13,739 --> 00:03:16,380
+like a different one also is actually
+
+83
+00:03:16,380 --> 00:03:17,790
+some animation to that on screen right
+
+84
+00:03:17,790 --> 00:03:19,200
+now if you're not completely getting my
+
+85
+00:03:19,200 --> 00:03:22,109
+my description but essentially for the
+
+86
+00:03:22,109 --> 00:03:23,760
+pebble and of course that creates a wave
+
+87
+00:03:23,760 --> 00:03:25,680
+the propagation thrown throughout the
+
+88
+00:03:25,680 --> 00:03:27,900
+liquid now when I actually was that when
+
+89
+00:03:27,900 --> 00:03:30,569
+you travels to to through the truth to
+
+90
+00:03:30,569 --> 00:03:33,359
+two slits what happens is a currents to
+
+91
+00:03:33,359 --> 00:03:35,519
+separate links up in those lips and
+
+92
+00:03:35,519 --> 00:03:37,500
+those two way to go ahead and travel
+
+93
+00:03:37,500 --> 00:03:39,480
+interfere with each other and create the
+
+94
+00:03:39,480 --> 00:03:41,370
+sort of interference pattern on the
+
+95
+00:03:41,370 --> 00:03:42,950
+measuring board or the other side
+
+96
+00:03:42,950 --> 00:03:45,959
+however if you do something similar with
+
+97
+00:03:45,959 --> 00:03:48,120
+saying marbles and so you've got no
+
+98
+00:03:48,120 --> 00:03:50,340
+liquids this time but you've got this
+
+99
+00:03:50,340 --> 00:03:52,680
+this board to slip it in our measurement
+
+100
+00:03:52,680 --> 00:03:53,940
+board which is just a piece of cardboard
+
+101
+00:03:53,940 --> 00:03:56,459
+and your marbles at that double slit
+
+102
+00:03:56,459 --> 00:03:59,160
+board randomly that's arcing this double
+
+103
+00:03:59,160 --> 00:04:01,319
+slit board just bounce it back however
+
+104
+00:04:01,319 --> 00:04:03,840
+some are actually going to slip and this
+
+105
+00:04:03,840 --> 00:04:05,430
+time instead of seeing an interference
+
+106
+00:04:05,430 --> 00:04:07,590
+pattern you're just seeing two lines on
+
+107
+00:04:07,590 --> 00:04:08,310
+the back
+
+108
+00:04:08,310 --> 00:04:10,410
+piece of cardboard and so in this case
+
+109
+00:04:10,410 --> 00:04:12,150
+you can see that we're not seeing an
+
+110
+00:04:12,150 --> 00:04:13,050
+interference pattern
+
+111
+00:04:13,050 --> 00:04:15,240
+however with quantum mechanics it works
+
+112
+00:04:15,240 --> 00:04:19,410
+a lot lot differently and so let's say
+
+113
+00:04:19,410 --> 00:04:23,160
+that you're selling electrons one by one
+
+114
+00:04:23,160 --> 00:04:25,830
+from one side to the other to another
+
+115
+00:04:25,830 --> 00:04:27,810
+before we're able you know explain where
+
+116
+00:04:27,810 --> 00:04:29,550
+the electrons hit and of course it's
+
+117
+00:04:29,550 --> 00:04:32,700
+going through these two slits now you
+
+118
+00:04:32,700 --> 00:04:35,550
+expect the electrons little particles to
+
+119
+00:04:35,550 --> 00:04:37,590
+act like the model and you see two
+
+120
+00:04:37,590 --> 00:04:39,350
+individual lines measurement board
+
+121
+00:04:39,350 --> 00:04:42,900
+however the really interesting part is
+
+122
+00:04:42,900 --> 00:04:46,110
+that you do not see those two one you
+
+123
+00:04:46,110 --> 00:04:48,900
+see an interference pattern using the
+
+124
+00:04:48,900 --> 00:04:51,120
+particles now the way this works is
+
+125
+00:04:51,120 --> 00:04:54,270
+really confusing the particle acts as a
+
+126
+00:04:54,270 --> 00:04:57,000
+wave and a particle at the same time
+
+127
+00:04:57,000 --> 00:04:59,760
+until it was observed by the variable
+
+128
+00:04:59,760 --> 00:05:01,680
+and it actually depends on where that
+
+129
+00:05:01,680 --> 00:05:04,290
+measurement takes a takes place as well
+
+130
+00:05:04,290 --> 00:05:06,000
+because if you measure it before the
+
+131
+00:05:06,000 --> 00:05:06,450
+board
+
+132
+00:05:06,450 --> 00:05:08,910
+yeah the electron has actually decided
+
+133
+00:05:08,910 --> 00:05:10,800
+which way it goes and with and did you
+
+134
+00:05:10,800 --> 00:05:13,140
+can actually see in heavier if you do
+
+135
+00:05:13,140 --> 00:05:14,850
+the measurement before the truth laying
+
+136
+00:05:14,850 --> 00:05:17,790
+around crazy exactly so that means that
+
+137
+00:05:17,790 --> 00:05:19,800
+if you're several electrons even one by
+
+138
+00:05:19,800 --> 00:05:21,390
+one so you're not coming like a bunch of
+
+139
+00:05:21,390 --> 00:05:22,800
+them they're interfering with each other
+
+140
+00:05:22,800 --> 00:05:24,570
+you're only from them one by one it
+
+141
+00:05:24,570 --> 00:05:27,360
+exists as a waste probabilities that
+
+142
+00:05:27,360 --> 00:05:29,190
+don't feel it that interferes with
+
+143
+00:05:29,190 --> 00:05:30,990
+itself and I creates the interference
+
+144
+00:05:30,990 --> 00:05:33,210
+pattern but it's centered but if you are
+
+145
+00:05:33,210 --> 00:05:35,280
+looking to the camera or something that
+
+146
+00:05:35,280 --> 00:05:36,870
+actually ended that interferes and
+
+147
+00:05:36,870 --> 00:05:39,510
+actually observes before it goes to the
+
+148
+00:05:39,510 --> 00:05:42,210
+Swift it doesn't go through both slits
+
+149
+00:05:42,210 --> 00:05:44,820
+at once it decides which will go through
+
+150
+00:05:44,820 --> 00:05:47,370
+in discrete two lines and there are lots
+
+151
+00:05:47,370 --> 00:05:49,380
+of other you know experiments talking
+
+152
+00:05:49,380 --> 00:05:51,030
+about how the house observed with a
+
+153
+00:05:51,030 --> 00:05:52,800
+quantum eraser experiment so much more
+
+154
+00:05:52,800 --> 00:05:54,330
+so we'll talk about that just yet
+
+155
+00:05:54,330 --> 00:05:55,830
+doesn't get a little bit too complicated
+
+156
+00:05:55,830 --> 00:05:57,600
+if you're interested in that I might
+
+157
+00:05:57,600 --> 00:05:59,400
+only some new video about those sorts of
+
+158
+00:05:59,400 --> 00:06:00,990
+experiments you can leave that down in
+
+159
+00:06:00,990 --> 00:06:01,740
+the comments below
+
+160
+00:06:01,740 --> 00:06:04,080
+but graph of that let's go ahead and
+
+161
+00:06:04,080 --> 00:06:05,550
+talk about another really interesting
+
+162
+00:06:05,550 --> 00:06:09,210
+concept known as superposition another
+
+163
+00:06:09,210 --> 00:06:10,890
+very interesting thing about quantum
+
+164
+00:06:10,890 --> 00:06:13,500
+mechanics is that when while particles
+
+165
+00:06:13,500 --> 00:06:16,710
+can also be waves all particles they can
+
+166
+00:06:16,710 --> 00:06:17,969
+also have some very
+
+167
+00:06:17,969 --> 00:06:19,709
+interesting properties so one of the
+
+168
+00:06:19,709 --> 00:06:21,629
+parties of fundamental particles is spin
+
+169
+00:06:21,629 --> 00:06:24,209
+and interesting thing about spin is that
+
+170
+00:06:24,209 --> 00:06:26,909
+a particle can either have a spin up or
+
+171
+00:06:26,909 --> 00:06:30,449
+spin down and in some situations it can
+
+172
+00:06:30,449 --> 00:06:33,389
+be inverse spin up or spin down and we
+
+173
+00:06:33,389 --> 00:06:35,009
+won't actually know which one it in
+
+174
+00:06:35,009 --> 00:06:37,199
+until we make a measurement and this has
+
+175
+00:06:37,199 --> 00:06:41,039
+some very interesting thought experiment
+
+176
+00:06:41,039 --> 00:06:44,489
+about that yeah and so that's a little
+
+177
+00:06:44,489 --> 00:06:46,439
+bit more about those showing your tax
+
+178
+00:06:46,439 --> 00:06:49,679
+revenue doctor and so essentially
+
+179
+00:06:49,679 --> 00:06:52,949
+showing your experiment ah basically the
+
+180
+00:06:52,949 --> 00:06:55,139
+starting to see how I think they need
+
+181
+00:06:55,139 --> 00:06:57,689
+quantum particles actually affect us in
+
+182
+00:06:57,689 --> 00:06:59,969
+our you know bigger world where regular
+
+183
+00:06:59,969 --> 00:07:01,469
+business enjoyment emits actually no
+
+184
+00:07:01,469 --> 00:07:04,379
+become works out so essentially this is
+
+185
+00:07:04,379 --> 00:07:06,899
+this experiment is a box and we thought
+
+186
+00:07:06,899 --> 00:07:11,129
+a we've got a cat inside of the box and
+
+187
+00:07:11,129 --> 00:07:14,399
+we've also got a radioactive particle uh
+
+188
+00:07:14,399 --> 00:07:17,369
+with some sort of you with some randomly
+
+189
+00:07:17,369 --> 00:07:21,479
+ran a vegetarian decay okay so if this
+
+190
+00:07:21,479 --> 00:07:24,689
+part was case a poison gas release which
+
+191
+00:07:24,689 --> 00:07:26,429
+killed the cat within a box there's no
+
+192
+00:07:26,429 --> 00:07:28,110
+way of knowing that this happened from
+
+193
+00:07:28,110 --> 00:07:31,889
+the outside and so in theory and so this
+
+194
+00:07:31,889 --> 00:07:33,479
+is where the super pollution comes in
+
+195
+00:07:33,479 --> 00:07:36,300
+that's a quantum particle and so it can
+
+196
+00:07:36,300 --> 00:07:39,689
+exist in the state of decayed and not
+
+197
+00:07:39,689 --> 00:07:41,879
+decayed at the exact same time and then
+
+198
+00:07:41,879 --> 00:07:46,019
+oh it's observed in existence or 50:56
+
+199
+00:07:46,019 --> 00:07:48,179
+and then the whole campus also involves
+
+200
+00:07:48,179 --> 00:07:51,029
+it within a 50-50 state of maybe being
+
+201
+00:07:51,029 --> 00:07:53,759
+alive or maybe being this long the gas
+
+202
+00:07:53,759 --> 00:07:58,379
+solar particle exactly and so until we
+
+203
+00:07:58,379 --> 00:08:01,319
+look inside of the box somehow and
+
+204
+00:08:01,319 --> 00:08:03,659
+observe what's actually happening within
+
+205
+00:08:03,659 --> 00:08:06,629
+the box we will never be sure whether
+
+206
+00:08:06,629 --> 00:08:09,479
+the cat is dead or alive it could be in
+
+207
+00:08:09,479 --> 00:08:11,909
+slow states at the same time in theory
+
+208
+00:08:11,909 --> 00:08:14,399
+inject it separate now I won't going to
+
+209
+00:08:14,399 --> 00:08:16,139
+be actual interpretation of the
+
+210
+00:08:16,139 --> 00:08:17,639
+many-worlds interpretation the cat
+
+211
+00:08:17,639 --> 00:08:19,619
+consciousness goes down a different
+
+212
+00:08:19,619 --> 00:08:21,119
+blood but anyway we don't get to that
+
+213
+00:08:21,119 --> 00:08:24,389
+right now but again if you request that
+
+214
+00:08:24,389 --> 00:08:25,190
+in the comments
+
+215
+00:08:25,190 --> 00:08:26,690
+we'll create a separate video about that
+
+216
+00:08:26,690 --> 00:08:28,970
+as well however for now well as you
+
+217
+00:08:28,970 --> 00:08:31,010
+mentioned spin is another very
+
+218
+00:08:31,010 --> 00:08:32,419
+interesting aspect and we sorts of
+
+219
+00:08:32,419 --> 00:08:35,210
+fundamentals or quantum particles but
+
+220
+00:08:35,210 --> 00:08:37,010
+there's also on your apartment spinning
+
+221
+00:08:37,010 --> 00:08:38,960
+in superposition there's also a really
+
+222
+00:08:38,960 --> 00:08:41,210
+other interesting aspect of these sorts
+
+223
+00:08:41,210 --> 00:08:42,770
+of quantum particles and how the actual
+
+224
+00:08:42,770 --> 00:08:44,900
+sidelines with quantum computing so
+
+225
+00:08:44,900 --> 00:08:46,130
+we'll talk a little bit more about in
+
+226
+00:08:46,130 --> 00:08:48,500
+Tanglers of how quantum particles can be
+
+227
+00:08:48,500 --> 00:08:53,770
+entangled yes sir there's as well as
+
+228
+00:08:53,770 --> 00:08:56,630
+particles having being unique you can
+
+229
+00:08:56,630 --> 00:08:58,280
+put a particular particle in a
+
+230
+00:08:58,280 --> 00:08:59,990
+superposition ask what you can also do
+
+231
+00:08:59,990 --> 00:09:02,360
+is set up a quantum mechanical system
+
+232
+00:09:02,360 --> 00:09:04,790
+whereby two quantum mechanical particles
+
+233
+00:09:04,790 --> 00:09:06,950
+can be entangled with each other so this
+
+234
+00:09:06,950 --> 00:09:10,400
+means that when you look at one or you
+
+235
+00:09:10,400 --> 00:09:12,650
+measure it or you compute with it or you
+
+236
+00:09:12,650 --> 00:09:14,090
+do some sort of experiment with it
+
+237
+00:09:14,090 --> 00:09:16,520
+you're going to affect the other one and
+
+238
+00:09:16,520 --> 00:09:18,200
+this actually doesn't matter how far
+
+239
+00:09:18,200 --> 00:09:20,090
+away they are apart well how good they
+
+240
+00:09:20,090 --> 00:09:21,710
+are so once they're entangled they're
+
+241
+00:09:21,710 --> 00:09:23,180
+always going to be entangled quantum
+
+242
+00:09:23,180 --> 00:09:25,370
+mechanically which means that if one has
+
+243
+00:09:25,370 --> 00:09:27,200
+been up yes the other one might always
+
+244
+00:09:27,200 --> 00:09:29,240
+be spin up or when it's been down the
+
+245
+00:09:29,240 --> 00:09:31,220
+other one has always been down and you
+
+246
+00:09:31,220 --> 00:09:34,070
+can do some very interesting confucius
+
+247
+00:09:34,070 --> 00:09:35,630
+computation with that and it's actually
+
+248
+00:09:35,630 --> 00:09:38,870
+caused another type of paradox similar
+
+249
+00:09:38,870 --> 00:09:40,790
+to surgeon is passed around a
+
+250
+00:09:40,790 --> 00:09:43,850
+communication issue so if you have a you
+
+251
+00:09:43,850 --> 00:09:46,700
+set up a quantum system of two consoles
+
+252
+00:09:46,700 --> 00:09:48,860
+here and instead of super super file
+
+253
+00:09:48,860 --> 00:09:49,730
+part yeah
+
+254
+00:09:49,730 --> 00:09:51,170
+and then sum of X measurements one you
+
+255
+00:09:51,170 --> 00:09:53,180
+instantly know what lives in the other
+
+256
+00:09:53,180 --> 00:09:55,160
+ones yes so this was the question of can
+
+257
+00:09:55,160 --> 00:09:56,780
+you actually have fun than like
+
+258
+00:09:56,780 --> 00:09:58,850
+communications yeah between two
+
+259
+00:09:58,850 --> 00:10:02,240
+different particles yes yes about that
+
+260
+00:10:02,240 --> 00:10:04,340
+yes I looked that was actually cool but
+
+261
+00:10:04,340 --> 00:10:04,910
+I'm saying
+
+262
+00:10:04,910 --> 00:10:07,040
+um popping telemarketer remember the
+
+263
+00:10:07,040 --> 00:10:09,860
+Southern Nevada by Topher and you can
+
+264
+00:10:09,860 --> 00:10:11,930
+actually do an experiment to test
+
+265
+00:10:11,930 --> 00:10:15,830
+whether the particles are entangled or
+
+266
+00:10:15,830 --> 00:10:20,000
+they actually have a hidden there's
+
+267
+00:10:20,000 --> 00:10:22,370
+exchanging hidden information behind the
+
+268
+00:10:22,370 --> 00:10:24,140
+other they decided beforehand that were
+
+269
+00:10:24,140 --> 00:10:26,089
+both going to be spin up were both going
+
+270
+00:10:26,089 --> 00:10:28,460
+to be spin down our weather is going to
+
+271
+00:10:28,460 --> 00:10:31,700
+be probabilistic and so on called this
+
+272
+00:10:31,700 --> 00:10:33,709
+spooky action
+
+273
+00:10:33,709 --> 00:10:40,170
+okay yes okay awesome elbow let's go a
+
+274
+00:10:40,170 --> 00:10:42,330
+little bit deeper into hug connection
+
+275
+00:10:42,330 --> 00:10:44,910
+use I'm still entanglement superposition
+
+276
+00:10:44,910 --> 00:10:47,070
+with quantum computing so now look at
+
+277
+00:10:47,070 --> 00:10:50,160
+how you can actually use IBM q but
+
+278
+00:10:50,160 --> 00:10:52,080
+before we get into the action lots of
+
+279
+00:10:52,080 --> 00:10:53,880
+experiment itself let's talk a little
+
+280
+00:10:53,880 --> 00:10:55,920
+bit more how can actually use the
+
+281
+00:10:55,920 --> 00:10:58,050
+supercomputers quantum computers
+
+282
+00:10:58,050 --> 00:11:01,140
+themselves that was all about quantum
+
+283
+00:11:01,140 --> 00:11:02,670
+computers ourselves first how do they
+
+284
+00:11:02,670 --> 00:11:05,130
+work what exactly are they okay they're
+
+285
+00:11:05,130 --> 00:11:08,279
+coding computers are computers that use
+
+286
+00:11:08,279 --> 00:11:10,890
+qubits to computer other than things so
+
+287
+00:11:10,890 --> 00:11:12,540
+the interesting thing about qubits is a
+
+288
+00:11:12,540 --> 00:11:15,089
+little bit a quantum business sorry one
+
+289
+00:11:15,089 --> 00:11:16,589
+of this is that you can put them in
+
+290
+00:11:16,589 --> 00:11:18,570
+superposition and then you can entangle
+
+291
+00:11:18,570 --> 00:11:21,570
+them they work by the laws of quantum
+
+292
+00:11:21,570 --> 00:11:23,520
+mechanics involving eternity and cilia
+
+293
+00:11:23,520 --> 00:11:25,709
+which is how all about you know laptops
+
+294
+00:11:25,709 --> 00:11:28,290
+today work and it's really interesting
+
+295
+00:11:28,290 --> 00:11:30,839
+because we think we can compute very
+
+296
+00:11:30,839 --> 00:11:32,850
+very different things on quantum
+
+297
+00:11:32,850 --> 00:11:34,529
+computers than we can on classical
+
+298
+00:11:34,529 --> 00:11:37,050
+computers it's all a really new exciting
+
+299
+00:11:37,050 --> 00:11:40,680
+era of computing yes yes I talk about
+
+300
+00:11:40,680 --> 00:11:42,899
+how these things actually work like a
+
+301
+00:11:42,899 --> 00:11:45,209
+little earlier how exactly these
+
+302
+00:11:45,209 --> 00:11:47,040
+processors work whether they look at how
+
+303
+00:11:47,040 --> 00:11:49,110
+having communicate with quantum bits
+
+304
+00:11:49,110 --> 00:11:52,200
+exactly sure so we can make quantum bits
+
+305
+00:11:52,200 --> 00:11:55,110
+in may different ways yes so one of the
+
+306
+00:11:55,110 --> 00:11:58,079
+easiest way to do it because atoms or
+
+307
+00:11:58,079 --> 00:12:00,360
+particles themselves have spin and we
+
+308
+00:12:00,360 --> 00:12:02,190
+try to interact with those spin yeah
+
+309
+00:12:02,190 --> 00:12:04,350
+that is one way to do it or if it's very
+
+310
+00:12:04,350 --> 00:12:06,990
+hard to get down to a clinical level and
+
+311
+00:12:06,990 --> 00:12:09,779
+and move them around and people actually
+
+312
+00:12:09,779 --> 00:12:13,050
+do that today using lasers okay okay at
+
+313
+00:12:13,050 --> 00:12:15,839
+IBM we actually use superconducting
+
+314
+00:12:15,839 --> 00:12:18,810
+circuits to act as our qubits okay so in
+
+315
+00:12:18,810 --> 00:12:20,310
+these little circus if the current is
+
+316
+00:12:20,310 --> 00:12:22,050
+going one direction that means it's in
+
+317
+00:12:22,050 --> 00:12:24,180
+the ground state or spin up or spin down
+
+318
+00:12:24,180 --> 00:12:26,520
+example or if the current going the
+
+319
+00:12:26,520 --> 00:12:27,959
+other direction that means our spit-up
+
+320
+00:12:27,959 --> 00:12:30,420
+yes and the problem with the
+
+321
+00:12:30,420 --> 00:12:32,640
+superconducting qubits is that you have
+
+322
+00:12:32,640 --> 00:12:34,440
+to have them at very very low
+
+323
+00:12:34,440 --> 00:12:37,200
+temperatures okay so they're actually at
+
+324
+00:12:37,200 --> 00:12:40,320
+a couple of nearly Kelvin okay sorry not
+
+325
+00:12:40,320 --> 00:12:41,430
+cool designer Jericho back to
+
+326
+00:12:41,430 --> 00:12:44,370
+perspective that is a lot lot lot colder
+
+327
+00:12:44,370 --> 00:12:45,880
+than for example out
+
+328
+00:12:45,880 --> 00:12:49,180
+okay Alex paces at about 2.7 Kelvin
+
+329
+00:12:49,180 --> 00:12:52,029
+we're at sort of 25 is nearly Kelvin
+
+330
+00:12:52,029 --> 00:12:55,029
+okay so you can see actually quite much
+
+331
+00:12:55,029 --> 00:12:58,300
+cooler than outer space and so now
+
+332
+00:12:58,300 --> 00:12:58,690
+though
+
+333
+00:12:58,690 --> 00:13:00,399
+Josefa new programs we all know that
+
+334
+00:13:00,399 --> 00:13:02,829
+sort of as a very bare level for
+
+335
+00:13:02,829 --> 00:13:04,389
+training where you work programming
+
+336
+00:13:04,389 --> 00:13:07,329
+computers using assembly assembler so
+
+337
+00:13:07,329 --> 00:13:09,759
+what exactly are we using for quantum
+
+338
+00:13:09,759 --> 00:13:11,440
+computers that is actually a new
+
+339
+00:13:11,440 --> 00:13:14,350
+interesting area of research right so we
+
+340
+00:13:14,350 --> 00:13:16,660
+program computers using first logic
+
+341
+00:13:16,660 --> 00:13:19,000
+gates yes and then assemble yeah and
+
+342
+00:13:19,000 --> 00:13:20,290
+then your higher-level like there's
+
+343
+00:13:20,290 --> 00:13:22,060
+there are going to be quantum computing
+
+344
+00:13:22,060 --> 00:13:25,060
+or you program your cutest using quantum
+
+345
+00:13:25,060 --> 00:13:26,769
+gates yes and on top of that we're
+
+346
+00:13:26,769 --> 00:13:28,690
+starting to build quantum assembly
+
+347
+00:13:28,690 --> 00:13:31,029
+languages IBM one is caught into the
+
+348
+00:13:31,029 --> 00:13:33,220
+closet and in the future we want to
+
+349
+00:13:33,220 --> 00:13:36,089
+figure out how to write those high-level
+
+350
+00:13:36,089 --> 00:13:38,920
+languages to go on top of that like C or
+
+351
+00:13:38,920 --> 00:13:41,680
+for Channel passes or on our Java these
+
+352
+00:13:41,680 --> 00:13:43,870
+days but at the moment we can also use
+
+353
+00:13:43,870 --> 00:13:46,690
+Python to write open closets to then
+
+354
+00:13:46,690 --> 00:13:49,180
+access our quantum computer yes is
+
+355
+00:13:49,180 --> 00:13:51,519
+really interesting but now though since
+
+356
+00:13:51,519 --> 00:13:54,490
+the head can actually use this quantum
+
+357
+00:13:54,490 --> 00:13:57,610
+computing will be angry MQ experience so
+
+358
+00:13:57,610 --> 00:13:59,439
+let's get over that now and as a
+
+359
+00:13:59,439 --> 00:14:01,029
+computer the point of power this
+
+360
+00:14:01,029 --> 00:14:03,430
+experiment is actually owned by IBM and
+
+361
+00:14:03,430 --> 00:14:06,399
+there in your town Research Lab yes so
+
+362
+00:14:06,399 --> 00:14:08,860
+in our youkai Research Lab anyone in a
+
+363
+00:14:08,860 --> 00:14:11,079
+freezer at almost a colder than outer
+
+364
+00:14:11,079 --> 00:14:14,949
+space we have a five qubit machine as
+
+365
+00:14:14,949 --> 00:14:17,290
+well as a 16 qubit machine which is free
+
+366
+00:14:17,290 --> 00:14:19,209
+for everybody to use on what is called
+
+367
+00:14:19,209 --> 00:14:21,490
+the IBM quantum experience and so I'll
+
+368
+00:14:21,490 --> 00:14:23,410
+be showing you here today yeah some
+
+369
+00:14:23,410 --> 00:14:25,180
+quantum experience actually I'll do
+
+370
+00:14:25,180 --> 00:14:27,459
+program in open glasses as well as this
+
+371
+00:14:27,459 --> 00:14:29,620
+great graphical user interface that
+
+372
+00:14:29,620 --> 00:14:30,910
+allows you to actually program these
+
+373
+00:14:30,910 --> 00:14:33,550
+quantum it to quantum computers that are
+
+374
+00:14:33,550 --> 00:14:35,380
+powering it to actually create different
+
+375
+00:14:35,380 --> 00:14:37,180
+forms and applications in fact it has
+
+376
+00:14:37,180 --> 00:14:38,230
+lots of different features like
+
+377
+00:14:38,230 --> 00:14:40,180
+simulating a quantum run run and
+
+378
+00:14:40,180 --> 00:14:42,130
+actually running it on a quantum
+
+379
+00:14:42,130 --> 00:14:44,439
+computer so for to actually go and
+
+380
+00:14:44,439 --> 00:14:46,360
+wonder a result you might want to
+
+381
+00:14:46,360 --> 00:14:48,220
+simulate it because the simulation just
+
+382
+00:14:48,220 --> 00:14:49,839
+gives you cleaner result because about
+
+383
+00:14:49,839 --> 00:14:52,149
+no error so it's very your finale wait
+
+384
+00:14:52,149 --> 00:14:53,290
+so that's where we've been you've got
+
+385
+00:14:53,290 --> 00:14:55,960
+one five machine and 116 qubit machines
+
+386
+00:14:55,960 --> 00:14:57,790
+ever'one something you have to go join
+
+387
+00:14:57,790 --> 00:14:59,200
+the queue yeah and you don't ever know
+
+388
+00:14:59,200 --> 00:15:00,610
+how long that he was going with it
+
+389
+00:15:00,610 --> 00:15:02,020
+exactly exactly
+
+390
+00:15:02,020 --> 00:15:04,600
+however now they'll get over to screen
+
+391
+00:15:04,600 --> 00:15:06,250
+recording or showing you how you can
+
+392
+00:15:06,250 --> 00:15:10,630
+actually use the queue experience okay
+
+393
+00:15:10,630 --> 00:15:14,110
+so this is the class of experience this
+
+394
+00:15:14,110 --> 00:15:16,450
+is how you can program two different
+
+395
+00:15:16,450 --> 00:15:19,390
+qubit floozies q0 and q1 and are two
+
+396
+00:15:19,390 --> 00:15:21,160
+different cubes and you can see down
+
+397
+00:15:21,160 --> 00:15:23,260
+here we can actually show you what our
+
+398
+00:15:23,260 --> 00:15:25,540
+quantum computing chip looks like I've
+
+399
+00:15:25,540 --> 00:15:27,400
+added currently active which is great
+
+400
+00:15:27,400 --> 00:15:29,020
+which means you could run on it if you
+
+401
+00:15:29,020 --> 00:15:31,810
+wanted to and you can see the particular
+
+402
+00:15:31,810 --> 00:15:34,960
+errors that we're getting on the on the
+
+403
+00:15:34,960 --> 00:15:36,970
+qubits themselves the error the readout
+
+404
+00:15:36,970 --> 00:15:38,920
+the qubit error as well as the current
+
+405
+00:15:38,920 --> 00:15:40,660
+temperature of the fridge so actually at
+
+406
+00:15:40,660 --> 00:15:43,120
+our 15 really Kelvin our cremeux is
+
+407
+00:15:43,120 --> 00:15:44,560
+lured a little high before when I said
+
+408
+00:15:44,560 --> 00:15:48,070
+25 so this particular experiment that
+
+409
+00:15:48,070 --> 00:15:49,810
+I've got running here or showing you
+
+410
+00:15:49,810 --> 00:15:53,800
+here is putting so here is a two qubits
+
+411
+00:15:53,800 --> 00:15:56,350
+and with time going along the x-axis
+
+412
+00:15:56,350 --> 00:15:58,750
+then this is called the composer and
+
+413
+00:15:58,750 --> 00:16:01,150
+what we do is you over time you put
+
+414
+00:16:01,150 --> 00:16:03,880
+Cupid escapes onto the qubits and then a
+
+415
+00:16:03,880 --> 00:16:06,850
+measurement at the end ah yes I actually
+
+416
+00:16:06,850 --> 00:16:08,380
+also just wanted that just to put that
+
+417
+00:16:08,380 --> 00:16:09,820
+two more push spectra for everyone as
+
+418
+00:16:09,820 --> 00:16:12,850
+around negative 273 degrees Celsius oh
+
+419
+00:16:12,850 --> 00:16:16,150
+yeah and we can talk very very cool
+
+420
+00:16:16,150 --> 00:16:18,220
+yes sorry that I forgot there were
+
+421
+00:16:18,220 --> 00:16:19,840
+neither would I want to cover your ear
+
+422
+00:16:19,840 --> 00:16:23,350
+right okay so this is actually one of a
+
+423
+00:16:23,350 --> 00:16:26,890
+four-part experiment that you do to try
+
+424
+00:16:26,890 --> 00:16:30,550
+and prove that quantum mechanics is
+
+425
+00:16:30,550 --> 00:16:32,110
+actually what causes entanglement and
+
+426
+00:16:32,110 --> 00:16:35,050
+not perhaps a hidden theory or hidden
+
+427
+00:16:35,050 --> 00:16:37,060
+information behind two entangled
+
+428
+00:16:37,060 --> 00:16:39,910
+particles because when the coil
+
+429
+00:16:39,910 --> 00:16:41,920
+mechanics first came out people given
+
+430
+00:16:41,920 --> 00:16:43,390
+the spooky action in the distance were
+
+431
+00:16:43,390 --> 00:16:44,740
+all thinking well maybe I'll apply for
+
+432
+00:16:44,740 --> 00:16:46,930
+the change information beforehand then
+
+433
+00:16:46,930 --> 00:16:48,490
+they went to two different places and we
+
+434
+00:16:48,490 --> 00:16:50,080
+just measuring the information that was
+
+435
+00:16:50,080 --> 00:16:52,720
+already there but they came up with an
+
+436
+00:16:52,720 --> 00:16:55,840
+experiment to try and test whether there
+
+437
+00:16:55,840 --> 00:16:57,280
+was actually information shared
+
+438
+00:16:57,280 --> 00:16:59,500
+beforehand or whether was entangled
+
+439
+00:16:59,500 --> 00:17:01,840
+particles and the way you do this is you
+
+440
+00:17:01,840 --> 00:17:04,150
+set up an entangled state and then you
+
+441
+00:17:04,150 --> 00:17:07,030
+do as a cup four different sets of
+
+442
+00:17:07,030 --> 00:17:08,040
+measurements on
+
+443
+00:17:08,040 --> 00:17:10,949
+entangled states this is one other sets
+
+444
+00:17:10,949 --> 00:17:12,570
+of measurements but of course you don't
+
+445
+00:17:12,570 --> 00:17:15,360
+want to have to drag and drop and check
+
+446
+00:17:15,360 --> 00:17:17,699
+and look at all the graphs to compare
+
+447
+00:17:17,699 --> 00:17:20,490
+for each of the 40 mistake that's why
+
+448
+00:17:20,490 --> 00:17:24,959
+we've created the we've got of FDA they
+
+449
+00:17:24,959 --> 00:17:27,089
+call it a piss kit sdk so you can
+
+450
+00:17:27,089 --> 00:17:29,490
+program the client experience or the
+
+451
+00:17:29,490 --> 00:17:31,440
+quantum computer using prison
+
+452
+00:17:31,440 --> 00:17:37,470
+okay so let's look over to that okay so
+
+453
+00:17:37,470 --> 00:17:42,240
+here um so this act this experiment it's
+
+454
+00:17:42,240 --> 00:17:45,150
+called the CHCs inequality named after
+
+455
+00:17:45,150 --> 00:17:47,130
+the four people who came up with it and
+
+456
+00:17:47,130 --> 00:17:50,340
+so the idea is you set up these space
+
+457
+00:17:50,340 --> 00:17:52,830
+and you measure them and you if with
+
+458
+00:17:52,830 --> 00:17:54,420
+quantum mechanics is actually a theory
+
+459
+00:17:54,420 --> 00:17:57,330
+and the qubits are entangled that we
+
+460
+00:17:57,330 --> 00:18:00,240
+should see some of this inequality being
+
+461
+00:18:00,240 --> 00:18:01,080
+above zero
+
+462
+00:18:01,080 --> 00:18:02,820
+this was actually some very interesting
+
+463
+00:18:02,820 --> 00:18:05,280
+research a couple papers were actually
+
+464
+00:18:05,280 --> 00:18:06,840
+written about this earlier
+
+465
+00:18:06,840 --> 00:18:09,480
+decentering of 2009 it's actually pretty
+
+466
+00:18:09,480 --> 00:18:11,100
+amazing that these days you can just
+
+467
+00:18:11,100 --> 00:18:13,110
+take the clothes and run it and get the
+
+468
+00:18:13,110 --> 00:18:15,180
+same back but it would have taken a team
+
+469
+00:18:15,180 --> 00:18:18,240
+of people helpful phd's probably to do
+
+470
+00:18:18,240 --> 00:18:20,910
+and that was only but eggs are using our
+
+471
+00:18:20,910 --> 00:18:26,190
+new so this is actually what a closet
+
+472
+00:18:26,190 --> 00:18:28,380
+looks like they're very assembler near
+
+473
+00:18:28,380 --> 00:18:30,900
+back yeah quite loud that you could we
+
+474
+00:18:30,900 --> 00:18:33,720
+can program the heisman to make the
+
+475
+00:18:33,720 --> 00:18:35,730
+assembler here that actually lined on to
+
+476
+00:18:35,730 --> 00:18:40,680
+the clone computer so he loved a lot so
+
+477
+00:18:40,680 --> 00:18:42,120
+does early are committing what they have
+
+478
+00:18:42,120 --> 00:18:44,940
+to wait during the video and you can see
+
+479
+00:18:44,940 --> 00:18:48,150
+here in this graph the red line there is
+
+480
+00:18:48,150 --> 00:18:51,330
+this theory and the blue dots are what
+
+481
+00:18:51,330 --> 00:18:54,060
+we get from the experiment and the two
+
+482
+00:18:54,060 --> 00:18:56,880
+blue lines are with pop and one is two
+
+483
+00:18:56,880 --> 00:18:58,980
+are okay so you can see that some of the
+
+484
+00:18:58,980 --> 00:19:00,780
+dots are actually above and below too
+
+485
+00:19:00,780 --> 00:19:05,010
+which proved that the theory is not a
+
+486
+00:19:05,010 --> 00:19:08,160
+hidden information yes very much so it's
+
+487
+00:19:08,160 --> 00:19:10,520
+possibly probably isn't angle
+
+488
+00:19:10,520 --> 00:19:14,130
+that is absolutely great so is there
+
+489
+00:19:14,130 --> 00:19:15,240
+anything else you want to share nothing
+
+490
+00:19:15,240 --> 00:19:17,309
+you experience when I'm in provides also
+
+491
+00:19:17,309 --> 00:19:19,890
+online through if you don't think that
+
+492
+00:19:19,890 --> 00:19:21,289
+Tommy is giving you enough information
+
+493
+00:19:21,289 --> 00:19:23,970
+there's also a lot of tutorials and
+
+494
+00:19:23,970 --> 00:19:26,640
+information about how to use the common
+
+495
+00:19:26,640 --> 00:19:28,080
+experience and some of the quantum
+
+496
+00:19:28,080 --> 00:19:29,940
+mechanics behind it for both people who
+
+497
+00:19:29,940 --> 00:19:33,000
+know linear algebra as well as people
+
+498
+00:19:33,000 --> 00:19:34,890
+without any to this background at all if
+
+499
+00:19:34,890 --> 00:19:36,380
+you want to go for a gamete you're that
+
+500
+00:19:36,380 --> 00:19:39,900
+sounds good okay so that wraps up this
+
+501
+00:19:39,900 --> 00:19:41,700
+video and of course there are many more
+
+502
+00:19:41,700 --> 00:19:43,770
+come in this series so thank you very
+
+503
+00:19:43,770 --> 00:19:45,210
+much everyone for joining in that's
+
+504
+00:19:45,210 --> 00:19:46,799
+going to be awesome this video really do
+
+505
+00:19:46,799 --> 00:19:48,480
+hope you enjoy it or you move in to
+
+506
+00:19:48,480 --> 00:19:50,610
+learn something from this course don't
+
+507
+00:19:50,610 --> 00:19:52,169
+you do have any more questions please
+
+508
+00:19:52,169 --> 00:19:53,700
+when we put down the comment section
+
+509
+00:19:53,700 --> 00:19:55,650
+below you can even want to me at Avenue
+
+510
+00:19:55,650 --> 00:19:58,169
+G or calm or tweet them to me at 10 G
+
+511
+00:19:58,169 --> 00:19:59,669
+baby Eric can have the questions for
+
+512
+00:19:59,669 --> 00:20:01,830
+anywhere for me to contact you also I
+
+513
+00:20:01,830 --> 00:20:05,309
+want Twitter at dr. F at all um yeah I
+
+514
+00:20:05,309 --> 00:20:07,110
+think I was about this perfect will put
+
+515
+00:20:07,110 --> 00:20:08,760
+your contact in the scripture as well so
+
+516
+00:20:08,760 --> 00:20:10,530
+you can actually go ahead and reach out
+
+517
+00:20:10,530 --> 00:20:11,370
+to her if you've got any more questions
+
+518
+00:20:11,370 --> 00:20:13,409
+for her as well and that's going to go
+
+519
+00:20:13,409 --> 00:20:14,490
+through this video of course so if you
+
+520
+00:20:14,490 --> 00:20:16,049
+do like my content you walk see more of
+
+521
+00:20:16,049 --> 00:20:17,460
+its needs to consider subscribing so
+
+522
+00:20:17,460 --> 00:20:19,200
+channel as well and it really does help
+
+523
+00:20:19,200 --> 00:20:20,610
+out a lot so thank you very much
+
+524
+00:20:20,610 --> 00:20:21,990
+everybody for joining in that's going to
+
+525
+00:20:21,990 --> 00:20:24,799
+be all good bye

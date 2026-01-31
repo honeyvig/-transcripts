@@ -1,0 +1,1051 @@
+1
+00:00:03,740 --> 00:00:06,150
+so hello there and welcome to another
+
+2
+00:00:06,150 --> 00:00:08,429
+tutorial my name is Tammy Bakshi and
+
+3
+00:00:08,429 --> 00:00:11,190
+today I'm joined by Rob hi the CTO MVP
+
+4
+00:00:11,190 --> 00:00:13,469
+of IBM Watson and my mentor thank you
+
+5
+00:00:13,469 --> 00:00:15,179
+very much for being a part today Rob
+
+6
+00:00:15,179 --> 00:00:17,190
+it's great to have you here Emma haha
+
+7
+00:00:17,190 --> 00:00:19,500
+thank you so today we're gonna be
+
+8
+00:00:19,500 --> 00:00:21,840
+talking about the Watson studio and
+
+9
+00:00:21,840 --> 00:00:23,400
+we're specifically how it relates to the
+
+10
+00:00:23,400 --> 00:00:25,220
+call for code now you can build
+
+11
+00:00:25,220 --> 00:00:28,109
+analytics a I powered solutions that
+
+12
+00:00:28,109 --> 00:00:30,960
+enable you to impact field of disaster
+
+13
+00:00:30,960 --> 00:00:32,550
+preparedness so you can help out those
+
+14
+00:00:32,550 --> 00:00:34,079
+who are being affected by natural
+
+15
+00:00:34,079 --> 00:00:37,920
+disasters using the power of the Watson
+
+16
+00:00:37,920 --> 00:00:40,649
+studio so the Watson studio Rob would
+
+17
+00:00:40,649 --> 00:00:42,420
+you just give us a quick brief on Lily
+
+18
+00:00:42,420 --> 00:00:44,370
+what that is and what it allows us to do
+
+19
+00:00:44,370 --> 00:00:46,469
+yeah it's my sister's really cool set
+
+20
+00:00:46,469 --> 00:00:48,300
+it's targeted at people who want build
+
+21
+00:00:48,300 --> 00:00:51,719
+analytic or AI based solutions it
+
+22
+00:00:51,719 --> 00:00:53,850
+includes a number of sub tools including
+
+23
+00:00:53,850 --> 00:00:56,579
+Jupiter notebooks including our the deep
+
+24
+00:00:56,579 --> 00:00:59,989
+learning visual construction tooling
+
+25
+00:00:59,989 --> 00:01:04,290
+access to our knowledge catalog yes the
+
+26
+00:01:04,290 --> 00:01:06,960
+ability to both gain access to it
+
+27
+00:01:06,960 --> 00:01:09,479
+publish as well as to curate some of the
+
+28
+00:01:09,479 --> 00:01:12,659
+data - exactly so it's really a suite of
+
+29
+00:01:12,659 --> 00:01:14,010
+tools that's really called it's really
+
+30
+00:01:14,010 --> 00:01:16,740
+targeted ad what we might normally refer
+
+31
+00:01:16,740 --> 00:01:18,780
+to as data scientist but really it's a
+
+32
+00:01:18,780 --> 00:01:20,670
+much broader class of people it doesn't
+
+33
+00:01:20,670 --> 00:01:23,220
+require that you have a GC analytics or
+
+34
+00:01:23,220 --> 00:01:25,350
+algorithms to be able to do anything
+
+35
+00:01:25,350 --> 00:01:27,479
+useful with and it really allows you to
+
+36
+00:01:27,479 --> 00:01:29,670
+get in and begin to detail out and
+
+37
+00:01:29,670 --> 00:01:32,100
+decompose your problem even stupider
+
+38
+00:01:32,100 --> 00:01:34,110
+notebooks to kind of organize your
+
+39
+00:01:34,110 --> 00:01:35,880
+thinking around the things you're trying
+
+40
+00:01:35,880 --> 00:01:39,150
+to analyze to import data normalize that
+
+41
+00:01:39,150 --> 00:01:42,030
+data and curate a yes and then layout
+
+42
+00:01:42,030 --> 00:01:43,740
+the algorithmic approach that you want
+
+43
+00:01:43,740 --> 00:01:46,350
+to take for assessing what they did is
+
+44
+00:01:46,350 --> 00:01:48,390
+trying to tell you yes including them
+
+45
+00:01:48,390 --> 00:01:50,340
+driving all the way down into using
+
+46
+00:01:50,340 --> 00:01:51,570
+various languages 14 buildings
+
+47
+00:01:51,570 --> 00:01:54,149
+algorithms with that is great now one
+
+48
+00:01:54,149 --> 00:01:55,710
+thing that you said they're really sort
+
+49
+00:01:55,710 --> 00:01:57,750
+of fascinates me and that is that you
+
+50
+00:01:57,750 --> 00:01:58,770
+don't need to be a machine learning
+
+51
+00:01:58,770 --> 00:02:00,899
+expert to use walk in the studio you
+
+52
+00:02:00,899 --> 00:02:02,670
+don't need to you know have a PhD in
+
+53
+00:02:02,670 --> 00:02:03,810
+data science or machine learning
+
+54
+00:02:03,810 --> 00:02:06,299
+whatever else it may be in order to use
+
+55
+00:02:06,299 --> 00:02:07,770
+this tool in order to build your own
+
+56
+00:02:07,770 --> 00:02:10,410
+applications and so let's just say you
+
+57
+00:02:10,410 --> 00:02:11,700
+know I wanted to build an application
+
+58
+00:02:11,700 --> 00:02:12,970
+that use the Watson
+
+59
+00:02:12,970 --> 00:02:15,250
+I could use tools as you mentioned of
+
+60
+00:02:15,250 --> 00:02:17,380
+data refinery that's built in to help me
+
+61
+00:02:17,380 --> 00:02:19,060
+pre-process figure out what my day is
+
+62
+00:02:19,060 --> 00:02:20,860
+like visualize I got a better idea of
+
+63
+00:02:20,860 --> 00:02:22,900
+what it is I can use the open source of
+
+64
+00:02:22,900 --> 00:02:24,580
+Jupiter notebooks and so I'm not even
+
+65
+00:02:24,580 --> 00:02:27,070
+just limited to using say the wonderful
+
+66
+00:02:27,070 --> 00:02:29,200
+Watson services I could use other
+
+67
+00:02:29,200 --> 00:02:30,790
+open-source technologies maybe I want to
+
+68
+00:02:30,790 --> 00:02:32,200
+build my own custom bottle eaves and
+
+69
+00:02:32,200 --> 00:02:34,540
+garage yeah I can do whatever I want to
+
+70
+00:02:34,540 --> 00:02:36,190
+inside the Jupiter notebooks and in fact
+
+71
+00:02:36,190 --> 00:02:38,560
+if you're using a supported library like
+
+72
+00:02:38,560 --> 00:02:40,180
+Ross you can actually build the neural
+
+73
+00:02:40,180 --> 00:02:41,800
+networks in a graphical user interface
+
+74
+00:02:41,800 --> 00:02:44,440
+with the journal Network model er uh but
+
+75
+00:02:44,440 --> 00:02:46,240
+let's just say that I were taking a look
+
+76
+00:02:46,240 --> 00:02:48,040
+at a more specific use case also one
+
+77
+00:02:48,040 --> 00:02:49,780
+more thing though would be like for
+
+78
+00:02:49,780 --> 00:02:51,610
+example the community tab there are also
+
+79
+00:02:51,610 --> 00:02:53,440
+tons of different projects and and
+
+80
+00:02:53,440 --> 00:02:55,480
+neural network designs and data sets I'm
+
+81
+00:02:55,480 --> 00:02:57,040
+even publish on to the community of
+
+82
+00:02:57,040 --> 00:02:59,170
+Watson studio in fact you can as well
+
+83
+00:02:59,170 --> 00:03:01,090
+and you can collaborate with people
+
+84
+00:03:01,090 --> 00:03:03,160
+inside of that experience but getting
+
+85
+00:03:03,160 --> 00:03:05,530
+back to the point let's just say that I
+
+86
+00:03:05,530 --> 00:03:07,180
+wanted to build an application that
+
+87
+00:03:07,180 --> 00:03:09,790
+predicts how intense a wildfire is gonna
+
+88
+00:03:09,790 --> 00:03:12,190
+be based off of where it's located of
+
+89
+00:03:12,190 --> 00:03:13,930
+course a few more environmental factors
+
+90
+00:03:13,930 --> 00:03:15,370
+in fact this is actually an open source
+
+91
+00:03:15,370 --> 00:03:18,010
+data set from NASA it was actually code
+
+92
+00:03:18,010 --> 00:03:19,390
+pattern on this and there'll be a link
+
+93
+00:03:19,390 --> 00:03:21,120
+to it down in the description below uh
+
+94
+00:03:21,120 --> 00:03:24,070
+but let's just say that I was working
+
+95
+00:03:24,070 --> 00:03:25,959
+towards this use case I want to use the
+
+96
+00:03:25,959 --> 00:03:27,820
+Watson tsuneo to build a custom machine
+
+97
+00:03:27,820 --> 00:03:29,740
+learning model soon just for my needs
+
+98
+00:03:29,740 --> 00:03:31,510
+could you kind of walk us through how
+
+99
+00:03:31,510 --> 00:03:33,940
+you would do that what kinds of tools
+
+100
+00:03:33,940 --> 00:03:35,860
+you use and what you use them for yeah
+
+101
+00:03:35,860 --> 00:03:38,020
+well let's start with the data and as
+
+102
+00:03:38,020 --> 00:03:39,190
+you pointed out some of that data is
+
+103
+00:03:39,190 --> 00:03:40,780
+available now but you know you still
+
+104
+00:03:40,780 --> 00:03:42,430
+need to make sure that it's shaved and
+
+105
+00:03:42,430 --> 00:03:43,840
+these guys the right characteristics in
+
+106
+00:03:43,840 --> 00:03:45,400
+it that you're looking for there may be
+
+107
+00:03:45,400 --> 00:03:46,840
+some assets that idea that you care
+
+108
+00:03:46,840 --> 00:03:47,860
+about some that you don't care about
+
+109
+00:03:47,860 --> 00:03:49,239
+there may be other data that you want to
+
+110
+00:03:49,239 --> 00:03:52,630
+bring in and so first step is to walk
+
+111
+00:03:52,630 --> 00:03:54,700
+through and what I think of as being a
+
+112
+00:03:54,700 --> 00:03:56,830
+curation process a lot of that is about
+
+113
+00:03:56,830 --> 00:03:58,720
+to simply make sure the days in a shape
+
+114
+00:03:58,720 --> 00:04:00,400
+that you want to be in so let me step
+
+115
+00:04:00,400 --> 00:04:01,540
+one now once you've got the data
+
+116
+00:04:01,540 --> 00:04:03,580
+ingested step two is to begin to
+
+117
+00:04:03,580 --> 00:04:05,709
+understand what your objective is what
+
+118
+00:04:05,709 --> 00:04:07,660
+is it they try to get from this data in
+
+119
+00:04:07,660 --> 00:04:09,610
+a case of disaster preparedness maybe
+
+120
+00:04:09,610 --> 00:04:10,660
+what you're trying to do is identify
+
+121
+00:04:10,660 --> 00:04:14,500
+where the fire is likely to be addressed
+
+122
+00:04:14,500 --> 00:04:15,880
+given the data that you've got available
+
+123
+00:04:15,880 --> 00:04:18,520
+to you or it could be you know where you
+
+124
+00:04:18,520 --> 00:04:20,260
+want equipment you know how are you
+
+125
+00:04:20,260 --> 00:04:23,110
+going to manage and prepare for this
+
+126
+00:04:23,110 --> 00:04:25,680
+disaster as it unfolds if you got
+
+127
+00:04:25,680 --> 00:04:28,500
+any advance warning they been coming up
+
+128
+00:04:28,500 --> 00:04:31,639
+to the potential maybe I said it was a
+
+129
+00:04:31,639 --> 00:04:33,720
+hurricane or a storm that you know
+
+130
+00:04:33,720 --> 00:04:36,090
+that's coming in or or unfortunately in
+
+131
+00:04:36,090 --> 00:04:38,009
+some cases that may be so that's already
+
+132
+00:04:38,009 --> 00:04:40,289
+happened but maybe the case you know
+
+133
+00:04:40,289 --> 00:04:42,389
+managers and people who are involved
+
+134
+00:04:42,389 --> 00:04:45,210
+with managing disaster situation II you
+
+135
+00:04:45,210 --> 00:04:46,229
+know need to be able to think about
+
+136
+00:04:46,229 --> 00:04:48,060
+where the gunner places equipment and
+
+137
+00:04:48,060 --> 00:04:50,250
+yes and where is going to be best used
+
+138
+00:04:50,250 --> 00:04:52,350
+what the needs are and so forth so but
+
+139
+00:04:52,350 --> 00:04:53,370
+that's part of what you're trying to do
+
+140
+00:04:53,370 --> 00:04:54,810
+then of course having that objective in
+
+141
+00:04:54,810 --> 00:04:57,300
+mind you can begin to work backwards and
+
+142
+00:04:57,300 --> 00:04:59,430
+decompose how would you go about
+
+143
+00:04:59,430 --> 00:05:01,320
+predicting for the things we need to
+
+144
+00:05:01,320 --> 00:05:03,810
+predict you know we talked about one you
+
+145
+00:05:03,810 --> 00:05:05,250
+know where what you want be able to do
+
+146
+00:05:05,250 --> 00:05:08,550
+is identify what people need you know
+
+147
+00:05:08,550 --> 00:05:10,289
+that they're already in the midst of the
+
+148
+00:05:10,289 --> 00:05:12,210
+disaster they've already been affected
+
+149
+00:05:12,210 --> 00:05:14,699
+by whatever the consequence is where it
+
+150
+00:05:14,699 --> 00:05:16,380
+may be that they're stuck in their home
+
+151
+00:05:16,380 --> 00:05:18,840
+and they're out of food or water
+
+152
+00:05:18,840 --> 00:05:20,280
+yes um you know how would you use
+
+153
+00:05:20,280 --> 00:05:22,199
+something official recognition to go and
+
+154
+00:05:22,199 --> 00:05:25,440
+identify somebody who's you know calling
+
+155
+00:05:25,440 --> 00:05:27,630
+or asking for that before they even got
+
+156
+00:05:27,630 --> 00:05:30,599
+a sign yeah so you know working
+
+157
+00:05:30,599 --> 00:05:33,240
+backwards to what you're trying to do
+
+158
+00:05:33,240 --> 00:05:36,000
+solve for and then using duper notebook
+
+159
+00:05:36,000 --> 00:05:39,120
+to begin to organize that yeah as you
+
+160
+00:05:39,120 --> 00:05:40,349
+can do that organization you can
+
+161
+00:05:40,349 --> 00:05:43,139
+identify the need for specific analytics
+
+162
+00:05:43,139 --> 00:05:44,849
+and so you don't have to go in and drill
+
+163
+00:05:44,849 --> 00:05:46,110
+into that you gonna have to go build
+
+164
+00:05:46,110 --> 00:05:47,669
+algorithms gonna have to do the machine
+
+165
+00:05:47,669 --> 00:05:48,539
+learning you're gonna have to go
+
+166
+00:05:48,539 --> 00:05:50,789
+construct the the approach that you want
+
+167
+00:05:50,789 --> 00:05:53,370
+to take for identifying the thing that
+
+168
+00:05:53,370 --> 00:05:54,630
+you're looking for the things are every
+
+169
+00:05:54,630 --> 00:05:57,449
+day and again and joking nope you switch
+
+170
+00:05:57,449 --> 00:05:59,669
+out of that into some of the machine
+
+171
+00:05:59,669 --> 00:06:02,400
+learning technologies you may come into
+
+172
+00:06:02,400 --> 00:06:03,720
+it knowing that you've got it so
+
+173
+00:06:03,720 --> 00:06:04,889
+vibrates that you've already been
+
+174
+00:06:04,889 --> 00:06:07,289
+playing with may be familiar with went
+
+175
+00:06:07,289 --> 00:06:09,120
+with source projects around tensorflow
+
+176
+00:06:09,120 --> 00:06:12,599
+or around cafe or as it carries for
+
+177
+00:06:12,599 --> 00:06:15,449
+others PI torches getting crystalline
+
+178
+00:06:15,449 --> 00:06:19,220
+polymers yes so you know you can import
+
+179
+00:06:19,220 --> 00:06:22,169
+those libraries and corals and make use
+
+180
+00:06:22,169 --> 00:06:23,789
+of them within within the Jupiter
+
+181
+00:06:23,789 --> 00:06:25,800
+notebook if you're building a complex
+
+182
+00:06:25,800 --> 00:06:28,470
+model like a deep learning model you may
+
+183
+00:06:28,470 --> 00:06:29,909
+want going he's one of our official
+
+184
+00:06:29,909 --> 00:06:33,030
+tools or tool for people in construction
+
+185
+00:06:33,030 --> 00:06:35,820
+and you know that's really nice because
+
+186
+00:06:35,820 --> 00:06:37,260
+you can use it parameterize the
+
+187
+00:06:37,260 --> 00:06:37,920
+different layers
+
+188
+00:06:37,920 --> 00:06:40,590
+as deep learning model you can read
+
+189
+00:06:40,590 --> 00:06:43,080
+sequence that the pooling the various
+
+190
+00:06:43,080 --> 00:06:44,370
+techniques of my applying of
+
+191
+00:06:44,370 --> 00:06:46,230
+construction of your model yes and of
+
+192
+00:06:46,230 --> 00:06:47,610
+course you know you're going to then use
+
+193
+00:06:47,610 --> 00:06:50,190
+that in the context of that data to see
+
+194
+00:06:50,190 --> 00:06:52,830
+what kinds of results really eventually
+
+195
+00:06:52,830 --> 00:06:54,420
+you may decide that we've got as a real
+
+196
+00:06:54,420 --> 00:06:57,180
+well form said of analytic and you want
+
+197
+00:06:57,180 --> 00:06:58,230
+to take the algorithms that you've
+
+198
+00:06:58,230 --> 00:07:00,600
+constructed and now export them for
+
+199
+00:07:00,600 --> 00:07:02,190
+production is huge case and that's where
+
+200
+00:07:02,190 --> 00:07:05,760
+this into running code and into services
+
+201
+00:07:05,760 --> 00:07:08,070
+when they publish somewhere on the cloud
+
+202
+00:07:08,070 --> 00:07:10,470
+perhaps and make use of that with these
+
+203
+00:07:10,470 --> 00:07:12,690
+application that is great thank you very
+
+204
+00:07:12,690 --> 00:07:15,270
+much Rob for giving me that overview as
+
+205
+00:07:15,270 --> 00:07:16,860
+to how you go about using the Watson
+
+206
+00:07:16,860 --> 00:07:19,140
+studio sounds you can tell the Watson
+
+207
+00:07:19,140 --> 00:07:21,330
+studio is really tool for you to go in
+
+208
+00:07:21,330 --> 00:07:23,610
+and build her own an outtake or machine
+
+209
+00:07:23,610 --> 00:07:25,920
+learning applications without you having
+
+210
+00:07:25,920 --> 00:07:28,140
+to be an expert in this field and at the
+
+211
+00:07:28,140 --> 00:07:29,730
+same time you can make use of
+
+212
+00:07:29,730 --> 00:07:31,890
+practically any library you want to you
+
+213
+00:07:31,890 --> 00:07:33,420
+can use all the open source tools that
+
+214
+00:07:33,420 --> 00:07:34,920
+you know and love and if you're an
+
+215
+00:07:34,920 --> 00:07:36,780
+expert you can go really deep inside of
+
+216
+00:07:36,780 --> 00:07:38,610
+your data you can reshape it you can
+
+217
+00:07:38,610 --> 00:07:39,990
+take a look at what's important you can
+
+218
+00:07:39,990 --> 00:07:41,850
+find patterns even yourself that you
+
+219
+00:07:41,850 --> 00:07:43,890
+wouldn't have noticed without the Watson
+
+220
+00:07:43,890 --> 00:07:45,180
+studio and all the tools that it
+
+221
+00:07:45,180 --> 00:07:46,950
+provides but thank you very much all for
+
+222
+00:07:46,950 --> 00:07:49,140
+giving us that detailed over you now
+
+223
+00:07:49,140 --> 00:07:51,090
+though in part two you're gonna be
+
+224
+00:07:51,090 --> 00:07:53,010
+seeing a live demo how you can actually
+
+225
+00:07:53,010 --> 00:07:55,470
+use of the Watson studio in order to
+
+226
+00:07:55,470 --> 00:07:57,540
+take a custom data set and actually
+
+227
+00:07:57,540 --> 00:07:59,310
+understand it inside and out using a
+
+228
+00:07:59,310 --> 00:08:01,020
+bunch of the different tools at the
+
+229
+00:08:01,020 --> 00:08:03,030
+Watson studio provides so again thank
+
+230
+00:08:03,030 --> 00:08:04,260
+you very much Rob for joining in today
+
+231
+00:08:04,260 --> 00:08:06,060
+and that's what we have thank you guys
+
+232
+00:08:06,060 --> 00:08:08,040
+of course thank you very much Rob glad
+
+233
+00:08:08,040 --> 00:08:10,170
+to have you on on the channel here at
+
+234
+00:08:10,170 --> 00:08:12,330
+Pasteur place and of course thank you
+
+235
+00:08:12,330 --> 00:08:13,650
+very much everyone for joining in today
+
+236
+00:08:13,650 --> 00:08:15,690
+that's what I had for this tutorial
+
+237
+00:08:15,690 --> 00:08:17,730
+today really do hope you enjoyed part
+
+238
+00:08:17,730 --> 00:08:18,780
+from that if you do have any questions
+
+239
+00:08:18,780 --> 00:08:20,550
+suggestions or feedback you can e-mail
+
+240
+00:08:20,550 --> 00:08:24,210
+or contact either or Rob so Rob how can
+
+241
+00:08:24,210 --> 00:08:26,640
+how can viewers contact you I'm on
+
+242
+00:08:26,640 --> 00:08:29,940
+LinkedIn and Rob Robert hi and on
+
+243
+00:08:29,940 --> 00:08:31,740
+Twitter at RI
+
+244
+00:08:31,740 --> 00:08:34,170
+Rho gh that's perfect I'll put your
+
+245
+00:08:34,170 --> 00:08:36,090
+contact down in the description below is
+
+246
+00:08:36,090 --> 00:08:37,650
+that you can go ahead and contact Rob if
+
+247
+00:08:37,650 --> 00:08:39,330
+you'd like to and you can of course
+
+248
+00:08:39,330 --> 00:08:40,920
+contact me my email on Twitter will be
+
+249
+00:08:40,920 --> 00:08:42,840
+in the description as well but if you
+
+250
+00:08:42,840 --> 00:08:44,070
+have any more questions please you'd
+
+251
+00:08:44,070 --> 00:08:45,540
+leave them in the comments down below
+
+252
+00:08:45,540 --> 00:08:47,220
+and Rob and I would love to get back to
+
+253
+00:08:47,220 --> 00:08:48,660
+you again thank you very much everyone
+
+254
+00:08:48,660 --> 00:08:50,220
+for joining in today
+
+255
+00:08:50,220 --> 00:08:51,449
+it's gonna be all for this tutorial to
+
+256
+00:08:51,449 --> 00:08:52,680
+do enjoy the content on the channel
+
+257
+00:08:52,680 --> 00:08:54,839
+please do make sure to subscribe and if
+
+258
+00:08:54,839 --> 00:08:56,220
+you know let's be notified whenever
+
+259
+00:08:56,220 --> 00:08:58,470
+release new videos please do click the
+
+260
+00:08:58,470 --> 00:09:00,269
+bell icon and they will receive an email
+
+261
+00:09:00,269 --> 00:09:02,250
+every time I upload a new video again
+
+262
+00:09:02,250 --> 00:09:03,360
+thank you very much for all for joining
+
+263
+00:09:03,360 --> 00:09:07,189
+in bye bye bye now

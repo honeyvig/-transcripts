@@ -1,0 +1,1975 @@
+1
+00:00:01,060 --> 00:00:05,810
+[Music]
+
+2
+00:00:13,790 --> 00:00:16,529
+so hello there and welcome to another
+
+3
+00:00:16,529 --> 00:00:19,289
+tutorial my name is Henry Bakshi and
+
+4
+00:00:19,289 --> 00:00:20,820
+this time we're going to be going over
+
+5
+00:00:20,820 --> 00:00:24,119
+how you can use CUDA for massively
+
+6
+00:00:24,119 --> 00:00:27,420
+parallel array arithmetic now in this
+
+7
+00:00:27,420 --> 00:00:29,340
+video today I'll show you how you can
+
+8
+00:00:29,340 --> 00:00:32,820
+actually implement CPUC code in order to
+
+9
+00:00:32,820 --> 00:00:36,000
+take two arrays of constant links and of
+
+10
+00:00:36,000 --> 00:00:38,579
+course the exact same length say 5,000
+
+11
+00:00:38,579 --> 00:00:41,190
+elements in each array now we will be
+
+12
+00:00:41,190 --> 00:00:42,690
+working with of course a lot more
+
+13
+00:00:42,690 --> 00:00:45,360
+elements in this video but just for
+
+14
+00:00:45,360 --> 00:00:47,309
+example what you could do is actually
+
+15
+00:00:47,309 --> 00:00:50,460
+add subtract multiply or divide each
+
+16
+00:00:50,460 --> 00:00:52,829
+element in the array for example the
+
+17
+00:00:52,829 --> 00:00:54,870
+first element in the first array and the
+
+18
+00:00:54,870 --> 00:00:56,879
+first element in the second array could
+
+19
+00:00:56,879 --> 00:00:59,460
+be added together or even multiplied or
+
+20
+00:00:59,460 --> 00:01:02,039
+subtracted or divided and that result
+
+21
+00:01:02,039 --> 00:01:05,040
+would be the element first element in
+
+22
+00:01:05,040 --> 00:01:08,070
+the resulting array third array which is
+
+23
+00:01:08,070 --> 00:01:11,340
+the final return value now after I show
+
+24
+00:01:11,340 --> 00:01:13,439
+you how you can implement that in CPU
+
+25
+00:01:13,439 --> 00:01:15,330
+code I'll tell you a few of the
+
+26
+00:01:15,330 --> 00:01:17,909
+drawbacks of converting this to parallel
+
+27
+00:01:17,909 --> 00:01:21,030
+code whether that be parallel CPU or GPU
+
+28
+00:01:21,030 --> 00:01:24,210
+code once that's done I'll show you how
+
+29
+00:01:24,210 --> 00:01:26,700
+you can actually code in that very same
+
+30
+00:01:26,700 --> 00:01:29,759
+system in CUDA C code to create a
+
+31
+00:01:29,759 --> 00:01:33,299
+parallel GPU version of that massively
+
+32
+00:01:33,299 --> 00:01:36,000
+parallel array arithmetic but now let's
+
+33
+00:01:36,000 --> 00:01:38,159
+get over to the Mac part where I'll show
+
+34
+00:01:38,159 --> 00:01:40,200
+you how you can actually implement all
+
+35
+00:01:40,200 --> 00:01:43,320
+of this code alright so welcome back to
+
+36
+00:01:43,320 --> 00:01:45,689
+the Mac part and now I'm going to show
+
+37
+00:01:45,689 --> 00:01:47,640
+you how you can actually implement all
+
+38
+00:01:47,640 --> 00:01:50,399
+of this now let's get started I was
+
+39
+00:01:50,399 --> 00:01:52,229
+actually taking a look at a CPU
+
+40
+00:01:52,229 --> 00:01:54,259
+implementation of such an application
+
+41
+00:01:54,259 --> 00:01:56,820
+now as you can see this is a little bit
+
+42
+00:01:56,820 --> 00:01:58,920
+of what the code looks like it starts
+
+43
+00:01:58,920 --> 00:02:00,750
+off with the includes and of course with
+
+44
+00:02:00,750 --> 00:02:02,040
+C we're going to be including the
+
+45
+00:02:02,040 --> 00:02:04,140
+standard input and output and standard
+
+46
+00:02:04,140 --> 00:02:07,619
+library libraries after that I'm going
+
+47
+00:02:07,619 --> 00:02:09,629
+to this one define a variable called
+
+48
+00:02:09,629 --> 00:02:11,160
+size and I'll talk about what that
+
+49
+00:02:11,160 --> 00:02:13,360
+actually means in just a moment
+
+50
+00:02:13,360 --> 00:02:15,680
+after that I'm going to declare the
+
+51
+00:02:15,680 --> 00:02:17,150
+actual functions that will do the
+
+52
+00:02:17,150 --> 00:02:19,130
+addition multiplication division and
+
+53
+00:02:19,130 --> 00:02:21,560
+subtraction and in this case these are
+
+54
+00:02:21,560 --> 00:02:24,140
+called matrix add matrix multiply matrix
+
+55
+00:02:24,140 --> 00:02:27,110
+divided and matrix subtract the inputs
+
+56
+00:02:27,110 --> 00:02:29,660
+for these functions are input 1 input 2
+
+57
+00:02:29,660 --> 00:02:32,120
+the output where the output will
+
+58
+00:02:32,120 --> 00:02:34,580
+actually go and of course the index of
+
+59
+00:02:34,580 --> 00:02:36,950
+where exactly the inputs should be taken
+
+60
+00:02:36,950 --> 00:02:39,620
+and the output should be given after
+
+61
+00:02:39,620 --> 00:02:41,810
+that all they simply do is they actually
+
+62
+00:02:41,810 --> 00:02:43,910
+take the output array or a pointer to
+
+63
+00:02:43,910 --> 00:02:46,390
+the output array and they set the index
+
+64
+00:02:46,390 --> 00:02:49,550
+element to the input ones index of
+
+65
+00:02:49,550 --> 00:02:51,800
+element plus the input twos index of
+
+66
+00:02:51,800 --> 00:02:54,980
+element matrix ad will then be called as
+
+67
+00:02:54,980 --> 00:02:57,440
+many times as there are elements in the
+
+68
+00:02:57,440 --> 00:02:59,780
+input one and input two arrays it will
+
+69
+00:02:59,780 --> 00:03:01,610
+put the results in the output array and
+
+70
+00:03:01,610 --> 00:03:04,040
+we use index to find out which were
+
+71
+00:03:04,040 --> 00:03:06,380
+which number of the function is actually
+
+72
+00:03:06,380 --> 00:03:08,720
+being called to find out which element
+
+73
+00:03:08,720 --> 00:03:11,260
+in the array is to actually use and set
+
+74
+00:03:11,260 --> 00:03:14,420
+very very similar logic is actually set
+
+75
+00:03:14,420 --> 00:03:17,630
+for the matrix multiply divide and
+
+76
+00:03:17,630 --> 00:03:20,810
+subtract functions except the fact that
+
+77
+00:03:20,810 --> 00:03:21,830
+we're not adding we're either
+
+78
+00:03:21,830 --> 00:03:23,959
+multiplying dividing or subtracting as
+
+79
+00:03:23,959 --> 00:03:27,080
+you can see here but after that in the
+
+80
+00:03:27,080 --> 00:03:29,000
+int main function we're ready for the
+
+81
+00:03:29,000 --> 00:03:31,430
+actual logic that will allow us to run
+
+82
+00:03:31,430 --> 00:03:34,580
+this code now of course it actually
+
+83
+00:03:34,580 --> 00:03:37,880
+begins with allocating the input 1 input
+
+84
+00:03:37,880 --> 00:03:41,270
+2 and output our X the way we do this is
+
+85
+00:03:41,270 --> 00:03:43,730
+by declaring a pointer to input 1 input
+
+86
+00:03:43,730 --> 00:03:48,350
+2 and out each one is equal to malloc
+
+87
+00:03:48,350 --> 00:03:51,470
+meaning memory a lock the size we're
+
+88
+00:03:51,470 --> 00:03:53,570
+passing it is the scien variable we
+
+89
+00:03:53,570 --> 00:03:55,880
+design we defined up in the top of the
+
+90
+00:03:55,880 --> 00:03:59,060
+code multiplied by the size of the float
+
+91
+00:03:59,060 --> 00:04:02,480
+data type and then we're converting this
+
+92
+00:04:02,480 --> 00:04:05,090
+from a void pointer to a float pointer
+
+93
+00:04:05,090 --> 00:04:07,580
+and then putting that into n1 into and
+
+94
+00:04:07,580 --> 00:04:10,820
+out respectively now you've allocated
+
+95
+00:04:10,820 --> 00:04:13,610
+all of your memory now you actually have
+
+96
+00:04:13,610 --> 00:04:15,830
+to give these variables meaning and once
+
+97
+00:04:15,830 --> 00:04:17,989
+you give them meaning you actually have
+
+98
+00:04:17,989 --> 00:04:21,019
+to allow these variables to be given to
+
+99
+00:04:21,019 --> 00:04:22,669
+the functions and then once the
+
+100
+00:04:22,669 --> 00:04:24,500
+functions have the variables they will
+
+101
+00:04:24,500 --> 00:04:26,280
+run their logic on them
+
+102
+00:04:26,280 --> 00:04:28,620
+the way you do this is by looping
+
+103
+00:04:28,620 --> 00:04:32,100
+through zero to the size variable that
+
+104
+00:04:32,100 --> 00:04:34,830
+we defined at the top of the code now
+
+105
+00:04:34,830 --> 00:04:36,720
+the iterator here is going to be an int
+
+106
+00:04:36,720 --> 00:04:40,110
+called I and the way you do this is by
+
+107
+00:04:40,110 --> 00:04:43,620
+saying for int I is equal to 0 I is less
+
+108
+00:04:43,620 --> 00:04:47,460
+than size plus plus I meaning while I is
+
+109
+00:04:47,460 --> 00:04:49,950
+less than size with an initial value of
+
+110
+00:04:49,950 --> 00:04:52,940
+0 increment I and then return its value
+
+111
+00:04:52,940 --> 00:04:55,170
+or at least that's what this means over
+
+112
+00:04:55,170 --> 00:04:58,290
+here now once that's done then you're
+
+113
+00:04:58,290 --> 00:05:00,390
+going to take the highest element of n1
+
+114
+00:05:00,390 --> 00:05:03,180
+and set it to the I variable you're
+
+115
+00:05:03,180 --> 00:05:05,520
+going to take the if' element of n2 and
+
+116
+00:05:05,520 --> 00:05:07,260
+set it to the I variable and you're
+
+117
+00:05:07,260 --> 00:05:09,060
+going to take the highest element of the
+
+118
+00:05:09,060 --> 00:05:12,720
+out variable and set it to 0 it will
+
+119
+00:05:12,720 --> 00:05:15,390
+then run the matrix multiply function on
+
+120
+00:05:15,390 --> 00:05:19,230
+the n1 and n2 arrays the out array and
+
+121
+00:05:19,230 --> 00:05:24,360
+of course the I iterator after that
+
+122
+00:05:24,360 --> 00:05:26,520
+you're done running the matrix function
+
+123
+00:05:26,520 --> 00:05:28,800
+you can then print F the first 10
+
+124
+00:05:28,800 --> 00:05:32,390
+results and then loop through I 0 to 10
+
+125
+00:05:32,390 --> 00:05:35,220
+meaning 0 to 9 in this case because of
+
+126
+00:05:35,220 --> 00:05:37,470
+the way that this is formed and from
+
+127
+00:05:37,470 --> 00:05:40,050
+there you can actually print out all of
+
+128
+00:05:40,050 --> 00:05:43,610
+the first 10 elements in the out array
+
+129
+00:05:43,610 --> 00:05:47,400
+now if you were to run GCC to compile
+
+130
+00:05:47,400 --> 00:05:49,950
+the script and then actually run the
+
+131
+00:05:49,950 --> 00:05:52,919
+file that GCC gives you out you can see
+
+132
+00:05:52,919 --> 00:05:57,030
+that the first 10 results are 0 1 4 9 16
+
+133
+00:05:57,030 --> 00:06:01,830
+25 36 49 64 and 81 and let's make sense
+
+134
+00:06:01,830 --> 00:06:03,540
+because of course the first element is 0
+
+135
+00:06:03,540 --> 00:06:07,530
+10 0 then 1 times 1 2 times 2 3 times 3
+
+136
+00:06:07,530 --> 00:06:10,919
+4 times 4 it continues and continues 5 6
+
+137
+00:06:10,919 --> 00:06:14,280
+7 8 until it's 9 times 9 and as you can
+
+138
+00:06:14,280 --> 00:06:15,720
+see that is correct
+
+139
+00:06:15,720 --> 00:06:18,660
+now of course this is to be accepted or
+
+140
+00:06:18,660 --> 00:06:20,640
+even expected because you're running
+
+141
+00:06:20,640 --> 00:06:23,250
+this on the CPU so any calculations you
+
+142
+00:06:23,250 --> 00:06:26,090
+perform here will be extremely precise
+
+143
+00:06:26,090 --> 00:06:28,350
+however when running it on the GPU
+
+144
+00:06:28,350 --> 00:06:30,180
+that's a little bit of a different story
+
+145
+00:06:30,180 --> 00:06:32,729
+now let's talk about how you can convert
+
+146
+00:06:32,729 --> 00:06:35,729
+all this code to GPU code which you can
+
+147
+00:06:35,729 --> 00:06:37,590
+then go ahead and run and actually run
+
+148
+00:06:37,590 --> 00:06:39,930
+this in very very highly
+
+149
+00:06:39,930 --> 00:06:42,000
+parallel fashion in order to get your
+
+150
+00:06:42,000 --> 00:06:46,320
+results not first of all there are quite
+
+151
+00:06:46,320 --> 00:06:48,330
+a few drawbacks when you're converting
+
+152
+00:06:48,330 --> 00:06:50,789
+this to parallel code whether it be CPU
+
+153
+00:06:50,789 --> 00:06:53,850
+or GPU the number one drawback is well
+
+154
+00:06:53,850 --> 00:06:55,500
+first of all this isn't very
+
+155
+00:06:55,500 --> 00:06:57,660
+computationally expensive meaning each
+
+156
+00:06:57,660 --> 00:07:00,289
+operation doesn't take very much time
+
+157
+00:07:00,289 --> 00:07:03,600
+when each operation takes a lot of time
+
+158
+00:07:03,600 --> 00:07:05,400
+that's usually when you want to
+
+159
+00:07:05,400 --> 00:07:07,400
+implement more parallel procedures
+
+160
+00:07:07,400 --> 00:07:10,530
+however again in this case we're not
+
+161
+00:07:10,530 --> 00:07:12,870
+necessarily looking for whatever takes
+
+162
+00:07:12,870 --> 00:07:15,330
+more time because we're doing so many in
+
+163
+00:07:15,330 --> 00:07:18,360
+parallel that the plain fact that doing
+
+164
+00:07:18,360 --> 00:07:21,780
+millions in parallel it adds up to give
+
+165
+00:07:21,780 --> 00:07:25,349
+us a big time saving however apart from
+
+166
+00:07:25,349 --> 00:07:27,870
+that you also have to remember that when
+
+167
+00:07:27,870 --> 00:07:29,940
+you do things in parallel you also have
+
+168
+00:07:29,940 --> 00:07:32,400
+to combine the results if you've got
+
+169
+00:07:32,400 --> 00:07:35,460
+eight people doing work for you you need
+
+170
+00:07:35,460 --> 00:07:36,690
+to actually go ahead and take the
+
+171
+00:07:36,690 --> 00:07:38,639
+results and combine them into one list
+
+172
+00:07:38,639 --> 00:07:40,259
+of results you can't just take the
+
+173
+00:07:40,259 --> 00:07:41,940
+results and do and do nothing with them
+
+174
+00:07:41,940 --> 00:07:44,370
+you can't just have eight separate lists
+
+175
+00:07:44,370 --> 00:07:47,639
+of results and so there's another sort
+
+176
+00:07:47,639 --> 00:07:49,380
+of bottleneck when you're taking all the
+
+177
+00:07:49,380 --> 00:07:51,389
+results and combining them back to be
+
+178
+00:07:51,389 --> 00:07:54,630
+used in another sequential manner and so
+
+179
+00:07:54,630 --> 00:07:57,000
+that is what that those are just a few
+
+180
+00:07:57,000 --> 00:07:59,669
+of the drawbacks however with GPUs these
+
+181
+00:07:59,669 --> 00:08:01,710
+drawbacks are even more amplified
+
+182
+00:08:01,710 --> 00:08:05,220
+because first of all GPUs do individual
+
+183
+00:08:05,220 --> 00:08:07,740
+operations much slower and much more
+
+184
+00:08:07,740 --> 00:08:10,199
+computationally expensive lis than CPUs
+
+185
+00:08:10,199 --> 00:08:12,419
+do they also do them with much less
+
+186
+00:08:12,419 --> 00:08:15,090
+precision than CPUs can do them and of
+
+187
+00:08:15,090 --> 00:08:17,610
+course when you're using GPUs you have
+
+188
+00:08:17,610 --> 00:08:19,770
+an entirely different memory space than
+
+189
+00:08:19,770 --> 00:08:22,650
+when you've got CPUs what this means is
+
+190
+00:08:22,650 --> 00:08:25,979
+that as you are using your GPU you need
+
+191
+00:08:25,979 --> 00:08:28,590
+to copy your input variables onto your
+
+192
+00:08:28,590 --> 00:08:31,289
+GPU memory and then once and do the
+
+193
+00:08:31,289 --> 00:08:34,110
+calculations in the GPU you need to copy
+
+194
+00:08:34,110 --> 00:08:37,169
+the output variables back onto CPU or
+
+195
+00:08:37,169 --> 00:08:40,680
+host memory now this is quite a bit of a
+
+196
+00:08:40,680 --> 00:08:43,050
+bottleneck and this can become one of
+
+197
+00:08:43,050 --> 00:08:44,459
+the reasons that your application
+
+198
+00:08:44,459 --> 00:08:47,579
+performs slower on GPU and faster on GPU
+
+199
+00:08:47,579 --> 00:08:51,060
+however with extreme parallel operations
+
+200
+00:08:51,060 --> 00:08:54,240
+this cost is really nullified
+
+201
+00:08:54,240 --> 00:08:56,579
+the CPU in general will take more time
+
+202
+00:08:56,579 --> 00:08:59,490
+to execute than the GPU would to copy
+
+203
+00:08:59,490 --> 00:09:03,179
+onto the GPU run and then copy back and
+
+204
+00:09:03,179 --> 00:09:05,519
+so now that I've discussed all of this
+
+205
+00:09:05,519 --> 00:09:07,889
+let's talk about the CUDA implementation
+
+206
+00:09:07,889 --> 00:09:11,009
+of this code now when you're doing when
+
+207
+00:09:11,009 --> 00:09:12,779
+you're running a CUDA implementation you
+
+208
+00:09:12,779 --> 00:09:14,459
+don't need the standard library because
+
+209
+00:09:14,459 --> 00:09:16,379
+you're not allocating any memory on the
+
+210
+00:09:16,379 --> 00:09:19,170
+host without CUDA so you only need to
+
+211
+00:09:19,170 --> 00:09:22,319
+import the standard i/o header after
+
+212
+00:09:22,319 --> 00:09:24,540
+that you can define your size which in
+
+213
+00:09:24,540 --> 00:09:26,670
+this case I'm also defining Mehan as one
+
+214
+00:09:26,670 --> 00:09:29,309
+million now after that there are a few
+
+215
+00:09:29,309 --> 00:09:31,559
+changes in how you actually declare
+
+216
+00:09:31,559 --> 00:09:33,420
+functions that will do the addition
+
+217
+00:09:33,420 --> 00:09:36,139
+multiplication division and subtraction
+
+218
+00:09:36,139 --> 00:09:38,369
+now the first change that you can
+
+219
+00:09:38,369 --> 00:09:40,249
+probably see is that there is a global
+
+220
+00:09:40,249 --> 00:09:42,959
+defined and defined in the beginning of
+
+221
+00:09:42,959 --> 00:09:45,329
+all of these functions what this means
+
+222
+00:09:45,329 --> 00:09:47,189
+is that it'll tell the CUDA C language
+
+223
+00:09:47,189 --> 00:09:49,589
+this is a function that can be called
+
+224
+00:09:49,589 --> 00:09:53,519
+from either device or host after that
+
+225
+00:09:53,519 --> 00:09:54,959
+we're just of course telling it that
+
+226
+00:09:54,959 --> 00:09:57,360
+this will return a void that's default
+
+227
+00:09:57,360 --> 00:09:59,429
+and then of course I'm also putting a
+
+228
+00:09:59,429 --> 00:10:01,920
+kernel underscore before the matrix add
+
+229
+00:10:01,920 --> 00:10:04,259
+matrix multiply matrix dividing matrix
+
+230
+00:10:04,259 --> 00:10:06,809
+subtract this doesn't have any language
+
+231
+00:10:06,809 --> 00:10:08,759
+meaning it's just that of course it's a
+
+232
+00:10:08,759 --> 00:10:11,819
+little bit more clean and you can this
+
+233
+00:10:11,819 --> 00:10:13,410
+is really just a terminology that we're
+
+234
+00:10:13,410 --> 00:10:16,350
+using always CUDA kernel if you don't
+
+235
+00:10:16,350 --> 00:10:17,670
+exactly know what that means well I'd
+
+236
+00:10:17,670 --> 00:10:19,439
+really really recommend that you watch
+
+237
+00:10:19,439 --> 00:10:21,179
+my previous to the tutorial which will
+
+238
+00:10:21,179 --> 00:10:23,040
+introduce you to all the basics
+
+239
+00:10:23,040 --> 00:10:25,439
+terminology drawbacks and benefits of
+
+240
+00:10:25,439 --> 00:10:27,509
+CUDA before continuing to watch this
+
+241
+00:10:27,509 --> 00:10:31,559
+video after that you can go ahead and
+
+242
+00:10:31,559 --> 00:10:33,449
+declare the input that this function
+
+243
+00:10:33,449 --> 00:10:35,790
+takes as you can see this function will
+
+244
+00:10:35,790 --> 00:10:39,089
+take input 1 input 2 and output as the
+
+245
+00:10:39,089 --> 00:10:40,889
+inputs to the function the parameters or
+
+246
+00:10:40,889 --> 00:10:43,379
+the arguments into the function these
+
+247
+00:10:43,379 --> 00:10:46,470
+are all float arrays however you will
+
+248
+00:10:46,470 --> 00:10:48,269
+notice that I'm no longer taking an
+
+249
+00:10:48,269 --> 00:10:51,149
+index integer why is that well it's
+
+250
+00:10:51,149 --> 00:10:53,759
+quite simple because now instead of
+
+251
+00:10:53,759 --> 00:10:57,360
+running for example matrix add 1 million
+
+252
+00:10:57,360 --> 00:11:00,119
+individual times I only call the
+
+253
+00:11:00,119 --> 00:11:02,429
+function once and CUDA will
+
+254
+00:11:02,429 --> 00:11:04,769
+automatically run it those millions of
+
+255
+00:11:04,769 --> 00:11:07,560
+times for me I just need to specify how
+
+256
+00:11:07,560 --> 00:11:09,960
+to run it millions of times from their
+
+257
+00:11:09,960 --> 00:11:12,570
+kuda will automatically give this
+
+258
+00:11:12,570 --> 00:11:14,490
+function a few different variables like
+
+259
+00:11:14,490 --> 00:11:17,279
+block index block dimensions and thread
+
+260
+00:11:17,279 --> 00:11:20,279
+index from there you can calculate the
+
+261
+00:11:20,279 --> 00:11:23,400
+index by using those variables that
+
+262
+00:11:23,400 --> 00:11:26,580
+cooter gives you once you calculate the
+
+263
+00:11:26,580 --> 00:11:28,980
+index then you can actually calculate
+
+264
+00:11:28,980 --> 00:11:31,230
+what the user needs you to calculate
+
+265
+00:11:31,230 --> 00:11:34,860
+which in this case is the output index
+
+266
+00:11:34,860 --> 00:11:37,500
+element is equal to input 1 and input
+
+267
+00:11:37,500 --> 00:11:42,450
+twos some of their indexes element from
+
+268
+00:11:42,450 --> 00:11:44,700
+there I do the same thing for the matrix
+
+269
+00:11:44,700 --> 00:11:47,339
+multiply matrix divided and matrix of
+
+270
+00:11:47,339 --> 00:11:49,440
+track functions except instead of using
+
+271
+00:11:49,440 --> 00:11:51,450
+as addition I use multiplication
+
+272
+00:11:51,450 --> 00:11:55,560
+division and subtraction but after that
+
+273
+00:11:55,560 --> 00:11:58,680
+there are a lot of other changes in how
+
+274
+00:11:58,680 --> 00:12:00,990
+you actually call those functions let's
+
+275
+00:12:00,990 --> 00:12:01,920
+talk about that
+
+276
+00:12:01,920 --> 00:12:03,779
+the first change that you can probably
+
+277
+00:12:03,779 --> 00:12:05,940
+notice is that we're not running the
+
+278
+00:12:05,940 --> 00:12:08,190
+malloc function anymore of course we're
+
+279
+00:12:08,190 --> 00:12:10,860
+not running memory a lock because if you
+
+280
+00:12:10,860 --> 00:12:13,200
+watched my earlier video you know that
+
+281
+00:12:13,200 --> 00:12:15,030
+running malloc will actually give you
+
+282
+00:12:15,030 --> 00:12:17,610
+page' belen ree and page double memory
+
+283
+00:12:17,610 --> 00:12:20,430
+is not very efficient for cuda memory
+
+284
+00:12:20,430 --> 00:12:22,770
+transfers and this is because of course
+
+285
+00:12:22,770 --> 00:12:25,290
+page will memory maybe swap memory it
+
+286
+00:12:25,290 --> 00:12:27,600
+may be giving less priority and in
+
+287
+00:12:27,600 --> 00:12:30,270
+transfer times and just generally page
+
+288
+00:12:30,270 --> 00:12:33,180
+will memory is much slower than pinch
+
+289
+00:12:33,180 --> 00:12:35,370
+memory with page real memory you might
+
+290
+00:12:35,370 --> 00:12:38,280
+be getting 4 to 6 gigabytes per second
+
+291
+00:12:38,280 --> 00:12:40,230
+whereas with pin memory you might be
+
+292
+00:12:40,230 --> 00:12:42,750
+getting 11 or 12 video bytes per second
+
+293
+00:12:42,750 --> 00:12:46,650
+with these sorts of transfers and so in
+
+294
+00:12:46,650 --> 00:12:48,750
+order to allocate this pinned memory
+
+295
+00:12:48,750 --> 00:12:51,720
+what I do is I run CUDA host a lock and
+
+296
+00:12:51,720 --> 00:12:54,000
+this will make the CUDA library allocate
+
+297
+00:12:54,000 --> 00:12:56,310
+memory on the host instead of using a
+
+298
+00:12:56,310 --> 00:12:58,380
+host function to allocate memory on the
+
+299
+00:12:58,380 --> 00:13:02,580
+host for you in essence I pass a pointer
+
+300
+00:13:02,580 --> 00:13:07,050
+to N 1 into and out I tell it the size
+
+301
+00:13:07,050 --> 00:13:09,570
+of these variables in this case the size
+
+302
+00:13:09,570 --> 00:13:12,720
+constant times the size of the float
+
+303
+00:13:12,720 --> 00:13:15,930
+data type and then I pass it in CUDA
+
+304
+00:13:15,930 --> 00:13:18,440
+host out lock and default enumerator
+
+305
+00:13:18,440 --> 00:13:20,610
+essentially this will tell it that we're
+
+306
+00:13:20,610 --> 00:13:21,089
+just doing
+
+307
+00:13:21,089 --> 00:13:25,019
+a default host a lock after that what I
+
+308
+00:13:25,019 --> 00:13:27,959
+do is I initialize these variables in
+
+309
+00:13:27,959 --> 00:13:31,019
+one into and out by setting of course as
+
+310
+00:13:31,019 --> 00:13:34,620
+you saw in the last CPU in one's AF
+
+311
+00:13:34,620 --> 00:13:37,740
+element to I into science element I and
+
+312
+00:13:37,740 --> 00:13:41,999
+outs AF element to zero after that what
+
+313
+00:13:41,999 --> 00:13:44,399
+I do is I declare three more floats and
+
+314
+00:13:44,399 --> 00:13:47,279
+these are d underscore in one into and
+
+315
+00:13:47,279 --> 00:13:50,189
+out now what does the D underscore mean
+
+316
+00:13:50,189 --> 00:13:53,129
+well D underscore stands for device
+
+317
+00:13:53,129 --> 00:13:56,009
+underscore now what this means is that
+
+318
+00:13:56,009 --> 00:13:58,050
+these are the variables that will be
+
+319
+00:13:58,050 --> 00:14:01,290
+stored in your device or GPU memory
+
+320
+00:14:01,290 --> 00:14:04,860
+instead of your CPU memory the way you
+
+321
+00:14:04,860 --> 00:14:07,439
+do this is by instead of running CUDA
+
+322
+00:14:07,439 --> 00:14:09,720
+host a lock this time you'll run
+
+323
+00:14:09,720 --> 00:14:12,990
+cudamalloc this will run the memory
+
+324
+00:14:12,990 --> 00:14:15,600
+allocation functions of CUDA and this
+
+325
+00:14:15,600 --> 00:14:17,879
+will allow you to allocate memory on
+
+326
+00:14:17,879 --> 00:14:20,850
+your GPU you'll pass a pointer to the
+
+327
+00:14:20,850 --> 00:14:23,970
+device in one into and out and you'll
+
+328
+00:14:23,970 --> 00:14:26,309
+pass it the size of these variables in
+
+329
+00:14:26,309 --> 00:14:28,679
+this case the size constant times the
+
+330
+00:14:28,679 --> 00:14:31,309
+size of the flow data type for each and
+
+331
+00:14:31,309 --> 00:14:35,129
+after that you will actually copy the in
+
+332
+00:14:35,129 --> 00:14:38,040
+one from the host to the n1 to the
+
+333
+00:14:38,040 --> 00:14:41,389
+device and similarly for in two and out
+
+334
+00:14:41,389 --> 00:14:43,920
+now the way you do this is by alarmingly
+
+335
+00:14:43,920 --> 00:14:47,519
+cut out mem copy function you pass it
+
+336
+00:14:47,519 --> 00:14:49,860
+the variable in which you want a copy
+
+337
+00:14:49,860 --> 00:14:52,679
+and then the variable from where you
+
+338
+00:14:52,679 --> 00:14:55,800
+want to copy you then pass it the size
+
+339
+00:14:55,800 --> 00:14:58,410
+of the transfer and you pass it from
+
+340
+00:14:58,410 --> 00:15:00,540
+where to where you're copying in this
+
+341
+00:15:00,540 --> 00:15:03,179
+case we're doing tuna mem copy host to
+
+342
+00:15:03,179 --> 00:15:05,850
+device so we're copying from CPU to GPU
+
+343
+00:15:05,850 --> 00:15:11,040
+memory after that I run the kernel
+
+344
+00:15:11,040 --> 00:15:14,040
+matrix multiply and over here we've got
+
+345
+00:15:14,040 --> 00:15:15,689
+a little bit of logic that will tell
+
+346
+00:15:15,689 --> 00:15:17,910
+CUDA how exactly it should run these
+
+347
+00:15:17,910 --> 00:15:21,660
+functions or run this function
+
+348
+00:15:21,660 --> 00:15:24,240
+now essentially what this means is that
+
+349
+00:15:24,240 --> 00:15:27,330
+we're taking the size in which case is 1
+
+350
+00:15:27,330 --> 00:15:30,720
+million and we're telling CUDA how many
+
+351
+00:15:30,720 --> 00:15:34,260
+blocks there should be now a block is
+
+352
+00:15:34,260 --> 00:15:37,680
+essentially a block of threads now do
+
+353
+00:15:37,680 --> 00:15:40,320
+remember that the GPU that I'm using the
+
+354
+00:15:40,320 --> 00:15:43,710
+gtx 1070 can only run ten twenty four
+
+355
+00:15:43,710 --> 00:15:45,990
+consecutive threads in one block at
+
+356
+00:15:45,990 --> 00:15:49,620
+least not on the chip on a block and so
+
+357
+00:15:49,620 --> 00:15:51,810
+what you have to do is calculate how
+
+358
+00:15:51,810 --> 00:15:54,510
+many blocks you'll have to use now in
+
+359
+00:15:54,510 --> 00:15:57,750
+this case you have 1 million of these
+
+360
+00:15:57,750 --> 00:16:01,380
+you have 1 million individual a 1
+
+361
+00:16:01,380 --> 00:16:04,170
+million 5 in 1 million elements meaning
+
+362
+00:16:04,170 --> 00:16:05,850
+that you want to run this function a
+
+363
+00:16:05,850 --> 00:16:10,020
+million times now you can only have 1024
+
+364
+00:16:10,020 --> 00:16:12,450
+threads in a block and each thread will
+
+365
+00:16:12,450 --> 00:16:15,780
+handle one individual element so now
+
+366
+00:16:15,780 --> 00:16:17,160
+what you need to do is divide this by
+
+367
+00:16:17,160 --> 00:16:19,380
+1024 and that's how many blocks you'll
+
+368
+00:16:19,380 --> 00:16:22,470
+use but then there's a problem what's
+
+369
+00:16:22,470 --> 00:16:23,190
+the problem
+
+370
+00:16:23,190 --> 00:16:26,400
+well let's just say that you have less
+
+371
+00:16:26,400 --> 00:16:30,450
+than 1024 elements say 300 elements then
+
+372
+00:16:30,450 --> 00:16:33,750
+you don't even have one single block so
+
+373
+00:16:33,750 --> 00:16:36,330
+you need to take all these and add one
+
+374
+00:16:36,330 --> 00:16:39,090
+block to it and similarly if you have
+
+375
+00:16:39,090 --> 00:16:42,810
+over mil over 1024 then that doesn't
+
+376
+00:16:42,810 --> 00:16:44,760
+really matter CUDA will just ignore that
+
+377
+00:16:44,760 --> 00:16:47,550
+extra block and of course the number of
+
+378
+00:16:47,550 --> 00:16:50,190
+threads that you're using are 1024 so
+
+379
+00:16:50,190 --> 00:16:51,750
+you calculate the number of blocks and
+
+380
+00:16:51,750 --> 00:16:57,180
+then tell that you have 1024 threads now
+
+381
+00:16:57,180 --> 00:16:59,700
+after that you pass it the device
+
+382
+00:16:59,700 --> 00:17:03,530
+variables for in one into and out
+
+383
+00:17:03,530 --> 00:17:06,120
+finally once that's done now this is
+
+384
+00:17:06,120 --> 00:17:07,949
+going to be run synchronously it's not
+
+385
+00:17:07,949 --> 00:17:09,600
+like you just started the task and then
+
+386
+00:17:09,600 --> 00:17:11,730
+it'll return to you it'll automatically
+
+387
+00:17:11,730 --> 00:17:14,189
+wait and once all of it is done
+
+388
+00:17:14,189 --> 00:17:16,170
+executing and this is really the best
+
+389
+00:17:16,170 --> 00:17:18,720
+part about CUDA it's not asynchronous
+
+390
+00:17:18,720 --> 00:17:20,610
+unless you want it to be you could tell
+
+391
+00:17:20,610 --> 00:17:23,280
+it to happening synchronously however it
+
+392
+00:17:23,280 --> 00:17:25,439
+becomes a lot easier to program in a
+
+393
+00:17:25,439 --> 00:17:27,660
+circumstance like this where I want it
+
+394
+00:17:27,660 --> 00:17:29,910
+to act like a CPU function or a
+
+395
+00:17:29,910 --> 00:17:32,310
+sequential function whereas everything
+
+396
+00:17:32,310 --> 00:17:34,230
+that's parallel is handled in the
+
+397
+00:17:34,230 --> 00:17:34,860
+backend
+
+398
+00:17:34,860 --> 00:17:38,700
+is actually happening but once that's
+
+399
+00:17:38,700 --> 00:17:41,580
+done I then run kunam em copy and I
+
+400
+00:17:41,580 --> 00:17:45,179
+actually copy into the host out variable
+
+401
+00:17:45,179 --> 00:17:48,270
+from the device out variable I give it
+
+402
+00:17:48,270 --> 00:17:50,400
+the size and I tell it that I'm copying
+
+403
+00:17:50,400 --> 00:17:52,440
+from the Vice Center to host memory
+
+404
+00:17:52,440 --> 00:17:54,929
+because remember the output of this
+
+405
+00:17:54,929 --> 00:17:57,330
+function was given in device memory I
+
+406
+00:17:57,330 --> 00:18:00,150
+now need to copy that from device memory
+
+407
+00:18:00,150 --> 00:18:02,580
+over a host memory and then in host
+
+408
+00:18:02,580 --> 00:18:04,650
+memory I can do it ever else I want to
+
+409
+00:18:04,650 --> 00:18:08,400
+win it and from here it's as if nothing
+
+410
+00:18:08,400 --> 00:18:10,890
+ever happened with the GPU it's as if we
+
+411
+00:18:10,890 --> 00:18:13,620
+just had those results just like the CPU
+
+412
+00:18:13,620 --> 00:18:16,470
+gave it to us we can use it just like we
+
+413
+00:18:16,470 --> 00:18:19,890
+would any other result from there you
+
+414
+00:18:19,890 --> 00:18:22,290
+can print out first ten results using
+
+415
+00:18:22,290 --> 00:18:25,530
+the exact same logic that you did last
+
+416
+00:18:25,530 --> 00:18:28,890
+time I'm now going to exit out of the
+
+417
+00:18:28,890 --> 00:18:32,669
+editor and run MVCC the nvidia cuda
+
+418
+00:18:32,669 --> 00:18:35,820
+compiler i'm going to pass it my cuda
+
+419
+00:18:35,820 --> 00:18:37,679
+file I mean want to tell it that I want
+
+420
+00:18:37,679 --> 00:18:40,500
+to run you can specify an architecture
+
+421
+00:18:40,500 --> 00:18:42,660
+though for example if I were to run you
+
+422
+00:18:42,660 --> 00:18:43,950
+can see for some reason it will
+
+423
+00:18:43,950 --> 00:18:46,350
+automatically use older architectures
+
+424
+00:18:46,350 --> 00:18:52,140
+and so in theory I can actually specify
+
+425
+00:18:52,140 --> 00:19:01,830
+it to use newer architectures and it
+
+426
+00:19:01,830 --> 00:19:04,110
+uses a newer architecture the warning is
+
+427
+00:19:04,110 --> 00:19:05,730
+not given to me because this one is not
+
+428
+00:19:05,730 --> 00:19:07,140
+deprecated this is the latest
+
+429
+00:19:07,140 --> 00:19:10,049
+architecture compatible you compute 6.1
+
+430
+00:19:10,049 --> 00:19:11,790
+architecture and I can of course also
+
+431
+00:19:11,790 --> 00:19:14,010
+apart from this SM I can also use the
+
+432
+00:19:14,010 --> 00:19:16,350
+compute architectures they both work
+
+433
+00:19:16,350 --> 00:19:19,320
+perfectly and as you can see we again
+
+434
+00:19:19,320 --> 00:19:21,059
+get the correct results because of
+
+435
+00:19:21,059 --> 00:19:24,179
+course zeros on 0 1 1 1 times 1/2 times
+
+436
+00:19:24,179 --> 00:19:27,809
+2 3 times 3 4 times 4 etc etc all the
+
+437
+00:19:27,809 --> 00:19:31,260
+way to 9 times 9 and as you can see all
+
+438
+00:19:31,260 --> 00:19:33,809
+these results are correct which again a
+
+439
+00:19:33,809 --> 00:19:37,080
+cheap you isn't even not that precise it
+
+440
+00:19:37,080 --> 00:19:39,210
+is it is more than precise enough to
+
+441
+00:19:39,210 --> 00:19:41,190
+actually give us these results correctly
+
+442
+00:19:41,190 --> 00:19:44,700
+and as you can see we have run all these
+
+443
+00:19:44,700 --> 00:19:46,010
+one
+
+444
+00:19:46,010 --> 00:19:49,250
+multiplication problems in parallel
+
+445
+00:19:49,250 --> 00:19:50,750
+now of course though if you're looking
+
+446
+00:19:50,750 --> 00:19:53,210
+to get an advantage while using a GPU
+
+447
+00:19:53,210 --> 00:19:56,870
+over a CPU you definitely want many many
+
+448
+00:19:56,870 --> 00:19:59,030
+more operations to be run in parallel
+
+449
+00:19:59,030 --> 00:20:01,930
+because of course we're copying
+
+450
+00:20:01,930 --> 00:20:04,130
+megabytes two gigabytes of information
+
+451
+00:20:04,130 --> 00:20:07,880
+to and from the CPU and GPU and so you
+
+452
+00:20:07,880 --> 00:20:10,070
+need enough of those operations to
+
+453
+00:20:10,070 --> 00:20:13,160
+balance out the disadvantages of the GPU
+
+454
+00:20:13,160 --> 00:20:15,050
+gives you the drawbacks of bottlenecks
+
+455
+00:20:15,050 --> 00:20:17,390
+you need to balance those out and of
+
+456
+00:20:17,390 --> 00:20:19,550
+course running more and more things in
+
+457
+00:20:19,550 --> 00:20:21,770
+parallel will definitely help you do
+
+458
+00:20:21,770 --> 00:20:25,910
+that okay so that's why I had to go over
+
+459
+00:20:25,910 --> 00:20:28,070
+in this video today how you can actually
+
+460
+00:20:28,070 --> 00:20:30,470
+take CPU code that allows you to do
+
+461
+00:20:30,470 --> 00:20:33,950
+arithmetic on a on a raise and actually
+
+462
+00:20:33,950 --> 00:20:36,470
+go ahead and convert that to GPU code in
+
+463
+00:20:36,470 --> 00:20:38,990
+CUDA I really do hope you enjoy today
+
+464
+00:20:38,990 --> 00:20:41,330
+thank you very much for joining and of
+
+465
+00:20:41,330 --> 00:20:42,740
+course if you like the video please -
+
+466
+00:20:42,740 --> 00:20:44,540
+make sure to leave a like down below and
+
+467
+00:20:44,540 --> 00:20:45,680
+of course if you think this could help
+
+468
+00:20:45,680 --> 00:20:47,000
+anybody else you know like your friends
+
+469
+00:20:47,000 --> 00:20:48,320
+our family please do consider sharing
+
+470
+00:20:48,320 --> 00:20:50,990
+this video as well of course so apart
+
+471
+00:20:50,990 --> 00:20:52,460
+from that if you have any more questions
+
+472
+00:20:52,460 --> 00:20:53,900
+suggestions or feedback please do make
+
+473
+00:20:53,900 --> 00:20:55,070
+sure to leave it down in the comment
+
+474
+00:20:55,070 --> 00:20:57,590
+section below you can you can also email
+
+475
+00:20:57,590 --> 00:21:00,560
+out to me at Tasmania gmail.com or leave
+
+476
+00:21:00,560 --> 00:21:02,300
+it down as a comment in the comment
+
+477
+00:21:02,300 --> 00:21:04,940
+section below or even tweet to me ask
+
+478
+00:21:04,940 --> 00:21:07,850
+Taji mani that's going to be it for this
+
+479
+00:21:07,850 --> 00:21:10,160
+video today thank you very much for
+
+480
+00:21:10,160 --> 00:21:11,630
+joining and if you'd like to subscribe
+
+481
+00:21:11,630 --> 00:21:13,400
+to my channel if you really do like my
+
+482
+00:21:13,400 --> 00:21:14,600
+content you want to see more of it
+
+483
+00:21:14,600 --> 00:21:18,140
+please do and of course if you'd like to
+
+484
+00:21:18,140 --> 00:21:19,790
+turn on notifications please do as well
+
+485
+00:21:19,790 --> 00:21:21,800
+if you'd like to be notified of any more
+
+486
+00:21:21,800 --> 00:21:24,260
+of my future content right as I release
+
+487
+00:21:24,260 --> 00:21:26,750
+it over email and YouTube notification
+
+488
+00:21:26,750 --> 00:21:29,270
+so thank you very much for joining today
+
+489
+00:21:29,270 --> 00:21:31,160
+stay tuned for the next part of the
+
+490
+00:21:31,160 --> 00:21:33,980
+Kunis series and of course - I will also
+
+491
+00:21:33,980 --> 00:21:36,080
+be starting an entirely new C and C++
+
+492
+00:21:36,080 --> 00:21:39,110
+series talking about all of these C
+
+493
+00:21:39,110 --> 00:21:41,600
+basics in the first place thank you very
+
+494
+00:21:41,600 --> 00:21:44,530
+much goodbye

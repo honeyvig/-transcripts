@@ -1,0 +1,7187 @@
+1
+00:00:01,439 --> 00:00:03,639
+hey everyone thanks for joining us my
+
+2
+00:00:03,639 --> 00:00:05,839
+name is James arery and you probably
+
+3
+00:00:05,839 --> 00:00:09,160
+know it's Tade boxy again hello um we're
+
+4
+00:00:09,160 --> 00:00:10,800
+actually excited to announce a new
+
+5
+00:00:10,800 --> 00:00:13,719
+series this year called um building that
+
+6
+00:00:13,719 --> 00:00:16,520
+t May Watson Made Simple series um where
+
+7
+00:00:16,520 --> 00:00:18,039
+Tam is going to be taking you through a
+
+8
+00:00:18,039 --> 00:00:19,840
+journey throughout this year on some of
+
+9
+00:00:19,840 --> 00:00:21,160
+these awesome Technologies and
+
+10
+00:00:21,160 --> 00:00:23,760
+capabilities that we have but from a
+
+11
+00:00:23,760 --> 00:00:25,240
+real world's perspective and how to
+
+12
+00:00:25,240 --> 00:00:28,000
+apply that exactly and you know Tam May
+
+13
+00:00:28,000 --> 00:00:29,800
+quickly introduce yourself sure I mean
+
+14
+00:00:29,800 --> 00:00:32,119
+hi hi there uh I'm tanway bakshi uh I
+
+15
+00:00:32,119 --> 00:00:34,520
+live just outside of Toronto in Bramton
+
+16
+00:00:34,520 --> 00:00:37,120
+Canada uh and I'm an honorary IBM Cloud
+
+17
+00:00:37,120 --> 00:00:39,719
+advisor and an IBM Champion for cloud so
+
+18
+00:00:39,719 --> 00:00:41,320
+as James said this is going to be our
+
+19
+00:00:41,320 --> 00:00:43,879
+first episode of many in the new Watson
+
+20
+00:00:43,879 --> 00:00:46,199
+Made Simple with tanm series uh we're
+
+21
+00:00:46,199 --> 00:00:48,039
+going to actually be doing some regular
+
+22
+00:00:48,039 --> 00:00:49,840
+episodes and this year we're going to be
+
+23
+00:00:49,840 --> 00:00:52,120
+having some special guests on the show
+
+24
+00:00:52,120 --> 00:00:54,640
+as well so I guess now without any
+
+25
+00:00:54,640 --> 00:00:56,600
+further Ado should we begin yeah and you
+
+26
+00:00:56,600 --> 00:00:59,199
+know Tam I would love for you to help me
+
+27
+00:00:59,199 --> 00:01:01,719
+figure out how to get solve my Hunger
+
+28
+00:01:01,719 --> 00:01:03,480
+I'm really hungry right now and I have a
+
+29
+00:01:03,480 --> 00:01:05,760
+hankerin for pizza Ken Watson helped me
+
+30
+00:01:05,760 --> 00:01:08,640
+get a pizza definitely in fact that's
+
+31
+00:01:08,640 --> 00:01:10,840
+the point of this Facebook live event
+
+32
+00:01:10,840 --> 00:01:15,080
+today so and so today we're going to be
+
+33
+00:01:15,080 --> 00:01:18,080
+showing you how you can build a chatbot
+
+34
+00:01:18,080 --> 00:01:20,640
+that could actually order pizza for you
+
+35
+00:01:20,640 --> 00:01:24,880
+through a rest API on an iOS application
+
+36
+00:01:24,880 --> 00:01:26,560
+so basically we're going to have an iOS
+
+37
+00:01:26,560 --> 00:01:28,240
+application where you can converse with
+
+38
+00:01:28,240 --> 00:01:31,000
+IBM Watson through speech and IBM Watson
+
+39
+00:01:31,000 --> 00:01:32,439
+will actually be able to help you build
+
+40
+00:01:32,439 --> 00:01:34,520
+your pizza and then order your pizza
+
+41
+00:01:34,520 --> 00:01:35,759
+through a rest
+
+42
+00:01:35,759 --> 00:01:38,240
+API now just before we actually get into
+
+43
+00:01:38,240 --> 00:01:39,880
+a demo though and before we actually get
+
+44
+00:01:39,880 --> 00:01:40,799
+your
+
+45
+00:01:40,799 --> 00:01:43,000
+pizza let's talk a little bit about the
+
+46
+00:01:43,000 --> 00:01:46,640
+technical side okay please sure so to
+
+47
+00:01:46,640 --> 00:01:48,960
+begin the Watson apis we're going to be
+
+48
+00:01:48,960 --> 00:01:50,840
+using today uh first of all Watson
+
+49
+00:01:50,840 --> 00:01:53,119
+speech to text for input as you can see
+
+50
+00:01:53,119 --> 00:01:55,280
+behind me uh and so speech to text we're
+
+51
+00:01:55,280 --> 00:01:56,960
+going to be using in order for the user
+
+52
+00:01:56,960 --> 00:01:58,840
+to be able to speak to the application
+
+53
+00:01:58,840 --> 00:02:00,680
+and have that converted to text that
+
+54
+00:02:00,680 --> 00:02:03,240
+Watson conversation can then understand
+
+55
+00:02:03,240 --> 00:02:05,200
+and Watson conversation can then of
+
+56
+00:02:05,200 --> 00:02:06,960
+course act as our chatbot and then
+
+57
+00:02:06,960 --> 00:02:08,800
+Watson conversation can give output to
+
+58
+00:02:08,800 --> 00:02:11,720
+the user using IBM Watson's text to
+
+59
+00:02:11,720 --> 00:02:13,440
+speech U so that's how we're going to be
+
+60
+00:02:13,440 --> 00:02:15,360
+giving output to our user through our
+
+61
+00:02:15,360 --> 00:02:16,760
+iOS
+
+62
+00:02:16,760 --> 00:02:19,080
+application of course though as I said
+
+63
+00:02:19,080 --> 00:02:21,160
+this is an iOS application so the
+
+64
+00:02:21,160 --> 00:02:23,440
+language I've coded this application in
+
+65
+00:02:23,440 --> 00:02:27,440
+is Swift however I do have a surprise I
+
+66
+00:02:27,440 --> 00:02:29,640
+guess you could say at the end uh as to
+
+67
+00:02:29,640 --> 00:02:31,879
+how I was able to integrate node.js with
+
+68
+00:02:31,879 --> 00:02:34,120
+this as well so make sure you stay tuned
+
+69
+00:02:34,120 --> 00:02:36,080
+to the end of the alive event in order
+
+70
+00:02:36,080 --> 00:02:38,519
+to see what I was able to do with no JS
+
+71
+00:02:38,519 --> 00:02:41,319
+and this application as well all right
+
+72
+00:02:41,319 --> 00:02:43,519
+so now finally I think we're ready to
+
+73
+00:02:43,519 --> 00:02:45,000
+actually start ordering your pizza using
+
+74
+00:02:45,000 --> 00:02:46,040
+this chat box please let's let's make
+
+75
+00:02:46,040 --> 00:02:49,200
+this thing work all right sure so now
+
+76
+00:02:49,200 --> 00:02:50,959
+let's get to the demo so as you can see
+
+77
+00:02:50,959 --> 00:02:54,519
+what I'm going to do uh is behind me uh
+
+78
+00:02:54,519 --> 00:02:57,800
+you should be able to see my phone here
+
+79
+00:02:57,800 --> 00:03:00,239
+okay and so this is a the my my phone
+
+80
+00:03:00,239 --> 00:03:01,959
+screen being mirrored onto this
+
+81
+00:03:01,959 --> 00:03:04,159
+television behind me uh and so as you
+
+82
+00:03:04,159 --> 00:03:05,920
+can see this is a simple application
+
+83
+00:03:05,920 --> 00:03:08,200
+that I've set up and this is the UI for
+
+84
+00:03:08,200 --> 00:03:11,040
+our chatbot it's extremely simple all we
+
+85
+00:03:11,040 --> 00:03:13,440
+have is a text View and a button the
+
+86
+00:03:13,440 --> 00:03:15,480
+button will allow us to control the
+
+87
+00:03:15,480 --> 00:03:18,400
+recording status of speech to text uh to
+
+88
+00:03:18,400 --> 00:03:20,120
+see when speech to text is and isn't
+
+89
+00:03:20,120 --> 00:03:21,599
+listening to me and I'll show you how
+
+90
+00:03:21,599 --> 00:03:23,319
+that works in just a moment uh but of
+
+91
+00:03:23,319 --> 00:03:24,959
+course we've got an invisible text view
+
+92
+00:03:24,959 --> 00:03:27,200
+on here as well and this text view will
+
+93
+00:03:27,200 --> 00:03:29,280
+allow us to see the input that we're
+
+94
+00:03:29,280 --> 00:03:31,239
+giving one Watson and the output that
+
+95
+00:03:31,239 --> 00:03:33,560
+Watson is giving to us along with that
+
+96
+00:03:33,560 --> 00:03:36,000
+speech to text and text to speech input
+
+97
+00:03:36,000 --> 00:03:38,480
+and output let's actually try it out so
+
+98
+00:03:38,480 --> 00:03:39,959
+let's actually start the conversation
+
+99
+00:03:39,959 --> 00:03:42,640
+with Watson by saying something
+
+100
+00:03:42,640 --> 00:03:46,519
+like hello Watson I would like a
+
+101
+00:03:46,519 --> 00:03:49,560
+pizza so I have stopped and as you can
+
+102
+00:03:49,560 --> 00:03:52,439
+see hi what size pizza would you like
+
+103
+00:03:52,439 --> 00:03:54,200
+all right so I I'm really hungry can we
+
+104
+00:03:54,200 --> 00:03:56,959
+do a large sure definitely uh so as you
+
+105
+00:03:56,959 --> 00:03:58,640
+can see Watson asked us what size we
+
+106
+00:03:58,640 --> 00:04:00,560
+want so now uh Jam wants a large so
+
+107
+00:04:00,560 --> 00:04:02,040
+let's
+
+108
+00:04:02,040 --> 00:04:06,159
+do we would like a large
+
+109
+00:04:08,319 --> 00:04:11,799
+pizza large pizza got it any toppings
+
+110
+00:04:11,799 --> 00:04:15,079
+today all right so as you can see uh it
+
+111
+00:04:15,079 --> 00:04:16,519
+all it's uh tells us that it's
+
+112
+00:04:16,519 --> 00:04:18,600
+understood that we want a large pizza
+
+113
+00:04:18,600 --> 00:04:20,199
+and it asks us for the toppings that we
+
+114
+00:04:20,199 --> 00:04:22,479
+would like uh and so you know let's just
+
+115
+00:04:22,479 --> 00:04:23,759
+say that we've never been here before
+
+116
+00:04:23,759 --> 00:04:25,360
+and we don't know which toppings are
+
+117
+00:04:25,360 --> 00:04:27,759
+provided so we can actually ask Watson
+
+118
+00:04:27,759 --> 00:04:30,440
+conversation since we're in this context
+
+119
+00:04:30,440 --> 00:04:33,639
+Now what are my
+
+120
+00:04:33,639 --> 00:04:36,000
+options and as you can see now I'm done
+
+121
+00:04:36,000 --> 00:04:38,280
+talking to Watson and have cheese olives
+
+122
+00:04:38,280 --> 00:04:40,919
+pineapples and chicken as toppings you
+
+123
+00:04:40,919 --> 00:04:43,520
+can have three toppings tops all right
+
+124
+00:04:43,520 --> 00:04:45,120
+so as you can see Watson has responded
+
+125
+00:04:45,120 --> 00:04:46,880
+to us and it gives us those four
+
+126
+00:04:46,880 --> 00:04:48,360
+different types of toppings that we can
+
+127
+00:04:48,360 --> 00:04:50,440
+have in our pizza of course in an actual
+
+128
+00:04:50,440 --> 00:04:52,039
+chatot you would probably have many more
+
+129
+00:04:52,039 --> 00:04:53,960
+options but in this case since we're
+
+130
+00:04:53,960 --> 00:04:56,320
+going for uh sort of like an example we
+
+131
+00:04:56,320 --> 00:04:58,080
+have cheese olives pineapples and
+
+132
+00:04:58,080 --> 00:05:00,080
+chicken as our toppings and you can have
+
+133
+00:05:00,080 --> 00:05:02,520
+maximum three toppings uh so let's
+
+134
+00:05:02,520 --> 00:05:04,520
+actually try out maybe I guess first
+
+135
+00:05:04,520 --> 00:05:07,240
+topping is cheese please sure got to
+
+136
+00:05:07,240 --> 00:05:09,720
+have cheese I like my first chopping as
+
+137
+00:05:09,720 --> 00:05:13,639
+cheese topping sorry
+
+138
+00:05:16,320 --> 00:05:18,680
+but all right
+
+139
+00:05:18,680 --> 00:05:21,800
+first any preference on crust size okay
+
+140
+00:05:21,800 --> 00:05:23,560
+so Watson still understood what we said
+
+141
+00:05:23,560 --> 00:05:26,080
+even though uh our speech to text didn't
+
+142
+00:05:26,080 --> 00:05:28,880
+exactly go that nice so got the int
+
+143
+00:05:28,880 --> 00:05:30,520
+exactly it stands that intent that's
+
+144
+00:05:30,520 --> 00:05:31,880
+where that machine learning aspect comes
+
+145
+00:05:31,880 --> 00:05:34,520
+in uh with Watson conversation uh and
+
+146
+00:05:34,520 --> 00:05:36,759
+then it asks me if I have any preference
+
+147
+00:05:36,759 --> 00:05:39,120
+on cr- eyes but just before we go to
+
+148
+00:05:39,120 --> 00:05:41,520
+that let's actually specify our second
+
+149
+00:05:41,520 --> 00:05:43,880
+topic sure well I want some protein so
+
+150
+00:05:43,880 --> 00:05:46,360
+can we get a chicken on that definitely
+
+151
+00:05:46,360 --> 00:05:51,440
+so I'd like chicken as my second
+
+152
+00:05:51,520 --> 00:05:54,160
+topping as you can see now speech texal
+
+153
+00:05:54,160 --> 00:05:56,160
+understood what I said and watch all
+
+154
+00:05:56,160 --> 00:05:58,639
+right chicken as your second topping any
+
+155
+00:05:58,639 --> 00:06:01,120
+preference for crust eyes all right so
+
+156
+00:06:01,120 --> 00:06:04,160
+now I think we can get to cross SI um I
+
+157
+00:06:04,160 --> 00:06:06,120
+think maybe we should go for normal I
+
+158
+00:06:06,120 --> 00:06:07,520
+mean I'm trying to watch my carbs can we
+
+159
+00:06:07,520 --> 00:06:10,280
+go thin crust sure let's try that
+
+160
+00:06:10,280 --> 00:06:15,120
+out I'd like a thin crust
+
+161
+00:06:18,440 --> 00:06:21,599
+please all right thin crust it is any
+
+162
+00:06:21,599 --> 00:06:24,000
+sauce requirements all right so speex
+
+163
+00:06:24,000 --> 00:06:26,240
+luckily understood what we said uh and
+
+164
+00:06:26,240 --> 00:06:28,479
+so Watson conversation has replied to us
+
+165
+00:06:28,479 --> 00:06:29,800
+and now it's asking us what we like to
+
+166
+00:06:29,800 --> 00:06:31,520
+do in terms of sauce so let's ask it
+
+167
+00:06:31,520 --> 00:06:33,080
+what our options are here and let's uh
+
+168
+00:06:33,080 --> 00:06:38,000
+decide according to that what are my
+
+169
+00:06:38,039 --> 00:06:41,440
+options okay and then you can have no
+
+170
+00:06:41,440 --> 00:06:43,759
+sauce we can go easy on the sauce you
+
+171
+00:06:43,759 --> 00:06:45,919
+can keep the normal amount of sauce or
+
+172
+00:06:45,919 --> 00:06:48,440
+we can add extra sauce all right so
+
+173
+00:06:48,440 --> 00:06:50,520
+Watson has replied to us now it gives us
+
+174
+00:06:50,520 --> 00:06:52,240
+those four options in terms of sauce
+
+175
+00:06:52,240 --> 00:06:53,560
+that we can have so James what you do
+
+176
+00:06:53,560 --> 00:06:55,479
+what would you prefer here let's go easy
+
+177
+00:06:55,479 --> 00:06:59,199
+on the sauce all right so please go easy
+
+178
+00:06:59,199 --> 00:07:01,520
+on the
+
+179
+00:07:01,560 --> 00:07:05,039
+sauce and so Watson says all right we'll
+
+180
+00:07:05,039 --> 00:07:07,199
+go easy on the sauce would there be
+
+181
+00:07:07,199 --> 00:07:08,000
+anything
+
+182
+00:07:08,000 --> 00:07:10,319
+else well I mean I think that's it for
+
+183
+00:07:10,319 --> 00:07:12,120
+today I'm good I'm hungry I'm really
+
+184
+00:07:12,120 --> 00:07:15,479
+hungry so am I so this works perfectly
+
+185
+00:07:15,479 --> 00:07:19,039
+so that's all for
+
+186
+00:07:21,680 --> 00:07:24,800
+today all right great you will be able
+
+187
+00:07:24,800 --> 00:07:27,199
+to pick up your pizza soon all right so
+
+188
+00:07:27,199 --> 00:07:29,080
+as you can see Watson has sent in the
+
+189
+00:07:29,080 --> 00:07:31,199
+order and it actually shows us those
+
+190
+00:07:31,199 --> 00:07:33,639
+final specifications of our pizza the
+
+191
+00:07:33,639 --> 00:07:35,520
+size is large the crust is thin the
+
+192
+00:07:35,520 --> 00:07:37,759
+sauce is easy topping one is cheese
+
+193
+00:07:37,759 --> 00:07:40,520
+topping two is chicken and Topping three
+
+194
+00:07:40,520 --> 00:07:43,440
+is nothing and that's the application
+
+195
+00:07:43,440 --> 00:07:44,919
+I'm going to be showing you how you can
+
+196
+00:07:44,919 --> 00:07:49,000
+coat in today in a live coating session
+
+197
+00:07:49,000 --> 00:07:50,879
+uh but just before we actually get into
+
+198
+00:07:50,879 --> 00:07:53,720
+that I guess uh it's Pizza time
+
+199
+00:07:53,720 --> 00:07:57,879
+then yeah so we actually do have a pizza
+
+200
+00:07:57,879 --> 00:08:00,199
+here so that's good
+
+201
+00:08:00,199 --> 00:08:01,240
+great
+
+202
+00:08:01,240 --> 00:08:04,080
+so this is nice so we can uh start
+
+203
+00:08:04,080 --> 00:08:07,120
+eating now since we're hungry but now
+
+204
+00:08:07,120 --> 00:08:09,280
+finally we can get into the technical
+
+205
+00:08:09,280 --> 00:08:11,639
+part of this demonstration so if I
+
+206
+00:08:11,639 --> 00:08:14,599
+actually switch back to my computer here
+
+207
+00:08:14,599 --> 00:08:17,479
+as you can see behind me we're going to
+
+208
+00:08:17,479 --> 00:08:19,800
+start building a diagram of how this
+
+209
+00:08:19,800 --> 00:08:23,879
+application actually works uh so now the
+
+210
+00:08:23,879 --> 00:08:25,560
+first thing is that we've got a few
+
+211
+00:08:25,560 --> 00:08:28,400
+components of this entire system uh and
+
+212
+00:08:28,400 --> 00:08:30,680
+so the first most important ingredient
+
+213
+00:08:30,680 --> 00:08:32,080
+to this application I guess you could
+
+214
+00:08:32,080 --> 00:08:34,000
+say is our hungry user in this case
+
+215
+00:08:34,000 --> 00:08:36,279
+James yes who is actually trying to
+
+216
+00:08:36,279 --> 00:08:37,719
+order the
+
+217
+00:08:37,719 --> 00:08:40,680
+pizza of course I just took my pizza
+
+218
+00:08:40,680 --> 00:08:44,320
+away well though of course we've got the
+
+219
+00:08:44,320 --> 00:08:46,080
+application which is going to help us
+
+220
+00:08:46,080 --> 00:08:48,680
+order the pizza of course we've got our
+
+221
+00:08:48,680 --> 00:08:50,880
+Watson Suite of apis which will actually
+
+222
+00:08:50,880 --> 00:08:53,399
+help us have the application order the
+
+223
+00:08:53,399 --> 00:08:54,880
+pizza itself and understand what the
+
+224
+00:08:54,880 --> 00:08:57,320
+user is saying but of course the rest
+
+225
+00:08:57,320 --> 00:09:00,240
+API will actually order the pizza itself
+
+226
+00:09:00,240 --> 00:09:03,440
+and receive the specifications from our
+
+227
+00:09:03,440 --> 00:09:05,680
+application now basically the way this
+
+228
+00:09:05,680 --> 00:09:08,120
+works is obviously the user gives us
+
+229
+00:09:08,120 --> 00:09:10,720
+some input uh to the application now
+
+230
+00:09:10,720 --> 00:09:12,200
+again the application will be doing all
+
+231
+00:09:12,200 --> 00:09:14,279
+of the orchestration here and so the
+
+232
+00:09:14,279 --> 00:09:17,399
+application takes this input uh and once
+
+233
+00:09:17,399 --> 00:09:19,240
+the application has input from the user
+
+234
+00:09:19,240 --> 00:09:21,480
+voice input we can't just directly give
+
+235
+00:09:21,480 --> 00:09:24,320
+that to conversation unfortunately so we
+
+236
+00:09:24,320 --> 00:09:26,600
+have to convert it to a string so what
+
+237
+00:09:26,600 --> 00:09:28,279
+we need to do is we need to take that
+
+238
+00:09:28,279 --> 00:09:30,480
+voice and we need to convert it to text
+
+239
+00:09:30,480 --> 00:09:32,680
+by running it through text to speech uh
+
+240
+00:09:32,680 --> 00:09:35,160
+sorry speech to text speech to text will
+
+241
+00:09:35,160 --> 00:09:37,519
+then take that wave file of the user's
+
+242
+00:09:37,519 --> 00:09:39,480
+voice and it'll convert that into a
+
+243
+00:09:39,480 --> 00:09:42,040
+string that string can then be sent back
+
+244
+00:09:42,040 --> 00:09:44,200
+to the application and the application
+
+245
+00:09:44,200 --> 00:09:46,320
+now has some input data that
+
+246
+00:09:46,320 --> 00:09:48,640
+conversation can actually work with this
+
+247
+00:09:48,640 --> 00:09:51,440
+is the thin crust that those exactly
+
+248
+00:09:51,440 --> 00:09:52,920
+exactly like for example when I would
+
+249
+00:09:52,920 --> 00:09:54,920
+say please go easy on the sauce that's
+
+250
+00:09:54,920 --> 00:09:56,839
+my voice that speech detects then
+
+251
+00:09:56,839 --> 00:09:59,079
+converting to a string please go easy on
+
+252
+00:09:59,079 --> 00:10:00,120
+the sauce
+
+253
+00:10:00,120 --> 00:10:02,560
+which can then be sent to and is sent to
+
+254
+00:10:02,560 --> 00:10:05,120
+Watson conversation Watson and of course
+
+255
+00:10:05,120 --> 00:10:06,800
+we are sending a little bit of metadata
+
+256
+00:10:06,800 --> 00:10:09,399
+about the actual conversation context on
+
+257
+00:10:09,399 --> 00:10:10,959
+how our conversation's going what was
+
+258
+00:10:10,959 --> 00:10:14,200
+said last uh and so uh once we have that
+
+259
+00:10:14,200 --> 00:10:16,839
+context in order then conversation is
+
+260
+00:10:16,839 --> 00:10:19,680
+going to return to us a response now
+
+261
+00:10:19,680 --> 00:10:21,760
+this response not only contains what it
+
+262
+00:10:21,760 --> 00:10:23,800
+wants to reply to the user but it also
+
+263
+00:10:23,800 --> 00:10:25,839
+contains some new metadata about the
+
+264
+00:10:25,839 --> 00:10:28,040
+conversation which is then sent back in
+
+265
+00:10:28,040 --> 00:10:30,040
+the next request so you'll actually see
+
+266
+00:10:30,040 --> 00:10:32,000
+a bit more of that about how that logic
+
+267
+00:10:32,000 --> 00:10:34,440
+works in the actual live coding session
+
+268
+00:10:34,440 --> 00:10:36,920
+but that's basically how that works but
+
+269
+00:10:36,920 --> 00:10:38,560
+then in order to make sure that the user
+
+270
+00:10:38,560 --> 00:10:40,920
+doesn't even need to read the screen we
+
+271
+00:10:40,920 --> 00:10:43,720
+send what Watson conversation told us to
+
+272
+00:10:43,720 --> 00:10:46,120
+Text to Speech Text Speech will then
+
+273
+00:10:46,120 --> 00:10:48,360
+synthesize what the US what conversation
+
+274
+00:10:48,360 --> 00:10:50,360
+is trying to say to the user and that's
+
+275
+00:10:50,360 --> 00:10:53,519
+sent as a wave audio file back to the
+
+276
+00:10:53,519 --> 00:10:55,839
+application the application then plays
+
+277
+00:10:55,839 --> 00:10:57,480
+that out through the iOS devices
+
+278
+00:10:57,480 --> 00:11:00,360
+speakers and then finally the user can
+
+279
+00:11:00,360 --> 00:11:02,760
+have their output the user will then
+
+280
+00:11:02,760 --> 00:11:04,360
+continue this cycle over and over and
+
+281
+00:11:04,360 --> 00:11:06,519
+over again just as we did in the demo
+
+282
+00:11:06,519 --> 00:11:08,600
+until they're done specifying what their
+
+283
+00:11:08,600 --> 00:11:11,279
+Pizza will contain and once that's done
+
+284
+00:11:11,279 --> 00:11:13,959
+of course we call our rest API which is
+
+285
+00:11:13,959 --> 00:11:16,760
+going to actually order the pizza as it
+
+286
+00:11:16,760 --> 00:11:20,240
+did today all right so that's exactly
+
+287
+00:11:20,240 --> 00:11:22,600
+all how the technical part of this
+
+288
+00:11:22,600 --> 00:11:25,040
+application will
+
+289
+00:11:25,040 --> 00:11:28,079
+work now though let's actually get into
+
+290
+00:11:28,079 --> 00:11:30,200
+a live coding session where I'm going to
+
+291
+00:11:30,200 --> 00:11:33,040
+show you how you can actually implement
+
+292
+00:11:33,040 --> 00:11:35,720
+this code but before we get into that
+
+293
+00:11:35,720 --> 00:11:36,880
+what you should do is you should
+
+294
+00:11:36,880 --> 00:11:39,560
+actually head over to my GitHub page uh
+
+295
+00:11:39,560 --> 00:11:41,560
+and so yeah so you should head over to
+
+296
+00:11:41,560 --> 00:11:43,920
+my GitHub page tan may1 123 is the
+
+297
+00:11:43,920 --> 00:11:46,160
+username there uh and there's a starter
+
+298
+00:11:46,160 --> 00:11:48,079
+code for the first Watson made simple
+
+299
+00:11:48,079 --> 00:11:50,279
+event uh what you're going to do is you
+
+300
+00:11:50,279 --> 00:11:51,760
+you probably want to download that
+
+301
+00:11:51,760 --> 00:11:53,360
+starter code because as you can see
+
+302
+00:11:53,360 --> 00:11:55,120
+behind me uh it's actually completely
+
+303
+00:11:55,120 --> 00:11:57,200
+blank there's no code or any interface
+
+304
+00:11:57,200 --> 00:11:59,800
+for this but what it does do do is I've
+
+305
+00:11:59,800 --> 00:12:02,000
+already included these IBM Watson
+
+306
+00:12:02,000 --> 00:12:04,600
+Frameworks in this application namely
+
+307
+00:12:04,600 --> 00:12:07,440
+rest kit conversation speech to text and
+
+308
+00:12:07,440 --> 00:12:09,800
+text to speech and so that you don't
+
+309
+00:12:09,800 --> 00:12:11,519
+need to install them from Carthage from
+
+310
+00:12:11,519 --> 00:12:13,760
+scratch at this time so you can follow
+
+311
+00:12:13,760 --> 00:12:15,639
+along with us I'd recommend doing this
+
+312
+00:12:15,639 --> 00:12:17,800
+because it's much faster but of course
+
+313
+00:12:17,800 --> 00:12:19,360
+if you'd like to manually install via
+
+314
+00:12:19,360 --> 00:12:21,120
+Carthage your choice you can do that if
+
+315
+00:12:21,120 --> 00:12:24,079
+you'd like as well all right so now
+
+316
+00:12:24,079 --> 00:12:26,279
+though we are actually ready to begin
+
+317
+00:12:26,279 --> 00:12:28,519
+coding but before we actually code let's
+
+318
+00:12:28,519 --> 00:12:30,720
+start with develop in the UI of the
+
+319
+00:12:30,720 --> 00:12:33,880
+application itself now the UI is as you
+
+320
+00:12:33,880 --> 00:12:36,600
+saw extremely simple we just have a text
+
+321
+00:12:36,600 --> 00:12:38,720
+View and a button on screen and so what
+
+322
+00:12:38,720 --> 00:12:39,959
+I'm going to do is I'm actually going to
+
+323
+00:12:39,959 --> 00:12:42,880
+drag on first of all a button from my uh
+
+324
+00:12:42,880 --> 00:12:45,320
+objects controller here uh and I'm going
+
+325
+00:12:45,320 --> 00:12:48,880
+to label this button as start as you can
+
+326
+00:12:48,880 --> 00:12:51,120
+see right there and what I'm going to do
+
+327
+00:12:51,120 --> 00:12:52,360
+is I'm actually going to have another
+
+328
+00:12:52,360 --> 00:12:55,040
+text view as well uh in this text View
+
+329
+00:12:55,040 --> 00:12:57,399
+and just going to drag this on screen uh
+
+330
+00:12:57,399 --> 00:12:59,639
+and this is going to be almost as big as
+
+331
+00:12:59,639 --> 00:13:01,279
+the screen but just before hitting the
+
+332
+00:13:01,279 --> 00:13:04,160
+button uh and basically this text view
+
+333
+00:13:04,160 --> 00:13:07,079
+as you saw will allow us to see what
+
+334
+00:13:07,079 --> 00:13:08,720
+yeah exactly you'll see that Watson
+
+335
+00:13:08,720 --> 00:13:11,160
+conversation uh going on uh what you're
+
+336
+00:13:11,160 --> 00:13:12,320
+what you're saying to the chat button
+
+337
+00:13:12,320 --> 00:13:14,760
+what it's saying back to you uh but
+
+338
+00:13:14,760 --> 00:13:15,959
+another thing you're probably going to
+
+339
+00:13:15,959 --> 00:13:17,480
+want to make sure is that the user can't
+
+340
+00:13:17,480 --> 00:13:19,240
+change anything that's in that text view
+
+341
+00:13:19,240 --> 00:13:20,440
+because we don't want them changing
+
+342
+00:13:20,440 --> 00:13:22,160
+anything this is just to show them
+
+343
+00:13:22,160 --> 00:13:23,800
+what's happening and so what you want to
+
+344
+00:13:23,800 --> 00:13:25,720
+do is click on your text View and in the
+
+345
+00:13:25,720 --> 00:13:28,000
+attributes inspector uh deselect
+
+346
+00:13:28,000 --> 00:13:29,680
+editable and deselect
+
+347
+00:13:29,680 --> 00:13:31,920
+selectable so once you've done that the
+
+348
+00:13:31,920 --> 00:13:34,320
+user will not be able to edit or select
+
+349
+00:13:34,320 --> 00:13:36,600
+any text in the text view so it becomes
+
+350
+00:13:36,600 --> 00:13:37,920
+really convenient because then we don't
+
+351
+00:13:37,920 --> 00:13:39,560
+need to implement keyboard hiding logic
+
+352
+00:13:39,560 --> 00:13:41,399
+when they hit return that type of stuff
+
+353
+00:13:41,399 --> 00:13:44,760
+so it becomes much much easier all right
+
+354
+00:13:44,760 --> 00:13:46,519
+so that's really all we had to do for
+
+355
+00:13:46,519 --> 00:13:49,079
+the UI extremely simple now though we
+
+356
+00:13:49,079 --> 00:13:52,759
+can actually get into the code of the
+
+357
+00:13:52,759 --> 00:13:55,120
+application all right so let's begin
+
+358
+00:13:55,120 --> 00:13:57,480
+with viewcontroller.swift and this is
+
+359
+00:13:57,480 --> 00:13:59,560
+where we're going to be doing all of the
+
+360
+00:13:59,560 --> 00:14:02,639
+coding for this application uh and so
+
+361
+00:14:02,639 --> 00:14:04,040
+well the first thing we need to start
+
+362
+00:14:04,040 --> 00:14:06,480
+off with though is our Imports now in
+
+363
+00:14:06,480 --> 00:14:09,519
+terms of imports uh again we are we are
+
+364
+00:14:09,519 --> 00:14:11,480
+uh in this application recording and
+
+365
+00:14:11,480 --> 00:14:14,079
+playing audio and we're doing this via
+
+366
+00:14:14,079 --> 00:14:16,519
+the AV Audio record and the AV Audio
+
+367
+00:14:16,519 --> 00:14:18,720
+player and by the way for this
+
+368
+00:14:18,720 --> 00:14:20,399
+application I'm assuming you have some
+
+369
+00:14:20,399 --> 00:14:22,560
+at least little experience with iOS
+
+370
+00:14:22,560 --> 00:14:24,959
+development uh through Swift uh so it's
+
+371
+00:14:24,959 --> 00:14:27,399
+much easier for you to follow along all
+
+372
+00:14:27,399 --> 00:14:29,920
+right so now the AV AIO player and AV
+
+373
+00:14:29,920 --> 00:14:32,399
+audio recorder classes are accessed via
+
+374
+00:14:32,399 --> 00:14:34,600
+the AV Foundation framework so what
+
+375
+00:14:34,600 --> 00:14:37,079
+we'll need to do is import that first so
+
+376
+00:14:37,079 --> 00:14:38,639
+right after import UI kit you're going
+
+377
+00:14:38,639 --> 00:14:41,440
+to want to type in import AV foundation
+
+378
+00:14:41,440 --> 00:14:44,079
+on your screen and then you're going to
+
+379
+00:14:44,079 --> 00:14:46,519
+want to import your Watson apis so you
+
+380
+00:14:46,519 --> 00:14:47,800
+can actually use them in this
+
+381
+00:14:47,800 --> 00:14:50,199
+application so I'm going to be importing
+
+382
+00:14:50,199 --> 00:14:52,560
+uh importing sorry conversation we're
+
+383
+00:14:52,560 --> 00:14:54,440
+going to be importing speech to text and
+
+384
+00:14:54,440 --> 00:14:55,920
+of course we're going to be importing
+
+385
+00:14:55,920 --> 00:14:58,399
+text to speech now once you've got all
+
+386
+00:14:58,399 --> 00:15:00,279
+those all those Imports down you should
+
+387
+00:15:00,279 --> 00:15:02,560
+be ready to actually start coding in
+
+388
+00:15:02,560 --> 00:15:05,040
+your application let's begin with a few
+
+389
+00:15:05,040 --> 00:15:06,399
+variables that are going to be used
+
+390
+00:15:06,399 --> 00:15:08,759
+throughout this class so if I go into my
+
+391
+00:15:08,759 --> 00:15:10,120
+view controller class here I'm going to
+
+392
+00:15:10,120 --> 00:15:12,079
+declare some class level variables and
+
+393
+00:15:12,079 --> 00:15:13,920
+constants and let's actually begin with
+
+394
+00:15:13,920 --> 00:15:15,639
+our IB Outlets which will actually let
+
+395
+00:15:15,639 --> 00:15:18,279
+us uh communicate with our interface
+
+396
+00:15:18,279 --> 00:15:21,040
+Builder or our UI throughout this code
+
+397
+00:15:21,040 --> 00:15:22,600
+uh so I'm going to create a new IB
+
+398
+00:15:22,600 --> 00:15:24,720
+Outlet a variable uh and so this is
+
+399
+00:15:24,720 --> 00:15:26,920
+going to be called let's just say start
+
+400
+00:15:26,920 --> 00:15:30,040
+stop button because uh as you can tell
+
+401
+00:15:30,040 --> 00:15:32,920
+uh by the self-explanatory name here uh
+
+402
+00:15:32,920 --> 00:15:34,319
+this is the button which will allow us
+
+403
+00:15:34,319 --> 00:15:37,319
+to start and stop our voice recording of
+
+404
+00:15:37,319 --> 00:15:39,680
+course though we have to declare uh our
+
+405
+00:15:39,680 --> 00:15:41,079
+text View and so we're going to be
+
+406
+00:15:41,079 --> 00:15:43,600
+calling this the conversation list and
+
+407
+00:15:43,600 --> 00:15:46,959
+this is a type UI text view once you've
+
+408
+00:15:46,959 --> 00:15:49,279
+got those IB Outlets down that's all you
+
+409
+00:15:49,279 --> 00:15:51,120
+need to do in terms of IB Outlets but
+
+410
+00:15:51,120 --> 00:15:52,920
+we've got a few more variables that
+
+411
+00:15:52,920 --> 00:15:54,519
+you're going to need to create today in
+
+412
+00:15:54,519 --> 00:15:56,959
+order to create this application so two
+
+413
+00:15:56,959 --> 00:15:58,680
+of the most important ones though would
+
+414
+00:15:58,680 --> 00:16:01,000
+be our av audio recorder and our av
+
+415
+00:16:01,000 --> 00:16:03,040
+audio player so let's create those so
+
+416
+00:16:03,040 --> 00:16:04,639
+first first thing we're going to do is
+
+417
+00:16:04,639 --> 00:16:06,600
+create a new recorder so variable
+
+418
+00:16:06,600 --> 00:16:11,360
+recorder and set this to a new AV audio
+
+419
+00:16:11,639 --> 00:16:13,440
+recorder uh of course this is going to
+
+420
+00:16:13,440 --> 00:16:15,160
+be a forced optional so it's equal to
+
+421
+00:16:15,160 --> 00:16:17,160
+nil by default uh and of course we're
+
+422
+00:16:17,160 --> 00:16:19,560
+also going to be creating a player or AV
+
+423
+00:16:19,560 --> 00:16:21,519
+Audio
+
+424
+00:16:21,519 --> 00:16:23,800
+player once you've got that down you're
+
+425
+00:16:23,800 --> 00:16:27,120
+done with your AV classes in terms of or
+
+426
+00:16:27,120 --> 00:16:29,720
+audio video Foundation classes uh in
+
+427
+00:16:29,720 --> 00:16:32,319
+terms of class level variables now
+
+428
+00:16:32,319 --> 00:16:33,639
+though let's start working with some
+
+429
+00:16:33,639 --> 00:16:36,079
+conversation logic now the first thing
+
+430
+00:16:36,079 --> 00:16:37,759
+in terms of conversation logic that
+
+431
+00:16:37,759 --> 00:16:39,480
+you're going to need to take care of is
+
+432
+00:16:39,480 --> 00:16:42,240
+your last context variable as I said
+
+433
+00:16:42,240 --> 00:16:43,880
+when I was explaining in the diagram of
+
+434
+00:16:43,880 --> 00:16:45,519
+this application what we're going to be
+
+435
+00:16:45,519 --> 00:16:47,639
+doing is sending Watson in the first
+
+436
+00:16:47,639 --> 00:16:49,600
+message no metadata about the
+
+437
+00:16:49,600 --> 00:16:52,279
+conversation and also the users whatever
+
+438
+00:16:52,279 --> 00:16:54,120
+whatever the user said but then what
+
+439
+00:16:54,120 --> 00:16:55,680
+happens is when Watson returns stuff
+
+440
+00:16:55,680 --> 00:16:57,920
+back to us it returns a little uh it
+
+441
+00:16:57,920 --> 00:16:59,920
+returns a variable called context
+
+442
+00:16:59,920 --> 00:17:01,880
+variable uh and it also returns a
+
+443
+00:17:01,880 --> 00:17:03,800
+response so the response we can of
+
+444
+00:17:03,800 --> 00:17:05,319
+course show that to the user and give it
+
+445
+00:17:05,319 --> 00:17:07,039
+to text of speech but then what we need
+
+446
+00:17:07,039 --> 00:17:08,880
+to do is in the next request that we
+
+447
+00:17:08,880 --> 00:17:11,679
+sent to IBM Watson the next uh message
+
+448
+00:17:11,679 --> 00:17:14,280
+the user sends we need to take that last
+
+449
+00:17:14,280 --> 00:17:16,640
+context variable that Watson gave us and
+
+450
+00:17:16,640 --> 00:17:18,799
+send it back to it and do that every
+
+451
+00:17:18,799 --> 00:17:21,160
+single time to make sure that Ian Watson
+
+452
+00:17:21,160 --> 00:17:23,520
+knows what of course is going on in the
+
+453
+00:17:23,520 --> 00:17:25,520
+conversation and is able to reply
+
+454
+00:17:25,520 --> 00:17:27,600
+accordingly uh and so the way we can do
+
+455
+00:17:27,600 --> 00:17:29,160
+this as is by creating something called
+
+456
+00:17:29,160 --> 00:17:31,320
+the last context variable and this is
+
+457
+00:17:31,320 --> 00:17:34,080
+going to be a of type context and this
+
+458
+00:17:34,080 --> 00:17:36,039
+is going to be a normal optional so by
+
+459
+00:17:36,039 --> 00:17:38,120
+default it's nil uh and of course we're
+
+460
+00:17:38,120 --> 00:17:40,120
+going to be passing this to IBM Watson
+
+461
+00:17:40,120 --> 00:17:42,640
+conversation the first time as a nil
+
+462
+00:17:42,640 --> 00:17:44,600
+object so it'll know that there's no
+
+463
+00:17:44,600 --> 00:17:46,600
+context and this is the first time that
+
+464
+00:17:46,600 --> 00:17:48,520
+we are of course sending a message to
+
+465
+00:17:48,520 --> 00:17:51,000
+Watson from this
+
+466
+00:17:51,000 --> 00:17:52,919
+application once that's done though
+
+467
+00:17:52,919 --> 00:17:55,120
+there's a little bit more conversation
+
+468
+00:17:55,120 --> 00:17:57,159
+logic left and what we're going to do
+
+469
+00:17:57,159 --> 00:17:58,600
+now though is we're going to create the
+
+470
+00:17:58,600 --> 00:18:00,400
+very variables that will help you keep
+
+471
+00:18:00,400 --> 00:18:02,480
+track of how your pizza is actually
+
+472
+00:18:02,480 --> 00:18:04,799
+being ordered and the structure of the
+
+473
+00:18:04,799 --> 00:18:06,799
+pizza order so let's actually take a
+
+474
+00:18:06,799 --> 00:18:08,960
+look at how that will work so what are
+
+475
+00:18:08,960 --> 00:18:10,320
+the things that the user can change
+
+476
+00:18:10,320 --> 00:18:12,200
+about the pizza well they can change the
+
+477
+00:18:12,200 --> 00:18:14,559
+size the crust size the sauce the
+
+478
+00:18:14,559 --> 00:18:17,159
+topping one two and three right so all
+
+479
+00:18:17,159 --> 00:18:18,960
+we need to do is create variables for
+
+480
+00:18:18,960 --> 00:18:20,720
+each one of those so I'm going to create
+
+481
+00:18:20,720 --> 00:18:23,520
+a variable called size empty string uh
+
+482
+00:18:23,520 --> 00:18:26,080
+of course crust size uh again empty
+
+483
+00:18:26,080 --> 00:18:27,600
+string uh we're going to create
+
+484
+00:18:27,600 --> 00:18:29,919
+something like um sauce empty string
+
+485
+00:18:29,919 --> 00:18:32,960
+again uh we're going to create the
+
+486
+00:18:32,960 --> 00:18:37,200
+topping one and Topping two and of
+
+487
+00:18:37,200 --> 00:18:39,200
+course topping
+
+488
+00:18:39,200 --> 00:18:41,559
+three once we've got all our toppings
+
+489
+00:18:41,559 --> 00:18:43,400
+down we're done over all of our
+
+490
+00:18:43,400 --> 00:18:45,720
+conversation logic and there's just one
+
+491
+00:18:45,720 --> 00:18:48,400
+last con uh sorry uh constant that we
+
+492
+00:18:48,400 --> 00:18:51,360
+need to create in the class level scope
+
+493
+00:18:51,360 --> 00:18:53,400
+uh and what this would be is our output
+
+494
+00:18:53,400 --> 00:18:56,360
+file URL now this URL will actually be
+
+495
+00:18:56,360 --> 00:18:59,039
+the URL to the file that our AP audio
+
+496
+00:18:59,039 --> 00:19:01,880
+recorder will record files to and Watson
+
+497
+00:19:01,880 --> 00:19:05,000
+speech to text will grab audio from the
+
+498
+00:19:05,000 --> 00:19:06,080
+way we're going to do this is we're
+
+499
+00:19:06,080 --> 00:19:08,520
+going to create a new output file URL
+
+500
+00:19:08,520 --> 00:19:10,280
+constant here and this is going to be
+
+501
+00:19:10,280 --> 00:19:13,600
+equal to a new URL okay uh and that
+
+502
+00:19:13,600 --> 00:19:15,880
+we're going to be using the file URL
+
+503
+00:19:15,880 --> 00:19:18,520
+with path initializer here now this
+
+504
+00:19:18,520 --> 00:19:20,440
+takes a string and in order to get the
+
+505
+00:19:20,440 --> 00:19:23,080
+string we're going to run the NS search
+
+506
+00:19:23,080 --> 00:19:25,159
+path and then wait for it to fill out
+
+507
+00:19:25,159 --> 00:19:27,320
+and then NS search path for directories
+
+508
+00:19:27,320 --> 00:19:29,720
+in domains function and this will return
+
+509
+00:19:29,720 --> 00:19:31,559
+an array of strings and so we're going
+
+510
+00:19:31,559 --> 00:19:34,600
+to ask it to find the document directory
+
+511
+00:19:34,600 --> 00:19:37,159
+through the default user domain mask and
+
+512
+00:19:37,159 --> 00:19:38,320
+of course we're going to ask it to
+
+513
+00:19:38,320 --> 00:19:41,320
+expand the till day now this returns an
+
+514
+00:19:41,320 --> 00:19:43,480
+array of strings so we're going to get
+
+515
+00:19:43,480 --> 00:19:45,400
+the last element by forcefully
+
+516
+00:19:45,400 --> 00:19:47,200
+unwrapping the last element in this
+
+517
+00:19:47,200 --> 00:19:50,159
+array and then to this we will append
+
+518
+00:19:50,159 --> 00:19:55,880
+slw Watson audio. wav or wave or wave
+
+519
+00:19:55,880 --> 00:19:59,120
+technically and so now this is the URL
+
+520
+00:19:59,120 --> 00:20:01,000
+that the that the recorder will actually
+
+521
+00:20:01,000 --> 00:20:03,360
+record your audio too whenever you click
+
+522
+00:20:03,360 --> 00:20:05,120
+on start record your audio and then
+
+523
+00:20:05,120 --> 00:20:07,720
+click on stop of course though this is
+
+524
+00:20:07,720 --> 00:20:09,840
+also the URL that speech DET text will
+
+525
+00:20:09,840 --> 00:20:12,080
+grab your voice from when it's trying to
+
+526
+00:20:12,080 --> 00:20:14,159
+understand what you said and that's what
+
+527
+00:20:14,159 --> 00:20:16,200
+these two what that's that's what this
+
+528
+00:20:16,200 --> 00:20:18,919
+constant sorry will be doing and that's
+
+529
+00:20:18,919 --> 00:20:20,720
+what we had to do to initialize
+
+530
+00:20:20,720 --> 00:20:23,320
+basically this entire class uh and have
+
+531
+00:20:23,320 --> 00:20:25,640
+our base variables down in order to get
+
+532
+00:20:25,640 --> 00:20:28,039
+started with the actual code but to
+
+533
+00:20:28,039 --> 00:20:29,960
+begin with our actual code though we
+
+534
+00:20:29,960 --> 00:20:33,520
+need to start off by sorry initializing
+
+535
+00:20:33,520 --> 00:20:36,720
+our av audio recorder and the way we can
+
+536
+00:20:36,720 --> 00:20:38,760
+do this is by going into our viewed load
+
+537
+00:20:38,760 --> 00:20:41,520
+function and over here we're going to be
+
+538
+00:20:41,520 --> 00:20:43,280
+of course initializing our av audio
+
+539
+00:20:43,280 --> 00:20:46,159
+recorder so it's ready to record some
+
+540
+00:20:46,159 --> 00:20:49,480
+audio so the way we can do this uh is by
+
+541
+00:20:49,480 --> 00:20:50,960
+first of all we need to create a new
+
+542
+00:20:50,960 --> 00:20:53,039
+session okay uh and I'm going to create
+
+543
+00:20:53,039 --> 00:20:55,919
+a new AV Audio session in a new constant
+
+544
+00:20:55,919 --> 00:20:57,120
+and I'm going to be getting a shared
+
+545
+00:20:57,120 --> 00:20:59,159
+instance meaning the default in instance
+
+546
+00:20:59,159 --> 00:21:02,200
+of an AV Audio session once that's done
+
+547
+00:21:02,200 --> 00:21:03,480
+I'm going to create a new variable
+
+548
+00:21:03,480 --> 00:21:05,679
+called settings and this is going to be
+
+549
+00:21:05,679 --> 00:21:11,200
+a new dictionary of type string any
+
+550
+00:21:12,200 --> 00:21:14,240
+object uh and of course this is going to
+
+551
+00:21:14,240 --> 00:21:17,200
+be a blank dictionary by default but
+
+552
+00:21:17,200 --> 00:21:18,200
+then what we're going to do is we're
+
+553
+00:21:18,200 --> 00:21:20,559
+going to go to the settings dictionary
+
+554
+00:21:20,559 --> 00:21:22,279
+and we're going to be setting the AV
+
+555
+00:21:22,279 --> 00:21:26,480
+sample rate key to a new NS number and
+
+556
+00:21:26,480 --> 00:21:28,720
+this NS number will be using the float
+
+557
+00:21:28,720 --> 00:21:31,919
+literal initializer and we'll be using
+
+558
+00:21:31,919 --> 00:21:35,000
+44100 as our number here again you don't
+
+559
+00:21:35,000 --> 00:21:36,960
+exactly need to know what this means uh
+
+560
+00:21:36,960 --> 00:21:38,679
+we don't really care about that all this
+
+561
+00:21:38,679 --> 00:21:40,120
+is doing is It's recording it's
+
+562
+00:21:40,120 --> 00:21:42,159
+initializing our recorder so it works
+
+563
+00:21:42,159 --> 00:21:43,960
+with Watson speech detex that's all we
+
+564
+00:21:43,960 --> 00:21:45,840
+care about right now this is not related
+
+565
+00:21:45,840 --> 00:21:48,320
+to wats in any in any way though uh but
+
+566
+00:21:48,320 --> 00:21:50,240
+then we're going to go back to our
+
+567
+00:21:50,240 --> 00:21:52,000
+settings variable and we're going to be
+
+568
+00:21:52,000 --> 00:21:54,559
+setting the AV number of channels key to
+
+569
+00:21:54,559 --> 00:21:56,360
+a new NS number uh this time we'll be
+
+570
+00:21:56,360 --> 00:21:59,360
+using the integer literal uh initializer
+
+571
+00:21:59,360 --> 00:22:01,640
+and this will be equal to one that's it
+
+572
+00:22:01,640 --> 00:22:03,919
+just one channel in our av audio
+
+573
+00:22:03,919 --> 00:22:06,720
+recording once that's done though well
+
+574
+00:22:06,720 --> 00:22:09,520
+I'm going to um be a little bad here and
+
+575
+00:22:09,520 --> 00:22:10,760
+I'm not going to implement error
+
+576
+00:22:10,760 --> 00:22:13,320
+handling uh because I want this to be as
+
+577
+00:22:13,320 --> 00:22:16,240
+simple for you as possible but in your
+
+578
+00:22:16,240 --> 00:22:18,000
+applications I would highly recommend
+
+579
+00:22:18,000 --> 00:22:20,120
+you implement error handling uh because
+
+580
+00:22:20,120 --> 00:22:21,559
+of course it's important and you don't
+
+581
+00:22:21,559 --> 00:22:23,919
+want your application to crashing uh and
+
+582
+00:22:23,919 --> 00:22:25,720
+so I'm not going to be implementing a do
+
+583
+00:22:25,720 --> 00:22:27,559
+catch statement here uh although you
+
+584
+00:22:27,559 --> 00:22:29,559
+could in your applic appliations uh
+
+585
+00:22:29,559 --> 00:22:31,240
+right now I'm going to forcefully try to
+
+586
+00:22:31,240 --> 00:22:32,799
+do all of this so what I'm going to do
+
+587
+00:22:32,799 --> 00:22:35,360
+is I'm going to forcefully try to set
+
+588
+00:22:35,360 --> 00:22:37,559
+the session category that we
+
+589
+00:22:37,559 --> 00:22:39,760
+created I'm going to be running the set
+
+590
+00:22:39,760 --> 00:22:41,640
+category function uh and what I'm going
+
+591
+00:22:41,640 --> 00:22:42,840
+to be doing is I'm going to be setting
+
+592
+00:22:42,840 --> 00:22:46,240
+this to AV Audio session category play
+
+593
+00:22:46,240 --> 00:22:47,200
+and
+
+594
+00:22:47,200 --> 00:22:49,559
+record once that's done I'm also going
+
+595
+00:22:49,559 --> 00:22:52,919
+to forcefully try to set the recorder to
+
+596
+00:22:52,919 --> 00:22:55,200
+a new AV audio recorder I'm going to be
+
+597
+00:22:55,200 --> 00:22:57,799
+initializing this new AV audio recorder
+
+598
+00:22:57,799 --> 00:22:59,400
+uh and of course going to be using the
+
+599
+00:22:59,400 --> 00:23:01,799
+URL settings initializer right over
+
+600
+00:23:01,799 --> 00:23:04,480
+there the URL will be the output file
+
+601
+00:23:04,480 --> 00:23:06,480
+URL because this is where we want our av
+
+602
+00:23:06,480 --> 00:23:08,480
+audio recorder to save the recordings
+
+603
+00:23:08,480 --> 00:23:10,240
+and settings will be the new will be the
+
+604
+00:23:10,240 --> 00:23:13,919
+settings variable that we had just
+
+605
+00:23:13,919 --> 00:23:15,960
+created once that's done though we're
+
+606
+00:23:15,960 --> 00:23:17,559
+going to tell the recorder to set
+
+607
+00:23:17,559 --> 00:23:20,679
+metering enable to true and then finally
+
+608
+00:23:20,679 --> 00:23:22,480
+what we're going to do is we're going to
+
+609
+00:23:22,480 --> 00:23:23,840
+what we're going to do is we're going to
+
+610
+00:23:23,840 --> 00:23:27,080
+set the recorder to prepare to record
+
+611
+00:23:27,080 --> 00:23:28,640
+and once we're done preparing that
+
+612
+00:23:28,640 --> 00:23:31,400
+recording we are done initializing our
+
+613
+00:23:31,400 --> 00:23:33,919
+recorder and we can finally get to
+
+614
+00:23:33,919 --> 00:23:36,880
+working with Watson nice yay okay let's
+
+615
+00:23:36,880 --> 00:23:39,240
+get to that now so now you can get out
+
+616
+00:23:39,240 --> 00:23:41,600
+of your viewed load function and you can
+
+617
+00:23:41,600 --> 00:23:43,760
+create a new IB action and we're going
+
+618
+00:23:43,760 --> 00:23:45,960
+to create a new IB action function and
+
+619
+00:23:45,960 --> 00:23:47,559
+we're going to call this start stop
+
+620
+00:23:47,559 --> 00:23:49,480
+recording now this is actually the
+
+621
+00:23:49,480 --> 00:23:50,720
+function that's called whenever you
+
+622
+00:23:50,720 --> 00:23:52,760
+click that start stop button and so
+
+623
+00:23:52,760 --> 00:23:54,080
+inside of here we're going to create a
+
+624
+00:23:54,080 --> 00:23:55,640
+new if statement and we're going to
+
+625
+00:23:55,640 --> 00:23:57,960
+check if the recorder is recording but
+
+626
+00:23:57,960 --> 00:23:59,919
+if it's not recording which is what that
+
+627
+00:23:59,919 --> 00:24:01,760
+little exclamation mark at the end over
+
+628
+00:24:01,760 --> 00:24:04,120
+there does if it's not recording then
+
+629
+00:24:04,120 --> 00:24:06,039
+what'll happen is it'll run some block
+
+630
+00:24:06,039 --> 00:24:08,080
+of code and this block of code what
+
+631
+00:24:08,080 --> 00:24:10,880
+it'll do uh is it'll first of all uh
+
+632
+00:24:10,880 --> 00:24:12,440
+make sure that first of all we create a
+
+633
+00:24:12,440 --> 00:24:14,400
+new session which is our AV Audio
+
+634
+00:24:14,400 --> 00:24:16,679
+session uh this is our shared instance
+
+635
+00:24:16,679 --> 00:24:18,880
+by the way uh and then what we do is we
+
+636
+00:24:18,880 --> 00:24:22,159
+forcefully try to set the session active
+
+637
+00:24:22,159 --> 00:24:25,240
+by doing session. setactive
+
+638
+00:24:25,240 --> 00:24:28,200
+true once that's done uh and again I'm
+
+639
+00:24:28,200 --> 00:24:29,760
+not implementing error handling that's
+
+640
+00:24:29,760 --> 00:24:31,279
+not good you should do that in your
+
+641
+00:24:31,279 --> 00:24:33,919
+applications uh but then once I'm done
+
+642
+00:24:33,919 --> 00:24:36,559
+that I tell the recorder to record by
+
+643
+00:24:36,559 --> 00:24:39,679
+running recorder. record that specific
+
+644
+00:24:39,679 --> 00:24:42,440
+record function uh and once that's done
+
+645
+00:24:42,440 --> 00:24:44,880
+we're ready to set the start stop button
+
+646
+00:24:44,880 --> 00:24:48,320
+title to stop because now we are
+
+647
+00:24:48,320 --> 00:24:50,360
+recording the user uh and when they
+
+648
+00:24:50,360 --> 00:24:52,240
+click on stop now it'll stop recording
+
+649
+00:24:52,240 --> 00:24:53,799
+them uh and of course we're going to be
+
+650
+00:24:53,799 --> 00:24:56,679
+using a normal UI control State and so
+
+651
+00:24:56,679 --> 00:24:57,720
+that's what we're going to be doing in
+
+652
+00:24:57,720 --> 00:25:00,760
+this block but what if the recorder was
+
+653
+00:25:00,760 --> 00:25:02,360
+recording and the user just clicked on
+
+654
+00:25:02,360 --> 00:25:04,399
+stop well in that case we actually want
+
+655
+00:25:04,399 --> 00:25:06,960
+to start using IBM Watson and so now
+
+656
+00:25:06,960 --> 00:25:08,760
+let's Implement that so let's actually
+
+657
+00:25:08,760 --> 00:25:11,240
+put an else into our little if statement
+
+658
+00:25:11,240 --> 00:25:13,159
+here uh and let's actually start
+
+659
+00:25:13,159 --> 00:25:15,440
+implementing what happens if the user
+
+660
+00:25:15,440 --> 00:25:18,240
+was recording their audio uh and now of
+
+661
+00:25:18,240 --> 00:25:20,559
+course they get to send that audio to IB
+
+662
+00:25:20,559 --> 00:25:22,440
+Watson and continue those steps in the
+
+663
+00:25:22,440 --> 00:25:24,520
+pipeline now the first step we have to
+
+664
+00:25:24,520 --> 00:25:27,039
+work with is speech to text and in order
+
+665
+00:25:27,039 --> 00:25:28,640
+to do that we actually have to to have
+
+666
+00:25:28,640 --> 00:25:31,679
+that audio file in a real way file on
+
+667
+00:25:31,679 --> 00:25:33,960
+the in the documents directory and the
+
+668
+00:25:33,960 --> 00:25:35,559
+way we can do that is by telling the
+
+669
+00:25:35,559 --> 00:25:38,919
+recorder to stop recording uh by saying
+
+670
+00:25:38,919 --> 00:25:42,320
+recorder. stop over there once that's
+
+671
+00:25:42,320 --> 00:25:43,960
+done what I'm going to do is I'm going
+
+672
+00:25:43,960 --> 00:25:46,520
+to get a new AV Audio session again our
+
+673
+00:25:46,520 --> 00:25:48,399
+shared instance and I'm going to set
+
+674
+00:25:48,399 --> 00:25:50,080
+active to false once again I'm going to
+
+675
+00:25:50,080 --> 00:25:52,240
+forcefully try
+
+676
+00:25:52,240 --> 00:25:55,320
+this once that's done though finally we
+
+677
+00:25:55,320 --> 00:25:58,320
+can actually start working with Watson
+
+678
+00:25:58,320 --> 00:26:01,120
+and specifically speech to text so let's
+
+679
+00:26:01,120 --> 00:26:03,320
+actually create a new speech to text
+
+680
+00:26:03,320 --> 00:26:05,399
+constant here and since we've already
+
+681
+00:26:05,399 --> 00:26:07,480
+imported speech to text I can actually
+
+682
+00:26:07,480 --> 00:26:09,919
+create a new speech to text object and I
+
+683
+00:26:09,919 --> 00:26:12,159
+can initialize this with my credentials
+
+684
+00:26:12,159 --> 00:26:13,559
+and since I already have some
+
+685
+00:26:13,559 --> 00:26:14,919
+credentials and I don't need to create
+
+686
+00:26:14,919 --> 00:26:16,760
+them in Blu miix what I'm going to do is
+
+687
+00:26:16,760 --> 00:26:19,120
+I'm going to paste them into this
+
+688
+00:26:19,120 --> 00:26:20,960
+application and these are my speech to
+
+689
+00:26:20,960 --> 00:26:22,880
+text credentials here and this is what
+
+690
+00:26:22,880 --> 00:26:25,320
+we're going to be using in order to of
+
+691
+00:26:25,320 --> 00:26:26,960
+course understand what the user is
+
+692
+00:26:26,960 --> 00:26:29,320
+saying once that's done we're going to
+
+693
+00:26:29,320 --> 00:26:31,480
+actually create a new settings uh
+
+694
+00:26:31,480 --> 00:26:33,880
+variable though and well basically the
+
+695
+00:26:33,880 --> 00:26:36,039
+speech detect service needs to know what
+
+696
+00:26:36,039 --> 00:26:37,679
+it's going to be given is it going to be
+
+697
+00:26:37,679 --> 00:26:41,000
+given a w file and uh some other sort of
+
+698
+00:26:41,000 --> 00:26:42,600
+file like some other sort of audio file
+
+699
+00:26:42,600 --> 00:26:43,720
+in fact you can actually check this
+
+700
+00:26:43,720 --> 00:26:45,720
+numeration are you giving it a basic
+
+701
+00:26:45,720 --> 00:26:48,960
+file an F Lac file an muula file an opus
+
+702
+00:26:48,960 --> 00:26:50,919
+file or wave file so there many
+
+703
+00:26:50,919 --> 00:26:53,200
+different for file formats that speech
+
+704
+00:26:53,200 --> 00:26:56,240
+to text works with uh but in this case
+
+705
+00:26:56,240 --> 00:26:57,760
+we're using Wave so we're going to
+
+706
+00:26:57,760 --> 00:26:59,760
+create a new recognition settings object
+
+707
+00:26:59,760 --> 00:27:01,640
+over here put that in the settings
+
+708
+00:27:01,640 --> 00:27:03,520
+constant and the initializer we'll be
+
+709
+00:27:03,520 --> 00:27:05,760
+using for recognition settings is the
+
+710
+00:27:05,760 --> 00:27:08,399
+content type initializer and we're going
+
+711
+00:27:08,399 --> 00:27:13,760
+to be using wve as the content type once
+
+712
+00:27:13,760 --> 00:27:15,840
+that's done though we are ready to go to
+
+713
+00:27:15,840 --> 00:27:18,360
+the speech to text uh constant that we
+
+714
+00:27:18,360 --> 00:27:20,760
+created and call the recognize function
+
+715
+00:27:20,760 --> 00:27:23,039
+on it and we're going to be using this
+
+716
+00:27:23,039 --> 00:27:25,840
+initializer right here uh the one that's
+
+717
+00:27:25,840 --> 00:27:28,559
+uh really short the shortest initializer
+
+718
+00:27:28,559 --> 00:27:31,440
+uh but of course this takes the audio as
+
+719
+00:27:31,440 --> 00:27:34,679
+URL and not data once that's done the
+
+720
+00:27:34,679 --> 00:27:36,279
+audio will be giving it will be the
+
+721
+00:27:36,279 --> 00:27:39,120
+output file URL and it'll automatically
+
+722
+00:27:39,120 --> 00:27:42,559
+grab the data from that URL the settings
+
+723
+00:27:42,559 --> 00:27:44,039
+will be the new recognition settings
+
+724
+00:27:44,039 --> 00:27:46,480
+that we just created and once that's
+
+725
+00:27:46,480 --> 00:27:48,279
+done we'll be creating a success
+
+726
+00:27:48,279 --> 00:27:50,880
+completion Handler and of course the one
+
+727
+00:27:50,880 --> 00:27:52,279
+parameter we'll be taking this
+
+728
+00:27:52,279 --> 00:27:54,120
+completion Handler would be the speech
+
+729
+00:27:54,120 --> 00:27:56,039
+recognition results and we're going to
+
+730
+00:27:56,039 --> 00:27:59,600
+be calling this the results variable
+
+731
+00:27:59,600 --> 00:28:01,480
+now inside of this completion Handler
+
+732
+00:28:01,480 --> 00:28:03,559
+we're going to be putting in some code
+
+733
+00:28:03,559 --> 00:28:05,159
+and the first thing we want to do once
+
+734
+00:28:05,159 --> 00:28:07,480
+we receive some text from speech to text
+
+735
+00:28:07,480 --> 00:28:10,440
+is show the user uh that they have said
+
+736
+00:28:10,440 --> 00:28:12,320
+something and as you saw in the demo it
+
+737
+00:28:12,320 --> 00:28:14,080
+says like for example I said please go
+
+738
+00:28:14,080 --> 00:28:17,200
+easy on the sauce and it said you colon
+
+739
+00:28:17,200 --> 00:28:18,799
+please go easy on the sauce it showed me
+
+740
+00:28:18,799 --> 00:28:20,840
+what I said uh and so the way we can do
+
+741
+00:28:20,840 --> 00:28:22,480
+that is by appending that to the text
+
+742
+00:28:22,480 --> 00:28:25,960
+view but when this code is called we
+
+743
+00:28:25,960 --> 00:28:28,159
+will be in a background thread and that
+
+744
+00:28:28,159 --> 00:28:29,799
+that means we're not in the UI thread so
+
+745
+00:28:29,799 --> 00:28:31,120
+that we've basically got this main
+
+746
+00:28:31,120 --> 00:28:33,919
+thread we've got a few more threads here
+
+747
+00:28:33,919 --> 00:28:35,399
+and we've deviated from the main thread
+
+748
+00:28:35,399 --> 00:28:37,360
+which is our UI thread to another thread
+
+749
+00:28:37,360 --> 00:28:38,600
+and this is a background thread and that
+
+750
+00:28:38,600 --> 00:28:40,440
+means that this code is going in
+
+751
+00:28:40,440 --> 00:28:42,480
+parallel with our UI code so we're not
+
+752
+00:28:42,480 --> 00:28:44,200
+freezing the UI while we're waiting for
+
+753
+00:28:44,200 --> 00:28:46,279
+speech to text but the only thing is for
+
+754
+00:28:46,279 --> 00:28:48,039
+our background thread we can't change
+
+755
+00:28:48,039 --> 00:28:50,519
+the UI since we're not in a UI thread so
+
+756
+00:28:50,519 --> 00:28:51,760
+what we have to do is we have to just
+
+757
+00:28:51,760 --> 00:28:54,600
+Fork back into the UI thread and we
+
+758
+00:28:54,600 --> 00:28:56,519
+actually have to change that text View
+
+759
+00:28:56,519 --> 00:28:58,399
+and get right back to our back backround
+
+760
+00:28:58,399 --> 00:28:59,960
+thread so the way we're going to do this
+
+761
+00:28:59,960 --> 00:29:01,880
+is we're going to go into ios's
+
+762
+00:29:01,880 --> 00:29:04,120
+operation queue and we're going to go to
+
+763
+00:29:04,120 --> 00:29:06,760
+the main operation queue which is our UI
+
+764
+00:29:06,760 --> 00:29:08,600
+a thread and so what we're going to do
+
+765
+00:29:08,600 --> 00:29:10,600
+here is we're going to add an operation
+
+766
+00:29:10,600 --> 00:29:12,240
+and the code for this operation is
+
+767
+00:29:12,240 --> 00:29:14,799
+actually quite simple we go to the self
+
+768
+00:29:14,799 --> 00:29:16,600
+conversation list which is the text view
+
+769
+00:29:16,600 --> 00:29:18,760
+that we just created and then we set its
+
+770
+00:29:18,760 --> 00:29:21,159
+text to this and I'll tell you what this
+
+771
+00:29:21,159 --> 00:29:23,120
+does in just a moment so we set it to
+
+772
+00:29:23,120 --> 00:29:25,519
+the text that was already there and then
+
+773
+00:29:25,519 --> 00:29:29,440
+we add uace and then we add what you
+
+774
+00:29:29,440 --> 00:29:30,240
+just
+
+775
+00:29:30,240 --> 00:29:33,120
+said and then we add a new line so
+
+776
+00:29:33,120 --> 00:29:35,399
+basically this code over here this line
+
+777
+00:29:35,399 --> 00:29:37,480
+of code that I just added will append
+
+778
+00:29:37,480 --> 00:29:40,120
+what I just said to the microphone or to
+
+779
+00:29:40,120 --> 00:29:42,880
+to speech to text onto the screen so I
+
+780
+00:29:42,880 --> 00:29:44,559
+can see if speech to text actually
+
+781
+00:29:44,559 --> 00:29:46,760
+understood me correctly that's what this
+
+782
+00:29:46,760 --> 00:29:48,960
+code over here is going to do but then
+
+783
+00:29:48,960 --> 00:29:51,039
+you're going to go after the ending
+
+784
+00:29:51,039 --> 00:29:54,399
+bracket or brace for your operation Q uh
+
+785
+00:29:54,399 --> 00:29:57,480
+added operation and once you're after uh
+
+786
+00:29:57,480 --> 00:29:59,440
+that little line a code we're ready to
+
+787
+00:29:59,440 --> 00:30:01,960
+start working with conversation this is
+
+788
+00:30:01,960 --> 00:30:03,960
+actually quite a simple service to use
+
+789
+00:30:03,960 --> 00:30:06,640
+speech to text uh now though we get to
+
+790
+00:30:06,640 --> 00:30:09,200
+work with conversation now the way we
+
+791
+00:30:09,200 --> 00:30:10,720
+can do this is by creating a new
+
+792
+00:30:10,720 --> 00:30:12,760
+conversation context and this is going
+
+793
+00:30:12,760 --> 00:30:15,440
+to be equal to a new conversation class
+
+794
+00:30:15,440 --> 00:30:16,960
+and of course as I said we can
+
+795
+00:30:16,960 --> 00:30:19,799
+initialize this with my own parameters
+
+796
+00:30:19,799 --> 00:30:21,880
+or with your parameter or sorry your own
+
+797
+00:30:21,880 --> 00:30:23,880
+credentials uh and so what you're going
+
+798
+00:30:23,880 --> 00:30:25,000
+to do is you're going to fill them out
+
+799
+00:30:25,000 --> 00:30:26,840
+in this initializer here that you've got
+
+800
+00:30:26,840 --> 00:30:28,720
+for the conversation class
+
+801
+00:30:28,720 --> 00:30:30,840
+however since I've already got my
+
+802
+00:30:30,840 --> 00:30:33,600
+credentials uh ready I'm going to just
+
+803
+00:30:33,600 --> 00:30:35,880
+paste them in from the other screen and
+
+804
+00:30:35,880 --> 00:30:37,559
+as you can see those are my credentials
+
+805
+00:30:37,559 --> 00:30:39,279
+there of course though we are also
+
+806
+00:30:39,279 --> 00:30:41,240
+specifying the version of the
+
+807
+00:30:41,240 --> 00:30:43,960
+conversation uh model to use and so this
+
+808
+00:30:43,960 --> 00:30:46,840
+is as far as I know the latest model uh
+
+809
+00:30:46,840 --> 00:30:49,720
+in existence here uh and so that's the
+
+810
+00:30:49,720 --> 00:30:52,519
+one that we're going to be using finally
+
+811
+00:30:52,519 --> 00:30:54,480
+though once that's done all we need to
+
+812
+00:30:54,480 --> 00:30:56,880
+do is create a message request and this
+
+813
+00:30:56,880 --> 00:30:58,720
+message request is actually going to
+
+814
+00:30:58,720 --> 00:31:00,399
+help us send a request to the
+
+815
+00:31:00,399 --> 00:31:02,480
+conversation service so let's create a
+
+816
+00:31:02,480 --> 00:31:05,039
+new MSG request here and let's set this
+
+817
+00:31:05,039 --> 00:31:07,440
+to a new message request object and
+
+818
+00:31:07,440 --> 00:31:09,720
+we're going to be using the longer text
+
+819
+00:31:09,720 --> 00:31:12,880
+string initializer over here and once I
+
+820
+00:31:12,880 --> 00:31:14,840
+uh put in that initializer I'm going to
+
+821
+00:31:14,840 --> 00:31:17,519
+be setting the text to results. bestest
+
+822
+00:31:17,519 --> 00:31:19,320
+transcript and this is the best
+
+823
+00:31:19,320 --> 00:31:21,200
+transcript that speech to text believes
+
+824
+00:31:21,200 --> 00:31:23,320
+that it could provide of the user's
+
+825
+00:31:23,320 --> 00:31:25,600
+Voice once that's done I'm going to be
+
+826
+00:31:25,600 --> 00:31:27,919
+giving it no alternate intents but then
+
+827
+00:31:27,919 --> 00:31:29,519
+and you see that there's this little
+
+828
+00:31:29,519 --> 00:31:32,279
+context parameter that it wants uh and
+
+829
+00:31:32,279 --> 00:31:34,320
+so this is actually going to be to uh be
+
+830
+00:31:34,320 --> 00:31:38,279
+equal to self. last context but you must
+
+831
+00:31:38,279 --> 00:31:40,440
+be wondering though last context is by
+
+832
+00:31:40,440 --> 00:31:42,639
+default nil why would we want to pass it
+
+833
+00:31:42,639 --> 00:31:46,519
+here well you're right in some in a way
+
+834
+00:31:46,519 --> 00:31:48,639
+but the message request actually takes
+
+835
+00:31:48,639 --> 00:31:51,639
+an optional context specifically uh and
+
+836
+00:31:51,639 --> 00:31:55,279
+so what happens is it's if uh last
+
+837
+00:31:55,279 --> 00:31:57,559
+context is nil anyway it's just as good
+
+838
+00:31:57,559 --> 00:32:00,559
+as saying nil to it directly uh however
+
+839
+00:32:00,559 --> 00:32:03,720
+if last context is full of some metadata
+
+840
+00:32:03,720 --> 00:32:06,080
+about our current conversation then of
+
+841
+00:32:06,080 --> 00:32:07,679
+course that will be sent over to the
+
+842
+00:32:07,679 --> 00:32:09,679
+message request and that can be sent to
+
+843
+00:32:09,679 --> 00:32:11,600
+conversation so the logic behind that
+
+844
+00:32:11,600 --> 00:32:13,120
+you'll understand in just a moment when
+
+845
+00:32:13,120 --> 00:32:14,919
+I add in the next few lines of code
+
+846
+00:32:14,919 --> 00:32:17,279
+that'll actually update that metadata
+
+847
+00:32:17,279 --> 00:32:19,519
+but you'll see that in just a moment of
+
+848
+00:32:19,519 --> 00:32:20,679
+course I'm going to be giving it no
+
+849
+00:32:20,679 --> 00:32:23,840
+entities no intents uh and of course no
+
+850
+00:32:23,840 --> 00:32:26,159
+output as of right
+
+851
+00:32:26,159 --> 00:32:29,320
+now once that's done though finally what
+
+852
+00:32:29,320 --> 00:32:32,159
+we need to do is call the message uh
+
+853
+00:32:32,159 --> 00:32:34,279
+sorry we have to call the message
+
+854
+00:32:34,279 --> 00:32:37,399
+function on conversation uh and so we're
+
+855
+00:32:37,399 --> 00:32:39,320
+going to be using the longer initializer
+
+856
+00:32:39,320 --> 00:32:41,639
+down there uh I'll paste in my workspace
+
+857
+00:32:41,639 --> 00:32:44,360
+ID in just a moment uh message request
+
+858
+00:32:44,360 --> 00:32:45,480
+we're going to be using the message
+
+859
+00:32:45,480 --> 00:32:47,320
+request that we just created I'm going
+
+860
+00:32:47,320 --> 00:32:49,720
+to again not Implement any failure
+
+861
+00:32:49,720 --> 00:32:51,360
+initializer you should be doing this in
+
+862
+00:32:51,360 --> 00:32:54,240
+your applications but I'm not right now
+
+863
+00:32:54,240 --> 00:32:56,480
+but then in terms of success initializer
+
+864
+00:32:56,480 --> 00:32:58,639
+I am and of course the one parameter
+
+865
+00:32:58,639 --> 00:33:00,039
+that will take in this completion
+
+866
+00:33:00,039 --> 00:33:02,440
+Handler will be called response and
+
+867
+00:33:02,440 --> 00:33:04,159
+there will be some code inside of this
+
+868
+00:33:04,159 --> 00:33:06,679
+message uh completion Handler here uh
+
+869
+00:33:06,679 --> 00:33:08,600
+and so I'll tell you what exactly that
+
+870
+00:33:08,600 --> 00:33:11,240
+code will do now so the first thing we
+
+871
+00:33:11,240 --> 00:33:12,600
+need to do though is update the
+
+872
+00:33:12,600 --> 00:33:15,200
+conversation
+
+873
+00:33:15,320 --> 00:33:18,000
+metadata and the way we can do this is
+
+874
+00:33:18,000 --> 00:33:21,799
+by setting self. context to the
+
+875
+00:33:21,799 --> 00:33:24,080
+response. context so basically the
+
+876
+00:33:24,080 --> 00:33:26,440
+context that Watson returned to us we're
+
+877
+00:33:26,440 --> 00:33:28,720
+putting that into the self last context
+
+878
+00:33:28,720 --> 00:33:30,600
+variable and the next time we send a
+
+879
+00:33:30,600 --> 00:33:32,639
+message to conversation this message
+
+880
+00:33:32,639 --> 00:33:34,600
+request over here will actually pass
+
+881
+00:33:34,600 --> 00:33:36,639
+that into the context and then this will
+
+882
+00:33:36,639 --> 00:33:38,039
+repeat and repeat and repeat until the
+
+883
+00:33:38,039 --> 00:33:39,720
+user's done ordering their pizza and
+
+884
+00:33:39,720 --> 00:33:41,639
+until then conversation will actually
+
+885
+00:33:41,639 --> 00:33:45,120
+keep track of the pizza
+
+886
+00:33:45,120 --> 00:33:47,240
+specifications so that's that logic
+
+887
+00:33:47,240 --> 00:33:48,600
+might seem a little bit confusing but
+
+888
+00:33:48,600 --> 00:33:50,080
+again if you've worked with conversation
+
+889
+00:33:50,080 --> 00:33:52,360
+before I'm almost sure that you'll uh uh
+
+890
+00:33:52,360 --> 00:33:54,399
+that you'll understand exactly what this
+
+891
+00:33:54,399 --> 00:33:58,399
+means uh and so then once you're done
+
+892
+00:33:58,399 --> 00:34:00,559
+that you can actually start working with
+
+893
+00:34:00,559 --> 00:34:03,399
+some entity and intent logic so let's
+
+894
+00:34:03,399 --> 00:34:05,559
+actually begin with our entity logic so
+
+895
+00:34:05,559 --> 00:34:08,320
+let's create a new response entity
+
+896
+00:34:08,320 --> 00:34:10,159
+constant over here and we're going to be
+
+897
+00:34:10,159 --> 00:34:12,480
+sending this to the response entities
+
+898
+00:34:12,480 --> 00:34:14,760
+and I'm going to be getting the first uh
+
+899
+00:34:14,760 --> 00:34:17,560
+from this array of entities now of
+
+900
+00:34:17,560 --> 00:34:19,280
+course there's always a possibility that
+
+901
+00:34:19,280 --> 00:34:21,119
+there's nothing in the entities array
+
+902
+00:34:21,119 --> 00:34:23,159
+and so first is nil and that's why it's
+
+903
+00:34:23,159 --> 00:34:25,240
+optional uh and so that's why we're
+
+904
+00:34:25,240 --> 00:34:27,240
+storing this in a temporary constant
+
+905
+00:34:27,240 --> 00:34:29,119
+right now uh and I'll be talking about
+
+906
+00:34:29,119 --> 00:34:31,280
+how we'll of course find the actual
+
+907
+00:34:31,280 --> 00:34:34,040
+output of entity in just a second here
+
+908
+00:34:34,040 --> 00:34:35,919
+so after that though we're also going to
+
+909
+00:34:35,919 --> 00:34:37,520
+do the same for the intent so response
+
+910
+00:34:37,520 --> 00:34:40,079
+intent is equal to the response intents
+
+911
+00:34:40,079 --> 00:34:41,599
+and again this is an array and we're
+
+912
+00:34:41,599 --> 00:34:43,520
+getting the first from this array again
+
+913
+00:34:43,520 --> 00:34:45,599
+could be nil and this is why we're going
+
+914
+00:34:45,599 --> 00:34:48,399
+to be putting some IFL statements here
+
+915
+00:34:48,399 --> 00:34:50,760
+so now let's put an IFL statement and
+
+916
+00:34:50,760 --> 00:34:53,159
+let's see IFL entity is equal to
+
+917
+00:34:53,159 --> 00:34:55,000
+response
+
+918
+00:34:55,000 --> 00:34:57,880
+entity this means that response entity
+
+919
+00:34:57,880 --> 00:34:59,839
+actually has something inside of it and
+
+920
+00:34:59,839 --> 00:35:02,880
+is not nil and so whatever if it's not
+
+921
+00:35:02,880 --> 00:35:04,880
+nil that value will be put into the
+
+922
+00:35:04,880 --> 00:35:06,880
+entity constant and the code inside of
+
+923
+00:35:06,880 --> 00:35:09,720
+this block will be called and so then
+
+924
+00:35:09,720 --> 00:35:12,000
+inside of this block we can use that
+
+925
+00:35:12,000 --> 00:35:13,880
+entity and the first thing let's do is
+
+926
+00:35:13,880 --> 00:35:16,079
+let's extract the entity's label by
+
+927
+00:35:16,079 --> 00:35:18,760
+doing entity.
+
+928
+00:35:18,760 --> 00:35:20,839
+entity and then let's extract the
+
+929
+00:35:20,839 --> 00:35:24,240
+entity's value by doing entity.
+
+930
+00:35:24,240 --> 00:35:26,800
+value then let's check if the entity
+
+931
+00:35:26,800 --> 00:35:29,560
+label
+
+932
+00:35:29,560 --> 00:35:30,440
+over
+
+933
+00:35:30,440 --> 00:35:33,680
+here was equal to
+
+934
+00:35:33,680 --> 00:35:36,119
+topping if the entity labels equal to
+
+935
+00:35:36,119 --> 00:35:38,440
+topping well I have to pause right here
+
+936
+00:35:38,440 --> 00:35:40,640
+there's a line of coder missing and I
+
+937
+00:35:40,640 --> 00:35:42,760
+purposely missed that out and the reason
+
+938
+00:35:42,760 --> 00:35:45,400
+being I have to explain some uh sort of
+
+939
+00:35:45,400 --> 00:35:47,400
+logic to you so if you take a look at
+
+940
+00:35:47,400 --> 00:35:48,800
+the screen now and just really
+
+941
+00:35:48,800 --> 00:35:50,720
+concentrate on that screen I'm going to
+
+942
+00:35:50,720 --> 00:35:52,839
+put in a few comments here and so as you
+
+943
+00:35:52,839 --> 00:35:55,040
+can see basically what what the logic is
+
+944
+00:35:55,040 --> 00:35:57,760
+behind this application is that int
+
+945
+00:35:57,760 --> 00:36:00,480
+topping numbers are handled by intents
+
+946
+00:36:00,480 --> 00:36:02,319
+and specific toppings are handled by
+
+947
+00:36:02,319 --> 00:36:04,800
+entities what I mean by this is let's
+
+948
+00:36:04,800 --> 00:36:07,240
+just say you say I'd like my first
+
+949
+00:36:07,240 --> 00:36:10,240
+topping as cheese or you know you could
+
+950
+00:36:10,240 --> 00:36:11,800
+phrase this however you'd want but this
+
+951
+00:36:11,800 --> 00:36:13,119
+is basically what you'd say this is what
+
+952
+00:36:13,119 --> 00:36:15,920
+you'd intend to say the intent here
+
+953
+00:36:15,920 --> 00:36:19,000
+would be topping one but the entity
+
+954
+00:36:19,000 --> 00:36:21,400
+would be topping cheese and so if we
+
+955
+00:36:21,400 --> 00:36:22,839
+were to combine these we would know
+
+956
+00:36:22,839 --> 00:36:25,640
+first topping cheese uh and so that's
+
+957
+00:36:25,640 --> 00:36:27,079
+what what what we're trying to implement
+
+958
+00:36:27,079 --> 00:36:29,359
+in terms of logic but there's one more
+
+959
+00:36:29,359 --> 00:36:31,240
+thing that you should see here though uh
+
+960
+00:36:31,240 --> 00:36:32,640
+which is that let's just say you were to
+
+961
+00:36:32,640 --> 00:36:35,319
+say I'd like cheese you wen't say you
+
+962
+00:36:35,319 --> 00:36:36,920
+wouldn't say I like my first topping
+
+963
+00:36:36,920 --> 00:36:38,920
+this cheese then who knows what the
+
+964
+00:36:38,920 --> 00:36:40,720
+intent will be we don't know because
+
+965
+00:36:40,720 --> 00:36:42,440
+Watson conversation hasn't been trained
+
+966
+00:36:42,440 --> 00:36:45,680
+to understand that uh but could be a
+
+967
+00:36:45,680 --> 00:36:47,440
+cheese crust right if that was one of
+
+968
+00:36:47,440 --> 00:36:50,440
+the opportunities exactly so you know
+
+969
+00:36:50,440 --> 00:36:51,880
+you you wouldn't know what this would
+
+970
+00:36:51,880 --> 00:36:54,359
+mean but our intent would know that this
+
+971
+00:36:54,359 --> 00:36:56,640
+is topping cheese because it sees the
+
+972
+00:36:56,640 --> 00:36:59,000
+word cheese inside of here and so what's
+
+973
+00:36:59,000 --> 00:37:01,119
+happening here is we get confused the
+
+974
+00:37:01,119 --> 00:37:02,560
+code gets confused and it doesn't set
+
+975
+00:37:02,560 --> 00:37:04,520
+your first topping to cheese because it
+
+976
+00:37:04,520 --> 00:37:06,560
+doesn't know which topping it should be
+
+977
+00:37:06,560 --> 00:37:08,000
+uh should be your first second or third
+
+978
+00:37:08,000 --> 00:37:10,400
+topping doesn't know uh but then let's
+
+979
+00:37:10,400 --> 00:37:12,319
+just say you say I'd like my first
+
+980
+00:37:12,319 --> 00:37:14,359
+topping which I'm not sure why you would
+
+981
+00:37:14,359 --> 00:37:16,359
+say something like that but if you were
+
+982
+00:37:16,359 --> 00:37:19,400
+to then your then your intent would be
+
+983
+00:37:19,400 --> 00:37:22,400
+topping one but there would be no entity
+
+984
+00:37:22,400 --> 00:37:25,000
+because there is no topping mentioned in
+
+985
+00:37:25,000 --> 00:37:26,880
+the sentence there's the word topping
+
+986
+00:37:26,880 --> 00:37:28,839
+but you're not specifying chicken cheese
+
+987
+00:37:28,839 --> 00:37:30,040
+olives or pineapple you're not
+
+988
+00:37:30,040 --> 00:37:32,160
+specifying any of that stuff so entities
+
+989
+00:37:32,160 --> 00:37:34,440
+don't come into account here and so
+
+990
+00:37:34,440 --> 00:37:36,880
+that's why that becomes a little bit
+
+991
+00:37:36,880 --> 00:37:39,280
+more confusing and so what we need to do
+
+992
+00:37:39,280 --> 00:37:41,800
+is before our if let statement we need
+
+993
+00:37:41,800 --> 00:37:44,640
+to create a variable called topping type
+
+994
+00:37:44,640 --> 00:37:46,680
+uh and this topping type variable will
+
+995
+00:37:46,680 --> 00:37:49,680
+be an optional uh string and so the
+
+996
+00:37:49,680 --> 00:37:51,040
+reason this is going to be an optional
+
+997
+00:37:51,040 --> 00:37:52,800
+string is because by default we want
+
+998
+00:37:52,800 --> 00:37:56,480
+this to be n okay however if our entity
+
+999
+00:37:56,480 --> 00:37:58,400
+contains a topic then what we're going
+
+1000
+00:37:58,400 --> 00:37:59,680
+to do is we're going to set this to that
+
+1001
+00:37:59,680 --> 00:38:01,920
+topping so inside of our new if
+
+1002
+00:38:01,920 --> 00:38:03,720
+statement where we say if entity label
+
+1003
+00:38:03,720 --> 00:38:05,720
+is equal to topping then what we do is
+
+1004
+00:38:05,720 --> 00:38:09,280
+we set as you probably guessed tobing
+
+1005
+00:38:09,280 --> 00:38:13,960
+type to The Entity value not the label
+
+1006
+00:38:13,960 --> 00:38:16,280
+and so in this case our label would be
+
+1007
+00:38:16,280 --> 00:38:18,119
+topping but our value would be something
+
+1008
+00:38:18,119 --> 00:38:20,440
+like cheese and then when we're handling
+
+1009
+00:38:20,440 --> 00:38:23,520
+the intense later then we can see okay
+
+1010
+00:38:23,520 --> 00:38:24,920
+which number of topping were they
+
+1011
+00:38:24,920 --> 00:38:25,800
+talking about were they talking about
+
+1012
+00:38:25,800 --> 00:38:28,040
+their first topping second or third uh
+
+1013
+00:38:28,040 --> 00:38:29,920
+and depending on that we can of course
+
+1014
+00:38:29,920 --> 00:38:31,880
+continue and Implement our logic so
+
+1015
+00:38:31,880 --> 00:38:33,920
+that's how that works and since we're on
+
+1016
+00:38:33,920 --> 00:38:35,680
+the topic of intents anyway let's
+
+1017
+00:38:35,680 --> 00:38:38,520
+Implement our intent handling uh so
+
+1018
+00:38:38,520 --> 00:38:40,960
+after your IFL statement for the entity
+
+1019
+00:38:40,960 --> 00:38:42,680
+let's implement the IFL statement for
+
+1020
+00:38:42,680 --> 00:38:45,119
+the intent uh and so we're going to say
+
+1021
+00:38:45,119 --> 00:38:47,280
+if let intent is equal to response
+
+1022
+00:38:47,280 --> 00:38:49,680
+intent and if this is true again if
+
+1023
+00:38:49,680 --> 00:38:52,760
+response intent is not nil uh then the
+
+1024
+00:38:52,760 --> 00:38:54,359
+value of response intent will be put
+
+1025
+00:38:54,359 --> 00:38:57,520
+into intent and then this this block
+
+1026
+00:38:57,520 --> 00:38:59,640
+code will be executed so let's actually
+
+1027
+00:38:59,640 --> 00:39:03,400
+say um maybe something like uh intent oh
+
+1028
+00:39:03,400 --> 00:39:04,680
+sorry no we have to actually check
+
+1029
+00:39:04,680 --> 00:39:07,760
+something first uh so what we need to do
+
+1030
+00:39:07,760 --> 00:39:09,400
+is we need to create a new constant
+
+1031
+00:39:09,400 --> 00:39:11,880
+called contextual intent and set this to
+
+1032
+00:39:11,880 --> 00:39:13,880
+the actual string value of the intent
+
+1033
+00:39:13,880 --> 00:39:16,560
+the actual name of the intent uh and so
+
+1034
+00:39:16,560 --> 00:39:18,599
+then what we do uh is once we've got
+
+1035
+00:39:18,599 --> 00:39:21,160
+that down we have to put in a few if
+
+1036
+00:39:21,160 --> 00:39:23,400
+statements unfortunately a lot of if
+
+1037
+00:39:23,400 --> 00:39:25,000
+statements uh so the first one we're
+
+1038
+00:39:25,000 --> 00:39:26,960
+going to do though is say if contextual
+
+1039
+00:39:26,960 --> 00:39:29,359
+intent
+
+1040
+00:39:29,520 --> 00:39:32,599
+is equal to size small now the size
+
+1041
+00:39:32,599 --> 00:39:34,760
+small intent means as you probably
+
+1042
+00:39:34,760 --> 00:39:37,160
+guessed the user wants a small pizza and
+
+1043
+00:39:37,160 --> 00:39:40,200
+so we can say small pizza and we can set
+
+1044
+00:39:40,200 --> 00:39:42,560
+self. size to
+
+1045
+00:39:42,560 --> 00:39:45,240
+small now of course we can continue this
+
+1046
+00:39:45,240 --> 00:39:49,560
+exact pattern uh for all the rest of the
+
+1047
+00:39:49,560 --> 00:39:52,839
+I'd say around 10 and T here uh but of
+
+1048
+00:39:52,839 --> 00:39:54,400
+course as you can probably guess that
+
+1049
+00:39:54,400 --> 00:39:56,359
+would take a lot of time uh and I don't
+
+1050
+00:39:56,359 --> 00:39:58,119
+want to of course spend your time on the
+
+1051
+00:39:58,119 --> 00:40:00,240
+live stream right now uh and so instead
+
+1052
+00:40:00,240 --> 00:40:01,839
+of spending your time what I've gone
+
+1053
+00:40:01,839 --> 00:40:04,319
+ahead and done is I'm just going to
+
+1054
+00:40:04,319 --> 00:40:06,800
+paste in these if statements from
+
+1055
+00:40:06,800 --> 00:40:08,319
+another screen
+
+1056
+00:40:08,319 --> 00:40:12,079
+here so I'm just going to copy and paste
+
+1057
+00:40:12,079 --> 00:40:13,640
+and for those wondering we've provided
+
+1058
+00:40:13,640 --> 00:40:16,200
+this also via your GitHub exactly so you
+
+1059
+00:40:16,200 --> 00:40:17,280
+know you don't have to worry about
+
+1060
+00:40:17,280 --> 00:40:18,800
+missing out on that it'll be available
+
+1061
+00:40:18,800 --> 00:40:20,440
+to you to follow along exactly so right
+
+1062
+00:40:20,440 --> 00:40:22,400
+after this event the actual final source
+
+1063
+00:40:22,400 --> 00:40:25,240
+code will be open sourced uh however
+
+1064
+00:40:25,240 --> 00:40:27,960
+though uh the uh starter code you can
+
+1065
+00:40:27,960 --> 00:40:29,280
+actually find on GitHub right now and if
+
+1066
+00:40:29,280 --> 00:40:30,599
+you'd like you can actually follow along
+
+1067
+00:40:30,599 --> 00:40:32,520
+with us right now have any questions or
+
+1068
+00:40:32,520 --> 00:40:33,839
+issues you can leave them in the live
+
+1069
+00:40:33,839 --> 00:40:35,680
+chat uh James will be giving me some
+
+1070
+00:40:35,680 --> 00:40:36,960
+more questions later of course we're
+
+1071
+00:40:36,960 --> 00:40:39,280
+going to be doing a great Q&A uh but
+
+1072
+00:40:39,280 --> 00:40:41,040
+let's continue as you can see we're
+
+1073
+00:40:41,040 --> 00:40:42,640
+getting an error and I made this error
+
+1074
+00:40:42,640 --> 00:40:45,319
+on purpose uh but why well there's a
+
+1075
+00:40:45,319 --> 00:40:46,839
+simple reason I need to explain some
+
+1076
+00:40:46,839 --> 00:40:50,160
+more logic to you so so it's happening
+
+1077
+00:40:50,160 --> 00:40:52,240
+here we're getting an error because log
+
+1078
+00:40:52,240 --> 00:40:54,040
+Pizza is a variable that hasn't been
+
+1079
+00:40:54,040 --> 00:40:57,640
+defined yet but what's log Pizza well
+
+1080
+00:40:57,640 --> 00:40:59,680
+when the user's intent is done and that
+
+1081
+00:40:59,680 --> 00:41:01,160
+means they're done ordering their Pizza
+
+1082
+00:41:01,160 --> 00:41:03,280
+they finalized their specifications then
+
+1083
+00:41:03,280 --> 00:41:05,640
+we want to take the actual Pizza
+
+1084
+00:41:05,640 --> 00:41:07,920
+specifications and print them out onto
+
+1085
+00:41:07,920 --> 00:41:09,880
+the screen for the user to see just as
+
+1086
+00:41:09,880 --> 00:41:12,040
+you saw in the demo how at the end it
+
+1087
+00:41:12,040 --> 00:41:14,880
+said size large sauce easy you know
+
+1088
+00:41:14,880 --> 00:41:16,960
+crust thin topping one cheese topping
+
+1089
+00:41:16,960 --> 00:41:19,000
+two chicken topping three nothing uh
+
+1090
+00:41:19,000 --> 00:41:20,520
+when it said that it was because of the
+
+1091
+00:41:20,520 --> 00:41:22,640
+log Pizza variable and the log Pizza
+
+1092
+00:41:22,640 --> 00:41:24,400
+variable is saying okay the next time we
+
+1093
+00:41:24,400 --> 00:41:26,720
+go into the main operation queue we're
+
+1094
+00:41:26,720 --> 00:41:29,240
+actually going to paste out all of those
+
+1095
+00:41:29,240 --> 00:41:31,760
+pizza specification onto the screen and
+
+1096
+00:41:31,760 --> 00:41:34,000
+so the way we're going to do this is by
+
+1097
+00:41:34,000 --> 00:41:36,680
+before our if let for the intent we're
+
+1098
+00:41:36,680 --> 00:41:38,720
+going to create a new constant uh or
+
+1099
+00:41:38,720 --> 00:41:41,400
+variable sorry called log pizza and this
+
+1100
+00:41:41,400 --> 00:41:43,280
+is going to be equal to false and Swift
+
+1101
+00:41:43,280 --> 00:41:45,880
+will type inference this as a Boolean uh
+
+1102
+00:41:45,880 --> 00:41:48,760
+and so after your IFL let though you can
+
+1103
+00:41:48,760 --> 00:41:50,920
+actually go back into the main operation
+
+1104
+00:41:50,920 --> 00:41:53,400
+queue in order to change the UI we're
+
+1105
+00:41:53,400 --> 00:41:55,400
+going to add an operation here and here
+
+1106
+00:41:55,400 --> 00:41:56,800
+we're actually going to do a few UI
+
+1107
+00:41:56,800 --> 00:41:59,160
+changes the first one is again as you
+
+1108
+00:41:59,160 --> 00:42:01,200
+saw in the demo when Watson replies to
+
+1109
+00:42:01,200 --> 00:42:03,119
+us it doesn't just say out what it said
+
+1110
+00:42:03,119 --> 00:42:05,640
+it also says watson colon then says what
+
+1111
+00:42:05,640 --> 00:42:07,880
+Watson said and so basically what we're
+
+1112
+00:42:07,880 --> 00:42:10,359
+going to do now is we're going to say
+
+1113
+00:42:10,359 --> 00:42:12,800
+okay uh we get to the conversation list
+
+1114
+00:42:12,800 --> 00:42:15,400
+self. conversation list and we append to
+
+1115
+00:42:15,400 --> 00:42:18,560
+its text again another row that has what
+
+1116
+00:42:18,560 --> 00:42:23,040
+Watson conversation uh replied to it so
+
+1117
+00:42:23,040 --> 00:42:25,880
+response uh.
+
+1118
+00:42:25,880 --> 00:42:29,839
+output. text tt. first and of course
+
+1119
+00:42:29,839 --> 00:42:31,680
+we're forcefully unwrapping you should
+
+1120
+00:42:31,680 --> 00:42:33,319
+be implementing error handling in your
+
+1121
+00:42:33,319 --> 00:42:35,640
+actual application though and so this
+
+1122
+00:42:35,640 --> 00:42:37,760
+will actually add out what Watson
+
+1123
+00:42:37,760 --> 00:42:40,599
+replied to the user in this onto the
+
+1124
+00:42:40,599 --> 00:42:42,119
+text View and of course I forgot to put
+
+1125
+00:42:42,119 --> 00:42:45,960
+do text here so that's a must here all
+
+1126
+00:42:45,960 --> 00:42:48,119
+right so once you've got that done then
+
+1127
+00:42:48,119 --> 00:42:50,480
+we put in an if statement to see if log
+
+1128
+00:42:50,480 --> 00:42:53,559
+Pizza uh and if log pizza then we want
+
+1129
+00:42:53,559 --> 00:42:55,680
+to put all those pizza specifications as
+
+1130
+00:42:55,680 --> 00:42:57,680
+you saw onto the screen
+
+1131
+00:42:57,680 --> 00:42:59,720
+and so quite simply all you need to do
+
+1132
+00:42:59,720 --> 00:43:02,000
+here uh is do something like maybe copy
+
+1133
+00:43:02,000 --> 00:43:03,800
+this line of code here paste it in and
+
+1134
+00:43:03,800 --> 00:43:06,280
+change this to size and change this to
+
+1135
+00:43:06,280 --> 00:43:09,480
+self. size and again since we have quite
+
+1136
+00:43:09,480 --> 00:43:11,559
+a few Pizza specifications uh and this
+
+1137
+00:43:11,559 --> 00:43:13,800
+is still a small application uh I'm just
+
+1138
+00:43:13,800 --> 00:43:15,440
+going to paste in those other Pizza
+
+1139
+00:43:15,440 --> 00:43:18,000
+specifications from another screen of
+
+1140
+00:43:18,000 --> 00:43:20,319
+code as you can see these are all our
+
+1141
+00:43:20,319 --> 00:43:21,960
+pizza specifications so it'll print out
+
+1142
+00:43:21,960 --> 00:43:26,119
+the size crust sauce topping one two and
+
+1143
+00:43:26,119 --> 00:43:28,880
+three once that's done though after log
+
+1144
+00:43:28,880 --> 00:43:30,880
+Pizza you're finally ready to work with
+
+1145
+00:43:30,880 --> 00:43:34,599
+the last final step in the pipeline and
+
+1146
+00:43:34,599 --> 00:43:37,640
+this is your text to speech service and
+
+1147
+00:43:37,640 --> 00:43:38,920
+finally after this you can actually go
+
+1148
+00:43:38,920 --> 00:43:40,440
+ahead and order some pizzas using this
+
+1149
+00:43:40,440 --> 00:43:43,240
+poot uh so all you need to do in order
+
+1150
+00:43:43,240 --> 00:43:45,200
+to work with text to speech you create a
+
+1151
+00:43:45,200 --> 00:43:48,559
+new text to speech constant set this to
+
+1152
+00:43:48,559 --> 00:43:52,440
+a new text to speech object and again I
+
+1153
+00:43:52,440 --> 00:43:54,000
+have my own credentials for this service
+
+1154
+00:43:54,000 --> 00:43:55,880
+so I'm going to be pasting those in
+
+1155
+00:43:55,880 --> 00:43:58,559
+right now
+
+1156
+00:43:58,559 --> 00:44:01,079
+as you can see here I've got my
+
+1157
+00:44:01,079 --> 00:44:03,240
+credentials here uh and then what I'm
+
+1158
+00:44:03,240 --> 00:44:05,640
+going to do is quite simply no message
+
+1159
+00:44:05,640 --> 00:44:07,359
+request or settings or anything to be
+
+1160
+00:44:07,359 --> 00:44:09,400
+done just do text to
+
+1161
+00:44:09,400 --> 00:44:12,200
+speech. synthesize use the smaller
+
+1162
+00:44:12,200 --> 00:44:14,359
+initializer give it the text as what
+
+1163
+00:44:14,359 --> 00:44:17,000
+Watson returned by going to the response
+
+1164
+00:44:17,000 --> 00:44:19,880
+getting the output getting the text and
+
+1165
+00:44:19,880 --> 00:44:22,000
+then of course getting the first in that
+
+1166
+00:44:22,000 --> 00:44:24,319
+array and then your success completion
+
+1167
+00:44:24,319 --> 00:44:27,119
+Handler will contain an object of data
+
+1168
+00:44:27,119 --> 00:44:29,839
+and just call this audio for example uh
+
+1169
+00:44:29,839 --> 00:44:32,520
+and then you have some code now I'm
+
+1170
+00:44:32,520 --> 00:44:34,240
+going to be pasting something in here
+
+1171
+00:44:34,240 --> 00:44:36,240
+let me let me show you this so basically
+
+1172
+00:44:36,240 --> 00:44:38,000
+what I'm going to do here and this is
+
+1173
+00:44:38,000 --> 00:44:39,839
+actually pretty important uh is I'm
+
+1174
+00:44:39,839 --> 00:44:41,480
+going to get a new shared instance of an
+
+1175
+00:44:41,480 --> 00:44:44,160
+AV Audio session uh and I'm going to be
+
+1176
+00:44:44,160 --> 00:44:46,680
+overriding the audio ports to make sure
+
+1177
+00:44:46,680 --> 00:44:48,960
+it plays audio through the speaker but
+
+1178
+00:44:48,960 --> 00:44:50,760
+what does this mean well it's quite
+
+1179
+00:44:50,760 --> 00:44:53,640
+simple so with an iPhone specifically an
+
+1180
+00:44:53,640 --> 00:44:55,319
+iPhone not iPads don't do this iPod
+
+1181
+00:44:55,319 --> 00:44:57,720
+Touches don't do this only iPhones when
+
+1182
+00:44:57,720 --> 00:44:59,319
+by default when you tell them to play
+
+1183
+00:44:59,319 --> 00:45:00,720
+audio they'll actually play it through
+
+1184
+00:45:00,720 --> 00:45:02,400
+the earpiece so the audio will be very
+
+1185
+00:45:02,400 --> 00:45:03,720
+dim and so you won't be able to hear
+
+1186
+00:45:03,720 --> 00:45:05,480
+anything but we want really loud audio
+
+1187
+00:45:05,480 --> 00:45:07,480
+so you can actually hear something uh
+
+1188
+00:45:07,480 --> 00:45:09,640
+and so what's going to happen is we need
+
+1189
+00:45:09,640 --> 00:45:11,839
+to actually override the earpiece and go
+
+1190
+00:45:11,839 --> 00:45:13,760
+directly to the speaker but there's a
+
+1191
+00:45:13,760 --> 00:45:15,720
+little problem now let me actually tell
+
+1192
+00:45:15,720 --> 00:45:17,359
+you a quick story here so while I was at
+
+1193
+00:45:17,359 --> 00:45:19,880
+ium developer connect 2016 I actually
+
+1194
+00:45:19,880 --> 00:45:21,880
+had my ass tme application which had
+
+1195
+00:45:21,880 --> 00:45:24,200
+speech to text as well and it would use
+
+1196
+00:45:24,200 --> 00:45:26,599
+code or text to speech sorry and and it
+
+1197
+00:45:26,599 --> 00:45:29,800
+used code similar to this and so one
+
+1198
+00:45:29,800 --> 00:45:31,640
+thing you must note here is that this
+
+1199
+00:45:31,640 --> 00:45:33,359
+won't just override the earpiece it'll
+
+1200
+00:45:33,359 --> 00:45:35,359
+override the headphone the HDMI
+
+1201
+00:45:35,359 --> 00:45:38,920
+lightning everything and so uh you will
+
+1202
+00:45:38,920 --> 00:45:40,640
+be able to hear the speaker but the
+
+1203
+00:45:40,640 --> 00:45:41,880
+audience won't be able to hear the
+
+1204
+00:45:41,880 --> 00:45:44,760
+speakers at all so you might want to
+
+1205
+00:45:44,760 --> 00:45:46,079
+stay careful of that so if you'd
+
+1206
+00:45:46,079 --> 00:45:47,720
+actually like like to play this to
+
+1207
+00:45:47,720 --> 00:45:49,640
+speakers or headphones or something of
+
+1208
+00:45:49,640 --> 00:45:51,480
+that sort you'd want to implement your
+
+1209
+00:45:51,480 --> 00:45:53,839
+own Logic for overriding specifically
+
+1210
+00:45:53,839 --> 00:45:55,800
+the earpiece going to the speakers if
+
+1211
+00:45:55,800 --> 00:45:57,400
+there are no headphones phones or
+
+1212
+00:45:57,400 --> 00:45:59,000
+anything else plugged in so you're
+
+1213
+00:45:59,000 --> 00:46:00,440
+probably going to want to implement that
+
+1214
+00:46:00,440 --> 00:46:02,760
+if you want that
+
+1215
+00:46:02,760 --> 00:46:05,040
+functionality all right so once that's
+
+1216
+00:46:05,040 --> 00:46:07,000
+done though we can actually play our
+
+1217
+00:46:07,000 --> 00:46:09,000
+audio and the way we can do this is by
+
+1218
+00:46:09,000 --> 00:46:11,559
+going to the self. player as you know we
+
+1219
+00:46:11,559 --> 00:46:13,880
+created in the beginning of this uh live
+
+1220
+00:46:13,880 --> 00:46:16,280
+event and we're going to be forcefully
+
+1221
+00:46:16,280 --> 00:46:18,280
+trying to set this to a new AV Audio
+
+1222
+00:46:18,280 --> 00:46:20,079
+player we'll be using the data
+
+1223
+00:46:20,079 --> 00:46:21,839
+initializer and we'll be using the data
+
+1224
+00:46:21,839 --> 00:46:23,640
+that Watson text to speech returned to
+
+1225
+00:46:23,640 --> 00:46:26,720
+us in the audio variable once that's
+
+1226
+00:46:26,720 --> 00:46:28,079
+done done we're going to be telling the
+
+1227
+00:46:28,079 --> 00:46:31,400
+a self. player to prepare to play and
+
+1228
+00:46:31,400 --> 00:46:36,079
+then self. player to actually play and
+
+1229
+00:46:36,079 --> 00:46:38,920
+from there you are done coding in this
+
+1230
+00:46:38,920 --> 00:46:41,640
+application but one last line of code
+
+1231
+00:46:41,640 --> 00:46:44,440
+all you need to do I'm hungry I know but
+
+1232
+00:46:44,440 --> 00:46:46,119
+just one last line of code I promise and
+
+1233
+00:46:46,119 --> 00:46:48,559
+then sell uh sorry so all you need to do
+
+1234
+00:46:48,559 --> 00:46:52,359
+is set the start stop buttons title to
+
+1235
+00:46:52,359 --> 00:46:55,839
+start sorry not star start and then set
+
+1236
+00:46:55,839 --> 00:46:58,040
+it to a normal by control State and you
+
+1237
+00:46:58,040 --> 00:47:00,599
+are done coding all you need to do now
+
+1238
+00:47:00,599 --> 00:47:02,640
+is go back to your main. storyboard
+
+1239
+00:47:02,640 --> 00:47:04,720
+connect the IB Outlet to the text View
+
+1240
+00:47:04,720 --> 00:47:06,280
+and of course the button so I've
+
+1241
+00:47:06,280 --> 00:47:07,880
+connected my IB Outlets to the text View
+
+1242
+00:47:07,880 --> 00:47:09,760
+and the button and then I connect my IB
+
+1243
+00:47:09,760 --> 00:47:13,000
+action from the button to the uh View
+
+1244
+00:47:13,000 --> 00:47:15,640
+and then we are completely done our
+
+1245
+00:47:15,640 --> 00:47:18,079
+button now knows how exact oh sorry I
+
+1246
+00:47:18,079 --> 00:47:20,160
+didn't connect the ibaction properly
+
+1247
+00:47:20,160 --> 00:47:22,440
+anyway so now our button knows exactly
+
+1248
+00:47:22,440 --> 00:47:24,240
+what to do when it's clicked our text
+
+1249
+00:47:24,240 --> 00:47:26,040
+view knows what output to give when it's
+
+1250
+00:47:26,040 --> 00:47:29,119
+done uh and of course this application
+
+1251
+00:47:29,119 --> 00:47:31,559
+is ready to be tested would you like to
+
+1252
+00:47:31,559 --> 00:47:34,599
+test this out now all right so what I'm
+
+1253
+00:47:34,599 --> 00:47:36,960
+going to do is I'm going to first of all
+
+1254
+00:47:36,960 --> 00:47:40,480
+uh connect my phone to my Mac because we
+
+1255
+00:47:40,480 --> 00:47:43,000
+can't do that um we can't test this
+
+1256
+00:47:43,000 --> 00:47:44,880
+application out without connecting uh so
+
+1257
+00:47:44,880 --> 00:47:46,640
+it's going to be a little bit of uh lag
+
+1258
+00:47:46,640 --> 00:47:49,440
+between putting this phone on screen so
+
+1259
+00:47:49,440 --> 00:47:52,319
+what I'm going to do here is I am going
+
+1260
+00:47:52,319 --> 00:47:55,000
+to run this onto my
+
+1261
+00:47:55,000 --> 00:47:57,359
+device and then
+
+1262
+00:47:57,359 --> 00:47:59,599
+we
+
+1263
+00:47:59,599 --> 00:48:02,079
+will okay so right okay so it's going to
+
+1264
+00:48:02,079 --> 00:48:03,400
+run on my device you'll be able to see
+
+1265
+00:48:03,400 --> 00:48:05,960
+it on screen in just a moment uh
+
+1266
+00:48:05,960 --> 00:48:07,839
+unfortunately these lightning to hdmis
+
+1267
+00:48:07,839 --> 00:48:09,680
+don't allow you to transfer data through
+
+1268
+00:48:09,680 --> 00:48:11,079
+the lightning Port that they give you
+
+1269
+00:48:11,079 --> 00:48:13,119
+only Power so that doesn't work come on
+
+1270
+00:48:13,119 --> 00:48:16,319
+Mac Apple okay so then we can continue
+
+1271
+00:48:16,319 --> 00:48:19,119
+I'm going to plug this back in as you
+
+1272
+00:48:19,119 --> 00:48:23,960
+can see on the TV right now we've got my
+
+1273
+00:48:23,960 --> 00:48:27,520
+phone and there we go as you can see now
+
+1274
+00:48:27,520 --> 00:48:29,280
+this is the application that we just
+
+1275
+00:48:29,280 --> 00:48:33,240
+coded in live Let's test it
+
+1276
+00:48:33,240 --> 00:48:35,640
+out
+
+1277
+00:48:35,640 --> 00:48:37,880
+hello as you can
+
+1278
+00:48:37,880 --> 00:48:40,599
+see it
+
+1279
+00:48:40,599 --> 00:48:42,599
+says or at least should say in just a
+
+1280
+00:48:42,599 --> 00:48:44,680
+moment here oh one thing I forgot to do
+
+1281
+00:48:44,680 --> 00:48:46,599
+in the code is we have to paste in the
+
+1282
+00:48:46,599 --> 00:48:49,000
+workspace ID for conversation of course
+
+1283
+00:48:49,000 --> 00:48:51,000
+or else how will it know where to go so
+
+1284
+00:48:51,000 --> 00:48:53,079
+you have to do is go back to the code uh
+
+1285
+00:48:53,079 --> 00:48:54,720
+so you already know where this is I've
+
+1286
+00:48:54,720 --> 00:48:56,200
+already shown you this I'm just going to
+
+1287
+00:48:56,200 --> 00:48:58,799
+paste in the conversation ID uh and then
+
+1288
+00:48:58,799 --> 00:49:02,319
+we will switch back to the phone uh so
+
+1289
+00:49:02,319 --> 00:49:05,720
+workspace ID right there all right so
+
+1290
+00:49:05,720 --> 00:49:08,640
+then we
+
+1291
+00:49:08,640 --> 00:49:11,400
+just put run this back right back onto
+
+1292
+00:49:11,400 --> 00:49:14,240
+our phone and then we should be able to
+
+1293
+00:49:14,240 --> 00:49:17,520
+test out our
+
+1294
+00:49:19,000 --> 00:49:21,079
+application all
+
+1295
+00:49:21,079 --> 00:49:23,240
+right run the
+
+1296
+00:49:23,240 --> 00:49:26,520
+app and in just a moment it should run
+
+1297
+00:49:26,520 --> 00:49:28,240
+onto my phone and then you'll be able to
+
+1298
+00:49:28,240 --> 00:49:32,440
+see it on the screen once I plug it
+
+1299
+00:49:32,760 --> 00:49:36,599
+in all right we've got this running and
+
+1300
+00:49:36,599 --> 00:49:38,000
+switch
+
+1301
+00:49:38,000 --> 00:49:41,960
+over so you can see here shows my phone
+
+1302
+00:49:41,960 --> 00:49:44,040
+and now we can actually test it
+
+1303
+00:49:44,040 --> 00:49:46,240
+out
+
+1304
+00:49:46,240 --> 00:49:49,240
+hello so in theory the recording works
+
+1305
+00:49:49,240 --> 00:49:51,960
+fine what size pizza would you like all
+
+1306
+00:49:51,960 --> 00:49:54,200
+right so Watson is able to reply to us
+
+1307
+00:49:54,200 --> 00:49:56,960
+using text and speech it's able to so so
+
+1308
+00:49:56,960 --> 00:49:59,160
+we've seen that the recording works
+
+1309
+00:49:59,160 --> 00:50:01,119
+works perfectly speech for text works
+
+1310
+00:50:01,119 --> 00:50:03,599
+perfectly conversation Works nicely uh
+
+1311
+00:50:03,599 --> 00:50:06,520
+what the text view Works nicely and of
+
+1312
+00:50:06,520 --> 00:50:09,200
+course text to speech works perfectly as
+
+1313
+00:50:09,200 --> 00:50:11,559
+well and this is our live coded in
+
+1314
+00:50:11,559 --> 00:50:13,160
+application I'm not using the older
+
+1315
+00:50:13,160 --> 00:50:15,680
+application right now and that is how
+
+1316
+00:50:15,680 --> 00:50:18,000
+you can Implement your own little pizza
+
+1317
+00:50:18,000 --> 00:50:20,119
+ordering chatbot that will actually call
+
+1318
+00:50:20,119 --> 00:50:22,799
+a rest API when it's done ordering the
+
+1319
+00:50:22,799 --> 00:50:25,720
+pizza in order to actually get your
+
+1320
+00:50:25,720 --> 00:50:28,079
+pizza all right so I guess it's Pizza
+
+1321
+00:50:28,079 --> 00:50:32,440
+time again uh but now just before we end
+
+1322
+00:50:32,440 --> 00:50:35,240
+off with this application as I said I
+
+1323
+00:50:35,240 --> 00:50:38,040
+have another little surprise I guess uh
+
+1324
+00:50:38,040 --> 00:50:40,559
+with node.js and this application so
+
+1325
+00:50:40,559 --> 00:50:42,799
+let's take a quick look over here back
+
+1326
+00:50:42,799 --> 00:50:45,760
+at our uh presentation here uh and so
+
+1327
+00:50:45,760 --> 00:50:48,680
+this is our system before or no we have
+
+1328
+00:50:48,680 --> 00:50:51,319
+to switch back to the Mac uh this was
+
+1329
+00:50:51,319 --> 00:50:54,760
+our system before all right uh right
+
+1330
+00:50:54,760 --> 00:50:57,960
+over here uh and so this this allow the
+
+1331
+00:50:57,960 --> 00:51:00,079
+user to order a pizza using the
+
+1332
+00:51:00,079 --> 00:51:02,119
+application but there are a few problems
+
+1333
+00:51:02,119 --> 00:51:03,520
+with this first of all you have to keep
+
+1334
+00:51:03,520 --> 00:51:05,799
+you know updating the software uh
+
+1335
+00:51:05,799 --> 00:51:07,400
+according to the newer Swifts that come
+
+1336
+00:51:07,400 --> 00:51:10,000
+out uh of course we have to have you
+
+1337
+00:51:10,000 --> 00:51:12,240
+know the user has to have have an iOS
+
+1338
+00:51:12,240 --> 00:51:14,400
+application specifically they can't have
+
+1339
+00:51:14,400 --> 00:51:16,599
+another type of device uh like they
+
+1340
+00:51:16,599 --> 00:51:17,960
+can't order it from a flip phone for
+
+1341
+00:51:17,960 --> 00:51:20,160
+example uh so there are just a few
+
+1342
+00:51:20,160 --> 00:51:22,240
+problems with how this is implemented
+
+1343
+00:51:22,240 --> 00:51:23,839
+which can't really be solved by creating
+
+1344
+00:51:23,839 --> 00:51:25,319
+more and more and more applications for
+
+1345
+00:51:25,319 --> 00:51:28,359
+different types of devices and so the
+
+1346
+00:51:28,359 --> 00:51:31,280
+way that I've decided we can combat this
+
+1347
+00:51:31,280 --> 00:51:33,319
+is by instead of using my own custom
+
+1348
+00:51:33,319 --> 00:51:37,720
+application we use twio and so twilio
+
+1349
+00:51:37,720 --> 00:51:39,440
+will allow us to actually order these
+
+1350
+00:51:39,440 --> 00:51:42,319
+pizzas through SMS that's right we can
+
+1351
+00:51:42,319 --> 00:51:44,599
+actually use twio in this case and
+
+1352
+00:51:44,599 --> 00:51:46,200
+through that means we could really order
+
+1353
+00:51:46,200 --> 00:51:47,799
+a pizza from a flip phone we could order
+
+1354
+00:51:47,799 --> 00:51:49,880
+it from an iPhone really anywhere where
+
+1355
+00:51:49,880 --> 00:51:52,240
+you can send an SMS from anywhere around
+
+1356
+00:51:52,240 --> 00:51:55,960
+the world uh and so now as you know with
+
+1357
+00:51:55,960 --> 00:51:57,880
+SMS speech to text and text to speech
+
+1358
+00:51:57,880 --> 00:51:59,760
+don't really come in because of course
+
+1359
+00:51:59,760 --> 00:52:03,000
+we have direct SMS uh so those have to
+
+1360
+00:52:03,000 --> 00:52:05,240
+go so those services are no longer in
+
+1361
+00:52:05,240 --> 00:52:08,119
+use uh now of course though we can't
+
+1362
+00:52:08,119 --> 00:52:09,839
+have twilio directly communicate with
+
+1363
+00:52:09,839 --> 00:52:13,040
+the rest API and conversation so we need
+
+1364
+00:52:13,040 --> 00:52:16,119
+to implement a node.js server in between
+
+1365
+00:52:16,119 --> 00:52:18,079
+and twilio will contact the node.js
+
+1366
+00:52:18,079 --> 00:52:20,240
+server whenever it receives a request
+
+1367
+00:52:20,240 --> 00:52:22,119
+from the user and that then then the
+
+1368
+00:52:22,119 --> 00:52:23,520
+node.js server will send that to
+
+1369
+00:52:23,520 --> 00:52:25,520
+conversation conversation will reply to
+
+1370
+00:52:25,520 --> 00:52:27,200
+the node.js server and it'll send that
+
+1371
+00:52:27,200 --> 00:52:29,480
+back to twilio for the user and of
+
+1372
+00:52:29,480 --> 00:52:31,319
+course once the user is done ordering
+
+1373
+00:52:31,319 --> 00:52:33,359
+their Pizza the nodejs server will
+
+1374
+00:52:33,359 --> 00:52:34,880
+actually send that request to the rest
+
+1375
+00:52:34,880 --> 00:52:39,079
+API in order to have the rest API order
+
+1376
+00:52:39,079 --> 00:52:42,079
+their Pizza in fact now let's take a
+
+1377
+00:52:42,079 --> 00:52:45,520
+look at a demo of how that can itself
+
+1378
+00:52:45,520 --> 00:52:48,119
+can be uh can be implemented uh and so
+
+1379
+00:52:48,119 --> 00:52:49,720
+now if I just open up my messages here
+
+1380
+00:52:49,720 --> 00:52:51,480
+I'm going to compose a new message then
+
+1381
+00:52:51,480 --> 00:52:53,880
+I'm going to switch over to my phone uh
+
+1382
+00:52:53,880 --> 00:52:55,119
+and then while it switches over I'm
+
+1383
+00:52:55,119 --> 00:52:57,280
+going to go into my Linux
+
+1384
+00:52:57,280 --> 00:53:00,599
+um box over here and I'm going to start
+
+1385
+00:53:00,599 --> 00:53:05,640
+a nodejs script if it'll load that is um
+
+1386
+00:53:05,640 --> 00:53:06,720
+sometimes the internet doesn't want to
+
+1387
+00:53:06,720 --> 00:53:08,720
+cooperate with you so just give it a
+
+1388
+00:53:08,720 --> 00:53:10,599
+moment so as you can see this is behind
+
+1389
+00:53:10,599 --> 00:53:13,400
+me uh but it might just take me a moment
+
+1390
+00:53:13,400 --> 00:53:16,280
+here to set up
+
+1391
+00:53:16,280 --> 00:53:18,359
+the
+
+1392
+00:53:18,359 --> 00:53:20,720
+actual Linux so basically what I'm going
+
+1393
+00:53:20,720 --> 00:53:22,359
+to be doing now is I'm going to be
+
+1394
+00:53:22,359 --> 00:53:25,520
+opening up or you know opening uh that
+
+1395
+00:53:25,520 --> 00:53:29,160
+to no Js that comes in between uh the
+
+1396
+00:53:29,160 --> 00:53:31,920
+twio conversation and the rest API all
+
+1397
+00:53:31,920 --> 00:53:33,880
+right so it should work technically uh
+
+1398
+00:53:33,880 --> 00:53:35,720
+so as you can see behind me we've got my
+
+1399
+00:53:35,720 --> 00:53:38,319
+phone once again uh my text message and
+
+1400
+00:53:38,319 --> 00:53:39,720
+so I'm actually going to be composing a
+
+1401
+00:53:39,720 --> 00:53:42,359
+new message to my Twi out number that
+
+1402
+00:53:42,359 --> 00:53:44,280
+I've got set up and as you can see what
+
+1403
+00:53:44,280 --> 00:53:46,200
+I'm going to do is again just like we
+
+1404
+00:53:46,200 --> 00:53:49,000
+said to my application I'm going to say
+
+1405
+00:53:49,000 --> 00:53:54,480
+hi to twio and it returns to with hello
+
+1406
+00:53:54,480 --> 00:53:56,200
+what size pizza would you like and of
+
+1407
+00:53:56,200 --> 00:53:58,760
+course from here we can continue our
+
+1408
+00:53:58,760 --> 00:54:00,280
+conversation of course just like we did
+
+1409
+00:54:00,280 --> 00:54:02,599
+last time we'd like a large pizza uh
+
+1410
+00:54:02,599 --> 00:54:05,119
+sure what uh what toppings do we have
+
+1411
+00:54:05,119 --> 00:54:06,960
+just to prove though that this is
+
+1412
+00:54:06,960 --> 00:54:09,440
+actually keeping in track of the context
+
+1413
+00:54:09,440 --> 00:54:11,200
+uh and the flow of our conversation I
+
+1414
+00:54:11,200 --> 00:54:13,119
+can ask it for the options which
+
+1415
+00:54:13,119 --> 00:54:14,640
+otherwise it wouldn't be able to tell me
+
+1416
+00:54:14,640 --> 00:54:16,640
+about the toppings unless I was keeping
+
+1417
+00:54:16,640 --> 00:54:18,480
+track of the conversation and the
+
+1418
+00:54:18,480 --> 00:54:21,040
+context which it has and it says we have
+
+1419
+00:54:21,040 --> 00:54:23,079
+cheese olives pineapples and chicken is
+
+1420
+00:54:23,079 --> 00:54:25,240
+toppings you can have three toppings
+
+1421
+00:54:25,240 --> 00:54:27,440
+tops and from here of course I can
+
+1422
+00:54:27,440 --> 00:54:29,599
+continue my conversation with lson and I
+
+1423
+00:54:29,599 --> 00:54:31,520
+can continue to order my pizza for my
+
+1424
+00:54:31,520 --> 00:54:34,400
+SMS and the best part is though that
+
+1425
+00:54:34,400 --> 00:54:36,559
+this will actually keep track of each
+
+1426
+00:54:36,559 --> 00:54:39,680
+phone's context variable independently
+
+1427
+00:54:39,680 --> 00:54:41,920
+so you could have 500 people messaging
+
+1428
+00:54:41,920 --> 00:54:44,040
+it at once and each one would remain
+
+1429
+00:54:44,040 --> 00:54:45,359
+separate and it wouldn't get those
+
+1430
+00:54:45,359 --> 00:54:48,280
+orders mixed up ever and so generally
+
+1431
+00:54:48,280 --> 00:54:50,880
+the the implementation of this is very
+
+1432
+00:54:50,880 --> 00:54:52,720
+very interesting and in fact you can see
+
+1433
+00:54:52,720 --> 00:54:55,599
+this source code on my GitHub page as
+
+1434
+00:54:55,599 --> 00:54:59,640
+well nice all right so that's what we
+
+1435
+00:54:59,640 --> 00:55:02,000
+had for this Facebook live event today
+
+1436
+00:55:02,000 --> 00:55:04,119
+but just before we go though uh I mean
+
+1437
+00:55:04,119 --> 00:55:08,160
+we would like to do a quick Q&A uh but
+
+1438
+00:55:08,160 --> 00:55:10,079
+one more thing is though uh that I'd
+
+1439
+00:55:10,079 --> 00:55:11,880
+like to say first of all a few
+
+1440
+00:55:11,880 --> 00:55:14,760
+conferences of ibms uh first of all oh
+
+1441
+00:55:14,760 --> 00:55:18,240
+sorry we've got connect 2017 here uh so
+
+1442
+00:55:18,240 --> 00:55:20,359
+connect 2017 is going to be a conference
+
+1443
+00:55:20,359 --> 00:55:22,760
+all about IBM Watson uh so this is going
+
+1444
+00:55:22,760 --> 00:55:24,880
+to be held in San Francisco from
+
+1445
+00:55:24,880 --> 00:55:26,839
+February 20th to 23rd it's going to be a
+
+1446
+00:55:26,839 --> 00:55:27,920
+really interesting conference so I'd
+
+1447
+00:55:27,920 --> 00:55:29,880
+recommend you check that out uh but of
+
+1448
+00:55:29,880 --> 00:55:31,319
+course apart from that we've also got
+
+1449
+00:55:31,319 --> 00:55:33,640
+interconnect 2017 which you'll be at
+
+1450
+00:55:33,640 --> 00:55:35,280
+right exactly I'm going to be presenting
+
+1451
+00:55:35,280 --> 00:55:37,520
+at interconnect 2017 it's going to be
+
+1452
+00:55:37,520 --> 00:55:39,880
+held from March 19th to 23rd in Las
+
+1453
+00:55:39,880 --> 00:55:41,400
+Vegas so I'd recommend you check that
+
+1454
+00:55:41,400 --> 00:55:42,880
+out as well might even be interesting to
+
+1455
+00:55:42,880 --> 00:55:44,799
+meet some of you uh at interconnect
+
+1456
+00:55:44,799 --> 00:55:47,240
+he'll be doing a book signing hopefully
+
+1457
+00:55:47,240 --> 00:55:51,240
+yes so maybe let's see U so apart from
+
+1458
+00:55:51,240 --> 00:55:53,319
+that uh of course we've also got amplify
+
+1459
+00:55:53,319 --> 00:55:54,599
+which is going to be held almost at the
+
+1460
+00:55:54,599 --> 00:55:56,720
+same time as interconnect again Las
+
+1461
+00:55:56,720 --> 00:56:00,000
+Vegas March 20th to 22nd uh so of course
+
+1462
+00:56:00,000 --> 00:56:02,760
+again all about IBM Watson and IBM Blu
+
+1463
+00:56:02,760 --> 00:56:04,079
+miix and uh basically how you can
+
+1464
+00:56:04,079 --> 00:56:06,359
+combine things like cloud and cognitive
+
+1465
+00:56:06,359 --> 00:56:08,760
+uh to your application Advantage now
+
+1466
+00:56:08,760 --> 00:56:10,480
+before we get to questions can you pull
+
+1467
+00:56:10,480 --> 00:56:12,480
+up um like your contacts or where they
+
+1468
+00:56:12,480 --> 00:56:14,960
+can follow you on the social media sure
+
+1469
+00:56:14,960 --> 00:56:16,280
+so as you can see here this is my
+
+1470
+00:56:16,280 --> 00:56:18,319
+contact information uh so this is my
+
+1471
+00:56:18,319 --> 00:56:19,799
+GitHub as well if you'd like to see my
+
+1472
+00:56:19,799 --> 00:56:21,520
+open source projects and the code for
+
+1473
+00:56:21,520 --> 00:56:24,000
+this application uh of course my YouTube
+
+1474
+00:56:24,000 --> 00:56:26,559
+email Twitter and Linkedin but of course
+
+1475
+00:56:26,559 --> 00:56:28,240
+though you can actually uh also this is
+
+1476
+00:56:28,240 --> 00:56:30,680
+my book hello Swift that I've written uh
+
+1477
+00:56:30,680 --> 00:56:32,799
+hello Swift iOS at programming for kids
+
+1478
+00:56:32,799 --> 00:56:34,839
+and other beginners uh and of course you
+
+1479
+00:56:34,839 --> 00:56:36,520
+can actually pre-order this online on
+
+1480
+00:56:36,520 --> 00:56:38,240
+the Publishers website and many other
+
+1481
+00:56:38,240 --> 00:56:41,359
+bookstores as well if you'd like to uh
+
+1482
+00:56:41,359 --> 00:56:42,520
+and of course you can actually just
+
+1483
+00:56:42,520 --> 00:56:44,559
+search up hell Swift and pre-order that
+
+1484
+00:56:44,559 --> 00:56:46,880
+if you'd like all right so now I guess
+
+1485
+00:56:46,880 --> 00:56:49,640
+we can actually uh start the Q&A of
+
+1486
+00:56:49,640 --> 00:56:51,799
+course our pizza was ordered uh so
+
+1487
+00:56:51,799 --> 00:56:55,480
+that's nice uh thank you so let's begin
+
+1488
+00:56:55,480 --> 00:56:57,039
+quick Q
+
+1489
+00:56:57,039 --> 00:56:59,160
+all right let's see what we
+
+1490
+00:56:59,160 --> 00:57:02,359
+got all
+
+1491
+00:57:02,640 --> 00:57:04,920
+right so Tammy while I'm looking for
+
+1492
+00:57:04,920 --> 00:57:07,680
+questions why don't you um get them
+
+1493
+00:57:07,680 --> 00:57:08,960
+interested in like how you got started
+
+1494
+00:57:08,960 --> 00:57:11,880
+with Watson sure definitely uh well the
+
+1495
+00:57:11,880 --> 00:57:13,440
+way I actually got started with Watson
+
+1496
+00:57:13,440 --> 00:57:15,280
+is actually quite interesting and quite
+
+1497
+00:57:15,280 --> 00:57:17,240
+coincidental uh so what happened is
+
+1498
+00:57:17,240 --> 00:57:19,240
+around one and a half years ago I was
+
+1499
+00:57:19,240 --> 00:57:20,880
+really interested in you know General
+
+1500
+00:57:20,880 --> 00:57:23,400
+programming really uh and so what
+
+1501
+00:57:23,400 --> 00:57:25,640
+happened is actually this was in uh nove
+
+1502
+00:57:25,640 --> 00:57:28,160
+just uh just before November of 2015 I
+
+1503
+00:57:28,160 --> 00:57:30,280
+was really interested in things like uh
+
+1504
+00:57:30,280 --> 00:57:32,280
+programming in general and so I was you
+
+1505
+00:57:32,280 --> 00:57:33,960
+know on YouTube I was creating YouTube
+
+1506
+00:57:33,960 --> 00:57:36,599
+videos and so in my recommended pain I
+
+1507
+00:57:36,599 --> 00:57:38,319
+actually saw a documentary about the
+
+1508
+00:57:38,319 --> 00:57:39,760
+smartest computer in the world and I was
+
+1509
+00:57:39,760 --> 00:57:42,079
+like okay what's this it was a 42-minute
+
+1510
+00:57:42,079 --> 00:57:44,839
+documentary and it highlighted exactly
+
+1511
+00:57:44,839 --> 00:57:46,720
+how Watson was able to play Jeopardy how
+
+1512
+00:57:46,720 --> 00:57:48,359
+it learns what machine learning is what
+
+1513
+00:57:48,359 --> 00:57:52,000
+AI is and I was just so so interested by
+
+1514
+00:57:52,000 --> 00:57:54,280
+all of this and so I was immediately
+
+1515
+00:57:54,280 --> 00:57:56,680
+hooked to I Watson uh and so I couldn't
+
+1516
+00:57:56,680 --> 00:57:59,039
+resist myself but to see what IBM Watson
+
+1517
+00:57:59,039 --> 00:58:00,520
+is nowadays and I was absolutely
+
+1518
+00:58:00,520 --> 00:58:02,359
+thrilled to see that Watson actually
+
+1519
+00:58:02,359 --> 00:58:05,079
+provided things like developer apis uh
+
+1520
+00:58:05,079 --> 00:58:06,799
+and so what happened is I actually
+
+1521
+00:58:06,799 --> 00:58:08,280
+started working with those those
+
+1522
+00:58:08,280 --> 00:58:10,520
+developer apis my first API was
+
+1523
+00:58:10,520 --> 00:58:12,640
+retrieving rank that I used uh so it was
+
+1524
+00:58:12,640 --> 00:58:14,359
+generally very interesting how I got
+
+1525
+00:58:14,359 --> 00:58:17,760
+into IBM Watson uh and of course though
+
+1526
+00:58:17,760 --> 00:58:19,480
+uh apart from that I actually released
+
+1527
+00:58:19,480 --> 00:58:22,559
+my first IBM Watson video in November of
+
+1528
+00:58:22,559 --> 00:58:24,799
+2015 uh and so of course I actually
+
+1529
+00:58:24,799 --> 00:58:26,200
+presented my very first Watson
+
+1530
+00:58:26,200 --> 00:58:30,000
+application at interconnect 2016 2016 uh
+
+1531
+00:58:30,000 --> 00:58:32,079
+which I had developed called as tme
+
+1532
+00:58:32,079 --> 00:58:33,599
+which is an nlqa
+
+1533
+00:58:33,599 --> 00:58:35,920
+system so that's how we got uh started
+
+1534
+00:58:35,920 --> 00:58:37,559
+off with
+
+1535
+00:58:37,559 --> 00:58:40,880
+Watson great no um tamy are there any of
+
+1536
+00:58:40,880 --> 00:58:42,960
+the services that you enjoy most from
+
+1537
+00:58:42,960 --> 00:58:45,559
+the Watson well I actually got asked
+
+1538
+00:58:45,559 --> 00:58:47,440
+this I don't exactly remember when but
+
+1539
+00:58:47,440 --> 00:58:50,240
+um I got asked this a lot uh and so what
+
+1540
+00:58:50,240 --> 00:58:52,599
+I have to say there though is that I
+
+1541
+00:58:52,599 --> 00:58:54,920
+don't necessarily have a favorite Watson
+
+1542
+00:58:54,920 --> 00:58:57,760
+API but the reason being here though is
+
+1543
+00:58:57,760 --> 00:58:59,200
+that they're all completely different
+
+1544
+00:58:59,200 --> 00:59:01,880
+they're all good in their own use cases
+
+1545
+00:59:01,880 --> 00:59:03,760
+uh but if you were to say the one that I
+
+1546
+00:59:03,760 --> 00:59:06,640
+find would be best for most use cases
+
+1547
+00:59:06,640 --> 00:59:08,200
+really interesting and really fun to
+
+1548
+00:59:08,200 --> 00:59:10,440
+work with I'd say visual recognition and
+
+1549
+00:59:10,440 --> 00:59:12,079
+the natural language classifier would
+
+1550
+00:59:12,079 --> 00:59:14,119
+have to be uh and so the only thing is
+
+1551
+00:59:14,119 --> 00:59:15,240
+though you know things like retrieving
+
+1552
+00:59:15,240 --> 00:59:16,920
+rank natural language classifier they
+
+1553
+00:59:16,920 --> 00:59:18,440
+have such different use cases that I
+
+1554
+00:59:18,440 --> 00:59:20,319
+can't really compare them uh with each
+
+1555
+00:59:20,319 --> 00:59:21,880
+other and see which one's better
+
+1556
+00:59:21,880 --> 00:59:24,039
+necessarily uh but in terms of
+
+1557
+00:59:24,039 --> 00:59:25,559
+interestingness I think visual
+
+1558
+00:59:25,559 --> 00:59:27,240
+recognition and the natural language
+
+1559
+00:59:27,240 --> 00:59:30,480
+classifier take the cake there nice do
+
+1560
+00:59:30,480 --> 00:59:32,640
+what um projects do you have working on
+
+1561
+00:59:32,640 --> 00:59:34,319
+right now that you maybe are interested
+
+1562
+00:59:34,319 --> 00:59:36,319
+in sharing with the team uh well I am
+
+1563
+00:59:36,319 --> 00:59:38,520
+actually working on quite a few projects
+
+1564
+00:59:38,520 --> 00:59:41,520
+most of them uh are quite secret for now
+
+1565
+00:59:41,520 --> 00:59:44,559
+though of course I am of also working on
+
+1566
+00:59:44,559 --> 00:59:46,520
+a lot of projects to make the like kids
+
+1567
+00:59:46,520 --> 00:59:48,880
+and their parents lives easier uh of
+
+1568
+00:59:48,880 --> 00:59:50,720
+course I'm working towards uh helping
+
+1569
+00:59:50,720 --> 00:59:52,480
+people with disabilities as well which
+
+1570
+00:59:52,480 --> 00:59:54,559
+you'll see more about this type of stuff
+
+1571
+00:59:54,559 --> 00:59:56,760
+at interconnect 20177
+
+1572
+00:59:56,760 --> 00:59:58,119
+so again that's what I'm saying uh you
+
+1573
+00:59:58,119 --> 00:59:59,799
+might just want to check that out as
+
+1574
+00:59:59,799 --> 01:00:03,240
+well um one of the questions I see is
+
+1575
+01:00:03,240 --> 01:00:05,760
+regarding the apis from Watson's if
+
+1576
+01:00:05,760 --> 01:00:07,720
+someone was to get started yes what
+
+1577
+01:00:07,720 --> 01:00:09,480
+would you recommend for someone to get
+
+1578
+01:00:09,480 --> 01:00:11,760
+started with no JS if that's their
+
+1579
+01:00:11,760 --> 01:00:13,240
+programming language of prefence sure
+
+1580
+01:00:13,240 --> 01:00:15,559
+yeah in order to get started like the
+
+1581
+01:00:15,559 --> 01:00:17,480
+Watson API to get started with Watson
+
+1582
+01:00:17,480 --> 01:00:19,480
+I'd say the natural language classifier
+
+1583
+01:00:19,480 --> 01:00:21,319
+the reason is because it's extremely
+
+1584
+01:00:21,319 --> 01:00:23,760
+simple to train requires very very
+
+1585
+01:00:23,760 --> 01:00:25,400
+little training data so if you don't if
+
+1586
+01:00:25,400 --> 01:00:26,680
+you're not like a data scientist and you
+
+1587
+01:00:26,680 --> 01:00:28,760
+don't have a lot of data available you
+
+1588
+01:00:28,760 --> 01:00:30,200
+don't have like an abundance of data
+
+1589
+01:00:30,200 --> 01:00:32,240
+natural language classifier is great to
+
+1590
+01:00:32,240 --> 01:00:34,799
+start off uh and so it just generally it
+
+1591
+01:00:34,799 --> 01:00:36,720
+trains very quickly trains nicely and
+
+1592
+01:00:36,720 --> 01:00:38,280
+it's accurate so I believe that the
+
+1593
+01:00:38,280 --> 01:00:39,720
+natural language classifier is a great
+
+1594
+01:00:39,720 --> 01:00:41,760
+starting point at least uh and from
+
+1595
+01:00:41,760 --> 01:00:43,200
+there though and it also has a lot of
+
+1596
+01:00:43,200 --> 01:00:45,440
+use cases so you won't have trouble uh
+
+1597
+01:00:45,440 --> 01:00:48,079
+like deciding for example uh what you
+
+1598
+01:00:48,079 --> 01:00:50,440
+what example you might want to create uh
+
+1599
+01:00:50,440 --> 01:00:51,920
+but apart from that if you've already
+
+1600
+01:00:51,920 --> 01:00:53,319
+experimented with a natural language
+
+1601
+01:00:53,319 --> 01:00:54,440
+classifier and you're looking for a
+
+1602
+01:00:54,440 --> 01:00:56,400
+little bit more challenge next I'd
+
+1603
+01:00:56,400 --> 01:00:58,280
+recommend the conversation service
+
+1604
+01:00:58,280 --> 01:00:59,839
+because again it's practically the
+
+1605
+01:00:59,839 --> 01:01:01,680
+natural language classifier and dialogue
+
+1606
+01:01:01,680 --> 01:01:03,799
+combined dialogue already wasn't really
+
+1607
+01:01:03,799 --> 01:01:06,039
+hard to use natural language classifier
+
+1608
+01:01:06,039 --> 01:01:08,119
+extremely simple to use combined they're
+
+1609
+01:01:08,119 --> 01:01:10,799
+really powerful and simple to use uh and
+
+1610
+01:01:10,799 --> 01:01:13,319
+of course provide a lot of use cases so
+
+1611
+01:01:13,319 --> 01:01:14,720
+natural language classifier and
+
+1612
+01:01:14,720 --> 01:01:17,039
+conversation would have to be
+
+1613
+01:01:17,039 --> 01:01:19,799
+it um so some of the other things that
+
+1614
+01:01:19,799 --> 01:01:22,079
+we had so some people
+
+1615
+01:01:22,079 --> 01:01:24,640
+um someone said what if the web services
+
+1616
+01:01:24,640 --> 01:01:26,640
+stop supporting the API do you jump onto
+
+1617
+01:01:26,640 --> 01:01:27,760
+another
+
+1618
+01:01:27,760 --> 01:01:31,079
+language well okay so uh sorry could you
+
+1619
+01:01:31,079 --> 01:01:32,280
+repeat the question yeah I don't know if
+
+1620
+01:01:32,280 --> 01:01:34,039
+it came out right um it says what at the
+
+1621
+01:01:34,039 --> 01:01:35,680
+web services well actually you know I
+
+1622
+01:01:35,680 --> 01:01:37,799
+had one because as they saw you were
+
+1623
+01:01:37,799 --> 01:01:39,680
+having to manually enter things yes
+
+1624
+01:01:39,680 --> 01:01:42,000
+right okay how would you want to work
+
+1625
+01:01:42,000 --> 01:01:43,880
+around that so that way you know is
+
+1626
+01:01:43,880 --> 01:01:45,720
+there way to deliv the web sockets
+
+1627
+01:01:45,720 --> 01:01:48,200
+exactly so speech DET text the Watson
+
+1628
+01:01:48,200 --> 01:01:50,200
+speech DET text service uh in fact the
+
+1629
+01:01:50,200 --> 01:01:52,520
+Watson speech detect Swift SDK which I'm
+
+1630
+01:01:52,520 --> 01:01:54,559
+using in my application actually
+
+1631
+01:01:54,559 --> 01:01:56,799
+provides support for web sockets in
+
+1632
+01:01:56,799 --> 01:01:58,799
+their applications uh and so what
+
+1633
+01:01:58,799 --> 01:02:00,720
+happens is like for example here since I
+
+1634
+01:02:00,720 --> 01:02:03,119
+didn't want to of course complicate all
+
+1635
+01:02:03,119 --> 01:02:04,880
+of this and show you how to do things
+
+1636
+01:02:04,880 --> 01:02:06,920
+like websockets with this what I did is
+
+1637
+01:02:06,920 --> 01:02:09,279
+I created this very very barebone and
+
+1638
+01:02:09,279 --> 01:02:11,520
+simple application where we've got this
+
+1639
+01:02:11,520 --> 01:02:13,279
+recorder that records a wave file and
+
+1640
+01:02:13,279 --> 01:02:15,520
+that wave file sent a speech to text but
+
+1641
+01:02:15,520 --> 01:02:17,039
+what you could do is you could have this
+
+1642
+01:02:17,039 --> 01:02:19,480
+websocket uh that would of course listen
+
+1643
+01:02:19,480 --> 01:02:23,000
+to you and stream transcripts back to
+
+1644
+01:02:23,000 --> 01:02:25,279
+you uh as you say them so like as you
+
+1645
+01:02:25,279 --> 01:02:27,880
+were to say sentence uh each word would
+
+1646
+01:02:27,880 --> 01:02:29,480
+be sent individually back to the
+
+1647
+01:02:29,480 --> 01:02:31,799
+application and added to the text View
+
+1648
+01:02:31,799 --> 01:02:33,880
+and it would automatically stop right as
+
+1649
+01:02:33,880 --> 01:02:35,400
+you're done speaking and it detects that
+
+1650
+01:02:35,400 --> 01:02:37,440
+you're done speaking and so of course
+
+1651
+01:02:37,440 --> 01:02:38,880
+Watson speech detex does actually
+
+1652
+01:02:38,880 --> 01:02:40,559
+provide that support it's just that I
+
+1653
+01:02:40,559 --> 01:02:41,880
+haven't implemented it in this
+
+1654
+01:02:41,880 --> 01:02:44,319
+application due to Simplicity I wanted
+
+1655
+01:02:44,319 --> 01:02:45,960
+it to be as simple as possible for you
+
+1656
+01:02:45,960 --> 01:02:47,559
+to be able to understand the concept
+
+1657
+01:02:47,559 --> 01:02:51,640
+behind it someone asked so you've done
+
+1658
+01:02:51,640 --> 01:02:53,520
+about a year now with us right when we
+
+1659
+01:02:53,520 --> 01:02:55,359
+first met each other I found you online
+
+1660
+01:02:55,359 --> 01:02:56,960
+Yes actually we interacted that way and
+
+1661
+01:02:56,960 --> 01:02:59,440
+we've been brothers ever since actually
+
+1662
+01:02:59,440 --> 01:03:02,440
+a lot of trips and Journeys um so but
+
+1663
+01:03:02,440 --> 01:03:05,640
+someone want to say that why did you go
+
+1664
+01:03:05,640 --> 01:03:08,640
+with like Watson from IBM standpoint
+
+1665
+01:03:08,640 --> 01:03:11,119
+versus I don't know you've got aure and
+
+1666
+01:03:11,119 --> 01:03:13,839
+you've gots or Google well there are
+
+1667
+01:03:13,839 --> 01:03:15,440
+actually quite a few reasons and I
+
+1668
+01:03:15,440 --> 01:03:17,359
+actually get asked this quite quite
+
+1669
+01:03:17,359 --> 01:03:20,640
+often uh the reason I'd say number one
+
+1670
+01:03:20,640 --> 01:03:23,000
+that I prefer IBM Watson over something
+
+1671
+01:03:23,000 --> 01:03:25,119
+like Google's cognitive cloud or maybe
+
+1672
+01:03:25,119 --> 01:03:28,079
+aour as you said would be that Watson
+
+1673
+01:03:28,079 --> 01:03:30,480
+first of all focuses a lot on natural
+
+1674
+01:03:30,480 --> 01:03:32,000
+language that's what that from the
+
+1675
+01:03:32,000 --> 01:03:34,079
+beginning as you know Watson's main goal
+
+1676
+01:03:34,079 --> 01:03:35,400
+was to understand and reason with
+
+1677
+01:03:35,400 --> 01:03:37,200
+natural language and that's one of the
+
+1678
+01:03:37,200 --> 01:03:39,720
+reasons and plus Watson really allows
+
+1679
+01:03:39,720 --> 01:03:41,839
+you to work with your own data where you
+
+1680
+01:03:41,839 --> 01:03:43,520
+know like Watson's visual recognition
+
+1681
+01:03:43,520 --> 01:03:46,039
+service allows you to use its own
+
+1682
+01:03:46,039 --> 01:03:47,880
+default classifier in order to do things
+
+1683
+01:03:47,880 --> 01:03:49,400
+like take a picture of a bird and it'll
+
+1684
+01:03:49,400 --> 01:03:51,079
+tell you there's a bird in the picture
+
+1685
+01:03:51,079 --> 01:03:52,760
+but you can also create your own
+
+1686
+01:03:52,760 --> 01:03:54,799
+classifiers for example where with
+
+1687
+01:03:54,799 --> 01:03:56,680
+Google's cognitive Cloud you can do that
+
+1688
+01:03:56,680 --> 01:03:58,880
+very easily at least you can but it's
+
+1689
+01:03:58,880 --> 01:04:01,440
+not intuitive is it's just not it's not
+
+1690
+01:04:01,440 --> 01:04:03,799
+as simple to do with Watson and it's not
+
+1691
+01:04:03,799 --> 01:04:07,400
+as powerful in in that context uh and so
+
+1692
+01:04:07,400 --> 01:04:09,799
+and Watson also provides a wide a much
+
+1693
+01:04:09,799 --> 01:04:13,119
+wider range of services than any other
+
+1694
+01:04:13,119 --> 01:04:15,839
+cognitive Cloud uh that I I've seen at
+
+1695
+01:04:15,839 --> 01:04:17,960
+least until now so that's really why I
+
+1696
+01:04:17,960 --> 01:04:20,640
+prefer Watson uh over most of these
+
+1697
+01:04:20,640 --> 01:04:23,119
+other services that are provided by
+
+1698
+01:04:23,119 --> 01:04:24,039
+other
+
+1699
+01:04:24,039 --> 01:04:26,520
+companies let's see some other ones is
+
+1700
+01:04:26,520 --> 01:04:28,319
+so Tammy you're um you're you just
+
+1701
+01:04:28,319 --> 01:04:31,920
+turned 13 or yes 13 October 16th I
+
+1702
+01:04:31,920 --> 01:04:34,920
+turned 13 um I know you've had
+
+1703
+01:04:34,920 --> 01:04:36,160
+interactions with some of the other
+
+1704
+01:04:36,160 --> 01:04:39,000
+companies especially regarding Walmart
+
+1705
+01:04:39,000 --> 01:04:40,880
+right and I think Walmart asked you
+
+1706
+01:04:40,880 --> 01:04:43,119
+something specifically like how did you
+
+1707
+01:04:43,119 --> 01:04:46,039
+learn so much about analytics data
+
+1708
+01:04:46,039 --> 01:04:47,920
+science machine learning yes so I think
+
+1709
+01:04:47,920 --> 01:04:49,440
+it's a good question for a lot of people
+
+1710
+01:04:49,440 --> 01:04:51,960
+out there that are really hungry to grow
+
+1711
+01:04:51,960 --> 01:04:53,799
+their knowledge there how how can they
+
+1712
+01:04:53,799 --> 01:04:56,319
+follow in your recommendations yeah you
+
+1713
+01:04:56,319 --> 01:04:58,240
+know there's actually this one thing
+
+1714
+01:04:58,240 --> 01:05:00,480
+that I'd like to tell you it's pretty
+
+1715
+01:05:00,480 --> 01:05:03,520
+much all about doing stuff so like for
+
+1716
+01:05:03,520 --> 01:05:06,200
+example when I found out about Watson
+
+1717
+01:05:06,200 --> 01:05:07,760
+Not only was I hooked to how these
+
+1718
+01:05:07,760 --> 01:05:10,039
+Watson apis work I was hooked to
+
+1719
+01:05:10,039 --> 01:05:11,359
+something else that came much before
+
+1720
+01:05:11,359 --> 01:05:13,079
+Watson apis which was the original
+
+1721
+01:05:13,079 --> 01:05:15,640
+Watson that played Jeopardy I was very
+
+1722
+01:05:15,640 --> 01:05:17,400
+interested in how that worked and I
+
+1723
+01:05:17,400 --> 01:05:19,520
+wanted to create my own nlqa system for
+
+1724
+01:05:19,520 --> 01:05:22,400
+example and so I created as tme after
+
+1725
+01:05:22,400 --> 01:05:24,599
+many many months of research and reading
+
+1726
+01:05:24,599 --> 01:05:27,319
+about I'd say 15 entire papers about
+
+1727
+01:05:27,319 --> 01:05:30,440
+nlqa systems I finally got to one called
+
+1728
+01:05:30,440 --> 01:05:32,640
+ask MSR which is what ask tan is based
+
+1729
+01:05:32,640 --> 01:05:34,720
+off of or ask Microsoft research which
+
+1730
+01:05:34,720 --> 01:05:37,880
+they developed in 2002 uh but you know
+
+1731
+01:05:37,880 --> 01:05:40,400
+basically what I like to say is like for
+
+1732
+01:05:40,400 --> 01:05:43,520
+example the nlqa system I developed uh
+
+1733
+01:05:43,520 --> 01:05:45,319
+that led me to finding out more things
+
+1734
+01:05:45,319 --> 01:05:47,039
+about machine learning and finding out
+
+1735
+01:05:47,039 --> 01:05:48,599
+more things about machine learning led
+
+1736
+01:05:48,599 --> 01:05:50,119
+me to learn about things like neural
+
+1737
+01:05:50,119 --> 01:05:52,599
+networks and once I had things like oh
+
+1738
+01:05:52,599 --> 01:05:53,880
+what's a neural network once I knew what
+
+1739
+01:05:53,880 --> 01:05:55,640
+a neural network is and once I know what
+
+1740
+01:05:55,640 --> 01:05:56,559
+what all these different machine
+
+1741
+01:05:56,559 --> 01:05:58,480
+learning algorithms are I start to get
+
+1742
+01:05:58,480 --> 01:05:59,960
+interested in like hey what's a neural
+
+1743
+01:05:59,960 --> 01:06:01,720
+network and then I do a few weeks of
+
+1744
+01:06:01,720 --> 01:06:03,200
+research on neural networks and I start
+
+1745
+01:06:03,200 --> 01:06:04,920
+to find out how they work and then in
+
+1746
+01:06:04,920 --> 01:06:06,440
+the process of learning how to use
+
+1747
+01:06:06,440 --> 01:06:09,000
+neural networks I learn about some other
+
+1748
+01:06:09,000 --> 01:06:11,240
+concept entirely and I get so interested
+
+1749
+01:06:11,240 --> 01:06:13,200
+and I just one thing leads to another
+
+1750
+01:06:13,200 --> 01:06:15,520
+and I just you know continually uh learn
+
+1751
+01:06:15,520 --> 01:06:17,960
+through uh basically learning one thing
+
+1752
+01:06:17,960 --> 01:06:19,359
+and then having that teach you another
+
+1753
+01:06:19,359 --> 01:06:21,319
+thing and then continuing like that
+
+1754
+01:06:21,319 --> 01:06:23,000
+that's usually how I like to of course
+
+1755
+01:06:23,000 --> 01:06:26,400
+learn uh with machine learn with thing
+
+1756
+01:06:26,400 --> 01:06:28,279
+topics like machine learning uh
+
+1757
+01:06:28,279 --> 01:06:29,799
+especially due to the fact that there is
+
+1758
+01:06:29,799 --> 01:06:31,960
+actually quite a bit of I guess you
+
+1759
+01:06:31,960 --> 01:06:33,640
+could there are quite a few resources
+
+1760
+01:06:33,640 --> 01:06:35,920
+online to help you do that uh so I think
+
+1761
+01:06:35,920 --> 01:06:39,000
+it's really interesting uh how it's How
+
+1762
+01:06:39,000 --> 01:06:42,680
+uh basically um if you think about it
+
+1763
+01:06:42,680 --> 01:06:44,119
+compar it to other topics machine
+
+1764
+01:06:44,119 --> 01:06:45,720
+learning doesn't have the most material
+
+1765
+01:06:45,720 --> 01:06:47,760
+online but whatever material is out
+
+1766
+01:06:47,760 --> 01:06:50,480
+there is extremely useful so it just
+
+1767
+01:06:50,480 --> 01:06:52,480
+turns out to I found out about feed
+
+1768
+01:06:52,480 --> 01:06:53,799
+forward neural networks it takes me to
+
+1769
+01:06:53,799 --> 01:06:56,039
+convolutional then recurrent Etc ET
+
+1770
+01:06:56,039 --> 01:06:58,160
+so just continuing in a cycle like that
+
+1771
+01:06:58,160 --> 01:07:00,400
+really does help me learn as much as
+
+1772
+01:07:00,400 --> 01:07:03,279
+possible great answer unfortunately
+
+1773
+01:07:03,279 --> 01:07:05,039
+we've got a lot of comments here but
+
+1774
+01:07:05,039 --> 01:07:07,400
+we've got to wrap it up so for anyone
+
+1775
+01:07:07,400 --> 01:07:08,920
+that has asked questions like I saw the
+
+1776
+01:07:08,920 --> 01:07:10,760
+one on about when do we you know what
+
+1777
+01:07:10,760 --> 01:07:12,200
+needs to be installed on Windows 7 to
+
+1778
+01:07:12,200 --> 01:07:14,079
+start with Watson and Blu miix and
+
+1779
+01:07:14,079 --> 01:07:15,400
+another one says what languages do you
+
+1780
+01:07:15,400 --> 01:07:16,920
+use for wats and programming what are
+
+1781
+01:07:16,920 --> 01:07:18,760
+available we'll respond back in the
+
+1782
+01:07:18,760 --> 01:07:20,680
+comments so that way you guys we make
+
+1783
+01:07:20,680 --> 01:07:22,440
+sure you get set in the right direction
+
+1784
+01:07:22,440 --> 01:07:24,640
+definitely and please stay tuned because
+
+1785
+01:07:24,640 --> 01:07:27,359
+tan May is going to be doing a lot more
+
+1786
+01:07:27,359 --> 01:07:29,640
+of these throughout the year and again
+
+1787
+01:07:29,640 --> 01:07:31,599
+come to interconnect next month if you
+
+1788
+01:07:31,599 --> 01:07:34,920
+can um to see Tam live again further
+
+1789
+01:07:34,920 --> 01:07:36,520
+program he's going to be doing some us
+
+1790
+01:07:36,520 --> 01:07:39,079
+some other Technologies um and he'll be
+
+1791
+01:07:39,079 --> 01:07:40,240
+able to meet you all and you can ask
+
+1792
+01:07:40,240 --> 01:07:42,039
+some more questions there again thank
+
+1793
+01:07:42,039 --> 01:07:44,200
+you again I'm James R an IBM cloud and
+
+1794
+01:07:44,200 --> 01:07:45,880
+cognitive technical leader and tan may
+
+1795
+01:07:45,880 --> 01:07:48,640
+you are an honorary IBM Cloud advisor
+
+1796
+01:07:48,640 --> 01:07:51,319
+and an IBM Champion for cloud thank you
+
+1797
+01:07:51,319 --> 01:07:54,599
+thanks everyone

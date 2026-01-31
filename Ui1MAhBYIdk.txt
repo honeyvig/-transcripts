@@ -1,0 +1,2131 @@
+1
+00:00:00,000 --> 00:00:01,680
+so hello there and welcome to another
+
+2
+00:00:01,680 --> 00:00:03,439
+tutorial my name is tammy bakshi and
+
+3
+00:00:03,439 --> 00:00:04,799
+today i'm going to be showing you
+
+4
+00:00:04,799 --> 00:00:07,520
+how you can run minecraft natively on
+
+5
+00:00:07,520 --> 00:00:08,720
+apple silicon
+
+6
+00:00:08,720 --> 00:00:10,160
+and this is really exciting stuff a
+
+7
+00:00:10,160 --> 00:00:11,840
+little while ago i got my hands on one
+
+8
+00:00:11,840 --> 00:00:12,320
+of the new
+
+9
+00:00:12,320 --> 00:00:14,320
+m1 macbook airs overall it's a great
+
+10
+00:00:14,320 --> 00:00:16,400
+device and of course it's a brand new
+
+11
+00:00:16,400 --> 00:00:17,600
+instruction set
+
+12
+00:00:17,600 --> 00:00:19,199
+apple switching over from intel to their
+
+13
+00:00:19,199 --> 00:00:20,960
+own in-house processors
+
+14
+00:00:20,960 --> 00:00:22,080
+and of course this means that they're
+
+15
+00:00:22,080 --> 00:00:23,920
+using arm instead of the x86
+
+16
+00:00:23,920 --> 00:00:24,960
+architecture
+
+17
+00:00:24,960 --> 00:00:27,199
+now arm has traditionally been viewed as
+
+18
+00:00:27,199 --> 00:00:29,359
+you know the low power
+
+19
+00:00:29,359 --> 00:00:32,320
+sort of mobile chipset but really that's
+
+20
+00:00:32,320 --> 00:00:33,760
+not inherent to the instruction set
+
+21
+00:00:33,760 --> 00:00:35,280
+itself that's just where it's been used
+
+22
+00:00:35,280 --> 00:00:36,880
+mostly so far because well
+
+23
+00:00:36,880 --> 00:00:38,960
+intel and amd well they've been doing
+
+24
+00:00:38,960 --> 00:00:41,760
+desktop chips for for many years now
+
+25
+00:00:41,760 --> 00:00:44,320
+and so now apple's bringing over arm to
+
+26
+00:00:44,320 --> 00:00:46,640
+their computers to the max and so far
+
+27
+00:00:46,640 --> 00:00:48,239
+it's been amazing the transition is
+
+28
+00:00:48,239 --> 00:00:49,280
+going really well
+
+29
+00:00:49,280 --> 00:00:50,719
+and they have this software called
+
+30
+00:00:50,719 --> 00:00:52,800
+rosetta or is that as incredible what it
+
+31
+00:00:52,800 --> 00:00:53,280
+does
+
+32
+00:00:53,280 --> 00:00:56,559
+is it actually translates x86 software
+
+33
+00:00:56,559 --> 00:00:59,120
+right before you run it to the new arm
+
+34
+00:00:59,120 --> 00:01:00,399
+instruction set
+
+35
+00:01:00,399 --> 00:01:02,160
+just in case you want to run an old
+
+36
+00:01:02,160 --> 00:01:03,920
+intel application on your new apple
+
+37
+00:01:03,920 --> 00:01:04,799
+silicon mac
+
+38
+00:01:04,799 --> 00:01:06,560
+in case the developer hasn't recompiled
+
+39
+00:01:06,560 --> 00:01:07,920
+it yet now there are lots of different
+
+40
+00:01:07,920 --> 00:01:09,360
+great examples of different software
+
+41
+00:01:09,360 --> 00:01:11,040
+that runs amazing under rosetta
+
+42
+00:01:11,040 --> 00:01:13,439
+things like zoom and discord and
+
+43
+00:01:13,439 --> 00:01:15,040
+previously google chrome and these sorts
+
+44
+00:01:15,040 --> 00:01:15,920
+of things
+
+45
+00:01:15,920 --> 00:01:18,640
+work really well through rosetta because
+
+46
+00:01:18,640 --> 00:01:20,799
+they haven't yet been compiled for arm
+
+47
+00:01:20,799 --> 00:01:22,400
+now of course the hope is that within
+
+48
+00:01:22,400 --> 00:01:24,320
+the next couple of months to years
+
+49
+00:01:24,320 --> 00:01:25,759
+all these different applications that we
+
+50
+00:01:25,759 --> 00:01:27,520
+use will become universal applications
+
+51
+00:01:27,520 --> 00:01:29,360
+meaning they run both on intel and arm
+
+52
+00:01:29,360 --> 00:01:31,200
+they've been compiled for both
+
+53
+00:01:31,200 --> 00:01:34,000
+both uh instruction sets and then in the
+
+54
+00:01:34,000 --> 00:01:35,119
+further future
+
+55
+00:01:35,119 --> 00:01:36,880
+after a couple of years they will be
+
+56
+00:01:36,880 --> 00:01:38,560
+exclusively for
+
+57
+00:01:38,560 --> 00:01:40,479
+apple the arm architecture kind of like
+
+58
+00:01:40,479 --> 00:01:43,439
+the transition from power pc to intel
+
+59
+00:01:43,439 --> 00:01:45,600
+now there is one application though that
+
+60
+00:01:45,600 --> 00:01:47,680
+i really wanted to get running natively
+
+61
+00:01:47,680 --> 00:01:50,079
+using arm code and that is minecraft
+
+62
+00:01:50,079 --> 00:01:51,439
+now the reason for that is because
+
+63
+00:01:51,439 --> 00:01:53,680
+rosetta is great of course it has pretty
+
+64
+00:01:53,680 --> 00:01:55,040
+good performance
+
+65
+00:01:55,040 --> 00:01:56,560
+but remember though that because we're
+
+66
+00:01:56,560 --> 00:01:58,079
+translating instructions from one
+
+67
+00:01:58,079 --> 00:01:59,360
+instruction set to another
+
+68
+00:01:59,360 --> 00:02:01,040
+we're still fundamentally losing a
+
+69
+00:02:01,040 --> 00:02:02,719
+little bit of performance
+
+70
+00:02:02,719 --> 00:02:04,399
+usually rosetta apps will run at about
+
+71
+00:02:04,399 --> 00:02:06,399
+80 percent of the original
+
+72
+00:02:06,399 --> 00:02:09,440
+intel performance however with minecraft
+
+73
+00:02:09,440 --> 00:02:11,120
+i don't want to lose any performance
+
+74
+00:02:11,120 --> 00:02:12,160
+right i want to be
+
+75
+00:02:12,160 --> 00:02:14,000
+pushing this processor to its max i want
+
+76
+00:02:14,000 --> 00:02:15,280
+to be getting the most frame rate i
+
+77
+00:02:15,280 --> 00:02:16,959
+possibly can i don't want to be dropping
+
+78
+00:02:16,959 --> 00:02:17,760
+any frames
+
+79
+00:02:17,760 --> 00:02:20,959
+so how can i do that well the hope is
+
+80
+00:02:20,959 --> 00:02:22,879
+that eventually uh there will be
+
+81
+00:02:22,879 --> 00:02:25,040
+official builds of minecraft and all of
+
+82
+00:02:25,040 --> 00:02:26,400
+its dependencies
+
+83
+00:02:26,400 --> 00:02:28,959
+for apple silicon but until that happens
+
+84
+00:02:28,959 --> 00:02:30,480
+i don't just want to wait
+
+85
+00:02:30,480 --> 00:02:32,080
+i want to play the game and so what i
+
+86
+00:02:32,080 --> 00:02:35,200
+did is i took minecraft 1.16.4 and all
+
+87
+00:02:35,200 --> 00:02:36,480
+of its dependencies
+
+88
+00:02:36,480 --> 00:02:38,720
+and i recompiled them from scratch to
+
+89
+00:02:38,720 --> 00:02:39,760
+run natively
+
+90
+00:02:39,760 --> 00:02:41,760
+on apple silicon i think it's really
+
+91
+00:02:41,760 --> 00:02:43,360
+exciting stuff
+
+92
+00:02:43,360 --> 00:02:45,040
+now this was a little bit more involved
+
+93
+00:02:45,040 --> 00:02:46,720
+than just going into the dependencies
+
+94
+00:02:46,720 --> 00:02:47,840
+and compiling them
+
+95
+00:02:47,840 --> 00:02:48,959
+because there are a couple different
+
+96
+00:02:48,959 --> 00:02:51,200
+things that sort of work against me here
+
+97
+00:02:51,200 --> 00:02:52,879
+first of all we're transitioning from
+
+98
+00:02:52,879 --> 00:02:55,440
+mac os x or mac os 10
+
+99
+00:02:55,440 --> 00:02:57,760
+to mac os 11 this year so with the big
+
+100
+00:02:57,760 --> 00:03:00,720
+sur update it's no longer 10.x for your
+
+101
+00:03:00,720 --> 00:03:01,920
+version numbers for the operating
+
+102
+00:03:01,920 --> 00:03:04,080
+systems it's rather 11.x
+
+103
+00:03:04,080 --> 00:03:05,200
+this means that a lot of different
+
+104
+00:03:05,200 --> 00:03:06,720
+dependencies don't know where to look
+
+105
+00:03:06,720 --> 00:03:07,200
+for
+
+106
+00:03:07,200 --> 00:03:09,120
+for example sdks because they all
+
+107
+00:03:09,120 --> 00:03:10,720
+usually come with the 10 dot prefix not
+
+108
+00:03:10,720 --> 00:03:12,480
+the 11 dot prefix
+
+109
+00:03:12,480 --> 00:03:14,720
+similarly pretty much every single
+
+110
+00:03:14,720 --> 00:03:16,879
+dependency expects that if you're on mac
+
+111
+00:03:16,879 --> 00:03:19,040
+you've you gotta be using x86 because
+
+112
+00:03:19,040 --> 00:03:20,720
+all mac so far have been
+
+113
+00:03:20,720 --> 00:03:23,440
+intel and so i've gotta modify a lot of
+
+114
+00:03:23,440 --> 00:03:25,040
+different build environments to get it
+
+115
+00:03:25,040 --> 00:03:26,959
+all to work with all these new updates
+
+116
+00:03:26,959 --> 00:03:28,159
+that are here
+
+117
+00:03:28,159 --> 00:03:30,959
+but i did get it working in the end now
+
+118
+00:03:30,959 --> 00:03:31,519
+there's
+
+119
+00:03:31,519 --> 00:03:33,040
+there's another challenge on top of that
+
+120
+00:03:33,040 --> 00:03:34,799
+though and that is that while i can get
+
+121
+00:03:34,799 --> 00:03:36,640
+it running locally on my system you may
+
+122
+00:03:36,640 --> 00:03:37,840
+have seen the teaser video that i
+
+123
+00:03:37,840 --> 00:03:39,680
+released a little while ago
+
+124
+00:03:39,680 --> 00:03:41,599
+it's another challenge altogether to
+
+125
+00:03:41,599 --> 00:03:43,360
+actually distribute that running
+
+126
+00:03:43,360 --> 00:03:44,480
+application
+
+127
+00:03:44,480 --> 00:03:45,760
+because then what i've got to do as a
+
+128
+00:03:45,760 --> 00:03:47,360
+developer is i've got to do things like
+
+129
+00:03:47,360 --> 00:03:48,159
+code sign
+
+130
+00:03:48,159 --> 00:03:50,239
+and notarize in order to make it so that
+
+131
+00:03:50,239 --> 00:03:52,000
+the application that i build
+
+132
+00:03:52,000 --> 00:03:54,799
+actually runs on your computer now
+
+133
+00:03:54,799 --> 00:03:56,319
+before i get to why that's so much of a
+
+134
+00:03:56,319 --> 00:03:57,120
+challenge let me
+
+135
+00:03:57,120 --> 00:03:58,640
+take a little step back and talk a
+
+136
+00:03:58,640 --> 00:03:59,920
+little bit more about the minecraft
+
+137
+00:03:59,920 --> 00:04:00,879
+architecture
+
+138
+00:04:00,879 --> 00:04:01,920
+they're really two different
+
+139
+00:04:01,920 --> 00:04:03,519
+applications when you take a look at the
+
+140
+00:04:03,519 --> 00:04:05,120
+world of minecraft there's the launcher
+
+141
+00:04:05,120 --> 00:04:06,480
+and then there's the actual minecraft
+
+142
+00:04:06,480 --> 00:04:06,959
+game
+
+143
+00:04:06,959 --> 00:04:09,040
+minecraft itself is written in java and
+
+144
+00:04:09,040 --> 00:04:10,720
+it has a couple of dependencies written
+
+145
+00:04:10,720 --> 00:04:12,879
+in c which are native code
+
+146
+00:04:12,879 --> 00:04:14,560
+which i need to which it needs to call
+
+147
+00:04:14,560 --> 00:04:15,840
+in order to have high performance
+
+148
+00:04:15,840 --> 00:04:17,359
+graphics and things like this
+
+149
+00:04:17,359 --> 00:04:19,440
+but then the launcher well that's just
+
+150
+00:04:19,440 --> 00:04:20,400
+something you can download from the
+
+151
+00:04:20,400 --> 00:04:21,840
+minecraft official website
+
+152
+00:04:21,840 --> 00:04:23,520
+the launcher doesn't actually contain
+
+153
+00:04:23,520 --> 00:04:24,880
+the game the launcher is only
+
+154
+00:04:24,880 --> 00:04:26,160
+responsible for doing things like
+
+155
+00:04:26,160 --> 00:04:28,080
+allowing you to sign into the game
+
+156
+00:04:28,080 --> 00:04:31,360
+and then actually invoke the game java
+
+157
+00:04:31,360 --> 00:04:32,800
+in order to get it to run on your
+
+158
+00:04:32,800 --> 00:04:35,360
+computer now there are also different
+
+159
+00:04:35,360 --> 00:04:36,880
+open source launchers that exist
+
+160
+00:04:36,880 --> 00:04:38,960
+so for example there's multi-mc which is
+
+161
+00:04:38,960 --> 00:04:40,800
+a launcher that you can download the
+
+162
+00:04:40,800 --> 00:04:42,000
+code for from github
+
+163
+00:04:42,000 --> 00:04:42,960
+in case you don't want to use the
+
+164
+00:04:42,960 --> 00:04:45,759
+official minecraft one and you can use
+
+165
+00:04:45,759 --> 00:04:48,240
+that to actually you know log in and
+
+166
+00:04:48,240 --> 00:04:50,000
+edit your minecraft jar files and do
+
+167
+00:04:50,000 --> 00:04:52,400
+things like modding and things like this
+
+168
+00:04:52,400 --> 00:04:54,560
+and it's really useful in some cases but
+
+169
+00:04:54,560 --> 00:04:56,400
+the launcher in this specific
+
+170
+00:04:56,400 --> 00:04:58,240
+case for apple silicon is actually
+
+171
+00:04:58,240 --> 00:05:00,080
+another bit of overhead
+
+172
+00:05:00,080 --> 00:05:02,000
+because the launcher has its own
+
+173
+00:05:02,000 --> 00:05:03,759
+dependencies for example
+
+174
+00:05:03,759 --> 00:05:06,639
+multi-mc depends on a library called qt
+
+175
+00:05:06,639 --> 00:05:08,400
+and it uses qt for a bunch of different
+
+176
+00:05:08,400 --> 00:05:09,919
+things including actually showing
+
+177
+00:05:09,919 --> 00:05:12,400
+itself in a window on screen so what
+
+178
+00:05:12,400 --> 00:05:13,840
+i've done for you is i've gone ahead and
+
+179
+00:05:13,840 --> 00:05:15,680
+made it super super simple
+
+180
+00:05:15,680 --> 00:05:18,479
+to run minecraft on apple silicon it is
+
+181
+00:05:18,479 --> 00:05:21,520
+exclusive to version 1.16.4
+
+182
+00:05:21,520 --> 00:05:23,440
+for now but i may end up updating it in
+
+183
+00:05:23,440 --> 00:05:25,280
+the future if you have any requests for
+
+184
+00:05:25,280 --> 00:05:26,880
+specific versions feel free to leave it
+
+185
+00:05:26,880 --> 00:05:28,320
+down in the comment section below and i
+
+186
+00:05:28,320 --> 00:05:29,520
+can try to give you
+
+187
+00:05:29,520 --> 00:05:31,039
+uh versions that'll actually run on
+
+188
+00:05:31,039 --> 00:05:33,360
+apple silicon but the idea is
+
+189
+00:05:33,360 --> 00:05:35,680
+that all you got to do is run a couple
+
+190
+00:05:35,680 --> 00:05:37,039
+of bash scripts
+
+191
+00:05:37,039 --> 00:05:38,720
+through your terminal and you will get
+
+192
+00:05:38,720 --> 00:05:40,240
+minecraft running
+
+193
+00:05:40,240 --> 00:05:41,919
+natively on apple silicon it's actually
+
+194
+00:05:41,919 --> 00:05:43,600
+a lot easier than it sounds it's just
+
+195
+00:05:43,600 --> 00:05:44,800
+like two commands
+
+196
+00:05:44,800 --> 00:05:46,479
+so let me show you how you can go ahead
+
+197
+00:05:46,479 --> 00:05:48,320
+and do this let's take a look at my mac
+
+198
+00:05:48,320 --> 00:05:50,080
+all right so now as you can see on my
+
+199
+00:05:50,080 --> 00:05:51,840
+mac over here i've got
+
+200
+00:05:51,840 --> 00:05:53,360
+just a single folder on my desktop
+
+201
+00:05:53,360 --> 00:05:55,199
+called mc apple silicon
+
+202
+00:05:55,199 --> 00:05:57,039
+this is actually in the description you
+
+203
+00:05:57,039 --> 00:05:59,039
+can go ahead and download this exact
+
+204
+00:05:59,039 --> 00:06:01,840
+folder and within it you get a bunch of
+
+205
+00:06:01,840 --> 00:06:04,080
+different things that i ship with it
+
+206
+00:06:04,080 --> 00:06:05,759
+now included in these things are for
+
+207
+00:06:05,759 --> 00:06:08,000
+example a couple of python packages
+
+208
+00:06:08,000 --> 00:06:11,280
+a new launch.jar file um a minecraft
+
+209
+00:06:11,280 --> 00:06:11,840
+folder
+
+210
+00:06:11,840 --> 00:06:13,360
+and a bunch of python scripts that'll
+
+211
+00:06:13,360 --> 00:06:15,360
+actually help us uh in getting the
+
+212
+00:06:15,360 --> 00:06:16,639
+environment set up
+
+213
+00:06:16,639 --> 00:06:18,639
+now what do all these different files do
+
+214
+00:06:18,639 --> 00:06:20,160
+well what i had to do is sort of write
+
+215
+00:06:20,160 --> 00:06:20,880
+my own
+
+216
+00:06:20,880 --> 00:06:23,440
+custom mini launcher that doesn't use a
+
+217
+00:06:23,440 --> 00:06:25,360
+gui but rather uses a bunch of python
+
+218
+00:06:25,360 --> 00:06:26,240
+and bash scripts
+
+219
+00:06:26,240 --> 00:06:28,639
+in order to invoke the game directly now
+
+220
+00:06:28,639 --> 00:06:29,759
+this is of course
+
+221
+00:06:29,759 --> 00:06:31,360
+a lot more complicated than it might
+
+222
+00:06:31,360 --> 00:06:33,440
+sound because a lot of this is very
+
+223
+00:06:33,440 --> 00:06:34,319
+undocumented
+
+224
+00:06:34,319 --> 00:06:36,000
+and not a lot of people actually take
+
+225
+00:06:36,000 --> 00:06:38,720
+the time to document how exactly you can
+
+226
+00:06:38,720 --> 00:06:40,400
+call minecraft natively here
+
+227
+00:06:40,400 --> 00:06:43,440
+um or rather directly should i say
+
+228
+00:06:43,440 --> 00:06:44,960
+uh so what i had to do was sort of go
+
+229
+00:06:44,960 --> 00:06:46,800
+through the multi-mc source code and
+
+230
+00:06:46,800 --> 00:06:48,479
+extract a couple of components that i
+
+231
+00:06:48,479 --> 00:06:49,680
+thought were really useful
+
+232
+00:06:49,680 --> 00:06:51,680
+in specific new launch.jar is a
+
+233
+00:06:51,680 --> 00:06:53,599
+component of multi-mc that i've gone
+
+234
+00:06:53,599 --> 00:06:54,479
+ahead and taken
+
+235
+00:06:54,479 --> 00:06:57,599
+and used for my application so now let
+
+236
+00:06:57,599 --> 00:06:58,720
+me actually show you how you can get
+
+237
+00:06:58,720 --> 00:06:59,840
+minecraft running
+
+238
+00:06:59,840 --> 00:07:02,080
+all right so there are really three
+
+239
+00:07:02,080 --> 00:07:03,680
+steps the first thing you've got to do
+
+240
+00:07:03,680 --> 00:07:05,759
+is download the minecraft libraries
+
+241
+00:07:05,759 --> 00:07:07,039
+second thing you got to do is download
+
+242
+00:07:07,039 --> 00:07:08,800
+the minecraft assets the third thing you
+
+243
+00:07:08,800 --> 00:07:09,280
+got to do
+
+244
+00:07:09,280 --> 00:07:10,880
+is launch the game that's all there is
+
+245
+00:07:10,880 --> 00:07:12,800
+to it let's take a look
+
+246
+00:07:12,800 --> 00:07:13,759
+now the first thing you're going to do
+
+247
+00:07:13,759 --> 00:07:15,120
+is you're going to open up your terminal
+
+248
+00:07:15,120 --> 00:07:16,160
+and you're going to
+
+249
+00:07:16,160 --> 00:07:19,599
+cd into the directory that that you just
+
+250
+00:07:19,599 --> 00:07:21,360
+downloaded so you will have downloaded a
+
+251
+00:07:21,360 --> 00:07:22,639
+zip file from the download from the
+
+252
+00:07:22,639 --> 00:07:24,319
+description of the video
+
+253
+00:07:24,319 --> 00:07:26,720
+once you extract the zip file you should
+
+254
+00:07:26,720 --> 00:07:29,280
+have the mc apple silicon folder
+
+255
+00:07:29,280 --> 00:07:31,199
+now what you can do is you can simply
+
+256
+00:07:31,199 --> 00:07:33,440
+type cd into your terminal
+
+257
+00:07:33,440 --> 00:07:36,560
+and then take this folder and drag it
+
+258
+00:07:36,560 --> 00:07:38,400
+into your terminal like so
+
+259
+00:07:38,400 --> 00:07:40,880
+and when you cd into it you should now
+
+260
+00:07:40,880 --> 00:07:42,240
+be within this
+
+261
+00:07:42,240 --> 00:07:44,560
+this folder now to start off let's
+
+262
+00:07:44,560 --> 00:07:46,080
+actually go ahead and download some
+
+263
+00:07:46,080 --> 00:07:47,039
+libraries
+
+264
+00:07:47,039 --> 00:07:49,440
+so what you're going to do is go cd
+
+265
+00:07:49,440 --> 00:07:50,800
+libraries
+
+266
+00:07:50,800 --> 00:07:52,479
+and there we go you're on the libraries
+
+267
+00:07:52,479 --> 00:07:54,479
+folder now if you go into your finder
+
+268
+00:07:54,479 --> 00:07:55,759
+and you take a look at the libraries
+
+269
+00:07:55,759 --> 00:07:56,240
+folder
+
+270
+00:07:56,240 --> 00:07:57,919
+by default there should be two files in
+
+271
+00:07:57,919 --> 00:08:00,800
+it there's lwjglfat.jar
+
+272
+00:08:00,800 --> 00:08:02,879
+and that is what i've compiled right
+
+273
+00:08:02,879 --> 00:08:05,199
+that is a jar file containing references
+
+274
+00:08:05,199 --> 00:08:06,639
+to a bunch of classes
+
+275
+00:08:06,639 --> 00:08:08,319
+um or containing the source code really
+
+276
+00:08:08,319 --> 00:08:09,919
+for all the classes um
+
+277
+00:08:09,919 --> 00:08:11,360
+that minecraft is actually going to use
+
+278
+00:08:11,360 --> 00:08:13,919
+to interface with lwjgl
+
+279
+00:08:13,919 --> 00:08:15,000
+and then of course there's also a
+
+280
+00:08:15,000 --> 00:08:17,360
+download.sh file which will go ahead and
+
+281
+00:08:17,360 --> 00:08:18,000
+download
+
+282
+00:08:18,000 --> 00:08:19,680
+all the different um important
+
+283
+00:08:19,680 --> 00:08:21,360
+dependencies and libraries
+
+284
+00:08:21,360 --> 00:08:24,080
+from the official minecraft website and
+
+285
+00:08:24,080 --> 00:08:25,919
+so in order to actually run the script
+
+286
+00:08:25,919 --> 00:08:27,280
+and download the dependencies
+
+287
+00:08:27,280 --> 00:08:30,720
+simply go sh download.sh
+
+288
+00:08:30,720 --> 00:08:32,000
+and there we go it's going to start
+
+289
+00:08:32,000 --> 00:08:32,959
+downloading all these different
+
+290
+00:08:32,959 --> 00:08:34,159
+dependencies there are a couple
+
+291
+00:08:34,159 --> 00:08:35,440
+different libraries that it's going to
+
+292
+00:08:35,440 --> 00:08:37,120
+download it's also downloading the
+
+293
+00:08:37,120 --> 00:08:38,000
+official game
+
+294
+00:08:38,000 --> 00:08:40,159
+file um so just wait for that to go
+
+295
+00:08:40,159 --> 00:08:41,120
+ahead and complete
+
+296
+00:08:41,120 --> 00:08:43,039
+and right after that you should be good
+
+297
+00:08:43,039 --> 00:08:44,560
+to go ahead to the next step
+
+298
+00:08:44,560 --> 00:08:47,040
+downloading your assets all right once
+
+299
+00:08:47,040 --> 00:08:48,800
+your libraries are done downloading the
+
+300
+00:08:48,800 --> 00:08:50,560
+next step is to download the assets
+
+301
+00:08:50,560 --> 00:08:52,880
+so go ahead and run cd space dot dot
+
+302
+00:08:52,880 --> 00:08:54,640
+that's going to bring you back directory
+
+303
+00:08:54,640 --> 00:08:56,640
+and then once you do that simply run
+
+304
+00:08:56,640 --> 00:08:57,839
+python 3
+
+305
+00:08:57,839 --> 00:09:00,800
+download assets dot py now when you run
+
+306
+00:09:00,800 --> 00:09:01,920
+this what it's going to do is it's going
+
+307
+00:09:01,920 --> 00:09:03,200
+to download essentially
+
+308
+00:09:03,200 --> 00:09:04,880
+all the different resources that
+
+309
+00:09:04,880 --> 00:09:06,959
+minecraft uses in the game
+
+310
+00:09:06,959 --> 00:09:09,279
+now remember that minecraft of course
+
+311
+00:09:09,279 --> 00:09:10,399
+uses a bunch of different
+
+312
+00:09:10,399 --> 00:09:12,399
+well what they're called assets so for
+
+313
+00:09:12,399 --> 00:09:14,000
+example when you break a block it makes
+
+314
+00:09:14,000 --> 00:09:14,640
+a sound
+
+315
+00:09:14,640 --> 00:09:16,480
+or there's music in the background or
+
+316
+00:09:16,480 --> 00:09:17,600
+the textures for all the different
+
+317
+00:09:17,600 --> 00:09:18,399
+blocks
+
+318
+00:09:18,399 --> 00:09:22,000
+these are all called assets and so of
+
+319
+00:09:22,000 --> 00:09:24,000
+course i can't give you those assets
+
+320
+00:09:24,000 --> 00:09:25,600
+directly already in this package because
+
+321
+00:09:25,600 --> 00:09:26,880
+that's not legal
+
+322
+00:09:26,880 --> 00:09:29,519
+um that's minecraft property not mine
+
+323
+00:09:29,519 --> 00:09:30,160
+and so
+
+324
+00:09:30,160 --> 00:09:31,279
+i can't just give it to you
+
+325
+00:09:31,279 --> 00:09:33,760
+unfortunately however by running this
+
+326
+00:09:33,760 --> 00:09:34,320
+script
+
+327
+00:09:34,320 --> 00:09:36,160
+within just around two minutes it should
+
+328
+00:09:36,160 --> 00:09:38,320
+go ahead and download all the assets for
+
+329
+00:09:38,320 --> 00:09:39,839
+you as a matter of fact in the little
+
+330
+00:09:39,839 --> 00:09:41,839
+time that i've explained what assets are
+
+331
+00:09:41,839 --> 00:09:43,760
+um it's already done more than half of
+
+332
+00:09:43,760 --> 00:09:46,000
+the assets there's about 26 ish 100 of
+
+333
+00:09:46,000 --> 00:09:46,560
+them
+
+334
+00:09:46,560 --> 00:09:49,200
+um it's already you know close to being
+
+335
+00:09:49,200 --> 00:09:50,240
+done um
+
+336
+00:09:50,240 --> 00:09:51,920
+and then once it actually downloads this
+
+337
+00:09:51,920 --> 00:09:53,760
+you're actually pretty much ready to go
+
+338
+00:09:53,760 --> 00:09:55,600
+ahead and play the game
+
+339
+00:09:55,600 --> 00:09:57,200
+now there is one more dependency just to
+
+340
+00:09:57,200 --> 00:09:58,240
+sort of let you know in the in the
+
+341
+00:09:58,240 --> 00:09:59,120
+meanwhile
+
+342
+00:09:59,120 --> 00:10:02,399
+um and that is the azul zulu jdk
+
+343
+00:10:02,399 --> 00:10:03,600
+now you don't need to worry about what
+
+344
+00:10:03,600 --> 00:10:05,360
+that means in case you're not interested
+
+345
+00:10:05,360 --> 00:10:06,800
+but the basic idea is that of course
+
+346
+00:10:06,800 --> 00:10:08,399
+minecraft runs on java and therefore you
+
+347
+00:10:08,399 --> 00:10:10,560
+need a version of java that itself
+
+348
+00:10:10,560 --> 00:10:13,279
+runs natively on apple silicon otherwise
+
+349
+00:10:13,279 --> 00:10:15,120
+the game's not going to run natively
+
+350
+00:10:15,120 --> 00:10:17,760
+and so i actually do ship the azul zulu
+
+351
+00:10:17,760 --> 00:10:18,640
+jdk
+
+352
+00:10:18,640 --> 00:10:20,160
+with this package as well so you don't
+
+353
+00:10:20,160 --> 00:10:21,360
+need to download anything you don't need
+
+354
+00:10:21,360 --> 00:10:22,160
+to
+
+355
+00:10:22,160 --> 00:10:23,760
+you know get anything installed yourself
+
+356
+00:10:23,760 --> 00:10:24,880
+all you got to do is download the
+
+357
+00:10:24,880 --> 00:10:26,720
+package run three commands and you're
+
+358
+00:10:26,720 --> 00:10:28,240
+good to go
+
+359
+00:10:28,240 --> 00:10:29,760
+so it's almost done downloading the
+
+360
+00:10:29,760 --> 00:10:31,519
+assets once it's done let's go ahead and
+
+361
+00:10:31,519 --> 00:10:32,640
+continue
+
+362
+00:10:32,640 --> 00:10:34,000
+all right as you can see it's done
+
+363
+00:10:34,000 --> 00:10:35,680
+downloading now it doesn't just download
+
+364
+00:10:35,680 --> 00:10:37,279
+like one at a time since there's like 2
+
+365
+00:10:37,279 --> 00:10:38,160
+600 of them
+
+366
+00:10:38,160 --> 00:10:39,839
+it actually downloads about 20 at a time
+
+367
+00:10:39,839 --> 00:10:41,680
+it'll start 20 processes to actually
+
+368
+00:10:41,680 --> 00:10:43,200
+start downloading
+
+369
+00:10:43,200 --> 00:10:44,560
+and then spin them down once they're
+
+370
+00:10:44,560 --> 00:10:46,640
+done their individual chunks
+
+371
+00:10:46,640 --> 00:10:48,320
+but that's that's how it actually goes
+
+372
+00:10:48,320 --> 00:10:51,440
+ahead and downloads its dependencies
+
+373
+00:10:51,440 --> 00:10:53,040
+now that we're done that you can go
+
+374
+00:10:53,040 --> 00:10:54,720
+ahead and actually launch the game
+
+375
+00:10:54,720 --> 00:10:56,720
+now the way that you would do this using
+
+376
+00:10:56,720 --> 00:10:58,880
+the script is actually pretty simple
+
+377
+00:10:58,880 --> 00:11:01,120
+so i've set up a little launcher that
+
+378
+00:11:01,120 --> 00:11:02,399
+you can actually invoke from the command
+
+379
+00:11:02,399 --> 00:11:04,000
+line so all you got to do is do
+
+380
+00:11:04,000 --> 00:11:07,519
+sh launch.sh and then here's the
+
+381
+00:11:07,519 --> 00:11:08,560
+interesting part
+
+382
+00:11:08,560 --> 00:11:11,839
+you give it your email address over here
+
+383
+00:11:11,839 --> 00:11:13,519
+and you give it your password over here
+
+384
+00:11:13,519 --> 00:11:14,720
+so this is the email address and the
+
+385
+00:11:14,720 --> 00:11:16,240
+password associated with your minecraft
+
+386
+00:11:16,240 --> 00:11:16,959
+account
+
+387
+00:11:16,959 --> 00:11:18,800
+now this email address and password you
+
+388
+00:11:18,800 --> 00:11:20,000
+can take a look at the script
+
+389
+00:11:20,000 --> 00:11:22,240
+it goes nowhere except the official
+
+390
+00:11:22,240 --> 00:11:24,240
+mojang authentication servers
+
+391
+00:11:24,240 --> 00:11:26,000
+now this is not stored anywhere it's not
+
+392
+00:11:26,000 --> 00:11:27,600
+sent to any other server you can take a
+
+393
+00:11:27,600 --> 00:11:28,959
+look at the source code all it's doing
+
+394
+00:11:28,959 --> 00:11:30,560
+is it's sending it over to the mojang
+
+395
+00:11:30,560 --> 00:11:32,560
+authentication servers it's getting your
+
+396
+00:11:32,560 --> 00:11:35,120
+user udid which is unique identifier for
+
+397
+00:11:35,120 --> 00:11:36,320
+your username
+
+398
+00:11:36,320 --> 00:11:40,320
+and it's also going ahead and taking
+
+399
+00:11:40,320 --> 00:11:42,640
+your your access token which is what it
+
+400
+00:11:42,640 --> 00:11:45,040
+actually uh uses to authenticate against
+
+401
+00:11:45,040 --> 00:11:46,399
+of course mojang's authentication
+
+402
+00:11:46,399 --> 00:11:48,079
+service inside of the game
+
+403
+00:11:48,079 --> 00:11:50,480
+and it goes ahead and runs it for you
+
+404
+00:11:50,480 --> 00:11:52,639
+now you would actually go ahead and run
+
+405
+00:11:52,639 --> 00:11:53,680
+this command
+
+406
+00:11:53,680 --> 00:11:55,600
+however i want to show you actually
+
+407
+00:11:55,600 --> 00:11:57,360
+launching it without necessarily showing
+
+408
+00:11:57,360 --> 00:11:57,839
+you
+
+409
+00:11:57,839 --> 00:11:59,760
+my email address and password so what
+
+410
+00:11:59,760 --> 00:12:01,839
+i've done is i've put those into
+
+411
+00:12:01,839 --> 00:12:04,560
+environment variables so i just do this
+
+412
+00:12:04,560 --> 00:12:05,839
+but what you would do
+
+413
+00:12:05,839 --> 00:12:08,000
+is actually put your email address and
+
+414
+00:12:08,000 --> 00:12:09,040
+your password
+
+415
+00:12:09,040 --> 00:12:11,519
+enclosed in single quotes that's really
+
+416
+00:12:11,519 --> 00:12:12,320
+important
+
+417
+00:12:12,320 --> 00:12:14,000
+your email address and your password
+
+418
+00:12:14,000 --> 00:12:15,600
+enclosed in single quotes
+
+419
+00:12:15,600 --> 00:12:16,959
+so watch this i'm going to go ahead and
+
+420
+00:12:16,959 --> 00:12:19,360
+run and at first it's going to look like
+
+421
+00:12:19,360 --> 00:12:20,480
+nothing's happening
+
+422
+00:12:20,480 --> 00:12:23,279
+but right as you run that command there
+
+423
+00:12:23,279 --> 00:12:25,519
+we go minecraft is now running
+
+424
+00:12:25,519 --> 00:12:28,639
+natively on apple silicon all right you
+
+425
+00:12:28,639 --> 00:12:29,360
+can
+
+426
+00:12:29,360 --> 00:12:30,959
+maybe hear that so i'm going to go ahead
+
+427
+00:12:30,959 --> 00:12:33,519
+and turn down my volume there
+
+428
+00:12:33,519 --> 00:12:35,200
+but there we go minecraft is now running
+
+429
+00:12:35,200 --> 00:12:36,639
+natively on apple silicon
+
+430
+00:12:36,639 --> 00:12:38,160
+and that's all it took you right i've
+
+431
+00:12:38,160 --> 00:12:39,279
+gone ahead and compiled all the
+
+432
+00:12:39,279 --> 00:12:41,200
+dependencies that you need everything
+
+433
+00:12:41,200 --> 00:12:43,600
+and shipped them in that package and all
+
+434
+00:12:43,600 --> 00:12:44,880
+you've got to do now
+
+435
+00:12:44,880 --> 00:12:46,720
+is run those three commands to download
+
+436
+00:12:46,720 --> 00:12:48,959
+the things that i can't ship you
+
+437
+00:12:48,959 --> 00:12:51,200
+and you get minecraft running natively
+
+438
+00:12:51,200 --> 00:12:52,800
+now just to sort of show you that this
+
+439
+00:12:52,800 --> 00:12:53,200
+is
+
+440
+00:12:53,200 --> 00:12:55,519
+indeed working i can create a new world
+
+441
+00:12:55,519 --> 00:12:56,639
+for youtube
+
+442
+00:12:56,639 --> 00:12:59,040
+um you know create the new world it'll
+
+443
+00:12:59,040 --> 00:13:01,200
+generate it pretty quickly
+
+444
+00:13:01,200 --> 00:13:02,720
+after it generates i can go ahead and
+
+445
+00:13:02,720 --> 00:13:04,399
+actually you know move around in the
+
+446
+00:13:04,399 --> 00:13:05,040
+world and
+
+447
+00:13:05,040 --> 00:13:07,519
+uh right now just keep in mind uh that i
+
+448
+00:13:07,519 --> 00:13:09,760
+am recording a video like i'm recording
+
+449
+00:13:09,760 --> 00:13:10,560
+the screen as
+
+450
+00:13:10,560 --> 00:13:12,720
+as we play and so keep in mind that it
+
+451
+00:13:12,720 --> 00:13:14,000
+is going to be a little bit
+
+452
+00:13:14,000 --> 00:13:16,079
+laggier than if i weren't but it still
+
+453
+00:13:16,079 --> 00:13:18,000
+is absolutely incredible
+
+454
+00:13:18,000 --> 00:13:19,600
+performance so like if i go into video
+
+455
+00:13:19,600 --> 00:13:21,839
+settings um i'm gonna turn you know
+
+456
+00:13:21,839 --> 00:13:23,920
+render distance up to maybe like
+
+457
+00:13:23,920 --> 00:13:26,160
+um actually let's start off with 12 and
+
+458
+00:13:26,160 --> 00:13:27,519
+then i'll bump it up and show you what
+
+459
+00:13:27,519 --> 00:13:28,720
+the performance is like
+
+460
+00:13:28,720 --> 00:13:30,560
+i'll make it unlimited max frame rate
+
+461
+00:13:30,560 --> 00:13:32,160
+i'll bring the brightness to bright turn
+
+462
+00:13:32,160 --> 00:13:33,839
+off v-sync
+
+463
+00:13:33,839 --> 00:13:35,360
+maybe increase the gui scale a little
+
+464
+00:13:35,360 --> 00:13:37,040
+bit even though that shouldn't really
+
+465
+00:13:37,040 --> 00:13:39,680
+affect performance and let's just go
+
+466
+00:13:39,680 --> 00:13:40,480
+ahead and continue
+
+467
+00:13:40,480 --> 00:13:42,079
+yeah there we go it's super smooth we're
+
+468
+00:13:42,079 --> 00:13:43,600
+not dropping any frames
+
+469
+00:13:43,600 --> 00:13:45,040
+take a look at the fps counter we're
+
+470
+00:13:45,040 --> 00:13:46,800
+currently at 90 fps
+
+471
+00:13:46,800 --> 00:13:49,199
+ish on average i guess or maybe more
+
+472
+00:13:49,199 --> 00:13:50,560
+like 80 on average
+
+473
+00:13:50,560 --> 00:13:53,680
+um while i'm recording that is and uh
+
+474
+00:13:53,680 --> 00:13:55,600
+for a macbook air with no fans that's
+
+475
+00:13:55,600 --> 00:13:58,399
+currently being you know actively used
+
+476
+00:13:58,399 --> 00:14:00,000
+that is incredible performance my
+
+477
+00:14:00,000 --> 00:14:01,680
+macbook pro probably couldn't reach
+
+478
+00:14:01,680 --> 00:14:03,440
+a 16-inch macbook pro probably couldn't
+
+479
+00:14:03,440 --> 00:14:04,720
+reach that level of performance
+
+480
+00:14:04,720 --> 00:14:05,760
+and it's all thanks to the fact that
+
+481
+00:14:05,760 --> 00:14:06,880
+this is running natively on apple
+
+482
+00:14:06,880 --> 00:14:08,079
+silicon
+
+483
+00:14:08,079 --> 00:14:10,240
+now just in case you are curious if i go
+
+484
+00:14:10,240 --> 00:14:12,000
+ahead and go to video settings and bring
+
+485
+00:14:12,000 --> 00:14:13,199
+this up to like
+
+486
+00:14:13,199 --> 00:14:16,320
+32 chunks i expect performance to oh it
+
+487
+00:14:16,320 --> 00:14:17,839
+actually is still pretty great
+
+488
+00:14:17,839 --> 00:14:20,959
+um we dropped below 60 just now
+
+489
+00:14:20,959 --> 00:14:24,959
+drop below 50 even or we're at 40ish
+
+490
+00:14:24,959 --> 00:14:26,800
+but considering that we're bringing the
+
+491
+00:14:26,800 --> 00:14:28,720
+render distance up to 32 it's still
+
+492
+00:14:28,720 --> 00:14:30,399
+incredibly smooth this is
+
+493
+00:14:30,399 --> 00:14:32,480
+not only playable it's actually really
+
+494
+00:14:32,480 --> 00:14:34,079
+nice um
+
+495
+00:14:34,079 --> 00:14:36,560
+and so that's running minecraft natalie
+
+496
+00:14:36,560 --> 00:14:37,440
+on apple silicon
+
+497
+00:14:37,440 --> 00:14:39,680
+now of course if you have any questions
+
+498
+00:14:39,680 --> 00:14:40,480
+or any
+
+499
+00:14:40,480 --> 00:14:42,720
+um suggestions as to different versions
+
+500
+00:14:42,720 --> 00:14:44,240
+you want to see porta dapple silicon or
+
+501
+00:14:44,240 --> 00:14:45,680
+different things you want to see
+
+502
+00:14:45,680 --> 00:14:47,519
+done that maybe i haven't shown you how
+
+503
+00:14:47,519 --> 00:14:48,880
+to do yet feel free to leave that in the
+
+504
+00:14:48,880 --> 00:14:50,240
+comment section below and i'd absolutely
+
+505
+00:14:50,240 --> 00:14:51,360
+love to show it to you
+
+506
+00:14:51,360 --> 00:14:53,279
+of course do subscribe stay to stay
+
+507
+00:14:53,279 --> 00:14:55,680
+tuned for more updates like this one on
+
+508
+00:14:55,680 --> 00:14:57,360
+running minecraft on not only apple
+
+509
+00:14:57,360 --> 00:14:59,519
+silicon but more exotic architectures in
+
+510
+00:14:59,519 --> 00:15:01,120
+the future as well i'm
+
+511
+00:15:01,120 --> 00:15:03,279
+sure that'll be fun but without any
+
+512
+00:15:03,279 --> 00:15:04,560
+further ado though i really do hope you
+
+513
+00:15:04,560 --> 00:15:05,920
+enjoyed that tutorial all the download
+
+514
+00:15:05,920 --> 00:15:07,120
+links will be in the description below
+
+515
+00:15:07,120 --> 00:15:08,320
+as well as the github that i mentioned
+
+516
+00:15:08,320 --> 00:15:08,959
+before
+
+517
+00:15:08,959 --> 00:15:10,399
+in case you just want to get started
+
+518
+00:15:10,399 --> 00:15:12,240
+immediately working with this
+
+519
+00:15:12,240 --> 00:15:13,519
+apart from that though again hope you
+
+520
+00:15:13,519 --> 00:15:14,959
+enjoyed the tutorial thank you very much
+
+521
+00:15:14,959 --> 00:15:16,639
+for joining in today if you did enjoy
+
+522
+00:15:16,639 --> 00:15:17,839
+please do make sure to subscribe it
+
+523
+00:15:17,839 --> 00:15:20,079
+really does help out a lot and of course
+
+524
+00:15:20,079 --> 00:15:21,680
+do turn on notifications to be notified
+
+525
+00:15:21,680 --> 00:15:23,360
+whenever i release content just like
+
+526
+00:15:23,360 --> 00:15:25,040
+this do like the video if it did help
+
+527
+00:15:25,040 --> 00:15:26,800
+you and you did enjoy as well
+
+528
+00:15:26,800 --> 00:15:29,040
+as that again does help me out a lot
+
+529
+00:15:29,040 --> 00:15:30,079
+feel free to comment if you have any
+
+530
+00:15:30,079 --> 00:15:31,759
+questions or suggestions or reach out to
+
+531
+00:15:31,759 --> 00:15:32,639
+me
+
+532
+00:15:32,639 --> 00:15:34,000
+and thank you very much for joining
+
+533
+00:15:34,000 --> 00:15:36,639
+goodbye

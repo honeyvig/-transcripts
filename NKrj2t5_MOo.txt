@@ -1,0 +1,859 @@
+1
+00:00:11,630 --> 00:00:14,490
+now just before I get into the actual
+
+2
+00:00:14,490 --> 00:00:16,770
+video today I just like to say that an
+
+3
+00:00:16,770 --> 00:00:19,380
+early access copy of my book for the
+
+4
+00:00:19,380 --> 00:00:21,750
+first two chapters hello Swift iOS
+
+5
+00:00:21,750 --> 00:00:23,880
+programming for kids and other beginners
+
+6
+00:00:23,880 --> 00:00:26,580
+has been released you can find it at the
+
+7
+00:00:26,580 --> 00:00:28,859
+link in the description I really hope it
+
+8
+00:00:28,859 --> 00:00:30,929
+helps you along your journey of learning
+
+9
+00:00:30,929 --> 00:00:34,290
+iOS development don't know there my name
+
+10
+00:00:34,290 --> 00:00:36,510
+is Timmy Bakshi and this time we're
+
+11
+00:00:36,510 --> 00:00:38,129
+gonna be going over how you can use the
+
+12
+00:00:38,129 --> 00:00:41,850
+IBM Watson text-to-speech API in Swift
+
+13
+00:00:41,850 --> 00:00:44,840
+using an iOS app all right so today
+
+14
+00:00:44,840 --> 00:00:47,309
+basically as I already said we're gonna
+
+15
+00:00:47,309 --> 00:00:49,230
+using Swift in order to communicate with
+
+16
+00:00:49,230 --> 00:00:52,440
+the IBM Watson text-to-speech API let's
+
+17
+00:00:52,440 --> 00:00:54,539
+see how we're gonna do that so again
+
+18
+00:00:54,539 --> 00:00:56,430
+just like to speech-to-text we're gonna
+
+19
+00:00:56,430 --> 00:00:57,870
+have if you've already watched that I
+
+20
+00:00:57,870 --> 00:00:59,940
+mean you'd know but I'm just gonna go
+
+21
+00:00:59,940 --> 00:01:02,070
+over this once more so basically we're
+
+22
+00:01:02,070 --> 00:01:05,729
+gonna have an iOS and an iOS app over
+
+23
+00:01:05,729 --> 00:01:08,490
+here all right now we're also going to
+
+24
+00:01:08,490 --> 00:01:11,010
+have bluemix over here which will
+
+25
+00:01:11,010 --> 00:01:13,740
+provide us with our credentials and
+
+26
+00:01:13,740 --> 00:01:17,850
+stuff that we need to access Watson the
+
+27
+00:01:17,850 --> 00:01:20,520
+Watson developer cloud but specifically
+
+28
+00:01:20,520 --> 00:01:23,210
+we're gonna be accessing the
+
+29
+00:01:23,210 --> 00:01:28,170
+text-to-speech API that's fun isn't it
+
+30
+00:01:28,170 --> 00:01:30,030
+all right so now basically that's gonna
+
+31
+00:01:30,030 --> 00:01:32,340
+happen is we're going to be talking with
+
+32
+00:01:32,340 --> 00:01:34,380
+bluemix and back and bluemix will
+
+33
+00:01:34,380 --> 00:01:37,439
+because I feel so with Watson yeah
+
+34
+00:01:37,439 --> 00:01:38,579
+that's basically what we're gonna be
+
+35
+00:01:38,579 --> 00:01:40,950
+doing so now let's see exactly how we
+
+36
+00:01:40,950 --> 00:01:44,579
+can do this when for the iOS SDK for the
+
+37
+00:01:44,579 --> 00:01:46,740
+Watson developer cloud and let's get to
+
+38
+00:01:46,740 --> 00:01:48,060
+the Mac part now we're going to be
+
+39
+00:01:48,060 --> 00:01:49,560
+explaining to you how you can actually
+
+40
+00:01:49,560 --> 00:01:51,990
+do this let's get to it so welcome back
+
+41
+00:01:51,990 --> 00:01:54,060
+to the back part and now I'm gonna be
+
+42
+00:01:54,060 --> 00:01:56,009
+showing you how exactly you can use
+
+43
+00:01:56,009 --> 00:02:00,420
+text-to-speech Watson API in Swift so
+
+44
+00:02:00,420 --> 00:02:01,619
+let's begin shall we
+
+45
+00:02:01,619 --> 00:02:03,479
+so I'm just gonna make my face a bit
+
+46
+00:02:03,479 --> 00:02:06,960
+smaller and let's head over to Xcode so
+
+47
+00:02:06,960 --> 00:02:10,379
+now basically now in this application
+
+48
+00:02:10,379 --> 00:02:12,180
+unlike if you've already watched the
+
+49
+00:02:12,180 --> 00:02:13,200
+speech-to-text video
+
+50
+00:02:13,200 --> 00:02:15,420
+you're not going to have to install any
+
+51
+00:02:15,420 --> 00:02:18,720
+API so I mean you have to but I wasn't
+
+52
+00:02:18,720 --> 00:02:20,670
+able to get that working for some reason
+
+53
+00:02:20,670 --> 00:02:22,980
+so I've just done it the harder way huh
+
+54
+00:02:22,980 --> 00:02:25,230
+so let's just make my face a bit smaller
+
+55
+00:02:25,230 --> 00:02:27,480
+and let me explain so to begin let's
+
+56
+00:02:27,480 --> 00:02:29,160
+start with the interface of this
+
+57
+00:02:29,160 --> 00:02:31,500
+application again it's really simple all
+
+58
+00:02:31,500 --> 00:02:34,830
+we have is a UI text view and then
+
+59
+00:02:34,830 --> 00:02:37,530
+essentially all I do with this
+
+60
+00:02:37,530 --> 00:02:41,910
+uitextview is it's it's just where the
+
+61
+00:02:41,910 --> 00:02:44,190
+user puts his input in and then
+
+62
+00:02:44,190 --> 00:02:48,090
+essentially I have a speak button which
+
+63
+00:02:48,090 --> 00:02:50,040
+allows the user to actually get this
+
+64
+00:02:50,040 --> 00:02:53,760
+spoken up by Watson so now that's the UI
+
+65
+00:02:53,760 --> 00:02:58,739
+and essentially if we see then the this
+
+66
+00:02:58,739 --> 00:03:02,940
+uitextview has input text as a reference
+
+67
+00:03:02,940 --> 00:03:06,209
+or referencing outlet ID outlet and the
+
+68
+00:03:06,209 --> 00:03:10,530
+speak button has a say button clicks a
+
+69
+00:03:10,530 --> 00:03:14,400
+button clicked IB action all right so
+
+70
+00:03:14,400 --> 00:03:16,739
+now let's look at the code shall we so
+
+71
+00:03:16,739 --> 00:03:18,480
+now first of all as you can see I have
+
+72
+00:03:18,480 --> 00:03:20,430
+an extension to the string class and
+
+73
+00:03:20,430 --> 00:03:21,750
+this is really simple all that really
+
+74
+00:03:21,750 --> 00:03:24,870
+does is it adds this URL encoded
+
+75
+00:03:24,870 --> 00:03:27,510
+computed property and essentially it'll
+
+76
+00:03:27,510 --> 00:03:32,310
+just return the self string but URL
+
+77
+00:03:32,310 --> 00:03:34,290
+encoded basically as you can tell by the
+
+78
+00:03:34,290 --> 00:03:37,140
+name then essentially I have an IB
+
+79
+00:03:37,140 --> 00:03:39,630
+outlet called input text which is a UI
+
+80
+00:03:39,630 --> 00:03:41,670
+text view which is what we were looking
+
+81
+00:03:41,670 --> 00:03:43,950
+at in the interface and then a class
+
+82
+00:03:43,950 --> 00:03:46,850
+level variable class scope variable
+
+83
+00:03:46,850 --> 00:03:50,850
+called audio player which is of type av
+
+84
+00:03:50,850 --> 00:03:55,380
+audio player all right so next the IB IB
+
+85
+00:03:55,380 --> 00:03:57,870
+action function say button clicked all
+
+86
+00:03:57,870 --> 00:03:59,940
+right so not basically all I'm doing
+
+87
+00:03:59,940 --> 00:04:02,819
+here is I have a function called say
+
+88
+00:04:02,819 --> 00:04:05,430
+something which takes a string and says
+
+89
+00:04:05,430 --> 00:04:08,489
+L in Watsons voice and so that we're
+
+90
+00:04:08,489 --> 00:04:10,549
+just calling that say something function
+
+91
+00:04:10,549 --> 00:04:14,880
+with that input text text that's simple
+
+92
+00:04:14,880 --> 00:04:18,630
+and now in say something I essentially
+
+93
+00:04:18,630 --> 00:04:23,909
+use the REST API for Watson in order to
+
+94
+00:04:23,909 --> 00:04:24,900
+actually give
+
+95
+00:04:24,900 --> 00:04:28,590
+text and download the file from Watson
+
+96
+00:04:28,590 --> 00:04:30,690
+and speak it out all right sounds
+
+97
+00:04:30,690 --> 00:04:32,040
+complicated it's really not that
+
+98
+00:04:32,040 --> 00:04:32,970
+complicated
+
+99
+00:04:32,970 --> 00:04:36,330
+basically if we go over to the iOS SDK
+
+100
+00:04:36,330 --> 00:04:39,960
+for IBM Watson and on github if I
+
+101
+00:04:39,960 --> 00:04:43,940
+searched up text-to-speech dots Swift
+
+102
+00:04:43,940 --> 00:04:46,410
+alright as you can see if I go in here
+
+103
+00:04:46,410 --> 00:04:49,590
+now basically from here there's quite a
+
+104
+00:04:49,590 --> 00:04:52,169
+bit of code like for example you went
+
+105
+00:04:52,169 --> 00:04:55,440
+alright as you can see the this function
+
+106
+00:04:55,440 --> 00:04:59,039
+for example data to you and 32 also data
+
+107
+00:04:59,039 --> 00:05:03,210
+to UVA and utf-8 string which are this
+
+108
+00:05:03,210 --> 00:05:05,729
+function this function along with this
+
+109
+00:05:05,729 --> 00:05:10,020
+repair wave header this function I've
+
+110
+00:05:10,020 --> 00:05:12,510
+all copied these functions from that
+
+111
+00:05:12,510 --> 00:05:15,210
+file from the iOS SDK and put it into
+
+112
+00:05:15,210 --> 00:05:17,820
+this function alright then I have the
+
+113
+00:05:17,820 --> 00:05:19,800
+rest of the code this is this code is
+
+114
+00:05:19,800 --> 00:05:21,690
+all from me I actually have another
+
+115
+00:05:21,690 --> 00:05:23,729
+function inside of this function called
+
+116
+00:05:23,729 --> 00:05:26,759
+say it alright and it takes that as NS
+
+117
+00:05:26,759 --> 00:05:29,190
+data of what it should actually speak
+
+118
+00:05:29,190 --> 00:05:32,160
+out the NS data of the file alright and
+
+119
+00:05:32,160 --> 00:05:34,500
+so basically first of all what I'm doing
+
+120
+00:05:34,500 --> 00:05:39,090
+is I'm trying to set the current av
+
+121
+00:05:39,090 --> 00:05:41,880
+audio sessions instance we're actually
+
+122
+00:05:41,880 --> 00:05:44,699
+I'm actually trying to override the
+
+123
+00:05:44,699 --> 00:05:47,159
+audio port and ensure that we speak
+
+124
+00:05:47,159 --> 00:05:49,349
+through an iPhone speaker not the
+
+125
+00:05:49,349 --> 00:05:50,909
+earpiece because the thing is I actually
+
+126
+00:05:50,909 --> 00:05:52,919
+had some problem with this and it's like
+
+127
+00:05:52,919 --> 00:05:56,039
+why is this volume this look this is not
+
+128
+00:05:56,039 --> 00:05:58,530
+very loud it's very dim sound then I
+
+129
+00:05:58,530 --> 00:05:59,880
+realized it's speaking out of the
+
+130
+00:05:59,880 --> 00:06:02,220
+earpiece not the speaker and this line
+
+131
+00:06:02,220 --> 00:06:04,830
+of code allows me to actually get over
+
+132
+00:06:04,830 --> 00:06:06,870
+that and speak through the speaker
+
+133
+00:06:06,870 --> 00:06:09,000
+however if there's no speaker on it
+
+134
+00:06:09,000 --> 00:06:11,310
+meaning it's like an iPod Touch or an
+
+135
+00:06:11,310 --> 00:06:13,409
+iPad meaning it doesn't have an earpiece
+
+136
+00:06:13,409 --> 00:06:16,500
+I'd only has a speaker then this is
+
+137
+00:06:16,500 --> 00:06:18,270
+gonna fail and it's gonna go into the
+
+138
+00:06:18,270 --> 00:06:20,729
+catch and I'm going to print out could
+
+139
+00:06:20,729 --> 00:06:22,409
+not force to speak through device
+
+140
+00:06:22,409 --> 00:06:25,530
+speaker alright next what I'm doing is
+
+141
+00:06:25,530 --> 00:06:28,169
+I'm trying to set audio player to a new
+
+142
+00:06:28,169 --> 00:06:29,760
+audio player and we're giving it the
+
+143
+00:06:29,760 --> 00:06:32,250
+data of DAT which is the argument that
+
+144
+00:06:32,250 --> 00:06:34,529
+we were passed then I'm going to prepare
+
+145
+00:06:34,529 --> 00:06:35,969
+it to playing way to set itself to
+
+146
+00:06:35,969 --> 00:06:37,680
+delegate I'm going to set
+
+147
+00:06:37,680 --> 00:06:39,600
+one to the volume and also of course
+
+148
+00:06:39,600 --> 00:06:42,990
+play the audio but before that functions
+
+149
+00:06:42,990 --> 00:06:45,090
+are yeah yeah before that function we
+
+150
+00:06:45,090 --> 00:06:46,830
+actually have to call that function with
+
+151
+00:06:46,830 --> 00:06:49,259
+the data so in order in order to
+
+152
+00:06:49,259 --> 00:06:51,690
+retrieve the data I actually create a
+
+153
+00:06:51,690 --> 00:06:55,259
+constant called da which is NS mutable
+
+154
+00:06:55,259 --> 00:06:58,259
+data out of normal data which is an
+
+155
+00:06:58,259 --> 00:07:00,600
+estate and contents of URL and as URL
+
+156
+00:07:00,600 --> 00:07:04,800
+string and then this huge string that
+
+157
+00:07:04,800 --> 00:07:08,009
+contains our credentials and also a list
+
+158
+00:07:08,009 --> 00:07:11,430
+of arguments etc etc once that's done I
+
+159
+00:07:11,430 --> 00:07:14,699
+force unwrapped the nsurl and of course
+
+160
+00:07:14,699 --> 00:07:16,949
+born before son rap ye and I stayed up
+
+161
+00:07:16,949 --> 00:07:19,410
+and then we get that converted to an
+
+162
+00:07:19,410 --> 00:07:21,810
+estimated data then I run the pair wave
+
+163
+00:07:21,810 --> 00:07:24,449
+header or insert prayer the wave header
+
+164
+00:07:24,449 --> 00:07:26,430
+of the actual data that was returned for
+
+165
+00:07:26,430 --> 00:07:29,430
+my name lots and and then I press print
+
+166
+00:07:29,430 --> 00:07:32,580
+this this is not required at all if you
+
+167
+00:07:32,580 --> 00:07:35,490
+want you can have it really and then I
+
+168
+00:07:35,490 --> 00:07:38,340
+run the same function with that data
+
+169
+00:07:38,340 --> 00:07:40,919
+that we have retrieved and it's that
+
+170
+00:07:40,919 --> 00:07:45,240
+simple to run text-to-speech with the
+
+171
+00:07:45,240 --> 00:07:49,139
+IBM Watson SDK on iOS let's actually run
+
+172
+00:07:49,139 --> 00:07:52,310
+this now and see how the app works out
+
+173
+00:07:52,310 --> 00:07:55,680
+so as you can see let's zoom in here and
+
+174
+00:07:55,680 --> 00:07:58,139
+this is the application that we're going
+
+175
+00:07:58,139 --> 00:07:59,750
+to be using in order to demonstrate
+
+176
+00:07:59,750 --> 00:08:02,849
+text-to-speech using Watson alright so
+
+177
+00:08:02,849 --> 00:08:04,440
+I'm gonna click over here in this little
+
+178
+00:08:04,440 --> 00:08:07,380
+text view and I can actually type out
+
+179
+00:08:07,380 --> 00:08:10,759
+what I want Watson is sake for example
+
+180
+00:08:10,759 --> 00:08:16,110
+hello world this is wasn't using
+
+181
+00:08:16,110 --> 00:08:19,070
+text-to-speech
+
+182
+00:08:20,370 --> 00:08:23,150
+API
+
+183
+00:08:23,849 --> 00:08:26,159
+all right so let's see if it can speak
+
+184
+00:08:26,159 --> 00:08:28,589
+that out in order to test for that I'm
+
+185
+00:08:28,589 --> 00:08:29,699
+actually going to be taking my
+
+186
+00:08:29,699 --> 00:08:31,499
+microphone and putting that on to the
+
+187
+00:08:31,499 --> 00:08:35,130
+iPhone speaker let's see just one second
+
+188
+00:08:35,130 --> 00:08:35,490
+please
+
+189
+00:08:35,490 --> 00:08:38,639
+all right so you can see my microphone
+
+190
+00:08:38,639 --> 00:08:41,969
+is now going near my iPhone and I'm
+
+191
+00:08:41,969 --> 00:08:45,289
+gonna click on the speak button now
+
+192
+00:08:47,690 --> 00:08:51,509
+hello world this is Watson using the
+
+193
+00:08:51,509 --> 00:08:55,319
+text-to-speech API and as you can see
+
+194
+00:08:55,319 --> 00:08:58,649
+that was IBM Watson in its official
+
+195
+00:08:58,649 --> 00:09:01,230
+Jeopardy voice which is actually called
+
+196
+00:09:01,230 --> 00:09:04,889
+us Michael now and that was it's saying
+
+197
+00:09:04,889 --> 00:09:07,009
+exactly what we wanted it to say and
+
+198
+00:09:07,009 --> 00:09:09,870
+that was the app let's head over back to
+
+199
+00:09:09,870 --> 00:09:13,170
+the code now so I hope you enjoyed that
+
+200
+00:09:13,170 --> 00:09:15,240
+and if you did please make sure to leave
+
+201
+00:09:15,240 --> 00:09:17,040
+a like on the video and if you really
+
+202
+00:09:17,040 --> 00:09:18,600
+enjoy my content and you want to see
+
+203
+00:09:18,600 --> 00:09:20,790
+more of it please do subscribe it really
+
+204
+00:09:20,790 --> 00:09:22,470
+does help out a lot and of course you
+
+205
+00:09:22,470 --> 00:09:23,759
+can even share it with some people who
+
+206
+00:09:23,759 --> 00:09:25,199
+you think might be able to benefit from
+
+207
+00:09:25,199 --> 00:09:28,019
+it all right that's gonna be it for this
+
+208
+00:09:28,019 --> 00:09:30,180
+video today if you have any questions
+
+209
+00:09:30,180 --> 00:09:32,339
+suggestions or feedback you can actually
+
+210
+00:09:32,339 --> 00:09:34,350
+email it to me at Tai Chi Manny at
+
+211
+00:09:34,350 --> 00:09:36,569
+gmail.com you can even tweet to me at
+
+212
+00:09:36,569 --> 00:09:39,329
+Taji Manny and you can even leave a
+
+213
+00:09:39,329 --> 00:09:41,220
+comment down below in the comment
+
+214
+00:09:41,220 --> 00:09:42,810
+section that's gonna be it for this
+
+215
+00:09:42,810 --> 00:09:47,329
+tutorial today I hope you enjoy good bye

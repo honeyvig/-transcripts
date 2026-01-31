@@ -1,0 +1,1363 @@
+1
+00:00:01,190 --> 00:00:03,659
+if you'd like to see how to add
+
+2
+00:00:03,659 --> 00:00:05,640
+information to a parts table click over
+
+3
+00:00:05,640 --> 00:00:08,309
+here if you'd like to see how to
+
+4
+00:00:08,309 --> 00:00:10,290
+retrieve information from a parse table
+
+5
+00:00:10,290 --> 00:00:13,620
+click over here if you'd like to see how
+
+6
+00:00:13,620 --> 00:00:15,210
+to update information in a parse table
+
+7
+00:00:15,210 --> 00:00:18,000
+click over here if you'd like to see how
+
+8
+00:00:18,000 --> 00:00:19,650
+to delete information in a parse table
+
+9
+00:00:19,650 --> 00:00:22,650
+you can click over here you can click
+
+10
+00:00:22,650 --> 00:00:24,000
+over here to follow me on Twitter and
+
+11
+00:00:24,000 --> 00:00:25,560
+even here to subscribe to my youtube
+
+12
+00:00:25,560 --> 00:00:27,720
+channel but if you don't click anywhere
+
+13
+00:00:27,720 --> 00:00:29,730
+this video will continue just like the
+
+14
+00:00:29,730 --> 00:00:32,250
+rest of my videos in that pattern so
+
+15
+00:00:32,250 --> 00:00:35,149
+let's get to it
+
+16
+00:00:37,100 --> 00:00:39,540
+so hello there and welcome to another
+
+17
+00:00:39,540 --> 00:00:41,430
+tutorial my name is Sonia Bakshi and
+
+18
+00:00:41,430 --> 00:00:43,040
+this time we're gonna be going over
+
+19
+00:00:43,040 --> 00:00:46,379
+parse and so I know I've already done a
+
+20
+00:00:46,379 --> 00:00:48,570
+chatting app tutorial but now I'm also
+
+21
+00:00:48,570 --> 00:00:50,460
+going to be going over just hi playing
+
+22
+00:00:50,460 --> 00:00:53,340
+how to use parse and so now I went to be
+
+23
+00:00:53,340 --> 00:00:55,620
+going over a few main things which are
+
+24
+00:00:55,620 --> 00:00:57,840
+retrieving data from the parse database
+
+25
+00:00:57,840 --> 00:00:59,699
+then I'm going to teach you how to
+
+26
+00:00:59,699 --> 00:01:01,500
+actually upload data into the parse
+
+27
+00:01:01,500 --> 00:01:04,580
+database I'm going to teach you how to
+
+28
+00:01:04,580 --> 00:01:07,590
+update some information in that table
+
+29
+00:01:07,590 --> 00:01:10,049
+and also delete some information from
+
+30
+00:01:10,049 --> 00:01:12,210
+that table and let's get started right
+
+31
+00:01:12,210 --> 00:01:14,760
+now in the first of all as you can see
+
+32
+00:01:14,760 --> 00:01:17,250
+I've already logged in to parse and I'm
+
+33
+00:01:17,250 --> 00:01:19,560
+gone to my dashboard now I'm not going
+
+34
+00:01:19,560 --> 00:01:20,909
+to go over how to do that because that
+
+35
+00:01:20,909 --> 00:01:22,920
+should be very self-explanatory and I
+
+36
+00:01:22,920 --> 00:01:25,170
+believe you can also login with Gmail or
+
+37
+00:01:25,170 --> 00:01:27,360
+even github or even Facebook so that
+
+38
+00:01:27,360 --> 00:01:29,909
+should be quite easy for you to do and
+
+39
+00:01:29,909 --> 00:01:33,479
+yeah so now what I'm going to just do is
+
+40
+00:01:33,479 --> 00:01:36,240
+in our dashboard you see up here there's
+
+41
+00:01:36,240 --> 00:01:38,759
+a create a new app button so I'm just
+
+42
+00:01:38,759 --> 00:01:42,000
+going to click on that I'm going to
+
+43
+00:01:42,000 --> 00:01:43,979
+create my put my face a bit smaller
+
+44
+00:01:43,979 --> 00:01:45,659
+actually I'm just going to cover right
+
+45
+00:01:45,659 --> 00:01:51,470
+there so I'm going to call this new app
+
+46
+00:01:53,270 --> 00:01:59,280
+parse tutorial ok I'm going to create it
+
+47
+00:01:59,280 --> 00:02:02,670
+and now what I'm going to do is I'm
+
+48
+00:02:02,670 --> 00:02:04,110
+going to click on this Quick Start
+
+49
+00:02:04,110 --> 00:02:08,099
+button let's click on it make our face a
+
+50
+00:02:08,099 --> 00:02:11,940
+bit smaller and now I don't always
+
+51
+00:02:11,940 --> 00:02:13,790
+recommend for you to do
+
+52
+00:02:13,790 --> 00:02:18,560
+is click on the data button now you can
+
+53
+00:02:18,560 --> 00:02:20,060
+choose any of these but since I'm
+
+54
+00:02:20,060 --> 00:02:21,680
+developing for iOS I'm just going to
+
+55
+00:02:21,680 --> 00:02:26,030
+click on mobile iOS now you can choose
+
+56
+00:02:26,030 --> 00:02:27,890
+between objective-c Swift or if you're
+
+57
+00:02:27,890 --> 00:02:30,590
+using this amber in c-sharp so I'm just
+
+58
+00:02:30,590 --> 00:02:33,290
+going to collect select Swift let's just
+
+59
+00:02:33,290 --> 00:02:35,030
+click on the new project button the
+
+60
+00:02:35,030 --> 00:02:36,349
+existing project button will be an
+
+61
+00:02:36,349 --> 00:02:39,739
+entirely different video then what
+
+62
+00:02:39,739 --> 00:02:40,819
+you're going to do is you're going to
+
+63
+00:02:40,819 --> 00:02:42,829
+click on this blue button here download
+
+64
+00:02:42,829 --> 00:02:48,680
+the blank Xcode project now you can just
+
+65
+00:02:48,680 --> 00:02:50,629
+uh go over here and wait for it to be
+
+66
+00:02:50,629 --> 00:02:53,290
+done downloading
+
+67
+00:03:03,430 --> 00:03:08,799
+and so now as you can see I've extracted
+
+68
+00:03:08,799 --> 00:03:15,099
+it and so what I can do is I believe yes
+
+69
+00:03:15,099 --> 00:03:17,230
+what you do once you extract it and go
+
+70
+00:03:17,230 --> 00:03:20,769
+into it double click on par starter it's
+
+71
+00:03:20,769 --> 00:03:22,900
+all your project Swift and then
+
+72
+00:03:22,900 --> 00:03:25,540
+double-click the Xcode project this
+
+73
+00:03:25,540 --> 00:03:27,909
+should open up the actual Xcode project
+
+74
+00:03:27,909 --> 00:03:33,670
+that you are developing for now what I'm
+
+75
+00:03:33,670 --> 00:03:37,540
+just quickly going to do is come over
+
+76
+00:03:37,540 --> 00:03:40,150
+here and since I'm actually developing
+
+77
+00:03:40,150 --> 00:03:43,660
+for iOS 9 not 9.1 I'm going to send it
+
+78
+00:03:43,660 --> 00:03:48,849
+to 9.0 perfect so now what I'm going to
+
+79
+00:03:48,849 --> 00:03:51,310
+do as you can see this has already been
+
+80
+00:03:51,310 --> 00:03:52,959
+set up by par so it's a nice app
+
+81
+00:03:52,959 --> 00:03:55,659
+delegate I believe yep all our
+
+82
+00:03:55,659 --> 00:03:59,079
+frameworks should already be imported as
+
+83
+00:03:59,079 --> 00:04:03,459
+you can see whatever is required and so
+
+84
+00:04:03,459 --> 00:04:05,079
+all we need to do is enter in our
+
+85
+00:04:05,079 --> 00:04:07,690
+application ID and we should be good to
+
+86
+00:04:07,690 --> 00:04:09,430
+go so what we're going to do is we're
+
+87
+00:04:09,430 --> 00:04:10,720
+going to go back into this parse
+
+88
+00:04:10,720 --> 00:04:13,389
+QuickStart page we're going to copy this
+
+89
+00:04:13,389 --> 00:04:17,349
+little code that they gave us we're
+
+90
+00:04:17,349 --> 00:04:19,150
+going to go into application did finish
+
+91
+00:04:19,150 --> 00:04:22,990
+launching with options and we're going
+
+92
+00:04:22,990 --> 00:04:24,900
+to take this little part where it says
+
+93
+00:04:24,900 --> 00:04:27,190
+uncomment and fill in with your parse
+
+94
+00:04:27,190 --> 00:04:30,039
+credentials parse set application ID
+
+95
+00:04:30,039 --> 00:04:32,130
+your application ID and your client keep
+
+96
+00:04:32,130 --> 00:04:37,720
+paste it in and now effectively what
+
+97
+00:04:37,720 --> 00:04:39,940
+we've done is we've told parts that yes
+
+98
+00:04:39,940 --> 00:04:41,770
+we are this person connecting to this
+
+99
+00:04:41,770 --> 00:04:44,470
+table and so we want access and so parse
+
+100
+00:04:44,470 --> 00:04:46,900
+it can be like yeah sure and now we can
+
+101
+00:04:46,900 --> 00:04:51,370
+access that entire parse database and so
+
+102
+00:04:51,370 --> 00:04:53,620
+that'll be good so now we can go to into
+
+103
+00:04:53,620 --> 00:04:56,650
+any table retrieve add update and even
+
+104
+00:04:56,650 --> 00:05:00,970
+Billy so now in order to actually use
+
+105
+00:05:00,970 --> 00:05:02,620
+these features I'm going to be really
+
+106
+00:05:02,620 --> 00:05:04,570
+simply just using the print commands for
+
+107
+00:05:04,570 --> 00:05:06,910
+now not creating any fancy UI this is
+
+108
+00:05:06,910 --> 00:05:08,169
+due to the fact that I just want to
+
+109
+00:05:08,169 --> 00:05:10,180
+explain how posh works too I don't want
+
+110
+00:05:10,180 --> 00:05:12,520
+to overcomplicate you with a UI and this
+
+111
+00:05:12,520 --> 00:05:14,460
+and that this is for beginners of course
+
+112
+00:05:14,460 --> 00:05:17,199
+so what I'm going to do
+
+113
+00:05:17,199 --> 00:05:20,469
+he's in our muted load function let's
+
+114
+00:05:20,469 --> 00:05:25,629
+demonstrate adding a row but wait what
+
+115
+00:05:25,629 --> 00:05:28,120
+are we adding a row - well in order to
+
+116
+00:05:28,120 --> 00:05:32,099
+solve this let's go back to parse sorry
+
+117
+00:05:32,099 --> 00:05:38,680
+and let's click on this core button then
+
+118
+00:05:38,680 --> 00:05:43,090
+let's click on add class make sure this
+
+119
+00:05:43,090 --> 00:05:45,159
+is set to custom and let's just set this
+
+120
+00:05:45,159 --> 00:05:49,240
+class name to messages now let's add a
+
+121
+00:05:49,240 --> 00:05:52,509
+column to this table let's make sure
+
+122
+00:05:52,509 --> 00:05:54,219
+this is a string and let's name this the
+
+123
+00:05:54,219 --> 00:06:00,279
+message and that's also how to column a
+
+124
+00:06:00,279 --> 00:06:02,699
+name at the number meaning which
+
+125
+00:06:02,699 --> 00:06:05,789
+actually sorry this has to be a number
+
+126
+00:06:05,789 --> 00:06:10,360
+so this is a number called number I'm
+
+127
+00:06:10,360 --> 00:06:12,099
+just going to take this call over here
+
+128
+00:06:12,099 --> 00:06:14,409
+that we just created a number and drag
+
+129
+00:06:14,409 --> 00:06:16,839
+it over here beside message you don't
+
+130
+00:06:16,839 --> 00:06:18,580
+need to do this it's completely optional
+
+131
+00:06:18,580 --> 00:06:21,219
+but you know it's more clean and easy
+
+132
+00:06:21,219 --> 00:06:22,599
+for you to see okay message number
+
+133
+00:06:22,599 --> 00:06:24,370
+residence number actually you can even
+
+134
+00:06:24,370 --> 00:06:25,810
+put the number before the message
+
+135
+00:06:25,810 --> 00:06:27,099
+because that makes more sense because
+
+136
+00:06:27,099 --> 00:06:29,259
+that's the unique not the unique because
+
+137
+00:06:29,259 --> 00:06:33,240
+object you get the point anyway
+
+138
+00:06:33,240 --> 00:06:37,779
+continuing now how do we add a row into
+
+139
+00:06:37,779 --> 00:06:39,909
+this table it's simple
+
+140
+00:06:39,909 --> 00:06:41,860
+first of all we need to do is we need to
+
+141
+00:06:41,860 --> 00:06:45,610
+define this row how do we define this
+
+142
+00:06:45,610 --> 00:06:48,819
+row we create a VAR object which is
+
+143
+00:06:48,819 --> 00:06:53,409
+equal to a new PF object but there's a
+
+144
+00:06:53,409 --> 00:06:53,979
+problem
+
+145
+00:06:53,979 --> 00:06:56,680
+we need an initializer and so if I do
+
+146
+00:06:56,680 --> 00:06:58,389
+this as you can see it fills in this
+
+147
+00:06:58,389 --> 00:07:02,800
+initializer class name for me and so I'm
+
+148
+00:07:02,800 --> 00:07:05,399
+going to give it the class name messages
+
+149
+00:07:05,399 --> 00:07:08,080
+because as you can see over here we gave
+
+150
+00:07:08,080 --> 00:07:12,460
+it messages and of course I exclude us
+
+151
+00:07:12,460 --> 00:07:14,229
+to load because it's really really slow
+
+152
+00:07:14,229 --> 00:07:18,729
+okay so now that we've decline and sorry
+
+153
+00:07:18,729 --> 00:07:22,330
+decline declared our objects what we can
+
+154
+00:07:22,330 --> 00:07:27,240
+do is we can say object dots set object
+
+155
+00:07:27,240 --> 00:07:29,870
+now we're going to say
+
+156
+00:07:29,870 --> 00:07:33,020
+we want the message named my name is
+
+157
+00:07:33,020 --> 00:07:37,639
+Tammy Bakshi for the message and for the
+
+158
+00:07:37,639 --> 00:07:42,830
+and so I went is also set number one for
+
+159
+00:07:42,830 --> 00:07:49,490
+the number and this should actually work
+
+160
+00:07:49,490 --> 00:07:51,560
+now what's going to happen it's going to
+
+161
+00:07:51,560 --> 00:07:53,900
+set the message to my name is Hannah
+
+162
+00:07:53,900 --> 00:07:56,570
+Bakshi and I'll set the number to one of
+
+163
+00:07:56,570 --> 00:07:58,490
+course I'm not going to go to the actual
+
+164
+00:07:58,490 --> 00:08:01,940
+database and find the number yet because
+
+165
+00:08:01,940 --> 00:08:04,190
+that would be way too much coding but
+
+166
+00:08:04,190 --> 00:08:06,710
+this is just a simple explanation of how
+
+167
+00:08:06,710 --> 00:08:10,130
+you'd actually save into parse but
+
+168
+00:08:10,130 --> 00:08:11,570
+there's a problem we're only setting
+
+169
+00:08:11,570 --> 00:08:13,280
+objects we're not actually saving into
+
+170
+00:08:13,280 --> 00:08:15,680
+the table so in order to do this let's
+
+171
+00:08:15,680 --> 00:08:18,350
+forest try object dot save because I
+
+172
+00:08:18,350 --> 00:08:20,840
+know that in my case this will work but
+
+173
+00:08:20,840 --> 00:08:22,370
+in your case you can implement air
+
+174
+00:08:22,370 --> 00:08:24,229
+handling because again air handling is
+
+175
+00:08:24,229 --> 00:08:26,419
+an entirely separate video for now I'm
+
+176
+00:08:26,419 --> 00:08:27,620
+just trying to teach you how to use
+
+177
+00:08:27,620 --> 00:08:28,720
+parse
+
+178
+00:08:28,720 --> 00:08:31,160
+now if I make the deployment target my
+
+179
+00:08:31,160 --> 00:08:34,669
+iPhone and if I run now gonna not going
+
+180
+00:08:34,669 --> 00:08:36,610
+to stream my iphone to my Mac because
+
+181
+00:08:36,610 --> 00:08:39,020
+you only really need to see what it
+
+182
+00:08:39,020 --> 00:08:40,729
+prints out not even prints out at this
+
+183
+00:08:40,729 --> 00:08:44,870
+stage whatever comes over here so as you
+
+184
+00:08:44,870 --> 00:08:49,029
+can see this should eventually run and
+
+185
+00:08:49,029 --> 00:08:52,839
+if all goes well it should give us this
+
+186
+00:08:52,839 --> 00:08:57,080
+warning perfect so now if we got a parse
+
+187
+00:08:57,080 --> 00:08:59,089
+and we reload by clicking on this little
+
+188
+00:08:59,089 --> 00:09:02,029
+refresh button here as you can see
+
+189
+00:09:02,029 --> 00:09:03,170
+number one
+
+190
+00:09:03,170 --> 00:09:07,010
+my name is Tana Bakshi we have inserted
+
+191
+00:09:07,010 --> 00:09:12,440
+this row into our table now what else
+
+192
+00:09:12,440 --> 00:09:13,790
+can we do
+
+193
+00:09:13,790 --> 00:09:17,300
+uh let's take this for an example now
+
+194
+00:09:17,300 --> 00:09:20,750
+that we've added a row again I'm going
+
+195
+00:09:20,750 --> 00:09:24,020
+to keep this code in the actual source
+
+196
+00:09:24,020 --> 00:09:27,440
+code or actually nevermind let's just do
+
+197
+00:09:27,440 --> 00:09:29,089
+this because we don't want to save it
+
+198
+00:09:29,089 --> 00:09:32,230
+again I'm just going to comment that out
+
+199
+00:09:32,230 --> 00:09:34,790
+okay so now that we've actually added a
+
+200
+00:09:34,790 --> 00:09:35,180
+row
+
+201
+00:09:35,180 --> 00:09:38,690
+let's try retrieving the information
+
+202
+00:09:38,690 --> 00:09:42,110
+that's already in the database now how
+
+203
+00:09:42,110 --> 00:09:43,310
+do we do this
+
+204
+00:09:43,310 --> 00:09:46,880
+first of all let's just declare a query
+
+205
+00:09:46,880 --> 00:09:49,620
+which is equal to a new PF query and of
+
+206
+00:09:49,620 --> 00:09:50,970
+course again we're going to give it a
+
+207
+00:09:50,970 --> 00:09:54,089
+class name aka table name and I'm going
+
+208
+00:09:54,089 --> 00:09:58,259
+to again give it messages then what I'm
+
+209
+00:09:58,259 --> 00:10:02,399
+going to do is I'm going to say I think
+
+210
+00:10:02,399 --> 00:10:07,940
+it's a yeah var objects is equal to
+
+211
+00:10:07,940 --> 00:10:12,060
+query dot find objects and of course way
+
+212
+00:10:12,060 --> 00:10:14,880
+to force try this now this is an array
+
+213
+00:10:14,880 --> 00:10:16,889
+of PF objects but what if we wanted to
+
+214
+00:10:16,889 --> 00:10:18,750
+print it out in a special way or we need
+
+215
+00:10:18,750 --> 00:10:21,060
+this information in a normal string
+
+216
+00:10:21,060 --> 00:10:23,930
+string or string any object dictionary
+
+217
+00:10:23,930 --> 00:10:27,560
+well in order to do this what I do is
+
+218
+00:10:27,560 --> 00:10:34,610
+say var final objects is equal to string
+
+219
+00:10:34,610 --> 00:10:38,339
+any object and this is actually an array
+
+220
+00:10:38,339 --> 00:10:44,779
+of this and so now we can loop through
+
+221
+00:10:44,779 --> 00:10:49,980
+the actual objects and so it's going to
+
+222
+00:10:49,980 --> 00:10:53,670
+happen is we're going to say final
+
+223
+00:10:53,670 --> 00:10:59,120
+objects dot append a blank dictionary
+
+224
+00:10:59,120 --> 00:11:03,269
+then final objects the last element
+
+225
+00:11:03,269 --> 00:11:05,810
+meaning final objects dot count
+
+226
+00:11:05,810 --> 00:11:12,630
+minus one specifically message will be
+
+227
+00:11:12,630 --> 00:11:17,160
+set to J which is the loop parameter
+
+228
+00:11:17,160 --> 00:11:22,230
+that we made the value for key message
+
+229
+00:11:22,230 --> 00:11:28,860
+as string then what we can do is we can
+
+230
+00:11:28,860 --> 00:11:29,760
+do the same thing
+
+231
+00:11:29,760 --> 00:11:34,019
+final objects final objects count minus
+
+232
+00:11:34,019 --> 00:11:37,019
+one meaning the last dictionary we're
+
+233
+00:11:37,019 --> 00:11:41,490
+setting the number to J dot value for
+
+234
+00:11:41,490 --> 00:11:50,819
+key number as a string so us effectively
+
+235
+00:11:50,819 --> 00:11:52,649
+what we're doing is we're taking the
+
+236
+00:11:52,649 --> 00:11:55,620
+message from the specific object from
+
+237
+00:11:55,620 --> 00:11:57,120
+this array
+
+238
+00:11:57,120 --> 00:11:59,760
+converting it to a string and putting it
+
+239
+00:11:59,760 --> 00:12:02,400
+into a final into the final objects
+
+240
+00:12:02,400 --> 00:12:04,800
+dictionary which is the last dictionary
+
+241
+00:12:04,800 --> 00:12:06,650
+in an array of more dictionaries of
+
+242
+00:12:06,650 --> 00:12:09,839
+values from this objects alright sounds
+
+243
+00:12:09,839 --> 00:12:11,820
+complicated right now but once I print
+
+244
+00:12:11,820 --> 00:12:16,080
+out the final objects won't really seen
+
+245
+00:12:16,080 --> 00:12:20,130
+this hard now it should actually print
+
+246
+00:12:20,130 --> 00:12:23,100
+out the my name is anand bakshi number
+
+247
+00:12:23,100 --> 00:12:29,220
+one oh sorry I made a mistake unless I
+
+248
+00:12:29,220 --> 00:12:35,910
+caught that integer not string a number
+
+249
+00:12:35,910 --> 00:12:38,910
+can't be a string unless you got that
+
+250
+00:12:38,910 --> 00:12:41,040
+and as you can see it has worked
+
+251
+00:12:41,040 --> 00:12:43,200
+perfectly and now in order to prove that
+
+252
+00:12:43,200 --> 00:12:45,510
+this actually does work I'm going to add
+
+253
+00:12:45,510 --> 00:12:49,290
+another row from within parts number two
+
+254
+00:12:49,290 --> 00:12:57,740
+message hi I'm new here
+
+255
+00:12:57,950 --> 00:13:02,400
+okay so now if I run this app it should
+
+256
+00:13:02,400 --> 00:13:05,970
+give us exactly what I typed in as you
+
+257
+00:13:05,970 --> 00:13:08,520
+can see it retrieves all the contents
+
+258
+00:13:08,520 --> 00:13:15,000
+from the parse table now we can
+
+259
+00:13:15,000 --> 00:13:22,350
+effectively retrieve all rows but what
+
+260
+00:13:22,350 --> 00:13:27,089
+about updating a row well that's also
+
+261
+00:13:27,089 --> 00:13:31,709
+quite simple in order to update yeah
+
+262
+00:13:31,709 --> 00:13:38,730
+update a row all we need to do is say
+
+263
+00:13:38,730 --> 00:13:41,279
+okay first of all we're going to do
+
+264
+00:13:41,279 --> 00:13:46,380
+create a query so this is going to be a
+
+265
+00:13:46,380 --> 00:13:49,560
+new query PF query of course it's not
+
+266
+00:13:49,560 --> 00:13:57,140
+error code query of class name messages
+
+267
+00:13:58,250 --> 00:14:00,930
+next what we're going to do is we're
+
+268
+00:14:00,930 --> 00:14:06,530
+going to say query dot we're key or
+
+269
+00:14:06,530 --> 00:14:09,540
+sorry not this one
+
+270
+00:14:09,540 --> 00:14:11,150
+we're key
+
+271
+00:14:11,150 --> 00:14:15,320
+equal to in my case where the number is
+
+272
+00:14:15,320 --> 00:14:21,170
+1 let's update the message to yay it
+
+273
+00:14:21,170 --> 00:14:26,270
+worked so first of all we've said the
+
+274
+00:14:26,270 --> 00:14:31,490
+query should look for a key number where
+
+275
+00:14:31,490 --> 00:14:35,390
+it's 1 so now let's get the object value
+
+276
+00:14:35,390 --> 00:14:39,190
+of that by doing query get first object
+
+277
+00:14:39,190 --> 00:14:41,540
+so this is effects we're going to do
+
+278
+00:14:41,540 --> 00:14:44,660
+it's going to get the object value of
+
+279
+00:14:44,660 --> 00:14:47,720
+the actual row it'll basically get the
+
+280
+00:14:47,720 --> 00:14:51,800
+row where number is equal to 1 or at
+
+281
+00:14:51,800 --> 00:14:53,480
+least the first row where number is
+
+282
+00:14:53,480 --> 00:14:54,170
+equal to 1
+
+283
+00:14:54,170 --> 00:14:56,030
+not sure about if there's any others
+
+284
+00:14:56,030 --> 00:15:00,440
+it'll just get the first one now I'm
+
+285
+00:15:00,440 --> 00:15:02,930
+just going to make this a let object so
+
+286
+00:15:02,930 --> 00:15:07,040
+it stops giving me a warning and so now
+
+287
+00:15:07,040 --> 00:15:13,750
+I'm going to say object dot set object
+
+288
+00:15:13,750 --> 00:15:16,490
+let's just say let's just say the new
+
+289
+00:15:16,490 --> 00:15:22,100
+message is yay it worked and let's set
+
+290
+00:15:22,100 --> 00:15:26,210
+this for the message of course and now
+
+291
+00:15:26,210 --> 00:15:29,390
+let's save this on to our parse server
+
+292
+00:15:29,390 --> 00:15:32,810
+and theoretically this should go to the
+
+293
+00:15:32,810 --> 00:15:37,790
+parse table update my name is anand
+
+294
+00:15:37,790 --> 00:15:38,210
+bakshi
+
+295
+00:15:38,210 --> 00:15:42,320
+into yay it worked so let's actually run
+
+296
+00:15:42,320 --> 00:15:44,800
+this code
+
+297
+00:15:50,460 --> 00:15:53,770
+okay no exception and if we go over here
+
+298
+00:15:53,770 --> 00:15:59,620
+and refresh it changed now
+
+299
+00:15:59,620 --> 00:16:01,360
+we're going to do the last thing and
+
+300
+00:16:01,360 --> 00:16:05,710
+this is actually very very fun it's
+
+301
+00:16:05,710 --> 00:16:07,570
+basically just updating with a little
+
+302
+00:16:07,570 --> 00:16:12,160
+bit of a twist so what we're going to do
+
+303
+00:16:12,160 --> 00:16:15,940
+now is we're going to delete a row so
+
+304
+00:16:15,940 --> 00:16:18,880
+now how do we delete a row you ask
+
+305
+00:16:18,880 --> 00:16:20,920
+well actually what I'm just going to do
+
+306
+00:16:20,920 --> 00:16:23,140
+is I'm going to copy this much code from
+
+307
+00:16:23,140 --> 00:16:25,120
+updating and I'm just going to say
+
+308
+00:16:25,120 --> 00:16:31,900
+object dot delete it was literally that
+
+309
+00:16:31,900 --> 00:16:35,560
+simple and now it'll delete yeah it
+
+310
+00:16:35,560 --> 00:16:40,060
+worked because we're deleting wherever
+
+311
+00:16:40,060 --> 00:16:43,390
+the number is one or at least the first
+
+312
+00:16:43,390 --> 00:16:47,470
+row where numbers one and so now if i
+
+313
+00:16:47,470 --> 00:16:53,730
+refresh number one is gone and it worked
+
+314
+00:16:53,730 --> 00:16:58,510
+and yeah that's pretty much it for this
+
+315
+00:16:58,510 --> 00:17:03,490
+tutorial and really quickly yeah that
+
+316
+00:17:03,490 --> 00:17:04,720
+was actually pretty much it for this
+
+317
+00:17:04,720 --> 00:17:06,490
+tutorial again if you enjoyed please
+
+318
+00:17:06,490 --> 00:17:08,170
+make sure to leave a like leave a
+
+319
+00:17:08,170 --> 00:17:09,850
+comment or email me at a g-man a
+
+320
+00:17:09,850 --> 00:17:11,560
+gmail.com my email within the
+
+321
+00:17:11,560 --> 00:17:13,959
+description if you have any questions
+
+322
+00:17:13,959 --> 00:17:17,560
+suggestions ideas concerns pretty much
+
+323
+00:17:17,560 --> 00:17:19,930
+anything from math to science to
+
+324
+00:17:19,930 --> 00:17:22,990
+computing to algorithms anything and I
+
+325
+00:17:22,990 --> 00:17:25,660
+will surely almost definitely get back
+
+326
+00:17:25,660 --> 00:17:28,390
+to you on that you can also email me a
+
+327
+00:17:28,390 --> 00:17:30,130
+video question of you saying question
+
+328
+00:17:30,130 --> 00:17:32,290
+and I will sir almost certainly feature
+
+329
+00:17:32,290 --> 00:17:35,200
+that in one of my next videos and maybe
+
+330
+00:17:35,200 --> 00:17:36,100
+even answer that
+
+331
+00:17:36,100 --> 00:17:39,400
+so also subscribe to my channel if you
+
+332
+00:17:39,400 --> 00:17:41,050
+like my cot and you want to see more of
+
+333
+00:17:41,050 --> 00:17:43,450
+it or if you just plain are new to the
+
+334
+00:17:43,450 --> 00:17:45,130
+channel or you like my channel please
+
+335
+00:17:45,130 --> 00:17:47,590
+subscribe that really does help you can
+
+336
+00:17:47,590 --> 00:17:49,840
+also follow me on twitter at tad g-man e
+
+337
+00:17:49,840 --> 00:17:51,580
+if you'd like to where you can get all
+
+338
+00:17:51,580 --> 00:17:53,890
+the latest updates maybe even some sneak
+
+339
+00:17:53,890 --> 00:17:56,230
+peeks towards my next videos or in
+
+340
+00:17:56,230 --> 00:17:58,570
+future ones and that's going to be it
+
+341
+00:17:58,570 --> 00:18:01,290
+good bye

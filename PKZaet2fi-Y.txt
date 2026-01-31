@@ -1,0 +1,3607 @@
+1
+00:00:00,560 --> 00:00:02,970
+so hello there and welcome to another
+
+2
+00:00:02,970 --> 00:00:05,430
+tutorial my name is Tammy vaccine this
+
+3
+00:00:05,430 --> 00:00:07,440
+time we're gonna be going over something
+
+4
+00:00:07,440 --> 00:00:10,410
+that I call the amazing maze now what
+
+5
+00:00:10,410 --> 00:00:12,980
+could the amazing maze be out of all the
+
+6
+00:00:12,980 --> 00:00:15,450
+amazing inventions that I make on my
+
+7
+00:00:15,450 --> 00:00:18,359
+channel what could this be well this is
+
+8
+00:00:18,359 --> 00:00:20,449
+using the a-star path finding algorithm
+
+9
+00:00:20,449 --> 00:00:23,609
+which is different than the Dijkstra and
+
+10
+00:00:23,609 --> 00:00:25,470
+the best first search algorithm in many
+
+11
+00:00:25,470 --> 00:00:28,080
+ways this is a path mining algorithm
+
+12
+00:00:28,080 --> 00:00:31,560
+that will allow us to find away from
+
+13
+00:00:31,560 --> 00:00:34,320
+point A to point B even through a maze
+
+14
+00:00:34,320 --> 00:00:38,390
+pretty easily so I've made a swift and
+
+15
+00:00:38,390 --> 00:00:41,040
+version of this and today I'm going to
+
+16
+00:00:41,040 --> 00:00:42,000
+be explaining it to you
+
+17
+00:00:42,000 --> 00:00:43,680
+first I'm going to explain the algorithm
+
+18
+00:00:43,680 --> 00:00:46,079
+itself and then I'm going to be
+
+19
+00:00:46,079 --> 00:00:50,390
+explaining my app that I created on it
+
+20
+00:00:50,390 --> 00:00:53,760
+right now you can get auxiliary code for
+
+21
+00:00:53,760 --> 00:00:56,070
+this app down in the description however
+
+22
+00:00:56,070 --> 00:00:58,980
+in a while I will be posting up the
+
+23
+00:00:58,980 --> 00:01:01,680
+actual API for path finding that I will
+
+24
+00:01:01,680 --> 00:01:03,809
+release so just keep your eyes in the
+
+25
+00:01:03,809 --> 00:01:05,939
+description for that you will get it
+
+26
+00:01:05,939 --> 00:01:09,840
+soon and yeah so let's get started so
+
+27
+00:01:09,840 --> 00:01:11,520
+this is called the a-star path finding
+
+28
+00:01:11,520 --> 00:01:13,710
+algorithm it's different than the best
+
+29
+00:01:13,710 --> 00:01:15,330
+first search algorithm which is very
+
+30
+00:01:15,330 --> 00:01:19,530
+greedy with the fact that it also keeps
+
+31
+00:01:19,530 --> 00:01:22,290
+a track of how far it is from its root
+
+32
+00:01:22,290 --> 00:01:25,049
+node meaning it's point a so it will
+
+33
+00:01:25,049 --> 00:01:27,240
+keep track of both how far it is from
+
+34
+00:01:27,240 --> 00:01:30,000
+its ending point and also how far it is
+
+35
+00:01:30,000 --> 00:01:31,909
+from point A which is a starting point
+
+36
+00:01:31,909 --> 00:01:34,590
+and it's also different is it from the
+
+37
+00:01:34,590 --> 00:01:37,770
+Dijkstra algorithm by because the
+
+38
+00:01:37,770 --> 00:01:40,380
+Dijkstra algorithm will also search a
+
+39
+00:01:40,380 --> 00:01:43,470
+lot of onion nodes which it really
+
+40
+00:01:43,470 --> 00:01:45,390
+shouldn't be searching at all I mean if
+
+41
+00:01:45,390 --> 00:01:47,549
+if it knows it's right there it
+
+42
+00:01:47,549 --> 00:01:49,200
+shouldn't go over here and start
+
+43
+00:01:49,200 --> 00:01:51,600
+searching just go over there which is
+
+44
+00:01:51,600 --> 00:01:53,070
+what the a-star path finding algorithm
+
+45
+00:01:53,070 --> 00:01:55,740
+will solve I will find usually the
+
+46
+00:01:55,740 --> 00:01:58,860
+shortest path to the end and this will
+
+47
+00:01:58,860 --> 00:02:02,340
+work great in games where an AI entity
+
+48
+00:02:02,340 --> 00:02:05,219
+would need to actually find its way to a
+
+49
+00:02:05,219 --> 00:02:09,030
+player from so many nodes away so it can
+
+50
+00:02:09,030 --> 00:02:11,180
+just find its way through ignore
+
+51
+00:02:11,180 --> 00:02:12,940
+obstacles
+
+52
+00:02:12,940 --> 00:02:14,980
+go around obstacles stuff like that
+
+53
+00:02:14,980 --> 00:02:16,350
+let's get started
+
+54
+00:02:16,350 --> 00:02:19,300
+so before we even start learning about
+
+55
+00:02:19,300 --> 00:02:22,690
+the a-star algorithm we need three
+
+56
+00:02:22,690 --> 00:02:25,510
+different costs what is a cost you may
+
+57
+00:02:25,510 --> 00:02:29,110
+ask a cost is the amount of energy used
+
+58
+00:02:29,110 --> 00:02:32,350
+by a node so for example there are three
+
+59
+00:02:32,350 --> 00:02:34,150
+different types of costs that you have
+
+60
+00:02:34,150 --> 00:02:36,460
+in this sort of an algorithm there is
+
+61
+00:02:36,460 --> 00:02:39,580
+the G cost there's the H cost and
+
+62
+00:02:39,580 --> 00:02:42,130
+there's the F cost the F cost it's
+
+63
+00:02:42,130 --> 00:02:45,280
+always the main cost here it's like the
+
+64
+00:02:45,280 --> 00:02:49,600
+father of all costs here so this cost is
+
+65
+00:02:49,600 --> 00:02:53,590
+always equal to G Plus H which I will
+
+66
+00:02:53,590 --> 00:02:54,700
+explain in just a minute
+
+67
+00:02:54,700 --> 00:02:58,420
+now our G cost what and you should know
+
+68
+00:02:58,420 --> 00:02:59,620
+what cost by now because I've explained
+
+69
+00:02:59,620 --> 00:03:01,960
+it it's how much energy is used up from
+
+70
+00:03:01,960 --> 00:03:04,690
+one specific node to another node our G
+
+71
+00:03:04,690 --> 00:03:08,260
+cost will be the energy used from one
+
+72
+00:03:08,260 --> 00:03:11,980
+node to its starting point meaning let's
+
+73
+00:03:11,980 --> 00:03:16,000
+just say we take this path this node
+
+74
+00:03:16,000 --> 00:03:18,790
+will have a G value of 10 then 20 then
+
+75
+00:03:18,790 --> 00:03:22,390
+30 and 40 and 50 then 60 due to the fact
+
+76
+00:03:22,390 --> 00:03:26,140
+that this is point a it's G value of
+
+77
+00:03:26,140 --> 00:03:28,660
+zero because it is itself point a then
+
+78
+00:03:28,660 --> 00:03:32,560
+we add 10 here we get 10 then 10 we at
+
+79
+00:03:32,560 --> 00:03:35,800
+20 and 10 me a 30x etc so our algorithm
+
+80
+00:03:35,800 --> 00:03:38,709
+here to find the G value is always going
+
+81
+00:03:38,709 --> 00:03:45,959
+to be the last G value plus another 10
+
+82
+00:03:45,959 --> 00:03:49,450
+so that's how we find our next G value
+
+83
+00:03:49,450 --> 00:03:52,870
+but how do we find our H value but first
+
+84
+00:03:52,870 --> 00:03:55,840
+of all what is our H value our H value
+
+85
+00:03:55,840 --> 00:03:59,470
+is how much cost we have for moving from
+
+86
+00:03:59,470 --> 00:04:04,060
+this node to our ending node so the way
+
+87
+00:04:04,060 --> 00:04:06,820
+you cut you calculate this and before I
+
+88
+00:04:06,820 --> 00:04:08,890
+tell you let's just draw the coordinates
+
+89
+00:04:08,890 --> 00:04:09,880
+on the squid so we can actually
+
+90
+00:04:09,880 --> 00:04:12,790
+understand it so first I'm going to draw
+
+91
+00:04:12,790 --> 00:04:17,220
+the Y values 0 1 2
+
+92
+00:04:20,799 --> 00:04:23,830
+we perfect so now we can see that this
+
+93
+00:04:23,830 --> 00:04:30,190
+is zero 3 this is 3 3 this is 3 0 and
+
+94
+00:04:30,190 --> 00:04:32,590
+this is 0 0 so that's how we can
+
+95
+00:04:32,590 --> 00:04:34,300
+understand our grid now so we can find
+
+96
+00:04:34,300 --> 00:04:36,610
+the coordinates of any such grid like
+
+97
+00:04:36,610 --> 00:04:41,470
+this would be 1 2 etc etc so now let's
+
+98
+00:04:41,470 --> 00:04:43,720
+see how we calculate the H value since
+
+99
+00:04:43,720 --> 00:04:48,009
+this is a longer expression I'm just
+
+100
+00:04:48,009 --> 00:04:51,550
+going to write it down here so this is
+
+101
+00:04:51,550 --> 00:04:54,580
+where we're going to do the H value okay
+
+102
+00:04:54,580 --> 00:04:58,180
+so now let's get started by doing this
+
+103
+00:04:58,180 --> 00:05:00,280
+is the actual algorithm we find the
+
+104
+00:05:00,280 --> 00:05:08,440
+absolute value the nodes X minus the
+
+105
+00:05:08,440 --> 00:05:15,759
+ending X plus the absolute value of the
+
+106
+00:05:15,759 --> 00:05:30,060
+node Y minus the node at the end and Y
+
+107
+00:05:30,060 --> 00:05:33,610
+okay so we add these and then one more
+
+108
+00:05:33,610 --> 00:05:36,880
+step we multiply it by 40 this will get
+
+109
+00:05:36,880 --> 00:05:38,889
+us our H cost that's pretty long
+
+110
+00:05:38,889 --> 00:05:40,900
+expression thank God we have computers
+
+111
+00:05:40,900 --> 00:05:45,130
+to do it anyway so then once we find our
+
+112
+00:05:45,130 --> 00:05:47,529
+G and H costs we always have to find our
+
+113
+00:05:47,529 --> 00:05:50,800
+F cost which is going to be G Plus H so
+
+114
+00:05:50,800 --> 00:05:53,889
+swift's forgot what it's called but they
+
+115
+00:05:53,889 --> 00:05:55,330
+have a feature where you can just set
+
+116
+00:05:55,330 --> 00:05:57,729
+you can give a variable organa in the
+
+117
+00:05:57,729 --> 00:05:59,830
+center so instead of having to set the F
+
+118
+00:05:59,830 --> 00:06:01,690
+value each time and then retrieving it
+
+119
+00:06:01,690 --> 00:06:04,330
+you can retrieve the F value and it'll
+
+120
+00:06:04,330 --> 00:06:06,880
+always return G Plus H that's a really
+
+121
+00:06:06,880 --> 00:06:07,690
+good feature
+
+122
+00:06:07,690 --> 00:06:10,449
+I'll have that written down in the Mac
+
+123
+00:06:10,449 --> 00:06:13,060
+part of the video anyway coming back to
+
+124
+00:06:13,060 --> 00:06:15,120
+our a starts planation
+
+125
+00:06:15,120 --> 00:06:17,500
+now you know what each of these costs
+
+126
+00:06:17,500 --> 00:06:20,289
+are and so now as you can see over here
+
+127
+00:06:20,289 --> 00:06:23,319
+I've prepared a little demonstration of
+
+128
+00:06:23,319 --> 00:06:25,719
+how this entire a-star pathfinding will
+
+129
+00:06:25,719 --> 00:06:28,569
+work remember this is not my app this is
+
+130
+00:06:28,569 --> 00:06:30,669
+just a presentation that I created which
+
+131
+00:06:30,669 --> 00:06:33,639
+will explain exactly how the apple tree
+
+132
+00:06:33,639 --> 00:06:36,430
+through point a go along here come up to
+
+133
+00:06:36,430 --> 00:06:38,469
+point B so it's just a little
+
+134
+00:06:38,469 --> 00:06:42,009
+explanation of how that happens so now
+
+135
+00:06:42,009 --> 00:06:43,780
+what I'm gonna do is I'm just going to
+
+136
+00:06:43,780 --> 00:06:46,509
+give you one more quick demo over here
+
+137
+00:06:46,509 --> 00:06:48,610
+then we're gonna get over here see how
+
+138
+00:06:48,610 --> 00:06:50,979
+this actually works and then we'll go to
+
+139
+00:06:50,979 --> 00:06:53,409
+the code so as you can see over here
+
+140
+00:06:53,409 --> 00:06:57,400
+let's just give a quick example over
+
+141
+00:06:57,400 --> 00:07:00,520
+here let's just find the G H and F costs
+
+142
+00:07:00,520 --> 00:07:03,009
+for this specific node that's it and
+
+143
+00:07:03,009 --> 00:07:06,009
+then we'll go to our explanation so in
+
+144
+00:07:06,009 --> 00:07:07,569
+order to find the G cost we take the
+
+145
+00:07:07,569 --> 00:07:09,610
+last G cost in this case it was zero
+
+146
+00:07:09,610 --> 00:07:13,180
+because it's its self then we add ad
+
+147
+00:07:13,180 --> 00:07:15,279
+tend to it and you might be thinking why
+
+148
+00:07:15,279 --> 00:07:17,889
+do we add ten to our G cost is there a
+
+149
+00:07:17,889 --> 00:07:20,469
+special reason well there is first of
+
+150
+00:07:20,469 --> 00:07:23,919
+all this app cannot do diagonals the
+
+151
+00:07:23,919 --> 00:07:25,779
+reason I didn't program them in is
+
+152
+00:07:25,779 --> 00:07:27,219
+because let's say there's an obstacle
+
+153
+00:07:27,219 --> 00:07:30,180
+here let's say there's an obstacle here
+
+154
+00:07:30,180 --> 00:07:34,419
+our diagonal searching won't look for an
+
+155
+00:07:34,419 --> 00:07:36,849
+obstacle over here and over here it's
+
+156
+00:07:36,849 --> 00:07:38,110
+just gonna look if there's an obstacle
+
+157
+00:07:38,110 --> 00:07:40,719
+here and it'll just happily jump over
+
+158
+00:07:40,719 --> 00:07:43,120
+these obstacles and continue and
+
+159
+00:07:43,120 --> 00:07:45,580
+continue and continue which we do not
+
+160
+00:07:45,580 --> 00:07:49,259
+want obviously so we don't do diagonals
+
+161
+00:07:49,259 --> 00:07:52,029
+coming back to the point let's find the
+
+162
+00:07:52,029 --> 00:07:54,729
+G H and F values for this specific node
+
+163
+00:07:54,729 --> 00:07:56,379
+so as you can see we've already
+
+164
+00:07:56,379 --> 00:07:59,259
+calculated the G cost which will be 10
+
+165
+00:07:59,259 --> 00:08:02,740
+you through its meaning the first due to
+
+166
+00:08:02,740 --> 00:08:04,330
+it being the first node that we're
+
+167
+00:08:04,330 --> 00:08:08,439
+travelling to then what we do is we
+
+168
+00:08:08,439 --> 00:08:10,990
+calculate the H value so our node X okay
+
+169
+00:08:10,990 --> 00:08:12,339
+let's just actually fill in the blanks
+
+170
+00:08:12,339 --> 00:08:15,789
+over here we have absolute value node X
+
+171
+00:08:15,789 --> 00:08:23,139
+minus end X plus I'm just gonna remember
+
+172
+00:08:23,139 --> 00:08:24,669
+to put the absolute value here since I
+
+173
+00:08:24,669 --> 00:08:25,779
+don't want to write that are actually
+
+174
+00:08:25,779 --> 00:08:32,769
+going out absolute value for this minus
+
+175
+00:08:32,769 --> 00:08:36,430
+this plus the absolute value for
+
+176
+00:08:36,430 --> 00:08:43,120
+something minus something times 40 ok
+
+177
+00:08:43,120 --> 00:08:44,560
+let's fill in the blanks and actually
+
+178
+00:08:44,560 --> 00:08:47,529
+answer this equation so first let's see
+
+179
+00:08:47,529 --> 00:08:50,019
+this by parts okay so we have the
+
+180
+00:08:50,019 --> 00:08:52,480
+absolute value what's the nodes x value
+
+181
+00:08:52,480 --> 00:08:56,889
+it's zero or yeah the nodes x value is
+
+182
+00:08:56,889 --> 00:08:59,439
+zero so we're gonna peel them what's our
+
+183
+00:08:59,439 --> 00:09:01,569
+ending X value 3
+
+184
+00:09:01,569 --> 00:09:04,600
+okay so you've answered that in then
+
+185
+00:09:04,600 --> 00:09:08,649
+what's our Y value for this node it is 2
+
+186
+00:09:08,649 --> 00:09:12,009
+so i'm gonna enter into what's our Y
+
+187
+00:09:12,009 --> 00:09:15,329
+value for this zero so I'm gonna turn 0
+
+188
+00:09:15,329 --> 00:09:19,180
+so what would this be this would be 3
+
+189
+00:09:19,180 --> 00:09:21,459
+and you might be asking yourself why
+
+190
+00:09:21,459 --> 00:09:24,249
+would it be 3 0 - store you would
+
+191
+00:09:24,249 --> 00:09:27,069
+obviously negative 3 well you obviously
+
+192
+00:09:27,069 --> 00:09:28,720
+ignored the fact that this is an
+
+193
+00:09:28,720 --> 00:09:31,029
+absolute value meaning that we have to
+
+194
+00:09:31,029 --> 00:09:32,860
+take away that a little negative that's
+
+195
+00:09:32,860 --> 00:09:35,470
+over there apart from that we have the
+
+196
+00:09:35,470 --> 00:09:37,749
+plus symbol and I'm just gonna put this
+
+197
+00:09:37,749 --> 00:09:41,170
+in a bracket plus and now we find the
+
+198
+00:09:41,170 --> 00:09:43,509
+absolute value of 2 minus 0 that will
+
+199
+00:09:43,509 --> 00:09:47,470
+obviously just be at positive 2 then we
+
+200
+00:09:47,470 --> 00:09:49,329
+can close our bracket and then obviously
+
+201
+00:09:49,329 --> 00:09:52,059
+times 40 so let's just take this by
+
+202
+00:09:52,059 --> 00:09:54,279
+parts again I'm just gonna break this
+
+203
+00:09:54,279 --> 00:09:56,589
+down into a little expression tree so
+
+204
+00:09:56,589 --> 00:10:01,439
+then this would be 5 times 40
+
+205
+00:10:01,439 --> 00:10:07,980
+so our final equation will me 5 times 40
+
+206
+00:10:07,980 --> 00:10:12,279
+so this would be 200 okay so now that we
+
+207
+00:10:12,279 --> 00:10:15,459
+found out our H value we can just write
+
+208
+00:10:15,459 --> 00:10:20,199
+it down here and so our F value will
+
+209
+00:10:20,199 --> 00:10:22,870
+obviously be 200 plus 10 which will be
+
+210
+00:10:22,870 --> 00:10:27,129
+210 perfect so this will be our final
+
+211
+00:10:27,129 --> 00:10:29,139
+node this is how the computer will
+
+212
+00:10:29,139 --> 00:10:31,720
+interpret this node and we will be able
+
+213
+00:10:31,720 --> 00:10:35,829
+to get a proper functioning a star
+
+214
+00:10:35,829 --> 00:10:37,689
+working out with them just by choosing
+
+215
+00:10:37,689 --> 00:10:39,939
+the lowest F value on the entire map
+
+216
+00:10:39,939 --> 00:10:41,519
+each time when we take another move
+
+217
+00:10:41,519 --> 00:10:45,339
+that's pretty simple now alright so yeah
+
+218
+00:10:45,339 --> 00:10:47,470
+I'll meet you at the presentation part
+
+219
+00:10:47,470 --> 00:10:51,519
+of the video so just before we get to
+
+220
+00:10:51,519 --> 00:10:52,839
+the presentation part I'm going to
+
+221
+00:10:52,839 --> 00:10:55,809
+explain the Doyle template and so now
+
+222
+00:10:55,809 --> 00:10:58,839
+that you know the GH enough values you
+
+223
+00:10:58,839 --> 00:11:01,500
+should be able to get this so for each
+
+224
+00:11:01,500 --> 00:11:03,060
+know that I have on my little
+
+225
+00:11:03,060 --> 00:11:05,940
+presentation over there I will have it
+
+226
+00:11:05,940 --> 00:11:08,940
+formatted this way up in this corner
+
+227
+00:11:08,940 --> 00:11:12,090
+will be the G value the H value and the
+
+228
+00:11:12,090 --> 00:11:15,840
+F value again this is the cost from our
+
+229
+00:11:15,840 --> 00:11:19,580
+starting node or node this is our
+
+230
+00:11:19,580 --> 00:11:22,560
+heuristic value calculated using the
+
+231
+00:11:22,560 --> 00:11:24,450
+Manhattan method which I will explain
+
+232
+00:11:24,450 --> 00:11:30,840
+later value to our destination Square
+
+233
+00:11:30,840 --> 00:11:33,690
+then our F value which is our G Plus H
+
+234
+00:11:33,690 --> 00:11:36,660
+value so let's get started shall we so
+
+235
+00:11:36,660 --> 00:11:38,010
+let's just show the presentation really
+
+236
+00:11:38,010 --> 00:11:41,300
+quickly and so now let's get started
+
+237
+00:11:41,300 --> 00:11:43,470
+since I've already showed you a little
+
+238
+00:11:43,470 --> 00:11:48,030
+example of calculating this nodes G H
+
+239
+00:11:48,030 --> 00:11:50,610
+and F values I'm just going to tell you
+
+240
+00:11:50,610 --> 00:11:52,440
+that this was actually right what we
+
+241
+00:11:52,440 --> 00:11:55,440
+calculated it was correct and so the
+
+242
+00:11:55,440 --> 00:11:59,630
+there's a 10 200 and 210 as you can tell
+
+243
+00:11:59,630 --> 00:12:02,040
+okay coming back to our presentation
+
+244
+00:12:02,040 --> 00:12:06,180
+then it will calculate the G H and F
+
+245
+00:12:06,180 --> 00:12:08,730
+values for its next neighbor so it'll
+
+246
+00:12:08,730 --> 00:12:10,620
+look at all its neighbors and say okay I
+
+247
+00:12:10,620 --> 00:12:12,380
+can either go to this either go to this
+
+248
+00:12:12,380 --> 00:12:14,870
+calculate the math for each one of these
+
+249
+00:12:14,870 --> 00:12:17,970
+then choose one now you must be asking
+
+250
+00:12:17,970 --> 00:12:20,160
+yourself why are these both the same
+
+251
+00:12:20,160 --> 00:12:22,170
+they shouldn't be well actually they
+
+252
+00:12:22,170 --> 00:12:25,830
+should be let's count one two three four
+
+253
+00:12:25,830 --> 00:12:29,730
+okay one two three four that means it's
+
+254
+00:12:29,730 --> 00:12:32,970
+the same amount of squares away then the
+
+255
+00:12:32,970 --> 00:12:35,130
+other square so these will both be the
+
+256
+00:12:35,130 --> 00:12:38,240
+same however I programmed it to choose
+
+257
+00:12:38,240 --> 00:12:42,050
+right more than up and up more than left
+
+258
+00:12:42,050 --> 00:12:45,930
+so now it goes over there and now I'm
+
+259
+00:12:45,930 --> 00:12:47,970
+going to speed things up by calculating
+
+260
+00:12:47,970 --> 00:12:49,530
+two at a time so that we don't take all
+
+261
+00:12:49,530 --> 00:12:53,670
+day so as you can see it calculated the
+
+262
+00:12:53,670 --> 00:12:55,620
+G H and F values for its neighbors as
+
+263
+00:12:55,620 --> 00:12:58,370
+well so its neighbors were this and this
+
+264
+00:12:58,370 --> 00:13:03,300
+so 21 60 180 they're getting smaller
+
+265
+00:13:03,300 --> 00:13:06,510
+each time again 20 160 180 because
+
+266
+00:13:06,510 --> 00:13:07,950
+they're the same amount of squares away
+
+267
+00:13:07,950 --> 00:13:12,290
+1 2 3 1 2 3 so those will be the same
+
+268
+00:13:12,290 --> 00:13:15,420
+then it decides to go over here again
+
+269
+00:13:15,420 --> 00:13:17,820
+because it detected that okay I could
+
+270
+00:13:17,820 --> 00:13:21,840
+either go up here where it's 31 2150 or
+
+271
+00:13:21,840 --> 00:13:24,780
+I could go where it's 31 2150 however
+
+272
+00:13:24,780 --> 00:13:26,490
+this is right this is up and again it
+
+273
+00:13:26,490 --> 00:13:30,120
+chooses right over up each time after
+
+274
+00:13:30,120 --> 00:13:32,400
+that it sees that I have no no neighbor
+
+275
+00:13:32,400 --> 00:13:34,260
+but this one so it will calculate the
+
+276
+00:13:34,260 --> 00:13:36,360
+values for this one it'll look for the
+
+277
+00:13:36,360 --> 00:13:39,330
+smallest F value on the entire map but
+
+278
+00:13:39,330 --> 00:13:40,800
+not just over here it'll actually look
+
+279
+00:13:40,800 --> 00:13:43,140
+over here too and it'll say oh if this
+
+280
+00:13:43,140 --> 00:13:45,740
+one's x value is coincidentally smaller
+
+281
+00:13:45,740 --> 00:13:48,150
+then we just want to back-trace and go
+
+282
+00:13:48,150 --> 00:13:50,790
+through here instead but it found out
+
+283
+00:13:50,790 --> 00:13:52,650
+that the F value is smallest over here
+
+284
+00:13:52,650 --> 00:13:55,950
+so it continued in this direction the re
+
+285
+00:13:55,950 --> 00:13:58,110
+and next as you can see this value
+
+286
+00:13:58,110 --> 00:14:01,020
+didn't update the reason is because it's
+
+287
+00:14:01,020 --> 00:14:02,850
+these that we already attempted to
+
+288
+00:14:02,850 --> 00:14:04,800
+travel this path but we didn't like this
+
+289
+00:14:04,800 --> 00:14:07,050
+path so it's going to ignore this path
+
+290
+00:14:07,050 --> 00:14:08,520
+and only say that it has one neighbor
+
+291
+00:14:08,520 --> 00:14:11,790
+and it is go immediately going to go up
+
+292
+00:14:11,790 --> 00:14:15,570
+here and calculate all of its math now
+
+293
+00:14:15,570 --> 00:14:17,460
+after that it has two more neighbors one
+
+294
+00:14:17,460 --> 00:14:19,310
+of its neighbors is the winning square
+
+295
+00:14:19,310 --> 00:14:21,360
+so of course it goes to the winning
+
+296
+00:14:21,360 --> 00:14:23,070
+square however due to the way it was
+
+297
+00:14:23,070 --> 00:14:24,480
+programmed and because I didn't want to
+
+298
+00:14:24,480 --> 00:14:27,000
+end add in any extra code it will also
+
+299
+00:14:27,000 --> 00:14:30,150
+calculate stuff for this node however it
+
+300
+00:14:30,150 --> 00:14:32,880
+will always go for the lowest F cost
+
+301
+00:14:32,880 --> 00:14:38,250
+which we will get when it gets to B so
+
+302
+00:14:38,250 --> 00:14:39,960
+that's a very simple demonstration of
+
+303
+00:14:39,960 --> 00:14:40,800
+how this will work
+
+304
+00:14:40,800 --> 00:14:42,480
+and now let me just go through this a
+
+305
+00:14:42,480 --> 00:14:46,320
+little bit faster so as you can see this
+
+306
+00:14:46,320 --> 00:14:49,350
+will start off by calculating the values
+
+307
+00:14:49,350 --> 00:14:52,500
+for each neighbor has and it will choose
+
+308
+00:14:52,500 --> 00:14:55,230
+the one with the smallest F value or if
+
+309
+00:14:55,230 --> 00:14:58,230
+it's to the right next it'll again
+
+310
+00:14:58,230 --> 00:14:59,850
+calculate each value for its neighbors
+
+311
+00:14:59,850 --> 00:15:01,680
+and choose the one either to the right
+
+312
+00:15:01,680 --> 00:15:04,140
+it'll either choose a direction that it
+
+313
+00:15:04,140 --> 00:15:06,630
+wants or it'll choose the costs that it
+
+314
+00:15:06,630 --> 00:15:08,880
+wants in this case that chooses the
+
+315
+00:15:08,880 --> 00:15:11,690
+direction because there is no cost value
+
+316
+00:15:11,690 --> 00:15:14,490
+again it'll do the same thing however
+
+317
+00:15:14,490 --> 00:15:17,150
+this time there's still no cost
+
+318
+00:15:17,150 --> 00:15:18,960
+comparison it's just the direction
+
+319
+00:15:18,960 --> 00:15:22,710
+comparison that's going on now it can
+
+320
+00:15:22,710 --> 00:15:24,420
+only go one way so it's going to go that
+
+321
+00:15:24,420 --> 00:15:25,390
+way however it will
+
+322
+00:15:25,390 --> 00:15:27,630
+still calculate the values for that note
+
+323
+00:15:27,630 --> 00:15:30,550
+it can still only go one way but it'll
+
+324
+00:15:30,550 --> 00:15:31,960
+still calculate the values for that note
+
+325
+00:15:31,960 --> 00:15:34,060
+then it has two neighbors one is the
+
+326
+00:15:34,060 --> 00:15:36,970
+winning square one is the longer square
+
+327
+00:15:36,970 --> 00:15:39,100
+to get there so of course it chooses the
+
+328
+00:15:39,100 --> 00:15:42,340
+winning square so that was a quick
+
+329
+00:15:42,340 --> 00:15:43,870
+rundown of how this works
+
+330
+00:15:43,870 --> 00:15:46,090
+and now we will be going to the Mac Park
+
+331
+00:15:46,090 --> 00:15:49,180
+mat part Mac parts are announced today
+
+332
+00:15:49,180 --> 00:15:51,730
+anyway now so now we will be going to
+
+333
+00:15:51,730 --> 00:15:52,960
+the Mac part in which I will explain all
+
+334
+00:15:52,960 --> 00:15:54,820
+my code I'll give you a link to the
+
+335
+00:15:54,820 --> 00:15:57,010
+source code in the description and all
+
+336
+00:15:57,010 --> 00:15:59,020
+that good stuff so let's get to the Mac
+
+337
+00:15:59,020 --> 00:16:04,000
+part so welcome back to the Mac part now
+
+338
+00:16:04,000 --> 00:16:05,260
+I'm gonna be giving you a quick demo
+
+339
+00:16:05,260 --> 00:16:07,060
+been going over the code so let's get
+
+340
+00:16:07,060 --> 00:16:08,860
+started so as you can see this is the
+
+341
+00:16:08,860 --> 00:16:10,120
+simulator and now I'm going to be
+
+342
+00:16:10,120 --> 00:16:11,530
+testing the app in front of you
+
+343
+00:16:11,530 --> 00:16:14,020
+as you can see the red point is point a
+
+344
+00:16:14,020 --> 00:16:17,740
+the green point is point B now it shows
+
+345
+00:16:17,740 --> 00:16:21,400
+you the G ot how it's the H and F values
+
+346
+00:16:21,400 --> 00:16:23,830
+on the node itself so when I click on
+
+347
+00:16:23,830 --> 00:16:27,250
+the pathline button guess what yep it
+
+348
+00:16:27,250 --> 00:16:30,370
+will find the path from red to green and
+
+349
+00:16:30,370 --> 00:16:32,320
+this is the shortest path that could
+
+350
+00:16:32,320 --> 00:16:34,120
+possibly take in this case I'm not
+
+351
+00:16:34,120 --> 00:16:35,860
+exactly sure for other cases I put one
+
+352
+00:16:35,860 --> 00:16:39,460
+but it probably would and for example I
+
+353
+00:16:39,460 --> 00:16:42,670
+can place obstacles here and here and it
+
+354
+00:16:42,670 --> 00:16:44,620
+would find it would find that I should
+
+355
+00:16:44,620 --> 00:16:47,200
+go through here around here over the
+
+356
+00:16:47,200 --> 00:16:49,630
+obstacle and back on the course that's
+
+357
+00:16:49,630 --> 00:16:50,950
+really interesting let's just try
+
+358
+00:16:50,950 --> 00:16:55,660
+obstacles maybe over here over here over
+
+359
+00:16:55,660 --> 00:16:59,230
+here over here this will force it to go
+
+360
+00:16:59,230 --> 00:17:02,920
+around and in its path find and as you
+
+361
+00:17:02,920 --> 00:17:06,010
+can see in it it actually just went this
+
+362
+00:17:06,010 --> 00:17:09,190
+path it didn't even it did explore these
+
+363
+00:17:09,190 --> 00:17:12,699
+it tried to but it didn't and so that's
+
+364
+00:17:12,699 --> 00:17:15,610
+what these are sort of lighter colors
+
+365
+00:17:15,610 --> 00:17:18,970
+mean here the light the cyan here means
+
+366
+00:17:18,970 --> 00:17:21,880
+that it explored this it tried it's best
+
+367
+00:17:21,880 --> 00:17:23,650
+to go here but it wasn't successful and
+
+368
+00:17:23,650 --> 00:17:27,010
+this dark blue path is where it actually
+
+369
+00:17:27,010 --> 00:17:28,600
+went and where it was successful in
+
+370
+00:17:28,600 --> 00:17:32,470
+going then there's these white where it
+
+371
+00:17:32,470 --> 00:17:34,180
+didn't even bother and then the green
+
+372
+00:17:34,180 --> 00:17:35,470
+and the red which I've already explained
+
+373
+00:17:35,470 --> 00:17:38,290
+and black are just the obstacles
+
+374
+00:17:38,290 --> 00:17:40,060
+so that's really it for that and there's
+
+375
+00:17:40,060 --> 00:17:43,180
+also of course a clear button and now
+
+376
+00:17:43,180 --> 00:17:45,520
+let's get into the code now we have a
+
+377
+00:17:45,520 --> 00:17:48,640
+few classes here such as block type node
+
+378
+00:17:48,640 --> 00:17:51,940
+node view and array extension let's
+
+379
+00:17:51,940 --> 00:17:53,950
+start with block type this block type
+
+380
+00:17:53,950 --> 00:17:56,740
+enum or enumeration will allow us to see
+
+381
+00:17:56,740 --> 00:17:59,050
+what types of blocks we can have we can
+
+382
+00:17:59,050 --> 00:18:01,840
+have air obstacle point a point B path
+
+383
+00:18:01,840 --> 00:18:05,310
+or explore path so air is just white
+
+384
+00:18:05,310 --> 00:18:09,340
+obstacle is black point a is red point B
+
+385
+00:18:09,340 --> 00:18:14,980
+is green the path is the the actual
+
+386
+00:18:14,980 --> 00:18:17,710
+darkbloom path the explored path or it
+
+387
+00:18:17,710 --> 00:18:20,950
+actually tried to go is the cyan and you
+
+388
+00:18:20,950 --> 00:18:23,080
+must be thinking I'm not declaring cyan
+
+389
+00:18:23,080 --> 00:18:25,660
+except for etc over here how are you
+
+390
+00:18:25,660 --> 00:18:28,480
+getting the value well that's simple in
+
+391
+00:18:28,480 --> 00:18:31,240
+my node class I have a color variable
+
+392
+00:18:31,240 --> 00:18:33,700
+which will allow me to get whatever
+
+393
+00:18:33,700 --> 00:18:38,200
+color of myself which I am so if it if
+
+394
+00:18:38,200 --> 00:18:40,060
+self dot type is not equal to one of
+
+395
+00:18:40,060 --> 00:18:41,500
+these it'll just return orange as a
+
+396
+00:18:41,500 --> 00:18:43,390
+random color because it has to return
+
+397
+00:18:43,390 --> 00:18:46,930
+something okay getting back to the main
+
+398
+00:18:46,930 --> 00:18:49,060
+stuff then we have an array extension
+
+399
+00:18:49,060 --> 00:18:52,120
+this array extension has a few functions
+
+400
+00:18:52,120 --> 00:18:56,980
+by some by some people so this function
+
+401
+00:18:56,980 --> 00:18:59,920
+a mutating function was created by drag
+
+402
+00:18:59,920 --> 00:19:01,300
+sorry I'm not pronouncing your name
+
+403
+00:19:01,300 --> 00:19:04,270
+right but this is a link to the stack
+
+404
+00:19:04,270 --> 00:19:06,700
+overflow thread where he actually
+
+405
+00:19:06,700 --> 00:19:09,460
+explained how to create a remove objects
+
+406
+00:19:09,460 --> 00:19:11,830
+from array function and I just modified
+
+407
+00:19:11,830 --> 00:19:13,450
+this function a bit so if you want to
+
+408
+00:19:13,450 --> 00:19:14,800
+download this source code will be in the
+
+409
+00:19:14,800 --> 00:19:17,110
+description apart from that we have a
+
+410
+00:19:17,110 --> 00:19:20,350
+get function by Alex Wain on
+
+411
+00:19:20,350 --> 00:19:22,060
+stackoverflow again sorry if I'm not
+
+412
+00:19:22,060 --> 00:19:24,580
+pronouncing your name right but this is
+
+413
+00:19:24,580 --> 00:19:28,570
+a link to where he answered this get
+
+414
+00:19:28,570 --> 00:19:31,570
+function and then this is the check
+
+415
+00:19:31,570 --> 00:19:34,120
+index function that I've created which
+
+416
+00:19:34,120 --> 00:19:36,430
+if an index exists it will return true
+
+417
+00:19:36,430 --> 00:19:40,390
+or else the return false okay so these
+
+418
+00:19:40,390 --> 00:19:42,430
+are all the extent being extended to the
+
+419
+00:19:42,430 --> 00:19:44,710
+array class and now we can get into our
+
+420
+00:19:44,710 --> 00:19:46,210
+main parts such as the node and node
+
+421
+00:19:46,210 --> 00:19:48,280
+view class for the first time I haven't
+
+422
+00:19:48,280 --> 00:19:50,730
+really used you controller dot Swift I'm
+
+423
+00:19:50,730 --> 00:19:52,970
+mainly only using these four files
+
+424
+00:19:52,970 --> 00:19:55,710
+anyway let's get into node first because
+
+425
+00:19:55,710 --> 00:19:58,350
+that's smaller simpler there's no really
+
+426
+00:19:58,350 --> 00:19:59,820
+much algorithms vault
+
+427
+00:19:59,820 --> 00:20:02,429
+this could be more of a struct if you
+
+428
+00:20:02,429 --> 00:20:04,890
+think about it but I just wanted to
+
+429
+00:20:04,890 --> 00:20:09,480
+create this as a class okay so now this
+
+430
+00:20:09,480 --> 00:20:12,750
+is one node on the screen not every
+
+431
+00:20:12,750 --> 00:20:15,450
+single node just one node which extends
+
+432
+00:20:15,450 --> 00:20:17,730
+and this object it has a private
+
+433
+00:20:17,730 --> 00:20:20,160
+variable called real type or just by
+
+434
+00:20:20,160 --> 00:20:22,470
+default equal to da air this is the real
+
+435
+00:20:22,470 --> 00:20:24,630
+type that the note carries and this is
+
+436
+00:20:24,630 --> 00:20:26,059
+always going to stay private
+
+437
+00:20:26,059 --> 00:20:30,330
+then this is the x value that's these
+
+438
+00:20:30,330 --> 00:20:32,850
+that this node holds and I must be
+
+439
+00:20:32,850 --> 00:20:34,740
+thinking that this is on-screen because
+
+440
+00:20:34,740 --> 00:20:36,720
+that's obviously what it is but no
+
+441
+00:20:36,720 --> 00:20:38,790
+that's not in the array of the nodes
+
+442
+00:20:38,790 --> 00:20:41,640
+themselves so for example if we had an
+
+443
+00:20:41,640 --> 00:20:44,010
+array of nodes a two-dimensional array
+
+444
+00:20:44,010 --> 00:20:46,140
+of nodes we could store that okay this
+
+445
+00:20:46,140 --> 00:20:48,960
+node is at this X this Y in this array
+
+446
+00:20:48,960 --> 00:20:51,660
+so we could use it later then there's
+
+447
+00:20:51,660 --> 00:20:55,890
+also the Y value for it then we have the
+
+448
+00:20:55,890 --> 00:21:01,320
+G H and F values the G value yeah by
+
+449
+00:21:01,320 --> 00:21:04,020
+default equal to negative 100 and so is
+
+450
+00:21:04,020 --> 00:21:06,480
+the H value as to be the lowest score as
+
+451
+00:21:06,480 --> 00:21:09,059
+possible and then for the F value
+
+452
+00:21:09,059 --> 00:21:11,100
+I think these are called properties
+
+453
+00:21:11,100 --> 00:21:13,770
+maybe I don't know exactly but basically
+
+454
+00:21:13,770 --> 00:21:16,830
+whenever you call this whatever you get
+
+455
+00:21:16,830 --> 00:21:21,240
+the F variable it will always return G
+
+456
+00:21:21,240 --> 00:21:24,240
+Plus H because then we don't need to
+
+457
+00:21:24,240 --> 00:21:26,220
+keep setting Afton retrieving up then
+
+458
+00:21:26,220 --> 00:21:27,870
+setting up and improving if then setting
+
+459
+00:21:27,870 --> 00:21:29,730
+after the treating F we just retrieve F
+
+460
+00:21:29,730 --> 00:21:31,169
+and it'll always give us the latest
+
+461
+00:21:31,169 --> 00:21:34,110
+updated output depending on what G and H
+
+462
+00:21:34,110 --> 00:21:37,440
+are next we have from this is basically
+
+463
+00:21:37,440 --> 00:21:40,590
+the nodes parent so for example if we
+
+464
+00:21:40,590 --> 00:21:44,760
+had from point a to the 1 2 that's right
+
+465
+00:21:44,760 --> 00:21:50,280
+it's from would be 0.8 then so on so on
+
+466
+00:21:50,280 --> 00:21:54,120
+so forth until we had an array or lots
+
+467
+00:21:54,120 --> 00:21:56,669
+of nodes from this node that came from
+
+468
+00:21:56,669 --> 00:21:58,080
+this node that came from this node that
+
+469
+00:21:58,080 --> 00:22:01,650
+came from this node except etc then we
+
+470
+00:22:01,650 --> 00:22:03,720
+have the color which is a UI color and
+
+471
+00:22:03,720 --> 00:22:04,260
+this is
+
+472
+00:22:04,260 --> 00:22:05,820
+color of the current node which I've
+
+473
+00:22:05,820 --> 00:22:07,679
+already explained to you so this will
+
+474
+00:22:07,679 --> 00:22:10,650
+return the color of the node that it
+
+475
+00:22:10,650 --> 00:22:12,780
+showed me so if it's air it'll be white
+
+476
+00:22:12,780 --> 00:22:14,820
+if it's obstacle to be black if it's one
+
+477
+00:22:14,820 --> 00:22:16,260
+day then it's red color if it's pointing
+
+478
+00:22:16,260 --> 00:22:17,580
+me then it's green color if it's path
+
+479
+00:22:17,580 --> 00:22:18,990
+then it's blue color for this explored
+
+480
+00:22:18,990 --> 00:22:21,150
+path and it's cyan and if it's none of
+
+481
+00:22:21,150 --> 00:22:23,100
+those than it's orange yeah because
+
+482
+00:22:23,100 --> 00:22:24,990
+there was no other color I could think
+
+483
+00:22:24,990 --> 00:22:27,990
+of anyway then we had the type this is
+
+484
+00:22:27,990 --> 00:22:30,870
+the actual type that we can access
+
+485
+00:22:30,870 --> 00:22:34,440
+publicly not globally publicly because
+
+486
+00:22:34,440 --> 00:22:36,660
+we have to have some sort of a time
+
+487
+00:22:36,660 --> 00:22:38,580
+variable in order to access it the
+
+488
+00:22:38,580 --> 00:22:41,429
+reason I didn't just create one proper
+
+489
+00:22:41,429 --> 00:22:43,950
+real type variable here as public is
+
+490
+00:22:43,950 --> 00:22:46,770
+because this will be private here
+
+491
+00:22:46,770 --> 00:22:49,980
+however when we are setting our type we
+
+492
+00:22:49,980 --> 00:22:52,530
+might want to do something so we create
+
+493
+00:22:52,530 --> 00:22:55,080
+this public variable that one get it
+
+494
+00:22:55,080 --> 00:22:56,549
+will just return the real type however
+
+495
+00:22:56,549 --> 00:22:58,980
+when you set it'll actually set the real
+
+496
+00:22:58,980 --> 00:23:00,510
+type to the new value that you're trying
+
+497
+00:23:00,510 --> 00:23:03,929
+to give it so it won't actually set
+
+498
+00:23:03,929 --> 00:23:04,470
+itself
+
+499
+00:23:04,470 --> 00:23:08,700
+this means that basically if we want to
+
+500
+00:23:08,700 --> 00:23:11,540
+do something once we've set a new color
+
+501
+00:23:11,540 --> 00:23:15,510
+or a new type then we can actually put
+
+502
+00:23:15,510 --> 00:23:18,030
+that code here we have the freedom to do
+
+503
+00:23:18,030 --> 00:23:20,190
+so we don't need to add this much code
+
+504
+00:23:20,190 --> 00:23:23,160
+just to do that anyway now into the
+
+505
+00:23:23,160 --> 00:23:25,290
+juiciest part you could possibly think
+
+506
+00:23:25,290 --> 00:23:28,049
+of the node view class this is the
+
+507
+00:23:28,049 --> 00:23:30,840
+actual UI view that we will have on our
+
+508
+00:23:30,840 --> 00:23:35,429
+main not storyboard and this is where
+
+509
+00:23:35,429 --> 00:23:36,929
+all the magic happens as you can see
+
+510
+00:23:36,929 --> 00:23:39,990
+this is very detailed commented code
+
+511
+00:23:39,990 --> 00:23:43,169
+that you can just download and you will
+
+512
+00:23:43,169 --> 00:23:45,270
+be able to understand almost all of this
+
+513
+00:23:45,270 --> 00:23:48,360
+so basically we're creating a global
+
+514
+00:23:48,360 --> 00:23:51,299
+variable called in finite just because
+
+515
+00:23:51,299 --> 00:23:54,270
+you know I had to have something for the
+
+516
+00:23:54,270 --> 00:23:57,720
+dummy G&H values then I create later not
+
+517
+00:23:57,720 --> 00:23:59,580
+the negative 100 and negative 100 that
+
+518
+00:23:59,580 --> 00:24:01,860
+you just saw but you will see when I
+
+519
+00:24:01,860 --> 00:24:04,559
+actually start comparing F values I have
+
+520
+00:24:04,559 --> 00:24:08,549
+to have a dummy G and dummy H value okay
+
+521
+00:24:08,549 --> 00:24:11,160
+next this is our actual class for the
+
+522
+00:24:11,160 --> 00:24:14,130
+node view then we have a size which is a
+
+523
+00:24:14,130 --> 00:24:16,999
+CG float for for mana exactly
+
+524
+00:24:16,999 --> 00:24:18,979
+I couldn't see oh yeah so I could
+
+525
+00:24:18,979 --> 00:24:20,539
+actually multiply and divide nicely
+
+526
+00:24:20,539 --> 00:24:22,159
+that's why I come here to see G float
+
+527
+00:24:22,159 --> 00:24:25,249
+anyway next we have the nodes or which
+
+528
+00:24:25,249 --> 00:24:28,629
+is array a two-dimensional array nodes
+
+529
+00:24:28,629 --> 00:24:31,039
+and this is just a blank array right now
+
+530
+00:24:31,039 --> 00:24:32,779
+because we will eventually be filling it
+
+531
+00:24:32,779 --> 00:24:35,629
+up with lots and lots of nodes so then
+
+532
+00:24:35,629 --> 00:24:39,679
+in our awake from nib function we we
+
+533
+00:24:39,679 --> 00:24:42,109
+have a few we have a for loop first of
+
+534
+00:24:42,109 --> 00:24:46,129
+all this one goes from this actually if
+
+535
+00:24:46,129 --> 00:24:47,779
+you didn't know already just a swift
+
+536
+00:24:47,779 --> 00:24:51,549
+quick tip just one second sorry
+
+537
+00:24:51,549 --> 00:24:55,129
+okay coming back to this slept quick tip
+
+538
+00:24:55,129 --> 00:24:58,579
+if you put an underscore in a for loop
+
+539
+00:24:58,579 --> 00:25:01,039
+or if an in an if statement or a flat
+
+540
+00:25:01,039 --> 00:25:02,749
+statement sorry we're in a while loop or
+
+541
+00:25:02,749 --> 00:25:04,939
+and a do-while loop or something this
+
+542
+00:25:04,939 --> 00:25:07,159
+will substitute for nothing
+
+543
+00:25:07,159 --> 00:25:08,869
+meaning it will not count this in any
+
+544
+00:25:08,869 --> 00:25:12,589
+variable that yeah that was pretty
+
+545
+00:25:12,589 --> 00:25:17,149
+interesting so so for blank in zero dot
+
+546
+00:25:17,149 --> 00:25:21,109
+dot less than and size this means that
+
+547
+00:25:21,109 --> 00:25:24,229
+it will basically go 0 to 1 less than
+
+548
+00:25:24,229 --> 00:25:27,619
+the size so this will insert also make
+
+549
+00:25:27,619 --> 00:25:28,759
+something that's for loop will insert
+
+550
+00:25:28,759 --> 00:25:30,979
+air into all the dummy nodes so I'll
+
+551
+00:25:30,979 --> 00:25:33,049
+create a final node well which is an
+
+552
+00:25:33,049 --> 00:25:36,199
+array of nodes and it will loop through
+
+553
+00:25:36,199 --> 00:25:39,559
+0 to 1 less than the size again and it
+
+554
+00:25:39,559 --> 00:25:41,809
+will create a new node it'll set the
+
+555
+00:25:41,809 --> 00:25:45,019
+node type to air and it will append that
+
+556
+00:25:45,019 --> 00:25:47,719
+node into the final array then it will
+
+557
+00:25:47,719 --> 00:25:49,599
+append that final rate or our nodes
+
+558
+00:25:49,599 --> 00:25:51,499
+two-dimensional array so that we
+
+559
+00:25:51,499 --> 00:25:52,999
+eventually get a two dimensional array
+
+560
+00:25:52,999 --> 00:25:56,359
+full of just blank nodes 4x4 or if I
+
+561
+00:25:56,359 --> 00:25:57,799
+were to change this we can actually make
+
+562
+00:25:57,799 --> 00:25:59,779
+this a 10 by 10 grid if you really want
+
+563
+00:25:59,779 --> 00:26:02,119
+to see what that looks like in case
+
+564
+00:26:02,119 --> 00:26:03,769
+you're one of those curious people that
+
+565
+00:26:03,769 --> 00:26:05,869
+really wants to see a 10 by 10 grid as
+
+566
+00:26:05,869 --> 00:26:07,519
+you can see it's the labels are almost
+
+567
+00:26:07,519 --> 00:26:11,059
+unreadable so just don't try to read
+
+568
+00:26:11,059 --> 00:26:13,489
+those if you want the bigger screen
+
+569
+00:26:13,489 --> 00:26:15,769
+anyway as you can see I can just make a
+
+570
+00:26:15,769 --> 00:26:18,679
+few obstacles and they should be able to
+
+571
+00:26:18,679 --> 00:26:20,509
+traverse to it as you can see it has
+
+572
+00:26:20,509 --> 00:26:23,029
+found the shortest path from the point A
+
+573
+00:26:23,029 --> 00:26:26,209
+to point B and I was amazing so then it
+
+574
+00:26:26,209 --> 00:26:29,179
+also explores these nodes and this is
+
+575
+00:26:29,179 --> 00:26:30,350
+very different than the
+
+576
+00:26:30,350 --> 00:26:31,610
+Dijkstra algorithm which would have
+
+577
+00:26:31,610 --> 00:26:34,910
+explored a few more layers deep in or
+
+578
+00:26:34,910 --> 00:26:36,860
+the best first search which would have
+
+579
+00:26:36,860 --> 00:26:40,220
+literally just taken a much different
+
+580
+00:26:40,220 --> 00:26:41,210
+path than this one
+
+581
+00:26:41,210 --> 00:26:43,640
+okay anyway getting back to the point
+
+582
+00:26:43,640 --> 00:26:47,360
+which is our real code here okay so now
+
+583
+00:26:47,360 --> 00:26:50,870
+we have after our way from nib for loop
+
+584
+00:26:50,870 --> 00:26:54,380
+we have this blue line of code so this
+
+585
+00:26:54,380 --> 00:26:56,090
+will create point A and point B on the
+
+586
+00:26:56,090 --> 00:26:58,190
+map so they will always be in the
+
+587
+00:26:58,190 --> 00:27:01,520
+corners if you just realized sorry if
+
+588
+00:27:01,520 --> 00:27:02,990
+you just realize these will always be in
+
+589
+00:27:02,990 --> 00:27:04,789
+the corner no matter what size I give it
+
+590
+00:27:04,789 --> 00:27:07,429
+because it automatically adjusts so for
+
+591
+00:27:07,429 --> 00:27:11,510
+example it'll do nodes in size minus 1 0
+
+592
+00:27:11,510 --> 00:27:15,440
+meaning the x value of the last size
+
+593
+00:27:15,440 --> 00:27:18,950
+meaning this one is equal to point a or
+
+594
+00:27:18,950 --> 00:27:25,280
+actually yeah so this is taking the Y
+
+595
+00:27:25,280 --> 00:27:27,950
+value first so apparently this Swift
+
+596
+00:27:27,950 --> 00:27:30,530
+thing will take the Y value first then
+
+597
+00:27:30,530 --> 00:27:32,929
+the x value so it's taking the Y value
+
+598
+00:27:32,929 --> 00:27:35,090
+which is our size minus 1 which is over
+
+599
+00:27:35,090 --> 00:27:38,390
+here and the x value for 0 which is over
+
+600
+00:27:38,390 --> 00:27:40,510
+here and we're setting that to point a
+
+601
+00:27:40,510 --> 00:27:45,970
+then we're taking nodes 0 Y but maximum
+
+602
+00:27:45,970 --> 00:27:49,280
+x over here and studying it to point B
+
+603
+00:27:49,280 --> 00:27:52,130
+as you can see then we are refreshing
+
+604
+00:27:52,130 --> 00:27:54,049
+the screen with self dot set needs
+
+605
+00:27:54,049 --> 00:27:56,780
+display and then we are looping through
+
+606
+00:27:56,780 --> 00:28:01,400
+1 0 to 1 less in nodes account then we
+
+607
+00:28:01,400 --> 00:28:05,750
+are doing for J in 0 to 1 less then I
+
+608
+00:28:05,750 --> 00:28:09,710
+don't count basically so imagine this a
+
+609
+00:28:09,710 --> 00:28:12,250
+two-dimensional array we're taking out a
+
+610
+00:28:12,250 --> 00:28:15,500
+little array at a time and then we're
+
+611
+00:28:15,500 --> 00:28:17,900
+looping through that array one note at a
+
+612
+00:28:17,900 --> 00:28:19,250
+time so we're basically looping through
+
+613
+00:28:19,250 --> 00:28:21,500
+the all the nodes and then we're
+
+614
+00:28:21,500 --> 00:28:23,690
+studying the X&Y value for each so we
+
+615
+00:28:23,690 --> 00:28:27,260
+can use them for reference later ok next
+
+616
+00:28:27,260 --> 00:28:28,940
+this is just a simple function that will
+
+617
+00:28:28,940 --> 00:28:31,370
+create a label wherever and you tell it
+
+618
+00:28:31,370 --> 00:28:34,520
+to and we're and whatever with whatever
+
+619
+00:28:34,520 --> 00:28:38,450
+text you give it so then this function
+
+620
+00:28:38,450 --> 00:28:42,740
+over here will be able to I started not
+
+621
+00:28:42,740 --> 00:28:43,370
+explaining
+
+622
+00:28:43,370 --> 00:28:45,680
+create label and touches begin and such
+
+623
+00:28:45,680 --> 00:28:47,420
+as move functions right now a much depth
+
+624
+00:28:47,420 --> 00:28:49,340
+however this is way too complicated to
+
+625
+00:28:49,340 --> 00:28:51,500
+actually go through right now but if you
+
+626
+00:28:51,500 --> 00:28:52,910
+really want a more detailed explanation
+
+627
+00:28:52,910 --> 00:28:54,530
+on this you can just tell it to me in
+
+628
+00:28:54,530 --> 00:28:56,900
+the comments or even mail me and I will
+
+629
+00:28:56,900 --> 00:29:00,050
+do something for you about that but you
+
+630
+00:29:00,050 --> 00:29:01,310
+can always download the source code in
+
+631
+00:29:01,310 --> 00:29:03,380
+the description and I will be giving you
+
+632
+00:29:03,380 --> 00:29:06,320
+a brief summary of these functions one
+
+633
+00:29:06,320 --> 00:29:09,740
+by one okay so getting back to the point
+
+634
+00:29:09,740 --> 00:29:12,380
+we have the touches began function which
+
+635
+00:29:12,380 --> 00:29:15,920
+is overridden from UI view and so this
+
+636
+00:29:15,920 --> 00:29:17,500
+will get the location of your touch
+
+637
+00:29:17,500 --> 00:29:19,880
+calculate which node you must have
+
+638
+00:29:19,880 --> 00:29:21,470
+touched on because we aren't really
+
+639
+00:29:21,470 --> 00:29:25,040
+doing a wait basically it's very
+
+640
+00:29:25,040 --> 00:29:28,820
+abstract how to find out which node you
+
+641
+00:29:28,820 --> 00:29:30,590
+clicked on because we always have to
+
+642
+00:29:30,590 --> 00:29:32,900
+take our X values divided by the size da
+
+643
+00:29:32,900 --> 00:29:35,330
+da da and so it becomes really
+
+644
+00:29:35,330 --> 00:29:36,950
+complicated in that sense with lots of
+
+645
+00:29:36,950 --> 00:29:38,600
+math and stuff so you can just download
+
+646
+00:29:38,600 --> 00:29:40,520
+it check it out but if you really want a
+
+647
+00:29:40,520 --> 00:29:42,320
+more detailed explanation again mail me
+
+648
+00:29:42,320 --> 00:29:46,340
+or leave it in the comments so then same
+
+649
+00:29:46,340 --> 00:29:48,680
+thing for touches moved however this
+
+650
+00:29:48,680 --> 00:29:50,510
+will meet whenever they move it'll keep
+
+651
+00:29:50,510 --> 00:29:52,820
+on placing another block when you touch
+
+652
+00:29:52,820 --> 00:29:55,250
+move I won't let you remove blocks
+
+653
+00:29:55,250 --> 00:29:59,060
+however like I can for such as begin do
+
+654
+00:29:59,060 --> 00:30:02,330
+children use a simple fact that when it
+
+655
+00:30:02,330 --> 00:30:04,520
+touches moved and if you were to keep it
+
+656
+00:30:04,520 --> 00:30:05,960
+here and just move around a little bit
+
+657
+00:30:05,960 --> 00:30:07,940
+it would just keep going on and off you
+
+658
+00:30:07,940 --> 00:30:10,220
+will get like okay on off on off on off
+
+659
+00:30:10,220 --> 00:30:11,870
+really fast and that would be very
+
+660
+00:30:11,870 --> 00:30:13,730
+annoying sometimes so I just turned that
+
+661
+00:30:13,730 --> 00:30:17,690
+ability off and then this function here
+
+662
+00:30:17,690 --> 00:30:19,730
+will create a rectangle on-screen
+
+663
+00:30:19,730 --> 00:30:21,950
+wherever I tell it to with an orange
+
+664
+00:30:21,950 --> 00:30:24,800
+border so it's all of these are just see
+
+665
+00:30:24,800 --> 00:30:28,160
+G Rex put on with CG context so that's
+
+666
+00:30:28,160 --> 00:30:31,610
+why our touches McGann is so abstract
+
+667
+00:30:31,610 --> 00:30:33,470
+we can't just click and have it okay
+
+668
+00:30:33,470 --> 00:30:35,230
+this node was clicked at this place
+
+669
+00:30:35,230 --> 00:30:39,440
+because of course I mean it doesn't keep
+
+670
+00:30:39,440 --> 00:30:41,750
+track of wherever every single node is
+
+671
+00:30:41,750 --> 00:30:45,470
+and so that really interferes with how
+
+672
+00:30:45,470 --> 00:30:49,000
+we calculates the location of your touch
+
+673
+00:30:49,000 --> 00:30:50,960
+yeah so this will just create the
+
+674
+00:30:50,960 --> 00:30:52,710
+rectangle as I said and
+
+675
+00:30:52,710 --> 00:30:55,110
+next so then this function will return
+
+676
+00:30:55,110 --> 00:30:58,230
+an array of nodes and these are all the
+
+677
+00:30:58,230 --> 00:31:01,830
+nodes which are neighbors for a specific
+
+678
+00:31:01,830 --> 00:31:05,100
+node that you give it so it'll get the
+
+679
+00:31:05,100 --> 00:31:07,559
+node excellent node wide and it'll check
+
+680
+00:31:07,559 --> 00:31:12,510
+above it it will check below it it will
+
+681
+00:31:12,510 --> 00:31:15,899
+check to its right
+
+682
+00:31:15,899 --> 00:31:19,289
+it will check to its left it will create
+
+683
+00:31:19,289 --> 00:31:23,279
+a final rain it will make sure that all
+
+684
+00:31:23,279 --> 00:31:26,789
+the neighbors match the criteria and
+
+685
+00:31:26,789 --> 00:31:28,830
+then it will return this final array
+
+686
+00:31:28,830 --> 00:31:34,590
+that it creates okay next this is the
+
+687
+00:31:34,590 --> 00:31:37,590
+function that will you use to get the
+
+688
+00:31:37,590 --> 00:31:42,690
+heuristic cost for from node to node and
+
+689
+00:31:42,690 --> 00:31:44,669
+this will return an integer always and
+
+690
+00:31:44,669 --> 00:31:46,559
+so it will return the absolute value
+
+691
+00:31:46,559 --> 00:31:50,850
+from X minus 2 X plus absolute value of
+
+692
+00:31:50,850 --> 00:31:53,850
+from dot y -2 dot y and then times this
+
+693
+00:31:53,850 --> 00:31:56,070
+by 40 so that's a pretty complicated
+
+694
+00:31:56,070 --> 00:31:57,960
+expression but again you can always
+
+695
+00:31:57,960 --> 00:31:59,640
+download this do this step by step
+
+696
+00:31:59,640 --> 00:32:01,080
+create the expression tree like we just
+
+697
+00:32:01,080 --> 00:32:03,260
+did it cetera et cetera
+
+698
+00:32:03,260 --> 00:32:08,580
+okay next we have our real a star
+
+699
+00:32:08,580 --> 00:32:11,610
+function and you would think that this
+
+700
+00:32:11,610 --> 00:32:13,860
+would be a gigantic function full-width
+
+701
+00:32:13,860 --> 00:32:15,570
+code that's really complex not easy to
+
+702
+00:32:15,570 --> 00:32:17,820
+understand but if you think that you're
+
+703
+00:32:17,820 --> 00:32:19,470
+wrong maybe this is actually quite
+
+704
+00:32:19,470 --> 00:32:22,830
+simple and so this is basically where
+
+705
+00:32:22,830 --> 00:32:25,980
+all the dirty work happens and so there
+
+706
+00:32:25,980 --> 00:32:28,470
+will be a link to the pursuit to the
+
+707
+00:32:28,470 --> 00:32:30,600
+pseudocode that I got from Wikipedia for
+
+708
+00:32:30,600 --> 00:32:33,419
+this which I had to vary it took me like
+
+709
+00:32:33,419 --> 00:32:35,399
+an entire day maybe two days just to
+
+710
+00:32:35,399 --> 00:32:38,100
+translate that's that sewer code and the
+
+711
+00:32:38,100 --> 00:32:40,110
+slips in Swift is so much more different
+
+712
+00:32:40,110 --> 00:32:43,140
+than some other languages well anyway
+
+713
+00:32:43,140 --> 00:32:45,210
+I've managed to get it done and ready
+
+714
+00:32:45,210 --> 00:32:47,460
+for you to download so this will
+
+715
+00:32:47,460 --> 00:32:49,950
+basically create tentative view scores
+
+716
+00:32:49,950 --> 00:32:56,059
+get the neighbors reload are basically
+
+717
+00:32:56,059 --> 00:33:00,539
+call it it will reload our view of over
+
+718
+00:33:00,539 --> 00:33:05,669
+and over again and etc etc anyway next
+
+719
+00:33:05,669 --> 00:33:06,390
+one is going to do
+
+720
+00:33:06,390 --> 00:33:08,430
+and by the way it will actually return
+
+721
+00:33:08,430 --> 00:33:12,150
+nothing no note for the path and this is
+
+722
+00:33:12,150 --> 00:33:15,750
+due to the fact that if in our while
+
+723
+00:33:15,750 --> 00:33:18,710
+loop when we're doing the dirty work
+
+724
+00:33:18,710 --> 00:33:21,720
+we're checking if we have already
+
+725
+00:33:21,720 --> 00:33:24,030
+reached our goal if we have then we
+
+726
+00:33:24,030 --> 00:33:26,850
+return reconstruct path for the current
+
+727
+00:33:26,850 --> 00:33:30,510
+path that we are on what this will do is
+
+728
+00:33:30,510 --> 00:33:34,110
+it will reconstruct our path from the
+
+729
+00:33:34,110 --> 00:33:37,110
+ending node back all the way down so
+
+730
+00:33:37,110 --> 00:33:39,030
+what it'll do is let's just say we've
+
+731
+00:33:39,030 --> 00:33:43,200
+created a path Oh from A to B we will
+
+732
+00:33:43,200 --> 00:33:46,350
+give it where we ended off in from B and
+
+733
+00:33:46,350 --> 00:33:49,170
+it will back trace to the beginning and
+
+734
+00:33:49,170 --> 00:33:52,770
+return that array of nodes so over here
+
+735
+00:33:52,770 --> 00:33:53,760
+as you can see this is how we
+
+736
+00:33:53,760 --> 00:33:57,240
+reconstruct and yeah that's a very
+
+737
+00:33:57,240 --> 00:33:59,520
+simple function to understand as long as
+
+738
+00:33:59,520 --> 00:34:01,530
+you know a little bit Swift so it will
+
+739
+00:34:01,530 --> 00:34:03,810
+create a total path nodes array which is
+
+740
+00:34:03,810 --> 00:34:06,600
+only equal to current and then we while
+
+741
+00:34:06,600 --> 00:34:08,640
+let particle the total path out first
+
+742
+00:34:08,640 --> 00:34:11,400
+stop from meaning we take the first
+
+743
+00:34:11,400 --> 00:34:14,640
+thing in the total path and we check if
+
+744
+00:34:14,640 --> 00:34:17,400
+it's we check its from if there's
+
+745
+00:34:17,400 --> 00:34:20,940
+nothing there then we stop and we just
+
+746
+00:34:20,940 --> 00:34:23,940
+return actually we don't stop we just
+
+747
+00:34:23,940 --> 00:34:26,340
+skip this supposed to be node but then
+
+748
+00:34:26,340 --> 00:34:27,660
+eventually we would have to stop because
+
+749
+00:34:27,660 --> 00:34:31,560
+of it but anyway then we actually insert
+
+750
+00:34:31,560 --> 00:34:34,470
+that from value to the total path which
+
+751
+00:34:34,470 --> 00:34:35,850
+is quite complicated if you think about
+
+752
+00:34:35,850 --> 00:34:38,900
+it so basically we have the ending node
+
+753
+00:34:38,900 --> 00:34:43,680
+we take its parent and then we take its
+
+754
+00:34:43,680 --> 00:34:45,960
+parent and then we take its parent until
+
+755
+00:34:45,960 --> 00:34:48,060
+we reach the end of the line and then we
+
+756
+00:34:48,060 --> 00:34:50,250
+return all of those nodes that we found
+
+757
+00:34:50,250 --> 00:34:53,250
+the parents and children for that's how
+
+758
+00:34:53,250 --> 00:34:55,980
+that works and this is the lowest F
+
+759
+00:34:55,980 --> 00:34:57,810
+score function that I created this will
+
+760
+00:34:57,810 --> 00:34:59,910
+find the lowest F score and need to hire
+
+761
+00:34:59,910 --> 00:35:01,740
+array of nodes and it will return one
+
+762
+00:35:01,740 --> 00:35:03,870
+node with the lowest F score so we'll
+
+763
+00:35:03,870 --> 00:35:05,820
+create a final node which is equal to a
+
+764
+00:35:05,820 --> 00:35:08,310
+new blank node it'll set it the G value
+
+765
+00:35:08,310 --> 00:35:10,290
+to in finite it'll set its H value to in
+
+766
+00:35:10,290 --> 00:35:11,820
+finite and that's why we're using that
+
+767
+00:35:11,820 --> 00:35:13,500
+in finite constant that I created later
+
+768
+00:35:13,500 --> 00:35:16,170
+before I mean and then we are just
+
+769
+00:35:16,170 --> 00:35:18,730
+searching for the lowest F value
+
+770
+00:35:18,730 --> 00:35:20,799
+and just making sure that it's not minus
+
+771
+00:35:20,799 --> 00:35:22,990
+100 and then we're just returning that
+
+772
+00:35:22,990 --> 00:35:25,210
+final node it's that simple
+
+773
+00:35:25,210 --> 00:35:27,730
+and anyway when we draw rect however
+
+774
+00:35:27,730 --> 00:35:29,319
+this is way too complicated to explain
+
+775
+00:35:29,319 --> 00:35:32,099
+right now but what's basically happening
+
+776
+00:35:32,099 --> 00:35:36,549
+is it will remove all squares that it
+
+777
+00:35:36,549 --> 00:35:40,030
+currently has and then it'll detect the
+
+778
+00:35:40,030 --> 00:35:43,569
+width for each little rectangle the
+
+779
+00:35:43,569 --> 00:35:46,180
+height for each rectangle the X and the
+
+780
+00:35:46,180 --> 00:35:50,260
+y for each for each rectangle and then
+
+781
+00:35:50,260 --> 00:35:51,730
+it'll just loop through all the nodes
+
+782
+00:35:51,730 --> 00:35:55,089
+create the actual rectangle for each one
+
+783
+00:35:55,089 --> 00:35:57,099
+of them set the X and the y values
+
+784
+00:35:57,099 --> 00:35:59,260
+accordingly create a label under them
+
+785
+00:35:59,260 --> 00:36:02,349
+that can easily also by the way the
+
+786
+00:36:02,349 --> 00:36:04,510
+labels fonts will automatically adjust
+
+787
+00:36:04,510 --> 00:36:08,079
+depending on what size they are or the
+
+788
+00:36:08,079 --> 00:36:11,829
+text and the actual rectangle so that's
+
+789
+00:36:11,829 --> 00:36:16,839
+interesting and it will also reset the x
+
+790
+00:36:16,839 --> 00:36:20,470
+and y values accordingly okay so that
+
+791
+00:36:20,470 --> 00:36:22,150
+was the draw rect function but I hadn't
+
+792
+00:36:22,150 --> 00:36:23,589
+also skipped a few functions before
+
+793
+00:36:23,589 --> 00:36:25,420
+because I didn't want to focus on those
+
+794
+00:36:25,420 --> 00:36:27,819
+yet but anyway now let's get back to
+
+795
+00:36:27,819 --> 00:36:29,589
+them in our clear function we're just
+
+796
+00:36:29,589 --> 00:36:31,240
+resetting all nodes and when we reset
+
+797
+00:36:31,240 --> 00:36:33,880
+all nodes you know that we are basically
+
+798
+00:36:33,880 --> 00:36:35,890
+clearing every node and doing whatever
+
+799
+00:36:35,890 --> 00:36:38,770
+we did up in the viewdidload function
+
+800
+00:36:38,770 --> 00:36:39,880
+over here
+
+801
+00:36:39,880 --> 00:36:41,829
+oh I mean awake from nib whenever we
+
+802
+00:36:41,829 --> 00:36:44,200
+awake from nib that's what we want to do
+
+803
+00:36:44,200 --> 00:36:48,280
+we want to basically reset all nodes and
+
+804
+00:36:48,280 --> 00:36:52,210
+that's it what when we reset nodes all
+
+805
+00:36:52,210 --> 00:36:55,270
+this means is that we are clearing only
+
+806
+00:36:55,270 --> 00:36:57,849
+the blue nodes that are for the path so
+
+807
+00:36:57,849 --> 00:37:00,280
+that next time when you pass find those
+
+808
+00:37:00,280 --> 00:37:02,920
+blue path nodes aren't still there
+
+809
+00:37:02,920 --> 00:37:06,309
+bugging you just like those are actually
+
+810
+00:37:06,309 --> 00:37:08,140
+the current path but no it'll actually
+
+811
+00:37:08,140 --> 00:37:10,920
+take away those blue paths before it
+
+812
+00:37:10,920 --> 00:37:14,109
+continues with its path finding that's
+
+813
+00:37:14,109 --> 00:37:16,569
+interesting apart from that there's not
+
+814
+00:37:16,569 --> 00:37:19,510
+much in this really and when it solves
+
+815
+00:37:19,510 --> 00:37:21,700
+all it does is it will reset the nodes
+
+816
+00:37:21,700 --> 00:37:25,480
+of course I will create a path which is
+
+817
+00:37:25,480 --> 00:37:28,119
+equal to a new a star this is a new a
+
+818
+00:37:28,119 --> 00:37:30,910
+star instance and we're giving it from
+
+819
+00:37:30,910 --> 00:37:31,660
+the
+
+820
+00:37:31,660 --> 00:37:35,829
+nones point a to the nodes point B as at
+
+821
+00:37:35,829 --> 00:37:38,710
+school and then we are just looping
+
+822
+00:37:38,710 --> 00:37:40,390
+through its path which is the
+
+823
+00:37:40,390 --> 00:37:42,220
+reconstructive path which that would
+
+824
+00:37:42,220 --> 00:37:44,680
+that we just got from that function and
+
+825
+00:37:44,680 --> 00:37:48,190
+for every square that it actually gives
+
+826
+00:37:48,190 --> 00:37:50,950
+us we want to set it to path and then
+
+827
+00:37:50,950 --> 00:37:53,740
+make sure we just said the squares back
+
+828
+00:37:53,740 --> 00:37:55,900
+to point B in point eight and then we
+
+829
+00:37:55,900 --> 00:37:57,670
+just refresh our view so that we have
+
+830
+00:37:57,670 --> 00:38:00,339
+the latest stuff and now just to prove
+
+831
+00:38:00,339 --> 00:38:02,619
+it to you let's just set this to 100 I'm
+
+832
+00:38:02,619 --> 00:38:05,260
+not sure this will crash it might
+
+833
+00:38:05,260 --> 00:38:12,849
+because I mean I 10,000 grits I don't
+
+834
+00:38:12,849 --> 00:38:15,400
+think it can handle it but why not try
+
+835
+00:38:15,400 --> 00:38:20,650
+right okay so as you can see this is way
+
+836
+00:38:20,650 --> 00:38:22,480
+too many minutes for it to handle I can
+
+837
+00:38:22,480 --> 00:38:24,369
+want to leave some drawn this in me we
+
+838
+00:38:24,369 --> 00:38:26,829
+wouldn't even see it alright so I mean
+
+839
+00:38:26,829 --> 00:38:28,900
+this is way too many but if we were to
+
+840
+00:38:28,900 --> 00:38:30,700
+pass find it would probably crash the
+
+841
+00:38:30,700 --> 00:38:33,039
+iOS simulator and as you can see over
+
+842
+00:38:33,039 --> 00:38:37,750
+here this is using up 99% of my CPU it's
+
+843
+00:38:37,750 --> 00:38:40,809
+using up around 300 maybe even getting
+
+844
+00:38:40,809 --> 00:38:44,349
+up to 400 mega Oh back in this 250
+
+845
+00:38:44,349 --> 00:38:48,099
+megabytes of my memory and yeah it's
+
+846
+00:38:48,099 --> 00:38:50,710
+really just very complicated how this is
+
+847
+00:38:50,710 --> 00:38:51,539
+working
+
+848
+00:38:51,539 --> 00:38:54,700
+apparently it's it hasn't been able to
+
+849
+00:38:54,700 --> 00:38:57,460
+find any path yet or actually have but
+
+850
+00:38:57,460 --> 00:39:00,599
+whatever that was it for this tutorial
+
+851
+00:39:00,599 --> 00:39:05,140
+and yeah any comment I just once I can't
+
+852
+00:39:05,140 --> 00:39:09,339
+though I just remembered something yeah
+
+853
+00:39:09,339 --> 00:39:12,460
+so that was pretty much it for this
+
+854
+00:39:12,460 --> 00:39:13,059
+tutorial
+
+855
+00:39:13,059 --> 00:39:18,760
+I guess and yeah so yeah just give me
+
+856
+00:39:18,760 --> 00:39:21,039
+one second oh yeah
+
+857
+00:39:21,039 --> 00:39:23,319
+and just before I go because this wasn't
+
+858
+00:39:23,319 --> 00:39:26,799
+really practical 100 by 100 why not try
+
+859
+00:39:26,799 --> 00:39:29,410
+20 so you can actually see it or some
+
+860
+00:39:29,410 --> 00:39:32,470
+pretty huge rids as you can see this is
+
+861
+00:39:32,470 --> 00:39:35,260
+still very huge we can like draw
+
+862
+00:39:35,260 --> 00:39:37,839
+something around it and then we can also
+
+863
+00:39:37,839 --> 00:39:44,099
+just create a simple little obstruction
+
+864
+00:39:45,320 --> 00:39:47,940
+sorry let's take a little bit time but
+
+865
+00:39:47,940 --> 00:39:50,660
+and this will really prove to you that
+
+866
+00:39:50,660 --> 00:39:53,940
+this can find its way through the most
+
+867
+00:39:53,940 --> 00:39:56,490
+difficult of mazes well actually I
+
+868
+00:39:56,490 --> 00:39:58,380
+didn't include a maze generation
+
+869
+00:39:58,380 --> 00:40:01,020
+algorithm in this but I will soon and
+
+870
+00:40:01,020 --> 00:40:02,390
+made me just upload a part two to this
+
+871
+00:40:02,390 --> 00:40:06,180
+so now if you were to pass find as you
+
+872
+00:40:06,180 --> 00:40:08,280
+can see it explores a lot of nodes
+
+873
+00:40:08,280 --> 00:40:10,350
+because obviously this is a pretty open
+
+874
+00:40:10,350 --> 00:40:14,910
+sort of ground for it to play on but I
+
+875
+00:40:14,910 --> 00:40:17,640
+mean it works eventually it actually
+
+876
+00:40:17,640 --> 00:40:20,310
+works much better than some path finding
+
+877
+00:40:20,310 --> 00:40:22,680
+things that I've ever I've seen what I
+
+878
+00:40:22,680 --> 00:40:24,960
+would like to include though is
+
+879
+00:40:24,960 --> 00:40:26,520
+something called look-ahead
+
+880
+00:40:26,520 --> 00:40:28,740
+meaning that it would actually look
+
+881
+00:40:28,740 --> 00:40:31,020
+ahead from this node and say okay why go
+
+882
+00:40:31,020 --> 00:40:34,020
+here when I can just go here but that's
+
+883
+00:40:34,020 --> 00:40:36,450
+for later maybe part three after I
+
+884
+00:40:36,450 --> 00:40:39,030
+include the maze generation and yeah
+
+885
+00:40:39,030 --> 00:40:41,340
+that was it for this video and I'd like
+
+886
+00:40:41,340 --> 00:40:43,170
+you to please subscribe to my channel if
+
+887
+00:40:43,170 --> 00:40:44,670
+you like my content you want to see more
+
+888
+00:40:44,670 --> 00:40:46,530
+of it please like my video if you liked
+
+889
+00:40:46,530 --> 00:40:49,470
+it comment if you have any suggestions
+
+890
+00:40:49,470 --> 00:40:51,390
+or questions you can even email me for
+
+891
+00:40:51,390 --> 00:40:53,010
+those my email will be down in the
+
+892
+00:40:53,010 --> 00:40:54,510
+description but just in case you want it
+
+893
+00:40:54,510 --> 00:40:54,960
+right now
+
+894
+00:40:54,960 --> 00:40:57,870
+it's Tasmania at gmail.com again all
+
+895
+00:40:57,870 --> 00:40:59,460
+what cap PDF pages will be down in the
+
+896
+00:40:59,460 --> 00:41:03,570
+description such as their Wikipedia page
+
+897
+00:41:03,570 --> 00:41:06,840
+on a star Dykstra and best first search
+
+898
+00:41:06,840 --> 00:41:10,620
+since they're all related to this app we
+
+899
+00:41:10,620 --> 00:41:11,760
+will also have the Stack Overflow
+
+900
+00:41:11,760 --> 00:41:14,220
+questions will relate to the array
+
+901
+00:41:14,220 --> 00:41:16,200
+extensions that I used and that's it
+
+902
+00:41:16,200 --> 00:41:19,220
+gonna be it goodbye

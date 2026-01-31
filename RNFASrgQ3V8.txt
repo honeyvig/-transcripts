@@ -1,0 +1,3243 @@
+1
+00:00:00,470 --> 00:00:05,100
+[Music]
+
+2
+00:00:13,200 --> 00:00:15,320
+all right so just before I start the
+
+3
+00:00:15,320 --> 00:00:17,560
+actual tutorial today i' just like to
+
+4
+00:00:17,560 --> 00:00:20,800
+say that an early access copy of my book
+
+5
+00:00:20,800 --> 00:00:23,000
+hello Swift has been released for the
+
+6
+00:00:23,000 --> 00:00:25,880
+first eight chapters you can find it on
+
+7
+00:00:25,880 --> 00:00:28,599
+many bookstores online such as Amazon
+
+8
+00:00:28,599 --> 00:00:31,480
+chapters and in the go as well as the
+
+9
+00:00:31,480 --> 00:00:34,680
+Publishers website I really do hope that
+
+10
+00:00:34,680 --> 00:00:37,040
+this helps you throughout your journey
+
+11
+00:00:37,040 --> 00:00:39,079
+of learning the Swift programming
+
+12
+00:00:39,079 --> 00:00:42,160
+language all right so let's get into the
+
+13
+00:00:42,160 --> 00:00:43,320
+tutorial
+
+14
+00:00:43,320 --> 00:00:46,120
+now so hello there and welcome to
+
+15
+00:00:46,120 --> 00:00:49,280
+another tutorial my name is tamry Baki
+
+16
+00:00:49,280 --> 00:00:50,600
+and this time we're going to be going
+
+17
+00:00:50,600 --> 00:00:53,160
+over how you can use the breath first
+
+18
+00:00:53,160 --> 00:00:56,680
+search algorithm in order to Traverse a
+
+19
+00:00:56,680 --> 00:01:00,559
+hierarchical graph or tree now now let's
+
+20
+00:01:00,559 --> 00:01:02,680
+actually begin today by saying first of
+
+21
+00:01:02,680 --> 00:01:04,799
+all thank you to Nicholas one of my
+
+22
+00:01:04,799 --> 00:01:07,360
+subscribers for actually sending in this
+
+23
+00:01:07,360 --> 00:01:09,320
+question in fact you can see a picture
+
+24
+00:01:09,320 --> 00:01:12,680
+of him on screen right now now Nicholas
+
+25
+00:01:12,680 --> 00:01:14,479
+actually originally came to me and
+
+26
+00:01:14,479 --> 00:01:16,799
+emailed me with a question that said how
+
+27
+00:01:16,799 --> 00:01:19,840
+can you use the AAR algorithm in order
+
+28
+00:01:19,840 --> 00:01:22,600
+to Traverse a an arbitrary graph or a
+
+29
+00:01:22,600 --> 00:01:26,159
+hierarchical graph uh and so I thought
+
+30
+00:01:26,159 --> 00:01:27,960
+that okay this would be a great video
+
+31
+00:01:27,960 --> 00:01:29,600
+idea and so I started doing some
+
+32
+00:01:29,600 --> 00:01:31,040
+research SE Arch but I realized
+
+33
+00:01:31,040 --> 00:01:33,119
+eventually that it's actually slightly
+
+34
+00:01:33,119 --> 00:01:35,720
+harder to let the AAR algorithm uh
+
+35
+00:01:35,720 --> 00:01:37,880
+Traverse a hierarchical graph than it is
+
+36
+00:01:37,880 --> 00:01:40,399
+to have AAR Traverse a maze something
+
+37
+00:01:40,399 --> 00:01:43,240
+like this is harder to use AAR with than
+
+38
+00:01:43,240 --> 00:01:45,040
+to do things like a maze and in fact you
+
+39
+00:01:45,040 --> 00:01:47,439
+can see a link to a video where I tell
+
+40
+00:01:47,439 --> 00:01:48,920
+you how to use the AAR algorithm with a
+
+41
+00:01:48,920 --> 00:01:51,439
+maze in the description below um and the
+
+42
+00:01:51,439 --> 00:01:53,159
+reason it's so hard is because you can't
+
+43
+00:01:53,159 --> 00:01:55,320
+just directly say okay what's the
+
+44
+00:01:55,320 --> 00:01:58,840
+distance between Toronto to Milton over
+
+45
+00:01:58,840 --> 00:02:00,600
+here on this little graph
+
+46
+00:02:00,600 --> 00:02:02,280
+uh you'd have to calculate it using
+
+47
+00:02:02,280 --> 00:02:05,079
+another uh using another algorithm but
+
+48
+00:02:05,079 --> 00:02:07,280
+we'll get into that later but now you're
+
+49
+00:02:07,280 --> 00:02:10,119
+probably wondering well what is this
+
+50
+00:02:10,119 --> 00:02:12,879
+well today I'm going to be using the
+
+51
+00:02:12,879 --> 00:02:15,080
+question that Nicholas asked me and I'm
+
+52
+00:02:15,080 --> 00:02:17,879
+going to be answering it using this
+
+53
+00:02:17,879 --> 00:02:20,280
+graph now I've actually created this
+
+54
+00:02:20,280 --> 00:02:22,200
+graph and this graph essentially
+
+55
+00:02:22,200 --> 00:02:25,879
+highlights uh a few of Ontario cities uh
+
+56
+00:02:25,879 --> 00:02:27,599
+very very few of them they're very
+
+57
+00:02:27,599 --> 00:02:28,560
+they're I guess you could say in the
+
+58
+00:02:28,560 --> 00:02:30,480
+greater Toronto area
+
+59
+00:02:30,480 --> 00:02:34,360
+uh and near Toronto uh in Canada uh and
+
+60
+00:02:34,360 --> 00:02:36,640
+so we have cities here like marham vaugh
+
+61
+00:02:36,640 --> 00:02:39,560
+Bramton msaga Oakville Burlington hton
+
+62
+00:02:39,560 --> 00:02:42,159
+Hills Aurora and more uh and so
+
+63
+00:02:42,159 --> 00:02:43,360
+basically what we're going to be doing
+
+64
+00:02:43,360 --> 00:02:46,200
+here uh is as you can see I've actually
+
+65
+00:02:46,200 --> 00:02:49,480
+highlighted in kilometers the distance
+
+66
+00:02:49,480 --> 00:02:51,319
+between any two cities that are
+
+67
+00:02:51,319 --> 00:02:55,879
+connected by Road um but there's one
+
+68
+00:02:55,879 --> 00:02:58,480
+small problem these distance values
+
+69
+00:02:58,480 --> 00:03:00,680
+aren't distance values based off of
+
+70
+00:03:00,680 --> 00:03:03,400
+Roads these are distance values from the
+
+71
+00:03:03,400 --> 00:03:06,280
+latitude and L longitude of from the
+
+72
+00:03:06,280 --> 00:03:08,599
+center of Toronto to the latitude and
+
+73
+00:03:08,599 --> 00:03:10,239
+longitude of the center of vau for
+
+74
+00:03:10,239 --> 00:03:12,599
+example uh the reason I'm doing this is
+
+75
+00:03:12,599 --> 00:03:14,120
+because I didn't want any complications
+
+76
+00:03:14,120 --> 00:03:16,280
+where the roads go through other cities
+
+77
+00:03:16,280 --> 00:03:17,400
+uh and that's the length that we're
+
+78
+00:03:17,400 --> 00:03:19,680
+taking so in basically skipping all of
+
+79
+00:03:19,680 --> 00:03:21,959
+that these are the kilometer distance
+
+80
+00:03:21,959 --> 00:03:23,640
+values between cities that are connected
+
+81
+00:03:23,640 --> 00:03:25,760
+by road but instead of getting the road
+
+82
+00:03:25,760 --> 00:03:27,720
+distance we get the air distance from
+
+83
+00:03:27,720 --> 00:03:30,360
+the centers of those respective
+
+84
+00:03:30,360 --> 00:03:33,040
+cities um that's basically what this
+
+85
+00:03:33,040 --> 00:03:35,159
+graph consists of in fact since this is
+
+86
+00:03:35,159 --> 00:03:36,640
+a little bit small to have on the
+
+87
+00:03:36,640 --> 00:03:37,959
+Whiteboard and we're going to need a lot
+
+88
+00:03:37,959 --> 00:03:39,400
+of whiteboard space to go through the
+
+89
+00:03:39,400 --> 00:03:41,239
+algorithm what I'm going to do is
+
+90
+00:03:41,239 --> 00:03:43,480
+throughout this video I'm going to have
+
+91
+00:03:43,480 --> 00:03:45,200
+this actually popping up on the video
+
+92
+00:03:45,200 --> 00:03:46,799
+screen so you can take a look at what
+
+93
+00:03:46,799 --> 00:03:48,519
+I'm talking about in fact there's
+
+94
+00:03:48,519 --> 00:03:49,920
+actually going to be a link to this
+
+95
+00:03:49,920 --> 00:03:52,519
+graph in the description below so what
+
+96
+00:03:52,519 --> 00:03:54,239
+I'd recommend you do is you open up half
+
+97
+00:03:54,239 --> 00:03:56,519
+of this on your screen and half of the
+
+98
+00:03:56,519 --> 00:03:58,760
+actual video so you can take a look at
+
+99
+00:03:58,760 --> 00:04:00,200
+exactly what I'm saying in bit more to
+
+100
+00:04:00,200 --> 00:04:01,920
+tail and stay in sync with what's
+
+101
+00:04:01,920 --> 00:04:03,760
+actually on the graph if you wouldn't
+
+102
+00:04:03,760 --> 00:04:05,200
+like to do that though don't worry I
+
+103
+00:04:05,200 --> 00:04:06,599
+will be showing the graph throughout the
+
+104
+00:04:06,599 --> 00:04:10,720
+video in intervals all right let's begin
+
+105
+00:04:10,720 --> 00:04:13,799
+now today what my goal is is to show you
+
+106
+00:04:13,799 --> 00:04:16,359
+how you can use the Brett's first search
+
+107
+00:04:16,359 --> 00:04:20,519
+algorithm to Traverse to from Toronto to
+
+108
+00:04:20,519 --> 00:04:22,800
+Aurora now there's another question you
+
+109
+00:04:22,800 --> 00:04:24,880
+might be wondering and well why is the
+
+110
+00:04:24,880 --> 00:04:27,199
+breath for search algorithm named the
+
+111
+00:04:27,199 --> 00:04:30,080
+breath for search algorithm well it's
+
+112
+00:04:30,080 --> 00:04:32,320
+quite simple the breett ver search
+
+113
+00:04:32,320 --> 00:04:34,880
+algorithm will actually check a nodes
+
+114
+00:04:34,880 --> 00:04:37,280
+neighbors before checking that those
+
+115
+00:04:37,280 --> 00:04:40,360
+nodes neighbors neighbors uh basically
+
+116
+00:04:40,360 --> 00:04:42,240
+what's going to happen is it's going to
+
+117
+00:04:42,240 --> 00:04:43,960
+check its own surroundings before
+
+118
+00:04:43,960 --> 00:04:46,560
+checking the surroundings of its own
+
+119
+00:04:46,560 --> 00:04:49,000
+surroundings uh unlike how the AAR
+
+120
+00:04:49,000 --> 00:04:51,720
+algorithm work Works uh and so in some
+
+121
+00:04:51,720 --> 00:04:52,919
+cases I guess you could say the breath
+
+122
+00:04:52,919 --> 00:04:55,000
+for search algorithm is sometimes more
+
+123
+00:04:55,000 --> 00:04:56,960
+efficient in some cases the AAR
+
+124
+00:04:56,960 --> 00:04:58,759
+algorithm is more efficient but that's a
+
+125
+00:04:58,759 --> 00:05:01,320
+topic for an entire different video for
+
+126
+00:05:01,320 --> 00:05:03,440
+now though I'm going to be showing you
+
+127
+00:05:03,440 --> 00:05:05,440
+how exactly we can use the breath for
+
+128
+00:05:05,440 --> 00:05:07,560
+search algorithm in order to Traverse a
+
+129
+00:05:07,560 --> 00:05:10,000
+hierarchical graph however soon in the
+
+130
+00:05:10,000 --> 00:05:12,080
+future I will also create a video of how
+
+131
+00:05:12,080 --> 00:05:14,280
+you can use the AAR algorithm to do this
+
+132
+00:05:14,280 --> 00:05:16,600
+as well and how you can use the breath
+
+133
+00:05:16,600 --> 00:05:18,759
+first search algorithm in order to
+
+134
+00:05:18,759 --> 00:05:21,080
+Traverse a maze so I'm going to be
+
+135
+00:05:21,080 --> 00:05:22,840
+creating a lot more pathfinding videos
+
+136
+00:05:22,840 --> 00:05:25,680
+in the near future as well all right but
+
+137
+00:05:25,680 --> 00:05:29,039
+let's begin so now as you can see uh on
+
+138
+00:05:29,039 --> 00:05:31,600
+the graph screen right now uh we've got
+
+139
+00:05:31,600 --> 00:05:33,840
+two cities Toronto and Aurora and we've
+
+140
+00:05:33,840 --> 00:05:35,400
+got a few cities in between these two
+
+141
+00:05:35,400 --> 00:05:37,440
+cities and we want to find the shortest
+
+142
+00:05:37,440 --> 00:05:40,520
+way to get from Toronto to Aurora uh by
+
+143
+00:05:40,520 --> 00:05:42,680
+going through some cities uh and so the
+
+144
+00:05:42,680 --> 00:05:45,360
+way we can do this is by first of all we
+
+145
+00:05:45,360 --> 00:05:48,479
+note down Toronto Okay
+
+146
+00:05:48,479 --> 00:05:52,280
+so we've got Toronto noted
+
+147
+00:05:52,280 --> 00:05:56,800
+down now where all does Toronto take us
+
+148
+00:05:56,800 --> 00:05:58,919
+where all can we go directly from
+
+149
+00:05:58,919 --> 00:06:00,240
+Toronto
+
+150
+00:06:00,240 --> 00:06:02,199
+on this graph so what we do is we draw
+
+151
+00:06:02,199 --> 00:06:07,240
+an arrow and we say okay we can go from
+
+152
+00:06:07,240 --> 00:06:10,880
+Toronto to marham Von Bramton and Miss
+
+153
+00:06:10,880 --> 00:06:13,880
+Saga okay but if you take a look at the
+
+154
+00:06:13,880 --> 00:06:16,280
+graph on screen you see that Miss Saga
+
+155
+00:06:16,280 --> 00:06:19,759
+is 22 km away rington is 32 km away Mark
+
+156
+00:06:19,759 --> 00:06:23,840
+is 24 and vau is 24 as well and so miss
+
+157
+00:06:23,840 --> 00:06:26,680
+Saga is the least distant from Toronto
+
+158
+00:06:26,680 --> 00:06:29,199
+then Markham and vaugh and then Bramton
+
+159
+00:06:29,199 --> 00:06:30,360
+so what I'm going to do is I'm going to
+
+160
+00:06:30,360 --> 00:06:32,639
+list it in that order Miss Saga Markham
+
+161
+00:06:32,639 --> 00:06:33,400
+Von
+
+162
+00:06:33,400 --> 00:06:36,800
+Bramton so miss
+
+163
+00:06:36,800 --> 00:06:38,840
+Saga
+
+164
+00:06:38,840 --> 00:06:40,440
+Markham
+
+165
+00:06:40,440 --> 00:06:42,319
+V
+
+166
+00:06:42,319 --> 00:06:46,000
+Bron okay now sometimes since like M
+
+167
+00:06:46,000 --> 00:06:49,160
+repeats for Miss Saga maram Milton and
+
+168
+00:06:49,160 --> 00:06:51,479
+more I'm just going to put an extra
+
+169
+00:06:51,479 --> 00:06:55,039
+letter to signify Miss Saga um Markham
+
+170
+00:06:55,039 --> 00:06:58,199
+ml for Milton and more uh same thing for
+
+171
+00:06:58,199 --> 00:07:00,680
+Brandon as well
+
+172
+00:07:00,680 --> 00:07:03,479
+okay so once we've got these down then
+
+173
+00:07:03,479 --> 00:07:06,039
+we're ready to move on to the next step
+
+174
+00:07:06,039 --> 00:07:08,440
+so we've actually noted down where
+
+175
+00:07:08,440 --> 00:07:11,479
+Toronto can take us uh and so what we're
+
+176
+00:07:11,479 --> 00:07:13,080
+going to do now is I'm actually going to
+
+177
+00:07:13,080 --> 00:07:15,280
+add a little super script to each one of
+
+178
+00:07:15,280 --> 00:07:17,720
+these and I'm going to say t meaning
+
+179
+00:07:17,720 --> 00:07:20,280
+Toronto and this means that this node
+
+180
+00:07:20,280 --> 00:07:24,160
+was visited by Toronto I'll tell you why
+
+181
+00:07:24,160 --> 00:07:26,039
+this is helpful to us in just a moment
+
+182
+00:07:26,039 --> 00:07:27,560
+but here's a hint we're going to be
+
+183
+00:07:27,560 --> 00:07:29,520
+backtracking how we were actually able
+
+184
+00:07:29,520 --> 00:07:31,479
+ble to get to our destination and these
+
+185
+00:07:31,479 --> 00:07:33,800
+superscripts will be extremely helpful
+
+186
+00:07:33,800 --> 00:07:35,879
+in a programming sense what would happen
+
+187
+00:07:35,879 --> 00:07:38,520
+is let's say you've got Ms as a node
+
+188
+00:07:38,520 --> 00:07:41,759
+class You' have a came from variable or
+
+189
+00:07:41,759 --> 00:07:43,080
+something of that sort which is another
+
+190
+00:07:43,080 --> 00:07:44,759
+node and that's where you would store
+
+191
+00:07:44,759 --> 00:07:46,159
+the superscript that's how you would
+
+192
+00:07:46,159 --> 00:07:47,960
+implement it but this is how we're going
+
+193
+00:07:47,960 --> 00:07:49,840
+to show it on the
+
+194
+00:07:49,840 --> 00:07:52,919
+Whiteboard so once you have drawn this
+
+195
+00:07:52,919 --> 00:07:54,960
+out then we're ready to move on to the
+
+196
+00:07:54,960 --> 00:07:58,240
+next step which is seeing well where can
+
+197
+00:07:58,240 --> 00:08:02,120
+these four nodes take us then uh so if I
+
+198
+00:08:02,120 --> 00:08:03,280
+continue
+
+199
+00:08:03,280 --> 00:08:05,759
+here as you can
+
+200
+00:08:05,759 --> 00:08:08,319
+see what we're going to do here is let's
+
+201
+00:08:08,319 --> 00:08:10,759
+take a look first of all at Misa Saga
+
+202
+00:08:10,759 --> 00:08:12,879
+but one last thing we do we need to do
+
+203
+00:08:12,879 --> 00:08:15,080
+before we move on to the next step is
+
+204
+00:08:15,080 --> 00:08:17,759
+over our superscript for Toronto let's
+
+205
+00:08:17,759 --> 00:08:19,960
+make another superscript that notes down
+
+206
+00:08:19,960 --> 00:08:23,199
+the distance between these two nodes so
+
+207
+00:08:23,199 --> 00:08:25,960
+Mrs to Toronto is
+
+208
+00:08:25,960 --> 00:08:30,479
+22 then this is 24 oh sorry
+
+209
+00:08:30,479 --> 00:08:34,479
+not M it's 24 so markam to Toronto and
+
+210
+00:08:34,479 --> 00:08:36,519
+Von Toronto are both 24 so I'm going to
+
+211
+00:08:36,519 --> 00:08:39,360
+note down 24 and
+
+212
+00:08:39,360 --> 00:08:44,800
+24 uh and then for Brandon we've got
+
+213
+00:08:44,800 --> 00:08:46,720
+32 all
+
+214
+00:08:46,720 --> 00:08:49,040
+right so now that we've noted this all
+
+215
+00:08:49,040 --> 00:08:50,959
+down we're ready to move on to the next
+
+216
+00:08:50,959 --> 00:08:54,480
+step so our next step is going to be and
+
+217
+00:08:54,480 --> 00:08:56,040
+also just so you don't get confused I'm
+
+218
+00:08:56,040 --> 00:08:58,600
+going to draw a quick Green Line that'll
+
+219
+00:08:58,600 --> 00:09:01,440
+signify
+
+220
+00:09:01,640 --> 00:09:04,120
+this is one set and now we're working on
+
+221
+00:09:04,120 --> 00:09:07,040
+our second set of
+
+222
+00:09:07,040 --> 00:09:09,720
+nodes
+
+223
+00:09:09,720 --> 00:09:12,640
+okay all right so let's begin now miss
+
+224
+00:09:12,640 --> 00:09:15,680
+Saga where can miss Saga take us to so
+
+225
+00:09:15,680 --> 00:09:18,240
+let's actually note down Miss Saga on
+
+226
+00:09:18,240 --> 00:09:20,480
+the side of our whiteboard over here and
+
+227
+00:09:20,480 --> 00:09:22,640
+we know that Miss Saga can take us too
+
+228
+00:09:22,640 --> 00:09:24,519
+and you can see the graph on screen
+
+229
+00:09:24,519 --> 00:09:27,040
+right now it can take us to Oakville it
+
+230
+00:09:27,040 --> 00:09:30,040
+can take us to Milton it can take us to
+
+231
+00:09:30,040 --> 00:09:35,120
+Halton Hills it can take us to Bramton
+
+232
+00:09:35,120 --> 00:09:37,519
+and it can also take us right back to
+
+233
+00:09:37,519 --> 00:09:39,800
+Toronto uh and also by the way in case
+
+234
+00:09:39,800 --> 00:09:41,880
+you were wondering uh you can see that
+
+235
+00:09:41,880 --> 00:09:44,480
+there's some arrows between these nodes
+
+236
+00:09:44,480 --> 00:09:46,279
+as well like for example there's an
+
+237
+00:09:46,279 --> 00:09:47,920
+arrow between the connection that goes
+
+238
+00:09:47,920 --> 00:09:50,200
+from Toronto to miss Saga and that Arrow
+
+239
+00:09:50,200 --> 00:09:52,959
+points from Toronto to miss Saga however
+
+240
+00:09:52,959 --> 00:09:54,399
+another thing I'd like to note is that
+
+241
+00:09:54,399 --> 00:09:56,399
+these arrows don't really mean anything
+
+242
+00:09:56,399 --> 00:09:58,320
+this is like bidirectional you can go
+
+243
+00:09:58,320 --> 00:10:00,079
+from Toronto to Mississippi using this
+
+244
+00:10:00,079 --> 00:10:01,839
+route and from Miss Saga to Toronto
+
+245
+00:10:01,839 --> 00:10:03,880
+using this route these these arrowheads
+
+246
+00:10:03,880 --> 00:10:06,160
+mean practically nothing at this point
+
+247
+00:10:06,160 --> 00:10:08,519
+uh But continuing so now we know that
+
+248
+00:10:08,519 --> 00:10:10,519
+Mrs sag can take us to Oakville Milton
+
+249
+00:10:10,519 --> 00:10:13,519
+hton Hills branches and Toronto now if
+
+250
+00:10:13,519 --> 00:10:16,320
+you take a look in these two lists here
+
+251
+00:10:16,320 --> 00:10:17,440
+and not the list that we've already
+
+252
+00:10:17,440 --> 00:10:19,640
+created because it's blank anyway uh if
+
+253
+00:10:19,640 --> 00:10:21,839
+you take a look at these two lists
+
+254
+00:10:21,839 --> 00:10:24,040
+Toronto is already in
+
+255
+00:10:24,040 --> 00:10:27,440
+one so we remove it Brandon is also
+
+256
+00:10:27,440 --> 00:10:30,600
+already in the list Milton is not opal
+
+257
+00:10:30,600 --> 00:10:32,440
+is not and hton Hills is
+
+258
+00:10:32,440 --> 00:10:36,160
+not so we know that we cannot re-include
+
+259
+00:10:36,160 --> 00:10:39,279
+brandton and Toronto in our new list so
+
+260
+00:10:39,279 --> 00:10:42,360
+we of course erase those but hton Hills
+
+261
+00:10:42,360 --> 00:10:44,839
+Oakville and Milton do seem like good
+
+262
+00:10:44,839 --> 00:10:46,720
+candidates so let's actually not down
+
+263
+00:10:46,720 --> 00:10:49,519
+their distance value so Oakville is 14
+
+264
+00:10:49,519 --> 00:10:53,560
+km from Miss Saga Milton is 21 and hton
+
+265
+00:10:53,560 --> 00:10:57,000
+Hills would be 31 and these are actually
+
+266
+00:10:57,000 --> 00:10:59,320
+perfect and the reason these are AB
+
+267
+00:10:59,320 --> 00:11:01,480
+absolutely perfect uh is because these
+
+268
+00:11:01,480 --> 00:11:04,880
+are already in order so 14 21 31 so all
+
+269
+00:11:04,880 --> 00:11:09,079
+we need to do now is erase
+
+270
+00:11:10,279 --> 00:11:12,839
+these and then go back to our list over
+
+271
+00:11:12,839 --> 00:11:15,240
+here and say
+
+272
+00:11:15,240 --> 00:11:19,240
+Oakville which comes from Miss
+
+273
+00:11:19,240 --> 00:11:22,000
+Saga all right and since Oakville comes
+
+274
+00:11:22,000 --> 00:11:23,560
+from Miss Saga we're going to note down
+
+275
+00:11:23,560 --> 00:11:26,880
+its distance value we're also going to
+
+276
+00:11:26,880 --> 00:11:30,200
+say Milton here
+
+277
+00:11:30,200 --> 00:11:32,800
+which comes from Miss Saga uh and this
+
+278
+00:11:32,800 --> 00:11:34,639
+is 21
+
+279
+00:11:34,639 --> 00:11:39,040
+km from Miss Saga then we've got hton
+
+280
+00:11:39,040 --> 00:11:42,160
+Hills which is from Miss Saga and this
+
+281
+00:11:42,160 --> 00:11:44,959
+is 31 km
+
+282
+00:11:44,959 --> 00:11:47,440
+away all right so we've noted these down
+
+283
+00:11:47,440 --> 00:11:51,120
+and they are in order for Miss Saga now
+
+284
+00:11:51,120 --> 00:11:53,880
+let's take a look at how Markham handles
+
+285
+00:11:53,880 --> 00:11:56,839
+this so let's
+
+286
+00:11:56,839 --> 00:12:00,040
+begin sorry uh so Markham uh as you can
+
+287
+00:12:00,040 --> 00:12:02,680
+see I want to note this down and we've
+
+288
+00:12:02,680 --> 00:12:04,800
+got Markham over here now Markham can
+
+289
+00:12:04,800 --> 00:12:07,680
+take us to Richmond
+
+290
+00:12:07,680 --> 00:12:10,360
+Hill it can take us to vaugh and it can
+
+291
+00:12:10,360 --> 00:12:12,560
+take us back to Toronto that's it now
+
+292
+00:12:12,560 --> 00:12:14,680
+vaugh and Toronto are already part of
+
+293
+00:12:14,680 --> 00:12:17,120
+this list so we cannot include those
+
+294
+00:12:17,120 --> 00:12:19,040
+however Richmond Hill has not yet been
+
+295
+00:12:19,040 --> 00:12:21,360
+included in any of these lists so what
+
+296
+00:12:21,360 --> 00:12:22,680
+I'm going to do is I'm going to add a
+
+297
+00:12:22,680 --> 00:12:25,199
+comma and we're going to say in this new
+
+298
+00:12:25,199 --> 00:12:28,120
+list we're going to add Richmond Hill
+
+299
+00:12:28,120 --> 00:12:29,920
+that comes from
+
+300
+00:12:29,920 --> 00:12:35,760
+Markham uh and this is a 8 km distance
+
+301
+00:12:35,760 --> 00:12:38,680
+uh and so that's how we know that down
+
+302
+00:12:38,680 --> 00:12:41,240
+uh then we are done working with Markham
+
+303
+00:12:41,240 --> 00:12:45,199
+so we can remove this little area of our
+
+304
+00:12:45,199 --> 00:12:47,560
+whiteboard then finally we can take a
+
+305
+00:12:47,560 --> 00:12:50,279
+look at V so now van has quite a few
+
+306
+00:12:50,279 --> 00:12:52,360
+different cities that it connects to so
+
+307
+00:12:52,360 --> 00:12:55,120
+V does marham
+
+308
+00:12:55,120 --> 00:12:59,279
+Toronto uh V's Richmond Hill again
+
+309
+00:12:59,279 --> 00:13:01,800
+uh vau does
+
+310
+00:13:01,800 --> 00:13:05,399
+King V does kadan and it does
+
+311
+00:13:05,399 --> 00:13:07,800
+Bramton quite a few it quite a few
+
+312
+00:13:07,800 --> 00:13:09,880
+different cities uh so now let's take a
+
+313
+00:13:09,880 --> 00:13:12,440
+look at this so Markham already exists
+
+314
+00:13:12,440 --> 00:13:14,800
+in this set Toronto already exists in
+
+315
+00:13:14,800 --> 00:13:17,440
+the first set Richmond Hill I'll talk
+
+316
+00:13:17,440 --> 00:13:20,279
+about in a moment King does not already
+
+317
+00:13:20,279 --> 00:13:22,920
+exist kaladin does not exist but Bramton
+
+318
+00:13:22,920 --> 00:13:25,720
+does so we've narrowed it down to
+
+319
+00:13:25,720 --> 00:13:27,320
+Richmond Hill King and
+
+320
+00:13:27,320 --> 00:13:30,199
+kaladan but then you take a look and say
+
+321
+00:13:30,199 --> 00:13:33,040
+hey but wait Richmond Hill already
+
+322
+00:13:33,040 --> 00:13:37,000
+exists in this set well we don't remove
+
+323
+00:13:37,000 --> 00:13:38,480
+this Richmond Hill oh sorry we don't
+
+324
+00:13:38,480 --> 00:13:41,560
+remove this new Richmond Hill just yet
+
+325
+00:13:41,560 --> 00:13:43,040
+what happened is like for example
+
+326
+00:13:43,040 --> 00:13:47,000
+Markham marham wasn't in this set but it
+
+327
+00:13:47,000 --> 00:13:49,279
+was in this set and this set well sorry
+
+328
+00:13:49,279 --> 00:13:52,120
+it was in a set before this one and so
+
+329
+00:13:52,120 --> 00:13:54,560
+what we do is we take a look at okay if
+
+330
+00:13:54,560 --> 00:13:56,839
+Markham or this node was in a set before
+
+331
+00:13:56,839 --> 00:13:58,600
+this one then we cannot re-include it in
+
+332
+00:13:58,600 --> 00:14:00,160
+the new set
+
+333
+00:14:00,160 --> 00:14:03,199
+however Richmond Hill isn't in a set for
+
+334
+00:14:03,199 --> 00:14:06,040
+this one it is in this set and so what
+
+335
+00:14:06,040 --> 00:14:07,480
+we're going to do is we're going to take
+
+336
+00:14:07,480 --> 00:14:10,160
+a look at both of these Richmond Hills
+
+337
+00:14:10,160 --> 00:14:11,639
+uh in the first Richmond Hill we're
+
+338
+00:14:11,639 --> 00:14:13,600
+going to take a look at how far away it
+
+339
+00:14:13,600 --> 00:14:15,639
+actually is from Toronto and the way
+
+340
+00:14:15,639 --> 00:14:16,959
+we're going to do this is by using these
+
+341
+00:14:16,959 --> 00:14:19,279
+super scripts I mentioned so if we take
+
+342
+00:14:19,279 --> 00:14:21,959
+a look over here this Richmond Hill in
+
+343
+00:14:21,959 --> 00:14:24,000
+the current set ignore this
+
+344
+00:14:24,000 --> 00:14:28,079
+one currently we go Richmond Hill to
+
+345
+00:14:28,079 --> 00:14:29,399
+where did Richmond Hill come from from
+
+346
+00:14:29,399 --> 00:14:32,920
+Markham so we go to Markham where did
+
+347
+00:14:32,920 --> 00:14:35,480
+Markham come from Markham came from
+
+348
+00:14:35,480 --> 00:14:37,680
+Toronto okay and what's the distance
+
+349
+00:14:37,680 --> 00:14:39,279
+between Richmond Hill and Markham that's
+
+350
+00:14:39,279 --> 00:14:41,480
+8 km and what's the distance between
+
+351
+00:14:41,480 --> 00:14:42,959
+Markham and Toronto as you can see that
+
+352
+00:14:42,959 --> 00:14:44,639
+is 24
+
+353
+00:14:44,639 --> 00:14:48,079
+km then we just add 8 and
+
+354
+00:14:48,079 --> 00:14:52,199
+24 and then we get a good uh that would
+
+355
+00:14:52,199 --> 00:14:54,399
+be
+
+356
+00:14:54,399 --> 00:14:59,320
+32 all right so we've got 8 + 24 that's
+
+357
+00:14:59,320 --> 00:15:03,120
+32 so in total from Richmond Hill to
+
+358
+00:15:03,120 --> 00:15:05,759
+Toronto using these superscripts as you
+
+359
+00:15:05,759 --> 00:15:08,920
+can see that's a 32 km
+
+360
+00:15:08,920 --> 00:15:13,240
+distance now if I were to take a look at
+
+361
+00:15:13,240 --> 00:15:15,160
+this new Richmond Hill that's in the
+
+362
+00:15:15,160 --> 00:15:18,120
+vonet let's take a look so Richmond
+
+363
+00:15:18,120 --> 00:15:20,680
+Hill in the new one goes to vaugh and
+
+364
+00:15:20,680 --> 00:15:23,320
+then this vaugh goes to Toronto is our
+
+365
+00:15:23,320 --> 00:15:26,360
+plan now vanau to Toronto distance is 24
+
+366
+00:15:26,360 --> 00:15:29,040
+km and Richmond Hill to vanau distance
+
+367
+00:15:29,040 --> 00:15:32,800
+is 7 and when we add 7 and
+
+368
+00:15:32,800 --> 00:15:34,800
+24 we get
+
+369
+00:15:34,800 --> 00:15:37,560
+31 and so as you can
+
+370
+00:15:37,560 --> 00:15:40,079
+see if we were to include the Richmond
+
+371
+00:15:40,079 --> 00:15:42,279
+Hill from the vaugh set and not the
+
+372
+00:15:42,279 --> 00:15:44,600
+Richmond Hill from the Markham set then
+
+373
+00:15:44,600 --> 00:15:47,480
+we would have a shorter path we have a
+
+374
+00:15:47,480 --> 00:15:49,560
+shorter path meaning a less number of
+
+375
+00:15:49,560 --> 00:15:51,759
+kilometers to get back to Toronto from
+
+376
+00:15:51,759 --> 00:15:53,920
+Richmond Hill and so what we're going to
+
+377
+00:15:53,920 --> 00:15:55,680
+do is since we've decided that the
+
+378
+00:15:55,680 --> 00:15:57,120
+Richmond Hill from the Von set is
+
+379
+00:15:57,120 --> 00:15:58,319
+shorter than the Richmond Hill from the
+
+380
+00:15:58,319 --> 00:16:01,040
+Markham set I'm actually going to erase
+
+381
+00:16:01,040 --> 00:16:03,279
+this Richmond
+
+382
+00:16:03,279 --> 00:16:08,399
+Hill and in place I am going to uh of
+
+383
+00:16:08,399 --> 00:16:11,720
+course replace this with Richmond Hill
+
+384
+00:16:11,720 --> 00:16:14,880
+from vgh and this is a 7 km
+
+385
+00:16:14,880 --> 00:16:17,079
+distance there we go then we can erase
+
+386
+00:16:17,079 --> 00:16:20,759
+all this extra work that we've done over
+
+387
+00:16:20,759 --> 00:16:23,759
+here
+
+388
+00:16:24,759 --> 00:16:26,759
+okay all
+
+389
+00:16:26,759 --> 00:16:29,319
+right so we're done with that that but
+
+390
+00:16:29,319 --> 00:16:31,600
+then we see we also have the king and
+
+391
+00:16:31,600 --> 00:16:33,800
+kaladan uh over here so we take a look
+
+392
+00:16:33,800 --> 00:16:36,120
+at King so King is how many kmers away
+
+393
+00:16:36,120 --> 00:16:42,279
+he 16 km away but kaladan is only 29 km
+
+394
+00:16:42,279 --> 00:16:44,360
+away so of course we know that King
+
+395
+00:16:44,360 --> 00:16:47,319
+comes after Kaled King comes before
+
+396
+00:16:47,319 --> 00:16:50,240
+kaladan in our final set so we note down
+
+397
+00:16:50,240 --> 00:16:54,279
+that we have King from vaugh with a 16
+
+398
+00:16:54,279 --> 00:16:56,720
+km distance uh and we've also got
+
+399
+00:16:56,720 --> 00:17:00,720
+kaledon from vau uh and this is a 29 km
+
+400
+00:17:00,720 --> 00:17:03,000
+distance uh and then we are done with
+
+401
+00:17:03,000 --> 00:17:08,280
+our V set and we can erase this van
+
+402
+00:17:08,280 --> 00:17:10,240
+information from
+
+403
+00:17:10,240 --> 00:17:13,199
+here but then finally in this set over
+
+404
+00:17:13,199 --> 00:17:16,039
+here we've got Bramton and bmon is our
+
+405
+00:17:16,039 --> 00:17:19,439
+last node uh and so what I'm going to do
+
+406
+00:17:19,439 --> 00:17:22,160
+is we're going to take bmon
+
+407
+00:17:22,160 --> 00:17:24,720
+here okay where does Bron take us to
+
+408
+00:17:24,720 --> 00:17:26,799
+well again quite a few cities so Bron
+
+409
+00:17:26,799 --> 00:17:30,880
+can take us to kaladan on Toronto it can
+
+410
+00:17:30,880 --> 00:17:34,880
+take us to hton Hills and it can take us
+
+411
+00:17:34,880 --> 00:17:38,360
+to miss Saga now of course we can see
+
+412
+00:17:38,360 --> 00:17:40,840
+that V already in one of our older lists
+
+413
+00:17:40,840 --> 00:17:42,480
+Toronto is already in one of our older
+
+414
+00:17:42,480 --> 00:17:44,720
+lists Halton the hills we'll talk about
+
+415
+00:17:44,720 --> 00:17:46,640
+in a minute Mrs Saga already in our
+
+416
+00:17:46,640 --> 00:17:48,799
+older list kaladin we will talk about in
+
+417
+00:17:48,799 --> 00:17:51,240
+a minute as well now let's talk let's
+
+418
+00:17:51,240 --> 00:17:52,600
+start by talking a little bit about
+
+419
+00:17:52,600 --> 00:17:55,120
+cadan so as you can see over here our
+
+420
+00:17:55,120 --> 00:17:57,919
+older path with kaladan what would
+
+421
+00:17:57,919 --> 00:18:00,200
+happen here is we would go from kaladan
+
+422
+00:18:00,200 --> 00:18:00,960
+to
+
+423
+00:18:00,960 --> 00:18:03,640
+vaugh and this was a 29 kilometer
+
+424
+00:18:03,640 --> 00:18:05,720
+distance and then from vaugh to Toronto
+
+425
+00:18:05,720 --> 00:18:08,520
+which was a 24 kilom distance and so the
+
+426
+00:18:08,520 --> 00:18:10,600
+distance between uh from from the from
+
+427
+00:18:10,600 --> 00:18:13,240
+the older kaladan already in our set to
+
+428
+00:18:13,240 --> 00:18:16,679
+Toronto uh would be 29 + 24 and that
+
+429
+00:18:16,679 --> 00:18:21,120
+would be 29 24 uh so we would
+
+430
+00:18:21,120 --> 00:18:26,960
+do 53 km apart uh and so what we should
+
+431
+00:18:26,960 --> 00:18:28,880
+do now though is let's just take a look
+
+432
+00:18:28,880 --> 00:18:32,240
+at our new cadin so our new cadin uh
+
+433
+00:18:32,240 --> 00:18:36,520
+over here so our kaladin to Brampton
+
+434
+00:18:36,520 --> 00:18:40,799
+distance would be 15
+
+435
+00:18:40,799 --> 00:18:43,960
+km then our Brandon Toronto distance
+
+436
+00:18:43,960 --> 00:18:46,880
+would be uh oh sorry I wrote Toronto in
+
+437
+00:18:46,880 --> 00:18:49,240
+the wrong place uh but our brand to
+
+438
+00:18:49,240 --> 00:18:51,280
+Toronto distance would be I can actually
+
+439
+00:18:51,280 --> 00:18:52,440
+check that from the super script that
+
+440
+00:18:52,440 --> 00:18:53,880
+we've already written and that's why
+
+441
+00:18:53,880 --> 00:18:56,520
+it's so useful uh 32
+
+442
+00:18:56,520 --> 00:19:00,600
+km 32 to Toronto
+
+443
+00:19:00,600 --> 00:19:04,760
+so now if we add those up though so 15
+
+444
+00:19:04,760 --> 00:19:09,760
+32 we've got 47 so as you can see the
+
+445
+00:19:09,760 --> 00:19:12,600
+distance between kaladan to Toronto
+
+446
+00:19:12,600 --> 00:19:15,080
+through brandton is actually shorter
+
+447
+00:19:15,080 --> 00:19:17,760
+than kaladin to Toronto through vau uh
+
+448
+00:19:17,760 --> 00:19:20,559
+and so what I'm going to do uh is as you
+
+449
+00:19:20,559 --> 00:19:23,480
+know we are going to take kaladan and we
+
+450
+00:19:23,480 --> 00:19:26,799
+are going to erase it and do an inplace
+
+451
+00:19:26,799 --> 00:19:29,159
+replacement uh meaning it stays in the
+
+452
+00:19:29,159 --> 00:19:32,320
+same uh it stays in the same um I guess
+
+453
+00:19:32,320 --> 00:19:33,919
+you would say element it stays the same
+
+454
+00:19:33,919 --> 00:19:36,240
+element uh in the array it stays the
+
+455
+00:19:36,240 --> 00:19:39,720
+same index sorry in the array uh however
+
+456
+00:19:39,720 --> 00:19:42,480
+we just change its value so kaladan
+
+457
+00:19:42,480 --> 00:19:44,240
+comes from
+
+458
+00:19:44,240 --> 00:19:48,960
+Bramton with a 15 km
+
+459
+00:19:48,960 --> 00:19:51,919
+distance all right so once that's done
+
+460
+00:19:51,919 --> 00:19:54,840
+we can oh one more we've got hton Hills
+
+461
+00:19:54,840 --> 00:19:56,600
+then we can also of course erase our
+
+462
+00:19:56,600 --> 00:20:00,640
+work for kaladan
+
+463
+00:20:02,440 --> 00:20:03,760
+all
+
+464
+00:20:03,760 --> 00:20:06,240
+right so now let's take a look at our
+
+465
+00:20:06,240 --> 00:20:08,200
+older hton Hills so hton Hills currently
+
+466
+00:20:08,200 --> 00:20:09,840
+goes through Miss Saga and then from
+
+467
+00:20:09,840 --> 00:20:11,640
+Miss Saga to Toronto so if we were to
+
+468
+00:20:11,640 --> 00:20:14,679
+write hton
+
+469
+00:20:14,679 --> 00:20:20,200
+Hills to miss Saga which is a 31 km
+
+470
+00:20:20,200 --> 00:20:22,760
+distance then from Miss Saga to Toronto
+
+471
+00:20:22,760 --> 00:20:25,559
+and that is a 22 km distance uh if we
+
+472
+00:20:25,559 --> 00:20:29,280
+were to add those up so 3122
+
+473
+00:20:29,280 --> 00:20:34,320
+uh we've got 53 km again so hton Hills
+
+474
+00:20:34,320 --> 00:20:39,039
+is currently 53 km uh away from uh
+
+475
+00:20:39,039 --> 00:20:41,520
+Toronto through Miss Saga but if we were
+
+476
+00:20:41,520 --> 00:20:44,520
+to by chance you know replace hton Hills
+
+477
+00:20:44,520 --> 00:20:46,360
+with Bramton oh sorry Miss Saga with
+
+478
+00:20:46,360 --> 00:20:48,559
+Bramton and go through Bramton for hton
+
+479
+00:20:48,559 --> 00:20:50,919
+Hills to get to Toronto what would
+
+480
+00:20:50,919 --> 00:20:52,640
+happen is let's say our hton Hills to
+
+481
+00:20:52,640 --> 00:20:55,520
+Bron distance uh is 23
+
+482
+00:20:55,520 --> 00:20:59,320
+km uh sorry
+
+483
+00:20:59,320 --> 00:21:02,360
+so our hton Hill to Bramton distance
+
+484
+00:21:02,360 --> 00:21:04,840
+would be let's just make sure yeah
+
+485
+00:21:04,840 --> 00:21:07,400
+that's 23 km as you can see on screen
+
+486
+00:21:07,400 --> 00:21:10,039
+right now then brandton 2 Toronto as I
+
+487
+00:21:10,039 --> 00:21:12,760
+noted before would be 32 and so as you
+
+488
+00:21:12,760 --> 00:21:15,400
+can see uh if we were to add those up
+
+489
+00:21:15,400 --> 00:21:17,320
+23 on
+
+490
+00:21:17,320 --> 00:21:20,880
+32 as you can see that would be 55 but
+
+491
+00:21:20,880 --> 00:21:23,720
+currently we've got a 53 distance so if
+
+492
+00:21:23,720 --> 00:21:26,120
+we were to replace Miss Saga with Bron
+
+493
+00:21:26,120 --> 00:21:28,960
+uh as the thorough far for hton to
+
+494
+00:21:28,960 --> 00:21:31,440
+Toronto uh we would be we would be uh
+
+495
+00:21:31,440 --> 00:21:34,720
+driving 2 more kilomet and so we're not
+
+496
+00:21:34,720 --> 00:21:36,840
+going to replace hton Hills and so we
+
+497
+00:21:36,840 --> 00:21:38,279
+know it's not worth it to go through
+
+498
+00:21:38,279 --> 00:21:40,799
+Bron to get from hton hills to Toronto
+
+499
+00:21:40,799 --> 00:21:43,600
+or from Toronto to hton Hills and so we
+
+500
+00:21:43,600 --> 00:21:45,919
+can of course erase our work for Brandon
+
+501
+00:21:45,919 --> 00:21:47,440
+as we know we're not replacing hton
+
+502
+00:21:47,440 --> 00:21:50,679
+Hills now and we are done with the next
+
+503
+00:21:50,679 --> 00:21:52,679
+step but we still haven't reached our
+
+504
+00:21:52,679 --> 00:21:56,480
+destination yet we want to reach Aurora
+
+505
+00:21:56,480 --> 00:21:58,960
+which is another city uh and so in order
+
+506
+00:21:58,960 --> 00:22:01,320
+to get there we've got to do a few more
+
+507
+00:22:01,320 --> 00:22:04,960
+steps uh so what we're going to do now
+
+508
+00:22:04,960 --> 00:22:07,039
+is I'm going to once again create a
+
+509
+00:22:07,039 --> 00:22:09,960
+little separator for you here between
+
+510
+00:22:09,960 --> 00:22:12,400
+the next set and this current
+
+511
+00:22:12,400 --> 00:22:18,640
+set and then we can continue
+
+512
+00:22:18,640 --> 00:22:22,720
+so let's begin with Oakville now where
+
+513
+00:22:22,720 --> 00:22:25,799
+can Oakville take us uh now if we take a
+
+514
+00:22:25,799 --> 00:22:27,880
+look at our map though uh and if we were
+
+515
+00:22:27,880 --> 00:22:31,159
+to draw out temporarily Oakville takes
+
+516
+00:22:31,159 --> 00:22:33,840
+us to uh I'm just going to see here so
+
+517
+00:22:33,840 --> 00:22:35,400
+it takes us to
+
+518
+00:22:35,400 --> 00:22:38,840
+Burlington it takes us to Milton and it
+
+519
+00:22:38,840 --> 00:22:43,039
+takes us to miss Saga now Milton now of
+
+520
+00:22:43,039 --> 00:22:44,960
+course this is our new set over here
+
+521
+00:22:44,960 --> 00:22:46,880
+this is our new set this is our old set
+
+522
+00:22:46,880 --> 00:22:48,000
+this is an older set and this is the
+
+523
+00:22:48,000 --> 00:22:51,760
+oldest set and so this one uh Now look
+
+524
+00:22:51,760 --> 00:22:54,039
+for example this Oakfield can take us to
+
+525
+00:22:54,039 --> 00:22:56,520
+Milton but this is already in an older
+
+526
+00:22:56,520 --> 00:22:59,360
+set and so what we do is we set Milton
+
+527
+00:22:59,360 --> 00:23:01,679
+won't work neither will Mrs Saga because
+
+528
+00:23:01,679 --> 00:23:04,559
+that's also in one of the older sets so
+
+529
+00:23:04,559 --> 00:23:06,760
+Mrs Saga gets crossed out as well so the
+
+530
+00:23:06,760 --> 00:23:08,840
+only place that Oakville can take us to
+
+531
+00:23:08,840 --> 00:23:09,840
+is
+
+532
+00:23:09,840 --> 00:23:12,039
+Burlington uh and so what we're going to
+
+533
+00:23:12,039 --> 00:23:13,200
+do is we're going to note down
+
+534
+00:23:13,200 --> 00:23:17,120
+Burlington uh in our set so Burlington
+
+535
+00:23:17,120 --> 00:23:19,279
+which comes from Oakville and our
+
+536
+00:23:19,279 --> 00:23:23,120
+distance between would be 18 km uh and
+
+537
+00:23:23,120 --> 00:23:25,799
+so once that's done though we can move
+
+538
+00:23:25,799 --> 00:23:28,720
+on to Milton from our older set over
+
+539
+00:23:28,720 --> 00:23:33,600
+here now where can Milton take us let's
+
+540
+00:23:33,600 --> 00:23:37,679
+see so Milton can take us to now again
+
+541
+00:23:37,679 --> 00:23:39,480
+quite a few cities it can take us to the
+
+542
+00:23:39,480 --> 00:23:42,400
+hton hills it can take us to Oakville it
+
+543
+00:23:42,400 --> 00:23:45,480
+can take us to Burlington it can take us
+
+544
+00:23:45,480 --> 00:23:50,960
+to Mrs Saga uh and so basically what
+
+545
+00:23:50,960 --> 00:23:53,159
+we're going to say is okay Oakville
+
+546
+00:23:53,159 --> 00:23:56,120
+already there hton hills already there
+
+547
+00:23:56,120 --> 00:23:58,080
+missa already there all we've got is
+
+548
+00:23:58,080 --> 00:24:01,000
+Berlin lington uh now though
+
+549
+00:24:01,000 --> 00:24:04,000
+Burlington uh is in our new set our
+
+550
+00:24:04,000 --> 00:24:06,360
+current set I guess you could say and so
+
+551
+00:24:06,360 --> 00:24:07,760
+we're going to do is we're going to
+
+552
+00:24:07,760 --> 00:24:10,080
+calculate the total distance using these
+
+553
+00:24:10,080 --> 00:24:12,840
+superscripts and so
+
+554
+00:24:12,840 --> 00:24:15,200
+Burlington currently goes through
+
+555
+00:24:15,200 --> 00:24:17,400
+Oakville and then Oakville if we take a
+
+556
+00:24:17,400 --> 00:24:19,400
+look at our subscript I mean superscript
+
+557
+00:24:19,400 --> 00:24:21,559
+goes to Mrs Saga which goes to Toronto
+
+558
+00:24:21,559 --> 00:24:23,919
+now the Mrs Saga to Toronto distance is
+
+559
+00:24:23,919 --> 00:24:26,880
+22 km the Oakville to miss Saga distance
+
+560
+00:24:26,880 --> 00:24:29,720
+is 14 and the Burlington to Oakville is
+
+561
+00:24:29,720 --> 00:24:33,559
+18 so if we were to add these all up 18
+
+562
+00:24:33,559 --> 00:24:34,760
+I'm just going to draw this a little bit
+
+563
+00:24:34,760 --> 00:24:41,520
+higher um so we've got our values 18 14
+
+564
+00:24:41,520 --> 00:24:44,480
+and 22 basically as you can see we've
+
+565
+00:24:44,480 --> 00:24:47,880
+got a
+
+566
+00:24:49,480 --> 00:24:54,760
+um 54 km distance here so this is these
+
+567
+00:24:54,760 --> 00:24:56,799
+are basically Burlington to Toronto or
+
+568
+00:24:56,799 --> 00:24:58,880
+Toronto to Burlington using Oakfield and
+
+569
+00:24:58,880 --> 00:25:00,679
+Miss Saga as thorough far you're going
+
+570
+00:25:00,679 --> 00:25:02,080
+to be going uh you're going to be
+
+571
+00:25:02,080 --> 00:25:06,480
+driving or flying in this case for 54 km
+
+572
+00:25:06,480 --> 00:25:08,520
+however this is for our old uh old
+
+573
+00:25:08,520 --> 00:25:10,480
+Burlington let's just see by chance if
+
+574
+00:25:10,480 --> 00:25:13,760
+we were to replace um this Oakville with
+
+575
+00:25:13,760 --> 00:25:16,279
+Milton what would happen is Burlington
+
+576
+00:25:16,279 --> 00:25:18,600
+would go to Milton which would go to
+
+577
+00:25:18,600 --> 00:25:20,919
+miss Saga which would go to Toronto
+
+578
+00:25:20,919 --> 00:25:22,360
+again the Miss Saga to Toronto distance
+
+579
+00:25:22,360 --> 00:25:24,360
+stays the same 22 I'll just draw that
+
+580
+00:25:24,360 --> 00:25:25,919
+slightly clearer for you so you can see
+
+581
+00:25:25,919 --> 00:25:29,919
+it's a 22 um but since that value stays
+
+582
+00:25:29,919 --> 00:25:31,559
+the same we don't really care much about
+
+583
+00:25:31,559 --> 00:25:36,159
+that value so 22 Milton to missaka
+
+584
+00:25:36,159 --> 00:25:39,679
+however uh will stay 21 and then
+
+585
+00:25:39,679 --> 00:25:42,679
+Burlington to Milton will of course be
+
+586
+00:25:42,679 --> 00:25:45,120
+22 now you can obviously already tell
+
+587
+00:25:45,120 --> 00:25:46,760
+that this is much higher let's just
+
+588
+00:25:46,760 --> 00:25:49,919
+still add to make sure so we've got 22
+
+589
+00:25:49,919 --> 00:25:53,440
+21 and 22 so 22
+
+590
+00:25:53,440 --> 00:25:59,039
+21 sorry 21 and 22
+
+591
+00:25:59,039 --> 00:26:00,760
+now as you can see basically we're me to
+
+592
+00:26:00,760 --> 00:26:06,120
+say five and six so 65 kilm uh so this
+
+593
+00:26:06,120 --> 00:26:08,760
+is much much more than what our current
+
+594
+00:26:08,760 --> 00:26:11,799
+Burlington is so we can successfully say
+
+595
+00:26:11,799 --> 00:26:14,440
+that Burlington should not be replaced
+
+596
+00:26:14,440 --> 00:26:15,679
+uh I mean Oakfield should not be
+
+597
+00:26:15,679 --> 00:26:17,520
+replaced with Milton in order to get
+
+598
+00:26:17,520 --> 00:26:19,960
+from Burlington to Toronto so Milton
+
+599
+00:26:19,960 --> 00:26:21,880
+cannot offer anything for us to add to
+
+600
+00:26:21,880 --> 00:26:24,559
+the set and so we erase all of our work
+
+601
+00:26:24,559 --> 00:26:27,840
+for Milton
+
+602
+00:26:31,799 --> 00:26:32,760
+there we
+
+603
+00:26:32,760 --> 00:26:36,880
+go there all right so we're almost half
+
+604
+00:26:36,880 --> 00:26:39,880
+done and now we take a look at hton
+
+605
+00:26:39,880 --> 00:26:42,520
+Hills where can hton Hills take us well
+
+606
+00:26:42,520 --> 00:26:45,799
+let's draw that out so hton Hills uh can
+
+607
+00:26:45,799 --> 00:26:50,559
+currently take us to in total Bramton
+
+608
+00:26:50,559 --> 00:26:54,760
+kaledon Milton and Mrs
+
+609
+00:26:54,960 --> 00:26:58,000
+Saga okay uh so now if we take a look
+
+610
+00:26:58,000 --> 00:27:00,000
+Mrs Saga again is already gone Milton is
+
+611
+00:27:00,000 --> 00:27:02,320
+already gone kadon is already gone and
+
+612
+00:27:02,320 --> 00:27:04,279
+bton is already gone so hton Hills can
+
+613
+00:27:04,279 --> 00:27:08,919
+take us nowhere and so hton Hills is
+
+614
+00:27:08,919 --> 00:27:11,919
+immediately
+
+615
+00:27:13,360 --> 00:27:16,760
+deleted then we take a look at Richmond
+
+616
+00:27:16,760 --> 00:27:19,039
+Hill you're probably getting excited now
+
+617
+00:27:19,039 --> 00:27:20,919
+because it's very close to Aurora let's
+
+618
+00:27:20,919 --> 00:27:24,120
+actually try this out so Richmond Hill
+
+619
+00:27:24,120 --> 00:27:28,279
+actually takes us to uh Aurora
+
+620
+00:27:28,279 --> 00:27:30,919
+it takes us to marham it takes us to
+
+621
+00:27:30,919 --> 00:27:35,559
+vaugh uh and it takes us to King now
+
+622
+00:27:35,559 --> 00:27:37,080
+even though we've reached our
+
+623
+00:27:37,080 --> 00:27:40,919
+destination with this our point is to
+
+624
+00:27:40,919 --> 00:27:43,640
+not um of course continue basically
+
+625
+00:27:43,640 --> 00:27:45,240
+we're not going to just stop here and
+
+626
+00:27:45,240 --> 00:27:47,240
+say that okay we're done uh because
+
+627
+00:27:47,240 --> 00:27:50,080
+Richmond Hill takes us to Aurora that's
+
+628
+00:27:50,080 --> 00:27:51,760
+not going to happen so what we're going
+
+629
+00:27:51,760 --> 00:27:56,679
+to do is um okay so sorry uh so Markham
+
+630
+00:27:56,679 --> 00:27:58,559
+is already in our list V is already on
+
+631
+00:27:58,559 --> 00:28:01,120
+our list uh then King and Aurora aren't
+
+632
+00:28:01,120 --> 00:28:02,039
+so what we're going to do is we're going
+
+633
+00:28:02,039 --> 00:28:05,159
+to take a look at King uh and so first
+
+634
+00:28:05,159 --> 00:28:08,880
+of all uh King and Aurora so Aurora uh
+
+635
+00:28:08,880 --> 00:28:13,320
+from Richmond Hill is 14 km uh and King
+
+636
+00:28:13,320 --> 00:28:16,760
+is 16 km so what I'm going to do is I'm
+
+637
+00:28:16,760 --> 00:28:18,640
+going to add these in this order so
+
+638
+00:28:18,640 --> 00:28:22,600
+Aurora 14 and King 16 so Aurora comes
+
+639
+00:28:22,600 --> 00:28:27,120
+from Richmond Hill uh with 14 km of 14
+
+640
+00:28:27,120 --> 00:28:31,080
+of distance uh and then King comes in uh
+
+641
+00:28:31,080 --> 00:28:33,600
+to from Richmond
+
+642
+00:28:33,600 --> 00:28:38,600
+Hill with 16 km of
+
+643
+00:28:38,600 --> 00:28:42,960
+distance once that is done though
+
+644
+00:28:42,960 --> 00:28:47,440
+finally uh we can continue now the only
+
+645
+00:28:47,440 --> 00:28:50,399
+reason that we're not just stopping at
+
+646
+00:28:50,399 --> 00:28:54,799
+Aurora though uh is because well let's
+
+647
+00:28:54,799 --> 00:28:58,320
+just say that for example King uh we've
+
+648
+00:28:58,320 --> 00:29:00,640
+already got King in our set so King can
+
+649
+00:29:00,640 --> 00:29:02,559
+also take us to Aurora let's just say
+
+650
+00:29:02,559 --> 00:29:04,440
+that by chance of King is a shorter path
+
+651
+00:29:04,440 --> 00:29:06,200
+to get to Aurora we don't just want to
+
+652
+00:29:06,200 --> 00:29:07,440
+stop at Richmond Hill we want to
+
+653
+00:29:07,440 --> 00:29:08,960
+continue and see and make sure that none
+
+654
+00:29:08,960 --> 00:29:11,440
+of our other nodes can take us to Aurora
+
+655
+00:29:11,440 --> 00:29:14,240
+in a much quicker way uh but one more
+
+656
+00:29:14,240 --> 00:29:15,600
+thing we have to take a look at is as
+
+657
+00:29:15,600 --> 00:29:18,440
+you can see I added King to our set but
+
+658
+00:29:18,440 --> 00:29:20,880
+in our older set we've already got king
+
+659
+00:29:20,880 --> 00:29:24,720
+so I'm going to remove this King
+
+660
+00:29:24,720 --> 00:29:28,240
+here all right so now we can continue
+
+661
+00:29:28,240 --> 00:29:31,159
+continue uh so as you can see we've got
+
+662
+00:29:31,159 --> 00:29:35,240
+this set and we're done with Richmond
+
+663
+00:29:35,600 --> 00:29:38,440
+Hill then we take a look at King from
+
+664
+00:29:38,440 --> 00:29:42,600
+our older set so King goes to in total
+
+665
+00:29:42,600 --> 00:29:44,480
+again quite a two cities it goes to New
+
+666
+00:29:44,480 --> 00:29:47,320
+Market it goes to kaledon it goes to
+
+667
+00:29:47,320 --> 00:29:51,320
+Aurora it goes to Richmond Hill and of
+
+668
+00:29:51,320 --> 00:29:55,000
+course it goes to V now Richmond Hill is
+
+669
+00:29:55,000 --> 00:29:57,080
+already in our older set V's already in
+
+670
+00:29:57,080 --> 00:29:58,960
+one of our older sets Aurora I'll talk
+
+671
+00:29:58,960 --> 00:30:00,919
+about in a minute kadan's already there
+
+672
+00:30:00,919 --> 00:30:03,240
+and New Market isn't uh so let's take a
+
+673
+00:30:03,240 --> 00:30:05,279
+look at Aurora first so our current
+
+674
+00:30:05,279 --> 00:30:07,600
+Aurora goes through Richmond Hill so it
+
+675
+00:30:07,600 --> 00:30:09,240
+basically goes like this Aurora to
+
+676
+00:30:09,240 --> 00:30:12,880
+Richmond Hill uh to vaugh H sorry yeah
+
+677
+00:30:12,880 --> 00:30:15,399
+Richmond Hill to vaugh and then vaugh
+
+678
+00:30:15,399 --> 00:30:17,159
+finally goes to Toronto now the Von to
+
+679
+00:30:17,159 --> 00:30:19,960
+Toronto distance is 24 km Richmond Hill
+
+680
+00:30:19,960 --> 00:30:22,320
+to vaugh is 7 and then aora to Richmond
+
+681
+00:30:22,320 --> 00:30:25,320
+Hill is 14 okay uh so if we add this all
+
+682
+00:30:25,320 --> 00:30:28,399
+up 14724
+
+683
+00:30:28,399 --> 00:30:31,640
+as you can see this basically becomes 5
+
+684
+00:30:31,640 --> 00:30:35,039
+one here and that's 45 45 km currently
+
+685
+00:30:35,039 --> 00:30:37,120
+uh if we want to get from Aurora to
+
+686
+00:30:37,120 --> 00:30:39,480
+Toronto through Richmond Hill and vaugh
+
+687
+00:30:39,480 --> 00:30:40,720
+however let's just say we were to
+
+688
+00:30:40,720 --> 00:30:44,000
+replace the Richmond Hill with King what
+
+689
+00:30:44,000 --> 00:30:46,799
+would happen is we would be going from
+
+690
+00:30:46,799 --> 00:30:50,360
+Aurora to King and then from King we
+
+691
+00:30:50,360 --> 00:30:53,519
+would be going to van and then from vgh
+
+692
+00:30:53,519 --> 00:30:55,679
+sorry we will be going to Toronto this
+
+693
+00:30:55,679 --> 00:31:00,440
+is 24 km King to would be 16 km and then
+
+694
+00:31:00,440 --> 00:31:04,960
+Aurora to King would be uh 28 km so if
+
+695
+00:31:04,960 --> 00:31:09,200
+we were to add 28 16 and 24 as you can
+
+696
+00:31:09,200 --> 00:31:12,000
+quite obviously tell it will be way way
+
+697
+00:31:12,000 --> 00:31:16,200
+higher so this would be around um eight
+
+698
+00:31:16,200 --> 00:31:19,000
+and then one more here uh and so this
+
+699
+00:31:19,000 --> 00:31:23,600
+would be 68 kilm in total if we were to
+
+700
+00:31:23,600 --> 00:31:24,880
+go through King and vaugh instead of
+
+701
+00:31:24,880 --> 00:31:27,519
+Richmond Hill and vaugh and that's why
+
+702
+00:31:27,519 --> 00:31:29,639
+we are are not going through King and
+
+703
+00:31:29,639 --> 00:31:31,960
+vaugh and so we know that it's not worth
+
+704
+00:31:31,960 --> 00:31:34,279
+it to replace this current Aurora path
+
+705
+00:31:34,279 --> 00:31:37,000
+with the new Aurora path so cing can
+
+706
+00:31:37,000 --> 00:31:40,000
+only take us to New Market uh and that
+
+707
+00:31:40,000 --> 00:31:42,440
+is with a 16 km distance so I'm going to
+
+708
+00:31:42,440 --> 00:31:44,600
+just note that down it can take us to
+
+709
+00:31:44,600 --> 00:31:49,799
+New Market from King with uh 16 making
+
+710
+00:31:49,799 --> 00:31:54,760
+sure yeah 16 kilm distance and then of
+
+711
+00:31:54,760 --> 00:31:59,880
+course we can erase our work for King
+
+712
+00:31:59,880 --> 00:32:04,240
+and we are almost done hooray after so
+
+713
+00:32:04,240 --> 00:32:07,639
+much work just almost done then finally
+
+714
+00:32:07,639 --> 00:32:11,159
+kaledon so where can kaladan take us
+
+715
+00:32:11,159 --> 00:32:12,279
+well it can take us to quite a few
+
+716
+00:32:12,279 --> 00:32:17,120
+places so begin kaladan takes us to uh
+
+717
+00:32:17,120 --> 00:32:19,919
+let's see so it can take us to brandton
+
+718
+00:32:19,919 --> 00:32:22,360
+hton
+
+719
+00:32:22,960 --> 00:32:29,120
+Hills it can take us to King and vaugh
+
+720
+00:32:29,120 --> 00:32:31,159
+got to make sure nothing else and there
+
+721
+00:32:31,159 --> 00:32:33,080
+we go all right so we can take these
+
+722
+00:32:33,080 --> 00:32:35,120
+four cities now Bron already in our
+
+723
+00:32:35,120 --> 00:32:38,799
+older set hton Hills already
+
+724
+00:32:38,799 --> 00:32:42,080
+um yes sorry uh cadin uh hton Hills
+
+725
+00:32:42,080 --> 00:32:44,000
+already in a roller set King already in
+
+726
+00:32:44,000 --> 00:32:45,559
+our older set and vau already in our
+
+727
+00:32:45,559 --> 00:32:49,080
+older set so cadan can take us nowhere
+
+728
+00:32:49,080 --> 00:32:52,360
+and we are done finding neighbor nodes
+
+729
+00:32:52,360 --> 00:32:56,960
+for all of these nodes here and so we
+
+730
+00:32:56,960 --> 00:33:02,960
+are done our third step now one thing
+
+731
+00:33:02,960 --> 00:33:05,200
+you should notice here though
+
+732
+00:33:05,200 --> 00:33:08,080
+is we don't need to go another step
+
+733
+00:33:08,080 --> 00:33:11,679
+further because we've already found our
+
+734
+00:33:11,679 --> 00:33:14,960
+destination we found Aurora in the set
+
+735
+00:33:14,960 --> 00:33:17,360
+and that is exactly where we want to go
+
+736
+00:33:17,360 --> 00:33:19,960
+and so all we need to do now is quite
+
+737
+00:33:19,960 --> 00:33:22,639
+simply back Trace from Aurora to
+
+738
+00:33:22,639 --> 00:33:26,200
+Richmond Hill to vaugh to Toronto and we
+
+739
+00:33:26,200 --> 00:33:28,240
+have found our destination so the way we
+
+740
+00:33:28,240 --> 00:33:30,600
+need to go is we take a look at Aurora
+
+741
+00:33:30,600 --> 00:33:33,360
+and we write down okay
+
+742
+00:33:33,360 --> 00:33:36,279
+Aurora where does Aurora come from well
+
+743
+00:33:36,279 --> 00:33:38,799
+Aurora came from Richmond Hill with a 19
+
+744
+00:33:38,799 --> 00:33:41,679
+km dist oh sorry 14 km distance so it
+
+745
+00:33:41,679 --> 00:33:44,440
+came from
+
+746
+00:33:45,200 --> 00:33:48,760
+richond Hill and the distance here was
+
+747
+00:33:48,760 --> 00:33:50,880
+14 km then you take a look at the
+
+748
+00:33:50,880 --> 00:33:52,679
+Richmond Hill from the other set and
+
+749
+00:33:52,679 --> 00:33:54,960
+Richmond Hill came from vaugh with a 7
+
+750
+00:33:54,960 --> 00:33:59,720
+km distance so it came from vaugh
+
+751
+00:34:00,279 --> 00:34:04,440
+with a six seven sorry kilm distance and
+
+752
+00:34:04,440 --> 00:34:07,600
+then Von came from Toronto as you can
+
+753
+00:34:07,600 --> 00:34:10,960
+see up there uh and as you can see the
+
+754
+00:34:10,960 --> 00:34:15,040
+distance is 24 km and we have found our
+
+755
+00:34:15,040 --> 00:34:17,440
+path to get from Toronto to Aurora and
+
+756
+00:34:17,440 --> 00:34:20,079
+Aurora to Toronto all we need to do now
+
+757
+00:34:20,079 --> 00:34:23,320
+is calculate the distance so
+
+758
+00:34:23,320 --> 00:34:26,280
+14724 and finally as you can see if I
+
+759
+00:34:26,280 --> 00:34:28,720
+quickly do the calculations here here we
+
+760
+00:34:28,720 --> 00:34:32,359
+end up with a
+
+761
+00:34:32,359 --> 00:34:33,879
+sorry
+
+762
+00:34:33,879 --> 00:34:38,159
+45 km
+
+763
+00:34:38,159 --> 00:34:42,399
+distance and there we go we have
+
+764
+00:34:42,399 --> 00:34:45,800
+completed our breath first search
+
+765
+00:34:45,800 --> 00:34:47,879
+testing here and as you can see what
+
+766
+00:34:47,879 --> 00:34:49,119
+we've done is we've taken this
+
+767
+00:34:49,119 --> 00:34:50,599
+hierarchical graph along with the
+
+768
+00:34:50,599 --> 00:34:52,919
+distance values it represents and we've
+
+769
+00:34:52,919 --> 00:34:55,919
+been able to go from and Traverse from
+
+770
+00:34:55,919 --> 00:34:58,240
+Toronto to Aurora
+
+771
+00:34:58,240 --> 00:35:02,119
+via V and Richmond Hill using the breett
+
+772
+00:35:02,119 --> 00:35:04,760
+first search algorithm all right so that
+
+773
+00:35:04,760 --> 00:35:06,480
+was it for this video today of course
+
+774
+00:35:06,480 --> 00:35:07,720
+I'd like to say a big thank you to
+
+775
+00:35:07,720 --> 00:35:09,480
+Nicholas for actually sending in this
+
+776
+00:35:09,480 --> 00:35:11,280
+question and giving me the suggestion
+
+777
+00:35:11,280 --> 00:35:14,079
+for this video today of course I will be
+
+778
+00:35:14,079 --> 00:35:15,480
+creating many more videos about how you
+
+779
+00:35:15,480 --> 00:35:17,960
+can use this with the Maze and how you
+
+780
+00:35:17,960 --> 00:35:21,440
+can use a star with this hierarchical
+
+781
+00:35:21,440 --> 00:35:23,680
+graph all right so that's going to be it
+
+782
+00:35:23,680 --> 00:35:26,280
+for this tutorial however in the next
+
+783
+00:35:26,280 --> 00:35:27,839
+part of this video you're going to
+
+784
+00:35:27,839 --> 00:35:30,079
+seeing an actual implementation of this
+
+785
+00:35:30,079 --> 00:35:32,320
+in Swift along with my own
+
+786
+00:35:32,320 --> 00:35:34,160
+implementation of how a hierarchical
+
+787
+00:35:34,160 --> 00:35:38,640
+graph itself can be implemented in Swift
+
+788
+00:35:38,640 --> 00:35:39,680
+all right so that's going to be it for
+
+789
+00:35:39,680 --> 00:35:41,160
+this video thank you very much for
+
+790
+00:35:41,160 --> 00:35:43,119
+joining today if you really like the
+
+791
+00:35:43,119 --> 00:35:44,359
+video though and you want to show your
+
+792
+00:35:44,359 --> 00:35:45,480
+support for it please do consider
+
+793
+00:35:45,480 --> 00:35:47,640
+leaving a like down below as well as if
+
+794
+00:35:47,640 --> 00:35:49,440
+you think if it could help any of your
+
+795
+00:35:49,440 --> 00:35:51,760
+friends or family uh do consider sharing
+
+796
+00:35:51,760 --> 00:35:54,240
+the video as well of course if you have
+
+797
+00:35:54,240 --> 00:35:56,359
+any questions suggestions or feedback
+
+798
+00:35:56,359 --> 00:35:57,800
+you can leave them down in the comments
+
+799
+00:35:57,800 --> 00:35:59,839
+section below email them to me at tagim
+
+800
+00:35:59,839 --> 00:36:02,599
+Manny gmail.com or tweet them to me at
+
+801
+00:36:02,599 --> 00:36:03,520
+tajim
+
+802
+00:36:03,520 --> 00:36:05,480
+Manny all right so that's going to be it
+
+803
+00:36:05,480 --> 00:36:07,160
+for this video but one last thing before
+
+804
+00:36:07,160 --> 00:36:08,520
+I go if you'd like to be notified
+
+805
+00:36:08,520 --> 00:36:10,440
+whenever I release new content please do
+
+806
+00:36:10,440 --> 00:36:12,040
+make sure to subscribe to the channel
+
+807
+00:36:12,040 --> 00:36:14,319
+and turn on notifications to be emailed
+
+808
+00:36:14,319 --> 00:36:17,160
+whenever I release new videos all right
+
+809
+00:36:17,160 --> 00:36:18,480
+that's going to be it for this tutorial
+
+810
+00:36:18,480 --> 00:36:20,240
+thank you very much for watching today
+
+811
+00:36:20,240 --> 00:36:23,040
+goodbye

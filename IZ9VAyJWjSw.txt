@@ -1,0 +1,3219 @@
+1
+00:00:03,770 --> 00:00:06,120
+so hello there and welcome to another
+
+2
+00:00:06,120 --> 00:00:08,490
+tutorial my name's sandy Bakshi and
+
+3
+00:00:08,490 --> 00:00:10,740
+today I'm joined by rich hire T so
+
+4
+00:00:10,740 --> 00:00:12,059
+welcome rich thank you for joining us
+
+5
+00:00:12,059 --> 00:00:12,960
+today would you like to quickly
+
+6
+00:00:12,960 --> 00:00:15,570
+introduce yourself lucky to be with you
+
+7
+00:00:15,570 --> 00:00:17,490
+thank you I'm rejecting I've worked for
+
+8
+00:00:17,490 --> 00:00:21,210
+IBM I'm a developer advocate working on
+
+9
+00:00:21,210 --> 00:00:24,869
+the Watson services so our role our team
+
+10
+00:00:24,869 --> 00:00:27,570
+have a small team we focus on the
+
+11
+00:00:27,570 --> 00:00:32,040
+cognitive AI side of things and our job
+
+12
+00:00:32,040 --> 00:00:35,070
+is to create assets for developers yes
+
+13
+00:00:35,070 --> 00:00:39,360
+so we go and create actual applications
+
+14
+00:00:39,360 --> 00:00:42,300
+that utilize a lot of lots of services
+
+15
+00:00:42,300 --> 00:00:44,970
+and we provide a lot of information
+
+16
+00:00:44,970 --> 00:00:47,460
+about how so developers can get started
+
+17
+00:00:47,460 --> 00:00:51,600
+a running start with pretty extensive
+
+18
+00:00:51,600 --> 00:00:55,020
+read B's and tutorials and blogs and all
+
+19
+00:00:55,020 --> 00:00:56,550
+that stuff that we'll get into later on
+
+20
+00:00:56,550 --> 00:00:59,520
+that's correct that so that we get
+
+21
+00:00:59,520 --> 00:01:01,920
+developers on to the Watson services as
+
+22
+00:01:01,920 --> 00:01:04,290
+quickly as possible that's nice thank
+
+23
+00:01:04,290 --> 00:01:06,030
+you very much this is really really
+
+24
+00:01:06,030 --> 00:01:07,439
+interesting stuff you just mentioned in
+
+25
+00:01:07,439 --> 00:01:09,690
+fact the tutorial today is all about the
+
+26
+00:01:09,690 --> 00:01:11,580
+Watson discovery service and more
+
+27
+00:01:11,580 --> 00:01:13,800
+specifically a new feature that's going
+
+28
+00:01:13,800 --> 00:01:15,659
+to be coming to all Watson discovery
+
+29
+00:01:15,659 --> 00:01:18,150
+service instances very very soon now
+
+30
+00:01:18,150 --> 00:01:20,070
+that's the step feature we'll talk about
+
+31
+00:01:20,070 --> 00:01:21,600
+in just a moment that allows you to get
+
+32
+00:01:21,600 --> 00:01:23,490
+structured information and knowledge
+
+33
+00:01:23,490 --> 00:01:25,440
+from your unstructured information which
+
+34
+00:01:25,440 --> 00:01:27,810
+is really interesting but for now I'd
+
+35
+00:01:27,810 --> 00:01:29,700
+like to begin by talking about how we
+
+36
+00:01:29,700 --> 00:01:31,890
+can actually use the Watson discovery
+
+37
+00:01:31,890 --> 00:01:34,830
+service in a much easier way using the
+
+38
+00:01:34,830 --> 00:01:37,260
+color patterns that enable you to create
+
+39
+00:01:37,260 --> 00:01:39,030
+Watson applications so right rajulun
+
+40
+00:01:39,030 --> 00:01:40,320
+tell us a little bit more about that you
+
+41
+00:01:40,320 --> 00:01:42,540
+discovery UI the in created as a code
+
+42
+00:01:42,540 --> 00:01:46,500
+pattern sure so what we did was we took
+
+43
+00:01:46,500 --> 00:01:50,040
+a real use case we we took it so first
+
+44
+00:01:50,040 --> 00:01:52,549
+of all Watson discovery is great it's a
+
+45
+00:01:52,549 --> 00:01:55,110
+ingesting unstructured data yes an
+
+46
+00:01:55,110 --> 00:01:56,530
+indexing it
+
+47
+00:01:56,530 --> 00:01:59,200
+enrichments so that it could be queried
+
+48
+00:01:59,200 --> 00:02:02,020
+in a number of ways that's the power of
+
+49
+00:02:02,020 --> 00:02:04,590
+discovery so what we did was we took
+
+50
+00:02:04,590 --> 00:02:08,560
+basically a thousand Airbnb reviews for
+
+51
+00:02:08,560 --> 00:02:10,929
+the City of Austin this is freely
+
+52
+00:02:10,929 --> 00:02:14,230
+available data yeah yeah so that's part
+
+53
+00:02:14,230 --> 00:02:17,590
+of the behind most of our code matters
+
+54
+00:02:17,590 --> 00:02:20,020
+we always use data that people can get
+
+55
+00:02:20,020 --> 00:02:22,720
+for free we have access to these
+
+56
+00:02:22,720 --> 00:02:24,280
+services that they can get on a free
+
+57
+00:02:24,280 --> 00:02:26,560
+trial basis okay so users never have to
+
+58
+00:02:26,560 --> 00:02:29,920
+pay for anything to get started right so
+
+59
+00:02:29,920 --> 00:02:32,200
+our code pattern basically takes a look
+
+60
+00:02:32,200 --> 00:02:35,110
+at that data you can we can use the
+
+61
+00:02:35,110 --> 00:02:36,940
+Watson discovery tooling to look at that
+
+62
+00:02:36,940 --> 00:02:39,130
+and try to try to get some information
+
+63
+00:02:39,130 --> 00:02:42,040
+glean some information from that through
+
+64
+00:02:42,040 --> 00:02:44,620
+the tooling a little bit ugly little the
+
+65
+00:02:44,620 --> 00:02:46,570
+interface just individual queries you're
+
+66
+00:02:46,570 --> 00:02:48,970
+not it's not formatted very well so what
+
+67
+00:02:48,970 --> 00:02:50,920
+the UI did was just put in a happy face
+
+68
+00:02:50,920 --> 00:02:52,900
+around that using the API is making the
+
+69
+00:02:52,900 --> 00:02:54,820
+same types of queries that users would
+
+70
+00:02:54,820 --> 00:02:58,030
+typically make presented in a nice UI so
+
+71
+00:02:58,030 --> 00:03:00,519
+people can see it and get some data
+
+72
+00:03:00,519 --> 00:03:03,190
+information about that way that's great
+
+73
+00:03:03,190 --> 00:03:05,019
+all right so now let's take a look and
+
+74
+00:03:05,019 --> 00:03:07,060
+how easy it is for you to get started
+
+75
+00:03:07,060 --> 00:03:09,040
+and actually use that new discovery UI
+
+76
+00:03:09,040 --> 00:03:11,799
+let's take a look at thousand Airbnb
+
+77
+00:03:11,799 --> 00:03:14,110
+reviews and take a look at what kinds of
+
+78
+00:03:14,110 --> 00:03:15,459
+insights were handling
+
+79
+00:03:15,459 --> 00:03:18,730
+okay so anyway this is the this is eek
+
+80
+00:03:18,730 --> 00:03:21,700
+developer code pattern home page which
+
+81
+00:03:21,700 --> 00:03:25,150
+is available at developer ibm.com so
+
+82
+00:03:25,150 --> 00:03:26,709
+this is where the landing page for all
+
+83
+00:03:26,709 --> 00:03:28,540
+of our code patterns so as a developer
+
+84
+00:03:28,540 --> 00:03:30,610
+this is where you'd come to just you
+
+85
+00:03:30,610 --> 00:03:32,739
+know you have a specific need or you're
+
+86
+00:03:32,739 --> 00:03:34,390
+trying to look for an example of this
+
+87
+00:03:34,390 --> 00:03:37,060
+specific service so you would come here
+
+88
+00:03:37,060 --> 00:03:39,610
+to find that that's great so we have
+
+89
+00:03:39,610 --> 00:03:42,780
+some some filtering over here or some
+
+90
+00:03:42,780 --> 00:03:45,150
+hints to get you to where you want to go
+
+91
+00:03:45,150 --> 00:03:47,920
+I'm going to go directly to the app that
+
+92
+00:03:47,920 --> 00:03:51,610
+I created so for each one of these
+
+93
+00:03:51,610 --> 00:03:53,019
+developer patterns we have this nice
+
+94
+00:03:53,019 --> 00:03:56,250
+page overview page which allows you to
+
+95
+00:03:56,250 --> 00:03:59,950
+view a demo try it out you can actually
+
+96
+00:03:59,950 --> 00:04:02,110
+run it without doing anything just
+
+97
+00:04:02,110 --> 00:04:05,020
+clicking the button you'll get there we
+
+98
+00:04:05,020 --> 00:04:06,940
+have a description of the of the code
+
+99
+00:04:06,940 --> 00:04:09,280
+pattern overview this is where you're
+
+100
+00:04:09,280 --> 00:04:09,980
+going to determine what
+
+101
+00:04:09,980 --> 00:04:11,629
+you really want to dig deeper or not
+
+102
+00:04:11,629 --> 00:04:13,220
+yeah hopefully it gives you enough
+
+103
+00:04:13,220 --> 00:04:15,799
+information for that as with all the
+
+104
+00:04:15,799 --> 00:04:17,570
+code patterns we have a diagram flow
+
+105
+00:04:17,570 --> 00:04:19,340
+describing the services and the
+
+106
+00:04:19,340 --> 00:04:23,000
+interactions between the pieces yes so
+
+107
+00:04:23,000 --> 00:04:25,850
+from there let's go ahead and get the
+
+108
+00:04:25,850 --> 00:04:27,949
+code that takes us to the github repo
+
+109
+00:04:27,949 --> 00:04:29,870
+again all of our code patterns are
+
+110
+00:04:29,870 --> 00:04:33,320
+housed on github publicly they're freely
+
+111
+00:04:33,320 --> 00:04:36,440
+open sourced so people can take them do
+
+112
+00:04:36,440 --> 00:04:37,760
+what they want with them they can
+
+113
+00:04:37,760 --> 00:04:39,229
+actually contribute to the code if they
+
+114
+00:04:39,229 --> 00:04:42,350
+find bugs they can log issues or
+
+115
+00:04:42,350 --> 00:04:46,160
+whatever so I'm gonna go to the github
+
+116
+00:04:46,160 --> 00:04:50,750
+repo here first page is always a detail
+
+117
+00:04:50,750 --> 00:04:53,510
+to read me so for this one we talked
+
+118
+00:04:53,510 --> 00:04:55,280
+about a little bit about what discovery
+
+119
+00:04:55,280 --> 00:04:58,190
+does for you this is the enrichment part
+
+120
+00:04:58,190 --> 00:05:00,800
+when we talked about where it pulls out
+
+121
+00:05:00,800 --> 00:05:03,500
+entities categories concepts keywords
+
+122
+00:05:03,500 --> 00:05:06,320
+and sentiment yes and we'll we'll dig a
+
+123
+00:05:06,320 --> 00:05:07,850
+little bit deeper in how you set that up
+
+124
+00:05:07,850 --> 00:05:10,750
+with your data mm-hmm here's that same
+
+125
+00:05:10,750 --> 00:05:13,729
+architecture diagram where we're
+
+126
+00:05:13,729 --> 00:05:16,280
+ingesting where we're feeding JSON files
+
+127
+00:05:16,280 --> 00:05:19,330
+into Watson discovery the API is
+
+128
+00:05:19,330 --> 00:05:21,530
+accessed as that discovery shows it to
+
+129
+00:05:21,530 --> 00:05:23,860
+the user mm-hmm
+
+130
+00:05:23,860 --> 00:05:26,539
+here's a little hand drawing of some of
+
+131
+00:05:26,539 --> 00:05:27,950
+them at the layout of what its gonna
+
+132
+00:05:27,950 --> 00:05:30,590
+look like I thought this was a pretty
+
+133
+00:05:30,590 --> 00:05:32,419
+cool this is what we thought about
+
+134
+00:05:32,419 --> 00:05:34,580
+additionally how we what we wanted to
+
+135
+00:05:34,580 --> 00:05:36,560
+show to the user yes
+
+136
+00:05:36,560 --> 00:05:39,110
+so these were all the UI components so
+
+137
+00:05:39,110 --> 00:05:41,169
+not only we showing you how to access
+
+138
+00:05:41,169 --> 00:05:44,150
+discovery but we're also going down and
+
+139
+00:05:44,150 --> 00:05:46,250
+showing and using specific obviously we
+
+140
+00:05:46,250 --> 00:05:47,660
+were writing codes we have to choose a
+
+141
+00:05:47,660 --> 00:05:50,870
+specific framework yes so what we like
+
+142
+00:05:50,870 --> 00:05:52,849
+about no this one's written to note what
+
+143
+00:05:52,849 --> 00:05:54,500
+we like about note is that it's a little
+
+144
+00:05:54,500 --> 00:05:56,990
+more freely open to other frameworks
+
+145
+00:05:56,990 --> 00:06:00,710
+it's not so cookie cutter you know you
+
+146
+00:06:00,710 --> 00:06:03,800
+have your choice of things in fact here
+
+147
+00:06:03,800 --> 00:06:05,360
+we talked about all the components this
+
+148
+00:06:05,360 --> 00:06:08,960
+one uses nodejs we based on react we
+
+149
+00:06:08,960 --> 00:06:11,449
+have an express back-end yes this one
+
+150
+00:06:11,449 --> 00:06:13,639
+uses semantic UI components which is
+
+151
+00:06:13,639 --> 00:06:17,750
+cool it uses chart and just for testing
+
+152
+00:06:17,750 --> 00:06:20,719
+that's nice so I can see that's all the
+
+153
+00:06:20,719 --> 00:06:22,470
+steps here are really neatly written
+
+154
+00:06:22,470 --> 00:06:24,630
+which I love so if I'm a developer and
+
+155
+00:06:24,630 --> 00:06:25,620
+it's just starting off with Watson
+
+156
+00:06:25,620 --> 00:06:27,870
+discovery I wouldn't need to you know
+
+157
+00:06:27,870 --> 00:06:28,950
+start from scratch entirely
+
+158
+00:06:28,950 --> 00:06:31,440
+documentation there's a clear list of
+
+159
+00:06:31,440 --> 00:06:32,730
+steps here that's gonna help me out so I
+
+160
+00:06:32,730 --> 00:06:35,160
+like that yeah and you don't want code
+
+161
+00:06:35,160 --> 00:06:37,080
+snippets right you want you want fully
+
+162
+00:06:37,080 --> 00:06:38,580
+functional code that's what's on the
+
+163
+00:06:38,580 --> 00:06:41,250
+liver so we have a video which you can
+
+164
+00:06:41,250 --> 00:06:43,380
+go click on I encourage you to do that
+
+165
+00:06:43,380 --> 00:06:47,820
+mm-hmm and if you link the only industry
+
+166
+00:06:47,820 --> 00:06:51,330
+actually good and that that's a deeper
+
+167
+00:06:51,330 --> 00:06:54,060
+dive into this thing so here's the steps
+
+168
+00:06:54,060 --> 00:06:57,510
+you talked about now for most of our
+
+169
+00:06:57,510 --> 00:06:59,790
+code matters we offer a deployed IBM
+
+170
+00:06:59,790 --> 00:07:02,630
+Cloud button which is convenience
+
+171
+00:07:02,630 --> 00:07:04,980
+basically there's some setup involved I
+
+172
+00:07:04,980 --> 00:07:06,840
+would recommend users who really want to
+
+173
+00:07:06,840 --> 00:07:08,940
+know this stuff to actually go through
+
+174
+00:07:08,940 --> 00:07:10,470
+the manual process without loading a
+
+175
+00:07:10,470 --> 00:07:12,330
+locally provisioning of the services
+
+176
+00:07:12,330 --> 00:07:13,590
+yourself yes that's the only where
+
+177
+00:07:13,590 --> 00:07:16,980
+you're gonna learn but there's we always
+
+178
+00:07:16,980 --> 00:07:18,660
+offer this option which does a
+
+179
+00:07:18,660 --> 00:07:21,150
+provisioning for you and pushes a code
+
+180
+00:07:21,150 --> 00:07:23,760
+and deploys it on the cloud and you can
+
+181
+00:07:23,760 --> 00:07:26,300
+access it that way that's convenient yes
+
+182
+00:07:26,300 --> 00:07:28,890
+so these are the steps I would recommend
+
+183
+00:07:28,890 --> 00:07:31,440
+running locally starts with cloning the
+
+184
+00:07:31,440 --> 00:07:34,560
+repo then we go through the creating of
+
+185
+00:07:34,560 --> 00:07:36,330
+the IBM cloud service in this case is
+
+186
+00:07:36,330 --> 00:07:39,690
+just discovery and we'll show you that a
+
+187
+00:07:39,690 --> 00:07:42,390
+bit the end result of what has house but
+
+188
+00:07:42,390 --> 00:07:44,460
+but essentially you you provision a
+
+189
+00:07:44,460 --> 00:07:47,669
+discovery instance and you have you
+
+190
+00:07:47,669 --> 00:07:49,950
+point to the data that you want to
+
+191
+00:07:49,950 --> 00:07:53,729
+ingest yes and this will give you your
+
+192
+00:07:53,729 --> 00:07:55,910
+shows kind of takes you through that
+
+193
+00:07:55,910 --> 00:07:59,040
+mm-hmm and they get ingested into
+
+194
+00:07:59,040 --> 00:08:04,800
+discovery so again these are the steps
+
+195
+00:08:04,800 --> 00:08:06,450
+involved with that at the end of that
+
+196
+00:08:06,450 --> 00:08:07,800
+you're going to have a set of
+
+197
+00:08:07,800 --> 00:08:10,610
+credentials that Watts provides for you
+
+198
+00:08:10,610 --> 00:08:13,260
+for to run this application you need to
+
+199
+00:08:13,260 --> 00:08:16,320
+plug those into what we are env file yes
+
+200
+00:08:16,320 --> 00:08:19,140
+and there's B&B file just for those not
+
+201
+00:08:19,140 --> 00:08:21,690
+familiar with that UJ and ojs would be
+
+202
+00:08:21,690 --> 00:08:22,560
+the environment file
+
+203
+00:08:22,560 --> 00:08:23,370
+yep telling you all the different
+
+204
+00:08:23,370 --> 00:08:26,250
+credentials yes so it's basically
+
+205
+00:08:26,250 --> 00:08:27,810
+username password and the pointer to
+
+206
+00:08:27,810 --> 00:08:29,729
+exact instance of discovery we want to
+
+207
+00:08:29,729 --> 00:08:32,310
+talk to and then you just run the
+
+208
+00:08:32,310 --> 00:08:35,490
+application and it's available on port
+
+209
+00:08:35,490 --> 00:08:36,860
+3000
+
+210
+00:08:36,860 --> 00:08:39,930
+so let's go to first let's go to the
+
+211
+00:08:39,930 --> 00:08:41,690
+discovery service
+
+212
+00:08:41,690 --> 00:08:44,640
+so here's those Airbnb ratings I've
+
+213
+00:08:44,640 --> 00:08:46,530
+already created the collection perfect
+
+214
+00:08:46,530 --> 00:08:50,010
+if we click on that you'll see that
+
+215
+00:08:50,010 --> 00:08:54,300
+we've loaded in 999 records perfect one
+
+216
+00:08:54,300 --> 00:08:56,010
+of the key things about the enrichment
+
+217
+00:08:56,010 --> 00:08:59,310
+is is done through a configuration file
+
+218
+00:08:59,310 --> 00:09:03,510
+so here's where you access that and you
+
+219
+00:09:03,510 --> 00:09:06,030
+notice here that for us we want all of
+
+220
+00:09:06,030 --> 00:09:09,930
+these enrichments to take place okay
+
+221
+00:09:09,930 --> 00:09:11,580
+another concept that we're going to go
+
+222
+00:09:11,580 --> 00:09:14,610
+into later with your with the knowledge
+
+223
+00:09:14,610 --> 00:09:19,370
+graph is that we need to add the
+
+224
+00:09:19,370 --> 00:09:21,720
+mentions like to this configuration
+
+225
+00:09:21,720 --> 00:09:23,430
+which isn't available which is not
+
+226
+00:09:23,430 --> 00:09:25,590
+available this tool so we had to do that
+
+227
+00:09:25,590 --> 00:09:29,670
+programmatically Juby API so if you take
+
+228
+00:09:29,670 --> 00:09:31,200
+a look at especially we take a look at
+
+229
+00:09:31,200 --> 00:09:33,240
+natural language understanding you'll
+
+230
+00:09:33,240 --> 00:09:35,310
+realize that under the egg teeth there's
+
+231
+00:09:35,310 --> 00:09:38,040
+also a specific kind of oh there's
+
+232
+00:09:38,040 --> 00:09:39,240
+another enrichment can I have been
+
+233
+00:09:39,240 --> 00:09:41,550
+mentions that's not available through
+
+234
+00:09:41,550 --> 00:09:43,200
+the tuning currently so you're gonna
+
+235
+00:09:43,200 --> 00:09:44,520
+have to add that manually but we'll get
+
+236
+00:09:44,520 --> 00:09:45,900
+into that in just a moment when we're
+
+237
+00:09:45,900 --> 00:09:47,310
+talking about the new feature that I was
+
+238
+00:09:47,310 --> 00:09:48,690
+telling you about the knowledge graph
+
+239
+00:09:48,690 --> 00:09:51,360
+right perfect
+
+240
+00:09:51,360 --> 00:09:53,910
+so here's the data and it pulls out
+
+241
+00:09:53,910 --> 00:09:57,570
+things like top entities these are what
+
+242
+00:09:57,570 --> 00:10:01,380
+we call aggregate information so it
+
+243
+00:10:01,380 --> 00:10:04,260
+takes a look at all the 999 of them and
+
+244
+00:10:04,260 --> 00:10:05,610
+it pulls out the things that it finds
+
+245
+00:10:05,610 --> 00:10:07,860
+most most often yes so we have related
+
+246
+00:10:07,860 --> 00:10:10,560
+concepts the hierarchies so it's all
+
+247
+00:10:10,560 --> 00:10:12,990
+cool stuff displayed to you you can
+
+248
+00:10:12,990 --> 00:10:17,420
+actually dig deeper look at some of the
+
+249
+00:10:17,420 --> 00:10:21,990
+the actual fields it pulls out mm-hmm
+
+250
+00:10:21,990 --> 00:10:24,600
+we can run queries through the tooling
+
+251
+00:10:24,600 --> 00:10:28,640
+yes wish I had a nice query I can run
+
+252
+00:10:28,640 --> 00:10:31,290
+it's about Airbnb ease and Austin so I'm
+
+253
+00:10:31,290 --> 00:10:33,660
+going to say near the college we'll see
+
+254
+00:10:33,660 --> 00:10:36,690
+what we get all right so we get some
+
+255
+00:10:36,690 --> 00:10:40,220
+hits about from the ratings themselves
+
+256
+00:10:40,220 --> 00:10:45,270
+again this is not easy to read it gives
+
+257
+00:10:45,270 --> 00:10:48,870
+you scores based on how well Watson
+
+258
+00:10:48,870 --> 00:10:50,019
+thinks it
+
+259
+00:10:50,019 --> 00:10:51,939
+meets the criteria for your search yeah
+
+260
+00:10:51,939 --> 00:10:53,949
+those kind of things so the whole
+
+261
+00:10:53,949 --> 00:10:55,720
+purpose behind the UI is to is to make
+
+262
+00:10:55,720 --> 00:10:58,420
+this more readable and accessible to the
+
+263
+00:10:58,420 --> 00:10:59,769
+user absolutely
+
+264
+00:10:59,769 --> 00:11:05,980
+so let's go to the UI so here it is I'm
+
+265
+00:11:05,980 --> 00:11:08,610
+running on port 3000 off that same data
+
+266
+00:11:08,610 --> 00:11:12,279
+these are all of the reviews and notice
+
+267
+00:11:12,279 --> 00:11:13,899
+we have those enrichments we talked
+
+268
+00:11:13,899 --> 00:11:16,119
+about as filters so this is what you
+
+269
+00:11:16,119 --> 00:11:17,379
+build with the kind of pattern so when
+
+270
+00:11:17,379 --> 00:11:18,730
+you actually go ahead download the code
+
+271
+00:11:18,730 --> 00:11:20,799
+pattern run it with NPM this is what
+
+272
+00:11:20,799 --> 00:11:23,410
+you're gonna get a little UI for Watson
+
+273
+00:11:23,410 --> 00:11:26,949
+discovery right so these things are
+
+274
+00:11:26,949 --> 00:11:29,139
+pretty obvious it talks about the
+
+275
+00:11:29,139 --> 00:11:30,869
+entities and it's in and or the
+
+276
+00:11:30,869 --> 00:11:34,119
+enrichments each category tells you the
+
+277
+00:11:34,119 --> 00:11:37,569
+number of hits what category it found we
+
+278
+00:11:37,569 --> 00:11:41,049
+have a nice tag cloud here with the top
+
+279
+00:11:41,049 --> 00:11:43,329
+entities or any of the other merchants
+
+280
+00:11:43,329 --> 00:11:45,309
+you want to choose we also have a
+
+281
+00:11:45,309 --> 00:11:48,600
+sentiment chart this is based on
+
+282
+00:11:48,600 --> 00:11:51,009
+Watson's determination of sentiment
+
+283
+00:11:51,009 --> 00:11:53,470
+which is different than a rating so the
+
+284
+00:11:53,470 --> 00:11:56,740
+user has rated the facility the Airbnb
+
+285
+00:11:56,740 --> 00:11:58,929
+rental but Watson has looked at the
+
+286
+00:11:58,929 --> 00:12:01,179
+actual text beyond text so the wording
+
+287
+00:12:01,179 --> 00:12:03,459
+of the rating and determined a positive
+
+288
+00:12:03,459 --> 00:12:05,769
+or negative sign yes not towards
+
+289
+00:12:05,769 --> 00:12:08,529
+necessarily the actual place but towards
+
+290
+00:12:08,529 --> 00:12:10,360
+the situation that was described in the
+
+291
+00:12:10,360 --> 00:12:13,149
+review yes and in this case you could
+
+292
+00:12:13,149 --> 00:12:16,029
+see most of them are favorable mm-hm
+
+293
+00:12:16,029 --> 00:12:18,279
+we have a nice trending graph here so we
+
+294
+00:12:18,279 --> 00:12:23,920
+could see how the term Austin has
+
+295
+00:12:23,920 --> 00:12:27,730
+trended over time I don't know if that's
+
+296
+00:12:27,730 --> 00:12:29,860
+very relevant one but I'm just going to
+
+297
+00:12:29,860 --> 00:12:33,040
+oh it's the actual scores over time
+
+298
+00:12:33,040 --> 00:12:35,069
+mm-hmm
+
+299
+00:12:35,069 --> 00:12:37,269
+so you can use different different
+
+300
+00:12:37,269 --> 00:12:37,929
+values here
+
+301
+00:12:37,929 --> 00:12:44,529
+yes I got a good one here so we can take
+
+302
+00:12:44,529 --> 00:12:48,759
+a lot of the concepts yeah we go and of
+
+303
+00:12:48,759 --> 00:12:51,389
+course we can also there's some other
+
+304
+00:12:51,389 --> 00:12:53,799
+niceties here we can filter the the
+
+305
+00:12:53,799 --> 00:12:56,559
+matches the actual ratings we can show
+
+306
+00:12:56,559 --> 00:12:58,869
+based on they go to the lowest rate the
+
+307
+00:12:58,869 --> 00:13:01,089
+lows are negative sentiments
+
+308
+00:13:01,089 --> 00:13:04,040
+there we go so as you can see there are
+
+309
+00:13:04,040 --> 00:13:07,069
+quite a few people that have negative
+
+310
+00:13:07,069 --> 00:13:09,709
+experiences with Airbnb but this one
+
+311
+00:13:09,709 --> 00:13:12,649
+over here about South by Southwest says
+
+312
+00:13:12,649 --> 00:13:14,629
+Lisa was great which is positive
+
+313
+00:13:14,629 --> 00:13:16,939
+welcoming cue bungalow and good
+
+314
+00:13:16,939 --> 00:13:19,129
+references for food around town okay but
+
+315
+00:13:19,129 --> 00:13:20,509
+this is where the negative part comes in
+
+316
+00:13:20,509 --> 00:13:20,930
+all right
+
+317
+00:13:20,930 --> 00:13:23,720
+when I broke a key she came armed with
+
+318
+00:13:23,720 --> 00:13:25,850
+bolt cutters and rescued my computer
+
+319
+00:13:25,850 --> 00:13:28,279
+from the locked cabinet above and beyond
+
+320
+00:13:28,279 --> 00:13:30,379
+now as a human you can tell this
+
+321
+00:13:30,379 --> 00:13:33,230
+technically positive but Watson took the
+
+322
+00:13:33,230 --> 00:13:36,319
+situation into context and said hey you
+
+323
+00:13:36,319 --> 00:13:38,420
+broke a key but luckily someone came
+
+324
+00:13:38,420 --> 00:13:39,740
+armed with bolt cutters but the
+
+325
+00:13:39,740 --> 00:13:42,290
+situation generally here was negative if
+
+326
+00:13:42,290 --> 00:13:43,819
+this hadn't happened it would be not
+
+327
+00:13:43,819 --> 00:13:45,980
+positive that's why Watson gave me
+
+328
+00:13:45,980 --> 00:13:48,499
+negative rating if you wanted to say
+
+329
+00:13:48,499 --> 00:13:50,509
+make this more relevant to Airbnb and
+
+330
+00:13:50,509 --> 00:13:52,189
+try and predict what someone's rating
+
+331
+00:13:52,189 --> 00:13:54,589
+would be based off of the text then in
+
+332
+00:13:54,589 --> 00:13:56,149
+that case you would probably have to
+
+333
+00:13:56,149 --> 00:13:57,800
+train your own model either a with the
+
+334
+00:13:57,800 --> 00:13:59,389
+Watson studio over the natural language
+
+335
+00:13:59,389 --> 00:14:01,399
+classifier or something that you seemed
+
+336
+00:14:01,399 --> 00:14:05,540
+fit but for the sentiment this is this
+
+337
+00:14:05,540 --> 00:14:07,009
+is what the sentiment understanding
+
+338
+00:14:07,009 --> 00:14:09,470
+currently does right great explanation
+
+339
+00:14:09,470 --> 00:14:15,399
+okay so let's go back to discovery and
+
+340
+00:14:15,399 --> 00:14:18,290
+let's talk about how we can further
+
+341
+00:14:18,290 --> 00:14:20,660
+enhance this data through building
+
+342
+00:14:20,660 --> 00:14:22,490
+relationships and they're not the
+
+343
+00:14:22,490 --> 00:14:24,529
+knowledge rap sounds good okay all right
+
+344
+00:14:24,529 --> 00:14:25,879
+so now once you get a little bit deeper
+
+345
+00:14:25,879 --> 00:14:28,550
+into Watson discovery by taking a look
+
+346
+00:14:28,550 --> 00:14:31,339
+at the knowledge grouse boy what does
+
+347
+00:14:31,339 --> 00:14:33,439
+the knowledge graph - well imagine this
+
+348
+00:14:33,439 --> 00:14:36,199
+for the Airbnb reviews we've got people
+
+349
+00:14:36,199 --> 00:14:38,029
+who are viewing different places at
+
+350
+00:14:38,029 --> 00:14:40,550
+Airbnb now let's just say we want to
+
+351
+00:14:40,550 --> 00:14:42,980
+extract some structured knowledge some
+
+352
+00:14:42,980 --> 00:14:45,439
+kind of facts so we're able to find from
+
+353
+00:14:45,439 --> 00:14:47,569
+that text and we want ballistically
+
+354
+00:14:47,569 --> 00:14:49,879
+display it in a graph like let's just
+
+355
+00:14:49,879 --> 00:14:52,769
+say we've got Fiona now Fiona
+
+356
+00:14:52,769 --> 00:14:55,259
+is someone who actually hosts guests on
+
+357
+00:14:55,259 --> 00:14:57,720
+Airbnb now of course these Airbnb
+
+358
+00:14:57,720 --> 00:15:00,629
+reviews are from Austin and so please
+
+359
+00:15:00,629 --> 00:15:02,489
+these are host two that are of course
+
+360
+00:15:02,489 --> 00:15:05,519
+Austin we know that already but if it
+
+361
+00:15:05,519 --> 00:15:07,110
+weren't as obvious to us like for
+
+362
+00:15:07,110 --> 00:15:09,179
+example if we were taking mobile reviews
+
+363
+00:15:09,179 --> 00:15:11,129
+into account we need information like
+
+364
+00:15:11,129 --> 00:15:11,699
+this
+
+365
+00:15:11,699 --> 00:15:14,549
+now one more thing fiona is hosting
+
+366
+00:15:14,549 --> 00:15:16,649
+people in downtown Austin
+
+367
+00:15:16,649 --> 00:15:19,709
+so downtown is technically considered as
+
+368
+00:15:19,709 --> 00:15:22,559
+a separate location by Watson and this
+
+369
+00:15:22,559 --> 00:15:25,499
+is downtown in the south of Austin so
+
+370
+00:15:25,499 --> 00:15:29,160
+cells is also a separate location now
+
+371
+00:15:29,160 --> 00:15:31,199
+this is how the knowledge graph works
+
+372
+00:15:31,199 --> 00:15:33,689
+all of this is a really complex
+
+373
+00:15:33,689 --> 00:15:36,059
+unstructured natural language but with
+
+374
+00:15:36,059 --> 00:15:37,679
+the knowledge graph you can go ahead and
+
+375
+00:15:37,679 --> 00:15:39,480
+determine relationships between all of
+
+376
+00:15:39,480 --> 00:15:41,670
+these entities we know that downtown
+
+377
+00:15:41,670 --> 00:15:43,619
+Austin and South are geo political
+
+378
+00:15:43,619 --> 00:15:46,470
+entities or locations and fiona is a
+
+379
+00:15:46,470 --> 00:15:50,749
+person and so fiona is located in Austin
+
+380
+00:15:50,749 --> 00:15:53,939
+okay so we Watson is able to tell us
+
+381
+00:15:53,939 --> 00:15:57,809
+that fiona is located in Austin Watson's
+
+382
+00:15:57,809 --> 00:16:01,490
+also able to tell us fiona is located
+
+383
+00:16:01,490 --> 00:16:05,069
+downtown and then Watson can go even
+
+384
+00:16:05,069 --> 00:16:07,860
+deeper and say downtown is located in
+
+385
+00:16:07,860 --> 00:16:09,749
+Austin and all of these relationships
+
+386
+00:16:09,749 --> 00:16:12,839
+are being found from simply natural
+
+387
+00:16:12,839 --> 00:16:15,540
+language and then it also tells us at
+
+388
+00:16:15,540 --> 00:16:19,079
+downtown is located in the south and
+
+389
+00:16:19,079 --> 00:16:21,779
+then all we need to do is build an
+
+390
+00:16:21,779 --> 00:16:23,730
+algorithm they can understand this kind
+
+391
+00:16:23,730 --> 00:16:26,279
+of graph but much much larger of course
+
+392
+00:16:26,279 --> 00:16:28,559
+because this is only a small snippet of
+
+393
+00:16:28,559 --> 00:16:29,639
+all the different knowledge that
+
+394
+00:16:29,639 --> 00:16:32,309
+discovery was able to uncover and just
+
+395
+00:16:32,309 --> 00:16:34,290
+like that we can understand unstructured
+
+396
+00:16:34,290 --> 00:16:36,299
+data through the Watson discovery
+
+397
+00:16:36,299 --> 00:16:38,519
+service using knowledge graph
+
+398
+00:16:38,519 --> 00:16:40,619
+unfortunately since it's in beta it's
+
+399
+00:16:40,619 --> 00:16:42,749
+only currently available to advanced and
+
+400
+00:16:42,749 --> 00:16:44,970
+premium instances so if you have an
+
+401
+00:16:44,970 --> 00:16:46,709
+advance or a premium instance of lots of
+
+402
+00:16:46,709 --> 00:16:48,929
+discovery great you can follow along
+
+403
+00:16:48,929 --> 00:16:51,059
+if not then highly recommend you take a
+
+404
+00:16:51,059 --> 00:16:53,009
+look at how it works just so you're
+
+405
+00:16:53,009 --> 00:16:54,579
+ready when Watson Isco
+
+406
+00:16:54,579 --> 00:16:56,350
+has this speech we're rolling out to all
+
+407
+00:16:56,350 --> 00:16:58,899
+the other kinds of instances as well all
+
+408
+00:16:58,899 --> 00:17:00,639
+right so now in order to enable the
+
+409
+00:17:00,639 --> 00:17:02,019
+knowledge graph feature with your
+
+410
+00:17:02,019 --> 00:17:03,999
+discovery instance you first will have
+
+411
+00:17:03,999 --> 00:17:06,010
+to give Watson correct enrichments for
+
+412
+00:17:06,010 --> 00:17:08,289
+its people to find out watch though the
+
+413
+00:17:08,289 --> 00:17:10,089
+knowledge graph so what I recommend you
+
+414
+00:17:10,089 --> 00:17:12,250
+do is you go over to the Watson swagger
+
+415
+00:17:12,250 --> 00:17:14,169
+interface now what this is it's
+
+416
+00:17:14,169 --> 00:17:16,959
+basically the API Explorer for Watson
+
+417
+00:17:16,959 --> 00:17:18,880
+you can find at the Watson API Explorer
+
+418
+00:17:18,880 --> 00:17:21,789
+Angela mix net there will be a link to
+
+419
+00:17:21,789 --> 00:17:24,069
+it in the description below now if you
+
+420
+00:17:24,069 --> 00:17:25,899
+scroll down you can see every single
+
+421
+00:17:25,899 --> 00:17:28,750
+different kind of API call that you can
+
+422
+00:17:28,750 --> 00:17:30,399
+make to the Watson discovery service
+
+423
+00:17:30,399 --> 00:17:32,320
+there are lots of them and they're
+
+424
+00:17:32,320 --> 00:17:34,179
+really useful but the one that we want
+
+425
+00:17:34,179 --> 00:17:36,279
+to use is actually get your
+
+426
+00:17:36,279 --> 00:17:38,590
+configuration now your configuration is
+
+427
+00:17:38,590 --> 00:17:40,360
+what tells Watson what exactly it does
+
+428
+00:17:40,360 --> 00:17:41,919
+with different data sources and how
+
+429
+00:17:41,919 --> 00:17:43,779
+exactly it enriches those data sources
+
+430
+00:17:43,779 --> 00:17:45,669
+so what you do is in the very top here
+
+431
+00:17:45,669 --> 00:17:48,010
+pasting your user name and password for
+
+432
+00:17:48,010 --> 00:17:49,870
+your discovery service then scroll down
+
+433
+00:17:49,870 --> 00:17:52,360
+and provide your environment ID and
+
+434
+00:17:52,360 --> 00:17:54,820
+configuration ID go ahead and click on
+
+435
+00:17:54,820 --> 00:17:56,860
+try it out and as you can see it's gonna
+
+436
+00:17:56,860 --> 00:17:58,750
+run the request and it's gonna come back
+
+437
+00:17:58,750 --> 00:18:01,179
+to you in response this is the whole
+
+438
+00:18:01,179 --> 00:18:04,750
+configuration now go ahead and copy this
+
+439
+00:18:04,750 --> 00:18:09,330
+response and paste it into the update
+
+440
+00:18:09,330 --> 00:18:13,029
+update API call now occurring you're
+
+441
+00:18:13,029 --> 00:18:14,289
+going to need to copy in your
+
+442
+00:18:14,289 --> 00:18:16,720
+environment ID and configuration ID but
+
+443
+00:18:16,720 --> 00:18:17,799
+you also need to paste in the
+
+444
+00:18:17,799 --> 00:18:20,230
+configuration if you pasted it and you
+
+445
+00:18:20,230 --> 00:18:23,260
+scroll up you'll realize that where it
+
+446
+00:18:23,260 --> 00:18:27,130
+says entities you will not have mentions
+
+447
+00:18:27,130 --> 00:18:29,590
+and mention types so what you need to do
+
+448
+00:18:29,590 --> 00:18:32,889
+is need to add mentions true and mention
+
+449
+00:18:32,889 --> 00:18:36,399
+types true there will be a there will be
+
+450
+00:18:36,399 --> 00:18:38,980
+a link to a github gist that contains
+
+451
+00:18:38,980 --> 00:18:41,649
+this whole configuration for you so you
+
+452
+00:18:41,649 --> 00:18:43,750
+don't need to put it in for yourself
+
+453
+00:18:43,750 --> 00:18:46,630
+manual and then what you do is fill out
+
+454
+00:18:46,630 --> 00:18:48,789
+the environment ID which I can just copy
+
+455
+00:18:48,789 --> 00:18:51,700
+from up over here from our last call
+
+456
+00:18:51,700 --> 00:18:56,559
+paste it into the update then go ahead
+
+457
+00:18:56,559 --> 00:18:57,460
+and do the same thing for the
+
+458
+00:18:57,460 --> 00:19:00,700
+configuration ID and then tell Watson to
+
+459
+00:19:00,700 --> 00:19:02,770
+update that configuration of course
+
+460
+00:19:02,770 --> 00:19:04,750
+I haven't need to add anything because I
+
+461
+00:19:04,750 --> 00:19:06,640
+already had it there but once you add in
+
+462
+00:19:06,640 --> 00:19:08,200
+your mentions just click on try it out
+
+463
+00:19:08,200 --> 00:19:11,940
+and just like that you've updated your
+
+464
+00:19:11,940 --> 00:19:14,110
+you've updated your configuration
+
+465
+00:19:14,110 --> 00:19:16,540
+response code 200 it's a success now
+
+466
+00:19:16,540 --> 00:19:18,460
+Watson knows exactly how it needs to
+
+467
+00:19:18,460 --> 00:19:20,290
+enrich the data now one thing you need
+
+468
+00:19:20,290 --> 00:19:22,000
+to make sure is that you upload your
+
+469
+00:19:22,000 --> 00:19:24,790
+documents after you do this step do not
+
+470
+00:19:24,790 --> 00:19:26,830
+do this step later because then Watson
+
+471
+00:19:26,830 --> 00:19:28,240
+will not be able to reinvent your
+
+472
+00:19:28,240 --> 00:19:29,950
+documents they're going to delete the
+
+473
+00:19:29,950 --> 00:19:31,960
+configuration or delete the environment
+
+474
+00:19:31,960 --> 00:19:34,090
+and do it all over again or delete the
+
+475
+00:19:34,090 --> 00:19:36,910
+collection all right so now that we're
+
+476
+00:19:36,910 --> 00:19:38,830
+back here and now of course we've
+
+477
+00:19:38,830 --> 00:19:40,690
+already had our mentions and Watson has
+
+478
+00:19:40,690 --> 00:19:42,910
+enriched the data now where do you take
+
+479
+00:19:42,910 --> 00:19:45,010
+a look at what the knowledge graph truly
+
+480
+00:19:45,010 --> 00:19:47,950
+does I'm gonna go over to this pane over
+
+481
+00:19:47,950 --> 00:19:50,920
+here the build queries pane now right
+
+482
+00:19:50,920 --> 00:19:52,480
+beside searching aggregations is
+
+483
+00:19:52,480 --> 00:19:54,460
+knowledge graph if you don't see if and
+
+484
+00:19:54,460 --> 00:19:56,080
+that means you're not running a premium
+
+485
+00:19:56,080 --> 00:19:58,570
+or advanced instance as of today which
+
+486
+00:19:58,570 --> 00:20:01,930
+is July 20th so now of course you can go
+
+487
+00:20:01,930 --> 00:20:03,310
+ahead and find some different entities
+
+488
+00:20:03,310 --> 00:20:05,620
+if you want to look for example well
+
+489
+00:20:05,620 --> 00:20:07,360
+let's just say I wanted to find a person
+
+490
+00:20:07,360 --> 00:20:09,880
+called Fiona I can go ahead and run the
+
+491
+00:20:09,880 --> 00:20:11,620
+query and it would give me entities that
+
+492
+00:20:11,620 --> 00:20:14,650
+match that Fiona and it gives me some
+
+493
+00:20:14,650 --> 00:20:16,840
+information about that entity but what's
+
+494
+00:20:16,840 --> 00:20:19,330
+more useful and what you want are the
+
+495
+00:20:19,330 --> 00:20:21,700
+relationships now of course it gives you
+
+496
+00:20:21,700 --> 00:20:23,200
+a watching discover is going to give you
+
+497
+00:20:23,200 --> 00:20:24,580
+a list of all the different entities
+
+498
+00:20:24,580 --> 00:20:26,830
+inside of its knowledge graph that it's
+
+499
+00:20:26,830 --> 00:20:29,410
+built inside the system and so all of
+
+500
+00:20:29,410 --> 00:20:30,940
+these entities are related to other
+
+501
+00:20:30,940 --> 00:20:34,660
+entities in some way or another so now
+
+502
+00:20:34,660 --> 00:20:36,640
+that we're here let's take a look at
+
+503
+00:20:36,640 --> 00:20:38,560
+what we can actually do now let's just
+
+504
+00:20:38,560 --> 00:20:40,750
+say we're looking for Fiona and we want
+
+505
+00:20:40,750 --> 00:20:43,930
+to see how exactly Fiona is related to
+
+506
+00:20:43,930 --> 00:20:46,780
+Austin all I'm going to do is run the
+
+507
+00:20:46,780 --> 00:20:49,720
+query as you can see it tells me Austin
+
+508
+00:20:49,720 --> 00:20:53,370
+has a colocation Fiona colocation is
+
+509
+00:20:53,370 --> 00:20:55,690
+it's a very very broad sort of
+
+510
+00:20:55,690 --> 00:20:57,310
+relationship so we can ignore all the
+
+511
+00:20:57,310 --> 00:21:00,370
+collocations but Fiona is located at
+
+512
+00:21:00,370 --> 00:21:03,370
+Austin and Fiona resides in Austin and
+
+513
+00:21:03,370 --> 00:21:06,100
+both of these are correct so I can
+
+514
+00:21:06,100 --> 00:21:08,550
+actually go ahead and take a look and
+
+515
+00:21:08,550 --> 00:21:13,390
+remove Austin now if I only provide if I
+
+516
+00:21:13,390 --> 00:21:15,980
+only provide Discovery with Fiona
+
+517
+00:21:15,980 --> 00:21:17,510
+and I don't tell it to find the
+
+518
+00:21:17,510 --> 00:21:19,190
+relationship of Fiona to any other
+
+519
+00:21:19,190 --> 00:21:21,230
+specific entity and it's just gonna give
+
+520
+00:21:21,230 --> 00:21:23,450
+me all the relationships that Fiona has
+
+521
+00:21:23,450 --> 00:21:26,510
+to other entities this Brian communicate
+
+522
+00:21:26,510 --> 00:21:29,240
+she's the owner of a cottage she greets
+
+523
+00:21:29,240 --> 00:21:31,669
+people that come over she's located at
+
+524
+00:21:31,669 --> 00:21:33,320
+location which is a co reference to
+
+525
+00:21:33,320 --> 00:21:36,260
+another entity but these are all good
+
+526
+00:21:36,260 --> 00:21:38,179
+for relationships associated with the
+
+527
+00:21:38,179 --> 00:21:41,030
+Fiona entity now if you would actually
+
+528
+00:21:41,030 --> 00:21:42,440
+go ahead and take all these
+
+529
+00:21:42,440 --> 00:21:45,440
+relationships and graph them out this is
+
+530
+00:21:45,440 --> 00:21:47,360
+what it would look like now one thing I
+
+531
+00:21:47,360 --> 00:21:49,490
+would do I would like you note is that
+
+532
+00:21:49,490 --> 00:21:52,040
+I'm using a website called web graph
+
+533
+00:21:52,040 --> 00:21:55,190
+viscom and what I did is I actually just
+
+534
+00:21:55,190 --> 00:21:57,290
+went him to the JavaScript console of
+
+535
+00:21:57,290 --> 00:21:59,840
+Google Chrome and I put together a quick
+
+536
+00:21:59,840 --> 00:22:03,380
+like uh like a three liner piece of
+
+537
+00:22:03,380 --> 00:22:05,990
+JavaScript code over here and basically
+
+538
+00:22:05,990 --> 00:22:08,480
+what this JavaScript code does is it
+
+539
+00:22:08,480 --> 00:22:10,850
+allows you to take all these
+
+540
+00:22:10,850 --> 00:22:12,770
+relationships that are shown in this
+
+541
+00:22:12,770 --> 00:22:14,960
+English sum in the Watson discovery
+
+542
+00:22:14,960 --> 00:22:17,600
+tooling and as you can see it exports
+
+543
+00:22:17,600 --> 00:22:20,120
+them to a format that graph is likes so
+
+544
+00:22:20,120 --> 00:22:21,950
+you can go ahead and copy this and you
+
+545
+00:22:21,950 --> 00:22:25,070
+can paste it into graph news and that's
+
+546
+00:22:25,070 --> 00:22:26,690
+actually gonna make a really uh neat
+
+547
+00:22:26,690 --> 00:22:28,400
+knowledge graph out of it
+
+548
+00:22:28,400 --> 00:22:30,320
+so I took a few different entities
+
+549
+00:22:30,320 --> 00:22:35,120
+namely I took Fiona downtown Austin and
+
+550
+00:22:35,120 --> 00:22:37,010
+I took those three entities and I found
+
+551
+00:22:37,010 --> 00:22:38,540
+all the different relationships they
+
+552
+00:22:38,540 --> 00:22:40,730
+have and I exported them to graph this
+
+553
+00:22:40,730 --> 00:22:42,679
+format and I put them into this website
+
+554
+00:22:42,679 --> 00:22:44,809
+called web graph is calm so I didn't
+
+555
+00:22:44,809 --> 00:22:47,179
+need to do it manually in Python so as
+
+556
+00:22:47,179 --> 00:22:49,850
+you can see this is the whole graph that
+
+557
+00:22:49,850 --> 00:22:51,650
+it makes for us let's go through this a
+
+558
+00:22:51,650 --> 00:22:53,150
+little bit and take a look at what it
+
+559
+00:22:53,150 --> 00:22:56,570
+actually is so of course we have Fiona
+
+560
+00:22:56,570 --> 00:22:59,240
+at the very beginning here now Fiona is
+
+561
+00:22:59,240 --> 00:23:00,740
+located at location of course that's
+
+562
+00:23:00,740 --> 00:23:02,630
+just a CO reference to learner entity
+
+563
+00:23:02,630 --> 00:23:06,470
+here's the agent of recommend and she's
+
+564
+00:23:06,470 --> 00:23:08,210
+the owner of a cottage so you can see
+
+565
+00:23:08,210 --> 00:23:11,179
+Fiona owner of cottage and there's
+
+566
+00:23:11,179 --> 00:23:12,410
+another feature and discovery that
+
+567
+00:23:12,410 --> 00:23:14,179
+allows you to find evidence for use but
+
+568
+00:23:14,179 --> 00:23:15,350
+we're not going to be coloring that in
+
+569
+00:23:15,350 --> 00:23:17,780
+this video now there is a little bit
+
+570
+00:23:17,780 --> 00:23:19,850
+more of an interesting map here so you
+
+571
+00:23:19,850 --> 00:23:21,890
+could take a look at Fiona she's located
+
+572
+00:23:21,890 --> 00:23:25,760
+at downtown now Fiona is also located at
+
+573
+00:23:25,760 --> 00:23:27,260
+Austin
+
+574
+00:23:27,260 --> 00:23:30,740
+now downtown is located at Austin and
+
+575
+00:23:30,740 --> 00:23:33,890
+downtown is located at self and South is
+
+576
+00:23:33,890 --> 00:23:36,049
+also located at downtown so there's a
+
+577
+00:23:36,049 --> 00:23:37,760
+sort of circular reference here between
+
+578
+00:23:37,760 --> 00:23:41,299
+these two entities now if you take a
+
+579
+00:23:41,299 --> 00:23:42,500
+look over here there's also an
+
+580
+00:23:42,500 --> 00:23:44,929
+organization or Congress that's based in
+
+581
+00:23:44,929 --> 00:23:46,850
+and is a part of the South which is
+
+582
+00:23:46,850 --> 00:23:48,620
+located in downtown which is located in
+
+583
+00:23:48,620 --> 00:23:50,720
+Austin so as you can see you're able to
+
+584
+00:23:50,720 --> 00:23:53,540
+create this really complex graphs you
+
+585
+00:23:53,540 --> 00:23:55,580
+can take a look at Congress and you can
+
+586
+00:23:55,580 --> 00:23:57,740
+see that Congress is technically located
+
+587
+00:23:57,740 --> 00:24:00,440
+in Austin because Congress is based in
+
+588
+00:24:00,440 --> 00:24:02,660
+self which is located in downtown which
+
+589
+00:24:02,660 --> 00:24:04,280
+is located in Austin so you can make
+
+590
+00:24:04,280 --> 00:24:06,620
+these really complex relationships you
+
+591
+00:24:06,620 --> 00:24:07,730
+can also take a look at some more things
+
+592
+00:24:07,730 --> 00:24:09,500
+that are located in downtown with for
+
+593
+00:24:09,500 --> 00:24:11,840
+example Hyde Park is located in downtown
+
+594
+00:24:11,840 --> 00:24:13,760
+there's a neighborhood there many
+
+595
+00:24:13,760 --> 00:24:16,580
+restaurants inside of downtown there are
+
+596
+00:24:16,580 --> 00:24:18,410
+the Boston streets cars they're all in
+
+597
+00:24:18,410 --> 00:24:21,470
+the downtown and so as you can see this
+
+598
+00:24:21,470 --> 00:24:23,960
+is just a small fraction of the
+
+599
+00:24:23,960 --> 00:24:25,850
+knowledge that discovery was able to
+
+600
+00:24:25,850 --> 00:24:29,660
+extract from the Airbnb reviews and
+
+601
+00:24:29,660 --> 00:24:31,429
+again the Airbnb reviews weren't even
+
+602
+00:24:31,429 --> 00:24:33,200
+written with the intention of providing
+
+603
+00:24:33,200 --> 00:24:35,780
+this kind of knowledge but still lots of
+
+604
+00:24:35,780 --> 00:24:37,160
+discovery was able to understand that
+
+605
+00:24:37,160 --> 00:24:39,049
+natural language and provide that
+
+606
+00:24:39,049 --> 00:24:41,360
+information to us but we've got a little
+
+607
+00:24:41,360 --> 00:24:42,679
+bit more of an interesting data set
+
+608
+00:24:42,679 --> 00:24:45,110
+that's meant to actually provide this
+
+609
+00:24:45,110 --> 00:24:47,780
+kind of knowledge now this data set is
+
+610
+00:24:47,780 --> 00:24:49,700
+actually two documents just two
+
+611
+00:24:49,700 --> 00:24:52,520
+documents in contrast to the 999
+
+612
+00:24:52,520 --> 00:24:54,470
+available over here in the Airbnb
+
+613
+00:24:54,470 --> 00:24:57,860
+ratings however if you go back over to
+
+614
+00:24:57,860 --> 00:24:59,510
+manage data it's a very very interesting
+
+615
+00:24:59,510 --> 00:25:02,059
+data set see the Danes that I'm talking
+
+616
+00:25:02,059 --> 00:25:04,610
+about two biographies of Henrietta Lacks
+
+617
+00:25:04,610 --> 00:25:06,140
+now just in case you're unaware
+
+618
+00:25:06,140 --> 00:25:09,020
+Henrietta Lacks or actually was
+
+619
+00:25:09,020 --> 00:25:10,880
+suffering from a kind of cancer back in
+
+620
+00:25:10,880 --> 00:25:15,620
+nineteen around the 1950s and this kind
+
+621
+00:25:15,620 --> 00:25:17,809
+of cancer was actually special because
+
+622
+00:25:17,809 --> 00:25:19,429
+the cancer she had made her the first
+
+623
+00:25:19,429 --> 00:25:21,620
+person to have cells that we live and
+
+624
+00:25:21,620 --> 00:25:23,510
+actually thrive outside of the human
+
+625
+00:25:23,510 --> 00:25:26,120
+body so you can actually buy HeLa cells
+
+626
+00:25:26,120 --> 00:25:27,890
+as they're called and actually what
+
+627
+00:25:27,890 --> 00:25:30,950
+experiments on them and so that's why
+
+628
+00:25:30,950 --> 00:25:33,410
+we've solved uncertainly solve but we've
+
+629
+00:25:33,410 --> 00:25:35,000
+had major breakthrough some different
+
+630
+00:25:35,000 --> 00:25:38,330
+areas like cancer it all tons it four
+
+631
+00:25:38,330 --> 00:25:40,040
+kinds of areas because we were able to
+
+632
+00:25:40,040 --> 00:25:41,170
+use those difference
+
+633
+00:25:41,170 --> 00:25:42,910
+and so of course our client people
+
+634
+00:25:42,910 --> 00:25:44,260
+different people who write biographies
+
+635
+00:25:44,260 --> 00:25:47,830
+on Henrietta Lacks and so we take these
+
+636
+00:25:47,830 --> 00:25:49,690
+biographies more specifically the one by
+
+637
+00:25:49,690 --> 00:25:52,360
+Rebecca Skloot and also the Wikipedia
+
+638
+00:25:52,360 --> 00:25:54,790
+page actually relax and upload them into
+
+639
+00:25:54,790 --> 00:25:57,220
+Watson discovery using that same Airbnb
+
+640
+00:25:57,220 --> 00:25:59,140
+config so that we have the mentions and
+
+641
+00:25:59,140 --> 00:26:01,170
+the entities and the relationships all
+
+642
+00:26:01,170 --> 00:26:06,340
+all in the India in figuration as you
+
+643
+00:26:06,340 --> 00:26:08,050
+can see I tells us it's 50 percent
+
+644
+00:26:08,050 --> 00:26:10,360
+positive 50 percent negative it gives us
+
+645
+00:26:10,360 --> 00:26:12,610
+some keywords Henrietta Lacks but Bette
+
+646
+00:26:12,610 --> 00:26:15,970
+lacks Carver a personal Crownsville
+
+647
+00:26:15,970 --> 00:26:18,790
+state hospital David Lacs and these are
+
+648
+00:26:18,790 --> 00:26:20,860
+all related to of course the biography
+
+649
+00:26:20,860 --> 00:26:23,200
+tells us a little bit about the content
+
+650
+00:26:23,200 --> 00:26:24,910
+and it also tell us about a few
+
+651
+00:26:24,910 --> 00:26:26,770
+different concepts of course he'll as I
+
+652
+00:26:26,770 --> 00:26:28,240
+was mentioning the HeLa cells are
+
+653
+00:26:28,240 --> 00:26:30,610
+talking about cell cultures Rebecca
+
+654
+00:26:30,610 --> 00:26:32,170
+Skloot who's who actually wrote the
+
+655
+00:26:32,170 --> 00:26:34,900
+biography and Henrietta Lacks herself
+
+656
+00:26:34,900 --> 00:26:37,030
+but I know what you're interested in
+
+657
+00:26:37,030 --> 00:26:38,170
+you're interested in the knowledge
+
+658
+00:26:38,170 --> 00:26:39,850
+graphs let's head over to the crosswords
+
+659
+00:26:39,850 --> 00:26:42,640
+now let's just say that we want to find
+
+660
+00:26:42,640 --> 00:26:45,100
+the relationship all the relationships
+
+661
+00:26:45,100 --> 00:26:48,370
+that Henrietta Lacks has as you can see
+
+662
+00:26:48,370 --> 00:26:51,190
+these are all a different kind these are
+
+663
+00:26:51,190 --> 00:26:52,420
+all the different relationships that
+
+664
+00:26:52,420 --> 00:26:54,790
+Henrietta Lacks has now Henrietta Lacks
+
+665
+00:26:54,790 --> 00:26:58,060
+has attribute cancer health condition
+
+666
+00:26:58,060 --> 00:26:59,950
+Watson's able to find these really
+
+667
+00:26:59,950 --> 00:27:02,440
+complex relationships just for natural
+
+668
+00:27:02,440 --> 00:27:04,780
+language and then the best part is that
+
+669
+00:27:04,780 --> 00:27:06,280
+you can combine it with other machine
+
+670
+00:27:06,280 --> 00:27:07,990
+learning services to say hey something
+
+671
+00:27:07,990 --> 00:27:10,120
+like does Henrietta Lacks suffer from
+
+672
+00:27:10,120 --> 00:27:12,340
+cancer and actually convert that to
+
+673
+00:27:12,340 --> 00:27:14,950
+actually find a certain kind of
+
+674
+00:27:14,950 --> 00:27:16,900
+attribute or entity in this knowledge
+
+675
+00:27:16,900 --> 00:27:19,540
+graph but anyway let's just say I go
+
+676
+00:27:19,540 --> 00:27:22,960
+ahead inspect and I run inside of the
+
+677
+00:27:22,960 --> 00:27:25,150
+console that quick three liner of code I
+
+678
+00:27:25,150 --> 00:27:25,840
+was telling you about
+
+679
+00:27:25,840 --> 00:27:29,110
+as you can see we get these these graph
+
+680
+00:27:29,110 --> 00:27:32,020
+is an x over these graphs this sort of
+
+681
+00:27:32,020 --> 00:27:34,420
+graph this format text so if I were to
+
+682
+00:27:34,420 --> 00:27:37,000
+copy that into web graph is again as you
+
+683
+00:27:37,000 --> 00:27:38,920
+can see this is the knowledge graphic
+
+684
+00:27:38,920 --> 00:27:42,580
+gives us four four four just a few of
+
+685
+00:27:42,580 --> 00:27:44,560
+the entities inside of the solid graph
+
+686
+00:27:44,560 --> 00:27:46,480
+of course there's a lot more you could
+
+687
+00:27:46,480 --> 00:27:48,700
+extract if you wanted to but this is
+
+688
+00:27:48,700 --> 00:27:50,860
+what I've extracted for now so as you
+
+689
+00:27:50,860 --> 00:27:52,720
+can see this is actually great because
+
+690
+00:27:52,720 --> 00:27:53,920
+it says Henry
+
+691
+00:27:53,920 --> 00:27:56,290
+relax part of many elderly because Henry
+
+692
+00:27:56,290 --> 00:27:58,840
+Lux was elderly Henry relaxes also the
+
+693
+00:27:58,840 --> 00:28:01,450
+parent of Deb relaxed which again is
+
+694
+00:28:01,450 --> 00:28:05,110
+correct can relax also resides in clover
+
+695
+00:28:05,110 --> 00:28:07,360
+which is a geopolitical entity now
+
+696
+00:28:07,360 --> 00:28:10,720
+Deborah Laxmi more interesting Oprah
+
+697
+00:28:10,720 --> 00:28:12,970
+Winfrey actually plays role of Deborah
+
+698
+00:28:12,970 --> 00:28:14,980
+lakhs in a movie
+
+699
+00:28:14,980 --> 00:28:17,410
+however whispers is not that movie
+
+700
+00:28:17,410 --> 00:28:18,900
+that's a separate ecatel together
+
+701
+00:28:18,900 --> 00:28:21,880
+and Deborah Lacs is also part of many
+
+702
+00:28:21,880 --> 00:28:24,160
+descendants and these descendants of
+
+703
+00:28:24,160 --> 00:28:26,830
+Henrietta Lacks are located in the South
+
+704
+00:28:26,830 --> 00:28:28,930
+just like Deborah Lacs is located in the
+
+705
+00:28:28,930 --> 00:28:31,510
+South actually also part of the family
+
+706
+00:28:31,510 --> 00:28:35,740
+the lacs family and she's also the agent
+
+707
+00:28:35,740 --> 00:28:37,900
+of informs because she's informing
+
+708
+00:28:37,900 --> 00:28:40,090
+people about this by participating in
+
+709
+00:28:40,090 --> 00:28:41,560
+talks all the descendants are
+
+710
+00:28:41,560 --> 00:28:44,230
+participating in talks as well as Deb
+
+711
+00:28:44,230 --> 00:28:46,390
+relax if you go over here here are some
+
+712
+00:28:46,390 --> 00:28:48,430
+entities that aren't actually directly
+
+713
+00:28:48,430 --> 00:28:50,020
+linked to this part of the knowledge
+
+714
+00:28:50,020 --> 00:28:52,000
+graph however if we were to get out
+
+715
+00:28:52,000 --> 00:28:54,100
+every single relationship in this
+
+716
+00:28:54,100 --> 00:28:55,510
+knowledge graph there would probably be
+
+717
+00:28:55,510 --> 00:28:58,030
+some kind of link here now again this is
+
+718
+00:28:58,030 --> 00:29:00,220
+why this is so interesting we can see
+
+719
+00:29:00,220 --> 00:29:02,020
+that there's instructor which is a
+
+720
+00:29:02,020 --> 00:29:04,300
+person who is employed by Bellarmine
+
+721
+00:29:04,300 --> 00:29:06,400
+University which is an organization and
+
+722
+00:29:06,400 --> 00:29:08,410
+this organization is based in Louisville
+
+723
+00:29:08,410 --> 00:29:10,900
+which is a geopolitical entity now
+
+724
+00:29:10,900 --> 00:29:13,030
+Center College is based in Danville and
+
+725
+00:29:13,030 --> 00:29:15,160
+most of Danville and Louisville are
+
+726
+00:29:15,160 --> 00:29:17,520
+located in Kentucky
+
+727
+00:29:17,520 --> 00:29:21,550
+so they're both located in Kentucky as
+
+728
+00:29:21,550 --> 00:29:24,750
+rich tell us they're located in Kentucky
+
+729
+00:29:24,750 --> 00:29:28,690
+and so this is the knowledge graph and
+
+730
+00:29:28,690 --> 00:29:31,200
+discovery built of just a few entities
+
+731
+00:29:31,200 --> 00:29:35,110
+imagine having to go through that entire
+
+732
+00:29:35,110 --> 00:29:37,330
+biography as human and actually having
+
+733
+00:29:37,330 --> 00:29:39,250
+to extract these cash relationships make
+
+734
+00:29:39,250 --> 00:29:41,560
+notes about this now instead of you
+
+735
+00:29:41,560 --> 00:29:43,530
+actually really through all that text
+
+736
+00:29:43,530 --> 00:29:46,900
+and actually having it be impossible for
+
+737
+00:29:46,900 --> 00:29:48,460
+many computer programs to go through
+
+738
+00:29:48,460 --> 00:29:50,530
+that text you can use programs like
+
+739
+00:29:50,530 --> 00:29:52,570
+Watson discovery to create knowledge
+
+740
+00:29:52,570 --> 00:29:54,190
+graphs convert the structure of
+
+741
+00:29:54,190 --> 00:29:55,780
+information take a look at all the
+
+742
+00:29:55,780 --> 00:29:57,310
+different relationships that exist
+
+743
+00:29:57,310 --> 00:29:59,800
+inside this text and of course make your
+
+744
+00:29:59,800 --> 00:30:02,590
+life million times easier by converting
+
+745
+00:30:02,590 --> 00:30:04,810
+unstructured data and structured data
+
+746
+00:30:04,810 --> 00:30:07,050
+that you can make use of in
+
+747
+00:30:07,050 --> 00:30:09,640
+yeah great job explaining that I think
+
+748
+00:30:09,640 --> 00:30:11,470
+this crap will make lives at home so
+
+749
+00:30:11,470 --> 00:30:12,340
+that's my radio
+
+750
+00:30:12,340 --> 00:30:14,740
+it's very soon you know very soon as you
+
+751
+00:30:14,740 --> 00:30:16,840
+create a code pattern once but once the
+
+752
+00:30:16,840 --> 00:30:19,060
+Watson discovery knowledge graph is in
+
+753
+00:30:19,060 --> 00:30:21,550
+of course it is completely available to
+
+754
+00:30:21,550 --> 00:30:22,630
+the public because currently it's only
+
+755
+00:30:22,630 --> 00:30:24,550
+in in advance and the code pattern
+
+756
+00:30:24,550 --> 00:30:26,950
+should allow you to upload documents and
+
+757
+00:30:26,950 --> 00:30:28,750
+automatically make huge knowledge graphs
+
+758
+00:30:28,750 --> 00:30:29,590
+like this one that you can actually
+
+759
+00:30:29,590 --> 00:30:31,570
+jurors the 3d now we need to join code
+
+760
+00:30:31,570 --> 00:30:34,090
+pattern yes looking forward to it
+
+761
+00:30:34,090 --> 00:30:38,500
+thank you alright and so that's how you
+
+762
+00:30:38,500 --> 00:30:41,290
+can use the Watson knowledge graph or
+
+763
+00:30:41,290 --> 00:30:43,120
+Watson discovery services knowledge
+
+764
+00:30:43,120 --> 00:30:45,460
+graph to convert unstructured data into
+
+765
+00:30:45,460 --> 00:30:47,650
+structured data alright so that's how
+
+766
+00:30:47,650 --> 00:30:49,240
+you can use water discoveries new
+
+767
+00:30:49,240 --> 00:30:50,950
+knowledge graph feature hopefully very
+
+768
+00:30:50,950 --> 00:30:53,170
+soon it becomes out of beta and you can
+
+769
+00:30:53,170 --> 00:30:54,880
+use it in your free trial instances or
+
+770
+00:30:54,880 --> 00:30:57,040
+light instances and your regular
+
+771
+00:30:57,040 --> 00:30:59,140
+instances as well so thank you very much
+
+772
+00:30:59,140 --> 00:31:00,700
+rich for joining you today glad to have
+
+773
+00:31:00,700 --> 00:31:02,550
+you on the show my pleasure thank you
+
+774
+00:31:02,550 --> 00:31:04,660
+opportunity working with you appreciate
+
+775
+00:31:04,660 --> 00:31:04,900
+it
+
+776
+00:31:04,900 --> 00:31:06,460
+thank you very much glad to have you on
+
+777
+00:31:06,460 --> 00:31:08,470
+so apart from that if you did like the
+
+778
+00:31:08,470 --> 00:31:09,640
+video and you want to see more content
+
+779
+00:31:09,640 --> 00:31:10,930
+just like this one please do consider
+
+780
+00:31:10,930 --> 00:31:12,730
+liking the video and sharing it with
+
+781
+00:31:12,730 --> 00:31:14,170
+people you believe may be able to
+
+782
+00:31:14,170 --> 00:31:15,580
+benefit from it apart from that if you
+
+783
+00:31:15,580 --> 00:31:16,990
+have any questions suggestions or
+
+784
+00:31:16,990 --> 00:31:19,150
+feedback please do go ahead and contact
+
+785
+00:31:19,150 --> 00:31:21,550
+either rich or I so rich how can people
+
+786
+00:31:21,550 --> 00:31:24,310
+contact you you pull my personal IBM
+
+787
+00:31:24,310 --> 00:31:25,750
+email account which I think you'll
+
+788
+00:31:25,750 --> 00:31:27,940
+provide a link to in your video perfect
+
+789
+00:31:27,940 --> 00:31:29,590
+so rich is email address will be down in
+
+790
+00:31:29,590 --> 00:31:31,450
+the description below also my email
+
+791
+00:31:31,450 --> 00:31:33,400
+address my Twitter will be in the
+
+792
+00:31:33,400 --> 00:31:36,070
+description so if you'd like to ask rich
+
+793
+00:31:36,070 --> 00:31:37,780
+variety questions please do feel free to
+
+794
+00:31:37,780 --> 00:31:39,490
+contact us or even just leave a comment
+
+795
+00:31:39,490 --> 00:31:41,950
+down below and we'd love to get back to
+
+796
+00:31:41,950 --> 00:31:42,250
+you
+
+797
+00:31:42,250 --> 00:31:43,900
+apart from that if you do love the
+
+798
+00:31:43,900 --> 00:31:45,070
+videos on this channel and you want to
+
+799
+00:31:45,070 --> 00:31:46,600
+see more content like this please do
+
+800
+00:31:46,600 --> 00:31:48,020
+consider subscribing as well
+
+801
+00:31:48,020 --> 00:31:50,720
+notifications so you send you receive an
+
+802
+00:31:50,720 --> 00:31:52,520
+email every single time I upload a new
+
+803
+00:31:52,520 --> 00:31:54,470
+video so thank you very much and thank
+
+804
+00:31:54,470 --> 00:31:56,270
+you rich alright thank you thank you bye
+
+805
+00:31:56,270 --> 00:31:59,020
+bye bye buddy

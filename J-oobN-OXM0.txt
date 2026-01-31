@@ -1,0 +1,831 @@
+1
+00:00:00,280 --> 00:00:13,910
+[Music]
+
+2
+00:00:13,910 --> 00:00:16,710
+so hello there and welcome to another
+
+3
+00:00:16,710 --> 00:00:17,699
+tutorial
+
+4
+00:00:17,699 --> 00:00:20,010
+my name is Tanmay Bakshi and this time
+
+5
+00:00:20,010 --> 00:00:21,810
+we're going to be going over how you can
+
+6
+00:00:21,810 --> 00:00:24,090
+use dropout layers and convolutional
+
+7
+00:00:24,090 --> 00:00:26,220
+neural networks in order to reduce the
+
+8
+00:00:26,220 --> 00:00:28,920
+chances overfitting now to begin though
+
+9
+00:00:28,920 --> 00:00:31,380
+a little background now what are you
+
+10
+00:00:31,380 --> 00:00:33,780
+trading a convolutional neural network
+
+11
+00:00:33,780 --> 00:00:35,100
+you know it's an extremely you know
+
+12
+00:00:35,100 --> 00:00:37,680
+computationally expensive process and
+
+13
+00:00:37,680 --> 00:00:39,360
+there are lots of measures in place to
+
+14
+00:00:39,360 --> 00:00:42,270
+try and prevent overfitting just like
+
+15
+00:00:42,270 --> 00:00:44,820
+drop out layers but one thing I'd like
+
+16
+00:00:44,820 --> 00:00:46,710
+to say here is that specially
+
+17
+00:00:46,710 --> 00:00:48,390
+convolutional neural networks are
+
+18
+00:00:48,390 --> 00:00:51,000
+notorious for overfitting they will over
+
+19
+00:00:51,000 --> 00:00:53,129
+fit if you do not give enough data or
+
+20
+00:00:53,129 --> 00:00:54,780
+safeguard against it by using an
+
+21
+00:00:54,780 --> 00:00:56,879
+algorithm like early stopping or these
+
+22
+00:00:56,879 --> 00:00:59,340
+dropout layers and so like for example
+
+23
+00:00:59,340 --> 00:01:00,780
+if you don't have enough data
+
+24
+00:01:00,780 --> 00:01:02,760
+it'll over fit to that training data and
+
+25
+00:01:02,760 --> 00:01:05,489
+it won't work on your test data and so
+
+26
+00:01:05,489 --> 00:01:07,799
+that's why this looks like imagenet are
+
+27
+00:01:07,799 --> 00:01:10,020
+great for scene ends because cnn's have
+
+28
+00:01:10,020 --> 00:01:12,270
+so many trampled parameters that you
+
+29
+00:01:12,270 --> 00:01:14,790
+need as much data as possible to allow
+
+30
+00:01:14,790 --> 00:01:16,979
+them to generalize to the concept of
+
+31
+00:01:16,979 --> 00:01:19,259
+what they're trying to learn and so
+
+32
+00:01:19,259 --> 00:01:20,640
+that's what i'm going to be showing you
+
+33
+00:01:20,640 --> 00:01:22,710
+how you can do today how you can
+
+34
+00:01:22,710 --> 00:01:24,960
+increase the generalization of your own
+
+35
+00:01:24,960 --> 00:01:27,299
+network instead of having an overfit to
+
+36
+00:01:27,299 --> 00:01:30,180
+a specific training set that's actually
+
+37
+00:01:30,180 --> 00:01:34,020
+came here probably know at the end of
+
+38
+00:01:34,020 --> 00:01:37,740
+every rule network you've got this fully
+
+39
+00:01:37,740 --> 00:01:39,600
+connected or as they're called dense
+
+40
+00:01:39,600 --> 00:01:42,689
+players now they need to act as regular
+
+41
+00:01:42,689 --> 00:01:45,869
+be forward neural networks so if I were
+
+42
+00:01:45,869 --> 00:01:49,920
+to draw say some some hidden neurons say
+
+43
+00:01:49,920 --> 00:01:54,600
+for hidden neurons alright so we've got
+
+44
+00:01:54,600 --> 00:01:56,780
+four circles representing four neurons
+
+45
+00:01:56,780 --> 00:02:00,570
+and then if I were to say CN n so the
+
+46
+00:02:00,570 --> 00:02:02,180
+output from AC and
+
+47
+00:02:02,180 --> 00:02:05,690
+and can actually become the input for
+
+48
+00:02:05,690 --> 00:02:08,210
+this beep over here I'll network and so
+
+49
+00:02:08,210 --> 00:02:10,670
+what would happen is the same man with
+
+50
+00:02:10,670 --> 00:02:18,290
+feed data into the neural network and so
+
+51
+00:02:18,290 --> 00:02:19,850
+we're assuming there's one more dense
+
+52
+00:02:19,850 --> 00:02:21,800
+layer here the beginning of the dense
+
+53
+00:02:21,800 --> 00:02:24,230
+layers here and then that access input
+
+54
+00:02:24,230 --> 00:02:26,810
+for this hidden layer what status let's
+
+55
+00:02:26,810 --> 00:02:28,820
+just say you're building a kind of dog
+
+56
+00:02:28,820 --> 00:02:30,620
+classifier all right
+
+57
+00:02:30,620 --> 00:02:32,360
+and so the first neuron represents cat
+
+58
+00:02:32,360 --> 00:02:34,130
+and the second neuron for output
+
+59
+00:02:34,130 --> 00:02:36,890
+represents a dog and so let's just say
+
+60
+00:02:36,890 --> 00:02:39,340
+we're gonna draw two neurons here
+
+61
+00:02:39,340 --> 00:02:43,520
+representing our output neurons okay I
+
+62
+00:02:43,520 --> 00:02:47,380
+know what happens all of our neurons
+
+63
+00:02:47,380 --> 00:02:50,570
+would actually connect to all of our
+
+64
+00:02:50,570 --> 00:02:52,280
+hidden neurons would connect to all of
+
+65
+00:02:52,280 --> 00:03:00,590
+our output neurons and then so so this
+
+66
+00:03:00,590 --> 00:03:02,600
+is what our fully connected or dense
+
+67
+00:03:02,600 --> 00:03:05,570
+layer looks like now what we're trying
+
+68
+00:03:05,570 --> 00:03:07,910
+to do is reduce overfitting in this
+
+69
+00:03:07,910 --> 00:03:09,560
+section of the convolutional neural
+
+70
+00:03:09,560 --> 00:03:12,709
+network because in this part you know we
+
+71
+00:03:12,709 --> 00:03:14,360
+can also incorporate dropout layers and
+
+72
+00:03:14,360 --> 00:03:15,860
+CNN itself but that's an entirely
+
+73
+00:03:15,860 --> 00:03:18,590
+separate video topic but today which we
+
+74
+00:03:18,590 --> 00:03:20,570
+talk about dropout layers and cnn's
+
+75
+00:03:20,570 --> 00:03:24,380
+inside of the dense layers so let's just
+
+76
+00:03:24,380 --> 00:03:26,090
+say we were to implement a dropout layer
+
+77
+00:03:26,090 --> 00:03:28,760
+and this dropout layer has a probability
+
+78
+00:03:28,760 --> 00:03:30,170
+value I don't tell you what the
+
+79
+00:03:30,170 --> 00:03:31,600
+probability doesn't just for a moment
+
+80
+00:03:31,600 --> 00:03:34,280
+fifty percent there is a 50 percent
+
+81
+00:03:34,280 --> 00:03:36,709
+chance that any neuron here can be
+
+82
+00:03:36,709 --> 00:03:39,560
+dropped up so what will happen is let's
+
+83
+00:03:39,560 --> 00:03:41,120
+just say we've got you know we've got
+
+84
+00:03:41,120 --> 00:03:43,310
+the same layer each neuron would be
+
+85
+00:03:43,310 --> 00:03:45,590
+assigned a random value from 1 to 100
+
+86
+00:03:45,590 --> 00:03:50,360
+okay let's just say these values are 50
+
+87
+00:03:50,360 --> 00:03:59,250
+and 10 and 59 and 5
+
+88
+00:03:59,250 --> 00:04:03,990
+okay so that what's happening is now is
+
+89
+00:04:03,990 --> 00:04:06,660
+now the actual logic behind behind
+
+90
+00:04:06,660 --> 00:04:09,390
+choosing the in a 50 percent random drop
+
+91
+00:04:09,390 --> 00:04:11,430
+out isn't actually no just generating
+
+92
+00:04:11,430 --> 00:04:12,960
+random number and checking if it's you
+
+93
+00:04:12,960 --> 00:04:15,510
+know 1 to 50 then no or you know
+
+94
+00:04:15,510 --> 00:04:18,810
+otherwise yes but let's just call it I'm
+
+95
+00:04:18,810 --> 00:04:20,370
+going to represent it for you to show
+
+96
+00:04:20,370 --> 00:04:23,010
+you that there is a 50% probability that
+
+97
+00:04:23,010 --> 00:04:25,020
+one of these neurons will be dropped out
+
+98
+00:04:25,020 --> 00:04:27,300
+so each neuron is assigned the value
+
+99
+00:04:27,300 --> 00:04:30,360
+then we check if we go through each
+
+100
+00:04:30,360 --> 00:04:38,640
+value if it is then we'll that neurons
+
+101
+00:04:38,640 --> 00:04:40,950
+been dropped out exactly that means in
+
+102
+00:04:40,950 --> 00:04:43,970
+just a moment and so as you can see
+
+103
+00:04:43,970 --> 00:04:47,310
+neuron number one and your number 3 have
+
+104
+00:04:47,310 --> 00:04:50,100
+been dropped out this means they will
+
+105
+00:04:50,100 --> 00:04:52,530
+basically be completely inactive they
+
+106
+00:04:52,530 --> 00:04:54,240
+will pretend as if they're not there and
+
+107
+00:04:54,240 --> 00:04:56,250
+the neural net will not know of their
+
+108
+00:04:56,250 --> 00:04:59,700
+existence what this means is that for
+
+109
+00:04:59,700 --> 00:05:02,040
+the one pass that's currently doing
+
+110
+00:05:02,040 --> 00:05:04,710
+these neurons won't exist at all
+
+111
+00:05:04,710 --> 00:05:07,050
+it so it's going to happen is the
+
+112
+00:05:07,050 --> 00:05:09,510
+neurons themselves as well as all of
+
+113
+00:05:09,510 --> 00:05:12,180
+their connections now mean nothing
+
+114
+00:05:12,180 --> 00:05:16,800
+they're not there and so when you see
+
+115
+00:05:16,800 --> 00:05:18,870
+them provides input to this dense layer
+
+116
+00:05:18,870 --> 00:05:21,450
+what's happening is only these neurons
+
+117
+00:05:21,450 --> 00:05:23,970
+are activated and only these neurons
+
+118
+00:05:23,970 --> 00:05:26,640
+mean is we don't pull it and let's just
+
+119
+00:05:26,640 --> 00:05:28,560
+say the output layer turns ugly like
+
+120
+00:05:28,560 --> 00:05:39,890
+zero zero point six seven and four dogs
+
+121
+00:05:39,890 --> 00:05:44,820
+0.89 but the problem is that it was
+
+122
+00:05:44,820 --> 00:05:47,400
+actually cat picture but this represents
+
+123
+00:05:47,400 --> 00:05:51,110
+cat probability and this represents dog
+
+124
+00:05:51,110 --> 00:05:54,660
+probability and so it's classifying this
+
+125
+00:05:54,660 --> 00:05:57,060
+cat pictures doll so you've been on the
+
+126
+00:05:57,060 --> 00:05:59,070
+back propagation to increase the score
+
+127
+00:05:59,070 --> 00:06:01,550
+for cat and decrease the score for dog
+
+128
+00:06:01,550 --> 00:06:05,370
+but there is another problem what do we
+
+129
+00:06:05,370 --> 00:06:06,930
+do with these john bell later dropout
+
+130
+00:06:06,930 --> 00:06:09,090
+neurons well it's actually quite simple
+
+131
+00:06:09,090 --> 00:06:11,280
+ignore them again when you back
+
+132
+00:06:11,280 --> 00:06:11,930
+propagate
+
+133
+00:06:11,930 --> 00:06:14,270
+only backpropagate on the weights that
+
+134
+00:06:14,270 --> 00:06:16,520
+are active and the muons are active the
+
+135
+00:06:16,520 --> 00:06:18,500
+ones that are remembering what this will
+
+136
+00:06:18,500 --> 00:06:21,229
+allow us to do is retain the knowledge
+
+137
+00:06:21,229 --> 00:06:23,840
+that these neurons and it's connections
+
+138
+00:06:23,840 --> 00:06:26,330
+store and when it retains its knowledge
+
+139
+00:06:26,330 --> 00:06:28,250
+well in that case we haven't changed it
+
+140
+00:06:28,250 --> 00:06:30,680
+at all so the neural network still has
+
+141
+00:06:30,680 --> 00:06:32,509
+some previous knowledge but also has
+
+142
+00:06:32,509 --> 00:06:34,190
+some newer knowledge and that doesn't
+
+143
+00:06:34,190 --> 00:06:35,930
+mean and that means that I mean with
+
+144
+00:06:35,930 --> 00:06:37,490
+overfitting that means you're basically
+
+145
+00:06:37,490 --> 00:06:39,380
+throwing out older knowledge using new
+
+146
+00:06:39,380 --> 00:06:40,759
+knowledge and the knowledge that's
+
+147
+00:06:40,759 --> 00:06:42,770
+that's there mostly in the data set
+
+148
+00:06:42,770 --> 00:06:44,180
+because that's the one that that
+
+149
+00:06:44,180 --> 00:06:45,500
+prevails the most on the back
+
+150
+00:06:45,500 --> 00:06:50,479
+propagating that simply does not have a
+
+151
+00:06:50,479 --> 00:06:53,600
+chance to survive because it's keeping
+
+152
+00:06:53,600 --> 00:06:55,669
+all the knowledge as well as newer
+
+153
+00:06:55,669 --> 00:06:57,940
+knowledge and it's allows us to reduce
+
+154
+00:06:57,940 --> 00:07:01,699
+over thing by so much and next time say
+
+155
+00:07:01,699 --> 00:07:03,500
+maybe this neuron this neuron are
+
+156
+00:07:03,500 --> 00:07:05,210
+dropped outer this you're on this one
+
+157
+00:07:05,210 --> 00:07:06,770
+end or this one in this one it's
+
+158
+00:07:06,770 --> 00:07:10,070
+completely random but it allows for us
+
+159
+00:07:10,070 --> 00:07:11,720
+never been overfeeding it's such a
+
+160
+00:07:11,720 --> 00:07:14,930
+simple yet intuitive way because what
+
+161
+00:07:14,930 --> 00:07:18,199
+happens again is it's not just learning
+
+162
+00:07:18,199 --> 00:07:20,930
+new things it's remembering what it has
+
+163
+00:07:20,930 --> 00:07:23,419
+already learned and this allows it to
+
+164
+00:07:23,419 --> 00:07:25,900
+generalize for the concept of cat and
+
+165
+00:07:25,900 --> 00:07:28,820
+generalize to the concept of a dog in a
+
+166
+00:07:28,820 --> 00:07:32,240
+much much better way and this allows it
+
+167
+00:07:32,240 --> 00:07:34,669
+to give you correct output as part of
+
+168
+00:07:34,669 --> 00:07:37,099
+the CNN now of course these same drop
+
+169
+00:07:37,099 --> 00:07:38,630
+out layers can be incorporated in
+
+170
+00:07:38,630 --> 00:07:41,750
+convolution layers and more but I'm not
+
+171
+00:07:41,750 --> 00:07:43,130
+going to be covering that yet as that
+
+172
+00:07:43,130 --> 00:07:45,380
+slightly different the logic behind is
+
+173
+00:07:45,380 --> 00:07:46,580
+slightly different although the concept
+
+174
+00:07:46,580 --> 00:07:49,159
+is entirely the same retain older
+
+175
+00:07:49,159 --> 00:07:50,720
+knowledge while still learning new
+
+176
+00:07:50,720 --> 00:07:53,870
+knowledge or gaining new knowledge but
+
+177
+00:07:53,870 --> 00:07:56,030
+again that's a topic for a separate
+
+178
+00:07:56,030 --> 00:07:58,159
+video all right so I really do hope
+
+179
+00:07:58,159 --> 00:07:59,750
+you're able to learn something from this
+
+180
+00:07:59,750 --> 00:08:01,909
+video and of course though if you did
+
+181
+00:08:01,909 --> 00:08:03,080
+learn from this video please make sure
+
+182
+00:08:03,080 --> 00:08:04,940
+to leave a like down below so it really
+
+183
+00:08:04,940 --> 00:08:07,099
+does help out a lot and of course if you
+
+184
+00:08:07,099 --> 00:08:08,360
+believe this could help anybody else you
+
+185
+00:08:08,360 --> 00:08:09,949
+know like your friends and family please
+
+186
+00:08:09,949 --> 00:08:11,720
+do make sure to share the video as well
+
+187
+00:08:11,720 --> 00:08:14,790
+all right any more questions
+
+188
+00:08:14,790 --> 00:08:16,830
+feedback from this or any of my other
+
+189
+00:08:16,830 --> 00:08:18,240
+videos please leave it down in the
+
+190
+00:08:18,240 --> 00:08:19,140
+comment section below
+
+191
+00:08:19,140 --> 00:08:21,510
+tweet it to me act as many or email it
+
+192
+00:08:21,510 --> 00:08:23,910
+to me at 10 G mani at gmail.com and my
+
+193
+00:08:23,910 --> 00:08:25,770
+contact information will be in the
+
+194
+00:08:25,770 --> 00:08:27,990
+description below alright so thank you
+
+195
+00:08:27,990 --> 00:08:29,520
+very much for watching today but you can
+
+196
+00:08:29,520 --> 00:08:31,080
+really like that content and you want to
+
+197
+00:08:31,080 --> 00:08:32,490
+see a lot more of it please do make sure
+
+198
+00:08:32,490 --> 00:08:33,990
+to subscribe to the YouTube channel as
+
+199
+00:08:33,990 --> 00:08:35,669
+well so it does help out a lot as well
+
+200
+00:08:35,669 --> 00:08:37,590
+as if you'd like to see notifications
+
+201
+00:08:37,590 --> 00:08:39,720
+whenever I release a new video by email
+
+202
+00:08:39,720 --> 00:08:41,640
+and Google notification please do make
+
+203
+00:08:41,640 --> 00:08:43,050
+sure to turn on notifications by
+
+204
+00:08:43,050 --> 00:08:44,970
+clicking the little bell icon beside the
+
+205
+00:08:44,970 --> 00:08:47,250
+subscribe button as well alright so
+
+206
+00:08:47,250 --> 00:08:48,570
+thank you very much for watching today
+
+207
+00:08:48,570 --> 00:08:51,500
+and good bye
+
+208
+00:08:57,900 --> 00:08:59,960
+you

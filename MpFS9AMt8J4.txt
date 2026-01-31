@@ -1,0 +1,679 @@
+1
+00:00:00,560 --> 00:00:03,040
+okay so hello there and welcome to this
+
+2
+00:00:03,040 --> 00:00:04,960
+tutorial in this tutorial i'll be
+
+3
+00:00:04,960 --> 00:00:06,400
+talking about something that i really
+
+4
+00:00:06,400 --> 00:00:08,960
+didn't find online yet and i don't think
+
+5
+00:00:08,960 --> 00:00:11,280
+there's any documentation for it
+
+6
+00:00:11,280 --> 00:00:13,120
+i'm going to be telling you how to run
+
+7
+00:00:13,120 --> 00:00:15,280
+your watch kit apps on a real apple
+
+8
+00:00:15,280 --> 00:00:18,320
+watch now usually if you were to run
+
+9
+00:00:18,320 --> 00:00:20,240
+your apple watch apps
+
+10
+00:00:20,240 --> 00:00:22,160
+on the real apple watch you would get an
+
+11
+00:00:22,160 --> 00:00:24,000
+error that would say that your
+
+12
+00:00:24,000 --> 00:00:26,240
+application could not be verified
+
+13
+00:00:26,240 --> 00:00:28,160
+however when watching this while
+
+14
+00:00:28,160 --> 00:00:29,840
+watching this tutorial you'll learn
+
+15
+00:00:29,840 --> 00:00:32,800
+exactly how to register your apple watch
+
+16
+00:00:32,800 --> 00:00:36,239
+with your developer account in order to
+
+17
+00:00:36,239 --> 00:00:37,920
+actually have it
+
+18
+00:00:37,920 --> 00:00:39,760
+run your apps
+
+19
+00:00:39,760 --> 00:00:42,719
+so let's get started
+
+20
+00:00:42,719 --> 00:00:44,480
+okay so now that we're at the mac let's
+
+21
+00:00:44,480 --> 00:00:46,879
+see how it actually works
+
+22
+00:00:46,879 --> 00:00:49,440
+so now we want to find the ud id of the
+
+23
+00:00:49,440 --> 00:00:50,879
+apple watch and connect it to our
+
+24
+00:00:50,879 --> 00:00:53,039
+developer account so let's do it
+
+25
+00:00:53,039 --> 00:00:56,160
+to find the udid you go to xcode and
+
+26
+00:00:56,160 --> 00:00:58,640
+number one you have to make sure
+
+27
+00:00:58,640 --> 00:01:01,120
+just completely make sure that your
+
+28
+00:01:01,120 --> 00:01:03,120
+apple watch and your iphone are both
+
+29
+00:01:03,120 --> 00:01:05,760
+paired together
+
+30
+00:01:05,760 --> 00:01:07,760
+if they're not paired together
+
+31
+00:01:07,760 --> 00:01:08,960
+this won't work
+
+32
+00:01:08,960 --> 00:01:13,320
+okay so let's go back to the mac now
+
+33
+00:01:13,600 --> 00:01:14,960
+so first of all what i'm going to do is
+
+34
+00:01:14,960 --> 00:01:16,880
+i'm going to put my cursor up and it'll
+
+35
+00:01:16,880 --> 00:01:18,720
+show this little menu
+
+36
+00:01:18,720 --> 00:01:21,280
+so i want to click on the window button
+
+37
+00:01:21,280 --> 00:01:22,320
+here
+
+38
+00:01:22,320 --> 00:01:24,720
+and then i will just go down
+
+39
+00:01:24,720 --> 00:01:27,360
+and click on devices
+
+40
+00:01:27,360 --> 00:01:29,759
+it'll open up another window where if
+
+41
+00:01:29,759 --> 00:01:32,720
+you click on your actual iphone while
+
+42
+00:01:32,720 --> 00:01:35,439
+it's plugged in
+
+43
+00:01:35,439 --> 00:01:37,040
+then it'll tell you the device
+
+44
+00:01:37,040 --> 00:01:39,280
+information for your iphone
+
+45
+00:01:39,280 --> 00:01:41,280
+for your apple watch and all the
+
+46
+00:01:41,280 --> 00:01:43,680
+installed apps on your iphone
+
+47
+00:01:43,680 --> 00:01:47,119
+so we want the udid for our paired watch
+
+48
+00:01:47,119 --> 00:01:48,880
+so as you can see under device
+
+49
+00:01:48,880 --> 00:01:50,960
+information we have paired watch
+
+50
+00:01:50,960 --> 00:01:53,200
+information and under paired watch
+
+51
+00:01:53,200 --> 00:01:54,479
+information
+
+52
+00:01:54,479 --> 00:01:57,680
+we have identifier last
+
+53
+00:01:57,680 --> 00:02:00,399
+so this identifier is a ud id that we
+
+54
+00:02:00,399 --> 00:02:03,040
+have to copy in to our developer account
+
+55
+00:02:03,040 --> 00:02:05,600
+just like we would any other iphone ipod
+
+56
+00:02:05,600 --> 00:02:07,439
+or ipad
+
+57
+00:02:07,439 --> 00:02:12,000
+so now we go command c to copy this
+
+58
+00:02:12,000 --> 00:02:14,560
+and then we go here
+
+59
+00:02:14,560 --> 00:02:17,520
+uh and then we just want to go to your
+
+60
+00:02:17,520 --> 00:02:19,840
+apple developer account
+
+61
+00:02:19,840 --> 00:02:22,959
+go to the ios developer uh or no you
+
+62
+00:02:22,959 --> 00:02:24,560
+need to go to the certificates
+
+63
+00:02:24,560 --> 00:02:28,720
+identifiers and profiles page
+
+64
+00:02:29,599 --> 00:02:32,480
+and so now we can click on the devices
+
+65
+00:02:32,480 --> 00:02:33,599
+button
+
+66
+00:02:33,599 --> 00:02:35,360
+and now it's just like any other apple
+
+67
+00:02:35,360 --> 00:02:38,800
+device you just click the plus button
+
+68
+00:02:38,800 --> 00:02:40,560
+you give it a name and i'll say apple
+
+69
+00:02:40,560 --> 00:02:42,879
+watch
+
+70
+00:02:43,599 --> 00:02:45,440
+and you just paste in your ud id and you
+
+71
+00:02:45,440 --> 00:02:47,519
+click continue
+
+72
+00:02:47,519 --> 00:02:50,080
+that's really all you need to do here
+
+73
+00:02:50,080 --> 00:02:51,440
+i'm just going to put an underscore
+
+74
+00:02:51,440 --> 00:02:54,560
+since i already have it registered
+
+75
+00:02:54,560 --> 00:02:57,120
+so as you can see i'm going to register
+
+76
+00:02:57,120 --> 00:02:59,360
+and it doesn't let me since i already
+
+77
+00:02:59,360 --> 00:03:01,599
+have this register but that's basically
+
+78
+00:03:01,599 --> 00:03:04,720
+how you would actually connect the udid
+
+79
+00:03:04,720 --> 00:03:06,720
+now that we've connected our udid to our
+
+80
+00:03:06,720 --> 00:03:10,000
+developer account what we can do
+
+81
+00:03:10,000 --> 00:03:13,040
+is we can go back to our device
+
+82
+00:03:13,040 --> 00:03:16,239
+and over here you want to select the
+
+83
+00:03:16,239 --> 00:03:17,440
+target
+
+84
+00:03:17,440 --> 00:03:20,560
+uh whatever your app's name is watch kid
+
+85
+00:03:20,560 --> 00:03:21,360
+app
+
+86
+00:03:21,360 --> 00:03:22,720
+select it
+
+87
+00:03:22,720 --> 00:03:25,280
+and then ask it to run on your iphone
+
+88
+00:03:25,280 --> 00:03:26,879
+not your watch
+
+89
+00:03:26,879 --> 00:03:29,040
+then turn on your watch
+
+90
+00:03:29,040 --> 00:03:30,959
+exit the clock
+
+91
+00:03:30,959 --> 00:03:32,879
+and run the app i'm just going to make
+
+92
+00:03:32,879 --> 00:03:35,920
+sure this doesn't sleep
+
+93
+00:03:36,080 --> 00:03:38,400
+and you can run it by doing command r
+
+94
+00:03:38,400 --> 00:03:41,519
+and as you can see in just a second here
+
+95
+00:03:41,519 --> 00:03:44,400
+uh the app called guessing game will
+
+96
+00:03:44,400 --> 00:03:46,640
+actually run on the apple watch
+
+97
+00:03:46,640 --> 00:03:49,599
+so as you can see here
+
+98
+00:03:49,680 --> 00:03:50,480
+sorry
+
+99
+00:03:50,480 --> 00:03:53,360
+um it's uh opening up the app uh xcode
+
+100
+00:03:53,360 --> 00:03:55,280
+is opening the app
+
+101
+00:03:55,280 --> 00:03:57,680
+and in just a second here
+
+102
+00:03:57,680 --> 00:03:59,760
+once it's done loading
+
+103
+00:03:59,760 --> 00:04:02,000
+as you can see it runs the app on the
+
+104
+00:04:02,000 --> 00:04:03,120
+watch
+
+105
+00:04:03,120 --> 00:04:04,959
+so it didn't give us an error
+
+106
+00:04:04,959 --> 00:04:06,799
+application verification failed it
+
+107
+00:04:06,799 --> 00:04:08,640
+doesn't give us any errors
+
+108
+00:04:08,640 --> 00:04:12,319
+so that's basically how you do it
+
+109
+00:04:12,480 --> 00:04:14,879
+okay so just one last thing before we
+
+110
+00:04:14,879 --> 00:04:16,799
+end let's actually run the app so you
+
+111
+00:04:16,799 --> 00:04:18,720
+know how it works
+
+112
+00:04:18,720 --> 00:04:20,639
+so as you can see i have the app here
+
+113
+00:04:20,639 --> 00:04:22,320
+and i've already made a tutorial for
+
+114
+00:04:22,320 --> 00:04:24,320
+this on my youtube channel
+
+115
+00:04:24,320 --> 00:04:26,080
+so um
+
+116
+00:04:26,080 --> 00:04:27,440
+yeah i'll put a link to that in the
+
+117
+00:04:27,440 --> 00:04:29,360
+description
+
+118
+00:04:29,360 --> 00:04:31,440
+but just for now let me explain
+
+119
+00:04:31,440 --> 00:04:34,160
+basically this guessing game app allows
+
+120
+00:04:34,160 --> 00:04:36,240
+you to enter numbers
+
+121
+00:04:36,240 --> 00:04:38,639
+and the computer will tell you if the
+
+122
+00:04:38,639 --> 00:04:40,160
+number is right or wrong
+
+123
+00:04:40,160 --> 00:04:42,479
+you'll get unlimited tries but it counts
+
+124
+00:04:42,479 --> 00:04:44,720
+how many tries you've done
+
+125
+00:04:44,720 --> 00:04:46,639
+look if you enter a number too big the
+
+126
+00:04:46,639 --> 00:04:47,759
+computer will tell you that your
+
+127
+00:04:47,759 --> 00:04:49,600
+number's too big if you enter a number
+
+128
+00:04:49,600 --> 00:04:51,280
+too small the computer will tell you
+
+129
+00:04:51,280 --> 00:04:53,440
+that your number is too small
+
+130
+00:04:53,440 --> 00:04:54,880
+so as you can see here i'm just going to
+
+131
+00:04:54,880 --> 00:04:56,560
+click on the new number button so it
+
+132
+00:04:56,560 --> 00:04:58,320
+generates a new random number in memory
+
+133
+00:04:58,320 --> 00:05:00,320
+i can do that as many times as i want if
+
+134
+00:05:00,320 --> 00:05:02,560
+i want to restart the game
+
+135
+00:05:02,560 --> 00:05:05,759
+and then let's just say my guess is six
+
+136
+00:05:05,759 --> 00:05:07,840
+as you can see i'm clicking bigger six
+
+137
+00:05:07,840 --> 00:05:10,080
+times so you can see six is in this
+
+138
+00:05:10,080 --> 00:05:12,960
+label that means that my guess is six
+
+139
+00:05:12,960 --> 00:05:15,039
+but wait how do i tell the computer that
+
+140
+00:05:15,039 --> 00:05:16,560
+my guess is six
+
+141
+00:05:16,560 --> 00:05:18,320
+you click the submit button
+
+142
+00:05:18,320 --> 00:05:20,400
+and the watch knows that you've clicked
+
+143
+00:05:20,400 --> 00:05:23,039
+it and as you can see i got lucky here
+
+144
+00:05:23,039 --> 00:05:25,840
+and 6 was actually the random number
+
+145
+00:05:25,840 --> 00:05:27,919
+so let's just click new number again
+
+146
+00:05:27,919 --> 00:05:29,520
+and let's just say
+
+147
+00:05:29,520 --> 00:05:33,360
+7 is my my choice
+
+148
+00:05:34,320 --> 00:05:36,400
+this is too small and if i haven't said
+
+149
+00:05:36,400 --> 00:05:37,680
+this already
+
+150
+00:05:37,680 --> 00:05:40,080
+this app will generate a random number
+
+151
+00:05:40,080 --> 00:05:43,759
+from 1 to 30. so if seven is too small
+
+152
+00:05:43,759 --> 00:05:46,479
+that means the number is in is between 7
+
+153
+00:05:46,479 --> 00:05:47,680
+and 30.
+
+154
+00:05:47,680 --> 00:05:49,680
+so as you can see i can go up maybe my
+
+155
+00:05:49,680 --> 00:05:52,080
+next number is 11.
+
+156
+00:05:52,080 --> 00:05:54,080
+eleven is too big that means it's in
+
+157
+00:05:54,080 --> 00:05:56,160
+between seven and eleven
+
+158
+00:05:56,160 --> 00:05:57,680
+so i can go a little bit smaller if i
+
+159
+00:05:57,680 --> 00:05:58,880
+want to
+
+160
+00:05:58,880 --> 00:06:02,320
+submit and i got i got it right correct
+
+161
+00:06:02,320 --> 00:06:04,560
+it three tries as you can see it says
+
+162
+00:06:04,560 --> 00:06:07,280
+nine correct in three tries so then
+
+163
+00:06:07,280 --> 00:06:09,280
+basically i can keep on doing that and
+
+164
+00:06:09,280 --> 00:06:11,120
+now you have proof that this app
+
+165
+00:06:11,120 --> 00:06:12,960
+actually works on the watch
+
+166
+00:06:12,960 --> 00:06:14,560
+thank you for watching this tutorial
+
+167
+00:06:14,560 --> 00:06:16,479
+subscribe if you're new to the channel
+
+168
+00:06:16,479 --> 00:06:18,479
+uh comment if you have any questions or
+
+169
+00:06:18,479 --> 00:06:20,319
+improvements and please like the video
+
+170
+00:06:20,319 --> 00:06:24,280
+if you liked it goodbye

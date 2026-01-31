@@ -1,0 +1,2691 @@
+1
+00:00:14,400 --> 00:00:16,640
+so hello there and welcome to another
+
+2
+00:00:16,640 --> 00:00:19,279
+tutorial my name is tim mubakshi and
+
+3
+00:00:19,279 --> 00:00:21,199
+this time we're going to be going over
+
+4
+00:00:21,199 --> 00:00:24,000
+how you can use sirikit with the new ios
+
+5
+00:00:24,000 --> 00:00:26,080
+10 frameworks that apple released in
+
+6
+00:00:26,080 --> 00:00:29,199
+order to create a messaging application
+
+7
+00:00:29,199 --> 00:00:32,000
+let's begin so now to begin first of all
+
+8
+00:00:32,000 --> 00:00:34,800
+siriket now with ios 10 apple has
+
+9
+00:00:34,800 --> 00:00:37,600
+released a new like just numerous new
+
+10
+00:00:37,600 --> 00:00:40,640
+apis for developers uh and one of them
+
+11
+00:00:40,640 --> 00:00:43,520
+is actually siriket and personally and i
+
+12
+00:00:43,520 --> 00:00:45,520
+know a lot of other developers have been
+
+13
+00:00:45,520 --> 00:00:48,000
+waiting for this for a long time in fact
+
+14
+00:00:48,000 --> 00:00:50,800
+since ios like seven or maybe even six
+
+15
+00:00:50,800 --> 00:00:52,160
+uh and so
+
+16
+00:00:52,160 --> 00:00:53,360
+of course
+
+17
+00:00:53,360 --> 00:00:55,760
+finally in june of this year apple had
+
+18
+00:00:55,760 --> 00:00:57,760
+released sirikit kiss
+
+19
+00:00:57,760 --> 00:01:00,399
+and now the iphone 7s have released
+
+20
+00:01:00,399 --> 00:01:02,960
+i just thought you know what why not
+
+21
+00:01:02,960 --> 00:01:04,960
+create something that makes use of this
+
+22
+00:01:04,960 --> 00:01:08,159
+new hardware and software so i created a
+
+23
+00:01:08,159 --> 00:01:10,880
+simple application that can help you as
+
+24
+00:01:10,880 --> 00:01:13,520
+a sort of proof of concept of how to use
+
+25
+00:01:13,520 --> 00:01:16,320
+siri kit let's begin
+
+26
+00:01:16,320 --> 00:01:19,119
+so now to begin uh what is syria what
+
+27
+00:01:19,119 --> 00:01:21,439
+will what will it allow you to do
+
+28
+00:01:21,439 --> 00:01:23,040
+so now to begin
+
+29
+00:01:23,040 --> 00:01:25,360
+let's take a look at the apple website
+
+30
+00:01:25,360 --> 00:01:27,119
+and you can see the apple website right
+
+31
+00:01:27,119 --> 00:01:29,280
+now
+
+32
+00:01:33,040 --> 00:01:34,880
+and the apple website it says that there
+
+33
+00:01:34,880 --> 00:01:38,079
+are only a few sort of ways you can use
+
+34
+00:01:38,079 --> 00:01:40,960
+siri with ios right now
+
+35
+00:01:40,960 --> 00:01:43,040
+and a few and one of those ways is
+
+36
+00:01:43,040 --> 00:01:44,720
+messaging which we're going to be using
+
+37
+00:01:44,720 --> 00:01:47,600
+today however in later videos i may be
+
+38
+00:01:47,600 --> 00:01:49,920
+covering other types of series uses as
+
+39
+00:01:49,920 --> 00:01:52,079
+well such as ride booking
+
+40
+00:01:52,079 --> 00:01:53,600
+continuing though
+
+41
+00:01:53,600 --> 00:01:55,520
+so now today we're going to be talking
+
+42
+00:01:55,520 --> 00:01:58,000
+about how to use sirikit for a messaging
+
+43
+00:01:58,000 --> 00:02:00,320
+application let's begin so now
+
+44
+00:02:00,320 --> 00:02:02,159
+essentially we're going to be creating
+
+45
+00:02:02,159 --> 00:02:05,680
+an application called chatter
+
+46
+00:02:05,680 --> 00:02:08,000
+now uh essentially what we're going to
+
+47
+00:02:08,000 --> 00:02:10,720
+be able to do is say to siri
+
+48
+00:02:10,720 --> 00:02:14,400
+uh hey send a chatter message to timothy
+
+49
+00:02:14,400 --> 00:02:17,040
+saying hi tim how are you
+
+50
+00:02:17,040 --> 00:02:18,400
+that's essentially what we're going to
+
+51
+00:02:18,400 --> 00:02:20,319
+be able to say to siri and then our
+
+52
+00:02:20,319 --> 00:02:22,959
+application chatter will parse exactly
+
+53
+00:02:22,959 --> 00:02:25,120
+or technically siri will parse what i
+
+54
+00:02:25,120 --> 00:02:28,560
+said uh and give that information to my
+
+55
+00:02:28,560 --> 00:02:30,800
+application which it will then use to
+
+56
+00:02:30,800 --> 00:02:34,480
+actually send uh to i mean they can send
+
+57
+00:02:34,480 --> 00:02:36,000
+the actual message if it wants i could
+
+58
+00:02:36,000 --> 00:02:37,840
+just display it on screen depends on
+
+59
+00:02:37,840 --> 00:02:39,840
+what it wants to do with the data but
+
+60
+00:02:39,840 --> 00:02:41,519
+once it has the data it's free to do
+
+61
+00:02:41,519 --> 00:02:43,360
+whatever it wants with it
+
+62
+00:02:43,360 --> 00:02:45,519
+continuing though
+
+63
+00:02:45,519 --> 00:02:47,840
+so now as you can see of course we have
+
+64
+00:02:47,840 --> 00:02:49,680
+our chatter application now how will
+
+65
+00:02:49,680 --> 00:02:50,640
+this work
+
+66
+00:02:50,640 --> 00:02:51,920
+essentially
+
+67
+00:02:51,920 --> 00:02:54,400
+i'm going to create first of all our ios
+
+68
+00:02:54,400 --> 00:02:56,879
+application
+
+69
+00:02:56,879 --> 00:02:58,959
+i'm also going to create an intense
+
+70
+00:02:58,959 --> 00:03:02,760
+application extension
+
+71
+00:03:05,920 --> 00:03:08,959
+intense and there's also an intense ui
+
+72
+00:03:08,959 --> 00:03:11,120
+which we won't be covering today but
+
+73
+00:03:11,120 --> 00:03:12,560
+essentially we're gonna have our ios
+
+74
+00:03:12,560 --> 00:03:14,640
+application and our intents
+
+75
+00:03:14,640 --> 00:03:17,040
+which will of course i mean uh by the
+
+76
+00:03:17,040 --> 00:03:19,680
+way on screen right now there's another
+
+77
+00:03:19,680 --> 00:03:22,000
+video that i had released about mm
+
+78
+00:03:22,000 --> 00:03:23,360
+wormholes
+
+79
+00:03:23,360 --> 00:03:24,800
+you should go check that out before you
+
+80
+00:03:24,800 --> 00:03:26,319
+watch this video if you're going to be
+
+81
+00:03:26,319 --> 00:03:28,480
+following along with the code so i'd
+
+82
+00:03:28,480 --> 00:03:31,120
+recommend you go watch that now
+
+83
+00:03:31,120 --> 00:03:33,440
+all right continuing
+
+84
+00:03:33,440 --> 00:03:35,360
+so as you can see we're going to have
+
+85
+00:03:35,360 --> 00:03:38,400
+sort of this ios and the intense end
+
+86
+00:03:38,400 --> 00:03:42,200
+and using the wormhole
+
+87
+00:03:47,840 --> 00:03:50,799
+we're going to be able to communicate
+
+88
+00:03:50,799 --> 00:03:52,239
+um
+
+89
+00:03:52,239 --> 00:03:55,440
+with intents
+
+90
+00:03:56,640 --> 00:03:57,840
+all right
+
+91
+00:03:57,840 --> 00:03:59,920
+and that's how we're going to work now
+
+92
+00:03:59,920 --> 00:04:01,920
+essentially what is intense if you're
+
+93
+00:04:01,920 --> 00:04:04,560
+wondering uh now essentially if we take
+
+94
+00:04:04,560 --> 00:04:06,480
+a look at the apple website again as you
+
+95
+00:04:06,480 --> 00:04:09,200
+can see there are many types of siri use
+
+96
+00:04:09,200 --> 00:04:11,680
+cases uh and in this case we're using
+
+97
+00:04:11,680 --> 00:04:14,480
+messaging again and so uh now when
+
+98
+00:04:14,480 --> 00:04:16,320
+you're messaging there can be many user
+
+99
+00:04:16,320 --> 00:04:18,720
+intents there can be a user intent to
+
+100
+00:04:18,720 --> 00:04:20,560
+look up for messages that are unread
+
+101
+00:04:20,560 --> 00:04:23,520
+there can be intents uh to
+
+102
+00:04:23,520 --> 00:04:25,600
+like the user could intend to look at
+
+103
+00:04:25,600 --> 00:04:27,759
+all unread messages from
+
+104
+00:04:27,759 --> 00:04:30,880
+timothy for example or from james
+
+105
+00:04:30,880 --> 00:04:33,600
+or the user could want to send a message
+
+106
+00:04:33,600 --> 00:04:36,160
+or a you know there's so many types of
+
+107
+00:04:36,160 --> 00:04:38,000
+intents that or things that the user
+
+108
+00:04:38,000 --> 00:04:39,520
+could want to do
+
+109
+00:04:39,520 --> 00:04:41,120
+and that's what intents will allow us to
+
+110
+00:04:41,120 --> 00:04:44,240
+do with siri uh and so essentially
+
+111
+00:04:44,240 --> 00:04:46,720
+we're going to have this uh function
+
+112
+00:04:46,720 --> 00:04:49,680
+this class uh which will inherit from or
+
+113
+00:04:49,680 --> 00:04:51,040
+conform to
+
+114
+00:04:51,040 --> 00:04:54,240
+a delicate uh for this sort of siri kit
+
+115
+00:04:54,240 --> 00:04:56,479
+or intense and so
+
+116
+00:04:56,479 --> 00:04:57,919
+what's going to happen is it's going to
+
+117
+00:04:57,919 --> 00:05:00,320
+make us sort of create these functions
+
+118
+00:05:00,320 --> 00:05:03,280
+which will handle what happens when we
+
+119
+00:05:03,280 --> 00:05:06,160
+receive an intent and that intent data
+
+120
+00:05:06,160 --> 00:05:08,720
+so let's say the intent so let's say
+
+121
+00:05:08,720 --> 00:05:11,520
+we a function is called and we're past
+
+122
+00:05:11,520 --> 00:05:16,000
+an intent to send a message
+
+123
+00:05:19,199 --> 00:05:20,560
+all right
+
+124
+00:05:20,560 --> 00:05:22,840
+okay and this message is supposed to go
+
+125
+00:05:22,840 --> 00:05:26,880
+to i don't know john
+
+126
+00:05:29,280 --> 00:05:31,280
+to john
+
+127
+00:05:31,280 --> 00:05:32,639
+all right this is going to be from
+
+128
+00:05:32,639 --> 00:05:35,120
+yourself of course uh but we're going to
+
+129
+00:05:35,120 --> 00:05:37,520
+say what else what do we say in the
+
+130
+00:05:37,520 --> 00:05:40,960
+message the content
+
+131
+00:05:42,639 --> 00:05:46,400
+that's going to be let's say like hi
+
+132
+00:05:47,680 --> 00:05:50,080
+john
+
+133
+00:05:50,560 --> 00:05:52,000
+that's going to be the content of the
+
+134
+00:05:52,000 --> 00:05:53,919
+message uh and that's essentially what
+
+135
+00:05:53,919 --> 00:05:57,120
+we're going to receive in the intent
+
+136
+00:05:57,120 --> 00:05:58,560
+and so what we can do with this is of
+
+137
+00:05:58,560 --> 00:06:00,400
+course we can send the message we can do
+
+138
+00:06:00,400 --> 00:06:02,320
+whatever we want but essentially siri
+
+139
+00:06:02,320 --> 00:06:04,880
+has parsed this out and given it to us
+
+140
+00:06:04,880 --> 00:06:06,800
+let's say the user wants to search for
+
+141
+00:06:06,800 --> 00:06:08,560
+messages they can do that as well and
+
+142
+00:06:08,560 --> 00:06:10,560
+that's handled in a separate intent and
+
+143
+00:06:10,560 --> 00:06:12,639
+that's essentially how it's going to
+
+144
+00:06:12,639 --> 00:06:13,840
+work
+
+145
+00:06:13,840 --> 00:06:16,319
+all right so that was a quick rundown of
+
+146
+00:06:16,319 --> 00:06:18,560
+siri kit itself and
+
+147
+00:06:18,560 --> 00:06:20,319
+now let's get to the mac part where i'm
+
+148
+00:06:20,319 --> 00:06:22,000
+going to be showing you how you can
+
+149
+00:06:22,000 --> 00:06:24,560
+create a simple chatter application
+
+150
+00:06:24,560 --> 00:06:27,039
+with siriket and of course i may just
+
+151
+00:06:27,039 --> 00:06:28,639
+integrate this with my chatting
+
+152
+00:06:28,639 --> 00:06:30,639
+application video that i created a
+
+153
+00:06:30,639 --> 00:06:33,919
+little while ago uh so you can of course
+
+154
+00:06:33,919 --> 00:06:34,800
+there's a link to that in the
+
+155
+00:06:34,800 --> 00:06:37,039
+description uh and so you can check that
+
+156
+00:06:37,039 --> 00:06:39,120
+out and check that out if you'd like to
+
+157
+00:06:39,120 --> 00:06:41,440
+uh and i'm going to be integrating siri
+
+158
+00:06:41,440 --> 00:06:43,919
+with that soon all right let's get to
+
+159
+00:06:43,919 --> 00:06:45,280
+the mac part where i'm going to be
+
+160
+00:06:45,280 --> 00:06:47,280
+showing you how to implement this
+
+161
+00:06:47,280 --> 00:06:49,600
+so welcome back to the mac part and now
+
+162
+00:06:49,600 --> 00:06:51,600
+i'm going to be showing you how you can
+
+163
+00:06:51,600 --> 00:06:53,199
+actually use siriket in your
+
+164
+00:06:53,199 --> 00:06:55,919
+applications and of course as an example
+
+165
+00:06:55,919 --> 00:06:58,080
+today i have the chatter application
+
+166
+00:06:58,080 --> 00:07:01,120
+open so as you can see here uh on my mac
+
+167
+00:07:01,120 --> 00:07:04,720
+screen uh i have my iphone mirrored uh
+
+168
+00:07:04,720 --> 00:07:07,199
+to the actual to
+
+169
+00:07:07,199 --> 00:07:08,160
+my mac
+
+170
+00:07:08,160 --> 00:07:10,479
+uh and so let's begin so now essentially
+
+171
+00:07:10,479 --> 00:07:12,479
+what i'm going to be able to do is talk
+
+172
+00:07:12,479 --> 00:07:14,560
+to siri and have it send a message for
+
+173
+00:07:14,560 --> 00:07:16,720
+me through chatter and then chatter
+
+174
+00:07:16,720 --> 00:07:18,160
+should be able to display who the
+
+175
+00:07:18,160 --> 00:07:20,240
+message was supposed to be sent to
+
+176
+00:07:20,240 --> 00:07:22,479
+and what the message said so let's try
+
+177
+00:07:22,479 --> 00:07:25,280
+it out shall we
+
+178
+00:07:25,759 --> 00:07:30,680
+send a chatter message to james archieri
+
+179
+00:07:30,880 --> 00:07:34,800
+what do you want to say to james r siri
+
+180
+00:07:34,800 --> 00:07:38,160
+hi james dash how are you question mark
+
+181
+00:07:38,160 --> 00:07:40,560
+i was just wondering when you have time
+
+182
+00:07:40,560 --> 00:07:43,120
+to come down to toronto for the facebook
+
+183
+00:07:43,120 --> 00:07:45,840
+event period
+
+184
+00:07:46,400 --> 00:07:48,000
+ready to send it
+
+185
+00:07:48,000 --> 00:07:49,759
+yes
+
+186
+00:07:49,759 --> 00:07:52,479
+it's sent as you can see we were able to
+
+187
+00:07:52,479 --> 00:07:54,319
+tell it to send a chatter message to
+
+188
+00:07:54,319 --> 00:07:55,919
+james archieri
+
+189
+00:07:55,919 --> 00:07:58,000
+it asked us what the what to say in the
+
+190
+00:07:58,000 --> 00:07:59,680
+chatter message
+
+191
+00:07:59,680 --> 00:08:01,520
+i told it exactly what i wanted it to
+
+192
+00:08:01,520 --> 00:08:04,720
+say it showed me a quick little ui here
+
+193
+00:08:04,720 --> 00:08:06,879
+uh that shows us it's going to james
+
+194
+00:08:06,879 --> 00:08:09,680
+archieri uh and the actual message with
+
+195
+00:08:09,680 --> 00:08:11,599
+a nice little interface there then i
+
+196
+00:08:11,599 --> 00:08:13,599
+told it that yes i do want to send the
+
+197
+00:08:13,599 --> 00:08:16,479
+message and of course it's been sent and
+
+198
+00:08:16,479 --> 00:08:19,039
+then i can actually go to my application
+
+199
+00:08:19,039 --> 00:08:21,199
+and if i click anywhere on the screen of
+
+200
+00:08:21,199 --> 00:08:22,960
+this application here you probably
+
+201
+00:08:22,960 --> 00:08:24,960
+cannot see this on the camera but if i
+
+202
+00:08:24,960 --> 00:08:26,160
+click anywhere on the screen of this
+
+203
+00:08:26,160 --> 00:08:27,520
+application
+
+204
+00:08:27,520 --> 00:08:30,160
+it'll update and as you can see my last
+
+205
+00:08:30,160 --> 00:08:32,959
+message was sent to james archery and
+
+206
+00:08:32,959 --> 00:08:34,880
+this is exactly what it said hi james
+
+207
+00:08:34,880 --> 00:08:36,399
+how are you i was just wondering when
+
+208
+00:08:36,399 --> 00:08:38,000
+you have time to come down to toronto
+
+209
+00:08:38,000 --> 00:08:40,399
+for the facebook event which is exactly
+
+210
+00:08:40,399 --> 00:08:43,120
+what i said
+
+211
+00:08:43,120 --> 00:08:44,399
+all right so that was a neat little
+
+212
+00:08:44,399 --> 00:08:46,959
+example but now let's go over the code
+
+213
+00:08:46,959 --> 00:08:48,399
+and then i'll show you some more neat
+
+214
+00:08:48,399 --> 00:08:50,800
+examples of how you can actually sort of
+
+215
+00:08:50,800 --> 00:08:52,880
+rephrase what you're talking about and
+
+216
+00:08:52,880 --> 00:08:55,760
+siri will still understand how and who
+
+217
+00:08:55,760 --> 00:08:58,080
+to send the message to
+
+218
+00:08:58,080 --> 00:09:00,399
+all right continuing
+
+219
+00:09:00,399 --> 00:09:03,360
+so now let's begin with how we begin so
+
+220
+00:09:03,360 --> 00:09:04,720
+first of all you create the chatter
+
+221
+00:09:04,720 --> 00:09:07,200
+application uh and once you do you have
+
+222
+00:09:07,200 --> 00:09:09,279
+to you i mean you start out with general
+
+223
+00:09:09,279 --> 00:09:11,519
+so now here uh you don't really need to
+
+224
+00:09:11,519 --> 00:09:13,519
+do much uh so when you go to
+
+225
+00:09:13,519 --> 00:09:16,080
+capabilities however uh you need to
+
+226
+00:09:16,080 --> 00:09:18,399
+begin you have to you have to enable the
+
+227
+00:09:18,399 --> 00:09:21,920
+siri capability uh in your app id uh and
+
+228
+00:09:21,920 --> 00:09:25,200
+of course the app groups uh capability
+
+229
+00:09:25,200 --> 00:09:28,000
+uh now again if you haven't already i'd
+
+230
+00:09:28,000 --> 00:09:29,839
+again really recommend that you watch my
+
+231
+00:09:29,839 --> 00:09:32,160
+wormhole tutorial first uh this will
+
+232
+00:09:32,160 --> 00:09:34,560
+really help you out but continuing so
+
+233
+00:09:34,560 --> 00:09:37,200
+now uh with ad groups i can essentially
+
+234
+00:09:37,200 --> 00:09:39,279
+say okay so the current app group that
+
+235
+00:09:39,279 --> 00:09:41,000
+i'm using is
+
+236
+00:09:41,000 --> 00:09:43,279
+group.com.tbss.sirikit example uh
+
+237
+00:09:43,279 --> 00:09:44,720
+because i mean this is the sirikit
+
+238
+00:09:44,720 --> 00:09:46,720
+example that i'm creating however you
+
+239
+00:09:46,720 --> 00:09:48,640
+can really use whatever you want i'd
+
+240
+00:09:48,640 --> 00:09:50,880
+recommend using your app's name
+
+241
+00:09:50,880 --> 00:09:52,320
+because that just really makes it simple
+
+242
+00:09:52,320 --> 00:09:53,839
+when you need to find your app group in
+
+243
+00:09:53,839 --> 00:09:56,560
+the future uh but essentially of course
+
+244
+00:09:56,560 --> 00:09:58,560
+i'm using this uh so it would have a
+
+245
+00:09:58,560 --> 00:10:01,360
+hole or a sort of way to transfer data
+
+246
+00:10:01,360 --> 00:10:03,839
+between the siri kit
+
+247
+00:10:03,839 --> 00:10:05,920
+app extension and the actual ios
+
+248
+00:10:05,920 --> 00:10:08,640
+application itself
+
+249
+00:10:08,640 --> 00:10:10,560
+continuing however
+
+250
+00:10:10,560 --> 00:10:13,040
+now once you are done this you need to
+
+251
+00:10:13,040 --> 00:10:17,200
+also go to your info.plist file
+
+252
+00:10:17,200 --> 00:10:20,240
+and add this row privacy siri usage
+
+253
+00:10:20,240 --> 00:10:22,399
+description and in this case i just have
+
+254
+00:10:22,399 --> 00:10:24,079
+chatter here you should actually
+
+255
+00:10:24,079 --> 00:10:26,720
+probably put in a real uh description of
+
+256
+00:10:26,720 --> 00:10:28,079
+why you want to use siri in your
+
+257
+00:10:28,079 --> 00:10:30,240
+application uh if you are planning on
+
+258
+00:10:30,240 --> 00:10:32,480
+submitting this to the app store however
+
+259
+00:10:32,480 --> 00:10:35,920
+i just have a chatter written here
+
+260
+00:10:35,920 --> 00:10:37,440
+continuing though
+
+261
+00:10:37,440 --> 00:10:39,680
+as you can see i have also integrated
+
+262
+00:10:39,680 --> 00:10:42,560
+the files from the mm wormhole source
+
+263
+00:10:42,560 --> 00:10:43,680
+code
+
+264
+00:10:43,680 --> 00:10:46,320
+and as i said in my wormhole tutorial as
+
+265
+00:10:46,320 --> 00:10:49,680
+well once i dragged these in i selected
+
+266
+00:10:49,680 --> 00:10:52,480
+all three of my targets chatter chatter
+
+267
+00:10:52,480 --> 00:10:54,560
+intense and chattery intensity y which i
+
+268
+00:10:54,560 --> 00:10:56,880
+will get into in just a moment
+
+269
+00:10:56,880 --> 00:10:59,600
+and as you can see uh it has created
+
+270
+00:10:59,600 --> 00:11:02,160
+three bridging headers one for chatter
+
+271
+00:11:02,160 --> 00:11:04,000
+one for chatter intense and one for
+
+272
+00:11:04,000 --> 00:11:05,920
+chatter intense ui
+
+273
+00:11:05,920 --> 00:11:08,480
+and for each one i've imported
+
+274
+00:11:08,480 --> 00:11:13,279
+a wwe wormhole.h and m oh sorry mmw i'm
+
+275
+00:11:13,279 --> 00:11:16,560
+sorry m m wormhole dot h and m m
+
+276
+00:11:16,560 --> 00:11:19,040
+wormhole session.h
+
+277
+00:11:19,040 --> 00:11:20,640
+these are the two sort of essential
+
+278
+00:11:20,640 --> 00:11:22,959
+files that you need to use wormholes in
+
+279
+00:11:22,959 --> 00:11:25,279
+your application
+
+280
+00:11:25,279 --> 00:11:26,880
+continuing however
+
+281
+00:11:26,880 --> 00:11:30,160
+what your next step is is to go to
+
+282
+00:11:30,160 --> 00:11:31,440
+general again
+
+283
+00:11:31,440 --> 00:11:33,760
+go to this little uh tab here as you can
+
+284
+00:11:33,760 --> 00:11:35,040
+see
+
+285
+00:11:35,040 --> 00:11:37,839
+click on the plus button
+
+286
+00:11:37,839 --> 00:11:39,360
+down there
+
+287
+00:11:39,360 --> 00:11:42,320
+and click on an intense extension under
+
+288
+00:11:42,320 --> 00:11:44,959
+ios
+
+289
+00:11:45,279 --> 00:11:47,120
+call this really whatever you want in
+
+290
+00:11:47,120 --> 00:11:48,399
+this case i'm just going to call it
+
+291
+00:11:48,399 --> 00:11:50,800
+chatter intense
+
+292
+00:11:50,800 --> 00:11:51,920
+all right
+
+293
+00:11:51,920 --> 00:11:54,000
+and so the rest can stay the same make
+
+294
+00:11:54,000 --> 00:11:56,240
+sure that the include ui extension is
+
+295
+00:11:56,240 --> 00:11:58,160
+selected i'm not actually currently
+
+296
+00:11:58,160 --> 00:12:00,560
+creating a ui extension uh but in the
+
+297
+00:12:00,560 --> 00:12:02,720
+future with a part two if i do want to
+
+298
+00:12:02,720 --> 00:12:04,560
+create one it just really helps out to
+
+299
+00:12:04,560 --> 00:12:06,800
+already have the ui extension there and
+
+300
+00:12:06,800 --> 00:12:09,120
+linked to your project
+
+301
+00:12:09,120 --> 00:12:10,399
+continuing though
+
+302
+00:12:10,399 --> 00:12:12,560
+if i continue now
+
+303
+00:12:12,560 --> 00:12:14,959
+essentially what i can do uh is if i
+
+304
+00:12:14,959 --> 00:12:16,560
+click on finish
+
+305
+00:12:16,560 --> 00:12:19,040
+oh well i mean the uh target already
+
+306
+00:12:19,040 --> 00:12:21,360
+exists but yeah yeah what i can
+
+307
+00:12:21,360 --> 00:12:25,200
+essentially do uh is i can um just a
+
+308
+00:12:25,200 --> 00:12:29,120
+second uh so i can essentially
+
+309
+00:12:29,839 --> 00:12:32,880
+uh sorry so i can essentially uh have
+
+310
+00:12:32,880 --> 00:12:34,399
+those two targets for the chatter
+
+311
+00:12:34,399 --> 00:12:36,240
+intense which is essentially the main
+
+312
+00:12:36,240 --> 00:12:38,800
+siri kit uh thing that you want
+
+313
+00:12:38,800 --> 00:12:40,160
+visible
+
+314
+00:12:40,160 --> 00:12:41,920
+for siri and of course the chatter
+
+315
+00:12:41,920 --> 00:12:45,120
+intense ui which is what i mean as i saw
+
+316
+00:12:45,120 --> 00:12:47,839
+as you saw in the ios and when you
+
+317
+00:12:47,839 --> 00:12:50,079
+actually use siri there's that little ui
+
+318
+00:12:50,079 --> 00:12:51,760
+that pops up once you tell it to send a
+
+319
+00:12:51,760 --> 00:12:52,959
+message
+
+320
+00:12:52,959 --> 00:12:54,800
+and so essentially
+
+321
+00:12:54,800 --> 00:12:56,959
+you can actually design that ui
+
+322
+00:12:56,959 --> 00:12:59,040
+which i will be covering in a separate
+
+323
+00:12:59,040 --> 00:13:01,200
+tutorial today i'm just teaching you how
+
+324
+00:13:01,200 --> 00:13:03,360
+you can actually integrate siri with
+
+325
+00:13:03,360 --> 00:13:05,680
+your application
+
+326
+00:13:05,680 --> 00:13:07,519
+continuing though
+
+327
+00:13:07,519 --> 00:13:11,040
+now let's go over the uh interface shall
+
+328
+00:13:11,040 --> 00:13:14,079
+we so now in the interface uh very very
+
+329
+00:13:14,079 --> 00:13:18,000
+simple uh just two labels over here uh
+
+330
+00:13:18,000 --> 00:13:20,560
+one for who the message was sent to one
+
+331
+00:13:20,560 --> 00:13:22,399
+for what the message said
+
+332
+00:13:22,399 --> 00:13:24,000
+and of course the actual labels that
+
+333
+00:13:24,000 --> 00:13:26,320
+contain the content themselves one is to
+
+334
+00:13:26,320 --> 00:13:27,279
+label
+
+335
+00:13:27,279 --> 00:13:30,079
+and one is content label and if i go to
+
+336
+00:13:30,079 --> 00:13:32,639
+my viewcontroller.swift file as you can
+
+337
+00:13:32,639 --> 00:13:34,880
+see those are the ib outlets for those
+
+338
+00:13:34,880 --> 00:13:36,399
+two labels
+
+339
+00:13:36,399 --> 00:13:38,720
+i'm also of course creating the constant
+
+340
+00:13:38,720 --> 00:13:40,959
+for my wormhole in this case i'm using
+
+341
+00:13:40,959 --> 00:13:43,440
+my uh app group that i created and my
+
+342
+00:13:43,440 --> 00:13:46,560
+optional directory is sirika example
+
+343
+00:13:46,560 --> 00:13:48,800
+i'm also creating two variables two and
+
+344
+00:13:48,800 --> 00:13:50,800
+content that will store whatever comes
+
+345
+00:13:50,800 --> 00:13:52,399
+back from the wormhole
+
+346
+00:13:52,399 --> 00:13:55,519
+uh and in my viewdidload function uh now
+
+347
+00:13:55,519 --> 00:13:57,680
+there's something here
+
+348
+00:13:57,680 --> 00:13:59,680
+essentially what you need to do is on
+
+349
+00:13:59,680 --> 00:14:02,079
+your first run of your application you
+
+350
+00:14:02,079 --> 00:14:05,440
+need to ask the user if they want your
+
+351
+00:14:05,440 --> 00:14:07,519
+application to be able to be compatible
+
+352
+00:14:07,519 --> 00:14:10,079
+with siri uh and so essentially this is
+
+353
+00:14:10,079 --> 00:14:12,079
+what this code does it'll use the
+
+354
+00:14:12,079 --> 00:14:14,639
+intense preferences and it'll request
+
+355
+00:14:14,639 --> 00:14:17,360
+siri authentic authorization uh and so
+
+356
+00:14:17,360 --> 00:14:18,800
+of course you're going to need to import
+
+357
+00:14:18,800 --> 00:14:20,399
+intents for this
+
+358
+00:14:20,399 --> 00:14:22,320
+uh and of course this will essentially
+
+359
+00:14:22,320 --> 00:14:25,199
+and uh this will of course request for
+
+360
+00:14:25,199 --> 00:14:27,519
+authorization to use siri uh using that
+
+361
+00:14:27,519 --> 00:14:28,959
+description that you provided in the
+
+362
+00:14:28,959 --> 00:14:32,639
+info.plist file and it'll also make sure
+
+363
+00:14:32,639 --> 00:14:34,880
+not to ask twice if it's already asked
+
+364
+00:14:34,880 --> 00:14:37,199
+and if it has permission it will not ask
+
+365
+00:14:37,199 --> 00:14:38,639
+again which is just great so i don't
+
+366
+00:14:38,639 --> 00:14:40,560
+need to implement logic for finding out
+
+367
+00:14:40,560 --> 00:14:42,480
+if it's the first run of the application
+
+368
+00:14:42,480 --> 00:14:45,120
+really convenient
+
+369
+00:14:45,120 --> 00:14:48,399
+next in the view did appear um
+
+370
+00:14:48,399 --> 00:14:50,160
+function uh which i'm overriding of
+
+371
+00:14:50,160 --> 00:14:52,079
+course from uiviewcontroller i've
+
+372
+00:14:52,079 --> 00:14:54,079
+essentially allowed the wormhole to
+
+373
+00:14:54,079 --> 00:14:56,160
+listen for a message that has the
+
+374
+00:14:56,160 --> 00:14:59,519
+identifier to message uh so now this is
+
+375
+00:14:59,519 --> 00:15:02,399
+essentially the channel i guess of the
+
+376
+00:15:02,399 --> 00:15:04,959
+wormhole which will contain
+
+377
+00:15:04,959 --> 00:15:07,519
+who we're sending the message to
+
+378
+00:15:07,519 --> 00:15:09,680
+uh and of course content message will
+
+379
+00:15:09,680 --> 00:15:11,920
+contain uh who what the content is of
+
+380
+00:15:11,920 --> 00:15:14,240
+the message that we're sending
+
+381
+00:15:14,240 --> 00:15:16,560
+and so essentially what i can say is in
+
+382
+00:15:16,560 --> 00:15:18,240
+each of these code blocks as you know
+
+383
+00:15:18,240 --> 00:15:20,079
+from the wormhole tutorial which again i
+
+384
+00:15:20,079 --> 00:15:23,279
+highly recommend you watch uh there is a
+
+385
+00:15:23,279 --> 00:15:24,160
+sort of
+
+386
+00:15:24,160 --> 00:15:27,040
+parameter or variable that comes in with
+
+387
+00:15:27,040 --> 00:15:29,760
+this asynchronous function or code block
+
+388
+00:15:29,760 --> 00:15:31,839
+called result or in this case i'm
+
+389
+00:15:31,839 --> 00:15:34,079
+calling it res for result
+
+390
+00:15:34,079 --> 00:15:35,839
+uh and so i'm just checking really
+
+391
+00:15:35,839 --> 00:15:38,079
+quickly uh making sure that's not nil so
+
+392
+00:15:38,079 --> 00:15:39,839
+i'm checking if let message is equal to
+
+393
+00:15:39,839 --> 00:15:42,480
+res uh in which case this will run uh
+
+394
+00:15:42,480 --> 00:15:44,480
+it'll set the two variable that i
+
+395
+00:15:44,480 --> 00:15:47,839
+created uh to the message as a string
+
+396
+00:15:47,839 --> 00:15:49,759
+because this as i mentioned my previous
+
+397
+00:15:49,759 --> 00:15:52,399
+tutorial is an optional any and so i'm
+
+398
+00:15:52,399 --> 00:15:55,519
+converting this to a string
+
+399
+00:15:55,519 --> 00:15:57,120
+and same thing for content message
+
+400
+00:15:57,120 --> 00:15:59,440
+except this time i'm setting the content
+
+401
+00:15:59,440 --> 00:16:02,880
+variable to my message as a string
+
+402
+00:16:02,880 --> 00:16:04,800
+and then in the touches began function
+
+403
+00:16:04,800 --> 00:16:06,959
+which is where i do most of my updating
+
+404
+00:16:06,959 --> 00:16:09,040
+i'm just sending the two labels text to
+
+405
+00:16:09,040 --> 00:16:11,279
+the to variable and the content labels
+
+406
+00:16:11,279 --> 00:16:13,920
+text to the content
+
+407
+00:16:13,920 --> 00:16:17,519
+but now how does siri actually integrate
+
+408
+00:16:17,519 --> 00:16:19,839
+with this well that's where as you can
+
+409
+00:16:19,839 --> 00:16:23,120
+see i created my chatter intense target
+
+410
+00:16:23,120 --> 00:16:25,759
+and using this chatter intense target i
+
+411
+00:16:25,759 --> 00:16:29,440
+have the intent handler.swift file
+
+412
+00:16:29,440 --> 00:16:32,720
+and this is essentially where all the uh
+
+413
+00:16:32,720 --> 00:16:35,120
+heavy lifting happens for siri and this
+
+414
+00:16:35,120 --> 00:16:37,519
+is where all the calculations are not
+
+415
+00:16:37,519 --> 00:16:39,120
+calculations necessarily but this is
+
+416
+00:16:39,120 --> 00:16:40,079
+where you
+
+417
+00:16:40,079 --> 00:16:42,000
+handle what happens with siri in your
+
+418
+00:16:42,000 --> 00:16:44,079
+messaging application
+
+419
+00:16:44,079 --> 00:16:46,160
+and so let's begin so now i'm going to
+
+420
+00:16:46,160 --> 00:16:48,399
+just run down this code uh and so as you
+
+421
+00:16:48,399 --> 00:16:51,519
+can see uh we are at the beginning uh
+
+422
+00:16:51,519 --> 00:16:54,320
+importing intents and foundation uh and
+
+423
+00:16:54,320 --> 00:16:56,079
+there are a few comments already created
+
+424
+00:16:56,079 --> 00:16:58,880
+by apple as to how you could use uh this
+
+425
+00:16:58,880 --> 00:17:00,320
+code
+
+426
+00:17:00,320 --> 00:17:01,759
+but continuing now first of all we're
+
+427
+00:17:01,759 --> 00:17:04,720
+creating a class called 10 handler
+
+428
+00:17:04,720 --> 00:17:08,319
+which uh inherits from or conforms to uh
+
+429
+00:17:08,319 --> 00:17:10,959
+intense extension intent send message
+
+430
+00:17:10,959 --> 00:17:13,520
+intent handling uh intense search for
+
+431
+00:17:13,520 --> 00:17:16,799
+messages intent handling and intense set
+
+432
+00:17:16,799 --> 00:17:19,280
+message attribute intent handling now
+
+433
+00:17:19,280 --> 00:17:20,559
+you don't exactly need to know what
+
+434
+00:17:20,559 --> 00:17:22,959
+these mean it's essentially sort of the
+
+435
+00:17:22,959 --> 00:17:25,360
+delegates or the handlers
+
+436
+00:17:25,360 --> 00:17:27,600
+for creating a messaging application
+
+437
+00:17:27,600 --> 00:17:29,679
+which is compatible with siri and siri
+
+438
+00:17:29,679 --> 00:17:31,120
+kit
+
+439
+00:17:31,120 --> 00:17:33,039
+now in this class of course i'm creating
+
+440
+00:17:33,039 --> 00:17:35,039
+my constant for the wormhole which is
+
+441
+00:17:35,039 --> 00:17:36,799
+again using the same app group that i
+
+442
+00:17:36,799 --> 00:17:39,039
+gave it in my viewcontroller.swift
+
+443
+00:17:39,039 --> 00:17:41,200
+and the same optional directory as well
+
+444
+00:17:41,200 --> 00:17:44,320
+in this case called sirikit example
+
+445
+00:17:44,320 --> 00:17:45,840
+now this is just you know the default
+
+446
+00:17:45,840 --> 00:17:47,360
+implementation we don't really need to
+
+447
+00:17:47,360 --> 00:17:49,919
+uh worry about this function
+
+448
+00:17:49,919 --> 00:17:53,039
+but this is the first really uh useful
+
+449
+00:17:53,039 --> 00:17:55,039
+function that we need to uh worry about
+
+450
+00:17:55,039 --> 00:17:57,280
+now essentially this is the resolve
+
+451
+00:17:57,280 --> 00:18:00,080
+recipients function now this function
+
+452
+00:18:00,080 --> 00:18:02,320
+will allow me
+
+453
+00:18:02,320 --> 00:18:05,360
+uh to essentially take uh an intent
+
+454
+00:18:05,360 --> 00:18:08,480
+called intent send message intent uh and
+
+455
+00:18:08,480 --> 00:18:10,000
+it'll have a completion which i'll get
+
+456
+00:18:10,000 --> 00:18:11,840
+into but essentially what this is going
+
+457
+00:18:11,840 --> 00:18:14,480
+to do is it's going to be a method that
+
+458
+00:18:14,480 --> 00:18:17,600
+will choose which contact uh you are
+
+459
+00:18:17,600 --> 00:18:19,600
+sending your message to now
+
+460
+00:18:19,600 --> 00:18:22,000
+in this specific case it's just going to
+
+461
+00:18:22,000 --> 00:18:24,240
+go with whatever you give it if you tell
+
+462
+00:18:24,240 --> 00:18:26,840
+him if you tell siri to send a message
+
+463
+00:18:26,840 --> 00:18:29,520
+to um i don't know
+
+464
+00:18:29,520 --> 00:18:30,559
+tim
+
+465
+00:18:30,559 --> 00:18:32,640
+and let's say tim isn't in your contact
+
+466
+00:18:32,640 --> 00:18:35,039
+list it'll still go with it but you
+
+467
+00:18:35,039 --> 00:18:37,440
+could integrate some sort of logic to
+
+468
+00:18:37,440 --> 00:18:39,280
+tell siri that hey tim isn't in the
+
+469
+00:18:39,280 --> 00:18:41,679
+contact list did you mean timothy or
+
+470
+00:18:41,679 --> 00:18:43,679
+something of that sort but in this case
+
+471
+00:18:43,679 --> 00:18:46,000
+it'll just go with whatever you give it
+
+472
+00:18:46,000 --> 00:18:47,919
+in siri
+
+473
+00:18:47,919 --> 00:18:50,080
+continue i mean in a future tutorial i
+
+474
+00:18:50,080 --> 00:18:52,559
+can of course uh tell you exactly how
+
+475
+00:18:52,559 --> 00:18:54,720
+you would uh do that but for now it just
+
+476
+00:18:54,720 --> 00:18:58,799
+goes with whatever siri gives you
+
+477
+00:18:59,120 --> 00:19:00,960
+next the resolve content which is
+
+478
+00:19:00,960 --> 00:19:02,960
+actually very very simple uh this is
+
+479
+00:19:02,960 --> 00:19:05,440
+just uh now also one more thing really
+
+480
+00:19:05,440 --> 00:19:07,760
+quickly these resolve functions
+
+481
+00:19:07,760 --> 00:19:09,360
+essentially take
+
+482
+00:19:09,360 --> 00:19:12,320
+whatever you gave from siri
+
+483
+00:19:12,320 --> 00:19:15,520
+and it's sort of asking you hey did the
+
+484
+00:19:15,520 --> 00:19:18,640
+user give enough information in what he
+
+485
+00:19:18,640 --> 00:19:19,520
+said
+
+486
+00:19:19,520 --> 00:19:21,760
+and let's say the user said send a
+
+487
+00:19:21,760 --> 00:19:25,120
+chatter message to james archieri
+
+488
+00:19:25,120 --> 00:19:27,360
+well then he said the recipients but he
+
+489
+00:19:27,360 --> 00:19:29,520
+didn't say what exactly he wanted to say
+
+490
+00:19:29,520 --> 00:19:31,600
+to them which is the content
+
+491
+00:19:31,600 --> 00:19:33,360
+and so in this case in the resolve
+
+492
+00:19:33,360 --> 00:19:35,520
+content as you can see we're checking if
+
+493
+00:19:35,520 --> 00:19:37,440
+they've actually given
+
+494
+00:19:37,440 --> 00:19:40,080
+that content if they have then great
+
+495
+00:19:40,080 --> 00:19:41,200
+success
+
+496
+00:19:41,200 --> 00:19:43,280
+if they haven't then we need that value
+
+497
+00:19:43,280 --> 00:19:44,559
+and we're calling that completion
+
+498
+00:19:44,559 --> 00:19:46,799
+handler for siri which will handle what
+
+499
+00:19:46,799 --> 00:19:49,440
+happens next and then of course apple or
+
+500
+00:19:49,440 --> 00:19:51,600
+siri specifically handles all that
+
+501
+00:19:51,600 --> 00:19:53,760
+natural language processing uh and all
+
+502
+00:19:53,760 --> 00:19:55,440
+those steps in between as well which
+
+503
+00:19:55,440 --> 00:19:57,280
+makes it very very convenient for
+
+504
+00:19:57,280 --> 00:19:59,840
+developers
+
+505
+00:19:59,919 --> 00:20:01,919
+but then once you're done resolving all
+
+506
+00:20:01,919 --> 00:20:03,840
+those things you are done handling all
+
+507
+00:20:03,840 --> 00:20:05,760
+the recipients that we need to send to
+
+508
+00:20:05,760 --> 00:20:07,760
+done handling the content and in
+
+509
+00:20:07,760 --> 00:20:09,200
+different types of applications there
+
+510
+00:20:09,200 --> 00:20:10,799
+could be more things to resolve or less
+
+511
+00:20:10,799 --> 00:20:13,280
+things to resolve then in this case
+
+512
+00:20:13,280 --> 00:20:15,360
+we're going to confirm
+
+513
+00:20:15,360 --> 00:20:17,520
+that of course do you actually want to
+
+514
+00:20:17,520 --> 00:20:19,520
+send this message
+
+515
+00:20:19,520 --> 00:20:20,400
+and
+
+516
+00:20:20,400 --> 00:20:22,720
+if the user says yes then great we're
+
+517
+00:20:22,720 --> 00:20:24,320
+just going to continue with whatever
+
+518
+00:20:24,320 --> 00:20:27,120
+siri wants us to continue with
+
+519
+00:20:27,120 --> 00:20:29,600
+and then this is the actual logic that
+
+520
+00:20:29,600 --> 00:20:32,799
+sends the message itself now this is
+
+521
+00:20:32,799 --> 00:20:34,960
+where it gets a little interesting where
+
+522
+00:20:34,960 --> 00:20:37,440
+uh now before if i show you this is the
+
+523
+00:20:37,440 --> 00:20:39,120
+code that i've added before it was just
+
+524
+00:20:39,120 --> 00:20:42,320
+this much uh but with my code added in
+
+525
+00:20:42,320 --> 00:20:44,080
+essentially what this does is it'll
+
+526
+00:20:44,080 --> 00:20:45,440
+check uh
+
+527
+00:20:45,440 --> 00:20:47,120
+first of all we do have the message
+
+528
+00:20:47,120 --> 00:20:50,720
+content we have the message recipients
+
+529
+00:20:50,720 --> 00:20:53,760
+and once we have determined all that
+
+530
+00:20:53,760 --> 00:20:56,159
+it'll create a two message variable and
+
+531
+00:20:56,159 --> 00:20:57,919
+it'll take the first recipient and get
+
+532
+00:20:57,919 --> 00:21:00,000
+the display name of that recipient uh
+
+533
+00:21:00,000 --> 00:21:01,600
+because i mean this application isn't
+
+534
+00:21:01,600 --> 00:21:03,760
+designed to send to multiple people only
+
+535
+00:21:03,760 --> 00:21:06,640
+one person uh and so it's going to take
+
+536
+00:21:06,640 --> 00:21:08,799
+the first recipient uh and get the
+
+537
+00:21:08,799 --> 00:21:12,080
+display name which is a string of course
+
+538
+00:21:12,080 --> 00:21:13,679
+and then what's going to happen this is
+
+539
+00:21:13,679 --> 00:21:15,600
+the really interesting part it uses the
+
+540
+00:21:15,600 --> 00:21:18,240
+wormhole and passes a message object
+
+541
+00:21:18,240 --> 00:21:21,440
+which is to message as an ns string to
+
+542
+00:21:21,440 --> 00:21:24,159
+the to message channel and so you know
+
+543
+00:21:24,159 --> 00:21:26,559
+view controller will get this variable
+
+544
+00:21:26,559 --> 00:21:28,480
+and sort in the two variable that i've
+
+545
+00:21:28,480 --> 00:21:30,640
+declared in view controller
+
+546
+00:21:30,640 --> 00:21:32,640
+and then the wormhole pass message
+
+547
+00:21:32,640 --> 00:21:35,760
+object message content sns string now as
+
+548
+00:21:35,760 --> 00:21:37,280
+i said in my wormhole tutorial the
+
+549
+00:21:37,280 --> 00:21:39,360
+reason i'm converting these to ns string
+
+550
+00:21:39,360 --> 00:21:41,120
+is because it has to be ns coding
+
+551
+00:21:41,120 --> 00:21:42,960
+compliant again if you have questions
+
+552
+00:21:42,960 --> 00:21:45,200
+about that just check out my wormhole
+
+553
+00:21:45,200 --> 00:21:47,200
+video and you'll find out
+
+554
+00:21:47,200 --> 00:21:48,720
+and of course i'm sending this on the
+
+555
+00:21:48,720 --> 00:21:51,200
+channel content message if we go back to
+
+556
+00:21:51,200 --> 00:21:52,960
+view controller as you can see two
+
+557
+00:21:52,960 --> 00:21:55,600
+message and contact message our content
+
+558
+00:21:55,600 --> 00:21:58,159
+message sorry
+
+559
+00:21:58,159 --> 00:22:00,159
+and after this it has sent through the
+
+560
+00:22:00,159 --> 00:22:02,080
+wormhole and we are calling our
+
+561
+00:22:02,080 --> 00:22:04,559
+completion and then siri can continue
+
+562
+00:22:04,559 --> 00:22:07,840
+with whatever it needs to continue with
+
+563
+00:22:07,840 --> 00:22:11,360
+then finally uh there's one last handler
+
+564
+00:22:11,360 --> 00:22:14,320
+uh which is let's say the user asks uh
+
+565
+00:22:14,320 --> 00:22:17,120
+let's search uh through my unread
+
+566
+00:22:17,120 --> 00:22:19,679
+messages uh and so this is essentially
+
+567
+00:22:19,679 --> 00:22:21,360
+the function that will get called for
+
+568
+00:22:21,360 --> 00:22:22,159
+that
+
+569
+00:22:22,159 --> 00:22:24,880
+i n search for messages intent uh and
+
+570
+00:22:24,880 --> 00:22:26,480
+then of course you can sort of give it
+
+571
+00:22:26,480 --> 00:22:28,000
+the messages that it needs to search
+
+572
+00:22:28,000 --> 00:22:30,320
+through or the unread messages that it
+
+573
+00:22:30,320 --> 00:22:32,240
+that siri should respond with which is
+
+574
+00:22:32,240 --> 00:22:34,480
+an in message which in turn takes the
+
+575
+00:22:34,480 --> 00:22:36,640
+identifier the content of the message
+
+576
+00:22:36,640 --> 00:22:39,120
+the date sent uh the sender which in
+
+577
+00:22:39,120 --> 00:22:41,840
+this case is uh sarah and the recipients
+
+578
+00:22:41,840 --> 00:22:44,720
+which in this case is john
+
+579
+00:22:44,720 --> 00:22:48,159
+and that was it for that uh code walk
+
+580
+00:22:48,159 --> 00:22:50,960
+through uh so now let's actually i'm
+
+581
+00:22:50,960 --> 00:22:54,799
+going to show you really quickly a quick
+
+582
+00:22:54,799 --> 00:22:59,440
+demo of a a few more siri phrases here
+
+583
+00:22:59,440 --> 00:23:01,200
+uh so now let's try this out let's uh
+
+584
+00:23:01,200 --> 00:23:04,880
+try out this time um
+
+585
+00:23:05,520 --> 00:23:09,480
+chatter marcus kempen
+
+586
+00:23:09,760 --> 00:23:13,200
+what do you want to say to marcus kempen
+
+587
+00:23:13,200 --> 00:23:16,720
+hi marcus dash i was able to practice my
+
+588
+00:23:16,720 --> 00:23:19,919
+table tennis serve comma so do you have
+
+589
+00:23:19,919 --> 00:23:22,640
+time this weekend to meet up question
+
+590
+00:23:22,640 --> 00:23:24,880
+mark
+
+591
+00:23:25,280 --> 00:23:27,200
+ready to send it
+
+592
+00:23:27,200 --> 00:23:28,880
+yes
+
+593
+00:23:28,880 --> 00:23:30,240
+it's sent
+
+594
+00:23:30,240 --> 00:23:32,880
+all right great us now as you can see
+
+595
+00:23:32,880 --> 00:23:34,880
+essentially what i was able to do
+
+596
+00:23:34,880 --> 00:23:37,919
+is i was able to uh say chatter marcus
+
+597
+00:23:37,919 --> 00:23:41,440
+kempen as a verb this time uh and so i
+
+598
+00:23:41,440 --> 00:23:42,799
+could say chatter and it would
+
+599
+00:23:42,799 --> 00:23:44,240
+understand that hey chatter marcus
+
+600
+00:23:44,240 --> 00:23:46,159
+campin means send a message to mark's
+
+601
+00:23:46,159 --> 00:23:48,159
+campaign via chatter
+
+602
+00:23:48,159 --> 00:23:49,840
+it asked me what i wanted to say to
+
+603
+00:23:49,840 --> 00:23:52,080
+marcus kempen so i told it exactly what
+
+604
+00:23:52,080 --> 00:23:54,880
+i wanted to say it asked me uh it just
+
+605
+00:23:54,880 --> 00:23:56,880
+you know confirmed and once i said yes
+
+606
+00:23:56,880 --> 00:23:59,600
+it was sent and so in that step it got
+
+607
+00:23:59,600 --> 00:24:02,320
+sent through the wormhole and if i click
+
+608
+00:24:02,320 --> 00:24:04,320
+on the application
+
+609
+00:24:04,320 --> 00:24:06,080
+it says your last message was sent to
+
+610
+00:24:06,080 --> 00:24:08,320
+marcus kempen and it said hi marcus i
+
+611
+00:24:08,320 --> 00:24:09,600
+was able to practice my table tennis
+
+612
+00:24:09,600 --> 00:24:11,679
+serve so do you have time this weekend
+
+613
+00:24:11,679 --> 00:24:13,039
+to meet up
+
+614
+00:24:13,039 --> 00:24:16,320
+all right let's try out one last thing
+
+615
+00:24:16,320 --> 00:24:18,640
+let's say
+
+616
+00:24:18,640 --> 00:24:22,559
+chatter john maxwell cohn
+
+617
+00:24:23,520 --> 00:24:25,440
+what do you want to say to john maxwell
+
+618
+00:24:25,440 --> 00:24:26,799
+cohn
+
+619
+00:24:26,799 --> 00:24:28,240
+hi john
+
+620
+00:24:28,240 --> 00:24:30,880
+dash i had some really new and
+
+621
+00:24:30,880 --> 00:24:34,000
+interesting watson iot ideas come on so
+
+622
+00:24:34,000 --> 00:24:36,000
+do you have any time to meet up soon
+
+623
+00:24:36,000 --> 00:24:38,640
+question mark
+
+624
+00:24:39,039 --> 00:24:40,960
+ready to send it
+
+625
+00:24:40,960 --> 00:24:42,720
+yes
+
+626
+00:24:42,720 --> 00:24:44,080
+it's sent
+
+627
+00:24:44,080 --> 00:24:45,679
+and as you can see if i click on the
+
+628
+00:24:45,679 --> 00:24:47,919
+application it will the application was
+
+629
+00:24:47,919 --> 00:24:50,960
+given information by siri uh and it was
+
+630
+00:24:50,960 --> 00:24:54,240
+able to uh parse that uh and display in
+
+631
+00:24:54,240 --> 00:24:55,440
+a label
+
+632
+00:24:55,440 --> 00:24:57,039
+all right so that was pretty interesting
+
+633
+00:24:57,039 --> 00:24:59,360
+so now again really quick recap siri
+
+634
+00:24:59,360 --> 00:25:01,120
+does all the natural language processing
+
+635
+00:25:01,120 --> 00:25:02,559
+you can phrase it really however you
+
+636
+00:25:02,559 --> 00:25:05,120
+want you can use it as a an action in
+
+637
+00:25:05,120 --> 00:25:07,200
+this case like for example you can say
+
+638
+00:25:07,200 --> 00:25:09,520
+chatter john maxwell cohn instead of
+
+639
+00:25:09,520 --> 00:25:11,440
+just send a chatter message to john
+
+640
+00:25:11,440 --> 00:25:14,080
+maxwell cohn uh and then it'll be able
+
+641
+00:25:14,080 --> 00:25:16,640
+to parse that out uh and tell chatter
+
+642
+00:25:16,640 --> 00:25:18,400
+that we want to send a message through
+
+643
+00:25:18,400 --> 00:25:20,720
+your application uh and then siri will
+
+644
+00:25:20,720 --> 00:25:23,360
+do as i said all the nlp and give you
+
+645
+00:25:23,360 --> 00:25:24,799
+who the message is supposed to be sent
+
+646
+00:25:24,799 --> 00:25:27,039
+to even if there are multiple recipients
+
+647
+00:25:27,039 --> 00:25:28,799
+uh it'll choose from the contact list
+
+648
+00:25:28,799 --> 00:25:31,039
+for you it'll do all that sort of stuff
+
+649
+00:25:31,039 --> 00:25:33,279
+and it'll even take out the content and
+
+650
+00:25:33,279 --> 00:25:35,600
+plus you can uh create your own little
+
+651
+00:25:35,600 --> 00:25:38,880
+ui for siri uh so you know you have your
+
+652
+00:25:38,880 --> 00:25:41,279
+own little message interface
+
+653
+00:25:41,279 --> 00:25:43,279
+and that is very interesting and of
+
+654
+00:25:43,279 --> 00:25:46,240
+course a more detailed look at surrogate
+
+655
+00:25:46,240 --> 00:25:48,559
+is going to be coming soon uh to the
+
+656
+00:25:48,559 --> 00:25:50,400
+channel but that's going to be it for
+
+657
+00:25:50,400 --> 00:25:52,320
+today thank you very much i hope you
+
+658
+00:25:52,320 --> 00:25:55,120
+enjoyed uh if this video helped you out
+
+659
+00:25:55,120 --> 00:25:56,480
+or if you think it could help someone
+
+660
+00:25:56,480 --> 00:25:58,559
+else out please try please uh you know
+
+661
+00:25:58,559 --> 00:25:59,919
+share the video with whoever you think
+
+662
+00:25:59,919 --> 00:26:02,000
+it might help and maybe even leave a
+
+663
+00:26:02,000 --> 00:26:04,559
+like down below and also if you like my
+
+664
+00:26:04,559 --> 00:26:06,000
+content and you want to see more of it
+
+665
+00:26:06,000 --> 00:26:07,679
+please subscribe to my youtube channel
+
+666
+00:26:07,679 --> 00:26:09,840
+it really does help out a lot again if
+
+667
+00:26:09,840 --> 00:26:12,480
+you have any suggestions uh comments or
+
+668
+00:26:12,480 --> 00:26:14,880
+feedback or even questions uh leave them
+
+669
+00:26:14,880 --> 00:26:17,120
+down in the comments below you can email
+
+670
+00:26:17,120 --> 00:26:20,000
+me at tagimania gmail.com or even tweet
+
+671
+00:26:20,000 --> 00:26:22,640
+to me at tajimani that's going to be it
+
+672
+00:26:22,640 --> 00:26:24,640
+for this tutorial thank you very much
+
+673
+00:26:24,640 --> 00:26:27,440
+goodbye

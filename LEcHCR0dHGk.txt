@@ -1,0 +1,415 @@
+1
+00:00:00,030 --> 00:00:02,220
+so lower there and welcome to another
+
+2
+00:00:02,220 --> 00:00:04,290
+tutorial my name is Sameer Bakshi and
+
+3
+00:00:04,290 --> 00:00:05,460
+this time we're gonna be going over
+
+4
+00:00:05,460 --> 00:00:08,340
+generic functions in swift 2 now in
+
+5
+00:00:08,340 --> 00:00:09,750
+order to understand what generic
+
+6
+00:00:09,750 --> 00:00:11,340
+functions are and what problem they
+
+7
+00:00:11,340 --> 00:00:14,309
+solve let's take a simple example let's
+
+8
+00:00:14,309 --> 00:00:16,859
+say we were to create a few functions or
+
+9
+00:00:16,859 --> 00:00:17,880
+actually 1 function
+
+10
+00:00:17,880 --> 00:00:28,830
+currently which is int equal ok and this
+
+11
+00:00:28,830 --> 00:00:36,899
+takes two integers and returns whether
+
+12
+00:00:36,899 --> 00:00:43,829
+or not they're equal ok now this is a
+
+13
+00:00:43,829 --> 00:00:46,140
+very simple function and it has some
+
+14
+00:00:46,140 --> 00:00:48,090
+functionality to it exactly that's why
+
+15
+00:00:48,090 --> 00:00:51,059
+it's called a function ok now this works
+
+16
+00:00:51,059 --> 00:00:53,010
+for integers right now let's create one
+
+17
+00:00:53,010 --> 00:00:54,660
+for Strings because of course you want
+
+18
+00:00:54,660 --> 00:00:56,100
+to check if integers are equal you want
+
+19
+00:00:56,100 --> 00:00:57,930
+to check if strings are equal and so
+
+20
+00:00:57,930 --> 00:00:59,340
+what we're going to do is we're going to
+
+21
+00:00:59,340 --> 00:01:09,689
+say st r which takes two strings and it
+
+22
+00:01:09,689 --> 00:01:14,930
+returns whether or not they're equal ok
+
+23
+00:01:14,930 --> 00:01:17,369
+now we have one for strings and we have
+
+24
+00:01:17,369 --> 00:01:19,950
+one for integers why not have one for
+
+25
+00:01:19,950 --> 00:01:21,270
+doubles right because we have to do
+
+26
+00:01:21,270 --> 00:01:26,939
+decimals as well so we're going to say
+
+27
+00:01:26,939 --> 00:01:33,540
+double equal which takes two doubles and
+
+28
+00:01:33,540 --> 00:01:36,240
+returns whether or not they're equal
+
+29
+00:01:36,240 --> 00:01:39,540
+again ok now this is just gonna keep
+
+30
+00:01:39,540 --> 00:01:41,369
+continuing on and on and on and on for
+
+31
+00:01:41,369 --> 00:01:44,670
+each type we have right and now there's
+
+32
+00:01:44,670 --> 00:01:46,680
+a quick problem you may have already
+
+33
+00:01:46,680 --> 00:01:48,509
+noticed this there are way too many
+
+34
+00:01:48,509 --> 00:01:50,790
+functions for us to create for every
+
+35
+00:01:50,790 --> 00:01:52,530
+single type of number or string or
+
+36
+00:01:52,530 --> 00:01:54,299
+datatype in general there will be for
+
+37
+00:01:54,299 --> 00:01:56,450
+one for NS data there would be one for
+
+38
+00:01:56,450 --> 00:01:58,710
+literally any type to be completely
+
+39
+00:01:58,710 --> 00:02:01,680
+honest and so in order to follow this we
+
+40
+00:02:01,680 --> 00:02:04,020
+use something called generics now make
+
+41
+00:02:04,020 --> 00:02:06,210
+me wondering how would generics help us
+
+42
+00:02:06,210 --> 00:02:09,170
+solve this problem well let me explain
+
+43
+00:02:09,170 --> 00:02:12,030
+let's take this example first of all
+
+44
+00:02:12,030 --> 00:02:14,490
+let's see integer string and double
+
+45
+00:02:14,490 --> 00:02:18,180
+what class do they all inherit from well
+
+46
+00:02:18,180 --> 00:02:20,910
+there's one answer equatable they also
+
+47
+00:02:20,910 --> 00:02:23,220
+inherit from me comparable but we'll
+
+48
+00:02:23,220 --> 00:02:24,180
+talk about that later
+
+49
+00:02:24,180 --> 00:02:35,700
+now in Swift equate Abel is a class that
+
+50
+00:02:35,700 --> 00:02:38,400
+determines if this if this is inherited
+
+51
+00:02:38,400 --> 00:02:40,590
+by class if a class inherits from this
+
+52
+00:02:40,590 --> 00:02:43,650
+then this class has to first of all
+
+53
+00:02:43,650 --> 00:02:46,590
+override some methods from this protocol
+
+54
+00:02:46,590 --> 00:02:48,990
+bio-oil was a protocol not a class if I
+
+55
+00:02:48,990 --> 00:02:51,270
+made that mistake it's a protocol which
+
+56
+00:02:51,270 --> 00:02:55,080
+if other classes conform to then they
+
+57
+00:02:55,080 --> 00:02:58,140
+have to implement some methods and then
+
+58
+00:02:58,140 --> 00:03:00,330
+there's a way to check if two of these
+
+59
+00:03:00,330 --> 00:03:02,940
+types are equal as the name equatable
+
+60
+00:03:02,940 --> 00:03:05,610
+says and so this is a default in Swift
+
+61
+00:03:05,610 --> 00:03:08,100
+but I'm not exactly sure about Swift one
+
+62
+00:03:08,100 --> 00:03:09,450
+but Swift too of course
+
+63
+00:03:09,450 --> 00:03:12,090
+yes it is and so now what we want to do
+
+64
+00:03:12,090 --> 00:03:13,530
+is we want to create something called a
+
+65
+00:03:13,530 --> 00:03:15,960
+generic function what is it going to do
+
+66
+00:03:15,960 --> 00:03:20,430
+essentially is this will take a T
+
+67
+00:03:20,430 --> 00:03:23,100
+variable not a variable from the user
+
+68
+00:03:23,100 --> 00:03:24,780
+won't have to fill out the T variables
+
+69
+00:03:24,780 --> 00:03:30,560
+but there's going to be an imaginary T
+
+70
+00:03:30,560 --> 00:03:34,560
+over here okay and now what we're also
+
+71
+00:03:34,560 --> 00:03:36,150
+going to do is we're going to make sure
+
+72
+00:03:36,150 --> 00:03:43,550
+that T inherits from equatable okay and
+
+73
+00:03:43,550 --> 00:03:48,300
+then we're going to do something I think
+
+74
+00:03:48,300 --> 00:03:55,200
+you can understand already T equal we
+
+75
+00:03:55,200 --> 00:03:59,240
+could just do equal but dumb
+
+76
+00:04:00,190 --> 00:04:03,020
+but but you know just for this example
+
+77
+00:04:03,020 --> 00:04:04,610
+so you understand we're going to
+
+78
+00:04:04,610 --> 00:04:08,900
+continue the pattern it's a t equal and
+
+79
+00:04:08,900 --> 00:04:13,430
+it's going to take two T's and it's
+
+80
+00:04:13,430 --> 00:04:15,770
+going to return whether or not these two
+
+81
+00:04:15,770 --> 00:04:18,709
+T's are equal and the reason we know
+
+82
+00:04:18,709 --> 00:04:21,830
+that these two T's can be compared in
+
+83
+00:04:21,830 --> 00:04:24,170
+equal terms is because it inherits from
+
+84
+00:04:24,170 --> 00:04:27,890
+the equator of protocol and so instead
+
+85
+00:04:27,890 --> 00:04:30,050
+of having to create types like and
+
+86
+00:04:30,050 --> 00:04:32,150
+functions to compare each and every
+
+87
+00:04:32,150 --> 00:04:34,370
+single different type we just create one
+
+88
+00:04:34,370 --> 00:04:37,070
+function that takes two any types that
+
+89
+00:04:37,070 --> 00:04:39,410
+are equatable compares them returns them
+
+90
+00:04:39,410 --> 00:04:41,180
+to you and run function you solve your
+
+91
+00:04:41,180 --> 00:04:43,460
+messy code problem you solve pretty much
+
+92
+00:04:43,460 --> 00:04:45,050
+every other problem that all of these
+
+93
+00:04:45,050 --> 00:04:47,450
+have and now in order to actually show
+
+94
+00:04:47,450 --> 00:04:49,100
+you how this works I'm gonna be going to
+
+95
+00:04:49,100 --> 00:04:51,110
+the Mac part where I will show you some
+
+96
+00:04:51,110 --> 00:04:53,210
+examples in the playground and of course
+
+97
+00:04:53,210 --> 00:04:54,710
+as always this will be in the
+
+98
+00:04:54,710 --> 00:04:57,980
+description in the on github as a
+
+99
+00:04:57,980 --> 00:05:00,500
+repository so you can check out the code
+
+100
+00:05:00,500 --> 00:05:01,970
+for yourself but for now let's get to
+
+101
+00:05:01,970 --> 00:05:03,770
+the Mac part in which I will be showing
+
+102
+00:05:03,770 --> 00:05:06,470
+you a quick and simple playground which
+
+103
+00:05:06,470 --> 00:05:08,810
+helps you solve the generic function
+
+104
+00:05:08,810 --> 00:05:12,280
+issue so let's get to it

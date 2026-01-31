@@ -1,0 +1,2591 @@
+1
+00:00:04,839 --> 00:00:06,399
+so hello there and welcome to another
+
+2
+00:00:06,399 --> 00:00:08,639
+tutorial my name is hry backy this time
+
+3
+00:00:08,639 --> 00:00:10,240
+we're going to be going over something a
+
+4
+00:00:10,240 --> 00:00:12,559
+bit different recursion and this time
+
+5
+00:00:12,559 --> 00:00:14,400
+using the example of
+
+6
+00:00:14,400 --> 00:00:17,760
+factorials uh and so uh again today
+
+7
+00:00:17,760 --> 00:00:19,080
+we're going to be talking about
+
+8
+00:00:19,080 --> 00:00:21,680
+recursion uh and so today we're going to
+
+9
+00:00:21,680 --> 00:00:23,640
+be doing something again a bit different
+
+10
+00:00:23,640 --> 00:00:25,119
+we're not going to be using apps we're
+
+11
+00:00:25,119 --> 00:00:27,880
+going to be using playgrounds uh so
+
+12
+00:00:27,880 --> 00:00:29,519
+anyway I'm still going to label it under
+
+13
+00:00:29,519 --> 00:00:31,480
+iOS apps just because it becomes easier
+
+14
+00:00:31,480 --> 00:00:33,480
+and I don't have a million different
+
+15
+00:00:33,480 --> 00:00:36,160
+playlists uh but they are classified
+
+16
+00:00:36,160 --> 00:00:38,160
+under iOS apps and this is technically
+
+17
+00:00:38,160 --> 00:00:39,879
+an algorithm because we're teaching you
+
+18
+00:00:39,879 --> 00:00:42,719
+how to get the factorial of something uh
+
+19
+00:00:42,719 --> 00:00:45,559
+using recursion not using recursion and
+
+20
+00:00:45,559 --> 00:00:46,840
+sort of using
+
+21
+00:00:46,840 --> 00:00:49,960
+recursion anyway let's get started today
+
+22
+00:00:49,960 --> 00:00:52,600
+uh with finding my marker anyway so now
+
+23
+00:00:52,600 --> 00:00:55,960
+that I have it uh let's get started with
+
+24
+00:00:55,960 --> 00:00:58,399
+first of all what in the world is
+
+25
+00:00:58,399 --> 00:01:01,280
+recursion well cursion simply put is
+
+26
+00:01:01,280 --> 00:01:04,920
+just recurring repeating it's just
+
+27
+00:01:04,920 --> 00:01:07,400
+calling something over and over again
+
+28
+00:01:07,400 --> 00:01:11,080
+for example if you have function called
+
+29
+00:01:11,080 --> 00:01:13,920
+um factorial and within that function
+
+30
+00:01:13,920 --> 00:01:17,240
+you call itself making an eternal Loop
+
+31
+00:01:17,240 --> 00:01:19,960
+that's considered recursion however I'm
+
+32
+00:01:19,960 --> 00:01:21,759
+going to be teaching you not how to
+
+33
+00:01:21,759 --> 00:01:23,960
+crash your computer not how to create an
+
+34
+00:01:23,960 --> 00:01:27,079
+internal Loop but instead how to create
+
+35
+00:01:27,079 --> 00:01:30,040
+a loop by calling a function over over
+
+36
+00:01:30,040 --> 00:01:32,680
+and over again within itself but then
+
+37
+00:01:32,680 --> 00:01:34,640
+stopping at a point and then returning a
+
+38
+00:01:34,640 --> 00:01:37,360
+value so let's get started by asking
+
+39
+00:01:37,360 --> 00:01:40,880
+another question what in the world is a
+
+40
+00:01:40,880 --> 00:01:43,880
+factorial well let's get started first
+
+41
+00:01:43,880 --> 00:01:46,040
+of all what's the operator for factorial
+
+42
+00:01:46,040 --> 00:01:48,360
+hint math because I have to put math
+
+43
+00:01:48,360 --> 00:01:51,439
+into everything anyway the operator for
+
+44
+00:01:51,439 --> 00:01:53,719
+a factorial is actually an exclamation
+
+45
+00:01:53,719 --> 00:01:57,240
+mark uh and so actually bit thicker you
+
+46
+00:01:57,240 --> 00:02:00,799
+probably can't see that on camera there
+
+47
+00:02:00,799 --> 00:02:02,439
+and now if I were to find something like
+
+48
+00:02:02,439 --> 00:02:03,719
+four is
+
+49
+00:02:03,719 --> 00:02:05,640
+factorial I would just put the number
+
+50
+00:02:05,640 --> 00:02:06,960
+four in front of
+
+51
+00:02:06,960 --> 00:02:12,040
+it four factorial and so all this
+
+52
+00:02:12,040 --> 00:02:15,519
+equal how do we calculate a factorial I
+
+53
+00:02:15,519 --> 00:02:17,760
+don't understand well you'll find out
+
+54
+00:02:17,760 --> 00:02:20,640
+right as I write this
+
+55
+00:02:24,800 --> 00:02:30,000
+down that's the factorial of four 4 * 3
+
+56
+00:02:30,000 --> 00:02:33,760
+* 2 * 1 and so you must understand the
+
+57
+00:02:33,760 --> 00:02:36,920
+point of a factorial now it's taking
+
+58
+00:02:36,920 --> 00:02:37,920
+number
+
+59
+00:02:37,920 --> 00:02:41,519
+n multiplying it by each number that
+
+60
+00:02:41,519 --> 00:02:45,440
+comes in between it till the number one
+
+61
+00:02:45,440 --> 00:02:47,920
+and so in the case of number four it's 4
+
+62
+00:02:47,920 --> 00:02:51,959
+3 2 and 1 so 4 * 3 * 2 1 so first let's
+
+63
+00:02:51,959 --> 00:02:55,560
+do it this order so 2 * 1 we know that's
+
+64
+00:02:55,560 --> 00:02:59,920
+2 2 * 3 we know that's 6 4 * 6 we know
+
+65
+00:02:59,920 --> 00:03:02,560
+that's 24 and so we can theoretically
+
+66
+00:03:02,560 --> 00:03:06,959
+say that 4 * 3 * 2 * 1 is
+
+67
+00:03:06,959 --> 00:03:12,319
+24 and so we know that the factorial of
+
+68
+00:03:12,319 --> 00:03:17,560
+four can successfully be identified as
+
+69
+00:03:18,159 --> 00:03:21,840
+24 now why exactly would we use this in
+
+70
+00:03:21,840 --> 00:03:24,080
+the first place well let's take this
+
+71
+00:03:24,080 --> 00:03:27,159
+down a step let's see what uh three's
+
+72
+00:03:27,159 --> 00:03:30,519
+factorial is for example so
+
+73
+00:03:30,519 --> 00:03:33,120
+3's
+
+74
+00:03:33,720 --> 00:03:35,920
+factorial 3's
+
+75
+00:03:35,920 --> 00:03:38,319
+factorial now how would we find this out
+
+76
+00:03:38,319 --> 00:03:41,200
+again 3 * 2 * 1 which I'll just write
+
+77
+00:03:41,200 --> 00:03:43,799
+down one more
+
+78
+00:03:44,640 --> 00:03:48,560
+time we know 2 * 1 is uh 2 and we know
+
+79
+00:03:48,560 --> 00:03:50,920
+that 3 * 2 is of course
+
+80
+00:03:50,920 --> 00:03:54,239
+6 and so we can say that 3 is factorial
+
+81
+00:03:54,239 --> 00:03:55,599
+is
+
+82
+00:03:55,599 --> 00:03:57,519
+six now let's just write down the
+
+83
+00:03:57,519 --> 00:04:00,280
+numbers 1 2 and three or to make it
+
+84
+00:04:00,280 --> 00:04:02,680
+simpler a b and
+
+85
+00:04:02,680 --> 00:04:05,159
+c so we have
+
+86
+00:04:05,159 --> 00:04:09,120
+a b and
+
+87
+00:04:09,120 --> 00:04:13,280
+c okay now how all can we arrange these
+
+88
+00:04:13,280 --> 00:04:15,840
+letters or what are the possible
+
+89
+00:04:15,840 --> 00:04:18,000
+permutations of this
+
+90
+00:04:18,000 --> 00:04:21,079
+set in this case let's get started it's
+
+91
+00:04:21,079 --> 00:04:22,160
+going to be
+
+92
+00:04:22,160 --> 00:04:25,280
+ABC a
+
+93
+00:04:25,280 --> 00:04:28,320
+CB B
+
+94
+00:04:28,320 --> 00:04:31,400
+CA B c a
+
+95
+00:04:31,400 --> 00:04:33,600
+c
+
+96
+00:04:33,600 --> 00:04:37,240
+CBA and C
+
+97
+00:04:39,080 --> 00:04:42,160
+AB now these are all the possible
+
+98
+00:04:42,160 --> 00:04:45,160
+permutations for a b c if you were to
+
+99
+00:04:45,160 --> 00:04:48,240
+swap these out with numbers 1 2 3 one
+
+100
+00:04:48,240 --> 00:04:50,600
+like 1 2 and three then you would have 1
+
+101
+00:04:50,600 --> 00:04:56,440
+2 3 1 3 2 etc etc but let's just count
+
+102
+00:04:56,440 --> 00:04:59,080
+this for a second there's one possible
+
+103
+00:04:59,080 --> 00:05:03,759
+permutation two possible permutation 3 4
+
+104
+00:05:03,759 --> 00:05:07,240
+5 6 oh what a coincidence this must not
+
+105
+00:05:07,240 --> 00:05:10,680
+even matter well the um apparently
+
+106
+00:05:10,680 --> 00:05:12,880
+factorial for three is six and the
+
+107
+00:05:12,880 --> 00:05:14,680
+possible permutations for it are six as
+
+108
+00:05:14,680 --> 00:05:17,240
+well what a coincidence well it's not
+
+109
+00:05:17,240 --> 00:05:18,960
+because that's what factorials are used
+
+110
+00:05:18,960 --> 00:05:22,360
+for factorials are used to find out the
+
+111
+00:05:22,360 --> 00:05:25,160
+possible permutations of a
+
+112
+00:05:25,160 --> 00:05:27,520
+set
+
+113
+00:05:27,520 --> 00:05:30,360
+so we can see that if we were to do this
+
+114
+00:05:30,360 --> 00:05:33,560
+with any number four is factorial 5 6 7
+
+115
+00:05:33,560 --> 00:05:37,240
+8 9 10 11 12 13 14 15 16 17 18 or even
+
+116
+00:05:37,240 --> 00:05:40,720
+19 or even 20 any
+
+117
+00:05:40,720 --> 00:05:44,560
+number is any number is factorial will
+
+118
+00:05:44,560 --> 00:05:46,880
+be the amount of permutations you can
+
+119
+00:05:46,880 --> 00:05:48,880
+give it give
+
+120
+00:05:48,880 --> 00:05:53,000
+it and so now that we know this much
+
+121
+00:05:53,000 --> 00:05:54,639
+let's continue really
+
+122
+00:05:54,639 --> 00:05:58,720
+quickly and so you might be wondering
+
+123
+00:05:58,720 --> 00:06:00,280
+actually you aren't wondering this
+
+124
+00:06:00,280 --> 00:06:01,960
+because I haven't told you this
+
+125
+00:06:01,960 --> 00:06:04,080
+already however I'm going to tell you
+
+126
+00:06:04,080 --> 00:06:05,400
+something a bit
+
+127
+00:06:05,400 --> 00:06:09,440
+shocking which you may have not
+
+128
+00:06:11,560 --> 00:06:14,240
+known which
+
+129
+00:06:14,240 --> 00:06:17,240
+is
+
+130
+00:06:20,240 --> 00:06:23,599
+that watch
+
+131
+00:06:24,840 --> 00:06:29,440
+this On's factorial
+
+132
+00:06:29,800 --> 00:06:32,560
+is equal to Z's
+
+133
+00:06:32,560 --> 00:06:36,000
+factorial which is equal to
+
+134
+00:06:36,000 --> 00:06:38,800
+one I'll just write that a bit
+
+135
+00:06:38,800 --> 00:06:41,199
+bigger how is this
+
+136
+00:06:41,199 --> 00:06:43,479
+possible well let's take this a step
+
+137
+00:06:43,479 --> 00:06:46,400
+back what are the possible permutations
+
+138
+00:06:46,400 --> 00:06:49,479
+of the set with one in
+
+139
+00:06:49,479 --> 00:06:53,319
+it well might not seem obvious at first
+
+140
+00:06:53,319 --> 00:06:55,039
+but there is one
+
+141
+00:06:55,039 --> 00:06:58,039
+permutation which is to do nothing keep
+
+142
+00:06:58,039 --> 00:07:00,479
+one in its place
+
+143
+00:07:00,479 --> 00:07:02,520
+so that counts as a permutation because
+
+144
+00:07:02,520 --> 00:07:06,120
+as you saw we counted a b c as a
+
+145
+00:07:06,120 --> 00:07:09,000
+permutation that was still in place so
+
+146
+00:07:09,000 --> 00:07:12,080
+why can't this be counted as permutation
+
+147
+00:07:12,080 --> 00:07:16,599
+H and so according to that
+
+148
+00:07:16,599 --> 00:07:21,800
+theory the uh factorial of one should be
+
+149
+00:07:21,800 --> 00:07:25,080
+one however zero how does this work so
+
+150
+00:07:25,080 --> 00:07:27,479
+these are the possible permutations for
+
+151
+00:07:27,479 --> 00:07:30,160
+zero just a blank thing because of
+
+152
+00:07:30,160 --> 00:07:32,000
+course it's
+
+153
+00:07:32,000 --> 00:07:34,400
+zero now what are the possible things
+
+154
+00:07:34,400 --> 00:07:38,680
+that I can do to this set well I can do
+
+155
+00:07:38,680 --> 00:07:41,840
+one thing keep it in place again and so
+
+156
+00:07:41,840 --> 00:07:44,440
+we can successfully say that Zero's
+
+157
+00:07:44,440 --> 00:07:47,319
+factorial should in theory be one which
+
+158
+00:07:47,319 --> 00:07:50,319
+is equal to one's
+
+159
+00:07:50,319 --> 00:07:52,800
+factorial and so now that you know that
+
+160
+00:07:52,800 --> 00:07:54,639
+you are completely equipped with the
+
+161
+00:07:54,639 --> 00:07:56,000
+knowledge for
+
+162
+00:07:56,000 --> 00:07:57,879
+factorials now that you know about
+
+163
+00:07:57,879 --> 00:08:00,800
+factorials nothing's left but to go to
+
+164
+00:08:00,800 --> 00:08:04,639
+the Mac part uh and so oh one more thing
+
+165
+00:08:04,639 --> 00:08:07,199
+before you continue on your quest is
+
+166
+00:08:07,199 --> 00:08:09,840
+what about
+
+167
+00:08:12,199 --> 00:08:14,800
+this -4
+
+168
+00:08:14,800 --> 00:08:17,199
+factorial well first of all let's break
+
+169
+00:08:17,199 --> 00:08:19,080
+this down into steps in order to find a
+
+170
+00:08:19,080 --> 00:08:20,759
+negative numbers
+
+171
+00:08:20,759 --> 00:08:22,800
+factorial take the
+
+172
+00:08:22,800 --> 00:08:25,919
+negative write a bracket then the
+
+173
+00:08:25,919 --> 00:08:28,440
+factorial part then another
+
+174
+00:08:28,440 --> 00:08:31,520
+bracket what does this do exactly well
+
+175
+00:08:31,520 --> 00:08:33,760
+that's telling us that we solve for
+
+176
+00:08:33,760 --> 00:08:37,479
+Four's um factorial and then give it a
+
+177
+00:08:37,479 --> 00:08:39,080
+negative
+
+178
+00:08:39,080 --> 00:08:43,560
+value and so we know that four is
+
+179
+00:08:43,560 --> 00:08:47,120
+factorial is equal to
+
+180
+00:08:48,760 --> 00:08:52,160
+24 now if we were to
+
+181
+00:08:52,160 --> 00:08:55,160
+take
+
+182
+00:08:55,600 --> 00:08:58,560
+24 we would actually quite actually
+
+183
+00:08:58,560 --> 00:09:01,480
+negative of positive 24 if you watch my
+
+184
+00:09:01,480 --> 00:09:03,360
+integer series I you know what I'm
+
+185
+00:09:03,360 --> 00:09:04,519
+talking about the link will be down in
+
+186
+00:09:04,519 --> 00:09:06,399
+the description and also on the screen
+
+187
+00:09:06,399 --> 00:09:07,320
+right
+
+188
+00:09:07,320 --> 00:09:13,320
+now and now it's gone uh but so
+
+189
+00:09:13,519 --> 00:09:16,839
+now negative and positive is equal to
+
+190
+00:09:16,839 --> 00:09:21,200
+negative so the net answer will be -4
+
+191
+00:09:21,200 --> 00:09:23,120
+and theoretically we should be able to
+
+192
+00:09:23,120 --> 00:09:25,120
+say that
+
+193
+00:09:25,120 --> 00:09:30,920
+-4 factorial is -4
+
+194
+00:09:33,079 --> 00:09:36,920
+and so that actually completes your
+
+195
+00:09:36,920 --> 00:09:39,320
+knowledge for
+
+196
+00:09:39,320 --> 00:09:41,600
+factorials anyway now I'm going to be
+
+197
+00:09:41,600 --> 00:09:43,640
+joining you in the Mac part where I will
+
+198
+00:09:43,640 --> 00:09:46,480
+be creating an implementation for this
+
+199
+00:09:46,480 --> 00:09:51,160
+in Swift using not using non- recursion
+
+200
+00:09:51,160 --> 00:09:54,240
+a little recursion but still keeping it
+
+201
+00:09:54,240 --> 00:09:58,040
+readable and no readability at all so
+
+202
+00:09:58,040 --> 00:09:59,839
+yeah it's going to be pretty interesting
+
+203
+00:09:59,839 --> 00:10:01,560
+uh so stick around to the Mac part in
+
+204
+00:10:01,560 --> 00:10:03,920
+which you will learn how to create your
+
+205
+00:10:03,920 --> 00:10:06,640
+own recursion sort
+
+206
+00:10:06,640 --> 00:10:09,440
+of program for factorials and then you
+
+207
+00:10:09,440 --> 00:10:11,560
+can apply it to any pretty much any
+
+208
+00:10:11,560 --> 00:10:14,000
+other algorithm or function you want so
+
+209
+00:10:14,000 --> 00:10:16,760
+let's get to
+
+210
+00:10:17,600 --> 00:10:20,240
+it so welcome back to the Mac part now
+
+211
+00:10:20,240 --> 00:10:21,839
+that we're at the Mac part let's
+
+212
+00:10:21,839 --> 00:10:24,040
+actually give a demonstration of how you
+
+213
+00:10:24,040 --> 00:10:26,720
+would do a classic sort of way of
+
+214
+00:10:26,720 --> 00:10:29,480
+finding the factorial now classically
+
+215
+00:10:29,480 --> 00:10:30,920
+wouldn't use recursion so we're not
+
+216
+00:10:30,920 --> 00:10:32,279
+going to use recursion this is going to
+
+217
+00:10:32,279 --> 00:10:34,440
+be the longest method and first I'm just
+
+218
+00:10:34,440 --> 00:10:36,399
+going to show you a barebone of how this
+
+219
+00:10:36,399 --> 00:10:38,480
+will work so let's get started by
+
+220
+00:10:38,480 --> 00:10:41,600
+creating a function uh named
+
+221
+00:10:41,600 --> 00:10:43,760
+factorial uh and let's just say that
+
+222
+00:10:43,760 --> 00:10:46,000
+this is not recursive uh and let's take
+
+223
+00:10:46,000 --> 00:10:49,120
+it take a number to factorial uh as a
+
+224
+00:10:49,120 --> 00:10:52,720
+number as an integer uh and return an
+
+225
+00:10:52,720 --> 00:10:54,800
+integer uh inside of here we're going to
+
+226
+00:10:54,800 --> 00:10:56,519
+do a few things like uh let's just
+
+227
+00:10:56,519 --> 00:10:58,320
+create the result variable so we have
+
+228
+00:10:58,320 --> 00:11:00,240
+something to return and let's just
+
+229
+00:11:00,240 --> 00:11:02,639
+return
+
+230
+00:11:03,560 --> 00:11:06,160
+this sometimes I hate Alex code takes a
+
+231
+00:11:06,160 --> 00:11:09,240
+bit of time yeah that was not supposed
+
+232
+00:11:09,240 --> 00:11:12,200
+to happen okay perfect uh and then next
+
+233
+00:11:12,200 --> 00:11:14,560
+let's just declare a limit for our while
+
+234
+00:11:14,560 --> 00:11:17,000
+loop uh and next what we want to do is
+
+235
+00:11:17,000 --> 00:11:19,200
+take our number over here and change it
+
+236
+00:11:19,200 --> 00:11:21,240
+to a variable you'll see why in just a
+
+237
+00:11:21,240 --> 00:11:23,279
+minute next we're going to create a
+
+238
+00:11:23,279 --> 00:11:24,120
+while
+
+239
+00:11:24,120 --> 00:11:27,440
+loop uh for while num the number that
+
+240
+00:11:27,440 --> 00:11:28,920
+they gave us in the parameter is not
+
+241
+00:11:28,920 --> 00:11:31,639
+equal to to our limit meaning it'll keep
+
+242
+00:11:31,639 --> 00:11:34,360
+going we just decrement our number and
+
+243
+00:11:34,360 --> 00:11:38,360
+say that our result times equals that
+
+244
+00:11:38,360 --> 00:11:40,440
+number now first of all I'm just going
+
+245
+00:11:40,440 --> 00:11:42,680
+to show you that it works after I show
+
+246
+00:11:42,680 --> 00:11:44,839
+you how it works I'll explain in depth
+
+247
+00:11:44,839 --> 00:11:46,720
+and explain some of the limitations as
+
+248
+00:11:46,720 --> 00:11:49,279
+well so let's see this as well let's see
+
+249
+00:11:49,279 --> 00:11:52,680
+this right now so factorial NR and let's
+
+250
+00:11:52,680 --> 00:11:55,360
+just get the factorial for four as you
+
+251
+00:11:55,360 --> 00:11:57,000
+can see first of all let's just
+
+252
+00:11:57,000 --> 00:11:59,880
+Spotlight it so if I do four exclamation
+
+253
+00:11:59,880 --> 00:12:02,920
+mark or exclamation mark uh we see we
+
+254
+00:12:02,920 --> 00:12:06,399
+should be getting 24 and we do and so
+
+255
+00:12:06,399 --> 00:12:07,519
+this
+
+256
+00:12:07,519 --> 00:12:11,959
+means if I open up here we get 24 and so
+
+257
+00:12:11,959 --> 00:12:13,600
+this means that our factorial function
+
+258
+00:12:13,600 --> 00:12:17,000
+is working we can even do five and if we
+
+259
+00:12:17,000 --> 00:12:18,160
+Spotlight
+
+260
+00:12:18,160 --> 00:12:21,199
+it 120 and we get
+
+261
+00:12:21,199 --> 00:12:25,000
+120 I can do it for six 7 8 9 10 11 up
+
+262
+00:12:25,000 --> 00:12:27,480
+to like a lot of
+
+263
+00:12:27,480 --> 00:12:30,880
+numbers however
+
+264
+00:12:30,880 --> 00:12:35,399
+what we can't do is something like
+
+265
+00:12:35,399 --> 00:12:38,399
+this and then we just go into an eternal
+
+266
+00:12:38,399 --> 00:12:42,079
+Loop of Despair and so in order to stop
+
+267
+00:12:42,079 --> 00:12:45,800
+this eternal Loop all we do is we make a
+
+268
+00:12:45,800 --> 00:12:49,120
+simple conditional before we even start
+
+269
+00:12:49,120 --> 00:12:51,560
+our function we just want to come over
+
+270
+00:12:51,560 --> 00:12:53,920
+here and say if our number is equal to
+
+271
+00:12:53,920 --> 00:12:57,600
+zero or our number is equal to one then
+
+272
+00:12:57,600 --> 00:12:59,440
+just immediately return one don't even
+
+273
+00:12:59,440 --> 00:13:03,440
+do anything and now if I give it a zero
+
+274
+00:13:03,440 --> 00:13:04,600
+don't worry about that error it's a
+
+275
+00:13:04,600 --> 00:13:08,600
+ghost err perfect we get the result one
+
+276
+00:13:08,600 --> 00:13:13,120
+it doesn't go into internal Loop of
+
+277
+00:13:13,279 --> 00:13:15,959
+Despair uh and so now next what we have
+
+278
+00:13:15,959 --> 00:13:18,959
+to do is something like um I have an
+
+279
+00:13:18,959 --> 00:13:21,920
+idea what if we were to give
+
+280
+00:13:21,920 --> 00:13:25,440
+it4 again it just realizes that hey I'm
+
+281
+00:13:25,440 --> 00:13:28,040
+never going to stop looping so I should
+
+282
+00:13:28,040 --> 00:13:30,600
+just give us a give an
+
+283
+00:13:30,600 --> 00:13:34,480
+exception and so in order to combat this
+
+284
+00:13:34,480 --> 00:13:37,320
+we have to do something like um okay
+
+285
+00:13:37,320 --> 00:13:39,639
+let's do this of first of all let's
+
+286
+00:13:39,639 --> 00:13:41,720
+create a flag and let's just check if
+
+287
+00:13:41,720 --> 00:13:44,399
+our uh number is
+
+288
+00:13:44,399 --> 00:13:46,399
+negative uh and we're going to check
+
+289
+00:13:46,399 --> 00:13:48,279
+this by saying if our number is less
+
+290
+00:13:48,279 --> 00:13:52,360
+than zero then it is or else it is
+
+291
+00:13:52,360 --> 00:13:55,000
+not okay so now we know if our number is
+
+292
+00:13:55,000 --> 00:13:56,480
+negative but we still aren't doing
+
+293
+00:13:56,480 --> 00:13:58,519
+anything about it and so in order to do
+
+294
+00:13:58,519 --> 00:14:01,360
+something about it what we need to do is
+
+295
+00:14:01,360 --> 00:14:04,079
+we have to say number is equal to first
+
+296
+00:14:04,079 --> 00:14:05,759
+of all we have to check is our number
+
+297
+00:14:05,759 --> 00:14:09,120
+negative if it is it's equal to uh the
+
+298
+00:14:09,120 --> 00:14:12,399
+absolute value of this number or else
+
+299
+00:14:12,399 --> 00:14:13,839
+it's just equal to the
+
+300
+00:14:13,839 --> 00:14:16,240
+number and so this will turn it into a
+
+301
+00:14:16,240 --> 00:14:18,880
+positive number now as you can see
+
+302
+00:14:18,880 --> 00:14:21,480
+already we see that it isn't going into
+
+303
+00:14:21,480 --> 00:14:24,839
+an internal loop it's just giving us
+
+304
+00:14:24,839 --> 00:14:29,600
+24 which is the factorial for positive4
+
+305
+00:14:29,600 --> 00:14:33,360
+however if you see this 4 is factorial
+
+306
+00:14:33,360 --> 00:14:37,279
+24-4 is factorial -4 I can do the same
+
+307
+00:14:37,279 --> 00:14:40,440
+thing with five 5's factorial is 120
+
+308
+00:14:40,440 --> 00:14:43,680
+Nega 5's factorial is- 120 and so what
+
+309
+00:14:43,680 --> 00:14:46,600
+this means is that a numbers a negative
+
+310
+00:14:46,600 --> 00:14:49,399
+numbers factorial is equal to a positive
+
+311
+00:14:49,399 --> 00:14:50,480
+numbers
+
+312
+00:14:50,480 --> 00:14:53,560
+factorial negated or actually put a
+
+313
+00:14:53,560 --> 00:14:55,639
+negative in front of it if you don't
+
+314
+00:14:55,639 --> 00:14:57,519
+know what that means and so in order to
+
+315
+00:14:57,519 --> 00:15:00,079
+do this when we're turning we just say
+
+316
+00:15:00,079 --> 00:15:02,440
+okay was our number negative in the
+
+317
+00:15:02,440 --> 00:15:06,399
+beginning okay if it was return our
+
+318
+00:15:06,399 --> 00:15:09,680
+negative result or else just return our
+
+319
+00:15:09,680 --> 00:15:13,199
+normal result and this should give us -4
+
+320
+00:15:13,199 --> 00:15:14,399
+and it
+
+321
+00:15:14,399 --> 00:15:18,279
+does and so now we've built a function
+
+322
+00:15:18,279 --> 00:15:21,320
+uh which does not use recursion uh and
+
+323
+00:15:21,320 --> 00:15:23,800
+it solves our purpose of finding a
+
+324
+00:15:23,800 --> 00:15:27,199
+factorial uh it can do negatives zero
+
+325
+00:15:27,199 --> 00:15:30,399
+one and any positive
+
+326
+00:15:30,399 --> 00:15:32,440
+now there's just one problem with this
+
+327
+00:15:32,440 --> 00:15:34,480
+it's way too long and it's adding too
+
+328
+00:15:34,480 --> 00:15:35,880
+much mess to your
+
+329
+00:15:35,880 --> 00:15:39,399
+code now how can we solve
+
+330
+00:15:39,399 --> 00:15:42,319
+this in order to solve this all we
+
+331
+00:15:42,319 --> 00:15:43,720
+really have to do is use something
+
+332
+00:15:43,720 --> 00:15:45,839
+called recursion there are two ways to
+
+333
+00:15:45,839 --> 00:15:46,720
+use
+
+334
+00:15:46,720 --> 00:15:50,920
+recursion one is just a nicely readable
+
+335
+00:15:50,920 --> 00:15:53,440
+uh sort of long uh nice way to do
+
+336
+00:15:53,440 --> 00:15:56,440
+recursion and then there's a type where
+
+337
+00:15:56,440 --> 00:15:58,199
+this is completely almost unreadable
+
+338
+00:15:58,199 --> 00:15:59,639
+unless you're an expert
+
+339
+00:15:59,639 --> 00:16:02,360
+programmer and it's just a oneline
+
+340
+00:16:02,360 --> 00:16:04,959
+program and so let's do both but first
+
+341
+00:16:04,959 --> 00:16:06,600
+I'm going to show you the medium way
+
+342
+00:16:06,600 --> 00:16:08,000
+then I'll show you the really short
+
+343
+00:16:08,000 --> 00:16:11,199
+oneliner way so let's get started by
+
+344
+00:16:11,199 --> 00:16:14,720
+creating um a function uh this is going
+
+345
+00:16:14,720 --> 00:16:17,560
+to be named
+
+346
+00:16:18,079 --> 00:16:20,920
+factorial with recursion but it's a bit
+
+347
+00:16:20,920 --> 00:16:22,240
+longer
+
+348
+00:16:22,240 --> 00:16:24,680
+method and we're going to again take a
+
+349
+00:16:24,680 --> 00:16:27,480
+number as an integer and we're going to
+
+350
+00:16:27,480 --> 00:16:29,759
+return an integer
+
+351
+00:16:29,759 --> 00:16:32,319
+uh and then we can do stuff like so now
+
+352
+00:16:32,319 --> 00:16:34,199
+what's going to happen is let's say we
+
+353
+00:16:34,199 --> 00:16:37,519
+give it factorial for the number four
+
+354
+00:16:37,519 --> 00:16:40,040
+it'll say four times the factorial for
+
+355
+00:16:40,040 --> 00:16:45,360
+three okay 3 times the factorial of two
+
+356
+00:16:45,360 --> 00:16:48,759
+okay 2 * a factorial of one and it'll
+
+357
+00:16:48,759 --> 00:16:50,560
+keep going until it finds the correct
+
+358
+00:16:50,560 --> 00:16:53,279
+answer if you don't get what I mean yet
+
+359
+00:16:53,279 --> 00:16:54,839
+don't worry because I'm about to explain
+
+360
+00:16:54,839 --> 00:16:56,800
+it so let's just move my head over here
+
+361
+00:16:56,800 --> 00:16:59,160
+for a second uh and so now what I'm
+
+362
+00:16:59,160 --> 00:17:02,600
+going to do is I'm going to explain how
+
+363
+00:17:02,600 --> 00:17:05,240
+exactly you can use recursion in a
+
+364
+00:17:05,240 --> 00:17:07,480
+longer method inside of function to find
+
+365
+00:17:07,480 --> 00:17:09,959
+a factorial and the simplest way you
+
+366
+00:17:09,959 --> 00:17:12,160
+could do this is say okay let's just
+
+367
+00:17:12,160 --> 00:17:15,600
+declare a result variable and set it to
+
+368
+00:17:15,600 --> 00:17:21,520
+two our current number times the
+
+369
+00:17:21,520 --> 00:17:24,640
+factorial for our number
+
+370
+00:17:24,640 --> 00:17:27,160
+minus1 and then we just return the
+
+371
+00:17:27,160 --> 00:17:29,320
+result
+
+372
+00:17:29,320 --> 00:17:31,480
+seems simple right it should
+
+373
+00:17:31,480 --> 00:17:35,400
+work however if I call it as you can see
+
+374
+00:17:35,400 --> 00:17:37,799
+right now it
+
+375
+00:17:37,799 --> 00:17:41,160
+again should go into an eternal
+
+376
+00:17:41,160 --> 00:17:44,400
+Loop uh sorry about that uh and so
+
+377
+00:17:44,400 --> 00:17:46,760
+what's happening now is Swift will
+
+378
+00:17:46,760 --> 00:17:48,760
+realize very quickly that this is just
+
+379
+00:17:48,760 --> 00:17:50,360
+going to keep repeating and repeating
+
+380
+00:17:50,360 --> 00:17:51,880
+and repeating over again so it doesn't
+
+381
+00:17:51,880 --> 00:17:53,919
+give us an exception but it gives us an
+
+382
+00:17:53,919 --> 00:17:57,120
+exception and it does not recurse over
+
+383
+00:17:57,120 --> 00:17:58,400
+and over again it just gives us an
+
+384
+00:17:58,400 --> 00:18:00,720
+exception
+
+385
+00:18:00,720 --> 00:18:02,480
+in order to solve this we have to see
+
+386
+00:18:02,480 --> 00:18:03,480
+why it's
+
+387
+00:18:03,480 --> 00:18:06,120
+happening well let's just take a look
+
+388
+00:18:06,120 --> 00:18:07,280
+first of all in order to find the
+
+389
+00:18:07,280 --> 00:18:11,799
+factorial of four we have to find four *
+
+390
+00:18:11,799 --> 00:18:14,400
+the factorial of 3 in order to find the
+
+391
+00:18:14,400 --> 00:18:17,400
+factorial of three we have to do 3 * the
+
+392
+00:18:17,400 --> 00:18:19,000
+factorial of
+
+393
+00:18:19,000 --> 00:18:21,600
+2 then in order to find the factorial of
+
+394
+00:18:21,600 --> 00:18:23,840
+two we have to do two * a factorial of
+
+395
+00:18:23,840 --> 00:18:25,760
+one but then there's one aspect we
+
+396
+00:18:25,760 --> 00:18:28,039
+didn't look at here wouldn't this just
+
+397
+00:18:28,039 --> 00:18:30,760
+keep going on till negative negative
+
+398
+00:18:30,760 --> 00:18:35,559
+Infinity yes and that's why I call this
+
+399
+00:18:35,559 --> 00:18:37,320
+new thing that I'm about to teach you
+
+400
+00:18:37,320 --> 00:18:39,360
+the barrier of
+
+401
+00:18:39,360 --> 00:18:41,919
+recursion what this barrier of recursion
+
+402
+00:18:41,919 --> 00:18:44,280
+will do is it'll make sure that our
+
+403
+00:18:44,280 --> 00:18:47,120
+function stops calling itself at a
+
+404
+00:18:47,120 --> 00:18:49,400
+certain point which in this case will be
+
+405
+00:18:49,400 --> 00:18:51,240
+when the number is equal to one and
+
+406
+00:18:51,240 --> 00:18:54,799
+it'll start back tracing each function
+
+407
+00:18:54,799 --> 00:18:57,600
+until it gets to the first one and now
+
+408
+00:18:57,600 --> 00:18:59,480
+in order to do this we just have to keep
+
+409
+00:18:59,480 --> 00:19:01,039
+on checking each time this function is
+
+410
+00:19:01,039 --> 00:19:03,400
+called if our number is equal to zero or
+
+411
+00:19:03,400 --> 00:19:06,200
+one and why did I say zero well let's
+
+412
+00:19:06,200 --> 00:19:08,159
+just kill two words with one stone and
+
+413
+00:19:08,159 --> 00:19:10,120
+let's just check if the user entered
+
+414
+00:19:10,120 --> 00:19:13,039
+zero or one or if our function got to
+
+415
+00:19:13,039 --> 00:19:15,640
+one so in order to do this we just do
+
+416
+00:19:15,640 --> 00:19:17,240
+the exact same thing as we did in our
+
+417
+00:19:17,240 --> 00:19:20,520
+older function which is if number is
+
+418
+00:19:20,520 --> 00:19:23,720
+equal to zero or the number is equal to
+
+419
+00:19:23,720 --> 00:19:27,320
+one then just immediately return one and
+
+420
+00:19:27,320 --> 00:19:29,840
+now as you can see it should give us the
+
+421
+00:19:29,840 --> 00:19:32,600
+correct answer 24 as you can see this is
+
+422
+00:19:32,600 --> 00:19:35,240
+a drastic improvement I think five to
+
+423
+00:19:35,240 --> 00:19:37,640
+six lines for the last one three lines
+
+424
+00:19:37,640 --> 00:19:40,039
+for this one so that's a pretty nice
+
+425
+00:19:40,039 --> 00:19:42,120
+Improvement but there are still a few
+
+426
+00:19:42,120 --> 00:19:43,799
+limitations for
+
+427
+00:19:43,799 --> 00:19:46,039
+example negative
+
+428
+00:19:46,039 --> 00:19:49,760
+numbers if I were to give it a negative
+
+429
+00:19:49,760 --> 00:19:54,520
+number again it just uh doesn't work and
+
+430
+00:19:54,520 --> 00:19:57,679
+so in order to uh fix this what we have
+
+431
+00:19:57,679 --> 00:20:00,120
+to do so first of all yeah as you can
+
+432
+00:20:00,120 --> 00:20:02,400
+see it went into an eternal loop again
+
+433
+00:20:02,400 --> 00:20:04,600
+in order to solve this first of all what
+
+434
+00:20:04,600 --> 00:20:06,000
+we have to
+
+435
+00:20:06,000 --> 00:20:09,240
+do is check if our number over here is
+
+436
+00:20:09,240 --> 00:20:12,200
+greater than zero if it is then we just
+
+437
+00:20:12,200 --> 00:20:14,480
+want to do the regular thing that we
+
+438
+00:20:14,480 --> 00:20:18,240
+were always doing however if it isn't we
+
+439
+00:20:18,240 --> 00:20:22,320
+want to positive out our
+
+440
+00:20:22,720 --> 00:20:26,159
+number by doing the number times we know
+
+441
+00:20:26,159 --> 00:20:28,880
+that this is a negative number we and so
+
+442
+00:20:28,880 --> 00:20:30,880
+we need to times it by another negative
+
+443
+00:20:30,880 --> 00:20:34,360
+number in order to make it
+
+444
+00:20:34,360 --> 00:20:38,400
+positive once we we make it positive we
+
+445
+00:20:38,400 --> 00:20:42,440
+can solve for that positive um uh number
+
+446
+00:20:42,440 --> 00:20:44,640
+once we solve for the positive number we
+
+447
+00:20:44,640 --> 00:20:48,039
+can negate it and return it in order to
+
+448
+00:20:48,039 --> 00:20:51,640
+do this all we have to do is we have to
+
+449
+00:20:51,640 --> 00:20:55,480
+instead of doing number times
+
+450
+00:20:55,480 --> 00:21:00,280
+factorial number times the negative fact
+
+451
+00:21:00,280 --> 00:21:03,120
+torial and you won't understand this yet
+
+452
+00:21:03,120 --> 00:21:06,360
+or maybe you will we're giving it
+
+453
+00:21:06,360 --> 00:21:08,640
+negative number minus one now what does
+
+454
+00:21:08,640 --> 00:21:11,559
+this mean basically what we're doing is
+
+455
+00:21:11,559 --> 00:21:13,880
+we're saying number times the negative
+
+456
+00:21:13,880 --> 00:21:18,799
+factorial of the positive number minus
+
+457
+00:21:18,799 --> 00:21:22,200
+one sounds a bit complicated it sort of
+
+458
+00:21:22,200 --> 00:21:25,240
+is but it should work and as we can see
+
+459
+00:21:25,240 --> 00:21:27,320
+we get 24 which is not the right answer
+
+460
+00:21:27,320 --> 00:21:29,200
+and I purposely tricked you to see if
+
+461
+00:21:29,200 --> 00:21:31,320
+you paying attention and so the reason
+
+462
+00:21:31,320 --> 00:21:33,080
+this won't work is because we're just
+
+463
+00:21:33,080 --> 00:21:35,840
+returning the positive result we're not
+
+464
+00:21:35,840 --> 00:21:39,320
+negating it then returning the result in
+
+465
+00:21:39,320 --> 00:21:41,159
+order to negate this we can again just
+
+466
+00:21:41,159 --> 00:21:43,480
+check if our number is greater than zero
+
+467
+00:21:43,480 --> 00:21:45,320
+then just return our result however if
+
+468
+00:21:45,320 --> 00:21:48,279
+it's not then return our negative result
+
+469
+00:21:48,279 --> 00:21:50,840
+and as you can see it gives us
+
+470
+00:21:50,840 --> 00:21:54,080
+-4 and that concludes this uh little
+
+471
+00:21:54,080 --> 00:21:56,159
+function however I just going to take a
+
+472
+00:21:56,159 --> 00:21:57,880
+look at one more thing which may just
+
+473
+00:21:57,880 --> 00:22:00,080
+work because the reason we're uh
+
+474
+00:22:00,080 --> 00:22:03,480
+negating negating the um factorial yeah
+
+475
+00:22:03,480 --> 00:22:05,279
+that worked as well so as you can see
+
+476
+00:22:05,279 --> 00:22:07,120
+this is a bit more understandable way of
+
+477
+00:22:07,120 --> 00:22:10,799
+doing it so essentially we're taking the
+
+478
+00:22:10,799 --> 00:22:13,919
+absolute value of our number so
+
+479
+00:22:13,919 --> 00:22:16,840
+basically positive number times the
+
+480
+00:22:16,840 --> 00:22:19,440
+factorial of our positive number again
+
+481
+00:22:19,440 --> 00:22:24,679
+so I can again say absolute value minus
+
+482
+00:22:24,760 --> 00:22:28,080
+one uh and so I guess what I could do
+
+483
+00:22:28,080 --> 00:22:30,520
+here
+
+484
+00:22:31,000 --> 00:22:32,720
+this could theoretically work and then
+
+485
+00:22:32,720 --> 00:22:34,559
+if I just do
+
+486
+00:22:34,559 --> 00:22:37,760
+this yeah so this is a even shorter way
+
+487
+00:22:37,760 --> 00:22:41,159
+of doing this uh and to be honest this
+
+488
+00:22:41,159 --> 00:22:44,960
+does save uh quite a lot of uh space uh
+
+489
+00:22:44,960 --> 00:22:47,520
+and as you can see using just this much
+
+490
+00:22:47,520 --> 00:22:51,320
+code you are able to find that factorial
+
+491
+00:22:51,320 --> 00:22:53,520
+and so simply what it's doing is it's
+
+492
+00:22:53,520 --> 00:22:56,039
+finding the absolute value of the number
+
+493
+00:22:56,039 --> 00:22:57,440
+meaning if it's negative make it
+
+494
+00:22:57,440 --> 00:23:00,240
+positive if it's positive keep it
+
+495
+00:23:00,240 --> 00:23:03,000
+positive times the factorial of the
+
+496
+00:23:03,000 --> 00:23:04,520
+absolute value of the number again
+
+497
+00:23:04,520 --> 00:23:07,120
+negative positive positive
+
+498
+00:23:07,120 --> 00:23:09,080
+positive minus
+
+499
+00:23:09,080 --> 00:23:12,760
+one and then once we find the answer of
+
+500
+00:23:12,760 --> 00:23:16,320
+the positive no matter what a result we
+
+501
+00:23:16,320 --> 00:23:18,799
+are checking if our number was greater
+
+502
+00:23:18,799 --> 00:23:22,080
+than zero good turn return the result or
+
+503
+00:23:22,080 --> 00:23:25,679
+else negate the result then
+
+504
+00:23:25,679 --> 00:23:28,480
+return however I believe there is a
+
+505
+00:23:28,480 --> 00:23:30,279
+smaller way to do this maybe even in
+
+506
+00:23:30,279 --> 00:23:31,720
+just one
+
+507
+00:23:31,720 --> 00:23:34,799
+line in order to do this let's create
+
+508
+00:23:34,799 --> 00:23:36,279
+another
+
+509
+00:23:36,279 --> 00:23:39,000
+function let's just call this function
+
+510
+00:23:39,000 --> 00:23:41,360
+um
+
+511
+00:23:41,720 --> 00:23:47,200
+factorial with recursion short now again
+
+512
+00:23:47,200 --> 00:23:49,760
+uh I mean it's not required for you to
+
+513
+00:23:49,760 --> 00:23:51,080
+use this method because of course this
+
+514
+00:23:51,080 --> 00:23:53,360
+is hardly readable and if your program
+
+515
+00:23:53,360 --> 00:23:55,000
+is going to be open source for beginner
+
+516
+00:23:55,000 --> 00:23:56,600
+programmers I would not recommend doing
+
+517
+00:23:56,600 --> 00:23:58,559
+this but if it's just for you and you're
+
+518
+00:23:58,559 --> 00:23:59,960
+just whipping up something really
+
+519
+00:23:59,960 --> 00:24:01,480
+quickly and you don't want really long
+
+520
+00:24:01,480 --> 00:24:03,919
+code then this is amazing for
+
+521
+00:24:03,919 --> 00:24:07,760
+you watch this we just need to and look
+
+522
+00:24:07,760 --> 00:24:09,679
+at this for a second all we're doing
+
+523
+00:24:09,679 --> 00:24:11,320
+here is conditionals there's an if
+
+524
+00:24:11,320 --> 00:24:14,240
+statement then there's a variable which
+
+525
+00:24:14,240 --> 00:24:18,080
+is full of a full of just uh stuff that
+
+526
+00:24:18,080 --> 00:24:19,640
+we're returning
+
+527
+00:24:19,640 --> 00:24:23,120
+anyway and so we can
+
+528
+00:24:23,120 --> 00:24:26,120
+put
+
+529
+00:24:26,159 --> 00:24:29,399
+essentially we could just say um
+
+530
+00:24:29,399 --> 00:24:31,039
+actually I'm not going to do that yet
+
+531
+00:24:31,039 --> 00:24:33,000
+but if you see this function it's just
+
+532
+00:24:33,000 --> 00:24:35,559
+all conditionals why not take those
+
+533
+00:24:35,559 --> 00:24:37,880
+conditionals and Stitch them into one
+
+534
+00:24:37,880 --> 00:24:40,360
+line not using
+
+535
+00:24:40,360 --> 00:24:42,559
+semicolons but you'll see how in just a
+
+536
+00:24:42,559 --> 00:24:45,679
+second so basically just immediately
+
+537
+00:24:45,679 --> 00:24:47,440
+return we're not going to do anything
+
+538
+00:24:47,440 --> 00:24:50,279
+else okay just immediately
+
+539
+00:24:50,279 --> 00:24:53,240
+return but then we just want to check is
+
+540
+00:24:53,240 --> 00:24:56,000
+our number equal to zero or is our
+
+541
+00:24:56,000 --> 00:24:59,360
+number equal to one if it's any of
+
+542
+00:24:59,360 --> 00:25:03,159
+those then we just want to return one or
+
+543
+00:25:03,159 --> 00:25:06,760
+else we want to
+
+544
+00:25:06,760 --> 00:25:09,360
+return first of all we have to check if
+
+545
+00:25:09,360 --> 00:25:14,240
+our number is greater than
+
+546
+00:25:15,600 --> 00:25:19,360
+zero then we just want to return our
+
+547
+00:25:19,360 --> 00:25:24,960
+normal number times uh
+
+548
+00:25:24,960 --> 00:25:28,600
+factorial number minus one however if it
+
+549
+00:25:28,600 --> 00:25:29,679
+is
+
+550
+00:25:29,679 --> 00:25:33,640
+not then we have to return the negative
+
+551
+00:25:33,640 --> 00:25:36,159
+of whatever we put here the reason I put
+
+552
+00:25:36,159 --> 00:25:39,760
+negative of is because over here we have
+
+553
+00:25:39,760 --> 00:25:43,360
+time to actually negate the result using
+
+554
+00:25:43,360 --> 00:25:46,039
+a conditional in the return statement
+
+555
+00:25:46,039 --> 00:25:47,559
+however here we don't have time for
+
+556
+00:25:47,559 --> 00:25:52,039
+another line and so we do it on the Fly
+
+557
+00:25:52,039 --> 00:25:55,399
+while we're doing this and so it's just
+
+558
+00:25:55,399 --> 00:25:58,480
+returning the negative value of of
+
+559
+00:25:58,480 --> 00:26:01,159
+whatever I just explained in factorial
+
+560
+00:26:01,159 --> 00:26:04,159
+with the recursion but long method now
+
+561
+00:26:04,159 --> 00:26:05,960
+I'll explain this in a bit more in depth
+
+562
+00:26:05,960 --> 00:26:08,039
+but first let's try it out so you know
+
+563
+00:26:08,039 --> 00:26:12,360
+it works factorial wrs let's give it a
+
+564
+00:26:12,360 --> 00:26:16,200
+four handles four is amazing 24 done
+
+565
+00:26:16,200 --> 00:26:18,720
+let's give it a
+
+566
+00:26:18,720 --> 00:26:23,880
+five 120 amazing let's give it um a
+
+567
+00:26:23,880 --> 00:26:26,399
+zero one let's give it a
+
+568
+00:26:26,399 --> 00:26:31,039
+one one let's give it a
+
+569
+00:26:34,080 --> 00:26:40,039
+-44 -4 amazing now let's do
+
+570
+00:26:40,360 --> 00:26:42,039
+uh5
+
+571
+00:26:42,039 --> 00:26:45,399
+-20 and that's how this function works
+
+572
+00:26:45,399 --> 00:26:47,080
+so it's checking if our numbers are
+
+573
+00:26:47,080 --> 00:26:49,279
+equal to zero or one if they are just
+
+574
+00:26:49,279 --> 00:26:51,399
+return one then we're checking if our
+
+575
+00:26:51,399 --> 00:26:54,360
+number is greater than zero if it is do
+
+576
+00:26:54,360 --> 00:26:56,720
+our classic number times factorial
+
+577
+00:26:56,720 --> 00:26:59,559
+number minus one method
+
+578
+00:26:59,559 --> 00:27:01,000
+however if it's
+
+579
+00:27:01,000 --> 00:27:04,440
+not return the negative of the absolute
+
+580
+00:27:04,440 --> 00:27:07,559
+value of our number times the
+
+581
+00:27:07,559 --> 00:27:09,840
+factorial H sorry just make this the
+
+582
+00:27:09,840 --> 00:27:12,200
+short method so it's
+
+583
+00:27:12,200 --> 00:27:14,679
+faster of the absolute value of our
+
+584
+00:27:14,679 --> 00:27:16,520
+number minus
+
+585
+00:27:16,520 --> 00:27:19,080
+one and so that'll return a positive
+
+586
+00:27:19,080 --> 00:27:22,080
+result which we then
+
+587
+00:27:22,080 --> 00:27:26,240
+negate and that's just the simplest way
+
+588
+00:27:26,240 --> 00:27:29,320
+we could do that and and that also
+
+589
+00:27:29,320 --> 00:27:33,399
+concludes this uh and also one more time
+
+590
+00:27:33,399 --> 00:27:36,360
+uh this recursion stuff takes up a lot
+
+591
+00:27:36,360 --> 00:27:38,159
+of memory and I've even seen some
+
+592
+00:27:38,159 --> 00:27:39,960
+programming languages don't allow you to
+
+593
+00:27:39,960 --> 00:27:42,399
+do recursion uh and so this is because
+
+594
+00:27:42,399 --> 00:27:44,519
+it takes so much memory uh but nowadays
+
+595
+00:27:44,519 --> 00:27:46,159
+we don't really care about this because
+
+596
+00:27:46,159 --> 00:27:48,960
+we have so much memory before uh if if
+
+597
+00:27:48,960 --> 00:27:50,519
+you were to just go back a few hundred
+
+598
+00:27:50,519 --> 00:27:52,240
+years and just say okay here's a
+
+599
+00:27:52,240 --> 00:27:56,159
+computer with 8 GB of RAM just 8 gab
+
+600
+00:27:56,159 --> 00:27:58,240
+they would go crazy because that's a lot
+
+601
+00:27:58,240 --> 00:28:00,720
+lot of RAM for a time that only has a
+
+602
+00:28:00,720 --> 00:28:04,600
+few megabytes of Ram uh and so uh back
+
+603
+00:28:04,600 --> 00:28:06,840
+then that would be a really big concern
+
+604
+00:28:06,840 --> 00:28:08,360
+that okay how are we going to conserve
+
+605
+00:28:08,360 --> 00:28:11,840
+memory well don't use recursion simplest
+
+606
+00:28:11,840 --> 00:28:14,960
+method uh but nowadays we have like
+
+607
+00:28:14,960 --> 00:28:17,120
+gigabytes and gigabytes of memory so we
+
+608
+00:28:17,120 --> 00:28:19,960
+don't need to really care that much uh
+
+609
+00:28:19,960 --> 00:28:21,600
+but again if you're looking for your
+
+610
+00:28:21,600 --> 00:28:24,600
+program to be fast down to the
+
+611
+00:28:24,600 --> 00:28:27,760
+millisecond then don't use recursion but
+
+612
+00:28:27,760 --> 00:28:29,679
+again they're so fast now that we don't
+
+613
+00:28:29,679 --> 00:28:30,960
+need that anyway I'm not going to
+
+614
+00:28:30,960 --> 00:28:32,799
+elaborate on that this video isn't
+
+615
+00:28:32,799 --> 00:28:34,760
+really talking about speed uh and just
+
+616
+00:28:34,760 --> 00:28:37,960
+one more thing recursion in memory
+
+617
+00:28:37,960 --> 00:28:39,720
+actually uses Stacks in case you didn't
+
+618
+00:28:39,720 --> 00:28:41,399
+know or you wanted to know it uses
+
+619
+00:28:41,399 --> 00:28:44,200
+Stacks so it builds up lots of recursive
+
+620
+00:28:44,200 --> 00:28:46,039
+functions right as it gets to that
+
+621
+00:28:46,039 --> 00:28:48,080
+barrier that barrier of recursion that I
+
+622
+00:28:48,080 --> 00:28:51,159
+talked about uh it comes back down and
+
+623
+00:28:51,159 --> 00:28:53,320
+again only a few programming languages
+
+624
+00:28:53,320 --> 00:28:55,159
+use that stacking sort of thing and
+
+625
+00:28:55,159 --> 00:28:58,679
+recursions and yeah and and that's going
+
+626
+00:28:58,679 --> 00:29:00,799
+to conclude our video for today I hope
+
+627
+00:29:00,799 --> 00:29:02,360
+you liked it and if you did please leave
+
+628
+00:29:02,360 --> 00:29:04,640
+a like down below again you can even
+
+629
+00:29:04,640 --> 00:29:07,559
+comment or email me at tman gmail.com if
+
+630
+00:29:07,559 --> 00:29:09,440
+you have any questions suggestions app
+
+631
+00:29:09,440 --> 00:29:12,840
+Ideas Math questions science questions
+
+632
+00:29:12,840 --> 00:29:14,760
+uh you can even email me with a video
+
+633
+00:29:14,760 --> 00:29:17,120
+question at tagim Manny
+
+634
+00:29:17,120 --> 00:29:19,840
+gmail.com uh and I may just feature it
+
+635
+00:29:19,840 --> 00:29:23,480
+in one of my next videos uh and again
+
+636
+00:29:23,480 --> 00:29:26,399
+one more thing um again subscribe to my
+
+637
+00:29:26,399 --> 00:29:28,320
+channel if you're new or you like my
+
+638
+00:29:28,320 --> 00:29:30,679
+content you want to see more of it uh
+
+639
+00:29:30,679 --> 00:29:32,480
+and that's going to be It Goodbye Oh
+
+640
+00:29:32,480 --> 00:29:34,919
+just before I go again don't forget to
+
+641
+00:29:34,919 --> 00:29:37,880
+follow me on Twitter uh and so uh my
+
+642
+00:29:37,880 --> 00:29:39,080
+Twitter handle will be down in the
+
+643
+00:29:39,080 --> 00:29:42,720
+description and it's also @ tajim Manny
+
+644
+00:29:42,720 --> 00:29:44,399
+uh and if you can't spell that again
+
+645
+00:29:44,399 --> 00:29:45,880
+it'll be in the description again
+
+646
+00:29:45,880 --> 00:29:47,159
+subscribe if you're new and you like my
+
+647
+00:29:47,159 --> 00:29:48,600
+content you want to see more of it
+
+648
+00:29:48,600 --> 00:29:52,320
+that's going to be it goodbye

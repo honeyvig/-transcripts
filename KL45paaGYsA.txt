@@ -1,0 +1,2383 @@
+1
+00:00:00,089 --> 00:00:02,040
+so hello there and welcome to a tutorial
+
+2
+00:00:02,040 --> 00:00:04,170
+my name is tender-back xin this time
+
+3
+00:00:04,170 --> 00:00:05,100
+we're gonna be going over something
+
+4
+00:00:05,100 --> 00:00:06,509
+really interesting I know you're all
+
+5
+00:00:06,509 --> 00:00:08,610
+gonna love it and this app is really fun
+
+6
+00:00:08,610 --> 00:00:12,990
+to test you because this is cold v he's
+
+7
+00:00:12,990 --> 00:00:14,910
+in tic-tac-toe and you'll see exactly
+
+8
+00:00:14,910 --> 00:00:17,460
+why I chose teasing for the word in just
+
+9
+00:00:17,460 --> 00:00:18,270
+a minute
+
+10
+00:00:18,270 --> 00:00:20,730
+the reason I chose teasing is because
+
+11
+00:00:20,730 --> 00:00:22,560
+well let's take tac toe game it's
+
+12
+00:00:22,560 --> 00:00:25,320
+impossible to beat you can only draw
+
+13
+00:00:25,320 --> 00:00:28,039
+with it and you can only lose against it
+
+14
+00:00:28,039 --> 00:00:30,449
+so let's get straight into it I'll
+
+15
+00:00:30,449 --> 00:00:32,340
+explain all the rules that falls the
+
+16
+00:00:32,340 --> 00:00:35,070
+basic algorithm it has and then we will
+
+17
+00:00:35,070 --> 00:00:36,630
+get straight into the code where I will
+
+18
+00:00:36,630 --> 00:00:39,000
+explain and I'll also give a little demo
+
+19
+00:00:39,000 --> 00:00:41,070
+and then I'll explain the code if you
+
+20
+00:00:41,070 --> 00:00:45,300
+can find any way to beat this game make
+
+21
+00:00:45,300 --> 00:00:46,950
+sure you tell me either in the comments
+
+22
+00:00:46,950 --> 00:00:49,200
+or mail me mail me my mail is tangent
+
+23
+00:00:49,200 --> 00:00:50,820
+Manion gmail.com and that will be in the
+
+24
+00:00:50,820 --> 00:00:52,940
+description if you don't understand that
+
+25
+00:00:52,940 --> 00:00:55,949
+so please tell me I will include a fix
+
+26
+00:00:55,949 --> 00:00:58,440
+in for that in my algorithm but let's
+
+27
+00:00:58,440 --> 00:01:01,109
+get started and as you can see here I
+
+28
+00:01:01,109 --> 00:01:04,260
+devised seven rules in tic-tac-toe these
+
+29
+00:01:04,260 --> 00:01:06,659
+are from Wikipedia link to this will be
+
+30
+00:01:06,659 --> 00:01:08,220
+down in the description below not
+
+31
+00:01:08,220 --> 00:01:09,540
+exactly sure who wrote this but that
+
+32
+00:01:09,540 --> 00:01:11,549
+will also be in the description but
+
+33
+00:01:11,549 --> 00:01:14,520
+these seven rules will help the computer
+
+34
+00:01:14,520 --> 00:01:16,080
+decide exactly what it needs to do on
+
+35
+00:01:16,080 --> 00:01:20,909
+this turn of its tic-tac-toe game so as
+
+36
+00:01:20,909 --> 00:01:23,220
+you can see the first rule is if you can
+
+37
+00:01:23,220 --> 00:01:25,860
+win win don't do anything else
+
+38
+00:01:25,860 --> 00:01:27,689
+don't walk your opponent from winning
+
+39
+00:01:27,689 --> 00:01:30,119
+just wait if you can win because you're
+
+40
+00:01:30,119 --> 00:01:32,250
+gonna end the game anyway and you would
+
+41
+00:01:32,250 --> 00:01:35,790
+have won next if your opponents about to
+
+42
+00:01:35,790 --> 00:01:39,540
+win block him from winning third if your
+
+43
+00:01:39,540 --> 00:01:41,520
+opponent tries to fork you block his
+
+44
+00:01:41,520 --> 00:01:44,430
+fork before he can and this doesn't
+
+45
+00:01:44,430 --> 00:01:46,040
+really apply to my algorithm because
+
+46
+00:01:46,040 --> 00:01:49,320
+it's really complicated but the rule for
+
+47
+00:01:49,320 --> 00:01:51,840
+humans is that fork the other player if
+
+48
+00:01:51,840 --> 00:01:54,540
+you could possibly could and if you
+
+49
+00:01:54,540 --> 00:01:57,210
+can't do all of these strategies then go
+
+50
+00:01:57,210 --> 00:01:58,950
+for the center if the center is taken
+
+51
+00:01:58,950 --> 00:02:00,780
+then go for the corners if the corners
+
+52
+00:02:00,780 --> 00:02:04,110
+are taken then go for the sides so I'm
+
+53
+00:02:04,110 --> 00:02:07,020
+gonna be sharing with you first of all
+
+54
+00:02:07,020 --> 00:02:11,400
+have an example of all the first the
+
+55
+00:02:11,400 --> 00:02:13,650
+first four rules actually the first
+
+56
+00:02:13,650 --> 00:02:15,510
+rules that the computer would use and
+
+57
+00:02:15,510 --> 00:02:17,849
+also just as an addition the fourth rule
+
+58
+00:02:17,849 --> 00:02:19,799
+that the human would use and then these
+
+59
+00:02:19,799 --> 00:02:22,439
+five six and seven rules I will explain
+
+60
+00:02:22,439 --> 00:02:23,790
+with an example game that I actually
+
+61
+00:02:23,790 --> 00:02:25,530
+played with the computer and I'll
+
+62
+00:02:25,530 --> 00:02:27,450
+explain all of its logic and reasoning
+
+63
+00:02:27,450 --> 00:02:30,390
+behind what the moves it did so let's
+
+64
+00:02:30,390 --> 00:02:32,099
+get started here I'm gonna start off
+
+65
+00:02:32,099 --> 00:02:33,959
+with rule number one which is if you
+
+66
+00:02:33,959 --> 00:02:36,480
+can't win just win don't bother doing
+
+67
+00:02:36,480 --> 00:02:38,760
+anything else so as you can see me here
+
+68
+00:02:38,760 --> 00:02:40,680
+we have a board and I'm just going to
+
+69
+00:02:40,680 --> 00:02:43,500
+start let's just say X is over here and
+
+70
+00:02:43,500 --> 00:02:45,480
+X isn't the most smartest of opponent
+
+71
+00:02:45,480 --> 00:02:46,829
+see it's a really new take back to a
+
+72
+00:02:46,829 --> 00:02:48,930
+player he hasn't played many games about
+
+73
+00:02:48,930 --> 00:02:51,180
+oh he's a really seasoned experienced
+
+74
+00:02:51,180 --> 00:02:52,730
+player so it isn't really a fair match
+
+75
+00:02:52,730 --> 00:02:54,900
+so let's just say all goes for the
+
+76
+00:02:54,900 --> 00:02:58,019
+center like most normal and most really
+
+77
+00:02:58,019 --> 00:03:00,030
+good take back to hers no that's where
+
+78
+00:03:00,030 --> 00:03:03,689
+you get the best moves so then let's
+
+79
+00:03:03,689 --> 00:03:05,069
+just say X goes over here for some
+
+80
+00:03:05,069 --> 00:03:05,760
+reason
+
+81
+00:03:05,760 --> 00:03:08,900
+now all we'll try it's best to go here
+
+82
+00:03:08,900 --> 00:03:11,519
+now what's gonna happen is let's just
+
+83
+00:03:11,519 --> 00:03:13,650
+say oh again isn't the brightest and he
+
+84
+00:03:13,650 --> 00:03:15,870
+doesn't realize that oh is threatening a
+
+85
+00:03:15,870 --> 00:03:19,109
+three X will play over here by mistake
+
+86
+00:03:19,109 --> 00:03:23,220
+Oh we'll play over here and win so this
+
+87
+00:03:23,220 --> 00:03:25,230
+is one of the examples if you can win
+
+88
+00:03:25,230 --> 00:03:28,199
+just win don't do anything else just win
+
+89
+00:03:28,199 --> 00:03:29,370
+that's it
+
+90
+00:03:29,370 --> 00:03:31,620
+apart from that we have the second rule
+
+91
+00:03:31,620 --> 00:03:34,470
+which is if your pony can win make sure
+
+92
+00:03:34,470 --> 00:03:36,419
+you block him let's just give a little
+
+93
+00:03:36,419 --> 00:03:39,389
+example this let's just say X plays over
+
+94
+00:03:39,389 --> 00:03:44,760
+here let's just say maybe old plays over
+
+95
+00:03:44,760 --> 00:03:48,810
+here or actually no I'm going to say X I
+
+96
+00:03:48,810 --> 00:03:52,440
+mean o plays over here okay now let's
+
+97
+00:03:52,440 --> 00:03:57,000
+just say X plays over here okay now X
+
+98
+00:03:57,000 --> 00:03:59,370
+can win like this so oh it's gonna play
+
+99
+00:03:59,370 --> 00:04:02,819
+over here now okay one like this so X is
+
+100
+00:04:02,819 --> 00:04:04,440
+gonna play over here and the rest of
+
+101
+00:04:04,440 --> 00:04:06,090
+this game would probably end in a draw
+
+102
+00:04:06,090 --> 00:04:07,440
+unless one of them can think of
+
+103
+00:04:07,440 --> 00:04:09,540
+something really smart to do or if one
+
+104
+00:04:09,540 --> 00:04:10,859
+of them makes a really foolish mistake
+
+105
+00:04:10,859 --> 00:04:13,919
+after that we have if your opponent
+
+106
+00:04:13,919 --> 00:04:16,470
+tries to fork you block that opponent
+
+107
+00:04:16,470 --> 00:04:19,199
+from forking so let's actually see how
+
+108
+00:04:19,199 --> 00:04:20,250
+this works
+
+109
+00:04:20,250 --> 00:04:22,979
+so the basic fork strategy that I've
+
+110
+00:04:22,979 --> 00:04:26,700
+learnt is that you choose a corner look
+
+111
+00:04:26,700 --> 00:04:27,480
+around it
+
+112
+00:04:27,480 --> 00:04:30,150
+try to fill these and try to fill the
+
+113
+00:04:30,150 --> 00:04:35,220
+inside then try to essentially kill it
+
+114
+00:04:35,220 --> 00:04:37,560
+then you actually do have two openings
+
+115
+00:04:37,560 --> 00:04:39,120
+here and then your opponent can't block
+
+116
+00:04:39,120 --> 00:04:40,650
+and just in case you were wondering
+
+117
+00:04:40,650 --> 00:04:42,540
+exactly what fork is let me explain that
+
+118
+00:04:42,540 --> 00:04:44,670
+to you right now a fork is when you have
+
+119
+00:04:44,670 --> 00:04:46,620
+two openings in six Actos that you could
+
+120
+00:04:46,620 --> 00:04:49,800
+possibly win and forking is actually one
+
+121
+00:04:49,800 --> 00:04:52,620
+of the most challenging tactics first of
+
+122
+00:04:52,620 --> 00:04:55,110
+all but it's also the best tactic if you
+
+123
+00:04:55,110 --> 00:04:57,060
+want to win and this to me doesn't work
+
+124
+00:04:57,060 --> 00:04:58,710
+if you play with one player because they
+
+125
+00:04:58,710 --> 00:05:00,480
+will eventually find out what you always
+
+126
+00:05:00,480 --> 00:05:03,300
+do in a game and they're always they're
+
+127
+00:05:03,300 --> 00:05:06,480
+gonna know how to actually go against
+
+128
+00:05:06,480 --> 00:05:08,730
+you so that's why this is really good
+
+129
+00:05:08,730 --> 00:05:10,950
+against new players who really don't
+
+130
+00:05:10,950 --> 00:05:13,050
+know much tic-tac-toe that they don't
+
+131
+00:05:13,050 --> 00:05:14,940
+have enough experience they don't know
+
+132
+00:05:14,940 --> 00:05:16,620
+what sort of trick you're doing on them
+
+133
+00:05:16,620 --> 00:05:19,400
+but they do make lots of silly mistakes
+
+134
+00:05:19,400 --> 00:05:22,020
+so let's just start here let's say X
+
+135
+00:05:22,020 --> 00:05:24,420
+wants to win this fork let's just give a
+
+136
+00:05:24,420 --> 00:05:27,540
+proper example of forking and that X
+
+137
+00:05:27,540 --> 00:05:30,830
+wins with this fork so X will start here
+
+138
+00:05:30,830 --> 00:05:34,800
+and since o is a pretty nice player
+
+139
+00:05:34,800 --> 00:05:37,050
+he'll say that ok you didn't go for a
+
+140
+00:05:37,050 --> 00:05:39,630
+corner or a side or the center so that
+
+141
+00:05:39,630 --> 00:05:42,210
+means you're bad at this so then all
+
+142
+00:05:42,210 --> 00:05:44,430
+would just get really overconfident and
+
+143
+00:05:44,430 --> 00:05:48,060
+he'll just place his over there okay
+
+144
+00:05:48,060 --> 00:05:51,090
+next X will play over here Oh still
+
+145
+00:05:51,090 --> 00:05:52,830
+really thinks that he's a master of this
+
+146
+00:05:52,830 --> 00:05:56,340
+thing and he just plays over here okay
+
+147
+00:05:56,340 --> 00:05:59,250
+oh it doesn't realize it but if X were
+
+148
+00:05:59,250 --> 00:06:01,470
+to play here now you would have two ways
+
+149
+00:06:01,470 --> 00:06:04,890
+for him to win so X will play here and
+
+150
+00:06:04,890 --> 00:06:06,900
+now X can either place here or here in
+
+151
+00:06:06,900 --> 00:06:09,600
+his next turn and he would always win so
+
+152
+00:06:09,600 --> 00:06:11,430
+now there's zero possible ways for o to
+
+153
+00:06:11,430 --> 00:06:14,490
+win I guess for example o goes here X
+
+154
+00:06:14,490 --> 00:06:16,830
+place here in wins and let's just
+
+155
+00:06:16,830 --> 00:06:20,730
+recreate this quickly when this and
+
+156
+00:06:20,730 --> 00:06:23,490
+let's just say again oh there's this now
+
+157
+00:06:23,490 --> 00:06:25,890
+for example o will play here X will play
+
+158
+00:06:25,890 --> 00:06:28,500
+here and win so no matter what this fork
+
+159
+00:06:28,500 --> 00:06:30,750
+attack will always work against almost
+
+160
+00:06:30,750 --> 00:06:33,690
+always work against newer players and it
+
+161
+00:06:33,690 --> 00:06:35,280
+you really works it's a really good
+
+162
+00:06:35,280 --> 00:06:38,640
+tactic but thing is our computer as I
+
+163
+00:06:38,640 --> 00:06:39,540
+said is
+
+164
+00:06:39,540 --> 00:06:41,460
+it's smart enough or at least I didn't
+
+165
+00:06:41,460 --> 00:06:43,260
+program it because that would be a lot
+
+166
+00:06:43,260 --> 00:06:45,660
+of code to actually fork however it can
+
+167
+00:06:45,660 --> 00:06:48,210
+defend against support attacks I'm
+
+168
+00:06:48,210 --> 00:06:50,280
+wondering how does it defend against a
+
+169
+00:06:50,280 --> 00:06:51,870
+fork attack well let me just tell you
+
+170
+00:06:51,870 --> 00:06:55,530
+right now the way it defends is let's
+
+171
+00:06:55,530 --> 00:06:57,810
+just say it's going to look at all of
+
+172
+00:06:57,810 --> 00:07:00,360
+these corners and it'll check around
+
+173
+00:07:00,360 --> 00:07:03,270
+them if any two are filled up then just
+
+174
+00:07:03,270 --> 00:07:05,190
+fill up those corners immediately
+
+175
+00:07:05,190 --> 00:07:08,010
+so for example let's just say X is over
+
+176
+00:07:08,010 --> 00:07:10,710
+here o which it's a computer will
+
+177
+00:07:10,710 --> 00:07:12,330
+automatically go here because as you can
+
+178
+00:07:12,330 --> 00:07:15,960
+see taking the court says Center is its
+
+179
+00:07:15,960 --> 00:07:18,840
+top priority as long as there's no other
+
+180
+00:07:18,840 --> 00:07:22,830
+strategies possible so it'll take the oh
+
+181
+00:07:22,830 --> 00:07:25,590
+in the center and then what will happen
+
+182
+00:07:25,590 --> 00:07:27,750
+X will go over here trying to over smart
+
+183
+00:07:27,750 --> 00:07:30,240
+pickle or outsmart the computer but then
+
+184
+00:07:30,240 --> 00:07:35,070
+over around this and create this little
+
+185
+00:07:35,070 --> 00:07:36,750
+thing this means that these two are
+
+186
+00:07:36,750 --> 00:07:38,610
+basically wasted now they can't really
+
+187
+00:07:38,610 --> 00:07:41,780
+fork anymore you could also go like this
+
+188
+00:07:41,780 --> 00:07:44,310
+but then again it would go this and then
+
+189
+00:07:44,310 --> 00:07:46,620
+it's basically almost a tie game now and
+
+190
+00:07:46,620 --> 00:07:49,640
+as you can see o has also created a fork
+
+191
+00:07:49,640 --> 00:07:53,880
+oh I've gone here in one but it's just a
+
+192
+00:07:53,880 --> 00:07:56,640
+bit more fun to do this so as you can
+
+193
+00:07:56,640 --> 00:07:59,220
+see now there's a fork for oh he can
+
+194
+00:07:59,220 --> 00:08:01,380
+either go like this or like this so
+
+195
+00:08:01,380 --> 00:08:03,420
+let's just say he decides to go like
+
+196
+00:08:03,420 --> 00:08:06,650
+this and Oh will win no matter what here
+
+197
+00:08:06,650 --> 00:08:10,440
+so that really sums that up now in order
+
+198
+00:08:10,440 --> 00:08:12,480
+to explain the rest of this I don't want
+
+199
+00:08:12,480 --> 00:08:14,610
+to give you lots more examples so I'm
+
+200
+00:08:14,610 --> 00:08:16,860
+gonna do is I'm going to explain an
+
+201
+00:08:16,860 --> 00:08:18,630
+actual example game that I played with
+
+202
+00:08:18,630 --> 00:08:19,950
+the computer and I wanted to explain
+
+203
+00:08:19,950 --> 00:08:22,140
+exactly what the computer thought behind
+
+204
+00:08:22,140 --> 00:08:26,280
+every single move it did now let's get
+
+205
+00:08:26,280 --> 00:08:29,030
+started I'm X the computers Oh so as
+
+206
+00:08:29,030 --> 00:08:32,190
+tic-tac-toe convention says I will be
+
+207
+00:08:32,190 --> 00:08:34,770
+going first because I'm X so I always I
+
+208
+00:08:34,770 --> 00:08:37,110
+take the center first usually okay I
+
+209
+00:08:37,110 --> 00:08:39,720
+took the center now the computer is like
+
+210
+00:08:39,720 --> 00:08:42,180
+okay this i connect I can't use a
+
+211
+00:08:42,180 --> 00:08:44,280
+strategy it'll that's just out of the
+
+212
+00:08:44,280 --> 00:08:46,590
+picture so what should I do now I can't
+
+213
+00:08:46,590 --> 00:08:48,150
+take the center I should take a corner
+
+214
+00:08:48,150 --> 00:08:51,750
+so it picks this corner over here so
+
+215
+00:08:51,750 --> 00:08:53,070
+that's what the reasoning was
+
+216
+00:08:53,070 --> 00:08:55,710
+behind this corner they've picked after
+
+217
+00:08:55,710 --> 00:08:58,770
+that I decided to place an X over here
+
+218
+00:08:58,770 --> 00:09:01,140
+this allowed me to threaten an attack
+
+219
+00:09:01,140 --> 00:09:02,160
+this way
+
+220
+00:09:02,160 --> 00:09:04,830
+on a diagonal but then the computer
+
+221
+00:09:04,830 --> 00:09:08,250
+realized that and put an O there this
+
+222
+00:09:08,250 --> 00:09:10,380
+means that the computer found out that I
+
+223
+00:09:10,380 --> 00:09:12,300
+was about to win so it blocked me from
+
+224
+00:09:12,300 --> 00:09:16,080
+winning then what's gonna happen is I
+
+225
+00:09:16,080 --> 00:09:18,600
+just place an X here and at this point I
+
+226
+00:09:18,600 --> 00:09:21,780
+you I placed an X here in order to block
+
+227
+00:09:21,780 --> 00:09:24,300
+these two O's from meeting I did not all
+
+228
+00:09:24,300 --> 00:09:26,490
+realize that I had just created an
+
+229
+00:09:26,490 --> 00:09:28,920
+opening for me to win so what happened
+
+230
+00:09:28,920 --> 00:09:31,440
+the computer did realize that so it
+
+231
+00:09:31,440 --> 00:09:33,390
+tried to its best to block me over there
+
+232
+00:09:33,390 --> 00:09:35,970
+and so I actually wondered why didn't it
+
+233
+00:09:35,970 --> 00:09:38,040
+just go for this corner why did it have
+
+234
+00:09:38,040 --> 00:09:42,000
+to go up here then I found out that okay
+
+235
+00:09:42,000 --> 00:09:43,890
+there actually wasn't opening for me to
+
+236
+00:09:43,890 --> 00:09:46,260
+win and so it chose this so I I don't
+
+237
+00:09:46,260 --> 00:09:49,620
+win and then what happens is that I
+
+238
+00:09:49,620 --> 00:09:51,780
+threatened an attack like this over in
+
+239
+00:09:51,780 --> 00:09:54,740
+this way and then what happens is the o
+
+240
+00:09:54,740 --> 00:09:57,150
+decides to block here and then over here
+
+241
+00:09:57,150 --> 00:09:59,400
+so it becomes a tie game no one wins the
+
+242
+00:09:59,400 --> 00:10:02,340
+computer is amazing at this so now we
+
+243
+00:10:02,340 --> 00:10:04,830
+will be getting into the Mac part again
+
+244
+00:10:04,830 --> 00:10:06,630
+if you find any way to beat this please
+
+245
+00:10:06,630 --> 00:10:08,310
+mail me at tad you manage gmail.com my
+
+246
+00:10:08,310 --> 00:10:10,830
+mail will be in the description yeah
+
+247
+00:10:10,830 --> 00:10:12,120
+let's get to the Mac parts and you can
+
+248
+00:10:12,120 --> 00:10:14,340
+also comment it down those in the video
+
+249
+00:10:14,340 --> 00:10:16,860
+comments and yeah let's get to the Mac
+
+250
+00:10:16,860 --> 00:10:21,450
+part so welcome to the back part of the
+
+251
+00:10:21,450 --> 00:10:23,430
+video and now we will explaining the
+
+252
+00:10:23,430 --> 00:10:26,850
+code and giving a life's little demo so
+
+253
+00:10:26,850 --> 00:10:29,850
+now I will be giving you a demo and
+
+254
+00:10:29,850 --> 00:10:32,250
+let's start so as you can see this is a
+
+255
+00:10:32,250 --> 00:10:34,650
+blank UI and I'm just gonna start in the
+
+256
+00:10:34,650 --> 00:10:36,960
+center as most good tic-tac-toe players
+
+257
+00:10:36,960 --> 00:10:40,320
+do I guess start in the center the app
+
+258
+00:10:40,320 --> 00:10:43,260
+will automatically put it over here I'm
+
+259
+00:10:43,260 --> 00:10:45,330
+just gonna click over here now and it
+
+260
+00:10:45,330 --> 00:10:47,010
+the text that I'm about to win and it
+
+261
+00:10:47,010 --> 00:10:48,120
+blocks me from winning
+
+262
+00:10:48,120 --> 00:10:49,590
+because it doesn't want me to win of
+
+263
+00:10:49,590 --> 00:10:52,560
+course I'm gonna close it here again
+
+264
+00:10:52,560 --> 00:10:54,900
+blocks me from winning now there's no
+
+265
+00:10:54,900 --> 00:10:56,880
+way either of us could possibly win I
+
+266
+00:10:56,880 --> 00:10:59,160
+mean I could do a diagonal but of course
+
+267
+00:10:59,160 --> 00:11:01,440
+it's too smart and then of course this
+
+268
+00:11:01,440 --> 00:11:04,350
+will actually try to win but then I just
+
+269
+00:11:04,350 --> 00:11:04,840
+do that
+
+270
+00:11:04,840 --> 00:11:08,860
+and we're gonna draw so then I can just
+
+271
+00:11:08,860 --> 00:11:11,590
+continue reset let's just play one more
+
+272
+00:11:11,590 --> 00:11:14,860
+example game all right here as you can
+
+273
+00:11:14,860 --> 00:11:17,050
+see it went concentr immediately because
+
+274
+00:11:17,050 --> 00:11:19,120
+it really asked you and then it tried to
+
+275
+00:11:19,120 --> 00:11:22,140
+block me here I'm gonna block it here
+
+276
+00:11:22,140 --> 00:11:25,930
+it's going to try to well it just took
+
+277
+00:11:25,930 --> 00:11:27,820
+this corner because there was nowhere
+
+278
+00:11:27,820 --> 00:11:29,890
+else for it to go I mean it could have
+
+279
+00:11:29,890 --> 00:11:32,680
+gone when they here but it isn't smart
+
+280
+00:11:32,680 --> 00:11:34,990
+enough to do that yet as you can see
+
+281
+00:11:34,990 --> 00:11:39,400
+then we can block it yet but I mean this
+
+282
+00:11:39,400 --> 00:11:41,740
+app will always either end up in a draw
+
+283
+00:11:41,740 --> 00:11:45,040
+or a win for the computer so this is
+
+284
+00:11:45,040 --> 00:11:47,920
+pretty nice and easy but let me just you
+
+285
+00:11:47,920 --> 00:11:49,300
+know at the whiteboard I gave you that
+
+286
+00:11:49,300 --> 00:11:51,490
+little example game I'm just going to
+
+287
+00:11:51,490 --> 00:11:53,080
+recreate that here so you can actually
+
+288
+00:11:53,080 --> 00:11:55,570
+see the app doing it so let's just start
+
+289
+00:11:55,570 --> 00:11:57,520
+as you can see the first move that I did
+
+290
+00:11:57,520 --> 00:12:00,670
+was play in the center the app will
+
+291
+00:12:00,670 --> 00:12:03,130
+automatically play here next I played
+
+292
+00:12:03,130 --> 00:12:05,320
+over here threatening an attack over
+
+293
+00:12:05,320 --> 00:12:08,080
+here so that I could win but then the
+
+294
+00:12:08,080 --> 00:12:10,240
+computer blocks and also makes a way for
+
+295
+00:12:10,240 --> 00:12:13,270
+it to win on its next turn however I
+
+296
+00:12:13,270 --> 00:12:17,230
+block that and I create a little gateway
+
+297
+00:12:17,230 --> 00:12:19,720
+for me to win and I didn't even realize
+
+298
+00:12:19,720 --> 00:12:21,400
+this but the computer did so if place
+
+299
+00:12:21,400 --> 00:12:23,050
+down and oh here and block you from
+
+300
+00:12:23,050 --> 00:12:26,080
+winning next I place down an X here
+
+301
+00:12:26,080 --> 00:12:28,330
+threatening over here however in place
+
+302
+00:12:28,330 --> 00:12:30,339
+down and oh and as you can see this all
+
+303
+00:12:30,339 --> 00:12:32,980
+could either continue extend or I could
+
+304
+00:12:32,980 --> 00:12:35,560
+just place it here and we end in a draw
+
+305
+00:12:35,560 --> 00:12:37,839
+of course because the computer is smart
+
+306
+00:12:37,839 --> 00:12:39,910
+enough to know exactly what move to do
+
+307
+00:12:39,910 --> 00:12:41,830
+at what time so that we either end in a
+
+308
+00:12:41,830 --> 00:12:46,270
+draw or a win so now we can reset and
+
+309
+00:12:46,270 --> 00:12:48,520
+I'm going to continue with explaining
+
+310
+00:12:48,520 --> 00:12:50,589
+the code so as you can see we have
+
+311
+00:12:50,589 --> 00:12:54,250
+classroom control and we have 9 IB
+
+312
+00:12:54,250 --> 00:12:56,770
+outlets for each UI button these are all
+
+313
+00:12:56,770 --> 00:12:58,180
+UI buttons if you didn't know already
+
+314
+00:12:58,180 --> 00:13:02,350
+each one of these I guess ok
+
+315
+00:13:02,350 --> 00:13:04,390
+so apart from that we have our reset
+
+316
+00:13:04,390 --> 00:13:06,220
+button and output label also which I
+
+317
+00:13:06,220 --> 00:13:10,630
+will just quickly show to you this is
+
+318
+00:13:10,630 --> 00:13:12,010
+the output label this is the reset
+
+319
+00:13:12,010 --> 00:13:13,990
+button the reason we create IB outlets
+
+320
+00:13:13,990 --> 00:13:15,310
+for this because we need to hide and
+
+321
+00:13:15,310 --> 00:13:17,770
+show them next we have the game over
+
+322
+00:13:17,770 --> 00:13:18,190
+which
+
+323
+00:13:18,190 --> 00:13:20,620
+tells us if our game is over and we also
+
+324
+00:13:20,620 --> 00:13:23,200
+have our plays array or a dictionary
+
+325
+00:13:23,200 --> 00:13:25,420
+which is an INT dictionary which will
+
+326
+00:13:25,420 --> 00:13:28,900
+store all of our grids and their status
+
+327
+00:13:28,900 --> 00:13:31,390
+and if you just come over here quickly
+
+328
+00:13:31,390 --> 00:13:33,130
+you'll see that this is the entire
+
+329
+00:13:33,130 --> 00:13:36,760
+dictionary in its full form so there's 0
+
+330
+00:13:36,760 --> 00:13:41,710
+1 2 3 4 5 6 7 8 for each ID for each
+
+331
+00:13:41,710 --> 00:13:46,030
+little grid or block next we have a
+
+332
+00:13:46,030 --> 00:13:48,940
+timer this timer will set the correct
+
+333
+00:13:48,940 --> 00:13:54,600
+colors for each little square every 0.01
+
+334
+00:13:54,600 --> 00:13:59,830
+seconds that's like 0 1 what's after
+
+335
+00:13:59,830 --> 00:14:08,170
+milli it's forgot after 4 millions so
+
+336
+00:14:08,170 --> 00:14:11,020
+it's 1 millisecond basically and then
+
+337
+00:14:11,020 --> 00:14:13,060
+what it's every one millisecond it's
+
+338
+00:14:13,060 --> 00:14:14,860
+going to look at it and it's going to
+
+339
+00:14:14,860 --> 00:14:19,170
+say ok I'm sorry every 10 milliseconds
+
+340
+00:14:19,170 --> 00:14:22,120
+and so what it's gonna do every 10
+
+341
+00:14:22,120 --> 00:14:24,250
+milliseconds it's going to set each
+
+342
+00:14:24,250 --> 00:14:27,760
+correct color over here so this one will
+
+343
+00:14:27,760 --> 00:14:29,470
+be green this one will a black and some
+
+344
+00:14:29,470 --> 00:14:32,260
+lemon red because all those are so to be
+
+345
+00:14:32,260 --> 00:14:35,800
+read all greens are to be all acts as a
+
+346
+00:14:35,800 --> 00:14:38,560
+social green and all underscores this
+
+347
+00:14:38,560 --> 00:14:41,830
+will be black so then let's get back to
+
+348
+00:14:41,830 --> 00:14:44,950
+our buted load we are resetting our
+
+349
+00:14:44,950 --> 00:14:49,300
+entire grid being also set and then we
+
+350
+00:14:49,300 --> 00:14:51,700
+are setting the timer to every 10
+
+351
+00:14:51,700 --> 00:14:55,600
+milliseconds I will change the colors or
+
+352
+00:14:55,600 --> 00:14:57,670
+it will actually execute the function
+
+353
+00:14:57,670 --> 00:14:59,710
+change colors with no user info and make
+
+354
+00:14:59,710 --> 00:15:01,420
+sure our piece then we have our change
+
+355
+00:15:01,420 --> 00:15:03,670
+colors function as you can see pretty
+
+356
+00:15:03,670 --> 00:15:06,339
+simple it just sets the color for each
+
+357
+00:15:06,339 --> 00:15:09,300
+button depending on which button it is
+
+358
+00:15:09,300 --> 00:15:12,250
+then we have a button clicked function
+
+359
+00:15:12,250 --> 00:15:15,550
+this is called whenever we click on one
+
+360
+00:15:15,550 --> 00:15:18,880
+of these grid buttons and depending on
+
+361
+00:15:18,880 --> 00:15:21,070
+which button it is it'll take out the
+
+362
+00:15:21,070 --> 00:15:25,030
+button ID and it will essentially just
+
+363
+00:15:25,030 --> 00:15:29,589
+take that button ID set the it'll check
+
+364
+00:15:29,589 --> 00:15:30,770
+ok
+
+365
+00:15:30,770 --> 00:15:34,520
+if look if the grid the specific little
+
+366
+00:15:34,520 --> 00:15:39,560
+node at that ID already has an O do not
+
+367
+00:15:39,560 --> 00:15:42,830
+give it X if it's blank then give it X
+
+368
+00:15:42,830 --> 00:15:45,649
+so that's how it works over there that's
+
+369
+00:15:45,649 --> 00:15:47,330
+what we're doing then we're checking if
+
+370
+00:15:47,330 --> 00:15:50,420
+it placed the X then you want to reset
+
+371
+00:15:50,420 --> 00:15:55,990
+the view check for a win on both X and O
+
+372
+00:15:55,990 --> 00:15:59,839
+then do an AI turn and also reset the
+
+373
+00:15:59,839 --> 00:16:02,480
+view again the reset view just sets all
+
+374
+00:16:02,480 --> 00:16:05,360
+these texts for the buttons correctly as
+
+375
+00:16:05,360 --> 00:16:10,610
+you can see next we have the check for
+
+376
+00:16:10,610 --> 00:16:13,160
+win function or I have the check for win
+
+377
+00:16:13,160 --> 00:16:16,180
+function and so what we're checking if X
+
+378
+00:16:16,180 --> 00:16:20,120
+wins anyhow meaning they win by doing
+
+379
+00:16:20,120 --> 00:16:24,440
+this this this this this this or this or
+
+380
+00:16:24,440 --> 00:16:28,820
+this then it will tell us the X 1 and
+
+381
+00:16:28,820 --> 00:16:31,370
+just stop the game or it'll do the same
+
+382
+00:16:31,370 --> 00:16:33,589
+thing for o and it will also do the same
+
+383
+00:16:33,589 --> 00:16:36,050
+thing for a drop so it'll check if
+
+384
+00:16:36,050 --> 00:16:38,240
+there's no blank squares and no 1 1 then
+
+385
+00:16:38,240 --> 00:16:41,450
+it's a draw obviously after that we have
+
+386
+00:16:41,450 --> 00:16:44,540
+our reset view the reset mute function
+
+387
+00:16:44,540 --> 00:16:46,579
+sorry and inside of here we are checking
+
+388
+00:16:46,579 --> 00:16:49,670
+if the game is not over then we want to
+
+389
+00:16:49,670 --> 00:16:52,209
+set the correct title depending on what
+
+390
+00:16:52,209 --> 00:16:56,720
+Square is currently on meaning if
+
+391
+00:16:56,720 --> 00:17:01,190
+buttons 0 has the ID for plays 0 in the
+
+392
+00:17:01,190 --> 00:17:04,670
+dictionary then if that plays 0 is equal
+
+393
+00:17:04,670 --> 00:17:07,970
+to 0 then give it the O if it's 1 then
+
+394
+00:17:07,970 --> 00:17:10,600
+give it X or else just keep it the same
+
+395
+00:17:10,600 --> 00:17:13,250
+after that we had our reset clicked IB
+
+396
+00:17:13,250 --> 00:17:15,530
+action what that means is it will just
+
+397
+00:17:15,530 --> 00:17:17,329
+call the reset function and then the
+
+398
+00:17:17,329 --> 00:17:19,429
+reset function as you can see we are
+
+399
+00:17:19,429 --> 00:17:22,760
+just going for I in 0 8 meaning 1 2 9
+
+400
+00:17:22,760 --> 00:17:25,250
+and I guess you could call it plays I is
+
+401
+00:17:25,250 --> 00:17:27,050
+equal to negative 1 meaning we are
+
+402
+00:17:27,050 --> 00:17:29,840
+complete we are creating dictionary from
+
+403
+00:17:29,840 --> 00:17:32,890
+0 to 8 with each value being minus 1
+
+404
+00:17:32,890 --> 00:17:35,420
+then we are sending each buttons titles
+
+405
+00:17:35,420 --> 00:17:38,660
+to just underscores as as simple as it
+
+406
+00:17:38,660 --> 00:17:40,520
+possibly could be because these are just
+
+407
+00:17:40,520 --> 00:17:42,169
+little placeholders so that you can
+
+408
+00:17:42,169 --> 00:17:44,530
+actually see how it works
+
+409
+00:17:44,530 --> 00:17:47,299
+then we are just setting game over to
+
+410
+00:17:47,299 --> 00:17:49,190
+false we are hiding the reset button and
+
+411
+00:17:49,190 --> 00:17:52,190
+we are also hiding the output label then
+
+412
+00:17:52,190 --> 00:17:54,559
+what an AI does turn this is where
+
+413
+00:17:54,559 --> 00:17:56,750
+things get interesting and as you can
+
+414
+00:17:56,750 --> 00:17:59,900
+see from this Wikipedia page this is the
+
+415
+00:17:59,900 --> 00:18:02,480
+entire steps that Wikipedia gives you
+
+416
+00:18:02,480 --> 00:18:06,169
+and so I'm skipping two of these in my
+
+417
+00:18:06,169 --> 00:18:08,900
+program the first one is number 3 and
+
+418
+00:18:08,900 --> 00:18:12,440
+I'm also skipping number 6 so instead of
+
+419
+00:18:12,440 --> 00:18:16,460
+checking for basically I just check for
+
+420
+00:18:16,460 --> 00:18:18,980
+corners I don't check if I want to go to
+
+421
+00:18:18,980 --> 00:18:20,750
+the opposite corner I just check four
+
+422
+00:18:20,750 --> 00:18:24,559
+corners themselves that's it so that but
+
+423
+00:18:24,559 --> 00:18:26,270
+I mean it's still so far it works
+
+424
+00:18:26,270 --> 00:18:30,110
+perfectly it can only draw or win a game
+
+425
+00:18:30,110 --> 00:18:32,240
+so I don't really need to implement them
+
+426
+00:18:32,240 --> 00:18:35,390
+anyway so apart from that this is just
+
+427
+00:18:35,390 --> 00:18:37,429
+mainly a human strategy if you think
+
+428
+00:18:37,429 --> 00:18:39,200
+about it but for computers this is more
+
+429
+00:18:39,200 --> 00:18:43,460
+than enough to be drawn okay so the ad
+
+430
+00:18:43,460 --> 00:18:45,590
+does turn and also just one more little
+
+431
+00:18:45,590 --> 00:18:48,350
+piece of fact there's a variable called
+
+432
+00:18:48,350 --> 00:18:50,480
+current move which is the move that the
+
+433
+00:18:50,480 --> 00:18:54,230
+AI currently has in mind to do so it's
+
+434
+00:18:54,230 --> 00:18:57,289
+going to start by checking the last rule
+
+435
+00:18:57,289 --> 00:18:59,539
+it's when to check for an empty side if
+
+436
+00:18:59,539 --> 00:19:01,130
+there's an empty side the current move
+
+437
+00:19:01,130 --> 00:19:03,980
+will be one of those empty sides then
+
+438
+00:19:03,980 --> 00:19:05,390
+it'll check for empty corners if there's
+
+439
+00:19:05,390 --> 00:19:07,250
+an empty corner it'll be one of those
+
+440
+00:19:07,250 --> 00:19:09,080
+empty corners it'll continue like that
+
+441
+00:19:09,080 --> 00:19:11,090
+and keep sitting at the current move to
+
+442
+00:19:11,090 --> 00:19:12,679
+the best move that it thinks it's
+
+443
+00:19:12,679 --> 00:19:14,900
+currently possible then when it gets to
+
+444
+00:19:14,900 --> 00:19:17,990
+the end it will do that move and so if
+
+445
+00:19:17,990 --> 00:19:20,150
+the winged move is the best move that it
+
+446
+00:19:20,150 --> 00:19:22,100
+could do then it'll just the win if the
+
+447
+00:19:22,100 --> 00:19:23,570
+fourth is the best well it can't do a
+
+448
+00:19:23,570 --> 00:19:25,490
+fourth if blocking an opponent's fourth
+
+449
+00:19:25,490 --> 00:19:27,140
+is the best things we can do then it
+
+450
+00:19:27,140 --> 00:19:29,419
+will do that if the center is the best
+
+451
+00:19:29,419 --> 00:19:31,640
+if the empty corner or on the side of
+
+452
+00:19:31,640 --> 00:19:34,580
+the best it'll always do that so far
+
+453
+00:19:34,580 --> 00:19:36,530
+from that that's really all we have to
+
+454
+00:19:36,530 --> 00:19:38,390
+do there so as you can see first we are
+
+455
+00:19:38,390 --> 00:19:39,799
+creating the current move burial which
+
+456
+00:19:39,799 --> 00:19:43,370
+is a blank integer and then we are
+
+457
+00:19:43,370 --> 00:19:45,470
+playing the sides meaning we want to
+
+458
+00:19:45,470 --> 00:19:47,870
+check if there's an empty side and if
+
+459
+00:19:47,870 --> 00:19:49,549
+there is and you want to play to that
+
+460
+00:19:49,549 --> 00:19:53,510
+side so we want to check if plays one
+
+461
+00:19:53,510 --> 00:19:55,750
+meaning the first side is and
+
+462
+00:19:55,750 --> 00:19:58,809
+set it to 1 etc etc for all sides and
+
+463
+00:19:58,809 --> 00:20:01,419
+set them so that me want to check if
+
+464
+00:20:01,419 --> 00:20:03,549
+this core is available if there are of
+
+465
+00:20:03,549 --> 00:20:06,490
+course use the corners then we want to
+
+466
+00:20:06,490 --> 00:20:08,020
+check if the center is available if it
+
+467
+00:20:08,020 --> 00:20:10,510
+is music because that's usually a good
+
+468
+00:20:10,510 --> 00:20:13,900
+tactic then we want to block forks if we
+
+469
+00:20:13,900 --> 00:20:17,650
+detect a user trying to fork us well we
+
+470
+00:20:17,650 --> 00:20:20,470
+just block it so that they can't then we
+
+471
+00:20:20,470 --> 00:20:22,600
+want to check if the user can win and I
+
+472
+00:20:22,600 --> 00:20:23,770
+will tell you more about this code in
+
+473
+00:20:23,770 --> 00:20:26,500
+just a minute if they can then try your
+
+474
+00:20:26,500 --> 00:20:29,289
+best to block it and if you can win just
+
+475
+00:20:29,289 --> 00:20:31,330
+immediately win because obviously it's
+
+476
+00:20:31,330 --> 00:20:33,039
+gonna end the game no one else can win
+
+477
+00:20:33,039 --> 00:20:36,730
+and you've already won then we want to
+
+478
+00:20:36,730 --> 00:20:38,470
+actually play the move if there is a
+
+479
+00:20:38,470 --> 00:20:41,260
+move meaning it'll only play the move if
+
+480
+00:20:41,260 --> 00:20:43,720
+there is a move meaning if there's no
+
+481
+00:20:43,720 --> 00:20:45,640
+squares left to be filled it won't do
+
+482
+00:20:45,640 --> 00:20:49,539
+anything so here we are playing the move
+
+483
+00:20:49,539 --> 00:20:52,270
+so we're checking if let nothing is able
+
+484
+00:20:52,270 --> 00:20:53,740
+to current move meaning we have a move
+
+485
+00:20:53,740 --> 00:20:56,200
+then plays the current move is equal to
+
+486
+00:20:56,200 --> 00:20:58,840
+zero meaning set it to an O and then we
+
+487
+00:20:58,840 --> 00:21:00,370
+want to reset the view check for a win
+
+488
+00:21:00,370 --> 00:21:03,580
+and then you south of you again now as
+
+489
+00:21:03,580 --> 00:21:06,580
+you can see these two little if
+
+490
+00:21:06,580 --> 00:21:08,919
+statements are quite different from the
+
+491
+00:21:08,919 --> 00:21:10,480
+rest because these are using a flat
+
+492
+00:21:10,480 --> 00:21:11,169
+statements
+
+493
+00:21:11,169 --> 00:21:13,630
+let me explain them first of all let's
+
+494
+00:21:13,630 --> 00:21:16,409
+see block the user if they can win
+
+495
+00:21:16,409 --> 00:21:18,900
+basically this is going to set a
+
+496
+00:21:18,900 --> 00:21:22,450
+constant called win available to two in
+
+497
+00:21:22,450 --> 00:21:24,730
+our row which is a function I created
+
+498
+00:21:24,730 --> 00:21:27,460
+and it'll check if X has two in a row if
+
+499
+00:21:27,460 --> 00:21:30,309
+it does then you want to set the current
+
+500
+00:21:30,309 --> 00:21:31,870
+move to that when that's available for
+
+501
+00:21:31,870 --> 00:21:33,580
+them meaning it will try its best to
+
+502
+00:21:33,580 --> 00:21:38,380
+block it however if you can win meaning
+
+503
+00:21:38,380 --> 00:21:40,630
+there's two in a row for o then you want
+
+504
+00:21:40,630 --> 00:21:42,400
+to set the current move to the way that
+
+505
+00:21:42,400 --> 00:21:44,080
+you can actually win because that will
+
+506
+00:21:44,080 --> 00:21:47,559
+end the game and you will also one so
+
+507
+00:21:47,559 --> 00:21:50,559
+then we can actually play that move as
+
+508
+00:21:50,559 --> 00:21:52,090
+you can see I've already told you about
+
+509
+00:21:52,090 --> 00:21:53,950
+that code but let's see the two in a row
+
+510
+00:21:53,950 --> 00:21:55,960
+function as you can see this function
+
+511
+00:21:55,960 --> 00:21:58,240
+takes the players of string and the an
+
+512
+00:21:58,240 --> 00:22:02,640
+array as two as a dictionary of intent
+
+513
+00:22:02,640 --> 00:22:07,700
+and so this is pretty simple
+
+514
+00:22:07,700 --> 00:22:11,020
+I mean it's nice it's an integer or
+
+515
+00:22:11,020 --> 00:22:13,340
+dictionary and as you can see this is
+
+516
+00:22:13,340 --> 00:22:15,170
+how it's actually gonna look inside of
+
+517
+00:22:15,170 --> 00:22:17,390
+the program the reason I had this
+
+518
+00:22:17,390 --> 00:22:22,250
+dictionary is because I had a custom
+
+519
+00:22:22,250 --> 00:22:24,440
+array feature before but then I didn't
+
+520
+00:22:24,440 --> 00:22:26,870
+really use it so I just still have it
+
+521
+00:22:26,870 --> 00:22:28,580
+there and this will return an optional
+
+522
+00:22:28,580 --> 00:22:31,550
+aunt and my default this will return nil
+
+523
+00:22:31,550 --> 00:22:36,410
+and so what'll happen is if the player
+
+524
+00:22:36,410 --> 00:22:39,560
+is X then you want to check every single
+
+525
+00:22:39,560 --> 00:22:41,630
+possible almost every single possible
+
+526
+00:22:41,630 --> 00:22:44,750
+combination that X could have tuner like
+
+527
+00:22:44,750 --> 00:22:47,260
+this one this one or this one
+
+528
+00:22:47,260 --> 00:22:49,370
+and we want to do that for every single
+
+529
+00:22:49,370 --> 00:22:51,200
+one except for a few which I'll explain
+
+530
+00:22:51,200 --> 00:22:54,230
+later and then what's gonna happen is
+
+531
+00:22:54,230 --> 00:22:57,770
+we're also going to check for oh okay so
+
+532
+00:22:57,770 --> 00:22:59,480
+then that's there so we're checking
+
+533
+00:22:59,480 --> 00:23:02,810
+every single possible combination for a
+
+534
+00:23:02,810 --> 00:23:03,710
+two in a row
+
+535
+00:23:03,710 --> 00:23:06,110
+that could possibly be there and then
+
+536
+00:23:06,110 --> 00:23:08,810
+after that it just returns the blank one
+
+537
+00:23:08,810 --> 00:23:13,700
+so for example if let's say o has an
+
+538
+00:23:13,700 --> 00:23:18,860
+opening at 1 4 7 meaning that this and
+
+539
+00:23:18,860 --> 00:23:21,020
+this are occupied but this one is free
+
+540
+00:23:21,020 --> 00:23:23,480
+meaning we just draw it out for you
+
+541
+00:23:23,480 --> 00:23:25,130
+these two are occupied but this one is
+
+542
+00:23:25,130 --> 00:23:28,010
+free that means it will return 7 because
+
+543
+00:23:28,010 --> 00:23:31,190
+then we can move to 7 and win so that
+
+544
+00:23:31,190 --> 00:23:33,830
+just proves that that really understands
+
+545
+00:23:33,830 --> 00:23:37,280
+how it will have to use its moves and
+
+546
+00:23:37,280 --> 00:23:39,020
+then apart from that but it's really
+
+547
+00:23:39,020 --> 00:23:40,640
+simple and now if I were to run this one
+
+548
+00:23:40,640 --> 00:23:43,670
+once more we can just do one more sample
+
+549
+00:23:43,670 --> 00:23:46,160
+game let's just play a little bit more
+
+550
+00:23:46,160 --> 00:23:48,800
+smart this time so I want to play the
+
+551
+00:23:48,800 --> 00:23:50,300
+center so it doesn't get an opportunity
+
+552
+00:23:50,300 --> 00:23:54,650
+to attack me from the diagonal then I'm
+
+553
+00:23:54,650 --> 00:23:58,580
+going to play this corner then I went to
+
+554
+00:23:58,580 --> 00:24:02,560
+play on over here so it cannot beat me
+
+555
+00:24:02,560 --> 00:24:05,000
+then of course the plays over there for
+
+556
+00:24:05,000 --> 00:24:05,450
+some reason
+
+557
+00:24:05,450 --> 00:24:07,760
+oh yeah so it blocks me then I'm just
+
+558
+00:24:07,760 --> 00:24:09,920
+going to play over here item Li and play
+
+559
+00:24:09,920 --> 00:24:11,420
+over here as you can see it's a job
+
+560
+00:24:11,420 --> 00:24:12,950
+because the computer is so smart even
+
+561
+00:24:12,950 --> 00:24:14,960
+look human can't beat it and that just
+
+562
+00:24:14,960 --> 00:24:17,900
+means it's really smart so yeah that was
+
+563
+00:24:17,900 --> 00:24:21,350
+the app now let's good for the ending of
+
+564
+00:24:21,350 --> 00:24:22,789
+so the source code will be down in the
+
+565
+00:24:22,789 --> 00:24:24,799
+description below you can feel free to
+
+566
+00:24:24,799 --> 00:24:27,710
+run through that I didn't really tell
+
+567
+00:24:27,710 --> 00:24:29,259
+you yet
+
+568
+00:24:29,259 --> 00:24:32,450
+there might be a few witches with this I
+
+569
+00:24:32,450 --> 00:24:35,059
+have written tested this but if you can
+
+570
+00:24:35,059 --> 00:24:37,909
+find any glitches in this whatsoever
+
+571
+00:24:37,909 --> 00:24:40,519
+please leave it down in the comment
+
+572
+00:24:40,519 --> 00:24:41,239
+section below
+
+573
+00:24:41,239 --> 00:24:43,220
+you can also email me at Tai Chi manage
+
+574
+00:24:43,220 --> 00:24:45,139
+email comm my email will be in the
+
+575
+00:24:45,139 --> 00:24:46,129
+description below if you didn't
+
+576
+00:24:46,129 --> 00:24:50,419
+understand that and yeah if you send it
+
+577
+00:24:50,419 --> 00:24:53,419
+to me I may just feature your comment or
+
+578
+00:24:53,419 --> 00:24:58,279
+email on my next video because I mean I
+
+579
+00:24:58,279 --> 00:25:00,289
+want to tell people that you're pretty
+
+580
+00:25:00,289 --> 00:25:02,119
+smart that you found that glitch and
+
+581
+00:25:02,119 --> 00:25:05,059
+also you deserve it because I could not
+
+582
+00:25:05,059 --> 00:25:08,570
+find any glitches whatsoever with this
+
+583
+00:25:08,570 --> 00:25:10,279
+my family couldn't find it my friends
+
+584
+00:25:10,279 --> 00:25:11,899
+couldn't find it so that's pretty much
+
+585
+00:25:11,899 --> 00:25:13,669
+foolproof if you can I'll give you a
+
+586
+00:25:13,669 --> 00:25:16,460
+shout-out great and yeah that was that
+
+587
+00:25:16,460 --> 00:25:17,480
+source code will be down in description
+
+588
+00:25:17,480 --> 00:25:19,009
+feel free to run through it use it in
+
+589
+00:25:19,009 --> 00:25:21,919
+your own app I yeah subscribe feed to my
+
+590
+00:25:21,919 --> 00:25:23,359
+channel and you like my content you'll
+
+591
+00:25:23,359 --> 00:25:25,190
+see more of it like my video if you
+
+592
+00:25:25,190 --> 00:25:27,289
+liked it and yeah comment if you have
+
+593
+00:25:27,289 --> 00:25:31,999
+any suggestions or any questions you can
+
+594
+00:25:31,999 --> 00:25:33,350
+even email me at tad you mana at
+
+595
+00:25:33,350 --> 00:25:35,389
+gmail.com I'm email will also me down in
+
+596
+00:25:35,389 --> 00:25:38,950
+the description and that's it goodbye

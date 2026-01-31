@@ -1,0 +1,1599 @@
+1
+00:00:00,350 --> 00:00:09,660
+[Music]
+
+2
+00:00:13,969 --> 00:00:16,770
+so Walter and welcome to another
+
+3
+00:00:16,770 --> 00:00:17,670
+tutorial
+
+4
+00:00:17,670 --> 00:00:20,550
+my name is Timmy Bakshi and this time
+
+5
+00:00:20,550 --> 00:00:22,380
+we're going to be going over how you can
+
+6
+00:00:22,380 --> 00:00:25,170
+use a year off neural network in order
+
+7
+00:00:25,170 --> 00:00:27,390
+to classify it between two different
+
+8
+00:00:27,390 --> 00:00:30,630
+types of hearing disorders now actually
+
+9
+00:00:30,630 --> 00:00:32,880
+this is going to be the first video in a
+
+10
+00:00:32,880 --> 00:00:34,200
+new series that I'm going to be doing
+
+11
+00:00:34,200 --> 00:00:36,360
+called healthcare and the range from
+
+12
+00:00:36,360 --> 00:00:39,420
+anything related to healthcare and of
+
+13
+00:00:39,420 --> 00:00:40,710
+course we're going mixing in a lot of
+
+14
+00:00:40,710 --> 00:00:42,960
+Technology and AI to make it really
+
+15
+00:00:42,960 --> 00:00:46,050
+really interesting alright selectman so
+
+16
+00:00:46,050 --> 00:00:48,239
+today what we're going to be doing is
+
+17
+00:00:48,239 --> 00:00:50,370
+we're going to be taking a data set from
+
+18
+00:00:50,370 --> 00:00:53,280
+the UCI machine learning repository and
+
+19
+00:00:53,280 --> 00:00:54,930
+we're going to be using it to train a
+
+20
+00:00:54,930 --> 00:00:56,969
+neural network powered by the near off
+
+21
+00:00:56,969 --> 00:01:00,570
+API in order to create a neural network
+
+22
+00:01:00,570 --> 00:01:03,030
+that can take some actions about a
+
+23
+00:01:03,030 --> 00:01:05,339
+person and classify whether he has a
+
+24
+00:01:05,339 --> 00:01:07,950
+normal ear an ear or a nearly two
+
+25
+00:01:07,950 --> 00:01:10,350
+different types of hearing disorders and
+
+26
+00:01:10,350 --> 00:01:14,070
+now let's talk about that alright so
+
+27
+00:01:14,070 --> 00:01:16,439
+basically the data set that I'm going to
+
+28
+00:01:16,439 --> 00:01:19,250
+be using was actually donated in 1992
+
+29
+00:01:19,250 --> 00:01:22,590
+and so basically what within you is the
+
+30
+00:01:22,590 --> 00:01:24,750
+data set consumes around 200 different
+
+31
+00:01:24,750 --> 00:01:27,360
+rows of training data and what we're
+
+32
+00:01:27,360 --> 00:01:29,009
+going to be doing here is we're actually
+
+33
+00:01:29,009 --> 00:01:31,140
+going to take like Golden Rose not
+
+34
+00:01:31,140 --> 00:01:32,939
+treating data and by the way there are
+
+35
+00:01:32,939 --> 00:01:36,380
+69 input attributes about the people
+
+36
+00:01:36,380 --> 00:01:41,299
+that are in this data set so 69 training
+
+37
+00:01:41,299 --> 00:01:45,570
+attributes and so basically the neural
+
+38
+00:01:45,570 --> 00:01:48,570
+network is said 69 attributes about the
+
+39
+00:01:48,570 --> 00:01:52,920
+person who is who is going into or who
+
+40
+00:01:52,920 --> 00:01:54,540
+is going to be classified by this neural
+
+41
+00:01:54,540 --> 00:01:57,420
+network and what's going to happen is
+
+42
+00:01:57,420 --> 00:01:59,250
+these 59 attributes will of course go to
+
+43
+00:01:59,250 --> 00:02:01,170
+a little hidden layer the hidden layer
+
+44
+00:02:01,170 --> 00:02:04,170
+will calculate somatic values that we
+
+45
+00:02:04,170 --> 00:02:05,759
+really don't care about just yet
+
+46
+00:02:05,759 --> 00:02:08,849
+and then those values will be given our
+
+47
+00:02:08,849 --> 00:02:11,790
+out will give us our output
+
+48
+00:02:11,790 --> 00:02:14,760
+this output will classify what type of
+
+49
+00:02:14,760 --> 00:02:16,109
+hearing further they have so basically
+
+50
+00:02:16,109 --> 00:02:18,150
+as a fiddler going to input 69
+
+51
+00:02:18,150 --> 00:02:20,129
+attributes of hot our patient or really
+
+52
+00:02:20,129 --> 00:02:22,109
+any person and we're going to send that
+
+53
+00:02:22,109 --> 00:02:24,150
+the neural network over here this is our
+
+54
+00:02:24,150 --> 00:02:28,379
+neural network phase and then we are
+
+55
+00:02:28,379 --> 00:02:31,200
+going to output either if the user or
+
+56
+00:02:31,200 --> 00:02:37,799
+the patient has a normal ear or if their
+
+57
+00:02:37,799 --> 00:02:43,769
+cochlea has aged and that's their
+
+58
+00:02:43,769 --> 00:02:46,889
+hearing problem or if it's something to
+
+59
+00:02:46,889 --> 00:02:50,669
+do with their cochlea but we don't
+
+60
+00:02:50,669 --> 00:02:55,049
+exactly know what it is all right so
+
+61
+00:02:55,049 --> 00:02:57,389
+that's basically what would we be doing
+
+62
+00:02:57,389 --> 00:02:59,129
+today and I'll explain a lot more about
+
+63
+00:02:59,129 --> 00:03:00,750
+what's going on in the middle of the
+
+64
+00:03:00,750 --> 00:03:03,480
+neural network in the actual coding part
+
+65
+00:03:03,480 --> 00:03:06,659
+but I get to go to a little science
+
+66
+00:03:06,659 --> 00:03:08,099
+explanation right now
+
+67
+00:03:08,099 --> 00:03:11,389
+ah so if you're wondering what exactly
+
+68
+00:03:11,389 --> 00:03:14,220
+cochlea means here what's actually quite
+
+69
+00:03:14,220 --> 00:03:16,349
+simple the cochlear is responsible for
+
+70
+00:03:16,349 --> 00:03:20,069
+well your hearing and so what happens
+
+71
+00:03:20,069 --> 00:03:22,139
+easy cochlea is actually powered by
+
+72
+00:03:22,139 --> 00:03:24,780
+something called the vestibular cochlear
+
+73
+00:03:24,780 --> 00:03:27,739
+nerve and the vestibular cochlear nerve
+
+74
+00:03:27,739 --> 00:03:30,209
+basically is one of the one of the
+
+75
+00:03:30,209 --> 00:03:33,440
+twelve this is the eighth cranial nerve
+
+76
+00:03:33,440 --> 00:03:35,909
+which goes from your inner ear in your
+
+77
+00:03:35,909 --> 00:03:38,010
+cochlea to your brain and so basically
+
+78
+00:03:38,010 --> 00:03:40,280
+what color of white cranial nervous
+
+79
+00:03:40,280 --> 00:03:42,690
+cranial nerves they're actually twelve
+
+80
+00:03:42,690 --> 00:03:45,389
+cranial nerves and so these are nerves
+
+81
+00:03:45,389 --> 00:03:47,400
+that don't originate from the spinal
+
+82
+00:03:47,400 --> 00:03:49,650
+cord but instead originate straight from
+
+83
+00:03:49,650 --> 00:03:53,729
+the inside your brain and so this is
+
+84
+00:03:53,729 --> 00:03:55,949
+what that would be one of those nerves
+
+85
+00:03:55,949 --> 00:03:58,829
+and so basically the vestibulocochlear
+
+86
+00:03:58,829 --> 00:04:02,599
+nerve can also be called the auditory
+
+87
+00:04:02,599 --> 00:04:05,400
+vestibular nerve and as the name
+
+88
+00:04:05,400 --> 00:04:08,069
+suggests not only does it does it
+
+89
+00:04:08,069 --> 00:04:11,549
+control your hearing and yeah your
+
+90
+00:04:11,549 --> 00:04:14,220
+hearing it also does I handle things
+
+91
+00:04:14,220 --> 00:04:16,289
+like your balance and of course the
+
+92
+00:04:16,289 --> 00:04:18,120
+equal equilibrium of your body and
+
+93
+00:04:18,120 --> 00:04:20,190
+making sure you don't tip over as you're
+
+94
+00:04:20,190 --> 00:04:22,380
+standing up straight and so that's neat
+
+95
+00:04:22,380 --> 00:04:23,820
+agree what that does although the
+
+96
+00:04:23,820 --> 00:04:24,980
+cochlear is only cancer
+
+97
+00:04:24,980 --> 00:04:27,050
+hearing in the labyrinth does all the
+
+98
+00:04:27,050 --> 00:04:30,710
+Elda balancing this nerve transmit that
+
+99
+00:04:30,710 --> 00:04:32,570
+transmit sound information from inner
+
+100
+00:04:32,570 --> 00:04:36,560
+ear to the brain but now though without
+
+101
+00:04:36,560 --> 00:04:38,690
+any more further ado what we're going to
+
+102
+00:04:38,690 --> 00:04:40,700
+do is I'm actually going to go over to
+
+103
+00:04:40,700 --> 00:04:42,740
+the code part now where I'm going to
+
+104
+00:04:42,740 --> 00:04:45,950
+show you exactly how you can implement
+
+105
+00:04:45,950 --> 00:04:48,620
+this neural network and of course we're
+
+106
+00:04:48,620 --> 00:04:50,300
+going to be reaching around a ninety
+
+107
+00:04:50,300 --> 00:04:52,490
+eight point nine percent accuracy on
+
+108
+00:04:52,490 --> 00:04:55,850
+this data set all right so let's get to
+
+109
+00:04:55,850 --> 00:04:57,500
+the color part now where I'm going to be
+
+110
+00:04:57,500 --> 00:04:59,720
+showing you how exactly you can do all
+
+111
+00:04:59,720 --> 00:05:01,090
+this
+
+112
+00:05:01,090 --> 00:05:03,920
+alright so welcome back to the code part
+
+113
+00:05:03,920 --> 00:05:06,110
+and now I'm going to show you how
+
+114
+00:05:06,110 --> 00:05:07,970
+exactly you can import your data sets
+
+115
+00:05:07,970 --> 00:05:10,580
+and train this neural network that I
+
+116
+00:05:10,580 --> 00:05:11,620
+have created
+
+117
+00:05:11,620 --> 00:05:14,570
+alright so let's begin our now I've
+
+118
+00:05:14,570 --> 00:05:16,760
+actually got two data sets the training
+
+119
+00:05:16,760 --> 00:05:19,280
+data set the testing data set so one man
+
+120
+00:05:19,280 --> 00:05:21,530
+is only the certain links down in the
+
+121
+00:05:21,530 --> 00:05:23,270
+description actually download those two
+
+122
+00:05:23,270 --> 00:05:25,190
+data sets but if you'd like to even
+
+123
+00:05:25,190 --> 00:05:27,140
+actually attain your own neural network
+
+124
+00:05:27,140 --> 00:05:29,180
+on this exact same thing as well because
+
+125
+00:05:29,180 --> 00:05:30,890
+what I thought I had done by taking back
+
+126
+00:05:30,890 --> 00:05:33,380
+down non-standard data that was provided
+
+127
+00:05:33,380 --> 00:05:35,570
+with this data set and I convert it into
+
+128
+00:05:35,570 --> 00:05:37,490
+my standard data so you can easily
+
+129
+00:05:37,490 --> 00:05:39,670
+import it into your neural networks
+
+130
+00:05:39,670 --> 00:05:43,550
+because right now is also troublesome to
+
+131
+00:05:43,550 --> 00:05:46,790
+get it into your neural networks due to
+
+132
+00:05:46,790 --> 00:05:48,380
+the fact that it's not a standard data
+
+133
+00:05:48,380 --> 00:05:50,930
+sets it's not a bit sorry not a standard
+
+134
+00:05:50,930 --> 00:05:53,210
+format for data set but now I've
+
+135
+00:05:53,210 --> 00:05:55,340
+converted it to one so that you can take
+
+136
+00:05:55,340 --> 00:05:58,100
+a look at that alright so let's take a
+
+137
+00:05:58,100 --> 00:06:00,050
+look at how this is going to work I
+
+138
+00:06:00,050 --> 00:06:02,360
+thought I already got my data set and
+
+139
+00:06:02,360 --> 00:06:03,980
+one of the training one of the test set
+
+140
+00:06:03,980 --> 00:06:06,260
+and by the studio here what I start
+
+141
+00:06:06,260 --> 00:06:08,330
+having done is we're going to create a
+
+142
+00:06:08,330 --> 00:06:10,910
+new data set under training set we're
+
+143
+00:06:10,910 --> 00:06:13,840
+going to call this audiology training
+
+144
+00:06:13,840 --> 00:06:18,410
+and we can have 69 on Friday 59 69 input
+
+145
+00:06:18,410 --> 00:06:20,810
+and we are going to have three output
+
+146
+00:06:20,810 --> 00:06:23,690
+course one into normal ear okapi or
+
+147
+00:06:23,690 --> 00:06:26,810
+eight or so clear something we're going
+
+148
+00:06:26,810 --> 00:06:28,460
+to be loading with is that from a file
+
+149
+00:06:28,460 --> 00:06:31,070
+and all of course this file will be for
+
+150
+00:06:31,070 --> 00:06:33,590
+my downloads here although I have
+
+151
+00:06:33,590 --> 00:06:34,650
+created this on Marcel
+
+152
+00:06:34,650 --> 00:06:36,870
+pinnacle and it's called ring final
+
+153
+00:06:36,870 --> 00:06:40,500
+audios rcfe I'm going to click on finish
+
+154
+00:06:40,500 --> 00:06:43,169
+them and as you can see we successfully
+
+155
+00:06:43,169 --> 00:06:46,440
+imports my 99 rolls of training data I'm
+
+156
+00:06:46,440 --> 00:06:47,520
+going to click OK
+
+157
+00:06:47,520 --> 00:06:50,040
+and I'm going to tell us to save with
+
+158
+00:06:50,040 --> 00:06:52,380
+new data set under test steps I'm going
+
+159
+00:06:52,380 --> 00:06:54,419
+to create another new data set and I'm
+
+160
+00:06:54,419 --> 00:06:58,949
+going to call this audiology testing of
+
+161
+00:06:58,949 --> 00:07:00,930
+course we're going to have 69 inputs and
+
+162
+00:07:00,930 --> 00:07:02,310
+three outputs once more and it's going
+
+163
+00:07:02,310 --> 00:07:04,320
+to be loading this up from a testing
+
+164
+00:07:04,320 --> 00:07:06,750
+file that I've created called testers
+
+165
+00:07:06,750 --> 00:07:09,600
+svse and you can see successfully
+
+166
+00:07:09,600 --> 00:07:11,760
+imported my few rows of training data
+
+167
+00:07:11,760 --> 00:07:13,710
+I'm going to click OK and tell it to
+
+168
+00:07:13,710 --> 00:07:15,870
+save this is then what I'm going to be
+
+169
+00:07:15,870 --> 00:07:17,400
+doing is I'm going to try to note on
+
+170
+00:07:17,400 --> 00:07:19,440
+your onion feed forward neural network
+
+171
+00:07:19,440 --> 00:07:21,210
+or in this case T is called a
+
+172
+00:07:21,210 --> 00:07:24,360
+multi-layer perceptron network and so
+
+173
+00:07:24,360 --> 00:07:26,970
+once seen on main your network I'm going
+
+174
+00:07:26,970 --> 00:07:29,850
+to call this audiology on 9 neurons
+
+175
+00:07:29,850 --> 00:07:31,740
+because we're having we're going to have
+
+176
+00:07:31,740 --> 00:07:33,860
+nineteen-year-old in our freedoms layer
+
+177
+00:07:33,860 --> 00:07:36,510
+and so building in a color network and
+
+178
+00:07:36,510 --> 00:07:38,820
+of course it's a multi-layer perceptron
+
+179
+00:07:38,820 --> 00:07:40,860
+type network we're going to click on
+
+180
+00:07:40,860 --> 00:07:43,950
+next and force within a 16-9 put me off
+
+181
+00:07:43,950 --> 00:07:46,500
+and you've all forgotten 90 15 year-olds
+
+182
+00:07:46,500 --> 00:07:49,530
+as well as 3 output we're going to make
+
+183
+00:07:49,530 --> 00:07:51,300
+sure we do use eyes neurons the third
+
+184
+00:07:51,300 --> 00:07:53,460
+thing help us make generalizations and
+
+185
+00:07:53,460 --> 00:07:55,680
+we are going to connect our we are not
+
+186
+00:07:55,680 --> 00:07:57,270
+going to connecting our input to alpha
+
+187
+00:07:57,270 --> 00:07:59,820
+you're on after that we're going to
+
+188
+00:07:59,820 --> 00:08:01,470
+begin a new transfer function or the
+
+189
+00:08:01,470 --> 00:08:02,970
+activation function as it's more
+
+190
+00:08:02,970 --> 00:08:06,150
+commonly known as sigmoid instead of
+
+191
+00:08:06,150 --> 00:08:08,010
+hyperbolic tangents that are really
+
+192
+00:08:08,010 --> 00:08:11,300
+lowly normal back propagation
+
+193
+00:08:11,300 --> 00:08:13,349
+full-on sex on we're going to click on
+
+194
+00:08:13,349 --> 00:08:15,630
+finish and you can see it creates our
+
+195
+00:08:15,630 --> 00:08:18,750
+nice little neural network here has 69
+
+196
+00:08:18,750 --> 00:08:21,449
+in for CTL books as well as 19 years in
+
+197
+00:08:21,449 --> 00:08:23,880
+between now if we were to do the math
+
+198
+00:08:23,880 --> 00:08:26,190
+here as you can see we've got this come
+
+199
+00:08:26,190 --> 00:08:29,789
+to 6970 connections from ankle to
+
+200
+00:08:29,789 --> 00:08:31,800
+feeding and competed alphabets activism
+
+201
+00:08:31,800 --> 00:08:35,010
+semi-sweet and since we've also got bias
+
+202
+00:08:35,010 --> 00:08:39,450
+neurons you mix if we want to do 70
+
+203
+00:08:39,450 --> 00:08:45,020
+times 91 times
+
+204
+00:08:45,070 --> 00:08:46,960
+this should be exactly how many neurons
+
+205
+00:08:46,960 --> 00:08:51,370
+in half folk are and this to be nine now
+
+206
+00:08:51,370 --> 00:08:52,870
+sorry how many connections between
+
+207
+00:08:52,870 --> 00:08:55,360
+neurons that we have in total and it
+
+208
+00:08:55,360 --> 00:08:57,130
+should have between nineteen thousand
+
+209
+00:08:57,130 --> 00:08:59,470
+month the hot 100 in ten different
+
+210
+00:08:59,470 --> 00:09:02,649
+connections between our neurons from the
+
+211
+00:09:02,649 --> 00:09:06,700
+layers where is that is how we or are
+
+212
+00:09:06,700 --> 00:09:09,370
+technically actually this should not
+
+213
+00:09:09,370 --> 00:09:11,649
+have been agent efficient have been
+
+214
+00:09:11,649 --> 00:09:15,339
+calculated that way it should be seventy
+
+215
+00:09:15,339 --> 00:09:19,060
+times nine one which is that and then
+
+216
+00:09:19,060 --> 00:09:25,209
+Plus that 91 times three operator
+
+217
+00:09:25,209 --> 00:09:27,670
+actually how many connections we have in
+
+218
+00:09:27,670 --> 00:09:30,339
+total sorry Elsa incorrect past there
+
+219
+00:09:30,339 --> 00:09:32,950
+Bob this is actual total number of
+
+220
+00:09:32,950 --> 00:09:35,610
+connections we have between our neurons
+
+221
+00:09:35,610 --> 00:09:38,860
+and so are actually the guilty pleas
+
+222
+00:09:38,860 --> 00:09:41,110
+network for these many connections now
+
+223
+00:09:41,110 --> 00:09:43,209
+line in D is I actually want to drag in
+
+224
+00:09:43,209 --> 00:09:45,640
+my training dataset from the training
+
+225
+00:09:45,640 --> 00:09:48,520
+set here to Mia's neural network and you
+
+226
+00:09:48,520 --> 00:09:50,470
+can see it grabs that training dataset
+
+227
+00:09:50,470 --> 00:09:52,510
+and I'm going to click on train button
+
+228
+00:09:52,510 --> 00:09:55,750
+and then it with a maximum error to 0.01
+
+229
+00:09:55,750 --> 00:09:56,950
+and what I'm going to do is a
+
+230
+00:09:56,950 --> 00:09:58,360
+millisecond learning rate in young men
+
+231
+00:09:58,360 --> 00:10:00,760
+comes to normal values and currently
+
+232
+00:10:00,760 --> 00:10:03,670
+that is 0.2 in 0.7 respectively of
+
+233
+00:10:03,670 --> 00:10:05,020
+course I'm going to tell if you stole my
+
+234
+00:10:05,020 --> 00:10:06,730
+error graph so I can actually see how
+
+235
+00:10:06,730 --> 00:10:08,230
+the how the training is going for now
+
+236
+00:10:08,230 --> 00:10:10,750
+I'm going to go to click on train now
+
+237
+00:10:10,750 --> 00:10:12,760
+this may take a moment or maybe not
+
+238
+00:10:12,760 --> 00:10:14,560
+depending on how the computer wants to
+
+239
+00:10:14,560 --> 00:10:17,170
+teach us and it ok you can see it was a
+
+240
+00:10:17,170 --> 00:10:19,630
+key very quick Bob just under 150
+
+241
+00:10:19,630 --> 00:10:22,170
+iterations required to uses error rate
+
+242
+00:10:22,170 --> 00:10:24,400
+what I'm going to do then is I'm going
+
+243
+00:10:24,400 --> 00:10:26,890
+to actually drag in our testing data set
+
+244
+00:10:26,890 --> 00:10:28,570
+and I'm going to click on the test
+
+245
+00:10:28,570 --> 00:10:31,690
+button and you can see our total mean
+
+246
+00:10:31,690 --> 00:10:34,930
+square error here in there that 0 159
+
+247
+00:10:34,930 --> 00:10:38,529
+here - tssss but we're going to do 1 -
+
+248
+00:10:38,529 --> 00:10:41,950
+live and then multiply this by 100 and
+
+249
+00:10:41,950 --> 00:10:43,149
+you can see what's currently leaking
+
+250
+00:10:43,149 --> 00:10:46,270
+nine eighty three percent accuracy but
+
+251
+00:10:46,270 --> 00:10:48,450
+as re many points in percent accuracy
+
+252
+00:10:48,450 --> 00:10:51,279
+and so this is actually quite good
+
+253
+00:10:51,279 --> 00:10:53,829
+accuracy imagine for just a 0.01 error
+
+254
+00:10:53,829 --> 00:10:55,029
+rate which is actually quite high
+
+255
+00:10:55,029 --> 00:10:57,200
+technically not high
+
+256
+00:10:57,200 --> 00:10:59,540
+but it isn't a Louis area that you can
+
+257
+00:10:59,540 --> 00:11:01,460
+hope work and we were able to achieve
+
+258
+00:11:01,460 --> 00:11:04,160
+quite a very nice accuracy actually and
+
+259
+00:11:04,160 --> 00:11:06,200
+as you can see that for example black
+
+260
+00:11:06,200 --> 00:11:09,740
+foam here the desired output was 0 1 0
+
+261
+00:11:09,740 --> 00:11:12,850
+I'm the real networks outputted almost 0
+
+262
+00:11:12,850 --> 00:11:16,010
+0.99 in an almost 0 even though these
+
+263
+00:11:16,010 --> 00:11:18,350
+numbers here are not in the training
+
+264
+00:11:18,350 --> 00:11:19,940
+data set the swimming I really like the
+
+265
+00:11:19,940 --> 00:11:22,790
+test those numbers were not serious
+
+266
+00:11:22,790 --> 00:11:24,920
+training data sets attack training and
+
+267
+00:11:24,920 --> 00:11:27,140
+test a completely separate the neural
+
+268
+00:11:27,140 --> 00:11:28,640
+network has never been exposed to these
+
+269
+00:11:28,640 --> 00:11:30,320
+into supports never been sold with the
+
+270
+00:11:30,320 --> 00:11:32,450
+outputs are for these inputs and we were
+
+271
+00:11:32,450 --> 00:11:34,100
+still able to achieve such a nice error
+
+272
+00:11:34,100 --> 00:11:36,560
+rate in fact if I just saw note this
+
+273
+00:11:36,560 --> 00:11:39,680
+down 98.3% and if you would a train
+
+274
+00:11:39,680 --> 00:11:42,020
+again about what I can do is even
+
+275
+00:11:42,020 --> 00:11:44,240
+further decreases error rate let's just
+
+276
+00:11:44,240 --> 00:11:47,840
+say 0.05 but the thing is I'm going in
+
+277
+00:11:47,840 --> 00:11:50,750
+increments here because it's already and
+
+278
+00:11:50,750 --> 00:11:52,160
+the reason going in increments here and
+
+279
+00:11:52,160 --> 00:11:53,960
+another thing opening 100 also a really
+
+280
+00:11:53,960 --> 00:11:56,510
+small error rate oh and I need a mistake
+
+281
+00:11:56,510 --> 00:11:58,970
+I tend the neural networks on the
+
+282
+00:11:58,970 --> 00:12:00,260
+testing set that's something you should
+
+283
+00:12:00,260 --> 00:12:03,140
+never do let's create a new neural
+
+284
+00:12:03,140 --> 00:12:07,970
+network here let's create this second
+
+285
+00:12:07,970 --> 00:12:12,070
+Network I can say network configuration
+
+286
+00:12:12,070 --> 00:12:14,930
+so wait to bring in a trance again and
+
+287
+00:12:14,930 --> 00:12:18,080
+we're just a cheap a slightly lower
+
+288
+00:12:18,080 --> 00:12:20,600
+error rate on the training set now again
+
+289
+00:12:20,600 --> 00:12:22,700
+the reason other thing for the reason
+
+290
+00:12:22,700 --> 00:12:24,200
+going in these sort of influence here
+
+291
+00:12:24,200 --> 00:12:25,730
+and they're not just rates going for a
+
+292
+00:12:25,730 --> 00:12:28,010
+really small error rate is because the
+
+293
+00:12:28,010 --> 00:12:30,350
+thing is I don't want to over fit to my
+
+294
+00:12:30,350 --> 00:12:32,840
+dreams that that my test set gets hardly
+
+295
+00:12:32,840 --> 00:12:34,610
+in the accuracy at all because right now
+
+296
+00:12:34,610 --> 00:12:37,280
+we're going 98.3% but if my neural
+
+297
+00:12:37,280 --> 00:12:39,050
+network would have just memorized within
+
+298
+00:12:39,050 --> 00:12:40,640
+my training set and not really
+
+299
+00:12:40,640 --> 00:12:42,590
+generalized to the fact that ok these
+
+300
+00:12:42,590 --> 00:12:44,300
+parameters means normally release
+
+301
+00:12:44,300 --> 00:12:46,280
+parameters in your cochlear and you can
+
+302
+00:12:46,280 --> 00:12:47,810
+these parameters means normal cochlear
+
+303
+00:12:47,810 --> 00:12:50,840
+issues then what happened means it's
+
+304
+00:12:50,840 --> 00:12:52,550
+really 1 or if there's no point it's
+
+305
+00:12:52,550 --> 00:12:53,960
+just memorizing the inputs and outputs
+
+306
+00:12:53,960 --> 00:12:56,750
+to everything that's why you want to go
+
+307
+00:12:56,750 --> 00:12:58,490
+in increments here and in fact if you'd
+
+308
+00:12:58,490 --> 00:13:00,260
+like to know more about what I'm doing
+
+309
+00:13:00,260 --> 00:13:02,870
+called it really swapping algorithm and
+
+310
+00:13:02,870 --> 00:13:04,370
+you can actually see video about that
+
+311
+00:13:04,370 --> 00:13:06,200
+that I created that's on my youtube
+
+312
+00:13:06,200 --> 00:13:07,490
+channel a link to that will be the
+
+313
+00:13:07,490 --> 00:13:08,300
+description below
+
+314
+00:13:08,300 --> 00:13:09,820
+Oh
+
+315
+00:13:09,820 --> 00:13:11,110
+but now as you can see we've gone to a
+
+316
+00:13:11,110 --> 00:13:13,870
+slightly lower error rate I need to drag
+
+317
+00:13:13,870 --> 00:13:16,330
+in the testing set and click on tests as
+
+318
+00:13:16,330 --> 00:13:19,770
+you can see if I just paste this in here
+
+319
+00:13:19,770 --> 00:13:24,610
+we have now launched a 98.7% accurate in
+
+320
+00:13:24,610 --> 00:13:28,360
+rounding that by the way 98.6 70 more
+
+321
+00:13:28,360 --> 00:13:31,840
+precise and our percent accuracy and you
+
+322
+00:13:31,840 --> 00:13:33,160
+can see we're just going up and up and
+
+323
+00:13:33,160 --> 00:13:35,590
+up as we are continuing to Train it's
+
+324
+00:13:35,590 --> 00:13:37,240
+just that again what could happen is
+
+325
+00:13:37,240 --> 00:13:39,490
+like for example if I were to go back to
+
+326
+00:13:39,490 --> 00:13:41,590
+my neural network click on the train
+
+327
+00:13:41,590 --> 00:13:43,810
+button and then get maybe too low of an
+
+328
+00:13:43,810 --> 00:13:46,210
+error rate but maybe not exists well
+
+329
+00:13:46,210 --> 00:13:49,210
+let's try this low for example now that
+
+330
+00:13:49,210 --> 00:13:49,930
+was quick
+
+331
+00:13:49,930 --> 00:13:52,690
+I'll just test it once more then where I
+
+332
+00:13:52,690 --> 00:13:54,820
+trained it all the testing set again but
+
+333
+00:13:54,820 --> 00:13:56,230
+you know you probably do get my point
+
+334
+00:13:56,230 --> 00:14:00,190
+where we want to Train it to a certain
+
+335
+00:14:00,190 --> 00:14:02,560
+point where the accuracy on the training
+
+336
+00:14:02,560 --> 00:14:04,420
+set doesn't really matter to us
+
+337
+00:14:04,420 --> 00:14:06,280
+it's the accuracy on the test set
+
+338
+00:14:06,280 --> 00:14:07,840
+because the training set is something
+
+339
+00:14:07,840 --> 00:14:09,250
+that the neural network can always just
+
+340
+00:14:09,250 --> 00:14:11,740
+memorize if you think about it we want
+
+341
+00:14:11,740 --> 00:14:13,270
+the neural network to be able to take
+
+342
+00:14:13,270 --> 00:14:15,280
+inputs that it's never seen before there
+
+343
+00:14:15,280 --> 00:14:16,960
+to being a completely unique case and
+
+344
+00:14:16,960 --> 00:14:18,760
+it's never referred for someone who's
+
+345
+00:14:18,760 --> 00:14:21,970
+let's say 23 years old and has these
+
+346
+00:14:21,970 --> 00:14:23,440
+parameters it's never heard from that
+
+347
+00:14:23,440 --> 00:14:25,030
+type of person before it but we still
+
+348
+00:14:25,030 --> 00:14:27,370
+want people to think that ok usually
+
+349
+00:14:27,370 --> 00:14:29,020
+these attributes are associated with
+
+350
+00:14:29,020 --> 00:14:31,510
+cochlear age be that successful see with
+
+351
+00:14:31,510 --> 00:14:33,310
+normal ears and then weigh those
+
+352
+00:14:33,310 --> 00:14:35,320
+together and then finally find our
+
+353
+00:14:35,320 --> 00:14:37,420
+answer but if we're just memorizing a
+
+354
+00:14:37,420 --> 00:14:40,180
+few casings is no point release is no
+
+355
+00:14:40,180 --> 00:14:43,240
+bug that's why I recommend you always
+
+356
+00:14:43,240 --> 00:14:44,920
+clean these things in increments unless
+
+357
+00:14:44,920 --> 00:14:47,020
+you have some default implementation of
+
+358
+00:14:47,020 --> 00:14:49,930
+an early stopping algorithm in place in
+
+359
+00:14:49,930 --> 00:14:51,670
+which case that is absolutely perfect
+
+360
+00:14:51,670 --> 00:14:54,640
+and you can continue to train until you
+
+361
+00:14:54,640 --> 00:14:55,900
+believe that your accuracy on the test
+
+362
+00:14:55,900 --> 00:14:58,300
+set is going up and then down to stop it
+
+363
+00:14:58,300 --> 00:15:00,670
+at its peak in fact you can find out
+
+364
+00:15:00,670 --> 00:15:02,290
+more I'm not going to go into too much
+
+365
+00:15:02,290 --> 00:15:04,720
+detail about this algorithm but you can
+
+366
+00:15:04,720 --> 00:15:06,190
+find out more about that in a separate
+
+367
+00:15:06,190 --> 00:15:08,290
+video that I created about overfitting
+
+368
+00:15:08,290 --> 00:15:10,480
+neural networks and memorization versus
+
+369
+00:15:10,480 --> 00:15:13,990
+generalizations oh but that is going to
+
+370
+00:15:13,990 --> 00:15:16,840
+be a full this video too okay so I have
+
+371
+00:15:16,840 --> 00:15:19,090
+to buy one but that would be it for this
+
+372
+00:15:19,090 --> 00:15:21,250
+video today thank you very much for
+
+373
+00:15:21,250 --> 00:15:22,250
+watching of course
+
+374
+00:15:22,250 --> 00:15:23,720
+like the video please - make sure to
+
+375
+00:15:23,720 --> 00:15:25,400
+LIKE the video and if you think this
+
+376
+00:15:25,400 --> 00:15:27,380
+could help anybody else for emails like
+
+377
+00:15:27,380 --> 00:15:28,580
+your friends or family please do
+
+378
+00:15:28,580 --> 00:15:30,950
+consider sharing the video as well of
+
+379
+00:15:30,950 --> 00:15:32,510
+course though if you have any more
+
+380
+00:15:32,510 --> 00:15:34,430
+questions suggestions or feedback please
+
+381
+00:15:34,430 --> 00:15:35,870
+do make sure to leave them down in the
+
+382
+00:15:35,870 --> 00:15:38,030
+comment section below email them to me
+
+383
+00:15:38,030 --> 00:15:40,520
+attaching any gmail.com 420 something
+
+384
+00:15:40,520 --> 00:15:43,610
+you xnt many of course so if you'd like
+
+385
+00:15:43,610 --> 00:15:45,380
+to be notified whenever I only see new
+
+386
+00:15:45,380 --> 00:15:47,660
+content you can do that by clicking our
+
+387
+00:15:47,660 --> 00:15:49,490
+little Bell button beside subscribe
+
+388
+00:15:49,490 --> 00:15:51,770
+button in order to be notified by email
+
+389
+00:15:51,770 --> 00:15:54,110
+and across Google platforms on a little
+
+390
+00:15:54,110 --> 00:15:55,750
+notification button in the corner
+
+391
+00:15:55,750 --> 00:15:58,280
+whenever I release a new video or
+
+392
+00:15:58,280 --> 00:16:01,130
+content of course though if you really
+
+393
+00:16:01,130 --> 00:16:02,660
+like my content you want to feel a lot
+
+394
+00:16:02,660 --> 00:16:03,800
+more of it we need to consider
+
+395
+00:16:03,800 --> 00:16:05,150
+subscribing to our YouTube channel as
+
+396
+00:16:05,150 --> 00:16:07,010
+well because it really really does help
+
+397
+00:16:07,010 --> 00:16:09,260
+out a lot zoom alright so thank you very
+
+398
+00:16:09,260 --> 00:16:10,880
+much for watching today that's going to
+
+399
+00:16:10,880 --> 00:16:11,930
+be it for this tutorial
+
+400
+00:16:11,930 --> 00:16:14,710
+goodbye

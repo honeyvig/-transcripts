@@ -1,0 +1,775 @@
+1
+00:00:02,060 --> 00:00:06,000
+so hello and welcome to the tutorial so
+
+2
+00:00:06,000 --> 00:00:08,010
+today I'm gonna be and my name is Tammy
+
+3
+00:00:08,010 --> 00:00:09,660
+Bakshi and today I'm gonna be talking
+
+4
+00:00:09,660 --> 00:00:12,389
+about an app that I created and this app
+
+5
+00:00:12,389 --> 00:00:14,040
+was written in Swift which is Apple's
+
+6
+00:00:14,040 --> 00:00:16,379
+programming language for Mac OS X and
+
+7
+00:00:16,379 --> 00:00:19,439
+iOS 9 or iOS 8 and it also works on iOS
+
+8
+00:00:19,439 --> 00:00:22,920
+9 so yeah this app will essentially
+
+9
+00:00:22,920 --> 00:00:25,650
+allow you to take a borrower's name and
+
+10
+00:00:25,650 --> 00:00:28,080
+I am named and also an image of the
+
+11
+00:00:28,080 --> 00:00:30,119
+items that they borrowed from you and
+
+12
+00:00:30,119 --> 00:00:32,130
+upload it all to a database on the web
+
+13
+00:00:32,130 --> 00:00:34,410
+so that you can access it from any other
+
+14
+00:00:34,410 --> 00:00:39,570
+device whenever you want yeah so this
+
+15
+00:00:39,570 --> 00:00:41,940
+app is mainly targeted towards people in
+
+16
+00:00:41,940 --> 00:00:45,660
+you know grade 11 grade 12 that are
+
+17
+00:00:45,660 --> 00:00:47,039
+trying to do computer science maybe
+
+18
+00:00:47,039 --> 00:00:49,469
+making a project then and they need to
+
+19
+00:00:49,469 --> 00:00:51,719
+upload images to a database it would
+
+20
+00:00:51,719 --> 00:00:54,570
+work for them it could work for even
+
+21
+00:00:54,570 --> 00:00:56,070
+professional app developers that are
+
+22
+00:00:56,070 --> 00:00:58,829
+actually trying to create apps that need
+
+23
+00:00:58,829 --> 00:01:01,410
+to actually upload images that the user
+
+24
+00:01:01,410 --> 00:01:03,989
+gives them onto a database stuff like
+
+25
+00:01:03,989 --> 00:01:06,479
+that and yeah I'm just going to go to
+
+26
+00:01:06,479 --> 00:01:11,310
+our Mac now and you will see the app in
+
+27
+00:01:11,310 --> 00:01:16,229
+action so as you can see here I have my
+
+28
+00:01:16,229 --> 00:01:20,250
+iPhone here and so I already have the
+
+29
+00:01:20,250 --> 00:01:22,860
+app up and running and so as you can see
+
+30
+00:01:22,860 --> 00:01:25,500
+this is a UI tableview in which all of
+
+31
+00:01:25,500 --> 00:01:28,170
+the entries are put in so we have Frank
+
+32
+00:01:28,170 --> 00:01:29,670
+took my mouse and then a picture the
+
+33
+00:01:29,670 --> 00:01:31,979
+mouse Travis took my well it was
+
+34
+00:01:31,979 --> 00:01:33,810
+supposed to be marker but again
+
+35
+00:01:33,810 --> 00:01:36,720
+autocorrect made it market so apparently
+
+36
+00:01:36,720 --> 00:01:38,460
+he took my market but as a picture of a
+
+37
+00:01:38,460 --> 00:01:40,439
+marker there and then Tom took my
+
+38
+00:01:40,439 --> 00:01:41,790
+glasses and then picture their glasses
+
+39
+00:01:41,790 --> 00:01:44,159
+and then Tim took my USB extension and
+
+40
+00:01:44,159 --> 00:01:45,560
+then the picture of the USB extension
+
+41
+00:01:45,560 --> 00:01:49,530
+and so now that we have all these why
+
+42
+00:01:49,530 --> 00:01:50,579
+don't we actually try uploading
+
+43
+00:01:50,579 --> 00:01:54,030
+something so to say we upload and let's
+
+44
+00:01:54,030 --> 00:01:56,689
+just say the person in this name is
+
+45
+00:01:56,689 --> 00:01:59,689
+Frankie
+
+46
+00:02:01,890 --> 00:02:04,620
+and then let's just say the item that
+
+47
+00:02:04,620 --> 00:02:07,710
+they took or my headphones that could
+
+48
+00:02:07,710 --> 00:02:12,210
+work so now I'm just gonna choose an
+
+49
+00:02:12,210 --> 00:02:15,600
+image and as you can see here I'm just
+
+50
+00:02:15,600 --> 00:02:17,760
+going to take my headphones take a quick
+
+51
+00:02:17,760 --> 00:02:22,500
+picture and then as you can see it asks
+
+52
+00:02:22,500 --> 00:02:24,750
+me if I want to take a retake or if I
+
+53
+00:02:24,750 --> 00:02:26,160
+want to just use the photo so I can
+
+54
+00:02:26,160 --> 00:02:28,080
+click on use photo and as you can see
+
+55
+00:02:28,080 --> 00:02:30,090
+after a little bit of delay which is one
+
+56
+00:02:30,090 --> 00:02:32,850
+of the known bugs in the app it will
+
+57
+00:02:32,850 --> 00:02:35,310
+actually start spinning the UI activity
+
+58
+00:02:35,310 --> 00:02:37,860
+indicator view which will tell the user
+
+59
+00:02:37,860 --> 00:02:39,810
+that it's uploading and also this back
+
+60
+00:02:39,810 --> 00:02:42,600
+button here is now disabled so that we
+
+61
+00:02:42,600 --> 00:02:45,360
+cannot go back while the uploads because
+
+62
+00:02:45,360 --> 00:02:47,220
+then it would be in between and
+
+63
+00:02:47,220 --> 00:02:48,570
+operation and then the next time you
+
+64
+00:02:48,570 --> 00:02:51,530
+would open the app it would just crash
+
+65
+00:02:51,530 --> 00:02:54,870
+so once this is done uploading and again
+
+66
+00:02:54,870 --> 00:02:56,670
+sometimes it takes longer than other
+
+67
+00:02:56,670 --> 00:02:59,610
+times but usually it's quite fast 30
+
+68
+00:02:59,610 --> 00:03:00,720
+seconds to a minute
+
+69
+00:03:00,720 --> 00:03:04,020
+at max so usually this can be done in
+
+70
+00:03:04,020 --> 00:03:06,239
+like 15 to 20 seconds sometimes if your
+
+71
+00:03:06,239 --> 00:03:08,280
+Wi-Fi slows 30 seconds and if it's
+
+72
+00:03:08,280 --> 00:03:10,170
+really slow or if it's a really big
+
+73
+00:03:10,170 --> 00:03:12,900
+image and it'll take around a minute so
+
+74
+00:03:12,900 --> 00:03:15,810
+as you can see the uploading bars gone
+
+75
+00:03:15,810 --> 00:03:18,090
+and the back button is now enabled so if
+
+76
+00:03:18,090 --> 00:03:22,019
+I click on back you will see that the
+
+77
+00:03:22,019 --> 00:03:24,390
+back button gets clicked but then we're
+
+78
+00:03:24,390 --> 00:03:26,250
+still at the view like what happened I
+
+79
+00:03:26,250 --> 00:03:28,860
+don't know but what actually happened is
+
+80
+00:03:28,860 --> 00:03:33,090
+it's loading up the images from my
+
+81
+00:03:33,090 --> 00:03:35,340
+website and it's putting them into the
+
+82
+00:03:35,340 --> 00:03:37,200
+table view so it's downloading each
+
+83
+00:03:37,200 --> 00:03:39,690
+image again and it's basically putting
+
+84
+00:03:39,690 --> 00:03:41,730
+each one into the table view one by one
+
+85
+00:03:41,730 --> 00:03:45,120
+so if I just wait a second this will in
+
+86
+00:03:45,120 --> 00:03:48,570
+fact just load up the entire UI
+
+87
+00:03:48,570 --> 00:03:50,190
+tableview with all the entries and we'll
+
+88
+00:03:50,190 --> 00:03:52,440
+also have additionally Frankie took my
+
+89
+00:03:52,440 --> 00:03:54,239
+headphones and then a picture of the
+
+90
+00:03:54,239 --> 00:03:55,950
+headphones just so I can make sure that
+
+91
+00:03:55,950 --> 00:03:58,110
+they're not damaged and just really make
+
+92
+00:03:58,110 --> 00:04:01,200
+sure that they're mine so yeah that'll
+
+93
+00:04:01,200 --> 00:04:03,870
+load up in a few minutes until then what
+
+94
+00:04:03,870 --> 00:04:06,030
+we can do is I'm just going to minimize
+
+95
+00:04:06,030 --> 00:04:08,940
+that and let's just go oh as you can see
+
+96
+00:04:08,940 --> 00:04:11,580
+it has loaded up and as you can see we
+
+97
+00:04:11,580 --> 00:04:14,099
+have the classic entries that were
+
+98
+00:04:14,099 --> 00:04:15,140
+already there
+
+99
+00:04:15,140 --> 00:04:16,850
+right to her mouth Travis took my marker
+
+100
+00:04:16,850 --> 00:04:19,370
+Tom took my glasses and took my USB
+
+101
+00:04:19,370 --> 00:04:22,390
+extension however if I scroll down here
+
+102
+00:04:22,390 --> 00:04:25,640
+in just a second sometimes it freezes up
+
+103
+00:04:25,640 --> 00:04:33,620
+like that a second again this is a
+
+104
+00:04:33,620 --> 00:04:35,690
+pretty big app so it does take some time
+
+105
+00:04:35,690 --> 00:04:38,600
+to load up so as you can see I can
+
+106
+00:04:38,600 --> 00:04:40,910
+scroll down even more and it says that
+
+107
+00:04:40,910 --> 00:04:42,590
+Frankie has taken my headphones and then
+
+108
+00:04:42,590 --> 00:04:45,530
+a picture the headphones so now that
+
+109
+00:04:45,530 --> 00:04:47,330
+you've seen a slight demo of the app
+
+110
+00:04:47,330 --> 00:04:49,460
+let's actually get let's just skim
+
+111
+00:04:49,460 --> 00:04:51,680
+through the source code here and as
+
+112
+00:04:51,680 --> 00:04:54,110
+always the source code will for sure me
+
+113
+00:04:54,110 --> 00:04:56,419
+in the description 100% on github like
+
+114
+00:04:56,419 --> 00:04:57,380
+always
+
+115
+00:04:57,380 --> 00:05:02,570
+and so this Apple essentially take the
+
+116
+00:05:02,570 --> 00:05:04,640
+swift parts and the objective-c part
+
+117
+00:05:04,640 --> 00:05:08,810
+makes it together and the the iOS end
+
+118
+00:05:08,810 --> 00:05:11,570
+which is both Swift and objective-c will
+
+119
+00:05:11,570 --> 00:05:15,919
+contact PHP PHP will upload the image to
+
+120
+00:05:15,919 --> 00:05:19,700
+web server on my GoDaddy and the name
+
+121
+00:05:19,700 --> 00:05:23,030
+the item and the name of the actual
+
+122
+00:05:23,030 --> 00:05:25,880
+image itself will go to the database so
+
+123
+00:05:25,880 --> 00:05:29,000
+that we can store it and then this is
+
+124
+00:05:29,000 --> 00:05:31,669
+the UI for the app you should see you've
+
+125
+00:05:31,669 --> 00:05:33,860
+already seen this but we have the reload
+
+126
+00:05:33,860 --> 00:05:36,890
+upload the name of the person the item
+
+127
+00:05:36,890 --> 00:05:38,600
+they took and an image of the item
+
+128
+00:05:38,600 --> 00:05:41,030
+inside of a costume table view cell and
+
+129
+00:05:41,030 --> 00:05:43,130
+then we have the UI for the uploading
+
+130
+00:05:43,130 --> 00:05:45,200
+which is the name of the item the name
+
+131
+00:05:45,200 --> 00:05:46,880
+of the person sorry and then with the
+
+132
+00:05:46,880 --> 00:05:48,710
+item then you can choose an image you
+
+133
+00:05:48,710 --> 00:05:50,810
+can go back and it will tell you if it
+
+134
+00:05:50,810 --> 00:05:53,180
+is currently uploading apart from that
+
+135
+00:05:53,180 --> 00:05:55,250
+we have view controller dot select which
+
+136
+00:05:55,250 --> 00:05:58,640
+will do some basic stuff you know it'll
+
+137
+00:05:58,640 --> 00:06:00,830
+it's basically the heart of the entire
+
+138
+00:06:00,830 --> 00:06:03,470
+app itself it controls the entire PHP
+
+139
+00:06:03,470 --> 00:06:06,620
+and the database and the web server it
+
+140
+00:06:06,620 --> 00:06:08,990
+just does everything that its little
+
+141
+00:06:08,990 --> 00:06:13,070
+branches can so in just a second here
+
+142
+00:06:13,070 --> 00:06:15,080
+and as you can see we have an extension
+
+143
+00:06:15,080 --> 00:06:16,490
+to the string class which will allow us
+
+144
+00:06:16,490 --> 00:06:19,070
+to get specific ranges of character were
+
+145
+00:06:19,070 --> 00:06:20,900
+actually just specific characters itself
+
+146
+00:06:20,900 --> 00:06:24,890
+from strings and also apart from that we
+
+147
+00:06:24,890 --> 00:06:27,020
+have a class view controller which
+
+148
+00:06:27,020 --> 00:06:28,639
+conforms to UI view controller
+
+149
+00:06:28,639 --> 00:06:30,860
+datasource and UI tableview delegate
+
+150
+00:06:30,860 --> 00:06:32,509
+it'll also conform to UI navigation
+
+151
+00:06:32,509 --> 00:06:34,280
+controller could I'll get and
+
+152
+00:06:34,280 --> 00:06:36,860
+uiimagepickercontroller delegate apart
+
+153
+00:06:36,860 --> 00:06:39,469
+from that this is just all some
+
+154
+00:06:39,469 --> 00:06:41,029
+variables and IB outlets we are
+
+155
+00:06:41,029 --> 00:06:43,460
+declaring then we have a function called
+
+156
+00:06:43,460 --> 00:06:45,620
+buted load and this function is called
+
+157
+00:06:45,620 --> 00:06:48,919
+whenever we whenever we run the app and
+
+158
+00:06:48,919 --> 00:06:50,949
+this function over here is called
+
+159
+00:06:50,949 --> 00:06:53,960
+whenever a boolean updates meaning
+
+160
+00:06:53,960 --> 00:06:56,419
+whenever we're done uploading this
+
+161
+00:06:56,419 --> 00:06:58,249
+function over here is the reload
+
+162
+00:06:58,249 --> 00:06:59,719
+function it's called whenever we click
+
+163
+00:06:59,719 --> 00:07:02,360
+on the reload button this button will
+
+164
+00:07:02,360 --> 00:07:03,919
+basically hide the keyboard whenever we
+
+165
+00:07:03,919 --> 00:07:06,919
+touch somewhere on the screen this
+
+166
+00:07:06,919 --> 00:07:10,159
+function here will get JSON values from
+
+167
+00:07:10,159 --> 00:07:12,439
+my websites or actually from the
+
+168
+00:07:12,439 --> 00:07:14,930
+database and put it into the table view
+
+169
+00:07:14,930 --> 00:07:17,360
+and this function will tell us how many
+
+170
+00:07:17,360 --> 00:07:19,639
+rows in the section there are for the
+
+171
+00:07:19,639 --> 00:07:21,680
+table view and this function will
+
+172
+00:07:21,680 --> 00:07:23,629
+actually be able to make a cell for each
+
+173
+00:07:23,629 --> 00:07:25,879
+cell that's required in that table view
+
+174
+00:07:25,879 --> 00:07:28,400
+this IB action will allow us to start
+
+175
+00:07:28,400 --> 00:07:31,189
+taking a picture this function will
+
+176
+00:07:31,189 --> 00:07:34,580
+allow us to pick an image and then we
+
+177
+00:07:34,580 --> 00:07:35,930
+can put that from the image picker
+
+178
+00:07:35,930 --> 00:07:38,539
+controller to the actual web server
+
+179
+00:07:38,539 --> 00:07:41,210
+itself and the database and this will
+
+180
+00:07:41,210 --> 00:07:43,310
+allow us to get all the contents inside
+
+181
+00:07:43,310 --> 00:07:46,729
+of the well basically all the names of
+
+182
+00:07:46,729 --> 00:07:49,310
+the images inside of the ID the inside
+
+183
+00:07:49,310 --> 00:07:51,439
+of Mike from my database and then this
+
+184
+00:07:51,439 --> 00:07:53,629
+function will just allow us to parse out
+
+185
+00:07:53,629 --> 00:07:56,949
+all those names from the all data and
+
+186
+00:07:56,949 --> 00:07:59,449
+yeah that was really it for this
+
+187
+00:07:59,449 --> 00:08:02,120
+tutorial please subscribe if you if
+
+188
+00:08:02,120 --> 00:08:04,370
+you're new to the channel like the video
+
+189
+00:08:04,370 --> 00:08:06,319
+if you liked it comment if you have any
+
+190
+00:08:06,319 --> 00:08:08,569
+questions you can even email me and I
+
+191
+00:08:08,569 --> 00:08:10,069
+will get back to you as soon as possible
+
+192
+00:08:10,069 --> 00:08:13,129
+and yeah I hope you guys liked at Khan
+
+193
+00:08:13,129 --> 00:08:15,860
+Academy most importantly and yeah that
+
+194
+00:08:15,860 --> 00:08:18,759
+would be it goodbye

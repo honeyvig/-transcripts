@@ -1,0 +1,1027 @@
+1
+00:00:00,970 --> 00:00:05,600
+[Music]
+
+2
+00:00:13,719 --> 00:00:16,000
+so hello there and welcome to another
+
+3
+00:00:16,000 --> 00:00:18,720
+tutorial my name is Tammy bakshi and
+
+4
+00:00:18,720 --> 00:00:20,400
+this time we're going to be going over
+
+5
+00:00:20,400 --> 00:00:23,519
+how you can use IBM iot IBM Watson
+
+6
+00:00:23,519 --> 00:00:26,880
+conversation and node red to control a
+
+7
+00:00:26,880 --> 00:00:29,599
+drone more specifically the parrot AR
+
+8
+00:00:29,599 --> 00:00:30,720
+drone
+
+9
+00:00:30,720 --> 00:00:33,760
+2.0 all right let's begin so now
+
+10
+00:00:33,760 --> 00:00:36,120
+essentially uh what I've developed is a
+
+11
+00:00:36,120 --> 00:00:38,760
+phone interface so you can uh text
+
+12
+00:00:38,760 --> 00:00:41,440
+message a twillo phone number uh with
+
+13
+00:00:41,440 --> 00:00:44,440
+your command for example take off land
+
+14
+00:00:44,440 --> 00:00:46,199
+or even like what's the battery
+
+15
+00:00:46,199 --> 00:00:48,399
+percentage for example uh and it will be
+
+16
+00:00:48,399 --> 00:00:51,440
+able to reply to you using no red Watson
+
+17
+00:00:51,440 --> 00:00:54,120
+conversation IBM iot and all the other
+
+18
+00:00:54,120 --> 00:00:57,079
+really fun stuff uh now what I'd like to
+
+19
+00:00:57,079 --> 00:01:00,000
+say first of all uh is actually quick
+
+20
+00:01:00,000 --> 00:01:02,760
+quick fun fact I named the Drone tandro
+
+21
+00:01:02,760 --> 00:01:06,799
+tan maze drone so yeah uh now also
+
+22
+00:01:06,799 --> 00:01:09,119
+really quickly uh this is in fact the
+
+23
+00:01:09,119 --> 00:01:11,520
+world's first to the extent of my
+
+24
+00:01:11,520 --> 00:01:14,400
+research at least drone to be powered by
+
+25
+00:01:14,400 --> 00:01:17,680
+IBM iot IBM Watson conversation and of
+
+26
+00:01:17,680 --> 00:01:19,799
+course no dread all right let's begin
+
+27
+00:01:19,799 --> 00:01:22,320
+shall we so essentially as I said we
+
+28
+00:01:22,320 --> 00:01:24,920
+have a phone here uh that's able to send
+
+29
+00:01:24,920 --> 00:01:28,439
+commands uh so we have a
+
+30
+00:01:28,439 --> 00:01:32,200
+phone uh and our our eventual goal is to
+
+31
+00:01:32,200 --> 00:01:38,320
+have a drone here sorry we have a drone
+
+32
+00:01:40,759 --> 00:01:43,240
+here uh and so essentially our eventual
+
+33
+00:01:43,240 --> 00:01:44,840
+goal is to be able to communicate
+
+34
+00:01:44,840 --> 00:01:46,920
+between the phone and the Drone all
+
+35
+00:01:46,920 --> 00:01:49,240
+right uh but we can't do that directly
+
+36
+00:01:49,240 --> 00:01:50,799
+that's impossible or at least almost
+
+37
+00:01:50,799 --> 00:01:52,640
+impossible unless you install the AR
+
+38
+00:01:52,640 --> 00:01:55,799
+free flight app and that other stuff but
+
+39
+00:01:55,799 --> 00:01:58,240
+that's too simple let's create let's say
+
+40
+00:01:58,240 --> 00:01:59,960
+we wanted to create our own little AP
+
+41
+00:01:59,960 --> 00:02:02,560
+die for this so how would we do that so
+
+42
+00:02:02,560 --> 00:02:05,079
+now let me show you uh so now
+
+43
+00:02:05,079 --> 00:02:07,320
+essentially what we do is we have a node
+
+44
+00:02:07,320 --> 00:02:10,239
+red here so we have
+
+45
+00:02:10,239 --> 00:02:13,239
+node
+
+46
+00:02:13,319 --> 00:02:16,400
+red all right this is one of our little
+
+47
+00:02:16,400 --> 00:02:19,840
+building blocks here we also have
+
+48
+00:02:19,840 --> 00:02:23,120
+twilio because I mean a phone's best
+
+49
+00:02:23,120 --> 00:02:26,879
+friend in the terms of API uh is twio uh
+
+50
+00:02:26,879 --> 00:02:30,879
+and of course we have Watson
+
+51
+00:02:33,000 --> 00:02:36,360
+and of course uh there's IBM
+
+52
+00:02:41,040 --> 00:02:42,800
+iot
+
+53
+00:02:42,800 --> 00:02:46,760
+sorry so we have IBM iot along with this
+
+54
+00:02:46,760 --> 00:02:50,159
+uh so now we have a few uh quite a few
+
+55
+00:02:50,159 --> 00:02:52,920
+building blocks here but now the
+
+56
+00:02:52,920 --> 00:02:55,319
+question is how do we connect these
+
+57
+00:02:55,319 --> 00:02:58,239
+building blocks to work together to
+
+58
+00:02:58,239 --> 00:03:00,720
+create what we eventually need now
+
+59
+00:03:00,720 --> 00:03:02,680
+essentially first of all what I did is I
+
+60
+00:03:02,680 --> 00:03:05,280
+set up the connection between the Drone
+
+61
+00:03:05,280 --> 00:03:08,000
+uh and IBM iot that's one of the most
+
+62
+00:03:08,000 --> 00:03:10,680
+essential Parts which is to ensure that
+
+63
+00:03:10,680 --> 00:03:12,760
+the Drone can commun communicate with
+
+64
+00:03:12,760 --> 00:03:14,920
+IBM iot on Blu miix uh so that we can
+
+65
+00:03:14,920 --> 00:03:17,879
+actually transfer data uh now uh that
+
+66
+00:03:17,879 --> 00:03:19,879
+that being said this is technically
+
+67
+00:03:19,879 --> 00:03:24,159
+through uh node.js uh so in between here
+
+68
+00:03:24,159 --> 00:03:26,640
+I guess you could say there is some
+
+69
+00:03:26,640 --> 00:03:30,519
+nodejs code
+
+70
+00:03:31,599 --> 00:03:34,159
+no JS code here uh which is essentially
+
+71
+00:03:34,159 --> 00:03:35,920
+allowing this communication between the
+
+72
+00:03:35,920 --> 00:03:37,480
+Drone and IBM
+
+73
+00:03:37,480 --> 00:03:40,159
+iot all right so now of course uh we
+
+74
+00:03:40,159 --> 00:03:42,560
+also have the phone okay so once this uh
+
+75
+00:03:42,560 --> 00:03:44,879
+connection is established uh essentially
+
+76
+00:03:44,879 --> 00:03:47,360
+we have the phone that connects to twio
+
+77
+00:03:47,360 --> 00:03:49,200
+so now essentially we've sent a text
+
+78
+00:03:49,200 --> 00:03:52,360
+message to twilio uh and so from twio
+
+79
+00:03:52,360 --> 00:03:54,720
+this will actually go to nothing other
+
+80
+00:03:54,720 --> 00:03:58,400
+than node red now once this goes to node
+
+81
+00:03:58,400 --> 00:04:00,360
+red node red can now hand
+
+82
+00:04:00,360 --> 00:04:03,040
+everything uh and then send us back uh a
+
+83
+00:04:03,040 --> 00:04:05,920
+text message so to begin we have Watson
+
+84
+00:04:05,920 --> 00:04:07,959
+Watson conversation uh and so
+
+85
+00:04:07,959 --> 00:04:10,760
+essentially node red sends the message
+
+86
+00:04:10,760 --> 00:04:13,879
+to Watson so now this is the first step
+
+87
+00:04:13,879 --> 00:04:15,360
+this is the second step this is the
+
+88
+00:04:15,360 --> 00:04:16,239
+third
+
+89
+00:04:16,239 --> 00:04:20,320
+one sorry this is the third step so now
+
+90
+00:04:20,320 --> 00:04:21,720
+uh essentially what's happening is no
+
+91
+00:04:21,720 --> 00:04:23,759
+Dre has sent this to Waton conversation
+
+92
+00:04:23,759 --> 00:04:26,000
+and Watson now understands the intent
+
+93
+00:04:26,000 --> 00:04:27,800
+behind what you wanted to say for
+
+94
+00:04:27,800 --> 00:04:29,759
+example if you asked it how much
+
+95
+00:04:29,759 --> 00:04:31,720
+batteries left in my drone it knows that
+
+96
+00:04:31,720 --> 00:04:33,560
+your intent is to find out the battery
+
+97
+00:04:33,560 --> 00:04:35,680
+remaining in the Drone if you asked it
+
+98
+00:04:35,680 --> 00:04:38,120
+to fire up the engines it knows that you
+
+99
+00:04:38,120 --> 00:04:40,360
+want to take off and if you asked it to
+
+100
+00:04:40,360 --> 00:04:42,680
+land it knows that you want to land your
+
+101
+00:04:42,680 --> 00:04:45,440
+drone so now once Watson knows this
+
+102
+00:04:45,440 --> 00:04:47,960
+intent it's going to return uh a
+
+103
+00:04:47,960 --> 00:04:51,360
+response to no dread now in this case
+
+104
+00:04:51,360 --> 00:04:53,360
+now just before I continue if you
+
+105
+00:04:53,360 --> 00:04:55,240
+haven't already please do check out my
+
+106
+00:04:55,240 --> 00:04:57,880
+Watson conversation YouTube video uh
+
+107
+00:04:57,880 --> 00:04:59,400
+that essentially teaches you how you can
+
+108
+00:04:59,400 --> 00:05:01,840
+use Watson conversation in depth
+
+109
+00:05:01,840 --> 00:05:03,520
+continuing though by the way link will
+
+110
+00:05:03,520 --> 00:05:05,800
+be in the description all right so now
+
+111
+00:05:05,800 --> 00:05:08,720
+essentially uh I the Watson conversation
+
+112
+00:05:08,720 --> 00:05:11,120
+service will give us a response but in
+
+113
+00:05:11,120 --> 00:05:13,320
+this case I programmed it to not give me
+
+114
+00:05:13,320 --> 00:05:16,039
+a simple response but an advanced
+
+115
+00:05:16,039 --> 00:05:18,039
+response and this Advanced response will
+
+116
+00:05:18,039 --> 00:05:19,960
+give me two responses instead of just
+
+117
+00:05:19,960 --> 00:05:22,840
+one now why would we need two responses
+
+118
+00:05:22,840 --> 00:05:25,520
+well let's say that this node.js code
+
+119
+00:05:25,520 --> 00:05:28,199
+hasn't executed or the Drone we weren't
+
+120
+00:05:28,199 --> 00:05:30,240
+able to get uh any battery percentages
+
+121
+00:05:30,240 --> 00:05:31,880
+from the Drone or the Drone has been
+
+122
+00:05:31,880 --> 00:05:34,880
+disconnected any one of those issues in
+
+123
+00:05:34,880 --> 00:05:37,280
+that case we don't know how much battery
+
+124
+00:05:37,280 --> 00:05:39,800
+there is in the Drone so what do we do
+
+125
+00:05:39,800 --> 00:05:42,880
+well Watson returns two as I said uh
+
+126
+00:05:42,880 --> 00:05:45,520
+texts uh and so the first one assumes
+
+127
+00:05:45,520 --> 00:05:48,039
+that yes we do have a battery percentage
+
+128
+00:05:48,039 --> 00:05:50,280
+value and the second one assumes that no
+
+129
+00:05:50,280 --> 00:05:52,440
+we do not have a battery percentage
+
+130
+00:05:52,440 --> 00:05:55,039
+value then what node red is going to do
+
+131
+00:05:55,039 --> 00:05:57,000
+is it's going to check its Global
+
+132
+00:05:57,000 --> 00:05:59,759
+variable or its Global context and check
+
+133
+00:05:59,759 --> 00:06:01,960
+whether or not uh that the that the
+
+134
+00:06:01,960 --> 00:06:04,479
+Watson conversation uh or the sorry the
+
+135
+00:06:04,479 --> 00:06:06,280
+battery percentage currently exists
+
+136
+00:06:06,280 --> 00:06:09,000
+inside of its Global context meaning did
+
+137
+00:06:09,000 --> 00:06:11,240
+the Drone actually send us a battery
+
+138
+00:06:11,240 --> 00:06:13,880
+percentage uh and if it did what it's
+
+139
+00:06:13,880 --> 00:06:15,080
+going to do is it's going to choose the
+
+140
+00:06:15,080 --> 00:06:17,479
+first one the battery percentage uh the
+
+141
+00:06:17,479 --> 00:06:20,840
+battery percentage uh uh of course um
+
+142
+00:06:20,840 --> 00:06:22,800
+message because of course if we do have
+
+143
+00:06:22,800 --> 00:06:24,319
+it available we want to send it to the
+
+144
+00:06:24,319 --> 00:06:26,840
+user and if it's not available then
+
+145
+00:06:26,840 --> 00:06:29,000
+we'll say sorry the Drone has not yet
+
+146
+00:06:29,000 --> 00:06:31,919
+provided me with this information all
+
+147
+00:06:31,919 --> 00:06:35,319
+right so now uh now once Watson has
+
+148
+00:06:35,319 --> 00:06:37,759
+given the result back to node red node
+
+149
+00:06:37,759 --> 00:06:41,720
+red will send a uh message back down
+
+150
+00:06:41,720 --> 00:06:45,000
+here to twio this is of course the
+
+151
+00:06:45,000 --> 00:06:48,720
+fourth step uh and then twio will most
+
+152
+00:06:48,720 --> 00:06:51,160
+certainly send it back to your phone
+
+153
+00:06:51,160 --> 00:06:52,759
+which is the fifth
+
+154
+00:06:52,759 --> 00:06:55,759
+step but then how do we control the
+
+155
+00:06:55,759 --> 00:06:58,680
+Drone well pretty simply uh once node
+
+156
+00:06:58,680 --> 00:07:01,080
+red knows the tent uh whether it is to
+
+157
+00:07:01,080 --> 00:07:03,479
+take off or to land it will send that
+
+158
+00:07:03,479 --> 00:07:07,080
+tent uh to technically not the Drone uh
+
+159
+00:07:07,080 --> 00:07:09,199
+well essentially what's going to happen
+
+160
+00:07:09,199 --> 00:07:13,199
+uh is it's going to send this
+
+161
+00:07:13,199 --> 00:07:17,240
+um request I guess you could say uh to
+
+162
+00:07:17,240 --> 00:07:19,840
+well IBM iot so it's going to send it
+
+163
+00:07:19,840 --> 00:07:21,720
+down here to IBM iot which is the sixth
+
+164
+00:07:21,720 --> 00:07:24,280
+step uh and then IBM iot will you know
+
+165
+00:07:24,280 --> 00:07:26,560
+send it up through nodejs code to the
+
+166
+00:07:26,560 --> 00:07:28,599
+Drone and the Drone will you know reply
+
+167
+00:07:28,599 --> 00:07:30,840
+back with what it's currently doing uh
+
+168
+00:07:30,840 --> 00:07:33,160
+and once we have this entire thing
+
+169
+00:07:33,160 --> 00:07:36,160
+working here uh it becomes a really neat
+
+170
+00:07:36,160 --> 00:07:38,639
+system which allows me to control a
+
+171
+00:07:38,639 --> 00:07:41,720
+drone using my phone all right so now
+
+172
+00:07:41,720 --> 00:07:44,520
+let's actually message Tandra and see uh
+
+173
+00:07:44,520 --> 00:07:48,280
+what we can achieve here uh so now as
+
+174
+00:07:48,280 --> 00:07:50,440
+you can see I have my phone uh and I'm
+
+175
+00:07:50,440 --> 00:07:53,800
+writing a text message to Chandra all
+
+176
+00:07:53,800 --> 00:07:55,720
+right now as you can see what I'm going
+
+177
+00:07:55,720 --> 00:07:57,479
+to say is I'm going to say something
+
+178
+00:07:57,479 --> 00:07:59,599
+like hey
+
+179
+00:07:59,599 --> 00:08:02,080
+how much battery is left in my drone
+
+180
+00:08:02,080 --> 00:08:03,440
+question
+
+181
+00:08:03,440 --> 00:08:06,240
+mark all right now if I send this quite
+
+182
+00:08:06,240 --> 00:08:07,639
+simply it
+
+183
+00:08:07,639 --> 00:08:09,879
+says the battery percentage of your
+
+184
+00:08:09,879 --> 00:08:11,800
+drone is currently
+
+185
+00:08:11,800 --> 00:08:15,000
+63% pretty nice uh should be good enough
+
+186
+00:08:15,000 --> 00:08:17,759
+for a take off maybe a little flight uh
+
+187
+00:08:17,759 --> 00:08:21,479
+and so what we can do is I can say fire
+
+188
+00:08:21,479 --> 00:08:25,039
+up the engines exclamation
+
+189
+00:08:25,319 --> 00:08:28,479
+mark all right so now uh let's actually
+
+190
+00:08:28,479 --> 00:08:31,199
+look at the Drone for a sec uh now I'm
+
+191
+00:08:31,199 --> 00:08:32,640
+going to send the message and look at
+
+192
+00:08:32,640 --> 00:08:34,760
+the
+
+193
+00:08:35,320 --> 00:08:39,240
+Drone all right it has now taken off and
+
+194
+00:08:39,240 --> 00:08:41,719
+as you can see the Drone is taken off
+
+195
+00:08:41,719 --> 00:08:44,560
+and now uh we can let it fly but let's
+
+196
+00:08:44,560 --> 00:08:46,920
+say we want it to land right all I need
+
+197
+00:08:46,920 --> 00:08:47,959
+to
+
+198
+00:08:47,959 --> 00:08:52,240
+say land the Drone all right I'm going
+
+199
+00:08:52,240 --> 00:08:54,640
+to send this text message and now watch
+
+200
+00:08:54,640 --> 00:08:56,800
+the
+
+201
+00:08:57,440 --> 00:09:00,120
+Drone as you can see the Drone has
+
+202
+00:09:00,120 --> 00:09:02,920
+landed and as I said fire up the engines
+
+203
+00:09:02,920 --> 00:09:05,279
+it said all right up we go which is one
+
+204
+00:09:05,279 --> 00:09:06,959
+of the options that I gave Watson
+
+205
+00:09:06,959 --> 00:09:09,480
+conversation and once I said land the
+
+206
+00:09:09,480 --> 00:09:11,959
+Drone it said all right Landing the
+
+207
+00:09:11,959 --> 00:09:15,079
+Drone the battery percentage is now
+
+208
+00:09:15,079 --> 00:09:18,279
+57% and that was how you can control a
+
+209
+00:09:18,279 --> 00:09:21,120
+drone if actually you know what uh let's
+
+210
+00:09:21,120 --> 00:09:23,040
+just do a second or you know what never
+
+211
+00:09:23,040 --> 00:09:26,279
+mind let's uh not do that but that was
+
+212
+00:09:26,279 --> 00:09:29,360
+how you can control a parrot AR drone to
+
+213
+00:09:29,360 --> 00:09:32,640
+2.0 with of course Watson conversation
+
+214
+00:09:32,640 --> 00:09:35,480
+and IMM iot and just before I end off
+
+215
+00:09:35,480 --> 00:09:37,519
+today I'd like to say that last night I
+
+216
+00:09:37,519 --> 00:09:40,519
+was with Marcus van kempen in the IBM uh
+
+217
+00:09:40,519 --> 00:09:42,279
+BL office in downtown Toronto you know
+
+218
+00:09:42,279 --> 00:09:44,079
+we were throwing around some ideas U
+
+219
+00:09:44,079 --> 00:09:46,320
+mixing up some ideas uh and we got the
+
+220
+00:09:46,320 --> 00:09:49,399
+idea uh and of course uh I was able to
+
+221
+00:09:49,399 --> 00:09:53,360
+develop uh using node red and iBot this
+
+222
+00:09:53,360 --> 00:09:55,880
+project uh and of course I actually do
+
+223
+00:09:55,880 --> 00:09:58,240
+have a lot more stuff coming up with him
+
+224
+00:09:58,240 --> 00:10:00,000
+uh in fact yesterday we didn't have
+
+225
+00:10:00,000 --> 00:10:02,560
+enough time to record uh but I do have
+
+226
+00:10:02,560 --> 00:10:04,000
+some more features that I will be adding
+
+227
+00:10:04,000 --> 00:10:06,399
+in with him uh and then of course we
+
+228
+00:10:06,399 --> 00:10:08,360
+will create a collaboration video but I
+
+229
+00:10:08,360 --> 00:10:10,200
+want to keep the features a surprise for
+
+230
+00:10:10,200 --> 00:10:11,959
+now but that's going to be it for this
+
+231
+00:10:11,959 --> 00:10:14,200
+tutorial and just before I end off I'd
+
+232
+00:10:14,200 --> 00:10:15,880
+like to say that in case you don't know
+
+233
+00:10:15,880 --> 00:10:18,600
+who Marcus van kmit is well essentially
+
+234
+00:10:18,600 --> 00:10:22,560
+he's my mentor from IBM uh and of course
+
+235
+00:10:22,560 --> 00:10:24,240
+I do lots of collaborations with him in
+
+236
+00:10:24,240 --> 00:10:28,240
+fact uh one of my earlier iot videos uh
+
+237
+00:10:28,240 --> 00:10:31,000
+my iot part 2 uh for beginners uh which
+
+238
+00:10:31,000 --> 00:10:33,320
+will be in the description uh was a
+
+239
+00:10:33,320 --> 00:10:36,720
+collaboration with Marcus uh and so yeah
+
+240
+00:10:36,720 --> 00:10:37,839
+that's actually going to be it for this
+
+241
+00:10:37,839 --> 00:10:39,959
+tutorial today thank you very much I
+
+242
+00:10:39,959 --> 00:10:42,040
+hope you enjoyed if you did enjoy please
+
+243
+00:10:42,040 --> 00:10:43,800
+consider liking the video and if you
+
+244
+00:10:43,800 --> 00:10:45,360
+think it help it could help someone else
+
+245
+00:10:45,360 --> 00:10:47,079
+that you know maybe even consider
+
+246
+00:10:47,079 --> 00:10:49,639
+sharing the video of course if you have
+
+247
+00:10:49,639 --> 00:10:52,720
+any questions feedback or suggestions do
+
+248
+00:10:52,720 --> 00:10:54,959
+send them to my email at tagim Manny
+
+249
+00:10:54,959 --> 00:10:58,360
+gmail.com tweet sorry tweet them to me
+
+250
+00:10:58,360 --> 00:11:00,519
+at tajim Manny or leave them in the
+
+251
+00:11:00,519 --> 00:11:03,200
+comments down below and of course if you
+
+252
+00:11:03,200 --> 00:11:04,839
+really like my content and you want to
+
+253
+00:11:04,839 --> 00:11:06,560
+see more of it please do consider
+
+254
+00:11:06,560 --> 00:11:08,399
+subscribing to my YouTube channel as it
+
+255
+00:11:08,399 --> 00:11:10,399
+really does help out a lot all right
+
+256
+00:11:10,399 --> 00:11:11,839
+that's going to be it for today thank
+
+257
+00:11:11,839 --> 00:11:15,480
+you very much goodbye

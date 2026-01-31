@@ -1,0 +1,3375 @@
+1
+00:00:00,000 --> 00:00:01,839
+so hello there and welcome to another
+
+2
+00:00:01,839 --> 00:00:03,840
+tutorial my name is tammy bakshi and
+
+3
+00:00:03,840 --> 00:00:04,400
+today
+
+4
+00:00:04,400 --> 00:00:05,759
+we're going to be talking about some of
+
+5
+00:00:05,759 --> 00:00:07,520
+the brand new concurrency features
+
+6
+00:00:07,520 --> 00:00:08,639
+introduced to swift
+
+7
+00:00:08,639 --> 00:00:11,040
+now just yesterday at wwdc 2021 when
+
+8
+00:00:11,040 --> 00:00:12,880
+they announced the brand new async await
+
+9
+00:00:12,880 --> 00:00:14,400
+functions and actors to swift
+
+10
+00:00:14,400 --> 00:00:16,000
+i was really excited and i just really
+
+11
+00:00:16,000 --> 00:00:17,760
+wanted to delve into
+
+12
+00:00:17,760 --> 00:00:19,359
+these brand new features i'll be
+
+13
+00:00:19,359 --> 00:00:21,199
+covering actors in a future tutorial
+
+14
+00:00:21,199 --> 00:00:22,480
+today i want to focus
+
+15
+00:00:22,480 --> 00:00:25,119
+on async await functions before i get
+
+16
+00:00:25,119 --> 00:00:26,000
+into that though
+
+17
+00:00:26,000 --> 00:00:27,760
+uh if you do enjoy this kind of content
+
+18
+00:00:27,760 --> 00:00:28,880
+you want to see more of it please do
+
+19
+00:00:28,880 --> 00:00:30,480
+make sure to subscribe to the channel as
+
+20
+00:00:30,480 --> 00:00:31,920
+it really does help out a lot
+
+21
+00:00:31,920 --> 00:00:33,600
+and of course turn on notifications if
+
+22
+00:00:33,600 --> 00:00:35,040
+you'd like to be notified whenever i
+
+23
+00:00:35,040 --> 00:00:36,480
+release new content
+
+24
+00:00:36,480 --> 00:00:37,600
+apart from that if you have any
+
+25
+00:00:37,600 --> 00:00:39,120
+questions suggestions or feedback feel
+
+26
+00:00:39,120 --> 00:00:40,399
+free to leave it down in the comment
+
+27
+00:00:40,399 --> 00:00:41,200
+section below
+
+28
+00:00:41,200 --> 00:00:42,559
+and i'd love to go ahead and hear what
+
+29
+00:00:42,559 --> 00:00:44,399
+you think or answer any questions you
+
+30
+00:00:44,399 --> 00:00:45,440
+may have
+
+31
+00:00:45,440 --> 00:00:47,600
+now diving right into this let's start
+
+32
+00:00:47,600 --> 00:00:49,120
+off by talking a little bit about
+
+33
+00:00:49,120 --> 00:00:51,199
+swift the swift language as you probably
+
+34
+00:00:51,199 --> 00:00:52,800
+know is apple's programming language and
+
+35
+00:00:52,800 --> 00:00:54,320
+it's most popularly known
+
+36
+00:00:54,320 --> 00:00:56,000
+for being the one language that you use
+
+37
+00:00:56,000 --> 00:00:57,360
+for basically everything
+
+38
+00:00:57,360 --> 00:00:59,280
+apple platforms so if you're building an
+
+39
+00:00:59,280 --> 00:01:01,280
+ios app your go to is probably going to
+
+40
+00:01:01,280 --> 00:01:02,399
+be swift
+
+41
+00:01:02,399 --> 00:01:04,320
+if you're building a mac os app probably
+
+42
+00:01:04,320 --> 00:01:06,320
+that as well at least i would hope so
+
+43
+00:01:06,320 --> 00:01:08,640
+um and so you know when you when you
+
+44
+00:01:08,640 --> 00:01:09,920
+build apple platform
+
+45
+00:01:09,920 --> 00:01:11,840
+applications you're usually using swift
+
+46
+00:01:11,840 --> 00:01:13,600
+but swift does a lot more around that
+
+47
+00:01:13,600 --> 00:01:15,040
+right swift is open source
+
+48
+00:01:15,040 --> 00:01:16,560
+it enables you to write applications for
+
+49
+00:01:16,560 --> 00:01:18,320
+linux and even windows now
+
+50
+00:01:18,320 --> 00:01:21,439
+and one of swift's main design goals has
+
+51
+00:01:21,439 --> 00:01:24,880
+always been safety which i will say
+
+52
+00:01:24,880 --> 00:01:26,799
+is criminally underrated in the
+
+53
+00:01:26,799 --> 00:01:28,320
+programming world
+
+54
+00:01:28,320 --> 00:01:29,520
+i feel like a lot of programming
+
+55
+00:01:29,520 --> 00:01:31,520
+beginners don't necessarily realize the
+
+56
+00:01:31,520 --> 00:01:31,920
+full
+
+57
+00:01:31,920 --> 00:01:35,439
+scope of just how much a safe language
+
+58
+00:01:35,439 --> 00:01:37,119
+can help you out and sort of speed up
+
+59
+00:01:37,119 --> 00:01:38,560
+your development process
+
+60
+00:01:38,560 --> 00:01:40,320
+right like for example optionals and
+
+61
+00:01:40,320 --> 00:01:42,479
+these sorts of language safety features
+
+62
+00:01:42,479 --> 00:01:44,240
+a lot of the times you know beginners
+
+63
+00:01:44,240 --> 00:01:45,360
+when they're getting into a language
+
+64
+00:01:45,360 --> 00:01:47,040
+will think you know this is unnecessary
+
+65
+00:01:47,040 --> 00:01:49,439
+ceremony right this wastes time
+
+66
+00:01:49,439 --> 00:01:51,200
+it makes development slower why do we
+
+67
+00:01:51,200 --> 00:01:53,280
+need this but really when you start to
+
+68
+00:01:53,280 --> 00:01:55,280
+you know boil away all that ceremony you
+
+69
+00:01:55,280 --> 00:01:57,280
+realize that when you're developing even
+
+70
+00:01:57,280 --> 00:01:59,040
+medium to you know larger scale
+
+71
+00:01:59,040 --> 00:02:01,439
+applications without those safety
+
+72
+00:02:01,439 --> 00:02:02,320
+features
+
+73
+00:02:02,320 --> 00:02:04,560
+things can take way more time than
+
+74
+00:02:04,560 --> 00:02:05,520
+they're supposed to
+
+75
+00:02:05,520 --> 00:02:07,360
+just because you will end up making
+
+76
+00:02:07,360 --> 00:02:09,200
+mistakes in places where you didn't need
+
+77
+00:02:09,200 --> 00:02:09,679
+to
+
+78
+00:02:09,679 --> 00:02:11,200
+places where the compiler could have
+
+79
+00:02:11,200 --> 00:02:13,520
+caught those mistakes if it had enough
+
+80
+00:02:13,520 --> 00:02:14,239
+information
+
+81
+00:02:14,239 --> 00:02:16,720
+about what you were trying to do really
+
+82
+00:02:16,720 --> 00:02:17,920
+this entire thing
+
+83
+00:02:17,920 --> 00:02:20,239
+is about trying to tell the compiler
+
+84
+00:02:20,239 --> 00:02:21,360
+what you're trying to do
+
+85
+00:02:21,360 --> 00:02:23,840
+so it can catch your errors for you
+
+86
+00:02:23,840 --> 00:02:25,040
+right so swift takes
+
+87
+00:02:25,040 --> 00:02:27,440
+entire classes of programming errors and
+
+88
+00:02:27,440 --> 00:02:28,319
+effectively
+
+89
+00:02:28,319 --> 00:02:29,920
+translates them to compiler errors
+
+90
+00:02:29,920 --> 00:02:31,599
+instead of runtime ones you know
+
+91
+00:02:31,599 --> 00:02:32,959
+optionals really help you out so you
+
+92
+00:02:32,959 --> 00:02:35,040
+never have those null pointer exceptions
+
+93
+00:02:35,040 --> 00:02:38,160
+right if led optional chaining guards
+
+94
+00:02:38,160 --> 00:02:39,360
+all these sorts of things
+
+95
+00:02:39,360 --> 00:02:41,280
+uh swift's unique exception handling
+
+96
+00:02:41,280 --> 00:02:42,959
+system enables you to have all kinds of
+
+97
+00:02:42,959 --> 00:02:43,360
+really
+
+98
+00:02:43,360 --> 00:02:45,280
+you know unique errors and it's really
+
+99
+00:02:45,280 --> 00:02:46,879
+just a more expressive way
+
+100
+00:02:46,879 --> 00:02:49,920
+of being able to throw errors and now
+
+101
+00:02:49,920 --> 00:02:50,959
+swift's safety
+
+102
+00:02:50,959 --> 00:02:52,560
+is coming to the world of concurrency
+
+103
+00:02:52,560 --> 00:02:54,720
+concurrency is traditionally
+
+104
+00:02:54,720 --> 00:02:57,200
+you know notoriously difficult to do
+
+105
+00:02:57,200 --> 00:02:58,000
+right
+
+106
+00:02:58,000 --> 00:03:00,159
+and that's just because you know the
+
+107
+00:03:00,159 --> 00:03:01,680
+human mind sort of thinks
+
+108
+00:03:01,680 --> 00:03:05,360
+serially you think doing task abcd
+
+109
+00:03:05,360 --> 00:03:07,440
+so having to change your mindset to
+
+110
+00:03:07,440 --> 00:03:08,959
+think about multiple threads doing
+
+111
+00:03:08,959 --> 00:03:10,480
+multiple things at once and somehow
+
+112
+00:03:10,480 --> 00:03:12,480
+sinking and converging and communicating
+
+113
+00:03:12,480 --> 00:03:14,640
+can sometimes be a really difficult
+
+114
+00:03:14,640 --> 00:03:16,159
+thing to do
+
+115
+00:03:16,159 --> 00:03:18,000
+however now with the power of these new
+
+116
+00:03:18,000 --> 00:03:19,920
+swift features concurrency is a lot
+
+117
+00:03:19,920 --> 00:03:20,560
+easier
+
+118
+00:03:20,560 --> 00:03:23,680
+um issues like data races uh issues
+
+119
+00:03:23,680 --> 00:03:26,239
+uh like you know blocking threads these
+
+120
+00:03:26,239 --> 00:03:27,360
+can all be avoided
+
+121
+00:03:27,360 --> 00:03:29,840
+uh with these brand new features now in
+
+122
+00:03:29,840 --> 00:03:31,360
+particular let's start off by talking
+
+123
+00:03:31,360 --> 00:03:32,400
+about something
+
+124
+00:03:32,400 --> 00:03:33,760
+not even related to concurrency
+
+125
+00:03:33,760 --> 00:03:35,519
+necessarily but just related to how
+
+126
+00:03:35,519 --> 00:03:37,040
+computers work
+
+127
+00:03:37,040 --> 00:03:39,440
+so let's talk about busy weights now as
+
+128
+00:03:39,440 --> 00:03:40,799
+a programmer you might know what a busy
+
+129
+00:03:40,799 --> 00:03:41,760
+weight is already
+
+130
+00:03:41,760 --> 00:03:43,120
+but let me just quickly catch you up to
+
+131
+00:03:43,120 --> 00:03:44,799
+speed in case you don't
+
+132
+00:03:44,799 --> 00:03:45,840
+let's just say you're running an
+
+133
+00:03:45,840 --> 00:03:48,080
+application on a single core cpu so the
+
+134
+00:03:48,080 --> 00:03:49,519
+cpu only has
+
+135
+00:03:49,519 --> 00:03:52,400
+a single cpu core single thread running
+
+136
+00:03:52,400 --> 00:03:53,200
+so at once
+
+137
+00:03:53,200 --> 00:03:55,840
+the cpu can only do a single thing now
+
+138
+00:03:55,840 --> 00:03:57,439
+let's just say your application needs to
+
+139
+00:03:57,439 --> 00:03:59,439
+sleep for one second
+
+140
+00:03:59,439 --> 00:04:02,480
+now if you were to type into say python
+
+141
+00:04:02,480 --> 00:04:03,599
+time dot sleep
+
+142
+00:04:03,599 --> 00:04:07,280
+one imagine what would happen if python
+
+143
+00:04:07,280 --> 00:04:08,400
+said
+
+144
+00:04:08,400 --> 00:04:11,760
+while true continue for one second
+
+145
+00:04:11,760 --> 00:04:14,159
+what would happen is your cpu for an
+
+146
+00:04:14,159 --> 00:04:15,200
+entire second
+
+147
+00:04:15,200 --> 00:04:18,400
+would be continuously used doing nothing
+
+148
+00:04:18,400 --> 00:04:20,880
+just looping until that one second is
+
+149
+00:04:20,880 --> 00:04:21,840
+over
+
+150
+00:04:21,840 --> 00:04:24,160
+that's called a busy weight it uses your
+
+151
+00:04:24,160 --> 00:04:25,280
+cpu
+
+152
+00:04:25,280 --> 00:04:27,919
+to wait now there are other kinds of
+
+153
+00:04:27,919 --> 00:04:28,400
+waiting
+
+154
+00:04:28,400 --> 00:04:30,080
+for example if you were to ask your
+
+155
+00:04:30,080 --> 00:04:31,840
+colonel to help you do a sleep
+
+156
+00:04:31,840 --> 00:04:33,600
+what would happen is you would tell your
+
+157
+00:04:33,600 --> 00:04:35,919
+colonel hey for a second i don't need to
+
+158
+00:04:35,919 --> 00:04:37,520
+execute this process
+
+159
+00:04:37,520 --> 00:04:39,680
+and what your kernel can then do is it
+
+160
+00:04:39,680 --> 00:04:41,520
+won't do a busy weight
+
+161
+00:04:41,520 --> 00:04:43,600
+instead it'll take control from your
+
+162
+00:04:43,600 --> 00:04:44,560
+process
+
+163
+00:04:44,560 --> 00:04:46,240
+you won't be executing anymore for an
+
+164
+00:04:46,240 --> 00:04:48,240
+entire second but the kernel can still
+
+165
+00:04:48,240 --> 00:04:48,560
+keep
+
+166
+00:04:48,560 --> 00:04:50,160
+other things running in the background
+
+167
+00:04:50,160 --> 00:04:51,919
+it can context switch
+
+168
+00:04:51,919 --> 00:04:53,520
+out of your process into something
+
+169
+00:04:53,520 --> 00:04:55,040
+potentially important
+
+170
+00:04:55,040 --> 00:04:57,520
+and then move you back into that process
+
+171
+00:04:57,520 --> 00:04:59,040
+after that second is complete
+
+172
+00:04:59,040 --> 00:05:01,440
+that's you know context switching
+
+173
+00:05:01,440 --> 00:05:02,080
+however
+
+174
+00:05:02,080 --> 00:05:04,000
+if you're doing a busy weight then your
+
+175
+00:05:04,000 --> 00:05:05,360
+colonel doesn't know that hey
+
+176
+00:05:05,360 --> 00:05:07,360
+wait this thread is free we can be doing
+
+177
+00:05:07,360 --> 00:05:08,880
+other things with it
+
+178
+00:05:08,880 --> 00:05:10,720
+similarly imagine you're building a
+
+179
+00:05:10,720 --> 00:05:12,560
+swift ui application to search through
+
+180
+00:05:12,560 --> 00:05:14,720
+movies on the open movie database
+
+181
+00:05:14,720 --> 00:05:17,680
+uh api now let's just say you submit a
+
+182
+00:05:17,680 --> 00:05:19,759
+new uh query for spongebob
+
+183
+00:05:19,759 --> 00:05:21,440
+uh and you're downloading all of the
+
+184
+00:05:21,440 --> 00:05:24,000
+album or sorry all of the cover art
+
+185
+00:05:24,000 --> 00:05:25,759
+for all these different movies all the
+
+186
+00:05:25,759 --> 00:05:27,120
+posters
+
+187
+00:05:27,120 --> 00:05:29,600
+well then these are files and files
+
+188
+00:05:29,600 --> 00:05:30,800
+especially images take
+
+189
+00:05:30,800 --> 00:05:33,680
+time to download so before you render
+
+190
+00:05:33,680 --> 00:05:34,639
+your ui
+
+191
+00:05:34,639 --> 00:05:37,280
+or really on the same thread as your ui
+
+192
+00:05:37,280 --> 00:05:38,960
+rendering if you start downloading all
+
+193
+00:05:38,960 --> 00:05:39,680
+those images
+
+194
+00:05:39,680 --> 00:05:41,120
+your app has become completely
+
+195
+00:05:41,120 --> 00:05:43,280
+unresponsive nobody can do anything on
+
+196
+00:05:43,280 --> 00:05:45,039
+the application while the
+
+197
+00:05:45,039 --> 00:05:47,600
+poster art is downloading and there's
+
+198
+00:05:47,600 --> 00:05:48,240
+nothing
+
+199
+00:05:48,240 --> 00:05:50,160
+anybody can do about it but if you
+
+200
+00:05:50,160 --> 00:05:52,080
+launch a new background thread and
+
+201
+00:05:52,080 --> 00:05:54,400
+unblock your ui thread suddenly people
+
+202
+00:05:54,400 --> 00:05:56,080
+can still interact with your application
+
+203
+00:05:56,080 --> 00:05:58,240
+while it's downloading the background
+
+204
+00:05:58,240 --> 00:06:00,319
+but then you've got to write the code to
+
+205
+00:06:00,319 --> 00:06:02,000
+make it so the background thread can
+
+206
+00:06:02,000 --> 00:06:03,600
+communicate with your main thread so
+
+207
+00:06:03,600 --> 00:06:04,000
+that
+
+208
+00:06:04,000 --> 00:06:05,360
+you can get the posters and actually
+
+209
+00:06:05,360 --> 00:06:06,639
+show them on screen so how do you do
+
+210
+00:06:06,639 --> 00:06:07,199
+that
+
+211
+00:06:07,199 --> 00:06:09,840
+well traditionally you do it with what's
+
+212
+00:06:09,840 --> 00:06:12,080
+known as a completion handler so
+
+213
+00:06:12,080 --> 00:06:13,600
+uh you call a function which is
+
+214
+00:06:13,600 --> 00:06:16,000
+responsible for taking say the url to
+
+215
+00:06:16,000 --> 00:06:17,280
+the poster art
+
+216
+00:06:17,280 --> 00:06:18,720
+and it will launch a thread in the
+
+217
+00:06:18,720 --> 00:06:20,720
+background it'll download it
+
+218
+00:06:20,720 --> 00:06:22,880
+and then you would have also passed that
+
+219
+00:06:22,880 --> 00:06:24,800
+function another function
+
+220
+00:06:24,800 --> 00:06:26,960
+and when that function is done
+
+221
+00:06:26,960 --> 00:06:28,319
+downloading the poster
+
+222
+00:06:28,319 --> 00:06:30,160
+it will call that function pointer that
+
+223
+00:06:30,160 --> 00:06:32,880
+you passed and tell that function hey
+
+224
+00:06:32,880 --> 00:06:35,600
+we finished um getting this this this
+
+225
+00:06:35,600 --> 00:06:36,560
+image
+
+226
+00:06:36,560 --> 00:06:38,240
+and effectively effectively what that
+
+227
+00:06:38,240 --> 00:06:40,160
+does is it enables that background
+
+228
+00:06:40,160 --> 00:06:41,199
+thread to communicate
+
+229
+00:06:41,199 --> 00:06:43,440
+back to you uh that hey we finished
+
+230
+00:06:43,440 --> 00:06:45,680
+downloading and here's the image
+
+231
+00:06:45,680 --> 00:06:47,919
+the issue with this architecture is that
+
+232
+00:06:47,919 --> 00:06:50,080
+just passing a closure to a function in
+
+233
+00:06:50,080 --> 00:06:50,720
+swift
+
+234
+00:06:50,720 --> 00:06:52,560
+doesn't tell the swift compiler anything
+
+235
+00:06:52,560 --> 00:06:54,400
+about what you're trying to do
+
+236
+00:06:54,400 --> 00:06:56,960
+you as the programmer understand that
+
+237
+00:06:56,960 --> 00:06:58,319
+passing that function
+
+238
+00:06:58,319 --> 00:07:00,880
+closure is an abstraction and that
+
+239
+00:07:00,880 --> 00:07:02,000
+abstraction
+
+240
+00:07:02,000 --> 00:07:04,000
+uh is effectively to make it so you can
+
+241
+00:07:04,000 --> 00:07:05,680
+communicate back from that background
+
+242
+00:07:05,680 --> 00:07:06,960
+thread when it's done
+
+243
+00:07:06,960 --> 00:07:09,360
+to your state to update you your ui for
+
+244
+00:07:09,360 --> 00:07:10,160
+example
+
+245
+00:07:10,160 --> 00:07:11,759
+but the swift compiler doesn't know that
+
+246
+00:07:11,759 --> 00:07:13,440
+as far as it knows you're just passing
+
+247
+00:07:13,440 --> 00:07:14,240
+another closure
+
+248
+00:07:14,240 --> 00:07:16,400
+it doesn't know why and so because of
+
+249
+00:07:16,400 --> 00:07:18,319
+that it can't enforce a bunch of safety
+
+250
+00:07:18,319 --> 00:07:19,680
+features for example
+
+251
+00:07:19,680 --> 00:07:21,280
+if you have a regular function that just
+
+252
+00:07:21,280 --> 00:07:23,360
+returns an integer then swift will make
+
+253
+00:07:23,360 --> 00:07:23,840
+sure that
+
+254
+00:07:23,840 --> 00:07:25,599
+all code paths through the function
+
+255
+00:07:25,599 --> 00:07:27,280
+return an integer
+
+256
+00:07:27,280 --> 00:07:29,280
+there is no way that this function can
+
+257
+00:07:29,280 --> 00:07:31,039
+complete execution without having
+
+258
+00:07:31,039 --> 00:07:33,039
+returned an integer to its caller
+
+259
+00:07:33,039 --> 00:07:36,080
+swift can ensure that safety but with
+
+260
+00:07:36,080 --> 00:07:37,360
+that architecture of
+
+261
+00:07:37,360 --> 00:07:40,319
+passing closures swift can't ensure that
+
+262
+00:07:40,319 --> 00:07:40,639
+you
+
+263
+00:07:40,639 --> 00:07:42,720
+call that closure and pass it something
+
+264
+00:07:42,720 --> 00:07:44,080
+that is valid
+
+265
+00:07:44,080 --> 00:07:45,599
+there's no way for swift to know to do
+
+266
+00:07:45,599 --> 00:07:46,720
+that because it doesn't know that you're
+
+267
+00:07:46,720 --> 00:07:48,240
+trying to use the closure as a
+
+268
+00:07:48,240 --> 00:07:50,800
+kind of return almost right so these are
+
+269
+00:07:50,800 --> 00:07:52,400
+the kinds of safety features that you
+
+270
+00:07:52,400 --> 00:07:53,919
+miss out on
+
+271
+00:07:53,919 --> 00:07:55,599
+however with this latest version of
+
+272
+00:07:55,599 --> 00:07:58,080
+swift all of these problems can be
+
+273
+00:07:58,080 --> 00:08:00,879
+forgotten because now you can use async
+
+274
+00:08:00,879 --> 00:08:03,120
+await functions to replace this whole
+
+275
+00:08:03,120 --> 00:08:06,400
+completion handler architecture
+
+276
+00:08:06,400 --> 00:08:08,400
+effectively what you can do is let's
+
+277
+00:08:08,400 --> 00:08:09,599
+just say you have a
+
+278
+00:08:09,599 --> 00:08:12,000
+simple function and what it does is you
+
+279
+00:08:12,000 --> 00:08:14,240
+know like the one on screen right now
+
+280
+00:08:14,240 --> 00:08:17,840
+it loads a movie's plot through a json
+
+281
+00:08:17,840 --> 00:08:20,080
+response from the open movie database
+
+282
+00:08:20,080 --> 00:08:23,199
+api uh now effectively what this code is
+
+283
+00:08:23,199 --> 00:08:23,840
+doing
+
+284
+00:08:23,840 --> 00:08:26,800
+uh is it's taking uh a movie structure
+
+285
+00:08:26,800 --> 00:08:28,400
+which is also on screen right now
+
+286
+00:08:28,400 --> 00:08:30,000
+and from that movie structure it's
+
+287
+00:08:30,000 --> 00:08:31,680
+extracting the imdb id
+
+288
+00:08:31,680 --> 00:08:34,959
+it's passing it to the omdb api and it's
+
+289
+00:08:34,959 --> 00:08:37,599
+serializing uh rather deserializing uh
+
+290
+00:08:37,599 --> 00:08:38,399
+decoding
+
+291
+00:08:38,399 --> 00:08:42,479
+uh the json response from um from omdb
+
+292
+00:08:42,479 --> 00:08:43,919
+into a structure and then extracts the
+
+293
+00:08:43,919 --> 00:08:45,519
+plot from it and returns the plot so
+
+294
+00:08:45,519 --> 00:08:47,120
+this is a simple function that gets the
+
+295
+00:08:47,120 --> 00:08:48,880
+plot of a movie
+
+296
+00:08:48,880 --> 00:08:51,040
+now in this specific example what i've
+
+297
+00:08:51,040 --> 00:08:53,680
+done is i've marked this function
+
+298
+00:08:53,680 --> 00:08:57,200
+async what does async mean well it means
+
+299
+00:08:57,200 --> 00:08:59,200
+that this function is being called in an
+
+300
+00:08:59,200 --> 00:09:01,120
+asynchronous context
+
+301
+00:09:01,120 --> 00:09:03,120
+meaning that it's possible for this
+
+302
+00:09:03,120 --> 00:09:04,320
+function to
+
+303
+00:09:04,320 --> 00:09:07,040
+out of nowhere suspend its execution and
+
+304
+00:09:07,040 --> 00:09:08,800
+tell the system that hey
+
+305
+00:09:08,800 --> 00:09:10,800
+i'm waiting for something to happen you
+
+306
+00:09:10,800 --> 00:09:12,560
+can do something else right now
+
+307
+00:09:12,560 --> 00:09:14,720
+so for example let's just say we're
+
+308
+00:09:14,720 --> 00:09:16,640
+making our actual url
+
+309
+00:09:16,640 --> 00:09:19,760
+session a request to get data from a url
+
+310
+00:09:19,760 --> 00:09:21,680
+now that's something that takes time to
+
+311
+00:09:21,680 --> 00:09:22,880
+go to a url
+
+312
+00:09:22,880 --> 00:09:25,680
+fetch something come back so we mark it
+
+313
+00:09:25,680 --> 00:09:27,200
+we mark that function call
+
+314
+00:09:27,200 --> 00:09:30,320
+with a weight because data for and then
+
+315
+00:09:30,320 --> 00:09:31,120
+some url
+
+316
+00:09:31,120 --> 00:09:33,120
+is an asynchronous function it's also
+
+317
+00:09:33,120 --> 00:09:34,320
+defined as async
+
+318
+00:09:34,320 --> 00:09:36,880
+so within this async function we mark
+
+319
+00:09:36,880 --> 00:09:38,160
+our function call
+
+320
+00:09:38,160 --> 00:09:41,200
+as a weight so we're waiting for that
+
+321
+00:09:41,200 --> 00:09:42,560
+function to give us something
+
+322
+00:09:42,560 --> 00:09:44,240
+now when we say a wait what we're
+
+323
+00:09:44,240 --> 00:09:46,160
+telling swift is hey
+
+324
+00:09:46,160 --> 00:09:49,120
+load plot is now for at least for now
+
+325
+00:09:49,120 --> 00:09:50,240
+done executing
+
+326
+00:09:50,240 --> 00:09:52,000
+suspend this function we're not going to
+
+327
+00:09:52,000 --> 00:09:53,920
+continue until we get a response
+
+328
+00:09:53,920 --> 00:09:57,519
+from url uh session but then once we do
+
+329
+00:09:57,519 --> 00:09:58,480
+get a response
+
+330
+00:09:58,480 --> 00:10:01,440
+resume execution of this function so now
+
+331
+00:10:01,440 --> 00:10:02,079
+the system
+
+332
+00:10:02,079 --> 00:10:04,079
+mac os knows that hey we're not
+
+333
+00:10:04,079 --> 00:10:05,600
+executing this function anymore clear up
+
+334
+00:10:05,600 --> 00:10:07,200
+some system resources go to some other
+
+335
+00:10:07,200 --> 00:10:07,760
+stuff
+
+336
+00:10:07,760 --> 00:10:10,079
+maybe render the ui or do whatever you
+
+337
+00:10:10,079 --> 00:10:10,800
+need to do
+
+338
+00:10:10,800 --> 00:10:13,760
+on this thread but then when url session
+
+339
+00:10:13,760 --> 00:10:15,120
+does end up returning a response or
+
+340
+00:10:15,120 --> 00:10:16,320
+maybe a little bit after that when the
+
+341
+00:10:16,320 --> 00:10:17,680
+kernel thinks it's time
+
+342
+00:10:17,680 --> 00:10:20,800
+then continue running this specific
+
+343
+00:10:20,800 --> 00:10:23,839
+function and then as if it were a
+
+344
+00:10:23,839 --> 00:10:25,519
+synchronous request
+
+345
+00:10:25,519 --> 00:10:27,519
+you have the result of the actual
+
+346
+00:10:27,519 --> 00:10:29,040
+request as well as the response from the
+
+347
+00:10:29,040 --> 00:10:29,839
+server
+
+348
+00:10:29,839 --> 00:10:31,920
+stored in your variables no need for a
+
+349
+00:10:31,920 --> 00:10:33,040
+completion handler
+
+350
+00:10:33,040 --> 00:10:35,680
+no need for a closure it really is
+
+351
+00:10:35,680 --> 00:10:37,519
+magical
+
+352
+00:10:37,519 --> 00:10:40,079
+now here's the thing functions that are
+
+353
+00:10:40,079 --> 00:10:42,240
+asynchronous can suspend their execution
+
+354
+00:10:42,240 --> 00:10:43,200
+if you don't
+
+355
+00:10:43,200 --> 00:10:45,040
+mark a function with async it can't just
+
+356
+00:10:45,040 --> 00:10:47,200
+suspend out of nowhere
+
+357
+00:10:47,200 --> 00:10:49,600
+that means that only async functions can
+
+358
+00:10:49,600 --> 00:10:51,600
+call async functions so for example if i
+
+359
+00:10:51,600 --> 00:10:53,360
+didn't mark this function as async
+
+360
+00:10:53,360 --> 00:10:56,000
+i would not be able to call url session
+
+361
+00:10:56,000 --> 00:10:57,279
+shared data for
+
+362
+00:10:57,279 --> 00:10:59,839
+url and the reason for that is because
+
+363
+00:10:59,839 --> 00:11:01,200
+that would be a regular function which
+
+364
+00:11:01,200 --> 00:11:02,800
+is not allowed to just suspend out of
+
+365
+00:11:02,800 --> 00:11:03,680
+nowhere
+
+366
+00:11:03,680 --> 00:11:05,519
+and if you're awaiting for that function
+
+367
+00:11:05,519 --> 00:11:07,839
+then you might end up suspending
+
+368
+00:11:07,839 --> 00:11:10,240
+and so you're probably wondering if only
+
+369
+00:11:10,240 --> 00:11:12,399
+async functions can call it functions
+
+370
+00:11:12,399 --> 00:11:14,240
+how do you start that call stack like
+
+371
+00:11:14,240 --> 00:11:16,720
+how do you make that first async call
+
+372
+00:11:16,720 --> 00:11:18,320
+and jump the bridge from the synchronous
+
+373
+00:11:18,320 --> 00:11:19,920
+world to the asynchronous world
+
+374
+00:11:19,920 --> 00:11:22,000
+well you can use what's known as an
+
+375
+00:11:22,000 --> 00:11:23,279
+async task
+
+376
+00:11:23,279 --> 00:11:25,200
+so within your synchronous function what
+
+377
+00:11:25,200 --> 00:11:27,040
+you can do is
+
+378
+00:11:27,040 --> 00:11:29,120
+effectively just write async and then a
+
+379
+00:11:29,120 --> 00:11:30,079
+curly bracket
+
+380
+00:11:30,079 --> 00:11:32,079
+and then within that async block you're
+
+381
+00:11:32,079 --> 00:11:33,360
+allowed to make those
+
+382
+00:11:33,360 --> 00:11:35,519
+calls uh to asynchronous functions
+
+383
+00:11:35,519 --> 00:11:36,959
+you're allowed to await for them
+
+384
+00:11:36,959 --> 00:11:39,360
+that asynchronous block launches a new
+
+385
+00:11:39,360 --> 00:11:41,200
+thread effectively
+
+386
+00:11:41,200 --> 00:11:42,880
+and so your original function will
+
+387
+00:11:42,880 --> 00:11:44,720
+continue execution after that async
+
+388
+00:11:44,720 --> 00:11:45,200
+block
+
+389
+00:11:45,200 --> 00:11:47,519
+it will not wait for it to be complete
+
+390
+00:11:47,519 --> 00:11:48,560
+the async block
+
+391
+00:11:48,560 --> 00:11:50,240
+just goes ahead and starts a new
+
+392
+00:11:50,240 --> 00:11:52,160
+asynchronous sort of thread
+
+393
+00:11:52,160 --> 00:11:54,880
+in the background so that is how these
+
+394
+00:11:54,880 --> 00:11:56,079
+new async await features
+
+395
+00:11:56,079 --> 00:11:58,240
+work i have built a little application
+
+396
+00:11:58,240 --> 00:11:59,680
+that i'd love to show you
+
+397
+00:11:59,680 --> 00:12:01,920
+uh and it effectively enables you to
+
+398
+00:12:01,920 --> 00:12:03,440
+search through omdb
+
+399
+00:12:03,440 --> 00:12:06,560
+uh using um the uh using
+
+400
+00:12:06,560 --> 00:12:09,120
+this new async await feature in swift
+
+401
+00:12:09,120 --> 00:12:10,800
+and then i'd love to go ahead and walk
+
+402
+00:12:10,800 --> 00:12:12,240
+you through the code
+
+403
+00:12:12,240 --> 00:12:14,240
+and how this is possible so let's go
+
+404
+00:12:14,240 --> 00:12:15,360
+ahead and take a look at it
+
+405
+00:12:15,360 --> 00:12:17,120
+let's start off by taking a look at a
+
+406
+00:12:17,120 --> 00:12:19,680
+demo of the application that i've built
+
+407
+00:12:19,680 --> 00:12:21,360
+now if you go ahead and launch this
+
+408
+00:12:21,360 --> 00:12:22,800
+application as you can see it's built in
+
+409
+00:12:22,800 --> 00:12:24,480
+swift ui so it's able to automatically
+
+410
+00:12:24,480 --> 00:12:26,959
+adapt to for example light and dark mode
+
+411
+00:12:26,959 --> 00:12:29,040
+i'm currently in dark mode and if i go
+
+412
+00:12:29,040 --> 00:12:30,480
+ahead and search for
+
+413
+00:12:30,480 --> 00:12:32,160
+let's just say spongebob and i hit the
+
+414
+00:12:32,160 --> 00:12:33,839
+enter character
+
+415
+00:12:33,839 --> 00:12:35,920
+on the keyboard then it instantly goes
+
+416
+00:12:35,920 --> 00:12:38,959
+ahead runs that search against omdb
+
+417
+00:12:38,959 --> 00:12:40,399
+and it does this again entirely
+
+418
+00:12:40,399 --> 00:12:42,000
+asynchronously in the background the ui
+
+419
+00:12:42,000 --> 00:12:44,000
+is still responsive as it does this
+
+420
+00:12:44,000 --> 00:12:46,880
+in the first pass of the api request all
+
+421
+00:12:46,880 --> 00:12:48,880
+it gets are the movie's titles
+
+422
+00:12:48,880 --> 00:12:51,680
+and years as well as their imdb ids it
+
+423
+00:12:51,680 --> 00:12:52,000
+then
+
+424
+00:12:52,000 --> 00:12:54,399
+stores that internally and then it goes
+
+425
+00:12:54,399 --> 00:12:55,600
+ahead and launches
+
+426
+00:12:55,600 --> 00:12:59,040
+uh per each uh per each cell in the list
+
+427
+00:12:59,040 --> 00:13:00,880
+it then launches two new threads
+
+428
+00:13:00,880 --> 00:13:02,639
+essentially or asynchronous sort of
+
+429
+00:13:02,639 --> 00:13:05,440
+uh streams of execution and within these
+
+430
+00:13:05,440 --> 00:13:07,040
+streams of execution one of them is
+
+431
+00:13:07,040 --> 00:13:08,880
+responsible for downloading the poster
+
+432
+00:13:08,880 --> 00:13:10,240
+and the other one is responsible for
+
+433
+00:13:10,240 --> 00:13:12,800
+making another api call to get the plot
+
+434
+00:13:12,800 --> 00:13:14,079
+of that movie
+
+435
+00:13:14,079 --> 00:13:15,920
+so again there's three sort of i guess
+
+436
+00:13:15,920 --> 00:13:17,519
+stages to this asynchronous operation
+
+437
+00:13:17,519 --> 00:13:18,399
+there's number one
+
+438
+00:13:18,399 --> 00:13:19,839
+which is do the initial search and
+
+439
+00:13:19,839 --> 00:13:21,519
+create the actual movie cells
+
+440
+00:13:21,519 --> 00:13:22,959
+then there's actually you know display
+
+441
+00:13:22,959 --> 00:13:24,560
+those the cells on the um
+
+442
+00:13:24,560 --> 00:13:27,120
+on the screen and then for each cell
+
+443
+00:13:27,120 --> 00:13:27,600
+launch
+
+444
+00:13:27,600 --> 00:13:29,519
+two new asynchronous streams of
+
+445
+00:13:29,519 --> 00:13:31,519
+execution one of which is to get the
+
+446
+00:13:31,519 --> 00:13:32,160
+poster
+
+447
+00:13:32,160 --> 00:13:34,000
+one of which is to get the plot now as
+
+448
+00:13:34,000 --> 00:13:35,680
+you can see sometimes you'll see like a
+
+449
+00:13:35,680 --> 00:13:36,880
+little loading icon instead of the
+
+450
+00:13:36,880 --> 00:13:38,639
+poster and then you'll see the poster
+
+451
+00:13:38,639 --> 00:13:40,880
+uh that's that's what happens if at
+
+452
+00:13:40,880 --> 00:13:42,720
+first the cell doesn't have a poster
+
+453
+00:13:42,720 --> 00:13:44,240
+but then the asynchronous task is like
+
+454
+00:13:44,240 --> 00:13:45,920
+oh hey here's your poster and then we
+
+455
+00:13:45,920 --> 00:13:47,040
+display it on screen
+
+456
+00:13:47,040 --> 00:13:48,880
+but if the asynchronous task throws an
+
+457
+00:13:48,880 --> 00:13:51,040
+exception or an error saying
+
+458
+00:13:51,040 --> 00:13:52,480
+wait no we couldn't get the poster for
+
+459
+00:13:52,480 --> 00:13:54,480
+some reason uh maybe it didn't exist
+
+460
+00:13:54,480 --> 00:13:56,240
+maybe it was an incorrect image
+
+461
+00:13:56,240 --> 00:13:58,639
+or something on those lines then in that
+
+462
+00:13:58,639 --> 00:13:59,440
+case
+
+463
+00:13:59,440 --> 00:14:02,079
+we remove the loading little progress or
+
+464
+00:14:02,079 --> 00:14:02,800
+spinner
+
+465
+00:14:02,800 --> 00:14:05,600
+um and instead we just show blank
+
+466
+00:14:05,600 --> 00:14:08,560
+transparent rectangle effectively
+
+467
+00:14:08,560 --> 00:14:10,720
+uh and the plot downloads pretty much
+
+468
+00:14:10,720 --> 00:14:12,480
+instantly because it's just text
+
+469
+00:14:12,480 --> 00:14:14,720
+but i do uh do that as an asynchronous
+
+470
+00:14:14,720 --> 00:14:16,720
+stream of execution so that that's not
+
+471
+00:14:16,720 --> 00:14:18,720
+blocking anything either
+
+472
+00:14:18,720 --> 00:14:21,600
+and of course as you scroll down in the
+
+473
+00:14:21,600 --> 00:14:22,399
+ui
+
+474
+00:14:22,399 --> 00:14:25,440
+what happens is when the last cell in
+
+475
+00:14:25,440 --> 00:14:26,480
+the list
+
+476
+00:14:26,480 --> 00:14:29,040
+appears then that triggers a bit of code
+
+477
+00:14:29,040 --> 00:14:30,320
+that's like oh you're at the end of the
+
+478
+00:14:30,320 --> 00:14:31,279
+list
+
+479
+00:14:31,279 --> 00:14:34,560
+and so then it loads in a bunch more
+
+480
+00:14:34,560 --> 00:14:36,800
+uh next search results and you can sort
+
+481
+00:14:36,800 --> 00:14:38,160
+of keep scrolling it'll detect that
+
+482
+00:14:38,160 --> 00:14:39,519
+you're at the end it'll keep
+
+483
+00:14:39,519 --> 00:14:41,600
+um it'll keep downloading more data and
+
+484
+00:14:41,600 --> 00:14:42,800
+again for every
+
+485
+00:14:42,800 --> 00:14:44,480
+you know individual cell that it
+
+486
+00:14:44,480 --> 00:14:46,480
+downloads each cell gets those two
+
+487
+00:14:46,480 --> 00:14:48,560
+streams of execution that then go ahead
+
+488
+00:14:48,560 --> 00:14:49,040
+and
+
+489
+00:14:49,040 --> 00:14:51,279
+merge back when they're done so let's go
+
+490
+00:14:51,279 --> 00:14:52,880
+ahead and take a look at the code now
+
+491
+00:14:52,880 --> 00:14:55,120
+all right let's dive right into the code
+
+492
+00:14:55,120 --> 00:14:56,639
+uh now the real magic of this
+
+493
+00:14:56,639 --> 00:14:59,519
+application starts off with the omdb api
+
+494
+00:14:59,519 --> 00:15:01,600
+class now this code is actually pretty
+
+495
+00:15:01,600 --> 00:15:02,800
+straightforward because
+
+496
+00:15:02,800 --> 00:15:04,560
+once again that's the entire point of
+
+497
+00:15:04,560 --> 00:15:06,160
+this the point
+
+498
+00:15:06,160 --> 00:15:08,720
+of the new async await function features
+
+499
+00:15:08,720 --> 00:15:10,639
+is to make code a lot more
+
+500
+00:15:10,639 --> 00:15:12,160
+you know intuitive it's to make it a lot
+
+501
+00:15:12,160 --> 00:15:13,839
+more straight line
+
+502
+00:15:13,839 --> 00:15:15,279
+so we start off of course by defining
+
+503
+00:15:15,279 --> 00:15:17,120
+our omdb api class this is what's
+
+504
+00:15:17,120 --> 00:15:18,639
+responsible for actually interacting
+
+505
+00:15:18,639 --> 00:15:20,000
+with the api
+
+506
+00:15:20,000 --> 00:15:21,760
+i start off by defining an enumeration
+
+507
+00:15:21,760 --> 00:15:23,360
+of the different possible errors that
+
+508
+00:15:23,360 --> 00:15:25,440
+we can encounter by calling the
+
+509
+00:15:25,440 --> 00:15:27,440
+different functions within the api
+
+510
+00:15:27,440 --> 00:15:29,120
+and then we define the movie structure
+
+511
+00:15:29,120 --> 00:15:30,880
+that you've seen earlier this has a
+
+512
+00:15:30,880 --> 00:15:33,440
+little bit more detail to it though
+
+513
+00:15:33,440 --> 00:15:35,839
+for example it conforms to the codable
+
+514
+00:15:35,839 --> 00:15:36,800
+protocol
+
+515
+00:15:36,800 --> 00:15:38,800
+and in order to do so i need to define
+
+516
+00:15:38,800 --> 00:15:40,480
+another enumeration within it called
+
+517
+00:15:40,480 --> 00:15:41,680
+coding keys
+
+518
+00:15:41,680 --> 00:15:43,920
+because this needs to define decodable
+
+519
+00:15:43,920 --> 00:15:44,959
+or rather
+
+520
+00:15:44,959 --> 00:15:47,199
+conformed codable because when i
+
+521
+00:15:47,199 --> 00:15:49,519
+actually get responses from omdb
+
+522
+00:15:49,519 --> 00:15:51,920
+i want to immediately take that json and
+
+523
+00:15:51,920 --> 00:15:54,320
+serialize it into this structure
+
+524
+00:15:54,320 --> 00:15:56,639
+and these coding keys help me translate
+
+525
+00:15:56,639 --> 00:15:59,279
+the keys that we get from the json
+
+526
+00:15:59,279 --> 00:16:02,560
+from from from omdb and translate them
+
+527
+00:16:02,560 --> 00:16:05,120
+over to the actual structure over here
+
+528
+00:16:05,120 --> 00:16:07,839
+i also do have a possible error for
+
+529
+00:16:07,839 --> 00:16:09,600
+getting posters for a movie
+
+530
+00:16:09,600 --> 00:16:11,279
+which is that we could get an invalid
+
+531
+00:16:11,279 --> 00:16:13,600
+image and then of course we have our
+
+532
+00:16:13,600 --> 00:16:15,759
+four fields the imdb id
+
+533
+00:16:15,759 --> 00:16:17,519
+the title of the movie the year it was
+
+534
+00:16:17,519 --> 00:16:20,800
+released as well as the poster url
+
+535
+00:16:20,800 --> 00:16:22,240
+and then of course we've got our very
+
+536
+00:16:22,240 --> 00:16:24,000
+first async function
+
+537
+00:16:24,000 --> 00:16:26,079
+now if an asynchronous function also
+
+538
+00:16:26,079 --> 00:16:27,199
+throws errors
+
+539
+00:16:27,199 --> 00:16:29,759
+the async keyword needs to come before
+
+540
+00:16:29,759 --> 00:16:31,360
+the throws keyword in the function
+
+541
+00:16:31,360 --> 00:16:32,480
+signature
+
+542
+00:16:32,480 --> 00:16:34,399
+this function takes no parameters and
+
+543
+00:16:34,399 --> 00:16:36,399
+all it does is it returns a ui
+
+544
+00:16:36,399 --> 00:16:39,279
+image it starts off by trying to convert
+
+545
+00:16:39,279 --> 00:16:41,759
+the poster url from within its field
+
+546
+00:16:41,759 --> 00:16:45,600
+into an actual url as a swift type
+
+547
+00:16:45,600 --> 00:16:48,639
+if it's able to do so then it continues
+
+548
+00:16:48,639 --> 00:16:49,440
+as normal
+
+549
+00:16:49,440 --> 00:16:51,680
+if it's unable to do so then it throws a
+
+550
+00:16:51,680 --> 00:16:53,759
+specific error specifically the invalid
+
+551
+00:16:53,759 --> 00:16:55,360
+url error
+
+552
+00:16:55,360 --> 00:16:57,600
+now assuming everything did go right
+
+553
+00:16:57,600 --> 00:16:59,680
+then we go ahead and convert that url to
+
+554
+00:16:59,680 --> 00:17:01,440
+a url request
+
+555
+00:17:01,440 --> 00:17:02,880
+then i go ahead and call another
+
+556
+00:17:02,880 --> 00:17:04,799
+asynchronous function from within this
+
+557
+00:17:04,799 --> 00:17:05,360
+one
+
+558
+00:17:05,360 --> 00:17:07,280
+this asynchronous function is url
+
+559
+00:17:07,280 --> 00:17:10,400
+session shared data for request
+
+560
+00:17:10,400 --> 00:17:13,120
+now what i'm doing here is i'm awaiting
+
+561
+00:17:13,120 --> 00:17:15,199
+the response from this function
+
+562
+00:17:15,199 --> 00:17:17,280
+but it can also throw its own error so
+
+563
+00:17:17,280 --> 00:17:18,240
+the try
+
+564
+00:17:18,240 --> 00:17:20,880
+comes before the await this time so i'm
+
+565
+00:17:20,880 --> 00:17:22,720
+trying to await a response
+
+566
+00:17:22,720 --> 00:17:25,520
+from this function over here if this of
+
+567
+00:17:25,520 --> 00:17:26,880
+course throws an exception just like
+
+568
+00:17:26,880 --> 00:17:27,760
+normal swift
+
+569
+00:17:27,760 --> 00:17:30,880
+that will recurse up the call stack
+
+570
+00:17:30,880 --> 00:17:33,200
+as as as this function throws itself as
+
+571
+00:17:33,200 --> 00:17:33,919
+well
+
+572
+00:17:33,919 --> 00:17:35,760
+uh now we will get a result which is of
+
+573
+00:17:35,760 --> 00:17:37,440
+type data and a response which is of
+
+574
+00:17:37,440 --> 00:17:39,120
+type url response
+
+575
+00:17:39,120 --> 00:17:40,960
+uh and then what i can do is attempt to
+
+576
+00:17:40,960 --> 00:17:43,120
+convert that response to an http url
+
+577
+00:17:43,120 --> 00:17:44,799
+response and attempt to get the status
+
+578
+00:17:44,799 --> 00:17:45,440
+code
+
+579
+00:17:45,440 --> 00:17:48,240
+from that response once i do that i can
+
+580
+00:17:48,240 --> 00:17:50,080
+check if it's equal to 200 which as we
+
+581
+00:17:50,080 --> 00:17:51,600
+all know is okay
+
+582
+00:17:51,600 --> 00:17:53,679
+and if it's not then we throw an invalid
+
+583
+00:17:53,679 --> 00:17:54,799
+response
+
+584
+00:17:54,799 --> 00:17:57,280
+error and then finally i can go ahead
+
+585
+00:17:57,280 --> 00:17:59,280
+and take that data which is the response
+
+586
+00:17:59,280 --> 00:18:00,880
+of our url request
+
+587
+00:18:00,880 --> 00:18:04,320
+convert that to an image and if it
+
+588
+00:18:04,320 --> 00:18:05,120
+doesn't work
+
+589
+00:18:05,120 --> 00:18:06,880
+then we just throw an invalid image
+
+590
+00:18:06,880 --> 00:18:08,720
+error otherwise we can go ahead and
+
+591
+00:18:08,720 --> 00:18:10,080
+return the image
+
+592
+00:18:10,080 --> 00:18:12,080
+that's all there is to it again the
+
+593
+00:18:12,080 --> 00:18:14,000
+entire point of this is to make writing
+
+594
+00:18:14,000 --> 00:18:17,039
+asynchronous code easy uh now
+
+595
+00:18:17,039 --> 00:18:18,799
+from there we've of course got two
+
+596
+00:18:18,799 --> 00:18:20,720
+structures the search api response and
+
+597
+00:18:20,720 --> 00:18:22,400
+id api response
+
+598
+00:18:22,400 --> 00:18:23,919
+this is so that i can take the different
+
+599
+00:18:23,919 --> 00:18:25,919
+api responses from omdb
+
+600
+00:18:25,919 --> 00:18:28,720
+and immediately serialize them to json
+
+601
+00:18:28,720 --> 00:18:30,080
+because once again
+
+602
+00:18:30,080 --> 00:18:32,799
+um like for example um with with the
+
+603
+00:18:32,799 --> 00:18:33,760
+search
+
+604
+00:18:33,760 --> 00:18:36,880
+field uh omdb will return to me json
+
+605
+00:18:36,880 --> 00:18:39,360
+which is a dictionary containing a key
+
+606
+00:18:39,360 --> 00:18:41,919
+and the value of that key is the array
+
+607
+00:18:41,919 --> 00:18:42,880
+of movies
+
+608
+00:18:42,880 --> 00:18:46,640
+and so this helps me deserialize that
+
+609
+00:18:46,640 --> 00:18:49,760
+from omdb then of course within the
+
+610
+00:18:49,760 --> 00:18:52,160
+actual omdb api class i go ahead and
+
+611
+00:18:52,160 --> 00:18:54,320
+define the api key that the user uses to
+
+612
+00:18:54,320 --> 00:18:55,840
+communicate with the api
+
+613
+00:18:55,840 --> 00:18:57,919
+as well as the last search that was made
+
+614
+00:18:57,919 --> 00:18:59,600
+through the class and the last
+
+615
+00:18:59,600 --> 00:19:02,400
+page that was accessed for a specific
+
+616
+00:19:02,400 --> 00:19:03,280
+query
+
+617
+00:19:03,280 --> 00:19:05,679
+all i need in the initializer is the api
+
+618
+00:19:05,679 --> 00:19:07,360
+key because we already have default
+
+619
+00:19:07,360 --> 00:19:09,280
+values for these two variables
+
+620
+00:19:09,280 --> 00:19:11,120
+then of course there's my next
+
+621
+00:19:11,120 --> 00:19:12,559
+asynchronous function
+
+622
+00:19:12,559 --> 00:19:15,039
+called search what this does is it takes
+
+623
+00:19:15,039 --> 00:19:17,039
+an optional query string like a normal
+
+624
+00:19:17,039 --> 00:19:17,679
+function
+
+625
+00:19:17,679 --> 00:19:20,000
+which by default i'm setting to nil now
+
+626
+00:19:20,000 --> 00:19:21,280
+what this means is
+
+627
+00:19:21,280 --> 00:19:23,760
+that if there is no query defined which
+
+628
+00:19:23,760 --> 00:19:24,960
+is the second case
+
+629
+00:19:24,960 --> 00:19:27,360
+for this if-let statement then i go
+
+630
+00:19:27,360 --> 00:19:29,280
+ahead and take the last query the user
+
+631
+00:19:29,280 --> 00:19:29,679
+made
+
+632
+00:19:29,679 --> 00:19:33,280
+and i re-run that query on the next page
+
+633
+00:19:33,280 --> 00:19:35,919
+of the results so i continue searching
+
+634
+00:19:35,919 --> 00:19:37,280
+for whatever the sutures
+
+635
+00:19:37,280 --> 00:19:39,679
+whatever the user searched for last
+
+636
+00:19:39,679 --> 00:19:40,880
+however if i was
+
+637
+00:19:40,880 --> 00:19:42,880
+passed a query then i go ahead and
+
+638
+00:19:42,880 --> 00:19:45,520
+actually run a brand new search
+
+639
+00:19:45,520 --> 00:19:49,120
+against the omdb api both of these code
+
+640
+00:19:49,120 --> 00:19:49,679
+paths
+
+641
+00:19:49,679 --> 00:19:51,840
+will end up putting a url in this
+
+642
+00:19:51,840 --> 00:19:53,919
+variable which we then go ahead and
+
+643
+00:19:53,919 --> 00:19:56,960
+query using the same url session
+
+644
+00:19:56,960 --> 00:20:00,000
+shared data function so this logic is
+
+645
+00:20:00,000 --> 00:20:01,360
+effectively the same
+
+646
+00:20:01,360 --> 00:20:03,280
+as what you had seen up here for
+
+647
+00:20:03,280 --> 00:20:05,120
+downloading posters
+
+648
+00:20:05,120 --> 00:20:07,600
+after that i do of course try and decode
+
+649
+00:20:07,600 --> 00:20:08,480
+the result
+
+650
+00:20:08,480 --> 00:20:12,559
+of the api into my search api response
+
+651
+00:20:12,559 --> 00:20:15,440
+structure and then i only return the
+
+652
+00:20:15,440 --> 00:20:15,919
+search
+
+653
+00:20:15,919 --> 00:20:18,559
+field which is an array of movies as you
+
+654
+00:20:18,559 --> 00:20:19,440
+can see
+
+655
+00:20:19,440 --> 00:20:22,720
+here after that there is one more
+
+656
+00:20:22,720 --> 00:20:24,720
+asynchronous function within the api
+
+657
+00:20:24,720 --> 00:20:28,000
+and it's called plot plot takes a movie
+
+658
+00:20:28,000 --> 00:20:30,960
+and it returns a string the string is
+
+659
+00:20:30,960 --> 00:20:32,240
+the plot of the movie
+
+660
+00:20:32,240 --> 00:20:34,240
+it's asynchronous and can throw an error
+
+661
+00:20:34,240 --> 00:20:36,000
+and is effectively the same as the two
+
+662
+00:20:36,000 --> 00:20:37,520
+functions you've seen before
+
+663
+00:20:37,520 --> 00:20:40,799
+it tries to convert a string to a url
+
+664
+00:20:40,799 --> 00:20:42,960
+after which it tries to make a url
+
+665
+00:20:42,960 --> 00:20:44,000
+request
+
+666
+00:20:44,000 --> 00:20:45,760
+and after that request it goes ahead and
+
+667
+00:20:45,760 --> 00:20:47,440
+takes the response make sure it's
+
+668
+00:20:47,440 --> 00:20:50,640
+valid and then returns the json of that
+
+669
+00:20:50,640 --> 00:20:52,480
+response specifically it returns the
+
+670
+00:20:52,480 --> 00:20:56,000
+actual plot string now in order to use
+
+671
+00:20:56,000 --> 00:20:58,159
+this api i've gone ahead and built a
+
+672
+00:20:58,159 --> 00:20:59,840
+little swift ui application
+
+673
+00:20:59,840 --> 00:21:03,200
+and this is the ui code we start off
+
+674
+00:21:03,200 --> 00:21:05,039
+with our content view structure in which
+
+675
+00:21:05,039 --> 00:21:07,039
+i create a new api instance
+
+676
+00:21:07,039 --> 00:21:09,039
+and i define two state variables which
+
+677
+00:21:09,039 --> 00:21:10,080
+is the search query
+
+678
+00:21:10,080 --> 00:21:11,440
+and the array of movies that we're
+
+679
+00:21:11,440 --> 00:21:14,320
+currently rendering on screen as a list
+
+680
+00:21:14,320 --> 00:21:16,880
+after that i've got my body variable
+
+681
+00:21:16,880 --> 00:21:18,720
+within the body variable i simply create
+
+682
+00:21:18,720 --> 00:21:20,400
+a v stack and this enables me just you
+
+683
+00:21:20,400 --> 00:21:22,080
+know to do some ui formatting
+
+684
+00:21:22,080 --> 00:21:23,760
+i put a bit of a title at the top of the
+
+685
+00:21:23,760 --> 00:21:26,159
+application and then i put an actual
+
+686
+00:21:26,159 --> 00:21:27,280
+search field
+
+687
+00:21:27,280 --> 00:21:28,880
+now when you click enter on the search
+
+688
+00:21:28,880 --> 00:21:30,480
+field when you commit on that search
+
+689
+00:21:30,480 --> 00:21:30,960
+field
+
+690
+00:21:30,960 --> 00:21:33,360
+i go ahead and submit a new query for
+
+691
+00:21:33,360 --> 00:21:34,559
+the whatever movie you've
+
+692
+00:21:34,559 --> 00:21:37,520
+you know typed in and i go ahead and
+
+693
+00:21:37,520 --> 00:21:40,000
+hide the keyboard with this line of code
+
+694
+00:21:40,000 --> 00:21:41,919
+then i've got a very simple list and
+
+695
+00:21:41,919 --> 00:21:43,600
+this list goes through each of the
+
+696
+00:21:43,600 --> 00:21:45,360
+movies in your array
+
+697
+00:21:45,360 --> 00:21:47,039
+and for each movie it creates a new
+
+698
+00:21:47,039 --> 00:21:49,600
+movie cell view passing it the api and
+
+699
+00:21:49,600 --> 00:21:51,440
+the movie that it needs to render
+
+700
+00:21:51,440 --> 00:21:53,919
+and if this movie appears on screen if
+
+701
+00:21:53,919 --> 00:21:55,679
+the cell appears on screen
+
+702
+00:21:55,679 --> 00:21:57,440
+and if the movie it's rendering is the
+
+703
+00:21:57,440 --> 00:21:58,880
+last in the list then i
+
+704
+00:21:58,880 --> 00:22:01,120
+refresh the movies i load some new
+
+705
+00:22:01,120 --> 00:22:02,400
+movies in
+
+706
+00:22:02,400 --> 00:22:04,320
+now the movie cell view is defined up
+
+707
+00:22:04,320 --> 00:22:06,320
+here within the movie sel
+
+708
+00:22:06,320 --> 00:22:09,120
+within the movie cell view all i really
+
+709
+00:22:09,120 --> 00:22:10,240
+need to define
+
+710
+00:22:10,240 --> 00:22:12,080
+are the api and the movie that i'm
+
+711
+00:22:12,080 --> 00:22:13,360
+trying to render
+
+712
+00:22:13,360 --> 00:22:15,280
+now what i can do from within this movie
+
+713
+00:22:15,280 --> 00:22:17,440
+cell view is i can take a look
+
+714
+00:22:17,440 --> 00:22:19,840
+at the poster of course this is an
+
+715
+00:22:19,840 --> 00:22:21,120
+optional ui image
+
+716
+00:22:21,120 --> 00:22:22,559
+i can take a look at whether or not the
+
+717
+00:22:22,559 --> 00:22:24,880
+poster was actually loaded successfully
+
+718
+00:22:24,880 --> 00:22:28,159
+and i can take a look at the plot of the
+
+719
+00:22:28,159 --> 00:22:30,799
+of the movie now when you actually go
+
+720
+00:22:30,799 --> 00:22:32,720
+ahead and load in one of these movie
+
+721
+00:22:32,720 --> 00:22:34,320
+cell views
+
+722
+00:22:34,320 --> 00:22:35,760
+then the first thing i do is of course
+
+723
+00:22:35,760 --> 00:22:38,000
+within the body i create a horizontal
+
+724
+00:22:38,000 --> 00:22:40,000
+stack and that horizontal stack contains
+
+725
+00:22:40,000 --> 00:22:42,320
+the poster which is defined up here as
+
+726
+00:22:42,320 --> 00:22:43,120
+well as the
+
+727
+00:22:43,120 --> 00:22:46,559
+movie's title year and plot
+
+728
+00:22:46,559 --> 00:22:47,840
+now let's go ahead and take a look at
+
+729
+00:22:47,840 --> 00:22:49,280
+the poster logic since that's very
+
+730
+00:22:49,280 --> 00:22:50,000
+interesting
+
+731
+00:22:50,000 --> 00:22:51,919
+if we already have a poster and it's not
+
+732
+00:22:51,919 --> 00:22:54,720
+nil we go ahead and show that poster
+
+733
+00:22:54,720 --> 00:22:58,080
+if we don't have a poster and we know
+
+734
+00:22:58,080 --> 00:22:59,120
+that it hasn't
+
+735
+00:22:59,120 --> 00:23:01,360
+failed to load meaning the post or bad
+
+736
+00:23:01,360 --> 00:23:02,400
+is not true
+
+737
+00:23:02,400 --> 00:23:03,840
+then we show a progress view which is
+
+738
+00:23:03,840 --> 00:23:05,840
+that little spinning indicator
+
+739
+00:23:05,840 --> 00:23:08,799
+but if it's nil and the asynchronous
+
+740
+00:23:08,799 --> 00:23:09,280
+task
+
+741
+00:23:09,280 --> 00:23:11,600
+set post or bad true meaning it failed
+
+742
+00:23:11,600 --> 00:23:12,400
+to load
+
+743
+00:23:12,400 --> 00:23:14,720
+then we just show nothing a transparent
+
+744
+00:23:14,720 --> 00:23:15,760
+rectangle
+
+745
+00:23:15,760 --> 00:23:18,400
+making it so that there's nothing there
+
+746
+00:23:18,400 --> 00:23:19,200
+and of course
+
+747
+00:23:19,200 --> 00:23:21,440
+you know showing the title year and plot
+
+748
+00:23:21,440 --> 00:23:22,960
+is very simple
+
+749
+00:23:22,960 --> 00:23:24,960
+however when this h stack appears on
+
+750
+00:23:24,960 --> 00:23:26,320
+screen for the first time
+
+751
+00:23:26,320 --> 00:23:28,640
+then we go ahead and load in the actual
+
+752
+00:23:28,640 --> 00:23:30,480
+poster and plot by calling
+
+753
+00:23:30,480 --> 00:23:33,600
+load poster and load plot both of these
+
+754
+00:23:33,600 --> 00:23:35,440
+functions need to make a call to an
+
+755
+00:23:35,440 --> 00:23:36,960
+asynchronous function but these
+
+756
+00:23:36,960 --> 00:23:38,080
+functions themselves
+
+757
+00:23:38,080 --> 00:23:40,960
+are not asynchronous as you can see over
+
+758
+00:23:40,960 --> 00:23:42,159
+here and over here
+
+759
+00:23:42,159 --> 00:23:44,880
+and so what i do is i use this
+
+760
+00:23:44,880 --> 00:23:46,880
+asynchronous task feature of swift
+
+761
+00:23:46,880 --> 00:23:48,960
+to have this brand new block of code
+
+762
+00:23:48,960 --> 00:23:51,039
+effectively and what this block of code
+
+763
+00:23:51,039 --> 00:23:51,600
+does
+
+764
+00:23:51,600 --> 00:23:53,600
+is it launches in like this new thread
+
+765
+00:23:53,600 --> 00:23:55,200
+in an asynchronous environment
+
+766
+00:23:55,200 --> 00:23:56,960
+where the entire call stack is
+
+767
+00:23:56,960 --> 00:23:58,960
+potentially suspendable and so you can
+
+768
+00:23:58,960 --> 00:24:00,080
+make calls
+
+769
+00:24:00,080 --> 00:24:02,640
+into asynchronous functions so for
+
+770
+00:24:02,640 --> 00:24:03,440
+example here
+
+771
+00:24:03,440 --> 00:24:06,400
+i can try and assign the poster from the
+
+772
+00:24:06,400 --> 00:24:07,039
+movie
+
+773
+00:24:07,039 --> 00:24:10,240
+to self.poster and if i catch an error
+
+774
+00:24:10,240 --> 00:24:13,200
+i can set post or bad to true and here's
+
+775
+00:24:13,200 --> 00:24:14,480
+what's really interesting
+
+776
+00:24:14,480 --> 00:24:16,400
+what happens is when you run this async
+
+777
+00:24:16,400 --> 00:24:17,520
+block of code
+
+778
+00:24:17,520 --> 00:24:19,760
+load poster is actually going to return
+
+779
+00:24:19,760 --> 00:24:20,799
+immediately
+
+780
+00:24:20,799 --> 00:24:23,520
+so load poster here isn't going to wait
+
+781
+00:24:23,520 --> 00:24:24,799
+to load the poster
+
+782
+00:24:24,799 --> 00:24:27,279
+before you load the plot because async
+
+783
+00:24:27,279 --> 00:24:27,840
+just
+
+784
+00:24:27,840 --> 00:24:30,159
+makes it return instantly now if i were
+
+785
+00:24:30,159 --> 00:24:31,919
+doing something
+
+786
+00:24:31,919 --> 00:24:33,919
+else here like for example if i printed
+
+787
+00:24:33,919 --> 00:24:35,039
+async called
+
+788
+00:24:35,039 --> 00:24:37,360
+async wouldn't make this function return
+
+789
+00:24:37,360 --> 00:24:38,320
+it would rather
+
+790
+00:24:38,320 --> 00:24:40,480
+go do the print and then return but the
+
+791
+00:24:40,480 --> 00:24:42,159
+point is that async
+
+792
+00:24:42,159 --> 00:24:44,559
+does not wait for whatever is inside of
+
+793
+00:24:44,559 --> 00:24:45,360
+it to finish
+
+794
+00:24:45,360 --> 00:24:46,799
+before the rest of your function
+
+795
+00:24:46,799 --> 00:24:49,840
+continues to execute
+
+796
+00:24:49,840 --> 00:24:51,840
+and so once we go ahead and load in the
+
+797
+00:24:51,840 --> 00:24:52,880
+poster in the plot
+
+798
+00:24:52,880 --> 00:24:54,400
+we've already got our movie cell view
+
+799
+00:24:54,400 --> 00:24:56,480
+done then after that all that's left
+
+800
+00:24:56,480 --> 00:24:58,159
+within the actual content view
+
+801
+00:24:58,159 --> 00:24:59,840
+is the code for searching for movies
+
+802
+00:24:59,840 --> 00:25:01,679
+which is very similarly
+
+803
+00:25:01,679 --> 00:25:04,559
+a simple wrapper around that omdb api
+
+804
+00:25:04,559 --> 00:25:05,360
+class
+
+805
+00:25:05,360 --> 00:25:07,039
+all it does is it takes the query which
+
+806
+00:25:07,039 --> 00:25:08,640
+by default we assume to be
+
+807
+00:25:08,640 --> 00:25:11,200
+uh nil and if the query is not nil
+
+808
+00:25:11,200 --> 00:25:12,799
+meaning we're trying to do a new search
+
+809
+00:25:12,799 --> 00:25:14,799
+we reset the movies that are currently
+
+810
+00:25:14,799 --> 00:25:16,159
+being rendered on screen
+
+811
+00:25:16,159 --> 00:25:17,679
+and then i go into an asynchronous
+
+812
+00:25:17,679 --> 00:25:19,360
+context and attempt to
+
+813
+00:25:19,360 --> 00:25:22,080
+wait for the api to give me a result for
+
+814
+00:25:22,080 --> 00:25:22,880
+that query
+
+815
+00:25:22,880 --> 00:25:25,039
+and if i do get a result then i go ahead
+
+816
+00:25:25,039 --> 00:25:27,600
+and add it to my swift ui state variable
+
+817
+00:25:27,600 --> 00:25:29,279
+which contains the movies we're trying
+
+818
+00:25:29,279 --> 00:25:31,679
+to render and that
+
+819
+00:25:31,679 --> 00:25:34,159
+is how async await functions work and
+
+820
+00:25:34,159 --> 00:25:35,360
+that's a really simple sample
+
+821
+00:25:35,360 --> 00:25:36,240
+application
+
+822
+00:25:36,240 --> 00:25:38,240
+that helps you actually use these
+
+823
+00:25:38,240 --> 00:25:39,520
+features in swift
+
+824
+00:25:39,520 --> 00:25:41,360
+yourself now i really do hope you
+
+825
+00:25:41,360 --> 00:25:43,120
+enjoyed this tutorial and i really do
+
+826
+00:25:43,120 --> 00:25:44,240
+hope it helped you out
+
+827
+00:25:44,240 --> 00:25:45,760
+now if it did once again please do make
+
+828
+00:25:45,760 --> 00:25:47,279
+sure to subscribe to the channel really
+
+829
+00:25:47,279 --> 00:25:48,240
+does help out a lot
+
+830
+00:25:48,240 --> 00:25:49,919
+like the video if you did enjoy and turn
+
+831
+00:25:49,919 --> 00:25:51,520
+on notifications so you know when i
+
+832
+00:25:51,520 --> 00:25:53,440
+release videos just like this one today
+
+833
+00:25:53,440 --> 00:25:55,120
+i can't wait to cover more of the brand
+
+834
+00:25:55,120 --> 00:25:56,480
+new swift features in some future
+
+835
+00:25:56,480 --> 00:25:57,279
+tutorials
+
+836
+00:25:57,279 --> 00:25:58,799
+make sure you stay tuned for that once
+
+837
+00:25:58,799 --> 00:26:00,640
+again any questions or suggestions
+
+838
+00:26:00,640 --> 00:26:01,600
+feel free to leave it down in the
+
+839
+00:26:01,600 --> 00:26:03,440
+comment section below or reach out to me
+
+840
+00:26:03,440 --> 00:26:05,279
+through social media or my email i'd
+
+841
+00:26:05,279 --> 00:26:06,720
+love to get in touch
+
+842
+00:26:06,720 --> 00:26:09,039
+apart from that once again thank you
+
+843
+00:26:09,039 --> 00:26:10,960
+very much for joining in today and
+
+844
+00:26:10,960 --> 00:26:13,919
+goodbye

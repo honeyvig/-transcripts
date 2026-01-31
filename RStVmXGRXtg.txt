@@ -1,0 +1,3751 @@
+1
+00:00:00,030 --> 00:00:01,829
+so hello there and welcome to another
+
+2
+00:00:01,829 --> 00:00:04,410
+tutorial my name is Tammy Bakshi and
+
+3
+00:00:04,410 --> 00:00:06,480
+today we're gonna be going over how you
+
+4
+00:00:06,480 --> 00:00:08,940
+can use the new Siri shortcuts feature
+
+5
+00:00:08,940 --> 00:00:11,820
+in iOS 12 to create an application that
+
+6
+00:00:11,820 --> 00:00:14,549
+can use custom intense with the Siri
+
+7
+00:00:14,549 --> 00:00:16,440
+kick it's really really interesting it's
+
+8
+00:00:16,440 --> 00:00:18,570
+a new feature by Apple and it really
+
+9
+00:00:18,570 --> 00:00:20,460
+allows developers to make much better
+
+10
+00:00:20,460 --> 00:00:22,740
+use of Siri than they ever could've done
+
+11
+00:00:22,740 --> 00:00:24,779
+before I'm sure you probably know that
+
+12
+00:00:24,779 --> 00:00:26,609
+last year were actually blessed last
+
+13
+00:00:26,609 --> 00:00:29,580
+year with iOS 10 Apple introduced Siri
+
+14
+00:00:29,580 --> 00:00:30,960
+kicks and developers can actually
+
+15
+00:00:30,960 --> 00:00:33,660
+incorporate their applications into Siri
+
+16
+00:00:33,660 --> 00:00:35,730
+so for example you can send say a
+
+17
+00:00:35,730 --> 00:00:38,100
+whatsapp message directly from Siri in
+
+18
+00:00:38,100 --> 00:00:39,600
+this instead of having to open up the
+
+19
+00:00:39,600 --> 00:00:42,000
+application allowing other developers to
+
+20
+00:00:42,000 --> 00:00:44,100
+use it but there's just one problem
+
+21
+00:00:44,100 --> 00:00:46,920
+unlike the Google assistant or Alexa or
+
+22
+00:00:46,920 --> 00:00:48,450
+any of the other personal assistant
+
+23
+00:00:48,450 --> 00:00:49,550
+libraries out there
+
+24
+00:00:49,550 --> 00:00:52,440
+sirikit helped refined intense with
+
+25
+00:00:52,440 --> 00:00:54,420
+their own entities that you as
+
+26
+00:00:54,420 --> 00:00:56,820
+developers could use however you could
+
+27
+00:00:56,820 --> 00:00:59,940
+not define your own custom intense or
+
+28
+00:00:59,940 --> 00:01:02,129
+entities and therefore you were limited
+
+29
+00:01:02,129 --> 00:01:04,530
+to the domains that Apple provided you
+
+30
+00:01:04,530 --> 00:01:06,390
+and if you try to use a workaround it
+
+31
+00:01:06,390 --> 00:01:08,610
+wouldn't be you know binding by the
+
+32
+00:01:08,610 --> 00:01:10,590
+human interface sidelines and so you
+
+33
+00:01:10,590 --> 00:01:12,330
+were very restricted with what you could
+
+34
+00:01:12,330 --> 00:01:12,689
+do
+
+35
+00:01:12,689 --> 00:01:15,299
+but with series shortcuts iOS becomes a
+
+36
+00:01:15,299 --> 00:01:17,070
+whole lot smarter even with your
+
+37
+00:01:17,070 --> 00:01:19,500
+application series shortcuts actually
+
+38
+00:01:19,500 --> 00:01:22,110
+enable the user first of all not only to
+
+39
+00:01:22,110 --> 00:01:23,759
+access your application and other
+
+40
+00:01:23,759 --> 00:01:25,770
+applications through Siri
+
+41
+00:01:25,770 --> 00:01:28,650
+but it also makes the whole of iOS more
+
+42
+00:01:28,650 --> 00:01:30,930
+intelligent for example let's just say
+
+43
+00:01:30,930 --> 00:01:32,070
+that you like to perform a certain
+
+44
+00:01:32,070 --> 00:01:34,229
+action maybe go to a certain website or
+
+45
+00:01:34,229 --> 00:01:36,960
+check your email at a very specific time
+
+46
+00:01:36,960 --> 00:01:40,170
+of day every single workday what's gonna
+
+47
+00:01:40,170 --> 00:01:42,240
+happen is eventually an iOS will learn
+
+48
+00:01:42,240 --> 00:01:44,610
+that pattern and after a few days or
+
+49
+00:01:44,610 --> 00:01:46,020
+weeks it'll automatically start
+
+50
+00:01:46,020 --> 00:01:47,939
+recommending to you and straight on the
+
+51
+00:01:47,939 --> 00:01:50,850
+lock screen or on spotlight whether or
+
+52
+00:01:50,850 --> 00:01:52,829
+not you actually want to jump straight
+
+53
+00:01:52,829 --> 00:01:55,770
+ahead to that action in fact users can
+
+54
+00:01:55,770 --> 00:01:57,810
+actually define their own custom
+
+55
+00:01:57,810 --> 00:02:00,899
+shortcuts as well for example what they
+
+56
+00:02:00,899 --> 00:02:02,159
+can do is actually put together these
+
+57
+00:02:02,159 --> 00:02:04,890
+really complex series shortcuts or
+
+58
+00:02:04,890 --> 00:02:07,259
+workflows and that's what I'm going to
+
+59
+00:02:07,259 --> 00:02:10,259
+be showing you how many you can do today
+
+60
+00:02:10,259 --> 00:02:11,730
+today I'm gonna show you not only how
+
+61
+00:02:11,730 --> 00:02:13,890
+you can actually develop a custom Siri
+
+62
+00:02:13,890 --> 00:02:16,379
+shortcuts application but also how you
+
+63
+00:02:16,379 --> 00:02:19,440
+create different Siri workflows and how
+
+64
+00:02:19,440 --> 00:02:21,540
+they actually work let's get into it
+
+65
+00:02:21,540 --> 00:02:23,909
+now first of all though let's focus on
+
+66
+00:02:23,909 --> 00:02:25,650
+the application and how it's gonna work
+
+67
+00:02:25,650 --> 00:02:28,290
+now I decided to give you a very simple
+
+68
+00:02:28,290 --> 00:02:30,450
+use case but one that's fun it should
+
+69
+00:02:30,450 --> 00:02:32,849
+really highlight where Siri shortcuts
+
+70
+00:02:32,849 --> 00:02:35,370
+are useful getting information or giving
+
+71
+00:02:35,370 --> 00:02:38,280
+information to applications now if you
+
+72
+00:02:38,280 --> 00:02:41,099
+are watching WWDC this year I'm sure
+
+73
+00:02:41,099 --> 00:02:43,310
+you've seen the demo of Ceres shortcuts
+
+74
+00:02:43,310 --> 00:02:46,049
+this one was specifically with the tile
+
+75
+00:02:46,049 --> 00:02:48,810
+application where you can say hey Siri I
+
+76
+00:02:48,810 --> 00:02:51,359
+lost my keys and it'll actually contact
+
+77
+00:02:51,359 --> 00:02:53,310
+the tile application to ring up
+
+78
+00:02:53,310 --> 00:02:56,220
+specifically your keys tile so you can
+
+79
+00:02:56,220 --> 00:02:59,190
+figure out where it is however what you
+
+80
+00:02:59,190 --> 00:03:01,410
+need to realize that Siri shortcuts is
+
+81
+00:03:01,410 --> 00:03:04,680
+that they are very very literal and
+
+82
+00:03:04,680 --> 00:03:07,109
+specific to the tasks that they've been
+
+83
+00:03:07,109 --> 00:03:09,959
+assigned to for example let's just say
+
+84
+00:03:09,959 --> 00:03:11,459
+you were following another one of my
+
+85
+00:03:11,459 --> 00:03:13,560
+tutorials on the Watson assistant or the
+
+86
+00:03:13,560 --> 00:03:16,680
+Alexa or the Google assistant and you
+
+87
+00:03:16,680 --> 00:03:18,299
+know that they can create interactive
+
+88
+00:03:18,299 --> 00:03:20,280
+chat experiences where you can actually
+
+89
+00:03:20,280 --> 00:03:22,590
+interact with the application so if you
+
+90
+00:03:22,590 --> 00:03:25,079
+were watching just by just one video
+
+91
+00:03:25,079 --> 00:03:26,819
+that I published very recently with Mark
+
+92
+00:03:26,819 --> 00:03:29,669
+Sturdivant we actually implemented the
+
+93
+00:03:29,669 --> 00:03:32,609
+Watson system onto the Alexa and Google
+
+94
+00:03:32,609 --> 00:03:34,620
+Google assistant and so you can actually
+
+95
+00:03:34,620 --> 00:03:37,709
+talk to the Watson for example rent a
+
+96
+00:03:37,709 --> 00:03:39,690
+car application and it would go through
+
+97
+00:03:39,690 --> 00:03:41,910
+a whole conversation workflow Siri
+
+98
+00:03:41,910 --> 00:03:44,700
+shortcuts is not like that so for
+
+99
+00:03:44,700 --> 00:03:46,019
+example let's just say you have five
+
+100
+00:03:46,019 --> 00:03:48,480
+titles and there's one series shortcut
+
+101
+00:03:48,480 --> 00:03:51,120
+to find a tile that Siri shortcut is
+
+102
+00:03:51,120 --> 00:03:53,870
+going to be hard-coded to find
+
+103
+00:03:53,870 --> 00:03:57,569
+specifically one kind of title or
+
+104
+00:03:57,569 --> 00:03:59,160
+whatever else you may be finding or
+
+105
+00:03:59,160 --> 00:04:01,650
+doing and so that's something you should
+
+106
+00:04:01,650 --> 00:04:03,840
+definitely keep in mind it's very very
+
+107
+00:04:03,840 --> 00:04:06,780
+specific to what you're trying to do and
+
+108
+00:04:06,780 --> 00:04:09,329
+so every different action that your user
+
+109
+00:04:09,329 --> 00:04:11,280
+takes in your application will need to
+
+110
+00:04:11,280 --> 00:04:13,620
+have a separate shortcut attached to it
+
+111
+00:04:13,620 --> 00:04:16,410
+nonetheless let's take a look at how you
+
+112
+00:04:16,410 --> 00:04:18,329
+can implement it in your applications
+
+113
+00:04:18,329 --> 00:04:19,380
+with a simple example
+
+114
+00:04:19,380 --> 00:04:20,950
+gathering rent
+
+115
+00:04:20,950 --> 00:04:23,290
+trivia fact about numbers from the
+
+116
+00:04:23,290 --> 00:04:26,050
+numbers API it may have heard of the
+
+117
+00:04:26,050 --> 00:04:27,820
+numbers API before it's a really really
+
+118
+00:04:27,820 --> 00:04:29,470
+interesting API that gives you all sorts
+
+119
+00:04:29,470 --> 00:04:33,040
+of fact about trivia about all around
+
+120
+00:04:33,040 --> 00:04:35,410
+numbers but because you also subtracts
+
+121
+00:04:35,410 --> 00:04:37,720
+around the current date or specific
+
+122
+00:04:37,720 --> 00:04:38,980
+number that you give to it or a random
+
+123
+00:04:38,980 --> 00:04:42,280
+number practically anything and it also
+
+124
+00:04:42,280 --> 00:04:46,060
+has a very very simple to use API it's
+
+125
+00:04:46,060 --> 00:04:48,430
+quite literally just a get request to a
+
+126
+00:04:48,430 --> 00:04:50,470
+single endpoint and it doesn't even give
+
+127
+00:04:50,470 --> 00:04:52,570
+you JSON it just gives you plain text
+
+128
+00:04:52,570 --> 00:04:54,610
+that you can go ahead and display in
+
+129
+00:04:54,610 --> 00:04:56,560
+your application so the app that we're
+
+130
+00:04:56,560 --> 00:04:58,450
+gonna build from scratch is very simple
+
+131
+00:04:58,450 --> 00:05:00,430
+it's just a button on a screen that you
+
+132
+00:05:00,430 --> 00:05:03,390
+click and it shows you in a message a
+
+133
+00:05:03,390 --> 00:05:07,270
+random trivia about another any ranked
+
+134
+00:05:07,270 --> 00:05:10,390
+number and then what happens is that can
+
+135
+00:05:10,390 --> 00:05:13,150
+also be extended to a series shortcut so
+
+136
+00:05:13,150 --> 00:05:15,100
+for example let's just say that every
+
+137
+00:05:15,100 --> 00:05:16,870
+day after you come out after you're done
+
+138
+00:05:16,870 --> 00:05:19,240
+work you exit your workplace and you
+
+139
+00:05:19,240 --> 00:05:21,430
+like to look up a random trivia fact
+
+140
+00:05:21,430 --> 00:05:24,070
+amount of numbers well Siri is actually
+
+141
+00:05:24,070 --> 00:05:25,360
+going to learn that and start
+
+142
+00:05:25,360 --> 00:05:27,430
+recommending to you whether or not you
+
+143
+00:05:27,430 --> 00:05:29,170
+want to do that completely automatically
+
+144
+00:05:29,170 --> 00:05:31,360
+and directly from your lock screen all
+
+145
+00:05:31,360 --> 00:05:33,280
+right you can actually add that shortcut
+
+146
+00:05:33,280 --> 00:05:35,890
+to Siri as a voice command so you can
+
+147
+00:05:35,890 --> 00:05:38,620
+raise up series say hey Siri show me
+
+148
+00:05:38,620 --> 00:05:40,660
+something new or tell me something about
+
+149
+00:05:40,660 --> 00:05:42,640
+a number and it'll automatically tell
+
+150
+00:05:42,640 --> 00:05:45,010
+you some kind of trivia about a random
+
+151
+00:05:45,010 --> 00:05:48,250
+number from the CPI however before you
+
+152
+00:05:48,250 --> 00:05:50,350
+can get to that though there are three
+
+153
+00:05:50,350 --> 00:05:53,170
+main steps that you need to handle in
+
+154
+00:05:53,170 --> 00:05:55,750
+your application number one is of course
+
+155
+00:05:55,750 --> 00:05:58,030
+the most important and that's meeting
+
+156
+00:05:58,030 --> 00:06:00,910
+sore sure that Siri knows exactly what
+
+157
+00:06:00,910 --> 00:06:03,310
+you want to do with Siri kicked it needs
+
+158
+00:06:03,310 --> 00:06:05,740
+to know what your shortcut is going to
+
+159
+00:06:05,740 --> 00:06:08,160
+do in the first place now this is called
+
+160
+00:06:08,160 --> 00:06:10,660
+defining your in text so essentially
+
+161
+00:06:10,660 --> 00:06:13,150
+what you're going to do is take your tag
+
+162
+00:06:13,150 --> 00:06:15,130
+to all the parameters that it needs from
+
+163
+00:06:15,130 --> 00:06:17,350
+the user and all the parameters that
+
+164
+00:06:17,350 --> 00:06:19,120
+it's going to give to the user and
+
+165
+00:06:19,120 --> 00:06:21,490
+you're going to define back so Siri
+
+166
+00:06:21,490 --> 00:06:24,130
+knows exactly what the user is talking
+
+167
+00:06:24,130 --> 00:06:26,590
+about and how your application is going
+
+168
+00:06:26,590 --> 00:06:30,400
+to handle that user input and then when
+
+169
+00:06:30,400 --> 00:06:32,230
+you define the intent it
+
+170
+00:06:32,230 --> 00:06:34,180
+important to let Siri know that this is
+
+171
+00:06:34,180 --> 00:06:36,220
+something valid something that the user
+
+172
+00:06:36,220 --> 00:06:38,770
+actually wants to do so what you're
+
+173
+00:06:38,770 --> 00:06:40,750
+gonna do is you're going to donate
+
+174
+00:06:40,750 --> 00:06:42,880
+intent that means that you're going to
+
+175
+00:06:42,880 --> 00:06:44,320
+take the intent that you just defined
+
+176
+00:06:44,320 --> 00:06:46,720
+and you're going to provide to Siri as
+
+177
+00:06:46,720 --> 00:06:49,960
+an iamb interaction object and what that
+
+178
+00:06:49,960 --> 00:06:51,670
+means is that Siri knows that this is
+
+179
+00:06:51,670 --> 00:06:53,650
+something that the user has done and you
+
+180
+00:06:53,650 --> 00:06:56,080
+can also provide supporting information
+
+181
+00:06:56,080 --> 00:06:58,360
+or data that can be helpful in making a
+
+182
+00:06:58,360 --> 00:07:00,340
+prediction we won't be getting into that
+
+183
+00:07:00,340 --> 00:07:02,200
+in this tutorial that's a very very
+
+184
+00:07:02,200 --> 00:07:04,810
+complex but we'll get to that in another
+
+185
+00:07:04,810 --> 00:07:08,020
+tutorial very soon however what you can
+
+186
+00:07:08,020 --> 00:07:10,030
+do from here is again as I mentioned
+
+187
+00:07:10,030 --> 00:07:12,760
+donate mutant but let's just say that
+
+188
+00:07:12,760 --> 00:07:14,620
+you've got a really complex app would
+
+189
+00:07:14,620 --> 00:07:16,510
+say five different possible series
+
+190
+00:07:16,510 --> 00:07:18,640
+shortcuts now let's just say there are
+
+191
+00:07:18,640 --> 00:07:20,770
+only three features of your application
+
+192
+00:07:20,770 --> 00:07:23,710
+that your user ever uses then that case
+
+193
+00:07:23,710 --> 00:07:26,140
+are only going to ever donate three
+
+194
+00:07:26,140 --> 00:07:28,330
+shortcuts or you're going to donate that
+
+195
+00:07:28,330 --> 00:07:31,060
+shortcut every time the user uses that
+
+196
+00:07:31,060 --> 00:07:33,970
+specific feature in your application if
+
+197
+00:07:33,970 --> 00:07:36,190
+they don't use a feature do not donate
+
+198
+00:07:36,190 --> 00:07:38,380
+the shortcut that is Apple's guideline
+
+199
+00:07:38,380 --> 00:07:40,450
+and that will ensure the Siri only
+
+200
+00:07:40,450 --> 00:07:42,310
+recognized shortcuts that are relevant
+
+201
+00:07:42,310 --> 00:07:44,200
+to the user and what they want to do
+
+202
+00:07:44,200 --> 00:07:47,080
+back to what we were talking about then
+
+203
+00:07:47,080 --> 00:07:48,610
+once you've defined and once you
+
+204
+00:07:48,610 --> 00:07:50,470
+understood exactly how the donation
+
+205
+00:07:50,470 --> 00:07:52,630
+scheme is going to work then you go
+
+206
+00:07:52,630 --> 00:07:56,320
+ahead and donate the intent so let me
+
+207
+00:07:56,320 --> 00:07:59,230
+give you an example with trivia now in
+
+208
+00:07:59,230 --> 00:08:00,790
+terms of premium this is really really
+
+209
+00:08:00,790 --> 00:08:03,160
+simple it's just we define the intent
+
+210
+00:08:03,160 --> 00:08:04,840
+once which is essentially just saying
+
+211
+00:08:04,840 --> 00:08:07,360
+all right the intent is that a random
+
+212
+00:08:07,360 --> 00:08:09,790
+trivia about a number and we're going to
+
+213
+00:08:09,790 --> 00:08:13,120
+provide a string called trivia and then
+
+214
+00:08:13,120 --> 00:08:15,610
+after that every single time the user
+
+215
+00:08:15,610 --> 00:08:17,860
+not only open the application but every
+
+216
+00:08:17,860 --> 00:08:19,930
+time they specifically query for a
+
+217
+00:08:19,930 --> 00:08:22,870
+trivia and every time they do that we're
+
+218
+00:08:22,870 --> 00:08:25,030
+going to donate that shortcut over to
+
+219
+00:08:25,030 --> 00:08:27,160
+Siri so that Siri understands that hey
+
+220
+00:08:27,160 --> 00:08:30,040
+this time is when the user was actually
+
+221
+00:08:30,040 --> 00:08:32,680
+trying to look for some trivia after
+
+222
+00:08:32,680 --> 00:08:34,870
+that is what the really interesting part
+
+223
+00:08:34,870 --> 00:08:36,940
+comes in then you've got to implement
+
+224
+00:08:36,940 --> 00:08:39,490
+some code that actually handles the
+
+225
+00:08:39,490 --> 00:08:41,349
+intent because you see if you're not
+
+226
+00:08:41,349 --> 00:08:44,080
+handling the intent then Siri has no
+
+227
+00:08:44,080 --> 00:08:46,120
+code to call in your application to
+
+228
+00:08:46,120 --> 00:08:48,610
+actually figure out what the intent
+
+229
+00:08:48,610 --> 00:08:51,460
+means and what the user should be given
+
+230
+00:08:51,460 --> 00:08:53,590
+so first you're gonna define then you're
+
+231
+00:08:53,590 --> 00:08:55,060
+gonna donate and then you're going to
+
+232
+00:08:55,060 --> 00:08:59,530
+handle the shortcut it's as simple as
+
+233
+00:08:59,530 --> 00:09:02,620
+that and then once you've got this all
+
+234
+00:09:02,620 --> 00:09:07,140
+in London you're ready to go ahead and
+
+235
+00:09:07,140 --> 00:09:09,760
+implement your app with Siri shortcuts
+
+236
+00:09:09,760 --> 00:09:12,210
+for intelligent predictions on iOS and
+
+237
+00:09:12,210 --> 00:09:14,620
+custom voice commands of the Siri
+
+238
+00:09:14,620 --> 00:09:16,540
+connector that the user can actually use
+
+239
+00:09:16,540 --> 00:09:19,240
+in their custom series shortcut
+
+240
+00:09:19,240 --> 00:09:22,090
+workflows and so that is just a quick
+
+241
+00:09:22,090 --> 00:09:24,490
+example of how you can create your own
+
+242
+00:09:24,490 --> 00:09:26,230
+series shortcuts of course there is a
+
+243
+00:09:26,230 --> 00:09:28,030
+lot more that you can do in Syria
+
+244
+00:09:28,030 --> 00:09:30,010
+shortcuts you can actually create your
+
+245
+00:09:30,010 --> 00:09:32,530
+own custom UIs as well with Siri
+
+246
+00:09:32,530 --> 00:09:35,200
+shortcut what that means is that you can
+
+247
+00:09:35,200 --> 00:09:37,660
+actually go ahead and say display a
+
+248
+00:09:37,660 --> 00:09:40,300
+graph or display a certain image on your
+
+249
+00:09:40,300 --> 00:09:42,460
+Siri shortcut so right as the user
+
+250
+00:09:42,460 --> 00:09:44,140
+actually activates the voice command or
+
+251
+00:09:44,140 --> 00:09:47,320
+force taps on the shortcut a lot on the
+
+252
+00:09:47,320 --> 00:09:49,210
+lock screen it'll automatically show
+
+253
+00:09:49,210 --> 00:09:52,030
+them a custom user interface that you've
+
+254
+00:09:52,030 --> 00:09:55,090
+designed for your shortcut but now know
+
+255
+00:09:55,090 --> 00:09:56,800
+let's get into how you can actually
+
+256
+00:09:56,800 --> 00:09:59,020
+implement this intent but before that
+
+257
+00:09:59,020 --> 00:10:01,780
+let's get into a demo of how it works so
+
+258
+00:10:01,780 --> 00:10:03,370
+you understand the application that
+
+259
+00:10:03,370 --> 00:10:05,050
+we're going to be building in fact I'm
+
+260
+00:10:05,050 --> 00:10:06,310
+going to show you how to build this
+
+261
+00:10:06,310 --> 00:10:08,620
+entire application from scratch and from
+
+262
+00:10:08,620 --> 00:10:10,380
+the ground up let's get into it
+
+263
+00:10:10,380 --> 00:10:12,910
+let's take a look at a demo of the
+
+264
+00:10:12,910 --> 00:10:15,610
+application in action as you can see on
+
+265
+00:10:15,610 --> 00:10:17,260
+my home screen over here I can go ahead
+
+266
+00:10:17,260 --> 00:10:18,820
+and click on the number trivia
+
+267
+00:10:18,820 --> 00:10:20,980
+application it's a really simple user
+
+268
+00:10:20,980 --> 00:10:22,630
+interface essentially I just click on
+
+269
+00:10:22,630 --> 00:10:24,850
+the give me some trivia button and it
+
+270
+00:10:24,850 --> 00:10:27,760
+instantly queries the number API in
+
+271
+00:10:27,760 --> 00:10:30,610
+order to tell me that one three six two
+
+272
+00:10:30,610 --> 00:10:32,110
+three one zero one five five is the
+
+273
+00:10:32,110 --> 00:10:34,600
+total number of items of mail that went
+
+274
+00:10:34,600 --> 00:10:36,750
+through the Canadian postal system in
+
+275
+00:10:36,750 --> 00:10:40,240
+1950 how randomly fitting so I click on
+
+276
+00:10:40,240 --> 00:10:42,160
+OK and I can just keep doing this I can
+
+277
+00:10:42,160 --> 00:10:45,130
+keep on keep on asking for some trivia
+
+278
+00:10:45,130 --> 00:10:47,890
+it says over here 600 is the maximum
+
+279
+00:10:47,890 --> 00:10:49,990
+credit score considered poor thus
+
+280
+00:10:49,990 --> 00:10:52,120
+limiting available credit in the u.s. a
+
+281
+00:10:52,120 --> 00:10:54,420
+I can just keep going here
+
+282
+00:10:54,420 --> 00:10:58,269
+from there though what I can do is take
+
+283
+00:10:58,269 --> 00:11:00,069
+a look at the shortcuts feature in
+
+284
+00:11:00,069 --> 00:11:03,250
+action now usually of course you can
+
+285
+00:11:03,250 --> 00:11:05,500
+swipe up and take a look at series
+
+286
+00:11:05,500 --> 00:11:07,600
+suggestions for different shortcuts that
+
+287
+00:11:07,600 --> 00:11:09,750
+it thinks you may want to execute
+
+288
+00:11:09,750 --> 00:11:12,939
+however in this case we haven't donated
+
+289
+00:11:12,939 --> 00:11:15,970
+the intent enough times or Siri doesn't
+
+290
+00:11:15,970 --> 00:11:18,850
+think that the intent is relevant enough
+
+291
+00:11:18,850 --> 00:11:20,829
+to my needs right now to actually
+
+292
+00:11:20,829 --> 00:11:24,009
+display it over here in spotlight but
+
+293
+00:11:24,009 --> 00:11:25,810
+since I'm a developer and I want to test
+
+294
+00:11:25,810 --> 00:11:29,019
+my application what I can do is go to
+
+295
+00:11:29,019 --> 00:11:32,230
+settings and scroll down to the
+
+296
+00:11:32,230 --> 00:11:35,139
+developer page once I'm there I just
+
+297
+00:11:35,139 --> 00:11:38,170
+scroll down and I click on display
+
+298
+00:11:38,170 --> 00:11:40,899
+recent shortcuts and display donations
+
+299
+00:11:40,899 --> 00:11:43,300
+on lock screen what this is gonna do
+
+300
+00:11:43,300 --> 00:11:45,579
+it's gonna actually show me right as I
+
+301
+00:11:45,579 --> 00:11:48,040
+go into spotlight the recent shortcuts
+
+302
+00:11:48,040 --> 00:11:50,470
+that were donated in the Siri kit system
+
+303
+00:11:50,470 --> 00:11:53,769
+as you can see on the top is the get
+
+304
+00:11:53,769 --> 00:11:56,290
+random trivia shortcut in fact if I were
+
+305
+00:11:56,290 --> 00:11:57,879
+to click on it it would instantly
+
+306
+00:11:57,879 --> 00:12:00,279
+provide me some trivia without needing
+
+307
+00:12:00,279 --> 00:12:02,860
+to open the application directly from
+
+308
+00:12:02,860 --> 00:12:05,050
+spotlight in fact it says over here
+
+309
+00:12:05,050 --> 00:12:07,720
+here's some trivia 441 is the number of
+
+310
+00:12:07,720 --> 00:12:09,399
+squares on the super Scrabble board
+
+311
+00:12:09,399 --> 00:12:12,160
+pretty interesting now if I were to exit
+
+312
+00:12:12,160 --> 00:12:13,959
+this we can do something even more
+
+313
+00:12:13,959 --> 00:12:16,089
+fascinating let's open up the shortcuts
+
+314
+00:12:16,089 --> 00:12:18,910
+workflow application I'm gonna create a
+
+315
+00:12:18,910 --> 00:12:21,339
+new shortcut now this is where you can
+
+316
+00:12:21,339 --> 00:12:23,920
+build your own custom with Siri shortcut
+
+317
+00:12:23,920 --> 00:12:27,370
+workflows now inside of here I can
+
+318
+00:12:27,370 --> 00:12:29,290
+search for different kinds of actions
+
+319
+00:12:29,290 --> 00:12:31,899
+that I can apply inside of my Siri
+
+320
+00:12:31,899 --> 00:12:34,120
+shortcut workflow now either I could
+
+321
+00:12:34,120 --> 00:12:36,610
+search for something or I could click on
+
+322
+00:12:36,610 --> 00:12:39,309
+Siri suggestions and it would suggest a
+
+323
+00:12:39,309 --> 00:12:41,439
+bunch of different shortcuts that it
+
+324
+00:12:41,439 --> 00:12:45,180
+thinks would be relevant to my needs
+
+325
+00:12:51,780 --> 00:12:55,180
+now I search for some kind of shortcut
+
+326
+00:12:55,180 --> 00:12:56,860
+or I could click on searing suggestions
+
+327
+00:12:56,860 --> 00:12:58,450
+right over here and it would show me
+
+328
+00:12:58,450 --> 00:12:59,710
+suggestions that are important to my
+
+329
+00:12:59,710 --> 00:13:00,850
+needs but I'm not gonna click that
+
+330
+00:13:00,850 --> 00:13:03,340
+button right now I'm gonna search for a
+
+331
+00:13:03,340 --> 00:13:05,560
+shortcut in this case I'm going to
+
+332
+00:13:05,560 --> 00:13:10,180
+search for trivia now as you can see it
+
+333
+00:13:10,180 --> 00:13:12,100
+recommends in the series suggestions
+
+334
+00:13:12,100 --> 00:13:14,920
+pane get random trivia so I'm going to
+
+335
+00:13:14,920 --> 00:13:16,840
+click on it and essentially this
+
+336
+00:13:16,840 --> 00:13:19,300
+shortcut is now going to run my number
+
+337
+00:13:19,300 --> 00:13:21,640
+trivia application I'm gonna click on
+
+338
+00:13:21,640 --> 00:13:23,800
+the options menu on the top right and
+
+339
+00:13:23,800 --> 00:13:27,220
+I'm gonna give this this shortcut a name
+
+340
+00:13:27,220 --> 00:13:32,020
+let's just say number trivia app gonna
+
+341
+00:13:32,020 --> 00:13:34,240
+click done and then I can even provide
+
+342
+00:13:34,240 --> 00:13:36,610
+it a Siri phrase I've already recorded a
+
+343
+00:13:36,610 --> 00:13:38,650
+phrase for this one it's called show me
+
+344
+00:13:38,650 --> 00:13:41,440
+a numbered trivia if I want to click
+
+345
+00:13:41,440 --> 00:13:43,750
+done and then done again and we're done
+
+346
+00:13:43,750 --> 00:13:45,820
+once more it should register the
+
+347
+00:13:45,820 --> 00:13:48,250
+shortcut in the series system and so now
+
+348
+00:13:48,250 --> 00:13:50,890
+not only can I go into spotlight and
+
+349
+00:13:50,890 --> 00:13:53,560
+take a look at those suggestions but I
+
+350
+00:13:53,560 --> 00:13:55,540
+can actually activate this through Siri
+
+351
+00:13:55,540 --> 00:13:58,470
+let's take a look
+
+352
+00:13:59,130 --> 00:14:14,470
+show me a numbered trivia that is pretty
+
+353
+00:14:14,470 --> 00:14:16,540
+interesting and now as you can see I do
+
+354
+00:14:16,540 --> 00:14:18,280
+not need to do anything I don't need to
+
+355
+00:14:18,280 --> 00:14:20,830
+open up my application directly within
+
+356
+00:14:20,830 --> 00:14:23,800
+Siri voice interface I will to ask my
+
+357
+00:14:23,800 --> 00:14:25,360
+application for some entered information
+
+358
+00:14:25,360 --> 00:14:28,120
+or even adjust what my application is
+
+359
+00:14:28,120 --> 00:14:30,130
+doing based on some information that I
+
+360
+00:14:30,130 --> 00:14:32,740
+provide it inside of the shortcut now
+
+361
+00:14:32,740 --> 00:14:34,660
+what I need you to realize is that this
+
+362
+00:14:34,660 --> 00:14:37,089
+is a special kind of shortcut as you can
+
+363
+00:14:37,089 --> 00:14:39,700
+see the shortcut did not open my
+
+364
+00:14:39,700 --> 00:14:41,800
+application it just queried some
+
+365
+00:14:41,800 --> 00:14:43,990
+information from the application in
+
+366
+00:14:43,990 --> 00:14:47,380
+order to run it inside of the Siri Siri
+
+367
+00:14:47,380 --> 00:14:50,050
+voice interface over here now what that
+
+368
+00:14:50,050 --> 00:14:52,210
+means is that this is a shortcut that
+
+369
+00:14:52,210 --> 00:14:54,880
+supports background execution my
+
+370
+00:14:54,880 --> 00:14:56,800
+application can be closed or in the
+
+371
+00:14:56,800 --> 00:14:59,290
+background while searing is able to
+
+372
+00:14:59,290 --> 00:15:01,720
+query it now serious shortcuts provides
+
+373
+00:15:01,720 --> 00:15:02,800
+priority to
+
+374
+00:15:02,800 --> 00:15:05,200
+specifically shortcuts that actually
+
+375
+00:15:05,200 --> 00:15:07,170
+have support for background execution
+
+376
+00:15:07,170 --> 00:15:09,730
+meaning that if you're able to always
+
+377
+00:15:09,730 --> 00:15:11,649
+make sure to enable background execution
+
+378
+00:15:11,649 --> 00:15:13,600
+to enable a better interface for your
+
+379
+00:15:13,600 --> 00:15:16,240
+users allowed to be more flexible but at
+
+380
+00:15:16,240 --> 00:15:18,850
+the same time make it so that well you
+
+381
+00:15:18,850 --> 00:15:20,950
+can have this kind of priority access
+
+382
+00:15:20,950 --> 00:15:23,380
+inside of the Siri shortcut system first
+
+383
+00:15:23,380 --> 00:15:24,970
+there are many other ways to access it
+
+384
+00:15:24,970 --> 00:15:26,950
+like through the lock screen and I've
+
+385
+00:15:26,950 --> 00:15:29,649
+already shown you spotlight as well all
+
+386
+00:15:29,649 --> 00:15:32,320
+right and so that is a quick demo of
+
+387
+00:15:32,320 --> 00:15:34,120
+seeing shortcuts in action now let's
+
+388
+00:15:34,120 --> 00:15:35,860
+actually go ahead and build this entire
+
+389
+00:15:35,860 --> 00:15:38,110
+application from scratch let's take a
+
+390
+00:15:38,110 --> 00:15:40,300
+look all right so as you can see on
+
+391
+00:15:40,300 --> 00:15:42,190
+screen right now I've got the latest
+
+392
+00:15:42,190 --> 00:15:45,339
+version of Xcode Xcode 10 installed on
+
+393
+00:15:45,339 --> 00:15:48,490
+my Mac running Mac OS Mojave so now what
+
+394
+00:15:48,490 --> 00:15:50,470
+I can do is I can create a new Xcode
+
+395
+00:15:50,470 --> 00:15:53,680
+project for the application this Xcode
+
+396
+00:15:53,680 --> 00:15:55,450
+project we can just create a simple
+
+397
+00:15:55,450 --> 00:15:57,670
+single view application and we call it
+
+398
+00:15:57,670 --> 00:16:01,300
+something like number trivia YouTube
+
+399
+00:16:01,300 --> 00:16:05,110
+edition I click return and create it and
+
+400
+00:16:05,110 --> 00:16:10,450
+save it on my desktop that's created as
+
+401
+00:16:10,450 --> 00:16:11,890
+you can see it's creating a very very
+
+402
+00:16:11,890 --> 00:16:13,899
+simple application structure for me
+
+403
+00:16:13,899 --> 00:16:15,670
+however I don't want this application
+
+404
+00:16:15,670 --> 00:16:18,399
+structure or this Xcode project
+
+405
+00:16:18,399 --> 00:16:22,839
+structure because I want a version of
+
+406
+00:16:22,839 --> 00:16:25,720
+Xcode that's actually able to support
+
+407
+00:16:25,720 --> 00:16:28,600
+cocoa pods now if you haven't used cocoa
+
+408
+00:16:28,600 --> 00:16:31,680
+pods before essentially they allow you
+
+409
+00:16:31,680 --> 00:16:35,410
+to install libraries like for example a
+
+410
+00:16:35,410 --> 00:16:36,970
+lamo fly or frameworks in this case
+
+411
+00:16:36,970 --> 00:16:38,980
+frameworks like a lamb on fire ink you
+
+412
+00:16:38,980 --> 00:16:41,890
+switch applications and so what I'm
+
+413
+00:16:41,890 --> 00:16:43,540
+going to do is I'm going to run pod in
+
+414
+00:16:43,540 --> 00:16:46,570
+it and it's gonna initialize a cocoa pod
+
+415
+00:16:46,570 --> 00:16:48,790
+file for me which I can then go ahead
+
+416
+00:16:48,790 --> 00:16:52,300
+and edit now in this case I'm just going
+
+417
+00:16:52,300 --> 00:16:55,529
+to remove all the unnecessary lines and
+
+418
+00:16:55,529 --> 00:16:59,410
+there we go I've got a very very simple
+
+419
+00:16:59,410 --> 00:17:02,350
+pod file and I'm going to pod Alamo fire
+
+420
+00:17:02,350 --> 00:17:04,419
+I'll go I already do have a few videos
+
+421
+00:17:04,419 --> 00:17:06,790
+on the Alamo fire framework which you
+
+422
+00:17:06,790 --> 00:17:08,939
+can take a look at on my channel as well
+
+423
+00:17:08,939 --> 00:17:11,500
+essentially Alamo fire will let us make
+
+424
+00:17:11,500 --> 00:17:13,059
+the very simple network connection
+
+425
+00:17:13,059 --> 00:17:15,850
+that's required to get to the numbers 8
+
+426
+00:17:15,850 --> 00:17:19,339
+I'm going to save this and then I'm
+
+427
+00:17:19,339 --> 00:17:22,309
+gonna go ahead and do pod install pod
+
+428
+00:17:22,309 --> 00:17:25,309
+install will install these cocoa pods
+
+429
+00:17:25,309 --> 00:17:28,280
+and actually delete my not delete it's
+
+430
+00:17:28,280 --> 00:17:30,350
+gonna change not change its going to
+
+431
+00:17:30,350 --> 00:17:32,840
+create a new Xcode workspace instead of
+
+432
+00:17:32,840 --> 00:17:34,909
+my current Xcode project and this
+
+433
+00:17:34,909 --> 00:17:37,370
+workspace also includes a new Xcode
+
+434
+00:17:37,370 --> 00:17:40,010
+project for the pods I'm gonna go ahead
+
+435
+00:17:40,010 --> 00:17:43,659
+and open up that Xcode workspace and
+
+436
+00:17:43,659 --> 00:17:47,809
+there we go it opens it up in Xcode now
+
+437
+00:17:47,809 --> 00:17:52,960
+as you can see I should be able to I
+
+438
+00:17:52,960 --> 00:17:59,710
+open this up once more maybe close it
+
+439
+00:18:04,659 --> 00:18:07,070
+wait just a moment and there we go as
+
+440
+00:18:07,070 --> 00:18:09,650
+you can see I'm able to access my number
+
+441
+00:18:09,650 --> 00:18:11,659
+tree via YouTube Xcode project from here
+
+442
+00:18:11,659 --> 00:18:14,000
+now what I'm going to do first of all is
+
+443
+00:18:14,000 --> 00:18:16,760
+let's get the trivia handling out of the
+
+444
+00:18:16,760 --> 00:18:17,419
+way first
+
+445
+00:18:17,419 --> 00:18:19,280
+so before we concentrate on the view
+
+446
+00:18:19,280 --> 00:18:21,140
+controller or the storyboard let's
+
+447
+00:18:21,140 --> 00:18:23,390
+create a new file it's gonna be a swift
+
+448
+00:18:23,390 --> 00:18:29,990
+file called trivia okay create that file
+
+449
+00:18:29,990 --> 00:18:35,210
+and import Alamo fire with it then
+
+450
+00:18:35,210 --> 00:18:37,789
+create a new class called trivia and
+
+451
+00:18:37,789 --> 00:18:43,640
+create a function called get trivial now
+
+452
+00:18:43,640 --> 00:18:45,440
+there's going to be a completion handler
+
+453
+00:18:45,440 --> 00:18:47,000
+because this is going to be run in the
+
+454
+00:18:47,000 --> 00:18:49,970
+background and I'm just going to define
+
+455
+00:18:49,970 --> 00:18:51,860
+that completion handler right now it's
+
+456
+00:18:51,860 --> 00:18:53,570
+going to be passed a string and it's
+
+457
+00:18:53,570 --> 00:18:55,789
+going to return nothing that string is
+
+458
+00:18:55,789 --> 00:18:58,309
+going to be the trivia then what I'm
+
+459
+00:18:58,309 --> 00:19:00,110
+gonna do is I'm going to make an Alam of
+
+460
+00:19:00,110 --> 00:19:03,169
+fire request this is gonna be a really
+
+461
+00:19:03,169 --> 00:19:05,299
+simple request we'll fill in the URL in
+
+462
+00:19:05,299 --> 00:19:06,350
+just a moment
+
+463
+00:19:06,350 --> 00:19:09,020
+and let's get a string response so let's
+
+464
+00:19:09,020 --> 00:19:13,880
+get trivia response then let's do a flat
+
+465
+00:19:13,880 --> 00:19:17,510
+trivia is equal to trivia response dot
+
+466
+00:19:17,510 --> 00:19:23,179
+result dot value so if this does indeed
+
+467
+00:19:23,179 --> 00:19:26,539
+exist then call a handler with the
+
+468
+00:19:26,539 --> 00:19:29,100
+trivia and there we go the trivia
+
+469
+00:19:29,100 --> 00:19:31,470
+class is done we just need to fill in
+
+470
+00:19:31,470 --> 00:19:34,799
+this this the this URL over here that
+
+471
+00:19:34,799 --> 00:19:36,120
+should be very very simple you can't
+
+472
+00:19:36,120 --> 00:19:38,850
+just open up Safari search up numbers
+
+473
+00:19:38,850 --> 00:19:43,080
+API trivia and as you can see pretty
+
+474
+00:19:43,080 --> 00:19:44,610
+high up in the list there should be
+
+475
+00:19:44,610 --> 00:19:48,179
+numbers API there we go
+
+476
+00:19:48,179 --> 00:19:49,830
+now as you can see it tells me a random
+
+477
+00:19:49,830 --> 00:19:52,679
+slash trivia is the endpoint to call so
+
+478
+00:19:52,679 --> 00:19:55,380
+I'm just gonna do slash random slash
+
+479
+00:19:55,380 --> 00:19:58,080
+trivia and it gives me this plain text
+
+480
+00:19:58,080 --> 00:20:00,870
+I'm gonna copy this URL and paste it
+
+481
+00:20:00,870 --> 00:20:02,640
+over here but Oh what do we have here as
+
+482
+00:20:02,640 --> 00:20:05,370
+you can see this is not an HTTP endpoint
+
+483
+00:20:05,370 --> 00:20:07,289
+it's not using SSL encryption and
+
+484
+00:20:07,289 --> 00:20:10,140
+therefore iOS does not trust the link so
+
+485
+00:20:10,140 --> 00:20:12,210
+you have to kind of force iOS to use
+
+486
+00:20:12,210 --> 00:20:13,919
+this link and this is not an optimal
+
+487
+00:20:13,919 --> 00:20:16,020
+solution by any means I'll tell you that
+
+488
+00:20:16,020 --> 00:20:16,409
+right now
+
+489
+00:20:16,409 --> 00:20:18,240
+there are definitely better ways to
+
+490
+00:20:18,240 --> 00:20:20,880
+handle app Transport Security is what
+
+491
+00:20:20,880 --> 00:20:22,980
+it's called but a way to sign could to
+
+492
+00:20:22,980 --> 00:20:24,750
+kind of circumvent this for now since
+
+493
+00:20:24,750 --> 00:20:26,280
+we're not dealing with even anything
+
+494
+00:20:26,280 --> 00:20:29,159
+important is go to your info property
+
+495
+00:20:29,159 --> 00:20:33,169
+list file add a row and call it
+
+496
+00:20:33,169 --> 00:20:38,240
+application transport or just app
+
+497
+00:20:38,240 --> 00:20:40,650
+Transport Security settings it's gonna
+
+498
+00:20:40,650 --> 00:20:42,299
+create a new dictionary for you right
+
+499
+00:20:42,299 --> 00:20:44,370
+now and then inside of that dictionary
+
+500
+00:20:44,370 --> 00:20:47,549
+you're gonna add a new row and this is
+
+501
+00:20:47,549 --> 00:20:50,220
+gonna be allow arbitrary loads and
+
+502
+00:20:50,220 --> 00:20:51,900
+you're gonna set this to yes essentially
+
+503
+00:20:51,900 --> 00:20:54,270
+to tell the iOS application doesn't care
+
+504
+00:20:54,270 --> 00:20:56,669
+don't care whether or not it's encrypted
+
+505
+00:20:56,669 --> 00:20:59,179
+just make the load doesn't matter and
+
+506
+00:20:59,179 --> 00:21:01,470
+there we go your trivia class is now
+
+507
+00:21:01,470 --> 00:21:04,530
+successfully done now you can go to your
+
+508
+00:21:04,530 --> 00:21:06,330
+view controller in fact I don't even
+
+509
+00:21:06,330 --> 00:21:08,400
+think we need the foundation it for do
+
+510
+00:21:08,400 --> 00:21:12,750
+we no we do not from there you can go to
+
+511
+00:21:12,750 --> 00:21:14,700
+your view controller and actually start
+
+512
+00:21:14,700 --> 00:21:17,750
+implementing some interesting code so
+
+513
+00:21:17,750 --> 00:21:20,280
+you don't even need to override view too
+
+514
+00:21:20,280 --> 00:21:22,289
+low because it's so simple you just need
+
+515
+00:21:22,289 --> 00:21:27,600
+to do IB action function get trivia and
+
+516
+00:21:27,600 --> 00:21:30,179
+there we go then once you created this
+
+517
+00:21:30,179 --> 00:21:32,429
+IB action all you need to do is say
+
+518
+00:21:32,429 --> 00:21:37,290
+trivia dot get trivia get the trivia
+
+519
+00:21:37,290 --> 00:21:39,659
+variable and then you're gonna create an
+
+520
+00:21:39,659 --> 00:21:42,690
+alert so everyone say alert is equal to
+
+521
+00:21:42,690 --> 00:21:44,970
+UI alert action we're gonna give it a
+
+522
+00:21:44,970 --> 00:21:49,170
+title something like random trivia let's
+
+523
+00:21:49,170 --> 00:21:52,680
+just set the UI oh wait you're not going
+
+524
+00:21:52,680 --> 00:21:54,330
+to create a UI alert action you're going
+
+525
+00:21:54,330 --> 00:21:57,180
+to create a UI alert controller then
+
+526
+00:21:57,180 --> 00:21:58,950
+you're gonna give it a title this time
+
+527
+00:21:58,950 --> 00:22:01,650
+once I actually give it a random trivia
+
+528
+00:22:01,650 --> 00:22:05,970
+title Oh trivia then the message is
+
+529
+00:22:05,970 --> 00:22:08,940
+gonna be something like just a trivia
+
+530
+00:22:08,940 --> 00:22:13,200
+maybe and then the preferred style is UI
+
+531
+00:22:13,200 --> 00:22:16,950
+alert controller dot style dot alert in
+
+532
+00:22:16,950 --> 00:22:18,720
+fact because we're using Swift we don't
+
+533
+00:22:18,720 --> 00:22:21,480
+need to specify where that email is now
+
+534
+00:22:21,480 --> 00:22:23,340
+you're going to add an action to this
+
+535
+00:22:23,340 --> 00:22:24,780
+this time you're actually going to
+
+536
+00:22:24,780 --> 00:22:26,910
+create a UI alert action let's just call
+
+537
+00:22:26,910 --> 00:22:30,630
+this okay let's have the default style
+
+538
+00:22:30,630 --> 00:22:32,790
+and let's give it no handler because I
+
+539
+00:22:32,790 --> 00:22:34,290
+don't care what happens when the person
+
+540
+00:22:34,290 --> 00:22:37,110
+says ok from there we should be able to
+
+541
+00:22:37,110 --> 00:22:40,710
+present that action let's animate that
+
+542
+00:22:40,710 --> 00:22:43,070
+and I don't want any completion handlers
+
+543
+00:22:43,070 --> 00:22:46,530
+so now you should have a really simple
+
+544
+00:22:46,530 --> 00:22:49,050
+application that just displays random
+
+545
+00:22:49,050 --> 00:22:51,150
+trivia here ten you click the button you
+
+546
+00:22:51,150 --> 00:22:52,620
+just need to create the user interface
+
+547
+00:22:52,620 --> 00:22:55,940
+now so you just get some kind of button
+
+548
+00:22:55,940 --> 00:22:58,470
+again you can design this however you
+
+549
+00:22:58,470 --> 00:23:00,870
+want to you can just say something like
+
+550
+00:23:00,870 --> 00:23:03,890
+query trivia and then you can just
+
+551
+00:23:03,890 --> 00:23:06,390
+customize the interface however you want
+
+552
+00:23:06,390 --> 00:23:09,270
+to and once you're done you go ahead and
+
+553
+00:23:09,270 --> 00:23:12,180
+run the application on your following so
+
+554
+00:23:12,180 --> 00:23:13,740
+I'm gonna run this directly onto my
+
+555
+00:23:13,740 --> 00:23:15,930
+device as you can see I am indeed still
+
+556
+00:23:15,930 --> 00:23:18,900
+screen sharing over here so Xcode is
+
+557
+00:23:18,900 --> 00:23:21,840
+running the application and once it's
+
+558
+00:23:21,840 --> 00:23:24,660
+done installing the application to my
+
+559
+00:23:24,660 --> 00:23:27,660
+device it's going to launch in theory I
+
+560
+00:23:27,660 --> 00:23:29,670
+should just be able to click the button
+
+561
+00:23:29,670 --> 00:23:34,200
+and instantly get some trivia there we
+
+562
+00:23:34,200 --> 00:23:36,270
+go the application is launching I click
+
+563
+00:23:36,270 --> 00:23:40,050
+the button and any second now
+
+564
+00:23:40,050 --> 00:23:43,110
+we should get trivia if not we go back
+
+565
+00:23:43,110 --> 00:23:45,450
+to Xcode and figure out why exactly it's
+
+566
+00:23:45,450 --> 00:23:46,080
+not working
+
+567
+00:23:46,080 --> 00:23:48,420
+in this case I forgot to connect the IB
+
+568
+00:23:48,420 --> 00:23:50,460
+action and so it's not actually doing
+
+569
+00:23:50,460 --> 00:23:52,440
+anything when the button is clicked or
+
+570
+00:23:52,440 --> 00:23:54,750
+you run the application go back to quick
+
+571
+00:23:54,750 --> 00:23:56,350
+time to take a look at what my
+
+572
+00:23:56,350 --> 00:23:59,049
+who's doing and there we go Xcode says
+
+573
+00:23:59,049 --> 00:24:02,500
+build has succeeded of course and now I
+
+574
+00:24:02,500 --> 00:24:03,730
+should be able to actually click on
+
+575
+00:24:03,730 --> 00:24:05,770
+queer trivia and get some trivia so I'm
+
+576
+00:24:05,770 --> 00:24:10,419
+gonna click and there we go just like
+
+577
+00:24:10,419 --> 00:24:12,280
+the application that I was showing you
+
+578
+00:24:12,280 --> 00:24:14,860
+it says 39 is the traditional number of
+
+579
+00:24:14,860 --> 00:24:17,260
+time citizens of ancient Rome if they're
+
+580
+00:24:17,260 --> 00:24:19,690
+slaves of being there refer to as 40
+
+581
+00:24:19,690 --> 00:24:23,590
+save one okay so random trivia from
+
+582
+00:24:23,590 --> 00:24:27,490
+there we can go ahead and improve this
+
+583
+00:24:27,490 --> 00:24:30,820
+with Siri shortcuts now is when the
+
+584
+00:24:30,820 --> 00:24:32,679
+interesting part comes in of course we
+
+585
+00:24:32,679 --> 00:24:34,900
+have to start off with actually defining
+
+586
+00:24:34,900 --> 00:24:37,240
+the shortcut I'm three main steps define
+
+587
+00:24:37,240 --> 00:24:39,400
+donate handle the shortcut so let's
+
+588
+00:24:39,400 --> 00:24:41,710
+start off with defining the shortcut so
+
+589
+00:24:41,710 --> 00:24:43,900
+I'm gonna go ahead and just under this
+
+590
+00:24:43,900 --> 00:24:46,960
+folder here create a new file and if you
+
+591
+00:24:46,960 --> 00:24:50,200
+just scroll down you should see a Siri
+
+592
+00:24:50,200 --> 00:24:54,220
+kit intent definition file right there
+
+593
+00:24:54,220 --> 00:24:55,929
+you can call this whatever you want I
+
+594
+00:24:55,929 --> 00:24:57,640
+usually just call it intense because it
+
+595
+00:24:57,640 --> 00:24:59,230
+contains all the intent so you're gonna
+
+596
+00:24:59,230 --> 00:25:02,020
+need and let's create a new intent
+
+597
+00:25:02,020 --> 00:25:03,600
+called
+
+598
+00:25:03,600 --> 00:25:10,539
+get trivia let's just say get random
+
+599
+00:25:10,539 --> 00:25:12,309
+trivia because you could get specific
+
+600
+00:25:12,309 --> 00:25:15,340
+number trivia as well okay so get random
+
+601
+00:25:15,340 --> 00:25:17,919
+trivia now there's a category for these
+
+602
+00:25:17,919 --> 00:25:19,900
+in this case we're just doing like a
+
+603
+00:25:19,900 --> 00:25:21,700
+view information of course there are
+
+604
+00:25:21,700 --> 00:25:22,929
+tons of other different categories
+
+605
+00:25:22,929 --> 00:25:25,120
+really depends on what your application
+
+606
+00:25:25,120 --> 00:25:29,250
+needs in this case you are viewing some
+
+607
+00:25:29,340 --> 00:25:33,400
+title let's just say get random trivia
+
+608
+00:25:33,400 --> 00:25:37,020
+and then description let's say random
+
+609
+00:25:37,020 --> 00:25:42,220
+trivia from numbers API I'm not going to
+
+610
+00:25:42,220 --> 00:25:44,230
+provide an image and I do not a user
+
+611
+00:25:44,230 --> 00:25:47,470
+confirmation to get trivia parameters
+
+612
+00:25:47,470 --> 00:25:50,409
+the usual provide none however if there
+
+613
+00:25:50,409 --> 00:25:52,450
+were some parameters that you wanted the
+
+614
+00:25:52,450 --> 00:25:55,650
+user to provide like for example I want
+
+615
+00:25:55,650 --> 00:25:58,809
+trivia about this specific number then
+
+616
+00:25:58,809 --> 00:26:00,789
+you would add those parameters here like
+
+617
+00:26:00,789 --> 00:26:03,309
+so you would add a parameter you would
+
+618
+00:26:03,309 --> 00:26:06,880
+say something like trivia topic you can
+
+619
+00:26:06,880 --> 00:26:08,710
+choose a type let's just say in this
+
+620
+00:26:08,710 --> 00:26:09,660
+case it's string of
+
+621
+00:26:09,660 --> 00:26:11,070
+course you can even say if it's an array
+
+622
+00:26:11,070 --> 00:26:13,080
+and then from there you would create
+
+623
+00:26:13,080 --> 00:26:14,820
+different shortcut types there are like
+
+624
+00:26:14,820 --> 00:26:17,400
+for example if someone would only be
+
+625
+00:26:17,400 --> 00:26:19,650
+able to ask for trivia if they provided
+
+626
+00:26:19,650 --> 00:26:21,660
+the trivia topic then you would click on
+
+627
+00:26:21,660 --> 00:26:23,910
+the plus button here so a trivia topic
+
+628
+00:26:23,910 --> 00:26:27,150
+ad shortcut type and now unless the user
+
+629
+00:26:27,150 --> 00:26:29,790
+provides that specific parameter they
+
+630
+00:26:29,790 --> 00:26:32,250
+cannot use a shortcut however if they
+
+631
+00:26:32,250 --> 00:26:35,190
+can also do it without providing it then
+
+632
+00:26:35,190 --> 00:26:37,170
+you just add a shortcut type without any
+
+633
+00:26:37,170 --> 00:26:39,450
+parameters and your code will just
+
+634
+00:26:39,450 --> 00:26:40,470
+handle it from there
+
+635
+00:26:40,470 --> 00:26:42,750
+but in this case you don't need to write
+
+636
+00:26:42,750 --> 00:26:44,400
+a trivia topic because there's nothing
+
+637
+00:26:44,400 --> 00:26:47,400
+to provide and you can just work with no
+
+638
+00:26:47,400 --> 00:26:49,410
+parameters of course it does support
+
+639
+00:26:49,410 --> 00:26:50,820
+background execution because the
+
+640
+00:26:50,820 --> 00:26:52,560
+application itself does not need to open
+
+641
+00:26:52,560 --> 00:26:55,350
+every time the response however still
+
+642
+00:26:55,350 --> 00:26:57,330
+needs to be built and in the response
+
+643
+00:26:57,330 --> 00:26:59,370
+the application is going to provide a
+
+644
+00:26:59,370 --> 00:27:01,620
+property called trivia it's going to be
+
+645
+00:27:01,620 --> 00:27:03,360
+a string and this is the result of the
+
+646
+00:27:03,360 --> 00:27:06,450
+API and here are some response templates
+
+647
+00:27:06,450 --> 00:27:09,890
+for a failure let's just say sorry I
+
+648
+00:27:09,890 --> 00:27:15,270
+wasn't able to complete the request to
+
+649
+00:27:15,270 --> 00:27:19,290
+numbers API but in case it actually did
+
+650
+00:27:19,290 --> 00:27:20,820
+succeed which we're hoping it always
+
+651
+00:27:20,820 --> 00:27:23,220
+exceed succeeds I should be able to do
+
+652
+00:27:23,220 --> 00:27:27,090
+here's a fact for you something of that
+
+653
+00:27:27,090 --> 00:27:29,460
+sort and then just add in this trivia
+
+654
+00:27:29,460 --> 00:27:31,830
+variable and Siri will respond with that
+
+655
+00:27:31,830 --> 00:27:34,890
+trivia and so that's exactly how the
+
+656
+00:27:34,890 --> 00:27:36,600
+application is going to respond to
+
+657
+00:27:36,600 --> 00:27:37,950
+different kinds of input that the
+
+658
+00:27:37,950 --> 00:27:41,490
+application gives it now though we have
+
+659
+00:27:41,490 --> 00:27:44,220
+to handle the intent itself so we'll
+
+660
+00:27:44,220 --> 00:27:46,140
+talk about how exactly you can donate
+
+661
+00:27:46,140 --> 00:27:48,720
+intense a little later first let's talk
+
+662
+00:27:48,720 --> 00:27:51,270
+about handling the intent so go back to
+
+663
+00:27:51,270 --> 00:27:54,480
+your Xcode project and add a new target
+
+664
+00:27:54,480 --> 00:27:57,030
+to your application in this case we're
+
+665
+00:27:57,030 --> 00:27:58,980
+going to add an intense extension
+
+666
+00:27:58,980 --> 00:28:01,200
+extension and you can call this whatever
+
+667
+00:28:01,200 --> 00:28:03,950
+you'd like to let's just say trivia
+
+668
+00:28:03,950 --> 00:28:08,430
+intense now if you'd like to create a UI
+
+669
+00:28:08,430 --> 00:28:10,440
+for your shortcut you can include a UI
+
+670
+00:28:10,440 --> 00:28:13,200
+extension I do not usually and your
+
+671
+00:28:13,200 --> 00:28:14,910
+starting point kinds we're messaging or
+
+672
+00:28:14,910 --> 00:28:16,650
+none let's start with none that'll be
+
+673
+00:28:16,650 --> 00:28:19,710
+easier click on finish as you can see it
+
+674
+00:28:19,710 --> 00:28:21,870
+asks you to activate the scheme activate
+
+675
+00:28:21,870 --> 00:28:22,650
+it
+
+676
+00:28:22,650 --> 00:28:24,510
+and then it creates these two files for
+
+677
+00:28:24,510 --> 00:28:26,640
+you inside of the intent handler this is
+
+678
+00:28:26,640 --> 00:28:28,290
+what's gonna to actually handle the
+
+679
+00:28:28,290 --> 00:28:29,400
+intent itself
+
+680
+00:28:29,400 --> 00:28:31,890
+now let's ignore this class for a minute
+
+681
+00:28:31,890 --> 00:28:34,440
+first let's create another class this is
+
+682
+00:28:34,440 --> 00:28:38,070
+going to be called well the get random
+
+683
+00:28:38,070 --> 00:28:41,670
+trivia intent handler it's going to
+
+684
+00:28:41,670 --> 00:28:43,320
+inherit from an Assad or it's going to
+
+685
+00:28:43,320 --> 00:28:46,440
+conform to and this object and get
+
+686
+00:28:46,440 --> 00:28:53,250
+random first let's build and one more
+
+687
+00:28:53,250 --> 00:28:54,870
+step you should definitely take is go to
+
+688
+00:28:54,870 --> 00:28:57,059
+intent definition file and I actually
+
+689
+00:28:57,059 --> 00:28:59,340
+add it to the trivia intense target
+
+690
+00:28:59,340 --> 00:29:01,440
+because what's happening right now is
+
+691
+00:29:01,440 --> 00:29:03,870
+that the intense definition art is only
+
+692
+00:29:03,870 --> 00:29:07,380
+part of your application intent it's not
+
+693
+00:29:07,380 --> 00:29:09,240
+part of the Sirikit oh sorry it's only
+
+694
+00:29:09,240 --> 00:29:11,760
+part of the application target it's not
+
+695
+00:29:11,760 --> 00:29:13,860
+part of the scene you get target so you
+
+696
+00:29:13,860 --> 00:29:14,880
+need to make sure to add it's a
+
+697
+00:29:14,880 --> 00:29:16,860
+surrogate target so we can apple that we
+
+698
+00:29:16,860 --> 00:29:18,900
+can actually access that intent from
+
+699
+00:29:18,900 --> 00:29:21,090
+here as well anyway so as I was saying
+
+700
+00:29:21,090 --> 00:29:22,980
+create this class and make it also
+
+701
+00:29:22,980 --> 00:29:25,770
+conformed to get random trivia intent
+
+702
+00:29:25,770 --> 00:29:28,800
+handling then inside of here you need to
+
+703
+00:29:28,800 --> 00:29:30,690
+actually implement two functions first
+
+704
+00:29:30,690 --> 00:29:33,510
+of all the confirm function and also the
+
+705
+00:29:33,510 --> 00:29:36,210
+handle function these two functions will
+
+706
+00:29:36,210 --> 00:29:39,420
+actually control whether or not your
+
+707
+00:29:39,420 --> 00:29:42,570
+handler can actually provide output for
+
+708
+00:29:42,570 --> 00:29:45,510
+what the user gave now over here though
+
+709
+00:29:45,510 --> 00:29:47,760
+in the intent handler what you're going
+
+710
+00:29:47,760 --> 00:29:51,030
+to do is say something like guard intent
+
+711
+00:29:51,030 --> 00:29:56,940
+is get random trivia intent else create
+
+712
+00:29:56,940 --> 00:30:03,390
+a fatal error unhandled intent otherwise
+
+713
+00:30:03,390 --> 00:30:08,690
+just return get random trivia intent
+
+714
+00:30:08,690 --> 00:30:12,750
+handler so essentially what this is
+
+715
+00:30:12,750 --> 00:30:16,620
+saying is every time a intent that's
+
+716
+00:30:16,620 --> 00:30:18,809
+linked to your application is called
+
+717
+00:30:18,809 --> 00:30:22,530
+this intent handler will be called now
+
+718
+00:30:22,530 --> 00:30:25,800
+this intent handler will this specific
+
+719
+00:30:25,800 --> 00:30:27,390
+function will be called and it's going
+
+720
+00:30:27,390 --> 00:30:29,570
+to provide the intent that was called
+
+721
+00:30:29,570 --> 00:30:32,790
+another thing is the only intent that
+
+722
+00:30:32,790 --> 00:30:34,800
+I'm actually working for right now is
+
+723
+00:30:34,800 --> 00:30:36,140
+the
+
+724
+00:30:36,140 --> 00:30:39,140
+get random trivia intent so if the
+
+725
+00:30:39,140 --> 00:30:41,360
+intent is a get random trivia intent
+
+726
+00:30:41,360 --> 00:30:44,720
+then go ahead but if it's not which is
+
+727
+00:30:44,720 --> 00:30:46,460
+where this else and the guard comes in
+
+728
+00:30:46,460 --> 00:30:48,320
+then just create a fatal error and crash
+
+729
+00:30:48,320 --> 00:30:50,390
+the application because for some reason
+
+730
+00:30:50,390 --> 00:30:52,390
+we're getting an intent that does not
+
+731
+00:30:52,390 --> 00:30:54,440
+that should not be linked to the
+
+732
+00:30:54,440 --> 00:30:57,530
+application however there is a little
+
+733
+00:30:57,530 --> 00:30:59,059
+bit more stuff we need to do for example
+
+734
+00:30:59,059 --> 00:31:02,870
+go over info dot list under NS extension
+
+735
+00:31:02,870 --> 00:31:06,049
+under NS extension attributes and intent
+
+736
+00:31:06,049 --> 00:31:08,360
+supported make sure that you add the
+
+737
+00:31:08,360 --> 00:31:10,580
+extension or the intent that you are
+
+738
+00:31:10,580 --> 00:31:12,760
+creating in this case it's going to be
+
+739
+00:31:12,760 --> 00:31:18,230
+get random trivia intent just exactly
+
+740
+00:31:18,230 --> 00:31:20,030
+what your intent name is here just let
+
+741
+00:31:20,030 --> 00:31:23,600
+Siri knows and then you're also going to
+
+742
+00:31:23,600 --> 00:31:27,160
+need to add the app Transport Security
+
+743
+00:31:27,160 --> 00:31:30,320
+over here as well so we're going to add
+
+744
+00:31:30,320 --> 00:31:33,740
+that dictionary then add that row so
+
+745
+00:31:33,740 --> 00:31:36,200
+you're gonna say oh no you don't want to
+
+746
+00:31:36,200 --> 00:31:38,179
+add that row there you want to add that
+
+747
+00:31:38,179 --> 00:31:43,429
+row inside of this dictionary allow
+
+748
+00:31:43,429 --> 00:31:46,790
+arbitrary loads yes then go back to your
+
+749
+00:31:46,790 --> 00:31:49,309
+intent Handler and now you can actually
+
+750
+00:31:49,309 --> 00:31:52,010
+start working with the intent now inside
+
+751
+00:31:52,010 --> 00:31:54,350
+of confirm for this very simple use case
+
+752
+00:31:54,350 --> 00:31:56,030
+we're going to assume that the
+
+753
+00:31:56,030 --> 00:31:58,580
+application will always be able to deal
+
+754
+00:31:58,580 --> 00:32:01,010
+with the intent so I'm just going to say
+
+755
+00:32:01,010 --> 00:32:04,549
+completion get random trivia intent
+
+756
+00:32:04,549 --> 00:32:08,929
+response code dot ready so that Siri
+
+757
+00:32:08,929 --> 00:32:10,549
+knows that we're ready and we're not
+
+758
+00:32:10,549 --> 00:32:12,980
+going to provide any user activity now
+
+759
+00:32:12,980 --> 00:32:14,690
+handle is where things get interesting
+
+760
+00:32:14,690 --> 00:32:17,809
+now first of all how serious it can
+
+761
+00:32:17,809 --> 00:32:20,059
+handle the intent it's not gonna access
+
+762
+00:32:20,059 --> 00:32:22,130
+this IB action what it's going to do
+
+763
+00:32:22,130 --> 00:32:24,080
+it's going to access this trivia class
+
+764
+00:32:24,080 --> 00:32:25,460
+but there's a problem
+
+765
+00:32:25,460 --> 00:32:28,010
+see when sirikit queries the application
+
+766
+00:32:28,010 --> 00:32:30,140
+its querying the trivia intents target
+
+767
+00:32:30,140 --> 00:32:32,510
+but the trivia class is inside of the
+
+768
+00:32:32,510 --> 00:32:35,240
+numbered trivia YouTube target so either
+
+769
+00:32:35,240 --> 00:32:37,700
+I could copy and paste the code which is
+
+770
+00:32:37,700 --> 00:32:39,740
+not an elegant solution or I could
+
+771
+00:32:39,740 --> 00:32:41,299
+create an embedded framework which is
+
+772
+00:32:41,299 --> 00:32:43,580
+the most elegant solution but for a very
+
+773
+00:32:43,580 --> 00:32:45,230
+simple application like this one with
+
+774
+00:32:45,230 --> 00:32:47,030
+less than 20 lines of code that is
+
+775
+00:32:47,030 --> 00:32:49,730
+overkill so all I'm gonna do
+
+776
+00:32:49,730 --> 00:32:51,890
+is I'm going to go over to the right of
+
+777
+00:32:51,890 --> 00:32:54,500
+my screen over here and get a checkmark
+
+778
+00:32:54,500 --> 00:32:57,020
+trivia intense that means it's gonna add
+
+779
+00:32:57,020 --> 00:32:59,500
+this trivia class to the trivia intense
+
+780
+00:32:59,500 --> 00:33:02,030
+target now if I were to build this you
+
+781
+00:33:02,030 --> 00:33:04,130
+should get an error as you can see no
+
+782
+00:33:04,130 --> 00:33:06,740
+such module ammo fire but you may say we
+
+783
+00:33:06,740 --> 00:33:09,230
+added a lamo fire in the cocoa pod file
+
+784
+00:33:09,230 --> 00:33:11,720
+but you have to realize that this air is
+
+785
+00:33:11,720 --> 00:33:13,880
+not being thrown by the application it's
+
+786
+00:33:13,880 --> 00:33:16,580
+being thrown by the Sirica and handler
+
+787
+00:33:16,580 --> 00:33:20,540
+target so what happened here is if I
+
+788
+00:33:20,540 --> 00:33:22,250
+were to go back to my terminal and open
+
+789
+00:33:22,250 --> 00:33:26,390
+up the pod file you'll realize that only
+
+790
+00:33:26,390 --> 00:33:28,430
+the target number trivia YouTube
+
+791
+00:33:28,430 --> 00:33:31,220
+actually has the Atlanta Fire pod so
+
+792
+00:33:31,220 --> 00:33:33,680
+what I need to do is go ahead and add a
+
+793
+00:33:33,680 --> 00:33:37,370
+new target in this case trivia intense
+
+794
+00:33:37,370 --> 00:33:42,470
+and tell it to use frameworks and also
+
+795
+00:33:42,470 --> 00:33:46,640
+tell it to pod a level fire there we go
+
+796
+00:33:46,640 --> 00:33:50,060
+just like that I have created this this
+
+797
+00:33:50,060 --> 00:33:53,140
+new pod file I can run pod install and
+
+798
+00:33:53,140 --> 00:33:55,040
+theoretically one spot is done
+
+799
+00:33:55,040 --> 00:33:56,990
+installing again cocoa pods is a great
+
+800
+00:33:56,990 --> 00:33:59,120
+tool but if I were to go ahead and run
+
+801
+00:33:59,120 --> 00:34:01,820
+this I shouldn't get any errors now but
+
+802
+00:34:01,820 --> 00:34:02,980
+we're not done just yet
+
+803
+00:34:02,980 --> 00:34:07,300
+so give that just a moment to build
+
+804
+00:34:07,450 --> 00:34:10,550
+there we go build succeeded now I can go
+
+805
+00:34:10,550 --> 00:34:12,170
+over to my intent handler and actually
+
+806
+00:34:12,170 --> 00:34:14,300
+handle the intent so I should be able to
+
+807
+00:34:14,300 --> 00:34:16,730
+just simply create a new trivia instance
+
+808
+00:34:16,730 --> 00:34:18,980
+get some trivia save it in the trivia
+
+809
+00:34:18,980 --> 00:34:22,420
+variable and then just say completion
+
+810
+00:34:22,420 --> 00:34:26,270
+dot success provided the trivia and
+
+811
+00:34:26,270 --> 00:34:29,660
+there we go that theoretically should be
+
+812
+00:34:29,660 --> 00:34:32,180
+all you need to implement series
+
+813
+00:34:32,180 --> 00:34:33,830
+shortcuts oh there's a problem
+
+814
+00:34:33,830 --> 00:34:36,440
+shorts implemented short works but
+
+815
+00:34:36,440 --> 00:34:39,020
+series still doesn't know that this is a
+
+816
+00:34:39,020 --> 00:34:41,780
+thing because we're not donating it so
+
+817
+00:34:41,780 --> 00:34:43,630
+go back to your view controller and
+
+818
+00:34:43,630 --> 00:34:46,340
+writers are done providing trivia to the
+
+819
+00:34:46,340 --> 00:34:49,160
+user donate this intent to Siri except
+
+820
+00:34:49,160 --> 00:34:52,400
+Siri knows that the user has gotten this
+
+821
+00:34:52,400 --> 00:34:54,350
+trivia so I'm going to create a new
+
+822
+00:34:54,350 --> 00:34:56,300
+interaction object called iam
+
+823
+00:34:56,300 --> 00:34:59,540
+interaction after I import the intense
+
+824
+00:34:59,540 --> 00:35:01,010
+framework
+
+825
+00:35:01,010 --> 00:35:03,740
+to create a new I in interaction with an
+
+826
+00:35:03,740 --> 00:35:07,640
+intent called get random trivia intent
+
+827
+00:35:07,640 --> 00:35:10,010
+and there's going to be no response
+
+828
+00:35:10,010 --> 00:35:12,530
+and I'm gonna donate this with no
+
+829
+00:35:12,530 --> 00:35:15,620
+completion and just like that it should
+
+830
+00:35:15,620 --> 00:35:19,430
+donate the intent to Sirikit and it
+
+831
+00:35:19,430 --> 00:35:23,770
+should therefore theory at least work
+
+832
+00:35:23,770 --> 00:35:25,970
+now we're ready to test out the
+
+833
+00:35:25,970 --> 00:35:28,070
+application and make sure that it
+
+834
+00:35:28,070 --> 00:35:29,480
+actually does function the way that we
+
+835
+00:35:29,480 --> 00:35:31,430
+want it to I'm going to run the
+
+836
+00:35:31,430 --> 00:35:35,090
+application target on my phone and as
+
+837
+00:35:35,090 --> 00:35:39,830
+you can see it opens up just like so
+
+838
+00:35:39,830 --> 00:35:42,320
+there's a little bit of lag between what
+
+839
+00:35:42,320 --> 00:35:43,430
+you're seeing on screen and what's
+
+840
+00:35:43,430 --> 00:35:45,410
+actually happening on my phone but if I
+
+841
+00:35:45,410 --> 00:35:48,440
+were to click on query trivia it shows
+
+842
+00:35:48,440 --> 00:35:50,450
+me trivia and it does not crash the
+
+843
+00:35:50,450 --> 00:35:51,680
+application meaning that it is
+
+844
+00:35:51,680 --> 00:35:54,050
+successfully at least donating the
+
+845
+00:35:54,050 --> 00:35:54,890
+intent
+
+846
+00:35:54,890 --> 00:35:59,630
+it says 56 age of Mayo Zedong sorry if
+
+847
+00:35:59,630 --> 00:36:01,880
+I'm not pronouncing that correctly when
+
+848
+00:36:01,880 --> 00:36:04,100
+the People's Republic of China was
+
+849
+00:36:04,100 --> 00:36:10,520
+established on October 1st 1949 actually
+
+850
+00:36:10,520 --> 00:36:11,900
+so there we go
+
+851
+00:36:11,900 --> 00:36:13,550
+that's done now remember in the
+
+852
+00:36:13,550 --> 00:36:16,100
+developer tab I had already turned on
+
+853
+00:36:16,100 --> 00:36:19,790
+the in the show recent shortcuts and
+
+854
+00:36:19,790 --> 00:36:21,290
+donations options so if I were to scroll
+
+855
+00:36:21,290 --> 00:36:24,740
+up as you can see it should show you in
+
+856
+00:36:24,740 --> 00:36:27,830
+just one moment that indeed there we go
+
+857
+00:36:27,830 --> 00:36:31,520
+the number trivia YouTube over here this
+
+858
+00:36:31,520 --> 00:36:33,500
+new application that we just developed
+
+859
+00:36:33,500 --> 00:36:35,540
+is showing me the get random trivia
+
+860
+00:36:35,540 --> 00:36:38,390
+intent if I click on it the intent is
+
+861
+00:36:38,390 --> 00:36:41,390
+handled perfectly it says three years a
+
+862
+00:36:41,390 --> 00:36:43,400
+number of notes in a triad the basic
+
+863
+00:36:43,400 --> 00:36:47,150
+form of any chord now we can go ahead
+
+864
+00:36:47,150 --> 00:36:49,900
+and develop a new shortcut let's create
+
+865
+00:36:49,900 --> 00:36:52,400
+inside of the series shortcuts workflow
+
+866
+00:36:52,400 --> 00:36:55,390
+application a new shortcut and this time
+
+867
+00:36:55,390 --> 00:36:58,190
+let's go ahead and search for something
+
+868
+00:36:58,190 --> 00:37:04,820
+like say trivia so now we have to figure
+
+869
+00:37:04,820 --> 00:37:06,590
+out exactly which one is the new
+
+870
+00:37:06,590 --> 00:37:08,690
+application so the second one is the new
+
+871
+00:37:08,690 --> 00:37:10,130
+application because this is number
+
+872
+00:37:10,130 --> 00:37:12,920
+trivia YouTube so I'm going to click on
+
+873
+00:37:12,920 --> 00:37:13,609
+this
+
+874
+00:37:13,609 --> 00:37:16,910
+I'm gonna say add to this shortcut and
+
+875
+00:37:16,910 --> 00:37:19,670
+just like that as you can see in a
+
+876
+00:37:19,670 --> 00:37:22,670
+second now it should add this as an
+
+877
+00:37:22,670 --> 00:37:25,940
+action in the shortcut workflow I can
+
+878
+00:37:25,940 --> 00:37:32,319
+then go ahead give it a name new trivia
+
+879
+00:37:32,319 --> 00:37:35,390
+go back if I want to I can add it to
+
+880
+00:37:35,390 --> 00:37:39,619
+Siri I can say something like show me
+
+881
+00:37:39,619 --> 00:37:45,349
+new trigger there we go
+
+882
+00:37:45,349 --> 00:37:52,759
+I can just click on again there's a
+
+883
+00:37:52,759 --> 00:37:54,109
+little bit of a lag between the actual
+
+884
+00:37:54,109 --> 00:37:57,230
+screen share here I'm going to click on
+
+885
+00:37:57,230 --> 00:38:00,499
+done and done and as you can see it
+
+886
+00:38:00,499 --> 00:38:02,299
+provides me a new shortcut I'm going to
+
+887
+00:38:02,299 --> 00:38:04,640
+click on new trivia and within the
+
+888
+00:38:04,640 --> 00:38:06,739
+application it is handled successfully
+
+889
+00:38:06,739 --> 00:38:08,930
+but what's interesting is if I go into
+
+890
+00:38:08,930 --> 00:38:10,730
+Siri any second now of course sometimes
+
+891
+00:38:10,730 --> 00:38:12,349
+it does take a second to register in the
+
+892
+00:38:12,349 --> 00:38:14,480
+actual Siri sort of application but I
+
+893
+00:38:14,480 --> 00:38:17,269
+should be able to say show me a new
+
+894
+00:38:17,269 --> 00:38:30,950
+trivia and just like that a new
+
+895
+00:38:30,950 --> 00:38:33,529
+application that uses Siri shortcuts and
+
+896
+00:38:33,529 --> 00:38:35,900
+is able to recommend to me exactly what
+
+897
+00:38:35,900 --> 00:38:37,640
+I want to do what I want to do it
+
+898
+00:38:37,640 --> 00:38:40,579
+completely automatically without you
+
+899
+00:38:40,579 --> 00:38:43,249
+having to do it manually so for example
+
+900
+00:38:43,249 --> 00:38:45,170
+if CEO recognizes a pattern and when you
+
+901
+00:38:45,170 --> 00:38:46,910
+like trivia it'll automatically
+
+902
+00:38:46,910 --> 00:38:48,859
+recommend that to you in spotlight and
+
+903
+00:38:48,859 --> 00:38:50,569
+their home screen on your widget screen
+
+904
+00:38:50,569 --> 00:38:54,019
+all that kind of stuff and so that was a
+
+905
+00:38:54,019 --> 00:38:56,210
+quick tutorial as to how you can use
+
+906
+00:38:56,210 --> 00:38:58,910
+Siri shortcuts and the new custom
+
+907
+00:38:58,910 --> 00:39:01,759
+intents that Apple lets you use in your
+
+908
+00:39:01,759 --> 00:39:04,339
+applications I do hope you enjoyed that
+
+909
+00:39:04,339 --> 00:39:06,259
+tutorial thank you very much everyone
+
+910
+00:39:06,259 --> 00:39:07,819
+for joining in today of course all this
+
+911
+00:39:07,819 --> 00:39:09,470
+code will be available in the
+
+912
+00:39:09,470 --> 00:39:10,730
+description below if you'd like to
+
+913
+00:39:10,730 --> 00:39:12,650
+follow along click download the code or
+
+914
+00:39:12,650 --> 00:39:15,410
+use it in your own applications that you
+
+915
+00:39:15,410 --> 00:39:17,359
+have any if you do have any suggestions
+
+916
+00:39:17,359 --> 00:39:19,309
+feedback or questions please do feel
+
+917
+00:39:19,309 --> 00:39:20,599
+free to leave it down in the comment
+
+918
+00:39:20,599 --> 00:39:22,190
+section below as I'd love to answer any
+
+919
+00:39:22,190 --> 00:39:23,950
+questions you may have
+
+920
+00:39:23,950 --> 00:39:25,060
+from that if you did like this video
+
+921
+00:39:25,060 --> 00:39:26,260
+please make sure to leave a like down
+
+922
+00:39:26,260 --> 00:39:27,700
+below and if you believe this can be
+
+923
+00:39:27,700 --> 00:39:28,990
+helpful to anyone you know like your
+
+924
+00:39:28,990 --> 00:39:30,250
+family your friends please do make sure
+
+925
+00:39:30,250 --> 00:39:32,860
+to share in the video as well apart from
+
+926
+00:39:32,860 --> 00:39:34,420
+that if you really do like my content
+
+927
+00:39:34,420 --> 00:39:35,950
+you want to see more of it please do
+
+928
+00:39:35,950 --> 00:39:37,240
+make sure to subscribe to my youtube
+
+929
+00:39:37,240 --> 00:39:39,730
+channel as it really does help out a lot
+
+930
+00:39:39,730 --> 00:39:41,230
+and if you'd like to be notified
+
+931
+00:39:41,230 --> 00:39:43,420
+whenever I release new content click on
+
+932
+00:39:43,420 --> 00:39:45,550
+a little bell icon beside the subscribe
+
+933
+00:39:45,550 --> 00:39:48,010
+button and you will receive an email and
+
+934
+00:39:48,010 --> 00:39:49,720
+a Google notification every time I
+
+935
+00:39:49,720 --> 00:39:51,700
+release a new video again thank you very
+
+936
+00:39:51,700 --> 00:39:53,140
+much everyone for joining in today
+
+937
+00:39:53,140 --> 00:39:54,520
+that's gonna be what I had for this
+
+938
+00:39:54,520 --> 00:39:57,750
+tutorial goodbye

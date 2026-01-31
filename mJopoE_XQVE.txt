@@ -1,0 +1,476 @@
+hey what's up traders i hope you're
+doing well it's a cold windy miserable
+day here in australia where i live but
+i'm in a good mood and i'm excited
+because this morning i woke up to this
+update from trading view this is super
+important for us as pine coders one of
+the biggest limitations of pinescript
+has been tradingview's backtester system
+and the way it tends to inaccurately
+simulate intrabar price action i've
+recorded videos on this before i'll
+include links to those in the
+description below if you're interested
+in what i mean by that but today the
+view back tester system got a major
+overhaul which has dramatically improved
+the accuracy of the tester system this
+is music to my
+eyes i guess not ears because i read
+this update but this is super exciting
+to me and i'll explain why in this video
+now the backtester system is still not
+perfect on trading view compared to
+other more complex systems but it's
+light years ahead of where it used to be
+with this small but important adjustment
+that the team have made to this software
+now i'll read the blog post and then
+we'll jump into the charts to
+demonstrate what this all means but
+first i want to quickly mention that i'm
+running a discount on my courses this
+week now quickly i won't bore those of
+you who aren't interested in paying
+extra for your education in panscript
+but for those of you really motivated
+and get value out of these youtube
+videos now is the perfect time to sign
+up to any of my courses i released the
+panscript mastery course on june 7th of
+2020 which is my birthday and i like to
+run a birthday discount on the course
+platform at this time of year is a way
+to thank you guys for your support i
+don't run discounts very often because i
+already think my courses are underpriced
+for the value they contain so if you're
+interested in absorbing everything i've
+learned about planscript over the past
+five years of trading my own systems
+profitably and creating hundreds of
+scripts then now is the perfect time to
+sign up i don't just teach random coding
+ideas and fluff i've been coding for
+over 16 years now as a hobby which is
+crazy to think about but i'm a trader
+and an investor first and foremost these
+days that's what i do that's what i
+spend the majority of my time
+researching and learning how to get
+better at and coding is really a hobby
+for me it's a side thing it's become
+more of a major part of my process in my
+life since i've released the mastery
+course obviously but what i mean by this
+is everything i teach is designed to
+make you a better trader and investor
+first and foremost it's not just about
+the code the code is just a means to an
+end it's just a tool and i teach you how
+to use this tool to make you a better
+trader that's the goal of this my
+courses are filled with practical
+examples of how to use pine script code
+to increase your efficacy and your
+efficiency as a trader which is why i
+think it's so popular and attracts so
+many great reviews i've somehow through
+my life path found myself in this unique
+position where i'm very experienced at
+coding but i'm also becoming an
+experienced trader i've been trading for
+five years now i've made a very nice
+living out of my trading and investing
+and so now i know how to explain coding
+concepts in a way that traders grasp
+really easily even if you've never
+written any code before in your life
+i'll also be covering this new back
+testing setting in great detail in the
+mastery course as i have a bunch of
+strategy scripts i want to use as
+examples as i finish recording more
+material on automation and back testing
+using pinescript so this update from
+tradingview couldn't have come at a more
+perfect time for me now with all that
+said let's read through this blog post
+and then jump into the charts and have a
+look at how this bad boy works back test
+more accurately with the bar magnifier
+the catch here is you need a um you need
+to have a premium account on tradingview
+in order to use this feature
+but believe me it's worth it if you're a
+serious trader premium account holders
+can now obtain more realistic order
+fills in their strategy back tests by
+using the bar magnifier option now in my
+opinion this feature should be included
+on trading view by default for free
+it's so important to have accurate back
+testing results otherwise what's the
+point in back testing if your results
+aren't being executed on accurate data i
+just don't understand that personally
+i'm guessing that there's probably a
+high computational cost
+for using this bar magnifier option on
+the trading view servers and that's
+probably why they're limiting limiting
+it to premium account holders because
+i'm sure they have millions of free
+users and they probably just can't
+afford to have this feature run on all
+free accounts but anyway
+this tool uses intra bar inspection to
+obtain deeper granularity on price
+movement within a bar you can tell that
+a programmer wrote all of this and not a
+trader but anyway allowing for more
+precise order fills i'll explain what
+all of this means without the jargon in
+a moment when we get into the charts
+but basically when selected the bar
+magnifier mode replaces the assumptions
+the broker emulator must make on price
+movement when it's only working with
+open high low close values for
+historical bars so this is purely for
+historical back testing purposes the
+intra bar time frame used with the bar
+magnifier dynamically adjusts with the
+chart's time frame and they have a table
+here which lists the corresponding
+lower time frame that is used on the
+higher time frame so basically let's use
+the 60 minute for example that's one of
+my favorite time frames so i've only
+just found out about this this morning i
+don't fully understand this chart here
+but what i think this means is that on
+these
+on this time frame here
+so the 60 minute and 30 minute and if
+these greater than less than symbols are
+accurate then this means from 59
+minutes down to 30 minutes the one
+minute time frame is used for intra bar
+simulation so we're simulating what
+happened on the lower time frames inside
+those higher time frame bars and here
+from the four hour time frame down to
+the 60 minute time frame the five minute
+bar
+is used so all of the five minute bars
+that printed within that 60 minute bar
+or that four hour bar
+are analyzed by the strategy tester
+to simulate how price unfolded so to use
+a regular bar chart as an example
+let me draw a terrible drawing here just
+really quickly here we have the open
+price the high
+the low and the closing price
+what the strategy tester system used to
+do before this feature was added is it
+would simulate how this bar unfolded on
+the lower time frame so this is a 60
+minute bar that i'm explaining here
+obviously under a 16 minute time frame
+there were 60 one minute bars the
+printed within that uh time frame or
+time period and there were 12 5-minute
+bars that printed and so within this
+hourly bar price might have done this it
+opened here and then it might have gone
+down a bit and then it came up and made
+a high and then it came down again and
+then it played around here for a bit and
+then it had a big sell-off and then it
+rallied and closed
+and this is what the price movement
+looked like in this 60 minute time frame
+and in the past the strategy tester
+system did not do a very good job of
+simulating this but now that we use
+lower intra day or intro bar time frames
+to simulate this movement what we
+actually have here is instead of
+assuming that price opened here went to
+the high went to the low and then went
+to the closing price
+it will simulate 12 5 minute bars so
+we'll have
+12 of these
+smaller bars inside
+of
+our
+hourly bar being simulated by the
+strategy tester and this gives us much
+more accurate
+data to work with when back testing
+i'll show you exactly what the main
+advantage of this is in a moment when we
+jump into the charts i have a couple of
+strategy scripts that
+i've been bugged by
+the
+old strategy strategy tester system the
+way it assumed how price moved now i get
+way way more accurate
+fills on my trades on intrabar
+price movement so i'll explain what that
+means soon let's just quickly go over
+i don't actually i don't think we need
+to go over all of this code because the
+scripts examples they use here are kind
+of terrible to be honest i'll show you
+how i use my scripts to demonstrate how
+this works so let's jump into the charts
+right now
+[Music]
+all right so here i am with a couple of
+strategy scripts that i have added to my
+chart this follow the bear strategy is a
+open source strategy i released on the
+youtube channel quite a few months ago
+now i think it was before panscript
+version 4 actually
+and i'm going to revisit this script
+soon in a future video
+where i'll show you how to add
+automation to the latest version of pine
+connector because a lot has changed
+since i last covered pine connector
+mostly
+new features but there are a couple of
+important changes to
+old features as well that we need to
+address for those of you who are
+interested in automating
+your trading view scripts through
+metatrader at least
+um but anyway this script here i'm not
+going to go over the rules of the
+strategy i'll do that in a different
+lesson because that's not important for
+today's lesson what's important is look
+at these metrics up here so this script
+has taken 132 trades over whatever
+amount of historical data is loaded onto
+my chart here i'm on the one hour time
+frame
+so we have
+maybe a couple of months of data here
+a return of around 39 percent max draw
+down of around five percent which is
+pretty good 62 win rate with a
+one-to-one risk reward
+um this is a really simple but great
+strategy it tends to work best on euro
+dollar i haven't really found any
+metrics close to this on other markets
+so it is kind of curve fit to euro
+dollar but it has worked for several
+years so anyway let me jump to a
+particular date where i know there's an
+example of
+what i want to show you guys here you
+can see this purple background
+on my chart here
+this purple background
+is
+alerting me to the fact that this bar
+this big green bar you see here
+hit my stop loss and my take profit on
+the same bar
+and if you've watched my previous videos
+where i explained the limitations of the
+trading view strategy tester and how it
+used to simulate
+in this case
+i can't remember how it simulates it but
+basically it assumes that if price
+opened closer to the high then it
+assumes that price open here went to the
+high and then went to the low actually
+might be the other way around now that i
+think about it because i have the use
+bar magnifier turned off and this is
+being counted as a winning trade
+so what this is actually doing is price
+opened here
+the strategy tester is assuming
+that price went to the low filled me on
+my take profit and then spiked to the
+high
+but that might not be what happened and
+the reason it had to uh assume that
+behavior on
+intra-bar price data so these lower time
+frames it assumed that's how price
+unfolded is because it only has the open
+the high
+the low and the close
+to work with when it's
+simulating its back testing on
+historical data but now with this new
+feature this um and i haven't added the
+code one second so if i jump back over
+here and i copied this line of code out
+this goes in the strategy annotation
+function if i copy this line of code and
+i paste it in here
+don't forget to put a comma save my
+scripts so now i've added the bar
+magnifier functionality to my script but
+it's off by default now i've come up to
+the settings menu and i scrolled down to
+properties
+to the bottom back testing precision use
+bar magnifier this should be on by
+default in every script you write from
+now on every strategy you test the
+script set this to true by default and
+put it on every single script you write
+unless obviously you can't afford to
+have the premium plan but if you have
+the premium plan this is how your
+scripts look from now on okay because
+this makes our strategy tester results
+far far more accurate particularly in
+these situations this is the only time
+this really matters there are other
+reasons when this might matter
+especially if you're using stop orders
+but for me and how i write my scripts
+this is the scenario that i am most
+bothered by so now what's happening if i
+go to properties and scroll down use bar
+magnifier is turned on look at my
+results up here my return and max
+drawdown when i turn this off
+now notice that changed slightly
+turn it back on
+changes again this little asterisk
+number up here in square brackets the
+three with an asterisk next to it
+this is how many trades across
+historical data across the past 132
+trades that this script has taken that
+has hit its stop and its take profit on
+the same bar
+and the strategy tester system the
+reason why i highlighted this is purple
+is to let me know that there are three
+questionable trades in my sample
+that
+may be giving me inaccurate
+results so it might be counting a
+winning trade as a losing trade or even
+worse a losing trade as a winning trade
+and giving me
+um
+better results than reality in my back
+testing data so now by turning this on
+this bar when the strategy tester runs
+on this bar it is using 12 five minute
+bars to simulate what really unfolded on
+this bar and that gives me a much much
+more accurate reading
+and with this option enabled
+i can be fairly confident very confident
+that this bar did hit my take profit
+before it spiked and hit my stop-loss it
+didn't open here and then spike my stop
+loss and then fill my take profit that
+would be a
+losing trade being counted as a winning
+trade which is the worst case scenario
+if anything we want more losing trades
+than reality then more winning trades
+than reality because otherwise we're
+trading a system that's not as
+profitable as it appears on paper
+according to the strategy tester
+but anyway
+that's kind of the gist of this
+i'm going to have to go into a lot more
+detail about this in practical examples
+in future lessons i want to wrap this
+lesson up here but for those of you who
+are interested make sure to go and read
+the blog post look through the example
+code there
+add this option to your existing
+strategy scripts and go and have a look
+at how it affects some of your results
+it's really important that we get a firm
+understanding of how this new feature
+works because as i've said we need to be
+using this feature all the time if i
+turn on a different strategy here this
+one's slightly less profitable 350
+trades 24 25 return with a 10 11 max
+drawdown across that sample size 11
+questionable trades here that's a much
+larger sample than the other strategy
+let's go down the properties here and
+turn use bar magnifier on keep an eye on
+my results when i do this when i turn
+this on these 11 trades that hit their
+take profit and stop loss on the same
+bar will be more accurately simulated
+and trades that lost that were counted
+as winning trades might flip to being
+counted as losing trades and vice versa
+so let's click this button and watch
+what these metrics do there you go they
+didn't change very much at all
+but they did change so we have a bigger
+drawdown and a slightly less return so
+that's important information to know
+this strategy is not quite as good as it
+looks
+when we're using the old strategy tester
+simulation the new strategy tester
+simulation as i've said is not perfect a
+perfect system would analyze intrabar
+price data on a tick by tick um
+precision but this is the next best
+thing this is um for most strategies
+this should suffice to give you much
+much more accurate results and the
+trader in me is really struggling not to
+notice that this price is reacting off a
+key support and resistance level
+i kind of want to trade this right now
+but i feel like i've missed the setup so
+i'll leave that alone
+but anyway you get the idea let's wrap
+up this lesson here and in a future
+lesson i'll go into more detail about
+these subjects this new feature for now
+i wish you the best of luck with your
+trading again if you're interested in my
+courses now is a great time to sign up
+the discount is only valid until the
+11th of june if you're already a member
+of one of my courses and you've already
+paid um a subscription or you bought
+lifetime access recently reach out to
+our support at the artoftrading.com
+email and my girlfriend jade she will
+fix you up she will give you
+which will credit what you've paid so
+far towards this discount as well so
+you'll pay even less so yeah if you have
+any questions at all shoot an email to
+support the art of trading dot com and
+one of us will get back to you as soon
+as we can
+with that said take care and i'll speak
+with you in the next lesson

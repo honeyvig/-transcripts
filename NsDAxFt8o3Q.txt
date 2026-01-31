@@ -1,0 +1,1387 @@
+1
+00:00:01,050 --> 00:00:08,559
+[Music]
+
+2
+00:00:08,559 --> 00:00:10,559
+so hello there and welcome to another
+
+3
+00:00:10,559 --> 00:00:13,040
+tutorial my name is Henry Baki and this
+
+4
+00:00:13,040 --> 00:00:14,639
+time we're going to be going over how to
+
+5
+00:00:14,639 --> 00:00:17,920
+use a lam of fire in Swift so let's
+
+6
+00:00:17,920 --> 00:00:20,480
+begin now first of all uh what is LAM of
+
+7
+00:00:20,480 --> 00:00:22,519
+fire basically uh Lam of fire is a
+
+8
+00:00:22,519 --> 00:00:25,519
+simple networking uh Library uh for
+
+9
+00:00:25,519 --> 00:00:29,039
+Swift uh it works with iOS watch OS TV
+
+10
+00:00:29,039 --> 00:00:31,480
+and Mac OS effect uh and so you know
+
+11
+00:00:31,480 --> 00:00:33,040
+what that's really going to be all it
+
+12
+00:00:33,040 --> 00:00:35,200
+for this little whiteboard part uh but
+
+13
+00:00:35,200 --> 00:00:36,600
+just before I go I just like to say that
+
+14
+00:00:36,600 --> 00:00:39,120
+this is a part two to the earlier alop
+
+15
+00:00:39,120 --> 00:00:41,920
+fire video that I had created uh and so
+
+16
+00:00:41,920 --> 00:00:43,399
+essentially this time I'm going to be
+
+17
+00:00:43,399 --> 00:00:45,280
+showing to you how exactly uh you can
+
+18
+00:00:45,280 --> 00:00:48,320
+use aop fire uh the real way uh and of
+
+19
+00:00:48,320 --> 00:00:49,960
+course I'm going to be showing you uh
+
+20
+00:00:49,960 --> 00:00:51,559
+exactly how you can incorporate
+
+21
+00:00:51,559 --> 00:00:55,239
+synchronous lamma fire uh and into this
+
+22
+00:00:55,239 --> 00:00:58,359
+as well all right so uh just before we
+
+23
+00:00:58,359 --> 00:01:00,039
+go though uh one last thing I'm just
+
+24
+00:01:00,039 --> 00:01:01,719
+like to show you asynchronous versus
+
+25
+00:01:01,719 --> 00:01:03,879
+synchronous uh now usually when you make
+
+26
+00:01:03,879 --> 00:01:05,960
+a URL request with something like NS
+
+27
+00:01:05,960 --> 00:01:07,960
+data what you're doing is basically
+
+28
+00:01:07,960 --> 00:01:09,880
+let's just say that um this is your
+
+29
+00:01:09,880 --> 00:01:12,240
+application over
+
+30
+00:01:12,240 --> 00:01:16,720
+time and this is the
+
+31
+00:01:17,479 --> 00:01:19,960
+execution okay so let's just say this
+
+32
+00:01:19,960 --> 00:01:22,799
+and so your application is going forward
+
+33
+00:01:22,799 --> 00:01:25,640
+right the UI and
+
+34
+00:01:25,640 --> 00:01:28,479
+everything UI stuff like that is getting
+
+35
+00:01:28,479 --> 00:01:31,360
+updated over time while it's being
+
+36
+00:01:31,360 --> 00:01:33,640
+executed uh now basically let's say you
+
+37
+00:01:33,640 --> 00:01:35,640
+were to call a request with NS data what
+
+38
+00:01:35,640 --> 00:01:39,280
+would happen is NS data would come into
+
+39
+00:01:39,280 --> 00:01:41,960
+play here and so basically this would uh
+
+40
+00:01:41,960 --> 00:01:44,159
+NS data would run on this little block
+
+41
+00:01:44,159 --> 00:01:46,360
+here uh and so essentially what would
+
+42
+00:01:46,360 --> 00:01:48,399
+happen is the UI would get blocked and
+
+43
+00:01:48,399 --> 00:01:50,560
+everything else would and only NS data
+
+44
+00:01:50,560 --> 00:01:53,000
+would run on this thread and so the
+
+45
+00:01:53,000 --> 00:01:55,280
+problem with this uh is that the fact
+
+46
+00:01:55,280 --> 00:01:56,600
+that I mean you can't really update the
+
+47
+00:01:56,600 --> 00:01:58,880
+UI or do anything here so now what a
+
+48
+00:01:58,880 --> 00:02:00,920
+lamif fire does for for you by default
+
+49
+00:02:00,920 --> 00:02:02,240
+uh is that it actually creates an
+
+50
+00:02:02,240 --> 00:02:05,520
+entirely I mean if I um erase this what
+
+51
+00:02:05,520 --> 00:02:09,560
+happens is a lop fire what it
+
+52
+00:02:09,560 --> 00:02:13,239
+does is it creates an entirely new
+
+53
+00:02:13,239 --> 00:02:16,560
+block right and so this is called
+
+54
+00:02:16,560 --> 00:02:18,280
+asynchronous programming because now the
+
+55
+00:02:18,280 --> 00:02:20,440
+UI and all the other sort of main
+
+56
+00:02:20,440 --> 00:02:22,879
+program uh stuff is running on this
+
+57
+00:02:22,879 --> 00:02:27,800
+block here uh and the NSL or the Lop
+
+58
+00:02:27,800 --> 00:02:31,640
+fire request is running in this block
+
+59
+00:02:31,640 --> 00:02:33,800
+here all right so now again this is
+
+60
+00:02:33,800 --> 00:02:35,959
+called asynchronous programming versus
+
+61
+00:02:35,959 --> 00:02:38,519
+synchronous programming uh of course
+
+62
+00:02:38,519 --> 00:02:39,760
+though if you just like to create some
+
+63
+00:02:39,760 --> 00:02:42,519
+sort of like little test application uh
+
+64
+00:02:42,519 --> 00:02:43,879
+and you just want to you know use
+
+65
+00:02:43,879 --> 00:02:45,879
+synchronous programming uh to just you
+
+66
+00:02:45,879 --> 00:02:47,159
+know quickly retrieve something from a
+
+67
+00:02:47,159 --> 00:02:49,080
+URL uh then I'm going to be showing you
+
+68
+00:02:49,080 --> 00:02:51,879
+another library that thead has made uh
+
+69
+00:02:51,879 --> 00:02:53,239
+and so basically what that allows you to
+
+70
+00:02:53,239 --> 00:02:55,200
+do is send this a lamif fire re Quest
+
+71
+00:02:55,200 --> 00:02:57,400
+back to the main thread here or main
+
+72
+00:02:57,400 --> 00:03:00,519
+block uh that'll continue that'll do it
+
+73
+00:03:00,519 --> 00:03:03,959
+stuff and then the UI can
+
+74
+00:03:03,959 --> 00:03:06,319
+continue and that's sort of how this is
+
+75
+00:03:06,319 --> 00:03:09,319
+going to work so now let's get straight
+
+76
+00:03:09,319 --> 00:03:10,879
+over to the Mac part where I'm going to
+
+77
+00:03:10,879 --> 00:03:13,200
+be showing you how exactly you can use a
+
+78
+00:03:13,200 --> 00:03:15,319
+lamif fire and a lamif fire synchronous
+
+79
+00:03:15,319 --> 00:03:18,480
+in Swift let's get to it so welcome back
+
+80
+00:03:18,480 --> 00:03:20,360
+to the Mac part and now I'm going to be
+
+81
+00:03:20,360 --> 00:03:22,200
+showing you exactly how you can
+
+82
+00:03:22,200 --> 00:03:24,040
+Implement a lamb fire and a lamb fire
+
+83
+00:03:24,040 --> 00:03:26,480
+synchronous into your xode projects
+
+84
+00:03:26,480 --> 00:03:28,720
+let's begin so now first of all uh let's
+
+85
+00:03:28,720 --> 00:03:31,680
+just open up xcode over here and as you
+
+86
+00:03:31,680 --> 00:03:34,760
+can see basically uh there is I mean of
+
+87
+00:03:34,760 --> 00:03:35,840
+course the launch screen I'm going to
+
+88
+00:03:35,840 --> 00:03:37,159
+create a new
+
+89
+00:03:37,159 --> 00:03:40,040
+project um I'm going to call
+
+90
+00:03:40,040 --> 00:03:42,599
+this Alo
+
+91
+00:03:42,599 --> 00:03:44,319
+fire
+
+92
+00:03:44,319 --> 00:03:47,720
+example YouTube uh I'm going to make
+
+93
+00:03:47,720 --> 00:03:50,640
+this in Swift uh and the device is going
+
+94
+00:03:50,640 --> 00:03:53,239
+to be for iPhone I'm going to click on
+
+95
+00:03:53,239 --> 00:03:57,200
+next put this in the iOS directory on my
+
+96
+00:03:57,200 --> 00:04:01,319
+desktop here uh and let's begin so now
+
+97
+00:04:01,319 --> 00:04:03,200
+first of all uh let's install the alif
+
+98
+00:04:03,200 --> 00:04:05,200
+fire framework into the xcode project
+
+99
+00:04:05,200 --> 00:04:06,920
+itself so now first of all what you need
+
+100
+00:04:06,920 --> 00:04:08,439
+to do is go over to your
+
+101
+00:04:08,439 --> 00:04:10,439
+terminal uh
+
+102
+00:04:10,439 --> 00:04:13,079
+okay then go over to your favorite
+
+103
+00:04:13,079 --> 00:04:17,400
+browser and type in uh Coco
+
+104
+00:04:17,400 --> 00:04:20,479
+pods now inside of cocoa pods uh inside
+
+105
+00:04:20,479 --> 00:04:23,080
+of the website uh you're going to see
+
+106
+00:04:23,080 --> 00:04:25,000
+this little command over here pseudo Jam
+
+107
+00:04:25,000 --> 00:04:27,120
+install cocoa pods you want to run this
+
+108
+00:04:27,120 --> 00:04:28,800
+to install cocoa pods and once you're
+
+109
+00:04:28,800 --> 00:04:31,440
+done uh you need to run the command in
+
+110
+00:04:31,440 --> 00:04:33,440
+your terminal uh I'm going to make this
+
+111
+00:04:33,440 --> 00:04:35,720
+bigger for you I'm going to you're going
+
+112
+00:04:35,720 --> 00:04:37,360
+to need to run something called pod
+
+113
+00:04:37,360 --> 00:04:41,360
+setup uh once that's done though uh just
+
+114
+00:04:41,360 --> 00:04:44,520
+navigate to
+
+115
+00:04:44,520 --> 00:04:49,039
+your uh your application
+
+116
+00:04:49,160 --> 00:04:51,759
+directory all right so here what you
+
+117
+00:04:51,759 --> 00:04:55,320
+need to do is say nanopod file and then
+
+118
+00:04:55,320 --> 00:04:57,080
+it was a directory you could use Vim if
+
+119
+00:04:57,080 --> 00:04:59,199
+you wanted to uh so essentially I'm
+
+120
+00:04:59,199 --> 00:05:02,520
+creating a uh file called pod file uh
+
+121
+00:05:02,520 --> 00:05:04,919
+and so the Pod file contains the pods uh
+
+122
+00:05:04,919 --> 00:05:06,560
+that we need to install and so basically
+
+123
+00:05:06,560 --> 00:05:08,479
+what we're going to do uh is I'm going
+
+124
+00:05:08,479 --> 00:05:10,039
+to tell it to install something called
+
+125
+00:05:10,039 --> 00:05:12,600
+aop fire uh and in order to do that I'm
+
+126
+00:05:12,600 --> 00:05:14,960
+going to go to the alop fire GitHub
+
+127
+00:05:14,960 --> 00:05:16,919
+repository which there will be a link to
+
+128
+00:05:16,919 --> 00:05:18,080
+in the
+
+129
+00:05:18,080 --> 00:05:20,720
+description all if we go down here as
+
+130
+00:05:20,720 --> 00:05:22,160
+you can see there's a way to install
+
+131
+00:05:22,160 --> 00:05:24,520
+this with cocoa pod so just in uh copy
+
+132
+00:05:24,520 --> 00:05:27,720
+this pod file script and paste it into
+
+133
+00:05:27,720 --> 00:05:30,600
+your terminal all right right and then
+
+134
+00:05:30,600 --> 00:05:32,080
+whatever you name the application in
+
+135
+00:05:32,080 --> 00:05:33,759
+this case I've named it a lmop fire
+
+136
+00:05:33,759 --> 00:05:36,440
+example YT so I'm going to copy
+
+137
+00:05:36,440 --> 00:05:39,400
+that okay and then I'm going to go back
+
+138
+00:05:39,400 --> 00:05:41,319
+here and where it says Target your
+
+139
+00:05:41,319 --> 00:05:43,840
+target name I going to delete uh your
+
+140
+00:05:43,840 --> 00:05:46,759
+target name uh and I'm going to paste in
+
+141
+00:05:46,759 --> 00:05:49,160
+the actual Target name uh then the Pod
+
+142
+00:05:49,160 --> 00:05:51,639
+for a l of fire is great the platform
+
+143
+00:05:51,639 --> 00:05:55,639
+iOS 9 uh sounds great there uh and
+
+144
+00:05:55,639 --> 00:05:58,240
+that's going to be it for the Pod file
+
+145
+00:05:58,240 --> 00:06:00,880
+so now if you to take contrl X now this
+
+146
+00:06:00,880 --> 00:06:03,800
+is for just for Nano control X to exit
+
+147
+00:06:03,800 --> 00:06:07,280
+say yes to save enter to actually save
+
+148
+00:06:07,280 --> 00:06:08,639
+uh all right then you just need to run
+
+149
+00:06:08,639 --> 00:06:10,240
+something called pod install now I'm
+
+150
+00:06:10,240 --> 00:06:11,520
+sure that most of you know these steps
+
+151
+00:06:11,520 --> 00:06:12,960
+I'm just going over them pod install
+
+152
+00:06:12,960 --> 00:06:15,560
+will install the Pod uh installing a l
+
+153
+00:06:15,560 --> 00:06:17,680
+fire into our
+
+154
+00:06:17,680 --> 00:06:20,440
+project as you can see it's going to
+
+155
+00:06:20,440 --> 00:06:25,000
+install and then as youer uh navigate
+
+156
+00:06:25,000 --> 00:06:28,000
+into the project
+
+157
+00:06:28,000 --> 00:06:30,960
+directory over here
+
+158
+00:06:30,960 --> 00:06:33,440
+here uh and then open up the workspace
+
+159
+00:06:33,440 --> 00:06:36,759
+not the X code project the
+
+160
+00:06:36,880 --> 00:06:41,120
+workspace or so open the workspace and
+
+161
+00:06:41,120 --> 00:06:44,840
+in just a second you should see that we
+
+162
+00:06:44,840 --> 00:06:47,199
+have a workspace now uh again you want
+
+163
+00:06:47,199 --> 00:06:50,400
+to use the Alam fire example YT X code
+
+164
+00:06:50,400 --> 00:06:52,000
+project in order to develop your
+
+165
+00:06:52,000 --> 00:06:53,960
+application and now you can incorporate
+
+166
+00:06:53,960 --> 00:06:56,720
+a Lambo fire into your code let's uh
+
+167
+00:06:56,720 --> 00:06:58,960
+begin with a simple example shall we uh
+
+168
+00:06:58,960 --> 00:07:00,840
+essentially what we're going to do is
+
+169
+00:07:00,840 --> 00:07:03,160
+first of all let's import a l
+
+170
+00:07:03,160 --> 00:07:06,000
+fire uh and then let's say we wanted to
+
+171
+00:07:06,000 --> 00:07:10,240
+sort of um download uh some let's say
+
+172
+00:07:10,240 --> 00:07:12,840
+Json all right or not Json let's just
+
+173
+00:07:12,840 --> 00:07:15,000
+say we wanted to download the contents
+
+174
+00:07:15,000 --> 00:07:16,120
+uh of
+
+175
+00:07:16,120 --> 00:07:18,360
+google.com essentially what i' do is I'd
+
+176
+00:07:18,360 --> 00:07:22,039
+say first all function download Google
+
+177
+00:07:22,039 --> 00:07:25,000
+okay I now I'm going to actually send in
+
+178
+00:07:25,000 --> 00:07:27,360
+an a fire request so if I build first
+
+179
+00:07:27,360 --> 00:07:29,000
+all as you can see there's the second
+
+180
+00:07:29,000 --> 00:07:31,319
+mat
+
+181
+00:07:34,360 --> 00:07:36,280
+as you can see the a
+
+182
+00:07:36,280 --> 00:07:38,919
+is and just a second it says build
+
+183
+00:07:38,919 --> 00:07:41,879
+exceeded so now what I can do is now a
+
+184
+00:07:41,879 --> 00:07:44,199
+very simple way to get something for
+
+185
+00:07:44,199 --> 00:07:46,039
+fire or download something let to say
+
+186
+00:07:46,039 --> 00:07:48,479
+alif
+
+187
+00:07:48,479 --> 00:07:52,000
+fire do request uh and then there are a
+
+188
+00:07:52,000 --> 00:07:53,960
+few methods either you can go with the
+
+189
+00:07:53,960 --> 00:07:56,599
+full uh sort of customizable method uh
+
+190
+00:07:56,599 --> 00:07:58,400
+or the function where you can specify
+
+191
+00:07:58,400 --> 00:08:00,319
+the method that URL string the
+
+192
+00:08:00,319 --> 00:08:02,199
+parameters the encoding the headers and
+
+193
+00:08:02,199 --> 00:08:05,479
+stuff like that or just the URL request
+
+194
+00:08:05,479 --> 00:08:09,240
+like the URL the NS URL requ or the
+
+195
+00:08:09,240 --> 00:08:11,960
+method and the URL string in this case
+
+196
+00:08:11,960 --> 00:08:13,639
+I'm going to go for the simplest one the
+
+197
+00:08:13,639 --> 00:08:17,240
+method and URL string so I'm going to go
+
+198
+00:08:17,240 --> 00:08:19,360
+getet as the method I'm not going to
+
+199
+00:08:19,360 --> 00:08:21,560
+post to Google I just want to get Google
+
+200
+00:08:21,560 --> 00:08:25,639
+and the URL string is going to be
+
+201
+00:08:26,360 --> 00:08:28,240
+httpswww
+
+202
+00:08:28,240 --> 00:08:30,520
+google.com and then I'm going to cck tab
+
+203
+00:08:30,520 --> 00:08:32,800
+that will finish this up and now let's
+
+204
+00:08:32,800 --> 00:08:36,000
+say we wanted to get a response as a
+
+205
+00:08:36,000 --> 00:08:39,360
+string okay so I just say response
+
+206
+00:08:39,360 --> 00:08:42,000
+string uh enter it'll give me a
+
+207
+00:08:42,000 --> 00:08:44,159
+completion Handler enter it'll fill that
+
+208
+00:08:44,159 --> 00:08:45,839
+up and then I can set the response to
+
+209
+00:08:45,839 --> 00:08:50,320
+you let say um allow fire
+
+210
+00:08:50,360 --> 00:08:52,519
+response uh and then the code inside of
+
+211
+00:08:52,519 --> 00:08:55,040
+this completion Handler uh I can say for
+
+212
+00:08:55,040 --> 00:08:58,200
+example a l fire
+
+213
+00:08:58,200 --> 00:09:03,839
+response do response or result sorry do
+
+214
+00:09:03,839 --> 00:09:06,279
+result dot
+
+215
+00:09:06,279 --> 00:09:08,360
+value okay so now this is the actual
+
+216
+00:09:08,360 --> 00:09:10,040
+value I'm going to forcefully unwrap
+
+217
+00:09:10,040 --> 00:09:12,480
+this and print it
+
+218
+00:09:12,480 --> 00:09:15,920
+out and as you can see uh in theory if I
+
+219
+00:09:15,920 --> 00:09:18,720
+add this function to viewed load in
+
+220
+00:09:18,720 --> 00:09:21,640
+download Google Now if I run this
+
+221
+00:09:21,640 --> 00:09:22,959
+application on the
+
+222
+00:09:22,959 --> 00:09:26,279
+simulator as you can see in just a
+
+223
+00:09:26,279 --> 00:09:31,079
+second it should work
+
+224
+00:09:31,079 --> 00:09:33,839
+Let's test this
+
+225
+00:09:37,399 --> 00:09:41,079
+out as you can see over here it prints
+
+226
+00:09:41,079 --> 00:09:45,720
+out exactly what it sees on
+
+227
+00:09:45,839 --> 00:09:47,880
+google.com now let's say we wanted to
+
+228
+00:09:47,880 --> 00:09:50,920
+use a bit more of a real example here uh
+
+229
+00:09:50,920 --> 00:09:53,480
+now let's say I want to go over
+
+230
+00:09:53,480 --> 00:09:56,519
+to you know what me one second what I'm
+
+231
+00:09:56,519 --> 00:09:58,079
+going to do is I'm going to set up a
+
+232
+00:09:58,079 --> 00:10:02,360
+simple Json file actually uh using a LMA
+
+233
+00:10:02,360 --> 00:10:05,800
+fire so if I go into my GoDaddy server
+
+234
+00:10:05,800 --> 00:10:11,399
+here I go to my web hting manage
+
+235
+00:10:16,200 --> 00:10:19,279
+it as you can see sc one second let move
+
+236
+00:10:19,279 --> 00:10:22,880
+the FP all right now file
+
+237
+00:10:22,880 --> 00:10:24,480
+[Music]
+
+238
+00:10:24,480 --> 00:10:28,079
+manager plus file I'm going to call this
+
+239
+00:10:28,079 --> 00:10:30,440
+um
+
+240
+00:10:30,440 --> 00:10:31,959
+Alo
+
+241
+00:10:31,959 --> 00:10:34,000
+fire
+
+242
+00:10:34,000 --> 00:10:35,560
+test.
+
+243
+00:10:35,560 --> 00:10:38,760
+Json create a new
+
+244
+00:10:38,760 --> 00:10:41,240
+file let's open it
+
+245
+00:10:41,240 --> 00:10:44,639
+up the code
+
+246
+00:10:46,440 --> 00:10:48,360
+editor and as you can see I'm going to
+
+247
+00:10:48,360 --> 00:10:51,760
+give it some simple Json
+
+248
+00:10:51,760 --> 00:10:54,120
+like
+
+249
+00:10:54,120 --> 00:10:58,040
+name taner backi um
+
+250
+00:10:58,040 --> 00:11:02,079
+age 12 all right or I can actually give
+
+251
+00:11:02,079 --> 00:11:05,680
+it uh 12 all right I'm going to close
+
+252
+00:11:05,680 --> 00:11:08,680
+this bracket and if I save it that
+
+253
+00:11:08,680 --> 00:11:11,360
+should save to my website now all I need
+
+254
+00:11:11,360 --> 00:11:13,760
+to do is change the link over here to
+
+255
+00:11:13,760 --> 00:11:17,120
+just HTTP
+
+256
+00:11:17,120 --> 00:11:20,120
+www.x.com
+
+257
+00:11:21,680 --> 00:11:24,360
+test.js let's see here and as you can
+
+258
+00:11:24,360 --> 00:11:28,480
+see yes this is called fire test. Json
+
+259
+00:11:28,480 --> 00:11:30,320
+and now now we need to do is go into the
+
+260
+00:11:30,320 --> 00:11:35,399
+info. pist open this up as source
+
+261
+00:11:35,399 --> 00:11:38,800
+code all right and then add in the NS
+
+262
+00:11:38,800 --> 00:11:43,079
+app Transport Security
+
+263
+00:11:47,240 --> 00:11:49,200
+workaround essentially what I'm doing
+
+264
+00:11:49,200 --> 00:11:52,639
+right now uh is I have actually uh sort
+
+265
+00:11:52,639 --> 00:11:55,399
+of uh given it the URL as you can see in
+
+266
+00:11:55,399 --> 00:11:57,440
+this um view controller. Swift as an
+
+267
+00:11:57,440 --> 00:12:00,959
+HTTP but uh Swift would require an https
+
+268
+00:12:00,959 --> 00:12:03,680
+meaning a secure protocol uh and so the
+
+269
+00:12:03,680 --> 00:12:05,240
+problem is that I don't have one of
+
+270
+00:12:05,240 --> 00:12:07,160
+those secure protocol uh sort of
+
+271
+00:12:07,160 --> 00:12:09,000
+certificates and so switch is going to
+
+272
+00:12:09,000 --> 00:12:10,639
+say you know what I cannot connect to
+
+273
+00:12:10,639 --> 00:12:13,480
+this URL however if I go into my info.
+
+274
+00:12:13,480 --> 00:12:15,160
+pist uh and there's going to be some
+
+275
+00:12:15,160 --> 00:12:17,000
+code down in the description and if I
+
+276
+00:12:17,000 --> 00:12:19,560
+paste it in here all right if I run this
+
+277
+00:12:19,560 --> 00:12:21,120
+application
+
+278
+00:12:21,120 --> 00:12:23,720
+now it should
+
+279
+00:12:23,720 --> 00:12:27,040
+theoretically allow me to uh skip that
+
+280
+00:12:27,040 --> 00:12:29,600
+security check uh and immediately as you
+
+281
+00:12:29,600 --> 00:12:33,240
+can see here the response in
+
+282
+00:12:33,240 --> 00:12:35,839
+Json that's going to be it for the alop
+
+283
+00:12:35,839 --> 00:12:38,120
+portion of this tutorial LMO fire sorry
+
+284
+00:12:38,120 --> 00:12:40,279
+uh but now let's say you wanted to do uh
+
+285
+00:12:40,279 --> 00:12:42,639
+a synchronous request uh essentially
+
+286
+00:12:42,639 --> 00:12:45,360
+what you could do is use this other
+
+287
+00:12:45,360 --> 00:12:47,639
+cocoa pod that uh as I said the L has
+
+288
+00:12:47,639 --> 00:12:49,800
+made uh it's called a l Fire Plus
+
+289
+00:12:49,800 --> 00:12:51,680
+synchronous and it allows you to create
+
+290
+00:12:51,680 --> 00:12:54,360
+synchronous requests for Lile so let say
+
+291
+00:12:54,360 --> 00:12:57,920
+I copied this pod command here pod file
+
+292
+00:12:57,920 --> 00:12:59,279
+as you can see over here here what I'm
+
+293
+00:12:59,279 --> 00:13:01,560
+going to do is I'm going to paste it in
+
+294
+00:13:01,560 --> 00:13:02,839
+with the other
+
+295
+00:13:02,839 --> 00:13:07,320
+po if I do p control X save right and if
+
+296
+00:13:07,320 --> 00:13:09,880
+I run pod install once
+
+297
+00:13:09,880 --> 00:13:12,560
+more as you can see It'll install the
+
+298
+00:13:12,560 --> 00:13:13,480
+new
+
+299
+00:13:13,480 --> 00:13:16,560
+pod and then what I can do is inside of
+
+300
+00:13:16,560 --> 00:13:20,760
+my xco project I can also
+
+301
+00:13:20,760 --> 00:13:24,480
+import AO
+
+302
+00:13:24,959 --> 00:13:27,480
+fire
+
+303
+00:13:27,480 --> 00:13:30,519
+synchronous see if that's a okay as you
+
+304
+00:13:30,519 --> 00:13:33,959
+can see no errors and then I oh never
+
+305
+00:13:33,959 --> 00:13:38,480
+mind uh if I clean
+
+306
+00:13:41,440 --> 00:13:44,360
+build all right no errors now all I need
+
+307
+00:13:44,360 --> 00:13:46,279
+to do is in order to make a synchronous
+
+308
+00:13:46,279 --> 00:13:50,240
+request is run a LOF
+
+309
+00:13:50,839 --> 00:13:53,920
+fire. request and as you can see I'm
+
+310
+00:13:53,920 --> 00:13:57,199
+going to do the same for doget uh and of
+
+311
+00:13:57,199 --> 00:14:00,759
+course the
+
+312
+00:14:01,600 --> 00:14:04,920
+URL copy it paste it here ask for
+
+313
+00:14:04,920 --> 00:14:06,000
+response
+
+314
+00:14:06,000 --> 00:14:08,440
+string all right and now this time you
+
+315
+00:14:08,440 --> 00:14:10,320
+don't want to include any parameters in
+
+316
+00:14:10,320 --> 00:14:12,920
+this function just response string and
+
+317
+00:14:12,920 --> 00:14:14,560
+then you want to go you can immediately
+
+318
+00:14:14,560 --> 00:14:17,920
+just go do result. value and then you
+
+319
+00:14:17,920 --> 00:14:23,000
+can of course print this out all right
+
+320
+00:14:23,000 --> 00:14:26,600
+so now in
+
+321
+00:14:26,880 --> 00:14:29,240
+theory as you can see there are no fion
+
+322
+00:14:29,240 --> 00:14:32,040
+handls uh and so now this will call uh
+
+323
+00:14:32,040 --> 00:14:33,639
+with a lam of fire you know it's simple
+
+324
+00:14:33,639 --> 00:14:37,040
+to use uh syntax of lam of fire uh
+
+325
+00:14:37,040 --> 00:14:39,839
+except it should uh theoretically uh
+
+326
+00:14:39,839 --> 00:14:42,000
+work in a synchronous Manner and as you
+
+327
+00:14:42,000 --> 00:14:45,040
+can see it did work and that's going to
+
+328
+00:14:45,040 --> 00:14:47,759
+be it for this tutorial I hope you
+
+329
+00:14:47,759 --> 00:14:50,440
+enjoyed again thank you very much uh and
+
+330
+00:14:50,440 --> 00:14:52,079
+if I mean if you did enjoy you might
+
+331
+00:14:52,079 --> 00:14:53,600
+want to consider subscribing to the
+
+332
+00:14:53,600 --> 00:14:55,639
+YouTube channel it really does help out
+
+333
+00:14:55,639 --> 00:14:57,040
+uh and of course you can leave a like
+
+334
+00:14:57,040 --> 00:14:59,759
+down below if you did uh enjoy the video
+
+335
+00:14:59,759 --> 00:15:01,759
+uh again of course share it uh with your
+
+336
+00:15:01,759 --> 00:15:04,000
+friends who you think might enjoy it uh
+
+337
+00:15:04,000 --> 00:15:06,000
+or learn from it uh you can also leave
+
+338
+00:15:06,000 --> 00:15:07,800
+any comments suggestions or feedback
+
+339
+00:15:07,800 --> 00:15:09,680
+down in the comment section below uh you
+
+340
+00:15:09,680 --> 00:15:12,440
+can email to me at tajim Manny gmail.com
+
+341
+00:15:12,440 --> 00:15:15,000
+Twitter at tajim Manny uh and of course
+
+342
+00:15:15,000 --> 00:15:16,399
+all these contact links will be down in
+
+343
+00:15:16,399 --> 00:15:18,120
+the description below all the links will
+
+344
+00:15:18,120 --> 00:15:19,320
+be in the description and the source
+
+345
+00:15:19,320 --> 00:15:21,199
+code too uh and that's going to be it
+
+346
+00:15:21,199 --> 00:15:23,120
+for this tutorial thank you very much
+
+347
+00:15:23,120 --> 00:15:26,000
+goodbye
