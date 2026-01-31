@@ -1,0 +1,377 @@
+hey everyone welcome to the simply L
+YouTube channel today we will be
+exploring prom tuning and we'll be
+commencing with a story in the heart of
+techn a city powered by the Marvel of AI
+lived the universal language model ULM
+an AI capable of understanding and
+generating text like human like fluency
+while the ULM was a Cornerstone of
+innovation serving varied purposes
+across education Healthcare and Beyond
+it faced challenges in meeting the
+specific needs of its diverse users and
+here ULM term is intended to illustrate
+a conceptual all-encompassing language
+model capable of understanding and
+generating humanik text across various
+applications and domains that is similar
+to how large language models like llms
+and GPT generative pre-trained
+Transformers act so let's enter the
+world of form tuning a technique Ain to
+providing the ULM with a compass guiding
+its vast intelligence to focus precisely
+on the task at hand consider Mrs Eda a
+teacher who leverage prom tuning to
+direct the ULM in creating customized
+educational materials on ancient
+civilizations filtering out the noise
+and horning in on relevance similarly
+entrepreneur Leo used prom tuning to
+refine his virtual assistance
+recommendations for eco-friendly travel
+ensuring accuracy and personalization
+prom tuning transform the ULM from a
+journalized into a specialist allowing
+it to adapt its respons to fit the
+unique demands of techn inhabitants
+however the journey revealed a critical
+balance from two narrow risk stiffling
+the ulm's creativity while too broad a
+scope led to diluted relevance through
+the tale of techn we witnessed the
+essence of prom tuning a testament to
+human Ingenuity demonstrating our
+capacity to shape AI to our nuanced
+needs it's a story not just of
+technological advancement but of
+creating a harmonious dialogue between
+humanity and artificial intelligence
+illustrating the endless possibilities
+when we Master the art of guiding AI
+with precision and insight and before we
+move on just a quick info for you guys
+if you are one of the aspiring a& ml
+enthusiasts looking for online training
+and graduating from the best
+universities or a professional who
+elicits to switch careers in AI ml by
+learning from the experts then try
+giving a short to Simply learns
+postgraduate program in a ml in
+collaboration with P University and IBM
+by enrolling in this certification
+program you will gain expert in skills
+like generative AI prompt engineering
+chat jpt explainable AI machine learning
+algorithm supervised and unsupervised
+learning model training and optimization
+and there's much more on the list so
+what are you waiting for hurry up and
+enroll now you can find the course Link
+in the description box below and pin
+comment so let's get started so let's
+first understand what is prom tuning so
+promp tuning is a method that enhances
+the adaptability of large language
+models for Noel task by fine-tuning a
+minimal set of prom parameters this
+technique involves appending a tailored
+prompt before the input text directing
+the llm to generate outputs aligned with
+specific objectives its efficiency and
+versatility have made it a local or
+focal point in natural language
+processing advancements so let's
+understand prom tuning so prom tuning is
+the practice of customizing llms for new
+applications by adjusting a limited
+subset of parameters known as prompts so
+these prompts placed before the input
+navigate the llm toward producing the
+intended output and now we talk about
+the advantages of prompt tuning so the
+number one comes is efficiency so unlike
+comprehensive model find tuning prompt
+tuning modifies only a select few
+parameters enabling quicker task
+specific model adjustment and then comes
+the versatility so this approach is
+applicable across a spectrum of task
+from text generation and Analysis in
+natural language processing to image
+recognition and automated coding
+showcasing its adaptability to different
+domains and then comes the
+interpretability The modifiable Prompt
+parameters allow for an examination of
+how the models output generation is
+influenced offering insights into the
+models processing so this was about the
+advantages of promp tuning Now we move
+to the key challenges is promp tuning
+and we will write some prompts and see
+how we can promp tune the Chad jpd model
+and we can generate the outputs we want
+so let's move to CH jpt and here first
+we'll draft or craft effective prompts
+so crafting prompts that effectively
+guide the model without being overly
+complex is challenging So to avoid them
+we will write some prompts and let's see
+so we will take a fresh example for
+crafting precise prompts so let's
+consider a scenario and consider you are
+part of a financial analysis firm
+specializing in renewable energy sectors
+like solar and wind power
+you aim to leverage a language model for
+extracting market trends investment
+opportunities and Regulatory impacts
+specific to these sectors however you
+wish to exclude General energy Market
+data or information about fossil fuels
+and nonrenewable sources as well as omit
+any direct mentions of rival firms or
+their investment products so what
+challenge we will face here is your
+objective is to direct the AI model to
+furnish targeted insights on renewable
+energy sectors while filtering out
+nonrelevant information and avoiding any
+specific mentions of competitors and
+their offerings so for example uh we can
+write a prompt that give me all details
+on renewable energy sectors including
+solar and wind power but skip all info
+on other energy types and ignore data
+about companies like you could name the
+companies like Ecco power Ventures and
+their solar boost investment fund so
+this is the in in effective prompt so
+this prompt is ineffective because it's
+overly detailed and instructs the model
+on what to exclude in a way that could
+be confusing potentially leading to an
+over focus on the exclusions rather than
+the desired content so we talk about the
+optimized PR what you can write is
+provide an analysis of current trends
+investment opportunities and the impact
+of regulations in the renewable energy
+sectors specifically focusing on solar
+and wind power excl General energy
+market trends and specific investment
+products so this refine prompt clearly
+directs the model towards the needed
+information that is market trends
+opportunities and Regulatory impacts
+within solar and wind energy without
+cluttering the request with too many
+exclusions it certainly implies the need
+for exclusively by focusing on
+specifically focusing which naturally
+guides the AI to a unrelated sectors and
+competitive products facc facilitating a
+more focused and relevant output so now
+let's see this example and this is the
+inefficient prompt so we'll copy this
+and paste it to chat jpt and let's see
+what output it will provide to
+us
+so you could see that it has provided us
+the output but this prompt is
+ineffective because it's overly detailed
+and instructs the model on what to
+exclude in a way that could be confusing
+now we'll write the correct prompt as
+that is the optimized prompt what I've
+told you that is provide an analysis of
+current trends investment and
+opportunities and the impact of
+regulations in the renewable energy
+sectors specifically focusing on solar
+and wind power and exclude General
+energy market trends and specific
+investment products so this is the
+optimized prompt and it will provide a
+good result and a good
+output so you could see that it has
+started with the current trends
+only
+you could see the output and this is the
+desired output what we need and the CH J
+has provided with the optimized form Now
+we move to the next challenge that is
+avoiding overfitting so there's a risk
+of the model becoming too specialized to
+the training promps reducing its ability
+to generalize so strategy for this broad
+application is to prevent over
+specialization prompts that should be
+designed to be broad enough to Encompass
+the range of related queries enhancing
+the models versatility so for this also
+we will draft and optimized and
+unoptimized prompt so let's think of a
+scenario that you are developing an
+educational platform that uses a
+language model to generate study
+materials for high school biology
+covering topics from cell biology to
+ecology initially you fine tune the
+model with prompts focused on very
+specific areas like photosynthesis and
+plants so initial prompt we can write is
+explain the process of photosynthesis in
+Plants focusing on chlorophylls rool and
+light absorption so while the model
+excels at generating detailed content on
+photosynthesis it struggles when asked
+about broader or slightly related topics
+such as cellular respiration or plant
+adoptions to different environments so
+the issue we encounter here is when
+students query how do plants adapt to
+low light conditions so the model will
+fail to provide comprehensive answers
+because it's been too narrowly trained
+on photosynthesis specifics so the
+solution for this overfitting challenge
+is to prevent overfitting and enhance
+the model's ability to journalize Across
+the broader subject of biology you
+should utilize more inclusive prompts
+that cover a range of topics within the
+field so we have the Revis prompt here
+that is provide an overview of plant
+biology including key processes like
+photosynthesis cellular respiration and
+adaptions to environmental factors so
+this broader approach encourages the
+model to generate content that's
+relevant across various biology topics
+improving its utility for educational
+purposes so this is the prompt and we'll
+ask CH GB that is provide an overview of
+the plant biology including key
+processes like photosynthesis cellular
+respiration and adaptions to
+environmental conditions so this will
+improve its utility for educational
+purposes
+so let's move to the next concern that
+would be scalability concern and you
+could see that it has provided the
+desired output for the photosynthesis
+and the environmental factors for plant
+biology and as you we talk about the
+scalability concern so as the training
+data volume grows maintaining the
+efficiency of prom tuning becomes more
+challenging necessitating innovative
+solutions to streamline the adaption
+process so now we'll talk about its
+prompt also so scalability that is
+implementing AI for diverse customer
+service inquiries so let's consider a
+scenario your company aims to deploy an
+AI chat board to handle customer service
+inquiries across different departments
+from technical support to billing and
+account management initially the
+chatboard is trained with specific
+prompts for each category performing
+well in small case test so what
+challenge will you face with this prompt
+is or with this scenario is as you scale
+the chatboard to handle thousands of
+inquiries daily a gross of wide range of
+topics you find that the initial
+approach of using highly specific
+prompts for each category is
+unsustainable so the chatboard struggles
+to adapt the vast and varied nature of
+customer queries and we'll face the
+scaling issue also here that is the
+specific prompts used during initial
+training don't cover the breadth of
+potential customer inquiries leading to
+inadequate responses in unanticipated
+scenarios so what strategy we can apply
+for scalability is instead of relying on
+narrow specific PRS for each inquiry
+type your transition to using broader
+more adaptable prompts that can guide
+the AI in understanding and categorizing
+a wide range of customer questions so we
+can have an adapted prompt example and I
+have one that is or we can write here
+that would be identify the category of
+the customers inquiry that could be
+technical billing account management and
+provide relevant assistance based on the
+identified category so this strategy
+allows the chatboard to more effectively
+process a variety of inquiries by
+understanding the context and
+categorizing questions before generating
+responses making it more scalable and
+versatile in handling customer service
+task so if we address prom tuning
+challenges it is simplifying complex
+proms that is Begin by clearly
+identifying the core information or
+action desired from the llm breaking
+down multifaceted prompts into simpler
+more focused request employ
+straightforward language and eliminate
+non- Essential Elements to clarify the
+prompt and then we have utilizing soft
+prompts So Soft prompts which are non
+textual signals trained from examples
+guide the llm without explicit worded
+instructions so these are particularly
+used for task with limited training data
+or where interpretability is less
+critical and then we have Innovative
+optimization techniques so the
+development of parameter efficient
+fine-tuning techniques such as ptuning
+optimizes the search for Effective proms
+in a continuous space making it feasible
+to tailor llms to specific task without
+extensive retraining so this was all
+about the prom tuning and there you have
+it folks we hope you enjoyed this
+insightful tutorial and we have come to
+the end of this session if you like this
+session then like share and subscribe if
+you have any questions then you can drop
+them in the comment section below and
+thanks for watching and stay tuned for
+more from Simply learn staying ahead in
+your career requires continuous learning
+and upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification program in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click
+here

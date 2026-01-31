@@ -1,0 +1,252 @@
+hey everyone it's no secret that the
+majority of our internet usage is at the
+risk of getting hacked be it via unsafe
+messaging applications or misconfigured
+operating systems to counteract this
+void of digital security penetration
+testing has become the norm when it
+comes to vulnerability assessment par
+security OS is an operating system that
+has been become a well-known weapon in
+this fight against hackers a l
+distribution more cater towards
+penetration testers specifically parent
+security has layers of features that we
+will be covering in today's lesson let's
+take a look at the topics for this
+video we start by learning about what
+parro security is and why it should be
+considered as a viable alternative next
+to K Linux of penetration
+testers next we take a look at the
+minimum system requirements necessary to
+obtain Optimum performance from an
+installation of parro security moving on
+we learn about some unique features that
+make parot Stand Out Among the multiple
+ethical hacking operating systems
+available on the market and finally we
+look at the multiple ways that par
+security OS can be installed be it on a
+single system or for portable
+media so let's start out by learning
+what parot security
+is parat is a Dean based Linux
+distribution with an emphasis on
+security privacy and development it is
+built on Debian testing branch and uses
+a custom Harden Linux kernel while being
+founded in
+2013 parro security contains several
+hundred tools targeted towards various
+information security tasks such as
+penetration testing security research
+computer forensics and reverse
+engineering it has become a
+multiplatform solution accessible and
+freely available to Information Security
+Professionals and hobbies
+it features a distinct forens six mode
+that does not Mount any of the system
+hard dis or partitions and has no
+influence on the host system making it
+more stealthy than regular mode this
+mode is used on the host system when
+there is a need for executing forensic
+procedures in software development a
+rolling release is a paradigm in which
+software upgrades are rolled out
+constantly rather than in batches of
+versions this ensures that the software
+is constantly up to date rolling release
+distribution such as parat security OS
+follows the same concept providing the
+most recent Linux kernel and software
+versions as they become available on the
+market with the basic introduction to
+the operating system out of the way let
+us have a look at the bare minimum
+system requirements necessary to be able
+to run this operating
+system first up we got a CPU requirement
+which states that a 1 GHz dual Co CPU is
+the absolute minimum in order to use
+parat OS while multiple core systems
+will provide more Optimum performance a
+small beginner has been
+included a very distinct thing to be
+noted is that the operating system can
+be installed on all variance of chipsets
+be 32-bit 64-bit and the newly popular
+armm portfolio of
+devices unlike K Linux which requires
+some amount of graphical acceleration
+needed to display the operating system
+correctly paret OS has no such
+requirements and can be used with the
+leanest of machines
+taking into account the ram issue a
+minimum of 256 MB to 512 MB free Ram
+provides the optimum usage
+scenarios even when the OS is installed
+on a hard drive storage media it should
+theoretically occupy around 8 GB of
+information which may extend up to 16 GB
+depending on the tools being installed
+out of the box when it comes to booting
+options we have the option of going with
+the Legacy BIOS settings or with the
+more modern ufi settings these are just
+some of the requir ments for the
+installation of parro security OS to
+understand this process more vividly and
+to learn how visualization can help
+install an OS in our existing computer
+please follow the link to a parro
+security installation video linked right
+above let's understand what some of the
+things that make parot security unique
+among all the other penetration testing
+operating
+systems along with all the giant catalog
+of scripts par security has its own
+custom hardened Linux kernel which has
+been modified explicitly to provide as
+much security and resistance to hackers
+as possible as a first line of defense
+the configurations in the operating
+system act as a second Gateway taking
+care of militia requests and dropping
+them off this is particularly beneficial
+since should there be a scenario where
+the latest Linux kernel is causing some
+particular issue the parat development
+team will most likely iron it out first
+before passing it on as an update
+the custom hardened kernel wasn't
+reasoning enough parid security
+developers managed to install more
+hacking tools and scripts to ensure a
+smooth transition for the G Linux users
+all the tools you found in Gali are
+present in parto and then a few extra
+ones for good measure this has been
+achieved while keeping roughly the same
+size of the installation file between
+both operating
+systems however it's not all
+productivity points for parro OS they
+provide a choice between two different
+desktop environments the M desktop which
+comes pre-installed by default and KDE
+for those unfamiliar with Linux
+terminology you can think of desktop
+environments as the main UI for a Linux
+system being highly modular in nature
+one can use Ki Linux or paratos while
+adding another dektop environment which
+they find appealing while Kali has only
+a single option paratos has managed to
+provide two optimized Wills with made
+desktop and KD desktop ready made on the
+website
+one of the primary advantages of parat
+os over Kali is that it's relatively
+lightweight this implies that it takes
+frequently less dis space and computing
+power to function properly with as
+little as 320 MB of ram required in
+reality paratos is also designed to
+operate successfully of a USB stick but
+Kali liux does not work well from a USB
+stick and is generally installed in a
+virtual machine parat can be seen as
+more of a niche distribution if you're
+searching for something lighter than G
+Linux
+now that we understand all about the
+operating system let us have a look at
+some of the ways we can move forward
+with the
+installation the first way to use parat
+security is by launching the
+distribution in live USB mode this can
+be achieved by downloading the installer
+image file or the ISO file from the
+parate security website and flashing it
+to a USB drive with capacity of at least
+8 GB some people do not need to save
+these data permanently and live USB is
+the perfect solution for such cases
+after the iso image is flashed the th
+Drive can be used to boot a fully
+working installation of the operating
+system with a caviar that any changes
+made to the OS in this mode are not
+written permanently some cases allow
+persistent storage and live USBS but
+those require further configuration than
+normal
+situations but what if the user wants to
+store data permanently in the installed
+OS the best and the most reliable way to
+ensure this is the full-fledged hard dis
+installation this will ensure the
+complete usage of the system's Hardware
+capabilities and will take into account
+the updates and configurations being
+made into the OS on a driver level this
+method is supposed to override any
+pre-existing operating system which is
+installed on the hard disk be it windows
+or any other variety of
+Linux the next alternative route for
+installing pirate security would be to
+use virtualization software such as
+VMware or virtual box the software will
+be installed as a separate application
+on an already existing OS and pallet
+security can be run as an operating
+system in the same system as a window
+the hardware requirements will be
+completely customizable starting with
+the allotted Ram to the virtual hard
+disk capacity the usage of both a host
+machine and a guest operating system
+like paratos allows users a safe
+environment to learn while not putting
+the systems at risk if you want to learn
+more about how we can go forward with
+this method we have a dedicated video
+where parat OS is being installed on a
+VMware while running a Windows 10
+operating system you can find the link
+in the description box to get started
+with your very own virtual machine
+instance the final way to install parot
+security is by using a dual boot system
+to put it in simple words the parro OS
+will not be overwriting any
+pre-installed operating system on a
+machine but will be installed alongside
+it when a computer boots up the user
+will get a choice to boot into either of
+the operating system many people prefer
+to keep both of Windows and parot
+security installed so if the
+distribution of work and recreational
+activities is also allotted effectively
+it also gives users a safety valve
+should their custom Linux installation
+runs into bugs that cannot be fixed from
+within the OS hope you learned something
+new today if you have any questions
+regarding this topic feel free to ask
+your queries in the comment section
+below and we will get back to you as
+soon as possible thank you for watching
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

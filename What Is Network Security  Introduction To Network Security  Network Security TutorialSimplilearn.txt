@@ -1,0 +1,666 @@
+the world runs on data off
+the internet houses are treasured loop
+of potentially harmful information from
+basic shopping habits to private
+financial transactions
+all this data is carried over a network
+of interconnected devices
+during transit the data is as secure as
+the mechanism responsible for its
+transmission it's in this phase that the
+most corrupted data originates
+it's paramount that the networks
+carrying this data must be secured
+against malicious hackers and ample
+attacks
+let's take a look at the topics to be
+covered in this video on network
+security which is rising in popularity
+and importance
+we start by introducing the viewers to
+network security and its basic
+definition
+we cover the working of network security
+in the next section
+then we have the different types of
+network security followed by a small
+introduction to transport and
+application layer security and the
+importance
+next we cover the key tools in network
+security the benefits and a live
+demonstration of how nmap can scan posts
+and aid in ethical hacking
+so let's start with the first topic for
+the day which is an introduction to
+network security
+network security is a set of
+technologies that protects the usability
+and integrity of a company's
+infrastructure by preventing the entry
+or proliferation within a network
+it architecture comprises of tools that
+protect the network itself and the
+applications that run over it
+effective network security strategies
+employ multiple lines of defense that
+are scalable and automated each
+defensive layer here enforces a set of
+security policies which are determined
+by the administrator beforehand
+this aims at securing the
+confidentiality and accessibility of the
+data and the network
+the every company or organization that
+handles a large amount of data has a
+degree of solutions against many cyber
+threats the most basic example of
+network security is password protection
+it has the network the user chooses
+recently network security has become the
+central topic of cyber security with
+many organizations involving
+applications from people with skills in
+this area it is crucial for both
+personal and professional networks most
+houses with high speed internet have one
+or more wireless routers which can be
+vulnerable to attacks if they are not
+adequately secured
+data loss theft and sabotage risk may be
+decreased with the usage of a strong
+network security system
+the workstations are protected from
+hazardous spyware thanks to network
+security
+additionally it guarantees the security
+of the data which is being shared over a
+network
+by dividing information into various
+sections encrypting these portions and
+transferring them over separate pathways
+network security infrastructure offers
+multiple levels of protection to thought
+man in the middle attacks preventing
+situations like eavesdropping among
+other harmful attacks
+it is becoming increasingly difficult in
+today's hyper-connected environment as
+more corporate applications migrate to
+both public and private clouds
+additionally modern applications are
+also frequently virtualized and
+dispersed across several locations some
+outside the physical control of the itd
+network traffic and infrastructure must
+be protected in these cases since
+assaults on businesses are increasing
+every single day
+we now understood the basics of network
+security but we need to understand how
+network security works in the next
+section in slightly more detail
+network security revolves around two
+processes authentication and
+authorization
+the first process which is
+authentication is similar to access
+paths which ensure that only those have
+the right to enter a building
+in other words authentication checks and
+verifies that it is indeed the user
+belonging to the network who is trying
+to access or enter it thereby preventing
+unauthorized intrusions
+next comes authorization
+this process decides the level of access
+provided to the recently authenticated
+user
+for example
+network admin needs access to the entire
+network whereas those working within it
+probably need access to only certain
+areas within the network
+based on the network user's role the
+process of determining the level of
+access or permission level is known as
+authorization
+today's network architecture is complex
+and faces a threat environment that is
+always changing and attackers that are
+always trying to find and exploit
+vulnerabilities
+these vulnerabilities can exist in many
+areas including devices data
+applications users and locations
+for this reason many network security
+management tools and applications are in
+use today that address individual
+threats
+when just a few minutes of down times
+can cause widespread disruption and
+massive damage to an organization's
+bottom line and reputation it is
+essential that these protection measures
+are in place beforehand
+now that we know a little about network
+security and it's working let's cover
+the different types of network security
+the fundamental tenet of network
+security is the layering protection for
+massive networks and stored data that
+ensure the acceptance of rules and
+regulations
+as a whole there are three types
+the first of which is physical security
+the next being technical and the third
+being administrative
+let's look into physical security first
+this is the most basic level that
+includes protecting data and network
+through unauthorized personnel from
+acquiring control over the
+confidentiality of the network these
+include external peripherals and routers
+that might be used for cable connections
+the same can be achieved by using
+devices like biometric systems
+physical security is critical especially
+for small businesses that do not have
+many resources to devote to security
+personnel and the tools as opposed to
+large firms
+when it comes to technical network
+security it focuses mostly on
+safeguarding data either kept in the
+network or engaged in network
+transitions
+this kind fulfills two functions
+one is depends against unauthorized
+users
+the other is a defense against
+malevolent actions
+the last category is administrative
+this level of network security protects
+user behavior like how the permission
+has been granted and how the
+authorization process takes place
+this also ensures the level of
+sophistication the network might need to
+protect it through all the attacks
+this level also suggests necessary
+amendments that have to be done to the
+infrastructure
+i think that's all the basics that we
+need to cover on network security
+in which our next topic we're going to
+go through two mediums of network
+security which are the transport layer
+and the application layer
+the transport layer is a way to secure
+information as it is carried over the
+internet with users browsing websites
+emails instant messaging etc
+tls aims to provide a private and secure
+connection between a web browser and a
+website server it does this with a
+cryptographic handshake between two
+systems using public key cryptography
+the two parties through the connection
+exchange a secret token and once each
+machine validates this token it is used
+for all communications
+the connection employs lighter symmetric
+cryptography to save bandwidth and
+processing power
+since the application layer is the
+closest layer to the end user it
+provides hackers with the largest threat
+surface
+poor app layer security can lead to
+performance and stability issues data
+theft and in some cases the network
+being taken down
+examples of application layer attacks
+include distributed denial of service
+attacks or tdos attacks http flats hp
+injections cross-site scripting etc
+most organizations have an arsenal of
+application layer security protections
+to combat these and more such as web
+application firewalls secure web gateway
+services etc
+now that we have the theory behind
+network security has been covered in
+detail let us go through some of the
+tools that can be used to enforce these
+network security policies
+the first two to be covered in the
+section is a firework
+a firewall is a type of network security
+device that keeps track of incoming and
+outgoing network traffic and it decides
+which traffic to allow or deny in
+accordance to a set of security rules
+for more than 25 years firewalls have
+served a network security's first line
+of defense
+they provide a barrier between
+trustworthy internal protected and
+regulated networks from shady external
+networks like the internet at some point
+the next tool which can be used to
+bolster network security is a virtual
+private network or vpn for short
+it's an encrypted connection between a
+device and a network via the internet
+the encryptment connection is the secure
+transmission of sensitive data
+it makes it impossible for unauthorized
+parties to eavesdrop on the traffic and
+enables remote work for the user
+the usage of vpn technology is common in
+both corporate and personal networks
+next we cover the importance of
+inclusion prevention systems in network
+security or ips frameworks
+an intrusion prevention system is a
+network security tool that continually
+scans the network for harmful activity
+and responds to it when it does occur by
+reporting blocking or discarding it
+it can be either hardware or software
+it's more sophisticated than an
+inclusion detection system or an ids
+framework which can just warn an
+administrator and merely identify
+harmful activities while in the case of
+an ips it actually takes against that
+activity
+the next tool in this section and final
+one are going to be behavioral analytics
+behavior analytics focus more on the
+statistics that are being carried over
+and stored through months and years of
+usage
+when some kind of similar pattern is
+noted that the idea administrator can
+detect some kind of attack the similar
+attacks can be stopped and the security
+can be further enhanced
+another day i've covered all that we
+need to know about network security the
+necessary tools it's different types etc
+let's go through the benefits of network
+security as a whole
+the first which is protection against
+external threats
+the objective for cyber assaults can be
+as varied as the defenders themselves
+although they are typically initiated
+for financial gain whether they are
+industrial spies hacktivists or cyber
+criminals these bad actors all have one
+thing in common which is how quick
+clever and covert the attacks are
+getting a strong cyber security posture
+that considers routine software updates
+may assist firms in identifying and
+responding to the abuse techniques tools
+and the common entry points
+the next benefit is protection against
+internal threats the human aspect
+continues to be the cyber security
+system's weakest link
+insider risk can originate from current
+or former workers third party vendors or
+even trusted partners and they can be
+unintentional careless or downright evil
+aside from that the rapid expansion of
+remote work and the personal devices
+used for business purposes while even
+iot devices in remote locations can make
+it easier for these kind of threats to
+go undetected until it's too late
+however by proactively monitoring
+networks and managing access these
+dangers may be identified and dealt with
+before they become expensive disasters
+the third benefit is increased
+productivity
+it is nearly impossible for employees to
+function when network and personal
+devices are slowed to a crawl by viruses
+and other cyber attacks during the
+operation of website and for the company
+to run
+you must significantly minimize
+violations and the amount of downtime
+required to fix the breach by
+implementing various cybersecurity
+measures such as enhanced firewalls
+wireless scanning and automatic backups
+employee identification of possible
+email phishing schemes suspicious links
+and other malicious criminal activities
+can also be aided by education and
+training
+another benefit is
+brand trust and reputation
+customer retention is one of the most
+crucial elements in business development
+customers today place a premium on
+maintaining brand loyalty through a
+strong cyber security stance since this
+is the fastest way to get other
+businesses back get referrals and sell
+more tickets overall additionally it
+helps manufacturers get on the vendor
+list with bigger companies as a part of
+the supply chain which is only as strong
+as its weakest link
+this opens possibilities for potential
+future endeavors and development
+it's all really the all for the
+theoretical part of network security
+after covering so many topics let's go
+through a small demonstration to drive
+home this topic's importance so one of
+the first things we're going to cover is
+the installation of nmap
+what are we using right now is actually
+vmware a re-running an instance of a
+relax distribution known as parrot
+security operating system
+the parrot security os is a debian based
+linux distribution that is catered more
+towards ethical hackers and penetration
+testers the howard is created more is it
+comes pre-installed with a lot of tools
+that ethical hackers need including nmap
+so let's say you're using another debian
+based linux distribution
+if you want to install nmap you can go
+with the command of sudo
+apt which is the package manager
+install
+and
+and just press enter
+at this point it's going to ask you for
+your administrator password because of
+the sudo command which you have used now
+this epd will change depending on the
+distribution let's say using a
+distribution that is based on arch linux
+that will be different if there is some
+other distribution which is built from
+scratch the commands will differ but
+more or less a lot of the distributions
+the main stream distributions that
+people use like ubuntu zorinos max mint
+they are debian bs so you're just going
+to be using sudo apt install and map
+if you give your administrator password
+here
+it's going to see that nmap is
+smashed manually installed and it is
+already the newest version at this point
+if you do not have an app in your
+distribution it's going to install the
+necessary package files
+if i just use the nmap command you can
+see some help lines where it basically
+says what kind of flags you can use what
+are some of the most common commands the
+version etc it gives a small sample for
+the usage of nmap
+now
+the first one of the most basic
+functions of nmap is to identify active
+hosts on your network
+and app does this by using a ping scan
+or sometimes it's called a ping suite
+this identifies all of the ip addresses
+that are currently online without
+sending any packets to these hosts
+to run the command we're just going to
+go with let me just clear the screen for
+now
+another thing you have to do before
+running nmap just for our ease of use is
+we're going to use the sudo suv command
+this will turn our console into an
+administrator console so let's say we
+want to use some drivers or some
+external adapters or anything that
+requires administrative permission we
+don't have to use the admin password
+again and again
+just going to give it a bit of time for
+it to recognize
+okay now that you see uh this dollar
+sign has changed into a hash symbol
+which means we now have root access
+of this console right now of this
+terminal so what we're going to do for
+the pink suite where we have to check
+existing course is are going to use the
+command in map
+minus sp
+and go with the ip address
+of the current subnet that you are in
+which is always going to be minus one uh
+it's always going to be 192 and 168.1.1
+the 24 bracket
+so this is going to take some time
+considering this is going to check all
+the hosts
+in this particular subnet
+the command then returns a list of posts
+on your network which is this and the
+total number of assigned ip addresses if
+you can spot like any ip addresses that
+you cannot account for in your network
+or your server you can then add further
+commands to investigate them further
+using nmap itself
+now coming to another feature of nmap
+which is a very important usage
+is
+when scanning posts and mac commands can
+use server names ip addresses or even
+ip6 addresses
+a basic nmap command will produce
+information about the given host
+so to run a basic port scan we can just
+use the nmap command with the ip address
+of the device or the ip address that we
+are targeting
+so for now the host machine that i am
+using currently has this current ip
+address
+if you can see the current id address is
+192.168.1.22
+as it's written in the ipv4 address
+preferred section
+so now we're going to try and attack
+this first machine using nmap on parent
+security operating system
+so we're just going to go with the end
+map
+192 162
+and press enter and it's going to start
+scanning the host for different services
+and the ap address
+that are being run on the system
+the speed of these scans usually depends
+on how quick the processor is and also
+how quickly the two machines can connect
+with each other but two machines i mean
+the virtual machine in this case and the
+machine that is being attacked which is
+right now the host machine which is
+running vmware workstation
+as you can see the core scanning is
+complete for this particular ip address
+and you can see the number of ports is
+mentioned and the services that these
+posts are used for is also mentioned it
+says which of these are open for example
+the 53 tcp port we can see it is closed
+while some of the other ports are open
+now one more feature of nmap is the
+ability to guess the operating system of
+the ip address that we are attacking
+for that we need to add one more flag
+which is going to go with the normal
+command is n map minus 4 and
+the regular appearance that we are in
+the process of attacking
+let's give it a few minutes to run the
+scan and it will try and put a small gas
+on the operating system that this host
+might be running
+this gas might not always be accurate
+but it puts a small idea and this is
+much more accurate in the case of
+actually unix based operating system
+other than windows based operating
+systems may be able to detect that if it
+is a windows a linux macintosh
+and so on
+but it may have difficulty finding exact
+single versions which becomes easier in
+the case of linux because we can
+identify different distributions by some
+of the kernels
+which and most of the vulnerabilities
+comes from the kernels and not the
+particular distributions
+as you can see the os detection guess is
+complete and you can see aggressive os
+is over here which is microsoft windows
+xp service pack or windows server and
+there's the 98 guess that it's mostly
+like i mentioned if you can guess if it
+is a windows based system you can apply
+the vulnerabilities and exploits
+accordingly
+now at times you may need to detect
+service version and the and similar
+information from these open ports
+actually this is useful for
+troubleshooting and scanning for
+vulnerabilities or locating services
+that need to be updated considering a
+lot of the new updates are used to fix
+these kind of open vulnerabilities so
+the flag that we're going to use in this
+case is minus
+sv or hyphen s3 so only this is going to
+change with the nmap and the ip address
+of the whole system staying consistent
+a lot of the services that are being run
+on these ports are often not the most
+safe for example apache web server which
+is a very common web server being used
+for even local and global projects uh a
+lot of the older versions used to have
+systems that can allow privilege
+escalations or other vulnerabilities
+that can allow hacker to get into your
+system without even you getting a trace
+of it
+silhouetted versions tend to fix these
+as quickly as possible and most of these
+versions do not circulate in the real
+world but can be used for ethical
+hacking and testing on how these
+validate and how these vulnerabilities
+can be attacked further
+now with the sv command scan is complete
+we can see that it is mentioning some of
+the version of the services that are
+being run on the particular post
+once again like i mentioned using these
+version numbers you can identify
+particular vulnerabilities and use the
+exploits design for these
+vulnerabilities to gain access to the
+system
+another thing that nmap does well is
+port scanning it's now the basic
+utilities actually that nmap offers and
+consequently there are few ways that
+this command can be customized further
+for example to come to start a port scan
+we're going to use the flag of my ipin p
+we're going to specify a random port for
+example 443 which we know it will be
+open because it is the port used for
+https connections which is obviously
+essential for you to access the internet
+and once again we are going to use the
+ip address or local host
+as the test machine that have been
+attacked
+as you can see it clearly states that
+the four fourth report is open as
+expected
+now you can use multiple ports you can
+check multiple ports this way for
+example and map and p we're going to use
+scan three different ports four four
+three eighty and four four five
+address again
+and it's going to show
+the state of all the three ports now you
+can see this filter part here
+which which does not mean it is open and
+it cannot be exploited in any way at
+least right now maybe there is any other
+service that is being run it can be
+exploited further but right now it is in
+a filtered condition
+that is how we can actually scan for
+multiple ports together we can also we
+can also use actually in a sports car in
+a range format for example
+let's say we're going to scan the ports
+from 200
+to 300 and once again going to use the
+hyphen key flag
+then the ip address of the system being
+attacked
+it's going to scan all the posts from
+200 to 300 and mention what are the
+ports that are open filtered or just
+straight up closed
+as you can see all the 101 stand posts
+are in ignore state for example if we
+try to scan a range in
+a more reasonable range for example uh 4
+4
+3 2
+4 6
+that's it
+we'll keep the ip address similar
+and you can see two of them are open and
+two of them are filtered for different
+different reasons this is how you can
+find out which of the ports are liable
+for exploitation before attacking these
+kind of devices
+hope you enjoy this video
+please let us know in the comments
+section if you have any issues with
+network security or the things that you
+learned in this video subscribe to our
+channel for more videos like this and
+thank you for watching
+[Music]
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

@@ -1,0 +1,488 @@
+hi everyone welcome to this pow shell
+tutorial by simply learn where we will
+discuss some key points of Powell like
+what is Powers shell how does poell work
+why is poell used and some advantages of
+Pell at the end we will perform some
+important commands of poell in the demo
+part so before jumping to what pow shell
+is if you are an aspiring cyber security
+professional looking for online training
+and certification from prestigious
+universities and in collaboration with
+leading expert to your credibility then
+search no more simply launch
+post-graduate program in cyber security
+from MIT University in collaboration
+with EC Council should be a right choice
+this postgraduate program in cyber
+security is designed to equip with the
+skills required to become an expert in
+the rapidly growing field of cyber
+security this cyber Security Programs
+aims to help stay a breast of all the
+latest Trend in the cyber security as
+well designed to accommodate a diverse
+range of Learners this course require
+just a bachelor degree with a 50%
+average no prior programming experience
+and one plus year of experience preer so
+for more details use the link in the
+description box below so without any
+further Ado let's get started so what is
+Powell Powell is an open source command
+line tool that leverages microsoft.net
+technology it serves as both a shell and
+a scripting language allowing automation
+of task and configuration for developers
+it admins and developed professionals
+the command line interface provides
+efficient control over the computer
+enabling easy reproduction of commands
+and minimizing errors Powershell
+scripting language conveys instructions
+from one software to another unlike
+compil languages like Ruby or python it
+interprets commands line by line
+enhancing parent software functionality
+for automation data extraction and
+configuration management so moving
+forward let's see how does Powershell
+work power shell rooted in The NET
+Framework operates more like a
+programming language than a traditional
+command Lang line tool it revolves
+around object treating everything as an
+object with Properties or methods so
+these objects seamlessly flow through
+the program as input or output
+manipulated by four types of commands
+cmdl command Le power shell function and
+the third one is Powershell script and
+the fourth one is executable commands so
+moving forward let's see why is
+powerwell used so built on the Net
+Framework Powershell functions a keen to
+a programming language rather than than
+a typical command line tool It Centers
+on objects viewing everything as an
+object with Properties or methods these
+object fluidly move through the program
+as input or output subject to
+manipulation by four type of commands so
+some key points why powerwell used are
+the first one is enabling task
+automation firstly po shell excels in
+task automation with devops as a
+scripting language it primarily employed
+for automation across various use cases
+its unique format system make it prefer
+choice for Automation and its
+extensively with functions classes CMD
+LS and modules enhance its capabilities
+the second one is driving data
+accessibility powershell's popularity is
+also attributed to its role in data
+accessibility primarily used in
+administrative task it provides it admin
+seamless access to diverse data stores
+with large computer networks including
+file system and Registries the third one
+is managing infrastructure as a code a
+third reason is a Powers Shield use of
+the desired State configuration DSC
+framework allowing users to manage
+company infrastructure through
+configuration as code managers or it
+admins develop Powershell skills to push
+or pull configuration models for
+seamless compossibility these skills are
+essential for enforcing settings
+achievement repeatable deployments and
+creating declarative configuration the
+fourth one is facilitating remote
+commands lastly Powershell broad
+acceptance and versatility stem from its
+capability to remote command
+facilitation remote work is highly
+sought after and tools enabling it gains
+immense popularity pow shell enables
+administrators to execute remote
+operation on multiple system facilit by
+Windows management instrument and the Ws
+management protocol and at the last we
+will discuss some advantages of
+Powershell now let's move forward and
+see some advantages of Powershell the
+first one is extensible format system
+Powershell simpli user input formatting
+and output customization through three
+flexible formatting methods allowing
+easy manipulation for any desired
+setting the second one is built-in data
+formats po shell supports data formats
+like CSV Json and XML enabling storage
+transfer and readability for both humans
+and machine CSV and inbuilt format
+stores table data and plain data as well
+with each file separated by the comma
+the third one is easy automation aell
+employs a simple single function command
+Le for task implementation which can be
+used independently or combined for
+complex task it includes over 90 basic
+command lets and developers can create
+and share custom command Le facilitating
+easy automation for repetitive task the
+fourth one we have self-service
+deployment poell empowers each exchange
+team to independently create their
+command LS offering a significant
+Advantage with a self-service model that
+allow developers to manage their feature
+concurrently with their development the
+last one we have consistent API Windows
+apis like Windows management
+instrumentation and component object
+model are recognized for their
+unlikeness and incompleteness leading to
+inefficiency in handling request to and
+from the browser so moving forward let's
+jump into our demo part so hi guys
+welcome to this demo part of power shell
+tutorial so we will be implementing some
+basic commands like get content test
+connection get help get date and start
+sleeps or write host some these type of
+commment so we will Implement one by one
+and we will see the output of the
+particular okay so this is our
+Powershell IC screen Windows Powershell
+IC screen so we will Implement commands
+one by one and the output will use okay
+so our first command is PS version table
+so we will write
+dollar
+PS version
+table right so here this button is there
+so you can run script here so as you can
+see okay let me make it big yes so as
+you can see a version table right so
+where is the addition desktop so these
+are the table so what is version table
+right so to check the version of
+Powershell uh you are using on Windows
+10 or 11 or open open a Powershell
+windows and enter this PS version table
+into the prompt so the current
+Powershell version will be displayed
+next to the PS version so finding your
+Powershell version helps you know what
+Powershell uh features have access to
+right so moving forward we will
+Implement our second command called
+location so I will remove this and I
+will enter location right so first let's
+run it so
+path where your Powershell I is
+installed so it will show that path
+right so my current path is this desktop
+so the current working location is the
+default location to which commands
+points right in other words this is the
+location that Powershell uses if you
+don't Supply an explicit path to the
+item or the location that is affected by
+the command right let's move forward and
+see our third command which is known as
+alas right so let's run this as you can
+see here the all the alas G right for
+each object these these are all the
+commands different different commands of
+particular this power right so an alas
+is an alternate name for the command L
+cmdl function or executable file you can
+say so including scripts the Powershell
+includes a set of buil-in function built
+in alas you can can say so you can add
+your own alas or function to the current
+session and you can use your Powershell
+profile into your Powershell profile
+okay so let's move forward to the
+fourth uh this function which is known
+as
+di right so if I will run it so di so it
+will tell you the directory of your
+particular this file name right okay so
+the DI command in this Windows command
+shell shows the targeted location of a
+file system Junction point so in
+Powershell this information is
+available uh from the target property of
+the file system so object can return by
+the get children and is displayed in the
+default output right so moving
+forward let's see our next
+command so here you can like we used to
+do in different different languages like
+hello we will print hello world so how
+we can print here so here we can write
+write
+post here you can add your text hi
+everyone okay just you have to run it so
+here okay this is right dash host so yes
+as you can see hi everyone is printing
+okay and you can
+print basic programming word hello
+world right let so as you can see here
+hello world is print so right host is a
+wrapper for right information this
+allows you to use right host to emit
+output to the information stream this
+enables the capture of uh suppression of
+data written using right host while
+preserving the PPS compatibility right
+so moving forward let's create one file
+name here I will create one
+file file text document I will name it
+simply learn. dxt okay so this is our
+file simply learn. txt let me make it
+small yeah so this is our file so here I
+will add text hi
+everyone how are
+you okay so I will save it and I will so
+how you can get this content okay okay
+so there is one command known as get
+content so get content in Powershell is
+used to read the content from the
+particular file text file okay so all
+the programs uh from the the desired
+location or the specified location so
+this function this get content function
+gets the content of the file one at the
+time and return it's a collection of
+objects so how we can do it so we have
+to write it
+here
+C
+content and the file name
+simply simply learn.
+dxt okay oh to write I can write it here
+as well but I will like to write
+here better
+visual
+okay okay maybe spelling mistake is
+there spelling mistake is there
+simply simply learn doxt so as you can
+see we got the content hi everyone how
+are you and if you will check here the
+data is return
+okay so this is how you can get content
+from the particular file moving forward
+let's uh move to the our next command
+which is out file or if you want to
+append on a particular file like simply
+learn. text if you want to write
+something else like I'm good how are you
+like this any text so how we can do so
+we can write
+here uh like I'm
+good what
+about
+you right then here I can write
+out file and
+simply simply
+le. dxt your file name then
+append right so using the outfile
+command so it will send output to a file
+particular file so it implicitly uses
+Powershell formatting system to write to
+the file so the file received the same
+display representation as a terminal
+okay so here I will run it okay if we
+will check check see as you can see here
+it is written I am good what about you
+okay we have appended particular text
+into the simply learn text file right
+what if I want to add text into a
+different you know documentation so for
+that you have to nothing you have to do
+you have to just change the file name so
+here I will write simply instead of
+Simply l
+okay and I will run
+it
+right
+so
+here file is created and it is written
+here I am good but about you right this
+is how you can create a different file
+and you can add your text and or you can
+say append your text right moving
+forward uh we will see some geted fun
+so for that I will write here simply I
+have to write
+get dat right enter it let's run it okay
+so as you can see today is 11 December
+2023 the time is this the minute is this
+and the settings are this right so the
+get date command gets a date time object
+that represent the current date or a
+date that you specify okay so get date
+use format the date and time in a
+several net and the Unix formats so you
+can use get dat to generate a date or
+time correct string and then send the
+string to the other command or program
+okay so we will see the start sleep
+function so the start sleep command
+suspends the activity in a script or a
+session for the specified period of time
+like 5 Seconds 10 seconds or minutes you
+can say and you can use it for many
+tasks such as waiting for an operation
+to complete or pausing before repeating
+an operation
+so how it will work I will write
+see
+write
+poost right
+host
+sleeping for five
+seconds right and I
+want background
+color color should be
+black
+and foreground color should
+be C lettick right and here I will write
+start
+start
+see
+seconds
+five okay let's run it so watch it here
+carefully okay in the
+terminal it is printed but one 2 3 4 5 5
+seconds after 5 Seconds this particular
+thing you know came so as you as I told
+you so you can use such as a waiting for
+an operation to complete so this is the
+operation to complete okay sleeping for
+5 seconds right and or pausing before or
+repeating for a nomination so this is
+how you can use this start sleep okay
+you can add 10 seconds you can add two
+seconds if I will add two seconds okay
+let's that 2 second see it will pause
+for the 2 second one two that's it and
+it came
+right so moving forward let's see get
+command
+okay
+get
+command Okay I want
+to get the
+command
+right so as you can see all the command
+is starting from right which has the
+right word it came right so this get
+command uh gets all the commands that
+are listed on the computer okay with
+right you can use any particular sort of
+word including command alas function
+filter scripts and application get
+commands get the commands from Parell
+modules and those imported from the
+other sessions as as well so this is
+done so moving next we will see get
+dis get this okay it's running wait so
+get get dis will get your the serial
+number of the
+dis you know the health and the
+operation station and the total size of
+the particular you know dis installed
+into your system okay so the get dis
+command gets one or more dis object
+visible to the operating system or
+optionally a filter
+list
+okay what I can
+do
+select
+on
+select select
+all as you can see
+here it is telling all the things about
+my disk right
+uh size of the disk
+512 and
+this manual
+Factor uh everything about the disk okay
+so moving
+forward we will see our next
+command. say testt connection test
+connection okay so here I will write
+test
+connection computer name
+then I will write here
+www.
+google.com right and I will run it so as
+you can see the IP came okay and the
+sources came the destination is G all
+the bites and the typ so the test
+connection command sends internet
+control message protocol icmp Echo
+request package or ping to one of the
+more report computers and return the
+echo message packages right so you can
+use this command to determine whether a
+particular computer can be contacted
+across an IP network or
+not okay so moving forward to our last
+command which is
+get
+help
+get
+content
+online right so let's wait so in this
+this page will come it will go to the
+online to the Microsoft and it will come
+with the get command okay get content
+all the content online right we can't
+use test connection because every test
+connection is not online so I use this
+get content online okay it will open
+this Microsoft page and it will show you
+all the contents related to
+potion right so yes so we are done with
+the our basic commands
+so here we have come to end of this
+video if you love anything about this
+video please do like share and subscribe
+if you have any question regarding
+Powershell please comment down below our
+team of expert will help you as soon as
+possible thank you and keep learning
+with simply staying ahead in your career
+requires continuous learning and
+upscaling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click
+here

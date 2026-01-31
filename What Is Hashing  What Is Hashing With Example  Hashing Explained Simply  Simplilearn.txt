@@ -1,0 +1,272 @@
+imagine creating an account on a new
+website
+you provide your email address and set a
+password that you are confident
+and you would not forget
+what about the website owner how
+securely are they going to store your
+password
+for website administrators they have
+three alternatives
+they can either store the passwords in a
+plain text format
+they can encrypt the passwords using an
+encryption and decryption key
+or they can store the passwords in a
+hash value
+let's have a look at each of these
+when a password is stored in clean text
+format it is considered to be the most
+unsafe option since anyone in the
+company can read your passwords a single
+hack and a data server breach will
+expose all the accounts credentials
+without needing any extra effort
+to counter this owners can encrypt the
+passwords and keep them in the servers
+as a second alternative
+but that would mean they also have to
+store the decryption key somewhere on
+their servers
+in the event of a data breach or the
+server hack both the decryption key and
+encrypted passwords will be leaked thus
+making it a single point of failure
+what if there was an option to store the
+passwords after scrambling them
+completely but with no way to decrypt
+them
+this is where hashing comes to play
+since only the hashed values are stored
+in the server
+though encryption is needed with no
+plain text passwords to protect your
+credentials are safe from the website
+administrators
+considering all the pros cached
+passwords are the industry standard when
+it comes to storing credentials nowadays
+hey everyone this is bible from simply
+learn welcome to this video on what is
+hashing
+let's see the topics that we need to
+cover today
+we understand what is hashing and the
+base concept behind its
+implementation we move on to hash
+functions and then take a look at the
+guidelines that need to be followed when
+setting the algorithm among other things
+in the end we take a look into how we
+can further strengthen hash values and
+make them more resistant to being
+cracked
+before getting too deep into the topic
+let's get a brief overview of how
+hashing works
+hashing is the process of scrambling a
+piece of information or data beyond
+recognition
+we can achieve this by using hash
+functions which are essentially
+algorithms that perform mathematical
+operations on the main plain text
+the value generated after passing the
+plaintext information through the hash
+function is called the hash value digest
+or in general just the hash of the
+original data
+while this may sound similar to
+encryption the major difference is
+hashes are meant to be irreversible
+no decryption key can convert or digest
+back to its original value
+however a few hashing algorithms have
+been broken due to the increase in
+computational complexity of today's new
+generation computers and processors
+there are new algorithms that stand the
+test of time and are still in news among
+multiple areas for password storage
+identity verification etc
+like we discussed earlier websites use
+hashing to store the user's passwords so
+how do they make use of these hash
+passwords
+when a user signs up to create a new
+account the password is then run through
+the hash function and the resulting hash
+value is stored on the servers
+so the next time a user comes to login
+to the account the password he enters is
+passed through the same hash function
+and compared to the hash stored on the
+main server
+if the newly calculated hash is the same
+as the one stored on the website server
+the password must have been correct
+because according to hash functions
+terminology same inputs will always
+provide the same outputs
+if the hashes do not match then the
+password entered during login is not the
+same as the password entered during the
+sign up hence the login will be denied
+this way no plain text passwords get
+stored preventing both the owner from
+snooping on user data and protecting
+users privacy in the unfortunate event
+of a data breach or a hack
+apart from password storage hashing can
+also be used to perform integrity checks
+when a file is uploaded on the internet
+the files hash value is generated and it
+is uploaded along with the original
+information
+when a new user downloads the file he
+can calculate the digest of the
+downloaded file using the same hash
+function
+when the hash values are compared if
+they match then file integrity has been
+maintained and there has been no data
+corruption
+since so much important information is
+being passed on to the hash function we
+need to understand how they work
+a hash function is a set of mathematical
+calculations operated on two blocks of
+data
+the main input is broken down into two
+blocks of similar size
+the block size is dependent on the
+algorithm that is being used
+hash functions are designed to be one
+way they shouldn't be reversible at
+least by design
+some algorithms like the previously
+mentioned md5 have been compromised but
+most secure algorithms are being used
+today like the sha family of algorithms
+the digest size is also dependent on the
+respective algorithm being used
+md5 has a digest of 128 bits while she
+256 has a digest of 256 bits
+this digest must always be the same for
+the same input irrespective of how many
+times the calculations are carried out
+this is a very crucial feature since
+comparing the hash value is the only way
+to check if the data is untouched as the
+functions are not reversible
+there are certain requirements of a hash
+function that need to be met before they
+are accepted while some of them are easy
+to guess others are placed in order to
+preserve security in the long run
+the hash function must be quick enough
+to encrypt large amounts of data at a
+relatively fast pace
+but it also shouldn't be very fast
+running the algorithm on all cylinders
+makes the functions easy to boot force
+and a security liability
+there must be a balance to allow the
+hash function to handle large amounts of
+data and not make it ridiculously easy
+to brute force by running through all
+the possible combinations
+the hash function must be dependent on
+each bit of the input
+the input can be text audio video or any
+other file extension
+if a single character is being changed
+it doesn't matter how small that
+character may be the entire digest must
+have a distinctly different hash value
+this is essential to create unique
+digest for every password that is being
+stored but what if two different users
+are using the same password
+since the hash function is the same for
+all users both the digest will be the
+same
+this is called a hash collision
+you may think this must be a rare
+occasion where two users have exactly
+the same password but that is not the
+case
+we have techniques like salting that can
+be used to reduce these hash collisions
+as we will discuss later in this video
+you would be shocked to see the most
+used passwords of 2020.
+all of these passwords are laughably
+insecure and since many people use the
+same passwords repeatedly on different
+websites cash collisions risks are more
+common than one would expect
+let's say the hash functions find two
+users having the same password
+how can they store both the hashes
+without messing up the original data
+this is where salting and peppering come
+to play
+salting is the process of adding a
+random keyword to the end of the input
+before it is passed on to the hash
+function
+this random keyword is unique for each
+user on the system and it is called the
+salt value or just the sort
+so even if two passwords are exactly the
+same the salt value will differ and so
+will they digest
+there is a small problem with this
+process though
+since the salt is unique for each user
+they need to be stored in the database
+along with the passwords and sometimes
+even in plain text to speed up the
+process of continuous verification
+if the server is hacked then the hashes
+will need to be brute forced which takes
+a lot of time but if they receive the
+salts as well the entire process becomes
+very fast
+this is something that peppering aims to
+solve
+peppering is the process of adding a
+random string of data to the input
+before passing them to the hash function
+but this time the random string is not
+unique for each user it is supposed to
+be common for all users in the database
+and the extra bit added is called the
+pepper in this case
+the pepper isn't stored on the servers
+it is mostly hard coded onto the website
+source code since it's going to be the
+same for all credentials this way even
+if the servers get hacked they will not
+have the right paper needed to crack
+into all the passwords
+many websites use a combination of
+salting and preparing to solve the
+problem of hash collision and bolster
+security since brute force takes such a
+long time many hackers avoid taking the
+effort the returns are mostly not worth
+it and the possible combinations of
+using both salting and peppery is
+humongous hope you learned something
+interesting today feel free to ask us in
+the comments section if you have any
+questions and subscribe to our channel
+for more videos like this thank you for
+watching
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

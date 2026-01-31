@@ -1,0 +1,97 @@
+hey everyone welcome to simply learn's
+youtube channel in this session we will
+be discussing the horizontal lookup in
+excel but before we begin let me tell
+you guys that we have daily updates on
+multiple technologies so if you're a
+tech geek in a continuous hunt for
+latest technological trends then
+consider getting subscribed to our
+youtube channel and don't forget to hit
+that bell icon to never miss an update
+from simply learn so let's get started
+with horizontal lookup or hlookup in
+excel so here we might want to switch to
+the practical mode that is starting up
+microsoft excel now we are on the sheet
+of microsoft excel and here you can see
+some data on my sheet
+that is employee name employee id and
+salary
+so here we are going to perform more
+horizontal lookup but before that let me
+show you that this particular drop down
+menu so this particular drop down menu
+has all the names of the employees in
+this particular table and we have
+created this using data validation in
+excel
+if you want to create the drop down
+menus just like these then feel free to
+check out our data validation in excel
+tutorial link to which is in the
+description box below now let's try to
+implement hlookup in excel so here we
+have employee name but we want to find
+out the employee id so for that let's
+create the hlookup now for that equals
+to hlookup
+now the first one is the lookup value so
+this one
+is
+the cell which is the employee name now
+after that the table array we have to
+select all the table arrays here
+now
+the row index number so the employee id
+is in row index number 2 according to
+the table so for that provide 2 and
+close the bracket and before closing
+brackets you might want to give the
+exact match so for exact match select
+false
+and close the bracket press enter and
+there you go
+and if you select
+jack then you'll find the employee id of
+check and if you select jury you'll find
+the employee id of cherry reflecting
+here
+now similarly let's find out the salary
+of all the employees using hlookup
+so equals hlookup
+and lookup value that happens to be the
+name of the employee
+now the table array
+and next we have
+row index number that is salary happens
+to be the third row in the table so
+three
+and
+exact match
+close the bracket and enter so now if
+you change the values in this particular
+dropdown menu you will find the employee
+id and their particular salary so jack
+happens to be carrying the employee id
+as 1001 and his salary is ten thousand
+so similarly let's try to find out
+peter's employee id and salary
+so there you go one zero zero five and
+fifty thousand dollars salary so that's
+how you use hlookup in excel if you have
+any queries regarding any of the topics
+covered in the session or if you need
+the data set that we have used in this
+particular tutorial then please feel
+free to let us know in the comment
+section below and our team of experts
+will be happy to resolve all your
+queries at the earliest until next time
+thank you stay safe and keep learning
+[Music]
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

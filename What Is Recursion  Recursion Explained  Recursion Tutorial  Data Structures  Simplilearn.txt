@@ -1,0 +1,285 @@
+hello everyone welcome to Simply learns
+YouTube channel today we will be
+discussing about recursion in
+programming in today's video we have an
+interesting quiz for you guys so stay
+tuned and do leave your answers for the
+quiz that's going to pop up on your
+screens in next few minutes but before
+we begin let me tell you guys that we
+have daily updates on multiple
+Technologies so if you are a tech geek
+in a continuous hunt for latest
+technological advancements then consider
+getting subscribed to our YouTube
+channel and don't forget to hit that
+Bell icon to never miss an update from
+Simply learn now without any further Ado
+let's get started with the agenda for
+today's
+session we will start this session by
+understanding what is
+recursion followed by that we'll find
+out how recursion gets executed in
+memory area
+once done with that we'll look into
+different types of recursion and finally
+we will Implement a program that
+demonstrate the concept of recursion I
+hope I made myself clear with the agenda
+now let's get started with our first
+topic what is
+recursion well recursion is a process in
+which a function repeatedly calls itself
+either directly or indirectly those
+calls are majorly done by explicitly
+calling function by its name however
+however it can also be accomplished by
+implicit calling as well the fundamental
+idea behind calling the function over
+and over again is to break a larger
+problem into smaller sub problems we do
+this for reducing the computational
+complexity of a larger Problem by
+breaking it into several pieces this
+tactic is also called as divide and
+conquer approach in programming so now
+you must be thinking about how we can
+break the larger problem into smaller
+sub problems well to do that that we
+break the given problem statement into
+two parts the first one is base case and
+the second one is recursive
+step the base case is nothing but the
+simplest instance of a problem that
+consist of condition which holds the
+recursive function given the function
+calls argument this base case computes
+the output of our program right away
+whereas in the recursive step we compute
+the result using one or more recursive
+calls to the same function but with the
+inputs decrease in size or complexity to
+understand this breakdown let's have a
+look at mathematical aspect of recursion
+suppose you have to formulate a
+mathematical function for computing the
+sum of N natural numbers that means the
+function that you are going to create
+must calculate the summation of all
+natural numbers in the range 0 to n
+mathematically it can be represented as
+summation of all numbers from K is = to
+0 to K isal to n now the critical
+question here is how can we actually
+represent this in form of recursive
+function the answer is quite simple all
+we need to do is break this larger
+problem into small fragments we can
+represent this problem as n plus sum of
+all natural numbers till n minus one
+this process of traversing in function f
+n minus 1 * is called the recursive step
+of our problem statement whereas the the
+base case is a condition which is
+stopping the recursion when K is
+reaching value zero in terms of
+programming it can be represented using
+a vog now I hope you guys have
+understood how we can break a larger
+problem into smaller sub problems moving
+further we are going to understand how
+recursion gets executed in memory
+area in order to do that we'll take this
+C program as an example in this program
+we have two methods the main method
+contains one variable and the statement
+that invokes a function named fun this
+function fun is making a recursive call
+in this function body we have both base
+case and recursive step inside this
+functions body now whenever a function
+is called its activation record will be
+maintained inside the St so for this
+program we are going to look into its
+control flow as we know the main
+function gets invoked primarily by an
+operating system thus will include the
+main function at first in our memory
+stab this activation record will consist
+of local variables of function
+parameters and the record of return
+address to the colum but here for the
+sake of Simplicity we are just
+maintaining the local variables inside
+the activation record after this step as
+you can see the main function is
+activating method fun with argument
+three once activated it will promp three
+on screen and will invoke fun 3 - 1 that
+is fun 2 now again as 2 is greater than
+zero the control will invoke fun 2 - one
+that is fun one after this the control
+will activate fun zero this time once
+the control enters an if block it will
+execute a return statement and
+activation record zero will get popped
+out of the memory stack forther every
+function inside the memory stack will
+get popped out from it which will result
+in generation of output the output that
+will get printed on the console for this
+particular program is 32 1 now here is
+the interesting question that we want
+you all to answer based on the
+properties of recursion that we have
+discussed till now which of the
+following statements seems right to you
+the options that we have are recursion
+is always better than iteration option b
+recursion uses more memory compared to
+the iteration option C recursion uses
+less memory compared to the iteration
+it will be interesting to see how many
+of you guys will get this right so guys
+do leave your answers to this question
+in comment section Below in a week's
+time we'll be announcing the right
+answer and you all can check it out now
+moving ahead we'll discuss different
+types of recursion in programming there
+are basically four types of recursion
+the first one is direct recursion the
+second one is indirect recursion the
+third one is tail recursion and the
+fourth one is non-tail recursion so
+let's discuss direct recursion a
+function is called direct recursive if
+it calls itself in its function body
+over and over again to better understand
+this definition let's look at the
+structure of a program that is direct
+recursive in nature in this program we
+have a method named fun which is calling
+itself again and again in its function
+body thus we can say that it is direct
+recursive in nature next St is indirect
+recursion the recursion in which the
+function calls itself via another
+function is called as indirect recursion
+for example in this program you can
+clearly see that the function fun one is
+explicitly calling Fun two which is
+invoking fun one again explicitly hence
+we can say that this is an example of
+indirect recursion further we have tail
+recursion a recursive function is said
+to be tail recursive if the recurs C you
+call is the last execution done by the
+function let's try to understand this
+definition with the help of an example
+if You observe this program you can see
+that the last line ADI will execute for
+method fun is recursive call and because
+of that there is no need to remember any
+previous state of our program finally we
+have a non-tail recursive function on
+our list a recursive function is said to
+be non-tail recursive if the recursion
+call is not the last thing done by the
+function after returning back there is
+something left to evaluate let's
+consider one example in this function
+you can clearly observe that there is
+another operation after the recursive
+call hence our ADI will have to memorize
+the previous state inside this memory
+block that is why this program can be
+considered as non-tail recursive now
+finally let's Implement a program to
+demonstrate the recursion
+the program that we are going to
+implement is solution to the problem
+statement that we discussed earlier
+according to that problem statement we
+have to calculate the sum of N natural
+numbers given the number n now in order
+to address this problem we are going to
+use C programming language so without
+any further Ado let's head over to the
+code
+editor now in order to get started with
+coding implementation first we'll create
+an utility function to calculate sum of
+N natural numbers so let's do
+that and we'll pass an argument in
+N now we have arrived inside the body of
+function sum what we'll first do is
+we'll calculate sum of N minus one
+natural numbers by making an recursive
+call to function sum so let's do that
+sum n
+minus1 and we'll store this value inside
+a temporary variable
+now we'll add this temporary variables
+value to n in order to return it as an
+result the statements that we just wrote
+are called as recursive steps But If You
+observe this statement we are not
+putting any limitation to our recur you
+call so that is why we'll have to add
+base case to our function so let's do
+that
+f n equal to equal to 0
+then
+return
+0 with this we have successfully
+implemented our sum function so let's
+work on our driver method to generate
+the result in this driver
+method first first we'll create an
+variable
+n and after that we'll write a print F
+statement
+enter the natural
+number n to
+calculate the sum
+of N numbers
+semicolon and in next line we'll write
+scanip statement in order to take input
+from our user
+so inside this we'll write modulus D
+comma ambass in
+n and
+semicolon and in next statement we'll
+make a call to our sum function in order
+to calculate sum of N natural numbers so
+how we can do that well we can add
+modulus D here
+comma sum
+n
+semicolon and I hope our code works fine
+now so let's check it by compiling
+here the console is asking us to provide
+with value of variable n and I'm going
+to provide value five here so let's
+provide value
+five and enter so the output that we are
+getting is 15 here that means our code
+works fine with this successful coding
+implementation we came to the end of
+this video I hope that you guys have UND
+how recursion works now in the upcoming
+sessions we'll discuss some Advanced
+problems of recursion so if you have any
+doubts about the concept covered in this
+video then let us know in comment
+section below and we'll surely help you
+get them resolved thank you so much for
+being here and do watch out for more
+videos from Simply
+love hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

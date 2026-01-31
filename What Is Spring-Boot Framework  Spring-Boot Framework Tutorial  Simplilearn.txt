@@ -1,0 +1,751 @@
+hello everyone and Welcome to our spring
+boot restful API tutorial at simpa in
+this comprehensive tutorial we will be
+exploring building a powerful restful
+API using spring boot which is a Java
+based backend framework whether you are
+a beginner or an experienced developer
+this tutorial is going to walk you
+through the essentials of creating the
+rest API we will cover topics like your
+how to create project structure defining
+controllers implementing service classes
+managing repositories and finally we are
+going to test our API now before we move
+on and learn more about it I request you
+guys that do not forget to hit the
+Subscribe button and click the Bell icon
+so now let us discuss our agenda for our
+today's session so guys we are going to
+start with an introduction to Spring
+Boot and restful apis next we'll be
+moving ahead with setting up our spring
+boot project then we are going to define
+the data models and entities moving
+ahead we will also be implementing our
+control layer and finally we are going
+to conclude our session with developing
+the service layer craving a career
+upgrade subscribe like and comment
+below dive into the link in the
+description to FastTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back just a quick info guys you can
+accelerate your career as a certified
+Java fullstack developer and acquire
+essential industry skills such as react
+angler spring spring board hibernate and
+jsps while mastering MVC and web
+services to craft highly scalable web
+applications hurry up now and join the
+course the course link is mentioned in
+the description box so guys let's start
+with what is spring wood guys spring
+boot is an open-source Java based
+framework which is developed by pivotal
+now it's a p of viare that simplifies
+the process of building and deploying
+Standalone production ready spring based
+applications it aims to a streamlined
+way to set up string based applications
+with minimal configuration which allows
+developers to quickly bootst their
+project and focus more on writing
+business logic rather than setting up
+infrastructure now let us discuss the
+key features of spring boot first one we
+have all over here is convention over
+configuration spring boot uses sensible
+defaults and conventions to reduce the
+amount of configuration required this
+means developers can get started with
+minimal
+and Frameworks will automatically
+configure many aspects of the
+application based on these conventions
+second one is Standalone springboard
+applications are designed to be
+Standalone and selfcontained meaning
+they can be deployed as executable jar
+files with embedded application servers
+like tomat jety or under or even as a
+files in traditional subet containers
+third one is auto configuration spring
+boot provides Auto configuration which
+automatically configures the application
+based on dependencies present in the
+class path this eliminates the need for
+manual configuration in many cases as
+spring boot can automatically detect and
+configure components such as data
+sources messaging systems and web
+servers fourth one is spring boot
+starters spring boot includes a
+collection of starters that simplifies
+dependency management by bundling
+commonly used libraries and Frameworks
+for specific use cases for example web
+applications data access security into
+easy to ous dependencies developers can
+simply include these starters in their
+project and spring boot will
+automatically configure the necessary
+dependencies fifth one is actuator
+spring boot actuator provides production
+ready features to Monitor and manage the
+application in production environments
+it includes end points for health checks
+metrics environment information logging
+and many more which allows developers to
+easily
+and manage their applications sixth one
+is spring boot CLI spring boot CLI
+allows developers to quickly prototype
+and develop spring boot applications
+using command line interface it provides
+commands for creating running and
+testing spring boot applications without
+a need for complex build configuration
+overall spring boot simplifies the
+development process of spring based
+applications by providing a set of op
+defaults like Auto configuration and a
+range of tools and features that enables
+developers to build robust and
+production ready applications with
+minimal effort now we will move to the
+eclipse and create a simple rest API so
+guys in this tutorial we are going to
+build a rest API you might be wondering
+what a rest API is first of all Let Me
+Explain you rest API stands for
+representational State transfer
+application programming interface it is
+a kind of a service architecture which
+is designed to allow communication
+between different systems over the
+Internet it follows the principle of
+rest which emphasizes stateless
+communication uniform resource
+identifiers for resource identification
+and use the standard HTTP methods like
+get post put and delete for performing
+action on resources so guys let us build
+an employ CPI with controller entity
+service and repository classes in Java
+so let me explain you what will be the
+class files the first one will be the
+entity class in the entity class guys we
+are going to Define our model for
+example in employee rest API what are
+the main things that we are going to
+need for example the name of the
+employee the department and what are the
+salary then we will be using the
+repository interface so guys you will be
+wondering why would we need a repository
+class guys basically repository class is
+responsible for interacting with the
+database or any storage mechanism for
+performing C operation which means
+create read update and delete operations
+on the database the repository class
+abstracts away the details of data
+access by providing a clean separation
+between the data layer and the rest of
+the application it allows for easier
+testing and maintenance by centralizing
+data access logic second one we have all
+over here service class service class
+contains the business logic of the
+application it trates various operation
+coordinates between different components
+and performs complex business rules and
+validation service class promotes
+separation of concerns by keeping
+business logic separate from web layer
+and data access layer it enhances code
+readability reusability and testability
+by encapsulating the application score
+logic in a single place finally we have
+the controller class the controller
+class handles the incoming HTTP request
+processes them and
+appropriate responses it typically
+contains methods or end points ma to
+different U and HTTP methods defining
+API Behavior but why do we need it the
+controller class acts as entry point for
+external clients to interact with the
+application it receive request delegates
+the processing to the service layer and
+returns responses it helps in achieving
+clean separation of concerns by keeping
+the web related logic separate from the
+business logic and the data access logic
+I hope so you have got a brief idea
+regarding these classes now let us make
+these classes so what we have to do
+first guys let us go to Spring
+initializer this is a website where we
+are going to download all our
+dependencies we'll be needing spring
+data jpa and spring stter web so let us
+add the dependencies so here I'm going
+to type
+spring web okay just add this dependency
+and add the next one that
+is spring data
+jpa okay now our project building tool
+will be M just click on this and let us
+choose 3.1.1 version because I'm using
+Java 17 so I feel so the older version
+of spring board would be compatible with
+it now let us update our meta data so
+let's say com. example. rest API or let
+us give some other name such as
+employee and here also we are going to
+type
+employee now let us generate the zip
+file and let us extract this ZIP file so
+I'm going to go on my downloads so we
+can see all over here we have the
+employee zip file just click on this and
+click on extract all now go to downloads
+and you can see our employee file has
+been extracted now we'll be going to the
+eclipse okay and here we are going to
+import our project so you can see this
+option all over here just click on mavin
+okay so you can see this is mavin and
+click on existing mavin projects just
+click on next so it is going to tell you
+to browse the root directory go on to
+the downloads as you know we have
+downloaded all over here and just select
+this folder and click on finish now as
+you can see we have download our folder
+and it is visible all over here you can
+see all these files such as Java
+resources and test let me explain you
+each one of them one by one so this is
+our main application file and you can
+see in a spring boot application you
+would get this annotation as spring boot
+which tells that hey Spring this is a
+spring boot based application and which
+is basically build on the spring
+framework now let us go to the resources
+and the resources you get app properties
+in this generally we add lot of other
+things such as we can customize our port
+number if you using the mySQL database
+we have to also add all the other
+information such as your username
+password okay similarly for testing we
+have SRC test. Java the most important
+file to understand is pom.xml file guys
+this is pom.xml file this file tells the
+apach m to download all the necessary
+dependencies such as the spring data jpa
+spring start web the test there's a
+Marin plugin okay so you can see these
+are all closed under the dependency
+section and you can see also the version
+of java we are using we are using Java
+17 and you can see all our metadata has
+been stored all over here and it is very
+very important file for our project now
+let us create our other files so we are
+going to go on Main
+and let us open this file and let us run
+this file first so guys you can see all
+over here that it is telling it is
+failed to run so sometimes you're going
+to get this error the reason is we have
+already added the spring data jpa
+dependency and because of that it is
+showing the error no worries let us move
+forward and let us create all the other
+classes first so let us go into the
+package let's create a new package all
+over
+here so here
+say this is
+entity
+and let's create the
+class let's click on
+finish similarly we going to create a
+repository
+class
+[Applause]
+similarly we are going to create our
+controller class
+sh
+and finally we are going to create our
+service
+class have
+all these classes all over here now let
+us start writing some of the codes to
+understand what we are going to do so
+basically as we have discussed that we
+are going to create our model first so
+let us click on the entity okay this is
+our employed. Java so let us consider a
+scenario where we are creating a simple
+rest API so for employee we need its ID
+name and what department they working in
+okay guys
+so let us create certain annotation for
+the same so this will be our entity
+class so we are going to use the entity
+annotation
+okay now here let us create the ID okay
+now ID would be there at
+theate
+generated value
+and here we are going to add the
+strategy equals
+to generation
+type do
+identity now let us declare our Fields
+so first would be ID and access modifier
+would be
+private
+next one would be name
+so third one would be Department we can
+also keep this access modifiers as
+private
+and let us uh choose for salary as
+double
+okay that would be our data type for it
+and finally let us create the
+constructors and get inserters you could
+see there are errors coming up so in
+order to remove the error just H upon
+this and you could see we have to import
+certain things now earlier it was Java X
+persistence now we are importing entity
+from Jakarta that is a slight change
+that has happened all over here let's
+click on entity this is ID type import
+ID and here for Generation value here we
+are going to import it from Jakarta
+persistence now our all errors are
+removed now let us do one thing just
+click on
+source
+and you could see generate Getters and
+Setters select all and click on
+generate next thing is we have to also
+generate Constructors so click on Source
+generate Constructors using fluids click
+this option and click on generate so you
+could see all over here we have
+generated all our Constructors so this
+is the constructors which is all
+automated okay this is a of eclipse and
+this is the gets and Setters so finally
+we have created our model now let us
+move to the next part that is repository
+so guys earlier I have told you that why
+do we need repository class the reason
+is because it is very very responsible
+for interacting with the database or any
+data storage mechanism it typically
+performs all the CR operation and that's
+why we need to create this class so let
+us delve into the repository section and
+and here the line of code is very Less
+in this section just you have to extend
+this to the jpa repository so this is
+basically an interface so I did one
+mistake all over here let us create an
+interface for this
+first Okay click on interface and it
+will be
+employee
+repository click on finish okay okay
+this is done now public interface
+employee repository and this is going to
+extend the jpa repository basically jpa
+repository has all the pre-built tools
+this is basically an interface which is
+going to help us give us all the methods
+and functionalities for interacting with
+any database so let's type
+extends jpa
+Repository
+this will be
+employee the name of
+our model and here will be type would be
+long now you have to import this so let
+us import this and also you have to
+import the employee so finally we have
+imported all the things we are going to
+leave it empty all over here uh for the
+sake of purpose but there are certain
+additional methods which we can do it
+but we going to stick to the minimal
+right now now let us create the service
+class just click on all over here and
+how spring is going to understand that
+this is a service class so the answer is
+guys service annotation let us type that
+annotation okay this is employee service
+and now we are going to use one more
+pattern that is called dependency
+injection
+so guys we all know that this framework
+is basically working on dependency
+injection we are going to inject the
+repository inance of repository all over
+here and so for spring to understand
+that we have injected we are going to
+use an annotation that is
+autowired
+so type Auto
+wir
+and I'm going to type
+private employee
+[Music]
+repository and just we can type ER all
+over here okay now let us import this
+okay next we are going to also import
+the auto finally we have also imported
+the employ repository and is instance
+now we are going to do certain things
+all here and the first thing is let us
+create a list of employee to get all the
+employees
+so public
+list employee and here we are going to
+type get all
+employee and basically it is going to
+return
+do find all method from the
+repository now let us import
+this list first
+okay and here we are going to import the
+employee
+okay
+basically this method is going to return
+details of all the employees next if you
+have to find the ID of a particular
+employee so for that
+purpose
+Public
+Employee
+get employee by ID
+method and here we are going to use data
+type as
+long and with the help of this instance
+ER so we're going to
+return er do find by ID
+method
+so the parameter would be ID and here we
+can use or also or
+else we could enter as
+null if the employee doesn't
+[Applause]
+[Music]
+exist
+for
+[Applause]
+for
+sh
+sh
+now next would be adding the employee so
+guys for adding the employee we are
+going to create this method same so I'm
+not going to type it all over
+again let's copy and
+paste so Public Employee and and let's
+say add employees so method would
+be and we are going to create an
+instance all over here of
+employee
+okay now here we are going to
+ER Dove
+method okay we're going to save this
+entity and just add the instance e all
+over
+here and finally we have a method for
+updating the
+[Applause]
+employee
+so it will be long
+ID and we can create an instance
+employee and say
+e and we can do certain conditionals all
+over here so if the given employee
+exists by its ID so we can do something
+like this er do exist by ID so we can
+see this this method is there just click
+on this and
+uh after this what we have to do guys we
+can set its ID so click on all over here
+so e
+do set
+ID and it will be ID and finally let's
+add the return statement for
+this return er do save
+and the entity would be
+e so that works pretty fine all over
+here
+now let us see what the error is coming
+up now it works pretty fine and finally
+we are going to add a delete
+method okay
+so public
+void
+delete
+employee data type would be
+long and it would be
+ID so er
+dot we can say delete by ID method
+so can we see the method so here is a
+method delete by ID just click on this
+and it works pretty
+fine
+now
+let us make this code a little bit
+correct or we can say return
+null
+okay so finally guys after a lot of hard
+work we have created our service
+class guys if you are doing for the
+first time please don't be afraid lot of
+mistakes are going to happen
+but we all know the fact that uh the
+more mistakes we are going to do the
+more we are going to learn so uh let us
+move forward with the next and the final
+one we have the controller class now in
+the controller class we are going to add
+all the HTTP verbs like get put delete
+so that in the service class what are
+the Logics we have added we can access
+it on the URL so let us go to the
+controller class
+and finally we are using AR rest
+so let us Put The annotation as rest
+controller import
+this
+okay finally let's uh do the uh okay
+since this is rest controller okay now
+let us create a request mapping
+tool so that when we are mapping the
+given URL so our URL would be/ employee
+okay okay now let us import this request
+mapping
+okay now finally what we will do we are
+going to also inject the instance of
+service
+[Music]
+so we going to type the
+autowired okay and here would
+be
+private employee
+service and we can create the instance
+as
+es okay so let us import this service
+and let us import the auto wired okay
+now let us do the get mapping first
+so
+get
+mapping and how we going to get a
+particular employee so the answer is
+with its particular ID and
+here let us type slash and with respect
+to its particular ID we are going to
+access the given employee let us create
+a method for the same so
+Public
+Employee so basically it is going to be
+a list
+so
+okay get all
+employees return es that's the instance
+we have injected from the service class
+and the method would be get all
+employees now it's done but it's still
+showing certain errors let us resolve
+the error first we have to import the
+list second we have to import the
+employee okay and finally we have to
+import the get mapping from or spring
+framework. web bind
+annotation okay now initially I have
+told you certain features about spring
+wood and I hope so you would be seeing
+that how our development is getting
+easier little by little so most of the
+thing uh like you would have seen like
+when you were in college basically you
+would have thought like we have to do a
+lot of coding but actually coding is
+reduced a lot because here in this ID is
+a very smart ID okay and we can just
+import the things one by one and all the
+methods you could see it's it's suggest
+so that makes our work pretty easy now
+let's create a post request and uh at
+the rate post
+mapping and here will be
+Public
+Employee
+and say add
+employee so for adding
+employee we going to type the request
+mapping okay this is a parameter
+so requesting the body okay is this
+annotation tells that uh hey Spring
+whenever we are posting any post request
+to the web server uh we need a body
+without that this request is incomplete
+so for that this annotation is used and
+finally we are going to add the employee
+so return e is. add employee and the
+instance is e that we have created all
+over here now let us import certain
+things so we have imported the post
+mapping let us import the request body
+annotation and finally let us close it
+with a
+delimiter now let us create the put
+mapping
+so for put mapping this would
+be
+slid and here the method would be
+Public
+[Applause]
+Employee say update
+employee
+and for updating a given employee
+suppose I have added the name as say uh
+Neil and say department is uh you can
+say sales and um and the salary is
+around like 30,000 but finally there's a
+program happened and the designation has
+been changed okay now he has moved to
+the marketing road so for that what we
+are going to do we have to update that
+particular uh you know the data for that
+employee in order to do that guys what
+we are going to add so we are going to
+add the particular path for which this
+update is going to happen and for that
+there's a particular annotation that is
+path variable so just add the path
+variable and here the data type would be
+long ID and they are also going to
+request
+the body all over
+here pretty fine so at theate request
+body
+annotation so because without body this
+request would be incomplete so basically
+for updating uh any data we use the put
+request okay so request body annotation
+and the instance would be
+employee and
+sayp not say
+e
+and finally we are going to call our
+update service so return
+es do
+update employee ID
+okay and the instance we have injected
+is a so that makes our work pretty
+easier now let us import so we have
+imported the port
+mapping path variable and and is pretty
+much
+done now finally we are going to create
+an annotation for delete
+mapping and it would be
+ID so for deleting we are going to use a
+delete method so public void
+delete
+employee and here will be the path
+variable let us use
+annotation and we going to call the
+return
+statement
+so you can see this method pops up just
+click on this and let's close this okay
+now let us import delete
+mapping okay I think there something
+wrong has
+happened let us debug
+it return
+es
+Dot
+delete given employee by its
+ID so guys we have come to the final
+part of the video now let us run our
+application so in order to run the
+application you have to just select all
+and you can type run as Java application
+or you can directly click all over here
+so guys I've already started my
+application and my application is
+running okay okay we can see certain
+failure so let us rerun the
+application so guys you can see all over
+here our server has started now let us
+test our apis so what we are going to do
+we are going to go at this Postman which
+is the API testing tool and for this
+port 81 we are using and our endpoint is
+employees so let us try to add one
+employee so remember guys for sending a
+post request you have to always add a
+body so you can see I will add one name
+okay
+say son vanand and he's
+a
+and I'm going to
+add okay now for the headers you have to
+add application. Json it will be content
+type and you can also add a description
+now let us try to send this request so
+you can see our ID is automatically
+generated and name Johnny vanand
+department and salary has been added now
+guys as you can all over here after
+triggering the get request we could see
+we are getting ID name as one named as
+Johnny vanand and department is musician
+and the salary so all the data which we
+have added using the post request we are
+returned now this is simple and basic
+rest API we have created using spring
+boot I hope so you would have enjoyed
+our today's video on Spring boot
+tutorial thank you for watching this
+staying ahead in your career requires
+requires continuous learning and
+upscaling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations
+and delivered by industry experts choose
+any of our programs and set yourself on
+the path to Career Success click the
+link in the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click
+here

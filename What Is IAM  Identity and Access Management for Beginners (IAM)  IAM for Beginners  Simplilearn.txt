@@ -1,0 +1,257 @@
+hello everyone and welcome to today's
+video on introduction to identity and
+access management also known as iam
+monitoring usage of corporate data and
+access to privileged information had
+been a daunting task before the advent
+of iam
+and compassing numerous apis single
+sign-on frameworks and data handling
+policies iem has established itself as a
+key component of every it department
+but how does it enforce these rules and
+what are the key benefactors of these
+policies
+what about the advantages of these
+frameworks and the workflow of these
+systems
+we are here today to answer these
+questions
+let's take a look at some of the topics
+to be covered today
+we start by learning about iam that is
+identity and access management from a
+surface level so as to put a clear idea
+of what it is
+next we cover the general workflow and
+process of how iam works
+moving on we cover some of the tools
+that find the place in an iem framework
+and are crucial components
+finally we go through some of the
+advantages of the iam learning what
+makes them a lucrative deal for
+organizations
+so let's get started by learning about
+iam from a surface level perspective
+identity and access management or iam is
+a set of processes policies and tools
+for defining and managing the roles and
+access privileges of individual network
+entities to a variety of cloud and
+on-premise applications
+the users can include customers partners
+employees devices like computers
+smartphones routers etc
+the core objective of iem systems is one
+digital identity per individual or item
+once the digital identity has been
+established it must be maintained
+modified and monitored throughout each
+user's or device's access lifecycle
+access and user are two vital iam
+concepts
+access refers to the actions permitted
+to be done by a user like view create or
+change a file
+users could be employees partners
+suppliers contractors or even customers
+furthermore employees can be further
+segmented based on their roles
+iam systems are designed to perform
+three key tasks identify authenticate
+and authorize
+meaning that only the right person
+should have access to computers hardware
+software apps any it resources etc
+for the entry of new users or the
+changing of the roles of existing users
+the list of access privileges must be up
+to date all the time
+im functions usually fall under it
+departments or sections that handle
+cyber security and data
+management now that we understand the
+importance of iem in today's cyber
+security sphere let us understand the
+process of this framework
+if multiple components that aid this
+process let's start by going through
+each of them individually
+principle is an entity that can perform
+actions on an aws resource or any cloud
+management system
+a user a role or an application can be a
+principle
+it's always the principal who raises a
+concern to access or modify data on
+servers serving as the first point of
+contact in the im workflow
+authentication is the process of
+confirming the identity of the principal
+trying to access the product
+the principal must provide such
+credentials or required keys for
+authentication
+this step can be further enhanced by
+multiple authentication factors and
+geologs among other things
+once the identity is confirmed the
+principal has the ability to view the
+data behind the wall of security take
+the necessary steps
+when it comes to requests a principal
+then sends a request to the cloud
+management system specifying the action
+and which resource should perform it
+in this step the user can ask to modify
+delete edit or affect other users in
+this particular bucket of organization
+by changing the data or the information
+when it comes to authorization it
+carries out the rest of an organization
+identity and access management processes
+once the user has been authenticated
+users are granted authorizations
+according to their role at an
+organization the practice is referred to
+as the role-based access control or rbec
+authorizations determine a role's
+resources and level of access in the
+network
+these items may include systems
+applications file shares printers and
+more
+for example an accounting department
+employee who regularly works with
+payroll software must be authorized to
+do such if authentication resembles a
+passport these are the things your
+digital identity can access with it
+while authentication is fully
+straightforward
+authorizations and their management are
+far more challenging authorizations
+consist of complex set of rules and
+policies and groups which are permitted
+explicitly configured per user account
+with the working of im frameworks out of
+the way lets cover some of the tools
+that these systems work on
+sso is an iem tool that enables a user
+to log into one organization's
+properties and automatically be logged
+into a design set of other properties
+for example when you log into google
+you're automatically logged into your
+gmail and your youtube accounts
+similarly for users single sign-on
+reduces fiction since they don't have to
+keep track of different credentials for
+every application
+for organizations sso helps in
+collecting valuable insights about user
+behavior and preferences since it tags
+them as they move from one application
+to another connected by one single login
+next is multi-factor authentication or
+mfa
+implementing multi-factor authentication
+is crucial to protect your
+organization's data from malicious
+intrusions and virtually every im
+platform offers some form of mfa
+however it is equally crucial to
+customize mfa with the appropriate level
+of security
+for example in business to consumer
+scenarios you need to consider ux and
+try not to create unnecessary friction
+for users who don't want to be subjected
+to heightened scrutiny every time they
+log in
+for workforce i am you may want a more
+stringent mfa since the consequences of
+an unauthorized party gaining access to
+your private network can be so
+devastating
+a modern iem solution will allow you to
+implement mfa only when it's needed this
+can be accomplished to set up
+authentication or adaptive
+authentication in which users only
+trigger mfa if they are trying to access
+sensitive data or their behavior is
+flagged as risky
+in the past few years identity has
+become the preferred gateway for hackers
+to break into systems brute force
+attacks credential stuffing attacks and
+even highly targeted phishing campaigns
+are all attempts by hackers to break in
+through a company's front door which is
+the login box
+there are multiple ways im systems can
+help detect and mitigate these malicious
+attacks im solutions detect attacks by
+monitoring signals such as the velocity
+of traffic detection of login patterns
+that differ from a user's routine use of
+a breached password use of devices and
+ip addresses with a poor reputation
+among other things
+these are some of the most widely used
+tools when it comes to im frameworks but
+why do we go through setting up so many
+tools and firewalls
+lets go through some of the advantages
+of using im systems in both corporate
+and consumer environments
+im solution helps identify and mitigate
+security risks
+you can use iem to identify policy
+violations or remove inappropriate
+access privileges without having to
+search through multiple distributed
+systems you can also leverage iem to
+ensure that security measures are in
+place to meet regulatory and auditing
+requirements
+iem provides a common platform for
+access and identity management
+information you can apply the same
+security policies across all the
+operating systems and devices used by
+the organization
+the imframework can help you enforce
+policies related to user authentication
+privileges and validation and attend to
+the privileged creep problems
+iem simplifies sign up and user
+management processes for application
+owners end users and system
+administrators
+it makes it simple to provide and manage
+access and promotes user satisfaction
+im services can also lower operating
+costs using federated identity services
+means you no longer need local
+identities for external users
+this makes application administration
+easier
+cloud-based im services can reduce the
+need to buy and maintain on-premise
+infrastructure
+hope you learned something new today
+if you have any questions feel free to
+let us know in the comment section below
+and we'll get back to you as soon as
+possible
+subscribe to our channel for more info
+video videos like this and thank you for
+watching
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

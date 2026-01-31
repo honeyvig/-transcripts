@@ -1,0 +1,363 @@
+over the decade bank fraud are
+increasing day by day these fraud can be
+detected and reduced with the help of
+supervised machine learning technique
+throttle and transition show a specific
+pattern and with the help of supervised
+machine learning algorithms these
+patterns can be separated from the
+genuine ones these supervised machine
+learning algorithms can identify
+fraudulent activity a lot quicker and
+with more exactness than traditional
+based systems
+hello everyone my name is maya from
+simplyla in this video we will learn
+what is supervised machine learning
+we will look at how supervised machine
+learning works we will also see some
+advantages and disadvantages of
+supervised machine learning we will
+continue this session by understanding
+supervised machine learning types
+followed by supervised machine learning
+algorithm
+further we will have a quick look at
+some real world application of
+supervised machine learning
+but before we begin if you haven't
+subscribed to our channel
+make sure to hit the subscribe button
+and don't forget to press the bell icon
+so you will never miss any update from
+simply learn
+but before we talk about supervised
+machine learning let's quickly
+understand what machine learning is
+machine learning is the art of making
+computers learn and act like humans by
+fitting data and which focuses on
+utilization of information and imitating
+the way that people learn step by step
+working on its accuracy
+machine learning is playing a major role
+in our day-to-day life
+machine learning is used in trends and
+pattern identification automation
+weather forecasting and many more
+machine learning is classified into
+supervised machine learning unsupervised
+machine learning reinforcement learning
+semi supervised learning
+let's understand supervised machine
+learning in detail
+wise machine learning machines are
+trained using label data
+also known as training data to predict
+the results
+here label data refers to a group of
+data that have been tagged with one or
+more names and data is already known to
+the machine in the real world supervised
+machine learning can be used for image
+and object recognition predictive
+analytics customer sentiment analysis
+spam detection and many more
+after understanding what supervised
+machine learning is let's move forward
+and see how supervised machine learning
+works
+suppose we have a data set that includes
+dogs and cats
+now the first step is that we need to
+train the model for each dogs and cats
+as per the factors like similarity
+pattern shapes and contrast
+now after training we test our model
+using new data set which is unknown to
+the model and the task of the model is
+to identify the new input data
+the machine is already trained on all
+types of similarity patterns shapes and
+contrast
+when it finds new data it classifies it
+on the basis of similarity patterns
+shapes and contrasts and predict the
+output
+as of now we are well aware of how
+supervised machine learning works let's
+have a walkthrough of the advantages and
+disadvantages of supervised machine
+learning
+before diving deep into any technology
+it is very important to understand its
+advantages and disadvantages here are
+some advantages of supervised machine
+learning first one is real world
+computation problems help you to solve
+various types of real world computation
+problems like spam detection image and
+object recognition and many more the
+second one is optimization using past
+experience supervised machine learning
+can optimize performance criteria
+the third one is prediction
+in supervised machine learning models
+can predict the output based on the past
+experience as well
+both one is reusable data we can reuse
+the training data unless there is any
+feature change
+supervised machine learning has
+advantages as well as disadvantages
+let's have a look at some disadvantages
+now
+computation time is also known as
+running time is very vast for the
+supervised machine learning
+supervisor machine learning models
+always need updates
+pre-processing of data a big challenge
+for predicting the output anyone can
+overlap supervised machine learning
+easily it occurs when a statical model
+is exactly against its training data
+now that we have an understanding of
+advantage and disadvantages let's move
+forward and discuss different types of
+supervised machine learning
+supervised machine learning can be
+further classified into two problems
+which are classification regression
+let's see them one by one in detail
+classification is a process of in which
+new observations are recognized and
+separated in such a way that they can be
+categorized
+assuming you have a group of things for
+example vegetables you can categorize
+them based on their properties that they
+have like you can arrange the potatoes
+in class a tomatoes in class b capsicum
+in class c
+these are some popular classification
+algorithms that come under supervised
+machine learning first one is random
+forest second is season trees third one
+is logistic regression fourth one is
+support vector machines
+moving forward let's have a look on
+regression
+a regression algorithm is used to figure
+out the connection between dependent and
+independent variables dependent
+variables are nothing but are variables
+which we are trying to predict or
+forecast
+and independent variables means that
+factors that influence the analysis it
+is usually used to make projection for
+example we have variable 1 as humidity
+and variable 2 s temperature where
+humidity will play the role of dependent
+variable and in temperature will be the
+independent variable humidity and
+temperatures are correlated in such a
+way that as temperature increases
+humidity will decrease and vice versa
+many organizations utilize regression
+models to predict how stocks will act
+from here on this is done by breaking
+down the past information on a stock
+cost and trends to recognize pattern
+these are some popular regression
+algorithms that comes under supervised
+machine learning first one is linear
+regression second one is regression
+trees
+third one is non-linear regression
+fourth one is bayesian linear regression
+after discussing the advantages and
+disadvantages of supervised machine
+learning and its types let's move
+forward to see algorithms in supervised
+machine learning
+in computer programming terms an
+algorithm is a set of well-defined
+instruction to solve a particular
+problem it takes a bunch of information
+sources and delivers the ideal result
+the first supervised machine learning
+algorithm is linear regression
+linear regression is utilized to
+recognize the connection between
+dependent variable and at least one
+independent variable and is commonly
+utilized to make forecasts about future
+results companies frequently use linear
+regression models to predict
+future sales this can be useful for
+things like planning and arranging
+algorithms like amazon product to
+product collaborative filtering are
+utilized to predict what clients will
+purchase later on given their past
+purchase history
+a regression tree is worked through a
+cycle known as binary recursive
+partitioning which is an additive
+interaction that divides the information
+into segments or branches and afterwards
+keep splitting each data into smaller
+groups as a technique climbs each branch
+these trees are used for dependent
+variables with continuous value for
+example a regression tree named food
+which divides into segments wedge and
+non-width
+further it keeps splitting into smaller
+groups
+non-linear regression is a type of
+regression examination wherein
+information is fed to model and
+afterward communicate it as a numerical
+function simple linear regression
+relates two factors with a straight line
+while non-linear regression relates the
+two factors in a non-linear relationship
+non-linear regression can be used to
+predict population growth over time
+or the relationship between gdp and the
+time of a country
+this algorithm is a way to deal with
+linear regression in which the statical
+examination is attempted inside the
+settings of pcn inference linear
+regression and patient regression can
+generate the same prediction and with
+the help of bayesian processing we can
+retrieve the complete variety of
+inferential solution instead of point
+estimate
+random forest is one of the most
+adaptable supervised machine learning
+algorithm utilized for both
+classification and regression purposes
+random forest is involved at work by
+researchers in numerous branches
+including banking stock exchanging
+mitigation it is utilized to predict the
+things which assist these businesses
+which running productively like client
+activity patient history and safety
+a decision tree is a very specific sort
+of tree that empowers you to conclude
+some kind of process used for dependent
+variables with discrete values for
+example we want to pick between
+manufacturing product a on product b or
+putting resources into disease at one
+decision two or decision three decision
+trees are an outstanding method for
+managing these kinds of complex choices
+logistics regression is calculated
+logically and chosen when the dependent
+variable is categorical meaning they
+have double results for example logistic
+reaction can be used to predict whether
+a political nominee will win or lose a
+political race or regardless of whether
+a secondary school student will be
+admitted up to a specific school a
+support vector machine is a well-known
+supervised machine learning model it is
+utilized for the two information
+classification and regression all things
+considered it is regularly utilized for
+grouping issues like we can involve in
+different life care systems we can
+involve in typically happy and sad look
+arrangement
+we can involve in filters if we make
+specific loops it would add the
+particular filter according to the
+expression the scope of articulation
+lies between happy and sad after
+understanding supervised machine
+learning algorithms let's move forward
+and cover applications of supervised
+machine learning choose from over 300
+in-demand skills and get access to 1 000
+plus hours of video content for free
+visit scale up by simply learn click on
+the link in the description to know more
+supervised machine learning models can
+be used to build an advanced several
+businesses application including the
+following the first one is image and
+object recognition supervised machine
+learning models can be utilized to find
+isolate and assort objects out of
+recordings of pictures
+making them valuable when applied to
+different computer design strategies and
+imaginary analysis the second one is
+predictive analysis a broad use case
+course provides machine learning models
+is in making predictive analytics
+systems to give profound experience into
+different business data of interest this
+permits to expect specific outcomes
+because of a given result variable
+assisting business leaders to justify
+choices or turn to serve the association
+the third one is customer sentiment
+analysis utilizing supervised machine
+learning models association can extract
+and arrange significant pieces of data
+from huge volumes of information
+including context emotion and purpose
+with very little human intervention
+this can be incredibly valuable while
+acquiring a superior understanding of
+client collaboration and can be utilized
+to further develop brand engagement
+efforts the fourth one is spam detection
+spam identification is another
+application of supervised machine
+learning model
+utilizing classification calculation
+companies can prepare data sets to
+recognize patterns or anomalies and new
+information to sort out spam and
+non-spam related data
+so as we have seen all the major aspects
+of supervised machine learning we will
+conclude this video
+the objective of supervised machine
+learning is to construct a machine
+learning models that can get familiar
+with the planning between data and the
+results and can predict the output of
+the following given data sources it is
+the most straightforward sub-category of
+machine learning and serves as an
+introduction to machine learning to many
+machine learning specialist
+most generally utilized type of machine
+learning has been demonstrated to be an
+excellent tool in many fields we have
+reached the end of this video i hope you
+guys found this video informative and
+helpful if you have any doubts or
+feedback feel free to ask them in
+comment section below we will happy to
+help you if you like this video please
+subscribe to our channel and don't
+forget to hit the bell icon thank you
+and keep learning
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

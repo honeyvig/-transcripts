@@ -1,0 +1,256 @@
+hello everyone I am M and welcome to
+Simply YouTube channel today we are
+diving into the fascinating world of
+lstms or long short-term memory networks
+in the machine learning if you are into
+Tech and data you probably heard about
+lstms they are a game changer for
+dealing with sequential data so what's
+the big deal about lstms well there are
+a special kind of neural network
+designed to handle task where data comes
+in sequence like predicting stock prices
+understanding human speech or even
+translating languages traditional neural
+networks struggle with these task
+because they can't remember information
+over long sequence this is where lstms
+come to the rescue lstms have a unique
+structure with memory cells and three
+key Gates input forgate and output Gates
+these gates work together to decide what
+information to keep what information to
+throw away and what to Output this
+clever mechanism allows lstm to remember
+important details for long periods
+making them super effective for task
+where context really matters whether
+it's predicting the next word in the
+sentence or analyzing Trends in Time
+series lsms have proven to be incredibly
+powerful stick around as we explore more
+about how they work and why they are
+such a big deal in the machine learning
+Bo in the meantime I would like to let
+you know that we regularly post updates
+on various Technologies if you are a
+tech Enthusiast looking for latest Trend
+consider subscribing to our YouTube
+channel and press that B icon to never
+miss any update from Simply Lear so
+great let's get started so now let's
+start with what the LSM model is long
+short-term memory is a type of recurrent
+neural network RNN designed to capture
+long-term dependencies in sequential
+data lstms can process and analyze
+sequential data like time series text
+and speech they use memory cells and
+gate to control information flow
+allowing them to selectively retain or
+discard information as needed thus
+avoiding the vanishing gradient problem
+found in traditional RNs lstms are
+widely used in applications such as
+natural language processing spe
+recognition time series forecasting and
+many more craving a career upgrade
+subscribe like and comment
+below dive into the link in the
+description to FasTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back so before moving forward as you
+guys know lstm is a concept of machine
+learning and if you want to learn Ai and
+ml from industry expert and want to gain
+on handson in top industry project then
+try a simp postgraduate program in Ai
+and machine learning from part
+University in collaboration with IBM
+this score teaches in demand skills such
+as machine learning deep learning NLP
+computer vision reinforcement learning
+chat gity and many more so don't forget
+to check out the course link from the
+description box below and the pin
+comment so let's get let's started so
+now what is RNN RNN are a type of neural
+network that are designed to process
+sequential data they can analyze data
+with temporal Dimensions such as time
+series speech and text RN can do this by
+using a hidden State pass from one time
+step to the next the next hidden state
+is updated at each other time step based
+on the input and the previous hiden
+state RNN are able to capture short-term
+dependencies in sequential data but they
+struggle with capturing long-term
+dependencies why the lstms are made so
+moving forward let's discuss types of
+lstm gates so lstm models have three
+types of gates the input gate the
+forgate gate and the output gate so
+let's first discuss the input gate the
+input gate controls the flow of
+information into the memory cell
+deciding what to store the input gate
+determines which values from the input
+should be updated in the memory cell it
+uses a sigmoid activation function to
+scale the values between 0o and one and
+then applies pointwise multiplication to
+decide what information to store next is
+forget gate controls the flow of
+information out of the memory cell
+deciding what to discard the forget gate
+decides what information should be
+discarded from the memory cell it also
+uses a sigo activation function to scale
+the values between 0er and one followed
+by Point wise multiplication to
+determine what information to forget the
+last one is output gate controls the
+flow of information out of the lstms
+deciding what to use for the output the
+output gate determines the output of the
+lstm unit it uses a sigmoid activation
+function to scale the values from 0 to
+one then applies Point VI multiplication
+to produce the output of the lstm unit
+so these G is implemented using sigmoid
+function are trained using back
+propagation they open and close based on
+the input and the previous hidden State
+allowing the lstm to selectively retain
+or discard information effectively
+capturing long-term dependencies so now
+let's discuss application of lstm lstm
+models are highly effective and used in
+various application including video
+analysis analyzing video frames to
+identify action object and scenes the
+second is language simulation task like
+language modeling machine translation
+and text summarization the third one is
+time series prediction so predicting
+future values in a Time series the
+fourth is voice recognition tasks such
+as speech to text transcription and
+command
+recognition the last one is sentiment
+analysis classifying Tex sentiment as
+positive negative or neural so there are
+many more examples of Ls so now let's
+move forward and understand LSM model
+and how it works with example let's
+consider the task of predicting the next
+word in a sentence this is a common
+application of lstm networks in natural
+language processing so I will break it
+down step by step using the analogy of
+remembering a story and deciding what
+comes next based on the context so
+imagine you are reading a story as you
+read you need to remember what has
+happened so far to predict what might
+happen next so let's illustrate with the
+simple example sentence the cat sat on
+the dash so you want to predict the next
+word which could be mat or roof or
+something else an lstm Network helps
+this make prediction by remembering
+important parts of the story and
+forgetting irrelevant details so now
+let's dive into step by step process so
+step by step exclamation using LSM the
+first one is reading the story input
+sequence as you read each word in the
+word sentence you process it and store
+relevant information for example the you
+understand it's determiner C you know
+it's a noun and the subject of the
+sentence s indicates the action
+performed by the subject on preposition
+indicating the relationship between the
+cat and the next noun so this sequence
+diagram showing the words being read and
+processed so second comes forget G As
+you move through the sentence you might
+decide that some details are no longer
+important for instance you might decide
+that knowing the is less important now
+that you have get and said so the word
+forget get help discard this less
+important information so this sequence
+diagram you can see on the screen
+showing how relevant information is
+discarded so the third one input gate
+when you read on you need to decide how
+relevant this information is so this
+sequence diagram in the screen is
+showing how new information is
+integrated with the last one okay the
+fourth one is the cell state memory part
+so this is like your memory of the story
+so far it carries the information about
+the subject cat and the action set on so
+it updates the new information as you
+read each word okay the get set on the
+retaining the important context so this
+sequence diagram showing how the memory
+is updated with the new information so
+the last one is output gate when you
+need to predict the next word the output
+gate helps you decide based on the
+current memory cellist so it uses the
+context the cat set on the so the
+predict the next word might be met
+because cat and mat are often associated
+with the context so it can predict
+anything the cat set on the table or on
+the sofa anything but Matt why I'm
+saying Matt because cat and Matt are
+often associated in the same context so
+this diagram is showing the prediction
+of the next word based on the current
+memory so there are many applications
+where you can use the lstm in predictive
+time series or next word in the sentence
+so by the using of lstm gates input gate
+forget gate and output gate and updating
+the cell State the network can predict
+the next word in a sequence by
+maintaining relevant context and
+discarding unnecessary information this
+step-by-step process allow LSM Network
+to effectively handle sequence and make
+accurate prediction based on the context
+so with this we have come to end of this
+video if you have any questions or doubt
+please ask in the comment section below
+our team of experts will help you as
+soon as possible thank you and keep
+learning with simply
+Le staying ahead in your career requires
+continuous learning and Skilling whether
+you're a student aiming to learn today's
+top skills or a working professional
+looking to advance your career we've got
+you covered explore our impressive
+catalog of certification programs in
+cuttingedge domains including data
+science cloud computing cyber security
+AI machine learning or digital marketing
+designed in collaboration with leading
+universities and top corporations and
+delivered by IND experts choose any of
+our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

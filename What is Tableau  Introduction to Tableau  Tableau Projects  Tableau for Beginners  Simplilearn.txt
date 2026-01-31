@@ -1,0 +1,635 @@
+foreign
+'s YouTube channel in this session we
+will learn what is data analytics
+followed by the fundamentals of data
+analytics we will have a brief
+introduction to one of the powerful
+Tools in data analytics which is none
+other than the Tableau once we have a
+good understanding of the fundamentals
+of Tableau like data connectivity how to
+create charts tables and Tableau and how
+to create stories in Tableau we will get
+ahead with the most important topic of
+today's session which is about building
+a real-time and interactive dashboard in
+Tableau with that having said if you are
+an aspiring data analyst looking out for
+online training and certification from
+the best universities and the industry
+experts then search no more simply
+learns postgraduate program and data
+analytics from the Purdue University in
+collaboration with IBM should be the
+right choice for more details on this
+program please use the link in the
+description box below also let me tell
+you guys that we have daily updates on
+multiple Technologies if you're
+attacking in a continuous hunt for
+latest technological Trends then
+consider getting subscribed to our
+YouTube channel and don't forget to hit
+that Bell icon to never miss an update
+from Simply learn now with that having
+said
+Ottawa training experts so what is w
+so before we understand what exactly is
+W let us imagine a simple situation
+imagine that you are an office worker
+and you get some loads of data uh maybe
+like millions of rows or billions of
+rows and you're supposed to extract the
+insights of that particular data so what
+do you do you basically load that data
+into a database and try to write the SQL
+commands and then try to extract the
+insights of that particular data
+so this kind of approach is basically
+time consuming and you get exhausted now
+what if you had a tool which could write
+all the SQL commands for you in the
+background and all you had to do is just
+to drag and drop the data
+sounds interesting right
+so Tableau is just the same all you have
+to do is just drag and drop the data and
+it will automatically write all the SQL
+commands you ever wanted to write on
+that particular data and it will give
+you live data interactions and advices
+for the future
+now with this let us understand the
+definition of w so basically Tableau is
+a business and analytical software tool
+develop in America W helps people to
+understand visualize and make data
+driven decisions in real time with
+extreme agility and accuracy
+now with this let us continue with the
+next topic which will be about the
+various versions of w so at first we
+have the Tableau desktop so Tableau
+desktop is a data visualization
+application to facilitate you to xmi in
+virtually any kind of structured data
+and generate highly interactive
+beautiful graphs dashboards and reports
+within minutes once a quick installation
+you can tie to virtually any data source
+from spreadsheets to data warehouses and
+display information in several graphic
+perspectives designed to be easy to
+utilize you'll be working more rapidly
+than ever before next we have the W
+server it is a business intelligence
+application that offers browser-based
+analytics anyone can utilize it is a
+rapid fire alternative to the slow pace
+of traditional business intelligence
+software it is an online solution meant
+for sharing Distributing and
+collaborating on content created in
+Tableau what makes W different it is
+proposed to everyone there is there is
+no scripting required so everyone can
+grow to be an analytics expert you can
+grow your deployment as you require it
+train online for free find answers and
+minutes and not in months that's the
+specialty of w
+now followed by the W server we have W
+online
+so w online is a business intelligence
+application that offers browser-based
+analytics anyone can utilize as
+discussed before it is a rapid fire
+alternative to slow based additional
+business intelligence software so
+Tableau online is a secure cloud-based
+solution for sharing and collaborating
+on Tableau view views and dashboards
+next up we have the Tableau public
+so now I want to give you guys a serious
+heads up if you are a beginner in w w
+public is like an open source whatever
+the data you choose to work on using
+table Republic it goes to public so kind
+of like w public is not preferable if
+you want to work on your company
+sensitive and confidential data W public
+is a free software to facilitate anyone
+to get connected to a spreadsheet or a
+file and create interactive data
+visualizations for the web
+it is delivered as a service that
+permits the user to be up to and running
+overnight with table Republic users can
+construct amazing interactive visuals
+and publish them quickly without the
+help of programmers or ID
+it is designed for organizations to
+facilitate their websites with
+interactive data visualizations there
+are higher limits on the size of data
+you can work with and among other
+features you can keep your underlying
+data hidden and lastly we have W reader
+W reader is a free desktop application
+that you can use to open and interact
+with data visualizations built in
+Tableau desktop web tab new reader you
+can filter drill down and discover
+humongous loads of data now moving ahead
+we have the features of w
+so these are the few important features
+that you might want to consider
+those are the first one robust security
+table you take special care of data and
+user security it has a foolproof
+Security based authentication and
+permission systems for data connections
+and user success
+W also gives you the freedom to
+integrate with other security protocols
+such as active directory Kerberos Etc an
+important point to note here is that the
+W practices low level filtering which
+helps in keeping the data secure
+followed by that we have the
+collaboration and sharing feature tabli
+provides convenient options to
+collaborate with other users and
+instantly share data in the form of
+visualizations sheets dashboards Etc in
+real time it allows you to securely
+share data from various data sources
+such as on-premise on-cloud hybrid Etc
+instant and easy collaboration and data
+sharing helps in getting quick reviews
+or feedback on data leading to a better
+overall analysis of it another extremely
+useful feature of Tableau is the use of
+Time series and forecasting easy
+creation of trend lines and forecasting
+is possible due to tablets powerful
+backend and dynamic front-end you can
+easily get data predictions such as a
+forecast or a trend line by simply
+selecting some options and drag and drop
+operations using your concerned fields
+next up we have live and in-memory data
+Tableau ensures connectivity with both
+live data sources and data extraction
+from external sources as in memory data
+this gives the user the flexibility to
+use the data from more than one type of
+data source without any restrictions you
+can use data directly from data source
+by establishing Library connections or
+keep that data in memory by extracting
+data from a data source as per their
+requirement
+W provides additional features to
+support data connectivity such as an
+automatic extract refreshes notifying
+the user upon live connection fail Etc
+next we have informative View and even
+the mobile view one of the key features
+of Tableau and the one that got its
+popularity is its wide range of
+visualizations in W you can make
+visualizations such as bar chart pie
+chart Gantt chart bullet chart motion
+chart tree map box plot and many more
+like you name it w got it you can select
+and create any kind of visualizations
+easily by selecting the visualization
+type from the show me tab apart from
+that it is capable to represent data in
+mobile view as well W acknowledges the
+importance of mobile phones in today's
+world and provides the mobile versions
+of Tableau app the next and the last
+feature is that being capable of
+accessing data from various kinds of
+data sources W offers a wide range of
+data source options where you can get
+connected and frustrated from data
+sources ranging from on-premise files
+spreadsheets relational databases
+non-relational databases online cloud
+data for data warehouses and many more
+so followed by the features now we'll
+discuss about the advantages of w
+so following are the advantages of using
+Tableau first one it has remarkable
+visualization capabilities of course the
+unparalleled capabilities of visualizing
+information is on top of the list of tab
+values software benefits followed by
+that we have the ease of use the tools
+intuitive manner of creating graphics
+and a user-friendly interface allows
+non-developers to utilize the basic apps
+functionalities to the fullest users
+arrange raw data into catchy diagrams in
+a drag and drop way which facilitates
+information analyzing and eliminates the
+need for the help of IT department and
+patent building
+next high performance apart from its
+high visualization functionality users
+rates its overall performance as robust
+and reliable the tool also operates fast
+on big data which makes it powerful
+performance on an important point on the
+list of the advantages of Tableau and
+next is the mobile friendliness one of
+our best advantages are the Cavalier
+benefits is its efficient mobile
+application which is available for both
+IOS and Android it adds Mobility to
+table users and allows them to keep
+statistics at their fingertips as well
+as supports their functionality that
+desktop and online versions have
+and finally we have a thriving community
+and Forum W has a rich Community the
+number of w fans who invest their
+expertise and skills in the community is
+increasing rapidly business users can
+beef up their knowledge on data
+processing and Reporting and get many
+useful insights in this community also
+Forum visitors are ready to help settle
+any user issues and also share their
+experience
+next up we have the disadvantages of
+tableau
+the first major disadvantage is the high
+cost the Tableau is not the most
+expensive visualization software
+especially compared to such business
+intelligence Giants such as oracles and
+IBM Solutions all the same the license
+is quite costly for small and medium
+companies which makes it one of the
+considerable fabulous disadvantages
+next is the inflexible pricing W sales
+team is not flexible enough to provide
+case-by-case approach for their
+customers ignoring the fact that each
+company has its own a unique
+requirements for visualization tool
+package the W sales model requires
+clients to purchase and extends license
+from the start
+as a result a lot of companies that use
+W arrive at the conclusion that they
+don't need all their license features
+they would prefer to buying a set of
+requirements and scale them if necessary
+followed by that the next disadvantage
+is poor after sales support on multiple
+message boards users complain that W
+software lacks proper after sales
+maintenance if customer has software
+performance problem the support team
+does not settle the matter by
+investigating the problems root and
+eliminating it next we have the power bi
+capability or the poor business
+intelligence capability as previously
+mentioned the tool provides
+best-in-class information visual
+interpretation however it lacks the
+functionality required for a fully
+fledged business intelligence tool such
+as large scale reporting the building of
+data tables and statistic layouts and
+lastly the poor versioning only the
+recent Tableau version support revision
+history while for the older ones
+software rolling back is impossible now
+with the advantages and disadvantages
+discussed let's move into the top
+companies hiring the companies which are
+desperately looking for Tableau experts
+are Accenture ey PepsiCo Deloitte Wells
+Fargo capgemini and many more
+now let's discuss the humongous and
+handsome salaries offered by this Tech
+Giants
+so according to Glassdoor the average
+salary of a tableau expert in America is
+82 000 grants and for a beginner it is
+somewhere around sixty thousand dollars
+per annum and at the highest rate it is
+1 lakh ten thousand dollars per annum
+similarly the average salary of a
+tableau expert in India is 5 lakhs 6000
+per annum and for a beginner it is
+somewhere around Three lakh Sixty
+thousand and and for a highly skilled
+experienced Tableau expert the salaries
+range from 8 lakh 75 000 per annum
+simply learns post graduate program in
+data analytics from the Purdue
+University in collaboration with IBM
+should be the right choice for more
+details on this program please use the
+link in the description box below in
+today's session we are going to take
+example of the Netflix database which we
+have and we will prepare certain reports
+in order to identify what kind of
+reports we can generate from such a data
+set
+So currently on my screen what you can
+see is the Tableau the Netflix data
+sheets the data sources where you have
+the Netflix shows movies their
+Associated duration uh what kind of
+shows or movies are there their release
+here are the associated rating
+description and a key which is the show
+ID now this is the unique identifier for
+each show in this Netflix title sheet
+and with this show ID all other sheets
+are related like you know who are the
+directors of the show in which country
+the show was released what is the cost
+of each show all that information is in
+this sheet and to which particular
+category basically the listed in
+category is being listed in this
+particular sheets so what we're going to
+do is first we are going to import this
+sheet into tableau
+okay and then create relationship
+between them using the Tableau
+relationship canvas so first our the
+primary transaction table the sheet in
+which all the information related to
+movies is there or shows is there is in
+Netflix titles and then we will drag
+sheet like Netflix cast titles cast now
+W has automatically identified the
+relationship between the show ID of
+titles and show ID of titles cast and it
+has made a join
+so if you double click this
+you can see this relationship
+cardinality and the related fields
+similarly I'll drag
+titles category
+countries and directors
+Now by virtue of this all the sheets
+have now been joined with Netflix titles
+and with this relationship ready we can
+start preparing our reports
+now let's create a basic report where we
+can just glance the data like you know
+whatever we were seeing in the Excel how
+it looks in w
+so you have all the types of movies then
+for example I drag the release Here
+now first I do not want to consider it
+as a
+Dimension so I'll just
+release Here per category per type there
+is a release Here
+and then I'll drop the listed in
+so now these are the categories so per
+year the details of the categories right
+and then you can
+drag the title and the associated rating
+so this is just a view of your data
+we can name it as shows listing report
+now let's try to create some report for
+some
+measures some numbers
+Etc
+so now let's
+check in which country how many movies
+or titles were released you know what is
+the count
+so first let's drag the
+country
+so as soon as we dragged the country uh
+field it is identified that it has the
+geographical names and identified the
+latitude and longitude details so
+Tableau internally does that
+automatically and it has identified the
+spots across the globe of the relevant
+country
+now let's drag the listed in on the
+color section
+now what it is doing is it is showing in
+which country what different kind of
+uh category wise movies are or shows
+have been released like in Sri Lanka
+documentaries have been released in
+India action and adventure United States
+action and adventure like this
+now let's
+put
+account of
+the titles right so if you see 247
+action adventure movies or shows have
+been released in United States
+okay so this is one inference by this
+particular report you can
+identify
+so let's save this report as
+listed
+in
+by country
+okay now let's create another report
+we will call it as the per year
+statistical report in this first I'll
+put the release years in the column
+now
+count of Netflix titles so this is the
+count of Netflix titles per year 2017
+2016 14. and then
+count of Netflix titles in the countries
+this is the second bar chart okay now
+what I'll do is I'll combine it into one
+so one report
+we are
+moving in the bar creating the bar and
+one in the line now I just have to
+so we will click on the count of Netflix
+titles by country right click Market
+dual access so now as soon as you click
+click this both the charts have been
+combined and right click over here and
+say synchronize access
+okay
+okay so now if you can see see right in
+2017 you had uh 2 303 Netflix releases
+across all categories and one one five
+nine
+titles right one zero six three titles
+in 2017. so this is a descending
+representation of the count of titles
+release per year across category and
+across titles
+so let's call this as
+per year
+stats
+now let's create another report
+number of shows
+per title okay
+so or or sorry per rating so we will
+drag the rating column
+and
+we will
+count of titles
+and
+unique count of titles and unique count
+of show IDs
+okay
+one is bar and one is line
+okay
+so this is a report which shows rating
+wise titles and the show IDs
+so in the tooltip you can see the
+listing count of Titus and show ID per
+rating
+okay so let's call it
+shows
+per rating
+now let's create another sheet call it
+as
+shows
+by caste
+so in this
+what we're going to do is first drag the
+cast column on the rows section you have
+name all of all the cast and then we
+drag the
+show ID on the column section and put a
+count D and sort it okay
+you can remove the null cast and this is
+your
+sorted order and on the labels section
+you can say show Mark labels and you
+will see the count return upon care has
+done the maximum then on Shahrukh Khan
+om Puri nasruddin sha so this is the
+details on this sorted order that who
+has done how many shows okay
+then next is
+shows by director similar to shows by
+cast
+drag
+director into rows
+or differently if you want to prepare
+into columns and then count off
+show ID
+okay sort it
+and you can actually filter out the null
+director value
+and this is the account put the label
+so you can see Jan's Twitter has the
+maximum shows
+okay
+then create another report
+shows by category
+now similarly drag the listed in
+in the rows and show ID count
+remove the null category
+and sort
+labels show Mark labels so International
+movies are the highest category dramas
+the next comedy International TV shows
+this way
+you have your category
+now let's create a dashboard in which we
+want to bring combine all these reports
+and
+take a common view so first let's drag
+listed in by country
+then
+shows by director
+also please let's set the size as
+automatic
+then let's drag shows by category
+and shows by cast
+now these four reports are on a single
+dashboard we will link them to each
+other so go to worksheet actions
+add action
+filter
+select dashboard one
+only select shows by category here
+and in Target dashboard one
+except shows by category keep everything
+else
+and in the source sheet just select
+click select
+click ok
+now whatever category you will select
+over here
+that related category data will
+automatically be shown in other reports
+like see International movies across the
+globe across countries directors of only
+International movies who has done the
+maximum
+Johnny Tow and uh shows by cast right
+that who has done the maximum
+International movies or dramas
+or comedies
+travel has a maximum number of comedies
+and then if you see the comedy movies uh
+you know these are the count of comedy
+movies released across the countries and
+the who is the director
+another a very interesting report which
+you can prepare is that for example you
+want to check in which country maximum
+duration of
+uh your
+maximum duration of
+movies have been released so
+first let's create a measure
+remove this
+okay
+so if you see
+maximum duration of the movies or the
+entire Netflix content is maximum United
+States then in India these many minutes
+next is United Kingdom and you can also
+change the colors
+whatever you feel is as per your
+standards or as per the convention you
+can change the color combination
+so there are multiple ways you can
+generate reports and uh hope you have
+understood how you can leverage such a
+data to create your reports with that we
+have come to an end of this session on
+what is data analytics and how to build
+real-time interactive dashboards using
+Tableau in case if you have any queries
+regarding any of the topics covered in
+this session or if you feel that you
+require the resources used in the
+session like the data set code
+documentation PPT Etc do let us know in
+the comment section Below on our team of
+experts will be more than happy to
+resolve all your queries at the earliest
+until next time thank you stay safe and
+keep learning
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
+thank you

@@ -1,0 +1,285 @@
+oltp stands for online transaction
+processing it's a type of database
+architecture that is designed to handle
+a massive amount of data insertions
+updates and delete operations basically
+it's a system that can process hundreds
+or thousands of transactions per second
+which makes it ideal for applications
+that need to process a high volume of
+transactions such as banking e-commerce
+and mobile apps sounds impressive right
+you might be surprised to learn that
+oltp is used in ATMs financial
+transaction systems online bookings
+ticketing and over a dozen major
+applications so if you want to make
+yourself familiar with oltp systems and
+learn more about this amazing technology
+stay tuned with us until the end of this
+session if you're an aspiring data
+analyst looking for online training and
+certifications from prestigious
+universities and in collaboration with
+leading experts then search no more
+simply lens postgraduate program and
+data analyst from Purdue University in
+collaboration with IBM should be your
+right choice for more details use the
+link mentioned in the description box
+below with that in mind go to our
+training experts hey everyone on let's
+get started first we shall discuss the
+agenda for today's session first we will
+understand what exactly is oltp followed
+by that we will understand the
+characteristics of ovaltp then moving
+ahead we will learn what are the types
+of queries that an old TP platform can
+actually process then we will dive into
+the architecture of ovaltp and lastly we
+will understand the advantages of using
+an oltp platform I hope I made myself
+clear with the agenda now proceeding
+ahead the first one is what is an old TP
+platform the answer for this question is
+oltp stands for online transaction
+processing it is a type of computing
+that involves managing and processing
+many transactions in real time over the
+Internet or a network
+oltp systems are designed to handle a
+day-to-day business operations where
+numerous concurrent users can access and
+modify data simultaneously now that we
+have understood the technical definition
+of oltp let's proceed ahead and
+understand what are the characteristics
+of Google TP platform the main
+characteristics of oltp platform include
+the following
+the first one asset properties
+oltp systems must record the entire
+transaction correctly a transaction is
+usually an execution of a program that
+may require the execution of multiple
+steps or operations it may be complete
+when all the parties acknowledge the
+transaction when the product or service
+is delivered or a certain number of
+updates are made to the specific tables
+in a database a transaction is recorded
+correctly only if all the steps involved
+are executed and recorded if there is
+any error in any steps the entire
+transaction must be aborted and all the
+steps must be deleted from the system
+thus oltp systems must comply with
+atomic consistent isolated and durable
+properties which is also known as asset
+properties to ensure the accuracy of the
+data in the system now moving ahead the
+next characteristic is the concurrency
+oltp systems can have enormously large
+use of populations with many users
+trying to access the same data
+simultaneously
+system must ensure that all these users
+are trying to read or write into the
+system can do so concurrently
+concurrency controls guarantee that two
+users accessing the same data in the
+database system simultaneously will not
+be able to change the data or that one
+user has to wait until the other user
+has finished processing before changing
+that single piece of data now moving
+ahead the next characteristic is scale
+oltp systems must be able to scale up
+and scale down instantaneously to manage
+the transaction volume in real time and
+execute transactions concurrently
+irrespective of the number of users
+trying to access the system moving ahead
+the next one is availability
+an oltp system must always be available
+and ready to accept transactions loss of
+a transaction can lead to a loss of
+Revenue or may have illegal implications
+because transactions are being executed
+from anywhere in the world and anytime
+the system must be available 24 7. next
+is high throughput and short response
+time oltp systems require nanosecond or
+even shorter response times to keep
+Enterprise users productive and meet the
+growing expectations of the customers
+moving ahead we have reliability oltp
+systems typically read and manipulate
+highly selective small amounts of data
+it is Paramount that at any given time
+the data in the database is reliable and
+trustworthy for the users and
+applications accessing the data
+next is security
+because these systems store highly
+sensitive customer transaction data data
+security is critical any breach can be
+very costly for the company
+and lastly the recoverability oltp
+systems must be able to recover in case
+of any hardware or software failure now
+that we have finished the characteristic
+support TV platform now we will
+understand the types of queries that an
+oltp system can process
+so online transaction processing or oltp
+systems can perform several types of
+queries to handle day-to-day business
+operations effectively some of the
+common types of queries include insert
+queries update queries delete queries
+select queries search queries filter
+queries join queries aggregate queries
+sorting queries group queries
+transaction queries and constrained
+queries let's understand them in a bit
+more detail firstly insert queries
+insert queries are used to add new data
+records rows or columns to the database
+Now update queries modify existing data
+records or rows in database to reflect
+changes or updates the delete query
+removes the records or rows from the
+database when they are no longer needed
+next is Select queries retrieve specific
+data records or rules from the database
+on specified criteria fifth one is
+search queries they are used to find
+specific data elements or patterns
+within the database filter query Supply
+filters to query results to retrieve
+only the relevant data join queries
+combine data from multiple tables based
+on specific conditions to create more
+comprehensive result eighth one is
+aggregate queries which perform
+calculations on data such as Computing
+sums average current or other aggregate
+functions sorting queries arrange query
+results in a specific order such as
+ascending or descending based on a
+particular column now the tenth one is
+grouping queries which group data based
+on specific columns to analyze category
+information and transaction queries are
+the queries that are related to
+initiation management and completion of
+transactions ensuring the asset
+properties are maintained and lastly the
+constrained queries they validate and
+enforce various constraints example
+unique Keys foreign keys on the data to
+ensure data Integrity oltp systems are
+primarily designed for handling these
+short and straightforward queries in
+real time allowing business to process
+and manage many concurrent transactions
+efficiently now moving ahead we will
+understand the architecture of old TPU
+platforms
+now the following picture represents the
+architecture of over AP and oltp
+platforms now let's understand them in a
+bit more detail business strategy
+business strategy deals with the issues
+that affect the organization and oltp it
+is typically developed at high level
+within the firm by board of directors or
+the top management
+business process oltp business process
+is a set of activities and tasks that
+once completed will accomplish an
+organizational goal next is customers
+orders and products oltp database stores
+information about products orders that
+is transactions customers which are
+buyers suppliers who are the sellers and
+employees next is the ETL process it
+separates the data from various rdbms
+Source systems then transforms the data
+like applying concatenations
+calculations Etc and loads the process
+data into the data warehouse system next
+is data Mart and data warehouse a data
+Mart is a structure or access pattern
+specific to a data warehouse environment
+data mining analytics and decision
+making is the next one data stored in
+data Mart and Warehouse can be used for
+data mining analytics and decision
+making this data helps you discover
+patterns analyze raw data and make more
+analytical decisions for your
+organization's growth now with that
+let's proceed to the next section of
+today's session that is based on oltp
+advantages
+there are many advantages of using an
+oltp platform we will discuss the top 5
+ones so the first one amongst the top 5
+advantages for ltp platforms are
+real-time data access oltp systems
+provide immediate access to up-to-date
+data enabling users to make timely and
+informed decisions based on the latest
+information next is concurrent user
+support oltp systems can handle multiple
+users simultaneously ensuring smooth
+operation during peak times third one is
+data Integrity oltp systems maintain
+data Integrity by enforcing asset
+properties ensuring that transactions
+are processed reliably and accurately
+next has efficient transaction
+processing oltp systems efficiently
+processed small frequent transactions
+making them ideal for day-to-day
+business operations and lastly enhanced
+business productivity oltp systems boost
+overall business productivity and
+responsiveness by streamlining
+transactional process and provide adding
+quick access to critical data we have
+reached the end of this session on what
+is oltp should you need any assistance
+PPT and any other resources used in this
+session please let us know in the
+comment section below and a team of
+experts will be happy to help you as
+soon as possible until next time thank
+you and keep learning stay tuned for
+more from Simply learn
+staying ahead in your career requires
+continuous learning and upskilling
+whether you're a student aiming to learn
+today's top skills or a working
+professional looking to advance your
+career we've got you covered explore our
+impressive catalog of certification
+programs in Cutting Edge domains
+including data science cloud computing
+cyber security AI machine learning or
+digital marketing designed in
+collaboration with leading universities
+and top corporations and delivered by
+industry experts choose any of our
+programs and set yourself on the path to
+Career Success click the link in the
+description to know more
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
+foreign

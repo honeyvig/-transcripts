@@ -1,0 +1,1183 @@
+foreign
+today we will take you through a hands
+of lab demo how we can use lstm model
+for forecasting in machine learning
+before we start I hope this screen is
+clearly visible and the audio is fine if
+yes please type in yes if there are any
+issues do let us know in the chat
+section so that we can resolve them
+let's wait for some more minutes to let
+other people join
+until then let me tell you guys that we
+have regular updates on multiple
+Technologies if you are a tech geek in a
+continuous hunt for the latest
+technological Trends then consider
+getting subscribed to our YouTube
+channel and press that Bell icon to
+never miss any update from Simply love
+great I think we can get started so in
+today's session we will discuss what
+lstm model is and moving ahead we will
+discuss what RNN is after that we will
+see types of gates in lstm model after
+covering types we will see some
+applications of lstm models and at the
+end we will do a hand Supply demo of
+gold price prediction using lstm model
+before we move on to the programming
+part let's discuss what lscm model is
+and positive further for the same so
+what is lstm long short term memory lstm
+is a type of recurrent neural network
+that can capture long-term dependencies
+in sequential data lstm order are able
+to process and analyze sequential data
+such as time series text and speech they
+use a memory cell and engage to control
+the flow of information allowing them to
+selectively retain or discard
+information as needed and thus avoid the
+vanishing gradient problems that plagues
+traditional RNN lstm are widely used in
+various applications such as natural
+language processing speech recognition
+and Time series
+so moving ahead we will see what is RNN
+RNN are a type of neural network that
+are designed to process sequential data
+they can analyze data with temporal
+Dimensions such as time series speech
+and text RNN can do this by using hidden
+state passed from one timestamp to the
+next the hidden state is updated at each
+timestamp based on the input and the
+previous hidden state
+R and N are able to capture short-term
+dependency in sequential data
+but they struggle with the capturing
+long-term dependencies
+so after understanding what is RNN
+moving forward let's see types of gates
+in lscm model
+so there are three types of gates in
+lstm models the input gate the forget
+gate and the output gate the input gate
+controls the flow of information into
+the memory cells the forget gate
+controls the flow of information out of
+the memory cells the output gate
+controls the flow of information out of
+the lstm model into the output
+so the input gate the input gate decides
+which information to store in the memory
+cell it is trained to open when the
+input is important and the close when it
+is not the second one is the forget gate
+the forget gate decides which
+information to discard from the memory
+cell it is trained to open when the
+information is no longer important and
+closed when it is the third one is the
+output gate the output gate is
+responsible for deciding when
+information to use for the output of the
+lstm it is trained to open when the
+information is important and close when
+it is not the gates in an lstm are
+trained to open and close based on the
+input and the previously done state this
+allows the lstm to selectability retain
+or discard information making it more
+effective at capturing long-term
+dependencies so moving forward let's see
+what are the application of lstm models
+long short term memory lstm is highly
+effective RNN that has been utilized in
+various applications so here are few
+well-known lstm application the first
+one is language simulation language
+support Vector machine lstm have been
+utilized for natural language processing
+tasks such as language modeling machine
+translation and text summarization by
+understanding the relationship between
+words in a sentence they can be trained
+to construct meaningful and
+grammatically correct sentences the
+second one is voice recognition lstm
+have been utilized for speech
+recognition tasks such as speech to text
+to text transcription and command
+recognition they may be taught to
+recognize pattern in speech and match
+them to appropriate text the third one
+is sentiment analysis lstm can be used
+to classify text sentiment as positive
+negative or neutral by learning the
+relationship between words and their
+associate sentiment the fourth one is
+time series prediction lstm can be used
+to predict future values in a Time
+series by learning the relationship
+between past values and future values
+the fifth one is video analysis LCM can
+be used to analyze video by learning the
+relationship between frames and their
+associate actions object and the scenes
+and the last one is handwriting
+recognition lstm can be used to
+recognize handwriting by learning the
+relationship between images of
+handwriting and the corresponding text
+so after seeing application of lstm so
+let's move to the programming part so
+first we will open command prompt to
+write command to open jupyter notebook
+so here we will write
+Jupiter
+notebook
+Jupiter notebook is open this is the UI
+of Jupiter notebook so here we will go
+new python 3.
+so this is the python kernel UI of The
+jupyter Notebook
+so now
+so first we will import some major
+libraries of python which will help us
+in analyzing the data and prediction and
+all okay so here we will write import
+numpy
+S and B
+second import
+pandas
+as PD
+third one is import
+matplotlib
+dot Pi plot
+as PLT
+fourth one is import
+antly
+dot Express
+as
+okay so these are some you know basic
+libraries
+so like from
+and scalan
+Dot
+pre-processing
+reprocessing import
+Max
+scalar
+okay then from
+skill learn
+Dot
+model
+selection
+import
+train
+test
+split
+this is used for like dividing the data
+into training and the testing
+okay
+split
+then from
+scale on
+dot matrix
+import
+solute
+percentage
+okay then some import
+tensorflow
+as TF
+then from
+Keras
+import
+model
+and from
+here as
+dot layers
+port
+dance
+drop out
+then from Keras
+dot layers
+import the major one lstm
+is
+so we are doing we will do the goal
+prediction okay we have the data from
+2020 okay we have data from 2013 to 2023
+like
+okay there is one address
+okay this is Keras
+yeah so I will change to
+gold
+prediction
+using
+lstm okay
+let's say name it
+yeah
+so first number is a python Library used
+for working with that is it also has a
+function for working in the domain of
+linear algebra and matrices it is an
+open source project and you can use it
+freely numpy stand for numerical python
+the second one is by pandas panda is a
+software Library written for the Python
+programming language for data
+manipulation and Analysis in particular
+it offers data structure an operation
+for manipulating numerical tables and
+The Time series
+and now matplotlib for Python and its
+numerical extension number Matt broadly
+is a cross platform data visualization
+and graphical charting package as a
+result it presents a strong open source
+suitable for Matlab the api's
+application programming interfaces for
+matplotlib allow programmers to
+incorporate graphs into GUI applications
+okay then
+there is SQL and scikit-learn so psychic
+learn is a free software machine
+learning library for the Python
+programming language teachers various
+classification regression and clustering
+algorithm including support Vector
+machines random Forest gradient boosting
+k-means and dbsc here and is designed to
+interrupt
+Incorporated with python numerical and
+scientific libraries like numpy and
+sci-fi
+okay
+then we have dance
+a dense layer is a layer that is deeply
+connected with its preceding layer which
+means the neurons of the layers are
+connected to every neuron of its
+preceding layer this layer is most
+commonly used layer in artificial neural
+networks okay
+then there is lstm
+okay lstm stands for long short term
+memory layer
+you know all we we have discussed in the
+starting of the video what is lstm what
+is RNN and how types of lstm and some
+application okay so LST stands for the
+long short term memory layer which
+created in 1997 this layer use available
+constant and runtime Hardware to gain
+the most optimized performance where we
+can choose the various implementation
+that is pure tensorflow or CU DNN based
+okay so now what is tensorflow
+tensorflows are free and open source
+software library for machine learning
+and artificial intelligence it can be
+used across a range of tasks but has a
+particular focus on training and
+interface of deep neural network
+okay so moving forward we will import
+our data set
+so for the reading data set we will
+write DF equals to PD Dot
+read underscore CSV
+okay
+then here we will let gold
+price
+dot CSV
+okay so this data set goal price data
+set you can download this result from
+the description box below
+okay
+data set is loaded so now we will see
+the overview of the data set so here we
+will add DF press enter
+so from 2022 like you know end of the
+year of like
+2022 till from the 2013.
+okay
+so as you can see the data set includes
+daily gold prices information including
+daily open and high and low prices and
+the final price of each day along with
+the volume transaction and the price
+changes in Easton okay like price open
+high low volume charge change percent
+okay so let's see now data set basic
+information
+okay what I will do I will for the
+better visuals I will
+here I will write DF Dot
+input
+yes so
+here all the variables are stored as
+object okay date price open high low
+volume or change percentage okay normal
+count total value is 2583
+okay memory uses 141.4 cubic
+okay so now moving forward
+let's do some data preparation okay
+feature subject selection since we will
+not use the volume and change percent
+features to predict price we will drop
+these two column or features you can say
+okay so for dropping them we will write
+here DF dot drop
+volume
+okay
+then
+change percent
+then axis
+equals to 1
+is
+equals to true
+okay press enter
+so
+okay there is one error
+volume not found in axis
+okay we will is there only I guess
+okay V is capital here
+let's see the data set
+see now the we have dropped these two
+column volume and change percentage data
+price open high and low
+got it
+so now here we will do some you know
+transforming data and all so data
+features is stored as object in the data
+frame as you already know
+see this object
+so first we remove
+uh node will not remove right now so to
+increase the speed of calculation we
+convert its data type to date time and
+then sort this feature in ascending
+order okay
+so for that I will write here
+it
+goes to PD 2.2
+date time
+then DF
+okay then DF dot sort
+values
+y equals to
+date
+then ascending
+equals to true
+is
+true
+then I will write TF dot reset
+true
+D is capital here
+is
+[Music]
+okay press enter
+so
+so now what we will do I will write here
+number of columns num columns
+it was shown
+DF Dot columns
+dot drop
+this state
+then DF
+some calls
+equals to DF
+dot replace
+comma
+here I will add colon
+then
+Rejects
+question
+true
+okay then TF
+num calls
+equals to DF
+num calls
+Dot as
+type
+code 64.
+okay
+here
+right press enter
+okay this place the spelling is strong
+mistake
+capital
+let's see is Captain
+yeah
+so the sign this one
+this sign
+I'll get this comma
+sign is redundant in the data set so
+first we remove it from the entire data
+set and then change the data type of the
+numerical variable to float
+okay
+so
+enter yeah
+okay
+so now we will do here
+so now we will see DF dot hat
+Center
+why head is used
+so head is used for like showing only
+top five rows of the data set
+if you want to see the last five rows so
+you can type here tail instead of head
+or what if you want to see the top 10
+rows so here you can write 10. okay 0 to
+9 10.
+right
+so now date is changed into this
+and descending order ascending order
+okay
+so now we will see the duplicates
+so checking duplicates for that we have
+to write
+duplicate
+zero there are no duplicate samples in
+the data feature
+okay then checking missing values so for
+that we have to write DF dot is null
+foreign
+now what I will do
+so now we will visualize the gold price
+history data okay
+by making
+graph
+so here we will write
+figure equals to
+PX dot line
+the pi equals to DF Dot
+price
+question
+Dot
+update
+date plan
+traces
+the line
+now
+color
+should be
+okay then figure Dot
+update
+layout
+then X
+axis
+title equals to
+date
+comma
+y axis
+title
+was to
+price
+comma then
+oh
+text okay we don't require this
+it should be gold
+those
+data
+then
+comma y
+0.95
+then
+X
+X should be
+0.5
+then
+X anchor
+is Center
+then
+bye
+anchor
+y anchors
+this atop
+okay
+come on then here we will add plot
+BG color
+rgba
+two five five
+comma two two three comma zero comma
+zero point nine
+okay
+so as you can see the gold price data
+graph
+okay from 2013 to 2022
+okay
+so now what we will do we will split
+data to training and test sets Okay so
+there is one thing since we cannot train
+on future data and time series data so
+we should not divide the time series
+data randomly okay like how much
+percentage to give to training set
+testing set like that n times series
+splitting the testing set is always
+later than the trading side okay so we
+considered the last year of for testing
+and the everything else for the training
+got it I'm repeating again so
+here the thing is that
+since we cannot train on future data and
+Time series
+data okay so we should not divide the
+time series data randomly and time
+series splitting testing set is always
+later than the training set so that we
+will consider the last year for the
+testing and the everything else for the
+training
+okay I will make a graph so from that
+graph you will understand easily
+okay so here I will write test
+thighs question
+Okay so
+test size
+also DF
+dot date dot DT Dot ER equals sequence 2
+0 2 2
+okay
+test
+size
+so here as you can see the test size is
+260.
+okay so now we will make a graph
+of gold price like training how much is
+for training how much is for testing
+plot okay so for that I will write PLT
+dot figure
+then because size
+equals to
+15 comma 6
+comma DPI equals to 150.
+bigger than PLT Dot
+RC params
+access
+comma
+Edge color
+was to White
+okay
+take
+don't come here
+the face color
+question
+yellow
+okay then pld.rc
+says
+comma Edge color
+equals to White
+to C on
+it will be good
+then PLT Dot Plot
+then DF Dot
+date
+test
+let's go
+guys
+comma
+DF dot price
+then
+underscore size
+comma color
+equals to
+black
+LW equals to 2.
+okay
+copy it for these
+testing set
+as well as the red
+Small Change
+now what we will do we will set the
+title and all
+title
+gold price
+then
+and test
+so after that
+the minerals at the font size
+PLT dot X label
+and
+date
+comma
+font size
+to 12.
+and PLT dot y level
+and here I've read price
+font size
+12 only
+so then PLT dot Legend
+training set
+comma
+test okay
+[Music]
+test set
+okay
+then I would like the location
+equals to
+upper
+left
+position equals to
+this is
+size
+18
+okay then PLT dot grid
+hello
+question
+White
+then
+PLT Dot
+so this is the graph so this black color
+graph is for the training set and this
+red color graph is for testing set got
+it
+okay this is from the data only data set
+we have
+and this is the date price
+okay date and time maybe I have to write
+here or years maybe
+okay so instead of date I will write
+here
+what should I write
+here
+okay
+now it's good here
+so after splitting in two day training
+and the testing what we will do we will
+do now data scaling okay since we aim to
+predict price only based on historical
+data so we have to scale the price using
+uh using what we already know we have
+like min max scalar
+so we will do from that to avoid what
+intensive computations okay so data
+scaling now we will do data scaling so
+here I will write a scalar
+equals to
+min
+Max
+scalar
+okay
+so we don't have to write again and
+again min max scalar now we can write a
+scalar equals to dot bit
+DF dot price
+values Dot
+D shape
+minus 1 comma 1.
+okay
+so min max scale is loaded so first we
+will do
+so now what we will do we will
+restructure the data and create the
+sliding windows
+so the use of Prior time steps to break
+the next time step is called the sliding
+window okay so in this way what we can
+do the time series data can be expressed
+as supervised learning so we can do this
+by using previous time steps as input
+variables and use the next time step as
+the output variable so the number of
+previous step is called the window bit
+here which we set window with 360.
+therefore extend and X text will be
+nested list containing list of 60
+timestamp prices okay now listen
+carefully y train and Y test are also
+list of the gold prices containing the
+next day's gold price correspond to each
+list in the extend and the X Tax
+okay so here we will set window
+size equals to what what I said 60.
+okay
+press enter
+now
+training set
+so train
+theta equals to TF Dot
+price
+test
+size
+then train
+data equals to scalar
+Dot
+transform
+train
+data Dot
+values Dot
+reshape
+that
+-1
+comma 1. okay
+press enter
+now
+X strain
+array
+then y train
+okay so for I in
+range
+window
+size comma
+alien train
+data
+okay so X string
+dot append
+train data
+I minus
+60
+I comma 0.
+okay
+then y
+train dot append
+10 data
+I comma 0
+okay
+so this is for the training and now we
+will do the or the testing data
+as theta equals to TF
+Dot
+price
+test size
+the
+okay then test
+data question
+Dot
+transform
+test data Dot
+values dot b shape
+S1
+comma 1.
+okay
+then again for this
+test
+was to blank at a then y
+s t equals to this
+okay so for I and range
+windows
+size
+comma
+test data
+test Dot band
+test data
+minus 60
+then I comma 0.
+okay
+then y
+test dot band
+test data
+then I comma zero
+yeah
+for the training and the testing is done
+let me check okay everything is fine
+so now what we will do we will do
+convert data into numpy arrays okay
+so the thing is that now X Jane and X
+this are nested list okay two Dimension
+list and Y train is the one Dimensions
+list
+so we need to convert them to numpy
+arrays with a higher Dimension which is
+the data format accepted by the
+tensorflow when the training the neural
+network
+let's start with that converting data
+into numpy arrays so we will write X
+train
+equals to NP Dot array
+X
+chain
+okay
+and X
+test
+equals to
+NP
+Dot
+array
+test okay then why
+let's train
+equals to NP dot array
+then y train
+and y underscore test
+we Dot
+array
+y test
+okay
+and we will write X
+train
+equals to NP dot C shape
+ducks
+train comma
+next trend
+dot shape
+chain Dot
+shape
+test equals to
+NP dot reshape
+test comma
+X
+test dot shape
+test
+dot shape
+one
+and
+question
+and reshape
+y
+trained
+come
+S1 comma 1
+then y test
+equals to
+NP dot V shape
+then y
+test comma
+okay
+testorship
+text
+tape
+there is an errors so
+let me debug
+okay list object has no attribute shape
+possible
+copy it and paste it
+again
+mirror
+k
+Test X strain X test
+white train and whitest
+into
+this email is coming
+okay so let me debug this error
+it was an error in this okay
+so
+now
+what I will do I will print the shape
+print
+strain
+shape
+okay comma X strain
+let me copy it
+and print it four times
+a train
+Ed
+a test okay
+then here again why
+X
+best
+y test
+first let me do this okay see so there
+are like this much of rows and columns
+present in uh training and the test is
+set
+so now finally let's create a lstm
+network okay we will build an lstm
+Network which is a type of RNN the
+current neural network designed to solve
+Vanishing gradient problem like
+forecasting and all okay
+so for that let me write DF
+fine
+model
+okay input
+one
+let's do input
+shape
+that's true
+window
+size
+come on
+equals to
+lstm
+done
+says
+so
+true
+but
+then x equals to
+drop out
+0.2
+plus 2
+lstm
+let's do 64.
+comma return
+expenses
+true
+x equals to
+drop out
+about
+and zero point
+two
+X
+okay
+then x equals to lstm
+this will be
+64.
+X
+then x equals to
+drop out
+0.2 X
+is capital
+now
+where I will write x equals to dance
+you know the dense layer now we
+discussed in the starting
+activation
+soft Max
+thenx
+then DNN
+output
+pursue tense
+and model
+inputs will be
+put one
+comma output
+outputs equation
+DNN
+output
+okay
+then model Dot
+compile
+laws
+assume
+mean
+when
+error
+comma optimizer
+let's do
+another
+then model dot summary
+and return
+okay
+then we have to define the model model
+equals to Define
+model
+okay
+then history
+question model dot bit
+X strain
+comma y train
+comma epochs
+will be 150
+comma batch
+size should be
+32 and the validation
+spent
+plus 2 0.1
+then verbose
+equals to 1.
+okay now press enter
+okay there is functional object has no
+okay this is a spelling mistake
+OKAY Model Model history
+yes okay it's okay model.fit got a
+validation okay spelling mistake
+so sorry for this valid day
+okay so it will be run till like 150 a
+box
+okay
+so it will take like
+it will
+156 okay
+so it will take a little bit time
+until 158 will be low oh
+after this we will do model evaluation
+and then we will visualizing the result
+after prediction okay
+what the model will perform
+it will take little bit time it's just
+17 it will go till 150.
+so we have to wait for this
+this is all the laws and it will take
+the accuracy and all
+it will take a little bit up
+okay 22
+after this we will add the model
+Evolution we will see the you know
+the accuracy the test map the test loss
+all the things like that
+okay
+and after that we will visualize the
+result
+training and the testing purpose
+so okay I will get back to you when it
+will be done
+so till like 108 it's done still some 40
+42 are left
+so let's wait for some more time okay
+it will be done then after that we will
+what we will do we will visualize the
+results and first we will do model
+evaluation and then we will visualize
+the result
+okay in model evaluation we will see the
+accuracy test accuracy the test map the
+test loss
+okay
+then we will predict
+the results
+after that visualization result
+like what's the actual and the predicted
+price values okay on on using the same
+chart
+done one one two
+you can download this data set from the
+description box below
+okay
+and if you need this whole code you can
+comment down for the same
+if you need this whole code
+okay I will make a PDF and I will
+put in the description box if you need
+this whole code
+okay Christine
+something more
+I hope you guys understand till here if
+you have any doubt you can you ask in
+the comment section
+okay any sort of question regarding to
+Python and machine learning you can ask
+in the comment section
+what I expect will you
+expert will help you out there okay
+30 more
+okay like 122
+if you have any queries related to
+python machine learning any problem in
+this code
+you can ask me in the comment section
+okay we can just
+we will respond you as soon as possible
+okay I will get back to you when this
+whole code will be done
+whole process okay
+so as you can see it's almost done 143
+till 150
+okay 144 six more
+145
+one more remaining
+note the idle will not come after this
+49
+and the last one
+okay so here we can start the model
+evaluation so here for the result
+equals to
+model
+dot evaluate
+X test comma y
+test
+I
+prediction equals to model
+dot predict
+s
+test
+so
+after that I will let me
+just to mean
+salute
+percentage
+error
+I test comma y
+prediction
+accuracy was you
+1 minus
+then
+here I will write print
+test loss
+okay
+comma result
+and print
+test map
+and
+test
+accuracy
+okay
+accuracy is not defined
+big deal maybe
+okay
+yeah
+here
+is small so that's why it's not loading
+yeah so as you can see the test map is
+0.02 and the accuracy is good like 97
+percent
+almost 98 percent
+so let's visualize the results returning
+the actual and predicted price values to
+their primary scale okay so first
+I will ship
+this yeah so here I would like if I test
+true let's go to scalar
+dot inverse
+transform
+by test
+then y test
+prediction plus two scalar
+dot inverse
+transform
+y prediction
+okay now let's see investigate the
+closeness of the prices predicted by the
+model to the actual prices
+okay for that here we have created the
+kind of same kind of graph so I will
+copy it from here
+okay and paste it here
+we'll do some color change
+so instead of yellow I need this yarn
+color
+and model performance okay
+that
+I want the red okay
+yeah
+so let's see the actual
+okay axis of Facebook C okay there is C
+on and it's missing
+so training data actual test data and
+the predicted data okay so it's black
+black
+it's black black so what I will do I
+will make it green
+yeah
+so training data is this and the actual
+test data is this
+and the predicted as it as this so it's
+like predicting almost the same
+so it means our LST model is performing
+good within 97 accuracy
+so as you can be seeing the price
+predicted by the LST model like follows
+the actual prices greatly the value of
+loss and the accuracy of like 1 minus
+map map obtained on the test data so
+also confirm the great performance of
+the model so loss equals is 0.001
+accuracy is almost almost 98 percent
+ok
+so I hope you guys understand like how
+you can do a model evaluation or time
+series prediction gold price prediction
+prediction using lstm model you can ask
+in the comment section below if you have
+any queries our team will respond to you
+as soon as possible so don't forget to
+check the courses or related to machine
+learning AI from the description box
+below and if you want this full code
+if you want this full code just comment
+for the same
+and thank you so much for being here if
+you enjoyed this video please subscribe
+to our YouTube channel and give a like
+to this video thank you and keep
+learning
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

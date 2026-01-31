@@ -1,0 +1,234 @@
+hi guys welcome to this video on react
+native
+if you wish to build mobile applications
+and are confused as to which tool to use
+then you're in the right place
+this video on react native will explain
+what react native is and guide you
+through it
+but wait before beginning if you haven't
+subscribed to our channel already then
+make sure to hit the subscribe button
+and the bell icon to never miss an
+update
+so here's what you'll be learning in
+this session
+first we'll understand what exactly
+react native is
+then we look at why react native is
+being so widely used off lately
+moving ahead we look at the differences
+between react native applications and
+platform specific applications
+after understanding why react native is
+used we'll understand some of the
+prerequisites for building applications
+using react native
+then we'll understand react native
+fundamentals like view state props and
+style
+and lastly we'll end the session by
+looking at some of the industry trends
+of react native
+so let's begin
+what exactly is react native
+now react native is a framework that
+combines the best parts of native
+development with react to build user
+interfaces
+these applications that are developed
+using react native are downloadable on
+google play store and apple store plus
+because most of the code you write can
+be shared between platforms react native
+offers a wide collection of ui kits and
+makes it easy to simultaneously develop
+for both android and ios devices
+but you must be wondering why is react
+native used
+so let's look at some of the reasons why
+react native is used
+first up is cross platform
+cross platform means that the
+applications can easily be run on
+microsoft windows linux and mac os
+so you can build your code base once and
+then run it on any platform as opposed
+to software built natively for a
+specific platform next up is performance
+now the react native apps are compiled
+into natively written code which enables
+it to not only work on both the
+operating systems but also functions the
+same way on both the platforms with no
+lags at all
+moving ahead there's quicker development
+now react native offers excellent
+developer experience it provides strong
+developer and debugging tools with
+meaningful error messages so working
+with this tool becomes very easy
+a large developer community now there
+are several github repositories on react
+native and groups on facebook stack
+overflow is an excellent website with
+several developers interacting about
+issues on a regular basis
+next up is wider audience
+now since react native applications run
+on both ios and android devices there's
+a huge user base
+and lastly react native has a great
+career scope
+considering the pace at which the
+framework took over the market and its
+simple approach to resolving development
+problems the future of react native
+looks more promising than ever
+so these were some of the reasons why
+react native is being widely adopted
+so now let's go ahead and look at some
+of the differences between react native
+applications and platform-specific
+applications
+as discussed earlier react applications
+work on multiple platforms while in the
+case of platform-specific applications
+as the name suggests these applications
+are built for the specific platform only
+developers have a stronger web
+development background while in the case
+of platform-specific apps they have a
+very strong platform's language
+background
+in this case when you consider ios
+developers have a very strong hold of
+swift which is a programming language
+used to develop ios applications and
+talking about android developers have a
+very strong hold on java
+when it comes to react native it has a
+faster build time and is less suitable
+for complex applications
+comparatively platform specific
+applications have a slower build time
+and are suitable for complex
+applications
+react native is best for small
+development teams with limited resources
+while in the case of platform-specific
+applications it is best used by
+experienced developers who have adequate
+experience in building mobile
+apps so now that you know what exactly
+is the difference between react native
+and
+platform specific applications let's
+look at some of the prerequisites for
+building apps using react native
+first up you should have a strong
+holding programming concepts like
+functions objects arrays and to lesser
+extent classes
+now understanding javascript and all the
+javascript libraries and frameworks is
+crucial
+and lastly you need to be familiar with
+html and css concepts so as long as you
+have a strong hold of these then react
+native development becomes very easy
+so now that you know what react native
+is you've understood why it's being used
+some of the prerequisites for react
+native
+let's look at the basic concepts like
+view state props and styling in react
+native
+let's begin with view
+now view is the most fundamental
+component of building a ui it is a
+container that supports layout with
+flexbox style some touch handling and
+accessibility controls
+now view maps directly to the native
+view
+equivalent on whatever platform react
+native is running on so here you can see
+there's a simple code snippet and the
+output for it so as you can see there's
+a hello world message in a render method
+and the same is being rendered and the
+view component here is being imported
+from react native
+now view as mentioned earlier acts as a
+container with support for flexbox
+layout and other styles
+so flexbox is designed to provide a
+consistent layout on different screen
+sizes
+moving on to state now there are two
+types of data that control a component
+one is props and the other one is state
+now props are generally set by the
+parent and are fixed throughout the
+lifetime of a component
+but for data that is going to change we
+make use of state
+so here you can see you have made use of
+the this dot stay dot my state in my
+render method you can also use the set
+state method when you want to change it
+moving on let's look at props
+most components can be customized when
+they are created with different
+parameters
+these created parameters are called
+props short for properties now props are
+passed from one container to another as
+a way of passing data between them
+so here using the name as a prop
+lets us customize the message in the
+component so we can reuse our component
+for each of our tv shows here
+so this is how you can use props in our
+component
+lastly talking about style react native
+uses the conventional javascript
+styling for components so the style
+names and values are similar to how css
+works
+now to style we either use inline style
+or style sheet
+so you can see here we've provided
+inline styling with a background color
+a color and a font size and accordingly
+the output is displayed
+moving ahead to our last and final
+section
+let's look at the industry trends today
+talking about salaries the average
+salary of a react native developer in
+india is around 6 lakh indian rupees per
+annum
+and the salary of a react native
+developer in the us is around 96 000 us
+dollars per annum now as you can see
+react native has a higher growth
+trajectory compared to other frameworks
+as a result is being readily deployed by
+many companies
+applications like facebook instagram
+netflix
+pinterest uber ubereats among others are
+developed using react native so this was
+a small session on what exactly react
+native is so if you have any doubts or
+queries let us know in the comment
+section below thank you so much for
+watching keep learning and stay tuned to
+simply learn
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

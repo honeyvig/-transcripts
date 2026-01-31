@@ -1,0 +1,358 @@
+hello everyone and welcome to this
+fantastic video on what is Lang chain on
+the simply Lear YouTube channel all of
+you must be already aware of blockchain
+but let me give you a quick refresher a
+blockchain is a digital Ledger that
+store information like a digital
+database without a central Authority
+controlling it instead a blockchain is
+maintained by a network of computers
+each one is storing a copy of The Ledger
+when a new transaction is added to the
+Ledger the network has to approve it
+before it can be recorded other side l
+chain is like a blockchain but with a
+few differences unlike a blockchain
+which stores information about financial
+transaction L chain can store any kind
+of data or information like medical
+records supply chain data or even social
+media profiles L chains design also
+allows for private transaction where
+only a certain people can access and
+view the store data which differs from a
+regular blockchain sounds fascinating
+right well it is and there is a lot more
+to learn and discuss about blockchain
+technology in this video so stay tuned
+till the very end as we embark on this
+amazing journey of exploring langin
+according to recent studies Ai and
+machine learning related job posting
+have increased by 3 44% in the past 5
+years companies across the globe are
+actively seeking professional who can
+harness the power of data and build
+intelligence system the average salary
+is $150,000 in the US and 15 lakhs in
+India as a field evolves new job titles
+and responsibilities are anticipated to
+C to Industry requirements prominent
+companies like Microsoft Google Amazon
+IBM Goldman s and apple are actively
+recruiting machine learning Engineers
+hey everyone welcome to Simply Lars
+YouTube channel but before we dive into
+that don't forget to subscribe like and
+share there is no better time to train
+yourself in the exciting field of
+machine learning if you are looking for
+a course that covers everything from the
+fundamental to Advanced Techniques for
+that accelerate your career in Ai and ml
+with our comprehensive postgraduate
+program in Ai and machine learning gain
+expertise in machine learning deep
+learning NLP computer vision and
+reinforcement learning you will receive
+a prestigious certificate exclusive
+alumini membership and ask me anything
+session by IBM with three Capstone and
+25 plus industry project using real data
+sets from Twitter Uber and many more you
+will gain practical experience master
+classes by ctech faculty and IBM expert
+and no top notch education simply runs
+job asist help you to get notice by
+Leading companies this program covers
+statistics by supervised and
+unsupervised learning NLP neural network
+computer Visions G scar us T oflow and
+many more skills so enroll now and
+unlock exciting a ml opportunities the
+link is in the description box below so
+without any further delay let's get
+started so what is Lang
+chain Lang chain is a versatile open
+source framework that empowers AI
+developers to integrate large language
+model llms such as gbt 4 with the
+external data available in the python
+JavaScript packages Lang chain addresses
+the limitation of GPT models trained
+only up until 2021 while GPT for models
+exibit impressive general knowledge
+their potential is greatly enhanced by
+connecting them to customize data and
+customized computations and this is
+precisely what Lang Chain facilate by
+enabling LMS access comprehensive
+database Lang chain empowers them to
+generate responses based on the most
+upto-date information found in the
+reports documents and website content
+since the launch of GTP 4 in March lch
+has garnered substantially popularity
+due to its flexibility and the my rate
+of possibilities it unlocks when
+combined with the high powered llm so
+moving forward let's see why we need
+Lang chin so Lang chin represents a
+practical solution to overcome this
+limitation through a practical approach
+it involves pre-processing the tax
+Corpus by dividing it into manageable
+chunks or summaries and adding them in a
+vector space and subsequently searching
+for similar chunks when a question is
+posed so this methodology of
+pre-processing real time and data
+collection and interaction with the llm
+is not only applicable in the context
+but also extend to other scenarios such
+as code semantic search so Lang
+simplifies the composition of these
+components by offering an abstraction
+the simplification of the process often
+called prompt Plumbing plays a crucial
+role and will grow in significance as
+llms becomes more powerful and
+necessitate the provision of additional
+data during the prompt execution so
+moving forward let's see how does Lang
+chain work so Lang chain simplifies the
+process of organizing large volume of
+data that can be easily accessed by the
+llm requiring minimal computational
+power it operates by taking a
+subsequential data source like 50 page
+PDF and breaking it down into manageable
+chunks and that are embedded into a
+vector store so with the vectorized
+representation of the extensive document
+at hand we can combine them with the llm
+to selectively retrieve the necessary
+information for creating prompt
+completion pairs so when we input a
+prompt into our chatbot equipped with
+langin it queries the vector store to
+find perent information a kind of
+miniature Google tailored to your
+document once the relevant details are
+obtained they are combined with the llm
+prompt and fed into the llm to generate
+our desired response after this
+integration of Lang chain with the open
+a llms also enables the creation of
+application capable of taking
+such as web serving email sending and
+other task related to APM and at the end
+you will get a reply so this is how Lang
+chain works with open AI llms moving
+forward let's see some use cases of Lang
+chain so there is a wide range of
+potential application for Lang chain
+here are few examples so first one is
+personal AI email assistant Lang chain
+can be used to develop an intelligent
+email assistant that understood and
+generates responses based on the user
+preferences and writing style the second
+one is AI study body so langin can
+assist a student in their Studies by
+providing real-time access to relevant
+research papers textbooks and
+educational resources offering
+personalized study recommendation and
+answering theoretical questions and the
+third one is AI data analytics Lang
+chain can be employed to enhance data
+analytics by allowing large language
+model to access and analyze V amount of
+structured and unstructured data
+enabling more comprehensive insight and
+prediction and the fourth one is custom
+company customer service chatbot langen
+can power chatbot that provide tailored
+customer service experience by
+integrating upto-date company
+information product knowledge and the
+customer data to offer personalized and
+accurate responses and the fifth one is
+social media content creation so Lang
+chain can help content creator generate
+engaging and relevant social media
+content by leveraging its ability to
+access the latest information Trends and
+insight from various sources so these
+example illustrate just the fraction of
+the potential application for L chain
+and its versatility extend to a wide
+array of other scenarios as well so
+after seeing use cases of Lang chain
+let's move forward and see using open AI
+how L chain works or not so welcome to
+the demo part so here first we will set
+up the what the problem is using the
+chat
+GPT so this is the chat GPT this is
+something that we all know and I'm going
+to first ask CH what is Lang chain
+and we will see what it will say okay so
+here I will write
+what okay what is
+Lang
+chain so as you can see it is saying I'm
+sorry but as of my knowledge cut off in
+September 2021 I'm not familiar with the
+term langang chin it is possible that it
+could be a term or concept that emersed
+or became popular at the at
+time and could you provide more context
+or details about what you are referring
+to that way I can try to assist you
+better so as you can see why this is
+happened it is because lanin is a more
+recent
+Library so this is the new library and
+Lang chain is I think published in uh
+somewhere around January and it is new
+and Chad GPT has not been trained on the
+data more recent than I think like
+around 21 as you can see it is written
+here September 2021 okay so this is the
+problem number one so let's see the
+problem number two so here I will write
+hey
+chat
+GPT tell me how
+many
+meetings the meetings are blocked
+today
+using using
+my
+Google
+calendar again it is saying I'm sorry
+but as an AI language model I don't have
+access to personal data about
+individuals unless it has been shared
+with me du during our conversation I can
+browse or retrieve information from your
+Google calendar or any other personal
+documents or accounts however if you
+have access to your Google calendar you
+can easily check the number of meetings
+blog today by opening your calendar and
+looking at the schedule events for the
+day the calendar interfaces should
+display the number of meetings or events
+you have scheduled and why this is
+happening because we are using chat GP
+open a okay but if we will use
+API of open AI okay currently I'm using
+the chat GPT but if we will use the open
+AI API so we can connect to our Google
+Drive Google Calendar and any
+anything after that we can easily
+retrieve our
+information okay so this is where so as
+you can see using this image what Lang
+chain
+does okay is it is going to connect
+connect your AI models okay these are
+the AI models open AI hugging
+phases so what the langet does okay
+using
+llms it is going to connect to outside
+sources like Google drive or Wikipedia
+wallframe or you know Google cender
+anything to the outside
+sources and you can do some really cool
+things without those outside sources
+okay you can ask to the chat GPT and or
+you can make your own model llm model
+but without llm model and Lang chain you
+can't connect with the outside
+resources okay so all of a sudden you
+can start to chain together commands
+Okay that is why the Lang chain is used
+chain okay these are the llm models open
+air hugging faces and you can chain both
+of them using L chain okay you can
+change the outside sources and this llms
+using Lang
+chain okay uh after chaining llm and
+outside sources using L chain you can
+ask any question to them okay what is my
+how many documents I wrote in the last
+year and this month or you can say hey
+chity what's the weather today to open
+AI or anything you can ask these uh kind
+of
+questions and the application for the
+Lang chain are the endless and we have
+already seen some of of them okay so now
+let's see the documentation part of the
+langin official documentation part of
+the langin so as you can see this is the
+official documentation of the Lang chain
+okay so here as you can see what is the
+Lang chain Lang chain is a framework for
+developing application powered language
+models llm models it enables
+applications that are dataware or agent
+so as you can see there are the certain
+modules and the example use cases as you
+can see the chatbots
+and you can create the M uh you know
+chat BS using llms like open Ai and
+there are the many things like
+interaction with apis
+autonomas okay you can check
+anything these are some the uh modules
+of the Lang change Lang CH provides
+standard extendable interfaces okay so
+these are the modules and the these are
+the use
+cases okay ecosystems and the support
+API reference these are the API
+differences how you can use the API and
+as you can see this is the installation
+part using pip you can use install the
+Lin and the cond part is here the cond
+install Okay so this is this you know
+official document you can go through it
+and you will learn you will definitely
+learn something if you will go through
+the official
+document so that's all we had for this
+video we can call it a app now if you
+have still any question or doubt let us
+know in the comment section below and
+our team of experts will help you at the
+earliest so thank you so much for being
+here today we'll see you in next time
+until then stay safe and keep learning
+with simply learn staying ahead in your
+career requires continuous learning and
+upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification program programs in
+cuttingedge domains including data
+science cloud computing cyber security
+AI machine learning or digital marketing
+designed in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos turn up and get certified click
+here

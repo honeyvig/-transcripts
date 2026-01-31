@@ -1,0 +1,246 @@
+hey everyone
+it's no secret that the majority of our
+internet usage is at the risk of being
+hacked be it via unsafe messaging
+applications or misconfigured operating
+systems
+to counteract this void of digital
+security penetration testing has become
+the knob when it comes to vulnerability
+assessment
+kali linux is an operating system that
+has become a well-known weapon in this
+fight against hackers
+a linux distribution that is made
+specifically for penetration testers
+kali linux has layers of features that
+we will be covering in today's lesson
+let's take a look at the topics to be
+covered in this video
+we start by learning about kali linux
+and a basic explanation of its purpose
+we take a look at the history of kali
+linux from the story of its origin to
+its current day exploits
+next we learn a few distinct features of
+kali that make it an attractive choice
+for penetration testers worldwide
+finally we take a look at the multiple
+ways we can install kali linux to start
+our journey in the world of penetration
+testing
+let's start by learning about kali linux
+in general
+kali linux which is formerly known as
+backtrack linux is an open source linux
+distribution aimed at advanced
+penetration testing and security
+auditing
+it contains several hundred tools that
+are targeted towards various information
+security tasks such as penetration
+testing security research computer
+forensics and reverse engineering
+kali linux is a multiple platform
+solution
+accessible and freely available to
+information security professionals and
+hobbyists
+among all the linux distributions kali
+linux takes its roots from the debian
+operating system debian has been a
+highly dependable and stable
+distribution for many years providing a
+similarly strong foundation to the kali
+desktop
+while the operating system is capable of
+practically modifying every single part
+of our installation the networking
+components of kali become disabled by
+default this is done to prevent any
+external factors from affecting the
+installation procedure which may pose a
+risk in critical environments
+apart from boosting security it allows a
+deeper element of control to the most
+enthusiastic of users
+we did not get kali linux since the
+first day how did it come into existence
+let's take a look at some of its history
+linux is based on years of knowledge and
+experience in building penetration
+testing and operating systems
+during all these project lifelines there
+have been only a few different
+developers as the team has always been
+small
+the first project was called vopex which
+stands for white hat nopex
+as can be inferred from the name it was
+based on the nopix operating system as
+its underlying os
+topics had releases ranging from version
+2.0 to 2.7
+this made way for the next project which
+was known as wax or the long hand being
+white hat slacks the name change was
+because the base os was changed from not
+picks to slacks
+wax started at version 3 as a nord it
+carrying on from opex
+there was a similar os being produced at
+the same time auditor security
+collection often being shorted to just
+auditor which was once again using nopex
+its efforts were combined with wax to
+produce backtrack
+backtrack was based on slackware from
+version 1 to version 3 but switched to
+ubuntu later on with version 4 to
+version 5.
+using the experience gain from all of
+this kali linux came after backtrack in
+2013.
+kali started off using debian stable as
+the engine under the hood before moving
+to debian testing when kali linux became
+a rolling operating system
+now that we understand the history and
+the purpose of kali linux let us learn a
+little more about its distinct features
+the latest version of kali comes with
+more than 600 penetration tools
+pre-installed
+after reviewing every tool that was
+included in backtrack developers have
+eliminated a great number of tools that
+either simply did not work or which
+duplicated other tools that provided the
+same or similar functionality
+the kali linux team is made up of a
+small group of individuals who are the
+only ones trusted to commit packages and
+interact with the depositories all of
+which is done using multiple secure
+protocols
+restricting access of critical code
+bases to external asset greatly reduces
+the risk of source contamination which
+can cause kali linux users worldwide a
+great deal of damage as a direct victim
+of cyber crime
+although penetration tools tend to be
+written in english the developers have
+ensured that kali includes true
+multilingual support allowing more users
+to operate in the native language and
+locate the tools they need for the job
+the more comfortable a user feels with
+the intricacies of the operating system
+the easier it is to maintain a strong
+hold over the configuration and the
+device in general
+since arm-based single board systems
+like the raspberry pi are becoming more
+and more prevalent and inexpensive the
+development team knew that kali's arm
+support would need to be as robust as
+they could manage with fully working
+installations
+kali linux is available on a wide range
+of arm devices and has arm repositories
+integrated with the mainline
+distributions so the tools for arm are
+updated in conjunction with the rest of
+the distribution
+all this information is necessary for
+users to determine if kali linux is the
+correct choice for them
+if it is what are the ways that they can
+go forward with this installation and
+start their penetration testing journey
+the first way to use kali linux is by
+launching the distribution in the live
+usb mode this can be achieved by
+downloading the installer image file or
+the iso file from the kali linux website
+and flashing it to a usb drive with a
+capacity of at least 8 gb
+some people don't need to save their
+data permanently and a live usb is the
+perfect solution for such cases
+after the iso image is flashed the thumb
+drive can be used to boot a fully
+working installation of the operating
+system with the caviar that any changes
+made to the os in this mode are not
+written permanently some cases allow
+persistent usage in live usbs but those
+require further configuration than
+normal situations
+but what if the user wants to store data
+permanently in the installed os
+the best and the most reliable way to
+ensure this is the full fledged hard
+disk installation
+this will ensure the complete usage of
+the system's hardware capabilities and
+will take into account the updates and
+the configurations being made to the os
+this method is supposed to overwrite any
+pre-existing operating system installed
+on the computer be it windows or any
+other variant of linux
+the next alternative route for
+installing kali linux would be to use
+virtualization software such as vmware
+or virtualbox
+the software will be installed as a
+separate application on an already
+existing os and kali linux can be run as
+an operating system in the same computer
+as a window
+the hardware requirements will be
+completely customizable starting with
+the allotted ram to the virtual hard
+disk capacity
+the usage of both a host and guest
+operating system like our linux allows
+users a safe environment to learn while
+not putting their systems at risk
+if you want to learn more about how one
+can go forward with this method we have
+a dedicated video where kali linux is
+being installed on vmware while running
+on a windows 10 operating system you can
+find the link in the description box to
+get started with your very own virtual
+machine
+the final way to install kali linux is
+by using a dual boot system to put it in
+simple words the kali linux os will not
+be overwriting any pre-installed
+operating system on a machine but will
+be installed alongside it when a
+computer boots up the user will get a
+choice to boot into either of these
+operating systems
+many people prefer to keep both the
+windows and kali linux installed so the
+distribution of work and recreational
+activities is also allotted effectively
+it gives users a safety valve should
+their custom linux installation run into
+any bugs that cannot be fixed from
+within the operating system
+hope you learned something new today if
+you have any questions regarding this
+topic feel free to ask your queries in
+the comments section below and we will
+get back to you as soon as possible
+thank you for watching
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

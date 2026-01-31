@@ -1,0 +1,240 @@
+hello everyone and welcome to this
+amazing video on what is olap by simply
+learn overlap and acronym for online
+analytical processing is a technology
+that allows for the extraction
+transformation and loading of data in
+order to perform complex analytics and
+create interactive Dynamic visualization
+IT addresses the shortcomings of the
+data warehouse by providing improved
+query performance and allowing for the
+creation of ad hoc queries and advanced
+analytics the concept of olap was
+introduced by Edgar F Court Arbor sbase
+was the first olap product released on
+the market and is known as the solution
+to the problem of long query times in
+data warehousing olap works by
+pre-calculating all the aggregate
+measures in an index data structure
+optimized for retrieval the result is a
+cube that can be visualized in a dynamic
+and initiative way olap is known as a
+powerful tool for enterprise-wide
+adoption and for providing users with a
+drag and drop interface that speed up
+the learning curve sounds fascinating
+right well olap still persists as one of
+the most in-demand analytic systems
+because it allows non-experts to ask
+questions of business data let's explore
+more about olap in this video on that
+note elevate your professional growth
+through this data analytics program
+developed in partnership with Purdue
+University and in collaboration with IBM
+this comprehensive program offers master
+classes and adapts an applied learning
+approach that incorporates real life
+projects and business case studies to
+enhance your practical skills this data
+analytics program spans crucial topics
+such as establishing a strong foundation
+in statistics utilizing Python and our
+languages for data analysis mastering
+SQL for database interactions and
+leveraging Tabu and power bi for
+impactful data visualizations check out
+the course Link in the description for
+more details since we already have an
+understanding of what olap is from the
+introduction let's now explore into it
+further by exploring the working of olap
+system the online analytical process
+working involves several steps to
+analyze and report on data from multiple
+Dimensions here's an overview of the
+typical olap process olap works by
+integration of data from various sources
+followed by structuring it into
+multi-dimensional model the data is
+organized that contain Dimensions
+measures and pre-calculated applications
+user formulates queries to retrieve and
+analyze data leveraging the engine's
+optimizations for the fast query
+execution the olap system supports
+multi-dimensional analysis enabling
+slicing dicing drill down and drill up
+operations reporting and visualization
+capabilities facelates data presentation
+periodic maintenance involves refreshing
+data and recalculating aggregations to
+ensure accuracy and relevance chart
+here's are the main steps involved in
+the typical process of an olap system
+data modeling Cube creation query
+formulation query execution
+multi-dimensional analysis reporting and
+visualization the olap process enables
+users to analyze data interactively
+perform complex calculations and gain
+insights by exploring data from multiple
+Dimensions it facilitates flexible and
+ad hoc reporting empowering users to
+make informed decision based on the
+comprehensive data analysis the three
+main types of olap that is online
+analytical processing systems are
+designed to cater to specific analytical
+needs these types are multi-dimensional
+olap that is M olap M olap system stores
+data in a multi-dimensional array or
+cube format data is pre-aggregated and
+organized based on Dimensions measures
+and hierarchies Mo lab offers fast query
+performance and support complex
+calculation it is suitable for
+applications that require quick analysis
+of aggregated data such as financial
+analysis sales forecasting and bird
+dating however Mo lab may need help with
+scalability when dealing with the large
+data sets next relational olap that is
+RO lab Rolex system stores data in a
+relational database management system
+instead of pre-aggregating data our olap
+system perform on the Fly aggregations
+and calculations during query execution
+aurolab provides more flexibility in
+handling large data sets and complex
+data relationships it is suitable for
+applications that require detailed ad
+hook analysis across multiple Dimensions
+however lab systems may experience lower
+query performance than immolab mainly
+when dealing with complex queries
+involving large volume of data and next
+type of olap is hybrid olap his olap
+systems combines the feature of Mo lab
+and Arbol app they leverage the
+advantages of both types by storing
+aggregated data in a multi-dimensional
+format similar to Ebola while allowing
+the options to access detailed data from
+a relational database similar to ro lab
+ho lab systems provide a balance between
+query performance and flexibility they
+are suitable for applications that
+require a mix of detail and summarize
+data analysis hybrid olap systems can
+handle both ad hoc analysis and
+predefined aggregation efficiently
+analytical processing systems offer
+various operations that allow users to
+analyze and manipulate data from
+different perspectives here are the main
+types of olap operations first we have
+slice slicing involves selecting a
+subset of a data from the olap Cube
+based on specific criteria or value of
+one or more Dimensions it allows users
+to focus on a particular segment of the
+data for example let's say you want to
+analyze the sales data for a specific
+City like New York you can use the olap
+system to slice the data and focus on
+sales figure for New York only this will
+give you a clear view of your business
+performance in that City and next we
+have dice dicing is similar to slicing
+but involves creating a new Cube by
+selecting specific dimensions and their
+corresponding values it allows users to
+examine data across multiple Dimensions
+simultaneously for example you want to
+analyze sales for a specific City for
+example New York and a specific product
+category like Electronics by dicing the
+data you can create a new view that
+shows sales figures for electronics in
+New York only this lets you understand
+how well your electronic products
+perform in that specific City next drill
+down drill down enables users to
+navigate from a higher level of
+aggregations to a lower level of detail
+within a Dimensions it involves
+expanding the view of data to reveal
+more specific information like for
+example you can drill down from yearly
+to quarterly monthly and even daily
+sales this will help you identify Trends
+and patterns at different levels of
+granularity allows you to see if there
+are any specific periods when sales are
+particularly high or low next drill up
+or roll up drill up or roll up as the
+reverse of drill down it allows users to
+navigate from a lower level of details
+to a higher level of aggregations within
+a dimension it involves some Rising data
+to a higher level of hierarchy or
+consolidations for examples user can
+drill from daily to monthly or yearly
+sales data to understand overall Trends
+and performance and lastly we have pivot
+pivoting involves rotating the axis of
+the multi-dimensional cube to view data
+from different dimensions it allows
+users to recognize data and analyze it
+from alternative perspective for example
+let's say you want to analyze sales data
+by city and product category by pivoting
+the data you can change the perspective
+and view sales figures for each product
+categories across all cities this will
+give you a comprehensive overview of how
+different product categories perform in
+different cities helping you decide on
+product assortment or marketing
+strategies
+and next online analytical processing
+has various applications across
+Industries and sectors here are some
+common applications of olap
+financial analysis sales and marketing
+analytics Supply Chain management
+Healthcare analytics human resource
+analytics and many more and with this we
+have come to the end of this video on
+what is olap I hope this video was
+informative and interesting if you need
+help opting for the data analytics
+program please let us know in the
+comment section below we will get back
+to you as soon as possible until next
+time thank you and keep learning staying
+ahead in your career requires continuous
+learning and upskilling whether you're a
+student aiming to learn today's top
+skills or a working professional looking
+to advance your career we've got you
+covered explore our impressive catalog
+of certification programs in Cutting
+Edge domains including data science
+cloud computing cyber security AI
+machine learning or digital marketing
+designed in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+foreign
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

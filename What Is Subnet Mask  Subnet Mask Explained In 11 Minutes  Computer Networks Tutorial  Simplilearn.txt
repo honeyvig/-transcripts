@@ -1,0 +1,276 @@
+hello everyone and welcome to today's
+video where we are diving deep into the
+world of networking ever wondered how
+devices communicate in the vast Realm of
+the internet well we're going to explore
+the nitty-gritty details we will start
+with the IP address blocks and what's
+called subnetting just ways to organize
+stuff in the digital world curious about
+subnets and subnet masks stick around we
+have got the simple scoop the star of
+the show is the subnet mask a sort of
+secret code that helps break down IP
+addresses
+after that we will cover different types
+of IP addresses and then the benefits of
+submitting and before commencing just a
+quick info for you if you are an
+aspiring cyber security professional
+looking for an online training and
+certification from prestigious
+universities and in collaboration with
+the leading experts to enhance your
+credibility then search no more simply
+learns postgraduate program in cyber
+security from the MIT University in
+collaboration with EC Council should be
+your right choice through our courses
+you will gain knowledge and work R
+expertise in skills like Advanced
+hacking Concepts Network packet analysis
+ethical hacking network security and
+over a dozen of others so if you are
+passionate about making your career in
+this field then make sure to check out
+the link in the pin comments and the
+description box so let's start with the
+first topic so how do IP addresses work
+IP V4 address such as 172 31.
+45.6 may seem like regular numbers but
+they are actually just a way of
+representing binary information imagine
+breaking down each address into four
+parts or blocks and each of these blocks
+is made up of eight bits which are like
+tiny switches that can either be on or
+off one or zero since there are eight
+bits in each block we call them octets
+and because there are four of these
+octets in an ipv4 address the total bits
+for the entire address is 32 bits so
+when you see an IP address like 17 2.3
+1.4
+45.6 each of these four parts is
+actually a group of eight switches in
+the on and off position making up for
+total of 32 bits this binary
+representation is a way for computers to
+communicate and understand these
+addresses on the internet to understand
+this we will have a look at the chart
+let's consider the process of converting
+the IP address 172.2 0.3 0.40 into
+binary all right now simply divide the
+address into four blocks 172 20 30 and
+40 and transform each block into binary
+adhering to Binary conversion chart it
+essential to note that in binary one
+represents on while 0er represents of to
+convert the first block 172 into binary
+begin at the charts beginning and assign
+ones or zeros to the corresponding cells
+until their sum equals to 172 repeat
+this process for each block in the IP
+address for like 20 also for 30 also and
+for 40
+also all right now moving on to the next
+topic which is
+subnetting so what is subnetting
+subnetting is a strategic process of
+dividing a network into smaller subn
+networks or subnets with the goal of
+enhancing efficiency security and overal
+performance the primary advantage lies
+in alloying devices within a subnet to
+communicate directly eliminating the
+need to Traverse unnecessary routers
+Beyond this subnetting AIDS in
+organizing the network structure and
+elevating traffic
+congestion in the process of subnetting
+certain bits from the host part of an IP
+address are allocated to signify the
+subnet leading to adjustments in the
+subnet mask the subnet mask presented as
+binary number delineates which bits on
+the IP address belongs to the network
+and which pertain to the host for for
+instance a subnet mask of
+255.255.255.0 indicates that the initial
+24 bits of the IP address represent the
+network while remaining eight bits
+represents the host so this was about
+subnetting now let's understand the
+difference between subnets and subnet
+masks the distinction between subnets
+and the subnet mask is crucial to
+understanding Network architecture while
+subnet mask plays a pivotal role in the
+concept of subnets they distinct
+entities a subnet short for sub Network
+refers to specific segment of the
+network this segment shares the overall
+Network's IP address but possesses a
+unique subnet address essentially a
+subnet allows for The Logical division
+of a larger Network into smaller more
+meaningful units on the other hand a
+subnet mask serves a different purpose
+it is numerical value that distinguishes
+between the part of an IP address
+corresponding to the subnet and the part
+that identifies the host with in the
+subnet so now let's understand what is
+subnet mask so a subnet mask is like a
+guide that helps computers understand
+the different parts of an IP address
+picture an IP address as a location
+where the network is the street name and
+the host is the house number for example
+consider the IP address
+192.168.1 23.13 2 in this case the first
+three sets of IP address 1
+192.168.1 123 show the Network while the
+last set specifies a particular device
+on that Network to make it simpler we
+use a DOT decimal system for IP
+addresses breaking down the 32 binary
+bits that is four sets of eight bits
+into more manageable groups so the
+subnet mask act as a kind of decoder
+helping computers figured out which part
+of IP address is the network and which
+part identifies the specific device it
+makes Communication in networks Easier
+by organizing these addresses in a way
+that devices can understand now let's
+have a look at its working all right so
+how do subnet masks work so subnet mask
+is a 32-bit numerical value that divides
+an IP address into distinct Network and
+host address as we know now in the
+subnet mask the network part is
+represented by all ones while the host
+part consist of all zeros for instance a
+subnet mask like
+255.255.255.0 indicates that initial 24
+bits pertain to the networ leaving the 8
+bit for the host this subnet mask
+facilitates communication among devices
+within a subnet which functions as a
+smaller Network within a larger Network
+subnetting achieved through subnet mask
+minimizing the broadcast traffic
+enhancing overall Network efficiency and
+Security to apply a subnet mask to an IP
+address a bitwise and operation between
+the two numbers is performed for example
+if the IP address is
+192.168.1 100 and the subnet mask is
+255.255.255.0 the resulting Network
+address is
+192.168.1.0 this signifies that the
+device is a part of subnet
+192.168.1 024 where the sl24 denotes the
+number of bits allocated to the network
+part all right so this was about the
+working of subnet mask now let's
+understand different types of IP
+addresses all right so first of all we
+have is Class A which lies between
+1.0.0 to
+126.0 point0 so reserved these class is
+reserved for large networks it allows
+for up to 126 networks with each Network
+having almost 17 million unique host
+addresses all right then we have his
+class B it range is 128.0 z.0 to 191
+255.0.0.0
+for mediumsized networks it permits
+around 16,000 networks with each Network
+supporting nearly 65,000 unique host
+addresses all right now coming to class
+C so Class C ranges from
+1920. to
+22325 5.25 5.0 commonly used for smaller
+networks with approximately 2 million
+available networks each class c network
+can accommodate up to 254 unique host
+addresses
+then class D
+224.000 to 23925 5255
+255 so this is the range of Class D
+reserved for multicast groups this class
+is not assigned for individual networks
+but is used for group communication
+devices that join a multic class group
+share information after that class E it
+ranges from
+24.0 to
+255.255 255 to 255 reserved for for
+purposes not intended for General use on
+public networks Class E address are set
+aside for testing and
+development so these were the different
+types of IP addresses you can have a
+look at them now let's understand the
+benefits of subnet masks first is
+enhanced security so it bolsters defense
+mechanisms to protect against potential
+threats ensuring the safety of data and
+Communications then there is smooth data
+flow it is the second benefit it
+promotes smoother data flow preventing
+slowdowns and interruptions resulting in
+more efficient Network all right then
+improve Network performance it enhances
+the speed and reliability of connections
+optimizing the overall user experience
+less Network congestion streamlines the
+network minimizing delays and improving
+overall productivity next is improve
+Network performance it enhances the
+speed and reliability of connections
+optimizing the overall user experience
+then at last we have is less Network
+congestion it streamlines the network
+and minimizing delays and improving
+overall productivity all right so these
+were the benefits of subnetting so as we
+conclude our exploration into subnetting
+and IP addresses we have covered the
+basics from how IP address blocks
+operate to the Ines of subnetting and
+the role of subnet masks understanding
+the different types of IP addresses and
+the perks of subnetting adds depth to
+our knowledge implementing subnetting
+not only enhances security but also
+improves overall Network efficiency if
+you find this video insightful drop your
+questions or suggestions in the comment
+section below make sure to like this
+video and drop down your comments
+staying ahead in your career requires
+continuous learning and upskilling
+whether you're a student aiming to learn
+today's top skills or a working
+professional looking to advance your
+career we've got you covered explore our
+impressive catalog of certification
+programs in Cutting Edge domain
+including data science cloud computing
+cyber security AI machine learning or
+digital marketing designed in
+collaboration with leading universities
+and top corporations and delivered by
+industry experts choose any of our
+programs and set yourself on the path to
+Career Success click the link in the
+description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to ner up and get certified click
+here

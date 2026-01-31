@@ -1,0 +1,410 @@
+the right analysis of the data at the
+right time can be very useful in a world
+where data is being generated at an
+alarming rate
+at the moment apache spark is one of the
+most amazing frameworks for handling big
+data in real time and performing
+analysis
+hi everyone i am umbra suhil welcome to
+simply lance youtube channel
+we will discuss pi spark in this session
+if you want more amazing tech related
+videos do like subscribe and hit the
+bell icon to stay tuned
+let's get to the video to learn more
+about pi spark without any further delay
+we will begin the session with an
+overview of apache spark
+then we will proceed to our main topic
+what is pi spark
+and next we will discuss pi sparks key
+features
+moving forward we will understand the
+rdd concept and need of pi spark
+and then the difference between scala
+and pi spark
+after that we will understand pi spark's
+data frame
+and finally we will end this session by
+discussing its use cases in the industry
+in order to understand by spark and its
+use in the big data world we must first
+understand the party spark
+so let's take a look at apache spark
+apache spark is an open source cluster
+computing framework that is used to
+develop big data applications that can
+perform fast analytics over large data
+sets
+spark is written in scala but it can
+also be used from python using pysmark
+it is very popular and one of the most
+requested tools in the it industry
+because it has inbuilt tools for rescue
+and machine learning and streaming
+so now that we understand apache spark
+it will be easier for us to understand
+pi spar so let's dive into it
+pi spark is a python api to support
+python with apache spark
+python can easily be connected with the
+purchase part using the pi spark
+provided by folder library
+when it comes to analyzing or working
+with large data sets pi spot is
+essential
+pi spark is a python api to support
+python with apache spa
+python can easily be connected with
+apache spark using the pi spark provided
+by folger library when it comes to
+analyzing or working with large data
+sets pi spark is essential
+pi spark is a mostly search tool among
+data engineers because of its
+functionality
+so now that we understood about buy
+spark now we shall move on to its
+features
+real time computing
+pi spark focuses on in-memory processing
+and offers real-time computing on
+massive amounts of data
+so the low latency is evident
+the next feature which comes in is
+support for several languages
+scala java python and are just a few
+programming languages with which the pi
+spark framework is compatible
+because of its interoperability it is
+the best framework for processing large
+datasets
+the next feature we have is consistency
+of disk and caching
+the pi spark frameworks offer powerful
+caching and reliable disk consistency
+as we know time is money and to work
+effectively we need powerful and fast
+processing so the next amazing feature
+of pi spark is rapid processing
+with by spark we can process data
+quickly roughly 100 times quicker in
+memory and 10 times faster on the disk
+so now we have come to the most
+important feature of pi spark which is
+effectiveness with rdd
+working with rdd is made easier by the
+dynamic typing of python programming
+languages
+if you are wondering what rdd is let me
+give you a quick explanation of rdd
+let's learn more about rdd
+rdd stands for resilient distributed
+data set
+it is apache sparks primary data
+structure
+rdd in apache spark is an immutable
+group of objects that computes on
+several cluster nodes
+resilient
+with the use of rdd lineage graph the
+system is resilient of fault tolerant
+and is therefore able to recompute
+missing or damaged partitions as a
+result of node failure
+now we have a better understanding of
+pyspart and its features so let's
+understand the need of pi spark
+it's crucial to understand why and when
+to use spark with python if you are
+going to learn pi spark
+here we will go over the basic factors
+to consider while deciding between
+python and scala for apache spark
+programming
+data science libraries
+you don't have to bother about the
+visuals or data science frameworks with
+the python api
+the r language's fundamental component
+can readily convert it to python
+the next factor which comes in is
+readability of code
+although internal modifications are
+simple in the scala api
+the python epa offers superior
+readability
+maintenance and familiarity with the
+code
+complexity in contrast to scala which
+produces verbose output and is therefore
+viewed as a complicated language
+so the python api provides an accessible
+simple and comprehensive interface
+moving on to next factor
+machine learning libraries
+since python offers several libraries
+based on machine learning approaches it
+is popular for developing machine
+learning algorithm because it makes the
+process simpler
+so now let's discuss the last factor on
+our list ease of learning
+python is simpler to learn and is known
+for its simple syntax
+in comparison to scala which has a
+complex syntax and is difficult to learn
+it is also extremely productive despite
+having a basic syntax
+if you are new to big data you have
+probably heard of frameworks such as
+spark
+that technologies can be in python or
+scala
+how do you choose programming languages
+to answer this question we must consider
+various factors
+let us figure out the answer to this
+question by understanding the difference
+between the two
+firstly let's discuss the difference
+between compiled versus interpreted
+one of the major differences is that
+python is an interpreted language
+which makes it quite handy when coding
+whereas scala requires you to compile
+your code for it to be executed by the
+java virtual machine
+this process results in a file
+containing bytecode
+so the next difference is based on the
+performance
+spark offers two apis the high level one
+where data frames and data sets are
+found and the low level one which uses
+resilient distributed data sets
+scala offers superior performance with
+rdds because python has an additional
+communication overhead with a jvm
+however python should not cause you any
+performance issue
+moving on to another difference that is
+based on type safety
+python has a dynamic typing
+whereas a scalar has static typing
+when using dynamic typing the type of
+the variable you are defining is not
+specified
+your code becomes simpler as a result in
+python the type of your variable can be
+derived by writing its name and
+assigning a value
+now what's the difference when it comes
+to a learning curve
+it's typically easier to learn python
+than scala if you are just a beginner in
+any of the languages
+python has a progressive learning curve
+but once you get the hang of it you can
+use the same simple syntax you started
+with to do the advanced task
+let's discuss the difference based on
+the community support
+python has a much larger user base than
+scala which can help it gain support
+as a result python benefits from more
+comprehensive libraries devoted to task
+complexity
+scala does have robust support it is
+still far beyond python
+finally
+let's discuss the last difference in our
+list based on the project scale
+python is a smart decision if you wish
+to work on a smaller project with less
+seasoned programmers
+however scala is the ideal option for a
+large project that requires numerous
+resources and parallel processing
+let's discuss the difference based on
+community support
+python has a much larger user base than
+scala which can help it gain support
+as a result python benefits from more
+comprehensive libraries devoted to
+various task complexity
+scala does have robust support it is
+still far beyond python
+finally
+let's discuss the last difference in our
+list based on the project scale
+python is a smart decision if you wish
+to work on a smaller project with less
+seasoned programmers however scala is
+the ideal option for a large project
+that requires numerous resource and
+parallel processing
+now let's learn about the data frame of
+pi spark
+a data frame in pi spark is a
+distributed grouping of rows with name
+columns
+in simpler terms it is equivalent to an
+excel sheet with column headers or a
+table in a relational database
+the spreadsheet is on single machine
+whereas data frame is partitioned across
+servers in data centers
+it also has some features in common with
+rdt
+such as being immutable because we can
+only build a data frame or rdd once
+without being able to edit it
+furthermore rdt and data frame are both
+distributed in nature
+large collection of organized or
+semi-structured data can be processed
+using data frames
+petabytes of data can be handled using
+data frame in apache spark data frame
+supports a variety of data formats and
+sources
+for example python r scala and java all
+have api support
+after learning different topics about pi
+spark in the session we have reached our
+final topic which is pi sparks use in
+industries let's take a look at it
+apache spark is gaining popularity and
+becoming more widely used by its users
+from startups to multinationals
+apache spark has been used to create
+develop and innovate big data systems
+here are various spark use examples for
+particular industries that show how to
+create and execute quick large data apps
+ecommerce industry let's understand this
+with an example
+like shopify wanted to analyze the kinds
+of goods its clients were selling in
+order to find suitable retailers with
+womb it may collaborate in order to grow
+its business
+its data warehousing infrastructure was
+unable to resolve this issue since its
+frequently timed out when processing
+data mining queries on millions of
+documents
+shopify successfully developed a list of
+stores for collaboration after
+processing 67 million entries using
+apache spark in a matter of minutes
+the next use case of pi spark is in
+healthcare industries
+healthcare spark is used in genomic
+sequencing
+prior to spark organizing all the
+chemicals compound with the jeans took
+several weeks
+with spark it only took a few hours now
+my fitness all
+the biggest health and fitness community
+use cases of pi spark in industry
+apache spark is gaining popularity and
+becoming more widely used by its users
+from startups to multinationals apache
+spark is being used to create develop
+and innovate big data systems
+here are various spark use examples for
+particular industries that show how to
+create and execute quick large data
+apps firstly we have e-commerce industry
+let's understand with this an example
+like shopify wanted to analyze the kinds
+of code its clients were selling in
+order to find suitable details before it
+may collaborate in order to grow its
+business
+its data warehousing infrastructure was
+unable to resolve this issue since it
+frequently time out when processing data
+mining queries on millions of documents
+shopify successfully developed a list of
+stores where collaboration after
+processing 67 million entries using
+apache spark in a matter of minutes
+the next use case of pi spark is in
+healthcare industries
+spark is used in genomic sequencing
+priority to spark organizing all the
+chemical compounds with jeans took
+several weeks
+with spark it only tooks a few hours
+only
+myfitnesspal the biggest health and
+fitness community uses spark to clean
+user into data with the ultimate purpose
+of identifying high quality food
+products
+the food calorie information of roughly
+80 million individuals has been scanned
+by myfitnesspal using spark
+media and entertainment
+with the help of apache spark pinterest
+is able to identify patents and very
+valuable user engagement data so that it
+can quickly respond to emerging trends
+by gaining a through understanding of
+users online behavior
+to offer online suggestion to its users
+netflix leverages spark for real time
+stream analysis
+another best use of pi spark is in
+software and information service
+the spark developers have created data
+breaks it is a platform that has been
+tailored for the cloud to run spark and
+ml apps on aws and azure
+as well as a through training course
+in order to grow the project and advance
+they are working on spark
+financial services provided finra assist
+in gaining real time data insight from
+billions of data occurrences
+it can test things on actual market data
+using apache spark
+last but not the least pi spark is used
+in travel industry as well
+let's learn more about it
+apache spark uses in the travel sector
+is growing quickly
+it facilitates consumer flawless
+traveling planning by expectating
+customized recommendation
+by comparing numerous websites they may
+also utilize it to advise tourists on
+where to group hotels
+spark is being used by tripadvisor a
+popular travel website that assists
+consumer in creating the ideal thing to
+speed up its tailored client suggestions
+so with this we have come to the end of
+the session on pi spark i hope you found
+this session both interesting and
+exciting
+if you have any questions about any of
+the topics covered in this session or if
+you need the resources used in this
+session please let us know in the
+comment section below
+and our team of experts will be pleased
+to respond as soon as possible thank you
+until next time this is umrah from
+simply lantern signing off continue to
+learn and stay safe
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

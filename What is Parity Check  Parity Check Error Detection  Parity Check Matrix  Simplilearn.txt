@@ -1,0 +1,187 @@
+hi guys and welcome to yet and
+interesting video by simply learn
+in this session we will look into the
+working of parity check which is a
+network method used to check errors in
+the data at the receiver site
+but before we begin if you love watching
+tech videos subscribe to our channel and
+hit the bell icon to miss an update from
+us
+now without further ado let's take a
+look at the agenda for today's session
+to begin with we will look into what is
+parity bit check
+moving on with key points regarding the
+parity check
+and continuing with explained example on
+the same
+now let's continue with the first
+heading that is
+what is parity bit check
+the parity bit is a data check bit added
+to the original data for detecting
+errors at the receiver side by checking
+the integrity of the received data
+the parity bit adds 1 or 0 to the
+original data that is to be transmitted
+to the receiver side
+and if in case there is an error in the
+received data the center side will do
+the parity check and
+give the request for re-transmission of
+the data
+now let's move on to the key points
+regarding peri-debt check
+to properly understand the working of
+parity bit check
+we need to understand some key points
+where the first one is
+redundant width
+they are the extra binary width that are
+added explicitly to the original data to
+prevent the damage to the transmitted
+data
+or to detect the damage to the
+transmitted data
+they are also used to recover the
+original data in case of a damage at the
+receiver end
+the number of redundant bits added
+depends upon the type of check method
+used
+regarding which
+in this example there are four data bits
+used
+whereas three redundant bits
+it can also be two redundant bits
+or one redundant bit
+in case of parity check method only one
+redundant bit is added to the original
+data
+now let's move on to the next key point
+that is
+parity bits
+the parity bit check method is a method
+to add binary bits to secure the
+original data
+that is done by counting the total
+number of ones in the original data
+which is either even or odd number
+the parity bit check method is used to
+detect error in the original data at the
+receiver side and also in some cases it
+is used to
+correct the change
+there are two types of parity bits
+available to choose from the first one
+is odd parity bit in this parity bit
+check
+the number of ones in the original data
+including the parity bit should be order
+number
+for example
+in the given example the number of green
+tiles has
+four ones that is even so the parity bit
+should be 1 in this case to make the
+total number of ones in the data
+5 that is odd
+similarly the other parity bit is known
+as even parity bit
+in this case of parity type the total
+number of ones counted is to be even
+including the parity bit for example
+the number of ones in green tiles is
+four that is even so the value of parity
+bit should be zero in this case
+the point to be noted is
+the parity bit value should always be
+correct because it acts as the error
+detection method at the receiver side
+now let's move on to the explained
+example to consolidate all the things we
+have learnt so far
+the question is for the given data bit
+that is 1 1 0 1 1 1 apply the even
+parity bit check for data transmission
+now let's begin
+for the first step let's take the
+original data
+that is 1 1 0 1 1 1
+and the parity bit value is to be given
+as p
+now according to the next step we have
+to count the number of ones in the
+original data
+which will come out to be
+5 bits
+that means there are five ones in the
+original data which represents an odd
+number
+to balance this according to even parity
+bit now we have to add one in place of p
+so the new data to be transmitted will
+become 1 1 0
+1 1 1
+and 1
+which will be transmitted to the
+receiver side
+by the sender side
+after the data has reached the receiver
+side there are a few cases that may
+arise in the data
+where case one is
+the database received to transmission
+has no errors that is the data received
+is correct after applying the
+parity-width check
+which in this case is even
+so the transmitted data is this
+and the received data is this that means
+both the transmitted data and received
+data are same that means the received
+data is correct
+then the second case arises is the data
+bit received to transmission has errors
+that is the data received is damaged
+after applying the even parity check
+which in this case the transmitted data
+is
+and the received data has an 0 instead
+of 1
+which means the number of ones in this
+case becomes 5
+which does not match with the even
+parity check so it has an error
+and the last case case 3 in this the
+data bit received through transmission
+has errors that is the data received is
+correct according to the even parity bit
+because the transmitted data has
+six ones
+whereas the received data has four ones
+but according to even parity check only
+the number of ones should be even
+that means the number of ones received
+by the receiver side is four so
+according to parity bit check it is
+valid
+but
+according to the original data the
+received data is wrong
+these are the three main cases that may
+arise
+during the transmission of data through
+parity check method
+with this we have completed all the
+headings regarding parity bit check
+if you have any questions regarding the
+topic you can ask them in the comments
+section
+thank you for watching
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

@@ -1,0 +1,204 @@
+hey everyone welcome to Simply learns
+YouTube channel today we will learn
+about the role level security in PBI
+that's said if these are the type of
+videos you'd like to watch then hit that
+like And subscribe buttons and the bell
+icon to get notifi craving a career
+upgrade subscribe like and comment
+below dive into the link in the
+description to FastTrack your Ambitions
+whether you're making a switch or a
+higher simply learn has your
+back just for a quick info if you want
+to upscale yourself master data
+analytics and landar your dream job or
+grow a new career then you must explore
+simply L good of various data analytics
+programs simply learn off first
+postgraduate programs from P University
+in collaboration with IBM through this
+program you will gain knowledge and work
+ready expertise in skills like
+prescriptive and Predictive Analytics
+regression classification and over a
+dozen others that's not all you also get
+the opportunity to work on multiple
+projects and learn from industry experts
+in Top Tire product companies and
+academic from top universities after
+completing these courses thousands of
+Learners have transitioned into a data
+analytics role as a fresher or moved on
+to a higher paying job profile if you
+are passionate about making your career
+in this field then make sure to check
+out the link in the P comment and
+description box below to find the data
+analytics program that puts your
+experience and areas of Interest now
+without further delay let's get started
+with what is role level security in
+power Pi now imagine that you're working
+in an organization and you have
+different subordinates let's say you are
+the creator of this entire data
+dashboard or if you are the manager and
+you have some subordinates so they might
+be of a different designation which is
+lyer to yours and they might have
+subordinates in the leaf node level or
+the lowest level right so they might not
+have complete access to your data set
+let's say you are dealing with six or
+seven dashboards so you'll have access
+to everything and your subordinates
+might have to deal with only two of
+those dashboards let's say the sales
+which are happening in west region and
+east region so their subordinates might
+have only access to few stores let's say
+if the person working with the vest Zone
+has two subordinates then he might have
+access to two or three different stores
+which are available in the west zone
+right you're getting my point correct so
+you might have access to all the five
+zones your subordinates might have to
+deal with individual zones and their
+subordinates might have to deal with
+individual stores that is the level of
+hierarchy divides the accessibility to
+the data you have so you given this uh
+accessibility because you don't want to
+mess up the whole dat set your
+subordinates might not have an idea how
+a dashboard of the DAT set is working or
+they might you know some reasons due to
+some reasons there is this Ro level
+security implemented on powerbi now
+let's have a check on this roev security
+or RLS and power Pi in a practical
+demonstration now we will be dealing
+with the same Super Store D so we will
+be trying to create individual Ro level
+Securities for different zones of sales
+that we have in our data set and we can
+have a view how it really works now
+let's quickly switch back to powerbi so
+that you have a better understanding on
+what exactly I mean about Ro level
+security yeah we are on our sales
+dashboard on the D set that we'll be
+dealing with the sales D set now this
+particular dashboard has all the five
+region so here you can see Central north
+south east west so this is the overall
+sales dashboard this deals with uh sales
+order month on month and uh sales based
+on Country sales based on category sales
+based on subcategory and here we also
+have the kpis the total quantity of
+products sold the total sales total
+discount being offered and the total
+profit that we have earned right now
+this is an overall dashboard this is the
+dashboard that you have access to as a
+manager let's say now you want to
+distribute or divide or you know
+segregate the accessibility based on
+zone so that your support needs work on
+those only zones or you know focus on
+the zones which are provided to them so
+that it don't have to deal with the
+entire dashboard that you're dealing
+with now that can be done by using the
+rule of security go to modeling option
+here and here you have manage rules so
+click on manage rules and you have
+access to provide the RO level security
+now you can create a new role here let's
+create a new role now name the role as
+Adam for
+north and let's create another one
+Jennifer for South John for
+West Ramsey for East Kumar for
+cental right now we have created Five
+grows now let's provide the atom with
+the not data so here you can just double
+click on data add a filter and go to
+region and in region you can provide the
+value as
+not there you go so your tax expression
+is perfect no errors you can just click
+on Save and a new region for North has
+been created just go back to manage
+roles and and try to apply this to
+everyone add a new filter go to region
+and uh we giving Jennifer the South
+Region and for John we giving west
+region and for Kumar we are giving the
+central
+[Music]
+region and Ramsey the last one will be
+dealing with east region you can save
+there you go now you have applied the
+role level Securities to individual
+employees working on individual zones
+now just to quickly check if they are
+working or not you can quickly save the
+current dashboard and it is done here
+you have a view option you can just
+click on view and here you have all the
+views that you created right now you can
+just click on add them for North Region
+and your dashboard will change and it
+will give you the sales happening for
+North region similarly if you go on
+checking for different roles you have
+different regions so that's how you can
+create the RO level security and when it
+comes to the end user if you want to
+give this particular Ro level security
+or access to that particular Zone to
+your end user you can just publish your
+dashboard and all your rle securities to
+your Microsoft powerbi service and you
+can provide the access so that's how
+basically the RO level security Works in
+powerbi and with that we have reached
+the end of this session on what exactly
+is role level security or RLS and
+powerbi and should you have any queries
+regarding any of the topics covered in
+this session or if you require the
+dashboard D set or any other resources
+used in the session please feel free to
+let us know in the comment section below
+and our team of experts will be happy to
+resolve all your queries at the earliest
+until next time thank you for watching
+staching for more from Simply learn
+staying ahead in your career requires
+continuous learning and upskilling
+whether you're a student aiming to learn
+today's top skills or a working
+professional looking to advance your
+career we've got you covered explore our
+impressive catalog of certification
+programs in cuttingedge domains
+including data science cloud computing
+cyber security AI machine learning or
+digital marketing designed in
+collaboration with leading universities
+and top corporations and delivered by
+industry experts choose any of our
+programs and set yourself on the path to
+Career Success click the link in the
+description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click
+here

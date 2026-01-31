@@ -1,0 +1,224 @@
+Welcome to our video on hdfs the HUD up
+distributed file system if you have ever
+worked with big data or in the field of
+data engineering you have probably heard
+of Hardo it's revolutionized the way we
+handle and analyze large data sets but
+what is hdfs and why should you learn it
+hdfs is a distributed file system
+designed to handle the high throughput
+computing needs of large scale data
+processing systems it was designed to
+run on clusters of community Hardware
+making it costeffective way to process
+large amount of data one of the main
+benefits of hdfs is its scalability it
+can handle petabytes of data across
+thousands of nodes making it well suited
+for Big Data applications another key
+feature of hdfs is its fall tolerance it
+can handle node failures without losing
+data ensuring uninterrupted data
+processing but why should you learn hdfs
+well if you're planning a career in data
+engineering it's an essential skill hdfs
+serves as a foundational infrastructure
+for the Hardo ecosystem enabling other
+tools like map reduce and Spark to
+process and analyze large volume of data
+efficiently so whether you are an
+aspiring data engineer or just curious
+about hero learning hdfs is a great
+place to start in this video we will
+explore the basics of hdfs from its
+architecture and data modeling to best
+practices for managing data let's dive
+in on that note consider the data
+engineering postgraduate program offered
+by simply learn in collaboration with
+both University and IBM which present an
+excellent opportunity for professionals
+seeking practical explosure this
+comprehensive program is designed to
+equip participate with essential data
+engineering skills and is closely
+aligned with AWS and Azure
+certifications ensuring industry
+relevance and recognition fast track
+your career as a data engineering
+professionals with our data engineering
+course this course covers big data and
+data engineering Concepts the hopo
+system Apache python Basics AWS EMR
+quick site Sage marker the AWS Cloud
+platform and Azo Services check out the
+course Link in the description for more
+details having previously covered the
+introduction of hdfs let's now explore a
+deeper understanding of the definition
+of Hadoop distributed file system Hadoop
+distributed file system or hdfs is a
+specifically designed distributed file
+system that stores and process large
+volume of data across multiple commodity
+Hardware nodes it is a fundamental
+element within the Apache HUD of
+ecosystems providing fall tolerance High
+through port and scalability for a
+better understanding let's illustrate
+hdfs using a simple Layman example so
+now imagine you have a large library
+with thousands of books managing such a
+massive collection efficiently can be
+challenging so to to address this you
+organize the books into a distributed
+system with multiple bookshelves in this
+example the library represents the hdfs
+the books in the library represents the
+data such as files and the bookshelves
+in the library represents the data notes
+in hdfs and the librarian who keeps
+track of the books and their location
+represents the name note in the hdfs you
+achieve better scalability for tolerance
+and efficient data access by organizing
+your library into a distributed system
+system similarly hdfs enables large
+scale data storage fall tolerance and
+parallel processing for Big Data
+applications now let's look at the
+architecture of hdfs from the given
+diagram below name node is the master
+node in hdfs it stores the metadata
+about the file system including
+directory tree file permissions and file
+to block mapping it keep tracks of data
+blocks location and coordinate data
+access operations and then we have data
+notes data notes are the slave nodes in
+hdfs they store the data blocks and
+perform read and WR operation as the
+name node directs data nodes are
+responsible for data block creation
+deletion and replication we have blocks
+so hdfs stores data in large blocks
+typically 64 or 128 megabytes here each
+file is divided into blocks and
+replicated across multiple data notes
+for fall tolerance rack so a rack is a
+collection of data notes grouped based
+on a physical proximity it helps in
+improving data locality and reduces
+Network traffic in hdfs a client refers
+to the entity or applications that
+interact with the Hardo distributed file
+system it is typically a software
+program or component that utilizes the
+hdfs API to perform various operations
+on file stored in hdfs the client
+communicates with the hdfs Clusters to
+request file operations like Reading
+Writing or modifying now let's have a
+look at the file operations like file
+read and file right so here the client
+can read the contents of the files
+stored in hdfs it communicates with the
+name node to obtain the locations of the
+data blocks connects the appropriate
+data nodes to retrieve the data the
+client can read the entire file or
+specific portion of it next file write
+here the client can write data to files
+in hdfs it communicates with the name
+node to obtain Block locations and then
+interact with data notes to write the
+data blocks the client can perform
+single wres or uptain data to existing
+files
+and next we have data modeling in hdfs
+hdfs follows a right On's read manyu
+model which means that once a file is
+written it is not modified however new
+data can be appended to the existing
+file so here are some key aspects of
+data modeling in hdfs first we have file
+organization files in hdfs are organized
+in a hierarchal directory structure
+similar to the traditional file system
+directories can be created to manage and
+collect the data effectively next we
+have replication hdfs replicates data
+blocks across multiple data nodes for
+fall tolerance the default replication
+factor is typically three meaning each
+block is stored on three data nodes the
+replication Factor can be configured
+based on the desired level of fall
+tolerance and the third we have data
+locality hdfs optimize data access by
+keeping the computation close to the
+data it tries to schedule task on the
+same data nodes where the data blocks
+are stored to the minim it tries to
+schedule task on the same data notes
+where the data blocks are stored to
+minimize network transfer and next we
+are moving on to the best practices for
+managing data in hdfs effectively manage
+data in hdfs consider the following best
+practices first we have data
+organization design a logical directory
+structure that suits your data access
+patterns and faciliates easy data
+management organize data into meaningful
+directories and subdirectories
+next we have file size hdfs performs
+best with large files rather than a
+large number of small files aim to have
+multiple file size of the block size to
+maximize data locality next we have
+replication Factor configure the
+replications factor based on the
+importance of the data and the available
+storage capacity higher replication
+factors provide better fall tolerance
+but require more storage next monitoring
+and maintenance regularly mon monitor
+your hdfs cluster's health and promptly
+address any issues monitor dis space
+utilization block distributions and
+cluster performance next backup and
+Disaster Recovery Implement a backup and
+Disaster Recovery strategy to ensure
+data durability regularly backup
+critical data and replicate it across
+different cluster or locations following
+this guidelines lets you maximum hdfs
+architecture and feature to effectively
+store and process large scale data with
+this we have come to the end of this
+video on what is hdfs I hope this video
+was informative and interesting until
+next time thank you and keep learning
+staying ahead in your career requires
+continuous learning and upskilling
+whether you're a student aiming to learn
+today's top skills or a working
+professional looking to advance your
+career we've got you covered explore our
+impressive catalog of certification
+programs in cutting Edge domains
+including data science cloud computing
+cyber security AI machine learning or
+digital marketing designed in
+collaboration with leading universities
+and top corporations and delivered by
+industry experts choose any of our
+programs and set yourself on the path to
+Career Success click the link in the
+description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to ner up and get certified click
+here

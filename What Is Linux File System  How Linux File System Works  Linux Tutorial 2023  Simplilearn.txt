@@ -1,0 +1,335 @@
+hello Tech Wizards and digital explorers
+welcome to a journey into the core of
+Linux the operating system powering over
+2.3% of desktop computers globally and
+is staggering 96.3% of the world's top 1
+million servers I'm abisa and today we
+are deling into one of the most vital
+components of Linux its file systems
+imagine a world where every piece of
+digital information is meticulously
+organized where every bite of data has
+its own unique place that world exists
+right inside your Linux machine so
+buckle up as we dive deep into the
+intricate Maze of Linux file systems
+exploring how they work why they are
+important and what makes them so unique
+in the realm of operating systems in the
+realm of Linux file systems like ext4
+xfs and btrfs aren just names they are
+sophisticated architectures that manage
+how billions of bytes of data are stored
+accessed and organized these systems are
+the unsung heroes ensuring data
+integrity and efficiency in our digital
+world today we will uncover how these
+file systems support everything from
+your personal blogs to the largest data
+centers hosting pedabytes of information
+we will explore inot journaling mounting
+and more terms that might sound complex
+but are incredibly fascinating once you
+get to know them and just a quick info
+for you if you're an aspiring cyber
+security professional looking for online
+training and certifications from
+prestigious universities and in
+collaboration with leading experts to
+enhance your credibility then search no
+more simply learns postgraduate program
+in cyber security from MIT University in
+collaboration with EC Council should be
+your right choice through this course
+you will gain knowledge and work ready
+expertise in skills like Advanced
+hacking Concepts Network packet analysis
+ethical hacking network security and
+over a dozen others and that's not all
+you also get the opportunity to work on
+multiple projects and learn from
+industry experts working in top tier
+product and security companies and
+academicians from top universities this
+course is designed to accommodate a
+diverse range of Learners and this
+course requires just a bachelor's degree
+with a 50% average and no prior
+programming experience and one plus year
+of work experience is preferred if
+you're passionate about making your
+career in this field then make sure to
+check out the link in the pin comment
+and description box to find a cyber
+security program that fits your
+experience and areas of interest and now
+Linux offers a diverse are of file
+systems each tailored to specific
+requirements and now let's explore some
+prevalent Linux file systems so starting
+with ex2 and then we have EX3 ext4 xfs
+btrfs ZFS JFS and then we have Riser FS
+so now starting with the first one that
+is EXT2 so EXT2 extended file system 2
+that is one of the Linux earliest and
+most commonly used file systems EXT2 has
+long been a default choice for many
+Linux distributions it's known for its
+stability and suitability for small to
+mediumsized partitions
+though it lacks a journaling feature
+which can complicate file recovery post
+crash now moving to the next file system
+that is ext3 extended file system 3
+building on EXT2 ext3 introduces
+journaling to track file system changes
+reducing data loss risk after crashes
+it's a popular choice for its stability
+reliability and performance and now move
+to the next that is ext4 extended file
+system 4 as the evolution of ext3 ext4
+addresses some of its predecessors
+limitations it supports larger files
+quicker file system checks and enhanced
+performance for larger disk features
+like joural check summing also enhances
+data Integrity ext4 is a default file
+system in many modern Linux
+distributions now moving to the next
+file system that is xfs so xfs that is x
+file system that is designed for large
+scale storage and xfs excels in
+performance and is suitable for file
+systems up to 16 exabytes
+it's a Top Choice for large data centers
+offering scalability reliability and
+featuring like Jing and file level
+languages now moving on to the next file
+system that is btrfs B3 file system a
+newer Linux file system BFS supports
+copy on write snapshots and sub volumes
+allowing for multiple file systems
+within a single partition it also
+includes rate and compression support
+btrfs is still under development and
+isn't as commonly used as other file
+systems next we have is ZFS ZFS zetabyte
+file system initially developed for
+Solaris ZFS is a robust system with
+features like snapshots data compression
+duplication and built-in rate renowned
+for its data integrity and self filling
+capabilities ZFS is not typically
+included in Linux distributions pe2
+licensing but can be installed
+separately now moving to the next file
+system that is GFS GFS Journal file
+system that is developed by by IBM JFS
+is known for its performance and
+reliability it offers Jing file level
+compression and online resizing making
+it a strong choice for high performance
+systems and now the next one that is
+resizer FS so targeted at high
+performance Computing resizer FS
+includes features like journaling file
+level encryption and support for larger
+files while known for its speed and
+reliability it's less common compared to
+other file systems listed here now
+moving to key Linux file system
+directories so the Linux operating
+systems file management is predominantly
+handled through directories commonly
+known as folders these elements are
+crucial in the Linux file system serving
+not just as file holders but also as
+organizational tools imagine directories
+as virtual boxes each capable of storing
+files and other directories directories
+in Linux play a vital role in providing
+an ordered hierarchical framework for
+file Arrangement this hierarchy
+commences at the root directory denoted
+AS Slash and extends into various sub
+directories this approach allows for a
+logical and systematic organization of
+complex systems enhancing the use of
+file management and access so key Linux
+file system directories each directory
+in the Linux file system serves a
+distinct purpose here are some of the
+significant directories starting with
+the number one that is root directory so
+root directory is the highest level in
+the Linux file system hierarchy all
+other directories and files are nested
+within this R now moving to the next
+directory that is bin standing for
+binaries this directory contains
+essential command line utilities and
+programs vital for basic system
+management and then we have boot so here
+lies the boot loader files and the Kel
+images necessary for system startup and
+then we have Dev this directory host
+device files representing both physical
+like printers and dis and virtual
+devices like Terminals and then we have
+Etc directory that is home to system
+system configuration files these are
+utilized by various applications and
+services and then we have home directory
+it houses individual users directories
+providing personal space for file and
+setting storage and then we have Library
+directory this directory stores shared
+Library files needed by System programs
+next we have media directory am mounting
+point for removable media such as USB
+drives CDs and DVDs and then we have MNT
+that is mounting directory that is used
+for temporarily mounting file systems
+like Network file systems or disk images
+next we have OPD directory a location
+for additional software packages that
+are not part of the standard system and
+then we have standard bin directory a
+directory for system binaries and
+administrative tools essential for
+system upkeep and then we have user
+directory that contains user level
+programs libraries documentation and
+shared data files so these were the
+directories in Linux file distribution
+system
+and now here are the key Concepts in
+file systems starting with journaling
+file system so these systems maintain a
+log refer to as Journal this log records
+changes to files that are not yet
+permanently saved on the disk this
+feature is particularly useful for
+recovering loss changes in the event of
+a system failure and the next we have is
+versioning file systems these systems
+preserve earlier versions of files
+essentially they save file copies based
+on their previous States at specific
+inter
+offering a backup mechanism that could
+be based on minute or hourly updates and
+next we have index nodes an i note
+symbolizes a file or diory detailing
+attributes like size permissions
+ownership and physical locations and now
+we'll see the demo for the Linux file
+distribution
+system so for that we'll open the
+terminal with control all
+t
+and
+now first we'll see in which directory
+we currently are in so we are in home
+abisara
+so first we'll move to the root
+directory for that we'll write the
+command CD space slash so now we have
+moved to the root directory and here
+we'll see what types directories we have
+we have bin Dev boot Etc op run swap
+file so now we'll move to the bin
+directory so in bin directory it
+contains binaries or essential
+executable
+files so these are the binaries and
+executable files that we can use in the
+terminal only so
+now as I will show you there's a bin
+and there's sbin also this is
+sbin so now we'll move to the sbin
+directory for that we'll write the
+command CD
+sbin and here we see the directories of
+sbin so what does sbin contain it
+contains system binaries like Mount or
+delete and the user that are used by the
+root user so these binaries can be used
+by the root user only
+and then we have other directories that
+is
+Library so to move to the library
+directory we'll write the command CD Li
+and now we'll see its
+directories so what does it contains it
+stores common libraries between bin and
+S spin so many directories are stored in
+the library directory
+only so then we have another directory
+that is user directory under the root
+only so to move to that we'll write CD
+user so it says
+that so first we'll move back to the
+root
+diory and then we'll move to the user
+directory so it says that no such file
+or
+directory is present here we'll just
+check
+I think it's USR for
+user yeah it's USR so user directory is
+named as
+USR we'll move to the user directory and
+to see the director inside user so these
+are the directories in user so user has
+its own bin and sbin directory and the
+binaries here are non essential binaries
+and there's a local directory under user
+so it contains binaries that you can
+combine manually so these are all
+the directories under root and you can
+go to other directories also as I have
+shown you the diagram of all the
+directories under user or under the root
+that I have shown in the previous thing
+so you can check it out so in conclusion
+the Linux file system with its directory
+structure is a Cornerstone of the
+operating system it facilitates
+efficient data management while
+upholding system stability and security
+Linux file system is characterized by
+its hierarchical tree like structure
+with the root directory at its apex
+various file systems in Linux CER to
+different needs each with its pros and
+cons the Linux directory structure
+encompasses an area of directories each
+designated for specific function like
+system binaries boot files device files
+and user files and with that we have
+come to the end of this tutorial hope
+you guys found it informative and
+helpful till then stay safe and keep
+learning staying ahead in your career
+requires continuous learning and
+upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to ner up and get certified click
+here

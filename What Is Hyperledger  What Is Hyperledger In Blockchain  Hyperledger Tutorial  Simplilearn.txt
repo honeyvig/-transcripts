@@ -1,0 +1,216 @@
+hey everyone i'm shamlee and i welcome
+you all to this new video of simply
+learn on what is hyper ledger
+in this video we are going to cover all
+important concepts and components
+related to hyperledger
+first we will understand what is
+hyperledger then we will explore the
+history of hyperledger
+then we will understand goals of
+hyperledger
+after that we will look into the layers
+of hyperledger technology
+after which we will explore
+organizational architecture of
+hyperledger then we will understand how
+hyperledger works and at the last we
+will explore other hyperledger tools and
+projects so without much delay let's get
+started with the video
+first let's understand what is
+hyperledger
+hyperledger is an open source community
+that offers and focuses on developing
+suitable frameworks tools and libraries
+for enterprise grade blockchain
+deployments
+and builds open source blockchains and
+related applications for use across
+various industries
+the linux foundation hosts this global
+collaboration which comprises
+professionals in finance banking the
+internet supply chains manufacturing and
+technology as well
+built under technical governance and
+open collaboration individual developers
+service and solution providers
+government associations corporate
+members and end users are all encouraged
+to get involved in the creation and
+marketing of this game-changing
+innovations well that makes me wonder
+how have pleasure came into existence
+let's die down and explore the history
+of hyperledger
+the hyperledger project was announced by
+the linux foundation in 2015
+a year before it was released
+the hyperledger project's executive
+director brian bellendorf also claimed
+that the hyperledger project would never
+create its own cryptocurrency
+the project began accepting submissions
+for the incubation of code bases and
+other code element technologies in 2016.
+hyperledger fabric and lip consensus
+were two of the first blockchain
+framework code bases to be accepted
+later saw two intel's distributed ledger
+was incubated now let's move to the
+goals of hyperledger
+first
+is to facilitate commercial transaction
+create enterprise grade open source
+distributed ledger frameworks and code
+bases
+second is to provide infrastructure that
+is impartial open and community driven
+with technical and corporate governance
+third is to develop blockchain and
+shared ledger pocs application cases
+field trails and deployments build
+technical communities
+fourth is to educate the general
+audience on the blockchain's
+technology's market potential
+fifth is to promote our community of
+communities by utilizing a toolkit
+approach that includes a variety of
+platforms and framework now let's
+understand the technology layer of
+hyperledger hyperledger employs the
+following essential business components
+in its architecture
+first is the consensus layer
+it is in charge of reaching an agreement
+on the order and verifying the accuracy
+of the blog's transactions
+then comes the smart contract layer
+which is in charge of processing
+transaction requests and only
+authorizing transactions that are valid
+after that is the communication layer
+peer-to-peer message transit is handled
+by the communication layer
+then comes identity management services
+these are required for maintaining and
+validating user and system identities as
+well as creating trust on the blockchain
+and at the end comes the api or
+application programming interface
+external programs and clients can
+interact with the blockchain using the
+api
+now let's have a look at the
+organizational architecture of
+hyperledger
+essentially hyperledger enables the
+development of various blockchain-based
+systems and applications for industrial
+use by providing the necessary
+infrastructure and standards it acts
+more like a hub bringing together
+numerous blockchain based projects and
+tools that follow established design
+philosophy
+hyperledger's architecture can be
+broadly divided into three main
+components which is apis
+sdks
+and clis
+apis or application programming
+interface include membership services
+which is a set of cryptographic
+certificates that defines the
+organization by itself
+every pair or order needs this type of
+certificate which consists of some
+common properties that signifies that
+whether the peer or the order belongs to
+the same organization
+a pair which is a part of the same
+membership services can communicate with
+each other but peers from other
+organizations cannot communicate with
+each other
+sdks or software development kits
+include blockchain and transaction layer
+which constitutes the core code of the
+blockchain it consists of the consensus
+algorithm which helps to make the final
+decision on the validation of every
+transaction
+it also consists of distributed ledger
+as well as legit storage which contains
+all details regarding the transactions
+made 1
+and also lastly known status of each
+transaction
+it has a peer-to-peer protocol used to
+communicate between the nodes on the
+network clies a command line interface
+consists of chain code which is a layer
+of logical programming which consists of
+the business logic required to run in
+operation on the hyperledger
+now that we know all about hyperledger
+structure and goals let's understand how
+hyperledger works
+let's take an example of two friends
+alex and sarah who wants to perform a
+hyperledger transaction
+sarah runs a bakery and wants to send a
+birthday cake to alex as per his request
+on the sarah's bakery app now sarah
+looks for his address on her application
+which sends a query to the membership
+services of the application and
+validates transaction of only directly
+affiliated peers to the application
+now our application searches for alex's
+membership on the membership services of
+that particular application for
+validation
+now after that hyperledger connects both
+parties alex and sarah
+both of them will now generate a result
+which needs to be the same for the
+transaction to be validated on the
+two-party agreement
+now the validated transaction is then
+sent to the consensus cloud for placing
+orders and these orders are then sent to
+the connected peers
+and then being verified by them
+according to the ledger once it is
+approved by the consensus cloud alex
+finally receives his birthday cake and
+then the transaction is committed to the
+ledger
+now let's have a look at some other
+hyperledger tools and projects
+hyperledger fabric hyperledger sawtooth
+high pleasure ayurva hyperledger indie
+hyperlogic basu hyperledger caliper
+hyperledger explorer hyperledger cello
+and hyperledger burrow are a few
+hyperledger tools and projects
+introduced after the origin of
+hyperledger in 2016.
+well this is all about hyperledger we
+almost reached the end of this video if
+i missed anything important do let me
+know in the comment section i hope you
+enjoyed this video on what is
+hyperledger and learn something new from
+it if you like this video then please do
+hit the like button thanks for watching
+this video and stay tuned for more
+updates and videos from simply learn
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

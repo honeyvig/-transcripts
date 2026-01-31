@@ -1,0 +1,217 @@
+hello everyone one of the blockchain
+initiatives within hyperledger is
+hyperledger fabric it utilizes smart
+contracts has a ledger and functions as
+a means of for participants to manage
+their transactions just like other
+blockchain technologies
+the fact that hypeology fabric is
+private and permission sets it apart
+from all of the blockchain platforms so
+here i am with a new video by simply
+learn on hyperledger fabric to give you
+a better insight of hyperledger fabric
+along with its concept
+but before proceeding with the video
+please do hit the like button and
+subscribe to our youtube channel to
+never miss an update from simply learn
+so let's get started with the video
+first let's have a look at the topics
+that we are going to cover in this video
+first we will have an understanding of
+what hyperledger fabric is
+following that we will have a look at
+some of the benefits of hyperledger
+fabric
+after that we will understand the
+working of hyperledger fabric
+following that we will explore the
+transaction flow of hyperledger fabric
+and at the end we will have a look at
+some of the industry use cases of
+hyperledger fabric
+so let's start with what is hyperledger
+fabric
+now the linux foundation launched
+hyperledger fabric in 2015 as an open
+source permission blockchain technology
+now it is a general purpose modular
+framework that provides distinctive
+identity management and access control
+features as a result it is appropriate
+for a range of business applications
+including trade finance loyalty and
+reward programs track and trace of
+supply chains and clearing and
+settlement of financial ad so
+technically speaking it enables
+plug-and-play compatibility for
+components like membership services and
+consensus so now that we have the
+understanding of hyperledger fabric
+let's have a look at some of its
+benefits to better understand its
+functionality
+so first is open source
+the linux foundation is the host of the
+open source hyperledger fabric
+technology which is a blockchain
+framework the developer community is
+vibrant and expanding
+second is permission
+fabric network which means that the
+identities of every individual
+who participates are known and verified
+this advantage is especially beneficial
+in sectors like healthcare supply chain
+management
+finance and insurance where data cannot
+be accessible to unidentified parties
+for instance to protect consumer privacy
+an insurance provider on an hyperledger
+fabric blockchain network can share
+customer claim data with authorized
+parties third is
+governance and access control
+fabric networks are made up of channels
+which are private subnets of
+communication between two or more
+particular network members
+through these channels network users can
+conduct confidential and private
+business
+every transaction on the blockchain
+network takes place on a channel where
+each person involved must be verified
+and given permission to conduct business
+this adds an extra degree of access
+control and is particularly helpful when
+members want to restrict how much
+information is made public for instance
+when rivals are on the same network
+fourth is performance
+because of its consensus mechanism
+hyperledger fabric can support his high
+transaction throughput for enterprise
+grade use cases fabric is a permission
+blockchain system therefore it does not
+have to deal with byzantine fault
+tolerance which might result in slower
+network transaction validation
+performance
+so now let's move on and have a look at
+the working of fabric network
+so an open tested enterprise way
+distributed ledger platform is
+hyperledger fabric it proposes unique
+privacy control so that only the
+information you want to share
+is shared with the permitted network
+users
+the business processes you want to
+automate are documented in smart
+contracts with self-executing clauses
+between the parties that are written in
+lines of code the code and the
+agreements contained therein exist
+across the distributed decentralized
+blockchain network
+these transactions are retraceable and
+irreversible organizations can trust one
+another due to this ability to quickly
+make better judgments organizations can
+save time money and risk
+so now that we know the working of
+hyperledger fabric let's understand its
+transaction flow
+so first when a client application sends
+a transaction proposal to peers in each
+organization for approval the
+transaction flow starts
+second the peers confirm the identity
+and legitimacy of the submitting client
+to submit the transaction after that
+they simulate the result of the proposed
+transaction
+and if they match what was anticipated
+they send the customer an endorsement
+signature
+third once it has the required number of
+endorsements as specified in the
+endorsement policy the client gathers
+recommendation from peers and transmit
+the transaction to the ordering service
+and lastly in order to comply with the
+endorsement policy the ordering service
+verifies that a transaction has the
+required number of endorsements
+the accepted transaction are then
+chronologically ordered bundled into
+blocks and sent to peer within each
+organization the ordering service sends
+new blocks of transaction to peer nodes
+who subsequently do a final validation
+on the transactions in that block as
+soon as this is finished the ledger
+state is updated and the new block is
+added
+the fresh deals have been committed
+now so that we have covered all the
+necessary details regarding hyperledger
+fabric let's have a look at some of the
+industrial use cases of hyperledger
+fabric
+the first one is supply chains
+now supply chains are vast dispersed
+network of suppliers producers and
+retailers by boosting the transparency
+and traceability of transaction within
+the network hyperledger fabric networks
+can enhance supply chain procedures
+companies who have access to the ledge
+on a fabric network can see the same
+unchangeable data in forcing
+responsibility and lowering the
+possibility of counterfeiting
+then comes trading
+now importers exporters banks shipping
+companies and customer offices are just
+a few of many institutions that must
+collaborate in order for trade to take
+place
+now financially and trading consortiums
+can simply build a blockchain network
+using hyperledger fabric
+where all the participants can conduct
+business and handle trade related
+documents electronically without the
+need for a central trusted authority
+in fact contrary to other processes
+which require players to exchange trade
+related documents back and forth
+taking 5-10 days to complete next is
+insurance
+now the insurance sector loses billions
+of dollars each year to fraud but using
+hyperledger fabric insurance companies
+can use transaction data stored on the
+ledger to spot duplicate and fabricated
+claims by leveraging smart contracts to
+automate payment from the at paul party
+back to the insurance company blockchain
+can help speed up the processing of
+multi-party suborgation claims so this
+brings us to the end of this video well
+this was all about hyperledger fabric if
+you have any questions regarding this
+video please feel free to ask them in
+our comment section our team will reach
+out to you as soon as possible hope you
+enjoyed this video and learn something
+new from it thank you and stay safe
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

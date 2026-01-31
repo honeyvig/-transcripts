@@ -1,0 +1,1728 @@
+foreign
+'s YouTube channel in this session we
+will learn what is data analytics
+followed by the fundamentals of data
+analytics we will go through the
+introduction to the most important data
+analytics tool which is the power bi
+once we understand the fundamentals of
+power bi we will try building charts and
+tables in power bi then how to build
+stories in power bi then we will get to
+the most important part of this tutorial
+which is how to build a real-time
+dashboard in power bi hope I make myself
+clear with the agenda now with that
+having said if you are an aspiring data
+analyst looking out for the online
+training and certification from the best
+universities and Industry experts then
+search no more simply learns
+postgraduate program in data analytics
+from the Purdue University in
+collaboration with IBM should be the
+right choice for more details on this
+program use the link in the description
+box below also let me tell you guys that
+we have daily updates on multiple
+Technologies if you're a tech geek in a
+continuous hunt for latest technological
+Trends then consider getting subscribed
+to our YouTube channel and don't forget
+to hit that Bell icon to never miss an
+update from Simply with that over to our
+training experts
+now why power bi so generally uh you
+know visualization tools reporting tools
+are required in order to create and
+prepare and analyze meaningful data it
+could be a data for an organization it
+could be a social media platform data it
+could be a data from iot devices but
+something which needs to be analyzed and
+some intelligent inferences and data
+mining has to be done on top of it now
+imagine there is today we are in a world
+where terabytes of data and information
+is getting generated on an instantaneous
+basis on minute-by-minute basis so it
+becomes very essential to churn out
+something meaningful something
+intelligent out of it in the market
+there are a lot of other tools which are
+available like clicks all tricks Tableau
+and power bi so power bi is a Microsoft
+product which is one of the most popular
+products and it comes as a free to
+download product Microsoft power bi
+desktop which is available and I'll show
+you a couple of ways how you can install
+it on your machine but why power bi is
+uh popular is because it provides a lot
+of out of the box features drag and drop
+features which we will talk about in our
+subsequent sessions and you know classes
+but today's session is primarily focused
+on giving you guys an introduction on
+what what is the purpose of power bi and
+what all problems it solve uh in the in
+the real world so power bi allows you to
+view analyze and visualize huge
+quantities of data and the data could be
+in any format Excel CSV text or it could
+be a direct connection to a database
+like SQL MySQL Azure Oracle anyone IBM
+db2 so it supports n number of uh you
+know data types or data sets and it's
+very powerful in terms of data
+connectivity
+so it uses powerful compression
+algorithms to import and cache the data
+within the dot pbix file
+so it's as convenient as a simple
+software if suppose you import a data
+and then you prepare a report and then
+you can easily share the reports with
+your peers or someone who's
+co-developing with you either through
+Power bi cloud services or even you can
+share the pbix file in an email
+or through any other means and you can
+share the data set with the concern and
+they can then work on the report
+independently so there are different
+ways there is no uh kind of a limitation
+for you know working on power bi there
+are multiple ways and it is very fast it
+is the most fast uh tool to work with
+Excel because definitely Excel is also a
+Microsoft Technology so it works very
+fast on Excel based data and gives you
+numbers and Reporting at a very high
+speed
+so now once you have imported the data
+power bi allows you to model the data
+allows you to work intelligently on the
+data it allows you to model the data in
+a way that if you are importing data
+from multiple Excel sheets importing
+data from multiple tables you can easily
+create a relationship between those
+tables or data sets in power bi and then
+create visually appealing reports
+meaningful reports as I've been
+emphasizing and make sense out of that
+data no data in silos is of any use data
+in Silo means a single worksheet or a
+single data set will not churn out any
+meaningful information until unless you
+basically join it clubbit merge it Union
+it append it with some other data sets
+because a single data set will never be
+able to hold that much amount of
+information which is generally required
+for a you know important report
+so it has easy drag and drop
+functionality with features that allow
+you to copy all formatting across
+similar visualizations so just like in
+Microsoft Excel we use format painter to
+copy the format of one cell to another
+similar features very very similar to
+excel products or Microsoft product they
+have provided that if you have applied
+uh a particular thing on a report you
+can easily replicate that on any other
+report the font uh the header size the
+background color you don't need to do it
+again and again so there's a lot of
+reusable features which are also
+available
+okay now as I said Excel is a Microsoft
+product power bi is a Microsoft product
+so they have intercompatibility you can
+publish data from Excel to power bi now
+with the latest developments and
+enhancements
+as of today pixel has also plugged in a
+new feature called powerpivot which I'll
+uh show you later down the line but that
+also allows you to do a quick analysis
+no you can't create of course complex
+reports or uh fancy reports like power
+bi but Power pivot allows you to create
+you know quick measures quick functions
+quick calculations on your data quickly
+only in Excel so it's an Excel plugin
+but whereas you know you can power bi is
+also compatible with Excel so when you
+create a report in power bi it gives you
+inbuilt feature to export your power bi
+report into Excel format directly you
+don't need to do any programming for it
+also
+you can easily publish when you publish
+your power bi reports it allows you to
+give some inbuilt intelligence of
+analyzing your reports in Excel and it
+gives you all those of all those
+features of exporting your power bi
+reports into Excel which is not
+available in any other tool or otherwise
+those tools have to create plugins
+create add-ins and probably they might
+charge for it but Power bi comes with
+lot of out of the box features which are
+very very helpful for analyzing data in
+Excel and vice versa
+Azure Cloud now Azure itself again is a
+Microsoft cloud Tech stack so using
+power bi with Azure allows you to
+analyze and share large volumes of data
+so Azure basically Azure database or
+Azure Cloud servers are meant to hold
+huge amount of data and power bi allows
+you to have seamless connection you can
+easily connect to Azure data Lake
+you can reduce the time it takes to get
+insights and increase collaboration
+between business analysts data engineers
+and data scientists so azure
+data Lake becomes the central focal
+point where all your analysts Engineers
+can keep working on on the centralized
+piece of data and churn out their
+reports data scientists primarily job is
+to keep the data in a structured way
+optimized way optimize the input output
+operations disk operations and memory
+utilization so that the reports also get
+churned out in a faster manner so every
+uh you know every person has their own
+role in order to give a quick
+refreshable report a quick rendered
+report any report which is taking huge
+amount of time to get rendered will not
+eventually be used by the business users
+because then it does not solve the
+purpose the report should be fast report
+should have uh you know appropriate
+filters slices and dices you should be
+able to you know create the reports or
+dynamically or you should be able to
+analyze visualize the data dynamically
+so all those visualization features are
+available in power bi and it works
+seamlessly either it is small data or
+huge data it allows that you to work on
+those kind of data in a seamless fashion
+right so this is just a very uh quick uh
+example of how our typical dashboard
+looks like dashboard is nothing but you
+know you have clubbed couple of multiple
+reports on a single page and you know if
+you change a filter uh a single filter
+on the page all the reports will honor
+that filter and the numbers will change
+accordingly so if you see the in this
+example there is a filter or a drop down
+or product ID product name employee name
+or supervisor or a date range so
+whatever date range or filter you will
+apply all the reports on this dashboard
+will get changed based on the filter you
+have selected so power bi allows you to
+get insights from data and turn insights
+into action to take data driven business
+decision and that is the ultimate goal
+of any visualization tool that is the
+purpose for which visualization tools
+are bought
+uh and purchased by the organizations
+and data is fed into them
+Now power bi fetches data from Factory
+sensors social media sources to get
+access to real-time Analytics so that
+you are always ready to make timely
+business decisions so so basically there
+is a a feature of live connection or cut
+off data connection so either you can
+work on data which is deciding on a
+machine and you can just work on the
+cutoff data like for example it's
+there's a data which is available for
+sales 2017 2018 and you're just working
+on a historical data it's a cut off data
+or it could be possible that you want to
+be connected live uh to a real-time iot
+based sensor based data or social media
+data like Twitter Facebook feeds or you
+know you're connected to live Google
+worksheets that is also possible you
+just need to publish your Google sheet
+for a public domain embed that you are
+in into Power bi and then whoever
+updates that Google sheet automatically
+the power bi report will also start
+honoring and consuming the new data
+which is added in the Google sheet so
+all those kind of real-time streaming
+analytics is also possible and that is
+one big feature and very important
+feature of power bi which is widely used
+and has a very huge uh you know Market
+acceptance and Market utilization
+now what is power bi
+power bi is a business analytics service
+provided by Microsoft that lets you
+visualize your data and share insights
+right so earlier
+you know uh
+Microsoft used to have a technology
+called ssas now they have replaced
+actually ssas and SSRS with power bi so
+basically you can use power bi on the
+data which is there in your Excel or any
+other data source and the power bi
+service or power bi desktop basically
+creates a connection to those data sets
+and import it cache it and give you a
+handle to it in order to work with it so
+you can create these fancy meaningful
+visualizations like for example there is
+a geographical map if you are importing
+data for a country or a continent or a
+region power bi will automatically
+detect that it's a geographical
+information and give you a map with
+latitude longitude information and you
+just need to plot
+your uh your numbers on the map either
+you can use bubbles or either you can
+use triangles or whatever data structure
+you want to use but all the mapping will
+be available geographically then you can
+create pie charts which is shown in this
+visualization you can create tree maps
+you can create cards where you know you
+can highlight the most important numbers
+like sales total sales of your company
+across all the regions or the growth
+chart or the month on month uh you know
+sales of your organization or number of
+total number of products or units sold
+so whatever is important and to be
+highlighted for the management to take
+any meaningful decision or any insights
+you want to share
+power bi visualization tool the power bi
+visualization uh
+uh chart allows you to drag and drop and
+create wonderful reports okay
+so what are the features of power bi so
+power bi desktop is something a
+standalone tool which you need to
+install on your machine it allows you to
+build reports by accessing data easily
+you do not need Advanced report
+designing or query skills to build a
+report though yes it is beneficial that
+if you know some SQL programming
+analytical programming or you are aware
+of advanced features of any analytical
+tool that might help you but that's not
+a showstopper you can easily build
+reports in quick turnaround time without
+needing any technical background you
+just need to have some analytical uh
+mindset and you can create uh Savvy
+visualization and you know analytical
+reports
+stream analytics as I mentioned you can
+create a live connection uh with any
+kind of data it could be iot it could be
+media social media it could be Google
+Docs it could be uh you know any other
+kind of uh you know live connection it
+could be a live database connection
+itself so any insertions or updations or
+deletions happening will automatically
+reflect in your report
+yes multiple data sources and that has
+to be the primary criteria for any tool
+to be popular if any visualization tool
+is limited to certain data sets then you
+know it will not be highly acceptable in
+the market
+and custom visualizations right so as I
+showed you certain uh examples in the
+past in the previous presentation uh
+that feature is very important because
+someone might want to look the kpis look
+at the kpis from a different perspective
+some management might want to look at
+the kpis from a different perspective so
+you need to you need to have that
+capability to create different
+visualization from the same data set now
+let's take a look at how
+to install power bi desktop on your
+machine
+so basically what you need to do is
+you need to go to this URL
+power bi dot microsoft.com en US desktop
+okay
+and you need to just
+enter this
+now you can download it for free so just
+click over here
+and
+it will open Microsoft store so
+basically now what Microsoft have done
+in the latest operating systems is that
+when you are trying to download you can
+actually directly go to the Microsoft
+store
+and search for Power bi
+so let's wait for a couple of seconds
+right here so power bi desktop in
+Microsoft store for me it's already
+installed so it's asking me to open it
+I'll open it in a while but for you for
+anyone who is not installed he will see
+the button of install over here and it
+will automatically install in your
+machine and then you can easily go and
+open power bi desktop now if I click
+open over here
+now this is the
+uh UI of the power bi desktop
+I'm not going to go right now in
+creating reports right away we will talk
+about that in a subsequent session with
+sample data sets and we will cover the
+features of power bi desktop one by one
+but this is what it is this is the whole
+tool of power bi which is having the
+visualization pane all the different
+visualizations are you know can be
+created from this pane then this is the
+pane which allows you to select the data
+data fields then there is a report view
+data View and relationship view the data
+model view where multiple relationships
+you can create you can view the data in
+the grid
+of the tables which you will create and
+the reports so you can create multiple
+reports on multiple Pages you can keep
+adding pages either you can drag create
+multiple reports on a single page and it
+will become a dashboard or you can
+create separate independent reports on
+the single page
+and these are the menu options which we
+will talk about how you can change color
+scheming you can do data modeling you
+can create new reports and you can also
+transform data which is the biggest
+feature extract transform and load the
+data apply different logic changing data
+types massaging the information creating
+new joins appending the data you know
+adding new columns etc etc uh we that is
+what you can do in transform data so
+this itself is a whole different world
+it's a dedicated topic so we will talk
+about that in our subsequent sessions
+simply learns postgraduate program in
+data analytics from the Peugeot
+University in collaboration with IBM
+should be the right choice for more
+details on this program use the link in
+the description box below now let's
+understand what power bi dashboard is
+power bi dashboard is a single page
+visualization to tell a story here on
+the screen you can see there's a
+dashboard which has been published on
+power bi service there are multiple
+charts and graphs that you can see the
+visualizations on a dashboard are
+generated from reports and each report
+is based on one data set a single page
+dashboard is known as a canvas the
+visualizations you see on the dashboard
+are called tiles and each of these tiles
+are pinned to the dashboard by report
+designers today we'll be covering the
+following dashboard that you see on the
+screen it will be a three page report
+where we will be analyzing the
+superstore sample data as you can see
+there are three tabs now let me move
+over to our data set so our Superstore
+sample data set is in the form of an
+Excel file you can see there are
+multiple columns you can see there's
+order date shipment date the mode of
+shipment customers first name and last
+name the segment to which the customer
+belong to country of the customer the
+city state and if you go towards the end
+you can see that the different product
+names the sales quantity sold discount
+and the profit so the report that you
+see here and the one which we are going
+to create might vary a little in terms
+of the color the formatting and the
+spacing so you need not worry about that
+now let me go ahead and bring up a new
+workspace so I'll go to file click on
+new this will take some time to bring up
+our new workspace now it will ask you
+for trying the free version or if you
+want you can go ahead and sign in I'll
+just close this so here is our new
+workspace before creating the dashboard
+we need to make some changes to our
+Superstore data set using the features
+of power bi desktop first we'll extract
+the year month and quarter values from
+the order date column I'll go to get
+data tab click on Excel as my source
+I'll locate my file it's on desktop
+click on open this might take some time
+to load the data set I'll select the
+orders sheet you can see the preview of
+our data here I'll go ahead and click on
+load this will take some time to load
+the data set onto power bi desktop I
+think we have successfully loaded our
+data set you can check that by going to
+the data tab so here is our data set
+first let's make some changes in the
+format of the order date and the
+shipment date I'll click on the order
+date under the modeling tab
+we have this data type and the format
+I'll click on the drill down option
+and the date and time now let's choose
+the first one which is in the format of
+ddmm yyy
+and click on ADD
+as you can see our order date column has
+been changed to that particular format
+similarly I'll select the ship date
+column
+go to the format option under date and
+time I click on the first one
+here you can see even the ship date
+column has been changed to that
+particular format now let's extract the
+month values from the order date column
+to do that right click on the order date
+column
+select new column
+so this will create a new column if you
+go to the end so there's a new column
+rename this column as month and since we
+want the month value from the order date
+column I'll search for order date
+dot since I want the month I'll select
+month if I hit enter
+it will give me the month values from
+the order date column
+similarly if you want to get the quarter
+values from the order date
+right click select new column
+rename the column as quarter
+then choose the order date column
+followed by the quarter name hit enter
+so you can see you have a quarter column
+and it has all the values of the quarter
+to which the date belongs to now let me
+go ahead and create one more column
+this time we'll create a new column for
+the order year this time we'll extract
+the order year values so let me rename
+it as year we'll continue with the same
+procedure I look for the order date and
+then select the year
+hit enter
+so it gives you only the ear values on
+which the order was placed
+now let's find which day of the week was
+the order placed so we need to use the
+weekday function and give the order
+data's parameter followed by which day
+you want the week to start with I'll
+show you how to do that so I'll click on
+order date
+then select new column
+let's rename this column as day of week
+I'll use the weekday function of power
+bi you can hit tab to finish I look for
+my order date column
+comma
+I'll choose 2 here since I want my week
+to start with Monday and end on a Sunday
+hit enter
+so you can see we have the day of the
+week column
+so the idea to create this day of V
+column is to find out if the order was
+placed on a weekday or a weekend now let
+me go ahead and create one more new
+column
+let's name this column as
+weekday
+or a weekend
+I'll use an if clause
+and pass in my parameters for logical
+test I'll use the day of the week column
+so I'll search for audios
+and then look for day of week if this
+day of the week is equal to 6 which
+means if it's a Saturday or I'm using
+the or operator
+if the day of week is a Sunday that is 7
+then it's a weekend
+else it's a weekday
+close the bracket hit enter so you can
+see we have our weekday and weekend
+column so moving ahead another thing we
+can do is we can find the total number
+of days it took for the shipment of the
+product this can be done using the
+dative function of power bi so let me
+show you how you can do that I'll click
+on any column right click go to new
+column let's rename the column as
+these for shipment then I'll use the
+date div function
+I'll give my starting date which is the
+order date so I'll search for
+order date
+followed by the second date will be our
+shipment date which is ship date and the
+day
+I'll hit enter
+so you can see here it gives us the
+total number of days it took for the
+shipment of the product now let's create
+a full name column where we will
+concatenate the first name and the last
+name of the customer let me go ahead and
+do that
+I'll create a new column
+let me rename the column as full name
+then I'll take the first name
+from the orders table use the Amber sent
+followed by a space using inverted
+commas followed by another Ampersand and
+the last name
+I hit enter
+you can see we have a full name column
+if you go back so there were two columns
+in the name of first name and last name
+now we have most both the columns into a
+single column named full name and you
+can see the first name space and the
+last name now let me give the sales
+column
+a currency value so I'll select the
+sales column
+here
+under General
+if I go to currency I can see there are
+multiple currency symbols
+choose whatever you want for this video
+I'll take dollar English United States
+you can see our sales column is now
+represented by a dollar value similarly
+let me make some changes to the profit
+column as you can see there are multiple
+decimal values for each profit so let's
+standardize it
+so I'll select the profit column and
+this is where you can standardize it now
+it's Auto so let me make it two decimal
+places
+so our data is ready now let's go to the
+report View and start building our
+reports
+before that
+under the model view you can see the new
+columns that we had created you can see
+there's weekday weekend this year
+this quarter column month column
+the same you can see under the report
+view as well
+under fields you can see these are the
+columns that we created days of shipment
+day of week
+quarter
+month weekday or weekend and year now we
+are under the report view first let me
+go ahead and create a text box
+so under the Home tab you have the text
+box
+I'll select that
+let me stretch it a bit
+we'll give a title
+sales
+dashboard I'll select this and increase
+the size to
+let's say 28 we make it bold
+and Center align it also under the
+visualizations tab under background
+will add a background color to this text
+box let me select this blue color and
+let me make
+the font as white
+so now we have our title ready
+so under General you can decrease the
+height of the text box let me make it as
+70
+first let us create a new card from the
+visualizations panel so under
+visualizations there is an option to
+create new card I'll click on it
+let me resize
+I'll move it to the top
+we'll see the total amount of sales all
+the total revenue that was generated
+from the sales after selecting the card
+I'll choose sales onto fields
+so here you can see it gives you the
+total sales that were made so which is
+nearly 2.3 million dollars
+if I go to the format tab under data
+label
+let me switch on the border under title
+you can give a new title for example
+total
+Revenue hit enter
+now you can
+increase the text size to say 15 and
+central line it you can also change the
+color of the sales value so under data
+label under colors you can choose
+whichever color you want
+similarly let's create one more card to
+find the total number of units that were
+sold I'll copy the same card
+Ctrl C Ctrl V
+I'll move it a little below
+now I'll remove the sales column
+from the fields and add the quantity
+column onto fields
+again
+under title I'll edit this title as
+total
+quantity sold
+let me create one more card
+where we will see the total amount of
+profit that were made I'll select this
+I'll remove the quantity column
+and add profit
+under the format tab
+under title
+I'll make this as
+total
+profit
+hit enter
+stretch it a bit so that you can see the
+total amount of profit that were made
+now
+let me add a slicer
+wherein
+will have the order date column
+so I'll add the order date column onto
+fields
+so you can see here we have the order
+date column and
+under slicer header
+let me increase the text size
+to 15
+and
+let's switch on the border
+you can also give a title to the slicer
+so under the format tab to go to title
+switch it on
+and we'll give a title text as
+slicer by
+order date
+scroll down I'll Center align it and
+increase the text size to 15.
+now if you want you can also change the
+date colors to Blue so under date inputs
+then go to font color and select any
+blue color
+now let's create a line and stacked
+column chart to visualize sales and
+profit by each year each month and each
+quarter so from the visualizations tab
+let me select line and stack column
+chart
+I'll resize this
+after that let me add the order date
+column onto the shared axis
+we'll drag the sales onto column values
+and underline values I'll take the
+profit column
+so here you can see we have the sales
+and profit by each year
+the bars represent the sales and this
+line represents the profit it made for
+each year let me go to the format tab
+and
+make some changes to the data colors let
+the color of the profit remain the same
+but the bars I'll choose a custom color
+give a hexadecimal value like
+196273
+hit enter
+so we have successfully changed the
+color of the bars power bi has an
+interesting feature where you can drill
+down the seals by each year each month
+each quarter or by days so let me show
+you so on the top it shows you go to the
+next level in the hierarchy so if I
+click on this here you can see the sales
+and the profit that were made for each
+quarter in every year
+quarter four for every year made the
+highest amount of sales and the profit
+similarly if I drill down further you
+can see let me expand it you can see by
+month this is for each month
+over all the years how much sales were
+made
+you can check November month give us the
+highest amount of sales and
+December month gave us the highest
+amount of profit
+similarly you can still go to the next
+hierarchy here you can see
+the sales and the profit made for each
+day over all the years so day 17 made
+the highest amount of sales
+and day 23 gave us the highest amount of
+profit if you see the lowest sales and
+the profit you can see order day 25 gave
+us the lowest amount of profit
+and similarly you can see day 29 gave us
+the lowest amount of sales
+now you can also go to the format tab
+and switch on the data labels
+so you can see here in 2014 we got
+nearly 49.5 K profit and nearly 0.48
+million dollar sales similarly in 2015
+we had nearly 61.6 K profit and 0.47
+million sales and so on
+now let me go ahead to the format Tab
+and
+switch on the border let me now create a
+clustered column chart for sales by year
+and quarter so from the visualizations
+let's select clustered column chart let
+me resize this a bit
+and under access
+will add the year column
+so I'll drag here on to access under
+Legend I'll take the quarter column
+and under values I'll choose sales
+so you can see here the sales that were
+made under each quarter for each year
+this picture clearly says quarter 4 for
+every year Meet the highest amount of
+sales and quarter one
+made the lowest
+let me go to the format tab
+and I'll go to the data colors let's
+change the colors for each of these
+quarters we'll be using hexadecimal
+values so under custom colors for
+quarter one
+let me select hexadecimal value as
+follows so for example PF D6 D9
+similarly for Quarter Two
+I'll select 6D 9 ba6
+for quarter 3
+and finally for quarter 4
+I choose a little darker color
+so here is how our clustered column
+chart looks like and we can see the
+sales by year and quarter
+now let me go ahead and
+let's add a border now
+we'll analyze the seals by each state so
+for that we will use field map so I'll
+click on field map
+let me resize it
+now let me add the state column onto
+location
+and the tool tips I'll
+add the sales column
+let me expand it so you can see here we
+have the map which shows the sales by
+each state
+now let's do some color formatting to
+this
+I'll go to the format tab click on ADD
+colors
+and blue is the default color there is
+an additional option
+where you can use conditional formatting
+so I'll use that so it gives you the
+option to choose your color between
+maximum value and the minimum value you
+can also choose this diverging option
+where you get a center value or a mid
+value as well now for the minimum value
+I'll choose a color again I'll use a
+custom color it will be similar to a
+green color
+correct okay then
+let's use some orange color for the Mid
+Valley range for example EB
+and similarly for the maximum value
+we'll use a little darker color which
+looks similar to red
+enter so now we have defined our color
+scheme
+let's click on OK
+let's zoom out so you can see the states
+which are in green color meet the lowest
+amount of sales while those which are in
+orange or in red meet the highest amount
+of sales so in this example you can see
+California had the highest amount of
+sales similarly New York is next is just
+below California with the amount of
+sales followed by Texas we'll go back
+let me also
+add a border to this similarly you can
+also select the profit column or the
+unit sold column to see the units or the
+profit that were sold by each state
+so let me now go ahead and create a
+donut chart in the donor chart we'll
+analyze the sales and profit by each
+segment
+so under visualizations I click on donut
+chart
+so under Legend I'll add the segment
+column
+under values I'll take the sales column
+and
+we also want the profit so I'll take
+The Profit column onto tooltips
+so you can see we have our donut chart
+prepared and you can see the sales and
+profit by each segment
+let me expand this the donut chart
+indicates consumer segment made the
+highest amount of sales and profit while
+home office segment made the lowest
+I'll go back
+let me go to the format tab
+and we'll make some formatting to our
+data
+let's change the color of all the
+segments
+choose custom color
+let's give a color
+coding as
+1558c
+similarly we change
+the color for corporate segment as well
+let's take a gray color
+and finally we'll change the color for
+home office as well
+I'll also switch on the border
+so we have our donor chart prepared now
+let's move ahead and create a pie chart
+to analyze the profit and sales by each
+category of products so under
+visualizations I'll select pie chart
+I'll drag the category column onto
+Legend
+under values I'll take the profit column
+and under tooltips I'll take the sales
+column
+so you can see we have a simple pie
+chart that tells you the profit and the
+sales that were made by each category
+as it's evident category technology made
+the highest amount of sales and profit
+while Furniture category made the lowest
+amount of profit and sales
+I'll go back
+under format I'll change the data Colors
+Let's go ahead and do that
+I'll use custom colors and give
+a hexadecimal color value
+similarly for office supplies I'll take
+another hexadecimal value
+and finally we'll change the color of
+the furniture category
+also
+let's give a border
+so we have a pie chart prepared that
+tells you the profit and sales by each
+category of products now we are done
+with our first sales dashboard so I can
+go ahead
+and rename
+this tab as
+overall sales
+next we are going to analyze the sales
+profit quantity sold and all of these
+by taking region and the state as
+filters so we'll continue with the same
+drill first I'll create a text box
+so under home menu I'll go to text box
+I'll stretch this
+I'll give a title to this page for
+example region
+and
+state
+level analysis
+let me make it bold
+and
+I'll increase the size to 28
+make it Center aligned
+we'll make the text
+as white
+and
+the visualizations
+let's give a background color
+I choose this blue color
+so let me go ahead and create three
+slicers a region slicer a state slicer
+and a ear slicer so under visualizations
+I'll click on slicer
+let me resize
+move it on top
+and
+for region slicer I need to add region
+onto fields
+so you can see we have a region filter
+now
+let's do some formatting to this
+under slicer header
+let me make the font color
+white and
+let's give a background
+let's say blue
+and let me increase the text size to
+say 15.
+you can also choose a font family
+let's go for calibri
+and
+you can increase the size
+of the items let's increase the text
+size
+to
+say 15.
+and
+let's give a border
+so now you have the region slicer ready
+let me copy paste this
+next
+we'll create the state slicer so I'll
+remove region from here and add
+State onto the field
+you can see we have the state slicer
+ready similarly
+you can also go ahead
+and create a ear slicer
+but you can analyze the sales and profit
+or quantity by year
+I'll remove State from here
+and
+I'll drag the ear column onto field
+you can see we have all the four years
+from 2014 to 2017. so sometimes it might
+be difficult for you to scroll through
+all the values present in a slicer for
+example in the state slicer
+you can see there are multiple States
+and if you want to filter your report by
+a particular State you have to always
+scroll down or scroll up and check
+manually where the state is so power bi
+gives you this feature where you can use
+the search option so if I click on this
+you can see there's a search option
+select that so now
+in the search bar you can search for any
+state you are looking for for example if
+you want to search for California state
+you can just type on California so you
+have just typed Cal and it shows me
+California that's an important feature
+that power bi gives you
+so let me now go ahead and create a
+simple table where we will see the
+quantity and the profit made in each
+City so under visualizations I'll select
+tables
+let me resize this
+so under values first I'll add the city
+column
+followed by
+the quantity column
+and
+The Profit column
+let's do some formatting
+so under column headers
+let me change the font color to white
+and let's add a background
+let me increase the text size also
+let's make it 15.
+similarly if you scroll down under
+values
+let's increase the text size
+to 15 as well
+and
+let's choose the font family let's take
+consoles
+so here
+you can see all the cities
+the quantity
+sold in each City and the profit that
+was made in each of these cities
+let me add a border to this
+so now you can filter each of these
+cities by region or by state
+for example if I choose Central
+as my region
+it will give you all the cities that lie
+in the central region
+similarly
+you can also search for any state for
+example
+I am taking Minnesota
+so under Minnesota
+you can see all the cities and the
+quantity as well as the profits made
+let me now uncheck the filters now let
+me go ahead and filter this table
+in terms of profit so I'll sort by
+profit
+you can see
+we have our cities sorted in terms of
+profit
+so New York City made the highest amount
+of profit followed by Los Angeles and
+Seattle below you can see the total
+units that were sold and the total
+profit that was made from all the cities
+so you can also filter down the quantity
+sold and the profit made by each year as
+well as by region and State
+so let's see suppose I am choosing
+East as the region
+so under East it tells you the states
+that are present
+let's
+go for Delaware
+and let's select 2016 as my year
+so you can see
+the cities that lie under delivery state
+and the quantity as well as the profit
+the made in 2016. similarly let's select
+Massachusetts as the state and let's
+go for another year for example 2017
+you can see all the cities that are
+present under Massachusetts the quantity
+sold and the profit that was made below
+you can see the total quantity and the
+profit
+let me uncheck all these
+now moving ahead let's analyze the sales
+by each state and the category of
+product for this
+will create a clustered bar chart so
+under visualizations I'll select
+clustered bar chart let me resize a bit
+under access
+I'll take the state column
+I'll take category onto Legend
+and and the values
+I'll put the sales column
+so you can see here
+we have the seals for each category
+under each state
+for example California state made the
+highest amount of sales under technology
+category and it made the lowest amount
+of sales under office supplies
+by scroll down you can see all the
+states
+and the sales they made
+for each category
+I'll go back to the report
+now let's use some filters
+you can filter here for example if I
+want to check
+the sales by each state and category for
+2015 I can just
+click on 2015
+and it will tell you the sales that were
+made
+now
+let's do some formatting to this bar
+chart
+I'll change the colors for each of the
+categories
+similarly we change the color for office
+supplies
+and finally for the technology
+so now we have our bar chart ready
+moving on now let me add a border to
+this bar chart
+okay
+so now that we have seen our sales by
+state and category let's now check the
+profit by year and category for that
+we'll create an area chart
+I'll resize this chart
+now
+under axis
+I'll take the year column
+under Legend
+I'll take the category column
+and
+the values
+I'll take profit
+so we have our area chart that depicts
+The Profit by each year and the category
+to which the product belonged to
+I'll go to the format Tab and under data
+colors
+I'll choose some colors
+let's change Furniture to this blue
+color
+I'll take office supplies a red color
+and Technology I'll use a green color
+so now you can use the filters
+for example you can check the profit
+that was made by each year and category
+under east region
+so you can see here
+in 2017 technology meet the highest
+amount of profit while furniture at the
+lowest
+similarly
+let's
+check for South Region
+so you can see in south region in 2016
+technology meet the highest amount of
+profit
+and
+furniture made the lowest in 2017 office
+supplies made the highest amount of
+profit and Furniture was the lowest
+I'll uncheck this South Region filter
+similarly you can also see the sales by
+each state so under State slicer you can
+choose whichever State you want and
+check the profit it made by that year or
+category
+for example I'll choose Connecticut
+so you can see the profit Connecticut
+state made in each of these years
+I'll uncheck it
+let us move ahead and now let's see
+profit that was made and the quantity
+that was sold by each category and
+subcategory of the product so for this
+I'll choose the line and cluster column
+chart so I'll select from the
+visualizations now
+under shared access
+I'll select the category column under
+column series I'll take the subcategory
+column
+under column values I'll choose profit
+and
+I'll choose quantity
+under the tooltips
+so now you can see
+The Profit that was made under each
+category and the subcategory
+for technology category copiers
+subcategory meet the highest amount of
+profit the quantity sold was 234.
+similarly
+if you check for furniture category
+we didn't make any profit for table
+subcategory
+and as well as for bookcases
+under office supplies people subcategory
+made the highest amount of profit
+now let me go ahead and add a border to
+this
+fine
+moving ahead now we will see the sales
+by each segment for that let's create a
+funnel so from visualizations I'll take
+the
+funnel and
+I'll drag
+segment onto group
+and the sales column onto values
+so you can see here
+the sales that were made by each segment
+this picture clearly depicts that
+consumer segment with the highest amount
+of sales next was corporate and then
+home office
+now
+let's do some color formatting so the
+default color is this blue
+I'll click on so all
+now we'll give individual colors to each
+of the segments
+using custom color
+let's give a hexadecimal value
+similarly we'll change the color for the
+corporate segment
+and finally for the home office segment
+now let me go ahead and give a border to
+it
+so if you want to analyze the seals by
+segment and for
+a particular region or state or any
+particular year you can do that so let's
+select
+for each region
+and
+let's take New Jersey as the state
+for year 2014 suppose
+so you can see here corporate segment
+meet the highest amount of sales
+followed by consumer and home office
+let me uncheck
+these filters
+so our second report is ready where we
+analyzed the sales quantity profit at
+Region level state level and by year so
+I can rename this
+as
+a region and State
+next we will analyze the sales quantity
+profit in terms of categories and
+subcategory of products so let me first
+copy this text box
+and create a new tab
+I'll paste that text box here and
+change the title to
+say
+category
+and
+sub category level analysis
+first
+we'll create a
+slicer
+where we will take
+the category as filter
+so if I want I can directly copy it
+from my previous tab
+and change the fields so let me copy
+this
+and paste it here
+I'll sync it
+and let me remove the region field and
+add
+category onto the field
+so you can see
+we have the three categories here
+let me copy paste this again and
+let me take the sub category now
+so I'll select this
+and
+I'll track subcategory onto the field so
+here you can see we have all the
+subcategories and above we have the
+categories
+let me resize this a bit
+with that now let's analyze the sales
+and profit by region and segment
+to do this we'll use a tree map so let's
+see how you can build a tree map under
+visualizations I have tree map let me
+select it
+and move it to the top
+and expand it a bit
+now
+under group
+I'll select region column
+under details I'll take
+segment
+I'll take the sales column under values
+and let's take profit
+on two tooltips
+so if I expand this
+you can see the sales and profit by each
+region and segment for example in the
+west region you have consumer corporate
+and home office
+as the segments and you can see consumer
+segment meet the highest amount of sales
+and profit while home office made the
+lowest amount of sales and profit
+similarly you can check for the other
+regions as well
+now
+let's give a border to this tree map and
+under data colors let me change the
+color of the regions
+scroll down
+custom color let me choose my own color
+let's take this as a gray color
+and finally
+for the best region
+so now you can select individual
+categories and sub categories to check
+the sales and profit by region and
+segment for example
+if I select
+Furniture as my category
+you can see the changes that were made
+to the tree map
+you can also select office supplies and
+see
+how the sales and profit changes
+similarly you can also go ahead and
+select whatever subcategories you want
+and then check the sales and profit by
+region and segment with that let me now
+create a pie chart
+to see the quantity and the sales by
+each segment
+so I'll go and select a pie chart
+let me resize this
+if you want you can increase the size of
+this tree map also
+so let me go ahead
+and select segment onto the legend
+under values I'll take quantity
+and
+sales under tooltips
+so this pie chart
+depicts the quantity and the sales that
+were made by each segment as you can see
+consumer segment meet the highest amount
+of sales and had the highest quantity
+sold
+while home office had the least number
+of quantities sold and the least number
+of sales
+let's add a border
+and
+change the data colors
+similarly I'll change the color for the
+corporate segment let's make this
+green
+and home office
+I'll take the following color
+move this a little to the right
+now let's build a scatter plot to
+analyze the sales quantity and profit by
+each subcategory
+so under visualizations
+I'll select scatter plot I'll resize
+this
+so I'll add
+sub category onto Legend
+then I'll add sales onto the x-axis
+quantity sold onto the y-axis
+and under size
+will take the profit column
+if I expand this
+you can see the sales quantity and the
+profit that was made for each
+subcategory of products you can see here
+subcategory phone has given us a
+significant amount of sales with less
+number of quantities sold and it has
+given us a good amount of profit also
+similarly subcategory shares has also
+given us good amount of sales with close
+to 2356 quantities sold and a good
+amount of profit if you see this one
+which is subcategory paper it gave us
+less amount of sales with more
+quantities sold while it gave us good
+amount of profit though so you may
+promote phones or for example chairs to
+sell more since it gives you more amount
+of profit with less quantity sold
+let's add a border to this
+you can use the category filter suppose
+if I choose for furniture
+and expand this
+you can see
+under Furniture subcategory Furnishings
+give us the lowest amount of sales with
+the highest number of quantities sold
+but it gave us a decent amount of profit
+subcategory tables give us a decent
+amount of sales with lesser number of
+quantities sold but didn't give us any
+profit
+subcategory chairs give us the highest
+amount of sales and also the profit
+I'll uncheck this
+let's now create a line chart where we
+can see the profit by each year and
+quarter so under visualizations
+I'll select line chart let me resize
+this
+so under access
+I'll take year
+and a legend
+I'll take the quarter column
+and under values
+I'll take the profit column
+so now you can see
+The Profit that was made
+each year and the lines depict each
+quarter
+so if you check for 2014 quarter four
+meet the highest amount of profit while
+quarter 2 made the lowest amount of
+profit while quarter 1 made the lowest
+amount of profit similarly if you see
+for 2016 you can see
+quarter four meet the highest amount of
+profit
+while quarter One Meet the lowest
+if you check for 2017 you see a quarter
+three and quarter four almost meet the
+same amount of profit while
+quarter 2 made the lowest amount of
+profit
+I go back
+now you can filter these by categories
+also suppose if I see for technology
+you can check the amount of profit that
+was made in each year and in each
+quarter for technology category
+let's add a border to this
+likewise we'll now create another line
+chart that will depict the sales by each
+year and quarter
+so let me copy paste this
+I'll drag this to the right
+now I'll remove
+profit from values and add sales
+let me uncheck this also
+so here you can see we have the sales by
+each year and quarter
+now if you see for 2014 again quarter
+four made the highest amount of sales
+and quarter 1 in 2014 meter lowest
+you see for 2016 you can see 2016 also
+quarter four meter highest amount of
+sales and quarter One Meet the lowest
+go back
+so our final report is ready where we
+analyzed the sales quantity sold the
+profit at category and subcategory level
+I can go ahead and rename this as
+category
+and sub category
+let me save this now if you want
+you can also filter it by subcategories
+for example if I select
+chairs as my subcategory
+so for chairs you can see the sales that
+was made by each year and quarter
+so in 2017 quarter four made the highest
+amount of seals while quarter one made
+the lowest amount of sales for cheers
+similarly
+you can select other subcategories also
+for example
+let me take
+some other category like
+machines
+let's see the profit now
+so for machine subcategory you can see
+in 2014 quarter four meet the highest
+amount of profit while
+quarter 3
+meet the lowest amount of profit
+now if you check for 2015 you can see
+quarter 3 made the highest amount of
+profit in shares while quarter one made
+the lowest amount of profit
+let's uncheck this
+so now we are almost done building our
+report using the superstore sample data
+set
+so we have our three reports ready you
+can see the first one was overall sales
+the second report we created
+by taking region State and the year as
+filters so we had a region and state
+level analysis and finally we analyzed
+the sales quantity and the profit sold
+by category and subcategory so I have
+arranged all these graphs and charts so
+that it looks little better now let me
+go to this publish option on the top so
+that we can publish this report onto the
+power bi Dash code
+so I'll click on publish
+I'll save it
+you can select the destination here I
+have only one destination which is my
+workspace so I'll choose it and select
+so there you go publishing to power bi
+it was successful
+I'll close it
+and let me move to my power bi service
+I'll refresh it for once
+so under my workspace
+you can see we have the dashboard report
+So Below you can see there are three
+tabs that we created the first one is
+overall sales
+the second one is sales by region the
+third one is by category and subcategory
+now to put this reports onto the
+dashboard I need to pin each one of
+these visualizations
+so let me pin one by one
+so it asks where would you want to pin
+it to I'll select the existing dashboard
+or better let's create a new dashboard
+let's say
+power bi
+Dash code
+spin it
+close this
+similarly let's spin the remaining ones
+I'll select power bi dashboard again pin
+it
+let's spin everything
+so this slicer you can't pin it
+let's do the remaining ones
+same will do for the donor chart
+as well as
+for the pie chart
+now
+now if I go to
+my dashboards
+and select power bi dashboard
+you can see
+we have a one page
+dashboard here
+you can resize all the charts and graphs
+let me resize it
+and move it to the top
+so we have our first canvas here which
+tells you the overall sales the profit
+and the units that were sold over
+different states different segments
+and by categories so one of the
+important feature that power bi service
+gives you is that you can ask questions
+about your data and it will tell you
+what the exact solution is for example
+you can see here you have a field where
+you can ask questions so for example if
+I type
+total sales
+and hit enter
+so it tells you the total amount of
+sales that were made which is 2.3
+million dollars similarly if I want to
+find out the total
+profit I can search for it here
+hit enter it will give you the exact
+amount of profit that was made let's do
+something else for example if you want
+total
+profit
+by
+say here
+I'll hit enter it gives you a nice line
+chart where you can see the total profit
+that was made over all the four years
+next
+suppose I searched for total
+quantity
+sold
+by
+segment
+see it gives me a bar chart where you
+can see the total quantity that was sold
+and it gives you a list of options where
+you can find out the total quantity that
+was sold by city state order ID first
+name last name and many others so
+consumer segment had the highest
+quantity sold
+let's see for something else for example
+if you want
+the total
+sales by
+say subcategory
+I'll choose the first one see you have
+all the subcategories and the total
+sales that they made so it's a very
+interesting feature that power bi gives
+you
+go back
+now if you want
+you can go to the report menu
+and if you want you can pin the other
+visualizations as well
+so another important feature about power
+bi dashboard is that you can derive
+insights from the visualization for
+example
+if I click on these dots there's an
+option you find view insights I'll
+select it
+so on the right you can see Power bi has
+itself given us some insights from the
+data and the visualizations we have made
+in C sales by year and quarter
+the sales by D of week and quarter sales
+by shipment mode where you can see the
+standard classic Mode made the highest
+amount of sales
+you can also see the sales and count of
+City by year
+and many more
+with that we have come to an end of this
+session on what is data analytics and
+how to build dashboards in power bi if
+you have any queries regarding any of
+the topics covered in the session or
+should you feel that you need the
+resources used in the session like the
+data set PPT or anything like code
+documentation Etc then do let us know in
+the comment section Below on another
+team of experts would be more than happy
+to resolve all the queries and the
+audience until next time thank you stay
+safe and keep learning
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
+thank you

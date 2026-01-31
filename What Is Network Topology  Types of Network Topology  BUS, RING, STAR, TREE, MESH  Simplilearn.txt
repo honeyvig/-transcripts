@@ -1,0 +1,260 @@
+during the installation of a network
+understanding the pattern and
+configuration of a network device and
+system is very important
+to solve such problems network topology
+is used
+which explains the network configuration
+network connection and data exchange
+hi guys i'm weber kandalwal and i
+welcome you all to yet another exciting
+video by simply learn but before we
+begin if you love watching tech videos
+then subscribe to our channel and hit
+the bell icon to never miss an update
+from us let's take a look at today's
+agenda
+for the first step we will look into
+what is network topology all about
+then we will continue with why to apply
+this network concept
+and then we will look into different
+types of network topologies in detail
+then we will choose which network
+topologies we should use
+then let's begin with the first heading
+what is network topology
+it is referred to as an arrangement of
+multiple systems and network devices
+interconnected to each other
+through a physical medium or logical
+channel
+the term network topology is combination
+of two individual network concept
+first is the network part which
+represents the devices or systems that
+are also known as nodes
+which is connected and how to change the
+data within the network
+then the other part is topology which
+represents the connection medium between
+different network devices and governs
+the data flow between them
+moving on let's talk about why do we
+apply the concept of network topology
+for the first point it allows the users
+to understand the overall model of the
+network along with the number of devices
+installed and their positions in the
+network which provide ease of
+installation of security measures and
+network and helps in case of
+troubleshooting cases
+then for the next reason applying
+network topology helps the user to
+understand the communication
+relationship among the different devices
+and through a connection medium
+this in turn helps the network
+professionals to set up an optimal
+network unit for the user
+next in the list we have different types
+of topologies used in networking
+first is
+the bus topology
+then we have ring topology then star
+topology then tree topology and in the
+end mesh topology but to understand the
+concept of topology let's start by
+point-to-point topology this is simpler
+form of topology connection which
+consists of two nodes connected through
+a connection medium like a network cable
+the nodes at the two ends of the cable
+shares data information between them
+where the data sharing part represents
+the network and the cable connection is
+the topology part
+with this we have understanding of
+network topology then let's begin with
+complex types of tech connections
+first is the bus topology in this
+topology the connection channel is a
+single cable known as the network
+backbone through which all the other
+nodes are connected to
+in this network setting the data packets
+sent by the nodes are provided with the
+receiver address to avoid transmission
+errors
+the data in this topology can travel
+from any end point where
+they are termed as terminate points
+advantages of bus topology it is easy to
+set up due to the simple configuration
+settings
+this setting is also cost effective as
+it requires only a network cable for the
+connection
+in the case of kreshnot the whole
+network remains unaffected as it does
+not have any direct connection to the
+other node
+let's take a look at disadvantages of
+bus topology
+in case of troubleshooting we require
+the use of special equipment to detect
+the fault in the network in the case of
+multiple data transmission the packet
+collision is the frequent occurrence
+damaging the transmitted message data
+due to the unavailability of network
+devices such as switches repeaters etc
+the loss of data over long distances
+communication is quite high then ring
+topology as the name suggests the node
+in the network are connected in a
+circular pattern similar to a ring
+the data transmitted in this connection
+is always in the clockwise direction the
+topology does not have any termination
+point due to its ring structure the
+method of data transmission is used is
+known as token passing which involves
+sending a token along with the data
+packet to which each of the node matches
+to identify the destination node using
+the destination address in the token
+next advantages of ring topology the
+crash node can be easily removed from
+the network
+the configuration settings are not
+complex for setup and materials are
+easily accessible
+the cost of installation is low as no
+extra network device are required to the
+connection
+moving on we have disadvantages of ring
+topology
+in the case of a node crash the whole
+system is affected and is non accessible
+due to the direct connection of each
+node
+the transfer of data is low due to the
+token passing method in the network
+difficulty in the troubleshooting fault
+in the connection leads to the trash of
+the whole network now let's talk about
+star topology in this topology the
+networks are connected to each other
+through the central hub which can be a
+computer or a server the central unit in
+the connection is also known as the
+server and the nodes are known as the
+clients any connection between the node
+has to be through the server and is one
+of the most popular topology connection
+next advantages of star topology in case
+of a node crash the network as a whole
+remains unaffected as each node is
+connected to the server of a connection
+the hardware requirements are easily
+available and of low cost
+troubleshooting is easy
+through the use of central hub to
+identify the faulty node
+in case of a server failure the whole
+network is shut down as all nodes are
+interconnected through the server
+the connection configuration is complex
+due to the pattern of the typology next
+up free topology
+this topology is a combination of tar
+and bus topology the node connection in
+the topology follows hierarchal pattern
+with the topmost node as the root and
+the branching node as the child node the
+sharing of data is from the root node to
+the child node pattern
+next up advantages of tree installation
+of a new network group is easy due to
+the root child configuration of the
+network
+in case of a node fault or trash the
+whole network is not affected by the
+error this makes it easier to
+troubleshoot the issue
+next up disadvantages in case of a
+server crash in any of the star
+connection groups the whole network is
+affected
+due to the complex setting of the
+topology installing security points is
+difficult in the network
+configuring and troubleshooting internal
+issues is quite complex due to this
+topology next up mesh topology
+as the name suggests this topology is a
+connection of interconnected system
+connected to each other in no particular
+order
+no installation of network devices such
+as switch or hubs this topology pattern
+can be divided into two forms
+first is full match topology in this
+connection all the nodes are connected
+to each other in the network then we
+have partial mesh topology where all of
+the nodes are connected to each other
+available in the network let's talk
+about the advantages of mesh topology in
+case of node damage the whole network
+does not suffer from the fault due to
+the interconnected patterns of the
+connection the transmission of data is
+very high in the network
+next up disadvantages
+the cost of installation is high due to
+the requirement of multiple cables and
+nodes for the network to function
+efficiently
+the management of the network becomes
+complex due to the large number of
+interconnections in the network due to
+the absence of repeater or a switch the
+data signal loss during the transmission
+is very high now let's take a look at
+how to choose best topology for a
+network configuration first of course
+the installation cost is one of the
+biggest factors that affects the type of
+topology configuration we choose from
+our network as the cost of installing
+cables routers switches and other
+network connections is slow then we have
+easy installation installing the
+hardware devices efficiently and
+precisely is also one of the factors
+that affect our choice of network
+topology moving on we have flexibility
+the ability of the topology to include
+new network nodes after installation and
+ease of troubleshooting refers to the
+flexibility of topology in the hand we
+have reliable security it is important
+that the topology installed allows us to
+introduce proper security points in the
+network and leading the fewer cash cases
+by referring the above factors we can
+decide the best topology for our network
+with this we have reached the end of the
+video if you have any question regarding
+the topic you can ask them in the
+comment section below thanks for
+watching and stay tuned for more from
+simply lunch
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here
