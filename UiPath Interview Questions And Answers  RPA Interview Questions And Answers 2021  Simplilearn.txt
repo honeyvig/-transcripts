@@ -1,0 +1,1097 @@
+hey everyone welcome to another video by
+simpler
+i am sure you must have watched our
+previous videos on uipath if you haven't
+watched them already i would suggest you
+to go through easy tutorials on every
+topic on uipath
+uipath is a well known rpa tool it has
+grown in popularity over the years
+and it is now used by organizations all
+over the world
+uipath assists business in successfully
+automating their business process
+if you are planning to attend an
+interview for an rpa or ui part
+developer role here is a comprehensive
+list of most frequently asked ui path
+interview questions with answers
+but before we begin make sure you have
+subscribed to our youtube channel and
+clicked on the bell icon so you never
+miss an update from simply learn
+so without wasting any further time
+let's get started
+what is ui path
+this question looks simple but people
+most of the time end up giving wrong
+definition
+uipath is a robotic process automation
+tool for large-scale end-to-end
+automation
+for an accelerated business change it
+provides solution for business to
+automate routine office activities
+it uses a variety of methods to
+transform tedious tasks into automated
+process
+what are the different components in ui
+ui path consists of three components
+mainly ui path studio ui patch studio is
+a user friendly interface that allows
+users to visually plan and design
+various automation process through
+diagrams using the drag and drop
+functionality
+these diagrams are merely a structural
+reflection of specific tasks that must
+be completed
+uipath robot after you have built your
+process the next move is to put into
+action in the uipath studio
+uipath robots are used to translate the
+strategies into tasks which are then
+executed
+these robots are used to assign various
+tasks and carry them out in the same
+manner as humans but without human
+interference when given an operation
+occurs on the computer they program
+uipath robots to begin executing task
+automatically
+uipath orchestrator the orchestrator is
+a web-based application in uipath
+it has features for deploying monitoring
+scheduling and controlling automated
+bots and process
+it's a centralized forum for managing
+and maintaining all software bots
+what are the different workflows in
+uipath
+sequences
+a sequence is a small type of project
+that is best suited for linear process
+it enables developers to transition from
+one activity to another easily they can
+be reused numerous times
+flowchart
+it can be used for large or small
+projects that help in development of
+complex business and connecting
+activities in a variety of ways
+flowcharts assist in the presentation of
+multiple branches of logical operators
+state machine
+a state machine is a machine that uses a
+certain number of states for automation
+during execution
+it will only change states if an action
+is performed on it let's look at the
+next question
+what is a ui path robot
+the robot is a ui path execution agent
+allowing you to run process created in
+the studio
+in order to execute process robots must
+be connected to the orchestrator or
+licensed locally
+what are the different components of
+uipath robot
+service the robot service is the primary
+controller for all operations
+it communicates with studio the robot
+agent and the robot command line
+interface by an inter-process
+communication channel to receive and
+process information
+executor the robot executor is the
+component that is directly responsible
+for process execution
+the robot service creates a robot
+executor instance every time a job is
+started
+command line interface the robot command
+line interface is a console application
+that starts jobs and waits for the
+results
+uipath assistant is a tool designed
+specifically to improve the user's
+interaction with our robots from the
+comfort of the desktop it is where users
+can easily access manage and run
+automation with a few clicks
+what is the difference between attended
+and unattended robot
+attended robots are supervised robots
+that humans operate
+they work on the same workstation as a
+human user and is triggered by user
+events
+unattended robots
+unattended robots are those that do not
+require human supervision to perform
+tasks
+they run in virtual environments without
+human control and can automate any
+number of process
+what are the features of uipath
+drag and drop workflow the uipath user
+will develop visual process steps by
+dragging and dropping related tasks onto
+the graphical workspace then with the
+user interface properties they can
+transform these process steps into a
+visual workflow users may also use the
+recorder wizard in the uipath tool to
+build web-based or application workflow
+record and playback the user can use
+this function to record actions and
+transform them into an automated process
+series
+inbuilt activities in uipath ui path
+comes with over 300 built-in activities
+covering a wide range of process
+automation and application integrated
+design task
+you can find these activities in
+activities pane which covers most design
+tasks such as data extraction data entry
+and automation
+advanced scraping options scraping data
+from web pages and applications is more
+accessible with ui path screen scraping
+furthermore the data scraping wizard
+helps in the scraping of data with a
+repetitive structure
+scraping solution works flawlessly with
+any program including dotnet java flash
+pdf legacy and sap
+high security and robustness you can
+create super smart durable robots with
+uipath visual canvas everyone in the
+company can use these boards uipath
+offers high security auto login
+functionality to run the bots and
+operates with a locked screen allowing
+automated process to run in complete
+privacy
+what are the different recording options
+in uipath
+basic recording it focuses on automating
+single task and is commonly used to
+develop each activity's complete
+selector
+desktop recording it can be used for a
+variety of actions as well as
+application development
+web recording web recording is a
+standard tool for viewing and recording
+web activities
+citrix recording it is very widely used
+for recording stuff like pictures and
+virtualized environment automation
+what is a manage package in ui path
+the package manager functionality allows
+to download activities packages
+libraries frameworks wrappers and others
+and view and update the ones already
+installed for the project and add and
+remove it
+it displays the list of available
+packages per feed and a list of
+dependencies for the current project
+the manage package windows always opens
+with the project dependencies list
+how to publish a project in uipath
+to publish a project in uipath first
+create a new project
+then in the design ribbon tab click
+publish the publish window will open
+in the package properties tab enter the
+name for package then click next
+in the publish options tab select the
+location where you want to publish your
+project and finally the information
+dialog box displays
+so let's see a demo
+how is it done
+so let's jump in the ui patch studio
+so here we are in ui patch studio
+let's open our workflow
+i'll drag and drop a simple message box
+just to show
+enter a message say
+hey
+so i have created a simple workflow just
+to show you how to publish project in
+uipath
+so here you can see the publish option
+once you have created the project go to
+the ribbon tab and click on the publish
+when you click the publish window opens
+here you can change the package name if
+you want you can see the version new
+version package icon
+and release notes
+so let's click on next
+here you will get the custom url
+where you want to publish to
+then click on publish
+here you go you can see publishing
+package
+so a info dialog box appears
+project published successfully
+if you want you can copy to the
+clipboard
+so this is how the project is published
+in the ui path
+what is data scraping and screen
+scraping
+data scraping is the process of
+extracting structured data from a
+browser application or document and
+saving it to a database or a dot csv
+file or even an excel spreadsheet
+screen scraping methods are activities
+that allow data to be extracted from a
+specific ui element or document such as
+a dot pdf file
+explain the different types of
+automation in uipath
+excel automation excel automation is a
+useful tool for sorting deleting
+retrieving and analyzing data
+it is simple to migrate and integrate
+data into platforms
+studio x has a strong integration with
+microsoft excel and ships with several
+activities that automate excel task
+mail automation enables task automation
+with emails from the outlook desktop
+application gmail and outlook 365.
+add the activities that use data from
+the account inside the resource activity
+after adding the account to the
+automation as a resource using a used
+outlook 365. use gmail or use desktop
+outlook app activity
+word automation in the word automation
+add the word document to be worked on by
+using a word file activity and then add
+the word activities to automate within
+the use word file
+powerpoint automation
+powerpoint automation allows the user to
+automate the most common task in
+powerpoint presentation at the
+presentation to work with the use
+powerpoint presentation activity and
+then inside the use powerpoint
+presentation add the presentation
+activities to automate
+file automation
+it refers to the automation of task
+performed on your computer with files
+and folders such as creating copying or
+renaming files and folders
+studio x includes several activities
+that automate tasks that you perform
+with files and folders
+csv automation
+in csv automation
+add the csv activities inside the use
+excel file activity where the excel file
+is defined to move data between csv and
+excel
+explain a few read and write activities
+read range read range reads the values
+of an excel range and stores in a data
+table variable
+read cell reads the values of an excel
+cell and stores in a variable
+read csv reads all entries from a
+specified csv file
+write range writes data from a data
+table variable to a spreadsheet
+write cell writes a value or formula
+into a specified spreadsheet cell
+write csv overwrites a specified data
+table to a csv file
+what is an excel application scope
+excel application scope opens an excel
+workbook and sets the scope for excel
+activities
+when this activity is completed the
+specified workbook and excel application
+are closed
+what is an orchestrator
+uipath orchestrator is a web application
+that orchestrates the execution of
+repetitive process
+it manages the creation monitoring
+scheduling and controlling of bots and
+process
+it can manage the entire robot fleet
+name some orchestrator capabilities
+provisioning
+provisioning establishes and maintains
+the connection between the robots and
+the web application
+deployment ensures that it delivers the
+correct package versions to the assigned
+robots for execution
+configuration looks after the
+maintenance and delivery of robot
+environments and process configuration
+queues ensures that it automatically
+distributes the workload across robots
+monitoring manages user permissions and
+keeps track of robot recognition details
+logging
+logs are stored and indexed in an sql
+database
+explain process job asset and queue
+the process page allows you to build new
+process from uploaded packages managing
+existing process and keep all of your
+process up to date with the latest
+package version
+jobs
+on an uipath robot a job represents the
+execution of procedure it can start the
+execution of job in either attended or
+unattended mode
+cues a queue is a storage container that
+can accommodate an infinite number of
+objects multiple types of data such as
+invoice information or customer data are
+stored in queue objects
+other systems such as sap or salesforce
+are used to process this data
+assets assets are usually shared
+variables or credentials that can be
+used through several automation projects
+they allow you to store unique
+information that the robots can easily
+access
+how to connect a robot to the
+orchestrator
+step 1 open uipath assistant
+step 2 sign in the uipath orchestrator
+step 3 create a
+tenant step 4 connect the robot to the
+orchestrator
+and step 5
+check the status
+it shows connected and licensed
+so let's see a demo of how to do this
+so let's jump into the uipath studio
+open you step one open uipath assistant
+so we'll open uipath assistant
+after opening uipath assistant
+login to the uipath orchestrator
+so go to the browser
+go to the browser and type
+platform.uipart.com
+this will take to the uipath website
+so sign in
+if you're new to this if you don't have
+the account
+then you can
+enter all the details and login
+since i've already created an account
+i'll sign in
+after logging in the uipath orchestrator
+go to the admin
+here you can create a new tenant
+you can add a tenant here and create a
+new tenant since i have already created
+a tenant named admin
+so after creating a tenant connect the
+robot to the orchestrator
+go to the ui path assistant
+go to preferences
+go to preferences
+go to orchestrator settings
+here you can see the status it is
+offline
+click on the sign in button
+once you click on the sign in button
+allow this open uipath
+here you can see it is connecting
+and you can see
+it is connected and licensed
+so the ui path robot is now connected
+with the orchestrator
+what is a tenant context and folder
+context
+in tenant context to view and control
+tenant level entities in the
+orchestrator pick tenant from the
+sidebar menu with only one instance of
+the orchestrator multi-tenancy allows
+isolating data
+for the folder context from the sidebar
+menu pick any available folder to view
+and control the entities within the data
+folder
+so i'll show you let's
+go to the orchestrator
+so
+let's go to the orchestrator
+here you can see this is the tenant
+context
+to view and control the tenant level
+entities in orchestrator you can pick
+the tenant from the sidebar
+menu from the sidebar menu pick any
+available folder so these are the
+folders pick any available folder to
+view and control the entities within
+that folder so this is with respect to
+the folder context
+what is an re framework
+the robotic enterprise framework is a
+state machine based project template
+it allows to handle even the most
+complex business situations it's
+designed to incorporate all of the
+industry's best practices for logging
+exception management application
+initialization and other areas
+what are the features of re framework
+settings
+during the initialization phase of
+several process some configuration
+settings and configuration values are
+frequently read
+like urls to a web application
+orchestrator queue names and default
+logging messages
+logging
+the built-in locking mechanism is
+another helpful feature of the framework
+the majority of the system's workflows
+use log message activities to output
+information about what is happening at
+each execution stage
+business exception
+if the issue is with the data or any
+underlying business requirement the
+system skips the transaction and moves
+on to the next search exceptions are
+known as business exceptions
+application exception if the issue can
+be resolved by restarting applications
+the framework will do so automatically
+and attempt to process the transaction
+again search exceptions are known as
+application exceptions
+how to merge two excel files into a
+single excel file
+first we need to create a sequence
+after creating a sequence we need a few
+activities like read csv activity assign
+activity data table activity and write
+cs file activity
+so we'll drag and drop all these
+activities and do the process
+then we'll run the sequence and see the
+output
+so let's jump into the ui path studio
+and start with the
+workflow
+so we are in the uipath studio
+i have already created a sequence you
+can go to new and create a sequence or
+press ctrl n
+so after starting a sequence first we
+will drag and drop
+read csv activity
+since we are using two excel files
+so we need to read csv activity
+we will drag and drop another read csv
+activity
+so we will select the location of the
+first excel file
+select the first excel file
+i'll show you
+both the excel files which we are
+merging
+so this is the first excel file so it
+has five rows
+five names
+so we'll this is the first excel file
+and
+this is the second excel files
+this excel file has five different names
+and the other excel file has five
+different rows
+so these are the two excel files will
+merge both these excel files into a
+single new excel file
+so we'll close this excel files
+so in the first read csv activity
+we have copied the location of the first
+excel file in the output 2 we will
+select this
+and create a variable right click and
+create a variable and let's say name the
+variable as sl underscore 5 1
+we have named the variable
+okay now we'll
+go to another read csv file and select
+the location of the second file
+so i have downloaded this sample excel
+files from the internet
+just for the demo
+right click and create a variable
+let's say name this variable as sl
+underscore file two
+so now that we have dragged and dropped
+to read csv activities now next we need
+assign activity
+so drag and drop assign activity
+so assign activity has two parameters as
+you can see two and enter a vb
+expression
+in the two parameter in this right click
+and create a variable
+and name the variable
+let's say merged
+essay
+after naming the variable enter an
+expression here
+so enter the expression
+as sl underscore file 1 which is the
+variable for file 1 select this
+and enter the expression dot clone
+what this clone function does is the
+clone function creates a new data table
+with the same structure
+but does not copy the data so we are
+creating a new excel file that is the
+third file in which we are merging the
+data tables of both the excel file so
+the third excel file which we are
+creating will have the same structure as
+the file one so this clone function
+creates a third excel file with the same
+structure as the file one
+so it's showing an error so select this
+assign
+let's go to variables
+here you can see variable type string
+change it to system dot data dot data
+table
+and here you go the error is gone
+okay
+so now we have dragged and dropped
+assign activity the next activity which
+we need
+is merge data table activity
+let's search for
+merge
+data table activity
+drag-and-drop
+modulatable activity
+we need to merge data table activity
+since we have two excel files
+select the first merge data table
+activity go to the destination
+and enter the destination which is the
+variable which we created in the assign
+activity the merged is so
+enter this
+and enter the source file
+that is the variable which you created
+in file one
+that is sl underscore
+file one
+similarly similarly
+go to merge data table
+and
+enter the same destination
+but here the source will be the second
+file
+okay
+now that we have dragged and dropped too
+much data tables the next activity we
+need is a write csv file
+so we'll search for write csv file
+after dragging and dropping write csv
+activity
+go to file path
+and create a file
+create a file say
+one will name it as
+file
+three
+safety file
+now that we have created the file
+we will write from the data table that
+is we need to copy the merge data table
+so we'll enter
+now that we have finished the program
+the file is created let's save
+and run it
+process execution has started and ended
+so
+let's go to the file
+so this is the file which we created
+let's open this file
+and here you can see
+both the excel files have been merged
+into a single excel file
+let's go to the next question how to
+send a file over at mail
+so first create a sequence and create a
+file after you have created a file drag
+and drop get password activity
+then drag and drop a smtp mail message
+activity so basically these two
+activities are used to send a file over
+me
+then run the sequence
+so we'll jump into the ui path studio
+and
+see so this was the previous question
+which we answered
+how to merge two excel files so the same
+file we will send it over and mail
+so we need a get password activity
+so we'll drag and drop a get password
+activity
+so if you go to the properties section
+enter the password to whichever
+mail you are sending riffs file enter
+the password of that mail id
+after entering the password in the
+result go and create a variable
+so that password is stored in that
+variable so name the variable say
+anything any randomly
+so i've named the variable
+after
+after this you need a smtp mail message
+activity
+so drag and drop send smtp mail message
+in smtp mail message
+under the properties pane under the host
+enter the port value
+for the port number which is 587
+after entering the port number go to the
+server
+and enter it as smtp.gmail.com
+okay
+now after entering the email id
+go to your email and enter your email id
+to which you want to send this file
+don't forget to use double quotes
+otherwise it will show an error
+enter the password
+so we had showed the password in the
+variable say sss
+so
+we'll write that
+so after that
+enter the email id here under the two
+option
+and enter the subject
+say it has demo since we are showing a
+demo
+we will enter the subject as demo this
+is the this subject and body
+is the subject and body of the
+mail
+now let's attach the file which we have
+created
+copy the file location
+so we'll go to the file
+and copy this file location
+after attaching the file
+let's save
+android
+the process has started
+and the process has ended here you can
+see in the
+the output
+has started and the process has ended
+let's go over the mail and check if we
+have received
+here we go we have received the file
+let's open the file
+and here you go the same this is the
+same file which had merged the data
+so the file has been sent over the mail
+one thing you have to keep in mind
+when you use the get password activity
+go to your google account in the
+security section
+go to this secure app access and turn it
+on
+you have to turn it on to receive the
+file over and mail
+explain the different states and
+transitions in re framework
+there are four key states in re
+framework
+the first state is initial state this is
+the point at which the procedure begins
+it's an event where the process
+initializes the settings and runs
+application test to ensure that all of
+the prerequisites for the process start
+are met
+next we have get transaction state
+this state retrieves the next
+transaction object this can be a queue
+item or a collection item
+transaction items are queue items by
+default but this can be modified to meet
+your needs this is also when the
+developer can set the condition to exit
+the state when there are no items to
+process
+process transaction state
+for the transaction item obtained in
+previous step it performs actions logic
+in various application
+if a transaction item has been processed
+the process moves on to the next
+transaction item available
+end process state
+the procedure is completed and the
+applications open during automations are
+closed in the end process state
+let's jump into the ui path studio
+and see the different transitions in
+robotic enterprise framework
+so this is the robotic enterprise
+framework this is the initialization
+state the first state so it has two
+transitions
+system error that is system exception
+and successful
+when it shows system exception when a
+system error is not nothing it gets
+transition to the end process
+suppose if you have an application
+exception during the initialization
+phase and we don't have enough details
+to start a process then as a result we
+are going to end process state to wrap
+it up
+and the successful is when a system
+error is nothing it gets transition to
+get transaction state
+if during initialization we have no
+error then it goes to the get
+transaction data
+the get transaction data
+has two transitions
+no data and
+new transaction
+no data is when if the transaction item
+is nothing then we are at the end of our
+data collection so it goes to the end
+process and in new transaction if the
+transaction item contains data then it
+processes it
+the process transaction data has three
+transitions
+success business exception and system
+exception success is when if the
+condition is business rule exception is
+nothing and system error is nothing then
+the transition to get transaction data
+if there is a business rule exception it
+is logged and we move on to the next
+transaction
+and rule exception is if the business
+rule exception is not nothing then it
+gets transaction to the get transaction
+data
+and the end process does not have any
+transition since the end process is the
+final state so there are no transitions
+what is a g-suite activity
+the uipath g-suite activity package
+helps in the automation of google
+workspace applications such as google
+calendar google drive
+google sheets
+gmail
+google docs you can create and modify
+google calendar events manage google
+drive files read and send gmail messages
+and create new google sheets
+spreadsheets and google documents with
+the google g-suite activity package
+what are selectors and wildcards in ui
+path
+wildcards are the symbols that enable
+you to replace zero or multiple
+characters in a string this can be quite
+useful when dealing with dynamically
+changing attributes in a selector
+selectors uipath studio uses what we
+call selectors this store the attributes
+of graphical user interface element and
+its parents in the shape of an xml
+fragment the selectorates in the
+automatic generation of the selection by
+utilizing wildcards
+what is a machine explain standard
+machine and machine template
+the machine page allows you to provision
+and manages machines to use them to
+register robots with orchestrator
+it displays the types of machine that we
+currently in use it enables you to
+design your machine whether standard or
+template
+standard machine it should be used when
+the name of the machine on which you
+want to define robots is the same every
+time you connect to it you define the
+machine once and then you can connect to
+as many robots as you want from the
+robots page
+machine template it should be used
+whenever the name of the machine on
+which you want to define robot changes
+you represent this entity once and then
+you use a unique active directory
+username to connect to any number of
+attended floating robots
+explain delay do if and switch
+activities in uipath
+the delay activity allows you to pause
+the automation for a specified amount of
+time
+this activity is beneficial in projects
+that require precise timing such as
+waiting for a specific application to
+start or for some information to be
+processed before using it in the another
+activity
+the do activity allows you to run a
+specific piece of automation while the
+condition is met
+the project exits the loop when the
+specified condition is no longer
+completed this activity can be used to
+iterate through all the array elements
+or execute a specific action multiple
+times
+if activity the if activity includes a
+statement as well as two conditions
+if the statement is true the first
+condition is executed if the statement
+is false the second condition is
+executed if activities can be used to
+make decision based on variable values
+switch activity the switch activity
+allows you to choose one of the several
+options based on the value of specified
+expression the switch activity uses an
+integer argument by default
+but you can change it in the properties
+panel under the type argument list the
+switch activity can be used to
+categorize data based on predefined
+number of cases
+how to create chart in excel
+step 1 create a new sequence go to the
+ui path studio and create a new sequence
+and then
+drag and drop the following activities
+to create a chart we need to use excel
+application scope create table activity
+and bar chart and pie chart activity
+depending on which type of charts you
+want to create
+then at last after completing then run
+the sequence
+we will see a demo of this in the uipath
+studio
+how to upload a file on drive
+so create a new sequence and drag and
+drop a g-suite application
+then inside g-suite application drag and
+drop upload file activity fill in the
+details
+and finally run the suite let's go and
+see a demo to how to create charts in
+excel file and how to upload a file on
+your drive
+so let's jump into the ui path studio
+this is the excel file which i have
+created
+it has all the number of cases in this
+five states in the year 2021 the month
+of jan feb march and april all this
+record i have taken it from a website
+called prsindia dot org
+so i have two sheets sheet one and sheet
+two
+so let's jump into the uipath studio
+to start off with the demo we need to
+have the three packages installed
+one is the uipath excel activities
+package the other one is uipath g suite
+dot activities this activity this
+package is used for
+drive top load on the drive
+then
+the other package is
+balareva excel activities this package
+is used for bar graph and pie chart
+so
+after installing these three packages
+we'll get started
+so let's create a new sequence
+name it as sequence
+2
+so first we'll drag and drop an excel
+application scope
+so excel application scope what it does
+is it opens an excel workbook and sets
+the scope for excel activities when this
+activity is completed the specified
+workbook and the excel applications are
+closed when the workbook application
+variable is specified in the output
+workbook activities field the
+spreadsheet is not closed
+after this drag and drop
+create table activity
+so by default we have sheet 1 and
+enter the range
+so the range is in this excel sheet the
+range is from a1 to f5
+so enter the range
+for this
+we need to enter the file path so we'll
+select the file
+so we have selected the file
+we have entered the
+entire table name
+say
+number of cases
+so once this much is done
+next we'll drag and drop a bar chart
+drop it outside the excel application
+scope
+and select the file path
+so select the file
+so select the file
+select this cell range
+that is the same range what we had
+entered earlier
+a1
+to s5
+so once that is done if the chart title
+say basis
+and you can select the chart type
+barge tag 3d clustered 3d stand whatever
+is required
+for now we will select bar cluster
+we have many other options to explore
+data label type
+will keep it in
+show value so that it shows the value
+and
+select
+show value
+if you want to show percentage you can
+select percentage
+and select show legend
+and size
+you can vary the size accordingly how
+much ever you want
+so i'll keep the size
+as 350
+to 350
+you can change the width
+so the bar chart is done
+and you can enter the sheet which sheet
+are you using so it's sheet one
+so we will drag and drop pie chart
+select the file
+similarly enter the options here
+enter the cell range
+the same range
+a1 is to f5
+show percent will show value
+show legend
+select show value
+and select the sheet which you are we'll
+select the sheet 2
+so done
+so we have completed till here
+next we need to upload this on the
+google drive so
+we'll select this option upload file
+select the file
+so we have selected define
+so select the destination folder
+for that
+go to your google drive account
+so we will go there
+so in my drive i have created a folder
+called excel automation
+so i'll copy this
+url
+till here not the entire
+copy this
+and
+go to your ui patch studio and paste it
+in the destination folder
+delete double quotes
+then create a variable and
+create a variable as file
+oops there is an error
+oh we have forgotten to use a g-suit
+application
+this can be only used inside a g-suite
+application
+so drag and drop a g-suite application
+and inside g-suite application
+will write this so there is god
+so we'll run the file now
+we'll save it
+and
+run
+you can see the file is getting
+run
+so the execution is ended
+we will
+navigate to the drive
+so here you can see
+the file is successfully uploaded will
+open the file
+it's working on the graph
+here you go here you can see the bar
+graph
+for the sheet one
+with the values
+number of values and each state was and
+for sheet2
+we created a pie chart so here you go
+here you can see the puzzle
+if you have any doubt any queries
+please don't hesitate to ask in the
+comment section we will try to answer
+all of your questions
+so with that we have reached the end of
+this video like and share it if you
+found it interesting thank you for being
+here keep learning and stay tuned to
+simply learn
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

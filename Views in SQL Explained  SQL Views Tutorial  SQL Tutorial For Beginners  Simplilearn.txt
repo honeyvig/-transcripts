@@ -1,0 +1,137 @@
+foreign
+'s YouTube channel in this session we
+will learn how to create view in SQL but
+before we begin let me tell you guys
+that we have daily updates on multiple
+Technologies and if you're a tech geek
+in a continuous hunt for latest
+technological Trends then consider
+getting subscribed to our YouTube
+channel and don't forget to hit that
+Bell icon to never miss an update from
+Simply done and without further Ado
+let's get started with our one point
+agenda that is how to create views in
+SQL
+if you are an aspiring data analyst
+looking for online training and
+certification from prestigious
+universities and in collaboration with
+leading industry experts then search no
+more simply launch professional
+certification program and data analytics
+from Purdue University in collaboration
+with IBM should be your right choice for
+more details use the link in the
+description box below with that in mind
+go to our PPT now how do we create a
+view in Excel so it's as simple as
+creating a new table the syntax is as
+follows you just need to add creative
+View and your customized view name as
+the statements now what are the
+statements statements usually have the
+statements of what you query the query
+statements for example selects down some
+data what you want to fetch from your
+table
+yes I totally understand select might be
+a really short one but sometimes you
+might have to add some wear conditions
+you might have to add some sub queries
+and the entire query length might go up
+to 10 to 15 lines
+right now you might not be able to
+execute that query for every single time
+so if you create a view for that and if
+you just write select that particular
+View and you get all the data now let's
+understand this more easily by going
+through a practical demonstration on my
+SQL now we are on the MySQL workbench we
+are having a small database which is
+flights and in that we have a table by
+the name flight data and this is the
+data which we have added into a flight
+data right let's run this and get the
+table so here you have the information
+on your table about a few flights you
+have the airline date of Journey
+departure destination total stops
+additional information etc etc right now
+let's say if someone asked you to fetch
+a flight from Indigo which is completely
+Non-Stop
+control enter now you have this right
+now you face this query for once and
+what if someone asks you to get this
+data for 10 times a day maybe you have
+10 clients who are asking for the same
+information would you write this thing
+for you 10 times
+no right similarly here you have let's
+say someone wanted to go to Delhi and
+they asked you to get information for
+the flights which are going to Delhi
+and someone asked for the flights which
+are going from Bangalore to Delhi
+right similarly you have many of such
+things so what would be helpful here so
+let's say you add one more query
+which reads as
+create
+View
+now the customized view name could be
+anything let's say View
+Indigo Non-Stop
+as
+your query
+right let's quickly execute this query
+and it should create a new view for you
+the new view is currently done
+similarly let's try to create a new view
+again
+create a view let's name it View
+lights
+Delhi
+Kolkata
+and the Bangalore daily flights
+right now you have the queries ready
+or the views ready
+now all you have to do is just get the
+select statement
+star from the view name
+this is simpler right
+it's Ctrl enter and you have the data
+over there now let's say somebody asks
+you to fetch the data for flights from
+Bangalore to Delhi all you have to do is
+Select star and you should be having the
+data
+there you go right as simple as that so
+that's how you can create a view in SQL
+and in case if you wanted to drop it
+let's say you don't need it anymore so
+it's simple just drop the view
+and the view name let's say you want to
+drop this particular View
+paste it there and Ctrl enter there you
+go the view got successfully dropped now
+when you try to run this query you will
+not get it as simple as that and with
+that we have come to an end of this
+session on how to create views in SQL if
+you have any queries regarding any of
+the topics covered in this session or if
+you require the resources like the code
+we added and the PPD we used then do let
+us know in the comment section below and
+RTM of experts will be more than happy
+to resolve all your queries at the
+earliest and until next time thank you
+stay safe and keep learning
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

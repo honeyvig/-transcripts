@@ -1,0 +1,278 @@
+hey guys welcome back to another video
+tutorial by simply learn
+in today's session we will be learning
+about kotlin core routines
+so let's go ahead and understand what's
+in it for you
+so in this tutorial first we will
+understand
+threads
+then we will learn what is co routines
+after that we will understand the
+features of co-routine and also we'll
+have a look at an example of it
+and at last we will learn some of the
+basics of co routines
+so without further ado let's get started
+but before we begin
+make sure to subscribe to our youtube
+channel and press the bell icon to never
+miss an update from simplylearn
+so
+what are threads
+to understand core routines in detail
+first we will have to understand the
+threads
+so let's understand it a little
+so the programs are just a set of
+instructions
+when a program runs a process is created
+which contains
+memory process id etc
+in that process there are threads
+that are used to execute information
+every process has at least one thread or
+more than one thread
+threads
+help with the high performance
+applications and they work in a
+sequential order one after the other
+whenever a thread gets stuck while
+running an instruction then the other
+thread executes the rest of the
+instructions
+so these were threads
+now as we have understood about threads
+so let's learn about core routines
+coroutines stands for cooperating
+functions
+the word co stands for cooperation and
+routine stands for functions
+the core routines can not only do all
+the things that a thread can
+but is also very efficient
+coroutines are lightweight threads that
+help to write simplified asynchronous
+code that keeps the application
+responsive while maintaining heavy tasks
+like network
+calls core routines are executed inside
+the thread
+and are also suspendable
+here the word suspendable means we can
+execute some instructions and then stop
+the core routine in between the
+execution and continue when we wish to
+and they can also switch between the
+threads which gives core routines and
+edge over threads
+so as we have understood about core
+routines so now let's learn about some
+features of core routine
+so these are the features of kotlin co
+routines
+first one is
+core routines are lightweight
+due to the support for the suspension
+we can run many core routines on a
+single thread
+which doesn't block the thread where the
+core routine is running
+core routine has a collection of threads
+that can be used when required
+when the task is done the thread is kept
+back to the collection and reused when
+needed
+so this was the first feature
+now moving on to the second feature
+which is less memory leaks
+there are very less memory leaks in
+kotlin
+because of the structured concurrency
+the kotlin coroutines follow the
+structured concurrency
+this structured concurrency means the
+new quarantine can only be launched in a
+particular coroutine scope which sets
+the lifetime of the core routine
+during the implementation a large number
+of core routines are launched and the
+structure concurrency take care of those
+so that they are not lost or leaked
+so as a second feature
+next is built-in cancellation support
+cancellation in coroutine is interactive
+in order to be cancellable a co-routine
+must be cooperative
+but
+if it is not cooperative then it will
+wait for the core routine to finish
+there are two ways to make a core
+routine cancellable
+one
+through using suspending functions
+through cortland dot co routines like
+delay function yield function etc
+these were cancellable
+and second using coroutine scope dot is
+active boolean flag
+there can be many reasons to cancel a
+co-routine and also a co-routine cannot
+be cancelled if it is working in
+computation
+now moving on to the last feature that
+is jet pack integration
+there are many libraries of jetpack that
+provide support for core routines for
+example android ktx is a set of cortland
+extensions that provide android platform
+and other apis etc the jetpack is
+basically a collection of android
+development components that helps in
+building android apps and making complex
+things
+simple and easy
+these were some features of coroutine
+now let's understand an example of core
+routine
+but before that we have to understand
+some terms of core routines which are
+launch delay and run blocking
+first is launch
+now launch is a co-routine builder
+launches a new co routine concurrently
+that is without blocking the current
+thread
+it is automatically cancelled when the
+resulting job is cancelled
+and it doesn't return any result
+now next is delay
+delay is a suspending function
+which is used to suspend a function for
+a particular time and resumes it after
+that time
+it doesn't really block the underlying
+thread but allows the other co-routines
+to run and use the underlying thread
+also it is a cancelable function then
+there is run blocking
+run blocking is a coroutine builder
+again
+it basically runs a new core routine and
+blocks the current thread until its
+completion
+or in other words the thread that runs
+in it gets blocked for the given
+duration until all the code blocks
+inside the brackets of run block
+complete their execution
+now
+as you can see in this example
+here the run blocking refer to the
+thread that runs it
+that is the main thread
+it is the scope of the core routine
+launch
+here launch will launch a new core
+routine concurrently
+then there is delay
+delay will suspend the core routine for
+a selected time
+here that selected time is 2 seconds
+by default the time is in milliseconds
+now here the word sam will be printed
+after
+my name is
+because of the time delay for 2 seconds
+on printing it
+it will display my name is sam
+let's take this example on kotlin
+playground
+here it is here we have written that
+example here we can see there is a delay
+of
+2000 l that is 2000 millisecond which is
+equal to 2 seconds
+so that is why my name is printed
+earlier then sam is getting printed
+let's run it and let's check the output
+as you can see my name is sam is getting
+printed because we have delayed this sam
+for a like for like two seconds
+and now we'll use delay here
+okay
+let's say
+three seconds
+three thousand milliseconds
+which is equal to three seconds
+so as you can see there's a delay of two
+seconds here is the delay of three
+seconds
+now what will happen is
+sam will print first after that my name
+is printed
+as you can see sam my name is
+so
+i want to show you that how this delay
+function work
+because here the delay is now three
+seconds which is greater than two
+seconds that is why my name is getting
+printed later
+now
+moving on to the next topic which is
+basics of core routine
+so first is scope builder
+the core routine scope is used to
+declare your own scope
+unlike run blocking it just suspends and
+releases the threads underlined
+it is used to set the scope for new core
+routines
+coroutine scope is responsible for
+controlling the life cycle of a group of
+core routines and their context
+scopes wait for their associated core
+routines to complete before completing
+themselves
+the core routine builder is an extension
+of coroutine scope
+now next is explicit job
+a job object is returned by launch co
+routine builder
+whose task is to explicitly wait for the
+child quality completion
+jobs acts as a handle to the core
+routine in the queue
+for every co routine that is created it
+returns a job instance which identifies
+the core routine uniquely and manages
+its life cycle
+then there is suspending functions
+suspending functions are those functions
+that can be paused and then continued
+later
+they can be used inside the coroutines
+and can use other suspending functions
+as well
+they are used for long-running
+operations and wait for it to complete
+without blocking
+the syntax of suspending functions is
+same as that of the normal function
+but with the addition of suspended
+keyword
+so these were some basics of coroutine
+and with that we have come to the end of
+this video
+if you like this video please give it a
+thumbs up
+i hope it really helped you all
+thanks for watching stay safe and keep
+learning
+[Music]
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

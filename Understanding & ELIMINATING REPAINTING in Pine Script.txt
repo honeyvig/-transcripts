@@ -1,0 +1,741 @@
+hey traders in this lesson we are going
+to be addressing one of the most uh
+confusing issues in pine script which is
+repainting
+repainting is the boogeyman of
+pinescript and tradingview scripts
+it is very misunderstood by beginner
+coders and to be honest in most cases
+it's not that big of a deal however in
+certain situations it can be misleading
+at best and downright inaccurate at
+worst and in this video i'm going to
+break down the various types of
+repainting how to avoid them and what
+repainting is
+so let's get started by reading the pine
+script user manual section on repainting
+so if i scroll down here there'll be a
+link to this below the video if you want
+to explore this in more detail
+but trading view the staff and
+developers of trading view define
+repainting as a script behavior causing
+historical verse real time calculations
+or plots to behave differently what they
+mean by differently is
+that your
+plots or real-time calculations will
+behave differently on historical bars
+versus real-time bars a classic example
+of this
+is in this paragraph here
+the rsi is a great example
+on historical bars the rsi is going to
+display a value and that value will
+never change because it's confirmed it's
+a historical bar the bar's values are no
+longer fluctuating like a real-time bar
+would and so the rsi's value the
+calculations the analysis that that
+indicator performs is set in stone and
+it is completed and will never change on
+historical bars but on the current
+real-time bar on your chart
+that is still active and if i jump over
+to trading view i can show an example of
+this let me go down to the one minute
+chart and throw on the rsi indicator
+keep an eye on this line
+you can see that it's moving around as
+the current real-time bar moves around
+this is one form of repainting it is
+literally repainting the indicator value
+for so long as this bar moves and in a
+couple of seconds when this bar closes
+this bar is no longer repainting but the
+current new bar is and so this line will
+continue to move up and down that is one
+form of repainting and it is perfectly
+acceptable if you know how to trade
+using indicators you should know that if
+you are basing your trading decisions on
+indicator values or even price action
+patterns you need to wait until the
+candle closes or the bar closes and
+confirms that value before you act on it
+so if an rsi goes overbought for example
+on the real-time bar and that is a
+signal to inform a trading decision you
+shouldn't make that trading decision
+until the bar closes because there is
+still a chance that it may not close as
+overbought and it may move down before
+the candle close same with candlestick
+patterns if you're trading a candlestick
+pattern like a bearish engulfing candle
+is a good example
+just because the bar is currently
+engulfing a previous bar doesn't mean it
+will look like that when the candle
+closes because as you can see here the
+price is moving quite rapidly and
+depending on the time frame you're on
+the pattern may be invalidated by the
+time the candle closes so that is one
+form of repainting repainting on the
+current active bar is completely
+acceptable as long as you understand
+what it is and you understand that your
+trading decisions should not be made on
+the real-time bar until it closes one
+hidden risk of this form of repainting
+that you might not think about is when
+you're creating your scripts let's say
+for example you want to automate a
+strategy and when a setup is detected on
+your chart you want to trigger an alert
+to enter a position you might write your
+code and the code may look fine it might
+execute perfectly fine on historical
+data but on the real time bar
+as soon as a setup or an indicator value
+hits a certain
+condition that you're looking for and
+your script generates an alert
+depending on how you set up your alert
+in the settings menu in terms of these
+options here
+may cause problems so for example this
+is a terrible terrible strategy in real
+life but just for example purposes let's
+imagine that as soon as the rsi goes
+overbought you send a command to a third
+party to go short on a market well if
+you set your options here to
+only once once per bar or once per
+minute then the very moment that
+the rsi goes overbought the tradingview
+platform will trigger the alert and your
+command will be sent off to the third
+party and your
+broker will enter short or your exchange
+on a crypto currency market and now
+you're short on a market because the rsi
+went overbought and then a few minutes
+later the candle closes and is no longer
+overbought and suddenly you are involved
+in an invalid setup an invalid trade
+that you were not supposed to be in
+because the rsi did not actually close
+and confirm is overbought
+that is one potential issue
+with repainting
+another issue would be candlestick
+patterns like i just explained earlier
+if a bar is plotting as a valid
+candlestick pattern on the real-time bar
+but then it closes as invalid if you
+don't set up your script properly or
+your alerts properly then the
+alert may fire prematurely and that can
+be a problem obviously because that's
+how you end up involved in invalid
+trades is exactly the same as entering
+positions manually before the current
+bar closes and then being caught in a
+trade you're not supposed to be in your
+scripts can do the same thing if you're
+not careful now there are a couple of
+ways around this the first way is to set
+your alerts up so that the script only
+fires the alert once per bar close the
+other way to avoid this is to use the
+bar states um inbuilt variable so i have
+a script here that we'll get into in a
+moment where we'll explore some of the
+various types of repainting but if you
+want to prevent your script from sending
+an alert
+on a real-time bar you could do
+something like this let's say we have
+valid short entry equals and then we
+have a bunch of conditions candlestick
+patterns indicator conditions and when
+this is true our script enters short
+what you can do is when your alert is
+fired
+you can do something like this
+if
+we have a valid short
+entry
+then we want to fire our alert which
+sends
+data to third party
+the way we stop this alert from being
+fired on a real sign bar is we add on
+the end here if valid short entry and
+bar state dot is confirmed
+now this will only fire our alert on the
+very final tick of a closing bar
+so it will not fire any alert unless the
+pattern the indicator values whatever
+our script is analyzing and calculating
+is confirmed on the final tick of a
+closing bar
+that is one way to prevent
+the issues of repainting that i just
+discussed and to be honest this is
+probably the preferred way because that
+prevents any uses of your script from
+accidentally setting the alerts up
+incorrectly because even if you set your
+alert to once per bar or only once or
+once per minute if you have this check
+in your script the alert will not fire
+until
+this is confirmed boolean is true on the
+final tick of the current real-time bar
+anyway that is the most basic form of
+repainting it's an acceptable form of
+repainting but you do need to be aware
+of it you need to be cautious of the
+potential side effects that it can cause
+let's get into some visual examples of
+repainting
+i'm going to comment out all of my plots
+here except for
+the first two here i'm going to save my
+script so let me explain what the code
+is doing here let's only focus on
+let me
+put in some curly
+braces here and we can minimize these
+bits of code and just focus
+on this block of code here our atr
+repainting code and if you're not aware
+of what i just did here if you put in
+some curly brackets in comments around
+your code so we have a curly bracket
+here open curly bracket and close curly
+bracket you can actually click on this
+little drop down arrow thing here which
+will hide that block of code which is
+really handy when working with complex
+scripts with lots of sections but anyway
+let me open up this atr repainting code
+and explain what's happening here
+so i have a user input here called
+disable repaint and when we turn the
+sinus off by default when we turn this
+on our disable repaint code will be
+executed instead of our real-time code
+which is going to repaint so
+first of all we're getting an atr value
+here
+and then we're just plotting
+a long stop in a short trailing stop
+which is the closing price
+minus the atr value and the closing
+price plus an atr value so if i minimize
+this and we zoom in a bit let me get rid
+of the rsi keep an eye on our
+red and green lines notice that they are
+moving with the real time bar
+now the reason why these lines are
+moving like this is because as the
+current real-time bar moves the atr
+value is changing so if i throw on the
+average true range
+you can see that on the real-time bar it
+is going to move as price expands and
+contracts now because we're on a one
+minute chart and we're averaging the
+past 14 bars and there's not a lot of
+volatility right now this number is not
+changing but if this bar was moving more
+dramatically
+this line would be moving our atr value
+would be moving and there we go it's
+starting to move now and because we're
+adding the atr and subtracting it from
+the current closing price our lines are
+moving with the closing price and as the
+atr value changes if you do not want
+this behavior in your script what you
+need to do is reference the previous bar
+if we are calculating on a real-time bar
+so if we're calculating on a historical
+bar the values are confirmed and we can
+calculate our trailing stop or whatever
+we're doing based on that historical
+bar's values but on the real time bar we
+cannot do that because the values are
+changing actively what we need to do is
+reference the previous bar and so the
+way we achieve that
+is using the bar dot is confirmed
+variable so here i have a
+ternary condition or ternary operator
+for our long stop and shortstop we're
+saying is disabled repaint turned on
+if so then we check is the bar state
+confirmed if it is then we just subtract
+the atr from the closing price or add
+the atr to the closing price otherwise
+if bar state is not confirmed then we
+reference the previous closing price and
+the previous atr value because these
+values are confirmed as the previous bar
+is a historical bar it's closed it's
+completed so if i open up my little
+settings menu here and turn on disable
+repainting keep an eye on our green and
+red lines they now
+are referencing the previous bars closed
+and adding the atr and subtracting the
+atr from that value and the lines are
+not moving on the current bar and just
+notice that the
+real time bar closed and our lines moved
+now we're referencing this bar on the
+current real-time bar so the script is
+detecting that this bar is active
+and referencing the previous bar's close
+and atr value for this real time bar
+that is one way to disable repainting
+when we're dealing with actual visual
+repainting on our chart let's have a
+look at a couple of other examples let
+me comment out these plots
+and open up this section and i'll
+minimize that
+now we have signal repainting
+so we just looked at the atr repainting
+that's a form of indicator repainting
+now let's look at the second form of
+repainting which is when we are
+detecting a
+candlestick pattern on our chart so let
+me uncomment these two plot shapes save
+my code
+and now our atr should go away but we're
+getting
+arrows drawing
+on
+uh higher close and lower closed candles
+so whenever the current bar closes
+higher than the previous high
+or the current bar closes lower than the
+previous low we are drawing a green and
+red arrow above and below price action
+so if i open up my
+settings and turn off disable repainting
+keep an eye on this current bar when it
+exceeds the previous bars high or low
+it should start drawing an arrow
+even though the current bar hasn't
+closed yet so i'll wait here until we
+get an example
+and there we go see how the arrow just
+popped up and then it disappeared and
+now it's back again
+that is signal repainting
+and if we had an alert set on this
+script to send an alert or fire an alert
+whenever this pattern is detected
+if we didn't set up our alerts correctly
+or we didn't use bar state dot is
+confirmed in our code when this arrow
+first popped up it would have fired an
+alert so now our signal is confirmed
+if i turn on disable repainting this
+arrow should stay here but if i turn it
+back off and this bar exceeds the
+previous bars low or high we'll get an
+arrow drawing onto our chart so how do
+we prevent this from happening if we
+don't want our signals repainting well
+it's exactly the same as our indicator
+repainting solution which is using bar
+state dot is confirmed so here for our
+long entry and short entry i'm detecting
+high close and lower closed candles and
+i'm checking
+is the current bar confirmed
+or
+do we not have disable repaint turned on
+so right now i've turned repaint off so
+if bar state is not confirmed and we do
+not have repainting turned off then our
+signal is free to draw onto our chart
+but if i disable repainting now
+the current bar must be confirmed before
+we draw
+our long and short entry shapes or in
+other words before long entry and short
+entry can be set to true bar state must
+be confirmed so that is one solution to
+uh signal repainting
+if you want your signals to paint on the
+real-time bar but you don't want your
+alerts to fire
+that is where the
+once per bar close alert setting comes
+in handy this way you can leave your
+indicator repainting
+so that you get your setup drawing on
+the real-time bar maybe it draws your
+stops and targets that way you can get
+an idea of what your setup might look
+like when the candle eventually closes
+you can throw on your short position
+tool or long position tool calculate
+your stop loss
+to get a rough idea of whether or not
+you can enter the trade based on how far
+away your stop-loss is and your target
+but you do not enter your trade you do
+not execute on that signal until the bar
+actually closes and is confirmed so
+there are some trading
+scripts some indicators i've created
+that i trade on a real time bar
+in intraday day trading strategies and i
+leave my stops and targets drawing onto
+my chart but i do not enter my order
+and send my trade order until the bar
+closes and is confirmed so that i know
+my stops and targets are confirmed
+so that is the second form of repainting
+we have indicator repainting we have
+candlestick pattern signal repainting
+for indicator repainting that's usually
+normal most indicators repaint and as
+i've mentioned several times you
+shouldn't act on that current repainting
+value until the bar is closed same for
+signal repainting when we're detecting
+market conditions candlestick patterns
+etc you may want your script to repaint
+you may want the signal to come and go
+based on what the real time bar is doing
+but you should not act on it and you
+should not send your alert
+to any third parties or anything like
+that until the bar is confirmed so keep
+that in mind for those two forms of
+repainting the final form of repainting
+is the security function this is the
+most complex form
+and the most
+dangerous form
+in terms of misleading results in your
+real-time scripts versus your historical
+data
+so let me save this code we'll get rid
+of our signal and atr repainting code
+and let's have a look at the security
+function repainting so i've already
+discussed this issue in previous lessons
+especially the breakout strategy i
+believe where we were drawing the daily
+high and low onto our chart we needed to
+disable repainting in that script
+what you see here is let me go to a four
+hour chart so
+price action is a little bit closer what
+you see here is repainting occurring so
+right now we are getting the daily
+closing price and we are adding and
+subtracting the daily atr
+from
+that daily closing price so we're doing
+exactly the same thing as our atr
+repainting code but using the security
+function to reference the daily chart
+instead of our
+current time frame and as you can see
+here these lines tick up here on the
+current real-time bar so if i hover my
+mouse over this real-time bar keep an
+eye on our values up here they are
+changing uh only a little bit each time
+but they are changing they are
+repainting that is because the market is
+currently live it's currently open and
+actively trading and our daily candle
+is still moving around the daily candle
+close
+on today's bar is not confirmed it's
+real time so what we need to do in order
+to fix
+repainting using the security function
+is the same way we fixed repainting on
+this atr plot on our current time frame
+we need to use the bar state dot is real
+time check so there are two ways we
+could do this we could say bar state dot
+is confirmed question mark then
+reference zero otherwise reference one
+so what this code here would do
+is it would check
+do we have disabled repaint on
+in the settings menu and
+is the current bar confirmed if so that
+means it's a historical bar and we are
+safe to reference that historical bar's
+value so we just pass in zero the
+current bar otherwise if the current bar
+is not confirmed then we want to
+reference the previous days bar and not
+the currently active bar
+we want to get yesterday's closing price
+and yesterday's atr value from that
+higher time frame using the security
+function so there are two different ways
+we can do this i've got them both
+written out here the first one is to
+check if the bar is confirmed the second
+one is to just check if the current bar
+is real time as far as i know it doesn't
+really matter which one you use you can
+use both of these methods and they
+should work the same
+i tend to prefer this
+version i'm not sure why i just like is
+confirmed that's just my preference i
+like to be consistent in my scripts and
+so this is how i like to write it out
+and so now if i save my code
+and minimize my editor let's keep an eye
+on these values here if i hover my mouse
+over the current real-time bar also keep
+an eye up there if i open up the
+settings menu and turn on disable
+repainting so that we are now checking
+the bar state dot is confirmed inbuilt
+condition variable even though price is
+moving on the current bar our indicator
+values are not moving
+because we are no longer repainting we
+are referencing yesterday's bar on the
+real-time bar and once the daily bar
+closes on this market our security
+function code will reference that day's
+bar and when tomorrow's trading begins
+the whole process will repeat and so
+it's basically the same solution for all
+of these examples of repainting all you
+need is this code here if i get rid of
+my little settings menu condition
+this is what your code needs to look
+like if you want to avoid repainting on
+the current real-time bar whether you
+are using the security function
+drawing a candlestick pattern
+referencing an indicator value
+if you do not want your indicator to
+repaint or update on a real-time bar
+this is how you need to write your code
+out in order to prevent your script from
+updating on the current real-time bar
+and repainting so those are the main
+three examples of visual repainting on
+your charts
+the final thing i want to draw your
+attention to
+is when using the security function or
+any of the request
+namespace functions so any of these
+inbuilt functions here there is the
+issue
+of referencing candlestick data that you
+should not have access to yet
+so what what i mean by that is if you
+set
+the setting look ahead
+to bar merge dot look ahead
+on if i throw that onto my security
+functions and save my code and let's
+change
+some of this code let me get rid of the
+atr and long stop short stop let's
+change this to just reference the higher
+time frame close let me plot that onto
+the chart as green and save my code so
+now we're drawing the previous day's
+closing price over today's price action
+if i go out to the daily chart and let's
+have a look at
+uh let's have a look at this big red bar
+right here let me put a vertical line on
+there and let me draw
+a line across the closing price value so
+the close of this bar was
+dot 49241.12
+two four one dot twelve uh let me bring
+it to the front and let's drop down to a
+one hour time frame and zoom out
+so here we are this blue line indicates
+the beginning of that big red day and
+you can see that we have this big
+sell-off here big wick to the downside
+that is
+this wick here
+so if we drop down to that one hour time
+frame and we look at our white line that
+is marking the closing price of that
+daily bar
+if i delete that white line have a look
+at our green line here
+this green line is drawing across the
+exact same value
+as our white line this is where that big
+red day closed but notice that it is
+drawing over price action
+from the very start of that intraday
+session
+so this blue line marks the start of
+that big red day and our green line is
+drawing the closing price of that big
+red day
+but it's drawing it over
+price action that occurred during that
+day
+or in other words we are cheating we are
+looking ahead to the close of of this
+day before it was actually known to us
+that's because i've set look ahead to on
+bar merge dot look ahead on by default
+this is normally off so you don't
+normally need to worry about this but if
+you're ever dealing with a script that
+has look ahead turned on beware of this
+issue
+so for example if you have a strategy
+that exits a trade takes profit for
+example at a previous day's high or low
+and you have look ahead turned on then
+your script is going to have insanely
+profitable results because it's actually
+cheating it knows where the current
+day's high is going to be before that
+bar had actually closed if i set look
+ahead back to off
+this
+uh green line here we'll move to the
+next day
+which is the day after this big red bar
+so on this day here we will draw this
+red bars close across this day's price
+action intraday price action which is
+how it should be so now if i turn look
+ahead back off and save my script watch
+this green line it's now moved to this
+day and now on this big red day we are
+referencing the previous day's close
+over that red days intraday price action
+or in other words we are not cheating
+anymore we are not accessing data that
+we shouldn't have access to until after
+that trading session had closed or that
+bar had closed many traders on trading
+view also refer to what i just showed
+you as repainting technically it's not
+repainting it's just a look ahead bias
+it's kind of cheating
+but for whatever reason the trading view
+community does sometimes refer to this
+functionality of a script as repainting
+and it's obviously a huge problem
+because it can lead to unrealistic
+results in your strategy scripts if you
+were using security data with lookahead
+turned on so my advice would be to never
+turn look ahead on unless you have a
+very very specific reason to i can't
+think of any off the top of my head but
+there are some use cases for wanting
+lookahead on
+otherwise it wouldn't be a feature in
+the first place
+but your default stance in your coding
+should be to always leave this as off
+which it is by default so if you don't
+specify this at all the script will
+assume that you do not want to cheat in
+your security function and you only want
+to reference data that makes sense that
+you should have access to after that
+data has been confirmed by the bar
+closing so now we're drawing this
+previous days bar close over that big
+red bar by drop out to the daily chart
+and we have a quick look
+you can see that my white line is a
+little bit wonky but it's right at that
+previous bars closed we're drawing that
+white line over this big red day that is
+fine that's perfectly fine because on
+this big red day we would obviously have
+access to the previous day's close
+what we don't have access to
+is this big red day's close until
+this bar
+so that's a crash course in repainting
+how to avoid it
+why it can be dangerous and why
+sometimes it's not dangerous at all like
+without indicator repainting sometimes
+you want
+the rsi to update in real time other
+times you may not want this to happen or
+at least you may not want your script to
+act on this value until
+after this value is confirmed the way
+you do that is using our bar state dot
+is confirmed check along with whatever
+candlestick pattern you're detecting
+whatever indicator value you are
+interacting with
+or whatever security function
+expression you are passing in whatever
+data you're trying to get from your
+higher time frame or your other market
+anyway that will do it for today's
+lesson i'll leave the source code to
+this example script below so that you
+can have a look through it
+study it and get very familiar with
+repainting how to avoid it it's very
+important that you understand
+when this happens in your scripts when
+it can be a problem and how to eliminate
+it when you don't want it to be a
+behavior of your script i hope you found
+this lesson interesting it's a slightly
+edited lesson straight out of my
+pinescript mastery course if you want to
+learn more about pinescript and some of
+the more advanced features of pinescript
+and have someone guide you through
+learning this language head over to
+panscriptmastery.com
+to check out my free basics course if
+you're new to panscript and if you want
+to really level up your coding i'm sure
+you will find the mastery course to be
+extremely helpful dozens of traders have
+left great reviews about the course it's
+helped many of them really take their
+trading to the next level and if you're
+not interested in the mastery course at
+least make sure to hit that subscribe
+button because i will definitely be back
+very soon with more free youtube lessons
+on this subject material good luck with
+your trading good luck with your coding
+and i'll speak with you in the next
+video
+you

@@ -1,0 +1,219 @@
+foreign
+welcome back to our Channel today we
+have an exciting topic to dive into what
+are microservices
+you may have heard this buzzword
+floating around in the world of software
+development but what exactly are
+microservices well in this video we'll
+not only uncover the answer but also
+explore the advantages challenges and
+even some real life examples of
+companies using microservices so let's
+get started but before that for more
+such interesting videos do subscribe to
+our YouTube channel and hit the Bell
+icon to never miss an update from simp
+leader and if you want to learn more
+about cloud computing Concepts and
+services and its various other cloud
+computing platforms then our Caltech
+cloud computing bootcamp will be the
+right choice for you this cloud
+computing bootcamp will help you become
+an expert in Azure and AWS
+this in-depth cloud computing online
+bootcamp course lets you master key
+architecture principles and develop the
+skills needed to become a cloud exporter
+it will help you become an expert in
+designing planning and scaling Cloud
+implementation our cloud computing
+course helps you master the core skill
+sets required to design and deploy
+dynamically scalable and reliable
+applications on Microsoft Azure and AWS
+so do check out the course link
+mentioned in the description so let's
+get started with the video but before we
+jump into microservices let's start with
+the traditional way of building
+applications known as monolithic
+architecture now in the world of
+software development monolithic
+architecture refers to a structure where
+all the components of an application are
+tightly integrated into a single
+monolithic unit it's like having a
+massive building where everything from
+the foundation to the roof is
+interconnected
+architecture has its advantages it also
+comes with some challenges
+imagine updating a single feature of
+your application with monolithic
+architecture you have to recompile and
+redeploy the entire application which
+can be time consuming and risky
+this can slow down the development
+process and make it harder to scale and
+maintain the application
+and that's when enters microservices
+instead of a monolithic building think
+of a microservice as a collection of
+small independent buildings that work
+together to create a powerful
+application but what exactly are
+microservices
+well microservices are an architectural
+style that structures an application as
+a collection of loosely coupled services
+each serving a specific business
+capability these Services communicate
+with each other through apis allowing
+them to work together harmoniously in a
+microservice architecture each service
+focuses on doing one thing and doing it
+well for example you can have a user
+service and inventory service and a
+payment service each service can be
+redeveloped redeployed and scaled
+independently enabling faster
+development cycles and easier
+maintenance but how do these
+microservices interact with each other
+well they communicate through
+well-defined apis using lightweight
+protocols like HTTP or messaging systems
+like rabbit mq this decouple
+communication allows each service to
+evolve independently without impacting
+the entire system microservices interact
+with each other using various
+communication protocols and mechanism
+and here are some common ways
+microservices interact first one is rest
+apis now microservices often expose rest
+apis that allow communication over HTTP
+each microservice typically has its own
+set of endpoints representing different
+resources and operations Services can
+make HTTP requests to the appropriate
+endpoints to exchange data and invoke
+functionalities of other microservices
+second is messaging queues now
+microservices can communicate
+asynchronously through messaging queues
+one microservice can publish messages to
+a queue and other microservices can
+consume those messages
+this decouples the service allowing them
+to operate independently
+popular messaging systems include
+rabbitmq Apache Kafka and activemq third
+is service Discovery now in a
+microservice environment where Services
+can be dynamically scaled and deployed
+across multiple instances service
+Discovery becomes crucial service
+Discovery enables microservices to
+locate and communicate with each other
+without hard coding IP address or
+endpoints it provides a centralized
+mechanism for registering discovering
+and resolving the network location of
+services then comes orchestration
+microservices orchestration involves
+managing the interaction and
+coordination between multiple
+microservices to accomplish in a
+specific business process or workflow
+orchestration typically involves a
+central component called an orchestrator
+that controls the execution and
+sequencing of microservices but it's
+worth noting that the choice of
+interaction mechanism depends on the
+specific requirement and constraints of
+the system some system May rely on a
+combination of these approaches to meet
+their communication needs
+now let's talk about key characteristics
+of microservices so the first one is
+microservices are highly decoupled each
+service can be developed deployed and
+maintained independently providing
+flexibility and Agility in the
+development process
+second is microservices are scalable you
+can scale Individual Services based on
+the specific needs allowing you to
+optimize resource allocation and handle
+increased user demand more effectively
+third microservices are fault tolerant
+if one service fails it doesn't brings
+down the entire application the fault is
+isolated and other services can continue
+to function and lastly microservices
+promote technology diversity
+each service can be built using
+different programming languages
+Frameworks and databases depending on
+what works best for that specific
+service
+now you might be wondering who is using
+microservices well many big names
+companies have adopted this
+architectural style companies like
+Netflix Amazon and Spotify have
+leveraged microservices to build
+scalable resilient and Innovative
+application and there you have it a
+glimpse into the world of microservices
+from the characteristics to the benefits
+and real world examples microservices
+have revolutionize the way we build and
+scale applications here's a success
+story of one of our Learners to boost
+your confidence do watch this video
+and I am currently living in Algeria I
+wanted to experience what is like to
+live I also realized that to get a new
+job I needed to have a personal
+certification in cloud computing so last
+year I started the postgraduate program
+in cloud computing and association with
+caltech.com video that with this course
+I had the choice to study while
+and that is how I got this new job offer
+with 60 salary high in Finland I will be
+leading the cloud computing unit of my
+new company we cannot wait to start our
+new life in Finland we are also thank
+you for joining me on this journey if
+you found this video helpful don't
+forget to hit the like button and
+subscribe for more exciting content
+until next time happy coding staying
+ahead in your career requires continuous
+learning and upskilling whether you're a
+student aiming to learn today's top
+skills or a working professional looking
+to advance your career we've got you
+covered explore our impressive catalog
+of certification programs in Cutting
+Edge domains including data science
+cloud computing cyber security AI
+machine learning or digital marketing
+designed in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
+thank you

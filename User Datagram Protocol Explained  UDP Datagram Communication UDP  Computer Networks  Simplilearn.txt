@@ -1,0 +1,213 @@
+in this session on user datagram
+protocol we will look into the
+application of applying the udp protocol
+and why it is used to transmit data in a
+network channel hi guys and welcome to
+yet another trusting video by simply
+learn but before we begin if you love
+watching tech videos subscribe to our
+channel and hit the bell icon to remiss
+an update from us now without further
+ado let's take a look at the agenda for
+today's session
+to begin with we will look into what is
+the user datagram protocol
+continuing with knowing some features of
+the protocol
+moving on with header format of the
+protocol
+next we will look into the working steps
+of the udp protocol
+applications of the udp protocol and in
+the end we will look into udp versus tcp
+protocol
+let's move on with the first heading
+that is what is user datagram protocol
+the user datagram protocol commonly
+known as udp protocol is designed
+to be unreliable and connectionless in
+nature
+which applies process to process
+communication model for data exchange
+between devices and is active in the
+transport layer of the osi model
+and is used to transfer
+data and information related to internet
+services over the network channel where
+process to process communication refers
+to the use of port numbers in the header
+format during the transmission of data
+over the network channel
+as for connectionless
+it means that
+the utp format does not provide
+established path for the data to
+transfer instead it uses multiple
+different paths which we will look into
+further in the video let's move on to
+the next heading
+features of using user datagram protocol
+the user datagram protocol provides the
+network with ways efficient and easy to
+understand network protocol features to
+apply over the data that is to be
+transmitted
+where the first feature of udp is
+related to the working area that is the
+udp model is a transport layer protocol
+of the osi model and is used to deliver
+best effort delivery options for the
+data transmission where the best
+delivery option refers that the protocol
+does not provide the sender will receive
+any acknowledgement from the receiver
+side for the data transmitted
+or it does not provide any guarantee of
+data transmitted to the receiver side
+now let's move on to the second feature
+of user datagram protocol the second
+feature represents the mode of delivery
+a connection that the udp establishes
+for data transmission
+the udp protocol as we know already
+establishes
+a connectionless path that means there's
+no actual virtual path for the data to
+be transmitted
+so that the each data from the udp
+format uses a random path available in
+the network channel and reaches its
+destination
+now let's move on to the next heading
+that is udp header format
+the udp header format comprises of two
+parts
+first the udp header part which is eight
+bytes in size and second the data to be
+transmitted
+furthermore the header part is divided
+into four different parts
+source port destination port total
+length and checksum
+where each of the parts are divided into
+16 bits
+let's take a look at the different parts
+of the header format in a little detail
+the first one is source port number
+it is a 16-bit value that is used to
+identify the port that is transmitting
+the data
+next is destination port number
+that is used to identify the port number
+that will be receiving the data on the
+receiver end
+next we have total length as the name
+suggests this value is used to specify
+the total length of the udp packet
+including the udp header part
+and the last is checksum this is a 16
+bit value field and is used as an
+optional attribute
+it is left empty if there is no need or
+it is used in case where accuracy of the
+data is to be measured
+now let's move on to the working of the
+udp protocol
+to begin with we have data from the
+sender side
+which is enclosed with the udp header
+for communication and data in the udp
+header part
+the next step is to hand over this data
+over to the ip section
+for encapsulation
+with the ip header and data
+with the udp header and data part
+as for the last step this part is handed
+over to the frame section where it is
+transformed with the frame header and
+data format
+moving on now let's transmit the data
+over the network channel for the
+receiver and to receive it
+over to the receiver side first step is
+decoding of frame header part and data
+part into the ip section which contains
+ip header and data section
+again this ip's packet is divided into
+udp header part and data part
+from where the message is retrieved from
+the data section of the utp header
+format and is then received by the
+receiver end
+now let's move on to the applications of
+udp protocol
+let's take a look at some of the
+features of the udp protocol that
+provides
+applications to various network models
+for the first one we have
+it provides flow control and error
+control mechanism
+to the network model such as tftp
+next it provides faster transmission of
+data as there is no pre-established
+virtual path needed
+so it is used for real-time services
+live communication and gaming services
+now let's move on to the last heading
+for this session that is udp versus tcp
+protocol
+we will differentiate between udp and
+tcp based on some attributes that are
+mostly used in the network model
+and the first attribute is reliability
+for udp protocol as we already know now
+it is an unreliable in nature
+that is it does not provide any
+guarantee of data transmitted to the
+destination side is reached or not
+as for tcp
+it provides reliable and guaranteed data
+delivery to the receiver side
+the next attribute is acknowledgement
+signal
+the udp protocol does not provide any
+acknowledgement from the receiver side
+to the sender side
+whereas in case of tcp protocol sharing
+the acknowledgement signal is very
+important if the acknowledgement signal
+is not shared by the receiver side to
+the center side the data exchange will
+halt
+let's move on to the next attribute that
+is connection mode
+as we already know now udp is a
+connectionless mode of service there is
+no virtual path established for the data
+transmission to takes place
+whereas for tcp protocol it is a
+connection oriented protocol
+that is a virtual path is needed for the
+data to be transmitted over to the
+receiver side or the destination node
+the next attribute is error check system
+in udp protocol basic check system is
+only used for error check
+whereas for tcp protocol it is an
+extensive error check service
+and along with error flow control
+mechanism included in the tcp protocol
+service
+with this we have reached the end of
+this video
+if you have any questions regarding the
+topic you can ask them in the comment
+section
+thank you for watching
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

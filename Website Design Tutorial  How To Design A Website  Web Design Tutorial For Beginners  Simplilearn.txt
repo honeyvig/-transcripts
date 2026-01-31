@@ -1,0 +1,1796 @@
+hello everyone and welcome you all so
+today is very exciting day because today
+we're going to help you to understand
+like how you're going to be developing
+some very attractive website having the
+css html and lot of images in a packet
+this mini project will help you to
+understand how we can align our content
+to display to my end user so not many
+things are there we have got css in
+place we have a html in place and using
+some css3 based effects using some html5
+based effects we will be creating our
+mini website having some
+single html page and
+a css and lot of images will help you to
+understand in case if i want to develop
+a website how to kickstart them
+okay so let's get started so this is my
+folder i've created call web pro and in
+a similar folder i'll be creating some
+of the files so my first file will be
+called styles
+dot css
+so in this style start series first of
+all i need to import some of the fonts
+which i will be using it throughout my
+development so i'm saying to add it
+import url
+and here i'll be offering the location
+by saying
+https
+songs
+dot
+google
+apis
+dot com
+okay google please dot com slash
+css
+okay question mark we have to use family
+equal to here we can use alure
+and with using this pipe symbol we're
+using joe's friend
+joe's film
+plus
+sense
+so that is the url for me in case if you
+want to verify whether this url does
+exist or not so what you can do you can
+just copy this
+and go to your browser
+and uh
+try to paste this and check if it does
+exist yes it does exist that means this
+urls are available to us so this is a
+url which i'll be using it
+for my development after that i'll be
+using this as trick
+and providing some of the core features
+like enlarging
+colon 0
+followed by
+other details
+okay like i'm saying margin colon zero n
+padding once again zero
+followed by box sizing
+this we're saying bottle box
+followed by outline
+okay none
+okay
+and
+post this will be offering this style
+here we are also saying none
+after that text decoration
+text decoration once again
+none
+after that font family
+font family so we are using this
+this option which you are saying called
+joe's fill
+okay
+science double which you have used
+comma
+we're using one more call signs
+hyphen sorry
+so this would be a first
+set of the style which will be global to
+all i'll be using this
+well earlier we have given the common
+style to all not be giving a start to my
+paragraphs
+so
+here in my paragraph we are trying to
+save margin
+hyphen
+and bottom i want to give all 15 pixels
+because i want to develop all the styles
+well in advance before i proceed ahead
+we are saying font iphone size
+yeah font hyphen size that we want to
+give it for 14 pixels
+followed by line height
+line height i'll grab 20 pixels
+after that color
+color you can give anything
+okay so there's one very common color
+called light blue
+for that there's one value called
+five
+f
+okay 8 e
+8
+e
+and again 8
+e
+you can see that is called a kind of
+light green color which is coming up now
+okay which is used now a part of this
+paragraph we'll be using h1 title
+okay as shown title and in this h1 title
+we are saying margin bottom
+margin bottom we are saying 20 pixels
+after that color
+orange
+okay uh let me put semicolon here
+along with this font family
+this font family will be giving alola
+okay
+along with this we also want to give
+curacao
+curacao
+okay also text
+transform
+this text transform i want to use upper
+case
+along with this font size
+this font size i would like to give 38
+pixels
+followed by font size
+yeah so this font size i want to give is
+called 38 pixels
+or font size we've already given word
+spacing we have to give
+this word spacing 125 pixels
+followed by letter spacing
+uh let us specify 5 pixels
+so these are the details we have given
+for the
+h1 title
+okay so now we'll be talking about our
+buttons
+which are the look and feel we have to
+go or provide to our button so we are
+saying once again dot btn
+okay space a means under my button tag a
+what i want so i say
+width
+180
+pixels once again
+yeah alright 180 pixels we're giving
+height
+35 pixels
+followed by line height
+line height we're giving 35 pixels
+followed by border
+this border will be 2 pixels
+solid
+black
+okay after that color
+color we want to give it i would say red
+would be
+sufficient enough
+followed by display
+display i want to give it is called
+block
+followed by margin
+margin i want to give 25 pixels
+auto
+and zero
+followed by text align
+okay
+center
+so this is for btn a which we have given
+along with this btna there are some
+other properties are also available like
+in dot
+main underscore
+container
+here we would like to provide position
+okay
+colon
+relative
+okay
+after this position we would like to
+also provide the property for nav bar
+so we are saying
+navbar
+underscore or let's talk about navbar
+rest of the stats will be offering it a
+little later
+with the snare bar we are providing this
+width
+okay this width will be a hundred
+percent
+okay this would be a 100
+and also we provide height
+this height will be 65 pixels
+okay provided by position
+position we are providing absolute
+after 30 second display
+display we are providing flicks
+after that we are saying justify content
+justify contains using space around
+after that
+we are saying align items
+this we are giving
+a center
+okay along with this we are giving this
+logo
+of type a
+so inside this logo we are saying font
+family
+this form family we are once again using
+the same
+the one which you have used earlier
+you remember alura and curacao let me
+we can use the same
+whatever we have used it earlier
+so
+same condition you can use it here
+so we remember earlier what we have used
+in my previous program
+okay font family so the same font family
+i would like to use it here also
+okay so logo a but let me check
+somewhere down the line
+what weight
+font family so let me copy the same
+and paste here right now
+okay so we have a god for family with me
+which we have taken it right now to my
+existing logo a along with i want to use
+for
+font size
+we would like to use 32 pixels
+also color
+and as usual i would like to use red
+okay
+so that is for logo on which we have
+basically applied this
+a part of this we would like to also use
+for navbar
+mapper underscore
+item
+space uh
+and here we would like to provide margin
+0 and padding
+again 0
+followed by line style
+list style sorry
+list
+style here using none see that is the
+benefit of having this visual studio
+called because sometimes when you're
+going wrong it immediately
+give you the idea of like saying like
+hey you're going somewhere wrong that's
+what the suggestions were not given to
+us
+so till here we've added furthermore
+we'll be adding few more styles into my
+code well
+never
+tell us we have seen now followed by
+saying
+dot navbar
+okay underscore
+items
+followed by
+lul which we have it and along with this
+we would like to go ahead with this list
+items also
+and in this list items we need
+few details first i talk about golf load
+so float left for sure then we talk
+about color width
+width will be 100 pixels
+and now we talk about color height
+height will be 40 pixels
+well
+float width height we have talked about
+now we talk about called background
+color
+background color we can say light
+solomon
+that looks nice
+and opacity
+opacity we can just give call 0.8
+followed by line height
+light height i can give called 40 pixels
+okay along with this we also want
+texture line
+once again
+center
+okay this is for
+these items
+now under the same nav bar you may have
+some other properties also
+okay this is for navbar uli
+and we can also have the same property
+copy
+but along with this li i can also have
+this anchor tag we can select multiple
+elements together
+so here i would like to offer text
+transform
+you see this text transform
+uppercase
+followed by color
+this color we are saying black
+and we are talking about called text
+decoration
+text decoration we want nothing
+along with this i want display
+and as usual it will be a block type
+okay that was li and within this anchor
+tag i also can have a hover
+let me copy the same
+and with this anchor i can have the
+property name called word
+cover
+so what property you are expecting for
+this
+so here in my hover property i can say
+background color
+and i can use
+tomato
+okay
+well after this in the same name bar
+items
+i also want to have
+after the anchor tag what should happen
+so this conditions i want to utilize
+because i want to offer some of the
+animations behavior
+right over there
+so what animations i would like to go
+ahead that i need to offer under this
+navigation
+items like so i just copy this
+paste it below but this over which we
+are talking about we would like to
+change from
+to after
+okay
+after
+so i'm removing this background color
+with this because background color can
+be changed to something else
+so i can change to white
+might
+well let me have few more properties to
+be get added
+first thing we are trying to secure
+position
+position will be absolute
+okay we want from left side
+left i want to give 50 percent space
+after this from bottom
+i'm saying zero
+okay
+now i want to talk about transform
+you remember to the property available
+in css
+and here we are saying
+translate
+x and in say this translate x i say
+minus 50
+okay and here we are saying after that
+scale
+x
+okay and here we are providing what
+zero
+so that's what the condition we want to
+provide it for the transform
+and the next thing will be transform
+origin
+transform origin so i say fifty percent
+and again
+fifty percent
+after this we would like to talk about
+width
+width will be hundred percent
+okay and we also want this height
+height will be two pixels
+okay with hundred percent height to
+pixels
+after that we talk about transition
+and this transition we can talk about
+transform
+okay transform to 50
+ms
+okay so these are so far the details
+which are available with us
+which i would like to use it in my code
+okay that is for after of this anchor
+tag
+so when you talk about whole you further
+want to change the behavior over there
+so in this case i would like to use the
+same
+condition i just copy that
+and here
+let me say colon
+so you can see
+ally
+space
+a colon over
+colon after
+so what conditions you want to use it
+here so
+transform
+okay so here
+translate x
+okay so here you say
+minus
+50
+scale x
+1.0
+followed by we would like to use again
+dot
+nav bar
+okay underscore item
+okay ul
+followed by li followed by once again
+url
+once again li
+and here in this case we want to offer
+display none
+display
+none
+okay
+so
+that's okay and one more conditions i
+would like to take it here is
+here when i say ulli li colon hover so i
+can say li
+colon
+over uli so we will say display
+block
+that's the condition
+okay so so far we have written this much
+of css we would like to go ahead and try
+to implement some of the html behavior
+and we'll be back to our css to make
+this possible
+okay everyone so we have developed a lot
+about css it's time for us to move
+towards our next
+ui that is called the html part okay so
+here i've already kept it just for the
+kind information i've just downloaded
+few of the
+images
+okay from the internet just to utilize
+into my application
+i'm gonna create
+the another
+file
+and give the name called index.html
+okay this index.html file let me have
+this template with me okay so i have got
+template with me
+now here
+uh we want to use some of the
+awesome css styles for of my usual
+development
+so within my head tag we would like to
+use this link
+this is for css so say link really good
+to stylesheet
+and href equal to now i'm going to give
+the location so this css anyways is
+there that's called style we want to say
+called styles.css
+and
+one more style i would like to use in my
+code
+but the location will be somewhere else
+i'm saying
+https cdnjs
+dot
+cloudflare
+dot com slash
+ajax slash
+libs
+slash font
+hyphen
+awesome
+okay that is a well-known style sheet we
+are giving the version called 5.15
+dot one slash
+css slash
+all
+sorry
+on dot
+min
+dot css so that is the location actually
+okay now i want to just check whether
+this location does exist or not so i'll
+just copy this
+paste it in my browser to verify
+well yes this
+style does exist so we would like to go
+ahead and continue
+well i would like to give some title in
+case if i want so this is called
+document i can just get the name called
+website
+okay just keep this double capital
+website development
+coming to my body tag
+here i just want to give a div
+class equal to
+let's give the name called main
+thunderscore
+container
+okay and also we want to give id equal
+to
+oh
+that is a div type format
+okay
+now along with this i want to give some
+other type of div tags to where i want
+to use it now here within this div tag i
+want to give another div tag
+where i want to provide the navbar so
+dave
+equal to
+navbar
+okay and within this nav bar i want to
+use another div tag
+which says
+class
+equal to
+logo
+okay
+within this div tag we want to provide
+double hlf
+okay a href equal to
+here we want to provide this hash
+okay
+and this will be provided to
+home so this is we have a god dev class
+we have a quality of class equal to logo
+and under this we are providing this
+hashtag and using
+simply run
+solutions
+okay that is the first anchor tag the
+drip tag is getting closed and we would
+like to start
+another tab tag
+and in this div tag we would like to say
+class equal to
+navbar
+underscore
+items
+okay
+within this div tag we would like to use
+this human
+and within this ul i would like to use
+this li
+okay and in this ally
+uh
+we would like to bring some
+ahref
+equal to
+hash
+that is the link which i need to provide
+okay
+so in this anchor tag we want to provide
+a location called home here this is the
+first list item which is there
+like this i can provide some other list
+items too
+like i'm going to talk about call about
+we're saying hash
+about and here we say
+about here
+so this anchor tag is getting closed
+okay
+and
+here before i close this list item here
+you would like to take another url tag
+okay in this url tag we would like to
+paste this list item again and here with
+this hash we can just give the name call
+something whichever you want to give it
+again
+blank
+and
+empty
+so after that ul is also getting closed
+li is also getting closed here
+okay
+after this
+we can provide few more li tags here
+okay so
+href equal to here we would like to
+provide a real url remove the hashtag
+and say
+https
+simply learn
+dot com
+slash
+corporate hyphen
+training
+okay and here we will be giving
+the option called services
+this falls into the category of what
+services
+like this we would like to provide one
+more anchor tag for contact us
+that's a
+contact
+one more for our team
+okay and here we say
+our t
+okay let me go back to my index.html
+file
+and check
+the status
+well it looks pretty nice now here we
+have got simply learn solution with us
+and right inside you can see now here in
+about you see how the things are working
+for me
+this links are coming up automatically
+it came because here if you remember
+in my code
+when i was saying this about
+okay this was a part of our current code
+and due to that it is now making it
+possible for us
+and that is possible because here in
+white style dot css
+if you remember
+we were using this
+a kind of
+neighbor uli
+okay so the moment i try to hover
+okay so this was giving me the complete
+details and due to that
+i was in position to get all the details
+so looks pretty
+nice okay so going forward what i would
+like to do is within my program
+as i could see in my index.html file we
+have provided this
+tag so ul is getting close this dip is
+getting close this tip is also getting
+closed
+okay
+now here we would like to start another
+table
+we say dev class equal to banner image
+minor underscore
+image
+okay now within this tip i would like to
+use one more div tag within this div we
+say
+class equal to
+banner underscore
+content
+okay
+banner underscore content now within
+this div class we would like to use this
+h1
+here we can say
+welcome to
+welcome to simply learn
+okay after this
+break tag as you know that is a for
+break
+and now
+so this is fantastic we can say
+words
+okay
+words
+number one bootcamp
+okay here the h1 tag is getting closed
+after that the paragraph tag within this
+paragraph we can say
+get certified
+get
+ahead
+this value
+after this the div tag is getting closed
+the second tip tag is also getting close
+let me check
+okay so that we need to organize it
+uh in a better way so but initially we
+have a god welcome to simply learn
+words number one bootcamp
+how my look and feel
+is really gonna help because this banner
+part
+i want to organize it because i do not
+have a css for this
+clear so certainly i need a css to
+organize this particular banner
+getting it because when we talk about
+banner content so i need to tell where
+it needs to go because i also would have
+some banned image also too so i will go
+back to my css now
+and in my style css
+here
+let me say banner content
+banner underscore
+content and here we can save
+text align
+center and say color
+we can say
+white smoke
+okay and also within this banner content
+we want to use the h1 tag
+within this h1 tag you have to just say
+text transform
+upper case
+and line height
+line height 30 pixels
+okay and
+margin bottom
+this margin bottom we want to use 15
+pixels
+okay
+so that's when we have it let me close
+this
+sorry
+and here we want to use one more
+property called banner content
+with h1 and the span tag so that i can
+change the color
+so here
+banner content
+h1 we also want to use
+span tag
+within this i want to say
+color
+and you can just say
+tomato and let's check does it affect my
+application
+yes exactly it does effect now you can
+see it is somewhere coming down the line
+like this
+okay
+so i can further change it
+to my application
+like
+if i talk about about and all so this i
+can change it for sure because if i have
+some images also
+those images i also want to change
+towards my application but it is just a
+simple part we are talking about call
+banner
+and
+we have also have to take some images
+too
+for this banner image
+so let's go back
+and talk about our index.html file and
+see
+what some of the balance i want to
+utilize it here
+okay
+now when we talk about get ahead i
+certainly need some of the banner image
+too but banner image is not available so
+let me go back and try to use some
+banner image whichever we have to define
+under my
+css
+okay so here in my style css let me go
+here and say
+dot
+banner underscore
+image
+in this banner image we have to say
+background url
+background
+colon now we have to say
+url and in this url we have to use this
+image called images
+slash p4
+dot jpg
+that will be my image and also we would
+like to use one very common option that
+is called no repeat
+so that it should not repeat it and i
+want to fix it to the top
+and in the center
+okay now let's check
+perfect it is coming up but it is not
+looking as good as it looks like it
+so we want to use few more important
+things saying this background size
+background size
+cover and also want to use width
+width i want to use 100
+and height
+we want to use it called 600 percent
+okay display
+we want to use it flex
+and justify content
+we want to use it call center
+and align items
+center let's check this out
+okay now you can see it looks pretty
+better
+compared to the previous version
+whatever we have written it
+but this image needs to be look even
+more better
+okay and the content needs to be more
+awesome
+but anyways that is the first thing
+which we have written after that we have
+to write an about us and other areas but
+that is initially which i would like to
+make it
+even more better and more look
+okay
+okay so we have seen the value still
+call option called get certified get
+ahead the div tag is getting closed and
+i want to use another
+div
+and inside this div we want to say
+class equal to about
+okay and
+id equal to about
+okay
+and within this div tag i want to use
+this h1 tag
+with the set one tag i say
+class equal to
+title
+okay here i want to say
+about us
+h1 time is closed
+after that i want to define this
+paragraph
+and want to give some details about the
+simpler okay like
+and talk about simply learn
+words number one
+training okay we can just
+provide
+you know some details training providers
+that's it so
+we can write it that much about in
+paragraph tag
+and we can use this tab again
+within this step we
+say to
+plus equal to
+bdn
+and say
+a
+h f
+equal to
+and in the search results we would like
+to say
+colon
+simply learn
+dot com okay slash
+resources and here we can just give the
+option name called
+learn
+more
+to this anchor tag the div tag is
+getting close later on
+okay and now
+just like in dev we have provided here
+we can also offer the details with
+regards to your
+services so i can just copy the same
+and provide about the services so we can
+say
+services id equal to
+services and you can provide anything
+whichever you would like to provide
+title is same about us we can say our
+services
+our services
+so
+you can give any details if you want
+okay paragraph
+now
+here after this paragraph using div
+class equal to
+div
+underscore services
+and uh
+we may not have any href right over here
+so we're removing this href tag
+okay deb class equal to
+diff on sickness particularly
+i
+developed inter services
+here we want to use another div tag
+and
+in this div tag we want to say
+class equal to
+enter underscore
+services
+underscore
+item
+we have to basically provide
+and within this i have to use this
+option called img
+src equal to now you have to provide a
+location so i'm saying
+under this images folder we have a call
+services
+because the results one
+dot jpg
+alt equal to
+in case of the service is not available
+you can just say
+service underscore image
+okay within this
+once this is close you like to use a h3
+diagonal
+and in this h3 tag i just say
+class
+equal to
+sub
+underscore
+title and here we get the title name
+called
+web development let me go back and check
+yeah so i can see this option called
+about us is coming up
+learn more if i talk about learn more
+you see i'm taking you to the
+website of this
+simply done resources which are
+available to us so this link is working
+perfectly fine
+and
+i can see here called our services
+it is the same
+well going back so we have a call
+this our services
+so alt equal to
+services underscore image
+sc class equal to subtitle web
+development
+and uh
+that's it
+so the div tag is getting closed here
+and i may choose to
+talk towards
+diff service item so let me have
+another div tag here and
+in this div tag we say
+class equal to
+div
+underscore services underscore item
+active underscore services underscore
+item
+okay now within this dev tag
+okay so
+what you want to offer now
+i want to offer some again certain
+images
+so what those images will be let me try
+to copy this
+and the s3 tag to let me copy this again
+service one i'm giving call service to
+service underscore images so underscore
+title rather than using web development
+we can say app development
+okay
+so this div tag i will copy it again
+which is getting closed and try to use
+one more
+so dev underscore service underscore
+item again images i'll say service 3
+instead service image and here i can say
+online certification
+online certification
+okay
+so
+like this
+all the three dip tags are getting close
+now and after that we will start
+meanwhile let me check
+so these image sizes are pretty big so i
+just want to make them small
+but initially they are okay
+okay you can see we have all our
+services
+okay
+so
+you can see like web development
+so image sizes are pretty big which we
+can
+make them small
+to cover up the way they are supposed to
+but this way we'll be doing it little
+later on let's go ahead and talk about
+the complete html portion which we want
+to complete it now
+okay so did online certification we have
+taken
+so also the three div tags are getting
+closed now here onwards
+we want to start the another table
+okay with this div we want to say class
+equal to
+equal to we want to use contactors
+we want to say contact us and here
+id equal to
+contact us let me try to wrap it with
+this single quotes
+okay and here we use this h1 tag
+within this h1 tag we say
+class equal to
+title here
+and
+here i say contact us
+contact us okay that is for the post h1
+tag we are using it now
+after that let's start with another div
+tag
+with this div we want to use class
+equal to
+form
+underscore
+wrapper
+okay deb class equal to what form
+underscore word wrapper
+div
+again
+okay
+class equal to
+form underscore what input
+and here we say
+the input tag
+so it is input applicable to what a
+check box for me
+so i would like to say
+text instead input applicable to what
+text and uh
+just say remove the name and id and say
+please hold it equal to
+email
+okay so this div tag is getting closed
+after that i can also use
+so for
+i would say subject as well as for
+message i copy this
+form input
+so once again
+placeholder
+subject
+and
+once again placeholder equal to what
+three options we are using it right now
+okay
+after this
+once it is over we would like to use
+another div tag
+and
+class equal to
+btn
+and within this i want to use
+some anchor tag
+a h f equal to hash
+is equal to what hash
+and want to use submit
+okay that's it
+now
+[Music]
+now you can see we have got these three
+properties are coming up at the end
+but certainly we can go back and try to
+fix those images
+which are there behind the scene
+okay using what the style
+so
+first important thing is
+we have got this images with us
+what those images are if we just check
+here
+we have a call
+def service item
+okay we have a call what dev service
+item so that we want to change it but
+before that i will go back to my style
+and after this h1 span we want to use
+for dot
+about
+okay dot
+service we press enter
+service or i can say services
+here we talk about dot
+contact us
+we also talk about dot dot
+our team
+okay
+so these four properties we are going to
+use it by saying
+texture line
+center and
+[Music]
+adding five percent
+ten percent
+okay
+now
+we talk about services so we saying dot
+services
+with the services we can say
+background
+white
+smoke
+now we would like to provide the tip
+services where we have these options
+with us we say dot
+div underscore
+services
+here
+margin top
+25 pixels
+from margin top usa after that display
+we are selecting this call type flex
+also justify contents
+of type space between
+for div services
+now in this div services we may get many
+different type of options
+okay
+this is the first dev service now in the
+same option in dot
+dev services
+space
+we talk about dev services underscore
+item
+okay
+and here we want to save with
+30 percent
+okay now
+i copy the same
+in this div services item
+so we want to use
+image part that is the most important
+area
+here we say
+width
+hundred percent
+okay and margin button
+okay margin bottom 25 pixels
+okay
+okay now you can see this images looks
+pretty nice
+yeah looks better
+so that's how you see your websites are
+really creating some difference compared
+to the previous one now they're aligned
+properly
+and
+you can see here
+these images are really nice
+okay that's the benefit
+so we have this
+let me call the classes
+yeah and
+once this image part is closed we would
+like to talk about h3 part
+let me copy this
+item
+and with this item we save as3
+and this h3 will say color
+tomato and margin bottom
+these are 15 pixels
+okay for this h3
+and when it comes to this text boxes
+certainly you can change the look and
+feel how you really want it
+so for this you can say dot
+form underscore
+wrapper
+form underscore
+input
+okay form wrapper form input
+we say margin hyphen bottom
+15 pixels
+okay perform input
+now in a similar line
+form input we may have a for text area
+input
+text area and in this text area we
+want to offer some of the details like
+i'm talking about like in width we talk
+about padding
+let's talk about like in the width
+i'm saying 250 pixels
+okay we said padding
+we say 12 pixels
+and
+20 pixels
+we talk about
+height
+80 pixels we talk about resize
+we talk about
+none
+we say border
+this bottle we say one pixels
+call it
+and
+right
+this is for this
+and in a similar one i can use it for
+the text box so form colon input
+whatever we have used it
+form wrapper
+form input so let me copy this
+okay form input and here we say
+input equal to
+type of text
+so what
+combination you'll be using so i'll be
+using width padding and border
+copy i need which paddock and border
+height and precisely removing it
+and
+awesome
+so they look
+pretty nice
+okay so we have this three text boxes
+with us
+and all are looking
+nice the way
+we are expecting from our application
+okay so that's the one
+which my application is offering about
+this
+text area and all
+so that looks really nice the way we are
+expecting right now
+okay
+so
+what are the areas we have seen
+tiff services item
+and everything whichever you are saying
+like this
+so let's go back and check
+my index.html file
+so we have a call
+form wrapper which is the outermost
+okay
+you see now here it contains lot many
+things
+so here in my
+program and i see like form wrapper
+okay
+form underscore wrapper
+dot form input
+and
+talk about like the other details
+talk about input type equal to text
+you see like the border is like that
+so if you want to have this border some
+different color
+and certainly use black
+now you can see it looks pretty nice
+because earlier it was looking like
+pretty much different now at least i can
+see
+here the location has been given
+okay uh so going back towards the
+previous
+html page so we had a call uh submit
+button with us
+okay after this the
+all three div tags are getting closed
+and now onwards we would like to start
+working with team details
+so we are saying div
+so div
+class equal to
+our team
+and uh
+id equal to
+team again
+okay and now we want to use this h1 tag
+here this h1 tag we say
+class
+class equal to title
+and here i say
+in a h1 tag
+now once it is over we will use again
+another div tag
+which having
+class equal to our team wrapper
+our
+team
+underscore
+wrapper
+now within this step tag
+we want to use one more div tag
+here in this
+class equal to
+team underscore or team iphone one
+base
+team
+there is a div tag now here we will be
+using a lot of other div tags inside
+this like
+i say
+div
+class equal to team members
+team members
+okay
+and uh
+data hyphen
+name equal to you can give any name like
+let's give the name
+call display space k
+okay
+and within this
+i want to use one image tag
+img space src equal to
+images slash
+team one
+dot jpg
+okay
+so that's the first thing
+we have it so this div tag is closed now
+i copy the same
+the total i want to use this three one
+two
+three
+and
+here team members i would like to change
+the name here
+rather than display let me give the name
+called
+abiji and
+one more
+that is gone
+okay and change the name to two
+forward five three
+okay so this is the first div we have
+used it so this jack is getting closed
+right over here
+along with this the second drive tag is
+getting closed
+so
+after having this
+two div tags closed we want to use
+another one so for team two
+okay so i just copy the same
+okay uh
+i would like to go ahead with
+team two team so team members
+and
+here i would like to say four five
+four
+five
+six
+and change the name
+like
+you can give anything i just give the
+name called
+suppose
+rn
+radish
+and
+so these names we are using it now let's
+go back and see how it really looks
+so these images are coming like that
+okay so we want to use those images in
+[Music]
+somewhere not like this or horizontal
+vertical
+so this spot fix that issue i have to
+once again look back to it to my styles
+okay where
+this option can be used in better way
+i like to go back to my style.css
+and want to use
+the first option called dot over 3.
+background
+sorry
+background now here we say
+white smoker
+now
+again
+our tea
+rubber in this i would like to say
+display
+flex
+and flex direction
+space between
+oh sorry column
+let's check already looks like it
+there's a no more change but
+certainly few more classes can really
+make a difference
+so our team
+okay underscore rapper
+let's check this is the same name we
+have used
+it is our team
+now in the same way we want to use this
+team
+so
+again our teamwrapper
+okay
+dot
+team
+display
+click
+and justify contents
+space between
+okay
+now here
+we talk about team we also want to say
+our team underscore rapper
+dot
+team
+underscore
+members
+here we would like to give width
+how much 30 percent
+and height
+this will be auto
+and here we'll be having cursor
+pointer for sure
+and overflow
+hidden
+and position
+relative
+this is for team members
+now you can see it looks better now now
+we have to basically divide those
+because we have got separate team
+members are available so we have to also
+divide them too so here after this we
+want to say
+dot
+our team
+wrap up and again dot
+team members
+space img
+these images we say
+display
+block
+width
+100
+okay
+height
+auto
+okay
+transition
+transition
+or
+transition i can say or type all
+like this
+okay and in a similar way
+copy this team
+and we'll say members
+over
+image
+and we can say
+transform
+scale
+1.1
+that's it
+okay so we have this
+look and feel appeared
+okay with
+transition image over so they're all
+ready with us
+okay everybody so after writing all
+those the only difference i've made it
+like i had used hyphen but i'm using
+underscore here
+finally when i see my look and feel
+of this
+i can see now it is moving you can see
+now it is all moving
+okay so that gives me the confidence of
+like yes exactly the code is working the
+way it was expected earlier
+in my index.html file
+okay so once this portion is over
+okay we want to go ahead so three tip
+tags are getting close one two and three
+and here
+we would like to start working with the
+footer so here we start
+folder
+so within this footer i say
+class equal to
+footer
+okay now after this i use container
+there
+div class equal to what
+container
+and again
+div
+equal to
+row
+okay
+now
+do class equal to row again another div
+equal to
+footer hyphen col
+call footer hyphen column
+now let me use h4
+within this h4 i say
+company
+okay after this we want to use this ul
+within this um
+once again
+i want to use some
+link items
+list items within this list item
+a
+equal to
+so this hrf tag we want to say
+http okay we have already used this
+simplyland.com url
+here
+let me copy this
+come down
+http.com rather than resources i can say
+about us
+about hyphen us
+and here we say about this
+it is getting closed
+so i copy this line again
+okay
+so one more thing i want to use it think
+href equal to
+dash
+and here we will say
+our team
+okay
+after that
+we want to offer the careers to be safe
+and we want to use
+careers
+here
+review
+that's it
+aluminum speak
+so this is the detail of this so the ul
+tag is getting close
+and after this ul tag is getting closed
+uh
+we want to use one more div class equal
+to footer hyphen column
+okay i copy this
+it is getting closed here
+okay so do classical to photo hyphen
+column so rather than using company we
+want to use test cover
+discover
+and here in this discover we say
+simplylink.com
+and here we have this option called
+skill up
+hyphen
+free iphone
+online hyphen
+order
+okay so here we will give the name call
+scale up
+okay after this
+we have this called careers we say
+resources
+very much
+resources
+here we can give the name called
+resources again
+resources
+we have called tutorials
+tutorials
+reset
+tutorials here so like this we can
+create as many number of urls as i want
+okay
+so
+once it is over
+let me copy this again
+and here
+photocolumn we say follow us
+follow
+us
+or else we can say this option name
+called work with us
+work
+with
+us
+in this work with us
+we can have
+some options with us and you will
+remove those two
+in this we would like to say guest
+blogging
+we say
+guest
+blogging
+yes blogging because a blog has guessed
+blog
+guest
+another link which i have it here that
+is called become our trainer
+here we say
+become
+hyphen our iphone
+trainer and we say
+become an instructor
+okay
+so like that you're offering it and
+once it is done
+i can copy it once again this there
+and
+provide few more
+photo hyphen column
+followers
+okay and
+[Music]
+follow us we would like to use another
+table
+okay we say div class
+equal to
+social hyphen
+links
+and this dev time will be closed later
+okay
+templar is equal to social links
+in this i can have some facebook.com
+and uh
+you know twitter.com and many more
+names i can take it so here in our
+dev classically social link
+here i would not be using any url here
+i would not be using any ally here
+okay so i'm closing this even in analyze
+closing this url like
+to
+well simplyland.com or else we can just
+give the name called twitter.com
+okay
+twitter.com slash
+simplylab
+okay
+so
+we can offer the user
+to
+follow
+sauna instagram also or the
+twitter also so here we say
+a hdf
+but what we need to give it so we can
+say trader.com
+slash simply
+learn we remove this values whichever we
+have it
+so instead we use this i
+okay and in this i i say
+equal to
+okay anchor tag is closed
+so in case if you want to talk about
+like in
+typical uh
+you know instagram that instagram also
+you can use it now so here
+we say
+dot http
+we say instagram.com okay slash
+simply learn underscore
+underscore e-learning
+okay and i want to use the same option
+there also
+i
+and with this
+remove this
+okay
+so here just give the name called every
+hybrid
+instructor
+now let's go back and check
+okay so you can see now we have got this
+links coming up for facebook as well as
+what
+of this instagram so that looks really
+nice that gives us a feeling of yes
+exactly the code the way we are looking
+forward for it is working
+the way it was expected
+okay and
+if you want to offer
+any
+other type of details that also you can
+offer but this is the first thing which
+we have taken so this is the navigation
+links are available
+these navigation links you could also
+change the way they always look forward
+for so i'll be providing some links
+which we can later on use it
+okay everyone so finally we are all
+ready so i have basically added some of
+the additional styles to my code you can
+see here from
+this one downwards we've added this
+image url
+this is for body this is for star
+container row ul
+this is for footer
+this is for photo column so because we
+are also using some photo portions into
+my code as you can see we will call
+photo column and photo class equal to
+what
+footer so implemented this photo
+background color equal to black we have
+used it padding 70 pixels footer column
+footer column because we are using this
+h4 tag also you remember like we're
+using this h4 tag also
+so for all h4 tags this would be the
+basic setting
+for footer column h4 before we would
+like to give the contents like this by
+giving this background color height box
+sizing width and then all
+for the column unle not last time we
+gonna give this margin bottom and this
+is the style for photo column uli and
+list items
+clear and here you can see this font
+size we are giving it this is for over
+this is for photo column where we have
+social links whichever we have created
+so it is showing me the display line
+block margin border radius
+and this is for social links when i try
+to click on or over it so the color will
+change to this white color
+and the media this is for responsiveness
+to make sure like in case if i reduce
+the size of my browser they look
+better the way it is expected
+so when the line size will change to 720
+pixels so this color will be changed and
+this is the styles for arrow footer one
+this all we have implemented and finally
+my application when i refresh it
+actually looks like that see now this is
+the photo area of my application
+so i'm sure that this looks even more
+better and convenient because when i try
+to
+reduce the size
+you see now it's still going to give you
+the responsiveness
+can you see this now this is going to
+give you the responsiveness reason
+because here we are using this
+logic for
+media when the change
+of width will to 720 pixels if it is
+going to 767 pixels so like that you
+implement that so guys our project is
+now ready i'm sure that you enjoyed
+thank you very much for enjoying this
+project so final our application is set
+and our application is working the way
+it is supposed to work for us
+okay thank you
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

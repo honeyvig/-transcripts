@@ -1,0 +1,306 @@
+a very warm welcome to all our viewers
+and in this video we will be looking at
+excel automation in uipath stay tuned
+till the end of the video we will be
+discussing excel automation in detail
+and at last there is a hands-on demo if
+you want to know more about uipath then
+you can check out our ui part tutorial
+let's look at today's agenda
+we will start with understanding what is
+excel automation and why do we use an
+excel automation what is the necessity
+of using it also we shall look at some
+of the advantages of excel automation
+then we will jump in uipath studio and
+see how to install an excel package and
+see some of the commonly used excel
+activities
+finally we will look at hands-on demo
+but before we begin if you love watching
+tech videos then subscribe to our
+youtube channel and make sure you press
+the bell icon to never miss an update
+what is excel automation
+excel automation is a task automation
+involving excel files studio x enables
+the creation of automation project
+involving various types of data from an
+excel file using various specialized
+activities
+to create an excel automation we must
+use excel file resource when creating a
+new project that includes excel an excel
+file must be specified within it so that
+all of the subsequent actions can access
+the data contained within that file
+why use an excel automation
+ui path allows you to automate excel in
+various ways such as excel application
+scope activities and workbook activities
+excel automation simplifies your
+application by performing tasks such as
+formatting cells updating values and
+running macros automatically excel task
+in automated process can also be
+integrated with several other functions
+across the enterprise using an rpa
+solution
+the benefit of excel automation in
+general is that it can save people many
+are spent manually completing tasks
+advantages of excel automation
+productivity excel automation provides
+higher production rates and increased
+productivity
+efficiency some of the functions of
+excel can easily create automated tasks
+and custom logic with functions like
+macros macros are an excellent way to
+save time on predictable repetitive
+tasks hence excel automation is
+efficient
+better product quality excel automation
+improves quality in several ways
+including eliminating human error
+increasing consistency and accuracy the
+ability to create more complex projects
+and the detection of mistakes along the
+way
+improved safety excel allows you to
+protect your work whether it's to
+prevent someone from opening a workbook
+without a password to grant read-only
+access to a workbook or to simply
+preserve a worksheet so you don't delete
+any data
+reduced labor excel automation will
+perform all the repetitive tasks more
+accurately and productively than humans
+thus reduces labor
+reduced lead time a lead time is the
+amount of time that elapses between the
+start and finish of a process excel
+automation reduces the lead time
+let's look how to install an excel
+package
+let's jump into the uipath studio to
+install an excel package go to the
+manage packages
+you can see the packages that are
+installed go to all packages and search
+for uipath excel activities
+by default an updated version will be
+installed if the excel package is not
+installed you can install it from here
+so in my device this activity is already
+installed
+so this is the place from where you can
+install any activities or any packages
+let's see some of the commonly used
+excel activities
+these are some of the commonly used
+excel activities redrain select range
+save workbook autofill range copy paste
+range insert and delete columns so
+insert inserting a column at the
+specified location in a sheet or a table
+or a range
+and to delete a column you can delete it
+from a specified range or the table
+there are filters
+filter table so what filters does is you
+can use the filter action to create a
+filter in a range table or a sheet based
+on the values in a single column we also
+have vlookup vlookup which stands for
+vertical lookup is an excel feature that
+when enabled searches and retrieves data
+from a specified column we will explore
+all of these activities in the demo
+section in detail
+let's look at the demo in this demo we
+have an excel sheet that has a record of
+kovitt cases in five states of india in
+2021
+so we will create an excel automation to
+represent the number of cases in charge
+it's easy to understand looking at the
+charts rather than looking at the huge
+numbers
+then we will upload the file on the
+drive
+so let's jump into the ui path studio
+and get started
+this is the excel file which i have
+created
+it has all the number of cases in this
+five states in the year 2021 the month
+of jan feb march and april
+all this record i have taken it from a
+website called prs india dot org
+so i have two sheets sheet one and sheet
+two
+so let's jump into the uipath studio
+to start off with the demo we need to
+have the three packages installed
+one is the ui path excel activities
+package
+the other one is uipath g suite dot
+activities this activity this package is
+used for
+drive top load on the drive then
+the other package is
+balareva excel activities
+this package is used for bar graph and
+pie chart
+so
+after installing these three packages
+we'll get started
+so let's create a new sequence
+name it as sequence
+2
+so first we'll drag and drop an excel
+application scope
+so excel application scope what it does
+is it opens an excel workbook and sets
+the scope for excel activities
+when this activity is completed the
+specified workbook and excel application
+are closed when the workbook application
+variable is specified in the output
+workbook activities field the
+spreadsheet is not closed
+after this drag and drop a create table
+activity
+so by default we have sheet1 and
+enter the range
+so the range is in this excel sheet
+ranges from a1 to f5
+so enter the range
+for this
+we need to enter the file path so we'll
+select the file
+so we have selected the file
+we have entered the
+entire table name
+say
+number of cases
+[Music]
+so once this much is done
+next we'll drag and drop a bar chart
+drop it outside the excel application
+scope
+and select the file path
+so select the file
+so select the file
+select this cell range
+that is the same range
+what we had entered earlier
+a1
+to f5
+so once that is done if the chart title
+say basis
+and you can select the chart type
+bar stack 3d clustered 3d stand whatever
+is required
+for now we will select bar cluster
+we have many other options to explore
+data label type
+will keep it in
+show value so that it shows the value
+and
+select
+show value
+if you want show percentage you can
+select percentage
+and select show legend
+and size
+you can vary the size accordingly how
+much ever you want
+so i'll keep the size as
+350
+to 350.
+you can change the width
+so the bar chart is done
+and you can enter the sheet which sheet
+are you using so it's sheet1
+so we will drag and drop pie chart
+select the file
+similarly enter the options here
+enter the cell range
+the same range
+a1 is to
+f5
+show percent will show value
+show legend
+select show value
+and select the sheet which you want we
+will select the sheet 2
+so done
+so we have completed till here
+next we need to upload this on the
+google drive so
+we'll select this option upload file
+select the file
+so we have selected define
+so select the destination folder
+for that
+go to your google drive account
+so we will go there
+so in my drive i have created a folder
+called excel automation
+so i'll copy this
+url
+till here not the entire
+copy of this
+and go to your ui patch studio and paste
+it in the destination folder
+you'll get double quotes
+then create a variable
+and
+create a variable as 5
+oops there is an error
+we have forgotten to use a g suite
+application
+this can be only used inside a g suite
+application
+so drag and drop a g suite application
+and inside g-suite application
+will write this so
+that it's gone
+so we'll run the file now
+we'll save it
+and
+run
+you can see the file is getting
+run
+so the execution is ended
+we will navigate
+to the drive
+so here you can see
+the file is successfully uploaded will
+open the file
+it's working on the graph
+here you go here you can see the bar
+graph
+for the sheet one
+with the values
+number of values and each state wise
+and for sheet two
+we created a pie chart so here we go
+here you can see the purchase
+if you have any doubt any queries
+please don't hesitate to ask in the
+comment section we will try to answer
+all of your questions
+so with that we have reached the end of
+this video like and share it if you
+found it interesting thank you for being
+here keep learning and stay tuned to
+siblings
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

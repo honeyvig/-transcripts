@@ -1,0 +1,444 @@
+hey everyone welcome back to the channel
+in today's video we are diving deep into
+the world of react and focusing on a
+fundamental concept that plays a crucial
+role in building Dynamic and interactive
+user interfaces react props I know many
+of you have been curious about how props
+work and why they are so essential in
+react development well you're in the
+right place because in this video we are
+going to unravel the mysteries of react
+props and break down the concept in
+detail it's not just going to be Theory
+we making Hands-On approach also craving
+a career upgrade subscribe like and
+comment
+below dive into the link in the
+description to FasTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back but before we begin just a quick
+info for you if you are a professional
+who wants to switch career with software
+engineering by learning from the experts
+then try giving a shot to Simply learns
+postgraduate program in fullstack web
+development accelerate your career as a
+software developer through this
+postgraduate program and full step web
+development course in collaboration with
+CCH ctme in just few months you will
+learn modern coding techniques and boot
+camp level intensity and gain all you
+need to be a fullstack technologist the
+link in the description box should
+navigate to the homepage where you can
+find a complete overview of the program
+being offered so let's start with the
+first topic which is what are react
+components in react components
+communicate with each other using props
+think of props as special messages or
+data that one component sends to another
+these props allow components to share
+customized informations like values or
+pieces of data the word props is short
+for properties which are basically the
+data or information of something in
+react props represent the specific
+details or attributes that one
+components want to share with another
+remember props or properties only make
+sense within the context of components
+in other words you need components in
+order to use props effectively props
+help components talk to each other and
+exchange information making it easier to
+build Dynamic and interactive user
+interfaces in react so now let's first
+make a parent and a child component then
+we will link them so let's go to visual
+studio all right so this is our visual
+studio now here we will first of all
+create a parent component so app.js we
+have named it parent component all right
+so first of all we'll
+import react from
+react all right so now we will create a
+function
+app now inside this function we will
+return so this is a syntax so as you can
+see now let's say we want to Let's
+create a d first of
+all now div is for
+multiple objects or attributes I repeat
+so now div is for multiple things so as
+of now we will inside the div we will
+write let's
+say
+image as of now we'll write image only
+then after that we will add other things
+so here I have zoomed in a bit so that
+it is easily visible for you guys so as
+of now let's export it export
+default app all right now this is a
+parent component as of now all right now
+we will link it with child components
+for for that we'll have to create a
+child component so we have named a child
+component as pitcher. jsx all right so
+let's let's start creating this child
+component so here also we'll do
+input react from
+react All Right Now
+function let's say picture is the name
+of the
+function all right now here we will
+return now inside it we will first of
+all
+write inside Dev
+again all right now inside this like
+inside div we will write a title and
+then we'll write an image we'll attach
+an image so H2 let's
+say so we write a
+beautiful
+sunset all right now after this an image
+will
+attach all right now what we'll have to
+do now
+sources there's a source I've
+written so you can pick the image of
+your
+own landscape let's name
+it
+then style this is this is basically
+what we are doing is CSS so in CSS we'll
+have to do double curly
+bra all right inside double qu Braes
+let's say
+width is 300
+pixels
+all right so here is closed so uh this
+is the title and this is the image now
+we will this is the child component as
+if we know so we'll export it export
+default picture all right so now in
+order to use it in the parent component
+we'll have to import it over there so
+basically what we'll do is we'll simply
+import it by writing import picture from
+picture
+okay
+put picture
+from so now here we'll use do slash so
+because we want to locate it do
+slash
+picture all right now here after H1 we
+can just use the can write the
+name of the component
+so piure this is how you write a
+component
+and now we'll save it so basically what
+we are doing is we are just using this
+whole code over here by including this
+name with a backs slash so this is a
+component that we are using inside the
+app. jss this is a picture component we
+are using it inside app.js now let's
+save it and let's see so let's just
+click on it as we can see a beautiful
+sunset again it is not a sunset but yeah
+we can see this image that we have given
+the H1 tag and as if we can see H1 and
+this picture inside picture what we are
+doing is there is
+a heading that is a beautiful sunset we
+can let's just change it let's write
+uh beautiful Valley yeah let's write
+valy all right now again as we can see
+there is heading H2 in h2 tag this one
+and then there is image so basically
+with the help of components we are using
+it inside the div after image tag now
+after this we can also pass props to the
+child component that we will have a look
+afterwards so in react we use a cool
+feature that lets us easily repeat a
+design without using a bunch of cod so
+let's say if I'm just just copying it
+and paste
+it four times and save it again so we
+will see four images and captions are
+there the headings are there so imagine
+you have a product card on a website and
+you want to show different products
+without typing out the details each time
+so as we can see in the picture these
+are the same products or same pictures
+but what if we want a different products
+so with react we can set up the designs
+once and then just update the product
+name price description and image without
+getting into the Integrity of the code
+it's like having the template for
+displaying products and we only need to
+change the specific details for each
+item without messing around with a lot
+of complicated code this way updating or
+adding new products becomes a breeze and
+we keep things nice and organized
+without hard coding everything as you
+can see now we have hardcoded it but we
+don't have to we can change each and
+every
+uh details of this image all right so
+this is where props come into the
+picture and for that we have to
+understand how to use
+props so how to use props so react
+follows a oneway data flow approach this
+simply implies that information is
+transferred exclusively from parent
+component to its child components
+additionally it's crucial to note that
+any data sent from parent component
+Remains unalterable by the child
+component
+in Practical terms this means that a
+data will move from
+app.js acting as the parent component to
+picture. JS which functions as the child
+component as we did this unidirectional
+flow of data ensures a structured and
+predictable interaction between
+different parts of react application so
+now let's understand passing props to
+components so in HTML when you want to
+add special instruction to an input box
+you can use attributes for instance if
+you want your friend to bring you a red
+balloon you might say red in the
+instruction and the balloon is like the
+input element similarly in react when
+you want to give Specific Instructions
+or information to a component you use
+props it's like telling your friend
+additional details but in react World
+you attach these details to component
+much like attaching attributes to an
+HTML element inside the component tag
+after specifying component's name we
+assign a value to each property as you
+can see component name prop equals value
+we can also use multiple props that is
+multiple values also as you can see prop
+one value one prop two value two prop
+three value three so it's up to us all
+right now this was about passing props
+to components now let's understand how
+to read props inside the child
+components this is how you can pass
+props from parents now we will
+understand how to read props in the
+child
+components to read the props in inside
+the child component you have to simplify
+and include the names of the props they
+are listed inside the curly braces right
+after the function name so when you see
+something like function name and person
+like this example function then function
+name that is bike then name and mileage
+name and mileage is inside the CRA so
+when you see something like name mileage
+or any other name inside the C braces it
+means you can find and use the values
+inside the component it's a simple way
+to organize and pass information to the
+function so this is how you receive or
+read props inside the child components
+now let's understand it with the help of
+a fine
+example all right so again we are on vs2
+code now we will modify this code and
+understand how we can pass props from
+parent component to child component we
+will understand the functionality so for
+that let's just just remove these or we
+can also keep these as it is all right
+now we'll go to picture. jsx so this is
+a child component we'll also have to
+modify this so but let's start with the
+parent component
+itself all right so as we can see H1
+image so we'll keep it as it is now
+inside this components we'll first of
+all pass the attributes so let's say the
+first attribute is title so we want the
+title so let's say first is uh
+beautiful value all right so this is our
+first attribute that is title so as we
+have already understood that we can also
+pass multiple attributes right so this
+is a second attribute image
+URL now inside this we'll use an image
+URL so as of now we I have some image
+URLs that I have kept so I can use
+this just copy paste it again in a
+similar way we'll do another one I'll
+just copy paste it so we can save some
+time all right so I've copy pasted it
+and changed this URL that is the image
+URL and the title that is a beautiful
+sunset now again we can copy
+this and go to another one now here what
+we'll do is we'll write let's say Hills
+in the
+night all right so again we'll have to
+copy
+paste we just copy pasting it because we
+need to save time nothing else all right
+so now we'll write Green
+Forest
+all right so this is the image URL and
+this is the title so we are done with
+this now we can just save it so here
+what we are doing is we're passing these
+attributes to the child component this
+is the component picture we are passing
+these attributes to this child component
+but here we have to read those
+attributes which the parent component is
+passing for that what we'll do is we
+will receive props as you can see props
+now we'll change this hardcode data that
+is a static data to the dynamic one this
+images this title also so how we will do
+that we'll use the title prop to display
+a custom title so what we'll do is we'll
+write inside the curly places
+GSX we write
+props dot
+title all right so the title is this one
+title beautiful value so this now
+becomes Dynamic it will
+automatically update over here so this
+is the dynamic data now all right
+similarly we'll do for image tag as well
+so as we can see SRC so this this is the
+static this is not Dynamic right this is
+the hardcode so we want it to be dynamic
+so what we'll do is we'll write the same
+way as we did upwards so curly
+braces now inside curly braces what
+we'll do is props do image
+URL all right so this is the second
+attribute image URL props do image URL
+so now it becomes the dynamic this is no
+longer hard code all right so we can
+keep it as it is CSS and all and let's
+try to save
+it all right so let's see everything is
+fine or not now let's see if it is
+working or not let's save it so as you
+can see uh a beautiful Valley a
+beautiful Sunset Hills in the night uh
+it is not visible we'll have to figure
+it out a green forest so now it is a
+dynamic data simply what we are doing is
+we are using this code only and we are
+passing these attributes from the parent
+to the child component so the child
+component is updating the title this
+props image this also that is the image
+also and we are simply using the
+components we have used the same
+component but we have changed the
+details or the information or the data
+so this is how you can pass the props
+from parent component to a child
+component all right now let's understand
+destructuring props in JavaScript
+there's a handy thing called d
+structuring imagine you have a bunch of
+data in an object or array and you want
+to pull out specific pieces and store
+them in a separate variables now in
+react which uses JavaScript when we are
+working with objects called props here's
+what you do first group your properties
+using curly braces you can then either
+put them into variable name props inside
+your function or just directly use them
+as functions input so as you can see in
+this example this props that this child
+component is receiving then we are
+destructuring it into the variables that
+is being passed from the parent
+component as you can see the variables
+are color name mileage price so these
+are the attributes that is being pass
+from the parent to the child components
+now the child components is
+destructuring these attributes so that
+we can use them as it is instead of
+using props do color props do name we
+can simply use their name that is color
+name mileage
+Etc now for the second step to use these
+properties where you need them just
+mention their names without using props
+before each one so as we have done this
+so we don't no longer have to use props
+do color props do name
+Etc so the second thing you can do is
+like this example function product this
+is the function name and after that
+simply you have done is instead of using
+props you simply pass the attributes
+image name description price and then
+you can use it further so in a nutshell
+destructuring in react is like picking
+out the bits you need from a bunch of
+data and using them easily in your code
+so this makes our code more readable and
+concise so this was about destructuring
+and about react props so in this video
+we have delved into the fundamental
+concepts of react DRS understanding
+their role in a component communication
+through Hands-On examples we have seen
+how props enhance flexibility and
+usability in our react applications now
+equipped with this knowledge you're
+ready to leverage props effectively in
+your own projects all right guys with
+that we have come to the end of this
+video If you like this video please give
+it a thumbs up I hope it really help you
+all thanks watching stay safe and keep
+learning staying ahead in your career
+requires continuous learning and
+upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in Cutting Edge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click
+here

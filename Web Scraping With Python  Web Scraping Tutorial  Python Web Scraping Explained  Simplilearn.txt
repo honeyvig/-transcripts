@@ -1,0 +1,582 @@
+hi everyone welcome to the simply learn
+YouTube channel in this session we will
+learn what is web scraping then we will
+see whether it is legal to scrape data
+from web pages or not further we will
+have Hands-On demonstration to scrape
+data from Simply learn web page but
+before we begin if you love watching
+Tech videos subscribe to our Channel
+like the tutorial and hit the Bell icon
+to never miss an update before starting
+I want to ask you is web scraping legal
+or not you can pause the video give it a
+thought and answer as yes or no in the
+comment section or if you want to
+comment something about it shortly do we
+can have a discussion or the
+comment now let's learn what is web
+scraping web scraping is extracting
+unstructured data from web pages and
+store it in a structured form let's see
+whether it is legal or not to scrape
+data from
+websites depending on the website web
+scraping may be permitted or prohibited
+you can check a websites robots.txt file
+to see if web scrapping is permitted or
+not you can locate the file by adding /
+robots.txt to the URL you intend to
+scrip I will be scraping data from
+Simply L web page the URL for the
+robots.txt file will
+be HTTP colon
+www.simple.com
+SL robots.txt
+and to scrape a website you can either
+use web API or do HTML web scraping
+using tools as you will perform now so
+for that first we will create a
+folder and name it as web
+scraping using
+Python and
+inside we will open the command prompt
+and write the command code
+space period and press
+enter it will open the editor and I'm
+using the visual studio code if you want
+to use any other edor you
+can
+now we will name the file as
+FB
+s.p now to start with a code first we
+will install python packages we don't
+have to write new code for everything we
+can use existing code written by experts
+for that we will install three packages
+that would be requests bs4 and HTML F Li
+for that we will visit the command prom
+again and write the commands to install
+the
+packages the first package we will
+install is
+requests and press
+enter you can see that uh it states
+requirement is already satisfied as I
+have already install the package you
+will just write the command and press
+enter and the package will be installed
+in your system
+now for the second package we'll write
+the command pip
+install
+bs4 that is the beautiful soup package
+you can see that here it also states
+that the requirement is already
+satisfied I've already installed the
+package you can just write the command
+and press enter and the work would be
+done for you now we install the next
+package that is HTML 5 Li for that we
+will write the command pep install HTML
+5
+lib and press
+Center as I also install this package so
+it states the requirement is already
+satisfied and if you face any issues
+while installing any of the packages
+just come on down in the section and we
+will get back to you and help you
+install those packages
+and when you run the code for web
+scripting like we will understand the
+basic principles of web scraping so when
+you will be running the code for web
+scraping a request is sent to the URL
+that you have mentioned as a response to
+the request the server sends the data
+and allows you to read the HTML or XML
+page the code then passes the HTML or
+XML page and finds the data and extracts
+it for you now to extract data using web
+pages you need to follow some basic
+steps first you need to find the url
+that you want to scrape and inspect the
+page you can just go to the developer
+options or just click the right click on
+any div or on any part of the web page
+you will find the inspect at the bottom
+of the right click and you can just see
+the HTM content
+there and then find the data you want to
+extract then write the code for what you
+want to extract run the code and store
+the data in any required
+format so now we'll start but before
+starting first we'll visit the website
+we want to scrape the data
+so this is the website that is ww.
+simply.com
+and we'll just see it source file you
+can see the code
+here that is the HTML and the JavaScript
+code
+here now mov M on to a Visual Studio
+code we will
+start with a code to extract the data to
+scrip the data from the web
+page so first thing we will do is import
+the
+request and why we should do that like
+we must obtain the HTML as a string to
+work with so with the help of the
+request module get function can quickly
+obtain the HTML data and for that we
+will install the sorry import the
+request module for that we'll write the
+command
+import
+requests and then we will import the
+beautiful soup class from
+bs4 so for that we'll write the command
+from
+bs4 import beautiful soup
+and
+now we can start with the code as we
+have imported the
+packages so first thing we will write
+the URL for the web page we want to
+extract the data or scrape the data so
+we'll
+just name the variable as URL own
+and inside we'll just copy
+the
+link from the browser on
+you copy the link and move back to our
+edor and paste it here so this is the
+website we want to scrape the
+data now we'll make a variable directory
+uh write the link in get function to get
+the HTML data as a string for
+that we will create a
+variable and name it as
+R so we are naming it as r as in the
+documentation of request module uh they
+they have also taken the variable up so
+we just taking it as it
+is so we will use the get function for
+that we'll write the command requests
+doget and inside we'll pass the URL we
+want to scrape the
+data and in next line we
+will uh use the variable HTML content
+and inside we will store our do content
+that is it will get all the data stored
+in the HTML content variable so now we
+will print it for that we'll write the
+command print and
+inside we will just pass the variable
+print
+content and now we will save the
+file and run the file
+you can see that all the data that we
+have just seen in the source file has
+been
+extracted and it is showing an ad
+dominal so if we just see the source
+file you can see that all the data has
+been scraped and it's an a
+terminal so once the HTML is fetched
+using the request the next step will be
+to pass the HTML content for that we'll
+use Python's beautiful soup module which
+will create a tree like structure for
+our document object model that is stone
+for
+that we will write the command and
+create a variable
+soup and we'll use beautiful
+soup and inside we will pass two
+arguments one is our HTML content
+another is our
+passo for that we will write the command
+R
+content
+comma and next will uh pass HTML
+passor so for that we will write html.
+passer now we will just run a loop to
+scrape all the code from the web page
+and before that we'll just command down
+this print command so we shouldn't be
+confused with this
+output and the next Sprint statement we
+would be just commanding so it won't get
+confused so we will also delete the
+output from the
+terminal and get the new
+terminal so we have the fresh one and
+now we will make a
+command so for that we will just run a
+ROP
+and we'll use find all
+function it's used to find any of the
+element or tag from the whole web page
+content so here we'll find the
+code the whole code from the web
+page and we will get it printed
+now we'll save the file and run
+it okay so this is
+okay for to place the
+PO you can see that the file has run
+successfully so it has scripped the data
+now now we'll start scrapping the real
+data and get it at output in the
+terminal so for that first we'll scrape
+the title of the web page for that we'll
+write the command
+and use the
+variable title
+only yeah
+titles and that would be equal to soup
+do
+and we'll get it
+printed so first
+we it titles the
+variable
+and we will get this for Loop in command
+section
+so it won't be able to run again and
+again and we'll get a terminal clean so
+we can just see the output for the
+particular command and don't get
+confused as there would be a lot more
+data when we scrape the data from a web
+page so it would be easy for us to
+understand and learn the commands and
+their
+output so now we'll save the
+file and run
+it as you can see the title from the web
+page of Simply learn it's simply learn
+online courses boot cam certifications
+platform so
+now if you want to get this only string
+for that you can just write down do
+string with the variable name save the
+file
+and run the file and get the
+output you can see that the title tag
+has been removed and the simple string
+has
+been at
+output so moving on now we will use the
+find
+function so what does it meant for so it
+is used to get the first ment in the
+HTML page as we have a web page that is
+simply.com
+so uh we will start with paragraphs so
+we'll pass P tag that is the paragraph
+tag in the find function so it will get
+us the first paragraph from the whole
+web
+page so for that we'll write the
+command print
+and it's all because of the soup so soup
+dot the find
+function and inside we will pass the
+paragraph
+text we will just comment
+down and clear
+terminal save the file and now we will
+run it
+you can see that it has printed the
+first paragraph that is partnering with
+world's leading universities and so
+on
+so now we have the second function that
+is find all it will give the output of
+all the elements you just want to get it
+past them so we'll do the same with the
+paragraph only and use the find all
+function and get all the paragraphs from
+a web page that is simply
+learn.com for that we'll write the
+command and
+we'll get it commented so we won't just
+confuse with all the commands and the
+output so the function name is findor
+all and inside we will pass the
+paragraph tag only
+we will save the
+file first clear the terminal and run
+it you can see that all the
+paragraphs paragraphs from the web page
+have been
+printed now
+uh if you want all the paragraphs uh
+line by line we can also use the loop
+for
+that for
+that
+just get it
+stored in a variable that would be
+a equal to sup to find all B
+[Music]
+and now we will run the
+group so first we'll clear the terminal
+so we won't get confused
+tost save the
+file and run
+it you can see all the
+paragraph have been printed in our
+terminal now if you want to scrap class
+of any
+element we can do that by just writing
+the class
+adjacent to a command that is find and
+the attribute you want to pass in that
+as you can see that these paragraph tags
+have
+classes so we will find the class of the
+first paragraph for that we'll write the
+command
+print so find and find is used to scrape
+the data and that is the first one of
+the and the end
+M and we would be scripting for the
+paragraph and we want to get the class
+for
+that for that we'll just initiate the
+square brackets and write class in
+it now we save the
+file clear the terminal
+and first we have to comment it
+down so it didn't get
+printed
+so uh as you can see that it has return
+key error class so the first paragraph
+doesn't have any class class as we have
+seen in the previous output that some
+paragraphs have class but here it's
+showing that key error class the first
+paragraph don't have any and similarly
+we can find the
+ID and as I
+remember there
+was no ID also but for the syntax part
+this is a Syntax for that you just have
+to write ID in the square brackets we'll
+save
+it
+and comment on this
+command now save it clear the
+terminal and run the
+file you can see uh there's a same error
+that is key error ID so there's no ID
+assigned to the first paragraph and if
+you want to get uh the ID of any element
+you can just use this command and the
+element
+tag should be here we have just find out
+for the first
+paragraph if you want to scrape only
+text from the paragraph that is only
+text and note the paragraph tags in the
+output so for that we write the command
+first we'll comment it
+down we'll comment the previous commands
+and and
+now to get the text uh the function is
+getor text so for that we'll write the
+command
+print soup
+dot
+find uh we'll do it for the first
+paragraph only find
+P catore text
+oh I inserted
+Thea yeah do getor text so this is the
+command uh from this you will get the
+output of the text only that is stored
+in the paragraph tag so we'll save the
+file clear the
+terminal and run the file
+as you can see that uh we have Cod the
+output that is partnering with world's
+leading universities and so on that was
+our first paragraph and there's no
+paragraph tag here and you can do the
+same for whole
+code uh for that you can write a simple
+command
+just write
+print sup
+to get uncore
+text it will give you all the text from
+the web page of Simply
+learn.com so first we will clear the
+terminal save the
+file and run the file
+you can see in the terminal that it has
+given
+us all the text from the web page and
+with no tags there is not a single tag
+for any of the
+elent so now moving on now we'll see the
+anchor Texs from the web
+page so first we'll
+get this command in the
+comment so uh we will use the find all
+function for the anchor tag also and get
+all the anchor tags
+printed
+so will get a variable and name it as
+anchor
+and write a command soup. find all
+and inside we will pass the element and
+that would be the tag of that element
+that is Anchor and it tag is a and we
+will get it
+printed so we'll save the file clear the
+terminal and run the file
+so you can see in the terminal that the
+Anor Texs have been printed from the
+whole web
+page so now if you want to get in in a
+pretty manner you can just run a loop
+and get all the anchor texts in
+lines so we'll get all the anchor text
+but anchor text have text in them so
+links are in href and HF is a variable
+written in the tag so we will use the
+slicing for that we will run a loop
+and
+print
+I sare
+brackets get the
+hrf so it can just get all the anchor
+Texs
+printed we save the file
+get this
+commented never been anchor
+only R
+it okay okay time so first we'll clear
+the terminal so we don't get confused
+with the previous
+output and now we have know a and we can
+anchor
+get I don't
+get
+and and it shouldn't be
+now now we'll save
+it and run the
+file so you can see that all the links
+have been printed and in the
+line so as I have told you earlier that
+anchor tags have HF in the them links
+they are in the hrf and hrf is a
+variable and that is we have used here
+that is we have inserted href inside the
+get function and got all the links that
+are present in the web
+page now we will create a set and store
+all the links in it and you know the
+property of set that uh it counts the
+item for a single time if there's a
+repetition of those
+items so for
+that first I'll come at
+it so uh there's a command that is find
+o and now we will get all the anchor
+tags in a
+set for
+that we will get the variable
+all
+and initiate a
+set
+now we will run a loop so that
+we get all
+the uh links uh that we have got in the
+output stored in the set and if there is
+something repetition it would be
+neglected and there will be the
+single link there only there will be no
+repetion so for that for I
+in anle
+we
+will get to variable
+text and inside we
+will the link of the webssite
+this that is I do
+get and just pass the
+HF so we get all the
+links and now
+we'll choose our
+variable inside we will
+add the links and get it
+printed now save the
+file clear the
+terminal and run
+it you can see
+that all the links have been printed in
+the terminal and
+if there's something repetition of the
+links that have been neglected
+and the unique links have been printed
+so
+now first we'll get it commented and we
+will see one
+another now see the div tags and get a
+div tag printed
+here and get all its contents here
+also first we'll comment it down
+and now we will move to the source
+code see where is the D tag and what's
+the name of
+it CU we would be requiring that
+okay so find
+it
+tank
+okay okay here we got so inside the
+class body we have the div ID equal to
+root so here we will get oh the contents
+from
+that we use the ID
+root and for that we'll create a
+variable with the name root only root
+equal to
+soup
+dot
+find
+ID equal to that
+was
+root and now
+will get it
+printed clear the terminal save the
+file run the
+file you can see
+that all the content that has been
+stored in the class with the Dy route
+have been printed here
+so
+yeah I think uh that makes the most of
+this tutorial and if you want to learn
+more about the web scrapping you can
+visit the documentation of beautiful
+soup and there you can learn about
+various elements and the various objects
+and you can apply them on website that
+permits you to scrape the
+data so with that we have come to the
+end of this session I hope it was
+interesting and informative if you liked
+it please let us know in the comment
+section below and also do subscribe to
+our Channel and stay tuned for more from
+Simply
+learn hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos turn n up and get certified click
+here

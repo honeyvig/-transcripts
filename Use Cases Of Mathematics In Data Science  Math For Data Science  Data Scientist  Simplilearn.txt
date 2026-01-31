@@ -1,0 +1,390 @@
+hello everyone welcome to this video on
+the use cases of mathematics in data
+science and ban inference by simple
+learn in today's video we will embark on
+a journey to explore the intrinsic
+relationship between mathematics and
+data science mathematics serves as the
+backbone of data science providing the
+essential tools and Frameworks to
+extract valuable insights and make
+informed decisions from data we will
+commence by examining various use cases
+where mathematics plays a pivotal role
+in data science applications from
+predictive modeling to machine learning
+algorithms and data visualization
+techniques we will uncover the
+mathematical principles that underpin
+these powerful tools furthermore we will
+delve into the realm of beian inference
+a remarkable Paradigm that has
+revolutionized the way we approach data
+analysis and decision making we will
+dissect the core principles of ban
+inference its applications across
+diverse domains and the process of
+updating beliefs based on new
+evidence craving a career upgrade
+subscribe like and comment
+below dive into the link in the
+description to FastTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back before we commence just a quick
+info if you are ready to advance your
+data science career consider simple
+earns ctech postgraduate program in data
+science ranked as the top PG data
+science program by aim in collaboration
+with ctech ctme and IBM this program
+equips you with essential skills in
+Python machine learning Tableau
+generative Ai and more benefit from
+master classes by coltech instructors
+and IBM experts this Interactive
+Learning Experience covers critical
+topics through live sessions led by
+global practitioners join successful
+alumni who have advanced their careers
+and gained a Competitive Edge in the job
+market so don't forget to check out the
+course in the description box below and
+the pin comment so without any further
+Ado let's get
+[Music]
+started hi everyone and welcome to this
+module and we will be discussing on use
+cases of mathematics in data science
+then we have beijan
+inference so beijan inference is used
+widely in different vertical it's a
+popular data science technique used for
+businesses especially for pricing
+decisions so businesses they can
+determine the prices for products based
+on field information like retail and
+wholesale prices the size of the market
+and the market share so it can be used
+for new product development as a whole
+maybe one would look at the different
+Risk by being uncertainties and
+determining if the project is worth it
+or not but again when it comes down to
+the beijan inference and the business
+decisions the most common application
+relates to the product ranking so many
+systems they have been developed to help
+customers have an ideal and customized
+shopping
+experiences so online shopping giants
+like Amazon uses it to make rating
+appear natural when searching for a
+product as opposed to displaying
+rankings in the order the default option
+it is used in terms of marketing so
+again we use it to look at previous
+campaigns and marketing information to
+improvise the existing campaigns or make
+new
+ones hypothesis
+testing then we have hypothesis testing
+so hypothesis testing is used in
+different scenarios first of all it is
+used in clinical trials as well so many
+Pharmacists and doctors they use
+hypothesis testing for clinical trials
+so the impact of a new clinical method
+medicine or procedure or the condition
+of the patient is analyzed through
+hypothesis testing for example a
+pharmacist believes that the new
+medicine is resulting in the rise of
+blood pressure in diabetic
+patients now to test this assumption the
+researcher has to to measure the blood
+pressure of the sample patients before
+and after the intake of new medicine for
+nearly a particular period let's say 1
+month so then there can be two scenarios
+we have the null hypothesis like the
+average blood pressure is the same after
+and before the conception of medicine
+and then we can have alternative
+hypothesis where the average blood
+pressure after the consumption of the
+medicine is less than the average blood
+pressure before the consumption of
+medicine so the P value of hypothesis
+test is less than the significance value
+than null hypothesis is going to be
+rejected it is also used widely in
+testing the effectiveness of the
+fertilizers on Plants so nowadays it is
+highly used by Farmers by those in the
+agricultural vertical so suppose let's
+say a researcher wants to check their
+assumption that a particular fertilizer
+may result in Faster growth of the plant
+in a month and its usual growth than
+what is observed I suppose in a couple
+of plants now to verify this assumption
+we will consistently give the fertilizer
+to the plant for nearly a month and then
+it can be further divided into two
+hypotheses null and alternative where
+null will be like fertilizer does not
+have any influence on the growth and
+alternative can be the fertilizer
+results in a faster growth of the plant
+and it is also used highly in
+manufacturing sectors as well so it is
+used in finding the defects in any kind
+of manufactured product for example
+let's say manufacturing plan X decides
+to verify that the particular method
+results in an increase in the defective
+products per quarter let's say the
+number can be 200 now to verify this we
+can calculate the mean of numbers of
+defective products produced before the
+start and end of the quarter so again we
+can divide them into two different
+scenarios null and alternative when null
+can be the average number of defective
+products and alternative can be the
+average number of defective products
+before and after the implementation of
+the new method and then we can see which
+one fits into our current criteria then
+we have image and Signal
+processing so we have a number of use
+cases for image processing and it is
+highly used in different verticals
+including Insurance retail banking in
+pharmaceutical especially in the
+Healthcare Community as well so
+basically is used in reverse image
+search for different
+purposes so for example if we have any
+image that we want to search the web
+page if we use this image for performing
+a search
+we can drag and drop search and then any
+search engine will be able to use this
+image as a base and give us all the
+relevant links where we can find image
+or whatever is present in the image so
+this is called as a reverse image search
+so we can search by an image and find
+out the relevant details about it so it
+uses the artificial intelligence
+software and image recognition
+techniques to identify image content and
+then compare them with billions of
+images indexed on the web so the image
+recognition algorithms they help out
+find out similar images the origin of
+the image and information about the
+owner of the image websites using the
+same image image plagiarism and all
+other relevant information in the past
+reverse image was only used for finding
+the similar images on the web but today
+we can use it for multiple other
+requirements as well then we talk about
+linear
+regression so linear regression is
+basically a technique through which we
+can model the relationship between
+different data pointers and one of the
+most widely used use case is the weight
+loss reduction so the problem of
+predicting the weight reduction in the
+form of number of kilos red reduced
+hypothetically could depend upon the
+input features that we have age height
+the weight of the person and the time
+spent on exercises so weight reduction
+is going to be the function of age
+height weight and time spent on
+exercises so that's why we have a shoe
+size which is going to be based on the
+height weight age to time on exercise so
+as a part of creating the above model
+the goal will be to find the value of B1
+B2 B3 B4 and B 0 which would minimize
+the objective function so the objective
+function would be the summation of mean
+squared error which is nothing but the
+sum of the square of actual value and
+the predicted value for different values
+of age height weight and time spent on
+exercises that's how it's going to be it
+is also used for forecasting the
+performance of students based on the
+marks based on the number of hours they
+have put in
+let's consider the problem of predicting
+the marks of a student based on number
+of hours he or she puts into the
+preparation although at the outside it
+may look like a problem that can be
+modeled using simple linear regression
+it could turn out to be a multiple
+linear regression problem depending upon
+multiple input features and
+alternatively it can also look like a
+problem that can be modeled using simple
+linear regression but it can be a
+multiple linear regression problem so
+let's assume for the sake of
+understanding that the marks of student
+M depends upon the number of hours he or
+she puts for the preparation so this is
+going to be the formula that can
+represent this model marks where M
+multiplied by the hours plus the
+constant so the best way to determine
+whether it is simple linear regression
+problem will be to do a plot of marks
+versus hours it a plot is going to be
+completely diagonal and again it is
+going to be a good fit for linear
+regression setup so we have predicted
+modeling which is basically used to
+model the probability distribution of
+variables in a given data set so there
+are multiple use cases first of all we
+have churn
+prevention so when a business loses a
+customer it has to replace a loss of
+Revenue by bringing a new customer so it
+proves to be expensive as the cost of
+acquiring a new customer is much higher
+than retaining the existing customer so
+Predictive Analytics model they help us
+in preventing the churn in our customer
+base by analyzing the dissatisfaction
+among our current customers and then
+identifying the customer segments at
+most risk for leaving our businesses can
+make the necessary modifications using
+predictive data to keep customers happy
+and satisfied eventually protecting
+their revenue and then it is also used
+for customer segmentation so it allows
+us to group the customers by shared
+traits in different businesses they
+Define the market differently depending
+upon the aspects that offer the most
+value to the Company products or
+services so profound use of this
+analysis technique allows us to Target
+the markets based on accurate insight
+and indicators and then we can analyze
+these segments of those most interested
+in what our company offers so there are
+multiple verticals like banking
+pharmaceutical retail Insurance
+Automotive sector they all make use of
+customer segmentation and then in terms
+of quality assurance so ineffective
+quality control will affect our customer
+satisfaction scale and ultimately impact
+the revenue and market share also leads
+to more customer support calls warranty
+issues repairs for inefficient
+manufacturing and so on so using
+Predictive Analytics we can help
+identify high-risk modules in our
+application where we can prioritize the
+critical areas we can reduce the time to
+Market through shift left testing and by
+using this we are going to get a better
+quality and we will be able to tame
+customers for long and different
+verticals like pharmaceutical
+manufacturing Automotive logistic
+Transportation they all make use of this
+to keep on improvising their current
+business models and as we discussed
+earlier there are multiple use cases of
+these in
+healthcare like we use that in creating
+some kind of prediction modeling so all
+the data sets from the demographics
+clinical measurements medical history
+mathematics they all are used to create
+models so that we can make an accurate
+prediction how the same data set is
+going to behave for any future
+references how we can find the most
+probable condition before it actually
+happens so they Ed to analyze large data
+sets of health related information so
+that we can prevent the disease before
+they happen like we have the image
+scanning for lung So based on the
+previous lung cancer patients we know
+what exactly is a pattern or development
+of cancer cells and based on the current
+scanning which has already been
+completed we can let the patient know if
+they are having a probability of
+developing the same lung cancer or not
+so that since they will be having enough
+amount of
+time we can make the right decision at
+the right time so that the prevention of
+cancer can get started before it
+spreads then we have some clinical files
+like we discussed so mathematics play a
+crucial role in the design and Analysis
+of clinical trials so we can make use of
+the models we can make use of the
+hypothesis testing to see if a given d
+drug is effective or not and then we can
+carry on with other hypothesis scenarios
+it is used for medical imaging so that
+we can know how exactly we can identify
+tumors we can identify cells we can
+identify some kind of cancer cells
+before they actually start in the blood
+so that we can analyze thousands of
+previous scans done and based on the
+pattern seen in the actual patients we
+can cross verify that by using the
+current scan and simply get the best
+probability of developing a Cancer and
+so on these all things can be easily
+verified there and it is also used in
+Precision medicine to ensure that we are
+able to give and use the right amount of
+medicine so that the possibility of them
+getting an overdose or getting less than
+what will be effective for their
+treatment can be avoided so these things
+are all done by using machine
+learning staying ahead in your career
+requires continuous learning and
+upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

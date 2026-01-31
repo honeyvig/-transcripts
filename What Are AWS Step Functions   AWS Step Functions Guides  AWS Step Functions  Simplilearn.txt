@@ -1,0 +1,305 @@
+hello everyone and welcome back to our
+Channel today we have an exciting and
+in-depth topic to delve into AWS step
+functions if you have been wondering how
+to simplify and organize your serverless
+workflows on AWS we have come to the
+right place AWS step is a powerful tool
+that lets you design and manages
+serverless workloads with ease whether
+you are just starting with AWS or a
+seasoned expert we will cover everything
+you need to know about AWS step
+functions so buckle up and hit that like
+button if you are excited as we are and
+if you haven't already be sure to
+subscribe and turn on the notification
+Bell so you won't miss any of your
+future contents without further Ado
+let's dive head first and before that if
+you are one of the aspiring Cloud
+enthusiasts looking for online training
+and graduating from the best
+universities or a professional who
+elicits to switch careers in cloud
+computing by learning from the experts
+then dragging a show to Simply learns
+postgraduate program in cloud computing
+in collaboration with Caltech Center for
+technology and management education the
+course link is mentioned in the
+description box that will navigate you
+to the course page where you can find a
+complete order of the program being
+offered so let's Dive Right In the
+details and explore the magic behind AWS
+step functions so the first thing we
+will explore is understanding the AWS
+step function challenges so before you
+get into the specifics of AWS step
+functions let's understand the problem
+IT addresses as you build larger
+applications with many different parts
+managing and coordinating them can
+become quite tricky absolutely imagine
+you have a bunch of different tasks that
+need to happen in a specific order to
+complete a big project for example if
+you want to build a house you need to
+follow a specific sequence of steps like
+laying the foundation building the walls
+putting on the roof and so on but what
+if something goes wrong in the middle of
+the process like the wall building part
+doesn't work correctly or you run out of
+bricks that's where the challenge lies
+with traditional methods handling these
+errors and coordinating everything can
+become a nightmare and here comes the
+AWS step functions now we'll have an
+introduction to AWS stamp functions so
+here AWS time function comes to rescue
+with these challenges so AWS staff
+functions are like having a master
+conductor who organizes and orchestrates
+all the tasks in your application it
+helps you build workflows as a series of
+steps or tasks making it easier to
+manage the entire process that's right
+just like a conductor guides the
+musicians in an orchestra to play their
+instruments at the right time AWS step
+functions guides you different services
+and functions to work together
+harmoniously it does this by using
+something called State machines so State
+machine is like a big map that shows all
+the different steps your application
+needs to take to finish its work each
+step in the state machine is a specific
+task that your application needs to do
+it could be running a piece of code
+processing some data or even making
+decisions based on certain conditions
+and now we'll see the components of AWS
+step functions now that we have basic
+understanding let's talk about the key
+components of AWS step on Solutions the
+first and most important component is
+the state each state represents a single
+task or a step in your workflow and
+there are different types of States like
+task choice and parallel a task state
+does a specific job like running a
+Lambda function or an activity a choice
+State makes decisions based on
+conditions and a parallel State lets you
+do multiple tasks at once that's right
+and what's really cool is that AWS step
+functions automatically manages the flow
+between these states it makes sure that
+each task happens in the right order
+just like following the steps to build a
+house and here's the best part if
+something goes wrong during one of the
+tasks AWS step functions can handle it
+it can retry the task a few times or
+even go to different part of the
+workflow to deal with the program and
+now you can see the state machine
+diagram on the screen so this state
+machine starts with the start state
+which represents the beginning of the
+workflow from the start state it goes to
+the check items stock that is a state
+which is a task state that checks if the
+requested item is available in the
+stores inventory after completing the
+check item stock task the state machine
+proceeds to process payment State
+another task test that processes the
+customer's payment based on the chosen
+payment method the notify method state
+is a choice state that evaluates whether
+the customer prefers to be notified via
+email or SMS if the customer prefers
+email the state machine goes to notify
+customer email state which is a task
+state that sends an order confirmation
+email to the customer if the customer
+prefers SMS the state machine goes to
+notify customer SMS state which another
+task State make which is another task
+paid that sends an order confirmation
+SMS to the customer the parallel state
+is responsible for running both notify
+customer email and notify customer SMS
+tasks simultaneously once the task is in
+the parallel state are completed the
+state machine reaches the end state
+which marks the end of the workflow the
+visual representation of the state
+machine provides a clear overview of how
+AWS step functions coordinate in a
+different tasks and branches in the
+workflow it helps in understanding the
+flow and logic of the serverless
+application and enables developers to
+manage and modify the workflow
+efficiently and now we'll see how AWS
+step functions work and now let's see
+how they will work imagine you are a
+chef and you want to bake a cake you
+have different steps like mixing the
+ingredients putting the batter in the
+oven and decorating the cake with AWS
+step functions you can define a state
+machine for baking a cake the state
+machine will list all these steps and
+the order they need to happen in so when
+you start the state machine it will take
+you through each step one by one just
+like following a recipe and if if you
+accidentally put too much sugar in the
+batter AWS step functions can handle
+that it can go back and give you another
+chance to mix the right amount of sugar
+or if the oven suddenly stops working
+AWS step functions can pose the baking
+process and wait for the oven to be
+fixed before continuing and now we'll
+see the benefits of AWS step functions
+AWS step functions offer several
+benefits let's highlight a few of them
+first they make your application more
+reliable with built-in error handling
+and automatic retwites you can be
+confident that your workflows will work
+smoothly even if something goes wrong
+absolutely and AWS step functions also
+make your life as a developer easier the
+visual workflow designer in the AWS
+Management console allows you to see and
+modify your workflows graphically plus
+it's highly scalable Azure application
+grows AWS step functions can handle more
+and more complex workflows without a
+hitch and let's now forget about cost
+Effectiveness you only pay for the state
+Transitions and the time your workflows
+are running which means you can save
+money while building powerful
+applications
+so these were the benefits of AWS step
+functions now we will see the real world
+use cases AWS staff functions are
+incredibly versatile and can be used in
+many real world scenarios for example if
+you have a big online store you can use
+AWS step functions to handle the entire
+order process from receiving the order
+to receiving the payment checking the
+inventory and finally shipping the
+products and let's not forget about data
+processing AWS step functions are
+perfect for automating data pipelines
+where you need to extract transform and
+load data from one place to another it's
+also a great tool for managing
+microservices if you have different
+parts of your application running
+independently AWS step functions can
+help you coordinate their interactions
+and now we conclude this topic that is
+AWS step functions so to wrap things up
+AWS functions are like having a magical
+conductor for your applications they
+make it easier to manage and coordinate
+all the different tasks in your
+serverless work close with AWS step
+functions you get reliability Simplicity
+scalability and cost Effectiveness all
+in one package so if you are working on
+AWS and want to simplify your serverless
+architecture give AWS step functions a
+prime and now let's take a minute to
+hear from our Learners who have
+experienced massive success in their
+careers
+I will be permanently moving to Europe
+with my family so simply learn this
+course has helped me back a great job
+offered there will be the 60 salary high
+we cannot wait to start our new life in
+Finland we are also excited hey I am
+Salah
+and I am currently living in Nigeria I
+am working as Chief Information
+Technology officer at aristiles after
+working for 23 years in IIT sector in
+Algeria I felt that my career had become
+stagnant here I wanted to experience
+what is like to live in Europe so I
+started applying to various jobs there
+as someone who is responsible for making
+the decision I wanted to upgrade my
+skills I also realized that to get a new
+job I needed to have a personal
+certification in cloud computing so last
+year I started the postgraduate program
+in cloud computing association with
+Caltech Chrome Sample video
+it's not easy to get access to Caltech
+but simply didn't provided that with
+this course I had the choice to study
+while I continued it with my job
+either Technologies like ews and Azure
+during the course luckily my new
+employers were looking for someone who
+knew these Technologies I have just
+completed the course but my new
+employers were aware that guy was taking
+this course and that is how I got this
+new job offer with 60 percent salary
+high in Finland I will be leading the
+cloud computing unit of my new company
+I am really excited not just for myself
+but for my family as well I have 30
+dollars I think I will be able to help
+them with their higher studies in Europe
+as a father you always want to make
+decision that have a positive impact on
+your children as for me I am going to
+live my dream now I think dreams come
+true when you work hard to achieve them
+if you found this video helpful please
+give it a thumbs up and share it with
+your friends and if you have any
+questions or if there's something
+specific you would like to cover in a
+future video leave a comment below
+thanks for watching and we'll see you in
+the next one
+staying ahead in your career requires
+continuous learning and upskilling
+whether you're a student aiming to learn
+today's top skills or a working
+professional looking to advance your
+career we've got you covered explore our
+impressive catalog of certification
+programs in Cutting Edge domains
+including data science cloud computing
+cyber security AI machine learning or
+digital marketing designed in
+collaboration with leading universities
+and top corporations and delivered by
+industry experts choose any of our
+programs and set yourself on the path to
+Career Success click the link in the
+description to know more
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
+foreign

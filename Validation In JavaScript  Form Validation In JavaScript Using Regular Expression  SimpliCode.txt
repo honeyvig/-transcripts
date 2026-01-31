@@ -1,0 +1,2701 @@
+hello everyone and welcome to simply
+learns youtube channel
+today in this video we will discuss
+everything about validation in
+javascript we'll start this video with
+regular expressions in javascript we'll
+go through certain different topics like
+meta characters character sets and
+ranges and shorthand character class
+then we'll move on to form validation in
+javascript and we will see how regular
+expressions are used to validate a
+user's input in javascript so before we
+begin make sure that you have subscribed
+to a youtube channel and press that bell
+icon to never miss an update from simply
+learn so without any further delay let's
+get started have you guys ever heard
+about validation or pattern matching in
+javascript we come across these terms
+when we hear about passwords mostly
+right so we say that we can use the if
+else statement to match if the user's
+password matches with the one we already
+have for that we write if password is
+equal to is equals to some sort of
+string or characters and then we see if
+the password matches will let the user
+enter otherwise the entry will be denied
+so we are discussing all that because
+regular expressions are objects used to
+perform pattern matching or if we want
+to search for something in a string or
+even if we want to replace something
+from a string we can do it all with
+regular expressions
+so we'll go through the syntax for
+regular expressions and some more
+important things about regular
+expressions in javascript so regular
+expressions are present in almost every
+programming language it's not limited to
+javascript only and the concept remains
+the same everywhere the syntax may
+differ a bit between different languages
+but the logic behind them will always be
+the same the name might be a little bit
+confusing but
+the reality is entirely different they
+are pretty easy to use and if you
+understand the basics clearly you'll
+face no problem while working on
+advanced topics
+so let's go through the regular
+expressions before we move on to
+validations using regular expressions in
+javascript so let's understand the
+concept entirely so that it will be easy
+for you guys in further videos so
+consider a scenario where we have a
+string and we want to find a particular
+word in that string or we can say we are
+in a static website i hope you guys are
+aware of the term static where we have
+the search option to find some word in
+the entire html document we have to
+write the word in the search box and it
+will return us the location of that word
+in the html file or in the website
+right what we'll do now is we'll use a
+word and we'll find that word in a
+string will make some changes to that
+word with the help of several functions
+used along with regular expressions in
+javascript so the syntax for regular
+expressions goes like this we'll move to
+a javascript file and we'll take a
+variable here so let's say the variable
+is where
+rejects
+and we use two forward slashes for it
+generally we use the double slash for
+comments but it will be recognized as a
+regular expression in javascript if we
+write something inside these double
+slashes so let's say we are writing
+something here let's say we write here
+hello
+now
+this word hello is present inside the
+variable rejects and this word needs to
+be searched in a string
+so let's use a string as well so for
+that we'll write here
+where let's say the string name is str1
+let's say we are writing here
+welcome
+to a
+youtube
+channel
+full stop
+say hello
+if
+you are new here
+fine so let's say this is the string we
+have
+now this string contains the word hello
+in it all we have to keep in mind is to
+add the main keyword in the string for
+now
+moving ahead what we want to do is we
+want to find this word in the string
+right we want to find this hello world
+in this string
+so next up we'll go through certain
+essential functions which we use with
+regular expressions and we'll see the
+functioning of these essential functions
+the first function is the exact function
+so let me write here guys
+this is the first function exec
+function
+now this function returns an array if
+the word is present in this string
+otherwise it will return null if the
+word is not present in the string the
+syntax is pretty straightforward all we
+have to do is to use the exact function
+with the variable that contains the
+regular expression now in this case the
+word rejects contains the regular
+expression we have to use it with the
+function and the string name will be
+passed as a parameter to this function
+so
+let's write the syntax here and it will
+be easy for you guys so let's comment it
+out
+and we'll write here let's say we are
+taking another variable where output
+will write here the
+variable name
+dot function name will write here exec
+and the string will be passed as a
+parameter fine
+so this is the syntax now this output
+variable over here will have an array
+and the array will return the index
+number of the word hello industry
+fine so let's print this array on the
+console and we'll write here
+console.log
+output fine
+save it and open the console so we will
+move to a browser and we'll open console
+here
+see here we have an array and if we
+click on this array we can see that we
+have
+the word hello at index 36 so if we
+count from here and the counting should
+start from 0 because error index always
+starts from 0 so at index 36 we can find
+that hello is over here and so it will
+return the index of this particular word
+now
+if we write here something else other
+than hello let's say we are writing here
+2 save it now and you can see here we
+have 2 present at index 8 so if we count
+from here we can see that 2 is present
+at index 8 so this is working totally
+fine now another scenario is if we write
+here 2 with a capital t save it now and
+you can see here the output is null
+why so because regular expressions in
+javascript are case sensitive case
+sensitive means it differentiates
+between the capital letters and small
+letters fine
+but the good part is we can make them in
+case sensitive as well so all we have to
+do is we have to use a modifier a
+modifier is actually used to make
+modifications in the search so what we
+have to do is we have to write here in
+the beginning we have to write a single
+letter and in this case we'll write here
+i because this modifier will tell the
+system that there will be no problem
+with the case sensitivity of the word
+now it will work fine and if we save
+this program
+we can see we have the output as index 8
+now if we change this string and we'll
+write here something other than this so
+we'll write here h e
+l o but
+the three letters of this word are
+capital letters
+so save it now and you can see we have
+the output as
+index 36 so this is working fine now one
+last situation is if we write here more
+than one hello in a single string so if
+we write here hello and welcome to our
+youtube channel now there are two hello
+words present in a single string save it
+and you can see we have the word hello
+at index 0 so it will return the first
+hello world in the string now if we want
+to get access of the second hello and
+for if we write here this piece of code
+again what we are expecting is we are
+expecting it
+to give us the index of second hello as
+well but it will not happen save it and
+you can see it will give the index of
+first hello twice you can see here we
+have index as 0 in both the areas right
+so it will not work
+now the solution to this problem is
+modifiers again what we have to do is we
+have to use another modifier here now we
+have to write here the letter g and save
+it
+now this is returning null because we
+have
+the string wrong here so we have to
+write here hello because we have removed
+the in case sensitive modifier save it
+now and you can see we have both the
+hello words with indexes as 0 and 46
+respectively so this global modifier
+tells the system that the word is now
+global and if you find the word once and
+the user tries the exact function again
+then the second time you should return
+the index value of the second word
+so this is how it actually works now the
+following function we are going to
+discuss is a pretty simple one the test
+function
+now this function returns either true or
+false nothing else
+this function checks for a particular
+word that if the word exists in a string
+then it will return true otherwise false
+it will not return the index value or
+some sort of other things
+it deals with the boolean value only
+that is true or false so that's it for
+the function let's see how this function
+work
+actually so what we'll do is we'll
+mention here this test function
+and will
+comment this piece of code
+so that there will be no
+confusion
+we'll comment it out
+now we'll go through the syntax of this
+test function
+the syntax is pretty easy we'll use the
+output variable again
+and we'll write here
+variable name dot function name and the
+string name will be passed as a
+parameter
+now the next thing we'll do is we'll
+write here console.log
+and we'll print this on a
+console
+fine so this is the syntax for test
+function
+save it
+and here you can see in the console that
+for the word hello it returns true if we
+change this word here to something else
+like if we write here hi instead of
+hello
+save it and you can see the output is
+changed to false because high is not
+there inside a string right because
+height does not exist according to this
+history
+so this is how the test function
+actually work now one more thing i want
+to mention here about the test function
+is if we write here some part of a word
+not the whole word but some part so
+let's say if we write here
+e l
+now this is the part of hello world now
+what if we save this you can see the
+output here is true that's because the
+test function checks for every letter
+and if it finds these three letters in
+any word it will return true in that
+case as well fine next up we have
+another function to use with the regular
+expressions in javascript now the next
+function's name is match function
+i'll write it here
+first i'll comment these two statements
+and then i'll write here the name of
+this function so the name is match now
+this match function returns an array of
+results otherwise null the syntax for
+this function is exactly opposite from
+the previous functions
+because we'll pass the regular
+expression as a parameter to this
+function now and the function will be
+used along with the string
+so
+it is completely opposite to
+the syntax we used for the previous two
+functions so we'll write here for this
+we'll use the output variable again
+we'll write here where output
+and
+instead of rejects we'll use it with the
+string so we'll write here str1 dot
+match
+and
+the variable name will be passed as a
+parameter fine
+so this is how the syntax for match
+function looks like it's exactly
+opposite to the syntax we used for
+previous two functions the next line
+will remain the same we'll write here
+console.log and will print
+output on a screen fine now we have to
+do one more thing here what's that is we
+have to remove this modifier from here
+and we have to write here
+hello so save it and you can see we have
+an array over here now what if we want
+to find both the words in a string if we
+have if we want to check if there's more
+than one word with the similar name so
+what we have to do is we have to write
+here g and if you save it now you can
+see the output is completely changed and
+now we have an array with two similar
+words what if we add another hello here
+so let's say we have another hello here
+save it and you can see here the array
+size is increased to 3 now now we are
+left with one more method and the method
+we are going to discuss now is pretty
+important because we'll use this method
+in future as well so the last method is
+the replace method which is used to
+replace something from a string we can
+either replace the first matching word
+or all the matching words from a string
+if we are using the global modifier then
+all the words will be replaced otherwise
+the first matching word will be replaced
+so the syntax for this method goes like
+this
+what we have to do is so let's comment
+it out first
+and we'll go through the syntax of final
+method so the final method is
+replace method
+fine
+so the syntax goes like this we'll use
+the output variable again
+and we'll write here
+str1
+dot replace because we want to replace
+something in that particular string the
+first parameter will be the
+variable name we'll write here rejects
+comma and then we'll pass
+the word we want to change so hello will
+be changed with let's say in this case
+hi
+fine
+now check over here that if we are using
+any modifier so we are using global
+modifier here
+now if we print this on our console if
+we write a console.log and
+we are writing here output
+if we save it now we'll get to know that
+all the hello words in the string are
+replaced with the word hi
+save it and you can see over here that
+hi and welcome to a youtube channel say
+hi if you are new here and then we have
+a hi you can see that all the hello
+words are replaced with the word hi
+now if we remove this global modifier
+from here and if we save it now you can
+see only the first hello world is
+replaced the other hello words are here
+and there will be no change in them
+because we are not using the global
+modifier now in the previous video where
+we came across regular expressions in
+javascript we saw different predefined
+functions that we use for finding a
+particular expression present inside a
+string right
+like the predefined functions we also
+have some javascript characters that
+make the searching part easy
+so these characters are used within the
+expressions and help us in different
+ways for example let's consider a
+scenario where we have a regular
+expression and we want to find a
+particular word within the string
+but we don't remember the whole word
+let's say we forgot the word with time
+and now we remember only a part of that
+word so let's do the same side by side
+and what we'll do is we'll go to our
+javascript file
+and we'll take three variables
+we'll write here let regex is equals to
+then we'll write here let str1 is equals
+to
+and then finally we'll write
+where output is equals to
+fine
+now here we have three variables the
+variable rejects will store a regular
+expression within it we haven't returned
+the word yet next up we have a variable
+str1 to store the string and a variable
+output to store the output returned by a
+function the function we'll use will be
+any one of the ones we used in the
+previous video so let's do it here the
+word let's say the word will be
+welcome fine
+you can take any word you want now
+moving on to the string let's write the
+string as well we'll write here welcome
+to our youtube
+channel and then we'll write another
+welcome here
+fine we'll discuss the reason why we
+wrote welcome twice now if you guys
+remember from the previous video where
+we have used the test function to check
+the availability of a word present in a
+string or not we'll use the same
+function again so we'll write here
+variable name
+dot
+function name so the function name is
+test and then we'll pass the string name
+as the parameter so we'll write a str
+that's fine
+and finally what we'll do is we'll
+print this on our console so we'll write
+a console.log
+output fine now we already know the
+output for this piece of code right the
+output will be true that's obvious
+because we have the word welcome present
+in our string not once but twice
+the output will remain true if we remove
+the first welcome from the string let's
+do it here let's save the program first
+and then we'll move to the console
+and you can see here the output says
+true for the word welcome present in the
+string str1 that's true right
+and now if we remove this welcome word
+from here and if we save it you can see
+the output still remains true because we
+have another welcome word present in the
+string right
+so this is how the test function
+actually works we'll put the welcome
+word here again we already know the
+functioning of this test function the
+main point of discussion here is the
+meta characters so metacharacters are
+characters with special meanings
+like the dot character if we write this
+regular expression like we can remove
+any one character from this word and put
+a dot in its place let's do it
+we'll remove a random character and
+write dot a so let's say
+we are removing
+l
+fine and instead of l we are putting a
+dot here
+now the dot character here will replace
+this character and the system will not
+throw any error
+it will still find the word we can also
+use exact function here to check the
+index number of the word so what we'll
+do is we'll take another variable
+and we'll do the same we'll write here
+rejects dot
+exec
+and then we'll pass the string name as
+parameters
+fine
+we'll copy this console.log from here
+and we'll paste it here
+the variable name is op
+save it
+and here you can see
+we have the output as true for the test
+function and for the exact function it
+returns the index number 0 of the word
+in the string now the system
+automatically puts a l in place of the
+dot character similarly if you want to
+do the same thing for more than one
+character we have another meta character
+for that it's not that we can't use this
+dot operator but we can use it for a
+limited time like we can use it for a
+single character but if we want to put
+more than one character and we don't
+know the number of the characters so
+then we have another meta character for
+that the meta character is asterisk
+now this asterisk allows us to put
+multiple characters within a particular
+expression for example if we write here
+let's remove all this
+and we'll put star or asterisk in place
+of all the characters in between so save
+it and you can see the output returns
+true
+for
+test function and for the exact function
+the index is
+0.
+now if we write here something like that
+and we don't know what it is but let's
+assume it so if we save it now you can
+still see the output returns true for
+this as well
+because
+now we can put any number of characters
+in between w and e the only thing that
+matters is the first and the last
+character of the word welcome
+now
+the next character we'll be looking at
+does not work the same way as these
+characters the character works upon a
+whole string let's go through the syntax
+and what we'll do is
+we'll remove this
+unwanted piece of code and then we'll
+come here we'll write here
+welcome again and now we'll put this
+carrot character now the carrot
+character is this character so
+what this character returns is this
+character returns true only if the whole
+string starts with the word welcome the
+second welcome word does not even exist
+for this meta character if we save this
+program now it will return true because
+welcome is present at the start of this
+string right so save it
+and you can see the output is true now
+if we remove this welcome from here
+and if we save this program now we know
+that we have another welcome present in
+the string but this character does not
+work
+that way
+and it will return false because the
+string starts with
+two now right
+save it and here you can see the output
+is false for test function and for exact
+function the output is null it will not
+return any index number of the second
+welcome or some sort of thing so this is
+how the carrot character works in
+javascript
+the next meta character does the same
+thing but for the end of the string the
+symbol is dollar and it checks for the
+end part of the string this meta
+character is placed at the end of a
+regular expression and it checks if the
+string ends with characters present in
+the expression the syntax goes like this
+what we'll do is we'll remove this
+carrot character and we'll put a dollar
+sign you
+now this statement now will check if the
+string ends with the word welcome or not
+in this case the last word of the string
+is
+back right
+not welcome so the output will be false
+save it
+save it and you can see here the output
+is false and null
+suppose we write here back in place of
+welcome now what we'll do is we'll write
+here
+back in place of welcome and if we save
+this program now the output will change
+to true because back is the last word
+present in a string right so this
+character checks for the end of the
+string
+save it and you can see the output is
+changed to true and the index number is
+32
+find the exact function will return the
+index number of the word back the last
+meta character we will discuss in this
+video is the optional meta character
+the question mark symbol represents this
+meta character and the functioning be
+like
+any character before the symbol is
+treated as optional
+this means that it doesn't matter if the
+character is present in the string or
+not for example if we write here let's
+say
+we'll
+write here welcome again because welcome
+has more characters than back and we'll
+write here
+welcome as well
+fine
+now let's make some changes in this
+particular rejects expression so what
+we'll do is we'll put a question mark
+here
+and let's say we'll put another question
+mark here fine now if we remove c and e
+from the string or any one of them then
+also the function will work fine and the
+output will be true let's do it and what
+we'll do is we'll make some changes in
+this particular string and we are going
+to remove some characters from this
+string so we have two welcome words
+there and what we'll do is we'll remove
+c from this one
+and we have two optional characters
+right both c and e are optional but for
+now we are removing c only so the string
+looks like this we have the word vellum
+it doesn't mean anything but for
+understanding purposes we have done it
+so save it and you can see the output
+remains true for vellum
+now
+what if we put any other word in place
+of this character
+let's say we are writing here b
+fine
+the output will change we have to put an
+o as
+because o is not an optional character
+now the output
+will change
+as we were discussing if we save this
+program you can see it is true for now
+but it is saying true because of this
+welcome now if we remove this welcome
+from here and if we save it now you can
+see the output is changed to null
+yes these characters are optional but we
+can't put any character in place of them
+we have two options only either we can
+put c in its place or we can leave it
+so there is no other option with the
+optional characters so these are the few
+meta characters present in regular
+expressions which helps in validation a
+lot we came across meta characters in
+regex in the previous video where we saw
+how to check the availability of a
+particular word or expression within a
+string we know about functions as well
+so today we will combine all these
+things to some extent and we'll see how
+basic validation actually works in
+javascript
+we'll see an example wherein we'll go
+through the character sets and ranges
+and check for some specific type of
+validation in this video
+now the topic character sets and ranges
+itself is a pretty explanatory topic and
+we can get an idea of what's coming just
+by going through the words characters in
+layman term refers to alphabets and
+numbers right we see a character on a
+daily basis and we know a lot about them
+now if i write here a
+we can say that this is a character in
+javascript now we can use one single
+character or a group of characters at a
+time with regular expressions in
+javascript we have a particular syntax
+for it we'll go through the syntax first
+and the syntax is like we have to use
+square brackets and we have to write
+characters in between these brackets or
+inside these brackets
+here we have three characters a b and c
+what we can do is we can give
+instructions to the system to use any
+one of them in a regular expression
+so let's take a small example of how
+this actually works with regular
+expressions and what we will do is we'll
+do the same thing we have been doing
+till now will search a word within a
+string will check that if a word exists
+within a string or not so we'll do it
+like we'll take a variable regex
+that will contain the regular expression
+so this is
+the syntax for regular expression and
+this is a regular expression which says
+d e f so in actual this is not a word
+but assume it as a word for now and what
+we have to do is we have to include
+character sets with this regular
+expression right so we'll write here
+inside square brackets abc
+now the next thing is we'll define the
+string let's say the string name is tr1
+and the string says
+this string
+contains adef
+so def
+or we can say adef is what matters the
+most for now so anything else you can
+write on the string the next thing we
+are going to do is we are going to
+use the test function to check if this
+particular regular expression
+is available in the string or not so
+we'll write here
+regex dot
+test and inside this will pass the
+string as a parameter
+now the last thing we'll do is we'll
+write here console.log and
+we'll print this on our console fine
+we are done with it so what we are doing
+here is we want to search the string for
+a word which contains the letter d e f
+compulsory but before d e f we can have
+a character that character can either be
+a
+b or c no other character will be taken
+in front of d e f because we have
+defined a character set as well right
+and that character set contains only
+three characters a b and c
+so
+here you can see we have adef present in
+the string and we have a along with def
+so
+what we are expecting is this test
+function should return true right so
+save it and check for the output in the
+console so we will go to a console
+and here you can see the output says
+true because we have adef only
+now if we write here anything else like
+if we replace this a with the character
+r
+save it and you can see the output is
+false because r is not present inside
+this character set now what if we write
+here something like
+let's say we are writing here
+caution def now this will check for this
+letter only for this l only other
+letters don't actually matters in this
+case in the case of character sets the
+only character that matters is the
+character right before the regular
+expression
+so if we save it you can see the output
+is changed to false and if we write here
+let's say
+caution adef save it and you can see the
+output is true because it checks for
+this character only fine
+talking about ranges let's say we want
+to add any character in the string
+between a to z now we have two options
+to do so first one is we can write a b c
+till z here like we'll write here d e f
+g h i and so on and so forth tills it
+but this task is a little bit lengthy
+right and we have to spend a lot of time
+in that process so the alternate to this
+process is to define a range of
+characters to define a range of
+characters it's quite an easy task all
+you have to do is write a
+hyphen z so this is how you can define a
+range of characters now this range will
+consist every character from a till z a
+and z will also be included keep this
+thing in mind if we write here caution
+df again so we have seen in in the
+previous example that it returned false
+for this right save it now and you can
+see the output is still true
+that's because now we have a range from
+a till z
+if we write here 5 now now it will
+return false because 5 does not lies in
+between this range in between a to z so
+it will return true for any character
+between a till z fine
+now let's say we want to exclude some
+particular characters from this range
+like we don't want the user to include
+def again no character from d e or f so
+the syntax for that is also pretty easy
+we have to use the carrot operator and
+we have to write here but we don't want
+to include so let's say in this case we
+don't want to include def fine so if we
+write here ddef now and save it you can
+see
+it will return false because we have
+included ddef and if we write here adef
+save it and you can see the output is
+true
+now we can't include
+characters
+d e and f in front of this regular
+expression because we have defined this
+character set to not include these
+characters in the regular expression
+so these are characters and ranges in
+regular expressions so the next thing
+we'll be doing is we'll be going through
+a basic validation example and we'll see
+how actually basic validation works in
+javascript what we'll do is we'll create
+a small html form that will take the
+employee id from the user and it will
+check if the employee belongs to the
+organization or not
+so let's say the employee id of the
+organization has some unique characters
+present in it and the character remains
+there in each employee id
+the idea is simple we'll take the id
+from the user and we'll use if else
+control statement to check if it belongs
+to the organization or not so let's move
+on to the html file and we'll create a
+placeholder and a button so
+let's do it
+we'll write here
+form
+and inside this form tag
+let input
+id is equals to
+eid
+and
+placeholder is equals to
+employee id
+and type is equals to
+text fine
+the next thing we are going to do is we
+are going to include a button as well
+button and we are going to call a
+function on clicking so we'll use the on
+click event so we'll write your own
+click and let's say the function name is
+employee
+and the button name is let's say submit
+save it and you can see over the browser
+that we have a placeholder along with
+the button so let me give a space here
+save it now and you can see we have a
+placeholder and a button so that's all
+what we have to do in html part now the
+rest of the thing we'll be doing in the
+javascript file so let's move to a
+javascript file
+and comment
+this piece of code first
+now what we want is we want to call a
+function employee on clicking the submit
+button fine so what we'll do is we'll
+define a function employee
+and inside the body of this function the
+first thing we will be doing is we'll be
+taking
+the user's id right so we need a
+variable for that so let's say the
+variable is
+mpid and we'll write here
+document
+dot
+get element by id the id is
+eid
+dot
+value
+fine now this empid variable will hold
+the value entered by the user right so
+like if we write here something like
+d2386 so let's say this is the id this
+will be stored the value for this id
+will be stored inside this empid
+variable fine
+now we'll use the regular expression to
+check for some special characters so
+we'll write
+here inside the function we'll write
+here where
+check is equals to
+inside the regular expression we'll
+write something so let's say we want to
+start the employee id for the
+development team with the alphabets d
+and d
+and each id will have a similar numeric
+code like 253 which represents the code
+for a particular team fine
+so we'll write here inside the character
+sets
+we want de to be there before a similar
+numeric code right so
+253 is the numeric code and we want to
+include either d or e
+before that right
+and
+after 253 let's say we have a range of
+numbers that each employee id has a
+unique two digit number the id should
+look like
+either
+d
+2 5 3
+1 1 or either
+e
+2 5 3
+6 1
+something like that right
+now so for that what we have to do is we
+have to include here another range and
+this range will be from 11
+oh so this range will be from 10 till 99
+fine
+this looks a bit complex now but if you
+try to do it by yourself believe me guys
+you'll find it out that this is an easy
+task but a little lengthy we can say now
+the next part is we have to validate the
+id entered for that we have to use the
+if else control statement along with the
+test function
+so we have to write here
+if
+check
+dot test and inside this will write
+amp id because mpid is the variable
+which is holding the value entered by
+the user right so if it's true then it
+will return
+an alert box with the message that says
+valid
+employee id
+fine
+else
+it will
+return a message in the pop-up
+which will say
+invalid
+id fine
+so this if-else statement will check the
+value returned by the test function if
+the value returned is true it will
+return a message valid employee id
+otherwise the else statement will run
+and the user will get a pop-up with the
+message invalid email id fine
+let's check the output and in the
+browser here we'll write the employee id
+in the
+given placeholder so let's say the
+employee id is d
+25319
+submit it and you can see it says valid
+employee id we can do it for some mode
+like if we write here e
+2 5 3
+9 8
+submit it and you can see it still says
+valid employee id now what if we want to
+include any character between this range
+and the unique number right so let's try
+to do it we'll write here d
+253
+k
+89 fine so let's say this is the id we
+want to enter submit it and you can see
+it says invalid employee id
+now one more thing we want to do here is
+like if we write here
+d 253
+okay 8 9
+in this case it will return false or
+invalid employee id why because we
+haven't included any modifier here and
+it will differentiate between uppercase
+and lowercase character so to overcome
+this problem what we can do is we can
+include the in case sensitive modifier
+and we are clearly good to go now if we
+write here d25398
+and save it if we write here now d
+2 5 3
+9 8 submit it
+and you can see here the output says
+valid employee id
+so this is how we can use validation
+along with regular expressions
+in the last video we came across
+character sets and ranges we saw how we
+could use them with regular expressions
+and we also saw how to validate a user's
+input with the help of character sets
+and ranges along with regular
+expressions now in this video we'll look
+at the shorthand character classes
+present within regular expressions and
+we'll see how they are helpful in
+javascript
+if you guys remember the regular
+expression we used became a bit
+confusing and lengthy because we have
+used so many ranges and character sets
+all in one right a character class can
+be used to overcome this particular
+problem and we have several character
+classes present in javascript so today
+we will go through them in this
+particular video now the syntax is not
+too much complicated all we have to do
+is to write a single character with the
+backslash and we are good to
+for example if we go to a javascript
+file and if we write here
+backslash d now if we write this
+character before any regular expression
+in javascript it means that we have
+added a character class to a regular
+expression this backslash d is a
+character class used for finding a digit
+within a string let's go through an
+example for this character class
+and we'll do the same thing we'll take a
+string and try to find a regular
+expression within that string so what
+we'll do is
+we'll write here
+where
+rejects is equals to
+and here we'll write a regular
+expression
+first we'll take up a string and use
+some functions to check the output so
+let's do it here what we'll do is we'll
+take another variable let's say the
+variable name is str1 and
+the string says
+user's
+phone number
+is
+three two 987654321 zero now let's say
+this is the string we are using for
+today's program
+the next thing we'll do is we'll use the
+exact function to find the regular
+expression within the string so we have
+already gone through this exact function
+in javascript today we'll use that
+function only
+now we'll write here where
+output is equals to
+regex dot exec
+and inside this will pass a string as a
+parameter the next thing we'll do is
+we'll write here console.log
+and we'll print this output on a console
+now we are good to go so we are done
+with it and the next thing we want to do
+is to find a particular pattern along
+with the number present before that
+pattern in the string so let's suppose
+if we write here inside these slashes if
+we write here let's say 3 to 1.
+now
+this statement here asks the computer to
+find a pattern three to one in the
+string
+save it
+and go to the console so we'll move to a
+browser and we'll press control plus
+shift plus i and here you can see we
+have a console here and here we have an
+array as well so here you can see it
+says
+let me zoom it out a bit here you can
+see it says
+321 is present at index 28.
+now
+the system finds out that this
+particular string or this particular
+regular expression
+is present here in the string at index
+number 28 obviously the indexes will
+start from 0 and the moment it will find
+this
+3 to 1 regular expression it will show
+the index number in an array
+in a console
+now if we add
+backslash d here let's say we are adding
+here backslash d
+in front of this expression and check
+the output here save it you'll notice
+that we have a number present here right
+before that expression
+right we have four three two one here
+instead of just three two one the output
+here gives us the number four this means
+that this backslash d represents this
+number
+four in this string now what if we put
+an alphabet before this expression now
+let's do it what we'll do is we'll write
+here a
+and let's say we are adding only a
+single alphabet here let's say we are
+adding a before three two one now the
+expected output is a321 but the moment
+we'll save it you can see it says null
+that's because this particular character
+class works for digits only if it finds
+anything other than a numeric digit it
+will return an error or it will return
+null in that case now if we want to find
+all the numbers before this pattern then
+we have to add a plus operator in the
+regular expression all we have to do is
+we have to write here plus and we are
+good to now it will return everything
+until it finds a space or any character
+other than a digit now let's suppose if
+you are writing here a after 987
+now this particular statement will
+return all the numbers till 6 the moment
+it will encounter a here it will return
+all the numbers after a it will stop at
+a and it will not go further now save it
+and you can see it says six five four
+three two one
+that's because
+this backslash d works for digits only
+now if we write here nothing
+like we have a number nine eight seven
+six five
+one
+save it and it will return the whole
+number 987654321
+not 0 because we haven't included any
+number here
+now if we write here again
+backslash d after this as well save it
+and here you can see we have the output
+as
+0 as well we have the whole number here
+fine
+so this is how this backslash d actually
+works in javascript so this is a
+character class
+now
+the next thing is what if we want to
+find a non-digit character before a
+particular pattern
+if we write here
+before 321 let's say we are writing here
+a
+and we want the system to return that
+non-digit character before 3 to 1 in
+that case we use capital d instead of
+small d always remember guys every
+shorthand character class in rejects
+have an inverse that does
+precisely the opposite of that
+particular class like if we have small d
+here that works for digits only we also
+have an inverse which is denoted by
+backslash capital d and it is exactly
+opposite of this small d here
+now if we write here
+capital d in place of small d
+what will happen is it will return the
+character here it will return true for
+everything other than a digit
+now if we remove this small d from here
+and save it
+here you can see it says null because we
+haven't included the backslash sign here
+save it and here you can see it says
+a321 it will return true for anything
+except for a digit even if we put a
+symbol over here then also it will
+return the output as true for example if
+we write here
+let's say we are including dollar sign
+here let's say we are including two
+dollar sign here save it and it will
+return two dollar signs that's because
+we are using the plus operator here
+obviously let's include as many signs as
+we can
+save it and here you can see we have all
+the symbols present over here on our
+output
+so this is how capital d character class
+works or we can say inverse character
+class of small d this is how it works
+now the next class will be going through
+is the wordly character denoted by the
+letter w small w and is used in place of
+any character that can be an alphabet a
+number or an underscore sign we can use
+this character over d if we are unsure
+about the character present before the
+pattern for example if we write here
+let's say backslash w
+ber
+now here we have used the ber pattern
+which is present at the end of
+number right here ber is present at the
+end of number now this statement will
+return m only because we are not using
+any plus operator here if we use any
+plus operator then it will return the
+whole number because it will return
+everything until it encounters a space
+or something like that
+so for now we are not using any plus
+operator so we'll be writing here this
+only now here it will return m because
+it can take up a number an alphabet or
+an underscore sign it will return false
+if it finds any space or something other
+than these three these three means a
+number an alphabet or an underscore sign
+fine
+now save it and you can see on the
+console that the output says mber let me
+zoom it a bit so here you can see the
+output says mber right present at index
+14. it will return null if we put a
+space before the pattern like if we
+write here num space b e r save it you
+can see it says null for this now we can
+use the plus operator as well here for
+this particular character class now what
+will happen is it will return every
+character present before the pattern
+until it encounters a space or something
+like a symbol or any sort of thing so
+let's try it what we'll do is we'll
+write here w
+plus b er and we'll remove this space
+from here
+save it and here you can see it says
+number what if we remove this space from
+here remove it save it and here you can
+see it says phone number it will return
+every character before the pattern until
+it finds any space or any other let's
+say
+symbol so let's say we are including
+here dollar percentage
+and carrot sign
+save it and here you can see it says an
+e number so it's returning it from here
+because it will not return true for any
+of the symbols here
+save it and here you can see we have the
+output as phone number again so that's
+working totally fine
+like the inverse character class for
+digits we have the inverse character
+class for this also and it returns true
+for everything other than an alphabet
+number or any underscore sign now if we
+write here
+instead of small w let's say we are
+writing here capital w
+and let's do something with the string
+as well so let's put a space here again
+and we are good to go we are not doing
+anything more than that so it will
+return null because before ber we have m
+here right if we remove this m with us
+sign let's say if we are removing this
+with a dollar sign or with an empty one
+like we are writing here space nothing
+then it will return the index number and
+the pattern
+so let's do it save it
+and here you can see it says dollar then
+it says ber and index number is 14 you
+can count the index number so 0 for u
+and then similarly 1 for s 2 for e 3 4 r
+4 for s up to 14 for dollar so dollar is
+present at index 14 it will return the
+index number here now the plus operator
+also works for this inverse character
+class as well right here plus ber and we
+can insert as many characters or as many
+symbols as we want so like here we have
+inserted so many symbols this doesn't
+mean anything but we are inserting them
+for
+example purposes or for practical
+purpose so save it and here you can see
+we have all the symbols present over
+here in a array and the index number is
+still 14 if we remove
+these n and u from here now save it the
+index number will change to 11
+that's quite easy
+now
+the next class we have is the simplest
+of all this class works for white spaces
+only it means that it will return true
+or give us the index number of the
+expression
+from the string only if a white space
+exists before the pattern
+it is denoted by small s and works for
+spaces only now if we write here
+let's say
+backslash s
+okay we have made a mistake we'll write
+a backslashes
+and we'll write your phone so
+this is the pattern and this is the
+character class backslash s is the
+character class now what we'll do is
+we'll
+remove it from here and we'll
+write the string as this again we'll
+write a user's phone number is this and
+this
+now for this regular expression it will
+return the index number of this space
+the space is present at index 5
+0 for u 1 for s 2 for e 3 for r 4 for s
+and this space is present at index
+number 5 so it will return index as 5
+for this particular space now don't get
+confused guys for this index number s5
+the index number is for the space
+present in the screen before the pattern
+phone
+right
+now if we try to do the same for users
+as well
+let's suppose if we write here users it
+will return null in this case because
+there's no space present before users in
+the string right save it and here you
+can see the output says null in this
+case
+fine now we can also use the plus
+operator here for more than one spaces
+present in the string it will return all
+the spaces until it finds a character or
+something other than the spaces like if
+it finds any symbol or any character
+then only it will return false otherwise
+for spaces it will return true so if we
+write here
+too many spaces if we put too many
+spaces before the word
+phone or let's say we are changing this
+word
+phone
+save it and here you can see we have all
+the spaces here it's denoted by a single
+space but the index numbers is changed
+to 19. now we have so many spaces
+present here before the
+pattern phone or before the word phone
+so this is how we can use
+space character class in javascript
+now we have also the inverse class for
+this character class as well it returns
+true for everything other than empty
+spaces if we write here
+let's say we are removing this and let's
+say we are right okay and let's say we
+are
+writing here users
+and we are
+giving so many spaces here before the
+word users now it will return null in
+this case because there are spaces
+present in front of the word users
+if we include a character or something
+in front of this word then only the
+output will change and return the index
+number along with the string so save it
+first and here you can see
+okay we have used the smallest in place
+of smallest we'll write here capital s
+save it and you can see here the output
+says null for capital s because this
+capital s will return true for
+everything other than spaces only now if
+we put here any symbol let's say we have
+these symbols here
+save it and here you can see now we have
+a hash symbol present before the word
+users that's because we have used
+capital s only now if we use a plus
+operator save it and here you can see we
+have all the symbols present in a array
+we have the index number as 11 we have
+dollar percentage carrot and hash
+present over here right so this is how
+the inverse of character spaces in
+javascript actually work so these are
+the character classes we have in
+javascript we discussed all the six
+character classes three of them were
+inverse i hope you guys got it these
+character classes are sometimes used in
+place of character sets and ranges as
+they make searching and comparing tasks
+easier for us during the validation
+process we'll go through the validation
+part in the next video
+so we'll go through how validation is
+used with html and then we'll move on to
+validation with javascript
+if you guys see we have two text boxes
+over here one is for the username and
+other one is for the password creating
+such text boxes in html is quite an easy
+task we have to use the input tag which
+we discussed a few sessions back
+and we are using some more properties
+here
+so you can see we have type as text for
+username and for password the type is
+password
+so before we move on to validation with
+javascript let me tell you guys that we
+can do certain things with html as well
+like if we want that none of the two
+text boxes over here remains blank
+we can write here inside these input
+tags so if we write here
+required
+save it and now if you try to click on
+the submit button you can see it says
+please fill out this field it will not
+allow the user to submit the form until
+there is any value present for the name
+so if we write here any random name and
+submit it now you can see the form is
+getting refreshed that's because we have
+used the form tag over here now if we
+try to submit without writing anything
+we'll get the pop-up as please fill out
+this field and we can do the same for
+password as well like if we write here
+required and save it
+now if you write any name over here for
+the username and if we leave this
+password field blank submit it you can
+see it says please fill out this field
+for password as well
+so html can let you do all this stuff
+but when it comes to actual validation
+like if you want the user to enter only
+if the name or password matches the one
+present in the backend or maybe we can
+say in the server
+we have to use something more than html
+now the case with javascript is a bit
+different if we talk about validation in
+javascript we can use javascript for
+client-side verification
+the scenario here will be the one we'll
+discuss in today's video what we'll do
+today is we'll create a basic signup
+form with three text boxes one is for
+the username the other one is for the
+password and we'll add one more box for
+each
+half of the work is already done and we
+have to add one more box now for the age
+so edge is just a number right so we can
+add a text box over here what we have to
+do is we have to write here
+before the submit button will write here
+input
+type is equals to number
+and we'll provide it the id as well so
+let's say the id is each we'll use the
+id attribute later
+and inside this placeholder will write
+here h
+save it and here you can see we have
+three text boxes over here
+inside the h we can't write any
+character or alphabet because we have
+defined the type as number for this so
+we can write numbers here only now the
+next part is to link this page to
+another web page such that if the
+credentials are correct the user will
+enter the home page of our website for
+that we have to use the action attribute
+in html now the question here is when do
+we want the user to enter the home page
+only if the credentials are correct
+right
+we have to use the action attribute with
+the form tag so you can see over here we
+have already mentioned the form tag now
+what we'll do is we'll write here action
+and what we want is we wanted to
+redirect the user to another page or
+another web page the home page of our
+website after checking the credentials
+and if the credentials are correct the
+user will move on to the home page so we
+have already a file named homepage.html
+so we'll write your homepage.html
+and save it now on clicking the submit
+button okay we have to fill something
+for
+name and for password as well so we'll
+write random values over here submit it
+and you can see we have been redirected
+to another page and this is the home
+page of our website
+however it doesn't look like a home page
+still we can assume it right so now we
+know what should be done if the user has
+correct credentials to enter the home
+page we are almost done with the html
+part we will make some more changes to
+this file later the next thing we have
+to do is to validate the credentials
+entered by the user right for validation
+purposes we'll use the if else control
+statements in a javascript file will
+create a function in a javascript file
+and call that function when the user
+clicks the submit button but there is a
+difference will not call the function on
+clicking the submit button instead we'll
+call the function on
+submission of the form so instead of
+writing here on click and then calling
+that function what we'll do is
+we'll write here inside the form tag
+we'll write on submit so this is an
+event and on submit what will happen is
+it will call a function named validate
+will create this validate function in
+our javascript file now
+so you can see here we have already used
+the id attribute with all the input tags
+in order to get the values entered by
+the user so let's move on to the
+javascript file and what we'll do here
+is we'll first declare a function named
+validate so we'll write here function
+and the function name is
+validate
+and then we have the body of this
+function
+now we'll take three variables to get
+all the values entered by the user
+because we need to check for all the
+values right so we need to check if the
+user's name and password match the one
+we want and the user should be aged
+above 13 to enter our website
+for all these we need the values entered
+by the user so we'll use the get element
+by id method to get all the values
+now for that we'll take three variables
+so let's say the first variable is
+unnamed it will hold the value entered
+in the username text box let me go to
+the form again
+and here you can see we have three text
+boxes username password and h so we'll
+take three variables
+for username we'll write here
+document.getelementbyid
+and the id is unname
+let me confirm it once so you can see
+here the id for username is
+unname
+for password it is pass and for h it's h
+so
+we'll write here dot
+value
+the next thing we'll do is we'll create
+another variable for password
+we'll write here again
+document.getelementbyid
+and the id is pass
+we'll again write here dot value
+and the third variable will be where age
+it will hold the age of the user
+so we'll again write here
+document.getelementbyid
+and id for ages h
+we'll again use the dot value property
+now we are done with the values
+we have three variables holding all the
+values entered by the user next up we'll
+use these values to validate the data
+entered by the user
+now the first condition we can have here
+is that we don't want the user to leave
+any of the text boxes empty right
+if we click on this submit button you
+can see it says please fill out this
+field now we can do it with the help of
+html as well but for now we are using
+javascript so we will remove these
+required keywords
+so that we can do it with javascript
+only
+save it
+and submit it now you can see it is
+redirecting us to the home page of our
+website so it's working totally fine now
+what we'll do is we'll write a condition
+if the user leaves any of these fields
+empty so we'll write here if
+unname
+is equals to is equals to blank
+or
+pass is equals to is equals to blank
+okay
+pass is equals to is equals to blank
+or
+age
+is equals to is equals to
+blank
+now what will happen is it will give the
+user a pop-up with the message
+let's say
+the message is
+missing
+credentials fine
+save it
+and if we leave any of these fields
+empty now a pop-up will appear with the
+message missing credentials so the first
+condition is done but there's a loophole
+in this condition so let's check it out
+first we'll leave username and password
+empty submit it you can see it says
+missing credentials right
+now the next thing is if we write here
+let's say a random name and password as
+well but we are leaving this age text
+box empty submit it it still says
+missing credentials because we haven't
+entered the age
+and it's working totally fine
+now there's a loophole in this condition
+the exciting part is it will work fine
+if the user enters more than one space
+in all the fields like
+if you are giving here spaces for more
+than once and similarly for password as
+well submit it and you can see it says
+missing credentials because we haven't
+filled the h
+so let's
+do one thing we'll
+write some spaces for username and
+password and for h we'll say the age is
+4 submit it and you can see we have no
+error over here now to overcome this
+problem we have a predefined javascript
+method that treats all the spaces the
+same
+no matter the number of spaces whether
+it be one or more than one it will treat
+all the same we have to include the trim
+method within the if else statement so
+what we'll do is we'll write here dot
+trim
+for user name and similarly for password
+as well we'll write here trim
+and for age as well let's say
+dot trim
+and save it now
+move back to a signup form and if we try
+to give more than one spaces here
+and let's say the age is 4 submit it you
+can see it says missing credentials for
+more than one species as well so this is
+working totally fine now the following
+condition will be for validating the
+name let's say the required name is
+caution or anything else
+the required password is let's say one
+two three four five and the age should
+be more than 13.
+then only the user can enter the website
+so for that we have to use the else if
+statement and what we'll do is we'll
+write here
+elsif and inside this will give our
+conditions so let's say the conditions
+are you name
+is equals to is equals to
+caution
+and
+pass
+is equals to is equals to
+one two three four five
+and
+h
+should be
+greater than or is equals to
+13.
+then
+it will give the user a pop-up and which
+states that we'll write here alert
+we'll write here
+sign up
+successful
+fine
+save it
+now the user can enter the website with
+these credentials only otherwise a
+pop-up will appear
+so let's give the else condition as well
+what we'll do is we'll write here else
+and we'll use another alert
+inside this we'll write
+wrong id and
+password
+fine
+now we have all the conditions here save
+it and now we'll check for different
+inputs
+so let's move back to a form
+and what we'll do is we'll write the
+username is let's say ravi
+and the password is let's say any random
+numbers
+and age is let's say 6 submit it and you
+can see it says wrong id and password
+now what we'll do is we'll give it the
+correct credentials we'll write here
+caution and the password will be one two
+three four five
+and the age is let's say twenty one fine
+the age should be greater than or equals
+to thirteen so submit it and you can see
+it says sign up successful
+now we have different conditions over
+here
+like if we write here any random name
+and
+if we write here any random password now
+it will return wrong id and password but
+if we write here correct id and password
+and
+correct username as well let's say we
+are writing here caution and let's say
+the age will change to
+11 submit it and you can see it still
+says wrong id and password we can add
+one more condition over here like we'll
+write here elsif age is less than 12 it
+will give an alert that
+you are underage or some sort of that so
+we'll write here elsif
+h
+is less than 13
+an alert
+which states under each fine
+save it
+and what we'll do is we'll move back to
+our form and we'll write here caution
+password is one two three four five and
+age is let's say
+11 submit it and you can see it says
+under aged now so it is working totally
+fine now one thing that seems a bit
+irritating as well is it redirects us to
+the home page every time right it
+doesn't matter if the credentials are
+correct or not it redirects to overcome
+this issue we have
+to make some minor changes in the html
+file and include the return keyword in a
+if else conditional statements so let's
+go back to our html file and what we'll
+do is
+we'll write here inside the form tag now
+we have on submit over here so what
+we'll do is we'll write return
+before validate
+so save it and we'll move back to a
+javascript file
+now this return keyword will let the
+form perform any action only if the
+value returned by the function validate
+is true otherwise it will not allow the
+form tag
+to perform any action the action here is
+redirecting the user to the home page
+right so
+let's do it here we know that the
+function should return true only if all
+the credentials are valid so we'll write
+here
+for all other
+conditions we'll write
+return
+false
+fine
+for this one we'll write
+return true because this is the
+condition when all the credentials are
+correct and for all other conditions
+we'll write return
+false
+similarly for else as well we'll write
+here
+return false
+now save it and we'll move back to
+sign up form
+save the html file as well once
+and what we'll do is we'll write a
+caution password is 1 2 3
+and age is let's say 4 submit it you can
+see it says under aged click on ok and
+now it is not redirecting us to the home
+page right
+now if the credentials are correct what
+we'll do is we'll write here the
+password is one two three four five
+and the age is let's say
+21
+submit it
+now you can see it says sign up
+successful click on ok and you can see
+we are in the home page it is working
+totally fine
+so if all the credentials are valid then
+it is redirecting us to the home page
+exactly what we wanted so these are the
+basics of validation in javascript
+obviously we can't validate a form with
+javascript in the real world because we
+don't have to deal with one user only we
+need the backend to do all the
+validation and all but simple validation
+can be done with the help of javascript
+we did it just now
+we have many things to do with
+validation in javascript like adding
+some more conditions or using regular
+expressions to validate forms in
+javascript using regular expressions for
+validation in javascript is what we
+already saw in the previous videos so we
+have gone through it already i want you
+guys to show some creativity and do
+something new on this topic and let us
+know what you have done in the comment
+box
+today we'll add another text box here
+wherein the user will enter the mobile
+number and then we'll validate it in two
+different ways so let's add another text
+box here what we'll do is
+we'll write here
+input
+type is equals to
+number and let's give it the id as well
+so let's say the id is mobile
+and the placeholder will say
+enter your
+mobile number
+fine save it so you can see we have
+another text box here
+what we'll do is we'll
+add a break tag here we'll write here br
+save it now so this is our form
+and here we have username password age
+and mobile number one thing to notice
+here is we can use the type as text as
+well
+as we are using
+mobile number that consists of digits
+only so we are using type as numbers
+here so let's move on to the javascript
+file
+and we'll do the rest of the part there
+so we'll take the user's input and store
+it inside a variable to compare it right
+so
+let's add another variable here here you
+can see we already have three variables
+for username password and h we'll add
+one more so let's say the variable name
+is
+where mob is equals to we'll use the
+document dot get element by id attribute
+so we'll write here get element by id
+and the id we used is
+mobile so let's cross check it once so
+here is the id mobile and we'll take the
+value we'll write here dot value so this
+variable mob holds the user's mobile
+number and will make certain changes to
+this existing if else statement
+so the first thing we'll be doing is
+we'll check if the user is writing
+something inside the text box or not so
+we'll add another condition here we'll
+write here mob dot
+trim
+is equals to is equals to space if the
+user leaves this box empty so this will
+pop up in his screen and it will say
+missing credentials right next up we'll
+change this condition as well we'll
+write here
+and then so let's say the mobile number
+is zero nine eight seven six five four
+three two one
+some sort of this and we'll write here
+mob is equals to is equals to
+zero to one
+now the last thing we are doing here is
+we'll be adding one more elsif to check
+if user enters any other mobile number
+than this one
+so like we did for h similarly we will
+do it for mobile number as well so we'll
+write here else if
+mob
+not is equals to
+09876 54321
+then it will return
+wrong mobile number
+and it will also return
+false
+save it
+now we have made three changes here
+first one is we added the mob dot trim
+so that the user won't leave this space
+empty the next one is we checked if the
+number entered by the user matches the
+one we have in our system and last one
+is for the number entered by the user
+doesn't match then it will return wrong
+mobile number fine
+so we are done with it you can check it
+here we have a condition here if the
+mobile number does not matches it will
+return wrong mobile number so let's do
+it here we know the username is caution
+the password is one two three four five
+and the a should be above 13 right so
+let's say we are writing here 15. now
+here we are in the mobile number so
+let's
+add a random number here what we'll do
+is we'll write this and submit it you
+can see it says wrong mobile number
+fine
+now the next thing is we'll write here
+zero nine eight seven six five four two
+54321 let's suppose this is the mobile
+number submit it and you can see it says
+sign up successful and it will redirect
+us to the home page
+now this is working totally fine and
+this is the traditional way of checking
+the phone number of a user only if we
+already know what the user has to put in
+the text box to enter the website
+now the next thing we'll be doing is
+pretty simple as well but for that
+method one should have a clear
+understanding of regular expressions in
+javascript
+now we'll use regex to validate the
+user's phone number
+and if you haven't watched the previous
+videos on regular expressions yet i
+suggest you to go through it before
+mobile number validation in javascript
+and this task of validation will be so
+easy for you guys so what we'll do is
+we'll move on to another html file let's
+create one here first so we'll create
+another html file let's say the html
+file name is
+mobile
+dot html
+and here what we'll do is
+we'll create another text box
+so let me connect it to another
+javascript file first and we'll create
+another javascript file as well find so
+we'll write here
+mobile.js
+so this is a javascript file
+and the next thing we'll be doing is
+we'll write a heading here so let's say
+we are writing mobile number validation
+in javascript
+fine save it and open it with live
+server so here is a new html file and
+this is the javascript file so the next
+thing we'll be doing here is we'll
+create another text box right we'll
+create a single text box so we'll write
+here
+input
+type is equals to text we can either use
+numbers here as well
+and then we'll use the id attribute
+so we have to do it later but we are
+doing it right now placeholder as
+mobile
+number fine
+now we'll create a submit button as well
+we'll write here input
+type is equals to button
+and value is equals to
+submit
+what we'll do is we'll call a function
+on clicking the submit button so we'll
+use the on click event here as well so
+we'll write here on click and let's say
+the function name is well
+fine
+go to save it
+and here you can see we have a text box
+for mobile number and a submit button
+over here
+so what we'll do next is we'll move on
+to the javascript file to create this
+val function now we'll create a function
+and that function will check if the
+number entered by the user is in the
+proper format or not so let's create a
+function first we'll go to a javascript
+file and we'll write here
+function well so this is the name of our
+function and then we have the body as
+well now the next thing we'll be doing
+is will be writing a program here so
+what we'll do is we'll first take a
+variable let's say the variable name is
+where mobile and this variable will hold
+the value entered by the user right so
+we'll write here document
+dot get element by id
+so his id is
+i guess mobile so let's check it once so
+here you can see we have the ids mobile
+now what we'll do is we'll write a dot
+value to get the value entered by the
+user and now what we are doing is we are
+using regular expressions for this
+purpose right so we'll create another
+variable
+for the regular expression and we'll
+leave it empty for now because we'll
+change it later first we'll write the
+whole program so what we'll do is we'll
+again use the if else control statement
+so the first condition will remain the
+same we'll write here mobile dot trim
+to check if the user is leaving the
+place empty or not
+and
+in this condition
+here we'll write
+alert
+and then inside alert we'll write
+please
+enter a mobile number fine
+i hope you guys got it so you can see
+here we are getting an error here in the
+if statement that's because we haven't
+written something over here so if we
+write something inside a regular
+expression so the error will go
+but for now we are not using any regular
+expression because i'll explain it to
+you after this so leave it here only for
+now the next
+condition will be
+writing here using the elsif so we'll
+write here
+elsif and we'll use this rejects
+variable with the test function
+to validate the user's mobile number so
+we'll write here rejects
+dot
+test and will pass this mobile number as
+a parameter to check right to compare
+between rejects variable and the mobile
+variable so we'll write here mobile fine
+now this elsif will return something so
+we'll use the alert method again we'll
+write here mobile number
+submitted
+successfully
+now you might be thinking why we are
+doing so because we know that this test
+function is used to compare the values
+and if this test function will return to
+then only a pop-up will appear with the
+message mobile number submitted
+successfully i hope you guys
+already know about this test function we
+already discussed it a few sessions back
+when we came across regular expressions
+in javascript
+so i think it might be easy for you guys
+and
+at last we'll write here else
+for any other input
+for any other input
+so we'll again use the alert method and
+we'll write here
+wrong mobile number fine
+here we have written everything inside
+this function even the conditions as
+well we have three cases over here
+the first one is if the user leaves the
+field empty and tries to submit the next
+one is for checking the number entered
+by the user and the last one is for
+everything else
+so we haven't written the regular
+expression yet because let's discuss it
+before writing
+so guys what we want is
+we want a 10 digit mobile number and the
+number should start from either 7 8 or 9
+because we know mobile numbers generally
+starts with these digits either 7 or 8
+or 9 fine
+then it has 10 digits only now for
+checking the length of the mobile number
+we could have used the mobile.length
+property right but the regular
+expression gives us a simple and easy
+method to do so we discussed the
+shorthand character classes in rejects a
+few sessions back right so now we want
+all the inputs to be digits only so what
+we'll do is we'll write here inside this
+regular expression
+backslash d
+so this is a shorthand character class
+and
+we'll use
+these curly braces and we'll write here
+10 inside this so this statement over
+here will check the length of the string
+but we have to do some more things here
+the next thing we need to do is the
+initial digit of a mobile number that
+can be 7 8 or nine
+so for that what we'll do is we'll
+define a range for initial number and
+we'll write here before this character
+class
+what we'll do is we'll define a range
+over here so we'll use square brackets
+and we'll write here 7
+to 9. now this particular statement
+defines a range that consists of only
+three numbers 7 8 or 9.
+now this regular expression is sort of
+complete we can say now one thing we
+have to keep in mind that we have to
+write here 9 now instead of 10
+that's because
+we have already defined the first number
+right and we need 9 more digits apart
+from that particular digit
+so let's check it out
+save it
+and we'll write a mobile number here so
+let's say the mobile number is this one
+two three four five six seven eight and
+what will happen is it will return wrong
+mobile number that's because the number
+here starts from 1 instead of 7 8 or 9
+so submit it and you can see it says
+wrong mobile number
+now we'll try for another condition
+we'll leave this field blank and submit
+it you can see it says please enter a
+mobile number so this is also working
+fine now the next thing we'll be doing
+is
+we'll be starting the number from 9
+and let's say the number is this
+so this is a 10 digit mobile number
+submit it and you can see it says mobile
+number submitted successfully
+so this is also working fine
+now the only problem here is if we write
+anything before this particular phone
+number
+like if we write here before
+9 if we let's say we are writing here a
+b c d e
+any character or alphabet as well submit
+it you can see it still says mobile
+number submitted successfully
+now it will not give any error because
+it finds the expression present in the
+string
+right we have to mention the static and
+the end points of a regular expression
+for this purpose
+we have two meta characters one denotes
+the start that is the carrot character
+and the other one denotes the end of the
+string that is the dollar sign so we'll
+add both of them in our expression what
+we'll do is we'll write here
+carrot
+this will denote the start of the string
+and here we'll write dollar this will
+denote the end of the string save it
+and now it will work fine
+and one more thing guys don't
+misunderstand this character with the
+one we use inside the brackets to
+exclude any particular string like if we
+remove this from here and if we insert
+this carrot character inside
+this bracket what will happen is it will
+exclude this particular range it will
+exclude 7 8 or 9. we have already
+discussed the use of this carrot
+character now if we write it here it
+will denote the start of a string so you
+will not get confused if the concept of
+meta characters and character sets are
+clear to you so let's check the output
+save it
+and we'll check for certain phone
+numbers now we'll check for that
+particular condition only we'll write
+here
+one 9876543210
+so this is a correct mobile number if
+you submit it it will say mobile number
+submitted successfully
+but now if you write here something
+before this 9876
+now if we write here any
+characters or alphabets and submit it
+you can see it says wrong mobile number
+because we have used the carrot
+character and we want at the start of
+the string either 7 8 or 9. now similar
+thing will happen at the end as well if
+you write here anything
+and submit it you can see it says wrong
+mobile number because we have added
+dollar sign as well fine
+remove it and if you are adding any
+numbers here as well save it and you can
+see it still says wrong mobile number
+because the length is more than 10 and
+the end will be denoted after nine
+digits so these are the nine digits and
+this is the end of the string according
+to a regular expression
+so these are the ways how we can
+validate a user's phone number in
+javascript we already know a lot about
+validation by now we came across
+validation several times so let's move
+on to the programming part directly and
+we'll create a text box here to take the
+user's input so what we'll do is we'll
+create a text box we'll write here
+input
+type is equals to
+email id here as let's say mail
+fine the next thing will be a
+placeholder and
+the placeholder will say
+enter
+email id here fine
+we'll close this input tag and the next
+thing we'll be doing is we'll be
+creating a submit button we'll write
+here type is equals to
+button
+value will be
+submit
+and we'll use the on click event
+so we'll write here on click so we'll
+call a function on clicking this button
+we'll write here validate we'll create
+this validate function in a javascript
+file
+now save this piece of code and you can
+see we have a text box and submit button
+here now if you write here something
+you can see nothing is happening over
+here
+now the next task we have to do is the
+one we already know we'll move on to the
+javascript file we'll create a function
+there and use the if else control
+statements to check if the email id
+entered by the user is in accordance
+with the pattern or not
+quite a simple task because we have been
+doing it for quite some time right so
+let's do it quickly what we'll do is
+we'll move to a javascript file i forgot
+to create one here so let me create one
+and the name will be email.js
+so this is a javascript file
+we'll create a function here so we'll
+write here function
+validate
+the next thing is the body of this
+function
+so we'll write here everything other
+than the regular expression because the
+rest will remain the same as mobile
+number validation so we'll try it here
+we'll create a variable here we'll write
+here where
+email is equals to
+we'll write here
+document.getelementbyid and the id is
+mail
+now we'll use the dot value attribute
+the next thing is we'll again take a
+variable for regular expression and
+we'll
+leave it for now we'll move on to the
+next part
+what we'll do here is we'll use the if
+else control statement again so the
+first condition will remain the same
+we'll write here if email dot
+trim is equals to is equals to null
+then what it will do is it will give a
+pop-up so we'll use the alert keyword
+and inside this will write
+please enter a valid
+email id fine the next thing we'll do is
+we'll use the test function in regular
+expressions so we'll write here elsif
+regex dot
+test
+and we'll pass this email variable as a
+parameter
+here it will check if the
+input given by the user matches the
+pattern of the regular expression will
+check for it so we'll
+write here alert and inside this will
+write
+email submitted successfully
+fine
+and at the last we'll use the else
+statement
+and we'll write here alert
+wrong
+email id
+fine
+save it
+now we are almost done with everything
+apart from the regular expression we
+didn't define the rejects until now
+because we'll discuss it first because
+you know guys using a regular expression
+for email validation is slightly
+different from other things like we have
+several parts for a regular expression
+let's discuss it first
+so let's take an email id first so let
+me write here
+let's say we have an email id
+as caution
+at the rate simply learn
+dot
+com
+fine we can't write here two dots so
+this is what a primary email id looks
+like an email id consists of four parts
+the first part is the name that can be
+anything it can have alphabets digits or
+sometimes dot and underscore as well so
+we can have the name as like if we write
+here
+let's say caution
+one one or if we write here caution dot
+one one or we can say we can write here
+caution
+underscore 011
+right so these names are allowed in an
+email id the next part is the at the
+rate symbol it's mandatory to add the
+symbol in each email id as you know
+so the third part is the domain name
+that can be the name of any particular
+organization like here simply learn is
+the domain name
+or it can be gmail or yahoo or hotmail
+or any of these so that depends on the
+user where they have their email id
+now the last part is the extension which
+comes after a dot so after this dot we
+have an extension over here this com is
+an extension
+fine
+an extension can be dot com it can be
+dot in or dot net or it can be dot co
+dot in
+so now that we have an idea about how an
+email id looks like the next thing we'll
+be doing is working here on the regular
+expression to create a particular format
+of this type
+right so we have four parts but we have
+to compulsorily add and add the rate
+symbol and
+dot before the extension
+so what we'll do is we'll take three
+pairs of parentheses or round brackets
+we can say for defining the rest three
+parts so what we'll do is we'll write
+here
+so we need
+three parentheses right now we have to
+mention at the rate and dot compulsory
+leave fine the rest will define but we
+have to add these two symbols
+compulsorily in each email id
+the caret and the dollar signs are meta
+characters used to define the regular
+expressions starting and the end points
+right so i hope you guys are clear with
+regular expressions till now as this is
+the last video on this topic and still
+if you have any doubts about rejects
+feel free to comment your doubts and
+we'll get back to you so let's define
+the first part here the first part is
+the name consisting of alphabets digits
+or some specific symbols like dot and
+underscore right we'll define a range
+here so we'll use square brackets to
+define the range so what we'll do is
+we'll write here
+a to z
+or
+a to z
+or zero to nine
+fine here we have defined three ranges
+arrange for small letter alphabets
+capital letter alphabets and a range of
+numbers from 0 to 9. now we could have
+used the global modifier at the end of
+this regular expression instead of
+defining a range of capital letter
+alphabets we have already discussed the
+concept of modifiers a few sessions back
+now the next thing is to add specific
+symbols like dot and underscore we can't
+write them simply because if we write
+here dot or underscore the meaning will
+change
+and it will return true for any
+character in place of dot
+the concept of meta characters remember
+so we have to put a backslash before
+writing the symbols what we'll do is
+we'll put a backslash over here
+now we have added the special symbols as
+well the next part is the length of this
+name
+now it can be either 10 or maybe 20 or
+we can say in some cases let's suppose
+it can go more than 20. now what we can
+do is we can either define the length
+inside curly braces like this we can
+write here
+2 comma 20. so this is the range for
+length but we can't do it here because
+we are keeping this thing in mind that
+the username might go above 20
+characters so what we'll do is we'll use
+the plus operator the plus operator will
+let the user enter the name as long as
+they want
+instead of using these curly braces over
+here what we'll do is we'll use the plus
+operator here
+fine
+now the next part is for the domain name
+after this add the red symbol over here
+what we'll do is we'll write the domain
+name
+that has to be there in each email id
+right the domain name can be the name of
+any organization as we have already
+discussed we don't need digits in the
+domain name right so what we'll do is
+we'll simply write here
+a to z and
+a to z so we have defined two ranges for
+domain name one for the small letters
+and the other one is for the
+capital letter alphabets
+fine we did it almost the same as name
+now again the domain name can be of any
+length so we have to use the plus
+operator here what we'll do is
+we'll first put them inside square
+brackets i forgot to mention them here
+and then we'll use the plus operator now
+the regular expression looks a bit
+complicated right but we don't have to
+worry about it because these all are
+easy things just a little bit lengthy we
+can say so the next thing we'll be doing
+here is we'll be going through the last
+part of a email id after this dot symbol
+what we have to do is we have to define
+another range for the extension
+right the extension can be any alphabet
+with a length not more than 6 to 7
+right so what we'll do is we'll write
+here
+a to z only consists of small letters
+or we can include capital letters as
+well so what we'll do is we'll write
+here
+a to z as well
+now the next thing we'll do is we'll
+define the
+length of this extension
+so we don't need the plus operator here
+because the length of any extension
+can't be more than 4 5 or 6 maybe right
+so what we'll do is we'll define a range
+of
+length we'll write here 2
+and 6 so 2 is the minimum length of
+extension and 6 is the maximum length
+now save it
+and let's check the output so we'll
+check for several email ids now what
+we'll do is we'll write here
+abc at the rate
+gmail.com
+fine
+submit it you can see it says email
+submitted successfully let me zoom it
+out a bit the next thing we'll do here
+is we'll write here
+abc
+underscore
+1 1 at the rate
+gmail.com
+so one thing we have forgotten here is
+to include the carrot character and the
+dollar character so we have to specify
+the starting and the end point here so
+what we did is we have included the
+carrot character and the dollar sign
+here
+now we'll write here abc underscore one
+one at the rate
+gmail.com
+submit it and you can see it says email
+submitted successfully so this is a
+valid email id now the next thing we'll
+be doing here is we'll be using any
+random symbol so let's say we are using
+here abc star at the rate gmail.com
+submit it and you can see it says wrong
+email id
+now the next thing we'll be doing here
+is
+we'll write any number here let's see
+and we'll write here caution
+112.3
+fine so
+this will return wrong email id because
+we have included numbers in domain name
+and we haven't defined any range of
+numbers for the domain name submit it
+and you can see it says wrong email id
+now remove these numbers from here
+and submit it you can see it says email
+submitted successfully so this is
+working totally fine
+now the last thing is what if we have an
+email like
+caution112.3 at the rate gmail.com
+submit it and you can see it says wrong
+email id
+in this case we have to define another
+range in the regular expression that can
+be optional so we have the question mark
+symbol that acts as an optional
+character it means that any range or
+anything return before this meta
+character will be optional
+so we'll use this symbol
+and we'll write here
+before this dollar sign will again use
+parenthesis and we'll write here dot
+a to z
+and then we'll define the range as 2
+comma 6
+and we'll use the question mark sign
+here or we can say this optional meta
+character here save it
+and now what if we write here
+caution at the rate gmail dot co dot in
+now submit it and you can see it says
+email submitted successfully and this is
+totally optional if we write here
+caution
+gmail.com submit it and you can see it
+still works fine so this is how we can
+validate a user's email id in javascript
+we can do a lot more stuff in this i
+want you guys to do it so that's all for
+this video guys if this video helped you
+anyhow do give it a thumbs up comment
+your doubts below share it with your
+friends and don't forget to subscribe
+simply learn thank you
+[Music]
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

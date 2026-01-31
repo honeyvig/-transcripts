@@ -1,0 +1,280 @@
+hello everyone I am M and welcome to
+this video on web scrapping with python
+web scribing is a powerful technique
+that allows you to automatically extract
+data from website turning the vast
+amount of information available online
+into something you can easily analyze
+and use whether you are gathering data
+for research building a data set for
+machine learning project or just curious
+about how websites work behind the
+scenes web scripting is an essential
+skills to help have in your toolkit on
+the other hand python is one of the most
+popular programming languages for web
+scripting thanks to its Simplicity and
+the wealth of libraries available in
+this video we will explore how to use
+Python to scrip data from website and we
+will dive into practical examples using
+python libraries like request and
+beautiful soup to fetch and parts web
+content but it's not just about the code
+web scripting sces with its own set of
+challenges and ethical consideration we
+will talk about how to script
+responsibility respecting the rules set
+by websites and ensuring that your
+scraping activity don't negatively
+impact the sites you are collecting data
+from so by the end of this video you
+will have a solid understanding of how
+to start scraping data from the web
+using python whether you are new to
+programming or looking to add web
+scripting to your skill set this video
+will give you the knowledge and tools
+you need to get started so let's jump in
+and see how python can help you unlock
+the full potential of the web craving a
+career upgrade subscribe like and
+comment
+below dive into the link in the
+description to FastTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back but before we start if you want to
+learn Ai and ml from the industry
+experts chice influance postgraduate
+program in Ai and machine learning from
+P University in collaboration with IBM
+this score teaches in demand skills such
+as machine learning deep learning NLP
+compter Vision reinforcement learning
+generative AI prompt engineering chat
+GPT and many more so don't forget to
+check out the course link from the
+description box below and the pin
+command so without any further Ado let's
+get started so here I using this Google
+collab for the web scraping okay you can
+use your
+own like jup notebook visual code Studio
+any okay so here I will write
+scraping using
+python okay then here first you have to
+install some libraries like you know uh
+request and you have to install
+beautiful
+so and you have to install that you know
+pandas because we will create one data
+frame and we will save it then we will
+check our data okay and you can install
+some basic p
+like and all that okay so here first I
+will
+import
+request okay then I will write from
+bs4
+import
+beautiful
+so
+okay then I will write in cot
+pandas as
+P fine then now what I will do okay
+let's see what is this request and all
+the so request is an STP client library
+for the Python programming language so
+request is one of the most you know
+downloaded python libraries okay like
+more like over 2,000 not exactly 2,000
+sorry 200 or 300 million monthly
+download okay so what it does it Maps
+the stt protocol onto Python's subject
+oriented semantics and here Beautiful
+soap So Beautiful soap is a python
+package for you know parsing the HTML
+and XML documents including those with
+know Mal phone mark it creates a parser
+for documents that can be you know used
+to extract data HTML from HTML which is
+useful for web script let me run it here
+our second step will
+be Define the URL and the address okay
+URL
+add so URL okay from where you want to
+Che your data so I will write here
+simply
+Lear that this okay let's open this PMP
+certification C it yeah so here I will
+write this
+and
+headers equals
+to so these are the headers okay so like
+in which you know device or you're
+working on which browser you are working
+on so these are for the headers so now
+what I will do I will send a get request
+to the simply lar page okay this URL for
+that
+know
+sending get
+Quest okay have I
+response
+request dot
+get then you
+added comma
+headers question
+headers okay that we run it okay working
+fine so now uh let's check if the
+request is successful or not for that
+if
+response do status
+code equals
+toal
+200 then
+so it
+for okay then
+response do
+content
+comma
+HTML pass
+okay
+here so here I write
+codes titles why because here I'm you
+know initializing the list to store our
+titles or whatever the things are okay
+basically the data okay why I'm writing
+course here because this is again course
+page that's why nothing else okay here I
+will give the MD
+list so now we will find all course
+titles based on the actual HTML
+structure what is HTML
+structure you have to go to the page
+right click then inspect
+okay according to this HTML structure
+means what is the class name what is the
+you know this PMP certification is which
+heading H1 heading H2 heading which
+heading it
+is okay so let's
+see which heading it is okay this PMP
+certification training H1 heading okay
+just remember H1
+adding so here I will write
+for codes and
+so do
+find
+or
+H1
+okay then
+title equals to for
+text do
+strip okay
+then here I write
+course
+titles dot
+append T
+okay now what I will do I will
+check if any data was extracted before
+it not okay I will write if
+course titles
+here I will create a data frame
+DF PD do data
+frame in this I will write course trt it
+will be a you know uh that column name
+so for write course seta
+okay
+then
+course titles
+okay then here I will write
+DF do
+2
+CSV then uh just create simply l. CSV
+okay so our data will be Sav in this
+simply le. CSV CSV fine here what I will
+do I will write index equals to false
+print
+data print data is save in
+CSV simply run.
+CSV
+fine so here I will
+write
+else
+print web page
+okay
+right retrieve the we page okay that's
+it let me run
+it
+okay it respond to this
+group spond subject has no attribute
+status code okay
+okay
+title it is text some minor spelling
+mistakes are
+there sorry sorry my
+bad again
+okay
+sorry D will be capital F will be
+Capital yeah so now you can see data is
+saved in simply. CSV so what I will do I
+will write data equals to everyone know
+how to read CSV in Python pg. read
+CSV what was a file name simply learn.
+CSV okay let me copy paste run it and
+then find
+data okay PMP certification training
+data is fed okay here you can see H1 we
+gave and that's why PMP certification
+trading came let's take what's in
+H2 okay in H2 there is leading Premier
+PMI partner something is there okay I
+will change
+here H H2 then I it
+okay
+fine see leading Premier P PMI okay let
+me make it big yeah so now you can see C
+data we mentioned
+so if you will see this H1 didn't come
+why because we have mentioned H2 that's
+why so these all are the s
+to okay so what is this I don't know
+okay this is a Time series graph this is
+Google C thing okay so this is how you
+can literally retrieve your data from
+any website okay just remember that some
+websites don't give you access to their
+you know for the scrapping just like
+Amazon don't give so you have to use at
+that time API and this is not ethical
+also to use someone's data okay without
+asking or whatever you guys so with this
+we have come to end of this video if you
+have any question or doubt please feel
+free to ask in the comment section below
+our team of experts will help you as
+soon as possible thank you and keep
+learning with simply learn staying ahead
+in your career requires continuous
+learning and upscaling whether you're a
+student aiming to learn today's top
+skills or a working professional looking
+to advance your career we've got you
+covered explore our impressive catalog
+of certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

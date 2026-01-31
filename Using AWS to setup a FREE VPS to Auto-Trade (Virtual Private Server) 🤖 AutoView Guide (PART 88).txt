@@ -1,0 +1,993 @@
+hi Traders and welcome to the final
+video in my auto view lesson Series in
+today's video I'm going to show you the
+final piece of the puzzle and that is
+setting up a virtual private server to
+run auto view 24 7 for those of you who
+can't do that at home so strap in
+there's a lot of information to cover
+today let's get started
+so before we begin we should probably
+cover an overview of what AWS is and
+what we plan to do today so first of all
+what is AWS for those of you who are not
+familiar with this AWS stands for Amazon
+web services which is a cloud computer
+hosting service which basically means
+you can rent someone else's computer and
+access it remotely and then use it for
+whatever purposes you want the main
+advantage of using AWS is that it's
+reliable scalable and inexpensive or in
+our case today completely free so we're
+basically renting a computer from Amazon
+and it's free for the first year now the
+computer we plan to rent today is
+extremely cheap so it's going to be slow
+to use but it is definitely going to be
+able to handle what we plan to do and
+what we're going to do today is we're
+going to rent this server set it up log
+into it install Chrome on it and then
+add the order view extension to that
+Chrome browser and then we connect auto
+view to trading view like I showed you
+at the beginning of this series all the
+steps are the same and then once we have
+auto view connected to tradingview and
+oanda all we need to do is set up our
+alerts and the virtual server will run
+24 7 and execute our trade orders for us
+so why are we doing it this way well
+this computer will run 24 7 remotely so
+you don't need to leave it running in
+your house which obviously saves on your
+power bill and is just one less thing in
+your house that you have to leave
+running
+there's minimal setup time involved in
+using AWS so that is the reason why I
+chose AWS and it's completely free to
+use within reason so on the free tier
+limit for the first 12 months you get a
+quota of hard drive space and network
+bandwidth so basically internet data and
+for our purposes of running auto view we
+are never going to be at risk of
+exceeding those limits now if you go off
+and do other things with this server
+then it's possible that you could exceed
+the limits but if you follow all the
+steps in this video it shouldn't cost
+you a thing for the first 12 months and
+if you do decide you want to continue
+using the service past 12 months it's
+pretty cheap to rent I think it's around
+one cent per hour or around a hundred
+dollars a year to rent this same
+computer we're using today so that's a
+quick rundown of what to expect from
+today's video let's get into the lesson
+alright so the first thing we need to do
+is go to AWS dot Amazon
+dot com this will be the page you land
+on as of recording this video this may
+change in the future but the steps
+should remain pretty similar even if
+they change the website so the first
+thing we need to do is come up here to
+the top right button and create an AWS
+account click on that and remember this
+is completely free so click on create a
+new AWS account put in your email
+address password AWS account name so
+this is just a screen name for your AWS
+account you can change this later so
+it's not really important what you put
+in here but I'm going to fill this out
+and click continue now you have to fill
+out your contact information and tell
+AWS what you're using this for for the
+most part you can just tick personal
+since we're retail Traders this is just
+a side thing for us but I don't think it
+really matters what you click here then
+I'm going to fill out my full name my
+phone number and country code my region
+and my address then make sure to agree
+to their terms read them if you want to
+and then click continue now we need to
+enter our billing information but don't
+worry Amazon will not charge you for
+usage below the AWS free tier limits but
+they do temporarily hold one dollar or
+Euro as a pending transaction for 3 to
+five days just to verify your identity
+and that you own this actual credit card
+or debit card so I'm going to fill this
+information out and then click continue
+alright so after putting in my credit
+card information I had to put in my
+phone number as well to get an AWS
+verification code so once you've done
+that step you'll land on this page here
+where we need to sign up for Amazon web
+services now we definitely definitely do
+not need this option and certainly not
+this option either we just want a
+virtual server to run Chrome a web
+browser in or metatrader if that is how
+you automate your trading what we're
+doing today can apply to any application
+you need to run 24 7 on a remote
+computer so we want to select this
+option here the basic free option so
+this option is selected by default so we
+just need to click this button complete
+sign up and we're done setting up our
+AWS account so now we can click this
+button here to go to the Amazon web
+services Management console so to log in
+we want to select root user and then we
+put in the email we signed up with click
+next and then type out this little
+anti-robot capture thing
+click submit and then type in your
+password and click the sign in and now
+here we are in the AWS Management
+console now we're ready to launch our
+very first virtual machine so we want
+this option here launch a virtual
+machine with ec2 so click on this link
+here and we're in now we have a lot of
+options here we've got Linux Mac OS
+Ubuntu Microsoft theoretically you
+should be able to use most of these
+operating systems to do what we're doing
+today if you're more familiar with Mac
+OS for example you might want to choose
+that but for today I'm going to be using
+a Microsoft Windows Virtual server just
+make sure that whichever option you
+select is a free tier eligible option so
+in my case I'm going to scroll down
+until I get to Windows Server 2019 base
+and I want to select this option so
+click select over here and now we have a
+lot of configurations to choose from so
+by default the free tier is selected
+here and that will do fine and for us
+today we have one gig of RAM one virtual
+CPU and we only have low Network
+performance which should be fine for our
+purposes so this will not be a fast
+computer by any stretch of the
+imagination but it should do what we
+need it to so now we come down to this
+button down here and click review and
+launch now we don't need to change any
+of these settings here we can just come
+all the way down to this bottom right
+button launch and click on that now this
+is important we need our private key in
+order to access our server remotely so
+it's important that you set this up
+properly otherwise you won't be able to
+connect to the server so we want to
+click on this first drop down box here
+and select create a new key pair and
+then we need to give this key pair a
+name you can name this whatever you want
+it doesn't really matter I'm going to
+call Mine The Art of trading key now we
+need to click download key pair which is
+this button here so click on that and
+then select where you want to download
+this it doesn't matter where you
+download it as long as you remember
+where it is so that we can access it
+later I'm just going to click save here
+now the file has downloaded the pem file
+it's called so make sure you save this
+somewhere safe because we will need this
+to connect to the server if you lose it
+you'll need to restart this whole
+process which is no big deal because
+we're not putting anything particularly
+valuable on this server but I would
+recommend putting this somewhere safe
+and backing it up onto a USB or hard
+drive external hard drive if you can or
+even just upload it to a Google Drive so
+once you've securely saved this file
+somewhere that you'll remember where it
+is we need to click this button here
+launch instances wait for AWS to do its
+thing and there we go our instances are
+now launching we have to wait a few
+minutes and and within a few minutes
+we'll be able to log in and access our
+remote computer and start setting up
+auto view over there so now if you click
+on this string of numbers here which is
+a link it'll take you to the interface
+where you can see how your instance is
+doing so after a few minutes of waiting
+your instance State should be green and
+running and your status check should be
+green and all the checks should have
+passed if they haven't yet just wait a
+little longer now everything is up and
+running we can right click on the
+instance and click this connect button
+or link that will take us to this page
+here so what we want to do here is click
+on RDP client and now we want to
+download our remote desktop file so
+click on this and save it somewhere safe
+I'm going to save it to where I save my
+private key file my pem file I'm not
+going to change the file name I'm just
+going to click save so now I have my
+remote desktop file saved I need to
+click on get password so that we can
+actually log into this server so click
+on get password now I need to upload
+your private key pair or the pem file so
+click browse and navigate to where you
+saved your file here's mine I'm going to
+click open so now I can click decrypt
+password and here is my password so let
+me copy this text and go to where my RDP
+file saved so I can just click show and
+folder here bring that over all I need
+to do now is double click on this file
+click connect you can ignore all of this
+you can even click don't ask me again
+for connections to this computer since
+we know this computer is safe we own it
+essentially or we're renting it from
+Amazon so click connect It'll ask you
+for a password I'm just going to paste
+in the text from this page I'm going to
+click remember me and I'm going to click
+OK again we don't need to worry about
+this warning here we can click don't ask
+me again for connections to this
+computer and click yes
+be patient while it connects and in a
+moment we should get an interface that
+we can start playing around with so here
+we are we're on a private server hosted
+over in America 2 30 am over there
+and this server is running on Amazon's
+Hardware so if this pops up for you I
+would just click no we don't need to
+worry about that and here we are we're
+good to go pretty exciting stuff so the
+next thing we need to do is install
+Chrome since Chrome is the only web
+browser that allows the auto view
+extension the problem with this is that
+Internet Explorer for some reason blocks
+nearly every website that you go to on
+this Windows Server I'm not sure why and
+I don't know how to fix it so it's a
+little bit inconvenient but what we need
+to do in order to install Chrome is
+download the installer onto our home
+computer and then copy that onto our web
+server and then just run the installer
+here so to do that I'm just going to
+minimize this virtual server and then
+I'm just going to click up here and type
+in Google Chrome download hit enter then
+I'm going to click on this download Now
+link it doesn't really matter if you
+leave this on or off but I'm just going
+to turn it off today because the less
+data our virtual server sends out the
+better since we're on the free tier and
+it will be a slow computer so let's
+click on download Chrome now if your
+download doesn't start like mine just
+didn't just click on this little link
+here and that should start the download
+click save once that's done I can bring
+up my AWS folder click on Chrome setup
+right click it and hit copy or control C
+then we need to bring back up our
+virtual server here our remote desktop
+connection and we can right click on the
+desktop here and just click paste wait
+for the file to copy over it needs to
+upload to the server and then the server
+needs to download it which will take a
+minute but once it's done we can now
+double click on this file and begin the
+installation process just wait for the
+installer to finish doing what it needs
+to do and then we can move on to the
+next step which is installing auto view
+alright so Chrome has successfully
+installed onto our web server I can now
+move this window to the side and delete
+our installer off the desktop because we
+no longer need it so the first thing we
+should do is go to the
+tradingview.com website
+now this will be very slow because we
+are on the free tier so don't be
+surprised if this takes a little while
+now that we're on the trading view
+website I'm going to log in to my
+account make sure you log into your
+account you may need to upgrade your
+plan if you're on a free plan or a low
+tier plan because unless you're just
+going to leave one account signed in on
+this virtual server if you want to use
+your home account at the same time as
+the web server account is signed in you
+may need to upgrade your plan because
+that does count as two sessions and
+tradingview does have limitations on how
+many charts you can have open on
+multiple computers so I'm going to click
+sign in and now just sign in with your
+username or email I'm going to sign in
+with my username
+make sure to click remember me we want
+to stay signed in on this server and
+then click sign in
+you may also want to click save up here
+to save the password in Chrome so that
+if you do happen to log out it's easier
+to log back in so I'm going to maximize
+this window here and let's load up a
+market and make sure that this server
+can handle trading views charts because
+quite frankly this is the first time I'm
+doing this and I'm not even sure if the
+computer can handle this but I'm hoping
+it can so that this entire video isn't a
+waste of time so I'm going to click on
+euro dollar and see what happens so now
+we need to click on full featured chart
+and I can close this tab and here we go
+seems to be working fine so now if you
+want to you can log into your oanda
+trading account here but that's
+completely optional remember that auto
+view runs through trading views alerts
+so we really only need to be logged in
+to trading view we don't need to log
+into our trading account because auto
+view connects to our trading account for
+us and then when our alerts are
+triggered in trading View Auto view
+relays that information to oanda on our
+behalf so we don't need to log into our
+account here so I'm just going to close
+this window and move on so now that we
+have this working the next step is to
+install auto view so let's open up a new
+tab here and I'm just going to Google
+auto view and this first link here
+should be the one we want this is the
+Chrome web store extension I'm just
+going to click on this first link now
+here is the auto view extension browser
+extension all we need to do now is click
+on add to Chrome click on that click ADD
+extension and we're done auto view has
+been added to Chrome so we can close
+this browser tab now go back to trading
+view now remember because this is a new
+setup it's essentially a new computer we
+need to log into auto view and
+reconfigure everything so I'm going to
+pin order view to my extension list and
+then click on the auto view icon now
+because order view needs to authenticate
+that you have access to it especially if
+you're a paying user we need to connect
+our Chrome account so click on this
+Chrome account link and then click on
+sign in up here now you need to sign in
+to whichever account you've bought auto
+view under or whichever account you want
+to use the free demo Services of auto
+view with now you may have to go through
+the two-factor authentication if you've
+turned that on in your account since we
+are logging into a server in another
+country or potentially another state if
+you do live in the US and that will
+trigger Google's security Flags now the
+next step we need to do is turn on sync
+we need to sync our extensions and
+profile on Google Chrome and Now to turn
+on sync all we need to do is click on
+our profile icon up here in the top
+right the top one not the bottom one
+here and then we need to click on turn
+on sync click on this button here and
+now just click yes I'm in now give
+Google Chrome a few moments to sync all
+of your bookmarks and extensions this
+could take up to a minute or two
+depending on how much information or
+data you need to sync and it looks like
+everything is done so now if I click on
+auto view
+now Chrome account should be connected
+there we go enabled and our trading view
+account is connected as well if yours
+does not stay connected your trading
+view section here make sure to just
+click on the link and then log into your
+training view account and that should
+connect auto view to trading view so
+we're good to go now we just need to set
+up our oanda API keys and enable oanda
+under the exchanges list and we should
+be good to start automating our trading
+so let me click on change settings here
+close this tab we no longer need that so
+the next thing we need to do is come to
+the permissions tab over here on the
+left so click on permissions and then we
+need to scroll down to whichever
+exchange you want to use this plugin
+with I'm using it with oanda today so
+I'm going to click on awanda and today I
+want to connect oh and to practice so
+I'm going to come over to the right here
+and click on the switch corresponding to
+away under practice that turns it on and
+now we need to click allow and then we
+need to click the Switch again and for
+some reason now for some reason mine is
+not working right now I'm going to try
+exiting Chrome and then reopening
+everything so let me click the x button
+wait for a moment and then double click
+on the Chrome shortcut I want to set
+Chrome as my default browser so I'm
+going to click on that little pop-up
+there I'm going to wait for this page to
+load this computer is painfully slow but
+you get what you pay for and it is free
+all right now we need to click on web
+browser here or I'm going to click on
+web browser and choose Chrome as my
+default web browser and then we can
+close this window come back up to auto
+view and click on change settings I'm
+going to go back to permissions scroll
+down to oanda and it's now turned on I'm
+not sure why it wasn't before but it is
+now now let's come back over here to
+oanda practice and scroll up so now if
+you remember from the previous videos
+where we configured auto view on our
+home computers we need to do the same
+thing here so we need to click on add
+account
+and this is the same for oanda practice
+and oanda live or your real money
+account you need to enter your account
+ID and your account API token now if
+you're not sure what these are I'll have
+a link popping up in the top right hand
+corner here that will take you to that
+video where we configured auto view for
+the first time all of the steps are the
+same there it's just that we're doing
+this on a remote computer to save time
+I'm not going to go over that again in
+this video I happen to have my account
+ID and account token or access token
+written down in a file so I'm just going
+to copy and paste them over into these
+two text boxes here so I'm going to copy
+over my first account ID and then my
+oanda demo API key remember the demo API
+key or access token and your live money
+token are two different tokens so make
+sure you copy the right one over I'm
+going to paste that access token in
+there and click test account so my
+credentials were successfully tested I
+can now click add account and we have
+now connected auto view to trading View
+and connected our oanda account to auto
+view so we are now set up for automated
+trading all we need to do now is set up
+our script alerts and remember we're
+logged in to our main trading view
+account so you could do that on your
+home computer if you want to because
+your alerts will trigger on any browser
+you have open whether that be a second
+computer at home or this virtual server
+right here but before we do that I'm
+going to do one last step to ensure that
+our server is always auto trading our
+alerts now there's one final thing I'd
+like to do before we consider this
+virtual server setup completely it's not
+a common occurrence but sometimes the
+Chrome browser can crash or your server
+could restart for an update or something
+like that if that happens then obviously
+our order view plugin is not going to be
+able to detect our trades and our entire
+operation is basically going to stop so
+there's a few ways to achieve a solution
+for this I'm going to show you my
+personal favorite way and that is to
+create a batch file that constantly
+checks to see if Chrome is running and
+if it's not it opens it back up and if
+it is running it just Waits 60 seconds
+and checks again this batch file runs on
+Windows startup so as soon as you boot
+up your server it will begin monitoring
+your Chrome browser and ensure that it
+is always running so long as your server
+is on so we need to do a little bit of
+batch file programming for this one if
+you've never done this before it
+shouldn't be anything more difficult
+than writing out Pine code so let's jump
+into it alright so to create this batch
+file monitor script come down and click
+on the Windows start button and just
+type in Notepad
+once this loads up click on notepad
+launch the program and now we're going
+to write a short batch file script which
+is going to constantly monitor our
+Chrome process make sure it's running on
+this server and if it's not running
+we're going to launch it so the first
+thing I'm going to type here is at Echo
+off now you don't need to know what all
+these commands are just copy me note for
+note I'll leave a link in the video
+description to a text file so you can
+just copy and paste this code if you
+want to this is not in any way related
+to Pine script so if you don't
+understand what's happening here it's
+not important but what we need to write
+here is colon check we're writing a
+little function here basically and what
+this check function is going to do is
+first we're going to list the current
+running tasks and then we need to put in
+a
+um shift backslash character I'm not
+sure what this thing's called to be
+honest with you it's just the kind of
+separator character and then we need to
+write find forward slash capital I and
+then Chrome in quotation marks next up
+we want to say if error level is one
+open brace and then I'm going to start a
+new line and tab to indent we're going
+to write here start
+chrome.exe so if error level returns one
+that means that the task list find
+function could not find the Chrome
+process so we want to start the Chrome
+process but we don't want to just start
+Chrome and go to our home page we want
+to open up the trading view charts so
+I'm going to bring up Chrome here
+um it doesn't matter which chart layout
+that you load because auto view detects
+the alerts regardless of what layout
+you're on so I'm just going to copy the
+one that I'm using right now to test
+this script which is my Hammers and
+stars layout as long as it's a chart
+this will work perfectly fine so just
+make sure to copy the URL of a chart
+layout and then minimize Chrome and
+paste that in here so this line of code
+here will start Google Chrome and load
+up this web page the next line of code
+we want to write here is CLS that just
+clears the screen of any text in the
+command prompt and then we want to write
+here Echo and you could write anything
+here this is just for feedback to you to
+know that the monitor just relaunched
+Chrome I'm just going to write here
+danger Will Robinson
+starting Chrome
+uh just a quick shout out to any of you
+who recognize this obscure sci-fi
+reference then I'm going to close this
+brace here and then we need to write
+else with a capital E then open a new
+bracket or brace parentheses whatever
+you want to call it and then we're going
+to write CLS to clear the screen and
+then a new line and then we're going to
+write Echo and then we're going to Echo
+or print to the command prompt
+everything is fine and then I'm going to
+close off that parentheses or bracket
+start a new line and just write timeout
+60. so this will wait 60 seconds before
+running this entire script again but to
+make sure that we Loop this check
+function all of this code we just wrote
+here we need to write at the very end of
+the batch file go to check whoops
+misspelled it go to check so every time
+this file runs it will get to the end of
+the file and then go back to the start
+of the file and it will just continue
+looping over and over and over again
+indefinitely and so this will ensure
+that we always have Chrome open if we
+detect that it's not open so now we need
+to save this file so just go file save
+as as
+we'll just save this to the desktop and
+before we save this file make sure to
+come down to save as file type click on
+that drop down box and click all files
+and now we want to save this text file
+as a batch file or a bat dot bat file it
+doesn't matter what you call it I'm
+going to call mine monitor Dot bat
+and then click save you'll see the file
+pop up here on the desktop we can now
+close this notepad open up the Windows
+button again and type in run r-u-n hit
+enter
+and then we want to write in here I've
+already written it out because I've
+accessed this before but we want to
+write shell colon common space startup
+and this will open up the startup folder
+for this Windows server and whatever
+files we put into this folder will
+always run when the server boots up so
+hit enter or click OK we want to drag
+our monitor file over to this folder
+drop the file in there and then if you
+want to test to make sure it's working
+open up Chrome and close the window
+and then just double click on this file
+and we'll see what happens
+and there we go it's working perfectly
+fine just said danger Will Robinson
+starting Chrome now we'll wait 60
+seconds it will check if Chrome is still
+open if it's not it will attempt to open
+it again if it is then nothing will
+happen so I'll leave this open for a
+moment and I'll skip ahead to show you
+what that looks like
+there we go you can see it says
+everything is fine so detected that
+Chrome is still running and it didn't
+have to do anything so now to confirm it
+works let's close Chrome again and just
+wait for this timer to run out we can
+close this folder now as well here we go
+and it's detected that Chrome wasn't
+open and it's open to back up so
+everything's working perfectly the final
+test to make sure this is working how we
+wanted to is to just restart your server
+so click on the Windows button click the
+power button when it loads and just hit
+restart and it'll prompt you for a
+reason to restart the server just click
+continue
+and you'll be logged out and when it
+boots up just log back in and check if
+the batch file is doing its thing so I'm
+reconnecting now to see if this worked
+now after restarting your server you
+need to log back in in order for
+everything to run the server will not
+automatically log itself back in so keep
+that in mind
+there's our monitor batch file starting
+up with Windows it has detected Chrome
+isn't running and it's launching it
+perfect everything is working how we
+want it to you can now leave this
+running
+hit the x button on your remote desktop
+connection to your virtual private
+server and you should need to check back
+on it very frequently it's probably
+worth checking on it every couple of
+days just in case something's gone wrong
+or it's turned itself off or restarted
+and you need to log back in but for the
+most part you should get away with only
+having to check on this every weekend or
+if you notice that it's not placing
+trades that it should be obviously so
+I'm going to close out of this session
+now and just leave it running for the
+next week or two so that's the end of
+today's demonstration we're pretty much
+set up if you followed all the steps
+note for note then you should be ready
+to start auto trading through auto view
+all you need to do is set up your alerts
+you can do this on this virtual server
+or you can minimize this virtual server
+load up your charts on your home
+computer and if you've got a script
+that's automatically trading for example
+this Hammers and shooting stars script
+that we wrote in a previous lesson all
+you need to do now is come up to the
+alert button select the script that
+contains your auto view automation code
+select alert function calls only and
+then create your alert and now whenever
+an alert is triggered so long as your
+web server is running and you've logged
+into your trading view account and
+you've connected auto view to oanda then
+your trades will automatically execute
+and to prove that is the case I'm going
+to log in to My Demo account here I'm
+going to choose the correct account ID
+here in my case it's 005 is the account
+ID that I connected auto view to I'm
+going to click allow and now here we are
+logged in now I'm going to swap over to
+my virtual server so for this I'm going
+to load up a different chart
+and let's just initialize a trade on New
+Zealand Yen here so to do that I'm just
+going to right click
+just slightly above price action here
+I'm going to click ADD alert
+and then I'm going to type out an alert
+syntax that should enter a market order
+on this pair if the conditions are met
+and the conditions are going to be if
+price is less than where we're setting
+our alert which is guaranteed to happen
+if price stays where it is right now by
+the time I'm done setting this alert I
+might set it even a little bit higher if
+this condition is met then we want to
+trigger an alert to auto view I'm going
+to turn off all of these because I don't
+need them and then I'm going to change
+this to say E equals oh and practice B
+or book is going to be long
+the symbol is going to be nzd JPY
+the order type is going to be a market
+order
+my fixed stop loss price is going to be
+78.9 let's keep it simple
+and our fixed take profit is going to be
+79.1 so now when I click create on this
+alert because price action is below 79.1
+or less than this alert should
+automatically trigger immediately
+whenever price moves and we should enter
+a trade on our demo account on this web
+server so to prove that is the case I'm
+going to minimize this I'm going to
+close this browser so that this auto
+view extension isn't running and then
+I'm going to go back to my virtual
+server and click create let's wait and
+see what happens there we go we've
+entered long at Market based on our auto
+view alert over here on our virtual
+server so hopefully you found this video
+interesting I know it was a slower paced
+video that didn't include any coding but
+now that we've got this set up you can
+run this Amazon web server for free for
+up to a year I believe and it will run
+24 7. now in a future lesson I will
+cover how to run metatrader metatrader
+expert advisors on this virtual server
+but I'll leave today's video here
+because that will add at least another
+20 minutes or half hour onto this video
+and this video is already long enough so
+we'll leave it there thanks for watching
+everyone I hope you found this
+interesting I hope those of you who need
+this service can successfully get it set
+up and running remember that it's
+completely free at least for the first
+year so you have nothing to lose by
+playing around with this if you're
+interested before we wrap up this video
+I want to just cover a couple of
+housekeeping things in relation to AWS
+such as what pricing looks like if you
+do exceed your 12 month free trial and
+what your options are if you want to
+continue using the service and pay for
+it so here is my current billion cost
+management dashboard you can see down
+here what my usage has been over the
+past three days I've used 3.3 percent of
+my storage I've used 3.3 percent of my
+hours for this month and I've used 0.78
+of my data bandwidth or available
+internet usage so there are
+approximately 730 hours in a month and
+we have 750 50 hours for free per month
+and according to this table there are no
+months that have more than 744 hours so
+unless something radical changes without
+time space reality I think will be safe
+for our hourly quota each month unless
+you're copying a lot of files over to
+your private server we are never going
+to exceed 15 gig per month by just
+running our charts if however you're
+worried about hidden costs if something
+goes horribly wrong with your virtual
+server and it downloads a massive file
+or something like that you scroll up
+here to budgets and click on that then
+click on create a budget up here leave
+it set on cost budget and click set your
+budget name this budget whatever you
+want I'm going to call mine auto view
+leave it on monthly leave it on
+recurring budget and specify your
+monthly budget so I'm just going to put
+one dollar in here we can leave
+everything else here as it is and click
+configure thresholds I'm going to set my
+alert threshold to one percent of our
+budgeted amount so as soon as we start
+incurring even a single Cent worth of a
+fee for this service will be notified
+and then put in your email address here
+I'm just going to put in the email for
+my company and then click confirm budget
+and then click done and now you'll be
+alerted by email as soon as this virtual
+private service starts racking up any
+fee whatsoever which should never happen
+if you followed the steps in today's
+video and you use your virtual private
+server only for what I showed you today
+now if something does go wrong with your
+server and it starts racking up a cost
+or you simply just want to shut the
+thing down or modify something or
+re-download the remote desktop
+connection application just go to
+aws.amazon.com like we did at the start
+of the video click on my account make
+sure you've logged in and click on AWS
+Management console once you're here just
+click on this recently visited service
+if it's showing up on your AWS Services
+home page or come up here to Services
+click on that and just click ec2 under
+compute once you're here come and click
+on the instances link over here on the
+left click on that here is your instance
+your virtual private server if you need
+to disable it and stop it from running
+just right click on it and click stop
+instance now if you do stop this
+instance and you start it again you will
+need to re-download the remote desktop
+application to connect to it because
+your instance could potentially be
+booted up on a different server with a
+different address all your files and
+stuff will still be there but just keep
+that in mind your IP address can change
+when you restart the instance and if
+something goes wrong while you're
+setting up your instance and you just
+want to wipe the whole thing and start
+again you can also terminate the
+instance and then just create a new one
+follow the steps from earlier in the
+video and just create a whole new
+instance alright so it's important to
+mention that if you do use your free
+tier AWS service for the full 12 months
+and you still want to keep your private
+server going you can purchase access to
+a private server for an entire year for
+around 100 US dollars which when you
+consider the cost of buying your own
+dedicated computer your electricity cost
+your internet usage all of that
+potential issues that could happen with
+the computer having to replace Parts Etc
+it's a pretty cheap way to run a
+dedicated virtual server or essentially
+rent a computer to rent the equivalent
+computer we're using today in today's
+video which is one of their more basic
+computers but as you can see today even
+though it's slow it gets the job done if
+you want to rent one of these for a year
+simply look over here at the instances
+drop down menu and we want to click on
+reserved instances so click on that and
+then we want to click on purchase
+reserved instances don't worry we're not
+buying anything today I'm just going to
+show you what this costs so the platform
+we want to select is Windows the
+instance type we want to select is T2
+micro which is what we were using in
+today's video the tenancy we want to
+leave as default if you set this to
+Dedicated you get your own dedicated
+Hardware that isn't shared with other
+people's virtual service it really
+doesn't matter for what we're doing and
+it's cheaper to select default term is
+up to you you could do one to 12 months
+I'm going to show you what it would cost
+to rent one for a full year offering
+class I would recommend setting to
+standard because it's a lot cheaper our
+payment option is up to you if you
+select no upfront and you pay an hourly
+rate so if I click search now here are
+our options if we rent one for 12 months
+then we pay a hourly rate of 1.2 cents
+and you can basically pay your bill as
+you go it is slightly cheaper however to
+select all upfront or you could do
+partial up front I'm just going to show
+you no upfront and all up front if we
+select all up front and search you can
+see that our upfront cost is 99 US
+Dollars and our effective rate is 1.1
+cents per hour or if we get a three-year
+deal it's 234 dollars I would probably
+recommend going with a one-year deal
+because you never know what might happen
+with your trading you may find a better
+way to Auto Trade by the time your first
+year is up or your second year in this
+case since we'll be able to use this for
+a full year for free up front anyway I
+just thought I'd better mention that in
+this video for those of you who do end
+up using this service for over 12 months
+and that'll pretty much do it for the
+housekeeping part of today's video I
+think that's all you really need to know
+in order to get started with this and of
+course if you run into any issues just
+contact the Amazon support don't send me
+an email because I won't have time to
+help you with this sort of thing but the
+Amazon support team should be there for
+you if you run into any technical
+difficulties thanks for watching
+everyone I'm going to go and manage my
+crypto positions now since we're having
+a volatile day and I'll see you in the
+next lesson take care and best of luck
+with your Trading

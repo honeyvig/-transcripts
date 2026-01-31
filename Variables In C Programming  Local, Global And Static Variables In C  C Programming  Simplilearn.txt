@@ -1,0 +1,273 @@
+hey everyone i am harsanya from simply
+learnstream and i welcome you all to
+this interesting session on variable c c
+programming
+but before we begin if you haven't
+subscribed to our channel already make
+sure to hit the subscribe button and
+press the bell icon so you'll never miss
+any update from simply learn
+without further ado let's get started
+with the agenda for today's session
+first we will understand what are
+variables in c programming
+next we will learn how to declare a
+variable in c and its initialization
+procedure and finally the types of
+variables in c
+i hope i made myself clear with the
+agenda
+now let's get started with the first
+part of today's session
+what are variables in c
+a variable is a user defined or a user
+readable custom name assigned to a
+memory location
+it is used to hold a value that can be
+modified and reused many times during
+the program execution
+a variable name can be an alphabet or
+digits and can also start with an
+underscore but a variable name cannot be
+a keyword this might be ambiguous and
+need a little attention to detail so
+basically we can declare a cast name a
+person's name or any object's name as a
+variable
+but a variable name cannot be a keyword
+they are set of words reserved for
+specific functionalities in c these
+words cannot be used for any other user
+related or custom functionalities a few
+such keywords are int
+float for
+why etc
+now let's look at an example
+so in this particular example the user
+defined variable a will store value at
+the address 2000 upon the variable
+declaration the memory allocation
+happens depending on the type of
+variable and its size for example if the
+data type is in it creates the memory
+for the variable type end the storage
+size of int is 2 bytes and 4 bytes for
+float
+let us now understand variable
+declaration in c with the help of syntax
+and examples
+syntax of variable declaration is data
+type variable list and semicolon at the
+end
+values assigned to variables can be of
+any data type like int float care etc so
+in this example int is a data type a b
+and sum are the variable list
+and they are specific rules for naming a
+variable
+here are the valued variable names in
+sum float underscore a b
+into b20
+with these examples we understood that a
+variable can have alpha bits start with
+an underscore character and have digits
+now let's look at some invalid variable
+links for example
+int 38 a variable name cannot start with
+digits
+in the next example we cannot have white
+space within a variable name
+and variable name cannot be a keyword
+now let's try to declare invalid
+variable names and run the program
+int 30
+float
+x space y
+and in go to
+so after declaring invalid variable
+names we got an error for all the
+variable declaration stating that
+invalid suffix a on integer constant
+expected comma semicolon before y
+and expected identifier
+now that we know how to declare a c
+variable let's move ahead and understand
+see variable initialization with the
+help of syntax and examples
+syntax of variable initialization is
+data type variable 1 is equal to value 1
+comma variable 2 is equal to value 2 and
+semicolon
+so this is how we initialize the
+variable for example in t is equal to 10
+comma b is equal to 20 comma sum
+10 is assigned to a variable year of
+type integer value 20 is assigned to a
+variable b of the same type and we have
+declared a variable sum
+okay so let me now move on to the types
+of variables in c there are five types
+of c variables let us understand one by
+one
+variables that are declared inside the
+functions are called local variables
+in this example we have declared
+variable e inside the function sum that
+holds the value 5.
+let's try to execute a simple program
+using local variables in vs code editor
+inside the function let's declare and
+initialize the local variable
+int
+a is equal to 5
+and then the printf function to print
+the value
+printf
+percentage d
+comma e
+here the value is printed successfully
+using local variable
+all right
+let's move on to the next type of
+variable
+variables declared outside the functions
+are called global variables here is the
+example where float pi is equal to 3.14
+a global variable defined outside the
+functions
+let's try to execute the program using
+global variables
+here let's add the function circle and
+try to access the global variable in the
+function
+float
+pi is equal to 3.14
+which is a global variable
+int circle
+which is a function
+and inside function let's declare
+variable r and area
+int r
+is equal to 5
+double area
+formula for area of the circle area is
+equal to
+pi into
+r into r
+written area
+inside void main let's call the function
+circle
+print f
+percentage d
+comma circle
+as you can see the circle's value for
+the area is printed successfully using
+global variable
+next variables declared with a keyword
+static or static variables whose
+lifetime is throughout the program
+runtime as you can see in this example
+static is a keyword used to declare a
+variable sum
+let's execute simple program using
+static keyword
+inside the function calculate let's
+declare the variable sum with static
+keyword and initialize the value to 0.
+static
+int sum is equal to zero
+sum plus plus
+to increment the value of sum by one
+return sum
+inside the main function let's call the
+function two times
+printf
+percentage d
+comma calculated
+for every function call the value of the
+static variable will increment and print
+new value
+that means the sum value was initially 0
+and then incremented by 1 and printed
+value 1.
+now the sum value is 1.
+the sum value will increment by 1 for
+the next function call and print the new
+value 2. let's remove this keyword
+static and now run the program
+as you can see the previous output with
+static keyword for every function call
+the value of the sum is incremented
+without starting keyword the value will
+be same for every function call i hope
+you got the idea of using a static
+keyword right
+next variables declared with auto
+keywords are known as automatic
+variables the variables decline inside
+the block of functions are automatic
+variables by default in this example
+into e is equal to 10 is an automatic
+variable by default
+now let's execute a program using the
+auto keyword
+int a is equal to
+10
+by default this is an automatic variable
+let us also declare a variable with auto
+keyword
+auto int
+p is equal to
+20
+printf
+percentage t
+comma a
+and let's print the value for b
+and here you get the output
+next
+external variables share the variables
+among the multiple c files to declare
+external variables we use the keyword
+extern let's see how the extent keyword
+works
+first create a file with a dot head
+extension a header file and define a
+variable with an extern keyword
+extern
+int x is equal to 10
+comma y is equal to 20
+in the file demo.c let's try to access
+the external variables so for that let's
+include the header file demo.head
+hash include
+demo.h
+now inside the main function let's
+declare the variable add
+int
+add
+and now let's print the value for x and
+y using printf function
+printf
+percentage d
+comma x
+and let's print the value for y
+and let's perform addition operation for
+that add is equal to
+x plus y
+printf
+percentage d
+comma add
+as you can see the output is printed
+successfully by using external variables
+so with this we have come to the end of
+this session on the variables in c
+programming i hope this session was
+informative and interesting until next
+time this is sania from simply learn
+steam signing off thank you stay safe
+and keep learning
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

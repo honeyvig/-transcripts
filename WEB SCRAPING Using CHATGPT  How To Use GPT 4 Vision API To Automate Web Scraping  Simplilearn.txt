@@ -1,0 +1,241 @@
+welcome to the digital age where data
+isn't just power it's the year we
+breathe the language we speak and the
+future we are building every second the
+internet explodes with new content did
+you know that over 4.4 million blog post
+are published every day and Google
+processes over 40,000 search queries
+every second that's a dling amount of
+information in the sever expanding
+Universe of data how do we make sense of
+what matters how do we filter out the
+noise and find the signals enter the
+world of gp4 not just anyi but a vision
+equipped Super Brain that's changing the
+way we interact with the vast ocean of
+web data imagine a tool so Advanced it
+doesn't just read text but sees and
+understand images charts and even the
+layout of web pages just like a human
+but here's the kicker it does this at a
+speed and scale that's simply out of our
+leak today we will see one of those
+features that is gp4 vision and before
+we move on just a quick info for you
+guys if you one of the aspiring python
+Enthusiast or a ml Enthusiast looking
+for online training and graduating from
+the best universities or a professional
+who elicits to switch careers in Ai and
+ml by learning from the experts then try
+giving a short to Simply learns
+postgraduate program in a ml in
+collaboration with P University and IBM
+by enrolling in this certification
+program you will gain expertise in
+skills like generative AI prompt and
+Jing chat jpd explainable AI machine
+learning algorithm supervised and
+unsupervised learning model training and
+optimizations and there's much more on
+the list with hands-on experience in
+tools you will catch the eye of top
+recruiters so what are you waiting for
+hurry up and enroll now a year of
+experience is preferred to enroll in
+these courses you can find the course
+Link in the description box and pin
+comment without any further Ado let's
+get started so opena recently released a
+multimodel version of gp4 called gp4
+Vision that is GPT 4V so GPT 4V can
+understand images as input and answer
+questions based on it 80% of the world's
+data is unstructured and Scattered
+across formats like websites PDFs or
+images that are hard to access and
+analyze we believe that this new era of
+multimodel models will have a big impact
+on the web scraping and document
+processing space because it's now
+possible to understand unstructured data
+without having to rely on complex OCR
+Technologies or tooling so let's explore
+potential application of GPD 4 week for
+web scripting so first what we'll do is
+we will open any website or we'll just
+open the simply learn website only and
+we will save this as a HTML
+dog HTML Only We have replaced
+it so this is the HTML
+log we will drag and drop it to chat jpd
+and now ask the chat jity to web script
+the data so we'll ask the chat jity that
+use the above HTML
+file
+and scrip the
+data from it so first we'll see the
+scrip data in text format only and after
+that we will uh ask the CH to scrip the
+data into Json format or if there are
+any CSS files or styling or metadata so
+we'll ask the J gyy to do
+so so you could see that jjd has
+responded that the HTML file you
+uploaded from the simply one website it
+provides a variety of courses and the
+platform aims too so it it has just
+given us the summary so now we'll ask
+jity to extract the data into Json
+format above
+HTML
+file
+in format so you could see that it's
+analyzing
+so you could see that it has extracted
+the data into Json format and here's a B
+for of the extracted data so this is how
+you could web script the data from the
+websites using GPT for vision so now
+what we'll do we will go to all courses
+click on explore the category so here
+you could see all the courses of the
+data science and business Analytics
+category so what we'll do we'll ask the
+chat GP what we'll do is we'll ask the
+chat JP to extract the titles of all the
+courses so for that first we'll save the
+page as HTML
+Doc and we'll upload to chat
+jpd and going back to the page just
+inspect so you could see that that
+heading three has the title of this
+course so we'll provide this as a
+reference to the chat J so it can
+understand and extract all the other
+titles from this page so we'll get back
+to chat JB and ask him that extract the
+course
+title from the
+attached web
+page or HTML do
+HTML and you can use Python and
+beautiful
+soup and
+xort
+the results to a CSV
+file and the title
+tag
+H3 like this and now we will provide
+it just copy the element past it to chat
+jpd extract all the PO
+titles attached web page okay let's see
+what does a chat shiy respond to
+this so you would see that it has
+created a CSF file so we'll click this
+and open the
+file and it has extracted all the titles
+which are present in
+H3 into a CSV file but we asked only for
+the course
+titles and it has done so for all the H3
+points and now we'll ask the chat JP to
+extract the
+metadata into Json
+format from the
+attached HTML
+file
+so you could see that JD has provided
+the metadata into Json format and
+similarly we can ask it for other
+scripts if this web page has any
+scripts provide that to in Json
+format so you could see that I extracted
+the scripts from the HTML file and
+presented them in Json format so here's
+a preview of the extracted scripts so
+this is the script that contains the
+JavaScript code embedded within the web
+page and due to the length of the
+scripts only the first part is shown
+here if you need the full Chon file all
+the scripts please let me
+know yeah
+I need the full
+script so you could see that it has
+provided us the Json file so we can just
+download it and open it with any
+ID so this is the Json format for the
+whole web
+page moving back we'll move back to the
+website and now we'll ask chat jpt to
+extract the data from this image that is
+or like make someone understand what
+does this image show so first we'll do
+is we'll save the page into HTML
+dog and P this
+image
+element and ask the chat jbd first we'll
+upload the HTML file and ask the chat
+J uh explain the
+graph present in the
+attached web
+page and describe it so we save and
+submit it and let's see what does it
+respond if it doesn't respond we'll just
+get back to the web page and inspect the
+element for it and provide the div class
+or the particular element so it could
+understand for Which diagram
+asking CH to describe
+it see so file you Prov it title Post in
+data science C tag does not display it
+content in a format that allows me to
+interact with or interpret any edate
+graphs so we provide
+you with the
+element present
+HTML
+file read that and
+explain the
+graph for Di to
+us so let's
+see so you could see that it has
+provided the information about that
+image that the HTML snipp to provid
+inter appearance to represent a style
+graphical element likely part of a
+larger graph or visual representation
+specifically it describes a div element
+rotated by minus 53° containing another
+div with a background color of a shade
+of pink so this is how the gp4 version
+works and it also describes the images
+so with that we have come to the end of
+this session I hope you like this
+tutorial if you liked it please give it
+a thumbs up like share and subscribe
+till then stay safe and keep learning
+staying ahead in your career requires
+continuous learning and upskilling
+whether you're a student aiming to learn
+today's top skills or a working
+professional looking to advance your
+career we've got you covered explore our
+impressive catalog of certification
+programs in cuttingedge domains
+including data science cloud computing
+cyber security AI machine learning or
+digital marketing designed in
+collaboration with leading universities
+and top corporations and delivered by
+industry experts choose any of our
+programs and set yourself on the path to
+Career Success click the link in the
+description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to ner up and get certified click
+here

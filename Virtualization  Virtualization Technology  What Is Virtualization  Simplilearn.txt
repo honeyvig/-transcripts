@@ -1,0 +1,284 @@
+as we know with the increasing demand in
+the project requirements for different
+companies we require new software along
+with different operating system for
+applications
+which creates more data and we need more
+processing power and more memory
+but there's a way to overcome such
+situations known as
+virtualization
+hi guys and welcome to another exciting
+video by simply learn
+but before we begin if you like watching
+tech videos subscribe to our channel and
+hit the bell icon to never miss an
+update
+to understand what exactly
+virtualization is let's take a look at
+an example
+meet jake he works as a software
+developer in an i.t firm
+and he often has to work on different
+projects involving multiple operating
+system according to the requirements of
+the project
+during which he often come across cases
+where the managing of data becomes
+problematic due to the compatibility
+issues with the different operating
+systems which makes it hard for the
+completion of the project
+so what can jake do to overcome such a
+problem
+to overcome such a problem he decided to
+use the way of virtualization
+but what is virtualization and how do
+they help us let's take a look
+to begin with we'll take a look at what
+exactly virtualization is and how to
+help us
+then we'll understand what virtual
+machines are
+after that we learn about the role and
+different types of hypervisor that are
+involved during the process of
+virtualization
+after that we learn what different types
+of virtualizations are available and how
+differently they affect our systems
+and lastly we will see what benefits
+virtualization provide us with
+let's begin
+to begin with we'll understand what
+virtualization is
+virtualization is nothing but utilizing
+a software to create a virtual layer
+over the hardware
+which allows the system hardware to be
+used more efficiently and allows
+appropriate return for a hardware cost
+the software hypervisor also allows the
+elements of the system like storage
+memory processor etc to be distributed
+among multiple separate and secure
+virtual computers known as virtual
+machines
+to understand the situation of
+virtualization much better let's take a
+look at an example
+this is a system installed with the
+windows operating system which is
+officially known as the host os where
+the virtualization software known as the
+hypervisor will run
+and then
+using the hypervisor software we can
+have multiple instances of different os
+including unix
+mac and linux which are known as virtual
+systems or guest os
+the working of the virtualization is
+only possible by the using a software
+known as a hypervisor
+and later in the video we will also
+learn about the working and different
+types of hypervisor involved
+now that we have understood what
+virtualization is let's take a look at
+what a virtual machine is
+as the name suggests virtualization is
+nothing but an emulation or a virtual
+representation of a physical operating
+system on a hardware device
+the virtual machines are also known as
+guest os whereas a physical system that
+they run on also known as the host os
+now let's take a look at the software
+that makes the virtualization possible
+hypervisor is a software layer that
+manages the virtual machines it forms an
+interface between the physical system
+and the virtual machine which ensures
+the proper access of the resources
+it also manage the virtual machine so
+that they don't interfere with each
+other's resources
+let's take a look at what different
+types of hypervisors are there
+the first type of hypervisor is known as
+the type 1 hypervisor or the bare metal
+hypervisor this type of hypervisor
+directly interacts with the hardware
+system and user resources
+the other type of hypervisor is known as
+the type 2 hypervisor
+which runs as an application on the host
+operating system
+and the hypervisor also coordinates with
+the virtual machine for resource
+management
+let's take a look at the type 1
+hypervisor
+they run directly on top of the host
+operating system and utilizes the
+hardware resources
+that is why they are also known as the
+bare metal hypervisor
+they take up the place of the host
+operating system and works as the own
+operating system
+since this type of hypervisor work
+directly on the hardware system they are
+highly efficient
+now that we understand type 1 hypervisor
+let's take a look at the type 2
+hypervisor
+this type of hypervisor doesn't directly
+work on the operating system hardware
+but instead it works as an application
+in the host operating system
+where they are suitable for running
+individual system
+users can also have different multiple
+os installed in the physical system by
+using this type of hypervisor
+due to the application based working of
+the type 2 hypervisor they are also
+known as virtual machine monitors in
+short vmms
+now that we understand what different
+types of hypervisor are let's take a
+look at what types of virtualization are
+present
+the first type of virtualization is the
+desktop virtualization
+then the network virtualization
+storage virtualization and lastly the
+application virtualization let's take a
+look at them one by one
+for desktop virtualization as the name
+suggests in this type of virtualization
+we can run multiple operating systems on
+a single hardware system
+let's take a look at different types of
+desktop virtualization
+the first one is virtual desktop
+infrastructure in short vdi
+which runs numerous virtual machines on
+a central server and then hosted to the
+user according to the user's requirement
+in this way the user can access any
+operating system
+without have to physically install the
+particular operating system in its
+hardware system
+the second one is known as local desktop
+virtualization as the name suggests it
+uses a hypervisor software on a local
+system which allows a user to run
+multiple operating system simultaneously
+without having to affect the host
+operating system
+the next type of virtualization is the
+network virtualization in this type of
+virtualization the software creates a
+virtual instance of the network that can
+be used to manage from a single console
+and it also forms the abstraction of the
+hardware components and functions
+including switches routers etc
+which simplifies the network management
+different types of network
+virtualization are
+software defined virtualization
+which virtualizes the hardware that
+controls the network traffic routing and
+the other one is network function
+virtualization
+virtualize is the hardware appliances
+that provide network specific function
+easier to configure and manage example
+firewall
+let's take a look at the third type of
+virtualization known as the storage
+virtualization this virtualization
+enables all the storage devices on the
+system to be accessed and be managed as
+a single storage unit
+the storage virtualization collects all
+the storage into a single pool from
+which they can allot
+another virtual machine on the same
+network as required and this makes it
+easier to assign storage for multiple
+virtual machines with max efficiency
+the last virtualization that we'll
+discuss is the application
+virtualization in this type of
+virtualization process the application
+runs directly without the need of
+installing it into the system as they
+run on a virtual environment
+different types of application
+virtualization app
+the local application virtualization and
+this type of application runs on the
+host device but runs in a different
+virtual environment but not in the
+hardware
+the second one is application
+virtualization in this the application
+is on the server side and it sends some
+of the components to the host device
+according to the requirement
+and last is the server-based application
+virtualization
+this application runs directly on the
+server side and sends only the interface
+to the client system
+now let's take a look at the benefits of
+virtualization
+the first one is the resource efficiency
+as the name suggests before
+virtualization each application server
+used its own hardware resources which
+were being underused but with the having
+multiple virtual machines maximum
+utilization of the hardware capacity
+occurs
+then we have minimum downtime which
+refers to the crashes of operating
+system and application which can cause a
+halt in the user productivity
+by using virtualization the admin can
+run multiple similar virtual machines
+simultaneously alongside and change over
+the working instances
+in case of a crash instead of having
+multiple dedicated servers
+then we have the time management
+buying installing configuring a new
+system is not only costly but also a
+waste of time
+in such a case virtualization can solve
+the problem
+provided that the existing hardware
+resources are sufficient
+for running the virtualization software
+otherwise it can be configured for the
+same
+now that we have reached the end of the
+module in which we learn what is
+virtualization what is the virtual
+machine and how do hypervisor work
+during the process of virtualization
+we can use this process to ease a work
+if you have any doubts you can ask them
+on the comment section
+thank you for watching
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

@@ -1,0 +1,314 @@
+foreign
+welcome back to our simply learn YouTube
+channel in this video we are going to
+discuss an essential tool for any
+developer or data science that is
+virtual environment and before
+proceeding I have an insight for you
+guys if you are aiming to get certified
+as an AI and ml engineer and want to
+build a career in AI in that case you
+can check the professional certificate
+program in Ai and machine learning that
+is in collaboration with IBM and Purdue
+University by simply alert which will
+open the doors for the best career
+opportunities and to find the details of
+this professional certificate program in
+Ai and machine learning you can check
+the link in the description box below
+and the pin comment and now let us have
+a simple question to brush upon our
+knowledge
+and your question is what command turns
+on a virtual environment and your
+options are the first option is Source
+script slash activate and the second
+option is python minus M way environment
+virtual environment and the name of the
+folder and the third option is Source
+virtual slash scripts slash activate OD
+all of the above please answer in the
+comment section below and we'll update
+the correct answer in the pin comment
+you can pause the video give it a
+thought and answer in the comment
+section
+now moving on to our topic that is
+virtual environment most python projects
+have dependencies that we installed and
+use for example we use flask for web
+applications and we use these libraries
+returned and tested by many developers
+so you don't have to write them again
+these libraries change over time
+they get new functionalities and Bug
+fixes with some newer versions for
+example let's say you are a python
+developer working on two different
+projects and each project has different
+package requirements project a requires
+flask 2.0 version while Project B
+requires flask version 2.2 you cannot
+have both versions stored globally on
+your system because they will conflict
+with each other and you might break one
+or both of these projects this is where
+virtual environment comes in handy and
+now we'll see what is a virtual
+environment
+virtual environments are isolated
+environments that allow developers to
+work on multiple projects with different
+dependencies without conflicts this is
+crucial when working on multiple
+projects simultaneously especially those
+with different dependencies because the
+virtual environment ensures that each
+project has its own set of dependencies
+that will not conflict with those of
+other projects in Python virtual
+environments are created using the
+built-in virtual environment module
+which creates a directory with a
+specific structure that contains a copy
+of the Python interpreter as well as
+other necessary files every virtual
+environment has a python version and a
+folder of third-party libraries that you
+will install for a particular project
+python libraries are frequently updated
+with new versions that include bug fixes
+new features and performance
+improvements upgrading a library to a
+newer version can have various effects
+on a virtual environment in general it
+is a good practice to keep libraries
+updated to the latest version but it is
+also important to consider the impact on
+the virtual environment and the
+application before upgrading it is
+recommended to test the upgraded library
+in a separate environment before making
+changes to the production environment
+this can help to identify any potential
+issues and ensure a smooth upgrade
+process if we update the library maybe a
+should not work as the functionalities
+would have been changed with the update
+now we'll see why do you need a virtual
+environment if getting your learning
+started is half the battle what if you
+could do that for free visit skillup by
+simply learn click on the link in the
+description to know more
+when you installed packages globally you
+run the risk of breaking other projects
+or application that rely on the same
+packages virtual environment provides a
+solution to this problem by creating an
+isolated environment for a project that
+doesn't interfere with your system
+environment now we'll see a Hands-On
+demonstration to create a virtual
+environment on our system so for that we
+will go to our projects folder and
+inside here we will create a folder and
+name it as virtual environment
+so inside this folder first we'll open
+the command prompt
+so creating a virtual environment is a
+straightforward process will demonstrate
+how to create a virtual environment
+using Python's built-in module that is
+virtual environment
+and we have opened the command prompt
+and navigated into a folder that we have
+created that is virtual environment I
+will write a command that would be
+python minus m
+the name of the
+module virtual environment and now we'll
+write the name of a folder we want to
+create
+so we'll press enter and
+now
+we'll see that we have a directory here
+that is with the name my environment
+once the command gets executed
+successfully we'll have a new directory
+that is
+my environment but we have made
+now we have to activate our virtual
+environment first we'll do that but
+before that
+what we can see is in the script section
+we have
+pip and the python files here that is
+the python.exe file that is application
+file web file so we have Python's
+version installed here
+so if we ask
+the command prompt what version is
+installed in our virtual environment
+will ask him
+it says 3.10.2 but it's the global
+python that is
+command prompt is showing
+so first we have to activate the virtual
+environment and after that it will show
+us what python version is installed in
+Dua environment so to activate our
+virtual environment we will write a
+command that is the path we will write
+and this is for the windows for that
+we'll write
+the name of the folder my environment
+slash you have seen the scripts folder
+slash and then we have
+activate
+and now we'll press enter
+you can see my environment folder in
+Brackets this shows that a virtual
+environment is active now now if we ask
+him what is the python version that is
+installed inside our virtual environment
+it says that is 3.10.2
+so we have the global installed python
+version that is 3.10.2 and in a virtual
+environment it's also
+3.10.2 and we have a command to
+deactivate
+our virtual environment that is
+deactivate so it has been deactivated
+that is you can see that my environment
+from the circular brackets it has been
+managed now we'll check what packages
+are installed into our system
+so now we are in the global system
+for that we'll write pip
+phrase and press enter
+so you can see these old packages are
+installed into a global environment
+system
+these are many packages
+so you can see these are the packages
+that are installed
+we'll get back to our virtual
+environment and activate it
+so to activate it we will get into the
+folder slash Scripts
+slash activate
+and press enter you can see that our
+virtual environment is active now
+and now in here write the command with
+freeze and see what packages are
+installed it says no packages are
+installed into a
+virtual environment
+so here we will install
+Django
+pip install Django and press enter
+so you could see that it has started
+installing it
+and it is installing 4.1.7 version
+now you have seen that Django is
+installed into a system now you can work
+on any Project without worrying about
+any package that conflict with other
+projects like if you name this as
+project a then the Django is installed
+into this project and if you want to
+work on Project B then you need to
+create another virtual environment for
+it using the same virtual environment
+command just above and you can work on
+Project B without worrying about any
+package conflicts or breaking project to
+deactivate we have seen that we can just
+write deactivate and the virtual
+environment would be deactivated so now
+if you want to give a particular project
+to another person for that you have to
+ask him to install all the particular
+version of the packages so to find all
+the packages installed into an
+environment I've seen the command pip
+freeze it has shown us all the packages
+that were installed into a the system
+environment or the global environment
+now we'll write a command to see what
+packages
+are installed in our virtual environment
+so for that you could use the previous
+command prompt or we could just have a
+new command prompt here and here we have
+to activate a virtual environment again
+as we are not able to see the name of
+the virtual environment in circular
+brackets so for that we'll write
+the name of the
+directory then scripts and then activate
+now you can see
+our virtual event is active
+now I'll write the command pip freeze
+and it has shared us all the
+packages that are installed into our
+system and these are the packages that
+are installed with the Django package
+so now if you want to share a particular
+project with another person then you
+have to
+create a file that would be
+requirements.txt file and you have to
+write all the
+projects with the version names
+installed for your project so for that
+we will write the command pip freeze and
+the greater than sign and then we will
+write
+requirements Dot
+txt and press enter
+so what this will do is it will create a
+file requirements.txt and it will get
+filled with all the packages with the
+particular and respective versions so
+you can share this file to a particular
+person and the particular person can
+install all the packages just by a
+single command so what command he could
+write as pip
+install minus r
+then
+the requirements
+Dot txt
+so it's Dot txt
+and press enter
+so you could see that the requirement is
+already satisfied as in this virtual
+environment we have the Django installed
+and with the Django these are the other
+packages that will be installed
+automatically
+so the particular person has to run the
+Quant pip install minus r
+requirements.txt and all the packages
+with the particular versions that are
+mentioned in the requirements.txt file
+will be installed for him that's it for
+today's video we hope you find
+introduction to Virtual environments
+helpful virtual environments are an
+essential tool for any developer or data
+scientist and we encourage you to start
+using them if you haven't already if you
+liked it please let us know in the
+comment section below also do subscribe
+to our Channel and stay tuned for more
+from Simply alert till then stay safe
+and keep learning
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

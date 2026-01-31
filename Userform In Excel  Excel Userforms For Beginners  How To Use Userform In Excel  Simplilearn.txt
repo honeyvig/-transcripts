@@ -1,0 +1,295 @@
+hey everyone welcome to Simply learns
+YouTube channel in this session we will
+learn about user form in Excel but
+before we begin let me tell you guys
+that we have daily updates on multiple
+Technologies if you're a tech gig in a
+continuous hunt for latest technological
+Trends then consider getting subscribed
+to our YouTube channel and don't forget
+to hit that Bell icon to never miss
+another update from Simply learn now
+without further Ado let's get started
+with our onepoint agenda that is user
+form in
+Excel so what exactly is a user form so
+user form is a graphical user interface
+that helps you have an live interaction
+with your worksheet which enables you to
+enter or eliminate data from your Excel
+worksheet through the graphical user
+interface now let's get into the
+Practical mode and start the Excel work
+book now we have launched our Microsoft
+Excel so let us create a blank workbook
+for now now we have the blank workbook
+or worksheet now before we get started
+with the user forms in Excel the
+fundamental step is to enable the
+developer menu on the toolbar here you
+can find the developer menu so basically
+it will not be enabled as default to
+enable that you need to get into file
+menu and inside the file menu you can
+see the the last menu that is the
+options menu select that and you will
+have a dialog box on your screen and
+inside that you need to go into the
+customize ribbon option and inside the
+customize ribbon option you have the
+main tabs scroll through the main tabs
+and here you can find an option called
+developer by default it will not be
+enabled it will look something like this
+but to enable that you need to select
+the check option in this and click click
+on that and select okay now the
+developer option will be enabled on your
+tool menu so now you have your developer
+option on your toolbar so to get started
+with user forms in Excel click on the
+developer option and here you can see
+Visual Basic so click on that Visual
+Basic and now you have your new window
+opened right on your
+screen so this is the visual basics for
+applications
+so here is where you create your user
+forms Now to create a user form just
+select on insert menu and you have the
+option called user
+form now a new user form will be created
+for
+you and that is user form
+one so this is the user form which you
+can design and enable to to interact
+with your worksheet and help you insert
+data or eliminate data for now let's try
+to create a simple user form for
+employees now here you can see the
+controls option where you can find the
+various options to provide an object
+into your user form so it might be a
+label it might be a text box it might be
+a multi-page it might be a command
+button it might be a frame or a toggle
+switch many more for now let's make it
+simple let's create a label
+so this is our first label we have just
+dragged and dropped it and let us name
+it
+as okay so let us select it and rename
+it as employee
+ID now let's insert another
+label drag and drop as simple as it
+looks
+select
+that and rename it as
+employee
+name now another one you can also copy
+that and paste
+it and this should be our employee phone
+number now we have a three labels on the
+screen let's try to insert the text
+box now this is our first text
+box for employee
+ID now let's copy and paste it so
+another text box for employee name copy
+and paste again and the last text box
+for employee phone now let us try to
+insert the
+button so the First Command button let
+us rename it as
+insert now let us relocate it to a
+little bit left now let us try to insert
+another
+button and here it is the second button
+would
+be refresh
+sheet uh the refresh button will play
+the role of uh clearing the text boxes
+in case if there is some data already
+entered if you want to clear that you
+can just press on refresh and it will be
+cleared now we have our user form so let
+us try to rename our user form so here
+you can see that we have the properties
+Tab and inside the properties tab you
+can always rename it and to rename it
+let us go into caption
+and rename it as
+employee
+data and that's done so our basic user
+form is ready now let's get back to
+Excel sheet so remember that we have
+created three labels employee ID
+employee name and employee form we need
+to create the exact same columns here so
+employ
+ID let us expand the column a little bit
+now em l o y e
+e name let us also increase the width
+and finally we have employee
+phone there you
+go yeah we have our three
+columns let us select all the three
+columns and uh
+a line to
+middle you can also format your
+cells let us select the green color and
+text as
+white and let us
+bold
+yeah pretty
+good there you go so we have created our
+sheet and it's ready now now the last
+part part remaining is we need to code
+this particular user form so coding in
+the sense we have two buttons over here
+right so those buttons should be
+performing some kind of operation so for
+insert button the operation should be
+inserting the data which we have entered
+into these text boxes so to program it
+just double click on the insert button
+and here eliminate everything and paste
+this code so basically what we did is we
+had this particular code segment so this
+is the starting part of the code segment
+and this is the ending part of the code
+segment so we are writing our code in
+between these two lines so what did we
+write here so end of the row is sheets
+of sheet name so this is the sheet name
+right here we have our sheet name as
+sheet one so that is the sheet name
+where we want to perform the operations
+and range from a to rows count and XL up
+row that is we counting the number of
+rows here that particular statement will
+count the rows till the end of the sheet
+automatically and after that it will
+shift to textbox value that is once the
+row number is counted that is from 1 to
+n it will start entering data from the
+first available row that is a column a
+column then once the a column is
+finished it will enter into B column and
+subsequently into C and once the text
+boxes are entered the data that is let's
+come back to here so once we have
+entered all the text that is the
+employee ID name and phone after
+selecting the insert button
+automatically these three text boxes
+should go blank again you cannot have
+the same data again in your text
+box so that is why we have included text
+Tex box value one null textbox value two
+null textbox value three null so that
+was for command operation
+insert now we should program the command
+operation for refresh double click on
+that and you have the code option over
+here so this particular code will be
+automatically loaded from The Click
+button one now for click button two you
+need to add some more data that is
+refreshing so whenever you press the
+refresh button the text should go blank
+for that we'll use the same code from
+the previous click button or the command
+button paste it over here and they
+should perform the clearing operation
+and it's done now close this so select
+the employee data user form and here you
+can see the Run option so select that
+run option and the sheet has the user
+form here now let us enter the employee
+ID as 1 2 3 4 5 and employee name as
+JN okay caps Lo is on J H and John
+employee phone as some
+1800
+231 and select the insert option and the
+data got inserted now let us try to
+insert another data 1 2 3 4
+6 employee name Wick
+and employee phone number 1
+18345 Yeah by now you might have guessed
+I'm a fan of John Wick yes and yeah
+there you go we have entered the second
+data over here now let me show you
+another trick where you can place all
+this user form as a macro and replace
+this by just one single button so
+whenever you press that button this data
+form or user form will pop up and you
+can directly start entering data
+so for that let's get back to the Visual
+Basic and stop this particular execution
+and you got your user form back now you
+need to insert a model get into insert
+option and select the module or model
+yeah it is module not model so inside
+this module you need to write the
+command for
+macro so here it
+is so what we basically doing is a m p l
+y e e data. show or we can use an
+underscore and get back to user form and
+rename this
+as
+dat cool so what we are doing is
+entering the subject as enter employ
+details this will be the macro name and
+when this macro is called the employe
+data user form should be shown and once
+it is shown the code should be ended
+that is end subject now we have designed
+our
+module now let's get back to the
+sheet and here go to the developer
+option go to the insert menu and select
+button and draw the button
+somewhere and now you can select the
+enter employee details macro and press
+okay and now you have a button here
+now you can edit
+this edit it as press to
+enter enter employee
+details and there you go done so now
+whenever you press this particular
+button the user form will activate
+Okay and you need to play
+this okay the error was related to the
+employe data sheet name we had to rename
+the employee data from user form to
+employee data initially it was just user
+form we have renamed that to employee
+data and now the code is fine so let's
+get back to the sheet now if you press
+this button the user form will
+automatically start now let us try to
+enter the data again 1 2 3 4 5 7 this
+time and
+uh some
+name let's enter as
+Jennifer and her phone number would be 1
+18345 098 some random number and select
+insert and the data has been inserted
+here so this is how you work on
+userforms in Excel now with that we have
+come to an end of this session on
+userforms in Excel if you have any
+queries regarding the topics covered in
+this particular session then please feel
+free to let us know in the comment
+sections below our team of experts will
+be happy to resolve all your queries
+until next time thank you stay safe and
+keep
+learning hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

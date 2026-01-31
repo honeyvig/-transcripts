@@ -1,0 +1,1060 @@
+hey traders welcome back to another
+video my name is matthew from the art of
+trading
+and today i have something really cool
+to show you guys today's lesson is going
+to demonstrate how to create an
+indicator that
+calculates an atr based trailing stock
+and then we're going to make our
+indicator
+use auto view alerts to tell oanda to
+move
+our stop-loss automatically to lock-in
+profits
+in the background i have a video showing
+this in action this is a very powerful
+tool for forex traders and allows you to
+manage your open positions in a manner
+that is far more advanced than
+the oanda charting platform or trading
+platform would typically allow you to do
+so that sounds interesting to you stick
+around because i think you're going to
+love today's lesson
+all right so by now you should be
+familiar with all of the order view
+commands that we're going to be working
+with in our scripts
+if you're not familiar with these
+commands then i'll leave a link
+in the video description to the playlist
+that this video
+is included in as this is a multi-part
+series where i
+break down how to use order view to
+automate your trade executions
+in the forex markets through orlando so
+this is the first video in the series
+that you're watching
+unless you are extremely familiar with
+order views commands then i highly
+recommend you go back and watch the
+at least the previous video that goes
+over how to use these commands in
+practice
+by writing out your alerts manually but
+in today's lesson we're going to
+write an actual script that automates a
+trailing stop loss so our script is
+going to handle everything
+it's going to calculate the trailing
+stop loss based on the current atr
+we need to tell the script whether we're
+going long or short and tell a script
+which bar we want to trail our stop loss
+from
+but once we've done that the script will
+automatically calculate our stop loss
+and as it rises or falls in the case of
+a short trade the script will generate
+alerts that will tell autoview where to
+put our stop loss
+so that we can completely fully automate
+our trade management
+so if that sounds like something you are
+interested in stick around because this
+is going to be an interesting lesson and
+hit the subscribe button if you haven't
+already because in the next video
+we're going to get even deeper we're
+going to start calculating our position
+size
+and at the end i'm going to show you a
+personal script that fully
+automatically trades the forex markets
+through oanda
+on a live money account i'll give you
+the complete source code to that script
+but for today's lesson let's get started
+with a blank script
+and we're going to start completely from
+scratch and write out a trailing stop
+loss
+script so first things first i'm going
+to change my title
+to auto view trailing stop
+and i'm going to set overlay to true so
+i want this stop loss to be drawn onto
+my actual chart
+next up we need to get some user input
+i'm going to get
+several inputs here the first one is
+going to be a trail
+type so this is whether we're trailing
+long or short
+we'll use the input function here for
+this i'm going to give this a title
+i'm going to give it a type i'm going to
+give it a default value
+and that will do for now i'm going to
+copy this line of code a couple of times
+because we're going to get
+several inputs from the user and this
+will speed up the process a little bit
+so the first one is trail type this
+determines whether the script calculates
+a long or short trailing stop
+so the title here is going to be called
+trail type
+the type is going to be input dot string
+the default value is going to be long
+and we need to set a couple of string
+options here the way to do that is using
+the square bracket
+parentheses to write out a list so the
+list here is going to be
+just long comma and short so these are
+our two input options
+for this particular setting the next
+input is going to be
+our structure look back which is how far
+back
+to uh detect the swing lows
+to trail our stop loss below so
+that is going to be called just look
+back
+uh its type is going to be input
+dot integer and the default value for
+this one is going to be seven
+so we're going to look back seven bars
+to find highs and lows to trail our stop
+loss below or above
+the next input is just going to be our
+atr
+length so here i need to call this atr
+length
+the type is also going to be
+input.integer and the default value is
+just going to be the default
+look back for any atr which is usually
+14.
+the next input is our bar index so this
+is going to be the number of the bar
+that we're going to trail our stop loss
+on so every bar in our chart has a bar
+index
+and if i comment out these two lines
+here and change our plot to bar
+underscore index
+and save the script call it auto view
+trailing stop save and add to chart
+this blue number here is our bar index
+so this is the number of bars that have
+printed
+since the very first bar on our chart
+so the first bar on our chart uh the
+index is zero
+so you can see on the left there and
+then one two three and so on all the way
+up to the current bar which is
+21 332 so there are currently 21 332
+bars loaded onto our chart
+if we wanted to trail our stop loss from
+let's say we went long
+uh somewhere down here you just hover
+your mouse over that bar and read the
+number in the top left there so
+21 264 if we wanted to trail from this
+bar here we'd write in 21 264 and then
+the script will calculate our trailing
+stop
+from that bar so this is one way
+to tell the script where we entered our
+trade and want to trail from
+when we finish writing the script i'll
+also add a time version so we can select
+the time and date
+which is a much better way of doing this
+but for example purposes the buyer index
+will work just fine so that we can
+quickly write the script
+and we can add in the time date check
+out later
+i'm just going to call this by index the
+type is going to be
+input.integer and the default value is
+going to be
+zero then we need two more inputs here
+the second last input
+is going to be our bar time uh which
+we'll come to
+later so i'll just comment that out for
+now we'll come back to that later
+the final input is going to be our
+broker so this is for telling order view
+which broker we want to execute our
+trades
+through so i'm just going to call this
+broker exchange
+this is also relevant or applicable to
+crypto markets if you're using auto view
+to automate your crypto trading
+you can input your crypto broker in this
+input here and that will tell
+all of you to execute your trades on the
+crypto markets
+however today's lesson is focused on the
+forex markets
+and i do not have any experience trading
+crypto
+through autoview as there are other i
+believe better methods
+to do that out there through third
+parties but in terms of forest trading i
+have not found an easier way to auto
+trade forex
+than through autoview so that's why we
+are focused on that today
+so the type for this one is input dot
+string and the default value is going to
+be awanda
+practice so we're going to be defaulting
+to our owenda demo account
+but if i save the script here later on
+when the script is finished
+the user or you if you're using this in
+your own trading can remove
+practice from this broker exchange and
+when you click ok and set your alerts
+the order view plugin will now trade
+through live money awanda
+account so that's the purpose of having
+that input there
+makes it easier that way we don't have
+to modify our code
+if we want to flip between a demo
+account and a real money account so
+those are all of our inputs except for
+bar time which we'll come back to at the
+end of the script
+let's move on to the actual meat
+of this script so the first thing i need
+to do is get
+the current atr which i can't type today
+ati equals inbuilt atr and then we pass
+our atr
+length parameter the next thing we need
+to do
+is calculate our trailing stop loss so
+i'm going to declare
+uh trailing variables here so we need
+two variables here to work with we need
+one var variable which is going to save
+our trail
+price so our actual trailing price by
+default
+it's going to be initialized to 0.0 and
+i'll explain why we do that in a minute
+and the next variable we need is a
+temporary
+trail price that we can assign
+to whatever the current distances from
+whichever bar we're
+calculating our current trailing stop
+from we can compare
+the current potential trailing stop to
+our saved trailing stop
+and if the new temporary trailing stop
+is more profitable than the current
+trailing stop then we update our current
+trailing stop to the temporary trailing
+stop this will make more sense in
+one second when we get down to our
+calculation code
+so for this i'm going to set this to
+trail type
+equals and then long question mark
+if our trail type is set to long then we
+want to set
+our temporary channel stop to the lowest
+low over our structure
+look back period which is seven bars by
+default
+so if the user has set trail type too
+long
+in the settings menu then our temporary
+trailing price will be initialized
+as the lowest low over the past seven
+bars or whatever the users set this
+to otherwise if we have not set trail
+type
+too long that means we've set it to
+short and we need to reference
+the highest high over our structure
+look back period and we also need to
+subtract the atr from the lowest low to
+get our trailing stop price
+and we need to add the atr onto our
+short trailing stop because that will be
+above
+price action so this will give us our
+atr trailing stop
+price the next thing we need to do is
+check if the user is going long or short
+or trailing along or short and we need
+to check
+if we need to update our stored or saved
+trailing
+stop loss so let's do that now i'm going
+to call this
+check for trailing stop update
+and this is going to be an if statement
+our first if statement is going to check
+if the current bar index is greater than
+or equal to
+the bar index setting from up here
+and we also want to make sure the bar
+index is not
+equal to zero because if it's set to
+zero that means it's disabled
+which is the default setting if we don't
+do this then it will just start trailing
+from the very first bar
+that loads onto our chart which we don't
+want the next thing we need to do is
+trail our long stop
+and that will require another if
+statement and this
+if statement this is a nested if
+statement within the scope of this if
+statement
+so we have this first if statement then
+we have this second if statement
+and then we're going to have a second if
+statement that trails our shortstop
+and both of these next if statements
+will only be executed
+if the bar index is greater than or
+equal to the bar index we've set in our
+settings menu
+hopefully that makes sense if all of
+this is alien to you then i suggest you
+check out my free
+pine script basics course before you
+start playing around with this sort of
+code but i'm going to assume that most
+of you are familiar with these more
+advanced
+concepts in pine script and we're just
+going to move on to write our
+trailing stop code so the first thing we
+need to do is check if our temporary
+trail price is greater than
+our saved trail price or
+check if our trail price is equal to 0.0
+so remember var variables are stored
+across all of our bars and only
+initialized once so on the very first
+bar in our chart
+trail price will be created in our
+script
+with a value of 0.0 so this check here
+will check
+if the temporary trailing price the
+current
+lowest low minus the atr lowest low of
+the x amount of bars minus the atr
+is greater than our existing trailing
+price
+or we have not yet set a trailing price
+and the user has set trail type
+too long then we want to trail
+our long stop in this code remember you
+need to indent
+indent your if statements by four spaces
+or a tab
+to make sure that your script will
+compile so now we have
+our next block of code which is going to
+set our trail price to our temporary
+trail price since it is in fact higher
+than our existing trailing stop
+and then we need to trail our short stop
+by doing
+exactly the same thing so if t trail
+price is less than
+our saved trail price or our trail
+price is equal to 0.0 and
+trail type equals short
+then we want to set our trail price to
+our
+temporary trail price that's all we need
+to do we are now
+calculating our trailing stop and
+updating it
+as needed and so let's quickly
+plot this to the chart so plot trail
+price will give it a color of color.red
+and i'll title this
+trailing stop i always like to comment
+everything that i'm doing
+so that i makes my scripts more readable
+in the future when i come back to them
+so it's a good habit to get into even
+though it's obvious what this is doing i
+like to comment it anyway
+and now if we save the script this
+should compile
+without any errors theoretically if i
+know what i'm doing
+there we go and now let's say we want to
+trail our stop loss from this
+lowest green bar here if i hover my
+mouse over that bar
+that has a bar index of two six 21264.
+so we come up here and write two one two
+six four
+and we've already got our trail type set
+to long by default so now if i click ok
+the script should calculate our trailing
+stop loss
+which it is doing perfect the one last
+thing we need to do is detect when it
+gets hit
+and basically stop drawing it stop
+calculating it because
+it is no longer relevant so let's do
+that next
+to do that i'm going to create another
+couple of if statements
+i'm going to comment this one and say if
+long stop
+is hit reset our trailing stop
+so if trail price is not equal to 0.0
+and the low of the current bar is less
+than or equal to
+our trailing stop price and our trail
+type
+is set to long then we want to set trail
+price
+whoops to n a i'm just going to set it
+to n a
+and it will no longer draw onto the
+chart so let's copy this
+block of code here paste that in change
+this to short
+if short trail stop is hit reset trail
+stop we need to change this to the high
+because now we're checking if price
+action has hit our
+upper journey stop our short trailing
+stop so is the high
+of the current bar greater than or equal
+to trail price
+and are we trailing a short trade then
+we also want to set this
+to n a you could combine these two if
+statements into one if statement if you
+wanted to by just putting a bracket
+around this
+and a bracket around this and copying
+that
+up here and writing or but i'm not going
+to do that today simply because i have
+my screen resolution set so high that
+this is going to draw off
+the screen so i'll leave these separate
+for now
+plus it makes the script a little more
+readable that is something to consider
+maybe when you're writing much longer
+scripts but this is a short script so it
+doesn't matter
+that we're being a little bit
+inefficient here without if statement so
+now if i save the script and do exactly
+the same thing should compile no
+problems
+bar index two one two six four two one
+two six
+four now it should stop drawing when
+it's hit there we go
+so now we start drawing our trending
+stop below this green bar
+and it only changes our trailing stop
+if the new trailing stop is higher than
+the current one
+so this red line only updates when it's
+being moved upwards to lock in profits
+on a long
+trade and eventually gets hit by a price
+action
+and stops drawing so far so good let's
+test the short version of this
+let's say we went short from here let's
+say we went short on this
+candle up the top here just for example
+purposes
+two zero nine six eight two
+zero nine six eight and we change our
+long to
+short trail type to short click okay
+and this is working just fine as well
+now we could remove this
+red line here which is just drawing from
+zero it's jumping up
+to whatever our trailing price is
+initially i'm going to leave this on the
+chart just because it does actually help
+you identify where your trailing stop
+began from but you could remove this
+if you wanted to but we'll leave that as
+it is for now so
+pretty much our trailing script is
+complete all we have to do now is add
+our alert functionality so let's do that
+now let's open up the pine editor come
+up to where our trailing stop is updated
+and this is where we need to tell auto
+view
+to update our stop loss and we need to
+do this for both long
+and short trades and to do this
+we need to first create a couple of new
+variables here
+so i'm going to create two new variables
+here
+called get symbol and broker the first
+one is going to be var
+symbol and it's going to be set to our
+current currency
+symbol which in this case is aud usd but
+we need to add a forward slash between
+the two
+tickers if we just use sim info.tickerid
+in our order view alerts oanda will not
+know
+what market that is because this
+inbuilt variable here will return aud
+usd
+all one word without a forward slash we
+need to put a forward slash or an
+underscore
+in between these two currency symbols or
+ticker ids
+in order for oanda to recognize them
+don't ask me why that's just how their
+api works
+so we need to do that ourselves here but
+thankfully it's pretty easy to do all we
+need to do is reference sim info
+dot base currency which in this case
+would be
+aud and then we need to plus or add or
+concatenate
+a string here which is just going to be
+a forward slash you could also make this
+an underscore if you want to but i'll
+leave it as a forward slash and then we
+need to add our sim
+info dot currency which will be usd in
+this case
+so this string here this var symbol
+variable will be a string
+a string type and it will just be set to
+our base currency
+forward slash our quote currency and now
+we can
+plug this symbol variable into our alert
+command
+when we get to that and that will tell
+all of you which symbol we want to
+execute our commands on so we need to
+create one more variable here the reason
+i'm making this a var variable
+you don't have to do that we could just
+leave this as symbol but this
+variable will be regenerated on every
+new bar in our chart
+and if you're using a variable that
+never changes in your script it's a good
+idea to set it to var
+it's a good practice because it just
+increases the efficiency of your script
+because your script does not need to
+keep generating this
+variable every time a new bar or new
+tick
+is detected on your chart and it's going
+to be the same with our next
+alert parameter which is going to be
+called av prefix this is short for auto
+view
+prefix and this is a prefix that's going
+to go in front of every single command
+we send to autoview
+so remember in the previous lessons
+where i went over our alert syntax
+you need to start your alert with e
+equals and then your exchange
+or broker and then you need to also
+specify your symbol s equals and then
+your symbol
+so that's going to be this variable and
+our av
+prefix is going to include both of these
+so that we can just
+tidy up our alerts a little bit when we
+come to writing them
+so here i'm going to write out e equals
+and then we're going to add or
+concatenate to use the
+official technical jargon um our broker
+variable
+so e equals and then we're adding on
+broker so by default this would be a
+string that says e
+equals awanda practice and then i'm
+going to add
+a space between these two or between
+this first parameter
+and set s equals and then add in
+our symbol variable which is this guy
+here and
+i'm also going to add a space on the
+very end of this string
+so now when it comes time to write out
+our
+auto view alert code we can just
+reference av prefix
+to save a bit of time tidy up our script
+instead of having to write this out
+on every command that we write and this
+is a good practice to get into for all
+of your
+auto view scripts today's script is
+quite simple so this is a bit
+a bit of overkill but i do like to show
+best practices
+in these videos even when it's not
+really necessary
+so we went out of our way a little bit
+here just to tidy up the script
+now we can add this information to our
+order view alert now remember these
+alert functions
+are triggered whenever they're called so
+unlike alert condition
+where you need to pass in a boolean
+variable and if that boolean
+variable is true or false or true if the
+variable check
+returns true then alert condition is
+fired
+in this case we don't need a boolean
+because our boolean is our if statements
+so if these both of these if statements
+pass or they both return true then our
+trailing price is updated
+and our alert is triggered if the user
+has set their alerts up properly which
+we'll go over at the end
+so this alert function takes a message
+parameter
+and a frequency parameter we're going to
+set the alert frequency
+to alert dot frequency once per bar
+close we only want to trigger the alert
+when the bar is closed and our trailing
+stop is confirmed
+so our trailing stop will update in real
+time on the bar
+on the chart as the bar moves but it
+will not
+trigger the command or the order to move
+our stop loss
+higher until that bar closes and is
+confirmed
+we don't want to be moving our stop loss
+while the bar is open because
+the low or high of that bar may change
+by the time the bar closes
+so that's the purpose of this and to
+make sure that that's the case we could
+even add
+another check onto the end of these if
+statements that says end
+bar state dot is confirmed so this means
+that
+this code will only execute if the
+current bar
+is on its final tick and closing or is
+already a historical bar so that's also
+a good practice to get into we'll add
+that check on to the end of our
+trailing stop if statement in fact we
+can just add it to this top
+if statement which would be a little bit
+more efficient there
+but anyway let's construct our order
+view alert
+and we're going to do this by creating
+two new
+variables just to tidy this up a bit the
+first variable is going to be called
+clear order and this is going to be set
+to av
+prefix plus so this is
+going to use our prefix it's going to
+specify our broker our symbol
+plus we also need to tell it we don't
+need a space there because we put a
+space on the end
+so we also need to tell it c equals
+order
+and this will cancel or clear any
+existing
+stop loss or take profit orders we have
+on this trade so keep in mind it will
+remove your take profit as well
+as your stop loss if you want to update
+your
+take profit order as well then you'll
+need to add
+your take profit command to this alert
+as well
+your fixed take profit and i'll go over
+how to do that in the previous
+video of this series but we're not going
+to do that today because today's
+example lesson i want to keep it as
+short as possible and
+today we're just basically making a
+trend
+following script that will just continue
+locking in our profits until price
+action comes down and
+stops us out so it doesn't matter if we
+delete our take profit here because we
+shouldn't have one anyway
+we are just trailing our stop loss to
+lock-in profits so the first thing we
+need to do before we update our
+stop-loss is delete it
+so this will clear any open orders on
+this symbol if we have any open
+trades on this symbol with an existing
+stop loss this order will delete that
+stop loss
+and the next order is our stop loss
+order which will update our stop loss
+so this also needs to start with our
+autoview prefix
+and then we need to set these parameters
+we need to set
+our c equals position so that autoview
+knows we're updating
+an existing position we want to set our
+book
+to long or direction to long and then
+finally we need to set our
+fixed stop loss price our fsl is the
+price
+of our current stop loss and for this we
+just need to add
+on our trail price
+variable but if we just do this we'll
+get a compile error because you cannot
+add
+a number to a string you need to instead
+use the tostring
+inbuilt function to convert this
+variable into a string
+so that orderview knows how to compile
+this line of code
+and then finally before i add these two
+variables to our alert i'm going to add
+the newline escape character to this
+first order
+so this will create two orders on two
+separate
+lines that will be sent to autoview
+and orderview will interpret these two
+orders separately
+and execute them in order so we'll first
+clear
+our limit orders and then it will update
+our stop loss
+so now i can add clear order plus sl
+order
+to our alert message parameter and we're
+done
+for our long trades we are now trailing
+our long trades using order view
+now if i copy all of this i can paste it
+under our short trailing stop code all i
+need to do is change
+b to short instead of long
+that's literally the only change we need
+to make to this short trailing command
+and that is it if i save the script we
+should compile without any errors
+there we go and now if i were to come up
+to this
+alert button and click on that and
+select our script
+if i leave this condition on any alert
+function call which is this alert
+function
+and i set up my alert then whenever my
+trailing stop is updated
+uh this alert will fire the command will
+be interpreted by autoview
+and oanda will move my stop loss
+to wherever trail price is really
+powerful stuff
+and this will allow you to automatically
+manage
+your trading positions while you're
+asleep or away from your computer
+assuming you use trailing stop losses in
+your trading plan
+of course you could just set up a
+regular trailing stop through orlando
+but that trails from the closing price
+so it will trail x amount of pips from
+the closing price
+which puts your stop-loss quite
+frequently in the middle of nowhere
+and it's extremely likely the price will
+come down and stop you out
+and in a bullish trend like this where
+we're making higher highs and higher
+lows
+until we break this low the bullish
+trend is still intact and price could
+come back down
+trickle down and then take off so we
+want to be trailing our stop loss below
+swing lows
+not just from price action arbitrarily
+so that's the whole purpose of this
+script
+the theory behind it and it's pretty
+much completed the one last thing that i
+will do before we
+wrap this lesson up and i show you this
+in practice
+by opening a position and letting the
+script manage it
+we're going to add our bar time input
+so for this i'm going to just call this
+bar time
+it's going to have a type of input dot
+time the default value here is going to
+be
+the inbuilt time stamp function i need
+to close off that
+outer bracket here and in this timestamp
+function
+you can just give it one string a date
+string
+so i'm going to write out one string
+here and it's just going to be 0
+1 jan for january 2000
+and we'll set it to 1 30 p.m
+at 0 0 0 zero as
+our time zone so plus zero zero zero
+zero this will set
+our bar time default value to the first
+of january 2000
+but you could set this to anything we
+could set it to the current date
+if you wanted to the current year i mean
+believe it is the current year
+so now if i come down to our bar
+index check we can add a new check to
+see if
+the current bar has passed the time that
+we have put
+in our settings menu so here i can add
+another check in between these
+that checks is the current bars time
+greater than or equal to
+our bar time input parameter and
+actually i need to change this to or
+so have we set bar index to something
+other than zero
+and is the current bar index greater
+than or equal to whatever that is that
+we've set it to
+if this check is met or true then our
+trailing stop
+code will execute otherwise if the user
+has not changed bar index from zero but
+they have
+set a time so we need to add a check in
+here and
+bar index is equal to zero so it is
+disabled
+if i put these in their own brackets so
+this is
+one boolean check here and then we check
+if the bar state is confirmed
+now we have two ways to set our trailing
+stop so let me save the script here make
+sure that compiles without any errors
+there we go and let me just tidy this up
+really quickly
+and set this to color.blue and title it
+current bar index
+save that now
+if we come up to the settings menu let's
+say we want to start trailing from this
+low in here i can either hover my mouse
+over one of these bars
+and get the bar index up there which is
+two one two eight three
+so two one two eight three and now we'll
+trail my stop-loss
+from this bar or i can set bar index to
+zero
+and i can change the date bar time to
+20th of april 11 41 so
+20th of april i need to move this up a
+bit
+20th of april 2021
+at 11 what was it 11
+41. so 11 40
+change this to one click ok
+and there we get the same thing
+happening so instead of using our bar
+index we're now using our bar time
+to specify when to start trailing our
+stop loss both methods work
+it's really just a matter of preference
+on which one you want to use
+so that's it we have completed our
+trailing stop script
+i'll leave a link to this script below
+the video description
+to the code for the script and i'll
+leave
+this video running with a example
+so let's find a good market to open a
+trade on and watch this trailing script
+work in real time all right so let's try
+uh eurodollar seems to be on a tear
+right now let's try
+buying this market and trailing our stop
+loss so i'm going to buy this market at
+market
+i'm definitely on my demo account so it
+doesn't matter how many positions we
+open let's just open whatever this is
+33 000 units and let me set up my alerts
+so i need to change the date of this to
+let's say
+20th of april 2021 12
+37
+click ok that's now trailing from here
+let me come up
+and set my alert order view trailing
+stop script
+my condition can stay like this i don't
+need to mess with any of my alert
+actions
+the script will handle everything now
+let's create the alert and let's wait
+and watch and see what happens
+so i'll add a stop loss to this really
+quickly let's let's say it was down here
+so 25 10 modify that and let's watch the
+script
+update this stop loss as this red line
+theoretically
+keeps rising i'll leave the video
+recording going until we get stopped out
+and i'll come back and we'll roll the
+[Music]
+outer
+[Music]
+and there we go we've now been stopped
+out by price action
+our stop-loss has been set to n a our
+trailing stop-loss has been reset
+open up my demo account and go to
+transaction history
+we did in fact make a profit on this
+example trade
+just by trailing our stop loss below
+recent swing lows
+on this one minute chart now obviously
+where we entered was a terrible entry
+this was for example purposes but if
+we'd entered lower like let's say on
+this
+bullish engulfing candle here at this
+one minute structure
+this sort of zone in here and had the
+script running you could have easily
+locked in a multiple r
+trade without even needing to be at your
+computer
+the whole time i left this recording i
+went to have lunch i came back just in
+time to see it get stopped out and i
+didn't
+even need to lift the finger that is the
+power of autoview
+and using this technology to enhance
+your trading trading is an extremely
+competitive arena only the best of the
+best truly
+excel in this craft and one way that you
+can skew the odds in your favor is by
+utilizing the power of technology
+in your trading process be that through
+indicators uh be that through automation
+like we just did here
+just having the ability to write your
+own scripts is a massive advantage
+over your average trader but being able
+to automate parts of your trading
+process
+takes things truly to the next level so
+i hope you found this video interesting
+if you did and you want to learn more
+about panscript
+check out my website
+panscriptmastery.com there's a bunch of
+courses on there
+covering pinescript in much much greater
+detail than i have time to do on youtube
+there's dozens of hours of content over
+there but make sure to hit that
+subscribe button because i will be back
+very shortly with the next lesson in
+this series where we will go into how to
+calculate your position size
+to automate not just your trade
+management and trade exits
+but your trade entries as well and by
+combining something
+such as this atr trailing stop
+management system
+with a trade entry automation system you
+can potentially create
+entirely automated profitable trading
+strategies
+so that sounds like something you're
+interested in hit the subscribe button
+hit the like button
+leave a comment with a suggestion of
+what you'd like me to cover and i will
+see you soon
+in the next video thanks for watching
+and take care
+[Music]
+you

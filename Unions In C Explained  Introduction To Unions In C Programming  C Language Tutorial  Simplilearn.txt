@@ -1,0 +1,128 @@
+hey guys welcome back to another video
+by learn in this session we gonna learn
+all about unions in c
+and while we are at it please leave us a
+like if you find our content helpful and
+a sub to the channel would be
+appreciated so now without any further
+delay let's begin
+this session will help you to understand
+what unions is in c then let's
+understand the union definition in c
+after that let's see how to create a
+union variable later on how to access
+members of a union
+now let's begin by understanding what a
+union is in c
+union is a special data type that holds
+elements of different data types at the
+same memory location
+the concept of structure and unions are
+the same however the only difference is
+in terms of storage space and the
+keyword so for unit declaration we use
+the keyword union
+now let's have a look at a union
+definition in c
+the union definition starts with a
+keyword union and is followed by tag
+name or union name then a list of union
+members inside the curly brackets and
+finally a union variable declaration for
+example
+the definition begins with a keyword
+union then student as a tag name and the
+union members are name of typecad and
+age of type int followed by s1 as a
+union variable name
+now we know how to declare members of a
+unit yet the memory is not allocated to
+these union members moving ahead let's
+look at the creation of a union variable
+similar to the concept of structures in
+c even in union memories are located
+once the variable is created and the
+union variables are created to access
+and assign the values of a union members
+in c
+the syntax to declare union variable is
+as given below it starts with a keyword
+union followed by tag name then a list
+of union variables
+for example
+the keyword union then tag name
+student followed by the variable s1
+now let's consider the below given
+example and understand how the
+structures in c is different from the
+unions
+as i discussed before the only
+difference between structure and union
+is in terms of memory space
+in structures the memories are located
+separately for every single structure
+member
+in a union memories are located at the
+same location for all the members of a
+union the highest memory space of a
+member is considered and memories are
+located
+in this example we have members name and
+age as a type care and int respectively
+so with this example let's understand
+the difference between structure and
+union elements in the memory
+once the variable is created the memory
+for the members are allocated
+in that case the memory will be
+allocated for s1.name and s1.h
+as we know the size of a car is one byte
+so according to the size of a name four
+bytes of memory space will be allocated
+and two bytes for each
+so the total memory allocated is 14
+bytes
+in the case of union the memory for the
+element's name and age will be allocated
+at the same location
+so
+in this example the highest memory space
+of an element is considered that is the
+size of an element name is 12 bytes
+now let's look at how to access the
+members of a union
+we use the period operator to assign
+values and access the union members
+the syntax that we follow to access the
+unit members are union uninvariable dot
+union member
+to an example let's see how to assign
+values
+so we have s1 as a variable name
+followed by a dot operator then h is a
+union member and with the help of the
+assignment operator we assign a value
+and to access the member we have an
+example s1.h
+now let's execute a simple program
+from this program we are going to find
+the difference between structure and
+union in terms of size we have same list
+of members in both structure and union
+so we're going to find the size it's
+occupying in the memory now let's run it
+as you can see the name in union occupy
+largest memory so the total size of
+union student is 12 and structure
+occupies this as 20. i hope it's clear
+so with this we have come to the end of
+this session on the unions in c
+programming i hope the session was
+informative and interesting until next
+time thank you stay safe and keep
+learning
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

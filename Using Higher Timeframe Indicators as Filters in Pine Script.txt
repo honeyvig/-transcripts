@@ -1,0 +1,403 @@
+a common request I get from Traders
+wanting to learn pinescript is how to
+use higher timeframe indicator values as
+filters for their trading systems the
+good news is this is pretty easy to do
+and in today's video I'll show you how
+on my chart right now is a very simple
+example script the strategy we're using
+today is not important because the code
+I'll show you today can be added to any
+of your existing trading systems just by
+copying about three or four lines of
+code but what you see on my chart right
+now is a higher time frame moving
+average this up the top here is just a
+colored ribbon to show me when my
+trading conditions are met so when this
+ribbon is red the script is not taking
+any trades and when it's green we are
+allowed to buy so for today's video this
+is just a long only system just to
+demonstrate how to reference higher time
+frame information in your systems now
+there's a second higher time frame
+indicator value we are referencing in
+this script and that is an RSI value so
+we're referencing the daily EMA 200 day
+EMA and the daily five period RSI so the
+script is buying this Market when price
+is trading above the 200 day moving
+average and the 5day RSI is below 30 and
+we're on a 1H hour chart so with that
+out of the way let's jump into the
+source code and I'll show you how the
+script works and how we're referencing
+these higher time frame indicator values
+so we have a strategy script here I've
+set my initial Capital to
+$10,000 and we don't actually need the
+default quantity value cuz I override
+that in our entries we'll get to that in
+a moment um the next thing I do is I
+import my zen Library this is a publicly
+available pinescript library that
+contains several um Quality of Life
+utility functions that just make coding
+a little bit easier we're going to use
+it today to detect uh Candlestick
+patterns if I type in zen. controlspace
+here is all the functions available in
+this library and today we're going to be
+using bullish and golfing candles this
+function contains a bunch of checks that
+will detect bullish and golfing candles
+on my chart without having to write out
+too much code I want to keep today's
+lesson as concise as possible and the
+lesson is not about Candlestick patterns
+I have plenty of lessons on the channel
+about that um so today we are just going
+to move on to our user inputs so we only
+need three user inputs today an EMA
+length an RSI length and a time frame
+which is going to be the one day chart
+by default but of course you can change
+this setting to any time frame however
+the code we ride today will only work on
+a time frame below the one you select
+here or equal to or below so this will
+work on the daily chart but if we go to
+2 days or above it will not work because
+referencing lower time frame information
+is a completely different can of worms
+in pinescript uh there's a video about
+that on my channel if you're interested
+but be warned it is quite a complex
+subject so now that we have our user
+inputs let's define a custom function
+that is going to get higher time frame
+information without repainting now I've
+covered repainting on the channel in the
+past I plan to do another video on that
+soon so make sure to subscribe to the
+channel if you haven't already if you're
+interested in and learning about the
+behaviors of repainting the dangers and
+how to avoid it um but this custom
+function we're using today looks scary
+if you've never used a custom function
+before but I'll break it down it's quite
+simple first we need to give the
+function a name so I've given it the
+name fcor for function and then NRP is
+just an abbreviation of non- repainting
+and then security and then this function
+takes one parameter one input parameter
+and that is going to be the expression
+we want to retrieve from our higher time
+frame so to get a higher time frame
+price value indicator value volume any
+of that data we need to use the request.
+security function now the first
+parameter this function takes is a
+ticker ID a symbol so ticker ID will
+pass in the current market I'm on and
+the current broker I'm using to retrieve
+this price information the next
+parameter this function takes is a time
+frame so in this case that's going to be
+the one day chart or time frame then we
+have our expression exp is short for
+expression and that is just a code
+expression that we want to retrieve from
+the one day chart so that could be a
+closing price it could be volume or it
+could be an indicator value today we are
+going to obviously be using indicator
+values now this code here is what
+eliminates repainting from that higher
+time frame but bring up the
+documentation for this function here is
+a brief description of what repainting
+is the reason we write our code the way
+we have is to avoid differences on
+historical and realtime bars so the code
+we are using will only return a value
+from the higher time frame on the bar
+after it completes so it will not
+retrieve realtime higher time frame
+information because if the RSI goes
+oversold today before the market closes
+there's no guarantee that at the end of
+the day it will still be oversold so we
+want to be operating our trading systems
+based on confirmed indicated conditions
+and so on today's trading price action
+we want to be referencing yesterday's
+higher time frame indicator values so
+what was the RSI value on yesterday's
+bar on the daily chart this code here
+will ensure that we do not get a
+situation where our system takes trades
+on historical price data that it doesn't
+take on real-time data or vice versa we
+want our system to be consistent on
+realtime price as well as historical
+price that's what this code here does so
+now that we have a non- repainting
+security function by the way you can
+copy this code into any script and pass
+in any expression as I mentioned open
+high low close vol volume indicator
+values and this will work in any script
+so it's probably worth either
+bookmarking this video or copying this
+code into a notepad and saving it if you
+reference higher time frame information
+frequently at least until you memorize
+this uh syntax so now that we have our
+non- repainting security function the
+next thing to do is to get the
+Expressions that we want to pass into
+our higher time frame security function
+so in this case that's going to be an
+EMA value and an RSI value so these two
+lines of code will get the current time
+frames EMA value and RSI value so if I
+plot these onto the chart let's just
+plot the EMA for
+now um this is going to give us the 1H
+hour 200 bar EMA but if we pass EMA CTF
+into this function we will now be
+getting the 200 day EMA drawing over the
+1hour chart so hopefully you can see now
+where we're going with the script uh the
+next thing to do is just get our higher
+time frame indicator values without
+repainting so to do that I have two new
+variable here that are identical to
+these except that we're passing these
+values into our non- repainting security
+function expression and so now we're
+getting our higher time frame EMA and
+our high time frame RSI value so that's
+essentially it with these few lines of
+code um and maybe some user inputs you
+can add these higher time frame
+indicator values into any indicator any
+um strategy script that you write and we
+can now reference these as market
+conditions so to wrap up this video
+Let's enter our trades and exit our
+trades to do that I'm just going to use
+really simple entry exit criteria here
+this lesson is not about creating a
+profitable trading system there's plenty
+of videos like that on my channel and in
+the Mastery course and I will cover new
+profitable trading systems in the future
+so make sure to subscribe to the channel
+if you haven't already but for today
+these are our entry and exit criteria so
+our buy condition is that the current
+price closing price of the current bar
+is greater than our higher time frame
+EMA and in addition to this we need the
+higher time frame RSI value to be below
+below 30 so we need the RSI oversold the
+5day RSI oversold and the 1hour bar
+trading above the 200 day EMA so I
+separated these to make it easy to read
+we could combine all of these into one
+line but I like to make my code AS
+intuitive as possible to read and so
+I've separated these into two conditions
+we have our profit our takeprofit
+condition and our stop-loss condition
+the takeprofit condition is very simple
+I don't recommend trading this system in
+a moment you'll see that it actually
+shows promise it's actually um
+profitable on several Forex pairs but I
+wouldn't recommend trading this at least
+not without fleshing it out a bit more
+it's a little bit too simple of a system
+but it just goes to show that sometimes
+simple can work just as well as complex
+because as you'll see at the end of this
+video we'll go over some Forex Pairs and
+I'll show you how this script performed
+seems to like Yen pairs for whatever
+reason but anyway our profit condition
+is a bearish close so a candle that
+closes lower than it opened and the
+closing price must be above our average
+position position price so because we're
+only trading one trade we're not
+pyramiding in the system this position
+average price will just show us our
+entry price for our long trade so as
+long as we get a bearish close above the
+price that we entered our trade that is
+a profit condition exit and then our
+stop loss condition is simply if price
+closes below the previous bars low so
+now that we have our entry and exit
+criteria our conditions I'll copy in
+this final block of code and break it
+down before we wrap up this video so
+here's our entry code so here we're only
+Trading long entries uh perhaps some
+homework for those of you who are newer
+to pinescript and want a challenge might
+be to add in the cell condition so you
+would just flip most of these operators
+around if you're looking for a short
+condition you want the close to be below
+the EMA and the RSI value to be above uh
+70 or whatever you prefer and you'd want
+to flip all of these conditions copy
+this code and convert it to short uh
+trades but for today's lesson we'll just
+keep this long only to keep things
+simple and all we do here to enter a
+long trade is we check that our buy
+condition buling conditions are met and
+that we have a bullish engulfing candle
+and again I'm just using my zen library
+to get this code the library is open
+source so if you want to see how I
+detect these bullish Eng golfing candle
+patterns you can hold down control and
+click on the Zen keyword here and the
+source code will be uh below here
+somewhere if these conditions are met we
+enter along trade now there is one line
+of code here that I had to add because
+Yen pairs have a much higher pip
+distance than non Yen pairs so if we
+were to trade 100,000 units which is one
+standard lot the system has a fixed lot
+size for every trade just to keep things
+simple I don't recommend this money
+management style you should really
+adjust your position size based on your
+account balance and your risk but for
+today's example we're keeping things
+simple 100,000 units on a Yen pair is
+very different to 100,000 units on a US
+dollar or euro dollar pair or something
+like that so this little line of code
+just checks is the current symbol's
+currency Yen if so our position size our
+QT parameter should be set to 1,000
+otherwise if this is not a Yen pair set
+the position size to one standard lot or
+100,000 units then we enter long using
+the strategy. entry function and then
+here are our exit conditions if our
+profit condition is met we close all
+trades we give it the trade comment of
+take profit so we know visually we can
+look at our chart and see which trades
+were closed for profit and which trades
+were closed for our stoploss condition
+and then we just draw the information to
+our chart we're plotting the higher time
+frame EMA and the RSI value I've set
+display to display. status line on the
+RSI value so that we don't have the RSI
+value drawing over price action because
+it doesn't make sense to have that on
+this particular script and then here is
+our ribbon code so this is just drawing
+squares and it's changing the color of
+these Square shapes based on whether our
+buy condition is me if I save my code
+here we now have our ribbon but if I go
+back a bit here here we have a bunch of
+Trades um you can see that our ribbon is
+green up here so the RSI is oversold on
+the daily chart and we're still trading
+above the 200 day EMA and so we can take
+long trades you can see our trade labels
+here so this trade closed for a loss a
+stop loss because this bar closed below
+the previous Bar's low same with this
+trade this trade was a profitable trade
+we entered long and then we got a
+bearish close above our Buy price and
+that will do it for today's lesson I
+hope you found this interesting as
+always the source code to the script
+will be in the pin comment below you can
+copy this code play around with it and
+let's have a quick look at how this
+performed on some currency pairs so
+again I wouldn't recommend trading this
+this is not trading advice this is just
+coding examples but here we have 72
+trades 20% return uh this isn't taking
+into account commissions that's
+important to mention that will
+definitely affect your performance
+metrics same with slippage which which
+is a big issue in Forex but on these
+higher time frames 1 hour chart and
+above it's not that big a deal the
+reason why I didn't include Commissions
+in the script is because one it's not
+the point of today's video and two
+commissions vary from broker to broker
+so it's up to you to figure out what
+commission structure your broker charges
+and input that information into this box
+here you may also want to experiment
+with slippage but if you're on a 1 hour
+chart or above slippage becomes less and
+less of an issue anyway let's have a
+quick look through some of these markets
+it's not going to be profitable on the
+majority of these pairs but you can see
+that uh there is some promise here I
+mean even on Aussie CAD we have a 62%
+win rate the sample size is Tiny But
+just goes to show that you don't have to
+have a really complex system to find an
+edge in the markets just simply waiting
+for the higher time frame conditions to
+align so short-term RSI value being
+oversold while price is above a moving
+average if you made a more complex entry
+criteria there might be potential to a
+system like this but anyway you can see
+that it does seem to favor Yen pairs
+nearly all of the Yen pairs here uh show
+a positive Equity curve uh pound Yen had
+a 57% return but this Equity curve is
+pretty horrible pretty trash until
+recently uh but yeah you get the idea
+that will do it for today's lesson uh
+thank you to the trader who wrote in to
+suggest this lesson in last week's
+newsletter uh unfortunately I had a
+really sore neck so I couldn't Cod or do
+a video last week but I did send out an
+email asking for suggestions for video
+content and you guys really provided as
+you can see here I had over 50 email
+replies suggesting new video content so
+thank you everyone for that I have a lot
+more content planned we're going to
+start branching out into more broad
+trading system uh content such as system
+development theory back testing
+techniques and I also plan to revisit
+Pine connector soon so make sure to hit
+the Subscribe button if you haven't
+already and I'll speak with you in the
+next lesson thanks for tuning in in I
+appreciate you guys and good luck with
+your trading take
+care
