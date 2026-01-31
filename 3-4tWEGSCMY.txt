@@ -1,0 +1,799 @@
+1
+00:00:03,560 --> 00:00:05,940
+so Lumiere and welcome to another
+
+2
+00:00:05,940 --> 00:00:08,400
+tutorial my name is Tammy Bakshi and
+
+3
+00:00:08,400 --> 00:00:11,730
+today I'm joined by Scott D'Angelo thank
+
+4
+00:00:11,730 --> 00:00:13,340
+you very much Scott for joining in today
+
+5
+00:00:13,340 --> 00:00:15,179
+really glad to have you on the show
+
+6
+00:00:15,179 --> 00:00:16,080
+would you like to quickly introduce
+
+7
+00:00:16,080 --> 00:00:16,859
+yourself
+
+8
+00:00:16,859 --> 00:00:19,410
+yeah I'm Scott D'Angelo I work for IBM
+
+9
+00:00:19,410 --> 00:00:23,519
+as a developer and I produce code
+
+10
+00:00:23,519 --> 00:00:26,910
+patterns that's great so just in case
+
+11
+00:00:26,910 --> 00:00:28,769
+you were actually watching around last
+
+12
+00:00:28,769 --> 00:00:30,960
+week I published a video with retire T
+
+13
+00:00:30,960 --> 00:00:33,630
+he's also a part of your team code
+
+14
+00:00:33,630 --> 00:00:35,280
+patterns of course being little building
+
+15
+00:00:35,280 --> 00:00:36,690
+blocks of code that you as developers
+
+16
+00:00:36,690 --> 00:00:38,670
+can take from people like Scott for
+
+17
+00:00:38,670 --> 00:00:40,590
+developing them and actually implement
+
+18
+00:00:40,590 --> 00:00:41,969
+them in your apps and modify them
+
+19
+00:00:41,969 --> 00:00:43,649
+probably want to or even combine them
+
+20
+00:00:43,649 --> 00:00:45,809
+and make your own applications brother
+
+21
+00:00:45,809 --> 00:00:48,329
+quickly Scott specifically what kinds of
+
+22
+00:00:48,329 --> 00:00:50,640
+technologies are you passionate about or
+
+23
+00:00:50,640 --> 00:00:53,460
+interested in well AI I'm fortunate
+
+24
+00:00:53,460 --> 00:00:55,920
+enough to work with IBM's Watson tools
+
+25
+00:00:55,920 --> 00:00:58,140
+and so I get to work with artificial
+
+26
+00:00:58,140 --> 00:01:01,379
+intelligence and machine learning and I
+
+27
+00:01:01,379 --> 00:01:02,280
+think today we're going to demonstrate
+
+28
+00:01:02,280 --> 00:01:04,860
+something that uses virtual reality
+
+29
+00:01:04,860 --> 00:01:06,360
+which is another fascinating topic
+
+30
+00:01:06,360 --> 00:01:07,920
+absolutely thank you very much Scott
+
+31
+00:01:07,920 --> 00:01:10,380
+that's right Oh Scott here is very
+
+32
+00:01:10,380 --> 00:01:13,530
+interested in virtual reality VR and of
+
+33
+00:01:13,530 --> 00:01:15,570
+course I actually have a youtube
+
+34
+00:01:15,570 --> 00:01:18,000
+tutorial on virtual reality and it was
+
+35
+00:01:18,000 --> 00:01:19,590
+done with Michael wooden who used toward
+
+36
+00:01:19,590 --> 00:01:21,090
+for IBM as well they will link to that
+
+37
+00:01:21,090 --> 00:01:22,229
+down in the description below
+
+38
+00:01:22,229 --> 00:01:24,360
+in fact that wart that Michael did has
+
+39
+00:01:24,360 --> 00:01:27,240
+now been adapted and applied as a code
+
+40
+00:01:27,240 --> 00:01:28,560
+pattern that you can go ahead and
+
+41
+00:01:28,560 --> 00:01:31,380
+download from the IBM website and Scott
+
+42
+00:01:31,380 --> 00:01:33,210
+over here is gonna be showing that to us
+
+43
+00:01:33,210 --> 00:01:35,549
+it only show us how exactly this VR
+
+44
+00:01:35,549 --> 00:01:38,070
+application works in fact if you at home
+
+45
+00:01:38,070 --> 00:01:40,110
+don't have an actual VR headset no need
+
+46
+00:01:40,110 --> 00:01:42,299
+to worry you can use one of these Google
+
+47
+00:01:42,299 --> 00:01:44,070
+cardboard or practically any kind of
+
+48
+00:01:44,070 --> 00:01:46,140
+cardboard headset that you get and you
+
+49
+00:01:46,140 --> 00:01:46,750
+can actually
+
+50
+00:01:46,750 --> 00:01:49,780
+and on your own phone I'm actually take
+
+51
+00:01:49,780 --> 00:01:52,750
+a look at virtual reality without having
+
+52
+00:01:52,750 --> 00:01:55,000
+to have any fancy hardware or headsets
+
+53
+00:01:55,000 --> 00:01:57,340
+and the best part is this isn't just any
+
+54
+00:01:57,340 --> 00:01:59,290
+virtual reality application this is
+
+55
+00:01:59,290 --> 00:02:01,450
+combined with IBM Watson speech to text
+
+56
+00:02:01,450 --> 00:02:03,700
+and text-to-speech to create a kind of
+
+57
+00:02:03,700 --> 00:02:05,110
+speech sandbox would you like to
+
+58
+00:02:05,110 --> 00:02:06,850
+elaborate a bit more on how exactly that
+
+59
+00:02:06,850 --> 00:02:09,340
+works yeah so basically we use speech to
+
+60
+00:02:09,340 --> 00:02:12,970
+text and the lesson assistant tool to
+
+61
+00:02:12,970 --> 00:02:16,270
+implement voice commands so the idea of
+
+62
+00:02:16,270 --> 00:02:18,490
+being in virtual reality you know you
+
+63
+00:02:18,490 --> 00:02:21,070
+can have a handset you can use various
+
+64
+00:02:21,070 --> 00:02:23,050
+artifacts to manipulate the virtual
+
+65
+00:02:23,050 --> 00:02:24,820
+reality but what in the real world we
+
+66
+00:02:24,820 --> 00:02:26,980
+naturally affect the world with our
+
+67
+00:02:26,980 --> 00:02:28,810
+voices we ask for things we interact
+
+68
+00:02:28,810 --> 00:02:30,880
+with our with our voices so this is a
+
+69
+00:02:30,880 --> 00:02:33,610
+way for you to use the Unity game
+
+70
+00:02:33,610 --> 00:02:36,130
+development engine along with IBM's
+
+71
+00:02:36,130 --> 00:02:39,070
+Watson a speech to text and the Watson
+
+72
+00:02:39,070 --> 00:02:40,930
+assistive tools and implement voice
+
+73
+00:02:40,930 --> 00:02:42,730
+commands to have the virtual reality
+
+74
+00:02:42,730 --> 00:02:45,280
+respond in any way you want that's great
+
+75
+00:02:45,280 --> 00:02:47,140
+no no what's Howard's the cutting part
+
+76
+00:02:47,140 --> 00:02:48,640
+where we're gonna take a look at a demo
+
+77
+00:02:48,640 --> 00:02:50,830
+the application in action and then also
+
+78
+00:02:50,830 --> 00:02:52,209
+take a look at a demo we'll go a little
+
+79
+00:02:52,209 --> 00:02:54,010
+bit into the code and show you how you
+
+80
+00:02:54,010 --> 00:02:56,380
+can actually modify it to work with your
+
+81
+00:02:56,380 --> 00:02:57,760
+own objects to work with your own
+
+82
+00:02:57,760 --> 00:02:59,560
+commands and then from there if you'd
+
+83
+00:02:59,560 --> 00:03:00,970
+like to deploy on their own virtual
+
+84
+00:03:00,970 --> 00:03:03,160
+reality headset or even on the Unity you
+
+85
+00:03:03,160 --> 00:03:04,390
+can go ahead and download the code
+
+86
+00:03:04,390 --> 00:03:06,040
+pattern in the description below let's
+
+87
+00:03:06,040 --> 00:03:10,420
+head over to code create a large black
+
+88
+00:03:10,420 --> 00:03:12,989
+box
+
+89
+00:03:13,410 --> 00:03:17,210
+create a large red box
+
+90
+00:03:19,830 --> 00:03:26,310
+destroy move up
+
+91
+00:03:29,459 --> 00:03:33,079
+create a large red ball
+
+92
+00:03:37,900 --> 00:03:39,849
+I'd like to do something up here on the
+
+93
+00:03:39,849 --> 00:03:41,530
+mountains for fun create a large green
+
+94
+00:03:41,530 --> 00:03:43,860
+ball
+
+95
+00:03:47,480 --> 00:03:50,549
+so your unity project has lots of assets
+
+96
+00:03:50,549 --> 00:03:54,150
+all the icons graphics tools we're
+
+97
+00:03:54,150 --> 00:03:56,040
+really interested in the script that
+
+98
+00:03:56,040 --> 00:03:58,680
+does all the work so if we look in the
+
+99
+00:03:58,680 --> 00:04:01,200
+scripts directory we have speech sandbox
+
+100
+00:04:01,200 --> 00:04:03,870
+streaming and this is where we
+
+101
+00:04:03,870 --> 00:04:06,269
+instantiate our speech to text and our
+
+102
+00:04:06,269 --> 00:04:08,189
+Watson assistant using credentials which
+
+103
+00:04:08,189 --> 00:04:10,650
+we can set in the in the unity editor
+
+104
+00:04:10,650 --> 00:04:12,750
+and the instructions for that are in the
+
+105
+00:04:12,750 --> 00:04:14,790
+github repo and of the readme you set
+
+106
+00:04:14,790 --> 00:04:17,820
+these credentials you instantiate your
+
+107
+00:04:17,820 --> 00:04:20,039
+speech to text and your Watson assistant
+
+108
+00:04:20,039 --> 00:04:24,630
+and then the the script will do all the
+
+109
+00:04:24,630 --> 00:04:27,440
+work to translate your voice commands to
+
+110
+00:04:27,440 --> 00:04:30,060
+text and then send that text off to the
+
+111
+00:04:30,060 --> 00:04:32,009
+Watson assistant service so here in
+
+112
+00:04:32,009 --> 00:04:34,500
+unrecognised we see where the speech to
+
+113
+00:04:34,500 --> 00:04:37,919
+text services is getting some some data
+
+114
+00:04:37,919 --> 00:04:40,560
+and once it gets some it sends it off to
+
+115
+00:04:40,560 --> 00:04:44,460
+the conversations message method and
+
+116
+00:04:44,460 --> 00:04:46,620
+that's where the intents and entities
+
+117
+00:04:46,620 --> 00:04:50,099
+are extracted using the Watson assistant
+
+118
+00:04:50,099 --> 00:04:52,199
+service so you can change these intents
+
+119
+00:04:52,199 --> 00:04:54,690
+and entities to be whatever it is you'd
+
+120
+00:04:54,690 --> 00:04:57,330
+like you can have any intent any verb
+
+121
+00:04:57,330 --> 00:05:01,169
+like create destroy up whatever you can
+
+122
+00:05:01,169 --> 00:05:04,650
+have any entity of the size of the ball
+
+123
+00:05:04,650 --> 00:05:08,340
+the color etc so if we go into the on
+
+124
+00:05:08,340 --> 00:05:12,530
+message method will see that you can use
+
+125
+00:05:12,530 --> 00:05:15,240
+the parsing of these intents and
+
+126
+00:05:15,240 --> 00:05:17,880
+entities and once we're inside there
+
+127
+00:05:17,880 --> 00:05:22,409
+let's see here so here the on message
+
+128
+00:05:22,409 --> 00:05:25,260
+method is where we we look at these
+
+129
+00:05:25,260 --> 00:05:27,599
+intents and entities for example if the
+
+130
+00:05:27,599 --> 00:05:30,630
+intent is move we can go ahead and call
+
+131
+00:05:30,630 --> 00:05:35,430
+our game managers create object first if
+
+132
+00:05:35,430 --> 00:05:37,440
+the intent is move we call game in
+
+133
+00:05:37,440 --> 00:05:39,300
+manager move object and that's where you
+
+134
+00:05:39,300 --> 00:05:41,789
+implement the logic to move the object
+
+135
+00:05:41,789 --> 00:05:43,259
+so if you're implementing your own
+
+136
+00:05:43,259 --> 00:05:45,630
+commands you'll you'll put that method
+
+137
+00:05:45,630 --> 00:05:47,340
+into your game manager or whatever and
+
+138
+00:05:47,340 --> 00:05:48,659
+that's where it will happen if the
+
+139
+00:05:48,659 --> 00:05:50,340
+intent is create first we're looking at
+
+140
+00:05:50,340 --> 00:05:53,430
+materials working at scale we're trying
+
+141
+00:05:53,430 --> 00:05:55,409
+to figure out some of the entities
+
+142
+00:05:55,409 --> 00:05:58,289
+around it and then we call game manager
+
+143
+00:05:58,289 --> 00:06:00,090
+create object so this is another method
+
+144
+00:06:00,090 --> 00:06:00,449
+that
+
+145
+00:06:00,449 --> 00:06:02,639
+implemented that you can look up but the
+
+146
+00:06:02,639 --> 00:06:04,469
+main point is that here is where you'll
+
+147
+00:06:04,469 --> 00:06:07,289
+add your own voice commands move create
+
+148
+00:06:07,289 --> 00:06:09,930
+destroy you can replace them you can you
+
+149
+00:06:09,930 --> 00:06:11,939
+can add wherever you like and then in
+
+150
+00:06:11,939 --> 00:06:13,650
+the game manager that's where you call
+
+151
+00:06:13,650 --> 00:06:15,360
+the method associated with with that
+
+152
+00:06:15,360 --> 00:06:18,300
+voice command so pretty straightforward
+
+153
+00:06:18,300 --> 00:06:20,400
+it's all open source code you can you
+
+154
+00:06:20,400 --> 00:06:22,139
+can modify it in any way you want use it
+
+155
+00:06:22,139 --> 00:06:25,199
+in your own application and you'll be
+
+156
+00:06:25,199 --> 00:06:27,180
+able to implement whatever voice command
+
+157
+00:06:27,180 --> 00:06:28,469
+you want you'll just have to also go to
+
+158
+00:06:28,469 --> 00:06:29,999
+the Watson assistant add your own
+
+159
+00:06:29,999 --> 00:06:32,099
+entities your own intents you can play
+
+160
+00:06:32,099 --> 00:06:34,499
+around with that as well alright so
+
+161
+00:06:34,499 --> 00:06:36,060
+thank you very much stop for joining in
+
+162
+00:06:36,060 --> 00:06:38,490
+today and helping me out demonstrating
+
+163
+00:06:38,490 --> 00:06:40,020
+virtual reality and how you can actually
+
+164
+00:06:40,020 --> 00:06:42,180
+take even things like the cardboard or
+
+165
+00:06:42,180 --> 00:06:44,699
+even the actual proper virtual virtual
+
+166
+00:06:44,699 --> 00:06:47,039
+reality headsets like the HTC vive I
+
+167
+00:06:47,039 --> 00:06:48,839
+know ahead and create your own
+
+168
+00:06:48,839 --> 00:06:50,819
+applications that use Watson to pretty
+
+169
+00:06:50,819 --> 00:06:53,039
+even better virtual reality experiences
+
+170
+00:06:53,039 --> 00:06:54,419
+again thank you very much Scott and
+
+171
+00:06:54,419 --> 00:06:55,979
+that's what we have for this tutorial
+
+172
+00:06:55,979 --> 00:06:57,599
+today thank you very much everyone for
+
+173
+00:06:57,599 --> 00:06:58,860
+joining in today that's what we had for
+
+174
+00:06:58,860 --> 00:07:00,569
+this tutorial do hope you enjoyed if you
+
+175
+00:07:00,569 --> 00:07:01,979
+do have any questions lessons or
+
+176
+00:07:01,979 --> 00:07:03,839
+feedback you can email that to either me
+
+177
+00:07:03,839 --> 00:07:05,699
+or Scott so Scott how can people contact
+
+178
+00:07:05,699 --> 00:07:07,830
+you you can go to my youtube channel
+
+179
+00:07:07,830 --> 00:07:10,979
+Scott dan jello and just put a comment
+
+180
+00:07:10,979 --> 00:07:12,870
+in on any of the videos that describe
+
+181
+00:07:12,870 --> 00:07:15,270
+this you can contact me at Scott Angelo
+
+182
+00:07:15,270 --> 00:07:17,819
+and ibm.com or Scott D'Angelo at
+
+183
+00:07:17,819 --> 00:07:19,889
+gmail.com that's perfect all your
+
+184
+00:07:19,889 --> 00:07:21,360
+contact will be down in the description
+
+185
+00:07:21,360 --> 00:07:23,789
+below so you can go ahead and email or
+
+186
+00:07:23,789 --> 00:07:25,860
+message Scott if you'd like to and of
+
+187
+00:07:25,860 --> 00:07:27,899
+course my contact my email Twitter and
+
+188
+00:07:27,899 --> 00:07:29,789
+of course you can lead down any
+
+189
+00:07:29,789 --> 00:07:31,379
+suggestions or feedback that you have
+
+190
+00:07:31,379 --> 00:07:33,240
+down in the comments as well and Scott
+
+191
+00:07:33,240 --> 00:07:34,560
+and I would love to get back to you
+
+192
+00:07:34,560 --> 00:07:35,699
+apart from that if you did like this
+
+193
+00:07:35,699 --> 00:07:36,930
+video please make sure to leave a like
+
+194
+00:07:36,930 --> 00:07:38,399
+and if you really do like a bunch of the
+
+195
+00:07:38,399 --> 00:07:40,110
+content on this channel please do make
+
+196
+00:07:40,110 --> 00:07:40,800
+sure to subscribe
+
+197
+00:07:40,800 --> 00:07:42,330
+internal notifications if you'd like to
+
+198
+00:07:42,330 --> 00:07:44,069
+be notified whenever I release a new
+
+199
+00:07:44,069 --> 00:07:45,569
+video thank you very much everyone for
+
+200
+00:07:45,569 --> 00:07:49,729
+20 and today thank you Scott bye-bye

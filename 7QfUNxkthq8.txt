@@ -1,0 +1,1059 @@
+1
+00:00:00,470 --> 00:00:05,100
+[Music]
+
+2
+00:00:13,400 --> 00:00:15,480
+so hello there and welcome to another
+
+3
+00:00:15,480 --> 00:00:18,560
+tutorial my name is Tam Baki and this
+
+4
+00:00:18,560 --> 00:00:20,680
+time we're going to be going over well
+
+5
+00:00:20,680 --> 00:00:23,720
+the impact of overfitting your neural
+
+6
+00:00:23,720 --> 00:00:26,320
+networks but just before I get into the
+
+7
+00:00:26,320 --> 00:00:29,439
+actual topic of this video today I'd
+
+8
+00:00:29,439 --> 00:00:31,480
+actually like to say that just a few
+
+9
+00:00:31,480 --> 00:00:33,760
+days ago in fact I was actually in
+
+10
+00:00:33,760 --> 00:00:36,760
+Arkansas at the David Glass Technology
+
+11
+00:00:36,760 --> 00:00:39,000
+Center of course Walmarts I guess you
+
+12
+00:00:39,000 --> 00:00:40,800
+could say Walmart technology
+
+13
+00:00:40,800 --> 00:00:42,840
+headquarters and I was actually giving a
+
+14
+00:00:42,840 --> 00:00:44,399
+keynote to a few hundred maybe even
+
+15
+00:00:44,399 --> 00:00:48,520
+around 300 400 uh developers at Walmart
+
+16
+00:00:48,520 --> 00:00:49,960
+uh and so of course I was going to a
+
+17
+00:00:49,960 --> 00:00:52,480
+keynote showing around three demos of my
+
+18
+00:00:52,480 --> 00:00:55,199
+neural network projects uh when I
+
+19
+00:00:55,199 --> 00:00:57,039
+actually went through the last demo my
+
+20
+00:00:57,039 --> 00:00:59,320
+tic-tac-toe demo uh where I showed them
+
+21
+00:00:59,320 --> 00:01:01,760
+how I created to Tic Tac Toe aai using a
+
+22
+00:01:01,760 --> 00:01:03,719
+neural network which that video will be
+
+23
+00:01:03,719 --> 00:01:05,840
+out soon as well but basically what
+
+24
+00:01:05,840 --> 00:01:08,360
+happened is while I was demoing that
+
+25
+00:01:08,360 --> 00:01:10,119
+application I talked about how this
+
+26
+00:01:10,119 --> 00:01:12,119
+neural network achieves just around the
+
+27
+00:01:12,119 --> 00:01:15,960
+99% accuracy and will hardly ever lose
+
+28
+00:01:15,960 --> 00:01:19,479
+and will almost never ever lose uh and
+
+29
+00:01:19,479 --> 00:01:21,560
+so one of basically one of the people
+
+30
+00:01:21,560 --> 00:01:23,400
+that was one of the developers that was
+
+31
+00:01:23,400 --> 00:01:27,000
+watching online uh on my for the in
+
+32
+00:01:27,000 --> 00:01:29,479
+internal Walmart web x uh they asked me
+
+33
+00:01:29,479 --> 00:01:32,119
+a question on slack and they said why
+
+34
+00:01:32,119 --> 00:01:34,479
+doesn't it reach 100% accuracy why is
+
+35
+00:01:34,479 --> 00:01:36,720
+that not possible uh like does it
+
+36
+00:01:36,720 --> 00:01:38,399
+inherit the human tradeit of making
+
+37
+00:01:38,399 --> 00:01:40,479
+mistakes and that's what I'm here to
+
+38
+00:01:40,479 --> 00:01:42,479
+answer today and that's why I'm here to
+
+39
+00:01:42,479 --> 00:01:45,119
+tell you that no it doesn't necessarily
+
+40
+00:01:45,119 --> 00:01:47,000
+implement the human trait of making
+
+41
+00:01:47,000 --> 00:01:49,560
+mistakes you could technically hardcode
+
+42
+00:01:49,560 --> 00:01:51,119
+a neural network to do pretty much
+
+43
+00:01:51,119 --> 00:01:53,600
+anything you could get it so close like
+
+44
+00:01:53,600 --> 00:01:56,280
+it get the error rate so little that
+
+45
+00:01:56,280 --> 00:01:58,600
+there would be pretty much no point in
+
+46
+00:01:58,600 --> 00:02:00,479
+thinking that it's not EX exactly the
+
+47
+00:02:00,479 --> 00:02:04,000
+same as let's say a function uh however
+
+48
+00:02:04,000 --> 00:02:06,079
+what I'm here to tell you about today is
+
+49
+00:02:06,079 --> 00:02:08,640
+why overfitting neural networks is never
+
+50
+00:02:08,640 --> 00:02:10,840
+a good idea so let's actually begin with
+
+51
+00:02:10,840 --> 00:02:13,800
+a little bit of terminology now let's
+
+52
+00:02:13,800 --> 00:02:17,040
+just say that we've got our tic TCT tone
+
+53
+00:02:17,040 --> 00:02:19,120
+neural network uh and so we've got a
+
+54
+00:02:19,120 --> 00:02:21,200
+little graph here uh and so let's just
+
+55
+00:02:21,200 --> 00:02:23,280
+say that this is our training iterations
+
+56
+00:02:23,280 --> 00:02:26,800
+graph okay so as we go along on this y
+
+57
+00:02:26,800 --> 00:02:29,400
+sorry this x axis over here what's going
+
+58
+00:02:29,400 --> 00:02:30,720
+to happen
+
+59
+00:02:30,720 --> 00:02:34,319
+is we're going to say that this is an
+
+60
+00:02:34,319 --> 00:02:38,640
+Epoch Epoch sorry so what's going to
+
+61
+00:02:38,640 --> 00:02:40,720
+happen is every single time our graph
+
+62
+00:02:40,720 --> 00:02:43,599
+progresses in the X direction from left
+
+63
+00:02:43,599 --> 00:02:47,400
+to right we're increasing an Epoch but
+
+64
+00:02:47,400 --> 00:02:49,680
+every time it increases from bottom to
+
+65
+00:02:49,680 --> 00:02:54,879
+top on the Y AIS we are increasing
+
+66
+00:02:56,159 --> 00:02:58,440
+accuracy now with most neural network
+
+67
+00:02:58,440 --> 00:03:00,480
+training graphs uh you don't put
+
+68
+00:03:00,480 --> 00:03:03,400
+accuracy on this uh axis you put error
+
+69
+00:03:03,400 --> 00:03:05,720
+rate uh and so the down the more you
+
+70
+00:03:05,720 --> 00:03:07,920
+know down this gets over time the better
+
+71
+00:03:07,920 --> 00:03:09,599
+because the less of the error rate but
+
+72
+00:03:09,599 --> 00:03:11,640
+I'm basically inversing that I'm saying
+
+73
+00:03:11,640 --> 00:03:13,319
+the higher this goes the better because
+
+74
+00:03:13,319 --> 00:03:15,440
+the higher the accuracy uh and so that's
+
+75
+00:03:15,440 --> 00:03:17,920
+basically what this graph contains it
+
+76
+00:03:17,920 --> 00:03:19,599
+contains the accuracy of this neural
+
+77
+00:03:19,599 --> 00:03:21,879
+network over many epochs and so let's
+
+78
+00:03:21,879 --> 00:03:23,599
+just say this is our Tic Tac Toe neural
+
+79
+00:03:23,599 --> 00:03:25,840
+network I'm taking my red marker over
+
+80
+00:03:25,840 --> 00:03:28,760
+here uh let's just say we were to start
+
+81
+00:03:28,760 --> 00:03:32,519
+from here okay so very very low accuracy
+
+82
+00:03:32,519 --> 00:03:35,439
+but over time over a few epochs what
+
+83
+00:03:35,439 --> 00:03:37,560
+happens
+
+84
+00:03:37,560 --> 00:03:40,599
+is see that the training set accuracy
+
+85
+00:03:40,599 --> 00:03:42,920
+goes higher and higher and higher over
+
+86
+00:03:42,920 --> 00:03:45,480
+time and so basically we're and then we
+
+87
+00:03:45,480 --> 00:03:47,200
+start to know stall over here a little
+
+88
+00:03:47,200 --> 00:03:49,000
+bit where we're not really seeing much
+
+89
+00:03:49,000 --> 00:03:51,080
+of an increase over here uh and so
+
+90
+00:03:51,080 --> 00:03:54,159
+basically it's not it's basically reach
+
+91
+00:03:54,159 --> 00:03:56,200
+that limit where it's it's hard to
+
+92
+00:03:56,200 --> 00:03:58,840
+increase the accuracy over here uh and
+
+93
+00:03:58,840 --> 00:04:01,079
+so this is at one of our last epochs
+
+94
+00:04:01,079 --> 00:04:04,319
+that we recorded uh and so now another
+
+95
+00:04:04,319 --> 00:04:06,439
+thing I'd like to say here is that this
+
+96
+00:04:06,439 --> 00:04:07,799
+red
+
+97
+00:04:07,799 --> 00:04:10,480
+marker
+
+98
+00:04:10,480 --> 00:04:13,000
+signifies the training set of this
+
+99
+00:04:13,000 --> 00:04:15,360
+neural
+
+100
+00:04:17,680 --> 00:04:21,040
+network okay our training
+
+101
+00:04:21,040 --> 00:04:23,919
+set but now what I'm going to tell you
+
+102
+00:04:23,919 --> 00:04:27,040
+is let's just say we were also to plot
+
+103
+00:04:27,040 --> 00:04:29,680
+out the accuracy of not just our
+
+104
+00:04:29,680 --> 00:04:32,120
+training
+
+105
+00:04:32,120 --> 00:04:36,479
+set but our test set as
+
+106
+00:04:37,639 --> 00:04:40,400
+well as it's very commonly said in the
+
+107
+00:04:40,400 --> 00:04:42,520
+neural networks world you should always
+
+108
+00:04:42,520 --> 00:04:45,240
+have a test set and so let's just say we
+
+109
+00:04:45,240 --> 00:04:47,759
+would to graph out our test set accuracy
+
+110
+00:04:47,759 --> 00:04:50,560
+as well so we've got this as our train
+
+111
+00:04:50,560 --> 00:04:52,280
+set accuracy but now let's take a look
+
+112
+00:04:52,280 --> 00:04:53,960
+as our at our test set which is
+
+113
+00:04:53,960 --> 00:04:55,720
+something the neural network has not
+
+114
+00:04:55,720 --> 00:04:58,720
+been trained on now again these are just
+
+115
+00:04:58,720 --> 00:05:00,759
+theoretical values but this is usually
+
+116
+00:05:00,759 --> 00:05:02,720
+how stuff goes on with neural networks
+
+117
+00:05:02,720 --> 00:05:04,960
+so we start off exactly almost at the
+
+118
+00:05:04,960 --> 00:05:07,000
+training set accuracy sometimes it's a
+
+119
+00:05:07,000 --> 00:05:09,120
+little different and we of course start
+
+120
+00:05:09,120 --> 00:05:13,400
+to go up it with this and then we slowly
+
+121
+00:05:13,400 --> 00:05:15,479
+start
+
+122
+00:05:15,479 --> 00:05:20,160
+to sink so it's happening here now this
+
+123
+00:05:20,160 --> 00:05:22,840
+might seem a little weird but let me
+
+124
+00:05:22,840 --> 00:05:25,880
+explain what's happening is just like a
+
+125
+00:05:25,880 --> 00:05:29,240
+human if you were to tell a human over
+
+126
+00:05:29,240 --> 00:05:31,600
+and over again to do the same thing what
+
+127
+00:05:31,600 --> 00:05:35,720
+happens is this neural network after
+
+128
+00:05:35,720 --> 00:05:37,639
+this point
+
+129
+00:05:37,639 --> 00:05:41,160
+here after this very point the neuron
+
+130
+00:05:41,160 --> 00:05:44,680
+network will stop generalizing the data
+
+131
+00:05:44,680 --> 00:05:47,240
+it'll stop understanding the patterns in
+
+132
+00:05:47,240 --> 00:05:49,639
+this data and what it'll do is it'll
+
+133
+00:05:49,639 --> 00:05:53,360
+hard code itself it'll memorize not
+
+134
+00:05:53,360 --> 00:05:56,400
+generalize this training data so what's
+
+135
+00:05:56,400 --> 00:05:57,919
+happening is while the training data
+
+136
+00:05:57,919 --> 00:06:00,319
+accuracy is just shooting up
+
+137
+00:06:00,319 --> 00:06:03,720
+the tested accuracy is just Sky
+
+138
+00:06:03,720 --> 00:06:06,199
+absolutely failing just jumping right
+
+139
+00:06:06,199 --> 00:06:08,080
+out of the sky and so what's happening
+
+140
+00:06:08,080 --> 00:06:10,440
+here is just completely crashing and so
+
+141
+00:06:10,440 --> 00:06:12,120
+what happens is that's an that's an
+
+142
+00:06:12,120 --> 00:06:15,039
+entire separate Topic in neural networks
+
+143
+00:06:15,039 --> 00:06:17,800
+generalization versus memorization which
+
+144
+00:06:17,800 --> 00:06:19,960
+is in fact why deep neural networks
+
+145
+00:06:19,960 --> 00:06:22,880
+exist they are extremely good at
+
+146
+00:06:22,880 --> 00:06:25,319
+generalizing data and not memorizing
+
+147
+00:06:25,319 --> 00:06:27,160
+them whereas shallow neural networks
+
+148
+00:06:27,160 --> 00:06:29,599
+might be better at memorizing your data
+
+149
+00:06:29,599 --> 00:06:31,639
+rather than generalizing them like this
+
+150
+00:06:31,639 --> 00:06:33,840
+in fact that's why deep neural networks
+
+151
+00:06:33,840 --> 00:06:37,080
+are so much harder to train than shallow
+
+152
+00:06:37,080 --> 00:06:39,759
+neural networks uh and so another thing
+
+153
+00:06:39,759 --> 00:06:41,280
+I'd like to say here is that if you were
+
+154
+00:06:41,280 --> 00:06:44,880
+to take a look after this point and
+
+155
+00:06:44,880 --> 00:06:48,639
+because of this as well after this I
+
+156
+00:06:48,639 --> 00:06:50,400
+guess you could say line here we start
+
+157
+00:06:50,400 --> 00:06:53,720
+to do something called
+
+158
+00:06:56,039 --> 00:06:58,960
+overfitting okay so overfitting
+
+159
+00:06:58,960 --> 00:07:01,560
+basically means that we are fitting this
+
+160
+00:07:01,560 --> 00:07:04,039
+neural network model too much to our
+
+161
+00:07:04,039 --> 00:07:06,720
+training data to the point where it's
+
+162
+00:07:06,720 --> 00:07:08,919
+memorizing the training data there is
+
+163
+00:07:08,919 --> 00:07:12,879
+absolutely no point for us to actually
+
+164
+00:07:12,879 --> 00:07:15,520
+train our neural network if it's after
+
+165
+00:07:15,520 --> 00:07:17,360
+this point and so basically that's
+
+166
+00:07:17,360 --> 00:07:19,440
+actually where the early stopping
+
+167
+00:07:19,440 --> 00:07:21,199
+algorithm comes in and the early
+
+168
+00:07:21,199 --> 00:07:23,160
+stopping algorithm is basically this
+
+169
+00:07:23,160 --> 00:07:26,199
+extension to back propagation where you
+
+170
+00:07:26,199 --> 00:07:28,840
+actually plot out these lines and you
+
+171
+00:07:28,840 --> 00:07:30,160
+see okay
+
+172
+00:07:30,160 --> 00:07:34,319
+which point did we see our
+
+173
+00:07:34,319 --> 00:07:37,599
+peak in the test set accuracy because if
+
+174
+00:07:37,599 --> 00:07:39,319
+you think about it the test set accuracy
+
+175
+00:07:39,319 --> 00:07:41,840
+is the only thing that matters to us if
+
+176
+00:07:41,840 --> 00:07:44,080
+the training set accuracy high is is
+
+177
+00:07:44,080 --> 00:07:46,360
+high that's great that might be really
+
+178
+00:07:46,360 --> 00:07:47,960
+good that might be a good sign maybe the
+
+179
+00:07:47,960 --> 00:07:50,479
+tested accuracy is up but the thing is
+
+180
+00:07:50,479 --> 00:07:52,960
+your neural network could technically
+
+181
+00:07:52,960 --> 00:07:55,120
+theoretically also be memorizing that
+
+182
+00:07:55,120 --> 00:07:57,560
+training data but the test set data it
+
+183
+00:07:57,560 --> 00:07:59,680
+has not been trained on and in fact has
+
+184
+00:07:59,680 --> 00:08:01,639
+never been exposed to in terms of back
+
+185
+00:08:01,639 --> 00:08:04,159
+propagation so we know that it's not
+
+186
+00:08:04,159 --> 00:08:06,240
+just memorizing this test data so as
+
+187
+00:08:06,240 --> 00:08:07,879
+long as this test data is accuracy is
+
+188
+00:08:07,879 --> 00:08:09,360
+just going up and up and its error rate
+
+189
+00:08:09,360 --> 00:08:11,400
+is going down and down we know that our
+
+190
+00:08:11,400 --> 00:08:13,879
+neural network is not memorizing it's
+
+191
+00:08:13,879 --> 00:08:16,000
+generalizing because it's still finding
+
+192
+00:08:16,000 --> 00:08:18,080
+the patterns in that data so right as
+
+193
+00:08:18,080 --> 00:08:19,599
+we're done training our neural network
+
+194
+00:08:19,599 --> 00:08:21,319
+and we find that peak in the test set
+
+195
+00:08:21,319 --> 00:08:23,639
+data that's the only place we can stop
+
+196
+00:08:23,639 --> 00:08:25,560
+our neural network from training uh in
+
+197
+00:08:25,560 --> 00:08:27,759
+order to actually get a good result
+
+198
+00:08:27,759 --> 00:08:29,759
+which is something that we desire
+
+199
+00:08:29,759 --> 00:08:32,320
+in fact another thing uh that's that uh
+
+200
+00:08:32,320 --> 00:08:34,080
+can also be called overfitting in in a
+
+201
+00:08:34,080 --> 00:08:36,719
+neural network isn't just when you have
+
+202
+00:08:36,719 --> 00:08:39,000
+this peak and then it slightly go
+
+203
+00:08:39,000 --> 00:08:40,240
+slightly goes down it's basically like
+
+204
+00:08:40,240 --> 00:08:42,320
+this mountain over here uh like a little
+
+205
+00:08:42,320 --> 00:08:45,000
+wave here but there's another I guess
+
+206
+00:08:45,000 --> 00:08:48,440
+you could say part of uh I guess the
+
+207
+00:08:48,440 --> 00:08:51,240
+overfitting and so this other uh I guess
+
+208
+00:08:51,240 --> 00:08:53,760
+you could say bubble of overfitting is
+
+209
+00:08:53,760 --> 00:08:57,120
+when your tested accuracy never gets off
+
+210
+00:08:57,120 --> 00:08:59,160
+the ground you're giving your neur
+
+211
+00:08:59,160 --> 00:09:01,399
+neural network either too little or too
+
+212
+00:09:01,399 --> 00:09:03,640
+much data or data that doesn't really
+
+213
+00:09:03,640 --> 00:09:05,680
+have patterns at all and so what's
+
+214
+00:09:05,680 --> 00:09:07,640
+happening is your neural network is not
+
+215
+00:09:07,640 --> 00:09:10,160
+finding patterns at all what's happening
+
+216
+00:09:10,160 --> 00:09:12,200
+is it's just memorizing those inputs and
+
+217
+00:09:12,200 --> 00:09:14,120
+outputs and your tested accuracy is
+
+218
+00:09:14,120 --> 00:09:16,760
+either staying the same dist stalling or
+
+219
+00:09:16,760 --> 00:09:19,200
+it's falling down uh or it's just not
+
+220
+00:09:19,200 --> 00:09:22,000
+going high uh and so those uh two
+
+221
+00:09:22,000 --> 00:09:23,600
+explanations would really be what
+
+222
+00:09:23,600 --> 00:09:25,839
+overfitting is in neural networks and
+
+223
+00:09:25,839 --> 00:09:27,440
+that's exactly what the early stopping
+
+224
+00:09:27,440 --> 00:09:30,040
+algorithm will help you to a aeve uh and
+
+225
+00:09:30,040 --> 00:09:33,000
+of course help you to prevent uh by
+
+226
+00:09:33,000 --> 00:09:35,800
+finding that peak in the neural network
+
+227
+00:09:35,800 --> 00:09:37,920
+tested accuracy and chopping your
+
+228
+00:09:37,920 --> 00:09:40,160
+training there stopping it and of course
+
+229
+00:09:40,160 --> 00:09:42,200
+just using that neural network and if
+
+230
+00:09:42,200 --> 00:09:44,640
+you don't receive your desired accuracy
+
+231
+00:09:44,640 --> 00:09:46,839
+like we did here then you can of course
+
+232
+00:09:46,839 --> 00:09:48,200
+train your neural network with a
+
+233
+00:09:48,200 --> 00:09:49,760
+different set of neurons or different
+
+234
+00:09:49,760 --> 00:09:51,920
+types of neurons uh really whatever you
+
+235
+00:09:51,920 --> 00:09:55,360
+can in order to increase the
+
+236
+00:09:55,360 --> 00:09:57,880
+accuracy now that was a pretty short
+
+237
+00:09:57,880 --> 00:10:00,120
+video but I really do want to of course
+
+238
+00:10:00,120 --> 00:10:02,120
+explain this in a bit more depth as to
+
+239
+00:10:02,120 --> 00:10:05,040
+how you can prevent this type of I guess
+
+240
+00:10:05,040 --> 00:10:06,720
+you could say stalling in terms of
+
+241
+00:10:06,720 --> 00:10:09,360
+accuracy and so in just a little while
+
+242
+00:10:09,360 --> 00:10:11,880
+maybe a few weeks uh soon though I will
+
+243
+00:10:11,880 --> 00:10:14,399
+release another video as to how you can
+
+244
+00:10:14,399 --> 00:10:16,440
+actually implement this maybe with some
+
+245
+00:10:16,440 --> 00:10:18,600
+apis in Java or maybe a custom imple
+
+246
+00:10:18,600 --> 00:10:21,519
+implementation we'll see about that but
+
+247
+00:10:21,519 --> 00:10:23,079
+that's going to be it for this video
+
+248
+00:10:23,079 --> 00:10:24,760
+today so of course I really hope you
+
+249
+00:10:24,760 --> 00:10:26,360
+enjoyed and if you did please leave a
+
+250
+00:10:26,360 --> 00:10:28,160
+like down below if you think this could
+
+251
+00:10:28,160 --> 00:10:30,000
+help anybody else maybe if it even
+
+252
+00:10:30,000 --> 00:10:32,279
+helped you uh you can share the video as
+
+253
+00:10:32,279 --> 00:10:34,560
+well uh that would really help me out uh
+
+254
+00:10:34,560 --> 00:10:36,079
+of course if you have any questions
+
+255
+00:10:36,079 --> 00:10:37,839
+suggestions or feedback please do feel
+
+256
+00:10:37,839 --> 00:10:39,360
+free to leave them down in the comments
+
+257
+00:10:39,360 --> 00:10:41,440
+below email them to me at tagim Manny
+
+258
+00:10:41,440 --> 00:10:44,839
+gmail.com or tweet them to me at tajim
+
+259
+00:10:44,839 --> 00:10:47,160
+Manny of course if you really like my
+
+260
+00:10:47,160 --> 00:10:48,959
+content though and you want to see a lot
+
+261
+00:10:48,959 --> 00:10:50,519
+more of it please do consider
+
+262
+00:10:50,519 --> 00:10:52,519
+subscribing to my channel as well as it
+
+263
+00:10:52,519 --> 00:10:54,839
+really does help out a lot all right
+
+264
+00:10:54,839 --> 00:10:56,399
+then thank you very much that's going to
+
+265
+00:10:56,399 --> 00:11:01,040
+be it for this tutorial today goodbye

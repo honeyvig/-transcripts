@@ -1,0 +1,959 @@
+1
+00:00:01,199 --> 00:00:04,279
+hello and welcome today I'm going to be
+
+2
+00:00:04,279 --> 00:00:09,719
+showing you how to install any app or
+
+3
+00:00:09,719 --> 00:00:12,160
+get an IPA file of your excode project
+
+4
+00:00:12,160 --> 00:00:16,240
+either one um without going through the
+
+5
+00:00:16,240 --> 00:00:18,880
+entire process so first of all I'd like
+
+6
+00:00:18,880 --> 00:00:24,000
+to announce that um first of all using
+
+7
+00:00:24,000 --> 00:00:25,480
+my technique that I'm going to show you
+
+8
+00:00:25,480 --> 00:00:28,760
+in this video you will be able to put
+
+9
+00:00:28,760 --> 00:00:32,239
+test an yours on your device or somebody
+
+10
+00:00:32,239 --> 00:00:34,879
+else's device wireless about connecting
+
+11
+00:00:34,879 --> 00:00:37,079
+it to your computer and doing all that
+
+12
+00:00:37,079 --> 00:00:40,160
+stuff and you'll also be able to convert
+
+13
+00:00:40,160 --> 00:00:45,280
+yourx code project files to an IPA very
+
+14
+00:00:45,280 --> 00:00:48,960
+quickly so to get started I will just
+
+15
+00:00:48,960 --> 00:00:50,719
+quickly show
+
+16
+00:00:50,719 --> 00:00:53,800
+you uh I have my
+
+17
+00:00:53,800 --> 00:00:58,640
+Mac and I have actually an xcode project
+
+18
+00:00:58,640 --> 00:01:02,160
+I know those 15 glider puzzles so I'm
+
+19
+00:01:02,160 --> 00:01:03,760
+just going to open that up quickly as
+
+20
+00:01:03,760 --> 00:01:05,960
+you can see I'm going to xcode and turn
+
+21
+00:01:05,960 --> 00:01:08,360
+on my 15 number G let me just take my
+
+22
+00:01:08,360 --> 00:01:10,720
+iPhone out of the screen for the for a
+
+23
+00:01:10,720 --> 00:01:13,320
+while so you can
+
+24
+00:01:13,320 --> 00:01:17,520
+see and so here I am in the code and
+
+25
+00:01:17,520 --> 00:01:19,640
+let's say I wanted to make some changes
+
+26
+00:01:19,640 --> 00:01:21,360
+okay so maybe in my
+
+27
+00:01:21,360 --> 00:01:28,680
+storyboard I want the name to be T15
+
+28
+00:01:28,840 --> 00:01:32,479
+slider okay then I'll Center that
+
+29
+00:01:32,479 --> 00:01:35,000
+25 slider
+
+30
+00:01:35,000 --> 00:01:38,439
+again perfect now I want to get this to
+
+31
+00:01:38,439 --> 00:01:41,360
+my device number one wirelessly and I do
+
+32
+00:01:41,360 --> 00:01:44,399
+not want to go through xcode's archiving
+
+33
+00:01:44,399 --> 00:01:47,439
+process so what I'm going to do is I'm
+
+34
+00:01:47,439 --> 00:01:48,759
+going to go to the
+
+35
+00:01:48,759 --> 00:01:54,119
+top and I'm going to go product
+
+36
+00:01:54,119 --> 00:01:57,590
+clean and then product build for
+
+37
+00:01:57,590 --> 00:01:58,840
+[Music]
+
+38
+00:01:58,840 --> 00:02:00,880
+running what this is going to do is just
+
+39
+00:02:00,880 --> 00:02:03,399
+make sure that all the files are updated
+
+40
+00:02:03,399 --> 00:02:05,320
+I know it automatically does that I'm
+
+41
+00:02:05,320 --> 00:02:07,920
+just making sure so the program runs
+
+42
+00:02:07,920 --> 00:02:12,160
+well now I've made a few things first uh
+
+43
+00:02:12,160 --> 00:02:15,080
+the first one is actually an app and
+
+44
+00:02:15,080 --> 00:02:18,280
+what it basically does is it takes any
+
+45
+00:02:18,280 --> 00:02:19,519
+xcode
+
+46
+00:02:19,519 --> 00:02:23,480
+project and it will convert it to an IPA
+
+47
+00:02:23,480 --> 00:02:27,519
+for you uh with a GUI interface uh but
+
+48
+00:02:27,519 --> 00:02:29,319
+there's another method that uses a shell
+
+49
+00:02:29,319 --> 00:02:31,319
+script which is basically what the app
+
+50
+00:02:31,319 --> 00:02:34,920
+is using uh but in a GUI form but
+
+51
+00:02:34,920 --> 00:02:36,920
+there's the other way the terminal way
+
+52
+00:02:36,920 --> 00:02:39,480
+using terminal which I don't recommend
+
+53
+00:02:39,480 --> 00:02:41,519
+for advanced users but I'll show you
+
+54
+00:02:41,519 --> 00:02:44,239
+both methods let's start off with the
+
+55
+00:02:44,239 --> 00:02:46,720
+method of the
+
+56
+00:02:46,720 --> 00:02:49,480
+terminal so now I have this 15 number
+
+57
+00:02:49,480 --> 00:02:50,840
+game and I want to convert this to an
+
+58
+00:02:50,840 --> 00:02:52,920
+IPA and I don't want to go to the
+
+59
+00:02:52,920 --> 00:02:55,560
+through that all archive and stuff so
+
+60
+00:02:55,560 --> 00:02:57,159
+I'm going to right click on 50 number
+
+61
+00:02:57,159 --> 00:02:58,760
+game and Sh and
+
+62
+00:02:58,760 --> 00:03:02,080
+finder now what you have to do is you
+
+63
+00:03:02,080 --> 00:03:04,720
+have to make a debug folder on your
+
+64
+00:03:04,720 --> 00:03:08,200
+desktop for the GUI to work um and then
+
+65
+00:03:08,200 --> 00:03:09,680
+put the files and there will be a
+
+66
+00:03:09,680 --> 00:03:11,760
+download link to these in the
+
+67
+00:03:11,760 --> 00:03:14,280
+description um in it but if you're using
+
+68
+00:03:14,280 --> 00:03:17,040
+the terminal interface you don't really
+
+69
+00:03:17,040 --> 00:03:20,560
+need to have it in a specific folder but
+
+70
+00:03:20,560 --> 00:03:23,040
+this file and this file must be together
+
+71
+00:03:23,040 --> 00:03:24,599
+in the same
+
+72
+00:03:24,599 --> 00:03:26,799
+folder so what we're going to do is
+
+73
+00:03:26,799 --> 00:03:29,920
+we're going to search terminal in Sp
+
+74
+00:03:29,920 --> 00:03:31,319
+light and we're going to open up
+
+75
+00:03:31,319 --> 00:03:33,319
+terminal what we want to do is we want
+
+76
+00:03:33,319 --> 00:03:36,120
+to browse to our desktop and the debug
+
+77
+00:03:36,120 --> 00:03:37,560
+folder which is where I've stored all
+
+78
+00:03:37,560 --> 00:03:40,159
+these files and then what I'm going to
+
+79
+00:03:40,159 --> 00:03:44,120
+do is I'm going to run sh archive. sh
+
+80
+00:03:44,120 --> 00:03:46,720
+and then I'm going to drag in 15 number
+
+81
+00:03:46,720 --> 00:03:49,799
+game this get this gives it the path to
+
+82
+00:03:49,799 --> 00:03:53,200
+your xcode project if we click enter now
+
+83
+00:03:53,200 --> 00:03:55,480
+you'll see there's a new IPA folder on
+
+84
+00:03:55,480 --> 00:03:57,239
+the desktop and it's going to say it's
+
+85
+00:03:57,239 --> 00:03:59,920
+starting to build the IPA file for the
+
+86
+00:03:59,920 --> 00:04:03,840
+15 number game app so now we just wait
+
+87
+00:04:03,840 --> 00:04:06,720
+and see our result as you can see it
+
+88
+00:04:06,720 --> 00:04:09,760
+says archiving succeeded IPA created and
+
+89
+00:04:09,760 --> 00:04:12,079
+it says completed building IPA 415
+
+90
+00:04:12,079 --> 00:04:14,079
+number game which is the actual app's
+
+91
+00:04:14,079 --> 00:04:17,440
+name find it in the IPA folder on the
+
+92
+00:04:17,440 --> 00:04:20,320
+desktop so we go to our desktop and we
+
+93
+00:04:20,320 --> 00:04:22,360
+see an IPA folder we're going to open it
+
+94
+00:04:22,360 --> 00:04:24,840
+and boom that's where our IPA is but
+
+95
+00:04:24,840 --> 00:04:26,800
+let's say you don't know all this sh you
+
+96
+00:04:26,800 --> 00:04:28,280
+don't want to do all this tracking and
+
+97
+00:04:28,280 --> 00:04:31,880
+stuff there's another method
+
+98
+00:04:31,880 --> 00:04:34,240
+now there will be a download link to
+
+99
+00:04:34,240 --> 00:04:36,400
+this app also in the
+
+100
+00:04:36,400 --> 00:04:39,560
+description uh what this essentially
+
+101
+00:04:39,560 --> 00:04:42,360
+is is I've made another
+
+102
+00:04:42,360 --> 00:04:45,840
+app where all you do I'm going to delete
+
+103
+00:04:45,840 --> 00:04:47,440
+this other
+
+104
+00:04:47,440 --> 00:04:50,600
+IPA is you give it the you make sure
+
+105
+00:04:50,600 --> 00:04:52,160
+first of all that there's a folder on
+
+106
+00:04:52,160 --> 00:04:54,960
+your desktop named debug and the files
+
+107
+00:04:54,960 --> 00:04:56,960
+that I give you to download are inside
+
+108
+00:04:56,960 --> 00:05:00,240
+of that folder okay that must be on the
+
+109
+00:05:00,240 --> 00:05:04,039
+desktop and there so now it asks you for
+
+110
+00:05:04,039 --> 00:05:07,560
+the path to your xcode project file now
+
+111
+00:05:07,560 --> 00:05:09,639
+what you need to do is again you just
+
+112
+00:05:09,639 --> 00:05:11,560
+drag it in instead of writing the entire
+
+113
+00:05:11,560 --> 00:05:15,080
+path you convert it and then you wait
+
+114
+00:05:15,080 --> 00:05:17,280
+might load a little might look like it's
+
+115
+00:05:17,280 --> 00:05:19,639
+crashing or it's frozen but it's
+
+116
+00:05:19,639 --> 00:05:21,919
+actually from the inside not it's
+
+117
+00:05:21,919 --> 00:05:23,400
+actually doing work
+
+118
+00:05:23,400 --> 00:05:26,720
+inside um uh just converting it to an
+
+119
+00:05:26,720 --> 00:05:29,720
+IPA so as you can see gives us a result
+
+120
+00:05:29,720 --> 00:05:32,280
+zero and this means it succeeded in
+
+121
+00:05:32,280 --> 00:05:35,240
+creating it and so now we can go into
+
+122
+00:05:35,240 --> 00:05:38,280
+our IPA folder and you find
+
+123
+00:05:38,280 --> 00:05:41,600
+this and so this is I think this is much
+
+124
+00:05:41,600 --> 00:05:43,759
+more convenient than going through the
+
+125
+00:05:43,759 --> 00:05:50,160
+entire um archiving process and yeah so
+
+126
+00:05:50,160 --> 00:05:54,400
+now what I'm going to do is as you can
+
+127
+00:05:54,400 --> 00:05:59,880
+see my iPhone here is not connected Ed
+
+128
+00:05:59,880 --> 00:06:02,160
+to my
+
+129
+00:06:02,160 --> 00:06:06,960
+computer Wi-Fi sync is off nothing is
+
+130
+00:06:06,960 --> 00:06:10,240
+it's not able to communicate with my
+
+131
+00:06:10,240 --> 00:06:12,680
+computer I'm going to set this right
+
+132
+00:06:12,680 --> 00:06:15,960
+here so you can see this and just in
+
+133
+00:06:15,960 --> 00:06:18,639
+case you can't I will mirror this
+
+134
+00:06:18,639 --> 00:06:24,280
+on so okay what I'm going to do now is
+
+135
+00:06:24,280 --> 00:06:26,720
+I'm actually going to go to
+
+136
+00:06:26,720 --> 00:06:29,960
+Safari and I'm going to go to a website
+
+137
+00:06:29,960 --> 00:06:31,960
+this website is
+
+138
+00:06:31,960 --> 00:06:33,840
+dii
+
+139
+00:06:33,840 --> 00:06:37,960
+dii what this is it's um development iOS
+
+140
+00:06:37,960 --> 00:06:40,000
+apps Wireless
+
+141
+00:06:40,000 --> 00:06:42,800
+installation what the basically you drag
+
+142
+00:06:42,800 --> 00:06:45,080
+in your IPA file you click Send it'll
+
+143
+00:06:45,080 --> 00:06:47,440
+give you a link you put this link in a
+
+144
+00:06:47,440 --> 00:06:51,400
+tiny URL you put that tiny URL link onto
+
+145
+00:06:51,400 --> 00:06:55,240
+your Safari on your actual device and
+
+146
+00:06:55,240 --> 00:06:58,879
+then on your actual device using Safari
+
+147
+00:06:58,879 --> 00:07:03,160
+you actually uh download and install the
+
+148
+00:07:03,160 --> 00:07:06,160
+app so this is actually pretty neat uh
+
+149
+00:07:06,160 --> 00:07:07,960
+as you can see I'm going to go to my
+
+150
+00:07:07,960 --> 00:07:10,160
+desktop I use the
+
+151
+00:07:10,160 --> 00:07:12,800
+gesture um and I'm going to go into the
+
+152
+00:07:12,800 --> 00:07:15,840
+IPA folder I'm going to take this drag
+
+153
+00:07:15,840 --> 00:07:18,919
+it into Safari and drag it into where it
+
+154
+00:07:18,919 --> 00:07:22,000
+says add files
+
+155
+00:07:22,000 --> 00:07:26,599
+here drag files here and then basically
+
+156
+00:07:26,599 --> 00:07:29,599
+this is going to upload to the the
+
+157
+00:07:29,599 --> 00:07:32,960
+servers and then going to click
+
+158
+00:07:33,000 --> 00:07:36,639
+Send now you can see that this create
+
+159
+00:07:36,639 --> 00:07:39,360
+gives you a link now I bet you don't
+
+160
+00:07:39,360 --> 00:07:41,280
+want to type that out in your iOS device
+
+161
+00:07:41,280 --> 00:07:43,720
+and you're too lazy to send it through
+
+162
+00:07:43,720 --> 00:07:46,159
+email so all you need to do is go to
+
+163
+00:07:46,159 --> 00:07:50,319
+tinyurl.com problem solved what you do
+
+164
+00:07:50,319 --> 00:07:52,000
+is you enter this URL and I'm going to
+
+165
+00:07:52,000 --> 00:07:56,240
+give it a good name U what's SEC here
+
+166
+00:07:56,240 --> 00:07:58,599
+I'm going to give it a good name 15 game
+
+167
+00:07:58,599 --> 00:08:00,120
+beta 5
+
+168
+00:08:00,120 --> 00:08:02,759
+this is the fifth bait of it and I'm
+
+169
+00:08:02,759 --> 00:08:05,319
+going to click make tiny
+
+170
+00:08:05,319 --> 00:08:07,360
+URL what it's going to do is it's going
+
+171
+00:08:07,360 --> 00:08:13,080
+to shorten this link here into this link
+
+172
+00:08:13,080 --> 00:08:16,000
+so now uh if it would give me a moment
+
+173
+00:08:16,000 --> 00:08:18,720
+what I'm going to do
+
+174
+00:08:18,720 --> 00:08:22,280
+is I'm going to show you my iPhone
+
+175
+00:08:22,280 --> 00:08:25,159
+screen and at the same time mirror it
+
+176
+00:08:25,159 --> 00:08:28,000
+onto this monitor so that you can see
+
+177
+00:08:28,000 --> 00:08:30,680
+what's happening
+
+178
+00:08:30,680 --> 00:08:33,360
+as you can
+
+179
+00:08:33,399 --> 00:08:40,440
+see I'm going to mirror this to my
+
+180
+00:08:42,919 --> 00:08:46,680
+Mac and so just as proof this is
+
+181
+00:08:46,680 --> 00:08:48,440
+actually
+
+182
+00:08:48,440 --> 00:08:50,640
+mirroring and I'll keep this in front of
+
+183
+00:08:50,640 --> 00:08:52,240
+you at the same
+
+184
+00:08:52,240 --> 00:08:55,800
+time so what we want to do first is you
+
+185
+00:08:55,800 --> 00:08:59,399
+want to go to Safari inside of safari
+
+186
+00:08:59,399 --> 00:09:01,760
+you want to go to that tiny URL that you
+
+187
+00:09:01,760 --> 00:09:02,880
+just
+
+188
+00:09:02,880 --> 00:09:05,920
+created tiny
+
+189
+00:09:05,920 --> 00:09:08,560
+url.com
+
+190
+00:09:08,560 --> 00:09:12,560
+slash and then the 15
+
+191
+00:09:12,560 --> 00:09:18,000
+game beta 5 so I'm going to click
+
+192
+00:09:18,000 --> 00:09:20,720
+go and as you can see it brings up this
+
+193
+00:09:20,720 --> 00:09:24,279
+screen which is incredibly amazing and
+
+194
+00:09:24,279 --> 00:09:26,839
+it lets you install the application
+
+195
+00:09:26,839 --> 00:09:29,640
+straight from the website
+
+196
+00:09:29,640 --> 00:09:32,160
+and then you just click the install
+
+197
+00:09:32,160 --> 00:09:35,360
+application button it's going to say
+
+198
+00:09:35,360 --> 00:09:37,640
+install. the.com would it like to
+
+199
+00:09:37,640 --> 00:09:40,120
+install whatever your app name is in my
+
+200
+00:09:40,120 --> 00:09:42,680
+case 15 number game and I'm going to
+
+201
+00:09:42,680 --> 00:09:44,760
+click install because I want it to
+
+202
+00:09:44,760 --> 00:09:47,320
+install I'm going to close
+
+203
+00:09:47,320 --> 00:09:49,720
+Safari as you can see it's installing it
+
+204
+00:09:49,720 --> 00:09:52,440
+again now I already had this so I'm
+
+205
+00:09:52,440 --> 00:09:54,399
+going to delete this and install it
+
+206
+00:09:54,399 --> 00:09:57,320
+again sorry uh remember don't do the
+
+207
+00:09:57,320 --> 00:10:00,680
+same mistake um make sure you delete any
+
+208
+00:10:00,680 --> 00:10:02,839
+old versions that you have of this app
+
+209
+00:10:02,839 --> 00:10:05,360
+and then install it so I've deleted the
+
+210
+00:10:05,360 --> 00:10:07,399
+old version it's installing I'm going to
+
+211
+00:10:07,399 --> 00:10:10,480
+go in and as you can see it gives me the
+
+212
+00:10:10,480 --> 00:10:14,040
+T15 slide with all the changes we made
+
+213
+00:10:14,040 --> 00:10:15,959
+and now I can actually play this game I
+
+214
+00:10:15,959 --> 00:10:17,920
+can go to my about page I can do
+
+215
+00:10:17,920 --> 00:10:19,680
+whatever I want and just this proof that
+
+216
+00:10:19,680 --> 00:10:23,279
+this works I'll do the first two numbers
+
+217
+00:10:23,279 --> 00:10:28,040
+for you boom so that's basically how you
+
+218
+00:10:28,040 --> 00:10:31,760
+would uh first of all convert an xcode
+
+219
+00:10:31,760 --> 00:10:34,440
+project to an IPA um without going
+
+220
+00:10:34,440 --> 00:10:36,000
+through xcodes
+
+221
+00:10:36,000 --> 00:10:39,120
+interface and also second how you would
+
+222
+00:10:39,120 --> 00:10:42,639
+distribute your apps um uh Apple would
+
+223
+00:10:42,639 --> 00:10:44,560
+call this uh ad hoc
+
+224
+00:10:44,560 --> 00:10:48,720
+development uh distribution sorry
+
+225
+00:10:48,720 --> 00:10:54,240
+deployment um for free and that's it
+
+226
+00:10:54,240 --> 00:10:57,760
+thank you and goodbye and also one more
+
+227
+00:10:57,760 --> 00:11:02,240
+thing I'd like to give a a little credit
+
+228
+00:11:02,240 --> 00:11:08,519
+to some person on GitHub his name is
+
+229
+00:11:08,519 --> 00:11:09,839
+gilam
+
+230
+00:11:09,839 --> 00:11:13,880
+squant and he made the xcode archive
+
+231
+00:11:13,880 --> 00:11:16,959
+script uh and if you go to his GitHub
+
+232
+00:11:16,959 --> 00:11:20,200
+page you can get the xcode archive uh
+
+233
+00:11:20,200 --> 00:11:23,600
+Ruby script of which I have built off in
+
+234
+00:11:23,600 --> 00:11:27,399
+another file AR archive. sh which
+
+235
+00:11:27,399 --> 00:11:31,079
+basically um lets the other script work
+
+236
+00:11:31,079 --> 00:11:34,000
+so his script is basically the Bare
+
+237
+00:11:34,000 --> 00:11:38,560
+Bones of which I have built off and I've
+
+238
+00:11:38,560 --> 00:11:43,800
+actually been able to um create this um
+
+239
+00:11:43,800 --> 00:11:46,839
+excode archiver for you thank you and
+
+240
+00:11:46,839 --> 00:11:51,680
+now officially goodbye

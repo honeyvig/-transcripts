@@ -1,0 +1,1451 @@
+1
+00:00:00,970 --> 00:00:05,600
+[Music]
+
+2
+00:00:07,519 --> 00:00:09,900
+hello there and welcome to another
+
+3
+00:00:09,900 --> 00:00:12,660
+tutorial my name is tan May bakshi and
+
+4
+00:00:12,660 --> 00:00:13,920
+this time we're going to be going over
+
+5
+00:00:13,920 --> 00:00:17,160
+using the Nuance speech kit in Swift
+
+6
+00:00:17,160 --> 00:00:19,140
+with iOS
+
+7
+00:00:19,140 --> 00:00:21,180
+well to begin this was actually a
+
+8
+00:00:21,180 --> 00:00:22,680
+question sent to me by one of my
+
+9
+00:00:22,680 --> 00:00:25,220
+subscribers
+
+10
+00:00:26,039 --> 00:00:28,740
+on clip now this is tarabala Christian
+
+11
+00:00:28,740 --> 00:00:30,900
+one of my subscribers
+
+12
+00:00:30,900 --> 00:00:34,260
+days ago she on a YouTube comment uh on
+
+13
+00:00:34,260 --> 00:00:36,120
+my NS speech recognizer tutorial
+
+14
+00:00:36,120 --> 00:00:38,340
+actually asked me how we can actually
+
+15
+00:00:38,340 --> 00:00:42,360
+use the Nuance speech SDK for iOS with
+
+16
+00:00:42,360 --> 00:00:44,520
+swift so that's the tutorial I'm
+
+17
+00:00:44,520 --> 00:00:46,320
+creating today I hope this helps you out
+
+18
+00:00:46,320 --> 00:00:48,620
+Tara
+
+19
+00:00:50,039 --> 00:00:52,559
+season sent by Tara uh let's actually
+
+20
+00:00:52,559 --> 00:00:54,660
+get into the Mac part
+
+21
+00:00:54,660 --> 00:00:57,239
+I will be explaining exactly how we can
+
+22
+00:00:57,239 --> 00:01:00,899
+use the Nuance speech kit with swift too
+
+23
+00:01:00,899 --> 00:01:03,600
+so uh let's get right into it shall we
+
+24
+00:01:03,600 --> 00:01:06,119
+so welcome back to the Mac part and now
+
+25
+00:01:06,119 --> 00:01:08,760
+I'm going to be showing you uh well I
+
+26
+00:01:08,760 --> 00:01:10,439
+mean just before this super simple and
+
+27
+00:01:10,439 --> 00:01:12,240
+short code I'm going to show showing you
+
+28
+00:01:12,240 --> 00:01:14,640
+a demo of the app that I've made for
+
+29
+00:01:14,640 --> 00:01:17,340
+Tara so let's begin as you can see this
+
+30
+00:01:17,340 --> 00:01:19,619
+is my iPhone mirrored onto my Mac
+
+31
+00:01:19,619 --> 00:01:21,659
+alright so as you can see what I'm gonna
+
+32
+00:01:21,659 --> 00:01:24,840
+do is I am going to say a sentence into
+
+33
+00:01:24,840 --> 00:01:26,759
+this application and let's see if it can
+
+34
+00:01:26,759 --> 00:01:28,680
+convert it to text so as you can see
+
+35
+00:01:28,680 --> 00:01:30,720
+there is a listen button right over at
+
+36
+00:01:30,720 --> 00:01:32,340
+the bottom here so we're going to click
+
+37
+00:01:32,340 --> 00:01:34,560
+this this will turn into listening then
+
+38
+00:01:34,560 --> 00:01:37,500
+the label over here will uh tell us what
+
+39
+00:01:37,500 --> 00:01:39,360
+the result is uh right as we're done
+
+40
+00:01:39,360 --> 00:01:41,220
+saying things now this will
+
+41
+00:01:41,220 --> 00:01:43,200
+automatically detect when you are done
+
+42
+00:01:43,200 --> 00:01:45,000
+talking and so you don't need to click
+
+43
+00:01:45,000 --> 00:01:46,860
+any sort of stop button which is just
+
+44
+00:01:46,860 --> 00:01:49,500
+great again Siri is actually powered by
+
+45
+00:01:49,500 --> 00:01:51,960
+Nuance and so that's actually a really
+
+46
+00:01:51,960 --> 00:01:54,299
+neat fun fact But continuing though
+
+47
+00:01:54,299 --> 00:01:57,240
+let's uh begin so let's actually give it
+
+48
+00:01:57,240 --> 00:02:00,060
+something pretty simple like
+
+49
+00:02:00,060 --> 00:02:02,640
+I have a YouTube channel comma in which
+
+50
+00:02:02,640 --> 00:02:06,259
+I like to teach things period
+
+51
+00:02:06,420 --> 00:02:09,360
+as you can see it says I have a YouTube
+
+52
+00:02:09,360 --> 00:02:11,220
+channel in which I like to teach things
+
+53
+00:02:11,220 --> 00:02:13,020
+alright so that was pretty simple let's
+
+54
+00:02:13,020 --> 00:02:14,940
+try something else though as you can see
+
+55
+00:02:14,940 --> 00:02:16,080
+I'm going to click on listen and it
+
+56
+00:02:16,080 --> 00:02:18,840
+turns into listening
+
+57
+00:02:18,840 --> 00:02:22,080
+I have created this sample app for one
+
+58
+00:02:22,080 --> 00:02:25,040
+of my subscribers
+
+59
+00:02:26,400 --> 00:02:29,160
+as you can see it said I have created
+
+60
+00:02:29,160 --> 00:02:30,480
+this sample app for one of my
+
+61
+00:02:30,480 --> 00:02:32,760
+subscribers great as you can see Nuance
+
+62
+00:02:32,760 --> 00:02:34,440
+is actually pretty accurate now there's
+
+63
+00:02:34,440 --> 00:02:36,660
+one thing that I am going to save for
+
+64
+00:02:36,660 --> 00:02:38,819
+the last which is actually just
+
+65
+00:02:38,819 --> 00:02:40,860
+fascinating uh but then again the best
+
+66
+00:02:40,860 --> 00:02:43,200
+examples are going to be saved for the
+
+67
+00:02:43,200 --> 00:02:45,239
+last uh all right so now let's continue
+
+68
+00:02:45,239 --> 00:02:47,640
+though let's begin with the UI shall we
+
+69
+00:02:47,640 --> 00:02:49,440
+so as you can see the UI is even simpler
+
+70
+00:02:49,440 --> 00:02:51,780
+than the code the listen button has an
+
+71
+00:02:51,780 --> 00:02:54,660
+IB action on the touch up inside which
+
+72
+00:02:54,660 --> 00:02:56,700
+has button clicked can't get simpler
+
+73
+00:02:56,700 --> 00:02:58,379
+than that button click gets executed
+
+74
+00:02:58,379 --> 00:03:00,260
+right as you click a button done okay
+
+75
+00:03:00,260 --> 00:03:02,819
+referencing Outlets we have an IB Outlet
+
+76
+00:03:02,819 --> 00:03:05,459
+that's called a record button connected
+
+77
+00:03:05,459 --> 00:03:08,099
+to the button that's it all right but
+
+78
+00:03:08,099 --> 00:03:10,080
+the label is a bit different the label
+
+79
+00:03:10,080 --> 00:03:11,640
+is actually connected only to an IB
+
+80
+00:03:11,640 --> 00:03:14,940
+Outlet that's called result label okay
+
+81
+00:03:14,940 --> 00:03:17,159
+that's the label now as you can see in
+
+82
+00:03:17,159 --> 00:03:19,379
+the code we actually have those two IB
+
+83
+00:03:19,379 --> 00:03:21,959
+Outlets uh record button which is a UI
+
+84
+00:03:21,959 --> 00:03:23,819
+button and result label which is a UI
+
+85
+00:03:23,819 --> 00:03:25,920
+label now as you can see view controller
+
+86
+00:03:25,920 --> 00:03:27,840
+doesn't just in uh actually let me see
+
+87
+00:03:27,840 --> 00:03:31,140
+UI view controller uh is a class so it
+
+88
+00:03:31,140 --> 00:03:33,180
+doesn't just inherit from UI view
+
+89
+00:03:33,180 --> 00:03:35,879
+controller but it actually conforms to
+
+90
+00:03:35,879 --> 00:03:39,480
+the SK transaction delegate protocol and
+
+91
+00:03:39,480 --> 00:03:41,099
+in case you were wondering actually if
+
+92
+00:03:41,099 --> 00:03:42,959
+you were to click on command on your
+
+93
+00:03:42,959 --> 00:03:45,000
+keyboard actually I promise I'm clicking
+
+94
+00:03:45,000 --> 00:03:46,799
+command on my keyboard and if you move
+
+95
+00:03:46,799 --> 00:03:48,000
+around your mouse you can actually see
+
+96
+00:03:48,000 --> 00:03:50,459
+these things convert into links whenever
+
+97
+00:03:50,459 --> 00:03:52,620
+you hover over something and so
+
+98
+00:03:52,620 --> 00:03:55,019
+basically if I hover over SK transaction
+
+99
+00:03:55,019 --> 00:03:57,239
+delegate and I click on it and then I
+
+100
+00:03:57,239 --> 00:03:59,940
+release command and the click as you can
+
+101
+00:03:59,940 --> 00:04:01,739
+see basically it shows us where this is
+
+102
+00:04:01,739 --> 00:04:03,780
+defined and as you can see right now
+
+103
+00:04:03,780 --> 00:04:07,140
+this is actually a public protocol of SK
+
+104
+00:04:07,140 --> 00:04:09,239
+transaction delegate in the nuanced
+
+105
+00:04:09,239 --> 00:04:12,299
+speech kit framework and so that's why I
+
+106
+00:04:12,299 --> 00:04:14,040
+know that this is a protocol so I can
+
+107
+00:04:14,040 --> 00:04:15,720
+say that this can then new controller
+
+108
+00:04:15,720 --> 00:04:17,820
+conforms to it not in the hair it's from
+
+109
+00:04:17,820 --> 00:04:19,739
+if it were to inherit from that would be
+
+110
+00:04:19,739 --> 00:04:22,320
+a class conforms to linear protocol all
+
+111
+00:04:22,320 --> 00:04:24,300
+right so I'm going to explain exactly
+
+112
+00:04:24,300 --> 00:04:25,919
+what the difference is in just a second
+
+113
+00:04:25,919 --> 00:04:27,479
+but then again that's an entirely
+
+114
+00:04:27,479 --> 00:04:30,600
+separate video uh but I will explain in
+
+115
+00:04:30,600 --> 00:04:33,600
+minor detail right now in just a second
+
+116
+00:04:33,600 --> 00:04:35,639
+then let's look at the IB action
+
+117
+00:04:35,639 --> 00:04:37,740
+function called button clicked now what
+
+118
+00:04:37,740 --> 00:04:39,360
+does this do basically we're going to
+
+119
+00:04:39,360 --> 00:04:41,520
+take the record button and we're going
+
+120
+00:04:41,520 --> 00:04:43,680
+to set its title to listening and for
+
+121
+00:04:43,680 --> 00:04:45,120
+State normal you don't need to worry
+
+122
+00:04:45,120 --> 00:04:46,440
+about that this that's just telling
+
+123
+00:04:46,440 --> 00:04:47,940
+record button that it's still a normal
+
+124
+00:04:47,940 --> 00:04:50,220
+button it's it's not weird
+
+125
+00:04:50,220 --> 00:04:51,000
+um
+
+126
+00:04:51,000 --> 00:04:54,419
+so basically uh the record buttons title
+
+127
+00:04:54,419 --> 00:04:56,040
+is now listening instead of listen
+
+128
+00:04:56,040 --> 00:04:58,320
+because you've clicked on it but then
+
+129
+00:04:58,320 --> 00:05:00,240
+after that we actually create a session
+
+130
+00:05:00,240 --> 00:05:01,919
+which is equal to a new speech kit
+
+131
+00:05:01,919 --> 00:05:04,199
+session or SK session for short if we go
+
+132
+00:05:04,199 --> 00:05:07,040
+into this this is inside of speech kit
+
+133
+00:05:07,040 --> 00:05:10,380
+and so basically what we're doing here
+
+134
+00:05:10,380 --> 00:05:12,180
+is we're creating that SK session with a
+
+135
+00:05:12,180 --> 00:05:15,419
+URL now basically the hard part is comes
+
+136
+00:05:15,419 --> 00:05:16,979
+in you want you're going to want to
+
+137
+00:05:16,979 --> 00:05:18,360
+actually go to the link in the
+
+138
+00:05:18,360 --> 00:05:20,160
+description uh the link in the
+
+139
+00:05:20,160 --> 00:05:22,199
+description basically brings you to a
+
+140
+00:05:22,199 --> 00:05:25,139
+page in Nuance that allows you to
+
+141
+00:05:25,139 --> 00:05:28,979
+actually register for an API key and so
+
+142
+00:05:28,979 --> 00:05:31,259
+once you've done that uh you will
+
+143
+00:05:31,259 --> 00:05:32,880
+actually get something called a Sandbox
+
+144
+00:05:32,880 --> 00:05:35,940
+credential now basically this is a
+
+145
+00:05:35,940 --> 00:05:39,120
+development credential uh and when
+
+146
+00:05:39,120 --> 00:05:40,860
+you're sort of developing your app with
+
+147
+00:05:40,860 --> 00:05:43,080
+Nuance you want to use these credentials
+
+148
+00:05:43,080 --> 00:05:44,580
+because they're absolutely free and who
+
+149
+00:05:44,580 --> 00:05:47,400
+doesn't like free stuff however what
+
+150
+00:05:47,400 --> 00:05:49,139
+this is not fit for production use okay
+
+151
+00:05:49,139 --> 00:05:50,820
+you want something that's paid when you
+
+152
+00:05:50,820 --> 00:05:53,100
+actually actually use it for a sort of
+
+153
+00:05:53,100 --> 00:05:55,500
+real life when it's on the App Store
+
+154
+00:05:55,500 --> 00:05:58,740
+basically and so basically uh you're
+
+155
+00:05:58,740 --> 00:06:00,419
+just going to want to pay when you're
+
+156
+00:06:00,419 --> 00:06:03,120
+actually uh using it for production but
+
+157
+00:06:03,120 --> 00:06:04,440
+right now when you're developing it I
+
+158
+00:06:04,440 --> 00:06:06,360
+guess uh the free credentials work
+
+159
+00:06:06,360 --> 00:06:07,740
+perfectly fine and they're called
+
+160
+00:06:07,740 --> 00:06:10,139
+sandbox credentials uh so basically what
+
+161
+00:06:10,139 --> 00:06:11,639
+you're going to want to do is take those
+
+162
+00:06:11,639 --> 00:06:14,220
+sandbox credentials and I mean I'm using
+
+163
+00:06:14,220 --> 00:06:15,660
+speech kit too but you could also use
+
+164
+00:06:15,660 --> 00:06:17,340
+speech kit one but I don't see why you
+
+165
+00:06:17,340 --> 00:06:19,020
+would do that since they have newer
+
+166
+00:06:19,020 --> 00:06:21,240
+versions released now and so basically
+
+167
+00:06:21,240 --> 00:06:22,500
+what you're going to do is you're going
+
+168
+00:06:22,500 --> 00:06:25,160
+to take the link that you get on these
+
+169
+00:06:25,160 --> 00:06:27,600
+speech kit too
+
+170
+00:06:27,600 --> 00:06:28,199
+um
+
+171
+00:06:28,199 --> 00:06:30,720
+under speaker two you'll see a link and
+
+172
+00:06:30,720 --> 00:06:32,100
+you're going to take that link and it'll
+
+173
+00:06:32,100 --> 00:06:33,900
+look something like this except instead
+
+174
+00:06:33,900 --> 00:06:36,479
+of tagumanny gmail.com it'll be your own
+
+175
+00:06:36,479 --> 00:06:38,580
+email and then lots of other random
+
+176
+00:06:38,580 --> 00:06:40,199
+letters along with the date that you
+
+177
+00:06:40,199 --> 00:06:42,600
+registered I assume this is I Don't Know
+
+178
+00:06:42,600 --> 00:06:44,940
+But continuing though it'll just give
+
+179
+00:06:44,940 --> 00:06:47,039
+you a link and you want to copy that and
+
+180
+00:06:47,039 --> 00:06:49,620
+paste it into this string okay I have
+
+181
+00:06:49,620 --> 00:06:51,419
+already done that then it's also going
+
+182
+00:06:51,419 --> 00:06:53,160
+to give you an application token near
+
+183
+00:06:53,160 --> 00:06:56,220
+the end uh but before speech kit one and
+
+184
+00:06:56,220 --> 00:06:57,960
+you're going to want to copy that into
+
+185
+00:06:57,960 --> 00:07:00,360
+here as well once you're done you're
+
+186
+00:07:00,360 --> 00:07:02,160
+going to actually type in another line
+
+187
+00:07:02,160 --> 00:07:04,380
+of code and this will essentially tell
+
+188
+00:07:04,380 --> 00:07:06,600
+the session that's uh and so the session
+
+189
+00:07:06,600 --> 00:07:08,639
+is basically connecting to the Nuance
+
+190
+00:07:08,639 --> 00:07:10,979
+SDK in the cloud and so basically what
+
+191
+00:07:10,979 --> 00:07:12,060
+you're going to do is you're going to
+
+192
+00:07:12,060 --> 00:07:13,800
+say you know what start listening
+
+193
+00:07:13,800 --> 00:07:16,139
+through the microphone for some sort of
+
+194
+00:07:16,139 --> 00:07:18,780
+uh user voice and so basically we're
+
+195
+00:07:18,780 --> 00:07:21,300
+going to say session dot recognize with
+
+196
+00:07:21,300 --> 00:07:24,120
+type SK transaction speech type
+
+197
+00:07:24,120 --> 00:07:26,639
+dictation what does this mean what do
+
+198
+00:07:26,639 --> 00:07:28,680
+these Ren letters mean they basically
+
+199
+00:07:28,680 --> 00:07:30,720
+just mean that Nuance will listen for
+
+200
+00:07:30,720 --> 00:07:33,840
+users voice and convert it into uh text
+
+201
+00:07:33,840 --> 00:07:36,020
+it'll dictate it okay
+
+202
+00:07:36,020 --> 00:07:39,720
+or the user will dictate to it basically
+
+203
+00:07:39,720 --> 00:07:41,460
+okay so that's what that is you don't
+
+204
+00:07:41,460 --> 00:07:42,960
+really need to worry about that too much
+
+205
+00:07:42,960 --> 00:07:44,340
+I don't know why they haven't created
+
+206
+00:07:44,340 --> 00:07:46,380
+enumeration for this but they haven't
+
+207
+00:07:46,380 --> 00:07:48,120
+for some reason now they could have done
+
+208
+00:07:48,120 --> 00:07:51,180
+SK transaction.speech type dot or speech
+
+209
+00:07:51,180 --> 00:07:53,099
+type dot dictation sorry uh which would
+
+210
+00:07:53,099 --> 00:07:54,539
+have been a bit cleaner way of doing it
+
+211
+00:07:54,539 --> 00:07:57,300
+but whatever uh continuing though then
+
+212
+00:07:57,300 --> 00:07:59,099
+we set the detection to long now this
+
+213
+00:07:59,099 --> 00:08:01,560
+can also be short or none uh and so
+
+214
+00:08:01,560 --> 00:08:03,660
+basically long means that the user will
+
+215
+00:08:03,660 --> 00:08:06,000
+be able to literally say in paragraphs
+
+216
+00:08:06,000 --> 00:08:07,740
+with punctuation and stuff but you could
+
+217
+00:08:07,740 --> 00:08:09,360
+also set this to short and that would be
+
+218
+00:08:09,360 --> 00:08:11,160
+like a sentence for like a quick text
+
+219
+00:08:11,160 --> 00:08:13,080
+message and you could even set this To
+
+220
+00:08:13,080 --> 00:08:15,300
+None now the reason I'm not doing none
+
+221
+00:08:15,300 --> 00:08:17,099
+is because that would require an
+
+222
+00:08:17,099 --> 00:08:18,960
+entirely separate function from that
+
+223
+00:08:18,960 --> 00:08:21,240
+delicate that were or that delegate that
+
+224
+00:08:21,240 --> 00:08:23,039
+we are conforming to SK transaction
+
+225
+00:08:23,039 --> 00:08:25,800
+delegate and so basically we would have
+
+226
+00:08:25,800 --> 00:08:27,599
+to sort of say when the user would click
+
+227
+00:08:27,599 --> 00:08:30,599
+a stop button uh in order for nuance to
+
+228
+00:08:30,599 --> 00:08:33,479
+actually stop listening for the user's
+
+229
+00:08:33,479 --> 00:08:36,180
+voice and but with detection it'll
+
+230
+00:08:36,180 --> 00:08:38,339
+automatically realize when the user is
+
+231
+00:08:38,339 --> 00:08:40,500
+done saying stuff and will automatically
+
+232
+00:08:40,500 --> 00:08:42,779
+just sort of stop listening and sort of
+
+233
+00:08:42,779 --> 00:08:45,660
+tell us the answer so that's why I use
+
+234
+00:08:45,660 --> 00:08:48,120
+detection and so that's why I also like
+
+235
+00:08:48,120 --> 00:08:49,920
+to keep it on long because with long you
+
+236
+00:08:49,920 --> 00:08:51,720
+can really say short stuff as well it
+
+237
+00:08:51,720 --> 00:08:53,580
+just isn't as good at it but with short
+
+238
+00:08:53,580 --> 00:08:55,500
+you can't really say it as long of
+
+239
+00:08:55,500 --> 00:08:57,120
+things so I'm just going to keep it that
+
+240
+00:08:57,120 --> 00:08:58,680
+long you can always change this if you'd
+
+241
+00:08:58,680 --> 00:09:00,720
+like and if you need help with the dot
+
+242
+00:09:00,720 --> 00:09:02,700
+none option please do tell me I will
+
+243
+00:09:02,700 --> 00:09:04,620
+have my contact info at the end of the
+
+244
+00:09:04,620 --> 00:09:06,779
+video but continuing dog
+
+245
+00:09:06,779 --> 00:09:08,580
+and then we set the language to English
+
+246
+00:09:08,580 --> 00:09:10,740
+USA now again you can use whatever
+
+247
+00:09:10,740 --> 00:09:13,620
+language you have I assume there is a
+
+248
+00:09:13,620 --> 00:09:15,360
+link in the documentation for the
+
+249
+00:09:15,360 --> 00:09:18,660
+nuanced speech kit SDK and so basically
+
+250
+00:09:18,660 --> 00:09:20,279
+they would describe sort of the
+
+251
+00:09:20,279 --> 00:09:22,019
+languages that are actually compatible
+
+252
+00:09:22,019 --> 00:09:25,019
+with nuance and so if they do have a
+
+253
+00:09:25,019 --> 00:09:26,880
+page like that if I'm able to find it it
+
+254
+00:09:26,880 --> 00:09:29,220
+will be in the description I hope I find
+
+255
+00:09:29,220 --> 00:09:31,860
+it for you that's uh basically then
+
+256
+00:09:31,860 --> 00:09:34,680
+we've set the delicate uh the delegate I
+
+257
+00:09:34,680 --> 00:09:36,779
+don't know why it's in delicate delegate
+
+258
+00:09:36,779 --> 00:09:39,360
+uh then we set the delegates of that
+
+259
+00:09:39,360 --> 00:09:41,519
+session to sell because we are
+
+260
+00:09:41,519 --> 00:09:43,440
+conforming to that protocol and that
+
+261
+00:09:43,440 --> 00:09:45,480
+there has to be a reason for it and so
+
+262
+00:09:45,480 --> 00:09:46,980
+this is why we're actually doing that
+
+263
+00:09:46,980 --> 00:09:49,200
+all right so that's why yeah that's
+
+264
+00:09:49,200 --> 00:09:50,279
+basically what we're gonna do there
+
+265
+00:09:50,279 --> 00:09:52,140
+however
+
+266
+00:09:52,140 --> 00:09:55,200
+what happens when Nuance is done sort of
+
+267
+00:09:55,200 --> 00:09:57,540
+getting the answer for us well that's
+
+268
+00:09:57,540 --> 00:10:00,420
+where the next function comes in now
+
+269
+00:10:00,420 --> 00:10:03,300
+to a protocol the protocol will give us
+
+270
+00:10:03,300 --> 00:10:05,220
+optional functions that we can or
+
+271
+00:10:05,220 --> 00:10:07,140
+mandatory functions that we can include
+
+272
+00:10:07,140 --> 00:10:09,839
+into our code in order to add some
+
+273
+00:10:09,839 --> 00:10:12,240
+functionality for example this sessions
+
+274
+00:10:12,240 --> 00:10:14,880
+delegate has been set to sell and so now
+
+275
+00:10:14,880 --> 00:10:17,399
+what it's going to do is since we
+
+276
+00:10:17,399 --> 00:10:20,279
+conform to this delegate and we're
+
+277
+00:10:20,279 --> 00:10:22,260
+setting ourselves to that sort of a
+
+278
+00:10:22,260 --> 00:10:24,180
+delegate of the session
+
+279
+00:10:24,180 --> 00:10:26,580
+it'll know that when we're done we have
+
+280
+00:10:26,580 --> 00:10:29,100
+to contact view controller
+
+281
+00:10:29,100 --> 00:10:31,620
+transaction function now there are many
+
+282
+00:10:31,620 --> 00:10:34,160
+transaction functions in this protocol
+
+283
+00:10:34,160 --> 00:10:36,899
+however one of them which is uh quite
+
+284
+00:10:36,899 --> 00:10:38,640
+interesting called didn't receive
+
+285
+00:10:38,640 --> 00:10:41,100
+recognition this one will actually be
+
+286
+00:10:41,100 --> 00:10:45,120
+called when the Nuance SDK is done sort
+
+287
+00:10:45,120 --> 00:10:47,160
+of recognizing what the user said in
+
+288
+00:10:47,160 --> 00:10:49,320
+transcribing it and so basically what we
+
+289
+00:10:49,320 --> 00:10:51,660
+do here is we actually get an SK
+
+290
+00:10:51,660 --> 00:10:55,079
+recognition from the nuance svk
+
+291
+00:10:55,079 --> 00:10:57,420
+after that what we want to do is we want
+
+292
+00:10:57,420 --> 00:10:59,459
+to take the highest scoring candidate
+
+293
+00:10:59,459 --> 00:11:02,779
+from that entire list of uh sort of
+
+294
+00:11:02,779 --> 00:11:05,940
+candidate answers of what uh the what
+
+295
+00:11:05,940 --> 00:11:08,100
+the user could have said we want to take
+
+296
+00:11:08,100 --> 00:11:10,019
+the highest scoring candidate and we
+
+297
+00:11:10,019 --> 00:11:11,399
+want to put that into a string okay
+
+298
+00:11:11,399 --> 00:11:12,959
+we're going to put that into one string
+
+299
+00:11:12,959 --> 00:11:16,320
+and put that into the result labels text
+
+300
+00:11:16,320 --> 00:11:18,600
+um we're going to set that as the text
+
+301
+00:11:18,600 --> 00:11:21,240
+of result label which is our UI label
+
+302
+00:11:21,240 --> 00:11:23,880
+that we uh declared up here all right so
+
+303
+00:11:23,880 --> 00:11:25,500
+once we've done that we've already given
+
+304
+00:11:25,500 --> 00:11:28,500
+our user uh the answer for them then
+
+305
+00:11:28,500 --> 00:11:29,820
+what we're going to do is we're going to
+
+306
+00:11:29,820 --> 00:11:32,220
+set the record buttons title back to
+
+307
+00:11:32,220 --> 00:11:34,079
+listen because we're done listening now
+
+308
+00:11:34,079 --> 00:11:35,760
+we're not listening to the user anymore
+
+309
+00:11:35,760 --> 00:11:37,740
+and so we're going to set the button
+
+310
+00:11:37,740 --> 00:11:39,720
+back to listen
+
+311
+00:11:39,720 --> 00:11:42,060
+that's it all right so that was pretty
+
+312
+00:11:42,060 --> 00:11:44,279
+much uh all we had to uh describe for
+
+313
+00:11:44,279 --> 00:11:46,740
+the code but now as I said I'd like to
+
+314
+00:11:46,740 --> 00:11:48,120
+show you one more thing which is
+
+315
+00:11:48,120 --> 00:11:51,000
+actually absolutely fascinating if I
+
+316
+00:11:51,000 --> 00:11:53,880
+were to actually say to this app
+
+317
+00:11:53,880 --> 00:11:55,800
+okay I have to get ready this is a lot
+
+318
+00:11:55,800 --> 00:11:59,420
+of stuff to say all right
+
+319
+00:11:59,820 --> 00:12:02,459
+this app is running on an iPhone comma
+
+320
+00:12:02,459 --> 00:12:06,240
+which runs iOS comma however comma my
+
+321
+00:12:06,240 --> 00:12:09,540
+Mac comma which is an iMac comma runs
+
+322
+00:12:09,540 --> 00:12:14,640
+Mac OS X comma which runs xcode comma
+
+323
+00:12:14,640 --> 00:12:17,640
+okay great so as you can see uh what has
+
+324
+00:12:17,640 --> 00:12:19,320
+happened is it says transcribe the
+
+325
+00:12:19,320 --> 00:12:22,019
+entire thing uh into this app is running
+
+326
+00:12:22,019 --> 00:12:24,480
+on the iPhone which runs iOS however my
+
+327
+00:12:24,480 --> 00:12:27,480
+Mac which is an iMac runs Mac Oh Mac OS
+
+328
+00:12:27,480 --> 00:12:30,540
+X Mac OS X which runs xcode now this
+
+329
+00:12:30,540 --> 00:12:33,300
+usually works if I were to say
+
+330
+00:12:33,300 --> 00:12:38,300
+Mac OS X runs on my iMac
+
+331
+00:12:38,940 --> 00:12:41,880
+and for some reason it gives us m-a-c-k
+
+332
+00:12:41,880 --> 00:12:43,800
+don't know why it was working a few
+
+333
+00:12:43,800 --> 00:12:46,680
+minutes ago anyway uh so I mean that's a
+
+334
+00:12:46,680 --> 00:12:49,500
+problem with the Nuance SDK not with our
+
+335
+00:12:49,500 --> 00:12:52,200
+code so I mean that would be fixed soon
+
+336
+00:12:52,200 --> 00:12:55,200
+I guess it keeps changing I guess I mean
+
+337
+00:12:55,200 --> 00:12:56,820
+it's machine learning so it would have
+
+338
+00:12:56,820 --> 00:12:59,639
+kept learning from people's uh responses
+
+339
+00:12:59,639 --> 00:13:01,800
+to the SDK but then again whatever
+
+340
+00:13:01,800 --> 00:13:04,620
+continuing that's gonna be it for this
+
+341
+00:13:04,620 --> 00:13:06,360
+tutorial I really hope this uh you
+
+342
+00:13:06,360 --> 00:13:07,800
+enjoyed and I really hope this was
+
+343
+00:13:07,800 --> 00:13:10,380
+helpful for your project Tara uh if you
+
+344
+00:13:10,380 --> 00:13:12,420
+have any more if uh you have any more
+
+345
+00:13:12,420 --> 00:13:14,220
+questions with your projects uh
+
+346
+00:13:14,220 --> 00:13:15,899
+regarding the iOS development I'd be
+
+347
+00:13:15,899 --> 00:13:18,540
+glad to help and everyone else if you
+
+348
+00:13:18,540 --> 00:13:20,459
+would also require help uh you can
+
+349
+00:13:20,459 --> 00:13:22,800
+actually comment down below uh with your
+
+350
+00:13:22,800 --> 00:13:24,959
+question suggestion or feedback and I'd
+
+351
+00:13:24,959 --> 00:13:26,820
+be happy to get back to you you can even
+
+352
+00:13:26,820 --> 00:13:30,240
+email me at tajimani gmail.com and you
+
+353
+00:13:30,240 --> 00:13:32,700
+can also tweet to me at tajimani that's
+
+354
+00:13:32,700 --> 00:13:33,779
+gonna be it for this video If you
+
+355
+00:13:33,779 --> 00:13:35,579
+enjoyed please leave a like subscribe to
+
+356
+00:13:35,579 --> 00:13:37,079
+my channel if you really liked it and
+
+357
+00:13:37,079 --> 00:13:38,579
+even share the video that would really
+
+358
+00:13:38,579 --> 00:13:41,220
+help out a lot uh in fact I actually
+
+359
+00:13:41,220 --> 00:13:43,139
+just hit 1 000 subscribers a few days
+
+360
+00:13:43,139 --> 00:13:45,899
+ago hooray but uh continuing though hope
+
+361
+00:13:45,899 --> 00:13:47,339
+you enjoyed Please Subscribe that's
+
+362
+00:13:47,339 --> 00:13:50,120
+gonna be it for this video goodbye
+
+363
+00:13:50,120 --> 00:13:53,029
+[Music]

@@ -1,0 +1,807 @@
+1
+00:00:00,000 --> 00:00:01,680
+so hello there and welcome to another
+
+2
+00:00:01,680 --> 00:00:03,520
+tutorial my name is tanray bakshi and
+
+3
+00:00:03,520 --> 00:00:05,200
+today i'm really glad to get to talk
+
+4
+00:00:05,200 --> 00:00:08,240
+about the new m1 max with an x macbook
+
+5
+00:00:08,240 --> 00:00:10,719
+pro and specifically running minecraft
+
+6
+00:00:10,719 --> 00:00:12,480
+on it as you know a little while ago i
+
+7
+00:00:12,480 --> 00:00:14,240
+released a tutorial on how you can run
+
+8
+00:00:14,240 --> 00:00:16,160
+minecraft natively on apple silicon for
+
+9
+00:00:16,160 --> 00:00:18,400
+the very first time uh to the best of my
+
+10
+00:00:18,400 --> 00:00:19,920
+knowledge it was the first tutorial on
+
+11
+00:00:19,920 --> 00:00:21,840
+the internet telling you how to run
+
+12
+00:00:21,840 --> 00:00:24,240
+minecraft natively on apple silicon back
+
+13
+00:00:24,240 --> 00:00:25,599
+when they had released the m1 with the
+
+14
+00:00:25,599 --> 00:00:28,000
+macbook air and the 13-inch macbook pro
+
+15
+00:00:28,000 --> 00:00:29,920
+as a matter of fact i'm linking to my
+
+16
+00:00:29,920 --> 00:00:31,920
+tutorial the first ever resource to run
+
+17
+00:00:31,920 --> 00:00:33,840
+minecraft natively on apple silicon down
+
+18
+00:00:33,840 --> 00:00:35,520
+in the description below so make sure
+
+19
+00:00:35,520 --> 00:00:36,559
+you take a look at that if you want to
+
+20
+00:00:36,559 --> 00:00:38,320
+understand a little bit more about what
+
+21
+00:00:38,320 --> 00:00:40,239
+went behind actually getting minecraft
+
+22
+00:00:40,239 --> 00:00:41,680
+to run natively and some of the
+
+23
+00:00:41,680 --> 00:00:43,520
+advantages of apple silicon in general
+
+24
+00:00:43,520 --> 00:00:45,520
+and now here's the thing after that not
+
+25
+00:00:45,520 --> 00:00:47,760
+much progress was made on minecraft or
+
+26
+00:00:47,760 --> 00:00:49,280
+microsoft's end on getting it to run
+
+27
+00:00:49,280 --> 00:00:51,280
+natively on apple silicon and still my
+
+28
+00:00:51,280 --> 00:00:52,800
+tutorial is pretty much the only way for
+
+29
+00:00:52,800 --> 00:00:54,559
+you to actually run it natively i
+
+30
+00:00:54,559 --> 00:00:56,239
+released a github gist telling you
+
+31
+00:00:56,239 --> 00:00:57,920
+exactly how to do it i've pre-compiled
+
+32
+00:00:57,920 --> 00:01:00,879
+all the dependencies like lwjgl and so
+
+33
+00:01:00,879 --> 00:01:02,480
+on and so forth there have been lots of
+
+34
+00:01:02,480 --> 00:01:04,000
+different folks on the github just
+
+35
+00:01:04,000 --> 00:01:06,000
+contributing different you know ideas to
+
+36
+00:01:06,000 --> 00:01:07,200
+how you can make it better like for
+
+37
+00:01:07,200 --> 00:01:09,760
+example integrating multi-mc integrating
+
+38
+00:01:09,760 --> 00:01:11,520
+forge and fabric and optiflying and all
+
+39
+00:01:11,520 --> 00:01:13,360
+these other great ideas in fact there
+
+40
+00:01:13,360 --> 00:01:15,280
+are also some workarounds to enable you
+
+41
+00:01:15,280 --> 00:01:18,000
+to log in with microsoft accounts like
+
+42
+00:01:18,000 --> 00:01:20,159
+for example using the minecraft native
+
+43
+00:01:20,159 --> 00:01:22,080
+launcher and then using that to launch
+
+44
+00:01:22,080 --> 00:01:24,400
+an intel version of minecraft closing it
+
+45
+00:01:24,400 --> 00:01:25,920
+finding the json where it stores the
+
+46
+00:01:25,920 --> 00:01:27,439
+access token and then using that access
+
+47
+00:01:27,439 --> 00:01:29,600
+token in my script in order to log you
+
+48
+00:01:29,600 --> 00:01:31,759
+into minecraft but here's the problem
+
+49
+00:01:31,759 --> 00:01:34,240
+that's really inconvenient and it seems
+
+50
+00:01:34,240 --> 00:01:36,400
+like minecraft and microsoft really want
+
+51
+00:01:36,400 --> 00:01:38,560
+to push people to using microsoft
+
+52
+00:01:38,560 --> 00:01:40,400
+accounts to log into minecraft
+
+53
+00:01:40,400 --> 00:01:42,880
+so today i want to do two things first
+
+54
+00:01:42,880 --> 00:01:44,479
+of all there's a link in the description
+
+55
+00:01:44,479 --> 00:01:47,040
+to a newer version of the same github
+
+56
+00:01:47,040 --> 00:01:49,680
+gist that enables microsoft account
+
+57
+00:01:49,680 --> 00:01:51,360
+based authentication completely within
+
+58
+00:01:51,360 --> 00:01:53,119
+the terminal meaning you no longer need
+
+59
+00:01:53,119 --> 00:01:55,040
+to use any weird hacks or workarounds to
+
+60
+00:01:55,040 --> 00:01:56,560
+use microsoft accounts for your
+
+61
+00:01:56,560 --> 00:01:58,159
+minecraft installation to run natively
+
+62
+00:01:58,159 --> 00:02:00,240
+on apple silicon second i want to show
+
+63
+00:02:00,240 --> 00:02:01,439
+you some benchmarks and show you the
+
+64
+00:02:01,439 --> 00:02:03,200
+kind of performance you can expect with
+
+65
+00:02:03,200 --> 00:02:06,240
+a 32 core gpu m1 max macbook pro
+
+66
+00:02:06,240 --> 00:02:08,640
+specifically the 16 inch running in high
+
+67
+00:02:08,640 --> 00:02:09,920
+performance mode although the high
+
+68
+00:02:09,920 --> 00:02:11,760
+performance mode doesn't matter as much
+
+69
+00:02:11,760 --> 00:02:13,599
+for minecraft because it doesn't require
+
+70
+00:02:13,599 --> 00:02:15,599
+as much sustained performance and that
+
+71
+00:02:15,599 --> 00:02:17,599
+much of a thermal envelope as a matter
+
+72
+00:02:17,599 --> 00:02:20,560
+of fact running minecraft barely ever in
+
+73
+00:02:20,560 --> 00:02:22,800
+fact i've never heard the fans running
+
+74
+00:02:22,800 --> 00:02:25,520
+on this computer running minecraft if
+
+75
+00:02:25,520 --> 00:02:27,440
+you go back to the intel max running
+
+76
+00:02:27,440 --> 00:02:29,680
+minecraft like a good 30fps would bring
+
+77
+00:02:29,680 --> 00:02:30,480
+you
+
+78
+00:02:30,480 --> 00:02:33,680
+to an extremely loud laptop but now we
+
+79
+00:02:33,680 --> 00:02:35,440
+can be running at like
+
+80
+00:02:35,440 --> 00:02:37,519
+fps with barely any heat generated it
+
+81
+00:02:37,519 --> 00:02:40,080
+truly is incredible now if you'd like to
+
+82
+00:02:40,080 --> 00:02:41,440
+skip ahead to the part where i actually
+
+83
+00:02:41,440 --> 00:02:44,000
+show you how to use the system click on
+
+84
+00:02:44,000 --> 00:02:45,680
+the box on screen right now or skip to
+
+85
+00:02:45,680 --> 00:02:46,879
+that chapter
+
+86
+00:02:46,879 --> 00:02:48,239
+however
+
+87
+00:02:48,239 --> 00:02:49,680
+if you'd like to go ahead and understand
+
+88
+00:02:49,680 --> 00:02:50,480
+a little bit more about how this
+
+89
+00:02:50,480 --> 00:02:52,160
+authentication works let me give you a
+
+90
+00:02:52,160 --> 00:02:54,239
+brief overview previously the way
+
+91
+00:02:54,239 --> 00:02:55,680
+authentication would work is you would
+
+92
+00:02:55,680 --> 00:02:57,519
+pass my script your username or email
+
+93
+00:02:57,519 --> 00:02:59,840
+address as well as a password and given
+
+94
+00:02:59,840 --> 00:03:01,440
+the email address and password i would
+
+95
+00:03:01,440 --> 00:03:03,599
+go to the minecraft servers run a rest
+
+96
+00:03:03,599 --> 00:03:05,760
+request to get an access token and your
+
+97
+00:03:05,760 --> 00:03:08,400
+user's uuid which i would then pass to
+
+98
+00:03:08,400 --> 00:03:10,319
+the minecraft client which would then
+
+99
+00:03:10,319 --> 00:03:12,080
+log you into minecraft and enable you to
+
+100
+00:03:12,080 --> 00:03:13,840
+join servers that were in online mode
+
+101
+00:03:13,840 --> 00:03:15,360
+and so on and so forth
+
+102
+00:03:15,360 --> 00:03:17,519
+however microsoft after they bought
+
+103
+00:03:17,519 --> 00:03:18,560
+mojang
+
+104
+00:03:18,560 --> 00:03:20,159
+is switching them over to microsoft
+
+105
+00:03:20,159 --> 00:03:22,080
+account-based authentication meaning in
+
+106
+00:03:22,080 --> 00:03:23,599
+order to authenticate against minecraft
+
+107
+00:03:23,599 --> 00:03:25,200
+there's actually a three-step procedure
+
+108
+00:03:25,200 --> 00:03:27,040
+you need to follow now first you have to
+
+109
+00:03:27,040 --> 00:03:29,040
+make an oauth request against microsoft
+
+110
+00:03:29,040 --> 00:03:31,440
+to log you into your microsoft account
+
+111
+00:03:31,440 --> 00:03:32,640
+then once you're logged into the
+
+112
+00:03:32,640 --> 00:03:34,879
+microsoft account you need to send a
+
+113
+00:03:34,879 --> 00:03:37,040
+request against the xbox live servers
+
+114
+00:03:37,040 --> 00:03:39,519
+the xbox live servers give you another
+
+115
+00:03:39,519 --> 00:03:41,519
+token that you then go ahead and pass to
+
+116
+00:03:41,519 --> 00:03:43,920
+the mojang servers saying here's my xbox
+
+117
+00:03:43,920 --> 00:03:45,920
+live token can you please log me into
+
+118
+00:03:45,920 --> 00:03:47,920
+minecraft then that gives you an access
+
+119
+00:03:47,920 --> 00:03:50,159
+token and if you send another request
+
+120
+00:03:50,159 --> 00:03:52,319
+you can get the uuid through the profile
+
+121
+00:03:52,319 --> 00:03:53,439
+endpoint
+
+122
+00:03:53,439 --> 00:03:56,000
+that is a lot of steps and sometimes it
+
+123
+00:03:56,000 --> 00:03:58,879
+requires weird ways of using azure and
+
+124
+00:03:58,879 --> 00:04:00,959
+other sorts of apis in order to work
+
+125
+00:04:00,959 --> 00:04:02,480
+however i managed to find a way to
+
+126
+00:04:02,480 --> 00:04:04,400
+encapsulate all of that into a single
+
+127
+00:04:04,400 --> 00:04:06,799
+javascript script and integrate that
+
+128
+00:04:06,799 --> 00:04:07,920
+into the launcher script that i had
+
+129
+00:04:07,920 --> 00:04:09,760
+built last time so now without any
+
+130
+00:04:09,760 --> 00:04:11,200
+further ado let's take a look at how you
+
+131
+00:04:11,200 --> 00:04:13,920
+can actually well run minecraft natively
+
+132
+00:04:13,920 --> 00:04:15,760
+on apple silicon
+
+133
+00:04:15,760 --> 00:04:17,519
+microsoft accounts as well this time
+
+134
+00:04:17,519 --> 00:04:19,199
+let's take a look running minecraft
+
+135
+00:04:19,199 --> 00:04:20,560
+using this new launcher script is
+
+136
+00:04:20,560 --> 00:04:22,240
+incredibly simple all you have to do is
+
+137
+00:04:22,240 --> 00:04:24,000
+provide it well your email and password
+
+138
+00:04:24,000 --> 00:04:26,080
+same as before except this time this is
+
+139
+00:04:26,080 --> 00:04:27,919
+the email and password associated with
+
+140
+00:04:27,919 --> 00:04:29,840
+the microsoft account that is associated
+
+141
+00:04:29,840 --> 00:04:32,160
+with the xbox live account that you use
+
+142
+00:04:32,160 --> 00:04:34,720
+for minecraft once you provide the email
+
+143
+00:04:34,720 --> 00:04:36,479
+and password through environment
+
+144
+00:04:36,479 --> 00:04:37,919
+variables in your shell using these
+
+145
+00:04:37,919 --> 00:04:41,280
+export commands simply run sh launch.sh
+
+146
+00:04:41,280 --> 00:04:43,360
+and just like that it will run node run
+
+147
+00:04:43,360 --> 00:04:45,199
+the request it needs to do get the
+
+148
+00:04:45,199 --> 00:04:47,440
+access token and launch minecraft for
+
+149
+00:04:47,440 --> 00:04:49,680
+you now by default without using
+
+150
+00:04:49,680 --> 00:04:51,600
+optifine or any other kind of mods using
+
+151
+00:04:51,600 --> 00:04:54,160
+just normal vanilla minecraft and
+
+152
+00:04:54,160 --> 00:04:56,639
+running entirely natively on the m1 max
+
+153
+00:04:56,639 --> 00:04:58,960
+i'm usually getting much over a hundred
+
+154
+00:04:58,960 --> 00:05:00,400
+frames per second i'm usually getting
+
+155
+00:05:00,400 --> 00:05:03,280
+about between 120 and 180 on average
+
+156
+00:05:03,280 --> 00:05:05,600
+using a render distance of 12 chunks of
+
+157
+00:05:05,600 --> 00:05:07,840
+course i have options like vsync off and
+
+158
+00:05:07,840 --> 00:05:10,320
+of course unlimited frame rate set now
+
+159
+00:05:10,320 --> 00:05:12,000
+here's what's really interesting with
+
+160
+00:05:12,000 --> 00:05:14,160
+previous macs even if you were getting
+
+161
+00:05:14,160 --> 00:05:16,960
+for example a 120 fps frame rate it
+
+162
+00:05:16,960 --> 00:05:18,880
+didn't really matter because your screen
+
+163
+00:05:18,880 --> 00:05:20,800
+wasn't refreshing that quickly anything
+
+164
+00:05:20,800 --> 00:05:22,800
+beyond 16 it no longer really matters
+
+165
+00:05:22,800 --> 00:05:24,960
+because once again your screen isn't
+
+166
+00:05:24,960 --> 00:05:26,479
+updating fast enough to show you all
+
+167
+00:05:26,479 --> 00:05:28,160
+those extra frames that your gpu is
+
+168
+00:05:28,160 --> 00:05:29,919
+calculating however what's really
+
+169
+00:05:29,919 --> 00:05:31,280
+interesting is on these brand new
+
+170
+00:05:31,280 --> 00:05:33,440
+macbook pros the monitors well they're
+
+171
+00:05:33,440 --> 00:05:35,360
+promotion and what that means is that
+
+172
+00:05:35,360 --> 00:05:37,360
+you get 120 hertz refresh rate when
+
+173
+00:05:37,360 --> 00:05:39,039
+you're playing minecraft and that means
+
+174
+00:05:39,039 --> 00:05:40,560
+when you get a higher frame rate you're
+
+175
+00:05:40,560 --> 00:05:42,400
+actually getting a much smoother
+
+176
+00:05:42,400 --> 00:05:44,479
+experience and that's running minecraft
+
+177
+00:05:44,479 --> 00:05:46,880
+natively on the m1 max which will also
+
+178
+00:05:46,880 --> 00:05:48,800
+work for the m1 pro as well as the m1 if
+
+179
+00:05:48,800 --> 00:05:50,560
+you'd like to use the m1
+
+180
+00:05:50,560 --> 00:05:52,479
+with a microsoft account thank you very
+
+181
+00:05:52,479 --> 00:05:53,840
+much for joining today i do hope you
+
+182
+00:05:53,840 --> 00:05:55,280
+enjoyed if you have any other questions
+
+183
+00:05:55,280 --> 00:05:56,720
+or you know things you'd like to see me
+
+184
+00:05:56,720 --> 00:05:58,240
+do with this specific versions to use
+
+185
+00:05:58,240 --> 00:05:59,600
+feel free to let me know down in the
+
+186
+00:05:59,600 --> 00:06:01,440
+comment section below and make sure to
+
+187
+00:06:01,440 --> 00:06:03,759
+also leave a comment on the github gist
+
+188
+00:06:03,759 --> 00:06:05,120
+there's a great community of people
+
+189
+00:06:05,120 --> 00:06:06,800
+working towards you know little
+
+190
+00:06:06,800 --> 00:06:09,520
+improvements um and making this a better
+
+191
+00:06:09,520 --> 00:06:11,199
+experience for everybody and so i'm sure
+
+192
+00:06:11,199 --> 00:06:13,120
+everybody can contribute towards making
+
+193
+00:06:13,120 --> 00:06:15,039
+this even better to run minecraft on
+
+194
+00:06:15,039 --> 00:06:17,600
+these new macs hopefully microsoft comes
+
+195
+00:06:17,600 --> 00:06:20,080
+with native support very soon but once
+
+196
+00:06:20,080 --> 00:06:21,680
+again thank you very much everybody for
+
+197
+00:06:21,680 --> 00:06:23,199
+joining today if you do enjoy this kind
+
+198
+00:06:23,199 --> 00:06:24,560
+of content you want to see more of it
+
+199
+00:06:24,560 --> 00:06:25,759
+please do make sure to subscribe to the
+
+200
+00:06:25,759 --> 00:06:27,280
+channel and turn on notifications so you
+
+201
+00:06:27,280 --> 00:06:29,280
+don't miss videos like this one thank
+
+202
+00:06:29,280 --> 00:06:32,479
+you goodbye

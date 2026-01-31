@@ -1,0 +1,1611 @@
+in today's video i'm going to show you
+how to use auto views commands
+in practice on the trading view charting
+platform
+so this is a theoretical lesson we are
+going to be covering all of the various
+trading commands that we use through
+oanda to manage our forex trades
+the purpose of today's lesson is to get
+ourselves familiar
+with autoview's oanda command so that
+when it comes time
+to work with the pine script coding
+version
+of these commands we know what we are
+doing so that sounds like something you
+might be interested in please hit the
+subscribe button because i will be back
+soon
+with plenty more lessons covering how to
+use auto view
+to automate your forex trading using
+trading view
+strategy and indicator scripts and even
+if you're not interested in it please
+hit the subscribe button anyway because
+it helps the channel out and i will be
+back soon with other videos that you
+might like
+so yeah i don't know just throwing it
+out there all right so before we begin
+working with a few example commands
+let's just quickly go over
+the auto view commands for oanda from
+the previous video
+so here is a list of all of the main one
+commands we're going to be using to
+manage our positions
+both on a demo account and a live
+account so on a live account you would
+just get rid of practice and just have
+e equals oanda this would execute these
+commands on your live
+oanda account assuming you've connected
+your account id
+and api key to autoview and before we
+continue i should mention that in the
+previous video i forgot one of the
+very important commands here which is fp
+i didn't include this on the previous
+video's list of commands
+by accident i forgot about it it is the
+command for setting your limit order
+fill price so if you use
+t equals limit you can use the optional
+parameter fp
+to set the limit order price and this is
+the price that your buy or sell order
+will be filled at
+if you do not include fp in your t
+equals limit command
+then the limit order will be just placed
+at the current market price
+the closing price of the current bar so
+now would be a good time to screenshot
+this
+slide or write these commands down
+before we get into actually executing
+alerts with these commands
+and let me move on to the next slide
+really quickly
+these are the more secondary commands
+we'll be working with
+less frequently than the first list of
+commands plus i couldn't fit them all on
+one page so i had to write up a second
+slide here and these were the commands
+that i thought were going to be least
+used
+on a regular basis so these are our
+commands let's jump over to trading view
+and start playing around
+with our alert syntax so here i am
+on a forex market i'm just on aussie
+dollar here australian dollar versus us
+dollar
+on the one minute chart just for testing
+purposes so that we get a bit of price
+action movement
+just ignore all these alerts here these
+are for helping my dad manage his
+stock portfolio we're going to create a
+new alert here
+just for practice demonstration purposes
+so i'm going to create a new
+alert here above price action i'm just
+going to click anywhere up here
+we're going to click add alert i'm going
+to leave everything up here as it is
+we do not need to select any alert
+actions these are all optional
+autoview does not require any of these
+in order to function or
+read our alerts and act on them i will
+change the alert name to order view
+test all right so we're going to replace
+our alert message here
+with our first practice command and this
+command is just going to enter
+one unit going along at market
+on aussie dollar so here i need to write
+e
+equals oanda practice for our exchange
+or broker
+next up we need to set the symbol so
+this in this case is going to be aud
+forward slash usd you could also use an
+underscore here if you wanted to but
+i like to use forward slashes next up we
+need to set the book
+or direction of our order so b equals
+and here you would write long or short
+for this test
+initial test we're going to go long next
+we need to set a quantity or a position
+size
+i'm just going to set this to one which
+is literally one unit you could set this
+to anything you wanted
+10 000 would be a mini 100 000 would be
+a standard lot i'm just going to go with
+one for now just
+to keep the alert clean and tidy later
+on when we get to the code portion of
+this
+lesson series i will show you how to
+automatically calculate your position
+size based on your stop loss and risk
+per trade
+but for today we're just going to mess
+around with a fixed position size
+the final thing for this first test
+command that we need to write out
+is whether we're using a limit order or
+a market order
+so t equals stands for type our market
+order type
+our order type is going to be market now
+i need to set my alert condition
+to something that will be triggered very
+easily by price action
+in this case i'm just going to set it to
+less than since we clicked up here
+whenever price action moves around down
+here that will trigger our alert
+and that's perfect for testing purposes
+so now if i click create
+this alert should get triggered when
+price action moves
+the alert will fire down here in the
+alerts log
+and you'll see it blank up here there we
+go
+we have entered one contract going along
+on
+aud usd at market and as you can see we
+were affected by the spread there
+if i open up my account and go to
+positions here
+is our australian dollar one unit
+going along so that first test command
+was successful
+let's add a few commands to this before
+we move on
+just so i can show you a few things
+first of all if i set d
+equals one this sets the parameter d
+which stands for disabled
+to turned on so what will happen when i
+save this alert and the alert triggers
+is this
+command will be sent to autoview but
+autoview will not forward it to oanda
+this is just for testing purposes just
+to confirm that you've got your syntax
+correct so this is useful for playing
+around with commands when you're brand
+new to autoview
+but if i click save here when this alert
+triggers
+autoview will receive a command to go
+long but it will not fire
+because we have turned the parameter d
+on
+or disabled on so let's wait for this
+alert to be triggered there we go
+so now if i come up to my order view
+settings
+by clicking on the order view plugin and
+coming down to
+change settings if i click on that you
+can see at the top here
+that my command we've basically just got
+a debug
+happening here so the command was
+received d
+is set to one and instead of actually
+executing this command it just printed
+out the json
+text that would have been sent to oanda
+if d had not been turned on so this is
+great for debugging
+and that sort of thing when dealing with
+complex commands the final parameter i
+want to play around with
+on this particular alert before we move
+on is delay
+so if i set delay to five here this
+market order will only be
+sent to oanda after five seconds have
+passed since all of you received
+the alert or the alert was triggered so
+if i click save here
+the alert was just triggered five
+seconds from now our market order will
+be entered
+so any second now there we go so there's
+a five second delay on this market order
+being
+executed so this delay is your delay in
+seconds
+from when autoview receives your alert
+or your command
+from your trading view alert so that's
+it for the first
+practice command which is just entering
+a market order without a stop loss or
+take profit or any of that stuff
+let's move on to the next test command
+which is going to be
+uh a close position command so you can
+see we have one unit open
+long on this market right now if we
+wanted to close this position the
+command to do that
+is you need to reference the broker
+you're using the symbol
+that you want to trade on and the
+command to close your position
+is c equals position
+so this is c stands for cancel or close
+in this case you want to close our
+position
+and we want to close our position at the
+market price at market
+so now if i save this alert
+it should fire as soon as price action
+moves
+there we go now order should disappear
+there we go our order was
+executed or closed at market as soon as
+that alert was fired
+so that's how you use the c parameter to
+close positions
+let's move on to opening a
+order at market with a stop loss in pips
+and a take profit in pips so we need to
+specify the book
+in this case we're going to go short
+we're going to exit our position at
+market
+we're going to set our quantity to 1
+again to one position and these
+commands can be in any order by the way
+there's there's no
+uh priority of parameters as far as i
+know you can just write these out in any
+order so keep that in mind
+the next thing we need to do is set our
+stop loss and i'll take profit so our
+stop loss
+is going to be i'm going to look up here
+at the atr i'm going to double this
+so we're going to go with a 2 2.6 pip
+stop loss to write that out we need to
+type 0.00026
+that gives us 2.6 pips on this
+instrument
+it's important to check the atr on the
+instrument you're creating your
+pip based stop loss or take profit order
+or
+command because the decimal places will
+differ depending on what market you're
+trading next up we need to set our take
+profit
+now when it comes to setting your take
+profit in pips
+depending on which direction you're
+trading you may need to use the negative
+sign
+to specify whether your take profit is
+above price action or below price action
+and the same is true of our stop loss so
+if we want to go long here
+we need to tell oanda or autoview
+that our stop loss is below price action
+so we want to set our stop loss
+negative 2.8 pips so we need to put a
+minus sign in front of our stop loss
+pips amount and so now if i save
+this command or this alert and it fires
+we should enter long with a stop loss
+2.8 pips below price action
+there we go we were hit by the spread
+again so we are already close to being
+stopped out
+but that command worked so we have a 2.8
+pip stop loss
+from where our order was filled so if i
+widen this up a bit
+76012 down to 75984
+is roughly 2.8 pips or exactly 2.8 pips
+and we just got stopped out there by the
+spread let me fire this command again
+and measure our take profit distance
+there we go entered long again
+so 75991 down to 75963
+is 2.8 pips and up to our take profit
+is 5.6 pips from our
+market order entry so that command is
+working that is what we wrote out here
+2.8 pips versus 5.6 pips
+now if we wanted to go short we need to
+flip this around
+so going short we have a positive
+stop-loss so we want our stop-loss to be
+positive 2.8 pips and our take profit to
+be
+negative 5.6 pips so we need to put a
+minus sign in front of this
+a parameter here now if i save the
+script and we
+get out of our long position when this
+alert fires we should be entered short
+perfect with a 2.8 pip stop loss
+to the upside roughly speaking we were
+affected a bit by the spread there
+and down to our take profit is about
+5.3 pips so as you can see
+due to slippage with these market order
+commands your stop loss and take profit
+will never be perfect
+especially when the market's volatile
+when using
+pip based stop losses which brings me to
+the next
+command test where we can actually set
+our stop loss
+based on price instead of using pips
+which i think is a much better way to go
+about this
+so what you would normally do is have
+your script calculate let's say you
+wanted to enter long here with a one atr
+stop loss below the swing low
+your script would get the closing price
+of your entry candle
+uh calculate the distance to the recent
+swing low add on
+one atr and that would give you a price
+to set your stop loss order at
+and you can use this next command to set
+your fixed stop loss and fixed take
+profit
+so for a fixed price stop loss you want
+to use
+fsl equals and then we need to set our
+stop loss so we're going short here
+let's set our stop loss uh just a little
+bit above this
+swing high here so we're roughly at a
+two pip atr right now so let's go
+uh let me get rid of this and go two
+pips above our swing high
+would be about seven six zero five seven
+so here we can write fsl equals zero
+point
+seven six zero five seven
+whoops zero five seven and our fixed
+take profit is going to be down here at
+the swing low
+which would be around seven five nine
+eight so
+zero point seven five nine eight now
+when this command gets
+triggered we will enter short at market
+with our fixed stop loss at this price
+and our fixed take profit at this price
+so let's save
+the alert wait for price action to move
+and trigger it
+there we go so now we are short and our
+stop loss and take profit are exactly
+where we told
+oanda to place them now keep in mind we
+did still get affected by the spread
+so if you're using this in a script and
+let's say you entered long
+here at market with a one atr stop loss
+below the swing low and your take profit
+was one to one
+up around here from your entry so let's
+say you've got a 10 pip stop loss and a
+10 pip target
+keep in mind that if you are entering at
+market you will be affected by the
+spread and on a lower time frame like
+this the spread can be as high as a
+couple pips
+depending on the time of day and which
+account type how much money you've got
+in your account that sort of thing
+depending on a few factors your spread
+could be
+wider or tighter than that if you do
+have a bad spread fill
+your risk reward profile can be skewed
+so let's say we got filled
+we tried to enter long on this candle
+close here but we got filled up here
+now this is your potential reward and
+this
+is your potential risk and your risk
+reward profile has been skewed massively
+and it is no longer a one to one
+risk profile so keep that in mind this
+is something you cannot avoid even if
+you're using a different programming
+language like python or java
+to automate your trading algorithms
+you're still going to be
+affected by the spread and you need to
+factor that into your testing
+and your strategy development both on a
+script
+level on a code level and on a
+theoretical like planning level and just
+general strategy development
+when you come up with a strategy idea
+keep in mind that
+just because it might work perfectly
+theoretically on a one minute chart
+that might depend on being filled
+perfectly
+at your setups closing price which is
+impossible
+unless you use limit orders which we'll
+get to in a second
+but even that is not a perfect system
+because quite often especially on these
+lower time frames
+you may not get filled on your limit
+order before price action goes on to hit
+your target so there are a lot of pros
+and cons to weigh
+when developing automated trading
+strategies
+but we will go over a few methods to
+mitigate those
+issues especially in future lessons when
+we get into the coding portion
+of this lesson series so today's lesson
+is still
+a theory lesson we're just going over
+practical examples of these commands
+in the video lessons to come i will go
+into more detail about how to convert
+this into pine script code so that you
+can automate your
+actual trading scripts but before we do
+that we need to understand how these
+commands work
+so let's move on to the next example
+command and dive a little deeper
+into order views command syntax so
+that's our
+fixed stop loss and fixed take profit
+order
+uh type there is also the fixed
+guaranteed
+stop loss order type that owenda has
+recently added
+to the api now i did do a bit of testing
+with this
+earlier today and i can't seem to get it
+to actually place the stop-loss order
+the command goes through to oanda and
+the market order is filled
+but the fixed guaranteed stop-loss does
+not show up on my chart so
+this is a new feature that oanda
+recently added to their brokerage
+platform
+so if you do want to work with the fixed
+guaranteed stop loss
+i encourage you to go and research that
+in your own time
+but for now we're just going to gloss
+over this really quickly let's see if
+the order gets filled let's
+save this alert and see what happens so
+that
+order was not filled let's go to our log
+guaranteed stop loss on fill minimum
+distance
+not met so we need to have a wider stop
+loss
+for this particular order um we're going
+short
+let's set our stop loss to 761
+see if that changes anything so now our
+stop-loss should go up here at this
+price
+if our order gets filled let's wait and
+see what happens there we go
+so our short order was triggered our
+take profit order was placed but our
+fixed guaranteed stop loss
+does not appear to have been placed at
+least it's not showing up on the chart
+for open up awanda there's no stop loss
+here
+but if we go over to order view there's
+no error here either so the command did
+go through our order was placed our take
+profit was placed
+but our fixed guaranteed stop-loss was
+not placed for some reason
+not really sure why it could be that
+autoview are just not sending the right
+command yet
+because it is a new feature recently
+added to the oanda api
+anyway let's move on to our next
+order type which is going to be a limit
+order so let me close this position
+open up our alert come down here let's
+change
+our order type to a limit order so let's
+say we want to enter short here
+when price gets back up to this high so
+that would be around
+seven six zero two nine the first thing
+we need to do is change our
+market type our order type to limit
+and then we can specify which price we
+want that limit order to be placed at
+using the fp
+equals command which stands for fixed
+price so we want to enter short up here
+at the swing high at around seven six
+zero two nine
+so let's write that in 0.76029
+and let's put in a stop loss as well so
+we'll put a stop loss at
+let's say 7606 0.7606
+and i'll take profit down at these swing
+lows
+at seven five nine seven five zero point
+seven
+five nine seven five now if i create
+this command a limit order will be
+placed at the swing high
+with a stop loss at seven six zero six
+and i take profit down here
+at the swing low and if price action
+comes up to fill it
+let's let this command get triggered
+first
+there we go our limit order has been
+placed at the high here with our stop
+loss and our take profit
+so we're not going to sit and wait for
+this order to be filled
+because who knows if it even will but if
+price action did come up to
+this high and exceeded it by the spread
+then we would be filled at 76029 on our
+short trade
+which is much better than using a market
+order and being affected by
+slippage so this is a great way
+to be more accurate with your trading
+entries
+when automating your strategies the way
+i use it is
+when i detect a setup let's say that
+this bearish engulfing candle here was
+my setup
+i would have the script place a sell
+limit order at the closing price
+of that candle with my fixed price stop
+loss above the swing high
+and my take profit wherever i've set it
+to in the script
+and that way i'm guaranteed to get a
+good fill on this
+setup uh the catch is this trade could
+go on without me to hit my take profit
+and never fill me because the spread is
+so high and price action doesn't
+poke high enough above my limit order to
+fill it so
+to mitigate that issue because keep in
+mind if we
+do have a situation like that unfold
+and price action comes down hits my take
+profit or would be take profit then
+comes back up and fills me on my
+limit order now i'm in an invalid trade
+and i don't want to be involved in this
+trade
+there are a couple of ways to mitigate
+this one
+way is to simply set an expiry date
+or time on your limit order which is
+what i will show you how to do now let's
+leave everything here as it is
+we want to use a limit order with a
+fixed price entry and a fixed stop loss
+and
+fixed take profit let's add on to the
+end of this limit order
+our date time parameter so dt stands for
+date time
+if you wanted to set it to a date let's
+say you've got a strategy trading on the
+four hour or
+daily or even weekly chart but you only
+want your limit order to stay
+on your chart active on the markets for
+one day well the way you would achieve
+this is let's check the date here
+it is the 12th of april 2021
+so the date format is in
+american style so we're doing month then
+day then year
+so here we would write four for april
+and then
+a dash and then 13 for tomorrow's day so
+today's april 12th we want to set
+our expiry for tomorrow and then 2021
+now if i save this alert and this
+alert gets fired our limit order will be
+placed where it was before
+but now if i open up our owner account
+and we go to orders
+and i scroll across here on our top
+order here
+you'll see that we now have an expiry
+time on this limit order
+for tomorrow the 13th of april at 2 pm
+my time so at 2 pm tomorrow if
+this limit order is not filled by that
+time then it simply gets cancelled
+and removed from my chart so this is
+great for daily chart strategies
+if you want to make sure that your limit
+order doesn't stay on the
+on your broker for longer than a day or
+two you can use the date
+expiry but on a lower time frame you may
+want to use
+minutes and you may want to set the
+expiry uh
+from a couple of hours from now for
+example the way you would do that
+is simply using unix time so let's
+remove this order come back up
+to our alert come down to dt now if we
+want to set
+let's say we want to set our limit order
+to expire two minutes
+from now if it's not filled within two
+minutes then the order gets
+cancelled to do that we need to know the
+current unix
+timestamp so that is how many
+milliseconds have passed
+since january first 1970. that's a
+industry programming standard way
+of determining the current time so let's
+go over to our unix timestamp website
+here
+this is how many seconds have passed
+since january 1st 1970
+in utc this is our timestamp and it
+corresponds to the exact current time of
+the day
+and year and all of that so if i
+copy this number and i bring over my
+calculator
+paste it in there let's add 120 seconds
+so this is in seconds not milliseconds
+keep that in mind if you're familiar
+with unix you know that it's normally
+milliseconds but
+we're dealing with seconds here so let's
+add 120 seconds to this number
+let's copy this number over to our alert
+box paste it in there
+get rid of the commas now if i create
+this
+alert we will have a limit order
+placed on our chart with an approximate
+expiry two minutes from now
+and i messed something up here the time
+in force is gtd but the timestamp is in
+the past i don't know how that happened
+so i've just refreshed
+my unix timestamp and i'll do the same
+thing again paste this over
+into my calculator add 120
+copy this number go back to my alert
+paste this number in here and get rid of
+the commas
+save that alert and this should work now
+there we go okay so the limit order is
+placed
+and it should have an expiry for
+approximately two minutes
+from now so here's the current time 12
+20
+roughly my time and here we go we have a
+limit order set for today's date the
+12th
+of april at 12 22. so
+in two minutes from now if this order is
+not filled it will just get removed from
+my chart
+automatically so that's how to manage
+your limit orders with a fixed price
+you've got your fixed stop loss price
+and take profit price and
+an expiry date or time so that your
+orders don't just stay on the chart
+forever
+so in this example here this trade is
+already played out
+we didn't get filled at our limit order
+price price has already come down to hit
+or take profit
+and now this trade setup is invalidated
+we miss this trade we don't want to be
+involved in this trade
+but if we don't set an expiry on our
+limit order price section will
+eventually
+come up and fill us on this order and
+probably stop us
+out and we would have taken a loss on an
+invalid trade
+so the way we've set this up in a couple
+of seconds
+this limit order will disappear off our
+chart so let's just wait and see what
+happens
+and this is a good way to prevent
+yourself from being filled on invalid
+trades
+now two minutes even on a one minute
+chart is a very
+quick expiry there we go our limit order
+is gone
+i would set this to a little bit higher
+on this one minute chart maybe a five
+minute expiry
+would be appropriate on a five minute
+chart maybe a 15 minute
+expiry would be appropriate etc and we
+will go over the code
+example of setting an expiry on your
+pan scripts your indicators and
+strategies there is a way to
+automatically calculate
+the date from x amount of days from now
+and also the time from the current time
+so you can automate all of this expiry
+stuff on your limit order in your
+scripts quite easily
+which we'll go over when we get to the
+coding portion of these lessons
+but for now we have just a couple more
+alerts i would like to demonstrate
+before we move on to the coding portion
+so let's move on to the next
+example that i'd like to show you which
+is to set
+a break even command so obviously the
+most valuable
+thing about autoview and the most useful
+application of it is to automate your
+trading scripts
+so automating the trade execution and
+management of your strategy scripts and
+indicator scripts
+is the main advantage of this plugin but
+one other advantage of autoview
+is that you can use it to automatically
+manage
+your manual trading positions so for
+example
+let's say we enter long here on aussie
+dollar
+and we have our stop loss below this
+swing low in here
+and we are expecting price to move up
+but let's say that after we enter this
+position
+we want to go out for lunch with our
+girlfriend or boyfriend or partner
+husband wife whatever and we don't want
+to
+have to sit and babysit this trade but
+we also
+want to move our stop loss to break even
+when price action
+hits a certain price level well of
+course you could just set an alert here
+you can just set a regular alert
+to pop up on your phone push
+notification and you can manage the
+position manually but let's say this is
+a really
+important occasion and you don't want to
+be checking your phone while you're out
+or even let's say you're at a business
+meeting or something well you can use
+auto view
+to automatically move your stop loss to
+break even
+when your price target is hit so let's
+say at one to one
+when price action gets back up to these
+highs we want to move our stop loss from
+down here
+to the price where our trade was entered
+well i'll show you how to do that now
+first thing i'm going to do
+is create a new order i'm going to go
+along at market
+there we go so we have filled at 76012
+two i'm gonna put my stop loss at seven
+five nine seven one seven five nine
+seven
+one there we go and i want my stop-loss
+to be moved to break even if price
+session comes back
+up to these highs well the way i can do
+that with auto view
+is if i set an alert at seven
+six zero five seven so if i just put a
+horizontal line there
+i can right click that line and create
+an alert on this line if we come down to
+the
+message section what we need to do here
+in order to initiate a break even stop
+alert is first we need to clear our stop
+loss
+and then replace it with a new stop loss
+so the oanda api does not allow you
+to update your stop loss as far as i can
+tell at least not through auto view
+i haven't found a way to be able to just
+update my stop loss with a command
+what you need to do instead is delete
+your limit order
+your stop loss order and replace it with
+a new stop loss order
+so the way we do that is we need to
+reference our exchange again
+so rwanda practice we need to reference
+our symbol
+so i'm on australian us dollar and i
+need to use the c
+which stands for cancel or close and i
+need to set
+c equals to order so this will cancel
+any limit orders i have now keep in mind
+this will also cancel your take profit
+so if i put a let me copy this order
+really quickly
+and let's put a take profit on this
+trade up at these highs here
+let's call it seven six one two seven
+six one two
+modify this position so now we have a
+take profit up at seven six one two
+let's create a new alert really quickly
+i'll set the condition to less than just
+for demonstration purposes
+let's paste that command in here if i
+create this alert
+when this alert gets triggered it will
+delete
+our stop loss and our take profit so
+watch this let's click create
+and wait for that alert to trigger there
+we go
+now our stop loss and our take profit
+are gone we can now use
+another alert to update our stop loss
+and take profit so the way we do this
+the way we update our orders is i need
+to change
+c to position so this will now
+update our position if we give new
+parameters for our stop loss and take
+profit
+so we need to first set the book so we
+are long
+on this position so if i set b equals
+long
+i can now set a new fixed stop loss
+so in the case of a breakeven trade we
+would set our fsl
+to 76012 but for now i'm just going to
+replace the stop loss that we just
+removed so let's type in
+0.75971
+and i will also replace our fixed take
+profit
+up here at let's change it to 76092
+0.76092 now if i create this
+alert these command parameters will
+replace our fixed stop loss and our
+fixed
+take profit but this is how you would
+move your stop loss to break even
+or even create a manual trailing stop
+but let's wait for this alert to be
+triggered
+there we go our stop-loss is back where
+we wanted it i'm not sure
+what happened to our take profit not
+sure why the take profit was not
+replaced
+let me just quickly check the auto view
+logs
+i'm not sure why my take profit is not
+being placed let me
+play around with this for a minute that
+seemed to work so
+i guess we need to use two commands here
+one for our stop loss one for our take
+profit so let me change fsl
+to 0.5971
+let me save that delete our orders again
+wait for that alert to be triggered and
+see if this works there we go
+so we need to separate our fsl and ftp
+commands if i copy this command over
+here
+and paste it in now this is where i
+should mention that we can
+execute multiple orders in the single
+alert message
+so we can have multiple commands here
+and what these three commands will do
+is the first command will delete our
+stop loss and our take profit
+the second command will set our stop
+loss to whichever price we want to
+so in this example we're going to set
+this to break even when this blue line
+is hit
+and then we need to replace our take
+profit as well
+so three different commands here to
+manage our position
+automatically let's copy this command
+and delete this alert and add
+that command to this blue line here
+we need to change our stop loss to our
+entry price
+so fsl will now become 7601
+and if i create this alert if price
+action
+gets up to this blue line and triggers
+this alert
+autoview will delete our stop loss and
+our take profit
+it will move our stop loss to breakeven
+to the price that we entered at
+and it will replace our take profit back
+at 7.61
+and this will all be done automatically
+without us having to lift the finger
+so long as you have order view running
+in your browser this position will be
+automatically managed so this is a great
+way to use auto view in your manual
+trading process
+now there have been many occasions in my
+career as a trader over the past four
+years or so
+where i've wanted to move my stop loss
+to break even if a certain price is hit
+but i end up going to bed and overnight
+at like three in the morning
+price action comes up hits where i
+wanted to move my stop-loss to break
+even
+but i was asleep and i couldn't manage
+the position and then price action has
+come
+back down to stop me out for a loss on a
+trade that i should have been
+stopped out for breakeven on but i
+wasn't able to manage my position
+now i can use order view to
+automatically manage
+my trades while i'm not at the computer
+so not only can i fully automate my
+trading scripts i can also
+fully automate my trade management even
+on the strategies that i do not
+fully automate which is phenomenal and a
+really powerful
+aspect of auto view that even manual
+click traders can take advantage of
+so now i'm going to leave my screen
+capture recording
+for the next i don't know hour or so and
+hopefully
+with any luck price action will come up
+and hit this blue line
+and my trade will manage autoview will
+auto manage this trade
+will automatically move my stop-loss to
+break even and
+with any luck we can see this in
+practice so let's wait and see what
+happens and i will be back in one second
+and no luck on that trade we just got
+stopped out by the spread
+and yet again we are stopped out i'm
+going to keep trying until
+we get a trade that plays out
+and demonstrates this break even
+technique
+set our take profit to 7608
+save the alert i'll put on my profit
+tool
+again so we can watch this play out in
+real time
+and we'll see what happens
+here we go and success
+so our stop-loss has now been moved to
+break even
+after price has finally come up to test
+this blue line
+and you have no idea how boring it was
+sitting here waiting for that to happen
+and while recording this i actually just
+made a cheeky two percent
+gain on my main account taking a
+discretionary trade
+because i noticed that the one minute
+chart was holding this
+this area down here and so i jumped over
+to my main account
+on my second monitor while i was
+recording and threw on a trade
+one percent risk stop loss below the uh
+swing low of this bat pattern and hit
+targets
+within an hour or so nice little
+profitable video to record
+can't complain about that and our take
+profit has been put
+up here at seven six zero eight so if i
+scroll up and open up the command
+that did all this first we cleared our
+limit orders
+on this instrument then we replaced
+our fixed stop-loss price to our
+break-even price
+and then we added back our take profit
+limit order all done automatically using
+the order view
+plugin which is really cool stuff now i
+can delete this
+line and that's it for the break even
+demonstration
+in future lessons i will show you how to
+achieve this inside your pine script
+code so if you were to do this on a real
+account all you will need to do is get
+rid of practice
+make sure that you've connected your
+real account id
+to autoview and make sure you have set
+all of your exchange parameters
+to awanda and apart from that none of
+these parameters need to be changed
+except if you're obviously using this on
+a different market you would need to
+change your symbol
+to the relevant market now there are
+three more practice command
+demonstrations that i would like to show
+you guys before we wrap this video up
+the next one is how to set a trailing
+stop using pips
+so there are obviously two ways to trail
+your stop one is to just trail your stop
+loss let's say we were
+let's say we went long here you could
+trail your stop-loss x amount of pips
+from the high of the current bar so as
+price moves into your favor your
+stop-loss also moves into your favor by
+an equal portion
+um the other alternative option is to
+trail your stop loss below recent swing
+high so let's say we went short up here
+somewhere and as price action goes into
+our favor
+our stop loss follows price action until
+eventually we are stopped out
+by retracement to do this second version
+trailing
+your stop above price action is much
+more complicated than using
+the standard uh trailing stop provided
+by most brokers
+now i've written a script that
+automatically trails my stop loss
+using a one atr stop below or above
+price action recent swing highs and lows
+so it looks back
+x amount of bars for the highest bar
+over that period or the level spa
+over that period and it trails my stop
+loss below that bar until it gets hit by
+price action
+i'll show you a quick demonstration of
+what that looks like right now
+but in today's video we're not going to
+be doing that because that requires pine
+script
+code and this is just a theory lesson
+covering the command
+functionality so we'll cover that in a
+future lesson
+today's lesson we're going to just cover
+the simple
+trailing stop method so let's quickly
+open a trade here
+looks like aussie dollars going down now
+so let's uh
+sell this market at market one unit make
+sure i'm on my demo account
+not that it matters when you're only
+trading one unit and let's
+set a trailing stop order so i'm going
+to put my stop loss here
+at around let's say 7 6
+7 6 1 just to give it some breathing
+room i wouldn't normally put my stop
+loss there but this is just for
+demonstration purposes
+now i'm going to create an alert up here
+i'm going to set the condition to less
+than so that it is guaranteed to be
+triggered
+when price action moves i'm coming down
+to the message box
+and we need to tell all of you how to
+manage our position how to manage our
+trailing stop
+so remember that if you have an existing
+stop-loss on an open position
+you cannot just update that stop-loss so
+we need to wipe
+our orders so let me quickly add a take
+profit here we'll put a take profit down
+at
+7596 for demonstration purposes
+um we'll create an alert up here and so
+to use
+a trailing stop order we need to first
+clear our existing position using the c
+equals order command
+and then we need to pass our ts
+command and if we have a take profit we
+need to replace our take profit because
+remember this will delete both our stop
+loss and take
+profit order so here i need to change my
+trailing stop
+the current atr is around one pip
+on this one minute chart so let's set
+our trailing stop to
+one pip 0.0001
+and we'll set our fixed take profit back
+to
+0.759 now for whatever reason in the
+previous example we couldn't set
+our fsl and our ftp in using the same
+command
+but from my previous testing i believe
+we can
+set a trailing stop and a fixed take
+profit
+under the same command so this command
+should work all we need is two commands
+here
+one to delete our limit orders and one
+to put in a new trailing stop
+so if i click create here this alert
+should get triggered
+as soon as price action begins moving
+there we go our order should be removed
+and replaced
+uh our book parameter is invalid i
+forgot to specify
+our book so here i need to say
+which direction we're going in so where
+b equals short at the moment
+let me save that and see if that alert
+will work
+still no luck there uh trailing stop
+loss on phil
+price distance does not meet the minimum
+allowed amount
+all right let me change it to five pips
+see if this works
+there we go okay that worked
+but we need to change this to say c
+equals position
+um bear with me while i play around with
+this
+this should theoretically work and there
+we go
+i'm not sure if i want to change how the
+api works i doubt it maybe it's
+different on a demo account but on a
+live account
+i'm pretty confident i was able to set
+my ftp as well as a trailing stop or fix
+stop loss
+but it's not allowing me to do that
+today so i need to separate these
+commands
+get rid of fcp get rid of the trailing
+stop
+and now this should update our position
+with a trailing stop and a fixed take
+profit so let me
+save this and when this gets triggered
+our trailing stop should be removed and
+added back
+there we go and it trailed with price
+action i don't know if you saw that but
+it just went a little lower
+and our take profit is back all right so
+i've got the command working now i'm
+trying to fly through this
+pretty quickly so bear with me if i'm
+making a few mistakes here
+but what we have done here similar to
+our breakeven stop we had to first
+clear our orders our limit orders our
+stop loss and our take profit
+then we had to specify a new trailing
+stop
+and this is in pips so 0.0005
+means 5 pips on this current market
+so every time price action moves 5 pips
+in our favor
+our trailing stock will also move five
+pips to lock in profits
+or minimize our losses in the case of it
+being above
+our entry price and then finally if we
+do have a take profit set
+we need to make sure to specify that uh
+take profit again using the ftp command
+now why am i showing you all of this
+well because when we get to the pine
+script
+section of these video lessons we need
+to
+write these commands into our script
+code
+so it's important that we understand how
+they work in theory before we get to
+that
+so that's the whole purpose of today's
+video but given the power
+of autoview and pinescript
+i don't think you'll be using this
+trailing stop method too often
+simply because it's just not an
+efficient method a more efficient method
+is to trail your stop loss above
+recent highs which is something that we
+can do in pine script
+but something which a regular standard
+trailing stop
+cannot do so i think we'll leave this
+example
+here for now since i doubt many of you
+will be actually using this command
+but if you do want to use it this is how
+you would do it so let's see if price
+action will head a little lower here and
+our trailing stop will
+move lower there we go just moved a
+little bit lower so every time our price
+action moves into our favor our trailing
+stop
+keeps moving into our favor too so
+let me draw that in there and if price
+action will cooperate today and go just
+a little bit lower
+we can measure here we go so price
+action just moved
+half a pip in our favor in the profit
+and our trailing stop also just moved
+half a pip
+into locking in our profits so that's
+how a standard awanda trailing stop
+works
+one way you could use this is you could
+have a standard
+stop loss order wherever you want it to
+be let's just set it
+five pips above price action and then
+you could set an alert
+let's say that when price gets down here
+you want to remove your standard stop
+loss and convert it into a trailing stop
+all you would do is create an alert
+there and paste in
+this series of commands so that's it for
+our trailing stop demonstration
+let's move on to the next example and
+the next example is the reduce
+only order so once again i'm going to
+open
+a long position this time with 100 units
+this time
+so we'll just open these at market by
+100 units
+and then if i double click on this alert
+that i created here
+and i delete the message here if i were
+to now
+try to buy an extra
+50 units going along on this market at
+market
+while ro is set to 1 this is our reduce
+only parameter if this is set to 1 that
+means that
+only orders which reduce our open
+position are allowed to be executed
+so if i click save here this position
+will not be affected
+by this command if i open up the alert
+box there we go the alert was triggered
+our position is still 100 units and you
+can see that our order
+here to buy 50 units was cancelled by
+oanda
+reason for that is according to the
+autoview log
+there was no position to reduce what
+this basically means is we do not have a
+short position open and buying
+more of uh this aussie dollar market
+will not reduce
+our position so it was not executed so
+let's do exactly the same thing
+but this time let's change our book
+direction to short and let's set the
+quantity to 150 which is more than our
+open position
+this will also not execute so if we save
+that and the alert
+gets triggered there we go our position
+has not changed
+and if we go back to auto views log says
+position to reduce
+is too small meaning that our open
+position
+is only 100 contracts and we just tried
+to
+sell 150 contracts but autoview did not
+allow us to do that because
+we did not have that much of a position
+size open
+now for the final test let's change this
+to just
+50 units going short so we're selling 50
+units on aussie dollar we have 100 units
+open long
+let's save this alert when this alert
+triggers the order will
+be executed because it is only reducing
+our
+open position there we go our position
+is now only 50
+units and the order did in fact go
+through
+because it was a valid reduce only order
+so that one's pretty easy to understand
+now let's move on to the final
+example command here which is going to
+be our alias
+our account alias command parameter so
+back on auto view here
+if i scroll down to oanda i went to
+practice
+click on that scroll to the top you'll
+notice that i only have one account here
+and by default it is just set to
+asterisks this
+is our account alias so for today's
+demonstration purposes i'm going to
+delete this account i'm going to add a
+new account
+so in order to set up multiple accounts
+under auto view
+i need to come to my oanda page
+i'm now on my awanda login page on the
+dashboard
+if i go to add sub account all of my
+various demo accounts
+will be listed here here they are right
+now i'm using my
+auto view youtube account but let's say
+i wanted to use
+two different accounts in my trading
+let's say i wanted to use this account
+and this account and i wanted each
+account to have a different
+script automating the trading on that
+account
+well the way we would manage this is i
+would copy
+my account number here for my first
+account that i want to add
+an alias for i also need to copy my demo
+account or
+if i'm setting up a live account my live
+accounts awanda api
+key so this is the key i need to give
+order view to
+allow it to have permission to access my
+account using the oanda api
+so i need both my account id and my
+awanda api key
+now here we are back on oandapractice
+now i need to change my account alias
+this is the account
+alias and when referencing this account
+i need to
+use the a parameter and pass it this
+account
+name so i'm going to call this first
+account sub
+1 for sub account 1. i'm going to paste
+in my account id
+and paste in my api key i'm going to
+click test account
+the credentials were successfully tested
+and now i can click
+add account so now i have my first sub
+account
+added to order view let's come up and
+click add account again
+go back to oanda go back to my sub
+account
+section click add account even though
+we're not actually adding an account we
+just need to see our account list
+come down and click on whichever account
+we
+want to use in conjunction with
+this first account so in this example
+i'm going to click auto view test
+1k click on that copy my account number
+or account id paste that into notepad
+and then
+jump back over to order view now to add
+my second account i'm going to call this
+account
+sub 2. i'm going to copy over my account
+id and my api key click test account
+all green click add account now we have
+two accounts here
+one called sub 1 and one called sub two
+so let's jump back into the trading view
+platform
+and now i have already logged into both
+accounts here so these are both
+of my trading view accounts my demo
+accounts that i want to play around with
+so this is my 10k version and this is my
+1k version
+or roughly whichever script i last
+tested did not
+do too well on this account so let's go
+back
+to our testing account and
+create a new alert so i'm going to add
+an alert above here
+set the condition to less than and then
+come down to the
+message box and we're just going to open
+a
+trade at market here so i'm going to
+paste in
+the command for opening a long position
+at market
+and so the only thing we need to do
+differently if we're working with
+multiple accounts
+through order view is to specify our
+account alias parameter which is a
+equals
+and here we type in our sub account name
+so our first account was sub 1 and our
+second account was sub 2.
+so i'm going to copy this alert i'm
+going to create
+this alert and once this triggers we
+should be entered long
+on this account there we go so now i'm
+going to create a new alert
+change this to less than uh scroll down
+here and paste that command in
+this time we're going to go short on
+aussie dollar
+and i'm going to change my account alias
+to sub 2
+for my other demo account now if i click
+create
+we wait for the alert to be triggered
+now if i come down to my trading panel
+and i switch over to my other account
+we have a short position open on this
+account
+and we have a long position open on my
+other account
+which was achieved using the account
+alias
+parameter very easy but very powerful
+stuff
+if you are trading multiple scripts on
+multiple accounts
+that sums up today's lesson if you would
+like to learn more about this stuff
+stick around hit the subscribe button
+because i'll be back soon with more
+lessons covering this material
+if you want to learn more about
+panscript head to panscriptmastery.com
+where you can find my free
+basics course covering the fundamentals
+of planscript
+you can find my flagship course the
+mastery course
+which has 97 lessons and over 15 hours
+of content
+covering panscript in detail including
+how to use autoview in your own scripts
+and if you really want to shortcut your
+learning process
+you can steal my best work by buying the
+indicators and strategies course this
+course contains
+all of the source code to every script
+i've ever published including my
+ultimate pullback indicator which is the
+most popular script i've ever written
+and contains over 700 lines of code
+including
+full order view automation already built
+in so if you want to steal the source
+code to that and copy paste blocks of
+code
+this is a fantastic resource otherwise i
+also have
+all 20 plus of my publicly published
+indicators on the tradingview platform
+and a bunch of other stuff including
+a handful of profitable trading
+strategies and if not that's fine you
+don't need to buy anything
+i will be back soon with more free
+content take care everybody good luck
+with the trading and i'll see you in the
+next
+video
+you

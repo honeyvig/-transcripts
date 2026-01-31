@@ -1,0 +1,3203 @@
+1
+00:00:00,980 --> 00:00:13,559
+[Music]
+
+2
+00:00:13,559 --> 00:00:15,599
+so hello there and welcome to another
+
+3
+00:00:15,599 --> 00:00:18,560
+tutorial my name is timy bakshi and this
+
+4
+00:00:18,560 --> 00:00:20,080
+time we're going to be going over
+
+5
+00:00:20,080 --> 00:00:22,320
+another math video and today we're going
+
+6
+00:00:22,320 --> 00:00:25,039
+to be talking about Transformations more
+
+7
+00:00:25,039 --> 00:00:28,160
+specifically rotations so today I'm
+
+8
+00:00:28,160 --> 00:00:30,039
+going to be covering a lot of different
+
+9
+00:00:30,039 --> 00:00:31,519
+types of Transformations four different
+
+10
+00:00:31,519 --> 00:00:34,040
+types to be specific uh but the main one
+
+11
+00:00:34,040 --> 00:00:35,520
+that I'm really going to be going in
+
+12
+00:00:35,520 --> 00:00:38,280
+depth about are going is going to be
+
+13
+00:00:38,280 --> 00:00:41,200
+rotations so just before I begin today
+
+14
+00:00:41,200 --> 00:00:43,920
+uh let's start off with transformations
+
+15
+00:00:43,920 --> 00:00:46,960
+in general now there are four main types
+
+16
+00:00:46,960 --> 00:00:47,840
+of
+
+17
+00:00:47,840 --> 00:00:50,000
+Transformations uh these are now I'll
+
+18
+00:00:50,000 --> 00:00:52,239
+get into each one in just a second and
+
+19
+00:00:52,239 --> 00:00:54,120
+what they mean but let me actually just
+
+20
+00:00:54,120 --> 00:00:56,320
+begin with uh Transformations there are
+
+21
+00:00:56,320 --> 00:00:58,559
+four main types uh there are
+
+22
+00:00:58,559 --> 00:01:00,160
+translations
+
+23
+00:01:00,160 --> 00:01:02,640
+stretches and compresses uh or stretch
+
+24
+00:01:02,640 --> 00:01:05,799
+and compression uh we also have uh
+
+25
+00:01:05,799 --> 00:01:09,000
+reflection and of course rotation now
+
+26
+00:01:09,000 --> 00:01:11,119
+the main reason that I'm talking uh
+
+27
+00:01:11,119 --> 00:01:14,000
+really about TR oh sorry rotations today
+
+28
+00:01:14,000 --> 00:01:16,040
+is going to be because well I find that
+
+29
+00:01:16,040 --> 00:01:17,840
+a lot of people have quite some
+
+30
+00:01:17,840 --> 00:01:20,079
+difficulty with rotations and I really
+
+31
+00:01:20,079 --> 00:01:22,280
+want to help as many people as I can uh
+
+32
+00:01:22,280 --> 00:01:23,799
+so I'm going to be covering the most
+
+33
+00:01:23,799 --> 00:01:25,960
+complicated topic out of them all which
+
+34
+00:01:25,960 --> 00:01:28,759
+would be rotations so let's actually get
+
+35
+00:01:28,759 --> 00:01:30,759
+right into this today uh as you can see
+
+36
+00:01:30,759 --> 00:01:33,399
+I have a few coordinate spaces uh drawn
+
+37
+00:01:33,399 --> 00:01:36,200
+out here uh and so today before I begin
+
+38
+00:01:36,200 --> 00:01:38,000
+the notations though I'm going to be
+
+39
+00:01:38,000 --> 00:01:40,159
+talking about lots of other types of
+
+40
+00:01:40,159 --> 00:01:42,360
+transformations in general so let's
+
+41
+00:01:42,360 --> 00:01:44,520
+actually begin with one of the simplest
+
+42
+00:01:44,520 --> 00:01:47,640
+types of Transformations translations
+
+43
+00:01:47,640 --> 00:01:51,000
+now translations are very simple so if I
+
+44
+00:01:51,000 --> 00:01:52,680
+just say so first of all we're going to
+
+45
+00:01:52,680 --> 00:01:54,440
+be talking about
+
+46
+00:01:54,440 --> 00:01:56,600
+[Music]
+
+47
+00:01:56,600 --> 00:01:59,200
+translations okay uh so let's actually
+
+48
+00:01:59,200 --> 00:02:02,399
+begin now quite simply let's say we have
+
+49
+00:02:02,399 --> 00:02:05,079
+a shape
+
+50
+00:02:05,079 --> 00:02:07,560
+okay we've got a shape over here on our
+
+51
+00:02:07,560 --> 00:02:10,239
+coordinate space and let's just say we
+
+52
+00:02:10,239 --> 00:02:13,400
+wanted to translate it well quite simply
+
+53
+00:02:13,400 --> 00:02:16,440
+all we do is move the shape we're not
+
+54
+00:02:16,440 --> 00:02:18,879
+going to manipulate the shape whatsoever
+
+55
+00:02:18,879 --> 00:02:21,280
+but we can move it left we can move it
+
+56
+00:02:21,280 --> 00:02:23,879
+right we can move it up and we can also
+
+57
+00:02:23,879 --> 00:02:25,680
+move it
+
+58
+00:02:25,680 --> 00:02:28,360
+down now again we're not manipulating
+
+59
+00:02:28,360 --> 00:02:30,959
+the shape or anything we are just moving
+
+60
+00:02:30,959 --> 00:02:33,720
+it around this coordinate space and that
+
+61
+00:02:33,720 --> 00:02:36,080
+would be a translation and this can go
+
+62
+00:02:36,080 --> 00:02:41,800
+left right uh up or down uh and remember
+
+63
+00:02:41,800 --> 00:02:43,800
+you can even move it diagonally uh
+
+64
+00:02:43,800 --> 00:02:45,920
+indirectly by going let's say you wanted
+
+65
+00:02:45,920 --> 00:02:47,840
+to move in this direction over here
+
+66
+00:02:47,840 --> 00:02:50,879
+you'd go left and then up uh or you
+
+67
+00:02:50,879 --> 00:02:53,519
+could go right and then down or really
+
+68
+00:02:53,519 --> 00:02:55,239
+however else you would like to move
+
+69
+00:02:55,239 --> 00:02:57,080
+essentially we're just moving the shape
+
+70
+00:02:57,080 --> 00:03:01,480
+which allows us to translate it
+
+71
+00:03:01,480 --> 00:03:03,200
+okay so that's what translations are
+
+72
+00:03:03,200 --> 00:03:04,879
+quite simply so I'm not going to be
+
+73
+00:03:04,879 --> 00:03:06,799
+covering that in too much detail in this
+
+74
+00:03:06,799 --> 00:03:09,120
+video but then again if I do get enough
+
+75
+00:03:09,120 --> 00:03:10,599
+response that you know people want to
+
+76
+00:03:10,599 --> 00:03:12,599
+learn much more about rotations that'll
+
+77
+00:03:12,599 --> 00:03:14,680
+be coming in another video but now let's
+
+78
+00:03:14,680 --> 00:03:17,599
+talk about stretch and compression so of
+
+79
+00:03:17,599 --> 00:03:21,599
+course our next topic is
+
+80
+00:03:21,599 --> 00:03:24,640
+stretch oh sorry uh so we're going to be
+
+81
+00:03:24,640 --> 00:03:26,920
+talking about stretch and compression in
+
+82
+00:03:26,920 --> 00:03:30,599
+this case both vertical and horizontal
+
+83
+00:03:30,599 --> 00:03:32,680
+stretch
+
+84
+00:03:32,680 --> 00:03:37,040
+and sorry and
+
+85
+00:03:37,280 --> 00:03:40,280
+come
+
+86
+00:03:40,439 --> 00:03:43,200
+compression Okay so we've got stretch
+
+87
+00:03:43,200 --> 00:03:45,159
+and compression
+
+88
+00:03:45,159 --> 00:03:47,760
+here and so let's just say you know what
+
+89
+00:03:47,760 --> 00:03:50,120
+the best way to explain this would be
+
+90
+00:03:50,120 --> 00:03:52,640
+let's say we have a
+
+91
+00:03:52,640 --> 00:03:56,480
+curve okay I'm going to draw nice big
+
+92
+00:03:56,480 --> 00:03:57,879
+curve over
+
+93
+00:03:57,879 --> 00:04:01,000
+here okay so we've got this nice black
+
+94
+00:04:01,000 --> 00:04:04,159
+curve and I'm going to say this is our o
+
+95
+00:04:04,159 --> 00:04:07,840
+curve meaning original curve let's take
+
+96
+00:04:07,840 --> 00:04:10,879
+a different color maybe blue I guess so
+
+97
+00:04:10,879 --> 00:04:12,560
+we've got our blue marker and let's just
+
+98
+00:04:12,560 --> 00:04:16,239
+say uh that we want to stretch this
+
+99
+00:04:16,239 --> 00:04:20,440
+curve vertically how would we do that
+
+100
+00:04:20,440 --> 00:04:23,000
+well seems a little weird at first but
+
+101
+00:04:23,000 --> 00:04:24,600
+think about
+
+102
+00:04:24,600 --> 00:04:26,560
+this
+
+103
+00:04:26,560 --> 00:04:31,600
+this would be our stretched curve
+
+104
+00:04:31,600 --> 00:04:33,199
+this is what would happen if we were to
+
+105
+00:04:33,199 --> 00:04:35,240
+stretch a curve vertically okay so this
+
+106
+00:04:35,240 --> 00:04:38,880
+is our S curve now you must be wondering
+
+107
+00:04:38,880 --> 00:04:40,759
+though how does this work this is
+
+108
+00:04:40,759 --> 00:04:45,039
+obviously compression well no imagine
+
+109
+00:04:45,039 --> 00:04:47,240
+this we've got a
+
+110
+00:04:47,240 --> 00:04:49,720
+curve and let's say we were to take this
+
+111
+00:04:49,720 --> 00:04:51,360
+curve grab it from the top and the
+
+112
+00:04:51,360 --> 00:04:53,080
+bottom vertically we were to grab it
+
+113
+00:04:53,080 --> 00:04:55,840
+vertically and stretch it out vertically
+
+114
+00:04:55,840 --> 00:04:57,280
+the top goes even higher and the bottom
+
+115
+00:04:57,280 --> 00:04:59,840
+goes down then of course from the sides
+
+116
+00:04:59,840 --> 00:05:01,000
+get thinner and thinner and thinner the
+
+117
+00:05:01,000 --> 00:05:02,479
+more I were to stretch stretch stretch
+
+118
+00:05:02,479 --> 00:05:05,240
+it vertically that means horizontally we
+
+119
+00:05:05,240 --> 00:05:07,479
+would be compressing it but vertically
+
+120
+00:05:07,479 --> 00:05:10,400
+we would be stretching it and so that's
+
+121
+00:05:10,400 --> 00:05:11,560
+what we're doing in this case we're
+
+122
+00:05:11,560 --> 00:05:13,280
+taking our curve and we're taking it and
+
+123
+00:05:13,280 --> 00:05:15,360
+we're stretching it from the from
+
+124
+00:05:15,360 --> 00:05:18,160
+vertically and we end up with this nice
+
+125
+00:05:18,160 --> 00:05:20,039
+horizontally compressed vertically
+
+126
+00:05:20,039 --> 00:05:22,440
+stretched blue
+
+127
+00:05:22,440 --> 00:05:26,199
+curve now the exact same concept applies
+
+128
+00:05:26,199 --> 00:05:29,120
+to compressing vertically so if I were
+
+129
+00:05:29,120 --> 00:05:31,600
+to take uh something of this sort so if
+
+130
+00:05:31,600 --> 00:05:36,319
+I were to just take like this red marker
+
+131
+00:05:36,319 --> 00:05:40,440
+and just this isn't exact unfortunately
+
+132
+00:05:40,440 --> 00:05:42,360
+uh because uh I mean of course I'm not a
+
+133
+00:05:42,360 --> 00:05:46,000
+computer I can't uh get perfect uh
+
+134
+00:05:46,000 --> 00:05:49,120
+however this is uh a quite close uh
+
+135
+00:05:49,120 --> 00:05:52,000
+imagination of how this curve would look
+
+136
+00:05:52,000 --> 00:05:54,440
+compressed so again the way we're doing
+
+137
+00:05:54,440 --> 00:05:56,440
+this is imagine we have our curve again
+
+138
+00:05:56,440 --> 00:05:58,080
+and we take it from both the top and the
+
+139
+00:05:58,080 --> 00:06:00,479
+bottom vertically and we compress it
+
+140
+00:06:00,479 --> 00:06:03,120
+vertically of course the sides will get
+
+141
+00:06:03,120 --> 00:06:04,520
+stretched out and so this is a
+
+142
+00:06:04,520 --> 00:06:07,560
+horizontal stretch but vertically we are
+
+143
+00:06:07,560 --> 00:06:10,080
+compressing this red curve we're
+
+144
+00:06:10,080 --> 00:06:11,880
+compressing this black curve this o
+
+145
+00:06:11,880 --> 00:06:15,720
+curve uh in order to get the red final
+
+146
+00:06:15,720 --> 00:06:17,280
+compressed
+
+147
+00:06:17,280 --> 00:06:21,080
+curve all right so now uh let's actually
+
+148
+00:06:21,080 --> 00:06:25,639
+try something else so before I get uh
+
+149
+00:06:25,639 --> 00:06:29,840
+into sorry uh before I get into rotation
+
+150
+00:06:29,840 --> 00:06:30,720
+now we're going to be talking about
+
+151
+00:06:30,720 --> 00:06:33,080
+rotations in a second but let's take
+
+152
+00:06:33,080 --> 00:06:36,360
+talk a little bit about
+
+153
+00:06:36,360 --> 00:06:37,880
+well
+
+154
+00:06:37,880 --> 00:06:40,880
+Reflections
+
+155
+00:06:43,199 --> 00:06:45,919
+so all right so Reflections what are
+
+156
+00:06:45,919 --> 00:06:47,840
+they uh well you know what this is best
+
+157
+00:06:47,840 --> 00:06:49,520
+explained with an example so let's take
+
+158
+00:06:49,520 --> 00:06:53,199
+an example uh let's say I were to draw a
+
+159
+00:06:53,199 --> 00:06:57,360
+little triangle here okay if I would
+
+160
+00:06:57,360 --> 00:06:59,840
+just uh finish this up so now we got
+
+161
+00:06:59,840 --> 00:07:02,720
+ourselves a nice little triangle uh and
+
+162
+00:07:02,720 --> 00:07:05,120
+so it's uh more towards the right than
+
+163
+00:07:05,120 --> 00:07:08,400
+it is up so it has more of an x value
+
+164
+00:07:08,400 --> 00:07:11,280
+than it does a y value and so let's say
+
+165
+00:07:11,280 --> 00:07:14,840
+we wanted to reflect this on the X AIS
+
+166
+00:07:14,840 --> 00:07:17,840
+of our coordinate space all we do is
+
+167
+00:07:17,840 --> 00:07:21,319
+negate the Y value sounds weird because
+
+168
+00:07:21,319 --> 00:07:23,919
+this is our x value right over here this
+
+169
+00:07:23,919 --> 00:07:26,879
+is our horizontal x value uh and so what
+
+170
+00:07:26,879 --> 00:07:29,960
+we have to do is negate the Y value in
+
+171
+00:07:29,960 --> 00:07:33,400
+order to get our reflected uh shape or
+
+172
+00:07:33,400 --> 00:07:36,240
+Point uh and so in this case let's just
+
+173
+00:07:36,240 --> 00:07:40,199
+say uh I were to roughly calculate here
+
+174
+00:07:40,199 --> 00:07:43,560
+uh we would end up with something around
+
+175
+00:07:43,560 --> 00:07:47,960
+here uh and then here and then like this
+
+176
+00:07:47,960 --> 00:07:49,319
+this is what would happen if we were to
+
+177
+00:07:49,319 --> 00:07:51,599
+reflect and technically if I had a piece
+
+178
+00:07:51,599 --> 00:07:53,240
+of paper and if I were to do it on a
+
+179
+00:07:53,240 --> 00:07:55,240
+piece of paper and if I were to fold the
+
+180
+00:07:55,240 --> 00:07:58,599
+paper in half along this x AIS then the
+
+181
+00:07:58,599 --> 00:07:59,840
+these two should be perfect perfectly
+
+182
+00:07:59,840 --> 00:08:01,240
+symmetrical this should be able to
+
+183
+00:08:01,240 --> 00:08:04,199
+overlap right on this perfectly if I've
+
+184
+00:08:04,199 --> 00:08:06,520
+reflected it nicely uh however if it's
+
+185
+00:08:06,520 --> 00:08:08,840
+even a bit off should but technically a
+
+186
+00:08:08,840 --> 00:08:10,919
+reflection would be completely
+
+187
+00:08:10,919 --> 00:08:13,919
+symmetrical on that axis uh and then
+
+188
+00:08:13,919 --> 00:08:16,560
+again the same concept applies to this y
+
+189
+00:08:16,560 --> 00:08:18,840
+vertical axis we've got here so what we
+
+190
+00:08:18,840 --> 00:08:20,319
+would do is let's say we wanted to
+
+191
+00:08:20,319 --> 00:08:23,120
+reflect this on our y vertical axis
+
+192
+00:08:23,120 --> 00:08:25,639
+quite simply all we need to do uh is of
+
+193
+00:08:25,639 --> 00:08:30,039
+course take this axis uh and uh of
+
+194
+00:08:30,039 --> 00:08:32,240
+course with the X axxis in order to
+
+195
+00:08:32,240 --> 00:08:34,519
+reflect on that we negate the Y value so
+
+196
+00:08:34,519 --> 00:08:37,200
+in order to reflect on the y axis we
+
+197
+00:08:37,200 --> 00:08:40,240
+negate the x value and so of course all
+
+198
+00:08:40,240 --> 00:08:42,320
+we need to do uh negate the x value and
+
+199
+00:08:42,320 --> 00:08:46,080
+say just um approximate this here uh it
+
+200
+00:08:46,080 --> 00:08:50,320
+would end up around somewhere uh here
+
+201
+00:08:50,320 --> 00:08:54,040
+is so again not perfect uh but this is
+
+202
+00:08:54,040 --> 00:08:56,120
+around where it would end up if I were
+
+203
+00:08:56,120 --> 00:08:58,200
+reflect on the Y AIS and again if this
+
+204
+00:08:58,200 --> 00:09:01,120
+was paper not AA solid whiteboard uh
+
+205
+00:09:01,120 --> 00:09:03,040
+then I could just you know fold this in
+
+206
+00:09:03,040 --> 00:09:05,440
+half and I should be able to see this
+
+207
+00:09:05,440 --> 00:09:08,279
+overlap perfectly onto this uh our
+
+208
+00:09:08,279 --> 00:09:11,839
+original shape or our original Point uh
+
+209
+00:09:11,839 --> 00:09:14,560
+and it should be perfectly symmetrical
+
+210
+00:09:14,560 --> 00:09:16,000
+uh of course though I'm not a machine so
+
+211
+00:09:16,000 --> 00:09:19,079
+I wouldn't be able to do that but now
+
+212
+00:09:19,079 --> 00:09:21,959
+I'd like to get into the main reason of
+
+213
+00:09:21,959 --> 00:09:23,839
+why I'm creating this video today
+
+214
+00:09:23,839 --> 00:09:26,440
+rotations and so without any further Ado
+
+215
+00:09:26,440 --> 00:09:30,160
+let's get right into rotations so let's
+
+216
+00:09:30,160 --> 00:09:32,360
+begin now again another thing I'm going
+
+217
+00:09:32,360 --> 00:09:34,440
+to be doing today uh is actually going
+
+218
+00:09:34,440 --> 00:09:36,880
+to be able to show you uh not just how
+
+219
+00:09:36,880 --> 00:09:38,519
+you can you know use those classic old
+
+220
+00:09:38,519 --> 00:09:40,760
+methods of rotating your notebook around
+
+221
+00:09:40,760 --> 00:09:42,839
+and doing all that sort of stuff instead
+
+222
+00:09:42,839 --> 00:09:44,600
+I'm going to be introducing you to a
+
+223
+00:09:44,600 --> 00:09:47,120
+generic algorithm that'll be that'll
+
+224
+00:09:47,120 --> 00:09:50,200
+allow you to calculate the coordinates
+
+225
+00:09:50,200 --> 00:09:52,720
+uh of how you could rotate a shape
+
+226
+00:09:52,720 --> 00:09:54,959
+counterclockwise or clockwise not just
+
+227
+00:09:54,959 --> 00:09:57,320
+about the origin but another point which
+
+228
+00:09:57,320 --> 00:10:00,519
+I will get to in just a second so now
+
+229
+00:10:00,519 --> 00:10:03,920
+before we begin uh I have to uh show you
+
+230
+00:10:03,920 --> 00:10:06,040
+something so of course we know what the
+
+231
+00:10:06,040 --> 00:10:08,480
+origin of our coordinate spaces the
+
+232
+00:10:08,480 --> 00:10:11,880
+origin would be right over here okay uh
+
+233
+00:10:11,880 --> 00:10:18,839
+and the origin is our zero zero point
+
+234
+00:10:18,839 --> 00:10:21,880
+okay now our this this is our origin
+
+235
+00:10:21,880 --> 00:10:23,240
+okay we agree this is the very center of
+
+236
+00:10:23,240 --> 00:10:25,800
+our coordinate space and let's just say
+
+237
+00:10:25,800 --> 00:10:30,560
+uh I were to draw a rectangle
+
+238
+00:10:30,560 --> 00:10:33,000
+or Square really any shape or even a
+
+239
+00:10:33,000 --> 00:10:36,880
+point on this coordinate space now let's
+
+240
+00:10:36,880 --> 00:10:38,720
+just say and you know actually in order
+
+241
+00:10:38,720 --> 00:10:41,000
+to help me do this I'm going to use my
+
+242
+00:10:41,000 --> 00:10:43,480
+uh trusty string so this is going to
+
+243
+00:10:43,480 --> 00:10:45,560
+help me rotate and so again this is one
+
+244
+00:10:45,560 --> 00:10:47,200
+of those classic methods right using one
+
+245
+00:10:47,200 --> 00:10:49,320
+of these strings or a compass or
+
+246
+00:10:49,320 --> 00:10:51,399
+rotating a notebook or the wax paper but
+
+247
+00:10:51,399 --> 00:10:52,959
+today I'm going to be showing you how
+
+248
+00:10:52,959 --> 00:10:54,480
+you can actually calculate those
+
+249
+00:10:54,480 --> 00:10:56,480
+coordinates but uh what I'm going to be
+
+250
+00:10:56,480 --> 00:10:58,920
+showing you on the Whiteboard here today
+
+251
+00:10:58,920 --> 00:11:01,360
+uh is just generally that this is a
+
+252
+00:11:01,360 --> 00:11:04,120
+rotation if I were to take my marker uh
+
+253
+00:11:04,120 --> 00:11:05,839
+say okay let's say this point we want to
+
+254
+00:11:05,839 --> 00:11:07,519
+rotate now let's say we want to go
+
+255
+00:11:07,519 --> 00:11:10,079
+counterclockwise about the origin quite
+
+256
+00:11:10,079 --> 00:11:12,240
+simply that's all we need to do and now
+
+257
+00:11:12,240 --> 00:11:15,160
+this is how we can go
+
+258
+00:11:15,160 --> 00:11:17,360
+counterclockwise uh over in this
+
+259
+00:11:17,360 --> 00:11:19,360
+direction uh that's how we can rotate
+
+260
+00:11:19,360 --> 00:11:22,360
+counterclockwise about our origin uh
+
+261
+00:11:22,360 --> 00:11:25,000
+however if I wanted to rotate clockwise
+
+262
+00:11:25,000 --> 00:11:27,600
+almost the same drill we just take that
+
+263
+00:11:27,600 --> 00:11:31,120
+little origin again uh I'm just going to
+
+264
+00:11:31,120 --> 00:11:34,320
+put that on the origin and then that
+
+265
+00:11:34,320 --> 00:11:37,440
+would be how we rotate clockwise about
+
+266
+00:11:37,440 --> 00:11:40,720
+the origin now that's quite simple but
+
+267
+00:11:40,720 --> 00:11:43,519
+it's not fun right and so of course I'm
+
+268
+00:11:43,519 --> 00:11:44,800
+going to be showing you how you can just
+
+269
+00:11:44,800 --> 00:11:46,959
+take those coordinates and calculate how
+
+270
+00:11:46,959 --> 00:11:49,639
+to rotate at 90° clockwise or
+
+271
+00:11:49,639 --> 00:11:52,279
+counterclockwise however something else
+
+272
+00:11:52,279 --> 00:11:53,760
+very very interesting that I'm going to
+
+273
+00:11:53,760 --> 00:11:55,800
+be getting into in just a second is
+
+274
+00:11:55,800 --> 00:11:58,360
+let's say we were to have another point
+
+275
+00:11:58,360 --> 00:12:00,440
+over here and and we were to label this
+
+276
+00:12:00,440 --> 00:12:03,839
+point B okay now this is a point in our
+
+277
+00:12:03,839 --> 00:12:07,440
+coordinate space what if we wanted to
+
+278
+00:12:07,440 --> 00:12:11,040
+rotate this same shape or point or
+
+279
+00:12:11,040 --> 00:12:16,800
+anything um about point B but not the
+
+280
+00:12:16,800 --> 00:12:20,160
+origin and so if we wanted to rotate
+
+281
+00:12:20,160 --> 00:12:22,600
+clockwise what would we do well I'm
+
+282
+00:12:22,600 --> 00:12:23,839
+probably going to have to covered this
+
+283
+00:12:23,839 --> 00:12:25,480
+just give me a second well I'm just
+
+284
+00:12:25,480 --> 00:12:27,360
+going to again use my string and this is
+
+285
+00:12:27,360 --> 00:12:29,480
+one of those old classic methods I'm
+
+286
+00:12:29,480 --> 00:12:31,760
+just going to do this and so this is how
+
+287
+00:12:31,760 --> 00:12:35,000
+we would go clockwise uh if we wanted to
+
+288
+00:12:35,000 --> 00:12:37,800
+rotate about point B right and we're not
+
+289
+00:12:37,800 --> 00:12:40,360
+rotating about the origin and if I
+
+290
+00:12:40,360 --> 00:12:42,040
+wanted to go
+
+291
+00:12:42,040 --> 00:12:44,240
+counterclockwise then it's again almost
+
+292
+00:12:44,240 --> 00:12:47,360
+the exact same thing uh all I do is put
+
+293
+00:12:47,360 --> 00:12:49,680
+the marker there uh take my string over
+
+294
+00:12:49,680 --> 00:12:52,399
+to point B uh and
+
+295
+00:12:52,399 --> 00:12:55,560
+then go over here okay so we have to
+
+296
+00:12:55,560 --> 00:12:57,680
+keep going in that direction uh and so
+
+297
+00:12:57,680 --> 00:13:00,120
+of course today I'm going to showing you
+
+298
+00:13:00,120 --> 00:13:03,199
+how you can rotate both clockwise and
+
+299
+00:13:03,199 --> 00:13:05,720
+counterclockwise about the origin and a
+
+300
+00:13:05,720 --> 00:13:07,839
+point about another point for in this
+
+301
+00:13:07,839 --> 00:13:11,639
+case point B uh on your coordinate space
+
+302
+00:13:11,639 --> 00:13:13,279
+and you'll be able to rotate anything a
+
+303
+00:13:13,279 --> 00:13:16,519
+shape a point anything and so of course
+
+304
+00:13:16,519 --> 00:13:18,519
+I'm very excited to get into a more
+
+305
+00:13:18,519 --> 00:13:20,839
+detailed explanation of rotations
+
+306
+00:13:20,839 --> 00:13:22,800
+themselves anyway though thank you for
+
+307
+00:13:22,800 --> 00:13:24,760
+the watching this whiteboard part let's
+
+308
+00:13:24,760 --> 00:13:27,639
+get right back into an actual in-depth
+
+309
+00:13:27,639 --> 00:13:30,399
+explanation of rotation themselves let's
+
+310
+00:13:30,399 --> 00:13:33,199
+get to it shall
+
+311
+00:13:34,920 --> 00:13:37,480
+we all right so welcome back to this
+
+312
+00:13:37,480 --> 00:13:39,680
+explanation part now and again we're
+
+313
+00:13:39,680 --> 00:13:41,279
+talking about Transformations and again
+
+314
+00:13:41,279 --> 00:13:43,560
+in this video specifically I'm talking
+
+315
+00:13:43,560 --> 00:13:46,360
+about rotations but if this video gets a
+
+316
+00:13:46,360 --> 00:13:47,920
+lot of you know support and people like
+
+317
+00:13:47,920 --> 00:13:49,839
+it and people want to know more about it
+
+318
+00:13:49,839 --> 00:13:52,720
+of course I will create more tutorials
+
+319
+00:13:52,720 --> 00:13:54,920
+uh on many different topics in
+
+320
+00:13:54,920 --> 00:13:56,399
+Transformations uh you know the
+
+321
+00:13:56,399 --> 00:13:58,160
+translations the stretching and
+
+322
+00:13:58,160 --> 00:14:00,839
+compression compression uh our
+
+323
+00:14:00,839 --> 00:14:03,199
+Reflections that type of stuff I'll be
+
+324
+00:14:03,199 --> 00:14:05,079
+I'll be creating videos about all that
+
+325
+00:14:05,079 --> 00:14:07,880
+sort of stuff uh if this video gets uh
+
+326
+00:14:07,880 --> 00:14:10,600
+you know a lot of uh support uh and
+
+327
+00:14:10,600 --> 00:14:12,639
+people actually want uh to know more
+
+328
+00:14:12,639 --> 00:14:15,519
+about this topic but anyway let's begin
+
+329
+00:14:15,519 --> 00:14:17,480
+so now as you can see in front of you
+
+330
+00:14:17,480 --> 00:14:20,560
+I've drawn a grid now in order to show
+
+331
+00:14:20,560 --> 00:14:23,079
+you what a rotation would be on a
+
+332
+00:14:23,079 --> 00:14:26,279
+coordinate uh you on a coordinate uh
+
+333
+00:14:26,279 --> 00:14:29,160
+space or coordinate um uh one of those
+
+334
+00:14:29,160 --> 00:14:31,360
+coordinate spaces we need to draw that
+
+335
+00:14:31,360 --> 00:14:33,199
+out so let's actually draw out one of
+
+336
+00:14:33,199 --> 00:14:35,320
+these coordinate spaces all right so as
+
+337
+00:14:35,320 --> 00:14:38,160
+you can see we've got four quadrants uh
+
+338
+00:14:38,160 --> 00:14:40,600
+and we've got our positive y our
+
+339
+00:14:40,600 --> 00:14:43,240
+negative y our Negative X and our
+
+340
+00:14:43,240 --> 00:14:46,560
+positive X and each one has their own
+
+341
+00:14:46,560 --> 00:14:50,040
+quadrants uh and so let's actually label
+
+342
+00:14:50,040 --> 00:14:53,000
+uh the origin of this uh coordinate
+
+343
+00:14:53,000 --> 00:14:55,800
+space uh which is0 0 in the middle you
+
+344
+00:14:55,800 --> 00:14:58,560
+know just uh in between everything uh
+
+345
+00:14:58,560 --> 00:15:01,360
+very middle everything uh and let's draw
+
+346
+00:15:01,360 --> 00:15:04,160
+Let's uh Mark a point on this coordinate
+
+347
+00:15:04,160 --> 00:15:07,240
+space uh which is 62 all right so this
+
+348
+00:15:07,240 --> 00:15:11,920
+is a 62 position 6x2 y so we are
+
+349
+00:15:11,920 --> 00:15:14,600
+essentially moving six in as X six
+
+350
+00:15:14,600 --> 00:15:17,680
+towards the right and two up as positive
+
+351
+00:15:17,680 --> 00:15:21,000
+2 y okay uh now let's say we wanted to
+
+352
+00:15:21,000 --> 00:15:24,279
+rotate this 90° clockwise how would we
+
+353
+00:15:24,279 --> 00:15:26,199
+do that well I'm going to give you a
+
+354
+00:15:26,199 --> 00:15:29,120
+quick uh sneak peek into the future and
+
+355
+00:15:29,120 --> 00:15:31,040
+I'm just going to give you the answer
+
+356
+00:15:31,040 --> 00:15:35,079
+right now the answer is 2 -6 okay we
+
+357
+00:15:35,079 --> 00:15:38,759
+rotate 6 2 90° clockwise we're getting
+
+358
+00:15:38,759 --> 00:15:41,040
+to
+
+359
+00:15:41,120 --> 00:15:44,880
+26 but how how is that possible well let
+
+360
+00:15:44,880 --> 00:15:49,800
+me show you let's draw a line with zero
+
+361
+00:15:49,800 --> 00:15:53,680
+y uh sorry with zero y but 6X so we're
+
+362
+00:15:53,680 --> 00:15:57,720
+drawing a 60 Line This is a blue line
+
+363
+00:15:57,720 --> 00:16:01,560
+and as you can see uh if uh we have uh
+
+364
+00:16:01,560 --> 00:16:04,120
+now as you can see all of these uh all
+
+365
+00:16:04,120 --> 00:16:06,160
+of these quadrants that we have here
+
+366
+00:16:06,160 --> 00:16:09,920
+these four quadrants are at right angles
+
+367
+00:16:09,920 --> 00:16:12,079
+and so if we were to rotate this blue
+
+368
+00:16:12,079 --> 00:16:14,720
+line 90° clockwise quite easily we could
+
+369
+00:16:14,720 --> 00:16:17,519
+say that it would end up here but this
+
+370
+00:16:17,519 --> 00:16:20,759
+still doesn't really prove how we could
+
+371
+00:16:20,759 --> 00:16:25,040
+have uh 62 trans you know rotated 90°
+
+372
+00:16:25,040 --> 00:16:28,319
+clockwise to 2 -6 how does that work
+
+373
+00:16:28,319 --> 00:16:31,000
+well let's put the this line back and
+
+374
+00:16:31,000 --> 00:16:34,560
+let's draw a latch from 62 to this line
+
+375
+00:16:34,560 --> 00:16:36,240
+another blue
+
+376
+00:16:36,240 --> 00:16:40,120
+line and now let's rotate this line 90°
+
+377
+00:16:40,120 --> 00:16:43,199
+clockwise and as you can see it ends up
+
+378
+00:16:43,199 --> 00:16:45,480
+at 2
+
+379
+00:16:45,480 --> 00:16:47,759
+-6 in fact in order to prove that this
+
+380
+00:16:47,759 --> 00:16:49,639
+is 90° we can actually draw lines
+
+381
+00:16:49,639 --> 00:16:51,560
+between them and as you can see the
+
+382
+00:16:51,560 --> 00:16:55,440
+angle here is 90° so it has been proven
+
+383
+00:16:55,440 --> 00:16:58,279
+that we have actually rotated this 90°
+
+384
+00:16:58,279 --> 00:17:00,600
+but actually Let's uh continue this
+
+385
+00:17:00,600 --> 00:17:02,120
+right let's say let's say we were to
+
+386
+00:17:02,120 --> 00:17:03,839
+again draw this line and put a latch to
+
+387
+00:17:03,839 --> 00:17:07,199
+2 -6 let's rotate this another 90°
+
+388
+00:17:07,199 --> 00:17:11,839
+clockwise all right we get to -6
+
+389
+00:17:11,839 --> 00:17:14,199
+-2 now again we can draw this line and
+
+390
+00:17:14,199 --> 00:17:16,760
+we can see that we have a 90° rotation
+
+391
+00:17:16,760 --> 00:17:18,839
+and we can do this once more and we get
+
+392
+00:17:18,839 --> 00:17:19,880
+to
+
+393
+00:17:19,880 --> 00:17:22,199
+-26 again we can draw this line and we
+
+394
+00:17:22,199 --> 00:17:26,720
+see that's another 90° but this is 270°
+
+395
+00:17:26,720 --> 00:17:29,840
+of course we went from 62 that's 190°
+
+396
+00:17:29,840 --> 00:17:32,880
+then we've got 180° then we rotated
+
+397
+00:17:32,880 --> 00:17:38,000
+270° from 62 to -26
+
+398
+00:17:38,000 --> 00:17:42,919
+clockwise and so after 3 after sorry 270
+
+399
+00:17:42,919 --> 00:17:46,600
+in order to get to 360 so a 360°
+
+400
+00:17:46,600 --> 00:17:48,960
+rotation is a full circle we know that
+
+401
+00:17:48,960 --> 00:17:51,799
+so if we were to have 62 and we were to
+
+402
+00:17:51,799 --> 00:17:55,760
+have a 360 degree rotation uh from 62
+
+403
+00:17:55,760 --> 00:17:58,240
+clockwise or even counterclockwise we
+
+404
+00:17:58,240 --> 00:18:00,039
+would reach back back at
+
+405
+00:18:00,039 --> 00:18:04,280
+62 and after 270 we get immediately if
+
+406
+00:18:04,280 --> 00:18:06,320
+we had another 90
+
+407
+00:18:06,320 --> 00:18:09,679
+360 and so in theory if this blue line
+
+408
+00:18:09,679 --> 00:18:12,720
+hits 62 again that means that we have
+
+409
+00:18:12,720 --> 00:18:14,840
+actually rotated
+
+410
+00:18:14,840 --> 00:18:18,440
+360° and that we have actually rotated
+
+411
+00:18:18,440 --> 00:18:21,440
+90° every single time and so as you can
+
+412
+00:18:21,440 --> 00:18:24,240
+see it does and if we draw this line you
+
+413
+00:18:24,240 --> 00:18:26,880
+can see that indeed we have been
+
+414
+00:18:26,880 --> 00:18:31,200
+rotating 90° clockwise every single time
+
+415
+00:18:31,200 --> 00:18:37,559
+we went from 62 to 26 to 66 -2 to -2 6
+
+416
+00:18:37,559 --> 00:18:41,080
+and then 360° back again to 62 and this
+
+417
+00:18:41,080 --> 00:18:45,400
+was all done in a clockwise
+
+418
+00:18:45,559 --> 00:18:49,120
+way but okay so this is great but how
+
+419
+00:18:49,120 --> 00:18:51,000
+would this really help us this is no
+
+420
+00:18:51,000 --> 00:18:52,480
+different than you know as I was saying
+
+421
+00:18:52,480 --> 00:18:54,480
+those classic techniques we need an
+
+422
+00:18:54,480 --> 00:18:56,520
+algorithm or some sort of pattern so
+
+423
+00:18:56,520 --> 00:18:58,159
+let's actually take a look at what this
+
+424
+00:18:58,159 --> 00:19:00,480
+pattern is so as you can see pattern we
+
+425
+00:19:00,480 --> 00:19:05,400
+have we begin with postive 6
+
+426
+00:19:05,400 --> 00:19:09,840
+pos2 now in order to get to the next uh
+
+427
+00:19:09,840 --> 00:19:12,120
+the next uh rotation the next rotation
+
+428
+00:19:12,120 --> 00:19:15,120
+the next 90° clockwise rotation what we
+
+429
+00:19:15,120 --> 00:19:16,559
+need to do is first of all we have to
+
+430
+00:19:16,559 --> 00:19:21,159
+have a negator okay and we also have to
+
+431
+00:19:21,159 --> 00:19:23,159
+have and what we're going to do
+
+432
+00:19:23,159 --> 00:19:25,240
+essentially is we're going to swap as
+
+433
+00:19:25,240 --> 00:19:28,240
+you can see we went from 62 to 2-6 and
+
+434
+00:19:28,240 --> 00:19:29,880
+so we're going to to
+
+435
+00:19:29,880 --> 00:19:33,480
+swap the six and the two but what we're
+
+436
+00:19:33,480 --> 00:19:36,000
+also going to do is we're going to make
+
+437
+00:19:36,000 --> 00:19:39,200
+it so that while the six the x value is
+
+438
+00:19:39,200 --> 00:19:42,600
+moving into the Y value into the Y
+
+439
+00:19:42,600 --> 00:19:45,120
+position we're going to negate it to
+
+440
+00:19:45,120 --> 00:19:46,400
+make it
+
+441
+00:19:46,400 --> 00:19:49,679
+A6 and so the positive2 over there the Y
+
+442
+00:19:49,679 --> 00:19:52,200
+value that's going into X that remains
+
+443
+00:19:52,200 --> 00:19:55,559
+intact the sign remains intact however
+
+444
+00:19:55,559 --> 00:19:58,000
+the positive six that goes into the Y
+
+445
+00:19:58,000 --> 00:20:00,159
+value that's currently X that goes into
+
+446
+00:20:00,159 --> 00:20:04,480
+y gets negated to -6 and we end up with
+
+447
+00:20:04,480 --> 00:20:06,240
+our
+
+448
+00:20:06,240 --> 00:20:08,039
+coordinate now another thing I'd
+
+449
+00:20:08,039 --> 00:20:10,000
+actually like to draw your attention to
+
+450
+00:20:10,000 --> 00:20:11,559
+uh is just before we continue with our
+
+451
+00:20:11,559 --> 00:20:13,559
+pattern if you take a look over here we
+
+452
+00:20:13,559 --> 00:20:17,400
+have 62 and we have -6
+
+453
+00:20:17,400 --> 00:20:21,520
+-2 now these two uh coordinates uh
+
+454
+00:20:21,520 --> 00:20:24,559
+what's happening is when you have uh
+
+455
+00:20:24,559 --> 00:20:27,880
+these when we have 62 which is on our
+
+456
+00:20:27,880 --> 00:20:29,880
+which is one of the Quant if we were to
+
+457
+00:20:29,880 --> 00:20:32,679
+move it diagonally if we were to reflect
+
+458
+00:20:32,679 --> 00:20:34,480
+remember when I explained Reflections in
+
+459
+00:20:34,480 --> 00:20:36,360
+the beginning if we were to reflect it
+
+460
+00:20:36,360 --> 00:20:39,280
+exactly diagonally to the to the to its
+
+461
+00:20:39,280 --> 00:20:42,280
+diagonal um quadrant we would have it uh
+
+462
+00:20:42,280 --> 00:20:44,240
+exactly uh placed diagonally and as you
+
+463
+00:20:44,240 --> 00:20:46,200
+can see if we just negate the six and
+
+464
+00:20:46,200 --> 00:20:48,760
+the two we have 6 -2 and it's placed
+
+465
+00:20:48,760 --> 00:20:53,600
+perfectly uh at a 180° angle uh from uh
+
+466
+00:20:53,600 --> 00:20:56,400
+clockwise or counterclockwise uh anyway
+
+467
+00:20:56,400 --> 00:20:59,440
+from 62 and that proves again that we've
+
+468
+00:20:59,440 --> 00:21:03,240
+been rotating 90° every single time but
+
+469
+00:21:03,240 --> 00:21:05,480
+continuing with the pattern though so
+
+470
+00:21:05,480 --> 00:21:08,840
+now we've got positive 2 -6 let's see if
+
+471
+00:21:08,840 --> 00:21:11,200
+the same pattern that we applied to POS
+
+472
+00:21:11,200 --> 00:21:14,679
+6 pos2 applies to this as well so let's
+
+473
+00:21:14,679 --> 00:21:17,840
+say we swap and negate the x value while
+
+474
+00:21:17,840 --> 00:21:20,880
+it's going to Y as you can see we end up
+
+475
+00:21:20,880 --> 00:21:24,559
+with -6 -2 because the -6 value its sign
+
+476
+00:21:24,559 --> 00:21:27,760
+stays intact while going over to X how
+
+477
+00:21:27,760 --> 00:21:30,360
+however the posit 2 gets negated while
+
+478
+00:21:30,360 --> 00:21:35,240
+going over to Y and we end up with -6 -2
+
+479
+00:21:35,240 --> 00:21:39,000
+which puts us at 18 180° angle with that
+
+480
+00:21:39,000 --> 00:21:41,559
+other quadrant over there which is a 90°
+
+481
+00:21:41,559 --> 00:21:44,760
+turn which is 90° uh rotate however from
+
+482
+00:21:44,760 --> 00:21:48,760
+positive2 -6 now again we put the same
+
+483
+00:21:48,760 --> 00:21:52,679
+pattern into play uh we have the Y value
+
+484
+00:21:52,679 --> 00:21:55,760
+going to x uh sign stays intact the X
+
+485
+00:21:55,760 --> 00:21:58,960
+going to Y uh it's it gets negated and
+
+486
+00:21:58,960 --> 00:22:02,600
+we end up with -2
+
+487
+00:22:02,600 --> 00:22:06,000
+pos6 because of course uh -6 negated
+
+488
+00:22:06,000 --> 00:22:09,360
+would be pos6 so now continuing though
+
+489
+00:22:09,360 --> 00:22:11,600
+let's say we were to put this again now
+
+490
+00:22:11,600 --> 00:22:14,240
+as you can see with -26 we've done as I
+
+491
+00:22:14,240 --> 00:22:17,320
+said a whole 270° of
+
+492
+00:22:17,320 --> 00:22:20,760
+rotating and if this pattern continues
+
+493
+00:22:20,760 --> 00:22:24,159
+again with 26 -26 sorry and we're able
+
+494
+00:22:24,159 --> 00:22:26,919
+to get 62 that means we've done a full
+
+495
+00:22:26,919 --> 00:22:29,640
+360 degree rotation and every single
+
+496
+00:22:29,640 --> 00:22:33,480
+time we rotated 90 Dees so let's
+
+497
+00:22:33,480 --> 00:22:36,640
+see positive 6 will remain intact while
+
+498
+00:22:36,640 --> 00:22:39,360
+going over to X from y but the negative
+
+499
+00:22:39,360 --> 00:22:41,720
+-2 will get negated to positive2 while
+
+500
+00:22:41,720 --> 00:22:44,279
+going over to the yv value and we end up
+
+501
+00:22:44,279 --> 00:22:48,760
+with POS 6 pos2 and we have made a full
+
+502
+00:22:48,760 --> 00:22:52,520
+360° rotation with this pattern which
+
+503
+00:22:52,520 --> 00:22:56,120
+proves that it actually does
+
+504
+00:22:56,120 --> 00:22:58,600
+work now let's actually take a look at
+
+505
+00:22:58,600 --> 00:23:00,559
+the algorithm though sure we've gotten a
+
+506
+00:23:00,559 --> 00:23:03,240
+pattern but what's our final algorithm
+
+507
+00:23:03,240 --> 00:23:07,120
+of how we can actually rotate uh a point
+
+508
+00:23:07,120 --> 00:23:11,400
+90° uh by from the origin well it's as
+
+509
+00:23:11,400 --> 00:23:13,799
+simple as this we have our original
+
+510
+00:23:13,799 --> 00:23:15,799
+starting point let's say positive 6
+
+511
+00:23:15,799 --> 00:23:18,840
+positive2 are positive X and positive y
+
+512
+00:23:18,840 --> 00:23:21,600
+values we essentially have the X going
+
+513
+00:23:21,600 --> 00:23:24,360
+over to the Y spot and getting negated
+
+514
+00:23:24,360 --> 00:23:26,600
+whereas the Y goes over to the X Spot
+
+515
+00:23:26,600 --> 00:23:29,000
+while keeping its sign intact
+
+516
+00:23:29,000 --> 00:23:31,840
+and we end up with positive y Negative X
+
+517
+00:23:31,840 --> 00:23:35,200
+because the negative X was
+
+518
+00:23:35,200 --> 00:23:38,159
+negated now you must be wondering though
+
+519
+00:23:38,159 --> 00:23:40,640
+sure we can you know apply this to
+
+520
+00:23:40,640 --> 00:23:44,159
+points but what about shapes how can we
+
+521
+00:23:44,159 --> 00:23:47,240
+rotate shapes from the origin well let's
+
+522
+00:23:47,240 --> 00:23:49,480
+put this simply all you need to do is
+
+523
+00:23:49,480 --> 00:23:51,039
+let's say you have a triangle with
+
+524
+00:23:51,039 --> 00:23:53,200
+points a b and c well what you do is
+
+525
+00:23:53,200 --> 00:23:55,679
+exactly that You' label those points and
+
+526
+00:23:55,679 --> 00:23:58,960
+you'd find their positions in the grid
+
+527
+00:23:58,960 --> 00:24:01,799
+what you do is You' actually rotate each
+
+528
+00:24:01,799 --> 00:24:05,039
+point individually using this algorithm
+
+529
+00:24:05,039 --> 00:24:07,120
+once you've done that and once you've uh
+
+530
+00:24:07,120 --> 00:24:09,159
+labeled those rotated points you're
+
+531
+00:24:09,159 --> 00:24:11,159
+going to connect those points just like
+
+532
+00:24:11,159 --> 00:24:13,679
+you would uh for creating the shape and
+
+533
+00:24:13,679 --> 00:24:15,440
+of course you have your shape that has
+
+534
+00:24:15,440 --> 00:24:18,559
+been rotated 90°
+
+535
+00:24:18,559 --> 00:24:20,480
+clockwise all right so that's the
+
+536
+00:24:20,480 --> 00:24:22,919
+algorithm for this but you know this is
+
+537
+00:24:22,919 --> 00:24:24,720
+nice and all we're rotating from the
+
+538
+00:24:24,720 --> 00:24:26,880
+origin but let's say we want something
+
+539
+00:24:26,880 --> 00:24:29,360
+more complex more fun
+
+540
+00:24:29,360 --> 00:24:34,200
+well what if we wanted to rotate from a
+
+541
+00:24:34,200 --> 00:24:37,480
+point that's not the origin sounds weird
+
+542
+00:24:37,480 --> 00:24:40,080
+doesn't it but let me explain so we have
+
+543
+00:24:40,080 --> 00:24:42,200
+this blank grid here again this blank
+
+544
+00:24:42,200 --> 00:24:45,679
+coordinate space and we have our origin
+
+545
+00:24:45,679 --> 00:24:48,840
+label as 0 0 and we have a red dot that
+
+546
+00:24:48,840 --> 00:24:51,679
+we want to rotate we're going to label
+
+547
+00:24:51,679 --> 00:24:54,000
+this as 1315 because that's its position
+
+548
+00:24:54,000 --> 00:24:56,840
+on the grid that is relative to the
+
+549
+00:24:56,840 --> 00:24:58,880
+origin
+
+550
+00:24:58,880 --> 00:25:02,159
+but now let's say we have a black dot
+
+551
+00:25:02,159 --> 00:25:04,320
+okay and we label as black dot 912 which
+
+552
+00:25:04,320 --> 00:25:06,760
+is its position relative to the
+
+553
+00:25:06,760 --> 00:25:10,039
+origin and we wanted to rotate this red
+
+554
+00:25:10,039 --> 00:25:13,919
+dot not from the origin but about this
+
+555
+00:25:13,919 --> 00:25:17,640
+black dot how would we do it well first
+
+556
+00:25:17,640 --> 00:25:19,320
+of all let's begin by drawing a circle
+
+557
+00:25:19,320 --> 00:25:21,399
+and let's talk about the algorithm let's
+
+558
+00:25:21,399 --> 00:25:25,480
+Dive Right In so to begin we have 13 15
+
+559
+00:25:25,480 --> 00:25:29,559
+now again we are not rotating about or
+
+560
+00:25:29,559 --> 00:25:32,279
+relative to the origin that's supposed
+
+561
+00:25:32,279 --> 00:25:35,360
+to be about the black dot and so in
+
+562
+00:25:35,360 --> 00:25:37,960
+order to do that we need to find the red
+
+563
+00:25:37,960 --> 00:25:41,120
+Dot's position with respect to that
+
+564
+00:25:41,120 --> 00:25:43,760
+black dot in
+
+565
+00:25:43,760 --> 00:25:48,000
+912 and so what we do is we subtract
+
+566
+00:25:48,000 --> 00:25:52,279
+that 912 value from 1315 and this
+
+567
+00:25:52,279 --> 00:25:57,799
+results in 43 POS 4 pos3 and this is our
+
+568
+00:25:57,799 --> 00:26:00,559
+final value which is actually you know
+
+569
+00:26:00,559 --> 00:26:02,320
+the 135
+
+570
+00:26:02,320 --> 00:26:04,919
+position according or sort of uh in
+
+571
+00:26:04,919 --> 00:26:08,120
+respect to the 912 Dot and so what this
+
+572
+00:26:08,120 --> 00:26:10,919
+means is of course the 4X 3 Y and so
+
+573
+00:26:10,919 --> 00:26:12,440
+this means that we're going four to the
+
+574
+00:26:12,440 --> 00:26:15,960
+right and three up that is our position
+
+575
+00:26:15,960 --> 00:26:19,080
+that is the red Dot's position uh like
+
+576
+00:26:19,080 --> 00:26:21,520
+relative to that black
+
+577
+00:26:21,520 --> 00:26:24,679
+dot and so what we can do now is use our
+
+578
+00:26:24,679 --> 00:26:27,399
+classic algorithm that we're so used to
+
+579
+00:26:27,399 --> 00:26:29,960
+we can swap these values and negate the
+
+580
+00:26:29,960 --> 00:26:33,919
+X going to the Y and we end up with pos3
+
+581
+00:26:33,919 --> 00:26:37,399
+-4 but wait a minute we have our
+
+582
+00:26:37,399 --> 00:26:39,480
+algorithm output that we've been using
+
+583
+00:26:39,480 --> 00:26:40,799
+for so long
+
+584
+00:26:40,799 --> 00:26:46,159
+now but this is not the value of 1315
+
+585
+00:26:46,159 --> 00:26:48,279
+rotated 90°
+
+586
+00:26:48,279 --> 00:26:51,440
+clockwise remember how we factored in or
+
+587
+00:26:51,440 --> 00:26:55,760
+we found 131 15's location relative to
+
+588
+00:26:55,760 --> 00:26:59,080
+that black dot well yeah we encode ened
+
+589
+00:26:59,080 --> 00:27:00,840
+that so I guess you could say encoded
+
+590
+00:27:00,840 --> 00:27:02,880
+it's not technically encoding but uh
+
+591
+00:27:02,880 --> 00:27:05,440
+quote unquote if you will uh we have
+
+592
+00:27:05,440 --> 00:27:09,919
+encoded uh 1315 with that 912 location
+
+593
+00:27:09,919 --> 00:27:11,200
+and we got
+
+594
+00:27:11,200 --> 00:27:13,720
+43 and so now we need to take this
+
+595
+00:27:13,720 --> 00:27:15,360
+location that this location that we've
+
+596
+00:27:15,360 --> 00:27:18,039
+got this coordinate pair and decode it
+
+597
+00:27:18,039 --> 00:27:19,600
+and we're going to put this on the side
+
+598
+00:27:19,600 --> 00:27:21,240
+okay so we don't mess up our current
+
+599
+00:27:21,240 --> 00:27:23,360
+coordinate pair uh and in order to
+
+600
+00:27:23,360 --> 00:27:26,039
+decode it well quite simply we just add
+
+601
+00:27:26,039 --> 00:27:30,440
+back the 9 and 12 this results in 1208
+
+602
+00:27:30,440 --> 00:27:33,240
+and in order to prove to you that 1208
+
+603
+00:27:33,240 --> 00:27:37,240
+is in fact that 90° uh that we've uh
+
+604
+00:27:37,240 --> 00:27:38,840
+rotated from
+
+605
+00:27:38,840 --> 00:27:43,679
+1315 on about the 912 well let's put
+
+606
+00:27:43,679 --> 00:27:46,240
+that on the grd uh sorry the grid and
+
+607
+00:27:46,240 --> 00:27:48,480
+let's label it as you can see that is
+
+608
+00:27:48,480 --> 00:27:52,279
+our 128 point and that is how we were
+
+609
+00:27:52,279 --> 00:27:57,440
+able to rotate 1315 90° clockwise about
+
+610
+00:27:57,440 --> 00:28:00,960
+the 9 12 or black dot Point instead of
+
+611
+00:28:00,960 --> 00:28:02,279
+the
+
+612
+00:28:02,279 --> 00:28:05,240
+origin that's pretty interesting but
+
+613
+00:28:05,240 --> 00:28:07,120
+let's say we wanted to continue we've
+
+614
+00:28:07,120 --> 00:28:09,640
+done 90° but let's do
+
+615
+00:28:09,640 --> 00:28:13,000
+180° which is 128 but another 90°
+
+616
+00:28:13,000 --> 00:28:16,200
+clockwise how do we do that well again
+
+617
+00:28:16,200 --> 00:28:19,760
+we're using the same uh positive3 -4
+
+618
+00:28:19,760 --> 00:28:22,159
+value that we got from our algorithm and
+
+619
+00:28:22,159 --> 00:28:24,080
+we're going to run the same classic
+
+620
+00:28:24,080 --> 00:28:27,399
+algorithm again the Y value going to X
+
+621
+00:28:27,399 --> 00:28:29,360
+will stay the the same not stay the same
+
+622
+00:28:29,360 --> 00:28:32,120
+the sign will stay intact whereas the x
+
+623
+00:28:32,120 --> 00:28:35,200
+value going to the Y will be negated and
+
+624
+00:28:35,200 --> 00:28:39,720
+finally we get -4 -3 but again we need
+
+625
+00:28:39,720 --> 00:28:41,799
+to decode it and so what we do is we
+
+626
+00:28:41,799 --> 00:28:44,480
+bring it to the side we add 912 and we
+
+627
+00:28:44,480 --> 00:28:46,159
+end up with
+
+628
+00:28:46,159 --> 00:28:49,080
+509 and using this value we can put that
+
+629
+00:28:49,080 --> 00:28:51,960
+on the grid label it and as you can see
+
+630
+00:28:51,960 --> 00:28:57,480
+that is indeed 90° clockwise from 128
+
+631
+00:28:57,480 --> 00:28:58,640
+and
+
+632
+00:28:58,640 --> 00:29:04,120
+180° from the clockwise uh from
+
+633
+00:29:04,760 --> 00:29:08,000
+1315 and then again that is about the
+
+634
+00:29:08,000 --> 00:29:12,159
+912 and not from the origin let's
+
+635
+00:29:12,159 --> 00:29:14,240
+actually continue this pattern once more
+
+636
+00:29:14,240 --> 00:29:17,120
+and we end up again with
+
+637
+00:29:17,120 --> 00:29:19,840
+-34 if we take this to the side again
+
+638
+00:29:19,840 --> 00:29:22,559
+decode it with a 9 and 12 and we end up
+
+639
+00:29:22,559 --> 00:29:26,120
+with 616 we put that on the graph and we
+
+640
+00:29:26,120 --> 00:29:28,720
+label it and as you can see
+
+641
+00:29:28,720 --> 00:29:31,440
+we have that 90° turn again so now what
+
+642
+00:29:31,440 --> 00:29:34,320
+we've done what we've done is we have a
+
+643
+00:29:34,320 --> 00:29:39,480
+90° clockwise turn from 59 about the 912
+
+644
+00:29:39,480 --> 00:29:40,559
+which is
+
+645
+00:29:40,559 --> 00:29:46,080
+616 but it's 180° rotation from 128 and
+
+646
+00:29:46,080 --> 00:29:49,519
+it's a 270° rotation from
+
+647
+00:29:49,519 --> 00:29:53,279
+1315 and so again we apply the same
+
+648
+00:29:53,279 --> 00:29:56,399
+algorithm as we did last time if we can
+
+649
+00:29:56,399 --> 00:29:58,200
+take 616
+
+650
+00:29:58,200 --> 00:30:01,399
+and apply our same algorithm in order to
+
+651
+00:30:01,399 --> 00:30:04,360
+rotate at 90° clockwise that would mean
+
+652
+00:30:04,360 --> 00:30:06,880
+from 1315 it should be
+
+653
+00:30:06,880 --> 00:30:11,000
+360° and since 360° is a perfect circle
+
+654
+00:30:11,000 --> 00:30:13,960
+that means we should end up with
+
+655
+00:30:13,960 --> 00:30:17,279
+135 and so we run our algorithm again
+
+656
+00:30:17,279 --> 00:30:19,640
+the positive4 sign stays intact and it
+
+657
+00:30:19,640 --> 00:30:23,240
+goes from y to X and negative3 sign gets
+
+658
+00:30:23,240 --> 00:30:26,120
+negated to three and goes over to Y and
+
+659
+00:30:26,120 --> 00:30:29,519
+as you can see we end up with 4
+
+660
+00:30:29,519 --> 00:30:33,000
+pos3 and that is the same value we got
+
+661
+00:30:33,000 --> 00:30:37,399
+when we took pos3 pos5 minus postive 9
+
+662
+00:30:37,399 --> 00:30:41,279
+pos2 we got 43 and now we got 43 again
+
+663
+00:30:41,279 --> 00:30:43,159
+and so there's no doubt that if we take
+
+664
+00:30:43,159 --> 00:30:46,240
+it to the side add 912 again we get
+
+665
+00:30:46,240 --> 00:30:50,080
+135 as our final result and as you can
+
+666
+00:30:50,080 --> 00:30:57,120
+see we have rotated 13 15 360° clockwise
+
+667
+00:30:57,120 --> 00:31:01,279
+about the point 912 not the
+
+668
+00:31:01,279 --> 00:31:04,120
+origin now this is pretty nice isn't it
+
+669
+00:31:04,120 --> 00:31:06,120
+how we were able to take something that
+
+670
+00:31:06,120 --> 00:31:08,720
+was so frustrating and simplify it down
+
+671
+00:31:08,720 --> 00:31:10,159
+into one
+
+672
+00:31:10,159 --> 00:31:13,159
+algorithm but we're not quite done yet
+
+673
+00:31:13,159 --> 00:31:15,240
+there's still one more
+
+674
+00:31:15,240 --> 00:31:18,159
+step what if we wanted to take all of
+
+675
+00:31:18,159 --> 00:31:20,880
+this and we wanted to condense it into
+
+676
+00:31:20,880 --> 00:31:24,679
+one final algorithm how would we do
+
+677
+00:31:24,679 --> 00:31:27,559
+it well let's say we have two different
+
+678
+00:31:27,559 --> 00:31:29,639
+algorithm one to rotate a point
+
+679
+00:31:29,639 --> 00:31:34,039
+clockwise and one to rotate a point
+
+680
+00:31:34,039 --> 00:31:36,200
+counterclockwise let's begin describing
+
+681
+00:31:36,200 --> 00:31:38,320
+how this would work well again this
+
+682
+00:31:38,320 --> 00:31:39,799
+isn't going to be about the origin it
+
+683
+00:31:39,799 --> 00:31:41,200
+could be about any point it could be
+
+684
+00:31:41,200 --> 00:31:43,240
+about the origin it could be about uh
+
+685
+00:31:43,240 --> 00:31:45,880
+another Point really anything and so we
+
+686
+00:31:45,880 --> 00:31:49,880
+have this red dot uh that we want to uh
+
+687
+00:31:49,880 --> 00:31:51,399
+that we want to rotate okay and we're
+
+688
+00:31:51,399 --> 00:31:56,240
+going to say its location is XP YP that
+
+689
+00:31:56,240 --> 00:31:58,360
+is the red dots location and this is
+
+690
+00:31:58,360 --> 00:31:59,600
+what we want to
+
+691
+00:31:59,600 --> 00:32:02,080
+rotate and this is one of the inputs
+
+692
+00:32:02,080 --> 00:32:04,159
+that both of our algorithms will
+
+693
+00:32:04,159 --> 00:32:07,559
+take but then we also label the the
+
+694
+00:32:07,559 --> 00:32:09,760
+black dot and this black dot is what we
+
+695
+00:32:09,760 --> 00:32:12,480
+want to rotate about now this black dot
+
+696
+00:32:12,480 --> 00:32:14,080
+could be the origin it could be where
+
+697
+00:32:14,080 --> 00:32:16,039
+the black dot currently is it could be
+
+698
+00:32:16,039 --> 00:32:18,600
+any place or any location on this
+
+699
+00:32:18,600 --> 00:32:19,679
+coordinate
+
+700
+00:32:19,679 --> 00:32:22,159
+space and we're going to label this
+
+701
+00:32:22,159 --> 00:32:25,039
+black dot as XO and
+
+702
+00:32:25,039 --> 00:32:27,639
+yo then what we're going to do is we're
+
+703
+00:32:27,639 --> 00:32:30,519
+going to take this uh this black dot and
+
+704
+00:32:30,519 --> 00:32:31,880
+what we're going to do is again just
+
+705
+00:32:31,880 --> 00:32:34,760
+like we did just a few seconds ago we're
+
+706
+00:32:34,760 --> 00:32:38,159
+going to take XP and YP and we're going
+
+707
+00:32:38,159 --> 00:32:43,000
+to subtract XO and yo from XP and YP
+
+708
+00:32:43,000 --> 00:32:44,720
+just like we did as I said a few seconds
+
+709
+00:32:44,720 --> 00:32:46,840
+ago and this is going to happen in both
+
+710
+00:32:46,840 --> 00:32:49,039
+of the algorithms and we're going to end
+
+711
+00:32:49,039 --> 00:32:51,799
+up with a result that I like to call X1
+
+712
+00:32:51,799 --> 00:32:54,639
+and y1 and this is where the algorithms
+
+713
+00:32:54,639 --> 00:32:56,880
+start to defer a bit uh and so what
+
+714
+00:32:56,880 --> 00:32:58,480
+going to happen
+
+715
+00:32:58,480 --> 00:33:00,880
+is uh let's just put our negators here
+
+716
+00:33:00,880 --> 00:33:02,760
+and so just like last time again what
+
+717
+00:33:02,760 --> 00:33:04,440
+I'm saying is we're using the same
+
+718
+00:33:04,440 --> 00:33:07,360
+algorithm uh we are essentially uh for
+
+719
+00:33:07,360 --> 00:33:09,159
+the clockwise one at least we're taking
+
+720
+00:33:09,159 --> 00:33:11,720
+X1 and we're putting it into the Y's
+
+721
+00:33:11,720 --> 00:33:13,799
+position while negating it so the
+
+722
+00:33:13,799 --> 00:33:17,320
+positive X1 becomes a negative X1
+
+723
+00:33:17,320 --> 00:33:19,519
+whereas the positive y1 switches over
+
+724
+00:33:19,519 --> 00:33:21,799
+with the X's position while keeping its
+
+725
+00:33:21,799 --> 00:33:22,880
+sign
+
+726
+00:33:22,880 --> 00:33:25,399
+intact however on the counterclockwise
+
+727
+00:33:25,399 --> 00:33:26,919
+side now I mean you've already seen the
+
+728
+00:33:26,919 --> 00:33:28,840
+clockwise side that's pretty you're fam
+
+729
+00:33:28,840 --> 00:33:30,559
+you're pretty familiar with that but
+
+730
+00:33:30,559 --> 00:33:32,120
+let's talk about
+
+731
+00:33:32,120 --> 00:33:34,399
+counterclockwise on the counterclockwise
+
+732
+00:33:34,399 --> 00:33:36,600
+side we were essentially able to take
+
+733
+00:33:36,600 --> 00:33:38,639
+the positive y1 value and we're
+
+734
+00:33:38,639 --> 00:33:40,519
+essentially doing the exact opposite
+
+735
+00:33:40,519 --> 00:33:42,679
+thing that we would do for clockwise we
+
+736
+00:33:42,679 --> 00:33:45,279
+are taking the we're taking the positive
+
+737
+00:33:45,279 --> 00:33:47,679
+X1 and we're swapping it with the Y
+
+738
+00:33:47,679 --> 00:33:50,880
+position all right we're doing that but
+
+739
+00:33:50,880 --> 00:33:53,080
+we're not negating we're keeping its
+
+740
+00:33:53,080 --> 00:33:55,399
+sign intact whereas we're taking the
+
+741
+00:33:55,399 --> 00:33:58,000
+positive y1 and we are of of course
+
+742
+00:33:58,000 --> 00:33:59,960
+swapping it out with the X position and
+
+743
+00:33:59,960 --> 00:34:02,039
+negating that instead so we end up with
+
+744
+00:34:02,039 --> 00:34:05,080
+negative y1 and positive
+
+745
+00:34:05,080 --> 00:34:08,079
+X1 and so finally as you can see we're
+
+746
+00:34:08,079 --> 00:34:10,560
+doing the exact opposite thing for the
+
+747
+00:34:10,560 --> 00:34:12,720
+counterclockwise algorithm than we are
+
+748
+00:34:12,720 --> 00:34:14,800
+for the clockwise algorithm and this
+
+749
+00:34:14,800 --> 00:34:17,960
+allows us to end up with our result now
+
+750
+00:34:17,960 --> 00:34:20,839
+again we have actually
+
+751
+00:34:20,839 --> 00:34:25,359
+found the location of the 90°
+
+752
+00:34:25,359 --> 00:34:28,879
+rotated uh point this Red Dot 90°
+
+753
+00:34:28,879 --> 00:34:32,320
+rotated we found its uh location
+
+754
+00:34:32,320 --> 00:34:34,359
+clockwise or counterclockwise but this
+
+755
+00:34:34,359 --> 00:34:37,760
+isn't our final location but why well
+
+756
+00:34:37,760 --> 00:34:39,639
+again I mean you should probably
+
+757
+00:34:39,639 --> 00:34:42,440
+remember this it's because we were we
+
+758
+00:34:42,440 --> 00:34:45,280
+did not yet decode it because of course
+
+759
+00:34:45,280 --> 00:34:47,240
+we found the red dots
+
+760
+00:34:47,240 --> 00:34:50,280
+location in you know with respect to
+
+761
+00:34:50,280 --> 00:34:53,040
+that black dot and so now what we need
+
+762
+00:34:53,040 --> 00:34:56,320
+to do is make it back in respect to that
+
+763
+00:34:56,320 --> 00:34:58,560
+uh Middle Point that origin
+
+764
+00:34:58,560 --> 00:35:00,839
+and so what we need to do is we need to
+
+765
+00:35:00,839 --> 00:35:04,560
+add XO and yo back to our result and we
+
+766
+00:35:04,560 --> 00:35:08,720
+should finally get an XA value a ya a
+
+767
+00:35:08,720 --> 00:35:11,760
+value uh for our clockwise algorithm and
+
+768
+00:35:11,760 --> 00:35:14,680
+an XB value and a YB value from our
+
+769
+00:35:14,680 --> 00:35:17,160
+counterclockwise algorithm and so of
+
+770
+00:35:17,160 --> 00:35:18,880
+course from our clockwise algorithm as I
+
+771
+00:35:18,880 --> 00:35:22,440
+said we get that XA and ya a uh which
+
+772
+00:35:22,440 --> 00:35:25,320
+which is our final 90° clockwise rotated
+
+773
+00:35:25,320 --> 00:35:28,520
+algorithm uh or Point uh and of course
+
+774
+00:35:28,520 --> 00:35:30,440
+from the counterclockwise algorithm we
+
+775
+00:35:30,440 --> 00:35:34,839
+get XB and YB which is the final point
+
+776
+00:35:34,839 --> 00:35:37,560
+of where uh we uh which is the final
+
+777
+00:35:37,560 --> 00:35:41,800
+Point uh of our 90° counterclockwise
+
+778
+00:35:41,800 --> 00:35:44,560
+rotation and that was all there was to
+
+779
+00:35:44,560 --> 00:35:46,680
+this video of course I really hope you
+
+780
+00:35:46,680 --> 00:35:49,040
+enjoyed and learned a lot if you did
+
+781
+00:35:49,040 --> 00:35:50,640
+please make sure to leave a like on this
+
+782
+00:35:50,640 --> 00:35:52,359
+video it really does help out a lot and
+
+783
+00:35:52,359 --> 00:35:53,720
+if you think this could help anybody
+
+784
+00:35:53,720 --> 00:35:55,800
+else uh please do consider sharing the
+
+785
+00:35:55,800 --> 00:35:57,920
+video again it really does help out uh
+
+786
+00:35:57,920 --> 00:35:59,359
+and of course if you have any more
+
+787
+00:35:59,359 --> 00:36:02,480
+questions suggestions uh or uh concerns
+
+788
+00:36:02,480 --> 00:36:03,920
+that type of thing you can leave it down
+
+789
+00:36:03,920 --> 00:36:06,200
+in the comments below you can of course
+
+790
+00:36:06,200 --> 00:36:08,480
+email it to me at tagim Manny gmail.com
+
+791
+00:36:08,480 --> 00:36:10,800
+or just straight tweet it to me at tajim
+
+792
+00:36:10,800 --> 00:36:12,960
+Manny of course my contact info will be
+
+793
+00:36:12,960 --> 00:36:13,920
+in the
+
+794
+00:36:13,920 --> 00:36:16,599
+description but if you really really do
+
+795
+00:36:16,599 --> 00:36:18,319
+like my content and you want to see a
+
+796
+00:36:18,319 --> 00:36:19,960
+lot more of it please do consider
+
+797
+00:36:19,960 --> 00:36:21,640
+subscribing to my YouTube channel as it
+
+798
+00:36:21,640 --> 00:36:23,480
+really does help us a lot again though
+
+799
+00:36:23,480 --> 00:36:25,319
+finally I really hope you enjoyed thank
+
+800
+00:36:25,319 --> 00:36:27,079
+you very much for watching the video
+
+801
+00:36:27,079 --> 00:36:30,400
+goodbye okay

@@ -1,0 +1,2451 @@
+1
+00:00:11,120 --> 00:00:13,120
+in this video you're going to learn how
+
+2
+00:00:13,120 --> 00:00:16,000
+you can use the power ai vision toolkit
+
+3
+00:00:16,000 --> 00:00:18,160
+this toolkit allows you to build deep
+
+4
+00:00:18,160 --> 00:00:20,560
+learning systems with ease without
+
+5
+00:00:20,560 --> 00:00:22,400
+having to worry about any of the
+
+6
+00:00:22,400 --> 00:00:25,439
+architectures code or even underlying
+
+7
+00:00:25,439 --> 00:00:26,800
+infrastructure
+
+8
+00:00:26,800 --> 00:00:29,039
+best part is that you don't even need to
+
+9
+00:00:29,039 --> 00:00:31,439
+worry about getting the toolkit set up
+
+10
+00:00:31,439 --> 00:00:33,920
+because the nimix cloud platform allows
+
+11
+00:00:33,920 --> 00:00:36,399
+you to spin up an instance of power ai
+
+12
+00:00:36,399 --> 00:00:38,480
+vision on the hardware of your
+
+13
+00:00:38,480 --> 00:00:41,200
+preference instantly
+
+14
+00:00:41,200 --> 00:00:43,120
+so hello there and welcome to another
+
+15
+00:00:43,120 --> 00:00:45,760
+tutorial my name is tanya bakshi and
+
+16
+00:00:45,760 --> 00:00:47,760
+this time we're going to be going over
+
+17
+00:00:47,760 --> 00:00:50,480
+how you can use the power ai vision
+
+18
+00:00:50,480 --> 00:00:54,160
+platform on nimbics in order to create a
+
+19
+00:00:54,160 --> 00:00:57,039
+cat dog classifier neural network now
+
+20
+00:00:57,039 --> 00:00:58,480
+this is very interesting essentially
+
+21
+00:00:58,480 --> 00:01:00,160
+what we're going to do is we're going to
+
+22
+00:01:00,160 --> 00:01:02,480
+train out an entire neural network
+
+23
+00:01:02,480 --> 00:01:05,840
+system and deploy it as a rest api it's
+
+24
+00:01:05,840 --> 00:01:07,840
+going to help us do image classification
+
+25
+00:01:07,840 --> 00:01:10,080
+in the cat dog classification task that
+
+26
+00:01:10,080 --> 00:01:11,920
+you may have seen by watson visual
+
+27
+00:01:11,920 --> 00:01:14,799
+recognition video but the best part is
+
+28
+00:01:14,799 --> 00:01:16,799
+that we're not going to be using any
+
+29
+00:01:16,799 --> 00:01:19,600
+code at all and not only are we going to
+
+30
+00:01:19,600 --> 00:01:21,520
+be using a watson visual recognition
+
+31
+00:01:21,520 --> 00:01:23,759
+kind of system rather we're going to be
+
+32
+00:01:23,759 --> 00:01:26,960
+using power ai vision which uses neural
+
+33
+00:01:26,960 --> 00:01:29,759
+network technology specifically to give
+
+34
+00:01:29,759 --> 00:01:32,400
+you all the raw statistics uh the
+
+35
+00:01:32,400 --> 00:01:34,000
+metrics of how great your neural network
+
+36
+00:01:34,000 --> 00:01:35,680
+system is running it gives you the
+
+37
+00:01:35,680 --> 00:01:38,000
+estimated time train and all that other
+
+38
+00:01:38,000 --> 00:01:40,159
+valuable information that you need while
+
+39
+00:01:40,159 --> 00:01:42,400
+you're training your model this is
+
+40
+00:01:42,400 --> 00:01:44,479
+actually hosted on the nimbix cloud
+
+41
+00:01:44,479 --> 00:01:47,200
+platform with their powerful jarvis tool
+
+42
+00:01:47,200 --> 00:01:48,560
+in fact there's going to be an entirely
+
+43
+00:01:48,560 --> 00:01:50,399
+separate video about jarvis and how it
+
+44
+00:01:50,399 --> 00:01:52,720
+works and how you can use its rest api
+
+45
+00:01:52,720 --> 00:01:54,880
+to control the nimix cloud platform spin
+
+46
+00:01:54,880 --> 00:01:56,799
+up jobs all that kind of stuff in a
+
+47
+00:01:56,799 --> 00:01:59,280
+separate tutorial but for today we're
+
+48
+00:01:59,280 --> 00:02:01,600
+going to be using the power ai vision
+
+49
+00:02:01,600 --> 00:02:04,159
+platform again because it's powered by
+
+50
+00:02:04,159 --> 00:02:05,920
+the power ai toolkit which is
+
+51
+00:02:05,920 --> 00:02:08,640
+essentially an ibm modified version of a
+
+52
+00:02:08,640 --> 00:02:10,720
+bunch of different open source tools
+
+53
+00:02:10,720 --> 00:02:13,520
+like tensorflow caf and so much more
+
+54
+00:02:13,520 --> 00:02:15,599
+that are optimized to run on the power
+
+55
+00:02:15,599 --> 00:02:17,599
+platforms that means that the neural
+
+56
+00:02:17,599 --> 00:02:19,520
+networks that you're trying are running
+
+57
+00:02:19,520 --> 00:02:22,720
+as fast as they possibly can on power
+
+58
+00:02:22,720 --> 00:02:24,800
+hardware they've been optimized for it
+
+59
+00:02:24,800 --> 00:02:27,120
+and of course you've got powerful nvidia
+
+60
+00:02:27,120 --> 00:02:30,160
+gpus going behind that training and of
+
+61
+00:02:30,160 --> 00:02:32,560
+course the powerful nv link between the
+
+62
+00:02:32,560 --> 00:02:35,200
+cpu and gpu allows you to have faster
+
+63
+00:02:35,200 --> 00:02:37,760
+memory transfer speeds as well but
+
+64
+00:02:37,760 --> 00:02:39,680
+that's not talking about power ai and
+
+65
+00:02:39,680 --> 00:02:41,519
+now what i'd like to do is get over
+
+66
+00:02:41,519 --> 00:02:43,519
+straight into the programming part where
+
+67
+00:02:43,519 --> 00:02:45,440
+i show you how you can use the nimix
+
+68
+00:02:45,440 --> 00:02:47,519
+cloud platform to start the power ai
+
+69
+00:02:47,519 --> 00:02:49,920
+vision tool and then from there train
+
+70
+00:02:49,920 --> 00:02:52,959
+neural network in under around five to
+
+71
+00:02:52,959 --> 00:02:55,040
+ten minutes all right so now let's get
+
+72
+00:02:55,040 --> 00:02:57,360
+to the programming part
+
+73
+00:02:57,360 --> 00:02:58,800
+all right so welcome back to the
+
+74
+00:02:58,800 --> 00:03:00,720
+programming part and now we're going to
+
+75
+00:03:00,720 --> 00:03:02,400
+take a look at how you can actually
+
+76
+00:03:02,400 --> 00:03:05,040
+implement this system let's get started
+
+77
+00:03:05,040 --> 00:03:06,800
+so now as i mentioned we're going to be
+
+78
+00:03:06,800 --> 00:03:09,680
+using the dog cat data set uh as i did
+
+79
+00:03:09,680 --> 00:03:12,000
+in my watson visual recognition tutorial
+
+80
+00:03:12,000 --> 00:03:13,280
+there will be a link to that in the
+
+81
+00:03:13,280 --> 00:03:14,800
+description below
+
+82
+00:03:14,800 --> 00:03:16,640
+however now as you can see i've already
+
+83
+00:03:16,640 --> 00:03:18,319
+gone ahead and downloaded the data set
+
+84
+00:03:18,319 --> 00:03:20,959
+i've unzipped it from its archive and as
+
+85
+00:03:20,959 --> 00:03:24,560
+you can see kaggle provides us with 12
+
+86
+00:03:24,560 --> 00:03:29,040
+500 images of cats and 12 500 images of
+
+87
+00:03:29,040 --> 00:03:31,200
+dogs so if i just keep scrolling down
+
+88
+00:03:31,200 --> 00:03:33,440
+here you'll see all the thousands of
+
+89
+00:03:33,440 --> 00:03:35,519
+cats and dogs that we have
+
+90
+00:03:35,519 --> 00:03:37,760
+now these are all to be used to train
+
+91
+00:03:37,760 --> 00:03:40,319
+the machine learning algorithm
+
+92
+00:03:40,319 --> 00:03:42,879
+however there's a small catch with the
+
+93
+00:03:42,879 --> 00:03:45,440
+power ai vision i don't want to upload
+
+94
+00:03:45,440 --> 00:03:47,040
+say twelve thousand five hundred for
+
+95
+00:03:47,040 --> 00:03:49,200
+each category right now because for the
+
+96
+00:03:49,200 --> 00:03:50,799
+videos purpose that'll take a little bit
+
+97
+00:03:50,799 --> 00:03:52,959
+of time to upload so what i'm going to
+
+98
+00:03:52,959 --> 00:03:54,239
+be doing for now is i'm going to be
+
+99
+00:03:54,239 --> 00:03:55,680
+uploading say
+
+100
+00:03:55,680 --> 00:03:59,360
+around 1500 to 2 000 images per category
+
+101
+00:03:59,360 --> 00:04:00,560
+and we'll take a look at what our
+
+102
+00:04:00,560 --> 00:04:02,799
+performance is like at the time and
+
+103
+00:04:02,799 --> 00:04:04,319
+depending on that we can either give
+
+104
+00:04:04,319 --> 00:04:06,720
+more if we're not satisfied or if we are
+
+105
+00:04:06,720 --> 00:04:09,120
+satisfied uh we will be good to go to
+
+106
+00:04:09,120 --> 00:04:12,080
+deploy with a rest api let's begin so
+
+107
+00:04:12,080 --> 00:04:13,120
+first thing that i'm going to do is
+
+108
+00:04:13,120 --> 00:04:15,200
+let's just say i want two thousand so
+
+109
+00:04:15,200 --> 00:04:17,040
+since we're starting at an index of zero
+
+110
+00:04:17,040 --> 00:04:19,000
+that's gonna be our
+
+111
+00:04:19,000 --> 00:04:22,560
+1999 images cats and then the same for
+
+112
+00:04:22,560 --> 00:04:25,040
+dogs so i'm just gonna scroll down until
+
+113
+00:04:25,040 --> 00:04:26,880
+we get the correct number of cats
+
+114
+00:04:26,880 --> 00:04:29,759
+right click new folder with selection
+
+115
+00:04:29,759 --> 00:04:31,680
+and i'm going to name these right as
+
+116
+00:04:31,680 --> 00:04:33,040
+it's done moving
+
+117
+00:04:33,040 --> 00:04:33,840
+as
+
+118
+00:04:33,840 --> 00:04:36,160
+cat
+
+119
+00:04:36,960 --> 00:04:38,560
+all right there we go it's almost done
+
+120
+00:04:38,560 --> 00:04:40,960
+moving those into a separate
+
+121
+00:04:40,960 --> 00:04:41,600
+well folder
+
+122
+00:04:41,600 --> 00:04:45,120
+uh oh perfect done
+
+123
+00:04:45,280 --> 00:04:47,680
+it's a little bit uh intensive all right
+
+124
+00:04:47,680 --> 00:04:49,199
+so there we go we've got our first
+
+125
+00:04:49,199 --> 00:04:50,800
+folder down
+
+126
+00:04:50,800 --> 00:04:54,639
+let's just scroll down and
+
+127
+00:04:54,639 --> 00:04:56,800
+right as we reach docs we're going to do
+
+128
+00:04:56,800 --> 00:04:58,320
+the exact same thing for dogs we're
+
+129
+00:04:58,320 --> 00:05:01,199
+going to select from the zeroth dog
+
+130
+00:05:01,199 --> 00:05:02,520
+to the
+
+131
+00:05:02,520 --> 00:05:06,160
+1999th dog
+
+132
+00:05:06,880 --> 00:05:09,120
+somewhere here's our partition
+
+133
+00:05:09,120 --> 00:05:10,800
+right there perfect
+
+134
+00:05:10,800 --> 00:05:13,680
+all right so just scroll down
+
+135
+00:05:13,680 --> 00:05:16,560
+a little bit too far
+
+136
+00:05:16,800 --> 00:05:19,280
+perfect so just right around here we
+
+137
+00:05:19,280 --> 00:05:20,680
+should see
+
+138
+00:05:20,680 --> 00:05:25,120
+1 999 there we go right click new folder
+
+139
+00:05:25,120 --> 00:05:27,199
+with selection once again 2 000 images
+
+140
+00:05:27,199 --> 00:05:28,960
+of dogs there we go it's moving it all
+
+141
+00:05:28,960 --> 00:05:30,639
+into a separate folder
+
+142
+00:05:30,639 --> 00:05:33,360
+right as that's done we'll name both
+
+143
+00:05:33,360 --> 00:05:35,520
+folders accordingly as they should cat
+
+144
+00:05:35,520 --> 00:05:37,840
+and dog number one being cat number two
+
+145
+00:05:37,840 --> 00:05:39,039
+being doc
+
+146
+00:05:39,039 --> 00:05:41,039
+and then we'll be training the machine
+
+147
+00:05:41,039 --> 00:05:44,960
+learning system itself all right so cat
+
+148
+00:05:44,960 --> 00:05:46,000
+and
+
+149
+00:05:46,000 --> 00:05:49,039
+if we just scroll back down again
+
+150
+00:05:49,039 --> 00:05:53,039
+we can see over here dog perfect we've
+
+151
+00:05:53,039 --> 00:05:55,440
+got our two folders which if we sort by
+
+152
+00:05:55,440 --> 00:05:56,960
+the kind of
+
+153
+00:05:56,960 --> 00:05:59,520
+file we should be able to see there we
+
+154
+00:05:59,520 --> 00:06:02,400
+go cat and dog folders each containing 2
+
+155
+00:06:02,400 --> 00:06:04,240
+000 images that are entirely unique and
+
+156
+00:06:04,240 --> 00:06:06,960
+we are now ready to train the power ai
+
+157
+00:06:06,960 --> 00:06:09,759
+vision system now before we can actually
+
+158
+00:06:09,759 --> 00:06:12,400
+start using power ai vision we have to
+
+159
+00:06:12,400 --> 00:06:15,199
+see where we can actually host it itself
+
+160
+00:06:15,199 --> 00:06:17,199
+so now i'm actually using the nimbics
+
+161
+00:06:17,199 --> 00:06:20,400
+cloud platform to host power ai vision
+
+162
+00:06:20,400 --> 00:06:22,400
+on the mimic style platform if i want to
+
+163
+00:06:22,400 --> 00:06:24,800
+train this cat dog classifier and i want
+
+164
+00:06:24,800 --> 00:06:26,880
+to spin up an instance power ai vision
+
+165
+00:06:26,880 --> 00:06:28,479
+it's as simple as quite literally
+
+166
+00:06:28,479 --> 00:06:31,199
+clicking on power ai vision telling it
+
+167
+00:06:31,199 --> 00:06:32,960
+what kind of hardware i want to run at i
+
+168
+00:06:32,960 --> 00:06:36,560
+can scale from 1k80 to 4k 80s all the
+
+169
+00:06:36,560 --> 00:06:39,360
+way up to four p100 gpus if i want to
+
+170
+00:06:39,360 --> 00:06:41,360
+and again since it's powered by power8
+
+171
+00:06:41,360 --> 00:06:43,919
+architecture we've also got nv link that
+
+172
+00:06:43,919 --> 00:06:45,039
+we can use
+
+173
+00:06:45,039 --> 00:06:47,199
+alright so i am going to click on let's
+
+174
+00:06:47,199 --> 00:06:50,319
+just say one p 100 gpu as power ai
+
+175
+00:06:50,319 --> 00:06:52,800
+vision does not use multi gpus yet we're
+
+176
+00:06:52,800 --> 00:06:55,280
+also going to get 128 gigs of ram and in
+
+177
+00:06:55,280 --> 00:06:58,000
+total 32 threads from this power 8
+
+178
+00:06:58,000 --> 00:06:59,759
+processor again one of the great parts
+
+179
+00:06:59,759 --> 00:07:01,919
+about power is we is that we've got a
+
+180
+00:07:01,919 --> 00:07:03,919
+lot higher threads per core
+
+181
+00:07:03,919 --> 00:07:08,080
+and so now we are able to submit
+
+182
+00:07:08,080 --> 00:07:10,800
+and there we go now you might wonder
+
+183
+00:07:10,800 --> 00:07:14,319
+well we were using power 8 here isn't
+
+184
+00:07:14,319 --> 00:07:16,240
+power 9 out shouldn't we be using power
+
+185
+00:07:16,240 --> 00:07:19,280
+nine and well yes the mix cloud platform
+
+186
+00:07:19,280 --> 00:07:21,680
+is indeed getting support for power nine
+
+187
+00:07:21,680 --> 00:07:23,360
+currently in fact they're going to be
+
+188
+00:07:23,360 --> 00:07:26,160
+hosting the ac 922
+
+189
+00:07:26,160 --> 00:07:27,599
+nodes if you were to take a look at that
+
+190
+00:07:27,599 --> 00:07:29,199
+online those are essentially the new
+
+191
+00:07:29,199 --> 00:07:31,039
+power nine nodes that ibm is coming out
+
+192
+00:07:31,039 --> 00:07:33,120
+with those is the highest end ones or
+
+193
+00:07:33,120 --> 00:07:35,599
+one of the highest end ones uh they have
+
+194
+00:07:35,599 --> 00:07:38,560
+two power nine cpus to run really
+
+195
+00:07:38,560 --> 00:07:40,960
+massively parallel operations on cpu as
+
+196
+00:07:40,960 --> 00:07:44,160
+well and all the way from two to six v
+
+197
+00:07:44,160 --> 00:07:47,599
+100 gpus instead of the pascal 100 gpus
+
+198
+00:07:47,599 --> 00:07:49,280
+that we're using with power eight
+
+199
+00:07:49,280 --> 00:07:51,440
+servers right now anyway but that's
+
+200
+00:07:51,440 --> 00:07:54,000
+going to be released very soon for now
+
+201
+00:07:54,000 --> 00:07:56,639
+let's use power 8 and the p100 gpus
+
+202
+00:07:56,639 --> 00:07:58,960
+already provided to us and let's start
+
+203
+00:07:58,960 --> 00:08:00,479
+by clicking on the click here to connect
+
+204
+00:08:00,479 --> 00:08:03,120
+button that's all we had to do nimix has
+
+205
+00:08:03,120 --> 00:08:04,960
+brought up the power ai vision tool and
+
+206
+00:08:04,960 --> 00:08:07,039
+there we go just like that i can start
+
+207
+00:08:07,039 --> 00:08:09,199
+using it so what i'm going to do is i'm
+
+208
+00:08:09,199 --> 00:08:11,840
+going to create a new data set and now
+
+209
+00:08:11,840 --> 00:08:13,680
+as you can see either i can run an
+
+210
+00:08:13,680 --> 00:08:16,400
+object detection task or i can run an
+
+211
+00:08:16,400 --> 00:08:18,560
+image classification task there's going
+
+212
+00:08:18,560 --> 00:08:20,240
+to be another video on the object
+
+213
+00:08:20,240 --> 00:08:22,879
+detection task for now let's open up the
+
+214
+00:08:22,879 --> 00:08:26,160
+image classification task
+
+215
+00:08:26,160 --> 00:08:27,840
+all right so as you can see i can choose
+
+216
+00:08:27,840 --> 00:08:30,560
+the data sets name let's just say
+
+217
+00:08:30,560 --> 00:08:33,680
+cat dog i can tell it which scenario
+
+218
+00:08:33,680 --> 00:08:35,200
+we're running i'm just going to click on
+
+219
+00:08:35,200 --> 00:08:37,120
+other and not give it much information
+
+220
+00:08:37,120 --> 00:08:39,039
+assuming this is some kind of arbitrary
+
+221
+00:08:39,039 --> 00:08:41,200
+use case and of course cat dog isn't in
+
+222
+00:08:41,200 --> 00:08:42,959
+this list either
+
+223
+00:08:42,959 --> 00:08:45,360
+i click on add data set and just give it
+
+224
+00:08:45,360 --> 00:08:47,200
+around a minute
+
+225
+00:08:47,200 --> 00:08:48,800
+and it's going to process that and
+
+226
+00:08:48,800 --> 00:08:50,800
+create a new data set for you
+
+227
+00:08:50,800 --> 00:08:52,800
+once it creates a new data set you have
+
+228
+00:08:52,800 --> 00:08:56,240
+two options either a you can zip up both
+
+229
+00:08:56,240 --> 00:08:58,720
+those folders bring some json
+
+230
+00:08:58,720 --> 00:09:01,600
+information of the data set itself into
+
+231
+00:09:01,600 --> 00:09:04,560
+that and then send it over to power ai
+
+232
+00:09:04,560 --> 00:09:07,440
+vision or you can upload the raw images
+
+233
+00:09:07,440 --> 00:09:08,560
+themselves
+
+234
+00:09:08,560 --> 00:09:11,760
+now what i usually do is i actually
+
+235
+00:09:11,760 --> 00:09:16,000
+upload a new data set with the zipped
+
+236
+00:09:16,000 --> 00:09:18,880
+the actually zipped folders or files so
+
+237
+00:09:18,880 --> 00:09:21,440
+let's go ahead and do that now so as you
+
+238
+00:09:21,440 --> 00:09:23,519
+can see we've created a new blank data
+
+239
+00:09:23,519 --> 00:09:27,040
+set let's just add a category dog
+
+240
+00:09:27,040 --> 00:09:29,360
+and let's also add a category
+
+241
+00:09:29,360 --> 00:09:31,600
+cat
+
+242
+00:09:31,760 --> 00:09:33,760
+all right there we go now what i'm going
+
+243
+00:09:33,760 --> 00:09:36,160
+to do is even though there's nothing in
+
+244
+00:09:36,160 --> 00:09:38,240
+this data set i'm going to click on
+
+245
+00:09:38,240 --> 00:09:40,800
+export as zip file now again what you
+
+246
+00:09:40,800 --> 00:09:44,080
+could just do is drag in uh or actually
+
+247
+00:09:44,080 --> 00:09:45,760
+because we haven't uploaded anything
+
+248
+00:09:45,760 --> 00:09:47,519
+here it won't let that what let us do
+
+249
+00:09:47,519 --> 00:09:50,240
+that now again as i was mentioning uh
+
+250
+00:09:50,240 --> 00:09:52,480
+you could just take the two thousand
+
+251
+00:09:52,480 --> 00:09:54,959
+cats and drag them into
+
+252
+00:09:54,959 --> 00:09:58,000
+uh nimbics or not mimics power ai vision
+
+253
+00:09:58,000 --> 00:09:59,600
+and in fact let's go ahead with that
+
+254
+00:09:59,600 --> 00:10:00,959
+method for now
+
+255
+00:10:00,959 --> 00:10:01,839
+so
+
+256
+00:10:01,839 --> 00:10:03,839
+there we go i'm just going to go over to
+
+257
+00:10:03,839 --> 00:10:07,680
+my downloads over to train
+
+258
+00:10:08,000 --> 00:10:10,480
+go over to dog
+
+259
+00:10:10,480 --> 00:10:11,600
+there we go
+
+260
+00:10:11,600 --> 00:10:13,440
+now i'm going to take all of the images
+
+261
+00:10:13,440 --> 00:10:16,560
+in the dog folder click on open
+
+262
+00:10:16,560 --> 00:10:18,959
+now it will go ahead and upload every
+
+263
+00:10:18,959 --> 00:10:20,959
+single one of those images to power ai
+
+264
+00:10:20,959 --> 00:10:23,440
+vision and this might take a little bit
+
+265
+00:10:23,440 --> 00:10:25,600
+of time so what i'm going to do is
+
+266
+00:10:25,600 --> 00:10:27,440
+instead of having you watch paint dry
+
+267
+00:10:27,440 --> 00:10:30,959
+here i'm going to go ahead and pause the
+
+268
+00:10:30,959 --> 00:10:33,519
+video while it uploads and right as it's
+
+269
+00:10:33,519 --> 00:10:38,200
+done uploading i will be right back
+
+270
+00:11:09,040 --> 00:11:10,959
+all right so as you can see we have
+
+271
+00:11:10,959 --> 00:11:13,120
+successfully loaded in the two thousand
+
+272
+00:11:13,120 --> 00:11:15,920
+dog images and now it's time to load in
+
+273
+00:11:15,920 --> 00:11:18,000
+the 2000 cat images so again i'm going
+
+274
+00:11:18,000 --> 00:11:20,880
+to click on select images go up a
+
+275
+00:11:20,880 --> 00:11:23,120
+directory go to the cat folder select
+
+276
+00:11:23,120 --> 00:11:25,760
+them all click open and then we must
+
+277
+00:11:25,760 --> 00:11:28,079
+wait a few more minutes and then we
+
+278
+00:11:28,079 --> 00:11:30,000
+should have all of our images ready in
+
+279
+00:11:30,000 --> 00:11:32,079
+our data set to train the deep learning
+
+280
+00:11:32,079 --> 00:11:33,360
+model all right so it should take
+
+281
+00:11:33,360 --> 00:11:34,480
+another
+
+282
+00:11:34,480 --> 00:11:36,480
+five to ten minutes and we will be good
+
+283
+00:11:36,480 --> 00:11:39,640
+to go
+
+284
+00:12:11,600 --> 00:12:13,279
+all right so as you can see the cat
+
+285
+00:12:13,279 --> 00:12:15,839
+images have now imported into the data
+
+286
+00:12:15,839 --> 00:12:17,519
+set and we are now ready to actually
+
+287
+00:12:17,519 --> 00:12:19,760
+train the deep learning model
+
+288
+00:12:19,760 --> 00:12:21,839
+so what you need to do now is just go
+
+289
+00:12:21,839 --> 00:12:23,920
+back as you can see i we've got the data
+
+290
+00:12:23,920 --> 00:12:26,560
+set ready so you can go over to my deep
+
+291
+00:12:26,560 --> 00:12:29,519
+learning tasks and power ai vision
+
+292
+00:12:29,519 --> 00:12:31,680
+once you're there click on create new
+
+293
+00:12:31,680 --> 00:12:33,440
+task and this is where we can actually
+
+294
+00:12:33,440 --> 00:12:35,519
+start training the neural net click on
+
+295
+00:12:35,519 --> 00:12:37,200
+classification to let it know that we're
+
+296
+00:12:37,200 --> 00:12:39,360
+not doing object detection and i'm going
+
+297
+00:12:39,360 --> 00:12:42,079
+to call this cat dog
+
+298
+00:12:42,079 --> 00:12:43,600
+try one
+
+299
+00:12:43,600 --> 00:12:45,360
+there we go i'm going to tell to use the
+
+300
+00:12:45,360 --> 00:12:47,680
+cat dog data set and i'm going to tell
+
+301
+00:12:47,680 --> 00:12:49,519
+it to use the precise first training
+
+302
+00:12:49,519 --> 00:12:52,000
+strategy if you want to train in a hurry
+
+303
+00:12:52,000 --> 00:12:54,240
+you can use speed first or you can
+
+304
+00:12:54,240 --> 00:12:56,880
+customize this to fit your needs let's
+
+305
+00:12:56,880 --> 00:12:58,720
+just say i increase the maximum number
+
+306
+00:12:58,720 --> 00:13:02,399
+of iterations to 2000 uh test iterations
+
+307
+00:13:02,399 --> 00:13:05,200
+to 100 test intervals to 20
+
+308
+00:13:05,200 --> 00:13:06,920
+and from there the learning rate to
+
+309
+00:13:06,920 --> 00:13:12,200
+0.001 and the weight decay to 0.0005
+
+310
+00:13:12,560 --> 00:13:14,639
+all right there we go now what i'm going
+
+311
+00:13:14,639 --> 00:13:17,519
+to do is click on build model
+
+312
+00:13:17,519 --> 00:13:19,440
+and there we go so now what it's going
+
+313
+00:13:19,440 --> 00:13:20,959
+to do is it's going to give us an
+
+314
+00:13:20,959 --> 00:13:23,519
+estimated time which is currently 21
+
+315
+00:13:23,519 --> 00:13:25,680
+minutes but it's usually a lot less than
+
+316
+00:13:25,680 --> 00:13:28,000
+the estimated time so i'm going to click
+
+317
+00:13:28,000 --> 00:13:30,560
+on create new task
+
+318
+00:13:30,560 --> 00:13:32,480
+and there we go all right so now as you
+
+319
+00:13:32,480 --> 00:13:35,200
+can see the model is truly training it's
+
+320
+00:13:35,200 --> 00:13:36,800
+currently starting up the task which is
+
+321
+00:13:36,800 --> 00:13:38,480
+why you can't see much
+
+322
+00:13:38,480 --> 00:13:40,560
+however usually when you use tools like
+
+323
+00:13:40,560 --> 00:13:42,399
+for example ibm watson visual
+
+324
+00:13:42,399 --> 00:13:44,560
+recognition you're kind of left in the
+
+325
+00:13:44,560 --> 00:13:46,720
+dark as to what exactly the accuracy is
+
+326
+00:13:46,720 --> 00:13:48,160
+and all those other metrics that you
+
+327
+00:13:48,160 --> 00:13:50,160
+really want to know like the loss
+
+328
+00:13:50,160 --> 00:13:52,160
+however in just a moment when the power
+
+329
+00:13:52,160 --> 00:13:54,320
+ai vision neural net actually starts
+
+330
+00:13:54,320 --> 00:13:55,279
+training
+
+331
+00:13:55,279 --> 00:13:57,279
+you'll be able to see that power
+
+332
+00:13:57,279 --> 00:13:59,440
+elevation actually shows us all the
+
+333
+00:13:59,440 --> 00:14:01,760
+different stats about this model if you
+
+334
+00:14:01,760 --> 00:14:03,120
+want you can actually go ahead and
+
+335
+00:14:03,120 --> 00:14:04,480
+refresh
+
+336
+00:14:04,480 --> 00:14:06,959
+and it should show the graphs again in
+
+337
+00:14:06,959 --> 00:14:09,120
+around uh a minute or so writers
+
+338
+00:14:09,120 --> 00:14:10,880
+actually initializes everything and
+
+339
+00:14:10,880 --> 00:14:12,880
+imports the data it will be showing us
+
+340
+00:14:12,880 --> 00:14:14,800
+those graphs and i'll be back right as
+
+341
+00:14:14,800 --> 00:14:16,800
+those graphs appear after that we'll
+
+342
+00:14:16,800 --> 00:14:18,560
+wait for the model to train we'll take a
+
+343
+00:14:18,560 --> 00:14:21,519
+look at it we'll deploy the rest api and
+
+344
+00:14:21,519 --> 00:14:24,079
+implement that rest api in python
+
+345
+00:14:24,079 --> 00:14:25,760
+alright so let's take a look at the
+
+346
+00:14:25,760 --> 00:14:29,560
+model and how it trains
+
+347
+00:14:48,639 --> 00:14:50,480
+all right so as you can see the model is
+
+348
+00:14:50,480 --> 00:14:52,160
+currently training our graphs have
+
+349
+00:14:52,160 --> 00:14:54,720
+appeared and on the left you can see the
+
+350
+00:14:54,720 --> 00:14:56,880
+training loss this is the last value on
+
+351
+00:14:56,880 --> 00:14:59,360
+the training data set as expected this
+
+352
+00:14:59,360 --> 00:15:01,440
+is indeed going down
+
+353
+00:15:01,440 --> 00:15:04,079
+on the right you can take a look at the
+
+354
+00:15:04,079 --> 00:15:06,320
+testing loss and again thankfully this
+
+355
+00:15:06,320 --> 00:15:08,000
+is indeed going down meaning that the
+
+356
+00:15:08,000 --> 00:15:10,639
+neural network is starting to generalize
+
+357
+00:15:10,639 --> 00:15:12,639
+to the data meet because the test data
+
+358
+00:15:12,639 --> 00:15:15,600
+is indeed um is indeed showing a low
+
+359
+00:15:15,600 --> 00:15:18,000
+loss and we can also take a look at our
+
+360
+00:15:18,000 --> 00:15:20,240
+accuracy as you can see over time this
+
+361
+00:15:20,240 --> 00:15:22,160
+is going up it has a little you know
+
+362
+00:15:22,160 --> 00:15:24,320
+kind of plateaued here but then again
+
+363
+00:15:24,320 --> 00:15:26,320
+though if we give this a little bit of a
+
+364
+00:15:26,320 --> 00:15:28,320
+little bit of time uh this should
+
+365
+00:15:28,320 --> 00:15:30,399
+increase and even right now it is
+
+366
+00:15:30,399 --> 00:15:33,000
+extremely accurate we've already reached
+
+367
+00:15:33,000 --> 00:15:34,560
+97.2
+
+368
+00:15:34,560 --> 00:15:37,040
+accuracy and we can only expect it to
+
+369
+00:15:37,040 --> 00:15:38,800
+get higher from here
+
+370
+00:15:38,800 --> 00:15:42,000
+of course this is only 820 ish training
+
+371
+00:15:42,000 --> 00:15:44,560
+iterations in this is increasing every
+
+372
+00:15:44,560 --> 00:15:46,480
+single second so let's take a look at
+
+373
+00:15:46,480 --> 00:15:47,839
+what actually happens when we reach
+
+374
+00:15:47,839 --> 00:15:50,560
+around 1500 and then 2 000. however
+
+375
+00:15:50,560 --> 00:15:52,320
+power a vision also does show us an
+
+376
+00:15:52,320 --> 00:15:53,920
+estimated time left which is currently
+
+377
+00:15:53,920 --> 00:15:57,680
+around 140 seconds uh so around say like
+
+378
+00:15:57,680 --> 00:15:58,720
+two minutes
+
+379
+00:15:58,720 --> 00:16:00,880
+a little bit more than two minutes so we
+
+380
+00:16:00,880 --> 00:16:03,040
+will be back in uh just a few minutes uh
+
+381
+00:16:03,040 --> 00:16:05,120
+i'm going to speed up the footage and
+
+382
+00:16:05,120 --> 00:16:06,560
+let's take a look at how the neural
+
+383
+00:16:06,560 --> 00:16:10,519
+network trains and generalizes
+
+384
+00:16:27,519 --> 00:16:29,680
+all right so as you can see the model is
+
+385
+00:16:29,680 --> 00:16:32,160
+now successfully done training and we
+
+386
+00:16:32,160 --> 00:16:34,079
+are ready to deploy the neural network
+
+387
+00:16:34,079 --> 00:16:36,480
+model however just before we go i'd like
+
+388
+00:16:36,480 --> 00:16:38,800
+to show you the final statistics as you
+
+389
+00:16:38,800 --> 00:16:40,399
+can see we have successfully gone
+
+390
+00:16:40,399 --> 00:16:42,160
+through two thousand entire training
+
+391
+00:16:42,160 --> 00:16:44,639
+iterations and have reached a test or
+
+392
+00:16:44,639 --> 00:16:48,160
+train loss of zero zero zero point zero
+
+393
+00:16:48,160 --> 00:16:49,440
+zero five
+
+394
+00:16:49,440 --> 00:16:52,240
+two so that is actually very very low
+
+395
+00:16:52,240 --> 00:16:53,600
+and of course as you can see we've
+
+396
+00:16:53,600 --> 00:16:56,959
+reached a test loss of 0.07
+
+397
+00:16:56,959 --> 00:16:59,279
+uh and so we have reached an accuracy of
+
+398
+00:16:59,279 --> 00:17:01,519
+around 98
+
+399
+00:17:01,519 --> 00:17:03,839
+which is considerably high actually very
+
+400
+00:17:03,839 --> 00:17:06,640
+high considering the fact that we had to
+
+401
+00:17:06,640 --> 00:17:09,839
+do absolutely no coding the architecture
+
+402
+00:17:09,839 --> 00:17:12,000
+development and everything else was all
+
+403
+00:17:12,000 --> 00:17:14,160
+handled by power ai vision you don't
+
+404
+00:17:14,160 --> 00:17:15,679
+need to care about any of the underlying
+
+405
+00:17:15,679 --> 00:17:17,360
+infrastructure the scalability or
+
+406
+00:17:17,360 --> 00:17:18,400
+anything else
+
+407
+00:17:18,400 --> 00:17:20,720
+because power ai vision takes care for a
+
+408
+00:17:20,720 --> 00:17:23,199
+care of that for you automatically and
+
+409
+00:17:23,199 --> 00:17:24,400
+you don't even need to care about
+
+410
+00:17:24,400 --> 00:17:26,480
+getting power ai vision set up in the
+
+411
+00:17:26,480 --> 00:17:27,919
+first place you just sign up for an
+
+412
+00:17:27,919 --> 00:17:30,160
+account with nimx spin up a server on
+
+413
+00:17:30,160 --> 00:17:32,559
+any hardware that you desire and power
+
+414
+00:17:32,559 --> 00:17:35,200
+ai vision will adapt to it it's that
+
+415
+00:17:35,200 --> 00:17:36,320
+simple
+
+416
+00:17:36,320 --> 00:17:37,919
+all right so now as you can see the
+
+417
+00:17:37,919 --> 00:17:39,840
+neural network model done training again
+
+418
+00:17:39,840 --> 00:17:42,240
+but let's go ahead and deploy it
+
+419
+00:17:42,240 --> 00:17:44,880
+all right so as you can see it is indeed
+
+420
+00:17:44,880 --> 00:17:47,760
+creating a web api out of it just before
+
+421
+00:17:47,760 --> 00:17:49,200
+we do that though i'd like to show you
+
+422
+00:17:49,200 --> 00:17:52,000
+the my train models page as you can see
+
+423
+00:17:52,000 --> 00:17:55,679
+this is our cat dog model over here
+
+424
+00:17:55,679 --> 00:17:57,360
+we can see the accuracy that it's
+
+425
+00:17:57,360 --> 00:17:59,200
+reached and we can actually go ahead and
+
+426
+00:17:59,200 --> 00:18:01,200
+run an action on it too for example i
+
+427
+00:18:01,200 --> 00:18:03,200
+can even export the model as a zip file
+
+428
+00:18:03,200 --> 00:18:05,440
+if i want to i can mark it as a sample
+
+429
+00:18:05,440 --> 00:18:07,760
+model do really whatever else i want to
+
+430
+00:18:07,760 --> 00:18:09,600
+but anyway let's go back over to the web
+
+431
+00:18:09,600 --> 00:18:12,720
+apis and let's run a test on it
+
+432
+00:18:12,720 --> 00:18:15,200
+all right there we go so now that we are
+
+433
+00:18:15,200 --> 00:18:18,320
+at the run test page we are ready to go
+
+434
+00:18:18,320 --> 00:18:20,640
+ahead and upload new images and actually
+
+435
+00:18:20,640 --> 00:18:22,320
+run them against the model to see what
+
+436
+00:18:22,320 --> 00:18:24,480
+it gives us so i'm going to upload my
+
+437
+00:18:24,480 --> 00:18:26,080
+own image here
+
+438
+00:18:26,080 --> 00:18:28,080
+now again we don't want to give any
+
+439
+00:18:28,080 --> 00:18:30,000
+images that were already in the training
+
+440
+00:18:30,000 --> 00:18:31,440
+set that we gave the neural network
+
+441
+00:18:31,440 --> 00:18:34,880
+model so outside of the dog and cat
+
+442
+00:18:34,880 --> 00:18:37,120
+folders let's just say i choose a
+
+443
+00:18:37,120 --> 00:18:38,880
+different cat
+
+444
+00:18:38,880 --> 00:18:40,799
+i'm going to upload that into the power
+
+445
+00:18:40,799 --> 00:18:42,799
+ai vision software
+
+446
+00:18:42,799 --> 00:18:45,679
+and there we go as you can see if i were
+
+447
+00:18:45,679 --> 00:18:48,400
+to zoom in here for example you can see
+
+448
+00:18:48,400 --> 00:18:52,000
+that there is this slightly uh
+
+449
+00:18:52,000 --> 00:18:54,240
+not um not exactly the correct i guess
+
+450
+00:18:54,240 --> 00:18:56,080
+you could say aspect ratio sorry so it's
+
+451
+00:18:56,080 --> 00:18:57,840
+not the correct aspect ratio it was
+
+452
+00:18:57,840 --> 00:18:59,360
+squished down to work with the neural
+
+453
+00:18:59,360 --> 00:19:01,200
+network size but you can see that this
+
+454
+00:19:01,200 --> 00:19:04,000
+is an image of a person holding a cat
+
+455
+00:19:04,000 --> 00:19:07,280
+and so as you can see over here what's
+
+456
+00:19:07,280 --> 00:19:10,400
+this this is a heat map of where the
+
+457
+00:19:10,400 --> 00:19:13,520
+neural network saw specific attributes
+
+458
+00:19:13,520 --> 00:19:15,440
+that led it to believe that this is an
+
+459
+00:19:15,440 --> 00:19:17,200
+image of a cat this is something that
+
+460
+00:19:17,200 --> 00:19:19,520
+you don't get with most other neural
+
+461
+00:19:19,520 --> 00:19:21,840
+network based softwares either even if
+
+462
+00:19:21,840 --> 00:19:23,280
+you were to develop your own neural
+
+463
+00:19:23,280 --> 00:19:25,360
+network architecture it would take you
+
+464
+00:19:25,360 --> 00:19:26,880
+some time to implement the entire
+
+465
+00:19:26,880 --> 00:19:28,960
+attention mechanism to get this kind of
+
+466
+00:19:28,960 --> 00:19:30,400
+heat map working
+
+467
+00:19:30,400 --> 00:19:31,760
+luckily though this is done
+
+468
+00:19:31,760 --> 00:19:34,559
+automatically through power ai vision
+
+469
+00:19:34,559 --> 00:19:36,080
+and if you were to take a look at the
+
+470
+00:19:36,080 --> 00:19:38,880
+right here it correctly classifies this
+
+471
+00:19:38,880 --> 00:19:41,160
+as a cat with
+
+472
+00:19:41,160 --> 00:19:44,880
+99.149 percent confidence it is that
+
+473
+00:19:44,880 --> 00:19:46,960
+simple to get up and running with power
+
+474
+00:19:46,960 --> 00:19:49,039
+ai vision in fact let's go ahead and
+
+475
+00:19:49,039 --> 00:19:51,120
+feed in the dog image shall we so i'm
+
+476
+00:19:51,120 --> 00:19:53,039
+just gonna scroll down over to my dogs
+
+477
+00:19:53,039 --> 00:19:55,679
+here uh and over here as you can see
+
+478
+00:19:55,679 --> 00:19:57,760
+this is an image of a dog let's feed it
+
+479
+00:19:57,760 --> 00:19:59,919
+into the neural network software and as
+
+480
+00:19:59,919 --> 00:20:02,720
+you can see this is so sure that it is
+
+481
+00:20:02,720 --> 00:20:04,720
+actually rounded it's uh it's called
+
+482
+00:20:04,720 --> 00:20:07,200
+it's actually work it's confidence up
+
+483
+00:20:07,200 --> 00:20:09,600
+from 99 point however many nines there
+
+484
+00:20:09,600 --> 00:20:11,440
+were to 100
+
+485
+00:20:11,440 --> 00:20:13,280
+confidence as you can see this is the
+
+486
+00:20:13,280 --> 00:20:16,000
+dog this is the heat map this is where
+
+487
+00:20:16,000 --> 00:20:17,840
+the neural network saw
+
+488
+00:20:17,840 --> 00:20:20,080
+whatever it sought in the image that led
+
+489
+00:20:20,080 --> 00:20:22,880
+to believe that there is indeed a dog in
+
+490
+00:20:22,880 --> 00:20:25,200
+this image as you can see it has learned
+
+491
+00:20:25,200 --> 00:20:27,520
+to generalize to the face it's not
+
+492
+00:20:27,520 --> 00:20:29,200
+focusing on any of the other features in
+
+493
+00:20:29,200 --> 00:20:31,120
+fact if you want to take a look at some
+
+494
+00:20:31,120 --> 00:20:33,200
+more examples let's just say we were to
+
+495
+00:20:33,200 --> 00:20:35,039
+take this cat over here
+
+496
+00:20:35,039 --> 00:20:37,120
+this cat shows its entire sort of body
+
+497
+00:20:37,120 --> 00:20:38,960
+here and it's just sitting down with no
+
+498
+00:20:38,960 --> 00:20:41,200
+obstructions if we were to feed that in
+
+499
+00:20:41,200 --> 00:20:43,200
+what does the heat map look at you can
+
+500
+00:20:43,200 --> 00:20:45,280
+see the neural network has generalized
+
+501
+00:20:45,280 --> 00:20:48,240
+to find specifically faces that's what
+
+502
+00:20:48,240 --> 00:20:50,400
+it's really good at looking for if
+
+503
+00:20:50,400 --> 00:20:52,880
+there's a cat face or a dog face that's
+
+504
+00:20:52,880 --> 00:20:55,200
+what it looks at and recognizes you can
+
+505
+00:20:55,200 --> 00:20:57,520
+also see that it kind of looks over here
+
+506
+00:20:57,520 --> 00:20:59,919
+at the tail and the rest of the outline
+
+507
+00:20:59,919 --> 00:21:02,240
+of the body like the legs but the number
+
+508
+00:21:02,240 --> 00:21:05,600
+one thing by far is the head of the cat
+
+509
+00:21:05,600 --> 00:21:08,320
+itself this is very very fascinating the
+
+510
+00:21:08,320 --> 00:21:10,320
+heat map gives you insight into why the
+
+511
+00:21:10,320 --> 00:21:12,000
+neural network makes the decisions that
+
+512
+00:21:12,000 --> 00:21:15,280
+it makes and also how the neural network
+
+513
+00:21:15,280 --> 00:21:17,440
+makes the decisions as well in fact if
+
+514
+00:21:17,440 --> 00:21:18,880
+we were to do something similar with a
+
+515
+00:21:18,880 --> 00:21:21,440
+dog here as you can see for example here
+
+516
+00:21:21,440 --> 00:21:23,280
+the dog is not showing its face let's
+
+517
+00:21:23,280 --> 00:21:24,640
+see what the neural network actually
+
+518
+00:21:24,640 --> 00:21:25,600
+thinks
+
+519
+00:21:25,600 --> 00:21:27,520
+as you can see it's still thought it's a
+
+520
+00:21:27,520 --> 00:21:30,080
+dog because it realized there's no face
+
+521
+00:21:30,080 --> 00:21:32,640
+visible and it inferred based off of the
+
+522
+00:21:32,640 --> 00:21:35,919
+rest of the body that it is indeed a dog
+
+523
+00:21:35,919 --> 00:21:38,080
+and you can see that infer
+
+524
+00:21:38,080 --> 00:21:39,840
+or that inference that it made through
+
+525
+00:21:39,840 --> 00:21:42,159
+the heat map over here and then of
+
+526
+00:21:42,159 --> 00:21:43,919
+course you can combine the heat map and
+
+527
+00:21:43,919 --> 00:21:46,159
+the actual image you can uh find out how
+
+528
+00:21:46,159 --> 00:21:48,559
+you can actually for example crop items
+
+529
+00:21:48,559 --> 00:21:51,039
+or objects out of images and in fact in
+
+530
+00:21:51,039 --> 00:21:53,120
+my next video i'm going to be showing
+
+531
+00:21:53,120 --> 00:21:55,760
+you how you can run full-on object
+
+532
+00:21:55,760 --> 00:21:57,840
+detection with the power ai vision
+
+533
+00:21:57,840 --> 00:21:59,760
+platform and plus i'm going to be
+
+534
+00:21:59,760 --> 00:22:01,679
+showing you how you don't even need to
+
+535
+00:22:01,679 --> 00:22:04,320
+train full-on machine learning models uh
+
+536
+00:22:04,320 --> 00:22:06,880
+in the first place or manually train or
+
+537
+00:22:06,880 --> 00:22:10,159
+manually label that data because instead
+
+538
+00:22:10,159 --> 00:22:12,320
+you can actually use pre-trained neural
+
+539
+00:22:12,320 --> 00:22:14,880
+networks to help you label that data in
+
+540
+00:22:14,880 --> 00:22:16,880
+the first place that is coming up in the
+
+541
+00:22:16,880 --> 00:22:19,600
+next edition of my power ai vision
+
+542
+00:22:19,600 --> 00:22:20,960
+series
+
+543
+00:22:20,960 --> 00:22:22,799
+all right so that was a quick tutorial
+
+544
+00:22:22,799 --> 00:22:24,640
+as to how you can use the power ai
+
+545
+00:22:24,640 --> 00:22:26,799
+vision platform to recognize cat and dog
+
+546
+00:22:26,799 --> 00:22:28,720
+images really do hope you enjoyed that
+
+547
+00:22:28,720 --> 00:22:31,200
+tutorial you were able to learn how you
+
+548
+00:22:31,200 --> 00:22:33,760
+can actually use power ai vision
+
+549
+00:22:33,760 --> 00:22:35,360
+and how you can train deep learning
+
+550
+00:22:35,360 --> 00:22:38,400
+models that simply again we started with
+
+551
+00:22:38,400 --> 00:22:40,480
+the nimbic star starvis platform
+
+552
+00:22:40,480 --> 00:22:42,320
+what happened is you could actually spin
+
+553
+00:22:42,320 --> 00:22:44,240
+up an instance of power ai vision
+
+554
+00:22:44,240 --> 00:22:46,880
+without dealing with anything all you do
+
+555
+00:22:46,880 --> 00:22:48,240
+is you tell it that you want to start
+
+556
+00:22:48,240 --> 00:22:50,080
+powering a vision you tell it which
+
+557
+00:22:50,080 --> 00:22:51,679
+hardware you want to use and it does it
+
+558
+00:22:51,679 --> 00:22:54,480
+for you instantly after that we actually
+
+559
+00:22:54,480 --> 00:22:56,480
+used the power ai vision software which
+
+560
+00:22:56,480 --> 00:22:59,200
+allowed us to quite simply upload images
+
+561
+00:22:59,200 --> 00:23:01,120
+into the software and right as the
+
+562
+00:23:01,120 --> 00:23:03,520
+images were in all we needed to do is
+
+563
+00:23:03,520 --> 00:23:05,440
+set a machine learning model to trade
+
+564
+00:23:05,440 --> 00:23:07,200
+you can set the hyper parameters however
+
+565
+00:23:07,200 --> 00:23:09,039
+you want to and once it's at the hyper
+
+566
+00:23:09,039 --> 00:23:11,360
+parameters it'll train on your gpu
+
+567
+00:23:11,360 --> 00:23:14,480
+hardware it is that simple from there
+
+568
+00:23:14,480 --> 00:23:16,880
+though you can actually deploy that uh
+
+569
+00:23:16,880 --> 00:23:19,600
+train machine learning model onto a rest
+
+570
+00:23:19,600 --> 00:23:24,080
+api a web api and once it's on a web api
+
+571
+00:23:24,080 --> 00:23:26,960
+you can actually send new images over
+
+572
+00:23:26,960 --> 00:23:29,360
+and not only does it give you back those
+
+573
+00:23:29,360 --> 00:23:31,760
+images with the predictions as to what
+
+574
+00:23:31,760 --> 00:23:34,080
+class they are instead it also gives you
+
+575
+00:23:34,080 --> 00:23:36,720
+a heat map as to where the neural
+
+576
+00:23:36,720 --> 00:23:38,799
+network was most activated
+
+577
+00:23:38,799 --> 00:23:40,559
+where it actually thought that hey this
+
+578
+00:23:40,559 --> 00:23:43,200
+is a dog or this is a cat and that is
+
+579
+00:23:43,200 --> 00:23:46,000
+how the power ai vision platform works
+
+580
+00:23:46,000 --> 00:23:48,400
+again we had to fiddle around not at all
+
+581
+00:23:48,400 --> 00:23:49,760
+with the actual architectures of the
+
+582
+00:23:49,760 --> 00:23:51,840
+neural network the way the underlying
+
+583
+00:23:51,840 --> 00:23:53,679
+infrastructure works it was all handled
+
+584
+00:23:53,679 --> 00:23:56,080
+for us automatically and we reached an
+
+585
+00:23:56,080 --> 00:23:59,679
+astounding 98 accuracy on the test data
+
+586
+00:23:59,679 --> 00:24:01,919
+which usually takes quite a bit of work
+
+587
+00:24:01,919 --> 00:24:04,480
+to get done even with a simple library
+
+588
+00:24:04,480 --> 00:24:06,080
+like cross
+
+589
+00:24:06,080 --> 00:24:07,360
+alright so i hope you enjoyed that
+
+590
+00:24:07,360 --> 00:24:09,039
+tutorial thank you very much everyone
+
+591
+00:24:09,039 --> 00:24:10,480
+for joining in today that's going to sum
+
+592
+00:24:10,480 --> 00:24:13,039
+up what i had for this tutorial of
+
+593
+00:24:13,039 --> 00:24:14,400
+course if you did enjoy please do make
+
+594
+00:24:14,400 --> 00:24:15,919
+sure to leave a like down below and
+
+595
+00:24:15,919 --> 00:24:17,120
+share the video if you believe it could
+
+596
+00:24:17,120 --> 00:24:18,880
+be helpful for anyone that you know like
+
+597
+00:24:18,880 --> 00:24:20,240
+your family or friends apart from that
+
+598
+00:24:20,240 --> 00:24:21,360
+but if you have any more questions
+
+599
+00:24:21,360 --> 00:24:23,200
+suggestions or feedback leave it down in
+
+600
+00:24:23,200 --> 00:24:25,279
+the comment section below tweet it to me
+
+601
+00:24:25,279 --> 00:24:27,039
+at taggingmanygmail.com
+
+602
+00:24:27,039 --> 00:24:29,279
+or you can email it to me at tagmani
+
+603
+00:24:29,279 --> 00:24:30,799
+gmail.com
+
+604
+00:24:30,799 --> 00:24:32,880
+apart from that though uh if you do
+
+605
+00:24:32,880 --> 00:24:34,320
+really do if you really do like my
+
+606
+00:24:34,320 --> 00:24:35,679
+content you do want to see more of it
+
+607
+00:24:35,679 --> 00:24:37,039
+please do consider subscribing to my
+
+608
+00:24:37,039 --> 00:24:38,559
+youtube channel as well and enable
+
+609
+00:24:38,559 --> 00:24:40,240
+notifications if you'd like to be
+
+610
+00:24:40,240 --> 00:24:42,640
+notified whenever i release new content
+
+611
+00:24:42,640 --> 00:24:44,240
+all right again thank you very much
+
+612
+00:24:44,240 --> 00:24:46,320
+everyone that's all for this tutorial
+
+613
+00:24:46,320 --> 00:24:49,320
+goodbye

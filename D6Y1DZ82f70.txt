@@ -1,0 +1,1547 @@
+1
+00:00:01,060 --> 00:00:05,810
+[Music]
+
+2
+00:00:14,719 --> 00:00:16,840
+so hello there and welcome to another
+
+3
+00:00:16,840 --> 00:00:19,760
+tutorial my name is Tam Baki and this
+
+4
+00:00:19,760 --> 00:00:21,560
+time we're going to be going over how
+
+5
+00:00:21,560 --> 00:00:24,199
+you can Implement oneshot learning with
+
+6
+00:00:24,199 --> 00:00:26,599
+an extremely Advanced deep learning
+
+7
+00:00:26,599 --> 00:00:29,599
+algorithm such as convolutional neural
+
+8
+00:00:29,599 --> 00:00:32,040
+network Works let's get started now in
+
+9
+00:00:32,040 --> 00:00:34,160
+this video today I'm going to tell you a
+
+10
+00:00:34,160 --> 00:00:36,480
+little bit about the challenges of
+
+11
+00:00:36,480 --> 00:00:39,719
+bringing onot learning to a system like
+
+12
+00:00:39,719 --> 00:00:41,280
+a deep neural network like a
+
+13
+00:00:41,280 --> 00:00:44,039
+convolutional neural network and well
+
+14
+00:00:44,039 --> 00:00:46,320
+there are quite a few reasons why
+
+15
+00:00:46,320 --> 00:00:49,520
+artificial intelligence isn't as good as
+
+16
+00:00:49,520 --> 00:00:52,000
+really learning from only a few training
+
+17
+00:00:52,000 --> 00:00:54,640
+parameters or a few training examples
+
+18
+00:00:54,640 --> 00:00:57,280
+whereas natural intelligence like humans
+
+19
+00:00:57,280 --> 00:01:01,559
+are very good in fact Excel at this task
+
+20
+00:01:01,559 --> 00:01:04,320
+for example let's just say that you have
+
+21
+00:01:04,320 --> 00:01:05,920
+seen you know you've seen kitchen
+
+22
+00:01:05,920 --> 00:01:08,520
+utensils You' seen spoons forks knives
+
+23
+00:01:08,520 --> 00:01:11,240
+etc etc uh you've seen quite a few you
+
+24
+00:01:11,240 --> 00:01:12,799
+haven't seen them all but you've seen
+
+25
+00:01:12,799 --> 00:01:16,200
+quite a few but you've never seen a
+
+26
+00:01:16,200 --> 00:01:20,159
+spatula or a blender before okay and so
+
+27
+00:01:20,159 --> 00:01:22,200
+let's just say that one day someone
+
+28
+00:01:22,200 --> 00:01:24,799
+introduces you to an individual spatula
+
+29
+00:01:24,799 --> 00:01:27,920
+and one blender okay simple enough you
+
+30
+00:01:27,920 --> 00:01:29,920
+start to understand the concept of a
+
+31
+00:01:29,920 --> 00:01:32,840
+spatula and a blender now though you've
+
+32
+00:01:32,840 --> 00:01:35,240
+only seen one spatula and one blender in
+
+33
+00:01:35,240 --> 00:01:39,640
+your entire life yet magically the next
+
+34
+00:01:39,640 --> 00:01:41,680
+time he shows you an entirely different
+
+35
+00:01:41,680 --> 00:01:44,719
+spatula or an entirely different blender
+
+36
+00:01:44,719 --> 00:01:47,560
+you instantly recognize what it is and
+
+37
+00:01:47,560 --> 00:01:49,280
+you don't confuse it with any other
+
+38
+00:01:49,280 --> 00:01:51,759
+kitchen utensil or the spatula and the
+
+39
+00:01:51,759 --> 00:01:55,200
+blender how is that that's because you
+
+40
+00:01:55,200 --> 00:01:58,560
+are human and you are amazing at
+
+41
+00:01:58,560 --> 00:02:00,920
+learning from only a few and in this
+
+42
+00:02:00,920 --> 00:02:03,719
+case one training
+
+43
+00:02:03,719 --> 00:02:06,479
+example however this sort of uh these
+
+44
+00:02:06,479 --> 00:02:08,560
+sorts of actions this sort of learning
+
+45
+00:02:08,560 --> 00:02:11,520
+is not very easy to replicate in
+
+46
+00:02:11,520 --> 00:02:14,400
+computers and the reason is computers
+
+47
+00:02:14,400 --> 00:02:18,319
+have one key part to learning that's
+
+48
+00:02:18,319 --> 00:02:20,519
+completely missing they're just missing
+
+49
+00:02:20,519 --> 00:02:24,200
+this one individual sort of main part of
+
+50
+00:02:24,200 --> 00:02:27,440
+learning that humans definitely do have
+
+51
+00:02:27,440 --> 00:02:29,360
+I'll talk about what that is in just a
+
+52
+00:02:29,360 --> 00:02:31,840
+moment but before that let's take a look
+
+53
+00:02:31,840 --> 00:02:34,400
+at what a regular convolutional neural
+
+54
+00:02:34,400 --> 00:02:37,319
+network looks like now when you're
+
+55
+00:02:37,319 --> 00:02:40,120
+either training or inferencing on a
+
+56
+00:02:40,120 --> 00:02:42,840
+convolutional neural network you're
+
+57
+00:02:42,840 --> 00:02:46,200
+using uh you know one of the classic CNN
+
+58
+00:02:46,200 --> 00:02:49,080
+flat and dense neural networks and so uh
+
+59
+00:02:49,080 --> 00:02:51,040
+let's just say you're building an
+
+60
+00:02:51,040 --> 00:02:55,800
+mnist convolutional neural
+
+61
+00:02:56,319 --> 00:02:58,840
+network and so with
+
+62
+00:02:58,840 --> 00:03:01,840
+mnist you're feeding the data into a
+
+63
+00:03:01,840 --> 00:03:04,799
+convolutional neural network the
+
+64
+00:03:04,799 --> 00:03:06,640
+convolutional neural Network's output
+
+65
+00:03:06,640 --> 00:03:08,840
+gets
+
+66
+00:03:09,840 --> 00:03:12,319
+flattened and then that flattened output
+
+67
+00:03:12,319 --> 00:03:14,640
+goes to a few dense
+
+68
+00:03:14,640 --> 00:03:17,000
+layers which then give output to the
+
+69
+00:03:17,000 --> 00:03:20,480
+user and so that is the final
+
+70
+00:03:20,480 --> 00:03:22,879
+output which is then
+
+71
+00:03:22,879 --> 00:03:25,360
+analyzed and so you're using this type
+
+72
+00:03:25,360 --> 00:03:30,440
+of model whether you are training
+
+73
+00:03:32,319 --> 00:03:35,680
+testing or inferencing whatever you're
+
+74
+00:03:35,680 --> 00:03:37,159
+doing you're
+
+75
+00:03:37,159 --> 00:03:39,000
+using
+
+76
+00:03:39,000 --> 00:03:42,120
+this model
+
+77
+00:03:42,120 --> 00:03:45,760
+OKAY however there are a few key
+
+78
+00:03:45,760 --> 00:03:48,120
+drawbacks to this model but before we
+
+79
+00:03:48,120 --> 00:03:50,400
+talk about the drawback let's take a
+
+80
+00:03:50,400 --> 00:03:53,519
+look at what we do if we want to say
+
+81
+00:03:53,519 --> 00:03:56,319
+compare two images to see if they
+
+82
+00:03:56,319 --> 00:03:59,319
+contain the same class now what I mean
+
+83
+00:03:59,319 --> 00:04:01,319
+by this is let's just say that we have
+
+84
+00:04:01,319 --> 00:04:04,079
+two different images and they both
+
+85
+00:04:04,079 --> 00:04:06,239
+contain the letter six but they're not
+
+86
+00:04:06,239 --> 00:04:07,959
+drawn in the same way they're not the
+
+87
+00:04:07,959 --> 00:04:09,599
+same image there could be a few pixels
+
+88
+00:04:09,599 --> 00:04:12,640
+up few pixels down it could be drawn a
+
+89
+00:04:12,640 --> 00:04:15,280
+little bit rotated etc etc so many
+
+90
+00:04:15,280 --> 00:04:17,479
+different things could go wrong or not
+
+91
+00:04:17,479 --> 00:04:19,120
+wrong necessarily but so many things
+
+92
+00:04:19,120 --> 00:04:21,799
+could be different between the images a
+
+93
+00:04:21,799 --> 00:04:24,240
+regular computer program could not tell
+
+94
+00:04:24,240 --> 00:04:25,720
+the difference between them I mean
+
+95
+00:04:25,720 --> 00:04:27,040
+forget telling the difference between
+
+96
+00:04:27,040 --> 00:04:29,360
+them a regular computer program couldn't
+
+97
+00:04:29,360 --> 00:04:31,960
+even tell you that there's a six in this
+
+98
+00:04:31,960 --> 00:04:34,199
+image that's for sure and so a deep
+
+99
+00:04:34,199 --> 00:04:36,240
+learning algorithm like this one can do
+
+100
+00:04:36,240 --> 00:04:40,560
+that with almost 100% accuracy
+
+101
+00:04:40,560 --> 00:04:44,120
+99.98% accuracy is the state-of-the-art
+
+102
+00:04:44,120 --> 00:04:46,600
+and so computers are very good at this
+
+103
+00:04:46,600 --> 00:04:49,199
+task when it comes to this type of deep
+
+104
+00:04:49,199 --> 00:04:51,680
+learning however say that you wanted to
+
+105
+00:04:51,680 --> 00:04:53,440
+do I mean this would be called I guess
+
+106
+00:04:53,440 --> 00:04:57,039
+you could say like a classic
+
+107
+00:04:57,039 --> 00:05:00,840
+CNN but now you want to do some sort of
+
+108
+00:05:00,840 --> 00:05:03,759
+equivalency
+
+109
+00:05:03,919 --> 00:05:05,919
+test
+
+110
+00:05:05,919 --> 00:05:10,759
+oh you want to do an equivalency
+
+111
+00:05:10,800 --> 00:05:13,080
+test and so essentially what this allows
+
+112
+00:05:13,080 --> 00:05:15,880
+you to do is take two images and see if
+
+113
+00:05:15,880 --> 00:05:18,479
+they contain the same class now
+
+114
+00:05:18,479 --> 00:05:21,120
+generally this could be quite easy what
+
+115
+00:05:21,120 --> 00:05:24,080
+you do is you go ahead and take the
+
+116
+00:05:24,080 --> 00:05:26,199
+output over here and You' compare it to
+
+117
+00:05:26,199 --> 00:05:27,880
+the other image's output and see if
+
+118
+00:05:27,880 --> 00:05:30,720
+they're the same and while technically
+
+119
+00:05:30,720 --> 00:05:33,000
+that would perform quite nicely let's
+
+120
+00:05:33,000 --> 00:05:35,680
+just say that you even wanted the
+
+121
+00:05:35,680 --> 00:05:39,160
+comparison to all be done by Deep
+
+122
+00:05:39,160 --> 00:05:41,880
+learning so it does it all
+
+123
+00:05:41,880 --> 00:05:44,360
+automatically how would you do that sort
+
+124
+00:05:44,360 --> 00:05:47,280
+of equivalency test well what you go
+
+125
+00:05:47,280 --> 00:05:52,199
+ahead and do is take two versions of
+
+126
+00:05:52,720 --> 00:05:55,840
+mnist or not necessarily two versions to
+
+127
+00:05:55,840 --> 00:05:58,919
+the the the nness data set you'd feed it
+
+128
+00:05:58,919 --> 00:06:00,800
+into two different
+
+129
+00:06:00,800 --> 00:06:03,520
+CNN's and remember these cnns are
+
+130
+00:06:03,520 --> 00:06:06,639
+already trained in a classic way so
+
+131
+00:06:06,639 --> 00:06:09,280
+these are pre-trained CNN's that you're
+
+132
+00:06:09,280 --> 00:06:13,280
+using you'd flatten their
+
+133
+00:06:14,039 --> 00:06:17,360
+output however there is one
+
+134
+00:06:17,360 --> 00:06:20,440
+difference oh sorry not dense the the
+
+135
+00:06:20,440 --> 00:06:22,680
+difference is that we're not using dense
+
+136
+00:06:22,680 --> 00:06:25,479
+layers we're only going to be using the
+
+137
+00:06:25,479 --> 00:06:26,840
+flatten
+
+138
+00:06:26,840 --> 00:06:31,360
+layer after that we've got a numeric
+
+139
+00:06:31,360 --> 00:06:34,479
+representation of how the CNN thinks
+
+140
+00:06:34,479 --> 00:06:36,520
+that the image looks and we've got this
+
+141
+00:06:36,520 --> 00:06:39,960
+in a list a one-dimensional array what
+
+142
+00:06:39,960 --> 00:06:41,240
+you can then
+
+143
+00:06:41,240 --> 00:06:46,400
+do is use a non-trained dense layer and
+
+144
+00:06:46,400 --> 00:06:51,440
+feed in the output of the trained CNN
+
+145
+00:06:51,440 --> 00:06:54,479
+and then train the dense layer to
+
+146
+00:06:54,479 --> 00:06:57,919
+understand when two images have the same
+
+147
+00:06:57,919 --> 00:07:00,560
+class and then you would have the dense
+
+148
+00:07:00,560 --> 00:07:03,720
+layer give output and this output can
+
+149
+00:07:03,720 --> 00:07:06,560
+either be the class that both of these
+
+150
+00:07:06,560 --> 00:07:09,560
+images contain or it could be just
+
+151
+00:07:09,560 --> 00:07:11,960
+simply whether or not the class of these
+
+152
+00:07:11,960 --> 00:07:13,639
+two images are the
+
+153
+00:07:13,639 --> 00:07:16,000
+same and so this would allow you to
+
+154
+00:07:16,000 --> 00:07:19,840
+create a relatively simple equivalency
+
+155
+00:07:19,840 --> 00:07:22,520
+neural network that'll take two images
+
+156
+00:07:22,520 --> 00:07:25,080
+and check if they contain the same
+
+157
+00:07:25,080 --> 00:07:28,800
+class however what would happen if you
+
+158
+00:07:28,800 --> 00:07:32,639
+only had had a few images to train with
+
+159
+00:07:32,639 --> 00:07:34,840
+but you have a lot of images to test
+
+160
+00:07:34,840 --> 00:07:37,240
+with really an infinite number of images
+
+161
+00:07:37,240 --> 00:07:39,360
+to test with because people can draw
+
+162
+00:07:39,360 --> 00:07:42,840
+these however they want to and while
+
+163
+00:07:42,840 --> 00:07:46,280
+technically the amness data set has
+
+164
+00:07:46,280 --> 00:07:49,680
+60,000 of these images there is another
+
+165
+00:07:49,680 --> 00:07:52,919
+data set which only has a few in fact
+
+166
+00:07:52,919 --> 00:07:57,759
+only 10 training images per letter and
+
+167
+00:07:57,759 --> 00:07:59,919
+in this case we're not going to be going
+
+168
+00:07:59,919 --> 00:08:03,360
+for numbers we're going to use 10 Greek
+
+169
+00:08:03,360 --> 00:08:05,680
+letters while technically the data set
+
+170
+00:08:05,680 --> 00:08:07,800
+provides many more I'm going with a
+
+171
+00:08:07,800 --> 00:08:10,759
+refined version of 10 of the characters
+
+172
+00:08:10,759 --> 00:08:13,199
+that this data set provides each of the
+
+173
+00:08:13,199 --> 00:08:15,840
+10 characters has 10 examples of how
+
+174
+00:08:15,840 --> 00:08:17,720
+it's written in Greek of course it's a
+
+175
+00:08:17,720 --> 00:08:20,319
+Greek character and so we don't really
+
+176
+00:08:20,319 --> 00:08:22,479
+have much to work with here and a
+
+177
+00:08:22,479 --> 00:08:25,879
+regular equivalent or classic CNN really
+
+178
+00:08:25,879 --> 00:08:28,360
+wouldn't do anything here at all so what
+
+179
+00:08:28,360 --> 00:08:31,240
+do we do well I'm going to go ahead and
+
+180
+00:08:31,240 --> 00:08:34,000
+merge these two types of neural networks
+
+181
+00:08:34,000 --> 00:08:37,240
+and add in one key element which enables
+
+182
+00:08:37,240 --> 00:08:39,839
+really natural learning and with this
+
+183
+00:08:39,839 --> 00:08:42,320
+key element such a neural network should
+
+184
+00:08:42,320 --> 00:08:45,640
+be possible let's talk about that now
+
+185
+00:08:45,640 --> 00:08:47,880
+and now with such a neural network there
+
+186
+00:08:47,880 --> 00:08:51,240
+are two stages you can't just train test
+
+187
+00:08:51,240 --> 00:08:53,320
+and inference on the exact same neural
+
+188
+00:08:53,320 --> 00:08:55,480
+network just like you can for these two
+
+189
+00:08:55,480 --> 00:08:57,320
+types of neural networks you have to
+
+190
+00:08:57,320 --> 00:08:59,880
+train on a different system and and test
+
+191
+00:08:59,880 --> 00:09:02,640
+or inference on another system let's
+
+192
+00:09:02,640 --> 00:09:04,560
+take a look at how you do
+
+193
+00:09:04,560 --> 00:09:06,959
+that and let's just say that you start
+
+194
+00:09:06,959 --> 00:09:09,120
+off with training so you want to start
+
+195
+00:09:09,120 --> 00:09:13,040
+off by training this neural
+
+196
+00:09:13,040 --> 00:09:16,240
+network and this time we're going for a
+
+197
+00:09:16,240 --> 00:09:18,839
+oneshot sort of learning and while
+
+198
+00:09:18,839 --> 00:09:21,240
+technically it's not one shot entirely
+
+199
+00:09:21,240 --> 00:09:23,399
+because we've got 10 different images
+
+200
+00:09:23,399 --> 00:09:26,440
+still though it's very very little data
+
+201
+00:09:26,440 --> 00:09:29,399
+to work off of so now again what we're
+
+202
+00:09:29,399 --> 00:09:32,440
+doing is well technically we should be
+
+203
+00:09:32,440 --> 00:09:35,040
+training with Greek and we are training
+
+204
+00:09:35,040 --> 00:09:37,959
+with Greek characters so we're taking
+
+205
+00:09:37,959 --> 00:09:40,839
+the Greek characters that we got from
+
+206
+00:09:40,839 --> 00:09:44,320
+the data set but we're feeding them into
+
+207
+00:09:44,320 --> 00:09:49,000
+a pre-trained CNN this pre-trained CNN
+
+208
+00:09:49,000 --> 00:09:52,040
+is trained on a very similar data set
+
+209
+00:09:52,040 --> 00:09:54,959
+that has ample data for us to work with
+
+210
+00:09:54,959 --> 00:09:57,120
+now what this means is well Greek
+
+211
+00:09:57,120 --> 00:09:59,560
+characters aren't that off for from
+
+212
+00:09:59,560 --> 00:10:02,079
+numbers they're still really the same
+
+213
+00:10:02,079 --> 00:10:04,680
+concept they are representing in some
+
+214
+00:10:04,680 --> 00:10:08,160
+sort of very small sort of character way
+
+215
+00:10:08,160 --> 00:10:10,920
+uh some sort of meaning and so we want
+
+216
+00:10:10,920 --> 00:10:13,160
+to be able to determine which character
+
+217
+00:10:13,160 --> 00:10:15,440
+it is and these characters are drawn uh
+
+218
+00:10:15,440 --> 00:10:17,399
+in a similar way to how a number would
+
+219
+00:10:17,399 --> 00:10:19,360
+be drawn it's similar enough that the
+
+220
+00:10:19,360 --> 00:10:21,839
+CNN's filters wouldn't do something
+
+221
+00:10:21,839 --> 00:10:23,399
+entirely different to these Greek
+
+222
+00:10:23,399 --> 00:10:25,440
+characters uh for example if we were to
+
+223
+00:10:25,440 --> 00:10:27,519
+use an imag net sort of convolutional
+
+224
+00:10:27,519 --> 00:10:30,200
+neural network we're using very very
+
+225
+00:10:30,200 --> 00:10:32,560
+similar data so you're going to feed
+
+226
+00:10:32,560 --> 00:10:35,560
+this into a convolutional neural network
+
+227
+00:10:35,560 --> 00:10:38,480
+which is pre-trained on the mest data
+
+228
+00:10:38,480 --> 00:10:41,320
+set now this mest data set has already
+
+229
+00:10:41,320 --> 00:10:44,399
+given the CNN a high amount of accuracy
+
+230
+00:10:44,399 --> 00:10:46,839
+so it already knows how to at least
+
+231
+00:10:46,839 --> 00:10:49,320
+slightly distinguish between different
+
+232
+00:10:49,320 --> 00:10:51,720
+characters from there you're going to
+
+233
+00:10:51,720 --> 00:10:55,399
+flatten the output of the
+
+234
+00:10:57,720 --> 00:11:00,399
+CNN but then once once you flatten the
+
+235
+00:11:00,399 --> 00:11:03,959
+output there's one key and this is
+
+236
+00:11:03,959 --> 00:11:05,560
+really as I mentioned what's going to
+
+237
+00:11:05,560 --> 00:11:08,959
+enable the entire system and that is
+
+238
+00:11:08,959 --> 00:11:12,320
+memory that's right deep neural networks
+
+239
+00:11:12,320 --> 00:11:15,880
+are very powerful but unlike humans they
+
+240
+00:11:15,880 --> 00:11:19,279
+never remember anything they just learn
+
+241
+00:11:19,279 --> 00:11:22,320
+individual patterns or concepts but they
+
+242
+00:11:22,320 --> 00:11:25,000
+don't remember any of the examples that
+
+243
+00:11:25,000 --> 00:11:27,839
+they had learned previously what this
+
+244
+00:11:27,839 --> 00:11:30,160
+means is that you're gener not getting
+
+245
+00:11:30,160 --> 00:11:32,120
+high accuracy because it doesn't
+
+246
+00:11:32,120 --> 00:11:34,480
+remember what the spatula looks like
+
+247
+00:11:34,480 --> 00:11:36,480
+it's trying to find individual little
+
+248
+00:11:36,480 --> 00:11:38,560
+patterns that might make a spatula a
+
+249
+00:11:38,560 --> 00:11:40,600
+spatula and little patterns that might
+
+250
+00:11:40,600 --> 00:11:42,920
+make a blender a blender but it's not
+
+251
+00:11:42,920 --> 00:11:45,560
+remembering the actual spatula or the
+
+252
+00:11:45,560 --> 00:11:47,880
+actual blender itself to be able to
+
+253
+00:11:47,880 --> 00:11:50,920
+compare future examples with its past
+
+254
+00:11:50,920 --> 00:11:53,839
+knowledge it doesn't have past knowledge
+
+255
+00:11:53,839 --> 00:11:56,880
+it only has past patterns learned and
+
+256
+00:11:56,880 --> 00:11:58,880
+current patterns that it's trying to
+
+257
+00:11:58,880 --> 00:12:01,120
+find and these patterns get mixed up
+
+258
+00:12:01,120 --> 00:12:02,880
+with other training examples and
+
+259
+00:12:02,880 --> 00:12:05,079
+eventually with enough training examples
+
+260
+00:12:05,079 --> 00:12:06,920
+you're able to make it learn enough of
+
+261
+00:12:06,920 --> 00:12:09,600
+an averaged pattern that it understands
+
+262
+00:12:09,600 --> 00:12:12,399
+new images however with this type of
+
+263
+00:12:12,399 --> 00:12:14,880
+neural network we're not doing that sure
+
+264
+00:12:14,880 --> 00:12:17,320
+we might want to retrain the CNN a
+
+265
+00:12:17,320 --> 00:12:19,680
+little bit and just fine tun its weights
+
+266
+00:12:19,680 --> 00:12:22,079
+to work with the Greek alphabet however
+
+267
+00:12:22,079 --> 00:12:23,920
+we're not going to be training an entire
+
+268
+00:12:23,920 --> 00:12:26,639
+neural network from scratch because we
+
+269
+00:12:26,639 --> 00:12:28,880
+don't have enough data to do that in the
+
+270
+00:12:28,880 --> 00:12:31,199
+first place and that's just generally
+
+271
+00:12:31,199 --> 00:12:33,560
+how these neural networks were built and
+
+272
+00:12:33,560 --> 00:12:35,360
+how they were built and really meant to
+
+273
+00:12:35,360 --> 00:12:38,480
+be used from the ground up and so once
+
+274
+00:12:38,480 --> 00:12:40,399
+you've gotten this flatten this
+
+275
+00:12:40,399 --> 00:12:43,279
+flattened output you can feed that into
+
+276
+00:12:43,279 --> 00:12:45,279
+the memory and the memory in this case
+
+277
+00:12:45,279 --> 00:12:48,079
+is just a very simple database this
+
+278
+00:12:48,079 --> 00:12:50,920
+database will contain the flatten output
+
+279
+00:12:50,920 --> 00:12:53,000
+and a little index of which character
+
+280
+00:12:53,000 --> 00:12:55,000
+this is say that we've got these 10
+
+281
+00:12:55,000 --> 00:12:56,959
+different characters the index will be
+
+282
+00:12:56,959 --> 00:12:59,600
+the number of which character this
+
+283
+00:12:59,600 --> 00:13:02,519
+flattened output truly
+
+284
+00:13:02,519 --> 00:13:05,720
+represents and now you have trained your
+
+285
+00:13:05,720 --> 00:13:08,440
+memory and you've already got a trained
+
+286
+00:13:08,440 --> 00:13:11,160
+convolutional neural network you've only
+
+287
+00:13:11,160 --> 00:13:14,160
+got one last training phase left before
+
+288
+00:13:14,160 --> 00:13:17,079
+you can get to the inferencing stage
+
+289
+00:13:17,079 --> 00:13:19,480
+once you've gone through the number one
+
+290
+00:13:19,480 --> 00:13:21,839
+training phase let's go through number
+
+291
+00:13:21,839 --> 00:13:25,199
+two now in number two this very same
+
+292
+00:13:25,199 --> 00:13:29,720
+model will be used for training
+
+293
+00:13:29,720 --> 00:13:33,040
+testing and
+
+294
+00:13:36,839 --> 00:13:39,199
+inference now this model will
+
+295
+00:13:39,199 --> 00:13:42,000
+essentially take that very same Greek
+
+296
+00:13:42,000 --> 00:13:44,440
+alphabet we were talking about and it'll
+
+297
+00:13:44,440 --> 00:13:46,600
+feed it into again the same
+
+298
+00:13:46,600 --> 00:13:48,279
+convolutional neural network that we
+
+299
+00:13:48,279 --> 00:13:50,240
+were talking about before now it's
+
+300
+00:13:50,240 --> 00:13:51,959
+actually again very important that you
+
+301
+00:13:51,959 --> 00:13:54,639
+use the same CNN so that what the memory
+
+302
+00:13:54,639 --> 00:13:56,880
+outputs actually still make sense in
+
+303
+00:13:56,880 --> 00:13:59,880
+this case once that's done of course the
+
+304
+00:13:59,880 --> 00:14:03,240
+CNN's output will be
+
+305
+00:14:04,079 --> 00:14:07,120
+flattened and then once it's flattened
+
+306
+00:14:07,120 --> 00:14:11,120
+then of course we bring back the memory
+
+307
+00:14:11,120 --> 00:14:13,360
+except we're not feeding into the memory
+
+308
+00:14:13,360 --> 00:14:16,720
+this time we're taking from previous
+
+309
+00:14:16,720 --> 00:14:20,519
+memory so the memory will also have
+
+310
+00:14:20,519 --> 00:14:22,880
+output here and now there's going to be
+
+311
+00:14:22,880 --> 00:14:26,240
+an entirely new script and this is
+
+312
+00:14:26,240 --> 00:14:31,040
+called the comparison script
+
+313
+00:14:31,880 --> 00:14:35,320
+now this itself will be powered by Deep
+
+314
+00:14:35,320 --> 00:14:36,800
+learning and I'll talk about that in
+
+315
+00:14:36,800 --> 00:14:39,480
+just a moment and so essentially the
+
+316
+00:14:39,480 --> 00:14:41,480
+memory will also feed into this
+
+317
+00:14:41,480 --> 00:14:44,320
+comparison script from somewhere else
+
+318
+00:14:44,320 --> 00:14:46,920
+and so this this memory will essentially
+
+319
+00:14:46,920 --> 00:14:49,199
+contain as I mentioned flattened output
+
+320
+00:14:49,199 --> 00:14:51,160
+that the con illusional neural network
+
+321
+00:14:51,160 --> 00:14:53,759
+had previously learned and with this
+
+322
+00:14:53,759 --> 00:14:56,440
+flattened output the comparison script
+
+323
+00:14:56,440 --> 00:14:59,560
+will then go ahead and use dense neural
+
+324
+00:14:59,560 --> 00:15:02,480
+networks against all of the different
+
+325
+00:15:02,480 --> 00:15:05,079
+examples in memory and finally the dense
+
+326
+00:15:05,079 --> 00:15:07,880
+neural network will output for each
+
+327
+00:15:07,880 --> 00:15:10,160
+different a training example that the
+
+328
+00:15:10,160 --> 00:15:12,519
+neural network had learned from before
+
+329
+00:15:12,519 --> 00:15:15,759
+how similar this image is or the content
+
+330
+00:15:15,759 --> 00:15:18,120
+in this image is or in this case the
+
+331
+00:15:18,120 --> 00:15:20,360
+important content in this image is to
+
+332
+00:15:20,360 --> 00:15:22,759
+the important content in the training
+
+333
+00:15:22,759 --> 00:15:25,639
+example from the memory from there the
+
+334
+00:15:25,639 --> 00:15:27,480
+comparison script once it's done using
+
+335
+00:15:27,480 --> 00:15:29,880
+its dense neural networks will give us
+
+336
+00:15:29,880 --> 00:15:33,880
+output and this output will contain the
+
+337
+00:15:33,880 --> 00:15:37,880
+class of the image itself and from there
+
+338
+00:15:37,880 --> 00:15:40,639
+you've built an entire system that took
+
+339
+00:15:40,639 --> 00:15:43,800
+only 10 training samples for 10
+
+340
+00:15:43,800 --> 00:15:46,399
+different classes and was able to
+
+341
+00:15:46,399 --> 00:15:49,279
+understand with actually very very high
+
+342
+00:15:49,279 --> 00:15:52,240
+accuracy these sorts of images and
+
+343
+00:15:52,240 --> 00:15:54,800
+remember this all depends on the neural
+
+344
+00:15:54,800 --> 00:15:56,839
+network that you're training off of if
+
+345
+00:15:56,839 --> 00:15:58,519
+the convolutional neural network that
+
+346
+00:15:58,519 --> 00:16:00,319
+you're train TR based off of in this
+
+347
+00:16:00,319 --> 00:16:02,880
+case from mest is isn't using similar
+
+348
+00:16:02,880 --> 00:16:04,519
+enough data or it doesn't have high
+
+349
+00:16:04,519 --> 00:16:07,720
+enough accuracy itself it can of course
+
+350
+00:16:07,720 --> 00:16:09,839
+definitely influence the accuracy that
+
+351
+00:16:09,839 --> 00:16:12,079
+you're getting on your Greek characters
+
+352
+00:16:12,079 --> 00:16:13,480
+in fact in the next part of this
+
+353
+00:16:13,480 --> 00:16:15,920
+tutorial I'll share with you exactly how
+
+354
+00:16:15,920 --> 00:16:17,759
+I was able to build the system all of
+
+355
+00:16:17,759 --> 00:16:19,839
+the challenges with it and of course how
+
+356
+00:16:19,839 --> 00:16:21,600
+you can give it multi- Channel images
+
+357
+00:16:21,600 --> 00:16:24,360
+and so so much more all implemented in
+
+358
+00:16:24,360 --> 00:16:27,240
+carass with a tensor flow back end and
+
+359
+00:16:27,240 --> 00:16:29,120
+so that's what I have had to cover in in
+
+360
+00:16:29,120 --> 00:16:31,240
+this video today thank you very much for
+
+361
+00:16:31,240 --> 00:16:32,680
+joining in I really do hope you were
+
+362
+00:16:32,680 --> 00:16:34,199
+able to learn something from this video
+
+363
+00:16:34,199 --> 00:16:36,600
+and enjoy so thank you very much if you
+
+364
+00:16:36,600 --> 00:16:38,279
+have any more questions suggestions or
+
+365
+00:16:38,279 --> 00:16:39,600
+feedback please do leave that in the
+
+366
+00:16:39,600 --> 00:16:41,440
+comment section down below email it to
+
+367
+00:16:41,440 --> 00:16:43,839
+me at tajim Manny gmail.com or you can
+
+368
+00:16:43,839 --> 00:16:46,240
+tweet it to me at tagim Manny of course
+
+369
+00:16:46,240 --> 00:16:47,519
+though if you like the video please do
+
+370
+00:16:47,519 --> 00:16:48,920
+make sure to leave a like down below and
+
+371
+00:16:48,920 --> 00:16:50,480
+share it with your friends or family if
+
+372
+00:16:50,480 --> 00:16:52,079
+you think it could help anybody else you
+
+373
+00:16:52,079 --> 00:16:54,160
+know as well apart from that if you
+
+374
+00:16:54,160 --> 00:16:55,480
+really do like my content and you want
+
+375
+00:16:55,480 --> 00:16:56,880
+to see more of it please do consider
+
+376
+00:16:56,880 --> 00:16:58,399
+subscribing to my YouTube channel as
+
+377
+00:16:58,399 --> 00:17:01,040
+well as it really does help out a lot
+
+378
+00:17:01,040 --> 00:17:02,399
+and of course if you'd like to be
+
+379
+00:17:02,399 --> 00:17:04,559
+notified whenever I release new content
+
+380
+00:17:04,559 --> 00:17:06,199
+please do turn on notifications by
+
+381
+00:17:06,199 --> 00:17:08,360
+clicking the little bell icon beside the
+
+382
+00:17:08,360 --> 00:17:10,480
+Subscribe button below and so you'll be
+
+383
+00:17:10,480 --> 00:17:12,400
+notified bya Google notification and
+
+384
+00:17:12,400 --> 00:17:15,280
+email whenever I release new content so
+
+385
+00:17:15,280 --> 00:17:16,640
+thank you very much for joining in today
+
+386
+00:17:16,640 --> 00:17:18,199
+that's going to be all for this video
+
+387
+00:17:18,199 --> 00:17:21,199
+goodbye

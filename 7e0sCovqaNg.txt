@@ -1,0 +1,922 @@
+hello my friends and fellow traders
+welcome back to another pie connector
+video
+in today's video we're going to be
+discussing the various syntax and alert
+commands that we have to work with
+when sending our trading view alerts to
+pine connector
+if this is the first video in this
+series you're watching make sure to go
+back and watch the previous video
+as that is where i show you how to set
+up pi connector with metatrader
+now pan connector is a metatrader bridge
+it's an expert advisor script that runs
+in metatrader
+you send your trading view alerts to
+that expert advisor
+and then that expert advisor executes
+orders based on what commands you send
+it
+through your trading view alerts so in
+today's video we're going to discuss
+the various commands we have to work
+with let's get started
+before we begin there will be an
+affiliate link in the video description
+that you can use to come to the pine
+connect website sign up and create your
+account
+if you use that link then i receive a
+commission for referring you to pine
+connector at no extra cost to you so
+that's just one way to support the
+channel if you want to
+and i would obviously greatly appreciate
+it if you do use that link
+if you don't use that link however
+that's fine i'm probably still making
+money off
+your ads so thanks for supporting the
+channel
+regardless of how you do it unless
+you've got an ad blocker like me
+in which case shame on you for free
+loading of my content
+i'm just kidding i love you all of
+course
+all right so you can find this syntax
+guide in
+your account uh home page which can be
+found by just clicking on this little
+icon up here and for the first part of
+this video i'm just going to go through
+each of these
+components or commands and explain what
+they do so the first
+thing we need to include in every alert
+command we send to pine connector
+is our license id which you can also
+find on your account home page
+so the way most of your alerts will look
+is you'll have your id
+and then a comma and then this symbol
+you're looking to trade
+so you're a dollar for example never
+mind my fantastic
+handwriting and then
+obviously your buy or sell direction or
+what you what you want to do with this
+symbol if you want to open a buy trade
+you would then write buy
+or sell if you want to go short if you
+want to close your loan or close your
+short you would
+just include that command but towards
+the end of this video we'll go over some
+practical examples of these commands for
+now let's just go through each of these
+one by one and explain them
+so if we're opening a position a buy or
+sell position we need to obviously
+specify
+what not obviously maybe but it's a good
+idea to specify
+a stop loss and a take profit
+obviously depending on how your strategy
+works so for me
+all of my strategies are designed around
+having a fixed stop loss
+and some form of a fixed target some of
+my strategies have multiple
+targets maybe i'll manage my second
+target
+with discretion or with a exit reason
+but most of my trades are going to be
+opened with a fixed stop loss
+and a fixed take profit in most cases
+the way this works is depending on how
+you've set up your expert advisor
+settings
+you can either specify a price for your
+stop loss and take profit
+or a pip amount so before we continue
+let me jump over to metatrader
+and show you what i mean by changing
+your settings
+regarding your stop loss and take profit
+so here i am on
+the beautiful interface of metatrader
+not as slick as trading view but it'll
+do the job if
+i want to change my expert advisor
+settings
+i can just press f7 i believe
+yes i have to blur out my license id
+here because this is on my actual live
+account
+unlike the previous videos which were
+under a trial account
+there are only two settings here that
+will affect how your alert
+commands are interpreted by pi connector
+and that is your target type and your
+volume type i think by default this is
+set to pips and this is set to
+uh specified volume and if your target
+type
+is set to tp and sales take profit and
+stop loss based on pips
+then when you use this sl and tp
+command in your alert syntax you need to
+specify this number as a whole number
+in pips so regardless of what symbol
+you're on it doesn't matter how many
+decimal
+places are in your standard pip
+calculation if you just specify a whole
+number
+pine connector will convert this into
+the relevant
+pip amount for your position so 25 here
+is obviously going to be 25 pips
+above or below your entry depending on
+whether you're going long or short
+if however i have this set to tp sl
+based on price which is my preferred
+method of using this
+expert advisor then whatever number you
+specify for your sl
+or tp is a price level
+so 1.2012 would set your stop loss
+to this price 1.2012 and then once
+you've specified your stop loss
+you can then use the risk parameter to
+calculate your position size
+automatically again depending on what
+setting you've set up in the pi
+connector settings
+so let's jump back over to metatrader
+and i'll explain what i mean
+here you can see i've set volume type to
+percentage of balance this is a
+percentage of my
+account balance if you have this setting
+set up this way
+then when you use the risk parameter
+you just need to specify a whole number
+and this will correspond to a percentage
+of your account balance
+so if i have a stop loss let's say i've
+set my sl and tp to
+pips and i have a 25 pip stop loss and
+then i set my risk parameter
+in the pi connector settings to a
+percentage of my account balance
+and i then specify risk is two then pi
+connector will automatically calculate
+how many lots or many lots
+whatever your broker deals in correspond
+to 2
+risk of your account balance based on
+your stop-loss distance
+whether that's in price or pips
+in other words whatever you've set your
+stop loss to
+pi connector will calculate the distance
+from your entry
+to your stop loss and then
+it will use the risk parameter to
+calculate
+in this case if we set it to 2 2 risk
+from your entry to your stop loss
+meaning if your stop loss is hit the
+position size that you have entered on
+this trade will account for a 2
+loss on that trade hopefully that makes
+sense if you're at all experienced with
+trading
+then you know exactly what i mean so
+moving on the next
+order or syntax command parameter
+whatever you want to call it
+we have to work with in part connector
+is a price parameter this is for
+specifying
+where to put pending orders now keep in
+mind some of these alerts
+and the way we use them may change in
+the future as pine connector is a work
+in progress
+when i first began using pine connector
+or when the creator of pine connector
+first reached out to me um alex
+shout out to alex if he's watching this
+uh he has been answering some of your
+comments in the in the comments section
+which i'm very appreciative for
+as i don't have the time to help
+everyone with this and he obviously has
+a more intricate knowledge
+of how pi connector works since he made
+the thing he's been really helpful
+in getting me started with this and he
+seems like a top guy so
+you're in good hands if you're using
+pine connector don't hesitate to reach
+out to him if you need any help
+when he first made me aware of pine
+connector pending orders were not a
+thing so this was just recently added to
+the pine connector expert advisor
+and it's something we'll play around
+with later in the video but basically if
+you wanted to set a
+buy stop for example above price action
+say price action is in a range
+and you want to buy a breakout of the
+high
+you could use pine connector to send a
+buy stop order
+just above this high and you can specify
+where that order goes
+using this price parameter but we'll get
+to that later when we get to practical
+examples
+of these commands in the charts next up
+we have our market order
+commands so we have obviously pending
+order commands or limit orders and
+buy stop sell stop orders then we have
+our market order commands which is just
+buy or sell at market
+so if you want to open a long position
+you would specify
+a buy command and notice that these
+commands don't have an equal sign
+in them there's no direction equals
+so to open a long trade we would do
+something like this
+specify your id your symbol
+and then comma buy and then
+comma stop loss equals let's say 50 pips
+comma risk equals let's say
+one percent of our account balance
+hopefully you can read this
+lucky for me i'm a better trader than i
+am a calligrapher
+but anyway this would open a long
+position if we wanted to then
+close this long position we would need
+to specify our license id
+the symbol we want this command to be
+executed on
+comma and then close
+long and that will close this buy
+trade and obviously close short
+would close a sell
+or short position so these are our
+market orders pretty easy to understand
+pretty intuitive
+next up we have our pending order
+commands i'm just going to rush through
+these because
+they should be pretty self-explanatory
+to you if you're an experienced trader
+and you've used these
+orders types before but a buy stop order
+goes above price action
+a buy limit order goes below price
+action will be filled if price
+comes down to it a sell stop order
+it says here place above current market
+price but this should be below
+current market price so a sell stop
+similar to a buy stop going above price
+action will go below price action and
+will be filled if price
+exceeds that price that you've specified
+for this sell stop and a sell limit
+order
+will be filled if price action comes up
+to
+the price you specify and then the final
+two pending order commands we have here
+is
+cancel long and cancel short which as
+the name implies cancels your buy stop
+buy limits or your sell stop and sell
+limits and i haven't mentioned this but
+there are examples down the right hand
+side here obviously
+that demonstrate the syntax for this so
+if you wanted to cancel a short position
+you would just input your license id
+the cancel short command and then the
+symbol you want to cancel those orders
+on
+let's move on to our break even and
+trailing commands
+first up we have be trigger or break
+even trigger
+this will activate your break even order
+it'll move your stop loss to break even
+after your trade gains this number of
+pips
+beyond the opening price into profit
+so if you set it to 30 and you have a
+long position open
+then when price moves 30 pips in your
+favor
+let's say you entered here and then
+price hits a 30 pip mark
+your stop loss will be brought up to
+break even and then you have a be offset
+or break even offset
+this is how many pips to put your stop
+loss above your entry price
+so i'm assuming this is set to zero by
+default and that means that your
+stop loss will be placed to your entry
+price
+the reason that alex has included this
+command
+i would assume is because of commission
+and spread issues
+i know for me personally when i'm using
+a break even stop i like to set my stop
+loss
+a few pips above
+my entry price for a long or below for a
+short
+so that i can at least cover the
+commission cost on the trade
+if you set it just to your entry price
+then even though your trade was exited
+for break even you may have still paid
+depending on your position size and time
+frame your trading etc
+you could pay a decent price for exiting
+a trade to break even if you don't use
+an offset
+so in this example if price moved 30
+pips
+in to profit the stop loss would be
+moved
+five pips above or below your entry
+price depending on whether you're long
+or short
+and there are two notes here that are
+important to
+address the first note is that your
+break even trigger
+should be a value that is minimally
+um a minimal distance from your entry
+price
+that your broker will allow so in other
+words
+if you set your breakeven trigger to one
+pip
+and your trade goes one pip into profit
+moving your stop loss to break even
+might not
+be allowed by your broker because it may
+be triggered instantaneously and
+some brokers i know oanda for example my
+broker will not allow me to put a stop
+loss
+in a position where it will be
+immediately executed it has to be some
+distance away from price action
+um taking into account the spread now
+breakeven offset also needs to be
+below or less than your break even
+trigger so you can't set b offset to 30
+because obviously if your entry is here
+and your stop loss is 30 pips and then
+your
+breakeven trigger is 30 pips and you set
+your offset to 30 pips then
+the pi connector script will attempt to
+move your stop loss
+up 30 pips which is where price action
+currently is since it triggered your
+breakeven trigger
+and this obviously will not work for the
+same reasons that this warning is in
+here or this
+this note is in here so keep that in
+mind when working with break-even
+commands it should be self-explanatory
+for anyone who uses break-even
+stop-losses in their strategies but for
+those of you who haven't used this
+before those are just some things to
+keep in mind
+next up we have trail trig or trail
+trigger
+this is similar to a break even stop
+loss except
+that it continues moving your stop-loss
+higher and higher
+in the case of a long trade whereas a
+break-even stop
+let's say we enter here on a trailing
+stop
+your trail trigger let's say it's 15
+pips that means that when price moves
+15 pips into profit and price action
+tags that level your stop loss let's say
+this was your stop loss
+as soon as your 15 pip trigger is hit
+your stop loss will be moved
+up below current price based on these
+next two parameters which we'll get to
+in a moment
+but this trail dist is trail distance in
+pips so let's say this is 10
+in this example when price moves 15 pips
+into your favor your stop loss will be
+moved
+10 pips below price action and then as
+price continues to move in your favor
+the stop-loss will continue to creep up
+higher and higher 10 pips below
+the current price obviously trailing
+stops never move down
+so once price action starts to trend
+down your stop-loss will stay
+wherever it got to and eventually price
+will come down and stop you out when it
+hits your trailing stop
+whereas obviously with a break-even
+trade if you were to enter here and your
+stop-loss down here
+if you had a 15-pip break even trigger
+then as soon as price moved
+15 pips into favor your stop-loss will
+just be moved to break even
+and it will not trail below price action
+that should be obvious to most of you
+but you'd be surprised
+at how many traders don't understand
+that concept
+anyway the next two commands the final
+two commands we have to work with here
+when using a trailing stop is trail dist
+and trail step
+so trail dist or distance is the
+distance of the trailing stop-loss from
+the current price
+your stop-loss will be placed at trail
+distance
+so this many pips from the current
+closing price and then finally we have
+trail step
+which moves the trailing stop loss once
+price moves
+by a specified number of pips in your
+favor
+so i'm not super experienced with using
+trailing stop losses
+um in my automated scripts so maybe
+we'll play around with this later
+but i'm guessing this works like this
+let's say we enter long here
+price moves 15 pips into our favor then
+our stop loss
+is moved 10 pips below price action
+the current closing price and then if
+price comes down a little bit our stop
+loss stays here
+and then if price moves 12 pips into our
+favor
+from this trigger spot then our stop
+loss has moved up
+10 pips below price action
+and again our stop loss will not be
+moved until price moves another 12 pips
+into our favor i believe that's how this
+works we'll play around with this later
+on the charts
+now if you're unclear about anything
+that i just covered or you want to learn
+more about how this all works
+just come to this alert syntax guide and
+just read through some of these
+scenarios and settings
+and examples alex and his team have done
+a great job of providing
+thorough documentation on how all of
+these alerts work and various examples
+of how you can use them
+now i'm not going to spend too much time
+going over various scenarios
+and use cases for all of these commands
+as there are quite a few examples here
+but we will jump over to metatrader and
+trading view
+for the remainder of this video and
+we'll just try out a few test commands
+and see how this all works in practice
+but
+but just really quickly before we do
+that i think it's important to mention
+this
+early on in the video in case you run
+into any issues if you get any errors
+from the expert advisor when you try to
+execute these alerts
+if you get little pop-ups with error
+codes come down
+to this useful resources section of the
+account page
+and click on the errors link here and
+this will give you
+a list of error codes for any potential
+issues you might run into with the
+expert advisor
+for example in the previous lesson where
+i showed you how to set up metatrader5
+i kept getting this error code here 4756
+and the only way to fix this was to
+download this alternate copy of the
+expert advisor file so if you run into
+any error codes jump over to this page
+and just read the remarks here the
+description of each code
+and you should be able to work out
+what's going on by reading the
+description and trying what is suggested
+here
+if you still can't get the script to
+work make sure to send the support team
+a message
+and i'm sure they'll get back to you as
+soon as they can but anyway let's jump
+over to trading view and start today's
+lesson okay so here we are on the
+australian dollar forex market
+let's add an alert to this chart and
+play around with some of the syntax
+from the pine connector page so i'm just
+going to right click on my chart click
+add alert
+i'm going to set this to a condition
+that will always execute in this case
+i'm going to set it to greater than zero
+i'm going to turn off notify on app and
+any alert sounds today we'll test
+opening a short position and then we'll
+test
+sending a command to close that position
+so before we start let's jump back over
+to metatrader you'll notice i'm on
+metatrader5 here in the first lesson i
+was using metatrader4 the platforms
+pretty much behave identically
+and so i'll probably just hop between
+them throughout the lesson series
+depending on what i'm doing
+the alert syntax is identical between
+the two so before we start i want to
+right click
+on my chart here and come down to
+expert list and then i want to click on
+the point connector
+ea and then click properties so before
+we start sending commands to this expert
+advisor we need to make sure we have our
+ea settings set up correctly
+i've got my target type set to tp and
+loss based on price
+and my volume type or risk type set to
+percentage of balance
+this means whatever number i send as my
+risk
+parameter if i bring over the alerts
+guide
+that's this parameter here whatever i
+set this to
+will be a percentage of my account
+balance since i've set this setting to
+that so just keep that in mind if you're
+running into issues with your alerts
+make sure you've set up your settings on
+the expert advisor side
+correctly so everything here is how i
+want it click ok
+close this and let's jump back over to
+trading view
+and send an alert to open a cell
+position so before we start let's make
+sure we've ticked the web hook url and
+put in the pine connector
+webhook url and then the very first
+thing we need to do for
+our alert syntax is paste in our license
+id
+so there's my id there for my account by
+the time you watch this video
+this account will have expired so don't
+even bother trying to use my
+license id for your alerts i just left
+this in
+for the first few videos to make it
+easier for you guys
+to follow along rather than blacking it
+out or blurring it or whatever
+so once we've inputted our license id
+the next thing we should do is specify
+which direction we want our order to be
+in in this case we want to
+sell aussie dollar short the next syntax
+parameter
+is the symbol we want to trade in this
+case that's aud usd
+now if you've watched the very first
+video in this series you'll remember
+that i had to add a dash 2
+onto my symbol because of the way awanda
+lists their symbols on metatrader
+because i'm using metatrader5 here
+through pepperstone which is a different
+broker
+they list their symbols differently to
+orlando and in this case i do not need
+to add the dash to suffix
+onto the symbol name so keep that in
+mind make sure you check
+your symbol on metatrader to make sure
+you've got the correct symbol ticker
+including any prefix or suffix otherwise
+the alert
+will not fire and get rid of that so far
+so good
+now we need to specify our stop loss
+because my risk is a percentage of my
+account balance we need to specify a
+stop loss
+price before we specify our risk
+remember i've set stop loss and take
+profit to a price based
+parameter so because we're selling short
+let's add a stop loss at 765
+just for demonstration purposes and then
+next up is my risk
+i'm going to set that to one percent of
+my account balance
+and remember if we want to set a take
+profit as well we can just add tp on the
+end here so tp equals
+let's set it to the low of this pullback
+which is around
+748 seven four eight and
+so now we're going to open a short
+position on aussie dollar with a stop
+loss at seven
+six point five cents a risk of one
+percent of my account balance
+and a take profit of seven four eight
+which is the low of this pullback let me
+click create
+and we'll see what happens there we go
+the trade has opened i'm on the 30
+minute chart here so i need to scroll my
+chart down a bit to see our orders but
+here's our stop loss and our take profit
+and our entry
+which was entered at market so we were
+affected by the spread here and that's
+something we'll cover
+in a future lesson on how to mitigate
+that issue but here we have an open
+position
+we have uh around 11 000
+units sold short here we're on a ten
+thousand dollar
+demo account us dollar and we have quite
+a wide stop-loss from our entry so our
+position size is quite small since we
+only risked one percent of our account
+so far so good everything's working
+let's try closing this trade
+with a different command or different
+alert
+let's jump over to trading view i'm
+going to open up my alerts dialog here
+and just edit this existing alert let me
+delete some of these old
+alerts open up this scroll down
+and i'm going to modify this alert to
+send a
+exit command to pi connector so to do
+that let's
+bring over our syntax guide again if we
+scroll down on this page
+you can see our market order commands
+and in order to close a short position
+we need to send
+close short with the symbol name
+so we need our license id just the close
+short
+parameter and then the symbol that we
+want to close so that's easy i'm just
+going to copy this
+last section come over here paste that
+in there
+change the symbol to aussie dollar let's
+save the alert
+jump over to pepperstone and see if this
+trade closes there we go
+easy so the reason i'm showing you all
+of this is because
+in the next lesson we're going to
+implement these commands into an actual
+script a pine script in the pine editor
+but before we do that we need to
+understand how these commands work so
+let's go through a couple more
+all right so we've covered a practical
+use case of opening
+a short trade and closing a short trade
+it's pretty much the same steps for a
+long trade
+so i won't go over that in today's video
+i'll just quickly show you how to set up
+a buy stop and then cancel that buy stop
+and then we'll wrap up today's video
+i would show you how to use the
+breakeven and trailing stop commands
+however given the fact that we have to
+wait on price action to
+move to trigger these commands it's
+going to take all day for me to record
+that
+these commands should be pretty
+self-explanatory anyway so we'll skip
+these commands today just to save time
+and maybe i'll cover them in a future
+video but for today let's wrap this
+video up by creating a buy stop
+and then cancelling that buy stop so for
+this
+i'm going to use metatrader4 just
+because i took a break between recording
+the previous section of this video with
+metatrader5
+and it just so happens i have
+metatrader4 set up today but this should
+be a good example of how similar these
+platforms behave when it comes to pi
+connector
+so let's jump over to trading view and
+create an
+alert so i am on eurodollar here so i'm
+going to click
+create alert scroll down turn off
+notifications
+turn on my web hook and clear this
+message text now let's jump back over to
+the syntax guide
+i'm going to copy this example here and
+paste it into my alert i need to replace
+my id with my license id and the market
+with the
+correct ticker in this case it's euro
+us dollar dash f now in the previous
+example i just showed you
+we didn't need to use the dash f suffix
+because i was
+dealing with pepper stone but oanda as
+you can see here
+have a dash f after they're 4x
+instruments so i need to include that
+suffix in this alert command next up we
+have the price i'm going to set my buy
+stop
+to just above the swing high here just
+as an example
+let's just set it to 120 even
+just to keep it simple and i'll set my
+stop loss it's currently
+based on price let's just set it to
+below
+this swing low here which would be
+around um
+117.5 let's call it so
+1.175 comma
+and then we need to specify our risk or
+position size i'm going to just set mine
+to 1
+of my account balance now i need to copy
+in my license id which is going to be my
+live license id so i'll need to blur
+this so that you guys don't steal my
+account of course my audience wouldn't
+steal my license id but this is going on
+the internet and who knows
+what kind of riffraff might see this
+number so i need to blur that
+paste that in there and now if i scroll
+up to the top make sure that
+this is set to greater than zero
+and now when i click create this alert
+should fire and we should
+place a buy stop at 1.20
+on euro dollar with a stop loss at 1.175
+and a risk of one percent so let's click
+create
+jump over to oanda
+see what happens there we go buy stop
+placed at a dollar 20 with a stop loss
+down here at 1
+175 and the size down here you can see
+is 0.01
+that's because i'm on a live account
+here i've only got 100 in this account
+i'll increase this later in the series
+when we start playing around with an
+actual strategy script
+but by default pi connector will round
+your position size
+up to the minimum lot size that is
+allowed by your broker in this case that
+is
+0.01 or one mini lot but anyway the
+command worked we have placed a buy stop
+with a stop loss and if i had more money
+in my account this
+position size would equate to one
+percent risk on this particular trade
+so just really quickly let's see if we
+can add a take profit to this
+scroll down to my alert let's add a tp
+equals 1.21 just to keep things simple
+click save and let's see how this works
+there we go buy stop entered at 120 with
+our take profit and stop loss
+so far so good let's now try cancelling
+this buy stop so to do that we can just
+copy
+this here jump over to trading view get
+rid of all of this
+and paste this in here
+get rid of that extra comma and there we
+have it we've got my license id
+the cancel long command and then the
+symbol i want to execute this command on
+let's click
+save and see if that removes our buy
+stop
+there we go gone excellent everything is
+working perfectly
+and obviously to set a limit order would
+be exactly the same except
+instead of buy stop you would just write
+buy limit or sell limit
+so most of these commands are pretty
+intuitive and self-explanatory
+obviously the tricky part will be
+implementing these into
+an actual trading view script because
+today's video is already quite long i'm
+going to wrap this up here
+and in the next video we'll jump into
+the pine editor
+and i will show you how to implement
+these commands into your pine
+code using an example strategy script
+so i hope you found today's lesson
+interesting if you did make sure to hit
+the subscribe button so that you don't
+miss the next video which will be
+far more interesting than the past two
+because we will actually get our hands
+dirty with some code
+this was all just the preliminary stuff
+to get you familiar with pine connector
+get you set up get to your head around
+how these
+commands work how the syntax works now
+we can really hit the ground running and
+start doing some cool stuff with this
+knowledge so thanks for watching best of
+luck with your trading remember there is
+an affiliate link
+to sign up to pine connector if you're
+interested in playing around with this
+expert advisor and again if you do buy a
+subscription
+you don't pay anything extra i just get
+a cut of your
+sale and that is one way to support the
+channel which i would be extremely
+appreciative of
+if you do that but if not no hard
+feelings thanks for watching i'll see
+you in the next video
+take care best of luck with your trading
+and i'll speak with you
+next week goodbye

@@ -1,0 +1,919 @@
+1
+00:00:00,280 --> 00:00:02,679
+hello there t back with another watch
+
+2
+00:00:02,679 --> 00:00:04,839
+kid tutorial well not another one this
+
+3
+00:00:04,839 --> 00:00:07,160
+is my first watch kit tutorial for
+
+4
+00:00:07,160 --> 00:00:11,400
+YouTube now basically uh this is a watch
+
+5
+00:00:11,400 --> 00:00:14,200
+uh an Apple Watch app and what this does
+
+6
+00:00:14,200 --> 00:00:18,320
+is it's a guessing game um so basically
+
+7
+00:00:18,320 --> 00:00:21,119
+it generates a random number and then
+
+8
+00:00:21,119 --> 00:00:23,800
+you have to guess that random
+
+9
+00:00:23,800 --> 00:00:26,199
+number and it counts how many tries you
+
+10
+00:00:26,199 --> 00:00:29,519
+take so it's both for the iPhone um and
+
+11
+00:00:29,519 --> 00:00:32,160
+the Apple watch so first I'll start off
+
+12
+00:00:32,160 --> 00:00:35,800
+by showing you the um uh iPhone Edition
+
+13
+00:00:35,800 --> 00:00:37,079
+and then I'll show you the Apple watch
+
+14
+00:00:37,079 --> 00:00:41,480
+Edition so if I uh try to make a number
+
+15
+00:00:41,480 --> 00:00:43,640
+bigger here I make my guess bigger on
+
+16
+00:00:43,640 --> 00:00:46,160
+the iPhone and I click submit eight is
+
+17
+00:00:46,160 --> 00:00:48,600
+too small and also it generates numbers
+
+18
+00:00:48,600 --> 00:00:51,520
+between 1 and 30 so 8's too small
+
+19
+00:00:51,520 --> 00:00:53,480
+meaning it's between 8 and
+
+20
+00:00:53,480 --> 00:00:57,199
+30 if I increase it so now it's in
+
+21
+00:00:57,199 --> 00:01:00,840
+between 13 and 30
+
+22
+00:01:00,840 --> 00:01:03,559
+18 and
+
+23
+00:01:03,600 --> 00:01:06,960
+30 okay I just got it
+
+24
+00:01:06,960 --> 00:01:09,759
+correct so that's basically how it works
+
+25
+00:01:09,759 --> 00:01:12,479
+and I got it corrected in for tries and
+
+26
+00:01:12,479 --> 00:01:13,960
+then I can also ask for a new number
+
+27
+00:01:13,960 --> 00:01:16,759
+that resets it and makes a new number
+
+28
+00:01:16,759 --> 00:01:18,920
+and then I can also use the Apple watch
+
+29
+00:01:18,920 --> 00:01:23,560
+Edition to do stuff and then okay five
+
+30
+00:01:23,560 --> 00:01:25,079
+is two
+
+31
+00:01:25,079 --> 00:01:28,240
+small let's try
+
+32
+00:01:28,240 --> 00:01:31,920
+10 two big
+
+33
+00:01:32,200 --> 00:01:34,560
+baby
+
+34
+00:01:34,840 --> 00:01:40,200
+eight um oh sorry smaller correct so
+
+35
+00:01:40,200 --> 00:01:42,320
+yeah so that's basically how it works
+
+36
+00:01:42,320 --> 00:01:45,280
+and now I'll show you the code and yeah
+
+37
+00:01:45,280 --> 00:01:46,920
+the full source code for this tutorial
+
+38
+00:01:46,920 --> 00:01:48,320
+will be available in the description
+
+39
+00:01:48,320 --> 00:01:51,880
+from GitHub and uh
+
+40
+00:01:51,880 --> 00:01:55,000
+yeah so let's uh
+
+41
+00:01:55,000 --> 00:01:57,600
+start basically this is the iPhone code
+
+42
+00:01:57,600 --> 00:01:59,560
+and then I'll introduce you to the watch
+
+43
+00:01:59,560 --> 00:02:00,399
+code
+
+44
+00:02:00,399 --> 00:02:03,240
+so first of all in the storyboard we
+
+45
+00:02:03,240 --> 00:02:05,920
+have two labels guest label here and
+
+46
+00:02:05,920 --> 00:02:08,720
+output label here and then we have four
+
+47
+00:02:08,720 --> 00:02:13,280
+buttons uh smaller bigger new number and
+
+48
+00:02:13,280 --> 00:02:16,920
+submit okay so now we have two IB
+
+49
+00:02:16,920 --> 00:02:18,640
+outlets for the guest label and the
+
+50
+00:02:18,640 --> 00:02:21,440
+output label we have three variables in
+
+51
+00:02:21,440 --> 00:02:24,519
+a constant so the three variables are
+
+52
+00:02:24,519 --> 00:02:26,440
+the guest number which is the number
+
+53
+00:02:26,440 --> 00:02:29,360
+we've currently guessed uh the other
+
+54
+00:02:29,360 --> 00:02:31,120
+variable is the number of guesses you've
+
+55
+00:02:31,120 --> 00:02:35,840
+done till now uh the other um variable
+
+56
+00:02:35,840 --> 00:02:37,720
+is the random number that the computer
+
+57
+00:02:37,720 --> 00:02:40,800
+is comparing your guess
+
+58
+00:02:40,800 --> 00:02:43,959
+against now this is the constant and
+
+59
+00:02:43,959 --> 00:02:46,360
+this is the number to randomize till so
+
+60
+00:02:46,360 --> 00:02:48,879
+if this is let's say 300 it's going to
+
+61
+00:02:48,879 --> 00:02:52,239
+make a random number between 1 and 300
+
+62
+00:02:52,239 --> 00:02:54,159
+however if I make this 30 it's going to
+
+63
+00:02:54,159 --> 00:02:56,840
+make a random number each time between 1
+
+64
+00:02:56,840 --> 00:02:58,400
+and
+
+65
+00:02:58,400 --> 00:03:02,400
+30 so B basically um I have a new number
+
+66
+00:03:02,400 --> 00:03:06,239
+function in the viewed appear uh uh
+
+67
+00:03:06,239 --> 00:03:08,000
+function from the UI view controller
+
+68
+00:03:08,000 --> 00:03:10,120
+class and that's why we're doing
+
+69
+00:03:10,120 --> 00:03:12,519
+override and I couldn't put it in viewed
+
+70
+00:03:12,519 --> 00:03:14,760
+load since uh these IB Outlets wouldn't
+
+71
+00:03:14,760 --> 00:03:17,519
+be loaded uh in the viewed load function
+
+72
+00:03:17,519 --> 00:03:19,280
+since viewed load happens before the
+
+73
+00:03:19,280 --> 00:03:22,000
+view actually
+
+74
+00:03:22,640 --> 00:03:27,959
+appears okay and so next we have two um
+
+75
+00:03:27,959 --> 00:03:30,080
+functions that I created the big clicked
+
+76
+00:03:30,080 --> 00:03:32,439
+and small clicked functions now what
+
+77
+00:03:32,439 --> 00:03:35,239
+these functions handle is when you have
+
+78
+00:03:35,239 --> 00:03:38,640
+clicked on the button bigger or smaller
+
+79
+00:03:38,640 --> 00:03:40,680
+respectively so basically what we're
+
+80
+00:03:40,680 --> 00:03:43,480
+doing in the big clicked
+
+81
+00:03:43,480 --> 00:03:47,400
+function is we are making
+
+82
+00:03:47,400 --> 00:03:50,360
+sure that first of all you do not go
+
+83
+00:03:50,360 --> 00:03:52,959
+over 30 and in the small click to making
+
+84
+00:03:52,959 --> 00:03:56,000
+sure you don't go over I mean under
+
+85
+00:03:56,000 --> 00:03:58,360
+zero uh and then so basically in the big
+
+86
+00:03:58,360 --> 00:04:00,720
+click we're increasing your guest number
+
+87
+00:04:00,720 --> 00:04:03,120
+and we're setting the guest labels text
+
+88
+00:04:03,120 --> 00:04:06,000
+to that guess number uh we're doing the
+
+89
+00:04:06,000 --> 00:04:08,439
+exact opposite in small click we are
+
+90
+00:04:08,439 --> 00:04:11,959
+decreasing your guess number and we are
+
+91
+00:04:11,959 --> 00:04:14,959
+also uh setting the guess labels text to
+
+92
+00:04:14,959 --> 00:04:18,320
+it next what we're actually uh here what
+
+93
+00:04:18,320 --> 00:04:20,639
+we can do just to decrease the amount of
+
+94
+00:04:20,639 --> 00:04:22,840
+work if we change the um number to
+
+95
+00:04:22,840 --> 00:04:25,120
+randomize we can set this to num to
+
+96
+00:04:25,120 --> 00:04:27,080
+randomize so basically they'll just make
+
+97
+00:04:27,080 --> 00:04:29,240
+sure you don't go over this a number
+
+98
+00:04:29,240 --> 00:04:32,039
+instead of you having to type it in two
+
+99
+00:04:32,039 --> 00:04:35,479
+places okay so in the submit
+
+100
+00:04:35,479 --> 00:04:37,840
+function as you can see it's doing quite
+
+101
+00:04:37,840 --> 00:04:41,080
+a lot of work we're checking if your
+
+102
+00:04:41,080 --> 00:04:43,280
+guest number is greater than what the
+
+103
+00:04:43,280 --> 00:04:45,199
+computer has generated then we're
+
+104
+00:04:45,199 --> 00:04:47,680
+increasing the number of guesses and if
+
+105
+00:04:47,680 --> 00:04:49,560
+the number of guesses is not equal to
+
+106
+00:04:49,560 --> 00:04:52,120
+one then we're saying your guess is too
+
+107
+00:04:52,120 --> 00:04:55,440
+big and then these number of guesses
+
+108
+00:04:55,440 --> 00:04:58,479
+tries however if it is one then too big
+
+109
+00:04:58,479 --> 00:05:01,199
+number of guesses TR try since we don't
+
+110
+00:05:01,199 --> 00:05:04,440
+want one try we want one try two tries
+
+111
+00:05:04,440 --> 00:05:07,240
+three tries and then we're and then we
+
+112
+00:05:07,240 --> 00:05:10,320
+are setting the guest labels text to uh
+
+113
+00:05:10,320 --> 00:05:12,600
+your guest number is greater than
+
+114
+00:05:12,600 --> 00:05:14,560
+whatever the computer is generated just
+
+115
+00:05:14,560 --> 00:05:17,880
+a little symbol to um make more visual
+
+116
+00:05:17,880 --> 00:05:19,960
+appeal and then we're doing the exact
+
+117
+00:05:19,960 --> 00:05:22,919
+opposite here uh if your number is less
+
+118
+00:05:22,919 --> 00:05:24,440
+than the random number that the computer
+
+119
+00:05:24,440 --> 00:05:26,280
+has generated we're increasing the
+
+120
+00:05:26,280 --> 00:05:28,199
+number of guesses doing the exact same
+
+121
+00:05:28,199 --> 00:05:29,720
+thing here except we're saying it's to
+
+122
+00:05:29,720 --> 00:05:32,800
+small and then uh here we are telling
+
+123
+00:05:32,800 --> 00:05:35,720
+them that their number is smaller than
+
+124
+00:05:35,720 --> 00:05:38,080
+what we had what the computer as
+
+125
+00:05:38,080 --> 00:05:40,600
+generator and then else if all these
+
+126
+00:05:40,600 --> 00:05:42,319
+conditions fail meaning the only thing
+
+127
+00:05:42,319 --> 00:05:46,280
+left is equals uh it will it will uh
+
+128
+00:05:46,280 --> 00:05:49,199
+increase the number of guesses um and
+
+129
+00:05:49,199 --> 00:05:51,479
+then it's going to check if it's not one
+
+130
+00:05:51,479 --> 00:05:53,440
+uh if it's not one correct in number of
+
+131
+00:05:53,440 --> 00:05:57,240
+guesses tries else uh correct in this
+
+132
+00:05:57,240 --> 00:05:59,919
+try
+
+133
+00:05:59,919 --> 00:06:01,840
+and yeah those are the main functions
+
+134
+00:06:01,840 --> 00:06:03,360
+and then the new number function which
+
+135
+00:06:03,360 --> 00:06:06,919
+basically acts as a reset um function
+
+136
+00:06:06,919 --> 00:06:09,479
+basically creates a new random number
+
+137
+00:06:09,479 --> 00:06:12,560
+between 1 and 30 but since the arc for
+
+138
+00:06:12,560 --> 00:06:15,440
+random uniform function will uh generate
+
+139
+00:06:15,440 --> 00:06:18,880
+a random number from 0 to 29 I'm adding
+
+140
+00:06:18,880 --> 00:06:20,880
+one so if it's zero it'll become one if
+
+141
+00:06:20,880 --> 00:06:23,360
+it's 29 it'll become uh
+
+142
+00:06:23,360 --> 00:06:27,000
+30 so then here um we're setting guest
+
+143
+00:06:27,000 --> 00:06:29,280
+labels text to zero and output labels
+
+144
+00:06:29,280 --> 00:06:31,720
+text to nothing and we're setting the
+
+145
+00:06:31,720 --> 00:06:34,000
+number of guesses to zero and the guest
+
+146
+00:06:34,000 --> 00:06:36,280
+number to zero uh we're basically
+
+147
+00:06:36,280 --> 00:06:38,960
+resetting those
+
+148
+00:06:38,960 --> 00:06:41,639
+variables uh yeah so that's basically it
+
+149
+00:06:41,639 --> 00:06:43,000
+for the iPhone
+
+150
+00:06:43,000 --> 00:06:45,560
+end and since this isn't a from the
+
+151
+00:06:45,560 --> 00:06:48,440
+groundup uh just totally beginner
+
+152
+00:06:48,440 --> 00:06:50,680
+tutorial I'm not going to be showing you
+
+153
+00:06:50,680 --> 00:06:52,680
+exactly how I created this watch app
+
+154
+00:06:52,680 --> 00:06:55,840
+step by step however number one I will
+
+155
+00:06:55,840 --> 00:06:57,240
+be putting the source code in the
+
+156
+00:06:57,240 --> 00:06:59,319
+description if you want to download it
+
+157
+00:06:59,319 --> 00:07:01,759
+take a look at it uh modify it to be
+
+158
+00:07:01,759 --> 00:07:04,199
+your own you have uh permission to do
+
+159
+00:07:04,199 --> 00:07:08,960
+that and uh also uh this week or maybe
+
+160
+00:07:08,960 --> 00:07:11,360
+even next week I will release another
+
+161
+00:07:11,360 --> 00:07:14,840
+watch kit tutorial uh where I will
+
+162
+00:07:14,840 --> 00:07:17,199
+basically um teach you from the ground
+
+163
+00:07:17,199 --> 00:07:20,520
+up how to create a simple app uh I'm
+
+164
+00:07:20,520 --> 00:07:22,400
+still not exactly sure about that so
+
+165
+00:07:22,400 --> 00:07:24,360
+just uh keep looking at the channel if
+
+166
+00:07:24,360 --> 00:07:27,000
+you're really interested into that
+
+167
+00:07:27,000 --> 00:07:31,720
+okay so this is the watch storyboard as
+
+168
+00:07:31,720 --> 00:07:33,479
+you can see this is the Apple watch 38
+
+169
+00:07:33,479 --> 00:07:37,039
+mm storyboard and so we have the guest
+
+170
+00:07:37,039 --> 00:07:39,599
+label output label bigger smaller submit
+
+171
+00:07:39,599 --> 00:07:42,759
+new number functions I mean buttons and
+
+172
+00:07:42,759 --> 00:07:45,960
+so that's the storyboard and then the uh
+
+173
+00:07:45,960 --> 00:07:48,039
+actual code for it we're importing watch
+
+174
+00:07:48,039 --> 00:07:50,319
+kit instead of UI kit and then uh we
+
+175
+00:07:50,319 --> 00:07:53,560
+don't really need this uh import
+
+176
+00:07:53,560 --> 00:07:57,440
+Foundation a watch kit import Stu for us
+
+177
+00:07:57,440 --> 00:08:00,639
+so all the there's really no change in
+
+178
+00:08:00,639 --> 00:08:03,319
+the code um all we're doing is instead
+
+179
+00:08:03,319 --> 00:08:06,560
+of UI uh view controller we're doing WK
+
+180
+00:08:06,560 --> 00:08:08,840
+interface controller and then instead of
+
+181
+00:08:08,840 --> 00:08:12,000
+UI label we're doing we're using the WK
+
+182
+00:08:12,000 --> 00:08:14,520
+interface label uh both for the guest
+
+183
+00:08:14,520 --> 00:08:17,199
+label and the output
+
+184
+00:08:17,199 --> 00:08:20,039
+label uh the next change is that instead
+
+185
+00:08:20,039 --> 00:08:21,840
+of viewed load we have awake with
+
+186
+00:08:21,840 --> 00:08:24,879
+context in which way are putting our new
+
+187
+00:08:24,879 --> 00:08:25,800
+number
+
+188
+00:08:25,800 --> 00:08:28,199
+function and then we have two extra
+
+189
+00:08:28,199 --> 00:08:31,519
+default functions will activate and did
+
+190
+00:08:31,519 --> 00:08:34,959
+deactivate um and yeah that's really all
+
+191
+00:08:34,959 --> 00:08:39,240
+there is uh changed and instead of using
+
+192
+00:08:39,240 --> 00:08:41,599
+text as equal to for the labels we're
+
+193
+00:08:41,599 --> 00:08:45,680
+using the dot set text method to set the
+
+194
+00:08:45,680 --> 00:08:48,720
+text of this label to this
+
+195
+00:08:48,720 --> 00:08:52,839
+variable and so I can also change this
+
+196
+00:08:52,839 --> 00:08:55,240
+number to
+
+197
+00:08:55,240 --> 00:08:59,120
+randomize and yeah or actually what we
+
+198
+00:08:59,120 --> 00:09:01,920
+can do do if number of
+
+199
+00:09:01,920 --> 00:09:05,680
+guesses not equal to
+
+200
+00:09:06,000 --> 00:09:09,760
+one yeah so we need to make sure it does
+
+201
+00:09:09,760 --> 00:09:12,880
+either tries or try if they get it
+
+202
+00:09:12,880 --> 00:09:15,720
+correct in one
+
+203
+00:09:16,640 --> 00:09:19,560
+try then we just want to paste that
+
+204
+00:09:19,560 --> 00:09:22,720
+there and make that try yeah so that's
+
+205
+00:09:22,720 --> 00:09:26,160
+basically how the watch end works and uh
+
+206
+00:09:26,160 --> 00:09:28,200
+subscribe if you're new to the channel
+
+207
+00:09:28,200 --> 00:09:29,959
+um like this video if you liked it
+
+208
+00:09:29,959 --> 00:09:31,160
+download the source code in the
+
+209
+00:09:31,160 --> 00:09:34,640
+description comment if you have any um
+
+210
+00:09:34,640 --> 00:09:36,680
+suggestions improvements or if you have
+
+211
+00:09:36,680 --> 00:09:41,560
+a question and yeah
+
+212
+00:09:58,320 --> 00:10:01,320
+goodbye
+
+213
+00:10:28,320 --> 00:10:31,320
+e
+
+214
+00:10:58,240 --> 00:11:01,240
+e
+
+215
+00:11:28,240 --> 00:11:31,240
+e
+
+216
+00:11:58,240 --> 00:12:01,240
+e
+
+217
+00:12:28,160 --> 00:12:31,160
+e
+
+218
+00:12:58,120 --> 00:13:01,120
+e
+
+219
+00:13:28,120 --> 00:13:31,120
+e
+
+220
+00:13:58,040 --> 00:14:01,040
+e
+
+221
+00:14:28,040 --> 00:14:31,040
+e
+
+222
+00:14:58,040 --> 00:15:01,040
+e
+
+223
+00:15:27,959 --> 00:15:30,959
+e
+
+224
+00:15:57,920 --> 00:16:00,920
+e
+
+225
+00:16:27,920 --> 00:16:30,920
+e
+
+226
+00:16:57,839 --> 00:17:00,839
+e
+
+227
+00:17:27,840 --> 00:17:30,840
+e
+
+228
+00:17:57,840 --> 00:18:00,840
+e
+
+229
+00:18:27,760 --> 00:18:30,760
+e
+
+230
+00:18:57,720 --> 00:19:01,760
+e e

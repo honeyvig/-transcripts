@@ -1,0 +1,6311 @@
+1
+00:00:00,000 --> 00:00:02,070
+so hello there and welcome to another
+
+2
+00:00:02,070 --> 00:00:04,319
+tutorial my name is Tammy Bakshi and
+
+3
+00:00:04,319 --> 00:00:06,060
+today we're going to be going through an
+
+4
+00:00:06,060 --> 00:00:08,280
+absolutely fascinating topic we're gonna
+
+5
+00:00:08,280 --> 00:00:11,099
+be talking about the alphago series of
+
+6
+00:00:11,099 --> 00:00:13,710
+algorithms now I'm absolutely certain
+
+7
+00:00:13,710 --> 00:00:16,320
+that you have seen of or or heard about
+
+8
+00:00:16,320 --> 00:00:19,650
+this new alphago technology alphago was
+
+9
+00:00:19,650 --> 00:00:21,900
+the very first system ever very first
+
+10
+00:00:21,900 --> 00:00:24,210
+computer system that has ever defeated a
+
+11
+00:00:24,210 --> 00:00:27,150
+go world champion a human player and
+
+12
+00:00:27,150 --> 00:00:29,939
+this is absolutely exceptional because
+
+13
+00:00:29,939 --> 00:00:32,669
+well if you take a look at other complex
+
+14
+00:00:32,669 --> 00:00:35,130
+games for example chess they have a very
+
+15
+00:00:35,130 --> 00:00:36,989
+large state space that means there are
+
+16
+00:00:36,989 --> 00:00:39,719
+tons of possible moves but still many
+
+17
+00:00:39,719 --> 00:00:42,120
+decades ago IBM was able to create deep
+
+18
+00:00:42,120 --> 00:00:44,460
+blue the first computer to ever beat a
+
+19
+00:00:44,460 --> 00:00:46,649
+human chess champion and that was
+
+20
+00:00:46,649 --> 00:00:48,570
+incredibly impressive but the way that
+
+21
+00:00:48,570 --> 00:00:51,090
+works is fundamentally brute force
+
+22
+00:00:51,090 --> 00:00:53,160
+you're looking through almost every
+
+23
+00:00:53,160 --> 00:00:55,079
+possible future move in order to
+
+24
+00:00:55,079 --> 00:00:58,109
+determine your probability of losing or
+
+25
+00:00:58,109 --> 00:01:00,420
+winning or tying the game and based off
+
+26
+00:01:00,420 --> 00:01:02,010
+of that choosing the moves that gave you
+
+27
+00:01:02,010 --> 00:01:04,890
+the highest probability of winning now
+
+28
+00:01:04,890 --> 00:01:07,020
+the issue with that is that first of all
+
+29
+00:01:07,020 --> 00:01:09,420
+you have to have human crafted
+
+30
+00:01:09,420 --> 00:01:12,150
+heuristics to guide your search because
+
+31
+00:01:12,150 --> 00:01:14,520
+while chess is relatively a lot smaller
+
+32
+00:01:14,520 --> 00:01:16,140
+than go and we'll get to that in just a
+
+33
+00:01:16,140 --> 00:01:18,930
+moment it's still really large and that
+
+34
+00:01:18,930 --> 00:01:21,509
+means brute forcing every single
+
+35
+00:01:21,509 --> 00:01:24,780
+possible move is simply impossible you
+
+36
+00:01:24,780 --> 00:01:25,619
+can't do it
+
+37
+00:01:25,619 --> 00:01:27,450
+and so you somehow have to create these
+
+38
+00:01:27,450 --> 00:01:30,119
+heuristics to tell you this branch is so
+
+39
+00:01:30,119 --> 00:01:32,460
+exceedingly unlikely on my opponent's
+
+40
+00:01:32,460 --> 00:01:33,840
+part that I might as well not even
+
+41
+00:01:33,840 --> 00:01:36,030
+consider it and the same thing for your
+
+42
+00:01:36,030 --> 00:01:38,369
+own player and so somehow you have to
+
+43
+00:01:38,369 --> 00:01:40,650
+create human crafted heuristics and
+
+44
+00:01:40,650 --> 00:01:43,140
+these take years to build good ones and
+
+45
+00:01:43,140 --> 00:01:46,020
+you need to use brute force lots of
+
+46
+00:01:46,020 --> 00:01:47,939
+compute to really take a look into the
+
+47
+00:01:47,939 --> 00:01:50,399
+future and forcefully figure out what's
+
+48
+00:01:50,399 --> 00:01:53,790
+gonna be happening but then alphago
+
+49
+00:01:53,790 --> 00:01:56,310
+completely changes the way games like
+
+50
+00:01:56,310 --> 00:01:59,100
+this are played and it has to in a way
+
+51
+00:01:59,100 --> 00:02:02,130
+because in go there are more possible
+
+52
+00:02:02,130 --> 00:02:04,409
+moves there are more possible individual
+
+53
+00:02:04,409 --> 00:02:06,810
+states and play outs of a game then
+
+54
+00:02:06,810 --> 00:02:08,640
+there are atoms in the observable
+
+55
+00:02:08,640 --> 00:02:11,860
+universe and so no computers
+
+56
+00:02:11,860 --> 00:02:14,260
+you can really model that entire state
+
+57
+00:02:14,260 --> 00:02:16,030
+space of go the techniques that we've
+
+58
+00:02:16,030 --> 00:02:18,630
+used for essentially every other game
+
+59
+00:02:18,630 --> 00:02:21,550
+won't hold up for the game of go now
+
+60
+00:02:21,550 --> 00:02:24,040
+there have been a few techniques applied
+
+61
+00:02:24,040 --> 00:02:25,720
+to try and play the game of go in the
+
+62
+00:02:25,720 --> 00:02:28,330
+past almost all of them have been based
+
+63
+00:02:28,330 --> 00:02:30,100
+on something called Monte Carlo tree
+
+64
+00:02:30,100 --> 00:02:32,590
+search now Monte Carlo and Las Vegas
+
+65
+00:02:32,590 --> 00:02:34,270
+algorithms are a certain class of
+
+66
+00:02:34,270 --> 00:02:37,240
+algorithms that work in a fundamentally
+
+67
+00:02:37,240 --> 00:02:39,040
+random manner that means they're not
+
+68
+00:02:39,040 --> 00:02:41,500
+deterministic they're stochastic and so
+
+69
+00:02:41,500 --> 00:02:44,250
+for example while a Las Vegas algorithm
+
+70
+00:02:44,250 --> 00:02:47,950
+may not always necessarily give you the
+
+71
+00:02:47,950 --> 00:02:50,260
+correct or always even give you a result
+
+72
+00:02:50,260 --> 00:02:52,900
+a Monte Carlo algorithm is guaranteed to
+
+73
+00:02:52,900 --> 00:02:55,330
+give you at least some result so that's
+
+74
+00:02:55,330 --> 00:02:56,800
+the difference between the two and Monte
+
+75
+00:02:56,800 --> 00:02:59,020
+Carlo tree search specifically is able
+
+76
+00:02:59,020 --> 00:03:01,420
+to make use of that random factor in
+
+77
+00:03:01,420 --> 00:03:04,360
+order to take a look into the future but
+
+78
+00:03:04,360 --> 00:03:06,130
+not too far into the future and not
+
+79
+00:03:06,130 --> 00:03:09,190
+through too many states so what exactly
+
+80
+00:03:09,190 --> 00:03:09,930
+does that mean
+
+81
+00:03:09,930 --> 00:03:12,250
+well let's take a look at what Monte
+
+82
+00:03:12,250 --> 00:03:14,260
+Carlo tree search really is and then
+
+83
+00:03:14,260 --> 00:03:16,330
+we'll get into this whole alphago alpha
+
+84
+00:03:16,330 --> 00:03:18,880
+zero thing and specifically the example
+
+85
+00:03:18,880 --> 00:03:20,590
+that I want to show you today so let's
+
+86
+00:03:20,590 --> 00:03:23,290
+take a look shopping now alpha zero or
+
+87
+00:03:23,290 --> 00:03:25,690
+alpha go well are fundamentally reliant
+
+88
+00:03:25,690 --> 00:03:27,880
+not only on deep learning and machine
+
+89
+00:03:27,880 --> 00:03:29,530
+learning technology but they're also
+
+90
+00:03:29,530 --> 00:03:31,030
+reliant on this other kind of
+
+91
+00:03:31,030 --> 00:03:32,830
+technologies Monte Carlo tree search so
+
+92
+00:03:32,830 --> 00:03:34,630
+the way this works is ensemble a new
+
+93
+00:03:34,630 --> 00:03:36,220
+techniques and old techniques together
+
+94
+00:03:36,220 --> 00:03:38,049
+so let's take a look at how exactly that
+
+95
+00:03:38,049 --> 00:03:40,720
+technology works now let's just say we
+
+96
+00:03:40,720 --> 00:03:43,150
+have some sort of go board state and
+
+97
+00:03:43,150 --> 00:03:46,060
+it's maybe represented with this dot now
+
+98
+00:03:46,060 --> 00:03:48,519
+the thing is there are tons of possible
+
+99
+00:03:48,519 --> 00:03:51,130
+is possible moving the star so one thing
+
+100
+00:03:51,130 --> 00:03:52,870
+that you could do is something called a
+
+101
+00:03:52,870 --> 00:03:55,780
+Monte Carlo evaluation where for example
+
+102
+00:03:55,780 --> 00:03:57,880
+you say all right I'm gonna take a look
+
+103
+00:03:57,880 --> 00:04:00,070
+at let's just say every single possible
+
+104
+00:04:00,070 --> 00:04:03,790
+move from here on out and I am going to
+
+105
+00:04:03,790 --> 00:04:06,850
+I'm going to modify the state so that I
+
+106
+00:04:06,850 --> 00:04:09,040
+take all of those actions and then I'm
+
+107
+00:04:09,040 --> 00:04:11,769
+going to run a series of completely
+
+108
+00:04:11,769 --> 00:04:15,900
+random games from that point onwards
+
+109
+00:04:15,900 --> 00:04:19,900
+okay and so on and so forth you're just
+
+110
+00:04:19,900 --> 00:04:22,330
+gonna run completely random games until
+
+111
+00:04:22,330 --> 00:04:24,880
+the game ends from that board state
+
+112
+00:04:24,880 --> 00:04:28,000
+that's it now I know it doesn't seem
+
+113
+00:04:28,000 --> 00:04:30,190
+like this would do anything but if you
+
+114
+00:04:30,190 --> 00:04:33,400
+run enough random games then what ends
+
+115
+00:04:33,400 --> 00:04:35,410
+up happening is the states that are
+
+116
+00:04:35,410 --> 00:04:38,350
+generally better usually end up having a
+
+117
+00:04:38,350 --> 00:04:40,750
+better average score after these random
+
+118
+00:04:40,750 --> 00:04:42,820
+games than the states which are worse
+
+119
+00:04:42,820 --> 00:04:46,270
+and so if you were choose the one with
+
+120
+00:04:46,270 --> 00:04:48,790
+the highest random average score then
+
+121
+00:04:48,790 --> 00:04:50,710
+you would end up most likely choosing a
+
+122
+00:04:50,710 --> 00:04:53,020
+pretty good move now this technically
+
+123
+00:04:53,020 --> 00:04:55,510
+isn't Monte Carlo tree search this is a
+
+124
+00:04:55,510 --> 00:04:58,000
+Monte Carlo evaluation at a single depth
+
+125
+00:04:58,000 --> 00:04:59,860
+level so you're not going further than
+
+126
+00:04:59,860 --> 00:05:02,260
+this one depth now let's pause here for
+
+127
+00:05:02,260 --> 00:05:04,780
+just a moment I would recommend that you
+
+128
+00:05:04,780 --> 00:05:06,310
+learn a bit more about Monte Carlo tree
+
+129
+00:05:06,310 --> 00:05:08,050
+search and how it works and specifically
+
+130
+00:05:08,050 --> 00:05:11,020
+applying it to a game called 2048 to do
+
+131
+00:05:11,020 --> 00:05:13,060
+so you can take a look at my course on
+
+132
+00:05:13,060 --> 00:05:15,130
+cognitive class that I I it's totally
+
+133
+00:05:15,130 --> 00:05:17,050
+free and it uses Swift for tensorflow
+
+134
+00:05:17,050 --> 00:05:18,520
+there will be a link to that in this in
+
+135
+00:05:18,520 --> 00:05:20,680
+the description below if you like you
+
+136
+00:05:20,680 --> 00:05:22,930
+can only take a look at the 2048 module
+
+137
+00:05:22,930 --> 00:05:25,210
+and come back to the video or if you
+
+138
+00:05:25,210 --> 00:05:26,440
+like you can take a look at the whole
+
+139
+00:05:26,440 --> 00:05:28,210
+course that covers other reinforcement
+
+140
+00:05:28,210 --> 00:05:30,250
+learning algorithms and the ions as well
+
+141
+00:05:30,250 --> 00:05:33,130
+however that will be very good base
+
+142
+00:05:33,130 --> 00:05:34,930
+knowledge for you to build off of and
+
+143
+00:05:34,930 --> 00:05:37,060
+understand the point of Monte Carlo tree
+
+144
+00:05:37,060 --> 00:05:40,450
+search so let's continue now from here
+
+145
+00:05:40,450 --> 00:05:43,390
+if I realize that we don't just want to
+
+146
+00:05:43,390 --> 00:05:46,360
+take a look at one single depth we want
+
+147
+00:05:46,360 --> 00:05:48,400
+to go a little bit further down the tree
+
+148
+00:05:48,400 --> 00:05:50,800
+and understand what what the future
+
+149
+00:05:50,800 --> 00:05:51,550
+holds for us
+
+150
+00:05:51,550 --> 00:05:54,610
+so what you have with Monte Carlo tree
+
+151
+00:05:54,610 --> 00:05:57,070
+search is something called a policy and
+
+152
+00:05:57,070 --> 00:05:59,700
+a policy is something that will take
+
+153
+00:05:59,700 --> 00:06:02,350
+your current state and it's going to
+
+154
+00:06:02,350 --> 00:06:04,900
+tell you for my current state I think
+
+155
+00:06:04,900 --> 00:06:07,420
+out of all the possible moves these are
+
+156
+00:06:07,420 --> 00:06:08,620
+the ones that are the best it's gonna
+
+157
+00:06:08,620 --> 00:06:12,370
+rank those possible actions from best to
+
+158
+00:06:12,370 --> 00:06:14,200
+worst and it's gonna sign a confidence
+
+159
+00:06:14,200 --> 00:06:15,490
+value to each one so we're gonna call
+
+160
+00:06:15,490 --> 00:06:18,760
+these our policy values so let's just
+
+161
+00:06:18,760 --> 00:06:23,580
+say there are four possible next moves
+
+162
+00:06:23,580 --> 00:06:27,400
+so we have one two three and four and
+
+163
+00:06:27,400 --> 00:06:29,980
+we're going to use a policy network to
+
+164
+00:06:29,980 --> 00:06:34,530
+assign a policy to each one of these
+
+165
+00:06:34,530 --> 00:06:37,290
+alright so we're going to assign a
+
+166
+00:06:37,290 --> 00:06:38,800
+policy
+
+167
+00:06:38,800 --> 00:06:40,569
+now what's gonna happen is we're
+
+168
+00:06:40,569 --> 00:06:42,789
+actually gonna continue down this way
+
+169
+00:06:42,789 --> 00:06:45,370
+we're going to continue to expand the
+
+170
+00:06:45,370 --> 00:06:47,830
+search tree for each of these Paul to
+
+171
+00:06:47,830 --> 00:06:50,319
+each of these nodes according to their
+
+172
+00:06:50,319 --> 00:06:53,319
+policy value now how do we determine
+
+173
+00:06:53,319 --> 00:06:55,990
+which nodes to continue down with but
+
+174
+00:06:55,990 --> 00:06:57,370
+we're gonna be using an algorithm called
+
+175
+00:06:57,370 --> 00:07:00,190
+UCT upper confidence bound applied to
+
+176
+00:07:00,190 --> 00:07:02,349
+trees now I'm not gonna get into how
+
+177
+00:07:02,349 --> 00:07:04,150
+that works here we'll talk about that
+
+178
+00:07:04,150 --> 00:07:05,770
+more during when we're actually taking a
+
+179
+00:07:05,770 --> 00:07:07,360
+look at a code but we're going to be
+
+180
+00:07:07,360 --> 00:07:09,460
+applying an algorithm called UCT to
+
+181
+00:07:09,460 --> 00:07:11,349
+determine which nodes we want to look at
+
+182
+00:07:11,349 --> 00:07:13,180
+based off of their policy values and
+
+183
+00:07:13,180 --> 00:07:16,000
+then continue down the tree so on and so
+
+184
+00:07:16,000 --> 00:07:17,830
+forth now let's just say we're going to
+
+185
+00:07:17,830 --> 00:07:19,569
+a depth of two and in this case we want
+
+186
+00:07:19,569 --> 00:07:21,039
+to expand this one let's just say
+
+187
+00:07:21,039 --> 00:07:24,130
+there's now only two possible moves so
+
+188
+00:07:24,130 --> 00:07:26,949
+we want to go down each one we'll have a
+
+189
+00:07:26,949 --> 00:07:30,250
+policy of course but now we have let's
+
+190
+00:07:30,250 --> 00:07:32,169
+just say reached our time budget and we
+
+191
+00:07:32,169 --> 00:07:33,550
+no longer have more time to continue
+
+192
+00:07:33,550 --> 00:07:35,380
+down so we're gonna end the Monte Carlo
+
+193
+00:07:35,380 --> 00:07:37,990
+tree search now you're wondering how
+
+194
+00:07:37,990 --> 00:07:39,789
+would we determine the value of these
+
+195
+00:07:39,789 --> 00:07:41,469
+nodes so we know which action to take
+
+196
+00:07:41,469 --> 00:07:45,250
+well then something else comes in we
+
+197
+00:07:45,250 --> 00:07:47,349
+stopped using our policy and we start
+
+198
+00:07:47,349 --> 00:07:50,229
+using something called our value now the
+
+199
+00:07:50,229 --> 00:07:52,090
+value portion of Monte Carlo tree search
+
+200
+00:07:52,090 --> 00:07:54,550
+is gonna be able to take any state and
+
+201
+00:07:54,550 --> 00:07:56,620
+just tell you how good that state is for
+
+202
+00:07:56,620 --> 00:07:59,169
+you so how good or how bad is the state
+
+203
+00:07:59,169 --> 00:08:01,900
+for my card player now it's a little bit
+
+204
+00:08:01,900 --> 00:08:04,659
+different from policy policy is for this
+
+205
+00:08:04,659 --> 00:08:06,520
+certain state what actions should I take
+
+206
+00:08:06,520 --> 00:08:09,190
+value is for this state how sure am
+
+207
+00:08:09,190 --> 00:08:10,960
+either this is a good or a bad position
+
+208
+00:08:10,960 --> 00:08:13,120
+for me so what's gonna happen is they're
+
+209
+00:08:13,120 --> 00:08:14,979
+gonna go to your leaf nodes and you're
+
+210
+00:08:14,979 --> 00:08:16,990
+going to go ahead and calculate the
+
+211
+00:08:16,990 --> 00:08:20,050
+values so you're gonna have a value one
+
+212
+00:08:20,050 --> 00:08:22,659
+a value two here this is going to have a
+
+213
+00:08:22,659 --> 00:08:25,870
+value since this itself will have value
+
+214
+00:08:25,870 --> 00:08:27,669
+you're gonna back propagate these values
+
+215
+00:08:27,669 --> 00:08:29,259
+up through the tree so this will have a
+
+216
+00:08:29,259 --> 00:08:31,180
+value this will have a value and this
+
+217
+00:08:31,180 --> 00:08:32,620
+will also have a value and then
+
+218
+00:08:32,620 --> 00:08:33,849
+whichever one of these nodes has the
+
+219
+00:08:33,849 --> 00:08:35,469
+highest value you're simply gonna choose
+
+220
+00:08:35,469 --> 00:08:37,240
+that one and they're gonna continue now
+
+221
+00:08:37,240 --> 00:08:39,430
+again the way these values are back
+
+222
+00:08:39,430 --> 00:08:41,380
+propping it up the tree we're gonna be
+
+223
+00:08:41,380 --> 00:08:43,270
+taking a look at during our cook we're
+
+224
+00:08:43,270 --> 00:08:44,529
+gonna be taking a look at that during
+
+225
+00:08:44,529 --> 00:08:47,320
+the code as well however just know that
+
+226
+00:08:47,320 --> 00:08:50,020
+this nodes value is based off of its
+
+227
+00:08:50,020 --> 00:08:51,880
+children values and
+
+228
+00:08:51,880 --> 00:08:54,010
+these notes had children these ones
+
+229
+00:08:54,010 --> 00:08:56,080
+values would also be based off of their
+
+230
+00:08:56,080 --> 00:08:59,110
+children's values and finally just like
+
+231
+00:08:59,110 --> 00:09:00,460
+that based off the one with the highest
+
+232
+00:09:00,460 --> 00:09:03,340
+value you know which node or which
+
+233
+00:09:03,340 --> 00:09:07,420
+action to take now where exactly does
+
+234
+00:09:07,420 --> 00:09:11,080
+alphago provide its innovation well you
+
+235
+00:09:11,080 --> 00:09:13,330
+see traditionally how would we estimate
+
+236
+00:09:13,330 --> 00:09:15,250
+these values we would just simply
+
+237
+00:09:15,250 --> 00:09:17,710
+devolve back to a Monte Carlo evaluation
+
+238
+00:09:17,710 --> 00:09:19,390
+we would run a bunch of random games
+
+239
+00:09:19,390 --> 00:09:21,580
+these are called rollouts and his
+
+240
+00:09:21,580 --> 00:09:23,110
+rollouts would help us determine what
+
+241
+00:09:23,110 --> 00:09:25,300
+the value of a current state is and the
+
+242
+00:09:25,300 --> 00:09:27,610
+policy would be some kind of other set
+
+243
+00:09:27,610 --> 00:09:28,870
+of heuristics that we would develop
+
+244
+00:09:28,870 --> 00:09:32,380
+manually now sure this is an OK
+
+245
+00:09:32,380 --> 00:09:34,780
+algorithm and maybe go BOTS like this
+
+246
+00:09:34,780 --> 00:09:37,360
+can challenge human beginners but once
+
+247
+00:09:37,360 --> 00:09:39,550
+you get to human moderate or expert
+
+248
+00:09:39,550 --> 00:09:42,220
+level these BOTS pose absolutely no
+
+249
+00:09:42,220 --> 00:09:45,610
+threat to any human player and so you've
+
+250
+00:09:45,610 --> 00:09:47,650
+got to have a more intelligent way of
+
+251
+00:09:47,650 --> 00:09:51,100
+doing this search and so what alphago
+
+252
+00:09:51,100 --> 00:09:53,350
+does is it uses neural network
+
+253
+00:09:53,350 --> 00:09:55,360
+technology deep learning technology to
+
+254
+00:09:55,360 --> 00:09:57,580
+be specific and what it's gonna do is
+
+255
+00:09:57,580 --> 00:09:59,650
+it's actually going to use those deep
+
+256
+00:09:59,650 --> 00:10:01,870
+neural Nets in order to guide and
+
+257
+00:10:01,870 --> 00:10:05,290
+evaluate the search as it's happening so
+
+258
+00:10:05,290 --> 00:10:07,540
+there are two steps making us having the
+
+259
+00:10:07,540 --> 00:10:10,330
+policy network and the value network the
+
+260
+00:10:10,330 --> 00:10:12,880
+policy network is gonna take your state
+
+261
+00:10:12,880 --> 00:10:15,700
+and it's going to predict using a soft
+
+262
+00:10:15,700 --> 00:10:17,620
+Mac so here at the end using a soft max
+
+263
+00:10:17,620 --> 00:10:21,010
+activation what are the best actions for
+
+264
+00:10:21,010 --> 00:10:23,770
+me to take then based off of those best
+
+265
+00:10:23,770 --> 00:10:26,680
+actions Monte Carlo tree search is going
+
+266
+00:10:26,680 --> 00:10:28,720
+to determine which nodes it should
+
+267
+00:10:28,720 --> 00:10:31,510
+continue to search through and then
+
+268
+00:10:31,510 --> 00:10:32,590
+here's the interesting part
+
+269
+00:10:32,590 --> 00:10:35,110
+when we reach a leaf node we're not just
+
+270
+00:10:35,110 --> 00:10:36,850
+going to run a random rollout because
+
+271
+00:10:36,850 --> 00:10:38,680
+first of all it takes a lot of time
+
+272
+00:10:38,680 --> 00:10:40,390
+you've got to simulate games
+
+273
+00:10:40,390 --> 00:10:42,760
+it's simply impractical to keep doing
+
+274
+00:10:42,760 --> 00:10:44,260
+that and at the same time in their
+
+275
+00:10:44,260 --> 00:10:46,000
+random games what can you really expect
+
+276
+00:10:46,000 --> 00:10:48,280
+them for expect from them so the value
+
+277
+00:10:48,280 --> 00:10:50,260
+network is going to take that state and
+
+278
+00:10:50,260 --> 00:10:52,180
+it's going to predict a single
+
+279
+00:10:52,180 --> 00:10:54,400
+continuous value from negative 1 to 1
+
+280
+00:10:54,400 --> 00:10:56,800
+predicting how good the current board
+
+281
+00:10:56,800 --> 00:10:59,050
+state is what is the likelihood of the
+
+282
+00:10:59,050 --> 00:11:01,150
+computer player winning from a current
+
+283
+00:11:01,150 --> 00:11:04,030
+board state and with those policy and
+
+284
+00:11:04,030 --> 00:11:04,649
+value net
+
+285
+00:11:04,649 --> 00:11:06,779
+that contain almost no human knowledge
+
+286
+00:11:06,779 --> 00:11:08,819
+and I'd say almost and you'll see why I
+
+287
+00:11:08,819 --> 00:11:09,959
+said the word almost there in just a
+
+288
+00:11:09,959 --> 00:11:11,490
+moment but because they contain almost
+
+289
+00:11:11,490 --> 00:11:13,050
+no human knowledge because they're
+
+290
+00:11:13,050 --> 00:11:14,730
+learning by themselves with deep
+
+291
+00:11:14,730 --> 00:11:16,529
+reinforcement learning technology
+
+292
+00:11:16,529 --> 00:11:18,600
+they're able to play the game and a
+
+293
+00:11:18,600 --> 00:11:20,839
+superhuman level so we're taking
+
+294
+00:11:20,839 --> 00:11:23,249
+classical techniques like Monte Carlos
+
+295
+00:11:23,249 --> 00:11:25,529
+research as well as these brand new
+
+296
+00:11:25,529 --> 00:11:27,629
+techniques of policy networks and value
+
+297
+00:11:27,629 --> 00:11:30,149
+networks in order to guide the search to
+
+298
+00:11:30,149 --> 00:11:32,369
+tell us what moves are the best to make
+
+299
+00:11:32,369 --> 00:11:35,639
+that is the fundamental premise of the
+
+300
+00:11:35,639 --> 00:11:38,730
+alphago algorithm now there are many
+
+301
+00:11:38,730 --> 00:11:40,920
+evolutions of this algorithm and there
+
+302
+00:11:40,920 --> 00:11:42,480
+are many specifics I didn't get into
+
+303
+00:11:42,480 --> 00:11:44,879
+right now for example how do you know
+
+304
+00:11:44,879 --> 00:11:46,800
+how much you want to explore versus
+
+305
+00:11:46,800 --> 00:11:49,290
+exploit your predictions because let's
+
+306
+00:11:49,290 --> 00:11:51,209
+just say there's a certain there's a
+
+307
+00:11:51,209 --> 00:11:53,040
+certain node with a very low confidence
+
+308
+00:11:53,040 --> 00:11:54,600
+value but that turns out to have higher
+
+309
+00:11:54,600 --> 00:11:57,059
+confidence values for its children well
+
+310
+00:11:57,059 --> 00:11:59,610
+then maybe it's better to explore in the
+
+311
+00:11:59,610 --> 00:12:01,829
+tree than it is to explore your highest
+
+312
+00:12:01,829 --> 00:12:03,809
+predictions so during training maybe you
+
+313
+00:12:03,809 --> 00:12:05,579
+want to do that but then at the same
+
+314
+00:12:05,579 --> 00:12:06,899
+time you don't really want to make a
+
+315
+00:12:06,899 --> 00:12:08,699
+mistake just because you saw something
+
+316
+00:12:08,699 --> 00:12:10,470
+with a low confidence could actually
+
+317
+00:12:10,470 --> 00:12:12,540
+pretty good for you and so there are a
+
+318
+00:12:12,540 --> 00:12:13,860
+few different issues that we'll take a
+
+319
+00:12:13,860 --> 00:12:15,480
+look at how they're fixed during the
+
+320
+00:12:15,480 --> 00:12:17,970
+code but again this is a fundamental
+
+321
+00:12:17,970 --> 00:12:20,300
+premise now you're probably wondering
+
+322
+00:12:20,300 --> 00:12:23,160
+how are the policy and value networks
+
+323
+00:12:23,160 --> 00:12:25,379
+trained how do we get the data to
+
+324
+00:12:25,379 --> 00:12:26,910
+actually get those neural networks to
+
+325
+00:12:26,910 --> 00:12:30,209
+make these predictions well alphago has
+
+326
+00:12:30,209 --> 00:12:32,129
+a lot of innovation in this front as
+
+327
+00:12:32,129 --> 00:12:34,439
+well what happens is the neural networks
+
+328
+00:12:34,439 --> 00:12:37,470
+generate their own data now I know that
+
+329
+00:12:37,470 --> 00:12:39,689
+seems weird but let me talk about how
+
+330
+00:12:39,689 --> 00:12:41,220
+this works so first of all you've got
+
+331
+00:12:41,220 --> 00:12:43,230
+your policy network and you've also got
+
+332
+00:12:43,230 --> 00:12:45,420
+your value network what happens is for
+
+333
+00:12:45,420 --> 00:12:48,629
+alphago in specific not alphago zero and
+
+334
+00:12:48,629 --> 00:12:51,509
+not alpha 0 for alpha go in specific
+
+335
+00:12:51,509 --> 00:12:53,040
+what they would do is they would take
+
+336
+00:12:53,040 --> 00:12:56,160
+moves made by professional human players
+
+337
+00:12:56,160 --> 00:12:57,899
+over the past couple of years on online
+
+338
+00:12:57,899 --> 00:13:00,360
+go servers and they would train the
+
+339
+00:13:00,360 --> 00:13:02,129
+policy network to essentially predict
+
+340
+00:13:02,129 --> 00:13:03,990
+what would a human expert do in this
+
+341
+00:13:03,990 --> 00:13:06,420
+case these networks usually never
+
+342
+00:13:06,420 --> 00:13:08,790
+reached great accuracy only like 60 70
+
+343
+00:13:08,790 --> 00:13:11,519
+percent accuracy max and that's after a
+
+344
+00:13:11,519 --> 00:13:13,709
+lot of overfitting but it doesn't really
+
+345
+00:13:13,709 --> 00:13:15,990
+need to even with a low enough accuracy
+
+346
+00:13:15,990 --> 00:13:17,670
+Monte Carlo trees
+
+347
+00:13:17,670 --> 00:13:19,530
+we'll make up for the inaccuracy because
+
+348
+00:13:19,530 --> 00:13:21,360
+it's gonna be looking deeper in the
+
+349
+00:13:21,360 --> 00:13:23,730
+actual gantry so low accuracy didn't
+
+350
+00:13:23,730 --> 00:13:26,220
+really matter then they use the similar
+
+351
+00:13:26,220 --> 00:13:28,410
+technique in order to train the value
+
+352
+00:13:28,410 --> 00:13:28,920
+network
+
+353
+00:13:28,920 --> 00:13:31,350
+they took 30 million go games and
+
+354
+00:13:31,350 --> 00:13:33,480
+sampled only a couple of moves from
+
+355
+00:13:33,480 --> 00:13:35,910
+every single game and then what they did
+
+356
+00:13:35,910 --> 00:13:38,550
+is they took those boards and fed them
+
+357
+00:13:38,550 --> 00:13:39,870
+into the neural network and had it
+
+358
+00:13:39,870 --> 00:13:42,630
+predict negative one or one for lose or
+
+359
+00:13:42,630 --> 00:13:45,990
+win four for the black player and what
+
+360
+00:13:45,990 --> 00:13:47,610
+happened was the neural network was able
+
+361
+00:13:47,610 --> 00:13:49,740
+to learn that hey these board states
+
+362
+00:13:49,740 --> 00:13:52,110
+usually lead to lose and these ones
+
+363
+00:13:52,110 --> 00:13:54,090
+usually lead to a win so I was able to
+
+364
+00:13:54,090 --> 00:13:56,940
+generalize and understand what leads to
+
+365
+00:13:56,940 --> 00:13:59,280
+a lose and what leads to a win in the
+
+366
+00:13:59,280 --> 00:14:02,610
+game of Gov now the thing is just
+
+367
+00:14:02,610 --> 00:14:05,130
+training on human professional moves
+
+368
+00:14:05,130 --> 00:14:07,530
+isn't enough because the neural networks
+
+369
+00:14:07,530 --> 00:14:09,660
+don't really generalize to human moves
+
+370
+00:14:09,660 --> 00:14:12,270
+they very very easily overfits as there
+
+371
+00:14:12,270 --> 00:14:14,220
+isn't enough data and that data is very
+
+372
+00:14:14,220 --> 00:14:16,110
+variable different humans will make
+
+373
+00:14:16,110 --> 00:14:17,370
+different decisions in different
+
+374
+00:14:17,370 --> 00:14:19,980
+circumstances and so there has to be a
+
+375
+00:14:19,980 --> 00:14:21,960
+way for the neural network to get more
+
+376
+00:14:21,960 --> 00:14:25,320
+data now think about this if you were to
+
+377
+00:14:25,320 --> 00:14:28,290
+play than play the game with only the
+
+378
+00:14:28,290 --> 00:14:30,030
+policy network so you literally just
+
+379
+00:14:30,030 --> 00:14:31,890
+take the state feed it into the policy
+
+380
+00:14:31,890 --> 00:14:34,590
+network get the maximum prediction that
+
+381
+00:14:34,590 --> 00:14:37,200
+'value for for an output and just make
+
+382
+00:14:37,200 --> 00:14:39,750
+that move you wouldn't have a very good
+
+383
+00:14:39,750 --> 00:14:42,120
+bot because that bot can only see one
+
+384
+00:14:42,120 --> 00:14:44,250
+move ahead into the future whereas with
+
+385
+00:14:44,250 --> 00:14:45,840
+Monte Carlo tree search when you're
+
+386
+00:14:45,840 --> 00:14:48,060
+using the policy network in conjunction
+
+387
+00:14:48,060 --> 00:14:50,640
+with this tree search you're able to see
+
+388
+00:14:50,640 --> 00:14:52,650
+more further you're able to see further
+
+389
+00:14:52,650 --> 00:14:54,780
+down the game tree and therefore make a
+
+390
+00:14:54,780 --> 00:14:57,540
+better decision so the policy network
+
+391
+00:14:57,540 --> 00:14:59,970
+plus the Monte Carlo tree search makes
+
+392
+00:14:59,970 --> 00:15:02,460
+better decisions than just the policy
+
+393
+00:15:02,460 --> 00:15:06,510
+network so what if you were to use the
+
+394
+00:15:06,510 --> 00:15:08,820
+policy network in conjunction with Monte
+
+395
+00:15:08,820 --> 00:15:11,340
+Carlo tree search to play games against
+
+396
+00:15:11,340 --> 00:15:13,470
+itself over and over again well
+
+397
+00:15:13,470 --> 00:15:15,810
+technically the data generated from
+
+398
+00:15:15,810 --> 00:15:18,780
+those games would be better data than it
+
+399
+00:15:18,780 --> 00:15:21,420
+was just fed into the network so you
+
+400
+00:15:21,420 --> 00:15:23,670
+train the network again now you have a
+
+401
+00:15:23,670 --> 00:15:25,980
+better network but that network is even
+
+402
+00:15:25,980 --> 00:15:27,480
+better when you put it with Monte Carlo
+
+403
+00:15:27,480 --> 00:15:30,330
+tree search so you generate even better
+
+404
+00:15:30,330 --> 00:15:31,320
+data
+
+405
+00:15:31,320 --> 00:15:33,210
+then you feed that data back into the
+
+406
+00:15:33,210 --> 00:15:34,920
+network and then you continue this cycle
+
+407
+00:15:34,920 --> 00:15:37,470
+over and over and over again and what
+
+408
+00:15:37,470 --> 00:15:39,330
+happens is after a few hundred or
+
+409
+00:15:39,330 --> 00:15:41,880
+thousand iterations you suddenly have a
+
+410
+00:15:41,880 --> 00:15:44,430
+superhuman goba that plays go at a level
+
+411
+00:15:44,430 --> 00:15:47,400
+no human has ever seen before and I just
+
+412
+00:15:47,400 --> 00:15:49,170
+focused on the policy network for
+
+413
+00:15:49,170 --> 00:15:51,090
+simplicity but this also includes the
+
+414
+00:15:51,090 --> 00:15:53,040
+value network remember value network
+
+415
+00:15:53,040 --> 00:15:55,170
+great on its own but it really shines
+
+416
+00:15:55,170 --> 00:15:57,120
+when it's helping Monte Carlo tree
+
+417
+00:15:57,120 --> 00:15:59,270
+search and not playing on its own and so
+
+418
+00:15:59,270 --> 00:16:02,190
+what you do is with every single Monte
+
+419
+00:16:02,190 --> 00:16:04,230
+Carlo tree search iteration you have the
+
+420
+00:16:04,230 --> 00:16:06,450
+agent play against itself and you have
+
+421
+00:16:06,450 --> 00:16:08,340
+it continuously generate better and
+
+422
+00:16:08,340 --> 00:16:10,050
+better data to create better and better
+
+423
+00:16:10,050 --> 00:16:11,790
+networks that will create better and
+
+424
+00:16:11,790 --> 00:16:14,340
+better data and by doing so you have
+
+425
+00:16:14,340 --> 00:16:17,490
+this infinite loop of progress that is
+
+426
+00:16:17,490 --> 00:16:19,680
+very very difficult to Plateau it just
+
+427
+00:16:19,680 --> 00:16:22,830
+continues to grow and grow and so that
+
+428
+00:16:22,830 --> 00:16:25,350
+is the idea behind the alphago algorithm
+
+429
+00:16:25,350 --> 00:16:28,140
+you have you have classical tree search
+
+430
+00:16:28,140 --> 00:16:29,520
+you've got neural networks working
+
+431
+00:16:29,520 --> 00:16:32,880
+together to create a single superhuman
+
+432
+00:16:32,880 --> 00:16:35,610
+system now alphago has two separate
+
+433
+00:16:35,610 --> 00:16:38,640
+neural nets policy and value but later
+
+434
+00:16:38,640 --> 00:16:40,470
+through the pipeline when deepmind
+
+435
+00:16:40,470 --> 00:16:43,140
+evolved from just alphago to now alphago
+
+436
+00:16:43,140 --> 00:16:44,520
+0 and alpha zero
+
+437
+00:16:44,520 --> 00:16:47,490
+they created a thing pool with a neural
+
+438
+00:16:47,490 --> 00:16:49,500
+network that merged these two networks
+
+439
+00:16:49,500 --> 00:16:51,900
+into one essentially having a common
+
+440
+00:16:51,900 --> 00:16:54,840
+head and two separate tails so you would
+
+441
+00:16:54,840 --> 00:16:56,790
+have a single feature extractor with a
+
+442
+00:16:56,790 --> 00:16:58,800
+bunch of convolutional layers and at the
+
+443
+00:16:58,800 --> 00:17:00,450
+end there would be two separate outputs
+
+444
+00:17:00,450 --> 00:17:03,480
+one for the policy and one for the value
+
+445
+00:17:03,480 --> 00:17:06,360
+and so that's how these next new these
+
+446
+00:17:06,360 --> 00:17:08,189
+next neural networks worked they were
+
+447
+00:17:08,189 --> 00:17:09,930
+much better because the gradients for
+
+448
+00:17:09,930 --> 00:17:11,459
+the value in the policy were able to
+
+449
+00:17:11,459 --> 00:17:13,980
+work together to create a better neural
+
+450
+00:17:13,980 --> 00:17:16,560
+network system and therefore guide Monte
+
+451
+00:17:16,560 --> 00:17:19,770
+Carlo tree search better but we don't
+
+452
+00:17:19,770 --> 00:17:21,510
+stop there there's one more thing I want
+
+453
+00:17:21,510 --> 00:17:23,070
+to mention and this is absolutely
+
+454
+00:17:23,070 --> 00:17:25,500
+incredible the inputs to these neural
+
+455
+00:17:25,500 --> 00:17:28,290
+networks the alphago neural network was
+
+456
+00:17:28,290 --> 00:17:30,690
+of course the current born state but it
+
+457
+00:17:30,690 --> 00:17:32,640
+was represented in a pretty special way
+
+458
+00:17:32,640 --> 00:17:34,950
+so for example you could have a certain
+
+459
+00:17:34,950 --> 00:17:37,200
+channel telling the neural network where
+
+460
+00:17:37,200 --> 00:17:38,670
+all the black zones are and then another
+
+461
+00:17:38,670 --> 00:17:39,960
+channel telling you where all the white
+
+462
+00:17:39,960 --> 00:17:42,030
+stones are and another another channel
+
+463
+00:17:42,030 --> 00:17:43,630
+telling it all the liberties of the
+
+464
+00:17:43,630 --> 00:17:45,790
+the liberties little white stones and so
+
+465
+00:17:45,790 --> 00:17:47,860
+on and so forth and even have manually
+
+466
+00:17:47,860 --> 00:17:49,540
+human crafted features in all these
+
+467
+00:17:49,540 --> 00:17:51,340
+channels and then you would feed it into
+
+468
+00:17:51,340 --> 00:17:53,980
+the network and when the network was
+
+469
+00:17:53,980 --> 00:17:55,810
+trained it started off with a bit of
+
+470
+00:17:55,810 --> 00:17:58,390
+seed data from human experts and then it
+
+471
+00:17:58,390 --> 00:17:59,890
+took over from there and went into this
+
+472
+00:17:59,890 --> 00:18:02,770
+sort of iterations iterations of Monte
+
+473
+00:18:02,770 --> 00:18:07,150
+Carlo tree search now what if you can
+
+474
+00:18:07,150 --> 00:18:09,760
+have a bot that just learn how to play
+
+475
+00:18:09,760 --> 00:18:12,940
+go by playing against itself and had no
+
+476
+00:18:12,940 --> 00:18:15,160
+human data or expertise involved
+
+477
+00:18:15,160 --> 00:18:19,090
+whatsoever that's exactly what alphago's
+
+478
+00:18:19,090 --> 00:18:21,280
+dear have accomplished now they still
+
+479
+00:18:21,280 --> 00:18:23,890
+did have some human crafted features fed
+
+480
+00:18:23,890 --> 00:18:25,570
+into the network for example the Liberty
+
+481
+00:18:25,570 --> 00:18:27,480
+counts as I just said as I just said
+
+482
+00:18:27,480 --> 00:18:30,490
+however these minimal networks were not
+
+483
+00:18:30,490 --> 00:18:33,460
+seated with any human data they started
+
+484
+00:18:33,460 --> 00:18:36,070
+from scratch and using Monte Carlo tree
+
+485
+00:18:36,070 --> 00:18:37,810
+search plus the policy and value
+
+486
+00:18:37,810 --> 00:18:40,480
+networks together they learned how to
+
+487
+00:18:40,480 --> 00:18:42,760
+play the game of go and here's the
+
+488
+00:18:42,760 --> 00:18:43,540
+interesting part
+
+489
+00:18:43,540 --> 00:18:46,480
+alphago was able to beat Lisa doll a
+
+490
+00:18:46,480 --> 00:18:49,510
+human Grandmaster at the go game and
+
+491
+00:18:49,510 --> 00:18:52,840
+then alphago zero which was trained on
+
+492
+00:18:52,840 --> 00:18:55,810
+no human data was able to beat alphago a
+
+493
+00:18:55,810 --> 00:18:58,570
+hundred games to zero that is absolutely
+
+494
+00:18:58,570 --> 00:19:01,930
+incredible but wait it gets better
+
+495
+00:19:01,930 --> 00:19:04,660
+there's a new algorithm called alpha 0
+
+496
+00:19:04,660 --> 00:19:08,260
+and alpha zero not only starts off with
+
+497
+00:19:08,260 --> 00:19:11,530
+absolutely no human expertise but there
+
+498
+00:19:11,530 --> 00:19:14,200
+are no human crafted features been into
+
+499
+00:19:14,200 --> 00:19:17,110
+the network so it's just given the raw
+
+500
+00:19:17,110 --> 00:19:20,110
+board state it's not given any manually
+
+501
+00:19:20,110 --> 00:19:23,230
+created heuristics or features it just
+
+502
+00:19:23,230 --> 00:19:24,550
+has the current board and it learns
+
+503
+00:19:24,550 --> 00:19:26,320
+everything else on its own then alpha
+
+504
+00:19:26,320 --> 00:19:29,140
+zero was then able to beat alphago zero
+
+505
+00:19:29,140 --> 00:19:30,460
+so we're starting to notice a bit of a
+
+506
+00:19:30,460 --> 00:19:32,500
+trend here the Morse human knowledge we
+
+507
+00:19:32,500 --> 00:19:34,600
+take out of the system and the more we
+
+508
+00:19:34,600 --> 00:19:36,610
+allow it to just learn on its own the
+
+509
+00:19:36,610 --> 00:19:38,740
+better it ends up playing because the
+
+510
+00:19:38,740 --> 00:19:41,260
+more novel play strategies it's able to
+
+511
+00:19:41,260 --> 00:19:43,900
+discover now there is one more
+
+512
+00:19:43,900 --> 00:19:47,140
+difference between alphago alphago zero
+
+513
+00:19:47,140 --> 00:19:50,470
+and the alpha zero algorithm and that is
+
+514
+00:19:50,470 --> 00:19:53,800
+the arena now what is that exactly well
+
+515
+00:19:53,800 --> 00:19:55,960
+let's just say you have a certain
+
+516
+00:19:55,960 --> 00:19:56,760
+version of the neural
+
+517
+00:19:56,760 --> 00:19:58,740
+network and you use that with Monte
+
+518
+00:19:58,740 --> 00:20:00,480
+Carlo tree search to generate some data
+
+519
+00:20:00,480 --> 00:20:02,370
+then what would happen is you would
+
+520
+00:20:02,370 --> 00:20:04,500
+train a new neural network and you would
+
+521
+00:20:04,500 --> 00:20:06,870
+have the old and the new play against
+
+522
+00:20:06,870 --> 00:20:09,060
+each other and only if the new network
+
+523
+00:20:09,060 --> 00:20:11,550
+actually wins more than 55 percent of
+
+524
+00:20:11,550 --> 00:20:13,350
+the games will you replace the old
+
+525
+00:20:13,350 --> 00:20:15,480
+Network and start to create new data if
+
+526
+00:20:15,480 --> 00:20:16,560
+it doesn't
+
+527
+00:20:16,560 --> 00:20:18,180
+for example the training didn't happen
+
+528
+00:20:18,180 --> 00:20:19,860
+very well or the data for some reason
+
+529
+00:20:19,860 --> 00:20:21,720
+wasn't good then you discard the new
+
+530
+00:20:21,720 --> 00:20:23,820
+network you keep that data you generate
+
+531
+00:20:23,820 --> 00:20:25,920
+more data with the old network and then
+
+532
+00:20:25,920 --> 00:20:27,270
+you train a new one and you continue
+
+533
+00:20:27,270 --> 00:20:29,070
+like this until you create a better
+
+534
+00:20:29,070 --> 00:20:31,470
+network to replace the old one with but
+
+535
+00:20:31,470 --> 00:20:33,060
+with alpha zero things are a bit
+
+536
+00:20:33,060 --> 00:20:33,660
+different
+
+537
+00:20:33,660 --> 00:20:36,180
+you simply have continuous training you
+
+538
+00:20:36,180 --> 00:20:37,800
+don't have an Arena Stage you have a
+
+539
+00:20:37,800 --> 00:20:39,930
+single model that continues to generate
+
+540
+00:20:39,930 --> 00:20:42,210
+data train itself and generate more data
+
+541
+00:20:42,210 --> 00:20:44,480
+and so on and so forth
+
+542
+00:20:44,480 --> 00:20:47,760
+now here's the thing Google is a rich
+
+543
+00:20:47,760 --> 00:20:51,630
+company they have lots and lots and lots
+
+544
+00:20:51,630 --> 00:20:53,670
+of compute power to throw at this if you
+
+545
+00:20:53,670 --> 00:20:56,940
+throw 5,000 TP use at just generating
+
+546
+00:20:56,940 --> 00:20:59,070
+games like this and they're barely
+
+547
+00:20:59,070 --> 00:21:01,500
+breaking a sweat in terms of budget and
+
+548
+00:21:01,500 --> 00:21:03,200
+so they can spend a few months with
+
+549
+00:21:03,200 --> 00:21:06,960
+5,000 GP TP use to continuously generate
+
+550
+00:21:06,960 --> 00:21:09,660
+games and train a superhuman go bot but
+
+551
+00:21:09,660 --> 00:21:11,340
+the thing is the vast majority of us
+
+552
+00:21:11,340 --> 00:21:13,140
+don't have that kind of compute power
+
+553
+00:21:13,140 --> 00:21:16,260
+and so we have to find other ways to
+
+554
+00:21:16,260 --> 00:21:18,720
+train these networks for example there's
+
+555
+00:21:18,720 --> 00:21:20,490
+a project known as Leela
+
+556
+00:21:20,490 --> 00:21:23,010
+zero and Leela zero is an open source
+
+557
+00:21:23,010 --> 00:21:25,410
+implementation of alpha go zero so the
+
+558
+00:21:25,410 --> 00:21:27,540
+naming is a bit off but that Leela zero
+
+559
+00:21:27,540 --> 00:21:29,040
+is an open source implementation of
+
+560
+00:21:29,040 --> 00:21:32,760
+alpha 0 and this implementation is a
+
+561
+00:21:32,760 --> 00:21:34,830
+distributed implementation that means
+
+562
+00:21:34,830 --> 00:21:37,410
+the average person literally anybody can
+
+563
+00:21:37,410 --> 00:21:39,360
+download the Leela zero source code
+
+564
+00:21:39,360 --> 00:21:41,940
+run it and they are suddenly on their
+
+565
+00:21:41,940 --> 00:21:44,400
+own computer calculating these these
+
+566
+00:21:44,400 --> 00:21:46,560
+self play games that are then being
+
+567
+00:21:46,560 --> 00:21:48,720
+contributed towards a larger model on
+
+568
+00:21:48,720 --> 00:21:50,850
+the Internet and currently the one of
+
+569
+00:21:50,850 --> 00:21:54,200
+Lear Leela zero models is the strongest
+
+570
+00:21:54,200 --> 00:21:57,720
+openly available go playing entity that
+
+571
+00:21:57,720 --> 00:21:59,970
+you can get and so this sort of
+
+572
+00:21:59,970 --> 00:22:01,710
+distributed effort is truly very
+
+573
+00:22:01,710 --> 00:22:04,650
+powerful but what I want to do today is
+
+574
+00:22:04,650 --> 00:22:06,900
+show you an example that you had all
+
+575
+00:22:06,900 --> 00:22:07,380
+trained
+
+576
+00:22:07,380 --> 00:22:09,210
+yourselves something that you can just
+
+577
+00:22:09,210 --> 00:22:11,190
+do on your computer and get an idea of
+
+578
+00:22:11,190 --> 00:22:13,470
+how the alphas your algorithm works and
+
+579
+00:22:13,470 --> 00:22:16,200
+so today we're gonna be taking a look at
+
+580
+00:22:16,200 --> 00:22:19,290
+how you can build a butt that uses
+
+581
+00:22:19,290 --> 00:22:22,640
+alphago like concepts for the game of
+
+582
+00:22:22,640 --> 00:22:26,040
+2048 now 2048 in my opinion is an
+
+583
+00:22:26,040 --> 00:22:28,680
+absolutely fascinating game it's only a
+
+584
+00:22:28,680 --> 00:22:30,600
+four by four board and there's only
+
+585
+00:22:30,600 --> 00:22:33,480
+eleven possible values on each tile so
+
+586
+00:22:33,480 --> 00:22:35,130
+that makes it super easy to represent
+
+587
+00:22:35,130 --> 00:22:36,810
+inside of memory and to actually
+
+588
+00:22:36,810 --> 00:22:38,760
+implement the game itself that's not a
+
+589
+00:22:38,760 --> 00:22:41,280
+challenge but the challenge is creating
+
+590
+00:22:41,280 --> 00:22:43,920
+a bot that is smart enough to deal with
+
+591
+00:22:43,920 --> 00:22:45,480
+the fact that the game is entirely
+
+592
+00:22:45,480 --> 00:22:47,940
+stochastic if you have a certain board
+
+593
+00:22:47,940 --> 00:22:50,340
+state and you copy it ten times and you
+
+594
+00:22:50,340 --> 00:22:52,140
+make it's the same move on each board
+
+595
+00:22:52,140 --> 00:22:53,220
+state there's a chance you'll get
+
+596
+00:22:53,220 --> 00:22:54,990
+completely different board states so
+
+597
+00:22:54,990 --> 00:22:57,090
+it's fundamentally a stochastic game and
+
+598
+00:22:57,090 --> 00:22:58,680
+you somehow have to create an algorithm
+
+599
+00:22:58,680 --> 00:23:01,200
+that can deal with that level of a
+
+600
+00:23:01,200 --> 00:23:03,660
+randomness so 2048 is a fascinating
+
+601
+00:23:03,660 --> 00:23:05,520
+challenge I've already covered how you
+
+602
+00:23:05,520 --> 00:23:08,070
+can use shallow Monte Carlo evaluations
+
+603
+00:23:08,070 --> 00:23:11,520
+to play 2048 on my cognitive class on AI
+
+604
+00:23:11,520 --> 00:23:13,110
+course which is why I recommended you
+
+605
+00:23:13,110 --> 00:23:15,150
+take a look at that but today we're
+
+606
+00:23:15,150 --> 00:23:16,530
+going to be taking a look at how you can
+
+607
+00:23:16,530 --> 00:23:19,110
+use Monte Carlo tree search Monte Carlo
+
+608
+00:23:19,110 --> 00:23:21,600
+evaluations and the value network for a
+
+609
+00:23:21,600 --> 00:23:23,880
+logo in conjunction with each other in
+
+610
+00:23:23,880 --> 00:23:27,060
+order to play 2048 better than any other
+
+611
+00:23:27,060 --> 00:23:30,420
+non human expertise bought on the
+
+612
+00:23:30,420 --> 00:23:31,140
+Internet
+
+613
+00:23:31,140 --> 00:23:33,750
+now there are some bots that people have
+
+614
+00:23:33,750 --> 00:23:36,570
+already put together for 2048 and some
+
+615
+00:23:36,570 --> 00:23:38,100
+of them are really popular you're seeing
+
+616
+00:23:38,100 --> 00:23:40,860
+one on screen right now but the thing
+
+617
+00:23:40,860 --> 00:23:42,210
+with these BOTS is that they are all
+
+618
+00:23:42,210 --> 00:23:44,850
+based on human heuristics and that is
+
+619
+00:23:44,850 --> 00:23:47,160
+incredibly annoying to me because we
+
+620
+00:23:47,160 --> 00:23:49,550
+have human strategies like for example
+
+621
+00:23:49,550 --> 00:23:53,250
+taking a board and keeping the largest
+
+622
+00:23:53,250 --> 00:23:55,410
+tile in the corner and then having the
+
+623
+00:23:55,410 --> 00:23:57,990
+actual tiles go in descending order so
+
+624
+00:23:57,990 --> 00:23:59,550
+that we can merge and sort of like a
+
+625
+00:23:59,550 --> 00:24:02,550
+snake style but the thing is that's a
+
+626
+00:24:02,550 --> 00:24:04,860
+fundamentally very human strategy that's
+
+627
+00:24:04,860 --> 00:24:06,960
+because we can't see far enough into the
+
+628
+00:24:06,960 --> 00:24:08,850
+future to know how to maneuver pieces
+
+629
+00:24:08,850 --> 00:24:11,310
+around so they merge and maneuver in the
+
+630
+00:24:11,310 --> 00:24:14,310
+right way but computers can't so why
+
+631
+00:24:14,310 --> 00:24:15,930
+don't we leverage that ability of theirs
+
+632
+00:24:15,930 --> 00:24:19,680
+and the power of this alphago algorithm
+
+633
+00:24:19,680 --> 00:24:21,360
+and with the power of Monte Carlo tree
+
+634
+00:24:21,360 --> 00:24:23,370
+search that's exactly what we can do the
+
+635
+00:24:23,370 --> 00:24:25,140
+bots that I'm about to show you and we
+
+636
+00:24:25,140 --> 00:24:27,060
+go over to the code is a bot that plays
+
+637
+00:24:27,060 --> 00:24:29,160
+with absolutely no human knowledge
+
+638
+00:24:29,160 --> 00:24:31,890
+involved whatsoever and because it's
+
+639
+00:24:31,890 --> 00:24:34,890
+using no human knowledge it plays in a
+
+640
+00:24:34,890 --> 00:24:37,560
+very weird way it just looks alien
+
+641
+00:24:37,560 --> 00:24:39,450
+whenever you look at it if you're if
+
+642
+00:24:39,450 --> 00:24:41,820
+you're a professional 2048 player and
+
+643
+00:24:41,820 --> 00:24:43,410
+you take a look at this you're gonna
+
+644
+00:24:43,410 --> 00:24:45,240
+think it's making the dumbest moves it
+
+645
+00:24:45,240 --> 00:24:47,220
+could make but when you actually take a
+
+646
+00:24:47,220 --> 00:24:49,020
+look at more than just a single move
+
+647
+00:24:49,020 --> 00:24:50,610
+when you take a look at an entire
+
+648
+00:24:50,610 --> 00:24:54,030
+episode it's mesmerizing how this 2048
+
+649
+00:24:54,030 --> 00:24:56,220
+BOTS can take a state that looks like
+
+650
+00:24:56,220 --> 00:24:58,800
+it's just about to lose and turn it into
+
+651
+00:24:58,800 --> 00:25:01,350
+a 2048 tile it's really fascinating
+
+652
+00:25:01,350 --> 00:25:04,110
+stuff and I don't think I can just
+
+653
+00:25:04,110 --> 00:25:05,580
+explain it I don't think words will do
+
+654
+00:25:05,580 --> 00:25:06,810
+it justice here so I think it's better
+
+655
+00:25:06,810 --> 00:25:08,130
+for you to take a look at a demo the
+
+656
+00:25:08,130 --> 00:25:10,320
+2048 bots in action and then we'll get
+
+657
+00:25:10,320 --> 00:25:12,270
+into how you can actually build a value
+
+658
+00:25:12,270 --> 00:25:14,430
+Network for 2048 and how you can
+
+659
+00:25:14,430 --> 00:25:15,780
+leverage it with Monte Carlo tree search
+
+660
+00:25:15,780 --> 00:25:17,820
+in the Swift language using sweeper
+
+661
+00:25:17,820 --> 00:25:19,650
+tensorflow in order to build your own
+
+662
+00:25:19,650 --> 00:25:22,110
+2048 BOTS let's take a look alright so
+
+663
+00:25:22,110 --> 00:25:23,490
+now let's take a look at how this
+
+664
+00:25:23,490 --> 00:25:26,490
+alphago inspired 2048 bots actually
+
+665
+00:25:26,490 --> 00:25:29,070
+works now before I actually show you the
+
+666
+00:25:29,070 --> 00:25:30,780
+code behind it I think it would be
+
+667
+00:25:30,780 --> 00:25:33,090
+really fascinating to take a look at the
+
+668
+00:25:33,090 --> 00:25:36,390
+actual demo running live so what I'm
+
+669
+00:25:36,390 --> 00:25:37,770
+gonna do is I'm actually gonna run the
+
+670
+00:25:37,770 --> 00:25:40,380
+backend code here in Xcode so I'm
+
+671
+00:25:40,380 --> 00:25:42,660
+running this code from within Xcode this
+
+672
+00:25:42,660 --> 00:25:44,580
+is written in Swift and what its gonna
+
+673
+00:25:44,580 --> 00:25:46,170
+do is it's gonna open up a cateura
+
+674
+00:25:46,170 --> 00:25:48,510
+server on port 8080 which opens up just
+
+675
+00:25:48,510 --> 00:25:51,240
+one simple rest endpoint that takes the
+
+676
+00:25:51,240 --> 00:25:53,250
+current 2048 board and spits out the
+
+677
+00:25:53,250 --> 00:25:56,280
+best move to make now if we switch back
+
+678
+00:25:56,280 --> 00:25:58,050
+over to my web browser you can take a
+
+679
+00:25:58,050 --> 00:26:00,930
+look at our 2048 game the 2048 game is
+
+680
+00:26:00,930 --> 00:26:03,180
+also being hosted by cateura and I've
+
+681
+00:26:03,180 --> 00:26:05,160
+modified this from Gabriel's
+
+682
+00:26:05,160 --> 00:26:08,310
+implementation just a little bit so
+
+683
+00:26:08,310 --> 00:26:10,560
+there's just a two extra functions that
+
+684
+00:26:10,560 --> 00:26:12,780
+will enable auto movement where you just
+
+685
+00:26:12,780 --> 00:26:15,060
+click a button and every single move it
+
+686
+00:26:15,060 --> 00:26:16,680
+will take the board send it over to my
+
+687
+00:26:16,680 --> 00:26:19,650
+REST API figure out the best move from
+
+688
+00:26:19,650 --> 00:26:22,500
+my little AI and then brings it back
+
+689
+00:26:22,500 --> 00:26:23,760
+over to the interface where it actually
+
+690
+00:26:23,760 --> 00:26:25,860
+makes that move and continues until the
+
+691
+00:26:25,860 --> 00:26:28,920
+game is over over could mean that it's
+
+692
+00:26:28,920 --> 00:26:32,070
+lost or it's won so watch this right as
+
+693
+00:26:32,070 --> 00:26:33,010
+I click the T
+
+694
+00:26:33,010 --> 00:26:36,190
+button just like that it goes on its way
+
+695
+00:26:36,190 --> 00:26:38,440
+now what I want you to realize is that
+
+696
+00:26:38,440 --> 00:26:40,059
+first of all I mean as I mentioned
+
+697
+00:26:40,059 --> 00:26:41,679
+already we're taking this board state
+
+698
+00:26:41,679 --> 00:26:43,030
+we're sending it over Swift it's coming
+
+699
+00:26:43,030 --> 00:26:45,760
+back but it's doing so so incredibly
+
+700
+00:26:45,760 --> 00:26:48,640
+fast you wouldn't think that 2048 AI
+
+701
+00:26:48,640 --> 00:26:51,309
+could be this performant now there are
+
+702
+00:26:51,309 --> 00:26:53,470
+some more performant 2048 guys out there
+
+703
+00:26:53,470 --> 00:26:55,299
+in fact the only other one that's faster
+
+704
+00:26:55,299 --> 00:26:56,590
+than this is one that I've also built
+
+705
+00:26:56,590 --> 00:26:58,090
+and that's the one that you would have
+
+706
+00:26:58,090 --> 00:27:01,600
+seen on cognitive classed on AI however
+
+707
+00:27:01,600 --> 00:27:03,610
+what's interesting about this is that
+
+708
+00:27:03,610 --> 00:27:06,040
+it's not just doing a single depth Monte
+
+709
+00:27:06,040 --> 00:27:09,070
+Carlo evaluation it's doing both Monte
+
+710
+00:27:09,070 --> 00:27:11,350
+Carlo evaluations and neural network
+
+711
+00:27:11,350 --> 00:27:13,929
+predictions and it still is fast that's
+
+712
+00:27:13,929 --> 00:27:15,760
+how fast the Swift language can be if
+
+713
+00:27:15,760 --> 00:27:17,679
+you write your code the right way we'll
+
+714
+00:27:17,679 --> 00:27:19,960
+talk about that in a moment now I want
+
+715
+00:27:19,960 --> 00:27:21,429
+you to notice something about this play
+
+716
+00:27:21,429 --> 00:27:24,340
+style I told you it was unorthodox but
+
+717
+00:27:24,340 --> 00:27:25,570
+now that you're looking at it you're
+
+718
+00:27:25,570 --> 00:27:28,330
+probably really starting to realize just
+
+719
+00:27:28,330 --> 00:27:30,640
+how weird it is humans have this
+
+720
+00:27:30,640 --> 00:27:34,270
+strategy of keeping similarly similar
+
+721
+00:27:34,270 --> 00:27:36,549
+tiles closer together so you can merge
+
+722
+00:27:36,549 --> 00:27:38,890
+them more easily so for example in this
+
+723
+00:27:38,890 --> 00:27:40,750
+case you would probably have 512 in a
+
+724
+00:27:40,750 --> 00:27:43,270
+corner and then 256 and then 128 and so
+
+725
+00:27:43,270 --> 00:27:44,530
+on and so forth so you could easily
+
+726
+00:27:44,530 --> 00:27:47,500
+merge into ingots at the 1024 tile but
+
+727
+00:27:47,500 --> 00:27:50,049
+this AI didn't need to do that it just
+
+728
+00:27:50,049 --> 00:27:51,790
+had them in completely random places and
+
+729
+00:27:51,790 --> 00:27:54,250
+out of nowhere it sort of emerged that
+
+730
+00:27:54,250 --> 00:27:57,130
+it created a local path of merging where
+
+731
+00:27:57,130 --> 00:28:00,880
+it merged 120 and 120 8 into 256 to 256
+
+732
+00:28:00,880 --> 00:28:03,370
+is together and then dos into a 512 and
+
+733
+00:28:03,370 --> 00:28:05,230
+then 2 of the 5 rolls together into a
+
+734
+00:28:05,230 --> 00:28:08,020
+1024 and you couldn't even see that
+
+735
+00:28:08,020 --> 00:28:09,850
+little local file that it created for
+
+736
+00:28:09,850 --> 00:28:12,100
+that merging but it did and we'll take a
+
+737
+00:28:12,100 --> 00:28:13,929
+look at some slow-motion footage of this
+
+738
+00:28:13,929 --> 00:28:15,880
+in just a moment towards the end of the
+
+739
+00:28:15,880 --> 00:28:17,260
+code section but I just wanted you to
+
+740
+00:28:17,260 --> 00:28:19,750
+get a feel of just how weird the code
+
+741
+00:28:19,750 --> 00:28:22,990
+just how weird the actual gameplay is I
+
+742
+00:28:22,990 --> 00:28:24,790
+mean if you take a look at the net at
+
+743
+00:28:24,790 --> 00:28:27,130
+the most popular 2048 eye out there and
+
+744
+00:28:27,130 --> 00:28:28,600
+if you take a look at that YouTube video
+
+745
+00:28:28,600 --> 00:28:31,000
+all the comments are about how sometimes
+
+746
+00:28:31,000 --> 00:28:34,360
+the AI ends up moving the highest value
+
+747
+00:28:34,360 --> 00:28:36,100
+tile out of the corner because it's very
+
+748
+00:28:36,100 --> 00:28:39,460
+human strategy based but this one is
+
+749
+00:28:39,460 --> 00:28:42,429
+it's not following any human strategy so
+
+750
+00:28:42,429 --> 00:28:44,890
+it's making really what seemed to us as
+
+751
+00:28:44,890 --> 00:28:45,580
+bad
+
+752
+00:28:45,580 --> 00:28:47,140
+I mean if you were to just pause the
+
+753
+00:28:47,140 --> 00:28:48,700
+game in one instant you might think
+
+754
+00:28:48,700 --> 00:28:50,200
+there's no way you're gonna win this but
+
+755
+00:28:50,200 --> 00:28:52,180
+then since you can see it goes ahead and
+
+756
+00:28:52,180 --> 00:28:54,640
+wins the game like that so this is
+
+757
+00:28:54,640 --> 00:28:57,700
+really really fascinating stuff so now
+
+758
+00:28:57,700 --> 00:28:59,470
+I'll Ted back over to the code and start
+
+759
+00:28:59,470 --> 00:29:01,210
+to take a look at how this actually
+
+760
+00:29:01,210 --> 00:29:02,770
+worked so I'm gonna go ahead and stop
+
+761
+00:29:02,770 --> 00:29:04,750
+the app so we stop taking up memory and
+
+762
+00:29:04,750 --> 00:29:07,330
+CPU so we can actually focus on the code
+
+763
+00:29:07,330 --> 00:29:09,970
+now what you're seeing over here is is
+
+764
+00:29:09,970 --> 00:29:12,010
+all the code that goes behind the actual
+
+765
+00:29:12,010 --> 00:29:14,410
+sort of quote unquote intelligence
+
+766
+00:29:14,410 --> 00:29:16,270
+portion of the application now there are
+
+767
+00:29:16,270 --> 00:29:18,550
+some other components to the app for
+
+768
+00:29:18,550 --> 00:29:20,800
+example there's the actual 2048 game
+
+769
+00:29:20,800 --> 00:29:25,540
+logic now here's the thing the 2048 game
+
+770
+00:29:25,540 --> 00:29:28,720
+logic is pretty intense and the reason
+
+771
+00:29:28,720 --> 00:29:31,780
+for that is because 2048 is a little bit
+
+772
+00:29:31,780 --> 00:29:33,610
+more computationally complex than you
+
+773
+00:29:33,610 --> 00:29:36,190
+may imagine so if we go back to the 2048
+
+774
+00:29:36,190 --> 00:29:37,510
+game and if you've already seen the
+
+775
+00:29:37,510 --> 00:29:39,400
+cognitive class course you may already
+
+776
+00:29:39,400 --> 00:29:40,720
+know a little bit of this but just in
+
+777
+00:29:40,720 --> 00:29:42,400
+case you haven't I'm gonna quickly walk
+
+778
+00:29:42,400 --> 00:29:44,770
+you through it if you've got for example
+
+779
+00:29:44,770 --> 00:29:46,210
+a board like this one you can see
+
+780
+00:29:46,210 --> 00:29:49,060
+there's only four rows now each row has
+
+781
+00:29:49,060 --> 00:29:51,100
+a tile and the tile only to store a
+
+782
+00:29:51,100 --> 00:29:54,070
+value from 0 to 11 now technically the
+
+783
+00:29:54,070 --> 00:29:56,530
+value is actually range from 0 to 2048
+
+784
+00:29:56,530 --> 00:29:58,240
+but we're storing them as powers of 2
+
+785
+00:29:58,240 --> 00:30:00,820
+and so you can a store 0 to 11 because 2
+
+786
+00:30:00,820 --> 00:30:04,930
+to the power 11 would be 2048 and so
+
+787
+00:30:04,930 --> 00:30:07,360
+what we need to do here is we need to
+
+788
+00:30:07,360 --> 00:30:09,820
+somehow have a super fast implementation
+
+789
+00:30:09,820 --> 00:30:13,210
+of the 2048 board so that for example I
+
+790
+00:30:13,210 --> 00:30:15,370
+click the left arrow we don't need to
+
+791
+00:30:15,370 --> 00:30:18,100
+compute all the tile merges and how
+
+792
+00:30:18,100 --> 00:30:19,480
+everything needs to move to the left
+
+793
+00:30:19,480 --> 00:30:21,820
+instead the way this algorithm works is
+
+794
+00:30:21,820 --> 00:30:24,490
+it actually pre computes before the game
+
+795
+00:30:24,490 --> 00:30:26,980
+starts every possible row of which there
+
+796
+00:30:26,980 --> 00:30:30,220
+are around 65,000 possibilities and then
+
+797
+00:30:30,220 --> 00:30:32,650
+for every single possible row it pre
+
+798
+00:30:32,650 --> 00:30:34,330
+computes all the mergers in all
+
+799
+00:30:34,330 --> 00:30:36,370
+directions and then when you click the
+
+800
+00:30:36,370 --> 00:30:37,900
+left arrow key all it's doing is it's
+
+801
+00:30:37,900 --> 00:30:40,000
+taking each row it's looking that up in
+
+802
+00:30:40,000 --> 00:30:41,350
+the table and it's saying all right for
+
+803
+00:30:41,350 --> 00:30:42,760
+this row someone clicks left what do I
+
+804
+00:30:42,760 --> 00:30:44,500
+need to change the road to and picking
+
+805
+00:30:44,500 --> 00:30:46,420
+that up and assuming that's the new row
+
+806
+00:30:46,420 --> 00:30:48,520
+if you click up or down then it just
+
+807
+00:30:48,520 --> 00:30:51,580
+transpose it so rows become columns and
+
+808
+00:30:51,580 --> 00:30:53,350
+calls to come rows and then it does the
+
+809
+00:30:53,350 --> 00:30:55,080
+same thing and then transposes it back
+
+810
+00:30:55,080 --> 00:30:57,580
+and so that's how this works because it
+
+811
+00:30:57,580 --> 00:30:58,140
+needs to be
+
+812
+00:30:58,140 --> 00:31:00,390
+really mainly fast if we want it to be
+
+813
+00:31:00,390 --> 00:31:02,400
+this performant that's why my other AI
+
+814
+00:31:02,400 --> 00:31:04,350
+which is which has a lower winning rate
+
+815
+00:31:04,350 --> 00:31:05,970
+than this one because it's only based on
+
+816
+00:31:05,970 --> 00:31:08,700
+Monte Carlo evaluations that's why it's
+
+817
+00:31:08,700 --> 00:31:11,160
+the fastest out there is because it's so
+
+818
+00:31:11,160 --> 00:31:14,310
+rigorously optimized like this and this
+
+819
+00:31:14,310 --> 00:31:16,170
+implementation also benefits from that
+
+820
+00:31:16,170 --> 00:31:17,850
+because it builds off of that
+
+821
+00:31:17,850 --> 00:31:20,010
+implementation so if we go back as you
+
+822
+00:31:20,010 --> 00:31:21,810
+can tell there's quite a bit of code
+
+823
+00:31:21,810 --> 00:31:23,490
+that actually goes behind determining
+
+824
+00:31:23,490 --> 00:31:26,790
+these determining these these values so
+
+825
+00:31:26,790 --> 00:31:28,380
+if we continue to go down you can take a
+
+826
+00:31:28,380 --> 00:31:29,970
+look at all this implementation code a
+
+827
+00:31:29,970 --> 00:31:31,950
+ends up to be approximately four hundred
+
+828
+00:31:31,950 --> 00:31:33,750
+and sixty-four lines of code but then it
+
+829
+00:31:33,750 --> 00:31:35,100
+connects with all sorts of spacing and
+
+830
+00:31:35,100 --> 00:31:37,260
+comments and other utilities so you
+
+831
+00:31:37,260 --> 00:31:39,120
+could definitely minimize this but it is
+
+832
+00:31:39,120 --> 00:31:41,370
+quite a bit of logic but it's absolutely
+
+833
+00:31:41,370 --> 00:31:43,680
+worth it and finally we can get to the
+
+834
+00:31:43,680 --> 00:31:45,300
+actual intelligence portion of the
+
+835
+00:31:45,300 --> 00:31:48,930
+application now the way this works is is
+
+836
+00:31:48,930 --> 00:31:51,690
+from a coding perspective as you'll see
+
+837
+00:31:51,690 --> 00:31:53,970
+super elegant it's not to say that it's
+
+838
+00:31:53,970 --> 00:31:56,550
+simple but rather that the pieces feel
+
+839
+00:31:56,550 --> 00:31:58,530
+natural and then they feel like they
+
+840
+00:31:58,530 --> 00:32:00,360
+should fit together and that's what's so
+
+841
+00:32:00,360 --> 00:32:02,370
+amazing about the alphago series of
+
+842
+00:32:02,370 --> 00:32:04,110
+algorithms is that they're not
+
+843
+00:32:04,110 --> 00:32:07,230
+incredibly technologically complex it's
+
+844
+00:32:07,230 --> 00:32:09,180
+something that people can understand if
+
+845
+00:32:09,180 --> 00:32:12,000
+you do enough research into it and this
+
+846
+00:32:12,000 --> 00:32:14,220
+is the first application ever of those
+
+847
+00:32:14,220 --> 00:32:17,310
+techniques to the 2048 game so let's
+
+848
+00:32:17,310 --> 00:32:19,020
+take a look at how that works now of
+
+849
+00:32:19,020 --> 00:32:20,280
+course in the beginning there's just a
+
+850
+00:32:20,280 --> 00:32:22,590
+couple of imports and Swift we're only
+
+851
+00:32:22,590 --> 00:32:25,110
+doing a few key imports foundation tends
+
+852
+00:32:25,110 --> 00:32:26,550
+to flow Python kit and cateura
+
+853
+00:32:26,550 --> 00:32:29,310
+foundation of course default Apple stuff
+
+854
+00:32:29,310 --> 00:32:31,050
+can give us some good Swift utilities to
+
+855
+00:32:31,050 --> 00:32:33,930
+use tensorflow the Swift pratensis love
+
+856
+00:32:33,930 --> 00:32:36,540
+framework is can allow us to create some
+
+857
+00:32:36,540 --> 00:32:38,310
+deep neural network architectures within
+
+858
+00:32:38,310 --> 00:32:40,590
+the Swift language Python kit will
+
+859
+00:32:40,590 --> 00:32:43,950
+actually allow us to load Python Karass
+
+860
+00:32:43,950 --> 00:32:46,830
+model weights into Python or into into
+
+861
+00:32:46,830 --> 00:32:48,510
+Swift and so what I'm going to do is I'm
+
+862
+00:32:48,510 --> 00:32:50,430
+going to import chorus and then using
+
+863
+00:32:50,430 --> 00:32:52,140
+chorus I'm going to load a model that's
+
+864
+00:32:52,140 --> 00:32:54,030
+saved on my disk and I'm going to use
+
+865
+00:32:54,030 --> 00:32:55,470
+chorus to export those weights to a
+
+866
+00:32:55,470 --> 00:32:57,600
+numpy array and then import those numpy
+
+867
+00:32:57,600 --> 00:32:59,640
+arrays into tensors in Swift that I'll
+
+868
+00:32:59,640 --> 00:33:01,530
+put into my model and then finally
+
+869
+00:33:01,530 --> 00:33:02,550
+there's cat or ruff we're actually
+
+870
+00:33:02,550 --> 00:33:04,740
+opening up that rest endpoint that the
+
+871
+00:33:04,740 --> 00:33:08,970
+2048 game can access and find find the
+
+872
+00:33:08,970 --> 00:33:11,820
+best moves for so those are the key
+
+873
+00:33:11,820 --> 00:33:14,490
+opponents that go behind go behind this
+
+874
+00:33:14,490 --> 00:33:16,260
+entire application then of course we've
+
+875
+00:33:16,260 --> 00:33:18,000
+just got our standard imports importing
+
+876
+00:33:18,000 --> 00:33:19,860
+numpy and models from ten to float
+
+877
+00:33:19,860 --> 00:33:23,310
+across and then I'm using that module to
+
+878
+00:33:23,310 --> 00:33:26,520
+load a model just called model la h5 in
+
+879
+00:33:26,520 --> 00:33:28,230
+my home directory users last time I've
+
+880
+00:33:28,230 --> 00:33:30,660
+actually after that there's a little
+
+881
+00:33:30,660 --> 00:33:32,580
+sort of utility function that I put
+
+882
+00:33:32,580 --> 00:33:34,860
+together called tile processor the tile
+
+883
+00:33:34,860 --> 00:33:37,680
+processor takes a two-dimensional array
+
+884
+00:33:37,680 --> 00:33:40,770
+of rows a row if we actually look up its
+
+885
+00:33:40,770 --> 00:33:43,350
+definition with Xcode is just is 16-bit
+
+886
+00:33:43,350 --> 00:33:46,020
+unsigned integer and so again we're
+
+887
+00:33:46,020 --> 00:33:47,730
+using a big board super optimized
+
+888
+00:33:47,730 --> 00:33:50,370
+implementation of the 2048 board and
+
+889
+00:33:50,370 --> 00:33:53,340
+what that means is each row is 16 bits
+
+890
+00:33:53,340 --> 00:33:56,640
+and so that means that we have four
+
+891
+00:33:56,640 --> 00:34:00,210
+individual tiles in each in each row and
+
+892
+00:34:00,210 --> 00:34:03,450
+each tile only needs four bits in order
+
+893
+00:34:03,450 --> 00:34:08,160
+to be represented and so 16 bits because
+
+894
+00:34:08,160 --> 00:34:09,990
+again we only know those four bits to
+
+895
+00:34:09,990 --> 00:34:13,260
+store up to 11 so now if we go back we
+
+896
+00:34:13,260 --> 00:34:15,000
+can take a look at the tile processor
+
+897
+00:34:15,000 --> 00:34:17,100
+function again it's taking that 2d array
+
+898
+00:34:17,100 --> 00:34:20,310
+of 16-bit unsigned integers and it
+
+899
+00:34:20,310 --> 00:34:22,650
+returns a floating-point tensor the
+
+900
+00:34:22,650 --> 00:34:27,480
+shape of this tensor is 1 4 4 11 so what
+
+901
+00:34:27,480 --> 00:34:30,030
+that means is we have one sample and
+
+902
+00:34:30,030 --> 00:34:35,370
+each sample is 4 by 4 by 11 large 4 by 4
+
+903
+00:34:35,370 --> 00:34:37,770
+meaning the actual board and 11 meaning
+
+904
+00:34:37,770 --> 00:34:39,660
+the channels that were feeding into the
+
+905
+00:34:39,660 --> 00:34:42,060
+actual algorithm so how does that work
+
+906
+00:34:42,060 --> 00:34:44,310
+well basically what we're doing is we're
+
+907
+00:34:44,310 --> 00:34:45,930
+not just gonna feed in the raw board to
+
+908
+00:34:45,930 --> 00:34:47,190
+the neural net because that doesn't
+
+909
+00:34:47,190 --> 00:34:49,530
+perform particularly well rather we're
+
+910
+00:34:49,530 --> 00:34:52,440
+gonna do is create a brand new array
+
+911
+00:34:52,440 --> 00:34:55,890
+with 11 channels and in each channel
+
+912
+00:34:55,890 --> 00:34:57,810
+we're going to assign each channel to a
+
+913
+00:34:57,810 --> 00:35:00,150
+certain kind of tile and every value
+
+914
+00:35:00,150 --> 00:35:03,330
+that every channel will be 0 except if a
+
+915
+00:35:03,330 --> 00:35:05,910
+certain location on the board contains
+
+916
+00:35:05,910 --> 00:35:08,130
+that kind of tile then it'll be a 1 so
+
+917
+00:35:08,130 --> 00:35:09,930
+for example within the very first
+
+918
+00:35:09,930 --> 00:35:12,090
+channel all the positions within the
+
+919
+00:35:12,090 --> 00:35:15,030
+board will be 1 if that tile contains a
+
+920
+00:35:15,030 --> 00:35:17,970
+2 value in the very last Channel the
+
+921
+00:35:17,970 --> 00:35:20,370
+positions within that channel will be 1
+
+922
+00:35:20,370 --> 00:35:23,400
+only if the board contains a 2048 at
+
+923
+00:35:23,400 --> 00:35:24,000
+that position
+
+924
+00:35:24,000 --> 00:35:26,490
+and within you get the values between 2
+
+925
+00:35:26,490 --> 00:35:30,080
+and 2048 and this is a much better
+
+926
+00:35:30,080 --> 00:35:32,790
+representation of the 2048 beta board
+
+927
+00:35:32,790 --> 00:35:35,760
+for the model to work off of and so this
+
+928
+00:35:35,760 --> 00:35:37,650
+logic is essentially just responsible
+
+929
+00:35:37,650 --> 00:35:39,420
+for that this is gonna find the actual
+
+930
+00:35:39,420 --> 00:35:42,390
+log base 2 of the actual value so for
+
+931
+00:35:42,390 --> 00:35:44,430
+example if it were 2048 what it would do
+
+932
+00:35:44,430 --> 00:35:46,590
+would be the simple logic of get the log
+
+933
+00:35:46,590 --> 00:35:49,740
+of 2048 and divided by the log of 2 and
+
+934
+00:35:49,740 --> 00:35:50,970
+then you would get 11 which is our
+
+935
+00:35:50,970 --> 00:35:54,300
+maximum value here and then finally you
+
+936
+00:35:54,300 --> 00:35:56,220
+would just go ahead and feed that into
+
+937
+00:35:56,220 --> 00:36:00,060
+the into the into the tensor so so
+
+938
+00:36:00,060 --> 00:36:01,110
+that's that's how that would work and
+
+939
+00:36:01,110 --> 00:36:02,370
+then you would just reshape it and
+
+940
+00:36:02,370 --> 00:36:04,320
+return it from the function so again
+
+941
+00:36:04,320 --> 00:36:08,010
+relatively simple logic now from there
+
+942
+00:36:08,010 --> 00:36:10,140
+we continue and we can take a look at
+
+943
+00:36:10,140 --> 00:36:12,600
+the actual logic behind the model itself
+
+944
+00:36:12,600 --> 00:36:14,850
+now the thing is if you've ever used
+
+945
+00:36:14,850 --> 00:36:16,410
+with for tensor flow you know that
+
+946
+00:36:16,410 --> 00:36:18,480
+there's a layer protocol and most models
+
+947
+00:36:18,480 --> 00:36:19,950
+are supposed to conform to the layer
+
+948
+00:36:19,950 --> 00:36:22,710
+protocol but in this case I did not have
+
+949
+00:36:22,710 --> 00:36:24,630
+my model conformed to that protocol
+
+950
+00:36:24,630 --> 00:36:27,660
+because I didn't need to because usually
+
+951
+00:36:27,660 --> 00:36:29,040
+you would use the layer if you were
+
+952
+00:36:29,040 --> 00:36:30,690
+actually training the model or if you
+
+953
+00:36:30,690 --> 00:36:33,030
+were calculating gradients or something
+
+954
+00:36:33,030 --> 00:36:34,350
+of that sort where if you were using
+
+955
+00:36:34,350 --> 00:36:37,170
+with other layers but in this case I
+
+956
+00:36:37,170 --> 00:36:38,340
+don't actually need to do any
+
+957
+00:36:38,340 --> 00:36:39,780
+differentiation I don't need to do any
+
+958
+00:36:39,780 --> 00:36:41,100
+training I'm just loading in a
+
+959
+00:36:41,100 --> 00:36:42,900
+pre-trained model for cross and I'll
+
+960
+00:36:42,900 --> 00:36:44,160
+talk about that in a moment how I
+
+961
+00:36:44,160 --> 00:36:45,570
+actually trained it so I'm only
+
+962
+00:36:45,570 --> 00:36:47,610
+conforming the key path I durable
+
+963
+00:36:47,610 --> 00:36:49,890
+protocol and what that lets me do is it
+
+964
+00:36:49,890 --> 00:36:51,900
+lets me take all the stored properties
+
+965
+00:36:51,900 --> 00:36:54,210
+within this actual structure and it
+
+966
+00:36:54,210 --> 00:36:57,450
+allows me to recursively iterate in in
+
+967
+00:36:57,450 --> 00:36:59,250
+this entire structure and all of its
+
+968
+00:36:59,250 --> 00:37:01,080
+sort properties and all of their stored
+
+969
+00:37:01,080 --> 00:37:02,550
+properties and so on and so forth and
+
+970
+00:37:02,550 --> 00:37:04,980
+find the key paths within the structure
+
+971
+00:37:04,980 --> 00:37:07,710
+to every floating point tensor so what
+
+972
+00:37:07,710 --> 00:37:09,360
+that's gonna let me do is find the
+
+973
+00:37:09,360 --> 00:37:11,640
+tensors find the variables that contain
+
+974
+00:37:11,640 --> 00:37:13,680
+all the weights for all the different
+
+975
+00:37:13,680 --> 00:37:16,230
+layers within the model and that's gonna
+
+976
+00:37:16,230 --> 00:37:18,090
+let me load in my weights from Python so
+
+977
+00:37:18,090 --> 00:37:19,500
+that's why we're doing that
+
+978
+00:37:19,500 --> 00:37:20,940
+and the way I'm going to do that is by
+
+979
+00:37:20,940 --> 00:37:22,800
+calling a function that's defined within
+
+980
+00:37:22,800 --> 00:37:24,870
+this protocol called recursively all
+
+981
+00:37:24,870 --> 00:37:27,420
+writable key paths so I'm saying
+
+982
+00:37:27,420 --> 00:37:29,820
+recursively find all of the key paths
+
+983
+00:37:29,820 --> 00:37:32,670
+that I can write to as long as the key
+
+984
+00:37:32,670 --> 00:37:35,730
+path is to a to a floating point tensor
+
+985
+00:37:35,730 --> 00:37:37,310
+and then I'm looping
+
+986
+00:37:37,310 --> 00:37:39,110
+through that and for each weight I'm
+
+987
+00:37:39,110 --> 00:37:41,450
+finding the respective Python weight and
+
+988
+00:37:41,450 --> 00:37:43,910
+loading that into Swift so that's how
+
+989
+00:37:43,910 --> 00:37:44,420
+that works
+
+990
+00:37:44,420 --> 00:37:46,520
+and the way this structure works is an
+
+991
+00:37:46,520 --> 00:37:48,710
+implementing singleton model so I'm not
+
+992
+00:37:48,710 --> 00:37:50,150
+going to create an instance of this
+
+993
+00:37:50,150 --> 00:37:52,010
+structure anywhere it's just within it I
+
+994
+00:37:52,010 --> 00:37:54,530
+have a static constant with this model
+
+995
+00:37:54,530 --> 00:37:56,390
+defined already and the initializer is
+
+996
+00:37:56,390 --> 00:37:57,920
+private so you cannot create more
+
+997
+00:37:57,920 --> 00:37:59,720
+instances other in other places in the
+
+998
+00:37:59,720 --> 00:38:01,250
+code you've got to use this shared
+
+999
+00:38:01,250 --> 00:38:03,620
+instance so so that's how this works
+
+1000
+00:38:03,620 --> 00:38:06,590
+I'll also talk about this model and why
+
+1001
+00:38:06,590 --> 00:38:09,050
+I chose the actual filters and laners
+
+1002
+00:38:09,050 --> 00:38:10,400
+that I did in just a moment
+
+1003
+00:38:10,400 --> 00:38:13,310
+so moving on from here I'm also just
+
+1004
+00:38:13,310 --> 00:38:16,340
+defining a simple constant array that's
+
+1005
+00:38:16,340 --> 00:38:19,490
+telling me the the order in which I like
+
+1006
+00:38:19,490 --> 00:38:21,980
+to define my directions so the way I'm
+
+1007
+00:38:21,980 --> 00:38:23,780
+defining that is just up down left right
+
+1008
+00:38:23,780 --> 00:38:26,570
+so whenever I give you an index for a
+
+1009
+00:38:26,570 --> 00:38:27,890
+direction like this just say I gave you
+
+1010
+00:38:27,890 --> 00:38:30,080
+the index - that means I'm referring to
+
+1011
+00:38:30,080 --> 00:38:34,100
+0 1 2 in this array which is left so
+
+1012
+00:38:34,100 --> 00:38:35,960
+this is just so that I have a standard
+
+1013
+00:38:35,960 --> 00:38:37,730
+integer representation and index
+
+1014
+00:38:37,730 --> 00:38:40,820
+representation for every direction from
+
+1015
+00:38:40,820 --> 00:38:42,620
+there I'm just defining an epsilon super
+
+1016
+00:38:42,620 --> 00:38:44,300
+small value to make sure that some
+
+1017
+00:38:44,300 --> 00:38:47,960
+values aren't 0 just 1 - 4 you don't
+
+1018
+00:38:47,960 --> 00:38:49,370
+need to worry about this value it's just
+
+1019
+00:38:49,370 --> 00:38:51,560
+we need this and Swift and we need this
+
+1020
+00:38:51,560 --> 00:38:53,930
+for Monte Carlo tree search specifically
+
+1021
+00:38:53,930 --> 00:38:55,490
+for the UCT algorithm that will
+
+1022
+00:38:55,490 --> 00:38:57,110
+implement later then I've just got a few
+
+1023
+00:38:57,110 --> 00:38:59,270
+utilities over here in my code these
+
+1024
+00:38:59,270 --> 00:39:00,890
+utilities are pretty standard if you're
+
+1025
+00:39:00,890 --> 00:39:02,180
+coming from a Python world but
+
+1026
+00:39:02,180 --> 00:39:03,530
+unfortunately they need to be defined
+
+1027
+00:39:03,530 --> 00:39:05,780
+manually and Swift so for example within
+
+1028
+00:39:05,780 --> 00:39:07,580
+the collection protocol I'm extending
+
+1029
+00:39:07,580 --> 00:39:10,430
+that wherever the element is comparable
+
+1030
+00:39:10,430 --> 00:39:12,680
+and kind of say the Swift generics make
+
+1031
+00:39:12,680 --> 00:39:14,780
+this super easy so every single
+
+1032
+00:39:14,780 --> 00:39:16,670
+collection type this includes arrays and
+
+1033
+00:39:16,670 --> 00:39:17,930
+sets and dictionaries or whatever
+
+1034
+00:39:17,930 --> 00:39:20,780
+whatever the element is a comparable
+
+1035
+00:39:20,780 --> 00:39:23,960
+element I'm adding I'm adding
+
+1036
+00:39:23,960 --> 00:39:26,390
+functionality to that collection called
+
+1037
+00:39:26,390 --> 00:39:29,150
+art max so the maximum argument it'll
+
+1038
+00:39:29,150 --> 00:39:31,460
+give me the index of the largest element
+
+1039
+00:39:31,460 --> 00:39:33,440
+within that array and it's optional
+
+1040
+00:39:33,440 --> 00:39:37,040
+technically because it can if the
+
+1041
+00:39:37,040 --> 00:39:38,210
+collection is empty you're going to get
+
+1042
+00:39:38,210 --> 00:39:41,420
+a nil result so that's how that's a
+
+1043
+00:39:41,420 --> 00:39:43,100
+large max works and then just a couple
+
+1044
+00:39:43,100 --> 00:39:45,560
+of like array multiplication and
+
+1045
+00:39:45,560 --> 00:39:48,350
+division functions custom operators or
+
+1046
+00:39:48,350 --> 00:39:50,360
+custom operator implementations that are
+
+1047
+00:39:50,360 --> 00:39:50,930
+pretty
+
+1048
+00:39:50,930 --> 00:39:54,440
+Eric and work across multiple types then
+
+1049
+00:39:54,440 --> 00:39:58,069
+we've got the actual meat of the of the
+
+1050
+00:39:58,069 --> 00:40:00,740
+algorithm so then I've got a function
+
+1051
+00:40:00,740 --> 00:40:02,480
+called scoreboard
+
+1052
+00:40:02,480 --> 00:40:04,819
+now scoreboard is gonna take a board and
+
+1053
+00:40:04,819 --> 00:40:06,619
+this board isn't like an array
+
+1054
+00:40:06,619 --> 00:40:08,059
+representational board this is a big
+
+1055
+00:40:08,059 --> 00:40:10,609
+board so it's just an unsigned 64-bit
+
+1056
+00:40:10,609 --> 00:40:13,490
+integer so again if we take a look at
+
+1057
+00:40:13,490 --> 00:40:16,160
+the row each row is 16 bits and we've
+
+1058
+00:40:16,160 --> 00:40:19,309
+got 4 rows 16 times 4 is 64 so it's
+
+1059
+00:40:19,309 --> 00:40:21,470
+pretty convenient that we have a 64 bit
+
+1060
+00:40:21,470 --> 00:40:23,359
+unsigned integer that we can store our
+
+1061
+00:40:23,359 --> 00:40:26,300
+boards in and and the way that I
+
+1062
+00:40:26,300 --> 00:40:27,829
+actually score boards is super simple
+
+1063
+00:40:27,829 --> 00:40:30,650
+just take the model and the shared
+
+1064
+00:40:30,650 --> 00:40:33,380
+instance of it feed the board into the
+
+1065
+00:40:33,380 --> 00:40:37,309
+model and then rescale it from negative
+
+1066
+00:40:37,309 --> 00:40:40,220
+1 to 1 to 0 to 1 this is used for Monte
+
+1067
+00:40:40,220 --> 00:40:42,650
+Carlo tree search again we won't be
+
+1068
+00:40:42,650 --> 00:40:44,150
+getting into Monte Carlo tree search in
+
+1069
+00:40:44,150 --> 00:40:46,670
+a later video but I'll but what I will
+
+1070
+00:40:46,670 --> 00:40:47,930
+tell you is the way we do this is we
+
+1071
+00:40:47,930 --> 00:40:49,490
+simply add 1 to the prediction and
+
+1072
+00:40:49,490 --> 00:40:51,500
+divide that by 2 rescales from negative
+
+1073
+00:40:51,500 --> 00:40:54,790
+1 to 1 to 0 to 1 and then finally
+
+1074
+00:40:54,790 --> 00:40:58,160
+there's the Monte Carlo search not tree
+
+1075
+00:40:58,160 --> 00:41:01,430
+search a Monte Carlo search now the way
+
+1076
+00:41:01,430 --> 00:41:04,880
+this entire 2048 bot works is it's kind
+
+1077
+00:41:04,880 --> 00:41:07,220
+of weird in a way in a sense that it's
+
+1078
+00:41:07,220 --> 00:41:10,040
+not entirely alphago like in the fact
+
+1079
+00:41:10,040 --> 00:41:11,900
+that the policy and value heads are
+
+1080
+00:41:11,900 --> 00:41:14,270
+neural networks but it's also not
+
+1081
+00:41:14,270 --> 00:41:16,130
+entirely primitive it's it's somewhere
+
+1082
+00:41:16,130 --> 00:41:19,069
+in between the policy is calculated by a
+
+1083
+00:41:19,069 --> 00:41:22,010
+Monte Carlo evaluator but the value is
+
+1084
+00:41:22,010 --> 00:41:24,470
+calculated by a neural network because
+
+1085
+00:41:24,470 --> 00:41:26,119
+the thing is neural networks aren't
+
+1086
+00:41:26,119 --> 00:41:29,000
+particularly good at comprehending 2048
+
+1087
+00:41:29,000 --> 00:41:30,589
+boards because of their stochastic
+
+1088
+00:41:30,589 --> 00:41:33,290
+nature and because of the fact that two
+
+1089
+00:41:33,290 --> 00:41:36,500
+moves don't really make all that much of
+
+1090
+00:41:36,500 --> 00:41:37,849
+a difference in whether or not you lose
+
+1091
+00:41:37,849 --> 00:41:39,950
+a game right now if you had some sort of
+
+1092
+00:41:39,950 --> 00:41:42,109
+2048 board I could make three random
+
+1093
+00:41:42,109 --> 00:41:44,299
+moves and you probably still wouldn't
+
+1094
+00:41:44,299 --> 00:41:45,589
+lose the game there's a way you could
+
+1095
+00:41:45,589 --> 00:41:47,599
+maneuver the board in order to fix those
+
+1096
+00:41:47,599 --> 00:41:49,880
+mistakes at least this is that's how
+
+1097
+00:41:49,880 --> 00:41:52,849
+this works and and neural networks
+
+1098
+00:41:52,849 --> 00:41:55,490
+cannot model that policy very well and
+
+1099
+00:41:55,490 --> 00:41:57,349
+so that's why the policy is being
+
+1100
+00:41:57,349 --> 00:41:59,480
+calculated by a Monte Carlo evaluator
+
+1101
+00:41:59,480 --> 00:42:01,549
+but the value is being calculated by a
+
+1102
+00:42:01,549 --> 00:42:02,130
+neural
+
+1103
+00:42:02,130 --> 00:42:04,170
+because the value neural networks are
+
+1104
+00:42:04,170 --> 00:42:06,089
+pretty good memory stick me are you
+
+1105
+00:42:06,089 --> 00:42:08,250
+close to losing the game or not in fact
+
+1106
+00:42:08,250 --> 00:42:12,119
+I was able to get around a 0.02 mean
+
+1107
+00:42:12,119 --> 00:42:14,819
+squared error loss on a validation data
+
+1108
+00:42:14,819 --> 00:42:17,160
+set that I had for for training the
+
+1109
+00:42:17,160 --> 00:42:18,779
+network and I'll again I'll get into
+
+1110
+00:42:18,779 --> 00:42:19,769
+that in just a moment
+
+1111
+00:42:19,769 --> 00:42:22,559
+this Monte Carlo search if you've seen
+
+1112
+00:42:22,559 --> 00:42:24,420
+the cognitive class that AI course it's
+
+1113
+00:42:24,420 --> 00:42:26,039
+really familiar to you so I'm not going
+
+1114
+00:42:26,039 --> 00:42:27,930
+to go over it in much detail just to
+
+1115
+00:42:27,930 --> 00:42:30,210
+know that it takes a game state as an
+
+1116
+00:42:30,210 --> 00:42:32,940
+input and then it returns just an array
+
+1117
+00:42:32,940 --> 00:42:35,640
+of floats and this array is always going
+
+1118
+00:42:35,640 --> 00:42:37,619
+to be four elements long no matter what
+
+1119
+00:42:37,619 --> 00:42:41,039
+each index refers to a direction and
+
+1120
+00:42:41,039 --> 00:42:43,680
+it's going to give you a probability for
+
+1121
+00:42:43,680 --> 00:42:46,380
+each direction that they all sum to one
+
+1122
+00:42:46,380 --> 00:42:49,769
+so it's going to give you the directions
+
+1123
+00:42:49,769 --> 00:42:52,619
+that it thinks would be best to move in
+
+1124
+00:42:52,619 --> 00:42:54,960
+essentially so again pretty much what
+
+1125
+00:42:54,960 --> 00:42:56,789
+the output of a policy network would be
+
+1126
+00:42:56,789 --> 00:43:00,299
+in the actual alphago algorithm now from
+
+1127
+00:43:00,299 --> 00:43:03,180
+there we start to get into the fun part
+
+1128
+00:43:03,180 --> 00:43:04,680
+of the intelligence which is the search
+
+1129
+00:43:04,680 --> 00:43:06,660
+and score the surgeon score actually
+
+1130
+00:43:06,660 --> 00:43:09,240
+takes a board and returns two outputs
+
+1131
+00:43:09,240 --> 00:43:11,700
+the policy and the value so what it's
+
+1132
+00:43:11,700 --> 00:43:13,559
+going to do is it's going to run the
+
+1133
+00:43:13,559 --> 00:43:15,359
+evaluator that I just showed you for the
+
+1134
+00:43:15,359 --> 00:43:18,960
+policy as well as the value network to
+
+1135
+00:43:18,960 --> 00:43:21,630
+score the board and it'll return both a
+
+1136
+00:43:21,630 --> 00:43:24,509
+policy and the value and this is what
+
+1137
+00:43:24,509 --> 00:43:26,789
+enables the Monte Carlo tree search to
+
+1138
+00:43:26,789 --> 00:43:28,980
+be this intelligent and know where to
+
+1139
+00:43:28,980 --> 00:43:32,609
+look exactly and then finally it got the
+
+1140
+00:43:32,609 --> 00:43:35,220
+Monte Carlo tree search now as you can
+
+1141
+00:43:35,220 --> 00:43:37,289
+tell Monte Carlo tree search is a pretty
+
+1142
+00:43:37,289 --> 00:43:40,410
+hefty algorithm here and the entire
+
+1143
+00:43:40,410 --> 00:43:43,079
+purpose and and the way Monte Carlo tree
+
+1144
+00:43:43,079 --> 00:43:45,359
+search works is it's a topic for a
+
+1145
+00:43:45,359 --> 00:43:46,920
+separate video where I'm going to show
+
+1146
+00:43:46,920 --> 00:43:48,599
+you how you can actually train your own
+
+1147
+00:43:48,599 --> 00:43:51,690
+alpha go including the policy Network
+
+1148
+00:43:51,690 --> 00:43:54,240
+from scratch that's part two however for
+
+1149
+00:43:54,240 --> 00:43:56,609
+now I will tell you how one of the two
+
+1150
+00:43:56,609 --> 00:43:58,890
+functions works within the structure for
+
+1151
+00:43:58,890 --> 00:44:01,470
+Monte Carlo tree search and that is the
+
+1152
+00:44:01,470 --> 00:44:04,769
+get action probabilities now we didn't
+
+1153
+00:44:04,769 --> 00:44:06,150
+get action probabilities this is the
+
+1154
+00:44:06,150 --> 00:44:07,950
+main function that you're hitting with
+
+1155
+00:44:07,950 --> 00:44:10,380
+in Monte Carlo tree search or MCTS and
+
+1156
+00:44:10,380 --> 00:44:11,880
+I'll call it from here on out you're
+
+1157
+00:44:11,880 --> 00:44:13,799
+feeding it a board and a temperature
+
+1158
+00:44:13,799 --> 00:44:15,420
+know what's a temperature
+
+1159
+00:44:15,420 --> 00:44:17,640
+well the temperature is gonna tell your
+
+1160
+00:44:17,640 --> 00:44:20,519
+model how open you are to new ideas or
+
+1161
+00:44:20,519 --> 00:44:22,260
+exploration so if you've got a really
+
+1162
+00:44:22,260 --> 00:44:23,640
+high temperature things are moving
+
+1163
+00:44:23,640 --> 00:44:25,740
+around a lot then you know maybe you
+
+1164
+00:44:25,740 --> 00:44:28,980
+want to have a little bit less of a very
+
+1165
+00:44:28,980 --> 00:44:32,510
+peak in terms of in terms of prediction
+
+1166
+00:44:32,510 --> 00:44:35,339
+probabilities predicted probabilities
+
+1167
+00:44:35,339 --> 00:44:38,180
+maybe you want to have a more smooth
+
+1168
+00:44:38,180 --> 00:44:41,339
+probability matrix in that you're okay
+
+1169
+00:44:41,339 --> 00:44:43,109
+with exploring other options that aren't
+
+1170
+00:44:43,109 --> 00:44:45,240
+necessarily as good but then if you've
+
+1171
+00:44:45,240 --> 00:44:47,220
+got a really cold temperature low
+
+1172
+00:44:47,220 --> 00:44:49,619
+temperature like zero then you only want
+
+1173
+00:44:49,619 --> 00:44:52,680
+to have a one for the top prediction and
+
+1174
+00:44:52,680 --> 00:44:54,059
+zeros for everything else that there's
+
+1175
+00:44:54,059 --> 00:44:56,069
+no chance of you looking in the wrong
+
+1176
+00:44:56,069 --> 00:44:58,440
+direction or at least according to the
+
+1177
+00:44:58,440 --> 00:45:01,200
+Monte Carlo tree search so so the way
+
+1178
+00:45:01,200 --> 00:45:02,730
+this works the way this function
+
+1179
+00:45:02,730 --> 00:45:04,920
+actually executes is it runs a number of
+
+1180
+00:45:04,920 --> 00:45:07,349
+Monte Carlo simulations so it's actually
+
+1181
+00:45:07,349 --> 00:45:09,299
+gonna find a note it's going to expand
+
+1182
+00:45:09,299 --> 00:45:10,859
+the note it's gonna run its value
+
+1183
+00:45:10,859 --> 00:45:12,510
+network it's gonna back propagate those
+
+1184
+00:45:12,510 --> 00:45:14,819
+values of the tree and it runs a number
+
+1185
+00:45:14,819 --> 00:45:16,920
+of these simulations and that's defined
+
+1186
+00:45:16,920 --> 00:45:19,349
+within the actual structure itself and
+
+1187
+00:45:19,349 --> 00:45:21,240
+then what it does is it actually takes
+
+1188
+00:45:21,240 --> 00:45:24,329
+the it's able to calculate the
+
+1189
+00:45:24,329 --> 00:45:27,539
+probabilities for visiting each four
+
+1190
+00:45:27,539 --> 00:45:29,759
+before choosing an action and the way it
+
+1191
+00:45:29,759 --> 00:45:31,650
+chooses it the way it calculates those
+
+1192
+00:45:31,650 --> 00:45:33,599
+probabilities is by actually taking the
+
+1193
+00:45:33,599 --> 00:45:35,759
+visit count of each node again you don't
+
+1194
+00:45:35,759 --> 00:45:36,869
+need to understand what visit count
+
+1195
+00:45:36,869 --> 00:45:38,279
+means just yet that's for the next video
+
+1196
+00:45:38,279 --> 00:45:40,349
+but what it does is it takes a visit
+
+1197
+00:45:40,349 --> 00:45:42,690
+count for each node at that root level
+
+1198
+00:45:42,690 --> 00:45:45,450
+and if the temperature is zero it just
+
+1199
+00:45:45,450 --> 00:45:48,750
+gives a 1/4 probability wherever the
+
+1200
+00:45:48,750 --> 00:45:50,700
+node has the or the action has the
+
+1201
+00:45:50,700 --> 00:45:52,460
+highest visit count and returns that
+
+1202
+00:45:52,460 --> 00:45:54,630
+otherwise it's going to actually go
+
+1203
+00:45:54,630 --> 00:45:56,279
+ahead and calculate that probabilities
+
+1204
+00:45:56,279 --> 00:45:58,440
+according to that temperature and then
+
+1205
+00:45:58,440 --> 00:46:00,839
+return that array so essentially what
+
+1206
+00:46:00,839 --> 00:46:02,789
+it's doing is calculating probabilities
+
+1207
+00:46:02,789 --> 00:46:05,400
+based off a visit count and that visit
+
+1208
+00:46:05,400 --> 00:46:08,099
+count is determined by the actual
+
+1209
+00:46:08,099 --> 00:46:10,710
+searches that the Monte Carlo tree
+
+1210
+00:46:10,710 --> 00:46:13,920
+search does now traditionally the more
+
+1211
+00:46:13,920 --> 00:46:16,410
+searches you do the more simulations you
+
+1212
+00:46:16,410 --> 00:46:19,250
+do the better your result is gonna be
+
+1213
+00:46:19,250 --> 00:46:21,960
+but then again that also means your
+
+1214
+00:46:21,960 --> 00:46:24,119
+results gonna come to you slower now
+
+1215
+00:46:24,119 --> 00:46:25,559
+because we're actually running Monte
+
+1216
+00:46:25,559 --> 00:46:27,390
+Carlo evaluations and not using an
+
+1217
+00:46:27,390 --> 00:46:29,420
+network for the policy the policy
+
+1218
+00:46:29,420 --> 00:46:32,039
+network or the policy algorithm is
+
+1219
+00:46:32,039 --> 00:46:33,420
+pretty compute-intensive
+
+1220
+00:46:33,420 --> 00:46:35,039
+and so we always want to run lower
+
+1221
+00:46:35,039 --> 00:46:36,690
+simulation counts otherwise it's gonna
+
+1222
+00:46:36,690 --> 00:46:39,180
+be super slow but if we were to
+
+1223
+00:46:39,180 --> 00:46:40,740
+transition to using a neural network
+
+1224
+00:46:40,740 --> 00:46:43,260
+then we have the ability to use more and
+
+1225
+00:46:43,260 --> 00:46:44,940
+more simulations which allows us to look
+
+1226
+00:46:44,940 --> 00:46:47,670
+at deeper within the game tree and so
+
+1227
+00:46:47,670 --> 00:46:49,410
+that's why alphago uses neural networks
+
+1228
+00:46:49,410 --> 00:46:50,880
+because you don't need to have to think
+
+1229
+00:46:50,880 --> 00:46:52,500
+about what the policy is going to be the
+
+1230
+00:46:52,500 --> 00:46:54,210
+neural network just has that knowledge
+
+1231
+00:46:54,210 --> 00:46:57,000
+and you're able to leverage that and so
+
+1232
+00:46:57,000 --> 00:47:00,390
+the actual search algorithm I cannot do
+
+1233
+00:47:00,390 --> 00:47:01,650
+it justice in this video we're going to
+
+1234
+00:47:01,650 --> 00:47:03,359
+be talking about it later on a very high
+
+1235
+00:47:03,359 --> 00:47:06,510
+level what it's doing is it's it's doing
+
+1236
+00:47:06,510 --> 00:47:09,440
+a few key steps around choosing nodes
+
+1237
+00:47:09,440 --> 00:47:11,460
+expanding those nodes and back
+
+1238
+00:47:11,460 --> 00:47:13,710
+propagating those values up through the
+
+1239
+00:47:13,710 --> 00:47:16,500
+tree with this logic over here and then
+
+1240
+00:47:16,500 --> 00:47:18,059
+based off of a visit count that's
+
+1241
+00:47:18,059 --> 00:47:20,309
+calculated over here we can go ahead and
+
+1242
+00:47:20,309 --> 00:47:23,369
+determine what the best action to take
+
+1243
+00:47:23,369 --> 00:47:26,970
+is so that's Monte Carlo tree search in
+
+1244
+00:47:26,970 --> 00:47:29,339
+a nutshell now from here we've got our
+
+1245
+00:47:29,339 --> 00:47:31,500
+cateura code so the intelligence is over
+
+1246
+00:47:31,500 --> 00:47:33,599
+and I know it's like wait what that's it
+
+1247
+00:47:33,599 --> 00:47:35,400
+well remember we haven't covered
+
+1248
+00:47:35,400 --> 00:47:37,109
+training yet we haven't covered quite a
+
+1249
+00:47:37,109 --> 00:47:39,630
+few things so let's take a look at this
+
+1250
+00:47:39,630 --> 00:47:41,190
+cateura code this Couture our code is
+
+1251
+00:47:41,190 --> 00:47:43,049
+gonna open up a static file server and
+
+1252
+00:47:43,049 --> 00:47:44,640
+that's what's gonna say ok whatever's in
+
+1253
+00:47:44,640 --> 00:47:46,380
+the public directory just open that up
+
+1254
+00:47:46,380 --> 00:47:50,160
+on the on that on the root end point so
+
+1255
+00:47:50,160 --> 00:47:52,410
+this would be the 2048 game since it's
+
+1256
+00:47:52,410 --> 00:47:55,619
+built in HTML and JavaScript and then
+
+1257
+00:47:55,619 --> 00:47:57,690
+finally I'm going to open up a new Monte
+
+1258
+00:47:57,690 --> 00:47:59,130
+Carlo tree search instance I'm gonna run
+
+1259
+00:47:59,130 --> 00:48:01,319
+only six simulations I can you probably
+
+1260
+00:48:01,319 --> 00:48:02,579
+want to run as many of these as possible
+
+1261
+00:48:02,579 --> 00:48:05,519
+but six is a good balance between very
+
+1262
+00:48:05,519 --> 00:48:06,299
+high winrate
+
+1263
+00:48:06,299 --> 00:48:08,220
+and at the same time very good
+
+1264
+00:48:08,220 --> 00:48:10,619
+performance and then just open up an
+
+1265
+00:48:10,619 --> 00:48:12,630
+endpoint called analyze take a board
+
+1266
+00:48:12,630 --> 00:48:15,000
+from the from the JavaScript code go
+
+1267
+00:48:15,000 --> 00:48:17,279
+ahead and predict using Monte Carlo tree
+
+1268
+00:48:17,279 --> 00:48:18,900
+search with the temperature of zero so
+
+1269
+00:48:18,900 --> 00:48:21,210
+we don't make any mistakes go ahead and
+
+1270
+00:48:21,210 --> 00:48:23,460
+choose the max and the arc max from that
+
+1271
+00:48:23,460 --> 00:48:27,119
+so get the get the action of the highest
+
+1272
+00:48:27,119 --> 00:48:29,579
+probability and then convert that
+
+1273
+00:48:29,579 --> 00:48:32,059
+direction to a string and return that
+
+1274
+00:48:32,059 --> 00:48:35,190
+from the cateura code and then continue
+
+1275
+00:48:35,190 --> 00:48:37,920
+from there and so that is essentially
+
+1276
+00:48:37,920 --> 00:48:39,220
+how this entire and
+
+1277
+00:48:39,220 --> 00:48:42,670
+code works now how did I train the value
+
+1278
+00:48:42,670 --> 00:48:45,130
+network you may ask well here's what I
+
+1279
+00:48:45,130 --> 00:48:47,890
+did I set up this thing called a thread
+
+1280
+00:48:47,890 --> 00:48:50,200
+pool now this is very generic code this
+
+1281
+00:48:50,200 --> 00:48:52,510
+is in no way specific to this
+
+1282
+00:48:52,510 --> 00:48:54,400
+application like you could copy and
+
+1283
+00:48:54,400 --> 00:48:55,570
+paste this code that I've written into
+
+1284
+00:48:55,570 --> 00:48:57,550
+any application you could use the thread
+
+1285
+00:48:57,550 --> 00:48:59,980
+pool and everything and this thread pool
+
+1286
+00:48:59,980 --> 00:49:02,710
+is relatively simple basically what it
+
+1287
+00:49:02,710 --> 00:49:04,859
+does is it takes a function so a closure
+
+1288
+00:49:04,859 --> 00:49:07,780
+and it stores that closure within the
+
+1289
+00:49:07,780 --> 00:49:10,330
+structure and what it enables you to do
+
+1290
+00:49:10,330 --> 00:49:13,690
+is specify alright I want to run this
+
+1291
+00:49:13,690 --> 00:49:16,300
+function on this array of inputs and I
+
+1292
+00:49:16,300 --> 00:49:17,830
+want to get an array of outputs and
+
+1293
+00:49:17,830 --> 00:49:19,390
+these can be totally generic types the
+
+1294
+00:49:19,390 --> 00:49:22,180
+inputs and outputs can be anything and I
+
+1295
+00:49:22,180 --> 00:49:23,680
+only want to use a certain number of
+
+1296
+00:49:23,680 --> 00:49:26,170
+threads though so let's just say you had
+
+1297
+00:49:26,170 --> 00:49:29,200
+a task like Monte Carlo evaluation now
+
+1298
+00:49:29,200 --> 00:49:31,000
+if you only had 16 threads on your
+
+1299
+00:49:31,000 --> 00:49:33,220
+computer and you had 30,000 boards to
+
+1300
+00:49:33,220 --> 00:49:35,380
+analyze and if you were to just do a
+
+1301
+00:49:35,380 --> 00:49:37,810
+loop for I in 1 to 30,000 that if you
+
+1302
+00:49:37,810 --> 00:49:40,060
+were to do dispatch Q double dot async
+
+1303
+00:49:40,060 --> 00:49:42,250
+on everyone you would be launching up 30
+
+1304
+00:49:42,250 --> 00:49:43,900
+thousand threads well not actually
+
+1305
+00:49:43,900 --> 00:49:45,250
+because the scheduler is a bit more
+
+1306
+00:49:45,250 --> 00:49:46,869
+intelligent than just letting you spawn
+
+1307
+00:49:46,869 --> 00:49:49,839
+30,000 threads but you you've overloaded
+
+1308
+00:49:49,839 --> 00:49:51,580
+the system you've given it too much work
+
+1309
+00:49:51,580 --> 00:49:53,140
+to do and there's so much context
+
+1310
+00:49:53,140 --> 00:49:54,880
+switching happening that it's not really
+
+1311
+00:49:54,880 --> 00:49:56,740
+doing a good job at any of them and so
+
+1312
+00:49:56,740 --> 00:49:58,599
+it ends up being pretty slow but this
+
+1313
+00:49:58,599 --> 00:50:00,460
+thread pool makes sure that you're only
+
+1314
+00:50:00,460 --> 00:50:02,680
+running and number of things at once so
+
+1315
+00:50:02,680 --> 00:50:04,839
+threads number of thing at once and then
+
+1316
+00:50:04,839 --> 00:50:06,790
+every time something is done it launches
+
+1317
+00:50:06,790 --> 00:50:09,550
+a new thread and opens up and tells it
+
+1318
+00:50:09,550 --> 00:50:12,400
+to do some work as well and the way this
+
+1319
+00:50:12,400 --> 00:50:14,170
+works is it uses three semaphores to
+
+1320
+00:50:14,170 --> 00:50:18,339
+make sure you know locks are making sure
+
+1321
+00:50:18,339 --> 00:50:20,980
+that the code is thread safe and and it
+
+1322
+00:50:20,980 --> 00:50:22,720
+returns its outputs in a synchronous
+
+1323
+00:50:22,720 --> 00:50:24,250
+fashion so when you call this function
+
+1324
+00:50:24,250 --> 00:50:26,320
+it'll block until all your work is done
+
+1325
+00:50:26,320 --> 00:50:28,900
+and then it returns the output to you so
+
+1326
+00:50:28,900 --> 00:50:30,760
+that's how the operate and and the
+
+1327
+00:50:30,760 --> 00:50:32,500
+thread pool works so with this thread
+
+1328
+00:50:32,500 --> 00:50:35,770
+pool what I did is I actually completely
+
+1329
+00:50:35,770 --> 00:50:38,260
+let go of Monte Carlo tree search and I
+
+1330
+00:50:38,260 --> 00:50:40,660
+just took the Monte Carlo evaluation so
+
+1331
+00:50:40,660 --> 00:50:42,490
+what I built in my cognitive class III
+
+1332
+00:50:42,490 --> 00:50:46,690
+course the world's fastest 2048 AI and
+
+1333
+00:50:46,690 --> 00:50:48,940
+with that what I was able to do was
+
+1334
+00:50:48,940 --> 00:50:51,520
+actually build a data
+
+1335
+00:50:51,520 --> 00:50:55,120
+set of 3000 2048 games which had a win
+
+1336
+00:50:55,120 --> 00:50:59,050
+rate of approximately 65 percent which
+
+1337
+00:50:59,050 --> 00:51:01,420
+is not that great but it's also not bad
+
+1338
+00:51:01,420 --> 00:51:04,210
+either considering that of all the games
+
+1339
+00:51:04,210 --> 00:51:07,060
+played on 2048 only about 1 or 2 percent
+
+1340
+00:51:07,060 --> 00:51:10,390
+were actually won by humans so a 65% win
+
+1341
+00:51:10,390 --> 00:51:13,810
+rate definitely isn't bad and with this
+
+1342
+00:51:13,810 --> 00:51:15,940
+data set I exported that to an empire
+
+1343
+00:51:15,940 --> 00:51:18,520
+array put that onto a GPU server of mine
+
+1344
+00:51:18,520 --> 00:51:21,550
+and used a Python script in order to
+
+1345
+00:51:21,550 --> 00:51:25,450
+train a model to predict based off of
+
+1346
+00:51:25,450 --> 00:51:28,120
+the current board state what's the
+
+1347
+00:51:28,120 --> 00:51:30,370
+likelihood of me actually winning this
+
+1348
+00:51:30,370 --> 00:51:32,800
+current game now there is a bit of a
+
+1349
+00:51:32,800 --> 00:51:34,930
+problem with that though and that is
+
+1350
+00:51:34,930 --> 00:51:38,890
+that the 2048 game is complex from the
+
+1351
+00:51:38,890 --> 00:51:40,960
+very very beginning from the very first
+
+1352
+00:51:40,960 --> 00:51:43,240
+few moves there's very little there's
+
+1353
+00:51:43,240 --> 00:51:44,560
+very little you can do in terms of
+
+1354
+00:51:44,560 --> 00:51:46,900
+understanding the initial board and
+
+1355
+00:51:46,900 --> 00:51:48,700
+determining if you're gonna win or lose
+
+1356
+00:51:48,700 --> 00:51:50,650
+because even if you were to do random
+
+1357
+00:51:50,650 --> 00:51:53,140
+key smash for the first 100 moves it
+
+1358
+00:51:53,140 --> 00:51:54,640
+doesn't really matter because the first
+
+1359
+00:51:54,640 --> 00:51:57,520
+few moves are so so rudimentary anyway
+
+1360
+00:51:57,520 --> 00:51:59,680
+that you can recover from there and win
+
+1361
+00:51:59,680 --> 00:52:03,490
+from the worst forward state however the
+
+1362
+00:52:03,490 --> 00:52:05,050
+neural network model doesn't understand
+
+1363
+00:52:05,050 --> 00:52:06,820
+that what's gonna happen is it's gonna
+
+1364
+00:52:06,820 --> 00:52:09,940
+have 3,000 inputs where a couple of were
+
+1365
+00:52:09,940 --> 00:52:12,730
+65 percent of them are wins and the rest
+
+1366
+00:52:12,730 --> 00:52:15,190
+are all losing port states and it's
+
+1367
+00:52:15,190 --> 00:52:16,600
+gonna take those initial board States
+
+1368
+00:52:16,600 --> 00:52:19,330
+and try and overfit to specific board
+
+1369
+00:52:19,330 --> 00:52:20,830
+States telling it that hey this is a
+
+1370
+00:52:20,830 --> 00:52:22,780
+winner of the soluz so the way I solve
+
+1371
+00:52:22,780 --> 00:52:24,520
+that problem it's actually pretty
+
+1372
+00:52:24,520 --> 00:52:29,020
+interesting what I do is I take I run
+
+1373
+00:52:29,020 --> 00:52:30,880
+the MPI linspace function so I generate
+
+1374
+00:52:30,880 --> 00:52:33,880
+a linear space so let's just say a
+
+1375
+00:52:33,880 --> 00:52:37,630
+certain game was 900 moves long what I
+
+1376
+00:52:37,630 --> 00:52:41,380
+would do is generate an array with 900
+
+1377
+00:52:41,380 --> 00:52:44,650
+elements and going from 0 to 1 assuming
+
+1378
+00:52:44,650 --> 00:52:47,320
+that we won the game that the model win
+
+1379
+00:52:47,320 --> 00:52:49,870
+was able to win the game we go from 0 to
+
+1380
+00:52:49,870 --> 00:52:53,620
+1 now here's a thing we're incrementing
+
+1381
+00:52:53,620 --> 00:52:56,260
+with just a linear increment every
+
+1382
+00:52:56,260 --> 00:52:58,540
+single time and for every element in the
+
+1383
+00:52:58,540 --> 00:53:00,520
+array to get to a 1 but then what I do
+
+1384
+00:53:00,520 --> 00:53:03,370
+is I take every element and I actually
+
+1385
+00:53:03,370 --> 00:53:05,230
+replace it with that element of the
+
+1386
+00:53:05,230 --> 00:53:05,650
+power
+
+1387
+00:53:05,650 --> 00:53:07,900
+not so what that does is it gives me a
+
+1388
+00:53:07,900 --> 00:53:10,140
+bit of an exponentiation
+
+1389
+00:53:10,140 --> 00:53:13,630
+that says moves made towards the end of
+
+1390
+00:53:13,630 --> 00:53:16,750
+the game are more likely to actually
+
+1391
+00:53:16,750 --> 00:53:18,700
+have affected at the end result of a
+
+1392
+00:53:18,700 --> 00:53:21,190
+game whereas towards the beginning your
+
+1393
+00:53:21,190 --> 00:53:22,900
+predictions can be closer to zero
+
+1394
+00:53:22,900 --> 00:53:24,549
+because you're not really sure which way
+
+1395
+00:53:24,549 --> 00:53:26,710
+the game is gonna go and if you go ahead
+
+1396
+00:53:26,710 --> 00:53:28,690
+and actually plot out the value
+
+1397
+00:53:28,690 --> 00:53:30,760
+throughout the game you're gonna see the
+
+1398
+00:53:30,760 --> 00:53:32,559
+value network actually follows that
+
+1399
+00:53:32,559 --> 00:53:34,720
+curve towards the end of the game it
+
+1400
+00:53:34,720 --> 00:53:36,190
+starts to make stronger and stronger
+
+1401
+00:53:36,190 --> 00:53:38,349
+predictions and they start to get better
+
+1402
+00:53:38,349 --> 00:53:40,240
+and better in the beginning they're not
+
+1403
+00:53:40,240 --> 00:53:42,039
+very good keeps jittering up and down
+
+1404
+00:53:42,039 --> 00:53:43,599
+but that doesn't matter because I
+
+1405
+00:53:43,599 --> 00:53:45,670
+trained it to make sure the values are
+
+1406
+00:53:45,670 --> 00:53:47,559
+close to zero at the beginning and only
+
+1407
+00:53:47,559 --> 00:53:48,760
+towards the end of the game will it
+
+1408
+00:53:48,760 --> 00:53:50,230
+actually start to make more confident
+
+1409
+00:53:50,230 --> 00:53:53,289
+predictions now if it if the model had
+
+1410
+00:53:53,289 --> 00:53:54,760
+lost the game then we would do the same
+
+1411
+00:53:54,760 --> 00:53:56,799
+thing in Reverse it would do zero to
+
+1412
+00:53:56,799 --> 00:53:59,319
+negative one and then do or well
+
+1413
+00:53:59,319 --> 00:54:01,510
+technically still zero to one and then
+
+1414
+00:54:01,510 --> 00:54:03,309
+every value to the power of nine and
+
+1415
+00:54:03,309 --> 00:54:04,900
+multiply those values by negative one
+
+1416
+00:54:04,900 --> 00:54:07,539
+and and so we would be able to take that
+
+1417
+00:54:07,539 --> 00:54:09,339
+and create a curve in the opposite
+
+1418
+00:54:09,339 --> 00:54:12,010
+direction and by doing that the model
+
+1419
+00:54:12,010 --> 00:54:13,869
+was able to learn a really good
+
+1420
+00:54:13,869 --> 00:54:17,230
+representation of what makes a good 2048
+
+1421
+00:54:17,230 --> 00:54:19,569
+board at what stage of the game this
+
+1422
+00:54:19,569 --> 00:54:21,250
+isn't something that demine did for
+
+1423
+00:54:21,250 --> 00:54:23,079
+alphago but it's something that I did as
+
+1424
+00:54:23,079 --> 00:54:25,869
+a game specific optimization for 2048 so
+
+1425
+00:54:25,869 --> 00:54:27,250
+it just goes to show how you can take a
+
+1426
+00:54:27,250 --> 00:54:29,380
+research done on a completely different
+
+1427
+00:54:29,380 --> 00:54:30,880
+kind of game is a completely different
+
+1428
+00:54:30,880 --> 00:54:32,829
+kind of play style and apply similar
+
+1429
+00:54:32,829 --> 00:54:35,109
+research to play again a completely
+
+1430
+00:54:35,109 --> 00:54:37,059
+different kind of game but using the
+
+1431
+00:54:37,059 --> 00:54:40,119
+same fundamental techniques now the
+
+1432
+00:54:40,119 --> 00:54:41,950
+actual code for training this value
+
+1433
+00:54:41,950 --> 00:54:44,260
+network will be available as a separate
+
+1434
+00:54:44,260 --> 00:54:46,779
+repository to this code on github
+
+1435
+00:54:46,779 --> 00:54:49,029
+both github links will be in the
+
+1436
+00:54:49,029 --> 00:54:51,400
+description for you to see and for you
+
+1437
+00:54:51,400 --> 00:54:53,410
+to use I will also have a little bit of
+
+1438
+00:54:53,410 --> 00:54:55,359
+Swift code in the initial repository of
+
+1439
+00:54:55,359 --> 00:54:58,140
+how you can actually generate that data
+
+1440
+00:54:58,140 --> 00:55:01,630
+set and so that's how the training
+
+1441
+00:55:01,630 --> 00:55:04,809
+actually works and with that you're able
+
+1442
+00:55:04,809 --> 00:55:07,869
+to create a really fast a performant and
+
+1443
+00:55:07,869 --> 00:55:12,609
+a model that reaches an over 85% win
+
+1444
+00:55:12,609 --> 00:55:16,210
+rate on 2048 and that's with only six
+
+1445
+00:55:16,210 --> 00:55:17,859
+simulations imagine if you were to do
+
+1446
+00:55:17,859 --> 00:55:19,330
+more simulations which you
+
+1447
+00:55:19,330 --> 00:55:20,950
+easily do just by tinkering around with
+
+1448
+00:55:20,950 --> 00:55:23,560
+this one individual value over here in
+
+1449
+00:55:23,560 --> 00:55:25,570
+this initializer you can get much higher
+
+1450
+00:55:25,570 --> 00:55:28,180
+win rates by allowing the network or by
+
+1451
+00:55:28,180 --> 00:55:30,010
+allowing the game tree to expand it
+
+1452
+00:55:30,010 --> 00:55:32,500
+further and further down now once again
+
+1453
+00:55:32,500 --> 00:55:34,450
+you simply run this it opens up an
+
+1454
+00:55:34,450 --> 00:55:35,860
+endpoint and you're free to experiment
+
+1455
+00:55:35,860 --> 00:55:39,630
+and go ahead and run your your very own
+
+1456
+00:55:39,630 --> 00:55:43,600
+2048 any I like that now there is one
+
+1457
+00:55:43,600 --> 00:55:45,130
+more thing that I want to show you
+
+1458
+00:55:45,130 --> 00:55:48,160
+before we end off today and that is this
+
+1459
+00:55:48,160 --> 00:55:51,100
+over here now as I mentioned some of
+
+1460
+00:55:51,100 --> 00:55:53,440
+these moves are kind of magical the way
+
+1461
+00:55:53,440 --> 00:55:56,020
+just happens to plan everything
+
+1462
+00:55:56,020 --> 00:55:57,360
+beforehand in this stochastic
+
+1463
+00:55:57,360 --> 00:56:00,160
+environment and how it just makes things
+
+1464
+00:56:00,160 --> 00:56:02,860
+work and how it creates these local
+
+1465
+00:56:02,860 --> 00:56:06,370
+aisles of tiles to merge so so here's
+
+1466
+00:56:06,370 --> 00:56:08,860
+what's gonna happen this is the ending
+
+1467
+00:56:08,860 --> 00:56:11,200
+stage of one of one of the 2048 games
+
+1468
+00:56:11,200 --> 00:56:13,330
+that uses this exact technique then I
+
+1469
+00:56:13,330 --> 00:56:15,580
+just record it because it's so fast and
+
+1470
+00:56:15,580 --> 00:56:17,920
+I'm gonna step through this frame by
+
+1471
+00:56:17,920 --> 00:56:20,640
+frame to show you just how fast and how
+
+1472
+00:56:20,640 --> 00:56:24,220
+genius the solution was for this game so
+
+1473
+00:56:24,220 --> 00:56:26,530
+take a look at this board now this isn't
+
+1474
+00:56:26,530 --> 00:56:28,300
+from a human perspective this isn't a
+
+1475
+00:56:28,300 --> 00:56:30,880
+great board now you have all the pieces
+
+1476
+00:56:30,880 --> 00:56:33,190
+necessary to get to 2048 but they're not
+
+1477
+00:56:33,190 --> 00:56:34,810
+merged and they're not in a good
+
+1478
+00:56:34,810 --> 00:56:37,480
+position to be merged but look at this
+
+1479
+00:56:37,480 --> 00:56:39,430
+if you take a look at this column over
+
+1480
+00:56:39,430 --> 00:56:41,920
+here there's only one space at the top
+
+1481
+00:56:41,920 --> 00:56:44,350
+if you hit the up arrow key you're
+
+1482
+00:56:44,350 --> 00:56:46,780
+guaranteed to move these three tiles up
+
+1483
+00:56:46,780 --> 00:56:49,480
+and that means these two 32s are gonna
+
+1484
+00:56:49,480 --> 00:56:51,460
+be aligned but what does that also mean
+
+1485
+00:56:51,460 --> 00:56:54,400
+it also means that after you merge them
+
+1486
+00:56:54,400 --> 00:56:57,400
+to the left there's a 64 beside it to
+
+1487
+00:56:57,400 --> 00:56:59,680
+merge into a 128 and then we're gonna
+
+1488
+00:56:59,680 --> 00:57:01,060
+continue from there and merge everything
+
+1489
+00:57:01,060 --> 00:57:04,030
+else back in the 2048 let's watch so we
+
+1490
+00:57:04,030 --> 00:57:06,880
+step ahead frame by frame the network
+
+1491
+00:57:06,880 --> 00:57:09,010
+had just made a move and so it actually
+
+1492
+00:57:09,010 --> 00:57:11,350
+spawned a tile in the top right corner I
+
+1493
+00:57:11,350 --> 00:57:14,140
+move ahead a few frames Oh as you can
+
+1494
+00:57:14,140 --> 00:57:17,650
+see merge down here and it spawned tile
+
+1495
+00:57:17,650 --> 00:57:20,380
+they're the two it's gonna go ahead and
+
+1496
+00:57:20,380 --> 00:57:23,050
+move left so again this is fascinating
+
+1497
+00:57:23,050 --> 00:57:25,360
+stuff it moves left it goes ahead and
+
+1498
+00:57:25,360 --> 00:57:28,060
+move it up so as I was saying now we've
+
+1499
+00:57:28,060 --> 00:57:30,640
+got the two thirty twos aligned it's
+
+1500
+00:57:30,640 --> 00:57:32,950
+gonna go ahead and move back down to
+
+1501
+00:57:32,950 --> 00:57:35,590
+the 32s align and set the 64's on the
+
+1502
+00:57:35,590 --> 00:57:37,150
+right so we can work that in eventually
+
+1503
+00:57:37,150 --> 00:57:40,450
+now look at this it'll Merv's it to 30
+
+1504
+00:57:40,450 --> 00:57:43,480
+twos and now it's kind of 64 there all
+
+1505
+00:57:43,480 --> 00:57:45,010
+right now and no it looks a little bit
+
+1506
+00:57:45,010 --> 00:57:46,060
+choppy but I'm actually going through
+
+1507
+00:57:46,060 --> 00:57:47,890
+frame by frame because it's so fast I
+
+1508
+00:57:47,890 --> 00:57:50,380
+have to go through frame by frame now
+
+1509
+00:57:50,380 --> 00:57:50,770
+watch
+
+1510
+00:57:50,770 --> 00:57:53,160
+it's gonna merge two to sixty fours and
+
+1511
+00:57:53,160 --> 00:57:56,050
+it had already envisioned this situation
+
+1512
+00:57:56,050 --> 00:57:58,270
+and the one to the other 128 tile is
+
+1513
+00:57:58,270 --> 00:58:02,170
+already above this 128 tile so I go
+
+1514
+00:58:02,170 --> 00:58:04,720
+ahead it goes ahead and clicks down down
+
+1515
+00:58:04,720 --> 00:58:06,820
+arrow and suddenly it's got a 256 and
+
+1516
+00:58:06,820 --> 00:58:09,430
+how convenient it's got a 256 right
+
+1517
+00:58:09,430 --> 00:58:11,710
+beside that tile waiting for it so it
+
+1518
+00:58:11,710 --> 00:58:14,050
+goes ahead and clicks down to prepare or
+
+1519
+00:58:14,050 --> 00:58:15,550
+something again these are moves that I
+
+1520
+00:58:15,550 --> 00:58:17,260
+can't entirely explain because I'm not
+
+1521
+00:58:17,260 --> 00:58:19,840
+the algorithm but it goes ahead and make
+
+1522
+00:58:19,840 --> 00:58:22,390
+some moves now it goes to the right to
+
+1523
+00:58:22,390 --> 00:58:24,880
+actually merge the two 256 tiles and
+
+1524
+00:58:24,880 --> 00:58:26,440
+pause for just a moment
+
+1525
+00:58:26,440 --> 00:58:29,380
+notice how this algorithm is not greedy
+
+1526
+00:58:29,380 --> 00:58:31,330
+at all it's unlike a lot of other
+
+1527
+00:58:31,330 --> 00:58:32,980
+algorithms and then it's not looking for
+
+1528
+00:58:32,980 --> 00:58:35,020
+short-term gain it's not just trying to
+
+1529
+00:58:35,020 --> 00:58:36,970
+say okay how can I get the most merges
+
+1530
+00:58:36,970 --> 00:58:39,580
+right away it was like even though I've
+
+1531
+00:58:39,580 --> 00:58:41,440
+got two 256 is right there and I could
+
+1532
+00:58:41,440 --> 00:58:43,420
+make it 2048 pretty quickly I'm not
+
+1533
+00:58:43,420 --> 00:58:45,040
+going to because I'm gonna maximize my
+
+1534
+00:58:45,040 --> 00:58:46,450
+chances by making this other move
+
+1535
+00:58:46,450 --> 00:58:48,100
+because that's not going to affect my
+
+1536
+00:58:48,100 --> 00:58:49,710
+current board state with these local
+
+1537
+00:58:49,710 --> 00:58:52,780
+merges but it might be beneficial in the
+
+1538
+00:58:52,780 --> 00:58:54,940
+future and so the way things is is
+
+1539
+00:58:54,940 --> 00:58:55,810
+pretty fascinating
+
+1540
+00:58:55,810 --> 00:58:59,800
+now you've simply got 512 512 at 1024
+
+1541
+00:58:59,800 --> 00:59:01,780
+you've got to merge them maybe the 2048
+
+1542
+00:59:01,780 --> 00:59:04,750
+how does it do that well we may never
+
+1543
+00:59:04,750 --> 00:59:06,790
+know exactly how it came to that move
+
+1544
+00:59:06,790 --> 00:59:10,000
+because it was so fast that we did a
+
+1545
+00:59:10,000 --> 00:59:13,120
+single frame it was a blotch I don't
+
+1546
+00:59:13,120 --> 00:59:14,350
+look like the right arrow it's gonna
+
+1547
+00:59:14,350 --> 00:59:15,790
+move with the video ahead by a single
+
+1548
+00:59:15,790 --> 00:59:17,770
+frame this was recorded at 60 frames per
+
+1549
+00:59:17,770 --> 00:59:21,280
+second it somehow merged those two into
+
+1550
+00:59:21,280 --> 00:59:23,770
+two ten twenty fours and in the very
+
+1551
+00:59:23,770 --> 00:59:26,020
+next few frames and two ten twenty fours
+
+1552
+00:59:26,020 --> 00:59:29,290
+become a 2048 tile and just like that
+
+1553
+00:59:29,290 --> 00:59:34,150
+the network has won the game and so that
+
+1554
+00:59:34,150 --> 00:59:36,160
+is absolutely fascinating the way this
+
+1555
+00:59:36,160 --> 00:59:38,950
+technique works and if you if you find
+
+1556
+00:59:38,950 --> 00:59:40,630
+something interesting that you see the
+
+1557
+00:59:40,630 --> 00:59:42,250
+model is done and you end up recording
+
+1558
+00:59:42,250 --> 00:59:43,810
+it please do share that with me I would
+
+1559
+00:59:43,810 --> 00:59:45,380
+absolutely love to analyze
+
+1560
+00:59:45,380 --> 00:59:46,910
+results get a better understanding of
+
+1561
+00:59:46,910 --> 00:59:49,489
+just how this technique is playing 2048
+
+1562
+00:59:49,489 --> 00:59:51,739
+and and what's really going behind it
+
+1563
+00:59:51,739 --> 00:59:54,200
+and so if you enjoy this tutorial please
+
+1564
+00:59:54,200 --> 00:59:56,539
+do make sure to leave me a comment down
+
+1565
+00:59:56,539 --> 00:59:57,769
+below if you have any questions
+
+1566
+00:59:57,769 --> 00:59:59,359
+suggestions or feedback you can reach
+
+1567
+00:59:59,359 --> 01:00:00,799
+out to me on all sorts of social media
+
+1568
+01:00:00,799 --> 01:00:03,200
+my Twitter or my email which will be in
+
+1569
+01:00:03,200 --> 01:00:04,849
+the description below again all the code
+
+1570
+01:00:04,849 --> 01:00:07,339
+and the links for example the logic
+
+1571
+01:00:07,339 --> 01:00:09,049
+behind Monte Carlo tree search that will
+
+1572
+01:00:09,049 --> 01:00:11,329
+be in the description below for you to
+
+1573
+01:00:11,329 --> 01:00:13,400
+check out apart from that if you do want
+
+1574
+01:00:13,400 --> 01:00:15,109
+to see more content like this and you do
+
+1575
+01:00:15,109 --> 01:00:16,549
+enjoy these videos please do make sure
+
+1576
+01:00:16,549 --> 01:00:18,710
+to subscribe to the channel as it really
+
+1577
+01:00:18,710 --> 01:00:20,749
+does help out a lot and once again thank
+
+1578
+01:00:20,749 --> 01:00:24,369
+you very much for watching goodbye

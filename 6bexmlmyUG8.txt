@@ -1,0 +1,1747 @@
+1
+00:00:08,519 --> 00:00:10,719
+so hello there and welcome to another
+
+2
+00:00:10,719 --> 00:00:13,480
+tutorial my name is Henry bakshi and
+
+3
+00:00:13,480 --> 00:00:15,240
+this time we're going to be going over
+
+4
+00:00:15,240 --> 00:00:18,039
+how you can use neural networks to play
+
+5
+00:00:18,039 --> 00:00:21,160
+a game in Swift and this time it's a
+
+6
+00:00:21,160 --> 00:00:23,960
+game called Nimble ninja and now first
+
+7
+00:00:23,960 --> 00:00:25,800
+of all before I continue I'd like to say
+
+8
+00:00:25,800 --> 00:00:28,439
+a big thank you to Michael leech Michael
+
+9
+00:00:28,439 --> 00:00:31,359
+leech is a uh I developer uh and he has
+
+10
+00:00:31,359 --> 00:00:33,800
+created a game uh that uses Sprite kit
+
+11
+00:00:33,800 --> 00:00:37,160
+and Swift for iOS uh and essentially is
+
+12
+00:00:37,160 --> 00:00:39,480
+a game called Nimble ninja so now let me
+
+13
+00:00:39,480 --> 00:00:41,520
+explain the concept of this game to you
+
+14
+00:00:41,520 --> 00:00:44,760
+to begin so first of all uh we have a
+
+15
+00:00:44,760 --> 00:00:47,399
+sort of platform all right we have a
+
+16
+00:00:47,399 --> 00:00:50,800
+platform here and we have a character
+
+17
+00:00:50,800 --> 00:00:54,840
+here uh who has eyes and a mouth okay so
+
+18
+00:00:54,840 --> 00:00:56,520
+he's a he's a character he's essentially
+
+19
+00:00:56,520 --> 00:00:59,199
+the ninja here H and we have obstacles
+
+20
+00:00:59,199 --> 00:01:01,480
+in front of him now it's not like your
+
+21
+00:01:01,480 --> 00:01:03,359
+classic game where you have to jump over
+
+22
+00:01:03,359 --> 00:01:05,880
+the obstacles instead here there are
+
+23
+00:01:05,880 --> 00:01:08,240
+obstacles underneath as well and they
+
+24
+00:01:08,240 --> 00:01:10,640
+don't just alternate like this like if I
+
+25
+00:01:10,640 --> 00:01:12,000
+were to do this they don't just
+
+26
+00:01:12,000 --> 00:01:14,920
+alternate like this what happens is it's
+
+27
+00:01:14,920 --> 00:01:17,479
+completely random which is the best part
+
+28
+00:01:17,479 --> 00:01:20,520
+so I mean by complete Randomness you
+
+29
+00:01:20,520 --> 00:01:25,240
+could have three in a row like this for
+
+30
+00:01:25,240 --> 00:01:27,960
+example all right uh you could also then
+
+31
+00:01:27,960 --> 00:01:30,280
+have like two more this could be some
+
+32
+00:01:30,280 --> 00:01:33,119
+sort of example game all right this is
+
+33
+00:01:33,119 --> 00:01:34,439
+sometimes how the game could play out
+
+34
+00:01:34,439 --> 00:01:37,040
+it's completely random and that's the
+
+35
+00:01:37,040 --> 00:01:38,680
+best part about it so this is
+
+36
+00:01:38,680 --> 00:01:40,920
+essentially the game and so in order to
+
+37
+00:01:40,920 --> 00:01:42,920
+dodge this obstacle now first of all
+
+38
+00:01:42,920 --> 00:01:45,520
+this obstacle is coming at this uh
+
+39
+00:01:45,520 --> 00:01:47,799
+person uh or the ninja and so
+
+40
+00:01:47,799 --> 00:01:49,920
+essentially what happens is when you
+
+41
+00:01:49,920 --> 00:01:51,560
+click on the screen anywhere on the
+
+42
+00:01:51,560 --> 00:01:53,920
+screen this ninja is going to flip
+
+43
+00:01:53,920 --> 00:01:57,439
+around over
+
+44
+00:01:57,479 --> 00:01:59,680
+here all right so he's going to flip
+
+45
+00:01:59,680 --> 00:02:01,360
+around then he's going to continue
+
+46
+00:02:01,360 --> 00:02:03,680
+running the obstacle will go above him
+
+47
+00:02:03,680 --> 00:02:05,840
+now once this obstacle starts coming at
+
+48
+00:02:05,840 --> 00:02:08,440
+him then he's going to flip over again
+
+49
+00:02:08,440 --> 00:02:10,280
+uh and uh and so he's going to dodge
+
+50
+00:02:10,280 --> 00:02:11,520
+that obstacle and he's going to keep
+
+51
+00:02:11,520 --> 00:02:13,440
+doing that whenever an obstacle is
+
+52
+00:02:13,440 --> 00:02:15,680
+beside him uh so that he can dodge the
+
+53
+00:02:15,680 --> 00:02:18,360
+obstacles up and down that's essentially
+
+54
+00:02:18,360 --> 00:02:20,680
+how the game works so now I'd like to
+
+55
+00:02:20,680 --> 00:02:23,319
+sort of get into how my part of this
+
+56
+00:02:23,319 --> 00:02:25,040
+game works now first of all this is
+
+57
+00:02:25,040 --> 00:02:26,959
+actually a pretty interesting gamees uh
+
+58
+00:02:26,959 --> 00:02:29,519
+game for a human to play all right so
+
+59
+00:02:29,519 --> 00:02:30,560
+now
+
+60
+00:02:30,560 --> 00:02:33,959
+humans are good at this but I've made a
+
+61
+00:02:33,959 --> 00:02:36,160
+modification to the game and this
+
+62
+00:02:36,160 --> 00:02:39,000
+modification incorporates speed so
+
+63
+00:02:39,000 --> 00:02:42,080
+obstacles over time come at you faster
+
+64
+00:02:42,080 --> 00:02:44,879
+and faster and faster every second they
+
+65
+00:02:44,879 --> 00:02:47,480
+get faster and essentially what this
+
+66
+00:02:47,480 --> 00:02:49,200
+allows me to do is add another level of
+
+67
+00:02:49,200 --> 00:02:51,959
+Challenge and so after about like
+
+68
+00:02:51,959 --> 00:02:55,000
+120 it becomes almost impossible for a
+
+69
+00:02:55,000 --> 00:02:57,480
+human to play maybe even 140 it becomes
+
+70
+00:02:57,480 --> 00:03:01,840
+impossible almost impossible at least
+
+71
+00:03:59,920 --> 00:04:02,360
+your brain that we're mapping out onto a
+
+72
+00:04:02,360 --> 00:04:05,760
+computer on a much much smaller scale
+
+73
+00:04:05,760 --> 00:04:07,200
+because of course your brain has
+
+74
+00:04:07,200 --> 00:04:09,480
+trillions upon trillions of neurons You
+
+75
+00:04:09,480 --> 00:04:11,560
+couldn't possibly you know simulate that
+
+76
+00:04:11,560 --> 00:04:14,040
+on a computer even the world's fastest
+
+77
+00:04:14,040 --> 00:04:16,919
+uh supercomputer can only emulate uh
+
+78
+00:04:16,919 --> 00:04:19,720
+around like a worm siiz brain not even
+
+79
+00:04:19,720 --> 00:04:22,840
+yet uh and so of course neural networks
+
+80
+00:04:22,840 --> 00:04:25,199
+do take a lot of computational power but
+
+81
+00:04:25,199 --> 00:04:27,520
+I will be getting into why the iPhone 7
+
+82
+00:04:27,520 --> 00:04:30,680
+handles this amazingly in just a
+
+83
+00:04:30,680 --> 00:04:33,639
+bit so now let's take an example of a
+
+84
+00:04:33,639 --> 00:04:35,680
+neural network so now let's say you
+
+85
+00:04:35,680 --> 00:04:38,880
+wanted to create a brain and this brain
+
+86
+00:04:38,880 --> 00:04:42,199
+could essentially count up okay so you
+
+87
+00:04:42,199 --> 00:04:46,000
+give it a b a four bit binary uh sort of
+
+88
+00:04:46,000 --> 00:04:48,400
+number and it'll give you the next
+
+89
+00:04:48,400 --> 00:04:50,840
+binary number so let's say we have our
+
+90
+00:04:50,840 --> 00:04:53,479
+inputs so this is a neuron whenever I
+
+91
+00:04:53,479 --> 00:04:56,240
+draw this sort of Big O I mean that this
+
+92
+00:04:56,240 --> 00:04:57,639
+is a
+
+93
+00:04:57,639 --> 00:04:59,919
+neuron just like in your brain these are
+
+94
+00:04:59,919 --> 00:05:01,840
+on so they might not look like them but
+
+95
+00:05:01,840 --> 00:05:04,240
+they are and so let's say you give it
+
+96
+00:05:04,240 --> 00:05:06,440
+the input as binary
+
+97
+00:05:06,440 --> 00:05:08,440
+0
+
+98
+00:05:08,440 --> 00:05:10,440
+0
+
+99
+00:05:10,440 --> 00:05:13,280
+0 1 now if you don't know this is 4 bit
+
+100
+00:05:13,280 --> 00:05:16,840
+binary and this would mean one okay this
+
+101
+00:05:16,840 --> 00:05:22,000
+is in 10 bit one so now uh essentially
+
+102
+00:05:22,000 --> 00:05:24,000
+uh what's going to happen is let's say
+
+103
+00:05:24,000 --> 00:05:26,440
+we have some more neurons now we of
+
+104
+00:05:26,440 --> 00:05:28,720
+course want to have output
+
+105
+00:05:28,720 --> 00:05:31,039
+neurons
+
+106
+00:05:31,039 --> 00:05:32,680
+these output neurons will be able to
+
+107
+00:05:32,680 --> 00:05:35,280
+give us our output which in this case is
+
+108
+00:05:35,280 --> 00:05:37,759
+going to be 0 0 1
+
+109
+00:05:37,759 --> 00:05:42,560
+0 but how do we go from input to Output
+
+110
+00:05:42,560 --> 00:05:44,000
+do we just connect these and do
+
+111
+00:05:44,000 --> 00:05:46,639
+calculations and do extremely Advanced
+
+112
+00:05:46,639 --> 00:05:48,199
+calculations between them in order to
+
+113
+00:05:48,199 --> 00:05:52,039
+find out how to add a number no but
+
+114
+00:05:52,039 --> 00:05:54,600
+you're close what we do is we add
+
+115
+00:05:54,600 --> 00:05:57,560
+another layer of neurons and this layer
+
+116
+00:05:57,560 --> 00:05:59,039
+is called the hidden layer so first of
+
+117
+00:05:59,039 --> 00:06:01,199
+all this is called the input
+
+118
+00:06:01,199 --> 00:06:05,240
+layer this is called the output
+
+119
+00:06:05,919 --> 00:06:08,000
+layer and now we're going to add
+
+120
+00:06:08,000 --> 00:06:09,599
+something called The
+
+121
+00:06:09,599 --> 00:06:11,520
+Hidden
+
+122
+00:06:11,520 --> 00:06:14,199
+layer the hidden layer is essentially
+
+123
+00:06:14,199 --> 00:06:15,919
+what does all of the processing now
+
+124
+00:06:15,919 --> 00:06:17,440
+again there can actually be multiple
+
+125
+00:06:17,440 --> 00:06:19,199
+hidden layers but I'll get back I'll get
+
+126
+00:06:19,199 --> 00:06:21,560
+back to that in just a bit so let's say
+
+127
+00:06:21,560 --> 00:06:23,440
+we have six hidden neurons so we have
+
+128
+00:06:23,440 --> 00:06:28,280
+one 2 3 4 five and six okay so we have
+
+129
+00:06:28,280 --> 00:06:30,960
+six hidden neurons
+
+130
+00:06:30,960 --> 00:06:33,639
+now this input neuron this specific
+
+131
+00:06:33,639 --> 00:06:35,440
+input neuron the first input neuron will
+
+132
+00:06:35,440 --> 00:06:40,759
+be connected to every single hidden
+
+133
+00:06:40,759 --> 00:06:43,240
+neuron now if you're wondering how it's
+
+134
+00:06:43,240 --> 00:06:45,680
+connected it's connected using something
+
+135
+00:06:45,680 --> 00:06:48,039
+called a synapse I'll explain this in
+
+136
+00:06:48,039 --> 00:06:51,080
+just a second so now of course every
+
+137
+00:06:51,080 --> 00:06:54,000
+other input neuron is also going to be
+
+138
+00:06:54,000 --> 00:06:58,759
+connected to every other hidden neuron
+
+139
+00:06:58,759 --> 00:07:00,680
+or res said every other neuron in the
+
+140
+00:07:00,680 --> 00:07:01,960
+hidden
+
+141
+00:07:01,960 --> 00:07:04,639
+layer and so if I just finish this
+
+142
+00:07:04,639 --> 00:07:07,360
+diagram really
+
+143
+00:07:07,800 --> 00:07:11,120
+quickly as you can see every input layer
+
+144
+00:07:11,120 --> 00:07:13,280
+neuron is connected to every other
+
+145
+00:07:13,280 --> 00:07:15,720
+hidden layer neuron so essentially
+
+146
+00:07:15,720 --> 00:07:17,080
+what's happening is these are called
+
+147
+00:07:17,080 --> 00:07:18,840
+synapses what are connecting these
+
+148
+00:07:18,840 --> 00:07:22,360
+neurons now these synapses do a
+
+149
+00:07:22,360 --> 00:07:24,919
+calculation okay now essentially what's
+
+150
+00:07:24,919 --> 00:07:26,800
+happening is it's let's say this neuron
+
+151
+00:07:26,800 --> 00:07:28,919
+it takes the zero and it passes it on to
+
+152
+00:07:28,919 --> 00:07:30,960
+every single synapse that it has
+
+153
+00:07:30,960 --> 00:07:33,879
+connected to it and those synapses will
+
+154
+00:07:33,879 --> 00:07:36,919
+do a c a very SM small and minor
+
+155
+00:07:36,919 --> 00:07:39,759
+calculation on them and then they'll
+
+156
+00:07:39,759 --> 00:07:42,360
+send that that like this uh this neuron
+
+157
+00:07:42,360 --> 00:07:43,440
+let's say it's going through the first
+
+158
+00:07:43,440 --> 00:07:45,240
+synapse it's going to send it to the
+
+159
+00:07:45,240 --> 00:07:48,479
+first hidden layer neuron now this
+
+160
+00:07:48,479 --> 00:07:51,319
+neuron is going to receive input from
+
+161
+00:07:51,319 --> 00:07:55,159
+lots of these other four neurons as well
+
+162
+00:07:55,159 --> 00:07:56,960
+and so it's going to take all of those
+
+163
+00:07:56,960 --> 00:07:59,680
+four inputs from the input layer from
+
+164
+00:07:59,680 --> 00:08:01,479
+the synapsis and it's going to do a
+
+165
+00:08:01,479 --> 00:08:04,599
+calculation on those and then pass it on
+
+166
+00:08:04,599 --> 00:08:07,280
+again through synapses and all of these
+
+167
+00:08:07,280 --> 00:08:08,840
+neurons will do that with the
+
+168
+00:08:08,840 --> 00:08:10,560
+corresponding inputs that they were
+
+169
+00:08:10,560 --> 00:08:12,840
+given now if you're thinking that hey
+
+170
+00:08:12,840 --> 00:08:14,960
+wouldn't all these neurons get the same
+
+171
+00:08:14,960 --> 00:08:17,360
+input though well no because the
+
+172
+00:08:17,360 --> 00:08:20,680
+synapses between these between like
+
+173
+00:08:20,680 --> 00:08:23,159
+let's say uh this neuron and this neuron
+
+174
+00:08:23,159 --> 00:08:25,039
+or this neuron and this neuron are
+
+175
+00:08:25,039 --> 00:08:27,599
+completely different weights by weights
+
+176
+00:08:27,599 --> 00:08:29,879
+I mean how heavy the calcul calculations
+
+177
+00:08:29,879 --> 00:08:31,720
+are how big the calculations are are
+
+178
+00:08:31,720 --> 00:08:35,039
+they very minor sort of really um sort
+
+179
+00:08:35,039 --> 00:08:37,320
+of really sort of minor calculations uh
+
+180
+00:08:37,320 --> 00:08:40,000
+like fine-tuned calculations or are they
+
+181
+00:08:40,000 --> 00:08:42,000
+major calculations that make the number
+
+182
+00:08:42,000 --> 00:08:44,760
+a lot bigger or a lot smaller that's
+
+183
+00:08:44,760 --> 00:08:47,240
+essentially the weight and then from the
+
+184
+00:08:47,240 --> 00:08:50,399
+hidden layer they go right back to the
+
+185
+00:08:50,399 --> 00:08:53,760
+output layer and so essentially of
+
+186
+00:08:53,760 --> 00:08:57,200
+course we are connecting every single
+
+187
+00:08:57,200 --> 00:09:00,320
+hidden uh neuron
+
+188
+00:09:00,320 --> 00:09:03,959
+uh in this layer to the output
+
+189
+00:09:03,959 --> 00:09:07,800
+sorry to the outputs
+
+190
+00:09:07,800 --> 00:09:10,399
+um so what's happening here is again we
+
+191
+00:09:10,399 --> 00:09:12,880
+are connecting to these neurons using
+
+192
+00:09:12,880 --> 00:09:13,800
+these
+
+193
+00:09:13,800 --> 00:09:16,519
+synapses now these synapses will again
+
+194
+00:09:16,519 --> 00:09:19,760
+do another calculation on the uh on the
+
+195
+00:09:19,760 --> 00:09:21,519
+number that they were given from the
+
+196
+00:09:21,519 --> 00:09:23,120
+hidden
+
+197
+00:09:23,120 --> 00:09:26,040
+neuron and then finally now I know this
+
+198
+00:09:26,040 --> 00:09:27,920
+is taking some time because this is
+
+199
+00:09:27,920 --> 00:09:30,600
+exactly how complex a neur actually is
+
+200
+00:09:30,600 --> 00:09:33,360
+in a computer as well so as you can see
+
+201
+00:09:33,360 --> 00:09:35,880
+this is essentially our architecture if
+
+202
+00:09:35,880 --> 00:09:38,360
+you will of how the ne network will work
+
+203
+00:09:38,360 --> 00:09:41,480
+now again every connection has a weight
+
+204
+00:09:41,480 --> 00:09:45,040
+every neuron has a weight every synapse
+
+205
+00:09:45,040 --> 00:09:46,920
+again has a weight and the output
+
+206
+00:09:46,920 --> 00:09:50,560
+neurons have a weight as well and once
+
+207
+00:09:50,560 --> 00:09:52,760
+everything comes together and all these
+
+208
+00:09:52,760 --> 00:09:54,920
+calculations are completed you'll have a
+
+209
+00:09:54,920 --> 00:09:58,440
+final output and this is all done within
+
+210
+00:09:58,440 --> 00:10:00,880
+milliseconds so we're essentially using
+
+211
+00:10:00,880 --> 00:10:02,720
+exactly what your human brain does as
+
+212
+00:10:02,720 --> 00:10:05,560
+I'm talking my brain is implementing a
+
+213
+00:10:05,560 --> 00:10:08,000
+very very very similar technique except
+
+214
+00:10:08,000 --> 00:10:10,360
+on a much larger scale with trillions
+
+215
+00:10:10,360 --> 00:10:12,519
+upon trillions of neurons and that's how
+
+216
+00:10:12,519 --> 00:10:15,839
+I'm generating the speech quite ironic
+
+217
+00:10:15,839 --> 00:10:19,760
+but uh essentially now to begin when you
+
+218
+00:10:19,760 --> 00:10:21,640
+initialize this neural network the
+
+219
+00:10:21,640 --> 00:10:23,279
+weights on the synapses and the neurons
+
+220
+00:10:23,279 --> 00:10:25,560
+are going to be completely random and
+
+221
+00:10:25,560 --> 00:10:27,640
+your output will be absolutely random as
+
+222
+00:10:27,640 --> 00:10:29,440
+well complete gibberish not useful
+
+223
+00:10:29,440 --> 00:10:32,480
+whatsoever okay now you may by a
+
+224
+00:10:32,480 --> 00:10:34,920
+completely random chance get the perfect
+
+225
+00:10:34,920 --> 00:10:37,200
+random weights and good output but
+
+226
+00:10:37,200 --> 00:10:40,959
+that's a very very small chance so now
+
+227
+00:10:40,959 --> 00:10:42,959
+how would we actually get this to give
+
+228
+00:10:42,959 --> 00:10:46,720
+us useful output this is how what we' do
+
+229
+00:10:46,720 --> 00:10:49,920
+is we'd say okay you gave me this output
+
+230
+00:10:49,920 --> 00:10:52,639
+but I expected this output you give it
+
+231
+00:10:52,639 --> 00:10:54,600
+that positive example and tell it what
+
+232
+00:10:54,600 --> 00:10:56,880
+it did was wrong so what's going to
+
+233
+00:10:56,880 --> 00:10:58,519
+happen is it's going to put a technique
+
+234
+00:10:58,519 --> 00:11:01,720
+called back propagation into play and
+
+235
+00:11:01,720 --> 00:11:03,360
+what's going to happen is it's going to
+
+236
+00:11:03,360 --> 00:11:05,680
+take that output that it was supposed to
+
+237
+00:11:05,680 --> 00:11:09,279
+give and sort of make that act as input
+
+238
+00:11:09,279 --> 00:11:11,959
+and see how like let's say we were to uh
+
+239
+00:11:11,959 --> 00:11:15,440
+give this uh run in Reverse if we were
+
+240
+00:11:15,440 --> 00:11:18,639
+to give it okay so let's say it okay
+
+241
+00:11:18,639 --> 00:11:20,320
+sorry I'm going all over the place but
+
+242
+00:11:20,320 --> 00:11:22,839
+let's say your random neural network
+
+243
+00:11:22,839 --> 00:11:25,639
+gives you uh 1 1
+
+244
+00:11:25,639 --> 00:11:28,720
+01 okay as your output but this is
+
+245
+00:11:28,720 --> 00:11:31,120
+completely wrong wrong all right we do
+
+246
+00:11:31,120 --> 00:11:34,959
+not want this all right but we do want
+
+247
+00:11:34,959 --> 00:11:37,680
+this we do want this output
+
+248
+00:11:37,680 --> 00:11:40,360
+though so what's going to happen is
+
+249
+00:11:40,360 --> 00:11:44,040
+you're going to say okay let's say that
+
+250
+00:11:44,040 --> 00:11:47,040
+we took this and ran it backwards
+
+251
+00:11:47,040 --> 00:11:49,240
+through the neural network and wanted to
+
+252
+00:11:49,240 --> 00:11:53,399
+get exactly this how would we do it
+
+253
+00:11:53,399 --> 00:11:54,680
+what's going to happen is it's going to
+
+254
+00:11:54,680 --> 00:11:57,000
+send us back and it's going to adjust
+
+255
+00:11:57,000 --> 00:12:00,279
+the calculations ever so slow ly in
+
+256
+00:12:00,279 --> 00:12:02,160
+these neurons in these synapses in these
+
+257
+00:12:02,160 --> 00:12:05,079
+other neurons and in these synapses and
+
+258
+00:12:05,079 --> 00:12:07,279
+if it doesn't get this output it'll do
+
+259
+00:12:07,279 --> 00:12:10,600
+that again in a very small fashion over
+
+260
+00:12:10,600 --> 00:12:13,480
+and over and over again until it reaches
+
+261
+00:12:13,480 --> 00:12:16,639
+this input or very very close to in this
+
+262
+00:12:16,639 --> 00:12:19,360
+input how far it is from this input is
+
+263
+00:12:19,360 --> 00:12:21,920
+called the error rate you can make the
+
+264
+00:12:21,920 --> 00:12:23,800
+error rate to be as small as you want or
+
+265
+00:12:23,800 --> 00:12:25,800
+to be as big as you want in this case
+
+266
+00:12:25,800 --> 00:12:27,720
+since we want this to be as accurate as
+
+267
+00:12:27,720 --> 00:12:29,360
+possible we're going to give it an error
+
+268
+00:12:29,360 --> 00:12:30,639
+rate of
+
+269
+00:12:30,639 --> 00:12:33,560
+0.01 now of course that may take hours
+
+270
+00:12:33,560 --> 00:12:35,480
+days maybe even like a week to train
+
+271
+00:12:35,480 --> 00:12:37,480
+depending on your training set and how
+
+272
+00:12:37,480 --> 00:12:40,240
+exactly accurate you'd like it to be but
+
+273
+00:12:40,240 --> 00:12:41,839
+it shouldn't be a
+
+274
+00:12:41,839 --> 00:12:44,040
+problem because of course I mean it does
+
+275
+00:12:44,040 --> 00:12:45,880
+pay off in the end you have an extremely
+
+276
+00:12:45,880 --> 00:12:47,360
+useful counter and of course this is
+
+277
+00:12:47,360 --> 00:12:48,880
+only four bit you could apply this to
+
+278
+00:12:48,880 --> 00:12:50,480
+many more bits or even to much more
+
+279
+00:12:50,480 --> 00:12:52,440
+useful calculations rather than just an
+
+280
+00:12:52,440 --> 00:12:55,600
+Adder But continuing though so now we
+
+281
+00:12:55,600 --> 00:12:57,560
+have this neural network and we have
+
+282
+00:12:57,560 --> 00:13:00,279
+this back propagating from many many
+
+283
+00:13:00,279 --> 00:13:02,199
+like for many different outputs and
+
+284
+00:13:02,199 --> 00:13:04,040
+that's essentially our training data
+
+285
+00:13:04,040 --> 00:13:05,800
+then we have our test data which checks
+
+286
+00:13:05,800 --> 00:13:07,839
+the error rate and if it's too high
+
+287
+00:13:07,839 --> 00:13:09,240
+it'll try to bring the error rate down
+
+288
+00:13:09,240 --> 00:13:12,160
+by back propagating over and over again
+
+289
+00:13:12,160 --> 00:13:14,480
+but this still I mean you kind of have
+
+290
+00:13:14,480 --> 00:13:16,680
+to admit that why would this be useful
+
+291
+00:13:16,680 --> 00:13:19,279
+we can just do plus equals 1 plus plus
+
+292
+00:13:19,279 --> 00:13:22,839
+or like equals to this plus one you
+
+293
+00:13:22,839 --> 00:13:24,279
+really don't need this type of neural
+
+294
+00:13:24,279 --> 00:13:26,639
+network but what you do need is for a
+
+295
+00:13:26,639 --> 00:13:28,839
+neural network to do something much more
+
+296
+00:13:28,839 --> 00:13:29,760
+advanced
+
+297
+00:13:29,760 --> 00:13:31,680
+that you can't just write a massive
+
+298
+00:13:31,680 --> 00:13:34,240
+function for let's take a look at that
+
+299
+00:13:34,240 --> 00:13:38,440
+so now let's just say that we don't use
+
+300
+00:13:38,440 --> 00:13:40,199
+this neural network right we're not
+
+301
+00:13:40,199 --> 00:13:42,680
+going to be implementing this but this
+
+302
+00:13:42,680 --> 00:13:44,920
+was a pretty nice example of how a
+
+303
+00:13:44,920 --> 00:13:47,720
+neural network actually works so let's
+
+304
+00:13:47,720 --> 00:13:51,120
+just take this off the board so now what
+
+305
+00:13:51,120 --> 00:13:52,720
+is what are we going to be doing in this
+
+306
+00:13:52,720 --> 00:13:54,600
+video now if you haven't already gotten
+
+307
+00:13:54,600 --> 00:13:57,040
+the clue we're going to be mixing Nimble
+
+308
+00:13:57,040 --> 00:14:00,079
+ninja with n networks they a bot that
+
+309
+00:14:00,079 --> 00:14:03,120
+can play the game almost infinitely
+
+310
+00:14:03,120 --> 00:14:05,480
+let's take a look so now as you can see
+
+311
+00:14:05,480 --> 00:14:07,880
+what I'm going to do is let's say uh we
+
+312
+00:14:07,880 --> 00:14:09,800
+have our game all right so of course we
+
+313
+00:14:09,800 --> 00:14:12,160
+have a little platform we have our
+
+314
+00:14:12,160 --> 00:14:15,160
+person here with his eyes and his nose
+
+315
+00:14:15,160 --> 00:14:17,880
+and a mouth and we have our obstacles
+
+316
+00:14:17,880 --> 00:14:19,120
+all
+
+317
+00:14:19,120 --> 00:14:22,240
+right now let's see what parameters we
+
+318
+00:14:22,240 --> 00:14:25,160
+have now if we were to feed some sort of
+
+319
+00:14:25,160 --> 00:14:27,519
+data from the game into the Neal Network
+
+320
+00:14:27,519 --> 00:14:30,600
+what would the data be okay so let's see
+
+321
+00:14:30,600 --> 00:14:33,160
+we have the current speed at which this
+
+322
+00:14:33,160 --> 00:14:35,199
+uh which the obstacles are running
+
+323
+00:14:35,199 --> 00:14:38,720
+towards the ninja so we have the
+
+324
+00:14:38,720 --> 00:14:41,880
+speed that's one of our
+
+325
+00:14:41,880 --> 00:14:45,920
+parameters we have I don't know the x
+
+326
+00:14:45,920 --> 00:14:49,440
+value of the nearest
+
+327
+00:14:49,440 --> 00:14:51,759
+obstacle and that's pretty much it
+
+328
+00:14:51,759 --> 00:14:53,279
+actually uh for this game I mean there
+
+329
+00:14:53,279 --> 00:14:55,440
+are a few more like the X obstacle uh
+
+330
+00:14:55,440 --> 00:14:58,040
+the x value for the OB for the obstacle
+
+331
+00:14:58,040 --> 00:14:59,600
+on the opposite side
+
+332
+00:14:59,600 --> 00:15:00,759
+but I'm not going to get into that
+
+333
+00:15:00,759 --> 00:15:02,040
+because that could get a little bit
+
+334
+00:15:02,040 --> 00:15:03,600
+complicated with the training so I'm not
+
+335
+00:15:03,600 --> 00:15:05,240
+going to get into that just
+
+336
+00:15:05,240 --> 00:15:08,320
+yet uh in fact I'm actually not even
+
+337
+00:15:08,320 --> 00:15:10,959
+going to get into the speed today all I
+
+338
+00:15:10,959 --> 00:15:13,959
+care about is the x value of that
+
+339
+00:15:13,959 --> 00:15:15,759
+obstacle let's take a look at what I
+
+340
+00:15:15,759 --> 00:15:18,320
+mean now let's say we have a neural
+
+341
+00:15:18,320 --> 00:15:21,880
+network with one input no more inputs
+
+342
+00:15:21,880 --> 00:15:25,199
+just one input then we have a hidden
+
+343
+00:15:25,199 --> 00:15:29,360
+layer okay now this isn't just these
+
+344
+00:15:29,360 --> 00:15:33,360
+many neurons we have a hidden layer of
+
+345
+00:15:33,360 --> 00:15:35,240
+300
+
+346
+00:15:35,240 --> 00:15:38,839
+neurons and so this input layer will
+
+347
+00:15:38,839 --> 00:15:41,880
+connect to each and every single one of
+
+348
+00:15:41,880 --> 00:15:44,079
+these neurons and there of which there
+
+349
+00:15:44,079 --> 00:15:45,040
+are like
+
+350
+00:15:45,040 --> 00:15:49,120
+300 okay and then we have one output
+
+351
+00:15:49,120 --> 00:15:53,000
+from which each neuron will connect two
+
+352
+00:15:53,000 --> 00:15:56,759
+again so essentially we have 300 Hidden
+
+353
+00:15:56,759 --> 00:16:00,199
+one input one output now how would this
+
+354
+00:16:00,199 --> 00:16:03,639
+work so our input is the x value of the
+
+355
+00:16:03,639 --> 00:16:07,120
+closest obstacle and our output is
+
+356
+00:16:07,120 --> 00:16:09,720
+whether to not whether or not to flip to
+
+357
+00:16:09,720 --> 00:16:12,600
+flip or not to
+
+358
+00:16:13,319 --> 00:16:17,399
+flip if it is over if this output value
+
+359
+00:16:17,399 --> 00:16:19,440
+is greater than
+
+360
+00:16:19,440 --> 00:16:25,480
+0.99 we consider that yes we do want to
+
+361
+00:16:26,440 --> 00:16:29,680
+flip if it's less than 0.9 99 then it's
+
+362
+00:16:29,680 --> 00:16:32,920
+a no we do not want to flip our
+
+363
+00:16:32,920 --> 00:16:34,920
+character and that is essentially how
+
+364
+00:16:34,920 --> 00:16:37,120
+it's going to work but what's going to
+
+365
+00:16:37,120 --> 00:16:39,880
+happen is I'm going to play this as far
+
+366
+00:16:39,880 --> 00:16:43,000
+as I can without it getting too fast and
+
+367
+00:16:43,000 --> 00:16:45,079
+right as I stop playing or right as I
+
+368
+00:16:45,079 --> 00:16:47,519
+lose the neural network will kick in so
+
+369
+00:16:47,519 --> 00:16:49,839
+essentially while I'm playing I've
+
+370
+00:16:49,839 --> 00:16:51,920
+created uh I've edited the code a little
+
+371
+00:16:51,920 --> 00:16:54,360
+bit of this game actually quite a bit uh
+
+372
+00:16:54,360 --> 00:16:56,120
+and so essentially it's going to collect
+
+373
+00:16:56,120 --> 00:16:58,480
+data of how I play and it'll clean up
+
+374
+00:16:58,480 --> 00:17:00,759
+the data and sort of it'll organize that
+
+375
+00:17:00,759 --> 00:17:04,240
+data after that it's going to use uh the
+
+376
+00:17:04,240 --> 00:17:07,679
+an API from Colin Hundley is GitHub will
+
+377
+00:17:07,679 --> 00:17:10,400
+be in the description as well as Michael
+
+378
+00:17:10,400 --> 00:17:13,160
+leeches and so essentially uh it uses an
+
+379
+00:17:13,160 --> 00:17:15,760
+API from Colin Hundley called Swift AI
+
+380
+00:17:15,760 --> 00:17:17,720
+which has a neural network library
+
+381
+00:17:17,720 --> 00:17:19,520
+essentially a neural network neural
+
+382
+00:17:19,520 --> 00:17:22,760
+network API and so it's going to feed
+
+383
+00:17:22,760 --> 00:17:25,600
+that data into the neural network then
+
+384
+00:17:25,600 --> 00:17:27,439
+the neural network will back propagate
+
+385
+00:17:27,439 --> 00:17:29,400
+back propagate back propagate train
+
+386
+00:17:29,400 --> 00:17:32,000
+train train test test test until it
+
+387
+00:17:32,000 --> 00:17:35,480
+reaches an error rate of under
+
+388
+00:17:35,480 --> 00:17:38,559
+0.01 once it reaches that error rate we
+
+389
+00:17:38,559 --> 00:17:40,360
+know that we're ready to let the neural
+
+390
+00:17:40,360 --> 00:17:42,520
+network play the neural network will
+
+391
+00:17:42,520 --> 00:17:45,080
+then run into action and it should be
+
+392
+00:17:45,080 --> 00:17:47,400
+able to play almost infinitely unless it
+
+393
+00:17:47,400 --> 00:17:49,679
+gets fast to the point that it's unable
+
+394
+00:17:49,679 --> 00:17:51,760
+to like it doesn't even appear on screen
+
+395
+00:17:51,760 --> 00:17:54,039
+it gets that fast which I could solve
+
+396
+00:17:54,039 --> 00:17:56,400
+technically by creating a maximum speed
+
+397
+00:17:56,400 --> 00:17:58,679
+but for the first version this is pretty
+
+398
+00:17:58,679 --> 00:17:59,720
+good
+
+399
+00:17:59,720 --> 00:18:02,280
+anyway though so this is essentially how
+
+400
+00:18:02,280 --> 00:18:03,919
+our final application is going to work
+
+401
+00:18:03,919 --> 00:18:05,480
+it looks like a simplification here but
+
+402
+00:18:05,480 --> 00:18:08,440
+trust me it's not this simple but I'm
+
+403
+00:18:08,440 --> 00:18:10,480
+here to make it simple for you so I hope
+
+404
+00:18:10,480 --> 00:18:12,600
+that by the end of this you'll either a
+
+405
+00:18:12,600 --> 00:18:15,120
+be able to implement this into uh this
+
+406
+00:18:15,120 --> 00:18:17,919
+Nimble ninja game by yourself or B be
+
+407
+00:18:17,919 --> 00:18:20,360
+able to implement it into your own game
+
+408
+00:18:20,360 --> 00:18:22,120
+in fact I'm working on implementing this
+
+409
+00:18:22,120 --> 00:18:24,120
+neuron Network technique to much much
+
+410
+00:18:24,120 --> 00:18:26,720
+more advanced games uh hint apple
+
+411
+00:18:26,720 --> 00:18:28,960
+picking uh but anyway you'll be seeing
+
+412
+00:18:28,960 --> 00:18:30,720
+more of that on my YouTube channel later
+
+413
+00:18:30,720 --> 00:18:32,440
+but for now this is what I'm going to be
+
+414
+00:18:32,440 --> 00:18:34,159
+explaining to you hope you like this
+
+415
+00:18:34,159 --> 00:18:36,440
+part again thank you very much uh but
+
+416
+00:18:36,440 --> 00:18:38,520
+now the rest will be explained in part
+
+417
+00:18:38,520 --> 00:18:41,039
+two when I explain to you how you can
+
+418
+00:18:41,039 --> 00:18:43,200
+use these neural networks to play Nimble
+
+419
+00:18:43,200 --> 00:18:45,559
+ninja again thank you very much uh if
+
+420
+00:18:45,559 --> 00:18:47,039
+you lik the video please make sure to
+
+421
+00:18:47,039 --> 00:18:48,960
+leave a like down below if you think it
+
+422
+00:18:48,960 --> 00:18:50,520
+can help anybody else please do consider
+
+423
+00:18:50,520 --> 00:18:52,480
+sharing the video and if you really like
+
+424
+00:18:52,480 --> 00:18:54,280
+my content and you want to see much more
+
+425
+00:18:54,280 --> 00:18:56,000
+of it please do consider subscribing to
+
+426
+00:18:56,000 --> 00:18:57,480
+my YouTube channel as it really does
+
+427
+00:18:57,480 --> 00:18:59,919
+help out a lot uh one more thing if you
+
+428
+00:18:59,919 --> 00:19:01,640
+have any questions suggestions or
+
+429
+00:19:01,640 --> 00:19:03,120
+feedback you can leave it down in the
+
+430
+00:19:03,120 --> 00:19:05,440
+comments tweet to me at tajim Manny or
+
+431
+00:19:05,440 --> 00:19:08,280
+email me at tajim Manny gmail.com in the
+
+432
+00:19:08,280 --> 00:19:10,039
+next video you'll be seeing the source
+
+433
+00:19:10,039 --> 00:19:12,440
+code and in the description of the next
+
+434
+00:19:12,440 --> 00:19:14,280
+video there will be a link to the source
+
+435
+00:19:14,280 --> 00:19:16,960
+code on GitHub anyway then goodbye I'll
+
+436
+00:19:16,960 --> 00:19:20,280
+see you in part two
+
+437
+00:19:26,240 --> 00:19:29,240
+goodbye

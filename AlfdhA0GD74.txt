@@ -1,0 +1,3063 @@
+1
+00:00:00,000 --> 00:00:07,930
+[Music]
+
+2
+00:00:14,150 --> 00:00:18,810
+in fact this here's Tyrion joining us
+
+3
+00:00:18,810 --> 00:00:21,390
+our first guests on the a hi cafe series
+
+4
+00:00:21,390 --> 00:00:24,539
+I actually created a video with him and
+
+5
+00:00:24,539 --> 00:00:26,869
+one of my other mentors Tim Duncan
+
+6
+00:00:26,869 --> 00:00:29,369
+some time ago about artificial
+
+7
+00:00:29,369 --> 00:00:32,579
+intelligence even Watson that was really
+
+8
+00:00:32,579 --> 00:00:33,899
+really interesting but luckily he's back
+
+9
+00:00:33,899 --> 00:00:35,430
+in Toronto and rabl to make another
+
+10
+00:00:35,430 --> 00:00:39,020
+video about something really fundamental
+
+11
+00:00:39,020 --> 00:00:41,730
+with artificial intelligence which is
+
+12
+00:00:41,730 --> 00:00:45,030
+the fact that pattern detection that our
+
+13
+00:00:45,030 --> 00:00:47,070
+visual intelligence is not artificial
+
+14
+00:00:47,070 --> 00:00:54,239
+intelligence oh yes absolutely yes my
+
+15
+00:00:54,239 --> 00:00:55,829
+name is Jerry Dammers here with our
+
+16
+00:00:55,829 --> 00:00:57,899
+ecosystem and 10 million I've been
+
+17
+00:00:57,899 --> 00:00:59,820
+working for a little while together we
+
+18
+00:00:59,820 --> 00:01:01,559
+were having fun actually it was a
+
+19
+00:01:01,559 --> 00:01:04,110
+pattern detection and in fact and I
+
+20
+00:01:04,110 --> 00:01:06,150
+without pattern detection it's just that
+
+21
+00:01:06,150 --> 00:01:07,710
+I got exactly and we're gonna change
+
+22
+00:01:07,710 --> 00:01:09,270
+things down exactly what we're going to
+
+23
+00:01:09,270 --> 00:01:11,760
+talk about we're going to have one of
+
+24
+00:01:11,760 --> 00:01:14,220
+those conversations that doesn't involve
+
+25
+00:01:14,220 --> 00:01:17,009
+keyboard it's kind of human and we're
+
+26
+00:01:17,009 --> 00:01:19,680
+talking about neural networks patterning
+
+27
+00:01:19,680 --> 00:01:21,360
+detection and what it means and what not
+
+28
+00:01:21,360 --> 00:01:23,970
+and how useful is it but but
+
+29
+00:01:23,970 --> 00:01:26,610
+fundamentally you can understand that it
+
+30
+00:01:26,610 --> 00:01:28,680
+is the core isn't it exactly well now
+
+31
+00:01:28,680 --> 00:01:30,210
+what that pattern detection there's no
+
+32
+00:01:30,210 --> 00:01:32,040
+point to a guy on first place that's
+
+33
+00:01:32,040 --> 00:01:34,290
+right and it even goes deeper than that
+
+34
+00:01:34,290 --> 00:01:35,939
+and and this is what's gonna be fun
+
+35
+00:01:35,939 --> 00:01:37,950
+about this this new series cafe right
+
+36
+00:01:37,950 --> 00:01:41,030
+yes is that we can talk about it and we
+
+37
+00:01:41,030 --> 00:01:43,549
+Caffe belong in this case week we're
+
+38
+00:01:43,549 --> 00:01:46,010
+gonna turn this guy and and allow the
+
+39
+00:01:46,010 --> 00:01:48,830
+analog device to get all right like the
+
+40
+00:01:48,830 --> 00:01:50,330
+other analog device which is our brain
+
+41
+00:01:50,330 --> 00:01:53,030
+and so fundamental to pattern detection
+
+42
+00:01:53,030 --> 00:01:56,869
+is our ability to as humans or any any
+
+43
+00:01:56,869 --> 00:01:59,690
+cognitive organism for that matter to
+
+44
+00:01:59,690 --> 00:02:01,640
+detect patterns in patterns create
+
+45
+00:02:01,640 --> 00:02:03,920
+memories right exactly and then when the
+
+46
+00:02:03,920 --> 00:02:06,500
+pattern changes what happens well you
+
+47
+00:02:06,500 --> 00:02:09,319
+say what's happening exactly and that's
+
+48
+00:02:09,319 --> 00:02:11,750
+the biggest thing so I've got a pattern
+
+49
+00:02:11,750 --> 00:02:14,420
+that changes what's happening well isn't
+
+50
+00:02:14,420 --> 00:02:16,070
+that what people are trying to really
+
+51
+00:02:16,070 --> 00:02:19,060
+find out isn't that what makes us aware
+
+52
+00:02:19,060 --> 00:02:22,989
+it's a VAR environment exactly
+
+53
+00:02:22,989 --> 00:02:25,310
+so isn't it fun to think that actually
+
+54
+00:02:25,310 --> 00:02:27,860
+today we have technology was AI that is
+
+55
+00:02:27,860 --> 00:02:30,500
+based on that fundamental belief or that
+
+56
+00:02:30,500 --> 00:02:32,090
+fundamental principle I should say then
+
+57
+00:02:32,090 --> 00:02:33,590
+we have to believe in it right but it's
+
+58
+00:02:33,590 --> 00:02:35,330
+a fundamental principle yeah that in
+
+59
+00:02:35,330 --> 00:02:39,110
+fact a pattern when we absorb when we
+
+60
+00:02:39,110 --> 00:02:41,360
+move through life or when a system moves
+
+61
+00:02:41,360 --> 00:02:44,810
+through data right we observe pattern
+
+62
+00:02:44,810 --> 00:02:46,190
+and the beauty was there's no network
+
+63
+00:02:46,190 --> 00:02:49,519
+nai is that as we move through the data
+
+64
+00:02:49,519 --> 00:02:52,329
+or as we move through life we remember
+
+65
+00:02:52,329 --> 00:02:55,579
+right and we observe that there is that
+
+66
+00:02:55,579 --> 00:02:57,380
+there is a reoccurring pattern and
+
+67
+00:02:57,380 --> 00:02:58,970
+what's interesting about it is that if
+
+68
+00:02:58,970 --> 00:03:03,380
+it's recurring it's soothing and it
+
+69
+00:03:03,380 --> 00:03:05,959
+doesn't matter who you are and then you
+
+70
+00:03:05,959 --> 00:03:08,030
+but what happens when the pattern always
+
+71
+00:03:08,030 --> 00:03:09,829
+occurs it's always the same time in
+
+72
+00:03:09,829 --> 00:03:14,000
+order it's boring exactly what you
+
+73
+00:03:14,000 --> 00:03:15,980
+expected it's what you know exactly
+
+74
+00:03:15,980 --> 00:03:18,620
+right so so we can we can go talk about
+
+75
+00:03:18,620 --> 00:03:19,450
+this about
+
+76
+00:03:19,450 --> 00:03:21,099
+are you of it Howard I pleasant
+
+77
+00:03:21,099 --> 00:03:23,470
+technology if you want you know bring
+
+78
+00:03:23,470 --> 00:03:25,030
+the analogy around an or network around
+
+79
+00:03:25,030 --> 00:03:26,769
+the wonderful work that you do or some
+
+80
+00:03:26,769 --> 00:03:28,239
+of the project to work out the cognitive
+
+81
+00:03:28,239 --> 00:03:31,170
+projects but besides that project alone
+
+82
+00:03:31,170 --> 00:03:36,069
+you know yeah how do you say okay great
+
+83
+00:03:36,069 --> 00:03:38,080
+I'm doing who's that
+
+84
+00:03:38,080 --> 00:03:40,510
+how do you bring it in to a point where
+
+85
+00:03:40,510 --> 00:03:42,130
+people understand and how can you
+
+86
+00:03:42,130 --> 00:03:44,170
+express that's a no-no really what we're
+
+87
+00:03:44,170 --> 00:03:47,880
+doing here is pattern detection exactly
+
+88
+00:03:49,379 --> 00:03:54,160
+all right so one of the projects that of
+
+89
+00:03:54,160 --> 00:03:55,450
+course we're actually collaborating on
+
+90
+00:03:55,450 --> 00:03:57,549
+is called the cognitive story may have
+
+91
+00:03:57,549 --> 00:03:59,799
+heard of it before it's basically a
+
+92
+00:03:59,799 --> 00:04:01,269
+project where I first of all I mean
+
+93
+00:04:01,269 --> 00:04:02,829
+generally we're trying to use AI to
+
+94
+00:04:02,829 --> 00:04:04,720
+enhance people's lives but our first
+
+95
+00:04:04,720 --> 00:04:06,640
+goal is to actually help out a
+
+96
+00:04:06,640 --> 00:04:11,230
+quadriplegic girl so as I mentioned
+
+97
+00:04:11,230 --> 00:04:12,790
+she's spotted a jerk unfortunately
+
+98
+00:04:12,790 --> 00:04:14,799
+suffers from Rhett syndrome meaning she
+
+99
+00:04:14,799 --> 00:04:16,720
+cannot communicate whatsoever if she's
+
+100
+00:04:16,720 --> 00:04:18,790
+you know thirsty or hungry or wants go
+
+101
+00:04:18,790 --> 00:04:19,590
+to the washroom
+
+102
+00:04:19,590 --> 00:04:23,889
+her mom has to make good informed guess
+
+103
+00:04:23,889 --> 00:04:27,370
+as to what Boo is trying to lie so there
+
+104
+00:04:27,370 --> 00:04:27,820
+you go
+
+105
+00:04:27,820 --> 00:04:29,530
+so why does she can she make a guess
+
+106
+00:04:29,530 --> 00:04:31,690
+because she's able to recognize those
+
+107
+00:04:31,690 --> 00:04:33,910
+paths there you go exactly that's it and
+
+108
+00:04:33,910 --> 00:04:37,240
+so what works like to do that is see how
+
+109
+00:04:37,240 --> 00:04:40,240
+can we unlock more data to gather
+
+110
+00:04:40,240 --> 00:04:41,229
+pirates fun
+
+111
+00:04:41,229 --> 00:04:43,000
+well booze mom is looking at while she
+
+112
+00:04:43,000 --> 00:04:44,020
+was trying to understand what who's
+
+113
+00:04:44,020 --> 00:04:46,120
+talking about if she said okay how is
+
+114
+00:04:46,120 --> 00:04:47,710
+boom moving what's the time of the day
+
+115
+00:04:47,710 --> 00:04:48,789
+when it's the context so it's a
+
+116
+00:04:48,789 --> 00:04:50,380
+situation like she's looking at all
+
+117
+00:04:50,380 --> 00:04:51,760
+these different variables which might
+
+118
+00:04:51,760 --> 00:04:53,260
+indicate towards what we was trying to
+
+119
+00:04:53,260 --> 00:04:55,000
+mention and these are the different
+
+120
+00:04:55,000 --> 00:04:56,229
+types of patterns that she's working at
+
+121
+00:04:56,229 --> 00:04:58,720
+recognizing but there are lots of more
+
+122
+00:04:58,720 --> 00:05:01,060
+patterns that she is a human cannot
+
+123
+00:05:01,060 --> 00:05:02,740
+recognize because us humans are
+
+124
+00:05:02,740 --> 00:05:05,050
+sometimes bias towards symbol repeatable
+
+125
+00:05:05,050 --> 00:05:06,789
+patterns correct we can't look through
+
+126
+00:05:06,789 --> 00:05:07,879
+vast amounts of
+
+127
+00:05:07,879 --> 00:05:10,039
+flex noise and noise data and say hey
+
+128
+00:05:10,039 --> 00:05:12,319
+this is a pattern correct but artificial
+
+129
+00:05:12,319 --> 00:05:14,990
+neural networks okay and so that's why
+
+130
+00:05:14,990 --> 00:05:16,629
+we're actually trying to use
+
+131
+00:05:16,629 --> 00:05:19,369
+electroencephalogram handsets and deep
+
+132
+00:05:19,369 --> 00:05:21,080
+learning algorithms to actually
+
+133
+00:05:21,080 --> 00:05:24,080
+recognize patterns in lose EEG brain
+
+134
+00:05:24,080 --> 00:05:25,879
+waves when she's trying to answer a
+
+135
+00:05:25,879 --> 00:05:27,860
+question and see if we can convert those
+
+136
+00:05:27,860 --> 00:05:30,589
+brain waves to actual intent or what she
+
+137
+00:05:30,589 --> 00:05:32,300
+wants to do and that's a perfect example
+
+138
+00:05:32,300 --> 00:05:34,219
+of how we're actually detecting quite
+
+139
+00:05:34,219 --> 00:05:35,929
+literally patterns in her brain waves
+
+140
+00:05:35,929 --> 00:05:38,479
+even though it's so noisy these neural
+
+141
+00:05:38,479 --> 00:05:40,490
+networks have relatively easy time
+
+142
+00:05:40,490 --> 00:05:42,889
+finding patterns in such a noisy and
+
+143
+00:05:42,889 --> 00:05:44,629
+fast amounts of data because they're
+
+144
+00:05:44,629 --> 00:05:46,849
+able to see repeatable yet changing
+
+145
+00:05:46,849 --> 00:05:48,919
+patterns throughout all the data it's
+
+146
+00:05:48,919 --> 00:05:51,169
+exactly right and what's fascinating but
+
+147
+00:05:51,169 --> 00:05:53,269
+when you bring in in that context they
+
+148
+00:05:53,269 --> 00:05:55,729
+say okay so the technology is reading
+
+149
+00:05:55,729 --> 00:05:58,219
+the signal that mean us as human we're
+
+150
+00:05:58,219 --> 00:06:00,259
+not capable of reading exactly so you're
+
+151
+00:06:00,259 --> 00:06:02,029
+complimenting and what I love about what
+
+152
+00:06:02,029 --> 00:06:03,469
+you said is that you're complimenting
+
+153
+00:06:03,469 --> 00:06:06,679
+what we call me if you won't be the
+
+154
+00:06:06,679 --> 00:06:08,809
+person who the intimate interpreter is
+
+155
+00:06:08,809 --> 00:06:10,879
+what we call bird on research right so
+
+156
+00:06:10,879 --> 00:06:12,499
+the mom is the intimate interpreter you
+
+157
+00:06:12,499 --> 00:06:16,430
+say today if it's daytime depending on
+
+158
+00:06:16,430 --> 00:06:17,110
+the weather
+
+159
+00:06:17,110 --> 00:06:20,149
+bunch of vectors exact hole that she's
+
+160
+00:06:20,149 --> 00:06:22,309
+observed she's able to correlate them
+
+161
+00:06:22,309 --> 00:06:24,709
+and says oh observing your child it's
+
+162
+00:06:24,709 --> 00:06:26,180
+based on the patterns of knowing how she
+
+163
+00:06:26,180 --> 00:06:28,189
+behaves if she Krantz is she looks a
+
+164
+00:06:28,189 --> 00:06:29,809
+certain way she knows that what's
+
+165
+00:06:29,809 --> 00:06:32,539
+beautiful but but the project is that
+
+166
+00:06:32,539 --> 00:06:35,569
+now we're saying patterns we don't see
+
+167
+00:06:35,569 --> 00:06:38,269
+the computer can see inside and then it
+
+168
+00:06:38,269 --> 00:06:40,009
+brings them in and it adds a new
+
+169
+00:06:40,009 --> 00:06:42,769
+dimension right and then when the
+
+170
+00:06:42,769 --> 00:06:44,300
+pattern is different but a pattern
+
+171
+00:06:44,300 --> 00:06:47,360
+changes let's say in conjunction was her
+
+172
+00:06:47,360 --> 00:06:49,959
+wanting to eat her being you know
+
+173
+00:06:49,959 --> 00:06:52,579
+nothing comfortable or wanting to watch
+
+174
+00:06:52,579 --> 00:06:53,929
+your teeth and somebody's in the way
+
+175
+00:06:53,929 --> 00:06:54,740
+like it happened
+
+176
+00:06:54,740 --> 00:06:57,200
+yeah I was there he said she there was a
+
+177
+00:06:57,200 --> 00:07:00,890
+reaction that in conjunction with the
+
+178
+00:07:00,890 --> 00:07:03,920
+data gives us the ability to take that
+
+179
+00:07:03,920 --> 00:07:06,080
+cognitive component that we all take for
+
+180
+00:07:06,080 --> 00:07:08,840
+granted and put it in assistant that can
+
+181
+00:07:08,840 --> 00:07:11,450
+assist her that's the augmentation right
+
+182
+00:07:11,450 --> 00:07:25,190
+there right we're limited by the amount
+
+183
+00:07:25,190 --> 00:07:27,440
+of data that we can take in and how we
+
+184
+00:07:27,440 --> 00:07:30,050
+can take in that data we humans are only
+
+185
+00:07:30,050 --> 00:07:31,790
+good taking in data with you know the
+
+186
+00:07:31,790 --> 00:07:42,920
+senses that we have listed numbers you
+
+187
+00:07:42,920 --> 00:07:44,330
+would never understand I mean you know
+
+188
+00:07:44,330 --> 00:07:46,730
+we'll try our best and visualize in your
+
+189
+00:07:46,730 --> 00:07:49,340
+head you would understand it but it's so
+
+190
+00:07:49,340 --> 00:07:51,380
+much easier for me to show you a graph
+
+191
+00:07:51,380 --> 00:07:56,600
+and you will immediately understand what
+
+192
+00:07:56,600 --> 00:07:58,630
+we're doing with something as complex as
+
+193
+00:07:58,630 --> 00:08:01,700
+EEG brain waves we cannot do that we
+
+194
+00:08:01,700 --> 00:08:03,530
+cannot have you just look at a graph of
+
+195
+00:08:03,530 --> 00:08:05,450
+the EEG brain waves and say okay do see
+
+196
+00:08:05,450 --> 00:08:07,310
+a pattern in these is the fact that
+
+197
+00:08:07,310 --> 00:08:09,950
+they're so complex they are literally
+
+198
+00:08:09,950 --> 00:08:11,720
+dependent on each other all the
+
+199
+00:08:11,720 --> 00:08:14,390
+individual data points to find out and
+
+200
+00:08:14,390 --> 00:08:16,370
+that's exactly correct and this is the
+
+201
+00:08:16,370 --> 00:08:18,710
+correlation that gives it sense it's
+
+202
+00:08:18,710 --> 00:08:20,420
+alright because I can look at a pattern
+
+203
+00:08:20,420 --> 00:08:22,310
+I kid I'm gonna be able to recognize it
+
+204
+00:08:22,310 --> 00:08:24,050
+but what I see a change if I cannot
+
+205
+00:08:24,050 --> 00:08:25,820
+correlate it with something else it's
+
+206
+00:08:25,820 --> 00:08:28,130
+meaningless and so on so you take this
+
+207
+00:08:28,130 --> 00:08:29,990
+in the context of business and market
+
+208
+00:08:29,990 --> 00:08:31,970
+fluctuation and whatnot and when we use
+
+209
+00:08:31,970 --> 00:08:33,620
+all these wonderful techniques to do
+
+210
+00:08:33,620 --> 00:08:36,400
+pattern detection we're looking at the
+
+211
+00:08:36,400 --> 00:08:39,810
+single streams of data
+
+212
+00:08:39,810 --> 00:08:42,479
+factors right and we're saying one of
+
+213
+00:08:42,479 --> 00:08:44,159
+the patterns so the system can learn the
+
+214
+00:08:44,159 --> 00:08:46,620
+pattern right and in its creat what it
+
+215
+00:08:46,620 --> 00:08:48,750
+creates in aggregate it creates a
+
+216
+00:08:48,750 --> 00:08:51,600
+collective I would say set of neural
+
+217
+00:08:51,600 --> 00:08:54,150
+pathways right all right and patterns
+
+218
+00:08:54,150 --> 00:08:55,920
+and then we're looking at this and say
+
+219
+00:08:55,920 --> 00:09:01,230
+ok with something changes changes what
+
+220
+00:09:01,230 --> 00:09:03,089
+happens next and that's what people in
+
+221
+00:09:03,089 --> 00:09:05,130
+business usually look for into business
+
+222
+00:09:05,130 --> 00:09:07,290
+intelligence and competitors for
+
+223
+00:09:07,290 --> 00:09:09,180
+instance a pattern like hey look
+
+224
+00:09:09,180 --> 00:09:12,860
+everybody and Twitter of my competitors
+
+225
+00:09:14,600 --> 00:09:15,779
+competitor
+
+226
+00:09:15,779 --> 00:09:18,420
+yeah well that's meaningful but if I
+
+227
+00:09:18,420 --> 00:09:24,000
+didn't understand the actual pattern how
+
+228
+00:09:24,000 --> 00:09:25,350
+would I have been awarded to what I
+
+229
+00:09:25,350 --> 00:09:27,480
+don't know exactly right and that's
+
+230
+00:09:27,480 --> 00:09:29,010
+where it's beautiful that's that's the
+
+231
+00:09:29,010 --> 00:09:29,430
+trigger
+
+232
+00:09:29,430 --> 00:09:31,500
+exactly so now we can do it this more
+
+233
+00:09:31,500 --> 00:09:33,900
+thing than just the limitation of your
+
+234
+00:09:33,900 --> 00:09:36,150
+physicality and my physicality in the
+
+235
+00:09:36,150 --> 00:09:38,040
+same room exactly right the burden would
+
+236
+00:09:38,040 --> 00:09:39,630
+show up over here it would be this
+
+237
+00:09:39,630 --> 00:09:41,279
+person to the pattern with very thick
+
+238
+00:09:41,279 --> 00:09:42,800
+even if you were standing over there
+
+239
+00:09:42,800 --> 00:09:45,720
+exactly so the system's unified that
+
+240
+00:09:45,720 --> 00:09:51,170
+improves decision dramatically in fact
+
+241
+00:09:51,170 --> 00:09:53,400
+artificial intelligence because the fact
+
+242
+00:09:53,400 --> 00:09:55,290
+that is running on technology has some
+
+243
+00:09:55,290 --> 00:09:57,030
+advantages that we humans can never have
+
+244
+00:09:57,030 --> 00:09:59,820
+mm-hmm good or drunk okay
+
+245
+00:09:59,820 --> 00:10:01,410
+this is basically a huge paddock
+
+246
+00:10:01,410 --> 00:10:10,650
+elimination problem if we do if we want
+
+247
+00:10:10,650 --> 00:10:14,660
+to do it actually but the thing is
+
+248
+00:10:14,660 --> 00:10:17,160
+driving me sometimes distracting person
+
+249
+00:10:17,160 --> 00:10:19,740
+why because the thing is our birth
+
+250
+00:10:19,740 --> 00:10:22,260
+family focus on so many things at once
+
+251
+00:10:22,260 --> 00:10:26,070
+yes our brains can't focus on 50 things
+
+252
+00:10:26,070 --> 00:10:28,500
+at once we can look you know in front of
+
+253
+00:10:28,500 --> 00:10:30,000
+us we can rearview mirror we can see
+
+254
+00:10:30,000 --> 00:10:32,130
+other nears we can see what speed we're
+
+255
+00:10:32,130 --> 00:10:34,230
+going to look at the GPS so many things
+
+256
+00:10:34,230 --> 00:10:35,850
+to look at so many things to cordoned
+
+257
+00:10:35,850 --> 00:10:39,360
+okay a pretty good job but this is our
+
+258
+00:10:39,360 --> 00:10:41,960
+machine is coming machines
+
+259
+00:10:41,960 --> 00:10:44,420
+cars so much better than us because they
+
+260
+00:10:44,420 --> 00:10:45,860
+can take a look at all the data points
+
+261
+00:10:45,860 --> 00:10:48,830
+make meaningful pattern recognition
+
+262
+00:10:48,830 --> 00:10:51,710
+alpha yes and then from there take
+
+263
+00:10:51,710 --> 00:10:53,210
+everything that it's seeing in
+
+264
+00:10:53,210 --> 00:10:54,860
+conjunction and then make a decision
+
+265
+00:10:54,860 --> 00:10:56,210
+because their full attention
+
+266
+00:10:56,210 --> 00:10:57,620
+exactly they have full attention
+
+267
+00:10:57,620 --> 00:10:59,360
+everywhere because they are capable of
+
+268
+00:10:59,360 --> 00:11:01,640
+making full attention every single data
+
+269
+00:11:01,640 --> 00:11:03,500
+point in your honor to go to your
+
+270
+00:11:03,500 --> 00:11:04,970
+example and somebody drives a car they
+
+271
+00:11:04,970 --> 00:11:07,010
+are used to seeing traffic around them
+
+272
+00:11:07,010 --> 00:11:08,840
+they were used to seeing people so it's
+
+273
+00:11:08,840 --> 00:11:11,300
+actually it becomes subconscious in a
+
+274
+00:11:11,300 --> 00:11:13,910
+way so their attention is only related
+
+275
+00:11:13,910 --> 00:11:15,890
+to the immediate decision after mating
+
+276
+00:11:15,890 --> 00:11:18,110
+and if something interferes exactly
+
+277
+00:11:18,110 --> 00:11:21,620
+right and systems are much more open to
+
+278
+00:11:21,620 --> 00:11:23,840
+the very largest right this is
+
+279
+00:11:23,840 --> 00:11:25,700
+interesting but you see this this is
+
+280
+00:11:25,700 --> 00:11:27,260
+where I think that the competition on
+
+281
+00:11:27,260 --> 00:11:28,490
+the pattern detection is very meaningful
+
+282
+00:11:28,490 --> 00:11:30,710
+because when people people talk about AI
+
+283
+00:11:30,710 --> 00:11:32,210
+who talk about natural language
+
+284
+00:11:32,210 --> 00:11:35,240
+processing oh no that's bad well it's
+
+285
+00:11:35,240 --> 00:11:36,050
+arbitrary
+
+286
+00:11:36,050 --> 00:11:37,730
+I mean think of it this way the world
+
+287
+00:11:37,730 --> 00:11:39,710
+around us yeah the world the natural
+
+288
+00:11:39,710 --> 00:11:41,740
+world shows patterns Laurens
+
+289
+00:11:41,740 --> 00:11:43,400
+demonstrated it was the strange
+
+290
+00:11:43,400 --> 00:11:45,380
+attractor where you know in a closed
+
+291
+00:11:45,380 --> 00:11:47,240
+environment that is highly dynamic we're
+
+292
+00:11:47,240 --> 00:11:49,430
+able to observe patterns exactly oh it's
+
+293
+00:11:49,430 --> 00:11:51,940
+no different this is one of the things i
+
+294
+00:11:51,940 --> 00:11:55,010
+postulate at all there was no difference
+
+295
+00:11:55,010 --> 00:11:57,110
+between the closed environment of nature
+
+296
+00:11:57,110 --> 00:11:59,030
+and the closed environment of human
+
+297
+00:11:59,030 --> 00:12:02,390
+cognitive right so the information or
+
+298
+00:12:02,390 --> 00:12:04,280
+the elements in that chaotic environment
+
+299
+00:12:04,280 --> 00:12:06,380
+of these feel patters yes right and
+
+300
+00:12:06,380 --> 00:12:08,120
+their computers now because we capture
+
+301
+00:12:08,120 --> 00:12:10,160
+so much of our firm ation is what is our
+
+302
+00:12:10,160 --> 00:12:11,329
+information when we
+
+303
+00:12:11,329 --> 00:12:14,059
+it's an intent exactly and we have an
+
+304
+00:12:14,059 --> 00:12:15,649
+intent in order to those because we
+
+305
+00:12:15,649 --> 00:12:16,759
+observe something and yeah and
+
+306
+00:12:16,759 --> 00:12:18,649
+communicated or we have an intent to
+
+307
+00:12:18,649 --> 00:12:20,329
+achieve something it's better that's why
+
+308
+00:12:20,329 --> 00:12:22,089
+we put it in the digital format
+
+309
+00:12:22,089 --> 00:12:24,019
+especially with unstructured data oh
+
+310
+00:12:24,019 --> 00:12:27,709
+yeah what more wonderful thing to do
+
+311
+00:12:27,709 --> 00:12:30,709
+then capture the intents of human
+
+312
+00:12:30,709 --> 00:12:33,649
+expression and analyze the pattern how
+
+313
+00:12:33,649 --> 00:12:36,019
+concepts evolve in the company in
+
+314
+00:12:36,019 --> 00:12:38,569
+collective memories these actually I
+
+315
+00:12:38,569 --> 00:12:40,429
+mean how cool is that and this is the
+
+316
+00:12:40,429 --> 00:12:43,069
+work we love to do I'm going to take all
+
+317
+00:12:43,069 --> 00:12:44,660
+the information you have I'm going to
+
+318
+00:12:44,660 --> 00:12:47,689
+slice it and correlate it and show the
+
+319
+00:12:47,689 --> 00:12:49,730
+patterns of your content show the story
+
+320
+00:12:49,730 --> 00:12:52,009
+you collect a story when you said about
+
+321
+00:12:52,009 --> 00:12:55,100
+the car examples it's exactly the same
+
+322
+00:12:55,100 --> 00:12:57,019
+because we're saying I'm not aware of
+
+323
+00:12:57,019 --> 00:12:58,699
+everything I'm not dismissing anything
+
+324
+00:12:58,699 --> 00:13:00,589
+and the thing is what I'm saying
+
+325
+00:13:00,589 --> 00:13:02,569
+okay we were trained by this one drivers
+
+326
+00:13:02,569 --> 00:13:05,389
+this is now my driving style what am i
+
+327
+00:13:05,389 --> 00:13:07,069
+able to do is it able to take say a
+
+328
+00:13:07,069 --> 00:13:09,769
+hundred drivers of its loading or maybe
+
+329
+00:13:09,769 --> 00:13:12,709
+200 300 drivers yes and each one before
+
+330
+00:13:12,709 --> 00:13:14,299
+I see how hundreds of hours of driving
+
+331
+00:13:14,299 --> 00:13:16,730
+data we're not telling machine ok
+
+332
+00:13:16,730 --> 00:13:18,259
+because the roads curving and these
+
+333
+00:13:18,259 --> 00:13:19,970
+would be the reason right this is how
+
+334
+00:13:19,970 --> 00:13:22,779
+you're gonna turn the steering wheel no
+
+335
+00:13:22,779 --> 00:13:25,459
+we're not able to do we're teaching it
+
+336
+00:13:25,459 --> 00:13:27,379
+we're giving all the data from these
+
+337
+00:13:27,379 --> 00:13:29,089
+drivers and saying learn how to drive
+
+338
+00:13:29,089 --> 00:13:31,129
+and it's implicit or lies all those
+
+339
+00:13:31,129 --> 00:13:33,470
+patterns it's not learning one specific
+
+340
+00:13:33,470 --> 00:13:34,850
+driving style look for example if you're
+
+341
+00:13:34,850 --> 00:13:36,439
+a human you're taught how to drive you
+
+342
+00:13:36,439 --> 00:13:38,929
+will learn a specific driving style with
+
+343
+00:13:38,929 --> 00:13:41,239
+AI we can look at all these data points
+
+344
+00:13:41,239 --> 00:13:43,519
+and find patterns among all of them and
+
+345
+00:13:43,519 --> 00:13:45,529
+say okay this is the average way to
+
+346
+00:13:45,529 --> 00:13:48,619
+drive the proper way to drive at least
+
+347
+00:13:48,619 --> 00:13:51,049
+this is how most units which are thank
+
+348
+00:13:51,049 --> 00:13:52,970
+you if you have any right and this is
+
+349
+00:13:52,970 --> 00:13:54,619
+why pattern detection is fundamental
+
+350
+00:13:54,619 --> 00:13:56,230
+when we talk about
+
+351
+00:13:56,230 --> 00:13:57,940
+because I mean one thing people look at
+
+352
+00:13:57,940 --> 00:13:59,709
+our special intelligence with respect to
+
+353
+00:13:59,709 --> 00:14:01,870
+human interface right now if you can't
+
+354
+00:14:01,870 --> 00:14:04,300
+fool me you know to think that a
+
+355
+00:14:04,300 --> 00:14:06,910
+computer can reason and I can say a lot
+
+356
+00:14:06,910 --> 00:14:08,290
+of this computer can reason therefore
+
+357
+00:14:08,290 --> 00:14:09,790
+it's artificial intelligence this is
+
+358
+00:14:09,790 --> 00:14:12,730
+where people are fiction their reality
+
+359
+00:14:12,730 --> 00:14:14,740
+is it's much wrong simple so what I'm
+
+360
+00:14:14,740 --> 00:14:17,339
+talking about this to me we demystified
+
+361
+00:14:17,339 --> 00:14:19,029
+for people
+
+362
+00:14:19,029 --> 00:14:21,880
+what a I really is because we're telling
+
+363
+00:14:21,880 --> 00:14:24,009
+this is fundamental this is a more
+
+364
+00:14:24,009 --> 00:14:26,829
+organic property of any company that
+
+365
+00:14:26,829 --> 00:14:29,500
+organism and we can do the same thing
+
+366
+00:14:29,500 --> 00:14:34,899
+with technology when you take it from
+
+367
+00:14:34,899 --> 00:14:36,220
+there I mean doesn't that simplify a
+
+368
+00:14:36,220 --> 00:14:39,399
+conversation in fact you could just say
+
+369
+00:14:39,399 --> 00:14:41,620
+artificial intelligence it's basically
+
+370
+00:14:41,620 --> 00:14:43,300
+just a huge pattern recognition problem
+
+371
+00:14:43,300 --> 00:14:45,279
+in general we're trying to give an
+
+372
+00:14:45,279 --> 00:14:47,589
+abstract and huge amounts of data and
+
+373
+00:14:47,589 --> 00:14:49,779
+see how can we find a specific patterns
+
+374
+00:14:49,779 --> 00:14:54,149
+that allow us to achieve this end result
+
+375
+00:14:56,519 --> 00:15:11,260
+there's also things like okay let's take
+
+376
+00:15:11,260 --> 00:15:13,180
+a look at the entire history here and
+
+377
+00:15:13,180 --> 00:15:15,220
+see when this similar type of pattern
+
+378
+00:15:15,220 --> 00:15:17,500
+has happened what usually happens after
+
+379
+00:15:17,500 --> 00:15:22,060
+this no longer a linear regression right
+
+380
+00:15:22,060 --> 00:15:24,130
+sorry it's a lot more interesting a lot
+
+381
+00:15:24,130 --> 00:15:25,930
+more organic exactly because you say
+
+382
+00:15:25,930 --> 00:15:27,970
+hello that the stock market is a human
+
+383
+00:15:27,970 --> 00:15:29,980
+invention so human extraction exactly
+
+384
+00:15:29,980 --> 00:15:32,319
+like for example with artificial
+
+385
+00:15:32,319 --> 00:15:34,089
+intelligence we're trying to emulate
+
+386
+00:15:34,089 --> 00:15:40,889
+things like empathy in humans computers
+
+387
+00:15:40,889 --> 00:15:46,920
+we cannot emulate things like
+
+388
+00:15:53,420 --> 00:15:57,770
+I should understand things like your
+
+389
+00:15:57,770 --> 00:15:59,570
+personality we can understand it's a
+
+390
+00:15:59,570 --> 00:16:02,240
+sentiment with which you're talking for
+
+391
+00:16:02,240 --> 00:16:04,370
+example let's just say that you're you
+
+392
+00:16:04,370 --> 00:16:05,660
+know tweeting about something that's
+
+393
+00:16:05,660 --> 00:16:07,130
+just saying that your entire company is
+
+394
+00:16:07,130 --> 00:16:08,420
+receiving millions or hundreds of
+
+395
+00:16:08,420 --> 00:16:10,940
+thousands of tweets we're filters here
+
+396
+00:16:10,940 --> 00:16:13,040
+whenever you say okay well this specific
+
+397
+00:16:13,040 --> 00:16:15,650
+keyword what sentiment attached this
+
+398
+00:16:15,650 --> 00:16:25,010
+keyword okay what types of catters allow
+
+399
+00:16:25,010 --> 00:16:27,140
+us to say okay the sentiment would this
+
+400
+00:16:27,140 --> 00:16:29,240
+is positive or negative or people are
+
+401
+00:16:29,240 --> 00:16:31,340
+angry or fearful and you're right and
+
+402
+00:16:31,340 --> 00:16:33,170
+this is complex any of you you've seen
+
+403
+00:16:33,170 --> 00:16:34,580
+this before you've seen people who do
+
+404
+00:16:34,580 --> 00:16:36,950
+like sentiment analysis on Twitter all
+
+405
+00:16:36,950 --> 00:16:38,720
+the time say hey what do they do they
+
+406
+00:16:38,720 --> 00:16:40,760
+simply use terms yeah then they said
+
+407
+00:16:40,760 --> 00:16:42,650
+this is positive this is negative this
+
+408
+00:16:42,650 --> 00:16:45,740
+is not this is so deterministic it has
+
+409
+00:16:45,740 --> 00:16:47,990
+no flexibility and you know people will
+
+410
+00:16:47,990 --> 00:16:50,570
+use certain language if in a positive
+
+411
+00:16:50,570 --> 00:16:53,000
+context when we for most of the people
+
+412
+00:16:53,000 --> 00:16:55,130
+that language is unacceptable in seen as
+
+413
+00:16:55,130 --> 00:16:57,560
+negative Zack how do you learn you know
+
+414
+00:16:57,560 --> 00:17:00,320
+so you have to inject disability in the
+
+415
+00:17:00,320 --> 00:17:02,540
+system so to learn and to give you
+
+416
+00:17:02,540 --> 00:17:05,480
+insight and then from there it's not
+
+417
+00:17:05,480 --> 00:17:07,700
+just that one time learning it is you
+
+418
+00:17:07,700 --> 00:17:10,400
+learn once you have base knowledge now
+
+419
+00:17:10,400 --> 00:17:11,990
+you're working on top of that building
+
+420
+00:17:11,990 --> 00:17:14,570
+more and more and more knowledge as you
+
+421
+00:17:14,570 --> 00:17:16,670
+go as you want inference or training
+
+422
+00:17:16,670 --> 00:17:25,760
+more and more as you drop okay you're
+
+423
+00:17:25,760 --> 00:17:27,590
+about to get into an accident learn from
+
+424
+00:17:27,590 --> 00:17:29,150
+that you learn that okay I shouldn't do
+
+425
+00:17:29,150 --> 00:17:30,680
+this one I should do this are you
+
+426
+00:17:30,680 --> 00:17:32,720
+telling me that companies will invest in
+
+427
+00:17:32,720 --> 00:17:33,190
+a
+
+428
+00:17:33,190 --> 00:17:35,740
+have to embrace the idea that it is good
+
+429
+00:17:35,740 --> 00:17:39,850
+to observe mistakes absolutely go you
+
+430
+00:17:39,850 --> 00:17:43,090
+guys got that this is true right you
+
+431
+00:17:43,090 --> 00:17:46,210
+have it's a learning system it is such a
+
+432
+00:17:46,210 --> 00:17:48,550
+beauty I mean think about it the
+
+433
+00:17:48,550 --> 00:17:50,500
+projects are on a college in health care
+
+434
+00:17:50,500 --> 00:17:52,840
+you know helping Diagnostics I mean it's
+
+435
+00:17:52,840 --> 00:17:54,850
+all pattern detection and validation by
+
+436
+00:17:54,850 --> 00:17:56,800
+professional if somebody asked me this
+
+437
+00:17:56,800 --> 00:18:00,100
+what is it we throw all of this data
+
+438
+00:18:00,100 --> 00:18:02,590
+into into the bucket into Watson and we
+
+439
+00:18:02,590 --> 00:18:04,480
+wanted to answer a completely arbitrary
+
+440
+00:18:04,480 --> 00:18:06,970
+question without proper training right
+
+441
+00:18:06,970 --> 00:18:10,120
+so that interaction to just is it it's
+
+442
+00:18:10,120 --> 00:18:11,980
+at home does it take for a human being
+
+443
+00:18:11,980 --> 00:18:14,260
+to learn to be a doctor
+
+444
+00:18:14,260 --> 00:18:15,820
+why would you expect a bunch of trial
+
+445
+00:18:15,820 --> 00:18:19,960
+and error okay when you put that into a
+
+446
+00:18:19,960 --> 00:18:21,910
+system you expect the system to do a
+
+447
+00:18:21,910 --> 00:18:24,670
+better job than a human being but number
+
+448
+00:18:24,670 --> 00:18:27,040
+two you gotta look and say well what is
+
+449
+00:18:27,040 --> 00:18:29,470
+the value of having trained assistants
+
+450
+00:18:29,470 --> 00:18:30,910
+spend perhaps billions of dollars
+
+451
+00:18:30,910 --> 00:18:35,140
+training your system exactly morning now
+
+452
+00:18:35,140 --> 00:18:38,110
+I can bring that knowledge into areas in
+
+453
+00:18:38,110 --> 00:18:40,060
+the world where thousands of
+
+454
+00:18:40,060 --> 00:18:42,700
+professionals can benefit from it you
+
+455
+00:18:42,700 --> 00:18:46,150
+tell me all valuable about this right
+
+456
+00:18:46,150 --> 00:18:46,390
+now
+
+457
+00:18:46,390 --> 00:18:50,230
+Oh cancer specialists sort of diagnosis
+
+458
+00:18:50,230 --> 00:18:53,530
+or you know treatment of cancer okay
+
+459
+00:18:53,530 --> 00:18:55,750
+they're all getting their own experience
+
+460
+00:18:55,750 --> 00:18:58,240
+they're all gaining their own individual
+
+461
+00:18:58,240 --> 00:19:00,130
+knowledge with every single diagnosis
+
+462
+00:19:00,130 --> 00:19:01,770
+and treatment I know where you're going
+
+463
+00:19:01,770 --> 00:19:06,250
+what happens we can have one single
+
+464
+00:19:06,250 --> 00:19:08,830
+cloud that has all the experience all
+
+465
+00:19:08,830 --> 00:19:11,470
+the knowledge so every time saying
+
+466
+00:19:11,470 --> 00:19:13,510
+someone's diagnosed in Canada
+
+467
+00:19:13,510 --> 00:19:16,780
+someone in Dubai can benefit from that
+
+468
+00:19:16,780 --> 00:19:18,910
+knowledge yes an entirely different
+
+469
+00:19:18,910 --> 00:19:20,470
+doctor entirely different Hospital
+
+470
+00:19:20,470 --> 00:19:22,300
+entirely different method but still
+
+471
+00:19:22,300 --> 00:19:23,980
+they're benefitting from the fact that
+
+472
+00:19:23,980 --> 00:19:26,740
+someone in Canada was treated by are you
+
+473
+00:19:26,740 --> 00:19:30,670
+telling me here that we can build
+
+474
+00:19:30,670 --> 00:19:32,500
+collective knowledge and benefit from it
+
+475
+00:19:32,500 --> 00:19:34,900
+quite literally yes there you go and
+
+476
+00:19:34,900 --> 00:19:36,910
+that's beautiful because as humans right
+
+477
+00:19:36,910 --> 00:19:38,560
+we can you talk about
+
+478
+00:19:38,560 --> 00:19:42,100
+right our organism our system is unified
+
+479
+00:19:42,100 --> 00:19:44,260
+in order to be stronger I mean build
+
+480
+00:19:44,260 --> 00:19:47,140
+city to be stronger we build Network and
+
+481
+00:19:47,140 --> 00:19:48,010
+you know it's beautiful
+
+482
+00:19:48,010 --> 00:19:49,990
+just like you all network just like that
+
+483
+00:19:49,990 --> 00:19:53,440
+all right it's funny how every time two
+
+484
+00:19:53,440 --> 00:19:56,350
+entities can communicate the sum of the
+
+485
+00:19:56,350 --> 00:20:02,770
+value is higher can you imagine I mean
+
+486
+00:20:02,770 --> 00:20:05,020
+the whole reality as well is that call
+
+487
+00:20:05,020 --> 00:20:07,300
+connected devices the fact that they're
+
+488
+00:20:07,300 --> 00:20:09,640
+connected give them their own governance
+
+489
+00:20:09,640 --> 00:20:12,730
+that only a cognitive awareness that we
+
+490
+00:20:12,730 --> 00:20:14,230
+don't need to comprehend as a difficult
+
+491
+00:20:14,230 --> 00:20:15,580
+like to simulate other cells in your
+
+492
+00:20:15,580 --> 00:20:17,680
+body little 10 is 10 what you're
+
+493
+00:20:17,680 --> 00:20:19,270
+thinking but they're participating in
+
+494
+00:20:19,270 --> 00:20:24,100
+the equation exactly every more official
+
+495
+00:20:24,100 --> 00:20:28,450
+cognitive system because it's it's but
+
+496
+00:20:28,450 --> 00:20:30,700
+it's negative so now we're unifying this
+
+497
+00:20:30,700 --> 00:20:31,930
+is what I always just said this
+
+498
+00:20:31,930 --> 00:20:34,480
+knowledge is converging we're gonna find
+
+499
+00:20:34,480 --> 00:20:36,880
+in technologies enabler exactly if you
+
+500
+00:20:36,880 --> 00:20:38,980
+take a look at this why are you in so
+
+501
+00:20:38,980 --> 00:20:41,200
+great it's because we can communicate
+
+502
+00:20:41,200 --> 00:20:42,400
+with each other in such a natural way
+
+503
+00:20:42,400 --> 00:20:44,380
+and we can actually transfer knowledge
+
+504
+00:20:44,380 --> 00:20:47,470
+of one person to other really quickly
+
+505
+00:20:47,470 --> 00:20:51,670
+but it's a common trail right that's why
+
+506
+00:20:51,670 --> 00:20:55,620
+the user so great
+
+507
+00:20:55,920 --> 00:20:58,030
+preserving knowledge for literally years
+
+508
+00:20:58,030 --> 00:21:00,010
+and you know gaining experience but this
+
+509
+00:21:00,010 --> 00:21:02,080
+meeting is not some limited mmm all
+
+510
+00:21:02,080 --> 00:21:03,280
+right as I mentioned going back to the
+
+511
+00:21:03,280 --> 00:21:05,560
+example can undo if you can't talk to
+
+512
+00:21:05,560 --> 00:21:07,000
+learn something in camera but it teaches
+
+513
+00:21:07,000 --> 00:21:10,440
+a few other doctors limit
+
+514
+00:21:10,440 --> 00:21:13,200
+those doctors go everything to each but
+
+515
+00:21:13,200 --> 00:21:15,690
+with AI that's not limited at all what
+
+516
+00:21:15,690 --> 00:21:17,460
+if we could take the fact that humans
+
+517
+00:21:17,460 --> 00:21:18,509
+can communicate with each other and
+
+518
+00:21:18,509 --> 00:21:20,159
+share their knowledge to the next level
+
+519
+00:21:20,159 --> 00:21:22,200
+what if we can make it set behind this
+
+520
+00:21:22,200 --> 00:21:24,320
+need to share knowledge gets just one
+
+521
+00:21:24,320 --> 00:21:27,419
+individual AI that does cancer treatment
+
+522
+00:21:27,419 --> 00:21:29,669
+diagnosis right Enix for it is the sum
+
+523
+00:21:29,669 --> 00:21:31,379
+of all the knowledge all the knowledge
+
+524
+00:21:31,379 --> 00:21:35,370
+every single honesty I mean everybody's
+
+525
+00:21:35,370 --> 00:21:36,899
+got to realize this is when we talk
+
+526
+00:21:36,899 --> 00:21:38,639
+about pattern detection looking L arche
+
+527
+00:21:38,639 --> 00:21:40,440
+I said defective the system can remember
+
+528
+00:21:40,440 --> 00:21:42,210
+oh the fact that the system can
+
+529
+00:21:42,210 --> 00:21:44,250
+aggregate defected the loop feedback
+
+530
+00:21:44,250 --> 00:21:46,740
+that the learning mechanism improves I
+
+531
+00:21:46,740 --> 00:21:50,460
+mean and I want to be metaphysical my
+
+532
+00:21:50,460 --> 00:21:53,639
+buddy but we are capturing the the in in
+
+533
+00:21:53,639 --> 00:21:56,039
+a very sustainable and long-term way the
+
+534
+00:21:56,039 --> 00:21:58,889
+essence of human cognitive and capacity
+
+535
+00:21:58,889 --> 00:22:01,110
+exactly for the service of humans oh
+
+536
+00:22:01,110 --> 00:22:03,090
+yeah you know and this is what's
+
+537
+00:22:03,090 --> 00:22:06,269
+fantastic so back to the beginning here
+
+538
+00:22:06,269 --> 00:22:09,330
+right yes parent detection fundamental
+
+539
+00:22:09,330 --> 00:22:12,360
+we do it organically technology enables
+
+540
+00:22:12,360 --> 00:22:15,230
+us to actually go act on it and
+
+541
+00:22:15,230 --> 00:22:18,179
+convergent when the pattern changes when
+
+542
+00:22:18,179 --> 00:22:21,179
+something is different if we can act on
+
+543
+00:22:21,179 --> 00:22:23,360
+it
+
+544
+00:22:46,810 --> 00:22:50,580
+[Laughter]
+
+545
+00:22:57,230 --> 00:23:00,480
+[Laughter]
+
+546
+00:23:03,740 --> 00:23:05,760
+over many years they've gathered
+
+547
+00:23:05,760 --> 00:23:07,080
+experience these are the stocks made to
+
+548
+00:23:07,080 --> 00:23:10,230
+buy sell they've learned how to
+
+549
+00:23:10,230 --> 00:23:13,830
+recognize patterns yes but the thing is
+
+550
+00:23:13,830 --> 00:23:16,260
+the only problem is it's limited to that
+
+551
+00:23:16,260 --> 00:23:17,120
+individual
+
+552
+00:23:17,120 --> 00:23:21,419
+they cannot completely distill all of
+
+553
+00:23:21,419 --> 00:23:23,100
+that knowledge that they have and give
+
+554
+00:23:23,100 --> 00:23:26,309
+it to another person true exactly so
+
+555
+00:23:26,309 --> 00:23:28,679
+what if we would have used AI to do
+
+556
+00:23:28,679 --> 00:23:30,780
+automatics in fact in the u.s. I believe
+
+557
+00:23:30,780 --> 00:23:34,020
+over 70% of stock trading done on us
+
+558
+00:23:34,020 --> 00:23:38,190
+bought in 2014 was all done by boss yeah
+
+559
+00:23:38,190 --> 00:23:42,600
+yeah so what if one central AI that
+
+560
+00:23:42,600 --> 00:23:44,850
+eventually learns all these patterns
+
+561
+00:23:44,850 --> 00:23:46,500
+it doesn't need to share any knowledge
+
+562
+00:23:46,500 --> 00:23:48,840
+or otherwise it's just one AI that
+
+563
+00:23:48,840 --> 00:23:51,540
+continuously learns and that's the AI
+
+564
+00:23:51,540 --> 00:23:53,190
+want to keep in a box in a basement
+
+565
+00:23:53,190 --> 00:23:56,490
+right and I throw some voltage at it and
+
+566
+00:23:56,490 --> 00:23:58,220
+because that's the distinction
+
+567
+00:23:58,220 --> 00:24:01,440
+unfortunately you know are we still
+
+568
+00:24:01,440 --> 00:24:04,770
+operate around a model of failures and
+
+569
+00:24:04,770 --> 00:24:06,929
+success to solve and necessity is a
+
+570
+00:24:06,929 --> 00:24:09,179
+necessity right I mean otherwise we will
+
+571
+00:24:09,179 --> 00:24:11,010
+be doing what we're told today but the
+
+572
+00:24:11,010 --> 00:24:12,179
+point is what you say you're absolutely
+
+573
+00:24:12,179 --> 00:24:14,220
+right if this was knowledge what I think
+
+574
+00:24:14,220 --> 00:24:17,160
+that think the expert in your case yeah
+
+575
+00:24:17,160 --> 00:24:19,650
+and then you bring the insight and you
+
+576
+00:24:19,650 --> 00:24:21,809
+reveal the patterns of data you reveal
+
+577
+00:24:21,809 --> 00:24:24,860
+the anomalies and you turn that into
+
+578
+00:24:24,860 --> 00:24:26,970
+something that they can use to make
+
+579
+00:24:26,970 --> 00:24:28,919
+better decision to give them a
+
+580
+00:24:28,919 --> 00:24:30,540
+competitive
+
+581
+00:24:30,540 --> 00:24:32,910
+now the same way that we talk about
+
+582
+00:24:32,910 --> 00:24:35,670
+normalizing patterns and not can you
+
+583
+00:24:35,670 --> 00:24:37,380
+imagine if everybody had the same tool
+
+584
+00:24:37,380 --> 00:24:41,420
+to market who no longer be a market oh
+
+585
+00:24:41,920 --> 00:24:44,979
+[Music]
+
+586
+00:24:48,950 --> 00:24:51,180
+yeah in the seats of purpose but the
+
+587
+00:24:51,180 --> 00:24:52,230
+example is absolutely right because
+
+588
+00:24:52,230 --> 00:24:56,210
+eventually this is what can happen
+
+589
+00:24:56,210 --> 00:25:01,620
+because of so this is fun so we have we
+
+590
+00:25:01,620 --> 00:25:02,940
+have a lot of example we could be
+
+591
+00:25:02,940 --> 00:25:04,260
+talking about the time he was talk
+
+592
+00:25:04,260 --> 00:25:05,580
+marketer talking about healthcare
+
+593
+00:25:05,580 --> 00:25:08,580
+talking about driving cars talking about
+
+594
+00:25:08,580 --> 00:25:10,440
+collective knowledge of looking at the
+
+595
+00:25:10,440 --> 00:25:12,360
+movement of memories in the organization
+
+596
+00:25:12,360 --> 00:25:13,890
+you know a thank you a great example
+
+597
+00:25:13,890 --> 00:25:16,020
+when you talk about as convergence its
+
+598
+00:25:16,020 --> 00:25:18,360
+two entities mergers and acquisition one
+
+599
+00:25:18,360 --> 00:25:20,400
+company has all this data all this
+
+600
+00:25:20,400 --> 00:25:22,380
+knowledge and can abstract it to make it
+
+601
+00:25:22,380 --> 00:25:25,650
+useful and find it inaccessible and then
+
+602
+00:25:25,650 --> 00:25:27,920
+you have another company who's got like
+
+603
+00:25:27,920 --> 00:25:30,810
+they just acquired it and something over
+
+604
+00:25:30,810 --> 00:25:33,900
+here happens that is unusual and guess
+
+605
+00:25:33,900 --> 00:25:35,520
+what it matches with something over here
+
+606
+00:25:35,520 --> 00:25:38,190
+that happened ten years ago you can drop
+
+607
+00:25:38,190 --> 00:25:40,380
+just like your memories yeah I can draw
+
+608
+00:25:40,380 --> 00:25:41,610
+from that knowledge check when I see
+
+609
+00:25:41,610 --> 00:25:43,530
+this it reminds me when my mom used to
+
+610
+00:25:43,530 --> 00:25:49,080
+make eggs five-minute eggs like this I
+
+611
+00:25:49,080 --> 00:25:51,360
+mean that's my was done right so my
+
+612
+00:25:51,360 --> 00:25:52,890
+correlation was this is most probably
+
+613
+00:25:52,890 --> 00:25:58,050
+different than yours so so the fact is
+
+614
+00:25:58,050 --> 00:26:00,000
+that uncorrelated that same thing was
+
+615
+00:26:00,000 --> 00:26:01,650
+Enterprise easy they acquire this
+
+616
+00:26:01,650 --> 00:26:03,780
+knowledge is collective and they can
+
+617
+00:26:03,780 --> 00:26:05,130
+bring it out and say well this is
+
+618
+00:26:05,130 --> 00:26:06,540
+meaningful for me right now I do a
+
+619
+00:26:06,540 --> 00:26:08,340
+virtual an acquisition gosh I didn't
+
+620
+00:26:08,340 --> 00:26:09,510
+know that you did stuff stem-cell
+
+621
+00:26:09,510 --> 00:26:11,580
+research 20 years ago the government
+
+622
+00:26:11,580 --> 00:26:12,390
+rules change
+
+623
+00:26:12,390 --> 00:26:14,340
+that's an emerging pattern exactly to
+
+624
+00:26:14,340 --> 00:26:17,070
+change well can we match that change as
+
+625
+00:26:17,070 --> 00:26:19,590
+a memory has a trigger to see what we
+
+626
+00:26:19,590 --> 00:26:20,430
+did in the past
+
+627
+00:26:20,430 --> 00:26:22,590
+and elevate all the entities associated
+
+628
+00:26:22,590 --> 00:26:24,630
+with it that's what we do every day
+
+629
+00:26:24,630 --> 00:26:26,110
+one can organs
+
+630
+00:26:26,110 --> 00:26:28,870
+it was actually the data the store in
+
+631
+00:26:28,870 --> 00:26:30,519
+your archives which to me you know what
+
+632
+00:26:30,519 --> 00:26:32,370
+it is is a graveyard of knowledge
+
+633
+00:26:32,370 --> 00:26:39,370
+graveyard it's silly look it was the
+
+634
+00:26:39,370 --> 00:26:42,250
+reality of things you know no it changes
+
+635
+00:26:42,250 --> 00:26:44,559
+haven't changed Diebold was technology
+
+636
+00:26:44,559 --> 00:26:46,510
+c'est moi maybe there's something I can
+
+637
+00:26:46,510 --> 00:26:48,880
+really do with say exactly its values in
+
+638
+00:26:48,880 --> 00:27:03,029
+there first of all cancer yes there is
+
+639
+00:27:11,399 --> 00:27:14,950
+humans cannot keep physically impossible
+
+640
+00:27:14,950 --> 00:27:16,570
+for us to read through all of that and
+
+641
+00:27:16,570 --> 00:27:18,519
+not just read through it but understand
+
+642
+00:27:18,519 --> 00:27:20,080
+all of it and apply it to make you
+
+643
+00:27:20,080 --> 00:27:24,730
+exactly yeah but technology it can only
+
+644
+00:27:24,730 --> 00:27:26,500
+store all that information but with AI
+
+645
+00:27:26,500 --> 00:27:30,159
+not only do we store that info we make
+
+646
+00:27:30,159 --> 00:27:34,539
+sense of it and use it can take all the
+
+647
+00:27:34,539 --> 00:27:36,610
+important stuff that we're going through
+
+648
+00:27:36,610 --> 00:27:39,309
+all the important stuff that we create
+
+649
+00:27:39,309 --> 00:27:41,529
+and then understand it and make use of
+
+650
+00:27:41,529 --> 00:27:43,899
+atoms interact with is very natural
+
+651
+00:27:43,899 --> 00:27:45,669
+exactly and that's bird can go ahead and
+
+652
+00:27:45,669 --> 00:27:47,559
+ask a question and it'll get done in
+
+653
+00:27:47,559 --> 00:27:49,000
+semesters based on the analysis it's
+
+654
+00:27:49,000 --> 00:27:52,480
+brilliant it is really and also another
+
+655
+00:27:52,480 --> 00:27:54,940
+great example which relates to this it's
+
+656
+00:27:54,940 --> 00:27:56,190
+actually
+
+657
+00:27:56,190 --> 00:27:57,480
+put a link to that in the description
+
+658
+00:27:57,480 --> 00:28:03,769
+about I believe with mining or password
+
+659
+00:28:03,769 --> 00:28:06,179
+and so what they were thinking doing is
+
+660
+00:28:06,179 --> 00:28:08,730
+collaborating with IBM and actually
+
+661
+00:28:08,730 --> 00:28:10,500
+taking most of their knowledge bases
+
+662
+00:28:10,500 --> 00:28:12,539
+most the knowledge sense you know
+
+663
+00:28:12,539 --> 00:28:14,250
+feeding it to Watson and they're placing
+
+664
+00:28:14,250 --> 00:28:15,809
+a good fraction of their workforce just
+
+665
+00:28:15,809 --> 00:28:18,269
+just like that okay mm-hmm but what they
+
+666
+00:28:18,269 --> 00:28:21,360
+found out was that related to the
+
+667
+00:28:21,360 --> 00:28:24,090
+equation the movie workers they added
+
+668
+00:28:24,090 --> 00:28:27,299
+war because they realize exactly what
+
+669
+00:28:27,299 --> 00:28:29,370
+they realize is that we don't need to
+
+670
+00:28:29,370 --> 00:28:31,679
+mess trick that with IRA people because
+
+671
+00:28:31,679 --> 00:28:35,809
+not all of our workers knowledge
+
+672
+00:28:35,809 --> 00:28:39,000
+knowledge an easy way hey I will take
+
+673
+00:28:39,000 --> 00:28:40,529
+all that knowledge and distill it down
+
+674
+00:28:40,529 --> 00:28:43,820
+make it so easy for us humans to access
+
+675
+00:28:43,820 --> 00:28:46,559
+them in fact especially the oil industry
+
+676
+00:28:46,559 --> 00:28:47,700
+I think you're talking about the example
+
+677
+00:28:47,700 --> 00:28:49,500
+and the oil rig and the deep-sea
+
+678
+00:28:49,500 --> 00:28:51,690
+exploration is that the one beliefs they
+
+679
+00:28:51,690 --> 00:28:53,429
+might be right but the beautiful part
+
+680
+00:28:53,429 --> 00:28:55,080
+about this and the oil industry is is
+
+681
+00:28:55,080 --> 00:28:56,429
+one company that used a lot of
+
+682
+00:28:56,429 --> 00:28:58,980
+contractors want you know depending on
+
+683
+00:28:58,980 --> 00:29:00,269
+the market and depending on other
+
+684
+00:29:00,269 --> 00:29:02,669
+resource allocations and they often lose
+
+685
+00:29:02,669 --> 00:29:04,200
+them and there's been a huge knowledge
+
+686
+00:29:04,200 --> 00:29:05,970
+attrition in this industry especially in
+
+687
+00:29:05,970 --> 00:29:07,139
+Louisiana Texas
+
+688
+00:29:07,139 --> 00:29:08,909
+you know it's a different move different
+
+689
+00:29:08,909 --> 00:29:11,490
+the different movement in the in the in
+
+690
+00:29:11,490 --> 00:29:13,230
+the price and the resources availability
+
+691
+00:29:13,230 --> 00:29:15,179
+and all that so these guys come in and
+
+692
+00:29:15,179 --> 00:29:17,370
+out you know and feel as it was a
+
+693
+00:29:17,370 --> 00:29:19,019
+knowledge denotes that they take off
+
+694
+00:29:19,019 --> 00:29:21,570
+notice so so knowledge knowledge
+
+695
+00:29:21,570 --> 00:29:25,110
+acquisition exploitation usage you know
+
+696
+00:29:25,110 --> 00:29:27,269
+in a way to remedy against now if you
+
+697
+00:29:27,269 --> 00:29:28,710
+Tricia is great but but here's the thing
+
+698
+00:29:28,710 --> 00:29:29,429
+that's fun
+
+699
+00:29:29,429 --> 00:29:33,330
+yes you know you used email how many
+
+700
+00:29:33,330 --> 00:29:34,880
+people say oh my gosh
+
+701
+00:29:34,880 --> 00:29:45,200
+place jobs we heard this but I'm fully
+
+702
+00:29:45,200 --> 00:29:46,450
+up to that in the description as well
+
+703
+00:29:46,450 --> 00:29:49,250
+but you know artificial intelligence is
+
+704
+00:29:49,250 --> 00:29:51,770
+one of the reasons that it's so hard to
+
+705
+00:29:51,770 --> 00:29:54,440
+develop with is because before I even
+
+706
+00:29:54,440 --> 00:30:13,330
+existed everyone expected exactly okay
+
+707
+00:30:13,330 --> 00:30:17,100
+[Laughter]
+
+708
+00:30:18,490 --> 00:30:21,140
+it doesn't mean that we will lose it
+
+709
+00:30:21,140 --> 00:30:23,630
+people we augment people we make them
+
+710
+00:30:23,630 --> 00:30:25,640
+more knowledgeable so they can make
+
+711
+00:30:25,640 --> 00:30:28,130
+better decisions that and it's true I
+
+712
+00:30:28,130 --> 00:30:31,310
+mean automation in the has taken a lot
+
+713
+00:30:31,310 --> 00:30:32,750
+of jobs with people I don't you know
+
+714
+00:30:32,750 --> 00:30:34,640
+what I think really is fine what it's
+
+715
+00:30:34,640 --> 00:30:40,610
+the people today and the fear about so
+
+716
+00:30:40,610 --> 00:30:42,860
+so before came a decision that affected
+
+717
+00:30:42,860 --> 00:30:44,870
+people who weren't into factories now
+
+718
+00:30:44,870 --> 00:30:47,210
+the making decision around the holiday
+
+719
+00:30:47,210 --> 00:30:50,030
+on their job somehow they feel that oh
+
+720
+00:30:50,030 --> 00:30:54,650
+my gosh so it's it's I think it's it's
+
+721
+00:30:54,650 --> 00:30:57,460
+it's it's humorous in some way but
+
+722
+00:30:57,460 --> 00:30:59,570
+fundamental back to what we're saying
+
+723
+00:30:59,570 --> 00:31:02,030
+yes and I think we're about to wrap up
+
+724
+00:31:02,030 --> 00:31:04,730
+this wonderful conversation this skeptic
+
+725
+00:31:04,730 --> 00:31:05,730
+I think we're about there
+
+726
+00:31:05,730 --> 00:31:09,870
+and I think we have about about just
+
+727
+00:31:09,870 --> 00:31:13,230
+this particular time so I think it's
+
+728
+00:31:13,230 --> 00:31:14,760
+important just for people to really
+
+729
+00:31:14,760 --> 00:31:18,389
+understand it is wonderful when an
+
+730
+00:31:18,389 --> 00:31:21,720
+organic model like pattern detection
+
+731
+00:31:21,720 --> 00:31:24,419
+like cognitive science is actually the
+
+732
+00:31:24,419 --> 00:31:27,389
+foundation of a technological
+
+733
+00:31:27,389 --> 00:31:29,820
+representation in abstraction and that
+
+734
+00:31:29,820 --> 00:31:32,519
+makes it intimate between us and the
+
+735
+00:31:32,519 --> 00:31:34,289
+technologies is the technology can start
+
+736
+00:31:34,289 --> 00:31:36,840
+to do things we expect ourselves to be
+
+737
+00:31:36,840 --> 00:31:38,789
+able to Jennifer what a wonderful
+
+738
+00:31:38,789 --> 00:31:41,159
+connection that represents oh yeah so
+
+739
+00:31:41,159 --> 00:31:42,870
+think of a I'm just but we were talking
+
+740
+00:31:42,870 --> 00:31:45,000
+about just stuffing a I'm without
+
+741
+00:31:45,000 --> 00:31:47,519
+pattern detection is not a I and embrace
+
+742
+00:31:47,519 --> 00:31:50,010
+it because what I'm truly believe that
+
+743
+00:31:50,010 --> 00:31:53,460
+it is a true transposition of something
+
+744
+00:31:53,460 --> 00:31:55,830
+that is innate in every one of us and it
+
+745
+00:31:55,830 --> 00:32:01,799
+only makes sense so that was the first
+
+746
+00:32:01,799 --> 00:32:06,720
+episode this was fun
+
+747
+00:32:06,720 --> 00:32:08,340
+thank you very much for joining in today
+
+748
+00:32:08,340 --> 00:32:10,440
+I really hope all of you enjoyed this
+
+749
+00:32:10,440 --> 00:32:12,929
+this new series we're doing some more of
+
+750
+00:32:12,929 --> 00:32:15,090
+these very soon as well officer Ian
+
+751
+00:32:15,090 --> 00:32:16,230
+thank you very much everyone for joining
+
+752
+00:32:16,230 --> 00:32:17,639
+it today hope you enjoy if you have any
+
+753
+00:32:17,639 --> 00:32:19,320
+questions suggestions or feedback please
+
+754
+00:32:19,320 --> 00:32:20,820
+leave it down in the comment section
+
+755
+00:32:20,820 --> 00:32:21,990
+below you can email it to me attend
+
+756
+00:32:21,990 --> 00:32:24,330
+original dark comm or you can tweet to
+
+757
+00:32:24,330 --> 00:32:26,070
+me I drew Manning apart from that Terry
+
+758
+00:32:26,070 --> 00:32:28,620
+how would you contact you Oh beacon
+
+759
+00:32:28,620 --> 00:32:30,630
+contact me directly at Darwin ecosystem
+
+760
+00:32:30,630 --> 00:32:33,419
+calm or cheery and Darwin ecosystem that
+
+761
+00:32:33,419 --> 00:32:35,519
+come we're happy to continue the
+
+762
+00:32:35,519 --> 00:32:38,429
+conversation all right thank you ten
+
+763
+00:32:38,429 --> 00:32:41,549
+wonderful fun conversation no computer
+
+764
+00:32:41,549 --> 00:32:43,890
+no keyboard no keyboard to me
+
+765
+00:32:43,890 --> 00:32:48,530
+keywords a lot of time moving all right
+
+766
+00:32:48,530 --> 00:32:51,650
+come on

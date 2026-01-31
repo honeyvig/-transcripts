@@ -1,0 +1,763 @@
+1
+00:00:01,930 --> 00:00:12,139
+[Music]
+
+2
+00:00:12,139 --> 00:00:15,240
+all right so just before I start the
+
+3
+00:00:15,240 --> 00:00:17,760
+actual tutorial today I just like to say
+
+4
+00:00:17,760 --> 00:00:20,430
+that an early access copy of my book
+
+5
+00:00:20,430 --> 00:00:22,859
+hello Swift has been released for the
+
+6
+00:00:22,859 --> 00:00:25,680
+first eight chapters you can find it on
+
+7
+00:00:25,680 --> 00:00:28,170
+many bookstores online such as Amazon
+
+8
+00:00:28,170 --> 00:00:31,380
+chapters and indigo as well as the
+
+9
+00:00:31,380 --> 00:00:34,380
+publishers website I really do hope that
+
+10
+00:00:34,380 --> 00:00:36,840
+this helps you throughout your journey
+
+11
+00:00:36,840 --> 00:00:38,460
+of learning the Swift programming
+
+12
+00:00:38,460 --> 00:00:42,090
+language alright so let's get into the
+
+13
+00:00:42,090 --> 00:00:44,940
+tutorial now so closer and welcome to
+
+14
+00:00:44,940 --> 00:00:45,840
+another tutorial
+
+15
+00:00:45,840 --> 00:00:48,360
+my name is Ken Lee battery and this time
+
+16
+00:00:48,360 --> 00:00:50,280
+we're going to be going over how you can
+
+17
+00:00:50,280 --> 00:00:52,949
+use the SS speech recognizer in swiftly
+
+18
+00:00:52,949 --> 00:00:55,770
+in a Mac OS application in order to
+
+19
+00:00:55,770 --> 00:00:58,620
+transcribe the Metro phonetic alphabet
+
+20
+00:00:58,620 --> 00:01:00,690
+or the North Atlantic Treaty
+
+21
+00:01:00,690 --> 00:01:03,960
+Organization phonetic alphabet numbers
+
+22
+00:01:03,960 --> 00:01:05,880
+call this is because the natural
+
+23
+00:01:05,880 --> 00:01:08,280
+organization is actually adopted this
+
+24
+00:01:08,280 --> 00:01:10,890
+phonetic alphabet but before I go any
+
+25
+00:01:10,890 --> 00:01:13,200
+further about this application I like to
+
+26
+00:01:13,200 --> 00:01:16,320
+say a big thank you to Ryan for sending
+
+27
+00:01:16,320 --> 00:01:19,799
+in this video request and idea so
+
+28
+00:01:19,799 --> 00:01:21,990
+beginning today though basically the
+
+29
+00:01:21,990 --> 00:01:24,180
+point of this application is let's just
+
+30
+00:01:24,180 --> 00:01:26,729
+say that you wanted to write out cat CA
+
+31
+00:01:26,729 --> 00:01:30,000
+T on your computer instead of saying C
+
+32
+00:01:30,000 --> 00:01:33,420
+18 or cat you would say Charlie alpha
+
+33
+00:01:33,420 --> 00:01:37,110
+tango which is the meta and SRC natural
+
+34
+00:01:37,110 --> 00:01:40,020
+phonetic alphabet form of cat and
+
+35
+00:01:40,020 --> 00:01:41,909
+basically this application will write
+
+36
+00:01:41,909 --> 00:01:44,009
+out cat free and this is based
+
+37
+00:01:44,009 --> 00:01:46,590
+completely off of my older and a speech
+
+38
+00:01:46,590 --> 00:01:49,229
+recognizer videos code so if you like to
+
+39
+00:01:49,229 --> 00:01:50,970
+learn a bit more about how the NFC's
+
+40
+00:01:50,970 --> 00:01:53,460
+recognizer actually works you can find a
+
+41
+00:01:53,460 --> 00:01:54,960
+link of that video down in the
+
+42
+00:01:54,960 --> 00:01:58,170
+description below and so cool so today
+
+43
+00:01:58,170 --> 00:02:00,119
+I'm going to be showing you how I was
+
+44
+00:02:00,119 --> 00:02:01,829
+able to implement the Semitic alphabet
+
+45
+00:02:01,829 --> 00:02:04,799
+into this speech recognizer so without
+
+46
+00:02:04,799 --> 00:02:06,329
+any further ado let's get straight to
+
+47
+00:02:06,329 --> 00:02:09,239
+the code part where I can show you how I
+
+48
+00:02:09,239 --> 00:02:11,129
+was able to implement this phonetic
+
+49
+00:02:11,129 --> 00:02:12,900
+alphabet with my
+
+50
+00:02:12,900 --> 00:02:15,810
+Mac OS application using the NS speech
+
+51
+00:02:15,810 --> 00:02:18,379
+recognizer let's get to it
+
+52
+00:02:18,379 --> 00:02:20,700
+alright so welcome back to the color
+
+53
+00:02:20,700 --> 00:02:22,739
+part and now I'm going to be showing you
+
+54
+00:02:22,739 --> 00:02:25,620
+the actual implementation of this
+
+55
+00:02:25,620 --> 00:02:28,439
+application so if you already seen my
+
+56
+00:02:28,439 --> 00:02:31,290
+older in a speech recognizer video you
+
+57
+00:02:31,290 --> 00:02:33,239
+actually find this you probably find
+
+58
+00:02:33,239 --> 00:02:36,180
+this code very very familiar example
+
+59
+00:02:36,180 --> 00:02:38,519
+facts this is a very this are a flicked
+
+60
+00:02:38,519 --> 00:02:41,760
+3 version of that same code and so
+
+61
+00:02:41,760 --> 00:02:44,310
+basically the point on this code is that
+
+62
+00:02:44,310 --> 00:02:46,200
+we are I mean I'm not going to be
+
+63
+00:02:46,200 --> 00:02:48,239
+explaining into too much depth basically
+
+64
+00:02:48,239 --> 00:02:49,829
+we are declining or we're Kotori
+
+65
+00:02:49,829 --> 00:02:52,260
+declaring our speech recognizer with
+
+66
+00:02:52,260 --> 00:02:53,609
+setting the delegates itself we're
+
+67
+00:02:53,609 --> 00:02:55,109
+setting the commands clean china
+
+68
+00:02:55,109 --> 00:02:57,150
+phonetic alphabet plus them and I'll
+
+69
+00:02:57,150 --> 00:02:59,220
+talk about that in a second and we're
+
+70
+00:02:59,220 --> 00:03:00,780
+telling the speech recognizer to start
+
+71
+00:03:00,780 --> 00:03:03,840
+listening for commands once that's done
+
+72
+00:03:03,840 --> 00:03:06,150
+we implement the speech recognizer did
+
+73
+00:03:06,150 --> 00:03:08,670
+recognize command function and in this
+
+74
+00:03:08,670 --> 00:03:10,530
+function we basically set the break
+
+75
+00:03:10,530 --> 00:03:12,629
+state which you probably understand from
+
+76
+00:03:12,629 --> 00:03:14,939
+my older video I'll be playing in too
+
+77
+00:03:14,939 --> 00:03:17,010
+much detail here though but we said in
+
+78
+00:03:17,010 --> 00:03:19,109
+blank state to either true or false
+
+79
+00:03:19,109 --> 00:03:21,449
+depending on what the user said and we
+
+80
+00:03:21,449 --> 00:03:24,959
+set the output text view to of what they
+
+81
+00:03:24,959 --> 00:03:28,709
+said and usually before what I did in my
+
+82
+00:03:28,709 --> 00:03:32,519
+video is we would set this that we look
+
+83
+00:03:32,519 --> 00:03:35,280
+at this texting a user could say text
+
+84
+00:03:35,280 --> 00:03:38,549
+not to basically just a command but this
+
+85
+00:03:38,549 --> 00:03:39,629
+time what we're doing is we're setting
+
+86
+00:03:39,629 --> 00:03:42,690
+up the commands first character so for
+
+87
+00:03:42,690 --> 00:03:45,150
+example to use just this alpha for a we
+
+88
+00:03:45,150 --> 00:03:46,829
+only want the a from the beginning of
+
+89
+00:03:46,829 --> 00:03:48,239
+alpha we don't want the entirety of
+
+90
+00:03:48,239 --> 00:03:50,159
+alpha to be printed out onto the
+
+91
+00:03:50,159 --> 00:03:52,049
+textview in fact let me show you a quick
+
+92
+00:03:52,049 --> 00:03:53,750
+example of this in action
+
+93
+00:03:53,750 --> 00:03:56,040
+so as you can see it's going to take a
+
+94
+00:03:56,040 --> 00:03:57,949
+second here
+
+95
+00:03:57,949 --> 00:04:00,209
+now let's actually try something else
+
+96
+00:04:00,209 --> 00:04:07,579
+like maybe YouTube so Yankee after
+
+97
+00:04:07,579 --> 00:04:13,650
+uniform tango uniform
+
+98
+00:04:13,650 --> 00:04:21,120
+Bravo echo take a break alright so
+
+99
+00:04:21,120 --> 00:04:23,010
+basically what I've done here is I
+
+100
+00:04:23,010 --> 00:04:25,620
+actually recited out YouTube in the NAT
+
+101
+00:04:25,620 --> 00:04:28,199
+hell phonetic alphabet form and what the
+
+102
+00:04:28,199 --> 00:04:29,699
+NSE truck is nigel has gone ahead and
+
+103
+00:04:29,699 --> 00:04:32,190
+done is actually understood that and
+
+104
+00:04:32,190 --> 00:04:35,370
+roll out YouTube in this text you over
+
+105
+00:04:35,370 --> 00:04:37,740
+here and the text fusing tire I guess
+
+106
+00:04:37,740 --> 00:04:39,690
+you could say window here I don't you
+
+107
+00:04:39,690 --> 00:04:42,240
+can see in this array that I'm defining
+
+108
+00:04:42,240 --> 00:04:44,669
+here I'm actually defining the entire in
+
+109
+00:04:44,669 --> 00:04:46,860
+NATO phonetic alphabet something alpha
+
+110
+00:04:46,860 --> 00:04:49,889
+Bravo Charlie Delta echo Foxtrot Golf
+
+111
+00:04:49,889 --> 00:04:52,229
+Hotel India Juliet kilo Lima Mike
+
+112
+00:04:52,229 --> 00:04:54,840
+November Oscar papa Quebec Romeo Sierra
+
+113
+00:04:54,840 --> 00:04:57,210
+tango uniform Victor whiskey x-ray
+
+114
+00:04:57,210 --> 00:04:58,949
+Yankee Yankee sorry
+
+115
+00:04:58,949 --> 00:05:02,880
+Zulu space take a break and get to work
+
+116
+00:05:02,880 --> 00:05:05,220
+now apart from the phonetic alphabet I
+
+117
+00:05:05,220 --> 00:05:07,169
+have three commands as well those would
+
+118
+00:05:07,169 --> 00:05:09,330
+be space take a break and get back to
+
+119
+00:05:09,330 --> 00:05:11,160
+work now if you've already watched my
+
+120
+00:05:11,160 --> 00:05:13,110
+older tutorial you'll you already know
+
+121
+00:05:13,110 --> 00:05:14,729
+what take a break and get back to work
+
+122
+00:05:14,729 --> 00:05:17,580
+means basically take a break tells E and
+
+123
+00:05:17,580 --> 00:05:19,889
+a sweet recognizer to stop listening and
+
+124
+00:05:19,889 --> 00:05:21,060
+get back to work tails at the start
+
+125
+00:05:21,060 --> 00:05:23,580
+listening again however space work that
+
+126
+00:05:23,580 --> 00:05:24,810
+what that's going to do is that's a new
+
+127
+00:05:24,810 --> 00:05:26,700
+command that I just put in and so what
+
+128
+00:05:26,700 --> 00:05:28,080
+that will do is it'll put a space
+
+129
+00:05:28,080 --> 00:05:30,300
+between what the characters that you say
+
+130
+00:05:30,300 --> 00:05:32,520
+so we actually give you a quick sample
+
+131
+00:05:32,520 --> 00:05:36,000
+of that as well like just for example if
+
+132
+00:05:36,000 --> 00:05:42,620
+I were to say maybe Oh get back to work
+
+133
+00:05:44,060 --> 00:05:45,240
+okay
+
+134
+00:05:45,240 --> 00:05:49,740
+get back to work and if it doesn't
+
+135
+00:05:49,740 --> 00:05:51,660
+realize that I just said that let's just
+
+136
+00:05:51,660 --> 00:05:58,410
+rerun the application and it should all
+
+137
+00:05:58,410 --> 00:06:00,349
+right
+
+138
+00:06:00,349 --> 00:06:08,130
+Hotel echo Lima Lima
+
+139
+00:06:08,130 --> 00:06:20,750
+Oscar space Sierra whiskey India Foxtrot
+
+140
+00:06:20,750 --> 00:06:26,880
+tango take a break as you can see it
+
+141
+00:06:26,880 --> 00:06:29,310
+wrote out hello Swift the title of my
+
+142
+00:06:29,310 --> 00:06:31,800
+book and so basically this proves that
+
+143
+00:06:31,800 --> 00:06:33,750
+it is able to understand commands like
+
+144
+00:06:33,750 --> 00:06:37,980
+space and so that's basically how this
+
+145
+00:06:37,980 --> 00:06:41,220
+application functions and of course as I
+
+146
+00:06:41,220 --> 00:06:43,230
+said I have not gone into the code to
+
+147
+00:06:43,230 --> 00:06:45,210
+very much detail basically what I'm
+
+148
+00:06:45,210 --> 00:06:47,160
+saying here is that taking the exact
+
+149
+00:06:47,160 --> 00:06:50,250
+same one out oh 10 15 Marco Daria around
+
+150
+00:06:50,250 --> 00:06:53,040
+30 ish lines of code that were from my
+
+151
+00:06:53,040 --> 00:06:55,350
+older tutorial I basically converted
+
+152
+00:06:55,350 --> 00:06:57,570
+them to Swift 3 and instead of channel
+
+153
+00:06:57,570 --> 00:06:59,220
+foods my favorite foods like chicken
+
+154
+00:06:59,220 --> 00:07:01,620
+lemon mangoes bananas etcetera etcetera
+
+155
+00:07:01,620 --> 00:07:03,990
+I'm actually just putting in the Nano
+
+156
+00:07:03,990 --> 00:07:06,420
+phonetic alphabet and instead of taking
+
+157
+00:07:06,420 --> 00:07:08,160
+the entire command what the user just
+
+158
+00:07:08,160 --> 00:07:09,930
+said to the NS speech recognizer and
+
+159
+00:07:09,930 --> 00:07:12,150
+putting that onto a text field I'm
+
+160
+00:07:12,150 --> 00:07:13,920
+actually just taking the first letter of
+
+161
+00:07:13,920 --> 00:07:16,170
+those commands and putting them onto the
+
+162
+00:07:16,170 --> 00:07:18,510
+text view but if those commands aren't
+
+163
+00:07:18,510 --> 00:07:20,580
+actually you know the parts of the Nano
+
+164
+00:07:20,580 --> 00:07:22,650
+phonetic alphabet and they're open
+
+165
+00:07:22,650 --> 00:07:24,510
+they're just real commands like space or
+
+166
+00:07:24,510 --> 00:07:26,700
+get back to work or take a break what's
+
+167
+00:07:26,700 --> 00:07:28,290
+going to happen is I won't
+
+168
+00:07:28,290 --> 00:07:30,030
+I just won't put them on screen at all
+
+169
+00:07:30,030 --> 00:07:32,730
+and I'll actually execute the actions
+
+170
+00:07:32,730 --> 00:07:36,720
+that that command has linked to it and
+
+171
+00:07:36,720 --> 00:07:38,580
+that's basically all we have for this
+
+172
+00:07:38,580 --> 00:07:40,920
+tutorial today thank you very much for
+
+173
+00:07:40,920 --> 00:07:42,780
+joining in I hope you learned a lot if
+
+174
+00:07:42,780 --> 00:07:44,190
+you did learn a lot and you really liked
+
+175
+00:07:44,190 --> 00:07:45,720
+the video please do consider leaving a
+
+176
+00:07:45,720 --> 00:07:47,520
+like down below and if you believe this
+
+177
+00:07:47,520 --> 00:07:49,170
+could help anyone else you know please
+
+178
+00:07:49,170 --> 00:07:51,620
+do consider sharing the video as well
+
+179
+00:07:51,620 --> 00:07:53,730
+but if you have any questions
+
+180
+00:07:53,730 --> 00:07:56,130
+suggestions or ideas or feedback really
+
+181
+00:07:56,130 --> 00:07:58,050
+you can stick you leave that down in the
+
+182
+00:07:58,050 --> 00:07:59,160
+comments below
+
+183
+00:07:59,160 --> 00:08:01,470
+tweet that to me at caddie mani or you
+
+184
+00:08:01,470 --> 00:08:04,080
+can even email it to me at panda mani at
+
+185
+00:08:04,080 --> 00:08:07,230
+gmail.com of course if you really like
+
+186
+00:08:07,230 --> 00:08:08,670
+my content and you want to see more of
+
+187
+00:08:08,670 --> 00:08:10,320
+it you can of course subscribe to my
+
+188
+00:08:10,320 --> 00:08:12,150
+youtube channel and it really does help
+
+189
+00:08:12,150 --> 00:08:14,010
+out a lot and of course thank you very
+
+190
+00:08:14,010 --> 00:08:15,240
+much for watching this tutorial today
+
+191
+00:08:15,240 --> 00:08:18,950
+that's going to be all good bye

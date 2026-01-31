@@ -1,0 +1,3039 @@
+1
+00:00:00,480 --> 00:00:02,280
+so hello there and welcome to another
+
+2
+00:00:02,280 --> 00:00:04,240
+tutorial my name is hry bshi and this
+
+3
+00:00:04,240 --> 00:00:06,600
+time we're going to be going over well
+
+4
+00:00:06,600 --> 00:00:09,480
+the second part for my tower of Hanoi
+
+5
+00:00:09,480 --> 00:00:11,759
+series now this is just the second part
+
+6
+00:00:11,759 --> 00:00:13,400
+so now I'm going to be explaining the
+
+7
+00:00:13,400 --> 00:00:14,799
+algorithm and showing you a little
+
+8
+00:00:14,799 --> 00:00:16,600
+implementation of it in Swift again this
+
+9
+00:00:16,600 --> 00:00:19,720
+uses trees and so yeah I'm just going to
+
+10
+00:00:19,720 --> 00:00:21,800
+be explaining it to you so let's get
+
+11
+00:00:21,800 --> 00:00:24,279
+started let's dive straight into this I
+
+12
+00:00:24,279 --> 00:00:26,400
+have really nothing to explain yet
+
+13
+00:00:26,400 --> 00:00:29,199
+however as I said already like a million
+
+14
+00:00:29,199 --> 00:00:31,320
+times we're using trees for this to
+
+15
+00:00:31,320 --> 00:00:34,480
+happen and I have the Whiteboard ready
+
+16
+00:00:34,480 --> 00:00:36,800
+here as you can see so what I'm going to
+
+17
+00:00:36,800 --> 00:00:39,680
+be doing now is I'm going to be telling
+
+18
+00:00:39,680 --> 00:00:42,840
+you how we can use my custom algorithm
+
+19
+00:00:42,840 --> 00:00:47,039
+to solve the Tower of Hanoi uh for four
+
+20
+00:00:47,039 --> 00:00:49,280
+discs okay so that's four discs we're
+
+21
+00:00:49,280 --> 00:00:52,800
+going to be solving using this method
+
+22
+00:00:52,800 --> 00:00:54,359
+first of all as you can see this is
+
+23
+00:00:54,359 --> 00:00:57,359
+going to be the tree area but uh this
+
+24
+00:00:57,359 --> 00:01:00,480
+green shaded area over here Will be an
+
+25
+00:01:00,480 --> 00:01:03,399
+array basically of all the instructions
+
+26
+00:01:03,399 --> 00:01:07,119
+that we have gathered thus far so let's
+
+27
+00:01:07,119 --> 00:01:10,439
+just dive straight into it now basically
+
+28
+00:01:10,439 --> 00:01:12,920
+what we're going to be doing is we need
+
+29
+00:01:12,920 --> 00:01:16,840
+to uh make a set of steps that we're
+
+30
+00:01:16,840 --> 00:01:20,400
+going to be taking so what my current
+
+31
+00:01:20,400 --> 00:01:25,000
+plan is we want to first of all
+
+32
+00:01:25,000 --> 00:01:28,479
+move four
+
+33
+00:01:28,920 --> 00:01:33,720
+diss from also uh yeah uh I'm going to
+
+34
+00:01:33,720 --> 00:01:37,399
+be referring to Peg one as Peg a peg two
+
+35
+00:01:37,399 --> 00:01:40,360
+as Peg B and Peg 3 is Peg C in case you
+
+36
+00:01:40,360 --> 00:01:43,200
+were wondering so now what I'm going to
+
+37
+00:01:43,200 --> 00:01:46,759
+say is we're using four
+
+38
+00:01:46,759 --> 00:01:49,479
+diss from
+
+39
+00:01:49,479 --> 00:01:51,439
+a to
+
+40
+00:01:51,439 --> 00:01:57,039
+c however we can use B in the middle if
+
+41
+00:01:57,039 --> 00:01:58,479
+we need
+
+42
+00:01:58,479 --> 00:02:00,880
+to okay
+
+43
+00:02:00,880 --> 00:02:05,439
+perfect now this is our beginning like
+
+44
+00:02:05,439 --> 00:02:09,000
+what are we going to be doing from now
+
+45
+00:02:09,000 --> 00:02:12,400
+on basically what we have to do is we're
+
+46
+00:02:12,400 --> 00:02:15,519
+going to take three discs now we're
+
+47
+00:02:15,519 --> 00:02:19,760
+going to move it from uh Peg a to Peg B
+
+48
+00:02:19,760 --> 00:02:22,760
+the first three discs then the remaining
+
+49
+00:02:22,760 --> 00:02:26,519
+disc on Peg a will be moved to Peg C
+
+50
+00:02:26,519 --> 00:02:29,080
+then the remaining pegs on Peg B will be
+
+51
+00:02:29,080 --> 00:02:32,920
+moved to Peg C and then like that all
+
+52
+00:02:32,920 --> 00:02:35,840
+four discs will be on
+
+53
+00:02:35,840 --> 00:02:39,720
+pegy so now how are we going to do this
+
+54
+00:02:39,720 --> 00:02:43,720
+we know that we have to move three discs
+
+55
+00:02:43,720 --> 00:02:45,280
+first of all let me just make a little
+
+56
+00:02:45,280 --> 00:02:49,280
+line so you can see first this is the
+
+57
+00:02:49,280 --> 00:02:51,239
+first tree that I'm first line that I'm
+
+58
+00:02:51,239 --> 00:02:53,959
+making we know that we have to move uh
+
+59
+00:02:53,959 --> 00:02:55,280
+three
+
+60
+00:02:55,280 --> 00:02:58,840
+discs from actually uh just give me a
+
+61
+00:02:58,840 --> 00:03:00,480
+sec
+
+62
+00:03:00,480 --> 00:03:03,000
+so you can see that a bit better I'm
+
+63
+00:03:03,000 --> 00:03:05,080
+just going to make it a bit
+
+64
+00:03:05,080 --> 00:03:09,760
+bigger okay so now we're moving three
+
+65
+00:03:09,760 --> 00:03:12,440
+discs from Peg
+
+66
+00:03:12,440 --> 00:03:17,640
+a to Peg B using Peg
+
+67
+00:03:17,640 --> 00:03:20,560
+C now you might already start noticing a
+
+68
+00:03:20,560 --> 00:03:24,599
+pattern but next we're going to be
+
+69
+00:03:24,920 --> 00:03:30,720
+moving Peg I mean one dis from Peg a a
+
+70
+00:03:30,720 --> 00:03:34,799
+to Peg C using
+
+71
+00:03:34,879 --> 00:03:38,920
+B again you're getting this
+
+72
+00:03:38,920 --> 00:03:41,159
+pattern and then finally what we're
+
+73
+00:03:41,159 --> 00:03:43,080
+going to be doing is we're going to be
+
+74
+00:03:43,080 --> 00:03:46,560
+moving those three discs from Peg B to
+
+75
+00:03:46,560 --> 00:03:50,680
+Peg C using Peg
+
+76
+00:03:50,840 --> 00:03:55,239
+a it is that simple now here is our
+
+77
+00:03:55,239 --> 00:03:57,319
+pattern essentially what we're doing is
+
+78
+00:03:57,319 --> 00:04:00,480
+we're taking our beginning uh for
+
+79
+00:04:00,480 --> 00:04:04,680
+example node this is one node in our
+
+80
+00:04:04,680 --> 00:04:09,400
+tree now this node has four for its dis
+
+81
+00:04:09,400 --> 00:04:13,799
+value a for its from Peg B for its using
+
+82
+00:04:13,799 --> 00:04:17,320
+Peg and C for its two
+
+83
+00:04:17,320 --> 00:04:20,359
+Peg now the first thing that this node
+
+84
+00:04:20,359 --> 00:04:25,600
+wants to do is move three diss from A to
+
+85
+00:04:25,600 --> 00:04:28,560
+B and so essentially what we're doing is
+
+86
+00:04:28,560 --> 00:04:32,320
+we're saying 4- 1 is 3 then we're just
+
+87
+00:04:32,320 --> 00:04:35,000
+swapping these two over here B and C we
+
+88
+00:04:35,000 --> 00:04:39,199
+swapping to make CB meaning a CB A to B
+
+89
+00:04:39,199 --> 00:04:41,520
+using
+
+90
+00:04:41,680 --> 00:04:44,400
+C then over here basically what we're
+
+91
+00:04:44,400 --> 00:04:47,840
+doing on the middle on the second node
+
+92
+00:04:47,840 --> 00:04:49,280
+is we are just saying okay we're going
+
+93
+00:04:49,280 --> 00:04:54,120
+to move one disc from a to c using B
+
+94
+00:04:54,120 --> 00:04:56,840
+that one disc on a going to
+
+95
+00:04:56,840 --> 00:04:59,800
+C then finally what we're going to do is
+
+96
+00:04:59,800 --> 00:05:01,800
+we're going to move the three diss that
+
+97
+00:05:01,800 --> 00:05:05,320
+we moveed to B back over to C using a
+
+98
+00:05:05,320 --> 00:05:07,800
+it's that simple now if you don't
+
+99
+00:05:07,800 --> 00:05:09,039
+understand this yet that's probably
+
+100
+00:05:09,039 --> 00:05:10,320
+because I haven't filled in the rest of
+
+101
+00:05:10,320 --> 00:05:12,639
+the table now I'm going to be filling in
+
+102
+00:05:12,639 --> 00:05:14,400
+the rest of the table with you then I'll
+
+103
+00:05:14,400 --> 00:05:16,400
+explain what this tree means then I'll
+
+104
+00:05:16,400 --> 00:05:18,080
+explain the actual algorithm then we're
+
+105
+00:05:18,080 --> 00:05:21,280
+going to go going to go to the Mac part
+
+106
+00:05:21,280 --> 00:05:23,160
+okay so
+
+107
+00:05:23,160 --> 00:05:26,120
+now from 3 ACB what are we going to be
+
+108
+00:05:26,120 --> 00:05:27,880
+doing first of all we know that the
+
+109
+00:05:27,880 --> 00:05:32,240
+first node over here is just diss minus
+
+110
+00:05:32,240 --> 00:05:37,080
+one okay so the diss number for this
+
+111
+00:05:37,080 --> 00:05:38,080
+specific
+
+112
+00:05:38,080 --> 00:05:43,520
+node will be 3 - 1 which is
+
+113
+00:05:43,520 --> 00:05:46,360
+2 okay so we had two discs we've
+
+114
+00:05:46,360 --> 00:05:48,840
+determined that then we know we have to
+
+115
+00:05:48,840 --> 00:05:51,759
+swap the using Peg and the two
+
+116
+00:05:51,759 --> 00:05:56,440
+Peg so ACB will become
+
+117
+00:05:56,440 --> 00:05:58,639
+ABC as you can
+
+118
+00:05:58,639 --> 00:06:01,639
+see
+
+119
+00:06:02,600 --> 00:06:06,599
+now we know that the second
+
+120
+00:06:06,599 --> 00:06:10,120
+node will have always one
+
+121
+00:06:10,120 --> 00:06:13,759
+dis uh so we can just write a
+
+122
+00:06:13,759 --> 00:06:16,840
+one right and we know it'll have the
+
+123
+00:06:16,840 --> 00:06:20,560
+exact same setup as these three
+
+124
+00:06:20,560 --> 00:06:25,840
+pegs so it'll have ABC or sorry
+
+125
+00:06:25,840 --> 00:06:28,560
+ACB because it's coming from this
+
+126
+00:06:28,560 --> 00:06:30,319
+node
+
+127
+00:06:30,319 --> 00:06:34,479
+then finally the third
+
+128
+00:06:34,880 --> 00:06:38,000
+node which will have again diss minus
+
+129
+00:06:38,000 --> 00:06:40,960
+one which would be two in this case and
+
+130
+00:06:40,960 --> 00:06:44,960
+then the two I mean the FR Peg and the
+
+131
+00:06:44,960 --> 00:06:48,400
+using Peg have to be
+
+132
+00:06:48,400 --> 00:06:55,880
+reversed and so I'm going to say c a
+
+133
+00:06:56,400 --> 00:07:00,199
+b now we have constructed
+
+134
+00:07:00,199 --> 00:07:05,879
+a little we've gone in one
+
+135
+00:07:05,879 --> 00:07:08,840
+depth but first of all we know one
+
+136
+00:07:08,840 --> 00:07:10,400
+cannot be extended like that's the
+
+137
+00:07:10,400 --> 00:07:12,319
+simplest thing you can do just move one
+
+138
+00:07:12,319 --> 00:07:14,280
+disc from a to c you don't need
+
+139
+00:07:14,280 --> 00:07:16,120
+instructions on how to do that but
+
+140
+00:07:16,120 --> 00:07:19,360
+moving three discs from A to B you need
+
+141
+00:07:19,360 --> 00:07:21,800
+instructions so this will be continued
+
+142
+00:07:21,800 --> 00:07:22,919
+this is just going to stop right here
+
+143
+00:07:22,919 --> 00:07:23,759
+and I'm going to tell you what we're
+
+144
+00:07:23,759 --> 00:07:26,720
+going to do with this but this is again
+
+145
+00:07:26,720 --> 00:07:28,680
+three not one so we're going to extend
+
+146
+00:07:28,680 --> 00:07:33,440
+it further so now let's just um bring it
+
+147
+00:07:33,440 --> 00:07:37,840
+further now 3 - 1 is
+
+148
+00:07:39,000 --> 00:07:44,440
+2 now b a c we have to uh switch over
+
+149
+00:07:44,440 --> 00:07:48,120
+the two and using p the pegs so this
+
+150
+00:07:48,120 --> 00:07:50,520
+will become B
+
+151
+00:07:50,520 --> 00:07:53,680
+CA so I'm going to write uh or sorry
+
+152
+00:07:53,680 --> 00:07:57,199
+yeah b c
+
+153
+00:07:57,199 --> 00:08:00,759
+a boom next what we're going to do for
+
+154
+00:08:00,759 --> 00:08:02,680
+the second
+
+155
+00:08:02,680 --> 00:08:05,960
+node is we are going to say again we
+
+156
+00:08:05,960 --> 00:08:08,120
+just know that it's one disc with the
+
+157
+00:08:08,120 --> 00:08:10,599
+exact same Peg set up so we're going to
+
+158
+00:08:10,599 --> 00:08:14,560
+say 1 BAC
+
+159
+00:08:16,800 --> 00:08:21,599
+C okay it's that simple next the third
+
+160
+00:08:21,599 --> 00:08:25,319
+node which will be down
+
+161
+00:08:25,639 --> 00:08:27,919
+here so what we're going to do is we're
+
+162
+00:08:27,919 --> 00:08:32,240
+going to switch the from and using
+
+163
+00:08:32,240 --> 00:08:34,479
+nodes and we're going to remove one from
+
+164
+00:08:34,479 --> 00:08:36,760
+the discs so that would be two
+
+165
+00:08:36,760 --> 00:08:39,519
+discs and if we swap b and a that would
+
+166
+00:08:39,519 --> 00:08:41,880
+be a
+
+167
+00:08:43,640 --> 00:08:45,800
+BC
+
+168
+00:08:45,800 --> 00:08:48,399
+perfect okay so we are making progress
+
+169
+00:08:48,399 --> 00:08:49,880
+with our tree but we still have a few
+
+170
+00:08:49,880 --> 00:08:51,920
+more things to do because as you can see
+
+171
+00:08:51,920 --> 00:08:55,000
+we have a two which is not to which we
+
+172
+00:08:55,000 --> 00:08:57,240
+do not know how to solve we have another
+
+173
+00:08:57,240 --> 00:08:59,880
+two we and we have two more twos so now
+
+174
+00:08:59,880 --> 00:09:01,959
+we have four more things to
+
+175
+00:09:01,959 --> 00:09:04,279
+expand and then theoretically we should
+
+176
+00:09:04,279 --> 00:09:06,320
+have a set of instructions right well
+
+177
+00:09:06,320 --> 00:09:07,160
+let's
+
+178
+00:09:07,160 --> 00:09:09,920
+see so we see we're starting off from
+
+179
+00:09:09,920 --> 00:09:14,440
+here we have two from a to c using B so
+
+180
+00:09:14,440 --> 00:09:18,760
+if I expand we know that 2 - 1 is 1 of
+
+181
+00:09:18,760 --> 00:09:21,120
+course and so the number of discs will
+
+182
+00:09:21,120 --> 00:09:22,839
+be
+
+183
+00:09:22,839 --> 00:09:24,360
+one
+
+184
+00:09:24,360 --> 00:09:27,920
+okay next we have to swap the using and
+
+185
+00:09:27,920 --> 00:09:30,959
+the two pegs so that will be
+
+186
+00:09:30,959 --> 00:09:35,200
+ACB a
+
+187
+00:09:36,120 --> 00:09:38,240
+CB okay then we're going to do our
+
+188
+00:09:38,240 --> 00:09:42,440
+middle Peg or our sorry our second
+
+189
+00:09:42,440 --> 00:09:45,480
+node get confused between those two
+
+190
+00:09:45,480 --> 00:09:47,680
+sometimes uh and so we know that's of
+
+191
+00:09:47,680 --> 00:09:50,760
+course just one uh dis but it's the
+
+192
+00:09:50,760 --> 00:09:52,440
+exact same Peg setup so we're going to
+
+193
+00:09:52,440 --> 00:09:55,320
+say dis one with the exact same Peg
+
+194
+00:09:55,320 --> 00:09:57,600
+setup which is
+
+195
+00:09:57,600 --> 00:10:02,079
+ABC then finally our third
+
+196
+00:10:03,120 --> 00:10:07,920
+node which 2 - one is one
+
+197
+00:10:08,760 --> 00:10:11,519
+dis uh and then A and B reverse that
+
+198
+00:10:11,519 --> 00:10:14,399
+would be b a
+
+199
+00:10:17,560 --> 00:10:20,279
+c and
+
+200
+00:10:20,279 --> 00:10:24,360
+perfect now we've solved this now let's
+
+201
+00:10:24,360 --> 00:10:28,440
+solve this node so now this node's first
+
+202
+00:10:28,440 --> 00:10:32,240
+node child node actually will be let's
+
+203
+00:10:32,240 --> 00:10:35,800
+see 2 minus one that's one for
+
+204
+00:10:35,800 --> 00:10:38,959
+Diss and then A and B reversed that
+
+205
+00:10:38,959 --> 00:10:41,360
+would be
+
+206
+00:10:43,279 --> 00:10:46,279
+CBA
+
+207
+00:10:47,320 --> 00:10:51,800
+perfect next what we have is the second
+
+208
+00:10:51,880 --> 00:10:54,320
+node okay so now we know it's the exact
+
+209
+00:10:54,320 --> 00:10:56,760
+same Peg setup with just one disc
+
+210
+00:10:56,760 --> 00:11:01,240
+instead so that would be c a b
+
+211
+00:11:03,440 --> 00:11:06,279
+finally the third node child node of
+
+212
+00:11:06,279 --> 00:11:09,560
+this node uh and so we know that's 2 -
+
+213
+00:11:09,560 --> 00:11:12,600
+one that's one
+
+214
+00:11:12,720 --> 00:11:15,600
+dis then we have C and A have to be
+
+215
+00:11:15,600 --> 00:11:18,399
+reverse so that would be
+
+216
+00:11:20,440 --> 00:11:23,639
+ACB and
+
+217
+00:11:23,639 --> 00:11:25,680
+perfect next we're going to solve this
+
+218
+00:11:25,680 --> 00:11:28,839
+one and this one and we'll be done okay
+
+219
+00:11:28,839 --> 00:11:32,600
+so 2 BCA 2 - 1 that's one so we know the
+
+220
+00:11:32,600 --> 00:11:35,560
+number of discs for this first child
+
+221
+00:11:35,560 --> 00:11:37,839
+node will be
+
+222
+00:11:37,839 --> 00:11:41,000
+one then we know C and A flipped will be
+
+223
+00:11:41,000 --> 00:11:44,560
+uh a so b a
+
+224
+00:11:49,720 --> 00:11:53,480
+c then I'm going to create the um
+
+225
+00:11:53,480 --> 00:11:55,560
+basically second node child node for
+
+226
+00:11:55,560 --> 00:11:56,720
+this parent
+
+227
+00:11:56,720 --> 00:11:59,880
+node which will have anywh
+
+228
+00:11:59,880 --> 00:12:02,760
+uh the one dis and the exact same Peg
+
+229
+00:12:02,760 --> 00:12:06,000
+setup so one
+
+230
+00:12:08,880 --> 00:12:11,120
+BCA then we're going to go for the third
+
+231
+00:12:11,120 --> 00:12:13,519
+child
+
+232
+00:12:14,920 --> 00:12:19,160
+node which will be 2 - 1 that's
+
+233
+00:12:19,160 --> 00:12:24,160
+1 and then B and C flipped so it will be
+
+234
+00:12:26,120 --> 00:12:28,480
+CBA and now just really quickly let me
+
+235
+00:12:28,480 --> 00:12:30,720
+just tell you this will work with both
+
+236
+00:12:30,720 --> 00:12:32,839
+even and odd discs because as you can
+
+237
+00:12:32,839 --> 00:12:36,120
+see here we have a node that has an odd
+
+238
+00:12:36,120 --> 00:12:38,360
+number and it's still working over here
+
+239
+00:12:38,360 --> 00:12:40,320
+it's working fine it's just that I
+
+240
+00:12:40,320 --> 00:12:45,000
+wanted a slightly bigger um pet um discs
+
+241
+00:12:45,000 --> 00:12:46,839
+uh for this example so you can really
+
+242
+00:12:46,839 --> 00:12:49,000
+see how this tree is formed and if I
+
+243
+00:12:49,000 --> 00:12:50,959
+were to choose something like five
+
+244
+00:12:50,959 --> 00:12:53,760
+however this would just be gigantic so
+
+245
+00:12:53,760 --> 00:12:56,279
+I'm not going to go so huge as to five
+
+246
+00:12:56,279 --> 00:12:59,279
+but I want a moderately big uh tree so
+
+247
+00:12:59,279 --> 00:13:01,079
+that you can really see how it's going
+
+248
+00:13:01,079 --> 00:13:02,680
+to three how it's going to two how it's
+
+249
+00:13:02,680 --> 00:13:04,519
+going to one etc
+
+250
+00:13:04,519 --> 00:13:06,519
+etc okay
+
+251
+00:13:06,519 --> 00:13:08,600
+continuing now that we've solved this
+
+252
+00:13:08,600 --> 00:13:11,600
+node's child nodes we don't need to do
+
+253
+00:13:11,600 --> 00:13:13,480
+it for this one because that's a one
+
+254
+00:13:13,480 --> 00:13:15,240
+then we can do it for this one however
+
+255
+00:13:15,240 --> 00:13:16,519
+this
+
+256
+00:13:16,519 --> 00:13:20,360
+node now this is 2 a BC so 2 - 1 we know
+
+257
+00:13:20,360 --> 00:13:24,440
+that's one so it's first nodes uh number
+
+258
+00:13:24,440 --> 00:13:26,920
+of discs should be one then B and C
+
+259
+00:13:26,920 --> 00:13:31,120
+flipped is CB so AC CB
+
+260
+00:13:33,880 --> 00:13:37,600
+okay uh then the second node we all know
+
+261
+00:13:37,600 --> 00:13:40,040
+that this is just going to be uh a one
+
+262
+00:13:40,040 --> 00:13:42,959
+dis with the exact same Peg set up so
+
+263
+00:13:42,959 --> 00:13:45,720
+that would be one
+
+264
+00:13:48,120 --> 00:13:52,519
+ABC uh next the third child node so
+
+265
+00:13:52,519 --> 00:13:54,000
+let's just do
+
+266
+00:13:54,000 --> 00:13:57,560
+that now we know 2 - 1 is 1 so that
+
+267
+00:13:57,560 --> 00:13:59,680
+would mean the number of discs is one
+
+268
+00:13:59,680 --> 00:14:03,199
+and then A and B flipped is ba a so b a
+
+269
+00:14:03,199 --> 00:14:09,000
+c meaning this will be the end
+
+270
+00:14:09,000 --> 00:14:12,600
+result and now we have completed our
+
+271
+00:14:12,600 --> 00:14:17,240
+tree now basically this is a this is how
+
+272
+00:14:17,240 --> 00:14:20,040
+you can take it into like consideration
+
+273
+00:14:20,040 --> 00:14:22,880
+this is a fully grown apple tree now we
+
+274
+00:14:22,880 --> 00:14:25,880
+need to pick the ripe apples off
+
+275
+00:14:25,880 --> 00:14:29,600
+essentially and the ripe apples are the
+
+276
+00:14:29,600 --> 00:14:33,720
+ones with one disc and it has to be done
+
+277
+00:14:33,720 --> 00:14:39,440
+from most top right down okay just top
+
+278
+00:14:39,440 --> 00:14:41,759
+right from here down now you may be
+
+279
+00:14:41,759 --> 00:14:44,440
+wondering wait a minute are these just
+
+280
+00:14:44,440 --> 00:14:45,480
+the instructions that we're going to
+
+281
+00:14:45,480 --> 00:14:49,959
+pick off no and you'll see what I
+
+282
+00:14:50,000 --> 00:14:52,920
+mean so essentially what I'm saying is
+
+283
+00:14:52,920 --> 00:14:56,079
+whenever you see a one in this
+
+284
+00:14:56,079 --> 00:14:59,720
+tree and then it's uh discs
+
+285
+00:14:59,720 --> 00:15:00,600
+these
+
+286
+00:15:00,600 --> 00:15:02,880
+diss are essentially what we're going to
+
+287
+00:15:02,880 --> 00:15:04,720
+take out and put into the
+
+288
+00:15:04,720 --> 00:15:08,440
+instructions for example 1 a BC will be
+
+289
+00:15:08,440 --> 00:15:12,519
+taken as a to c by our program and then
+
+290
+00:15:12,519 --> 00:15:15,680
+given to the user but we can't just take
+
+291
+00:15:15,680 --> 00:15:17,519
+this in any random order that just
+
+292
+00:15:17,519 --> 00:15:20,279
+wouldn't work however what we are going
+
+293
+00:15:20,279 --> 00:15:25,399
+to do is let's just say I get a marker
+
+294
+00:15:25,399 --> 00:15:27,880
+we see we're going here we have this
+
+295
+00:15:27,880 --> 00:15:29,480
+initial node
+
+296
+00:15:29,480 --> 00:15:32,800
+it has its own first node then it has
+
+297
+00:15:32,800 --> 00:15:34,279
+its own first
+
+298
+00:15:34,279 --> 00:15:38,240
+node now it has its own first node and
+
+299
+00:15:38,240 --> 00:15:41,199
+then it ends here this is the last one
+
+300
+00:15:41,199 --> 00:15:44,680
+so this is the first uh basically uh
+
+301
+00:15:44,680 --> 00:15:46,800
+node that I've encountered that has one
+
+302
+00:15:46,800 --> 00:15:50,519
+dis on it so I can say I can note down
+
+303
+00:15:50,519 --> 00:15:53,959
+a I can I can put that into my array as
+
+304
+00:15:53,959 --> 00:15:55,120
+a to
+
+305
+00:15:55,120 --> 00:16:00,639
+B so I'm going to note that down as a
+
+306
+00:16:00,639 --> 00:16:05,199
+to B so we got one instruction down now
+
+307
+00:16:05,199 --> 00:16:06,480
+as you can see we have to go back
+
+308
+00:16:06,480 --> 00:16:08,240
+because we cannot go forward that that
+
+309
+00:16:08,240 --> 00:16:11,399
+would just be nil so we have over here
+
+310
+00:16:11,399 --> 00:16:13,199
+the second node for this okay so this
+
+311
+00:16:13,199 --> 00:16:14,680
+node has a second
+
+312
+00:16:14,680 --> 00:16:17,800
+node this is the second time we've got
+
+313
+00:16:17,800 --> 00:16:20,800
+over with a dis with a uh instruction
+
+314
+00:16:20,800 --> 00:16:23,920
+with one it and we can see it says a to
+
+315
+00:16:23,920 --> 00:16:26,360
+c so we're going to follow what it says
+
+316
+00:16:26,360 --> 00:16:30,399
+and move from a
+
+317
+00:16:30,399 --> 00:16:32,560
+over 2
+
+318
+00:16:32,560 --> 00:16:34,720
+C then we're going to go back and we're
+
+319
+00:16:34,720 --> 00:16:37,360
+going to say okay come down over here
+
+320
+00:16:37,360 --> 00:16:40,360
+and we see oh third node this also has a
+
+321
+00:16:40,360 --> 00:16:43,959
+one so it says B to C that means note
+
+322
+00:16:43,959 --> 00:16:46,720
+down from B to
+
+323
+00:16:46,720 --> 00:16:48,440
+C
+
+324
+00:16:48,440 --> 00:16:51,319
+okay now we go back we see oh we checked
+
+325
+00:16:51,319 --> 00:16:53,240
+all these all the child noes for this
+
+326
+00:16:53,240 --> 00:16:56,399
+node now we have to go back now we see
+
+327
+00:16:56,399 --> 00:16:58,959
+for this node what's its second child
+
+328
+00:16:58,959 --> 00:17:01,279
+node because we're done the first oh it
+
+329
+00:17:01,279 --> 00:17:06,039
+has a one so well we say A to B perfect
+
+330
+00:17:06,039 --> 00:17:08,439
+note it
+
+331
+00:17:09,880 --> 00:17:12,559
+down a to
+
+332
+00:17:12,559 --> 00:17:14,880
+B
+
+333
+00:17:14,880 --> 00:17:17,240
+perfect now we cannot expand further
+
+334
+00:17:17,240 --> 00:17:19,240
+than this again that would just be nail
+
+335
+00:17:19,240 --> 00:17:22,240
+so we say okay come back over here and
+
+336
+00:17:22,240 --> 00:17:24,120
+we're done the second child node for
+
+337
+00:17:24,120 --> 00:17:27,840
+this node so go down
+
+338
+00:17:27,840 --> 00:17:29,840
+here
+
+339
+00:17:29,840 --> 00:17:34,600
+and so from here we have a first
+
+340
+00:17:36,559 --> 00:17:39,440
+Noe so this is a one and we're going to
+
+341
+00:17:39,440 --> 00:17:46,080
+say C to a so we just note down C to a
+
+342
+00:17:46,080 --> 00:17:47,760
+perfect then we go back in the second
+
+343
+00:17:47,760 --> 00:17:53,799
+node C to B perfect C to
+
+344
+00:17:53,799 --> 00:17:56,480
+B then we go back and we say oh third
+
+345
+00:17:56,480 --> 00:17:59,840
+node A to B perfect no put that
+
+346
+00:17:59,840 --> 00:18:02,400
+down a
+
+347
+00:18:02,400 --> 00:18:04,640
+to
+
+348
+00:18:04,640 --> 00:18:08,720
+B come back come back come back because
+
+349
+00:18:08,720 --> 00:18:11,400
+we are done
+
+350
+00:18:11,400 --> 00:18:13,919
+basically we've gone into this
+
+351
+00:18:13,919 --> 00:18:17,120
+node and we've gone into its first node
+
+352
+00:18:17,120 --> 00:18:18,799
+and we've completed all of its three
+
+353
+00:18:18,799 --> 00:18:21,080
+child nodes now we're coming back then
+
+354
+00:18:21,080 --> 00:18:24,400
+we grab an apple from here then we come
+
+355
+00:18:24,400 --> 00:18:26,120
+back and we grab all of these three
+
+356
+00:18:26,120 --> 00:18:28,960
+child nodes and we just noticed just
+
+357
+00:18:28,960 --> 00:18:30,640
+like we got all the three child nodes
+
+358
+00:18:30,640 --> 00:18:34,280
+from this we got it from this node so
+
+359
+00:18:34,280 --> 00:18:37,880
+now this node is no longer needed by us
+
+360
+00:18:37,880 --> 00:18:40,080
+so either we can just delete it but why
+
+361
+00:18:40,080 --> 00:18:41,720
+would you want to delete it when you can
+
+362
+00:18:41,720 --> 00:18:44,440
+just keep it and go to the next and now
+
+363
+00:18:44,440 --> 00:18:46,480
+since we are initiating this from this
+
+364
+00:18:46,480 --> 00:18:48,799
+node we have to look at its second node
+
+365
+00:18:48,799 --> 00:18:52,600
+which is a one dis and this is a to c so
+
+366
+00:18:52,600 --> 00:18:54,400
+I'm going to note that
+
+367
+00:18:54,400 --> 00:18:57,720
+down a 2
+
+368
+00:18:57,720 --> 00:18:59,799
+C perfect
+
+369
+00:18:59,799 --> 00:19:01,880
+there now we're going to look at its
+
+370
+00:19:01,880 --> 00:19:04,080
+third node which is again a
+
+371
+00:19:04,080 --> 00:19:07,679
+three now this has a first node which
+
+372
+00:19:07,679 --> 00:19:09,840
+has its own first node but then that's
+
+373
+00:19:09,840 --> 00:19:13,280
+the end of the line so that's B to
+
+374
+00:19:15,080 --> 00:19:18,799
+C again going back oh this has a second
+
+375
+00:19:18,799 --> 00:19:21,799
+node beat
+
+376
+00:19:23,919 --> 00:19:26,960
+a now come back this has its own third
+
+377
+00:19:26,960 --> 00:19:29,760
+node which is c a
+
+378
+00:19:29,760 --> 00:19:33,760
+okay which I can just note down
+
+379
+00:19:33,760 --> 00:19:36,679
+conveniently coming back we see okay
+
+380
+00:19:36,679 --> 00:19:39,360
+perfect uh we're done the first node and
+
+381
+00:19:39,360 --> 00:19:41,679
+all its three child nodes now we have to
+
+382
+00:19:41,679 --> 00:19:45,840
+do the three's second
+
+383
+00:19:45,840 --> 00:19:49,159
+node uh so uh wait just really quickly
+
+384
+00:19:49,159 --> 00:19:52,159
+note if you were if you want to if you
+
+385
+00:19:52,159 --> 00:19:54,000
+make this connection from the other part
+
+386
+00:19:54,000 --> 00:19:57,679
+one that I just made uh actually Four
+
+387
+00:19:57,679 --> 00:20:00,480
+discs will require 15 turns because uh
+
+388
+00:20:00,480 --> 00:20:04,720
+actually 2 to ^ 4 16 - 1 is 15 meaning
+
+389
+00:20:04,720 --> 00:20:07,520
+it'll take 15 turns uh so that's why I
+
+390
+00:20:07,520 --> 00:20:10,440
+have exactly 15 elements in this array
+
+391
+00:20:10,440 --> 00:20:12,919
+over here uh so that we can see if we
+
+392
+00:20:12,919 --> 00:20:16,120
+have the correct number of moves anyway
+
+393
+00:20:16,120 --> 00:20:18,120
+continuing now we've gotten back from
+
+394
+00:20:18,120 --> 00:20:19,960
+here here here now we're going to the
+
+395
+00:20:19,960 --> 00:20:23,559
+second node which is B to
+
+396
+00:20:23,559 --> 00:20:27,200
+C so I can just write that
+
+397
+00:20:27,200 --> 00:20:30,520
+down B to
+
+398
+00:20:30,520 --> 00:20:32,000
+next we're going to go to its third node
+
+399
+00:20:32,000 --> 00:20:34,720
+which has its own first node which is a
+
+400
+00:20:34,720 --> 00:20:36,880
+to
+
+401
+00:20:39,440 --> 00:20:42,480
+B then it has its own second node which
+
+402
+00:20:42,480 --> 00:20:45,000
+is a to
+
+403
+00:20:46,200 --> 00:20:48,919
+c then it has its own third node which
+
+404
+00:20:48,919 --> 00:20:51,360
+is B
+
+405
+00:20:51,400 --> 00:20:56,280
+Toc now we can go back say back back
+
+406
+00:20:56,280 --> 00:20:58,760
+back and now once we've returned this to
+
+407
+00:20:58,760 --> 00:21:01,840
+this initial node we know that we've
+
+408
+00:21:01,840 --> 00:21:04,480
+gone through all this
+
+409
+00:21:04,480 --> 00:21:07,600
+tree and that means we have a perfectly
+
+410
+00:21:07,600 --> 00:21:10,600
+good set of instructions to solve four
+
+411
+00:21:10,600 --> 00:21:13,320
+discs in the tower of noo in the minimum
+
+412
+00:21:13,320 --> 00:21:15,840
+number of moves possible hope you
+
+413
+00:21:15,840 --> 00:21:17,720
+enjoyed that now what I'm going to do is
+
+414
+00:21:17,720 --> 00:21:19,919
+I'm going to be taking a picture of this
+
+415
+00:21:19,919 --> 00:21:22,080
+I'm going to move it onto my Mac and I'm
+
+416
+00:21:22,080 --> 00:21:24,760
+going to show you that these moves will
+
+417
+00:21:24,760 --> 00:21:28,320
+actually solve a tower of hanoy game
+
+418
+00:21:28,320 --> 00:21:30,039
+okay so that was actually pretty much it
+
+419
+00:21:30,039 --> 00:21:32,400
+for the Whiteboard part of this video I
+
+420
+00:21:32,400 --> 00:21:33,559
+hope you enjoyed now we're going to be
+
+421
+00:21:33,559 --> 00:21:34,840
+going to the Mac part where I'm also
+
+422
+00:21:34,840 --> 00:21:35,600
+going to be showing you an
+
+423
+00:21:35,600 --> 00:21:37,520
+implementation of this and Swift hope
+
+424
+00:21:37,520 --> 00:21:40,720
+you enjoy let's get to it so welcome
+
+425
+00:21:40,720 --> 00:21:42,840
+back to the Mac part now I'm going to be
+
+426
+00:21:42,840 --> 00:21:44,400
+cropping this image so we can only see
+
+427
+00:21:44,400 --> 00:21:46,440
+the instructions then I'm going to be
+
+428
+00:21:46,440 --> 00:21:48,520
+going to the Tower of Hanoi simulator
+
+429
+00:21:48,520 --> 00:21:51,320
+online The Flash simulator uh and then
+
+430
+00:21:51,320 --> 00:21:52,559
+we're just going to be seeing how it
+
+431
+00:21:52,559 --> 00:21:53,640
+works I'm going to show you the Swift
+
+432
+00:21:53,640 --> 00:21:55,840
+implementation and then we'll be done
+
+433
+00:21:55,840 --> 00:21:58,200
+okay so let's get started with uh this
+
+434
+00:21:58,200 --> 00:22:00,120
+white board image over here make my face
+
+435
+00:22:00,120 --> 00:22:03,240
+smaller uh come over here and I'm just
+
+436
+00:22:03,240 --> 00:22:05,480
+going to select these instructions that
+
+437
+00:22:05,480 --> 00:22:08,600
+we have created on the Whiteboard and in
+
+438
+00:22:08,600 --> 00:22:10,000
+case you didn't already know this if you
+
+439
+00:22:10,000 --> 00:22:12,080
+select something in preview and then you
+
+440
+00:22:12,080 --> 00:22:16,000
+click command K crops that right out
+
+441
+00:22:16,000 --> 00:22:18,960
+okay then I'm going to use l capitan's
+
+442
+00:22:18,960 --> 00:22:21,279
+Main feature I guess I'm going to press
+
+443
+00:22:21,279 --> 00:22:24,159
+this down actually I guess I have to
+
+444
+00:22:24,159 --> 00:22:26,679
+have these uh in small view uh I'm going
+
+445
+00:22:26,679 --> 00:22:30,200
+to press this down put this over here
+
+446
+00:22:30,200 --> 00:22:32,840
+put this over here make this a bit
+
+447
+00:22:32,840 --> 00:22:36,760
+bigger and here we are ready so now as
+
+448
+00:22:36,760 --> 00:22:38,679
+you can see I have the tower ofy on one
+
+449
+00:22:38,679 --> 00:22:41,000
+side and then I have the instructions on
+
+450
+00:22:41,000 --> 00:22:43,400
+the other so again this is for four
+
+451
+00:22:43,400 --> 00:22:46,360
+discs and let's get started now first of
+
+452
+00:22:46,360 --> 00:22:51,080
+all it tells us to solve a to B so uh
+
+453
+00:22:51,080 --> 00:22:52,960
+we're on a to B over here on the first
+
+454
+00:22:52,960 --> 00:22:58,760
+one so A to B boom then it says a to c
+
+455
+00:22:58,760 --> 00:23:02,400
+okay I'll do that then it says B to
+
+456
+00:23:02,400 --> 00:23:05,480
+C then it says A to
+
+457
+00:23:05,480 --> 00:23:07,960
+B then it's telling you to move from C
+
+458
+00:23:07,960 --> 00:23:09,159
+to
+
+459
+00:23:09,159 --> 00:23:12,640
+a again as you if you really look at
+
+460
+00:23:12,640 --> 00:23:15,080
+this pattern and if you watch part one
+
+461
+00:23:15,080 --> 00:23:16,880
+you realize that we're using the exact
+
+462
+00:23:16,880 --> 00:23:18,720
+same algorithm it's just the computer
+
+463
+00:23:18,720 --> 00:23:20,559
+found out these
+
+464
+00:23:20,559 --> 00:23:23,080
+moved again in case you haven't watched
+
+465
+00:23:23,080 --> 00:23:25,520
+part one this website is mathisfun.com
+
+466
+00:23:25,520 --> 00:23:27,159
+that allows me to simulate the Tower of
+
+467
+00:23:27,159 --> 00:23:29,559
+hooi uh and there's a flash version and
+
+468
+00:23:29,559 --> 00:23:31,559
+an HTML version The Links will be in the
+
+469
+00:23:31,559 --> 00:23:33,080
+description
+
+470
+00:23:33,080 --> 00:23:35,440
+continuing now after we've moved from C
+
+471
+00:23:35,440 --> 00:23:37,679
+to a we can move from C to
+
+472
+00:23:37,679 --> 00:23:42,480
+B then from A to B and we've we've
+
+473
+00:23:42,480 --> 00:23:45,279
+solved the first seven and as you can
+
+474
+00:23:45,279 --> 00:23:49,279
+see we've moved three diss from A to B
+
+475
+00:23:49,279 --> 00:23:50,279
+using
+
+476
+00:23:50,279 --> 00:23:54,080
+C okay now it tells us to move from a to
+
+477
+00:23:54,080 --> 00:23:55,159
+c
+
+478
+00:23:55,159 --> 00:23:58,440
+interesting then it says B to C okay
+
+479
+00:23:58,440 --> 00:24:01,919
+okay I'll do that then it says b to a
+
+480
+00:24:01,919 --> 00:24:04,440
+okay then C to
+
+481
+00:24:04,440 --> 00:24:10,200
+a interesting B to C not very surprising
+
+482
+00:24:10,200 --> 00:24:11,720
+then a to
+
+483
+00:24:11,720 --> 00:24:14,279
+b a to
+
+484
+00:24:14,279 --> 00:24:18,360
+c and finally B2
+
+485
+00:24:18,360 --> 00:24:22,400
+C now that was quite simple and we have
+
+486
+00:24:22,400 --> 00:24:27,720
+solve the the game in exactly 15 moves
+
+487
+00:24:27,720 --> 00:24:30,360
+now when I was explaining this to you
+
+488
+00:24:30,360 --> 00:24:32,360
+you may have realized oh God this is
+
+489
+00:24:32,360 --> 00:24:34,159
+going to be really expensive to program
+
+490
+00:24:34,159 --> 00:24:36,240
+and this is just going to be too much
+
+491
+00:24:36,240 --> 00:24:39,520
+but you're mistaken this is actually
+
+492
+00:24:39,520 --> 00:24:43,039
+quite simple to actually make it's just
+
+493
+00:24:43,039 --> 00:24:45,679
+that the implementation of it uh is
+
+494
+00:24:45,679 --> 00:24:48,960
+really easy just creating a command line
+
+495
+00:24:48,960 --> 00:24:51,120
+interface isn't that easy but we'll get
+
+496
+00:24:51,120 --> 00:24:53,399
+into that later first what we have to
+
+497
+00:24:53,399 --> 00:24:56,960
+get into is the
+
+498
+00:24:56,960 --> 00:25:01,200
+Noy so as you can see over here this is
+
+499
+00:25:01,200 --> 00:25:04,000
+a simple version of an implementation in
+
+500
+00:25:04,000 --> 00:25:05,960
+Swift as you can see it's very very
+
+501
+00:25:05,960 --> 00:25:09,760
+little code and if I say uh I want
+
+502
+00:25:09,760 --> 00:25:12,840
+number of discs as for example three it
+
+503
+00:25:12,840 --> 00:25:15,120
+gives us the result first of all move a
+
+504
+00:25:15,120 --> 00:25:17,720
+to c uh or actually you know what let me
+
+505
+00:25:17,720 --> 00:25:19,679
+just actually follow these steps so a to
+
+506
+00:25:19,679 --> 00:25:21,600
+c
+
+507
+00:25:21,600 --> 00:25:23,720
+first just to really quickly show you
+
+508
+00:25:23,720 --> 00:25:26,440
+this works a to c then it tells us to
+
+509
+00:25:26,440 --> 00:25:29,520
+move a to B
+
+510
+00:25:29,520 --> 00:25:33,200
+then it says C to
+
+511
+00:25:33,640 --> 00:25:37,840
+B then it says a to
+
+512
+00:25:38,159 --> 00:25:43,200
+c then it says uh B to
+
+513
+00:25:44,799 --> 00:25:48,279
+a and then it says B to
+
+514
+00:25:48,279 --> 00:25:51,919
+C and then it says a to c and as you can
+
+515
+00:25:51,919 --> 00:25:54,559
+see we've solved it in seven
+
+516
+00:25:54,559 --> 00:25:57,360
+moves so that was actually quite simple
+
+517
+00:25:57,360 --> 00:25:58,919
+uh and that proves that this actually
+
+518
+00:25:58,919 --> 00:26:00,760
+works we can also do it for
+
+519
+00:26:00,760 --> 00:26:05,120
+four and it'll give us the instructions
+
+520
+00:26:05,120 --> 00:26:08,520
+five I think we might need a debug uh
+
+521
+00:26:08,520 --> 00:26:11,760
+console now uh we can do it for six I'm
+
+522
+00:26:11,760 --> 00:26:14,279
+just quickly scrolling through these um
+
+523
+00:26:14,279 --> 00:26:15,919
+see how it
+
+524
+00:26:15,919 --> 00:26:18,000
+works as you can see it eventually
+
+525
+00:26:18,000 --> 00:26:20,559
+starts taking uh some time to
+
+526
+00:26:20,559 --> 00:26:23,200
+calculate uh moves because of course
+
+527
+00:26:23,200 --> 00:26:26,279
+there are tons of moves for like nine
+
+528
+00:26:26,279 --> 00:26:30,240
+different discs but anyway so now okay
+
+529
+00:26:30,240 --> 00:26:32,240
+it got that um there was an earlier
+
+530
+00:26:32,240 --> 00:26:33,919
+version of this that I programmed in
+
+531
+00:26:33,919 --> 00:26:35,640
+that would actually use the first
+
+532
+00:26:35,640 --> 00:26:37,799
+algorithm that I used in part one and
+
+533
+00:26:37,799 --> 00:26:40,600
+that could at Max do around five discs
+
+534
+00:26:40,600 --> 00:26:43,000
+because it was very memory intensive but
+
+535
+00:26:43,000 --> 00:26:45,679
+this is recursive yet it's not that
+
+536
+00:26:45,679 --> 00:26:48,159
+memory intensive so as you can see this
+
+537
+00:26:48,159 --> 00:26:50,039
+is a very efficient algorithm and let's
+
+538
+00:26:50,039 --> 00:26:52,559
+get straight into coding this now now
+
+539
+00:26:52,559 --> 00:26:54,120
+first of all this is an implementation
+
+540
+00:26:54,120 --> 00:26:56,000
+of it in part three I'm going to be
+
+541
+00:26:56,000 --> 00:26:57,960
+showing you the cui or how to create the
+
+542
+00:26:57,960 --> 00:26:59,760
+command line interface for
+
+543
+00:26:59,760 --> 00:27:02,440
+it okay so now let me make my face a bit
+
+544
+00:27:02,440 --> 00:27:05,200
+bigger and so now I can just uh comment
+
+545
+00:27:05,200 --> 00:27:07,159
+this line out so we don't have all this
+
+546
+00:27:07,159 --> 00:27:10,679
+random execution going on and hide the
+
+547
+00:27:10,679 --> 00:27:12,440
+debug
+
+548
+00:27:12,440 --> 00:27:16,039
+console so let's get into it by saying
+
+549
+00:27:16,039 --> 00:27:17,840
+that first of all we are creating a
+
+550
+00:27:17,840 --> 00:27:20,600
+class called Hanoi node and also a quick
+
+551
+00:27:20,600 --> 00:27:23,039
+tip uh if you're using a playground
+
+552
+00:27:23,039 --> 00:27:25,760
+really basic uh functionality like not
+
+553
+00:27:25,760 --> 00:27:28,840
+even framework functionality just no UI
+
+554
+00:27:28,840 --> 00:27:31,520
+kit whatsoever or anything you don't
+
+555
+00:27:31,520 --> 00:27:33,880
+really need to spend excess memory
+
+556
+00:27:33,880 --> 00:27:36,480
+importing framework or UI kit when you
+
+557
+00:27:36,480 --> 00:27:38,440
+can just import Darwin and it takes up a
+
+558
+00:27:38,440 --> 00:27:40,440
+bit less memory so that's just a quick
+
+559
+00:27:40,440 --> 00:27:43,799
+tip for you anyway continuing inside of
+
+560
+00:27:43,799 --> 00:27:47,159
+the Hanoi node class we are noting the
+
+561
+00:27:47,159 --> 00:27:50,960
+diss from using and two
+
+562
+00:27:50,960 --> 00:27:55,240
+pegs so basically uh when I would show
+
+563
+00:27:55,240 --> 00:27:59,440
+you uh over here on preview if I just
+
+564
+00:27:59,440 --> 00:28:02,720
+control command Z that uh each one of
+
+565
+00:28:02,720 --> 00:28:06,600
+these was a node this was a node this
+
+566
+00:28:06,600 --> 00:28:10,960
+was a node this was a node it had a
+
+567
+00:28:10,960 --> 00:28:12,559
+diss
+
+568
+00:28:12,559 --> 00:28:16,120
+from Two and using
+
+569
+00:28:16,120 --> 00:28:18,519
+value which were the pegs that it was
+
+570
+00:28:18,519 --> 00:28:19,960
+from using in
+
+571
+00:28:19,960 --> 00:28:22,320
+two and so now these are stored as
+
+572
+00:28:22,320 --> 00:28:24,039
+strings because of course you can name
+
+573
+00:28:24,039 --> 00:28:25,600
+your
+
+574
+00:28:25,600 --> 00:28:28,600
+pegs then what we're doing is we we have
+
+575
+00:28:28,600 --> 00:28:30,559
+three computed properties in case you
+
+576
+00:28:30,559 --> 00:28:32,679
+don't know what a computed property is
+
+577
+00:28:32,679 --> 00:28:35,600
+well uh I do have another tutorial with
+
+578
+00:28:35,600 --> 00:28:37,320
+my AAR pathfinding that will explain
+
+579
+00:28:37,320 --> 00:28:39,039
+that but anyway let me just give a quick
+
+580
+00:28:39,039 --> 00:28:41,000
+explanation but if you are wondering
+
+581
+00:28:41,000 --> 00:28:42,600
+what a star pathfinding is a link will
+
+582
+00:28:42,600 --> 00:28:45,919
+be in the description for sure okay so
+
+583
+00:28:45,919 --> 00:28:47,679
+basically computed property will allow
+
+584
+00:28:47,679 --> 00:28:50,880
+you to it's just a variable but when you
+
+585
+00:28:50,880 --> 00:28:53,760
+get it the propert the value inside of
+
+586
+00:28:53,760 --> 00:28:56,559
+this property is computed each time uh
+
+587
+00:28:56,559 --> 00:29:01,000
+so for example uh let's say I created um
+
+588
+00:29:01,000 --> 00:29:03,360
+a variable a which is equal to something
+
+589
+00:29:03,360 --> 00:29:05,320
+the user can enter and variable B which
+
+590
+00:29:05,320 --> 00:29:07,480
+is also something the user can enter
+
+591
+00:29:07,480 --> 00:29:10,360
+variable C if it was a computed property
+
+592
+00:29:10,360 --> 00:29:12,039
+whenever you would get it it would
+
+593
+00:29:12,039 --> 00:29:14,279
+automatically already be equal to the
+
+594
+00:29:14,279 --> 00:29:18,159
+value of a plus b that's simple so that
+
+595
+00:29:18,159 --> 00:29:19,760
+you don't need to calculate it then use
+
+596
+00:29:19,760 --> 00:29:22,120
+it no just use it straight up and it
+
+597
+00:29:22,120 --> 00:29:25,120
+gets calculated like a function but it
+
+598
+00:29:25,120 --> 00:29:26,799
+has some limitations like it can't take
+
+599
+00:29:26,799 --> 00:29:30,120
+parameters it's that simple okay
+
+600
+00:29:30,120 --> 00:29:32,440
+continuing so
+
+601
+00:29:32,440 --> 00:29:35,840
+now we have Leaf one leaf 2 and leaf
+
+602
+00:29:35,840 --> 00:29:39,159
+three which themselves are Hanoi nodes
+
+603
+00:29:39,159 --> 00:29:41,120
+now you may be thinking if a Hanoi node
+
+604
+00:29:41,120 --> 00:29:43,360
+contains a variable of a Hanoi node and
+
+605
+00:29:43,360 --> 00:29:46,240
+that itself has more Hanoi nodes doesn't
+
+606
+00:29:46,240 --> 00:29:48,159
+that just break my own rule of the
+
+607
+00:29:48,159 --> 00:29:50,760
+barrier recursion that I talked about in
+
+608
+00:29:50,760 --> 00:29:52,559
+my other recursion video which there
+
+609
+00:29:52,559 --> 00:29:54,799
+will be a link to in the
+
+610
+00:29:54,799 --> 00:29:57,360
+description well no because this is
+
+611
+00:29:57,360 --> 00:29:59,840
+optional meaning at any time I can make
+
+612
+00:29:59,840 --> 00:30:02,120
+this nil meaning there will be nothing
+
+613
+00:30:02,120 --> 00:30:04,600
+after that that also means that I was
+
+614
+00:30:04,600 --> 00:30:06,519
+lying to you a few minutes ago not lying
+
+615
+00:30:06,519 --> 00:30:09,960
+just I'm sorry but uh as you can see
+
+616
+00:30:09,960 --> 00:30:12,799
+whenever you have one on the board the
+
+617
+00:30:12,799 --> 00:30:14,559
+tree doesn't just end there there's
+
+618
+00:30:14,559 --> 00:30:16,360
+actually a nil after this but you
+
+619
+00:30:16,360 --> 00:30:18,679
+usually ignore that due to the fact that
+
+620
+00:30:18,679 --> 00:30:21,440
+it's just nil doesn't matter it's just
+
+621
+00:30:21,440 --> 00:30:24,399
+nil I guess uh and same thing for all
+
+622
+00:30:24,399 --> 00:30:25,840
+these ones there's a nil after this
+
+623
+00:30:25,840 --> 00:30:27,760
+there's a nil after this there's a nil
+
+624
+00:30:27,760 --> 00:30:30,120
+after all of these because it can't just
+
+625
+00:30:30,120 --> 00:30:32,640
+abruptly end it can't just stop at a
+
+626
+00:30:32,640 --> 00:30:35,600
+Hanoi node that's impossible so that's
+
+627
+00:30:35,600 --> 00:30:38,360
+just a quick uh explanation of that for
+
+628
+00:30:38,360 --> 00:30:42,720
+you anyway continuing now when you get
+
+629
+00:30:42,720 --> 00:30:46,080
+Leaf one we are creating a new Final
+
+630
+00:30:46,080 --> 00:30:48,440
+constant which is equal to a new Hanoi
+
+631
+00:30:48,440 --> 00:30:51,399
+node which is the discs of this Hanoi
+
+632
+00:30:51,399 --> 00:30:54,919
+node are equal to our diss minus one the
+
+633
+00:30:54,919 --> 00:30:58,080
+current diss minus one the from value
+
+634
+00:30:58,080 --> 00:31:01,519
+will be same from but we're swapping the
+
+635
+00:31:01,519 --> 00:31:05,000
+using Peg and the two Peg uh so we're
+
+636
+00:31:05,000 --> 00:31:06,639
+for the using we're giving two and for
+
+637
+00:31:06,639 --> 00:31:09,399
+two we're giving using that
+
+638
+00:31:09,399 --> 00:31:13,600
+simple next we are returning uh then
+
+639
+00:31:13,600 --> 00:31:16,760
+we're using a quick uh conditional uh
+
+640
+00:31:16,760 --> 00:31:19,440
+we're checking if final do diss greater
+
+641
+00:31:19,440 --> 00:31:24,399
+than zero meaning it is one or something
+
+642
+00:31:24,399 --> 00:31:26,399
+bigger than
+
+643
+00:31:26,399 --> 00:31:29,080
+one then we on to return that final
+
+644
+00:31:29,080 --> 00:31:31,880
+variable meaning continue good job or
+
+645
+00:31:31,880 --> 00:31:35,159
+else nil because we do not want an
+
+646
+00:31:35,159 --> 00:31:37,440
+endless loop of
+
+647
+00:31:37,440 --> 00:31:40,760
+recursion next in leaf two we're doing
+
+648
+00:31:40,760 --> 00:31:42,679
+the same thing with the optional Hanoi
+
+649
+00:31:42,679 --> 00:31:44,679
+node we're still creating the final
+
+650
+00:31:44,679 --> 00:31:47,840
+constant however this time for the diss
+
+651
+00:31:47,840 --> 00:31:49,760
+we're just straight up giving one
+
+652
+00:31:49,760 --> 00:31:52,480
+because we I taught that to you in the
+
+653
+00:31:52,480 --> 00:31:55,679
+trees uh then we are keeping from using
+
+654
+00:31:55,679 --> 00:31:58,120
+into two the exact same then we're doing
+
+655
+00:31:58,120 --> 00:32:00,000
+exact same thing with the discs however
+
+656
+00:32:00,000 --> 00:32:01,880
+instead of checking finals discs because
+
+657
+00:32:01,880 --> 00:32:02,960
+we know that's going to be one we're
+
+658
+00:32:02,960 --> 00:32:05,760
+checking our own discs so that we can
+
+659
+00:32:05,760 --> 00:32:09,159
+see uh if we should actually uh continue
+
+660
+00:32:09,159 --> 00:32:10,960
+and create this
+
+661
+00:32:10,960 --> 00:32:14,000
+node finally Leaf three in which we are
+
+662
+00:32:14,000 --> 00:32:16,200
+still creating finyl we are putting the
+
+663
+00:32:16,200 --> 00:32:19,159
+diss minus one however we are swapping
+
+664
+00:32:19,159 --> 00:32:22,720
+from and using and we're keeping two the
+
+665
+00:32:22,720 --> 00:32:25,120
+same then we're just check then we're
+
+666
+00:32:25,120 --> 00:32:27,279
+just checking if the final discs are
+
+667
+00:32:27,279 --> 00:32:30,000
+greater than Z Z if so then return final
+
+668
+00:32:30,000 --> 00:32:31,840
+or else
+
+669
+00:32:31,840 --> 00:32:33,919
+no then we just have a really quick
+
+670
+00:32:33,919 --> 00:32:35,720
+initializer for this class which takes
+
+671
+00:32:35,720 --> 00:32:38,840
+the diss from using and two and sets the
+
+672
+00:32:38,840 --> 00:32:42,279
+values to them that was quick then we
+
+673
+00:32:42,279 --> 00:32:45,880
+have a global variable named ins or
+
+674
+00:32:45,880 --> 00:32:49,600
+instructions uh which is a string array
+
+675
+00:32:49,600 --> 00:32:53,120
+then we have a Hanoi function now simply
+
+676
+00:32:53,120 --> 00:32:56,159
+put this function is going to do all the
+
+677
+00:32:56,159 --> 00:32:57,960
+dirty work for us it's going to to
+
+678
+00:32:57,960 --> 00:33:00,159
+create the Hanoi node class go through
+
+679
+00:33:00,159 --> 00:33:02,240
+the tree and basically grab all the
+
+680
+00:33:02,240 --> 00:33:04,360
+values it'll pick all the
+
+681
+00:33:04,360 --> 00:33:07,840
+apples and so this function will take
+
+682
+00:33:07,840 --> 00:33:11,120
+the diss the name of the peg a the name
+
+683
+00:33:11,120 --> 00:33:14,120
+of Peg B and the name of Peg
+
+684
+00:33:14,120 --> 00:33:19,559
+C then we are creating a starting Leaf a
+
+685
+00:33:19,559 --> 00:33:22,480
+constant we are creating a hanoy node in
+
+686
+00:33:22,480 --> 00:33:25,720
+this of course we're setting the diss to
+
+687
+00:33:25,720 --> 00:33:27,120
+the dis that the user gave us in the
+
+688
+00:33:27,120 --> 00:33:30,919
+function declar ation from as a using as
+
+689
+00:33:30,919 --> 00:33:34,960
+B and to as C of
+
+690
+00:33:35,039 --> 00:33:37,720
+course then what we're doing is we're
+
+691
+00:33:37,720 --> 00:33:41,480
+checking if let L1 is equal to leaf.
+
+692
+00:33:41,480 --> 00:33:43,919
+Leaf one meaning does this Leaf have
+
+693
+00:33:43,919 --> 00:33:48,960
+Leaf one if it does then say if L1 do
+
+694
+00:33:48,960 --> 00:33:50,760
+diss is equal to
+
+695
+00:33:50,760 --> 00:33:53,360
+one what what's happening now is we're
+
+696
+00:33:53,360 --> 00:33:56,919
+checking is this ripe essentially uh if
+
+697
+00:33:56,919 --> 00:34:00,960
+it is tick it or else call yourself on
+
+698
+00:34:00,960 --> 00:34:01,760
+this
+
+699
+00:34:01,760 --> 00:34:04,440
+Leaf I'll explain what that means
+
+700
+00:34:04,440 --> 00:34:08,440
+now meaning if the discs are one then
+
+701
+00:34:08,440 --> 00:34:10,760
+just take this instruction and append it
+
+702
+00:34:10,760 --> 00:34:12,560
+into our instructions
+
+703
+00:34:12,560 --> 00:34:18,879
+array as Leaf one from then Leaf one to
+
+704
+00:34:18,879 --> 00:34:23,240
+so if it were to say a one ABC meaning
+
+705
+00:34:23,240 --> 00:34:25,800
+one disc from a to c it would actually
+
+706
+00:34:25,800 --> 00:34:29,879
+just depend AC into to the
+
+707
+00:34:29,879 --> 00:34:34,919
+array or else if it's actually a um real
+
+708
+00:34:34,919 --> 00:34:39,520
+U uh dis if it's the you call it if it's
+
+709
+00:34:39,520 --> 00:34:42,000
+not one it's two or three or something
+
+710
+00:34:42,000 --> 00:34:44,079
+greater than one then we're just going
+
+711
+00:34:44,079 --> 00:34:47,839
+to call ourself on diss minus
+
+712
+00:34:47,839 --> 00:34:52,639
+one with the same from using and two
+
+713
+00:34:52,639 --> 00:34:56,640
+values that we got from this
+
+714
+00:34:56,640 --> 00:34:59,680
+leaf then we do the exact same thing for
+
+715
+00:34:59,680 --> 00:35:02,000
+leaf two and the exact same thing for
+
+716
+00:35:02,000 --> 00:35:05,160
+leaf three no difference whatsoever
+
+717
+00:35:05,160 --> 00:35:08,359
+except that in leaf two if uh the discs
+
+718
+00:35:08,359 --> 00:35:11,599
+are not one then we call ourself with
+
+719
+00:35:11,599 --> 00:35:15,560
+diss minus one and a is just a b is just
+
+720
+00:35:15,560 --> 00:35:18,560
+B and C is just C it'll eventually stop
+
+721
+00:35:18,560 --> 00:35:20,960
+we know that
+
+722
+00:35:20,960 --> 00:35:24,960
+okay now this function works but it
+
+723
+00:35:24,960 --> 00:35:27,920
+isn't too convenient to code in this is
+
+724
+00:35:27,920 --> 00:35:29,440
+due to the fact that you need to give it
+
+725
+00:35:29,440 --> 00:35:32,839
+the discs the a value the B value and
+
+726
+00:35:32,839 --> 00:35:34,800
+the C value and it doesn't return
+
+727
+00:35:34,800 --> 00:35:37,920
+anything now order to fix that I've
+
+728
+00:35:37,920 --> 00:35:40,280
+actually created another function called
+
+729
+00:35:40,280 --> 00:35:43,520
+Hanoi just straight up Hanoi not Hanoi
+
+730
+00:35:43,520 --> 00:35:46,280
+underscore and so what's happening is
+
+731
+00:35:46,280 --> 00:35:49,200
+this uh function only takes uh the diss
+
+732
+00:35:49,200 --> 00:35:51,440
+as an integer and returns an array of
+
+733
+00:35:51,440 --> 00:35:52,800
+strings or the
+
+734
+00:35:52,800 --> 00:35:55,480
+instructions then we just call Hanoi on
+
+735
+00:35:55,480 --> 00:35:57,800
+the discs that you gave us with the the
+
+736
+00:35:57,800 --> 00:36:00,440
+a peg named a the bpeg named B and the
+
+737
+00:36:00,440 --> 00:36:03,920
+cpeg named C then we just return those
+
+738
+00:36:03,920 --> 00:36:08,200
+instructions that uh are created uh once
+
+739
+00:36:08,200 --> 00:36:10,760
+uh you use the Hanoi function and then
+
+740
+00:36:10,760 --> 00:36:13,000
+as you can see if I just fill this in
+
+741
+00:36:13,000 --> 00:36:16,599
+with let's say three
+
+742
+00:36:17,359 --> 00:36:21,200
+diss it worked and that was actually all
+
+743
+00:36:21,200 --> 00:36:23,200
+it for part two I hope you enjoyed if
+
+744
+00:36:23,200 --> 00:36:25,560
+you did please uh leave a like on this
+
+745
+00:36:25,560 --> 00:36:27,800
+video again also subscribe to my Channel
+
+746
+00:36:27,800 --> 00:36:30,079
+if you're new you can also contact me by
+
+747
+00:36:30,079 --> 00:36:33,119
+either commenting down below you can uh
+
+748
+00:36:33,119 --> 00:36:35,839
+um also contact me on Twitter at tagim
+
+749
+00:36:35,839 --> 00:36:37,720
+Manny or you can just email me at tajim
+
+750
+00:36:37,720 --> 00:36:39,760
+man gmail.com the email and Twitter
+
+751
+00:36:39,760 --> 00:36:41,079
+handle that I just mentioned will be in
+
+752
+00:36:41,079 --> 00:36:43,040
+the description if you can't spell them
+
+753
+00:36:43,040 --> 00:36:44,800
+and yeah that's going to be it for this
+
+754
+00:36:44,800 --> 00:36:47,079
+video again part three is coming out
+
+755
+00:36:47,079 --> 00:36:49,280
+really soon and part three will have how
+
+756
+00:36:49,280 --> 00:36:53,000
+to create a little simple uh cui not GUI
+
+757
+00:36:53,000 --> 00:36:55,880
+command user interface not um graphical
+
+758
+00:36:55,880 --> 00:36:58,800
+user interface for this program and
+
+759
+00:36:58,800 --> 00:37:00,440
+that's going to be it for this video
+
+760
+00:37:00,440 --> 00:37:03,440
+goodbye

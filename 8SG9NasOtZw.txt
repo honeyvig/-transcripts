@@ -1,0 +1,2691 @@
+1
+00:00:00,179 --> 00:00:03,149
+so lower and welcome to the tutorial my
+
+2
+00:00:03,149 --> 00:00:04,890
+name is Henry Bakshi and this time we're
+
+3
+00:00:04,890 --> 00:00:06,569
+gonna be going over something printing
+
+4
+00:00:06,569 --> 00:00:08,970
+you and before I continue I'm just going
+
+5
+00:00:08,970 --> 00:00:11,040
+to recommend that this tutorial is
+
+6
+00:00:11,040 --> 00:00:14,370
+slightly based off of my postfix and
+
+7
+00:00:14,370 --> 00:00:17,430
+infix evaluating tutorial so I actually
+
+8
+00:00:17,430 --> 00:00:20,039
+created a video for that and so I'd
+
+9
+00:00:20,039 --> 00:00:22,080
+recommend you check that out down in the
+
+10
+00:00:22,080 --> 00:00:22,710
+description
+
+11
+00:00:22,710 --> 00:00:24,420
+it'll be really helpful if you just
+
+12
+00:00:24,420 --> 00:00:26,849
+watch that then watch this because it's
+
+13
+00:00:26,849 --> 00:00:29,970
+slightly based off of it and yeah that's
+
+14
+00:00:29,970 --> 00:00:31,769
+pretty much it anyway continuing today
+
+15
+00:00:31,769 --> 00:00:33,719
+I'm going to be explaining how you could
+
+16
+00:00:33,719 --> 00:00:36,180
+evaluate straight up in fix expressions
+
+17
+00:00:36,180 --> 00:00:40,020
+using Swift so let's get started and so
+
+18
+00:00:40,020 --> 00:00:42,540
+this method is basically instead of
+
+19
+00:00:42,540 --> 00:00:44,640
+converting to post tricks than solving
+
+20
+00:00:44,640 --> 00:00:48,780
+the postfix just solve as you go through
+
+21
+00:00:48,780 --> 00:00:50,820
+the equation essentially so let's get
+
+22
+00:00:50,820 --> 00:00:52,770
+started and I'll explain exactly how it
+
+23
+00:00:52,770 --> 00:00:55,379
+works while we move on so let's get
+
+24
+00:00:55,379 --> 00:00:57,390
+started to end so now first thing what
+
+25
+00:00:57,390 --> 00:01:01,260
+I'm gonna do is I'm going to take some
+
+26
+00:01:01,260 --> 00:01:05,220
+sort of random expression like maybe
+
+27
+00:01:05,220 --> 00:01:16,610
+something like 1 plus 2 2 times 4 plus 5
+
+28
+00:01:16,610 --> 00:01:18,420
+now this is a pretty interesting
+
+29
+00:01:18,420 --> 00:01:20,400
+equation the reason I didn't just put 3
+
+30
+00:01:20,400 --> 00:01:22,799
+here's because windows 2 is 3 anyway so
+
+31
+00:01:22,799 --> 00:01:26,100
+it's a really more informative if we do
+
+32
+00:01:26,100 --> 00:01:30,329
+this way ok let's continue so again
+
+33
+00:01:30,329 --> 00:01:32,100
+we're going to be using stacks for this
+
+34
+00:01:32,100 --> 00:01:34,619
+and so again this is going to be a
+
+35
+00:01:34,619 --> 00:01:38,280
+quicker way to do this since once we
+
+36
+00:01:38,280 --> 00:01:40,229
+reach an operator it's going to solve
+
+37
+00:01:40,229 --> 00:01:43,200
+whatever was behind it as long as it can
+
+38
+00:01:43,200 --> 00:01:45,329
+with bed mass rules again I couldn't
+
+39
+00:01:45,329 --> 00:01:48,170
+find this on Wikipedia online in general
+
+40
+00:01:48,170 --> 00:01:52,200
+so I'm assuming since I couldn't find it
+
+41
+00:01:52,200 --> 00:01:54,390
+no no no one has screen a tutorial on
+
+42
+00:01:54,390 --> 00:01:56,909
+this yet but if you can find a name for
+
+43
+00:01:56,909 --> 00:01:58,290
+this algorithm please do tell me in the
+
+44
+00:01:58,290 --> 00:01:59,820
+comments or you can even email me at Tai
+
+45
+00:01:59,820 --> 00:02:02,100
+Chi mini at gmail.com and I email will
+
+46
+00:02:02,100 --> 00:02:04,409
+also be down in the description anyway
+
+47
+00:02:04,409 --> 00:02:07,259
+continuing let's start solving this
+
+48
+00:02:07,259 --> 00:02:10,379
+expression so first of all let's number
+
+49
+00:02:10,379 --> 00:02:13,350
+these characters so the
+
+50
+00:02:13,350 --> 00:02:16,380
+one is zero this plus is one actually
+
+51
+00:02:16,380 --> 00:02:19,380
+which right is a bit bigger zero this is
+
+52
+00:02:19,380 --> 00:02:20,580
+the one
+
+53
+00:02:20,580 --> 00:02:23,970
+and so then Oh actually that's two
+
+54
+00:02:23,970 --> 00:02:27,690
+erases and I'm where to where I didn't
+
+55
+00:02:27,690 --> 00:02:29,790
+read so you can clearly tell the
+
+56
+00:02:29,790 --> 00:02:32,670
+distinct difference so now is it going
+
+57
+00:02:32,670 --> 00:02:39,890
+to be a zero this is a 1 this is a 2 3
+
+58
+00:02:41,240 --> 00:02:45,150
+so this one is the zeroth character in
+
+59
+00:02:45,150 --> 00:02:47,490
+the expression this plus is the first
+
+60
+00:02:47,490 --> 00:02:51,750
+this 2 is the second this times is the
+
+61
+00:02:51,750 --> 00:02:55,170
+third this fourth is the fourth this
+
+62
+00:02:55,170 --> 00:02:58,080
+pick this plus is the fifth and this v
+
+63
+00:02:58,080 --> 00:03:01,910
+is the sixth and so let's get started
+
+64
+00:03:01,910 --> 00:03:05,130
+and so now what I'm going to be doing is
+
+65
+00:03:05,130 --> 00:03:07,110
+we're going to be solving if you use Dax
+
+66
+00:03:07,110 --> 00:03:09,300
+let's get started and so first thing
+
+67
+00:03:09,300 --> 00:03:11,610
+what we do is in Swift we split this
+
+68
+00:03:11,610 --> 00:03:14,130
+into an array it's separated by each
+
+69
+00:03:14,130 --> 00:03:16,620
+space so that we have each and every is
+
+70
+00:03:16,620 --> 00:03:20,100
+a little token then what we do is we
+
+71
+00:03:20,100 --> 00:03:21,780
+just loop through that entire tokens
+
+72
+00:03:21,780 --> 00:03:23,250
+array and start solving so let's get
+
+73
+00:03:23,250 --> 00:03:25,890
+started over here and so let's just say
+
+74
+00:03:25,890 --> 00:03:29,810
+first of all we have one stack in black
+
+75
+00:03:29,810 --> 00:03:43,200
+one stack good so this is one stack that
+
+76
+00:03:43,200 --> 00:03:45,810
+we have I'm going to make one more stack
+
+77
+00:03:45,810 --> 00:03:48,270
+for our operators it's already starting
+
+78
+00:03:48,270 --> 00:03:51,080
+to look quite a lot like my other
+
+79
+00:03:51,080 --> 00:03:53,580
+tutorial however this is where the twist
+
+80
+00:03:53,580 --> 00:03:56,460
+comes in instead of converting than
+
+81
+00:03:56,460 --> 00:03:58,440
+solving again this will convert and
+
+82
+00:03:58,440 --> 00:04:00,990
+solve at the same time and then whatever
+
+83
+00:04:00,990 --> 00:04:04,380
+is left it'll solve so let's get started
+
+84
+00:04:04,380 --> 00:04:07,770
+and first we have a 1 again whenever you
+
+85
+00:04:07,770 --> 00:04:10,110
+find a number in this expression just
+
+86
+00:04:10,110 --> 00:04:12,750
+add it to the operand stack so in order
+
+87
+00:04:12,750 --> 00:04:15,030
+to differentiate between these this is
+
+88
+00:04:15,030 --> 00:04:22,670
+the operand stack or the number stack
+
+89
+00:04:23,210 --> 00:04:27,930
+and this is the operator stack there's
+
+90
+00:04:27,930 --> 00:04:32,360
+no other really name for it stack
+
+91
+00:04:32,360 --> 00:04:34,320
+perfect so this is the operand stack
+
+92
+00:04:34,320 --> 00:04:36,780
+this is the operator stack so when we
+
+93
+00:04:36,780 --> 00:04:39,360
+see a 1 over here we just immediately
+
+94
+00:04:39,360 --> 00:04:42,360
+say that okay we're gonna take one and
+
+95
+00:04:42,360 --> 00:04:45,900
+push it in here now what we're gonna do
+
+96
+00:04:45,900 --> 00:04:47,580
+is we're gonna see a plus and since
+
+97
+00:04:47,580 --> 00:04:49,080
+there's nothing in here there's no
+
+98
+00:04:49,080 --> 00:04:51,090
+things for us to do so we just push the
+
+99
+00:04:51,090 --> 00:04:53,700
+plus onto our stack so we write a plus
+
+100
+00:04:53,700 --> 00:04:59,970
+inside here perfect then we have a 2
+
+101
+00:04:59,970 --> 00:05:02,370
+again this will just go straight into
+
+102
+00:05:02,370 --> 00:05:06,900
+our operand stack now here's where
+
+103
+00:05:06,900 --> 00:05:08,400
+something comes in we seen other times
+
+104
+00:05:08,400 --> 00:05:10,290
+now let me explain something called
+
+105
+00:05:10,290 --> 00:05:14,090
+priority 2 now as you can see we have
+
+106
+00:05:14,090 --> 00:05:24,150
+times divide add and subtract now we
+
+107
+00:05:24,150 --> 00:05:28,160
+split these into two parts and so
+
+108
+00:05:28,160 --> 00:05:29,970
+multiplication and division have the
+
+109
+00:05:29,970 --> 00:05:34,020
+priority of 0 addition subtraction of
+
+110
+00:05:34,020 --> 00:05:39,150
+the priority of 1 and so these actually
+
+111
+00:05:39,150 --> 00:05:41,100
+you know what it's a little bit
+
+112
+00:05:41,100 --> 00:05:42,810
+confusing for someone just to see it
+
+113
+00:05:42,810 --> 00:05:45,510
+like that so I'm gonna get spaced out so
+
+114
+00:05:45,510 --> 00:05:47,389
+there's going to be
+
+115
+00:05:47,389 --> 00:05:50,750
+times which has a priority of zero me
+
+116
+00:05:50,750 --> 00:05:53,419
+has the highest priority and there's
+
+117
+00:05:53,419 --> 00:05:55,819
+also divide which also has a priority of
+
+118
+00:05:55,819 --> 00:05:58,840
+zero so it also has the highest priority
+
+119
+00:05:58,840 --> 00:06:01,789
+addition not so much it has the least
+
+120
+00:06:01,789 --> 00:06:05,199
+priority and so does subtraction
+
+121
+00:06:05,199 --> 00:06:09,379
+perfects so now that you know that I can
+
+122
+00:06:09,379 --> 00:06:14,500
+explain the rule to you the rule is that
+
+123
+00:06:14,500 --> 00:06:17,180
+because we want to take a look at this
+
+124
+00:06:17,180 --> 00:06:21,620
+operator so we have a times currently
+
+125
+00:06:21,620 --> 00:06:25,969
+that's what we're on okay in our stack
+
+126
+00:06:25,969 --> 00:06:30,349
+our stacks peak which is our plus which
+
+127
+00:06:30,349 --> 00:06:33,830
+is the highest element in the stack is a
+
+128
+00:06:33,830 --> 00:06:39,949
+plus so we note down the priorities for
+
+129
+00:06:39,949 --> 00:06:43,930
+each four times zero for addition it's 1
+
+130
+00:06:43,930 --> 00:06:50,029
+now when you can see that this number
+
+131
+00:06:50,029 --> 00:06:57,379
+over here 1 is greater than zero so we
+
+132
+00:06:57,379 --> 00:06:59,990
+can say that we will not be popping out
+
+133
+00:06:59,990 --> 00:07:04,279
+however for example if it's priority or
+
+134
+00:07:04,279 --> 00:07:07,370
+zero we would be popping out the plus
+
+135
+00:07:07,370 --> 00:07:09,289
+and doing some more stuff however I'm
+
+136
+00:07:09,289 --> 00:07:10,580
+going to be explaining that in just a
+
+137
+00:07:10,580 --> 00:07:12,979
+minute so now we know we're not going to
+
+138
+00:07:12,979 --> 00:07:15,199
+be doing any popping we just add the
+
+139
+00:07:15,199 --> 00:07:22,969
+times to our snack perfect so now we see
+
+140
+00:07:22,969 --> 00:07:25,759
+a four and so we just put a four onto
+
+141
+00:07:25,759 --> 00:07:31,250
+our operand stack perfect then we see a
+
+142
+00:07:31,250 --> 00:07:33,080
+plus and now this is where the twist
+
+143
+00:07:33,080 --> 00:07:36,529
+comes in as you can see this is
+
+144
+00:07:36,529 --> 00:07:38,240
+basically just like my other tutorial
+
+145
+00:07:38,240 --> 00:07:41,439
+we're just building up some postfix
+
+146
+00:07:41,439 --> 00:07:44,659
+however now that it sees this operator
+
+147
+00:07:44,659 --> 00:07:47,779
+no not because it's the last however
+
+148
+00:07:47,779 --> 00:07:52,039
+because it's priority is greater than
+
+149
+00:07:52,039 --> 00:07:54,409
+the one that's in the peak of the stack
+
+150
+00:07:54,409 --> 00:07:57,949
+so as you can see we're currently on
+
+151
+00:07:57,949 --> 00:07:59,870
+this plus
+
+152
+00:07:59,870 --> 00:08:01,610
+and we're not on this tines we're
+
+153
+00:08:01,610 --> 00:08:08,030
+currently on the plus ok so we note down
+
+154
+00:08:08,030 --> 00:08:09,500
+the plusses priority which we know is
+
+155
+00:08:09,500 --> 00:08:12,470
+one and we note down the times priority
+
+156
+00:08:12,470 --> 00:08:16,610
+which is zero so now we know that 0 is
+
+157
+00:08:16,610 --> 00:08:20,750
+less than 1 so what we do is we come
+
+158
+00:08:20,750 --> 00:08:25,940
+over here and we and we pop the x out of
+
+159
+00:08:25,940 --> 00:08:29,830
+our stack then we pop out the floor and
+
+160
+00:08:29,830 --> 00:08:35,870
+then we pop out the two okay then we put
+
+161
+00:08:35,870 --> 00:08:37,909
+them to the side and we said okay what's
+
+162
+00:08:37,909 --> 00:08:42,279
+for the operator and then two equal to
+
+163
+00:08:42,279 --> 00:08:48,710
+well we know that it is eight so what we
+
+164
+00:08:48,710 --> 00:08:50,839
+do is we take that eight and push it
+
+165
+00:08:50,839 --> 00:08:56,420
+onto our operand stack perfect so now
+
+166
+00:08:56,420 --> 00:09:00,500
+what we can do is again we see that I'm
+
+167
+00:09:00,500 --> 00:09:02,180
+not going to erase this because we're
+
+168
+00:09:02,180 --> 00:09:04,010
+still on this because we see there's
+
+169
+00:09:04,010 --> 00:09:07,760
+still something in our operator stack so
+
+170
+00:09:07,760 --> 00:09:10,010
+this actually has the same priority
+
+171
+00:09:10,010 --> 00:09:12,050
+because plus and plus both have a
+
+172
+00:09:12,050 --> 00:09:15,110
+priority of one so this is equal to one
+
+173
+00:09:15,110 --> 00:09:17,480
+that means still that we will pop out
+
+174
+00:09:17,480 --> 00:09:21,110
+and add so what I'm going to do is I'm
+
+175
+00:09:21,110 --> 00:09:23,860
+going to pop this plus out of our stack
+
+176
+00:09:23,860 --> 00:09:26,450
+I'm going to pop out our eight from the
+
+177
+00:09:26,450 --> 00:09:30,170
+stack I'm going to pop out the one from
+
+178
+00:09:30,170 --> 00:09:33,140
+our stack then what I want to do is I
+
+179
+00:09:33,140 --> 00:09:34,610
+again I'm going to put them to the side
+
+180
+00:09:34,610 --> 00:09:37,370
+and again we're done this I'm just going
+
+181
+00:09:37,370 --> 00:09:38,660
+to keep that there so you know we've
+
+182
+00:09:38,660 --> 00:09:43,089
+done that and then so we have 8 plus 1
+
+183
+00:09:43,089 --> 00:09:48,050
+which will be equal to 9 and so we put a
+
+184
+00:09:48,050 --> 00:09:51,230
+9 into our operand stack and then we see
+
+185
+00:09:51,230 --> 00:09:54,230
+ok there's a plus and so we just put in
+
+186
+00:09:54,230 --> 00:09:56,420
+a plus onto our operators that operator
+
+187
+00:09:56,420 --> 00:09:59,120
+stack because of course that needs to go
+
+188
+00:09:59,120 --> 00:10:02,600
+there no matter what then we see a 5 so
+
+189
+00:10:02,600 --> 00:10:04,459
+we're going to put it onto our operand
+
+190
+00:10:04,459 --> 00:10:08,360
+stack now we realize that the question
+
+191
+00:10:08,360 --> 00:10:10,880
+is over so a few remaining operators
+
+192
+00:10:10,880 --> 00:10:11,800
+that are in this
+
+193
+00:10:11,800 --> 00:10:13,930
+that we're going to apply here just like
+
+194
+00:10:13,930 --> 00:10:16,180
+we didn't postfix just no not exactly
+
+195
+00:10:16,180 --> 00:10:20,070
+so we see a plus right so what we do
+
+196
+00:10:20,070 --> 00:10:23,740
+where we pop out with plus we pop out
+
+197
+00:10:23,740 --> 00:10:27,130
+the 9 you pop out the 5 and you say
+
+198
+00:10:27,130 --> 00:10:35,310
+what's five plus nine and so it is 14
+
+199
+00:10:35,310 --> 00:10:39,670
+and so it'll push 14 onto our auburn
+
+200
+00:10:39,670 --> 00:10:42,640
+stack and then once we're done
+
+201
+00:10:42,640 --> 00:10:44,529
+completely there's nothing left in the
+
+202
+00:10:44,529 --> 00:10:46,690
+operator stack we can just pop out this
+
+203
+00:10:46,690 --> 00:10:51,490
+value and return it and so our answer we
+
+204
+00:10:51,490 --> 00:10:54,730
+know will leave 14 so it's a really
+
+205
+00:10:54,730 --> 00:10:57,700
+basic method of how this works and now
+
+206
+00:10:57,700 --> 00:11:00,220
+that you know exactly how this works I'm
+
+207
+00:11:00,220 --> 00:11:01,089
+going to give you one more example
+
+208
+00:11:01,089 --> 00:11:04,450
+before we do go to the Mac part let's do
+
+209
+00:11:04,450 --> 00:11:23,470
+something like yeah let's do some
+
+210
+00:11:23,470 --> 00:11:25,240
+subtraction this times right
+
+211
+00:11:25,240 --> 00:11:31,050
+let's do subtraction so something like
+
+212
+00:11:31,560 --> 00:11:43,209
+five plus two minus four perfect no but
+
+213
+00:11:43,209 --> 00:11:47,910
+I can do draw this out nicely for you
+
+214
+00:11:47,910 --> 00:11:56,620
+five plus four and so this is the zero
+
+215
+00:11:56,620 --> 00:11:58,660
+with character is the first character
+
+216
+00:11:58,660 --> 00:12:01,630
+the second character this is the third
+
+217
+00:12:01,630 --> 00:12:02,680
+character and this is the fourth
+
+218
+00:12:02,680 --> 00:12:07,180
+character perfect and actually since
+
+219
+00:12:07,180 --> 00:12:09,070
+this is actually a little bit hard to
+
+220
+00:12:09,070 --> 00:12:11,050
+distinguish if this is actually a number
+
+221
+00:12:11,050 --> 00:12:14,260
+or character number I'm gonna try it in
+
+222
+00:12:14,260 --> 00:12:19,300
+red so again this is the zero is the
+
+223
+00:12:19,300 --> 00:12:22,640
+first second third
+
+224
+00:12:22,640 --> 00:12:24,589
+that's the fourth the reason I'm
+
+225
+00:12:24,589 --> 00:12:26,329
+actually telling you these character
+
+226
+00:12:26,329 --> 00:12:28,370
+numbers and you'll see is in the Mac
+
+227
+00:12:28,370 --> 00:12:30,800
+part there's a little extra feature in
+
+228
+00:12:30,800 --> 00:12:32,540
+this app that I will be showing you that
+
+229
+00:12:32,540 --> 00:12:35,300
+requires these characters numbers anyway
+
+230
+00:12:35,300 --> 00:12:37,339
+let's solve this now first of all I'm
+
+231
+00:12:37,339 --> 00:12:40,279
+gonna draw stack so I'm just going to
+
+232
+00:12:40,279 --> 00:12:52,579
+say stack one stack two wrong okay so
+
+233
+00:12:52,579 --> 00:12:54,920
+first of all we see a five and you push
+
+234
+00:12:54,920 --> 00:12:59,690
+it onto our operand stack perfect
+
+235
+00:12:59,690 --> 00:13:01,880
+then you take a plus and we add it onto
+
+236
+00:13:01,880 --> 00:13:08,480
+our operators back then we see it - we
+
+237
+00:13:08,480 --> 00:13:15,440
+put it onto our operand stack we see a -
+
+238
+00:13:15,440 --> 00:13:19,070
+now we start so the minuses priority and
+
+239
+00:13:19,070 --> 00:13:22,279
+the pluses priority are the same since
+
+240
+00:13:22,279 --> 00:13:25,220
+they're the same we just do this you pop
+
+241
+00:13:25,220 --> 00:13:29,029
+out the plus you pop out the - they pop
+
+242
+00:13:29,029 --> 00:13:36,740
+out the five we do 5 minus 2 and we know
+
+243
+00:13:36,740 --> 00:13:40,459
+oh it's so plus 2 sorry and so we know
+
+244
+00:13:40,459 --> 00:13:43,910
+that this will be 7 so what we can do is
+
+245
+00:13:43,910 --> 00:13:48,040
+just push a 7 on to our operand stack
+
+246
+00:13:48,040 --> 00:13:51,649
+then again this - has to go into our
+
+247
+00:13:51,649 --> 00:13:55,519
+operator stack and then we see a 4 so I
+
+248
+00:13:55,519 --> 00:13:57,649
+can just put it onto our operand stack
+
+249
+00:13:57,649 --> 00:14:01,160
+now that we're done we see a - and so
+
+250
+00:14:01,160 --> 00:14:03,980
+since it's a - what we do we pop it out
+
+251
+00:14:03,980 --> 00:14:07,720
+of our operator stack we pop the 4 out
+
+252
+00:14:07,720 --> 00:14:13,060
+we pop the 7 out and then we see okay
+
+253
+00:14:13,060 --> 00:14:19,130
+what is 7 minus 4 well this is going to
+
+254
+00:14:19,130 --> 00:14:21,920
+be equal to 3 now that we know that we
+
+255
+00:14:21,920 --> 00:14:23,480
+can push it back in here and then we see
+
+256
+00:14:23,480 --> 00:14:26,089
+oh this is empty the operator stack is
+
+257
+00:14:26,089 --> 00:14:29,060
+anything so you just pop this out return
+
+258
+00:14:29,060 --> 00:14:33,589
+it and we have our answer which is the
+
+259
+00:14:33,589 --> 00:14:35,879
+correct answer which is 3
+
+260
+00:14:35,879 --> 00:14:38,739
+those are two really quick examples of
+
+261
+00:14:38,739 --> 00:14:41,319
+how that worked and so actually further
+
+262
+00:14:41,319 --> 00:14:42,999
+to tell you this I actually thought of
+
+263
+00:14:42,999 --> 00:14:45,699
+this algorithm while I actually suck
+
+264
+00:14:45,699 --> 00:14:48,730
+nose up punching calculators where you
+
+265
+00:14:48,730 --> 00:14:50,739
+can basically type five plus four plus
+
+266
+00:14:50,739 --> 00:14:54,369
+this plus that and it solves it why like
+
+267
+00:14:54,369 --> 00:14:57,639
+while you type I was really confused on
+
+268
+00:14:57,639 --> 00:15:01,389
+how it would just actually be able to
+
+269
+00:15:01,389 --> 00:15:03,669
+solve it without knowing mean to our
+
+270
+00:15:03,669 --> 00:15:05,230
+question without knowing that there's
+
+271
+00:15:05,230 --> 00:15:07,679
+something ahead that has higher bidness
+
+272
+00:15:07,679 --> 00:15:12,699
+but since I have I've seen many of these
+
+273
+00:15:12,699 --> 00:15:15,579
+I've worked with them I was able to
+
+274
+00:15:15,579 --> 00:15:17,769
+estimate what sort of algorithm would be
+
+275
+00:15:17,769 --> 00:15:19,839
+after a bit of tweaking it worked and
+
+276
+00:15:19,839 --> 00:15:21,399
+I'm creating this video so now we're
+
+277
+00:15:21,399 --> 00:15:22,569
+gonna be going to the Mac part in which
+
+278
+00:15:22,569 --> 00:15:23,980
+I will explain my entire code a
+
+279
+00:15:23,980 --> 00:15:26,410
+playground and also a slight app that
+
+280
+00:15:26,410 --> 00:15:28,929
+I've created again I haven't really
+
+281
+00:15:28,929 --> 00:15:31,089
+created a framework for yet but I will
+
+282
+00:15:31,089 --> 00:15:32,549
+be making one and it will be available
+
+283
+00:15:32,549 --> 00:15:34,329
+available for download down in the
+
+284
+00:15:34,329 --> 00:15:36,730
+description and it can also handle
+
+285
+00:15:36,730 --> 00:15:39,069
+brackets basically it'll just solve
+
+286
+00:15:39,069 --> 00:15:42,309
+brackets for you it'll actually know
+
+287
+00:15:42,309 --> 00:15:45,639
+it'll sold the bracket and instead of
+
+288
+00:15:45,639 --> 00:15:46,959
+having the bracket there it'll put a
+
+289
+00:15:46,959 --> 00:15:49,299
+dancer there and then it's maybe becomes
+
+290
+00:15:49,299 --> 00:15:50,889
+much easier to solve so that's how that
+
+291
+00:15:50,889 --> 00:15:51,369
+works
+
+292
+00:15:51,369 --> 00:15:57,669
+and yeah let's get to the Mac part so
+
+293
+00:15:57,669 --> 00:15:59,379
+welcome back to the Mac part now we're
+
+294
+00:15:59,379 --> 00:16:01,209
+going to be going over the code and as
+
+295
+00:16:01,209 --> 00:16:03,759
+you can see I have actually brought this
+
+296
+00:16:03,759 --> 00:16:05,889
+little panel closer to the codes and you
+
+297
+00:16:05,889 --> 00:16:08,709
+can actually see the equation and also
+
+298
+00:16:08,709 --> 00:16:12,790
+the answer pretty much close together so
+
+299
+00:16:12,790 --> 00:16:15,449
+let's get started with this specific
+
+300
+00:16:15,449 --> 00:16:19,539
+equation two plus four plus five minus
+
+301
+00:16:19,539 --> 00:16:22,449
+three times two plus seven pretty long
+
+302
+00:16:22,449 --> 00:16:24,339
+and the answer in this case should be
+
+303
+00:16:24,339 --> 00:16:27,399
+okay let's take this out so three times
+
+304
+00:16:27,399 --> 00:16:30,129
+two we know that's six then we can do it
+
+305
+00:16:30,129 --> 00:16:32,589
+in anywhere you want so six plus seven
+
+306
+00:16:32,589 --> 00:16:36,399
+for example 13 five minus 13 we could do
+
+307
+00:16:36,399 --> 00:16:40,600
+eight for that and then so four plus 80
+
+308
+00:16:40,600 --> 00:16:43,269
+2000 be 12 and then I'm two so this
+
+309
+00:16:43,269 --> 00:16:46,509
+should be around 14 for the answer so
+
+310
+00:16:46,509 --> 00:16:47,730
+now let's put this into
+
+311
+00:16:47,730 --> 00:16:50,399
+our little contraption actually you know
+
+312
+00:16:50,399 --> 00:16:52,170
+what that wasn't such a good idea anyway
+
+313
+00:16:52,170 --> 00:16:53,970
+so let's put this into our little code
+
+314
+00:16:53,970 --> 00:16:58,380
+and so 2 plus 4 plus 5 minus 3 2 plus 4
+
+315
+00:16:58,380 --> 00:17:04,530
+plus 5 minus 3 times 2 plus 7 so let's
+
+316
+00:17:04,530 --> 00:17:07,069
+see what this program gives us and the
+
+317
+00:17:07,069 --> 00:17:09,660
+answer is 12 maybe I had an error in my
+
+318
+00:17:09,660 --> 00:17:12,240
+calculations but this is the correct
+
+319
+00:17:12,240 --> 00:17:14,069
+answer because I have tested this out
+
+320
+00:17:14,069 --> 00:17:16,740
+and it is completely correct so let's
+
+321
+00:17:16,740 --> 00:17:20,549
+just test this out 6 plus 5 so that
+
+322
+00:17:20,549 --> 00:17:26,250
+would be around 11 11 minus 6 we know
+
+323
+00:17:26,250 --> 00:17:33,380
+that would be around 5 5 plus 7 would be
+
+324
+00:17:33,380 --> 00:17:36,990
+12 perfect so this is 12 and so I had an
+
+325
+00:17:36,990 --> 00:17:39,540
+error in my calculation sorry but anyway
+
+326
+00:17:39,540 --> 00:17:41,160
+we know that the correct answer is 12
+
+327
+00:17:41,160 --> 00:17:44,330
+and so our program is pretty accurate
+
+328
+00:17:44,330 --> 00:17:47,010
+and so again as I said in the whiteboard
+
+329
+00:17:47,010 --> 00:17:50,340
+parts this program does work with
+
+330
+00:17:50,340 --> 00:17:53,580
+brackets I have coded it to place all
+
+331
+00:17:53,580 --> 00:17:56,100
+brackets with their answer and so ever
+
+332
+00:17:56,100 --> 00:18:01,520
+to give it something like 12 plus 10
+
+333
+00:18:01,520 --> 00:18:05,520
+divided by 2 as you can see it will give
+
+334
+00:18:05,520 --> 00:18:08,610
+17 however if I put brackets around 12
+
+335
+00:18:08,610 --> 00:18:13,830
+plus 10 it will give us 11 and this is
+
+336
+00:18:13,830 --> 00:18:15,929
+the correct answer because 12 plus 10
+
+337
+00:18:15,929 --> 00:18:18,660
+that's 22 divided by 2 that should be 11
+
+338
+00:18:18,660 --> 00:18:20,940
+however if we do it this way it's going
+
+339
+00:18:20,940 --> 00:18:23,460
+to be 12 plus 10 divided by 2 and 10
+
+340
+00:18:23,460 --> 00:18:24,600
+divided by 2 is 5
+
+341
+00:18:24,600 --> 00:18:27,540
+so 12 plus 5 which is 17 which is the
+
+342
+00:18:27,540 --> 00:18:29,669
+correct answer as well so the brackets
+
+343
+00:18:29,669 --> 00:18:31,110
+in this case do make a difference and
+
+344
+00:18:31,110 --> 00:18:32,910
+that's how they work in case you don't
+
+345
+00:18:32,910 --> 00:18:34,590
+understand what I mean by replace the
+
+346
+00:18:34,590 --> 00:18:37,110
+brackets well this is what I mean if we
+
+347
+00:18:37,110 --> 00:18:38,790
+go up here as you can see my bracket
+
+348
+00:18:38,790 --> 00:18:41,669
+logic this is the original little
+
+349
+00:18:41,669 --> 00:18:44,400
+expression here with the brackets and
+
+350
+00:18:44,400 --> 00:18:46,980
+stuff after my simplification process it
+
+351
+00:18:46,980 --> 00:18:50,400
+is this 22 divided by 2 and that's how
+
+352
+00:18:50,400 --> 00:18:51,230
+that works
+
+353
+00:18:51,230 --> 00:18:56,130
+anyway now continuing let's take a look
+
+354
+00:18:56,130 --> 00:18:58,830
+at the code now now again as I said it
+
+355
+00:18:58,830 --> 00:19:00,570
+would be extremely helpful if you would
+
+356
+00:19:00,570 --> 00:19:01,070
+just go
+
+357
+00:19:01,070 --> 00:19:03,409
+watch the original postfix tutorial
+
+358
+00:19:03,409 --> 00:19:06,980
+because there I always explain stacks I
+
+359
+00:19:06,980 --> 00:19:10,549
+explain most that sort of stuff and so
+
+360
+00:19:10,549 --> 00:19:11,720
+it would be really helpful if you would
+
+361
+00:19:11,720 --> 00:19:14,809
+just check that out and then so you will
+
+362
+00:19:14,809 --> 00:19:16,250
+also find out how I calculate the
+
+363
+00:19:16,250 --> 00:19:19,490
+precedents and stuff like that anyway
+
+364
+00:19:19,490 --> 00:19:21,889
+and also one more thing before we
+
+365
+00:19:21,889 --> 00:19:23,809
+continue first of all what I'm gonna do
+
+366
+00:19:23,809 --> 00:19:26,389
+is I'm going to expand this variable
+
+367
+00:19:26,389 --> 00:19:29,990
+once I type something in like what was
+
+368
+00:19:29,990 --> 00:19:33,049
+the original question two plus four plus
+
+369
+00:19:33,049 --> 00:19:41,289
+five plus four plus five minus actually
+
+370
+00:19:41,470 --> 00:19:47,929
+minus three minus three times two plus
+
+371
+00:19:47,929 --> 00:19:51,019
+seven perfect and so now as you can see
+
+372
+00:19:51,019 --> 00:19:53,419
+it gives us the correct answer and this
+
+373
+00:19:53,419 --> 00:19:55,850
+is all the stuff behind it so I just do
+
+374
+00:19:55,850 --> 00:19:59,090
+this and so I can also show this so as
+
+375
+00:19:59,090 --> 00:20:01,460
+you can see here this is actually
+
+376
+00:20:01,460 --> 00:20:04,100
+showing us first of all what character
+
+377
+00:20:04,100 --> 00:20:08,570
+are what index in our array and then
+
+378
+00:20:08,570 --> 00:20:10,519
+second it's actually showing us okay so
+
+379
+00:20:10,519 --> 00:20:14,659
+um basically the third character which
+
+380
+00:20:14,659 --> 00:20:18,860
+is this plus modified this two plus four
+
+381
+00:20:18,860 --> 00:20:21,620
+to be turned into six and as you can see
+
+382
+00:20:21,620 --> 00:20:23,600
+these red numbers here are all our
+
+383
+00:20:23,600 --> 00:20:27,379
+indexes now anyway continuing and I set
+
+384
+00:20:27,379 --> 00:20:29,450
+this third this third character which is
+
+385
+00:20:29,450 --> 00:20:32,899
+the plus actually modified to plus four
+
+386
+00:20:32,899 --> 00:20:38,980
+to become 6 then this fifth minus
+
+387
+00:20:38,980 --> 00:20:43,820
+modified six plus five to become eleven
+
+388
+00:20:43,820 --> 00:20:48,590
+as you can see here also here we have
+
+389
+00:20:48,590 --> 00:20:51,110
+the five here it modified this to become
+
+390
+00:20:51,110 --> 00:20:56,000
+eleven anyway now at nine we can see
+
+391
+00:20:56,000 --> 00:21:00,169
+this plus has turned this 3 times 2 into
+
+392
+00:21:00,169 --> 00:21:05,200
+6 over here and then this Plus also
+
+393
+00:21:05,200 --> 00:21:11,029
+solved for essentially 11 minus 6 which
+
+394
+00:21:11,029 --> 00:21:13,100
+would be 5 as you can see and then it
+
+395
+00:21:13,100 --> 00:21:14,659
+was just left with 5 plus
+
+396
+00:21:14,659 --> 00:21:17,450
+seven and so it got the answer 12 and so
+
+397
+00:21:17,450 --> 00:21:20,599
+that's how that works anyway now we can
+
+398
+00:21:20,599 --> 00:21:22,749
+continue who is looking at our code
+
+399
+00:21:22,749 --> 00:21:25,460
+let's continue now and as you can see I
+
+400
+00:21:25,460 --> 00:21:28,369
+am going to be skipping a little bit of
+
+401
+00:21:28,369 --> 00:21:30,529
+this because uh first of all this is you
+
+402
+00:21:30,529 --> 00:21:32,539
+don't need to know this right now and
+
+403
+00:21:32,539 --> 00:21:34,669
+also this is completely I needed I was
+
+404
+00:21:34,669 --> 00:21:35,989
+just experimenting with something before
+
+405
+00:21:35,989 --> 00:21:38,570
+but now it's not needed as you can see I
+
+406
+00:21:38,570 --> 00:21:41,509
+have my stack class I have an extensions
+
+407
+00:21:41,509 --> 00:21:43,099
+in the string class which will easily
+
+408
+00:21:43,099 --> 00:21:45,169
+allow me to get the precedents the
+
+409
+00:21:45,169 --> 00:21:48,549
+operator or number of any sort of
+
+410
+00:21:48,549 --> 00:21:53,299
+essentially string another extension is
+
+411
+00:21:53,299 --> 00:21:55,429
+the string class which was created by I
+
+412
+00:21:55,429 --> 00:21:57,919
+think Alec Lars not start on them so but
+
+413
+00:21:57,919 --> 00:21:59,840
+anyway the link to it will be down in
+
+414
+00:21:59,840 --> 00:22:02,599
+the description and so that completely
+
+415
+00:22:02,599 --> 00:22:05,299
+works this string extension will allow
+
+416
+00:22:05,299 --> 00:22:07,369
+us to get a subscript of a string and
+
+417
+00:22:07,369 --> 00:22:10,129
+then finally this extension to the array
+
+418
+00:22:10,129 --> 00:22:12,590
+class which will allow us to get
+
+419
+00:22:12,590 --> 00:22:17,019
+something from an array and make sure
+
+420
+00:22:17,019 --> 00:22:19,700
+that it actually exists by either
+
+421
+00:22:19,700 --> 00:22:22,369
+returning an optional or it will return
+
+422
+00:22:22,369 --> 00:22:25,960
+the actual value if it exists and so
+
+423
+00:22:25,960 --> 00:22:29,389
+what it's going to do it actually this
+
+424
+00:22:29,389 --> 00:22:30,559
+was created by someone on Stack Overflow
+
+425
+00:22:30,559 --> 00:22:33,529
+as well and I will be putting their name
+
+426
+00:22:33,529 --> 00:22:35,269
+and the link to their answer down in
+
+427
+00:22:35,269 --> 00:22:36,679
+description so you can look in the
+
+428
+00:22:36,679 --> 00:22:40,609
+description for that anyway continuing
+
+429
+00:22:40,609 --> 00:22:43,879
+let's look at our in fix parser now so
+
+430
+00:22:43,879 --> 00:22:46,789
+anyway this is our and fixed parser and
+
+431
+00:22:46,789 --> 00:22:49,190
+first of all as you can see I have a
+
+432
+00:22:49,190 --> 00:22:51,559
+function here what this function is
+
+433
+00:22:51,559 --> 00:22:54,409
+going to do is it's going to allow me to
+
+434
+00:22:54,409 --> 00:22:57,200
+replace all the brackets with the actual
+
+435
+00:22:57,200 --> 00:23:00,379
+final answer it does this by taking each
+
+436
+00:23:00,379 --> 00:23:04,129
+and every section of brackets and it
+
+437
+00:23:04,129 --> 00:23:07,580
+will basically and also in case you are
+
+438
+00:23:07,580 --> 00:23:10,279
+wondering these are the only two things
+
+439
+00:23:10,279 --> 00:23:12,799
+that I've taken from Stack Overflow the
+
+440
+00:23:12,799 --> 00:23:15,529
+rest is all mine completely is the only
+
+441
+00:23:15,529 --> 00:23:17,779
+two things that were from stag envelope
+
+442
+00:23:17,779 --> 00:23:20,059
+anyway so that's the this is the bracket
+
+443
+00:23:20,059 --> 00:23:21,500
+engine it has
+
+444
+00:23:21,500 --> 00:23:23,330
+some nested functions which will allow
+
+445
+00:23:23,330 --> 00:23:26,690
+us first of all to power to parse out
+
+446
+00:23:26,690 --> 00:23:30,320
+all the brackets and so from all of them
+
+447
+00:23:30,320 --> 00:23:33,290
+from the entire expression convert all
+
+448
+00:23:33,290 --> 00:23:35,930
+the brackets into an array of strings so
+
+449
+00:23:35,930 --> 00:23:38,050
+if there's like five sets of brackets
+
+450
+00:23:38,050 --> 00:23:41,350
+you want to put five sets of brackets
+
+451
+00:23:41,350 --> 00:23:45,260
+into that string array and then after
+
+452
+00:23:45,260 --> 00:23:47,870
+that this bracket solving function will
+
+453
+00:23:47,870 --> 00:23:50,060
+actually return a string which is the
+
+454
+00:23:50,060 --> 00:23:54,190
+final expression completely ready to be
+
+455
+00:23:54,190 --> 00:23:57,770
+essentially returned so it will take all
+
+456
+00:23:57,770 --> 00:24:00,770
+the brackets values and it will solve
+
+457
+00:24:00,770 --> 00:24:02,870
+them using this solve function that I've
+
+458
+00:24:02,870 --> 00:24:08,000
+created and then it will replace the the
+
+459
+00:24:08,000 --> 00:24:09,860
+places where that bracket is occurring
+
+460
+00:24:09,860 --> 00:24:12,680
+inside of the expression with the answer
+
+461
+00:24:12,680 --> 00:24:14,870
+that it got from the sole function so
+
+462
+00:24:14,870 --> 00:24:17,660
+that's a pretty simple way to explain
+
+463
+00:24:17,660 --> 00:24:19,970
+how it works and if you want a more
+
+464
+00:24:19,970 --> 00:24:22,550
+detailed explanation on this again you
+
+465
+00:24:22,550 --> 00:24:24,440
+can always download the source code from
+
+466
+00:24:24,440 --> 00:24:26,030
+github and this will be completely
+
+467
+00:24:26,030 --> 00:24:28,040
+available on github I will be releasing
+
+468
+00:24:28,040 --> 00:24:30,140
+an app version soon of this but the
+
+469
+00:24:30,140 --> 00:24:31,340
+playground version will be available
+
+470
+00:24:31,340 --> 00:24:33,620
+immediately and it will also be soon
+
+471
+00:24:33,620 --> 00:24:35,630
+releasing an app version of the postfix
+
+472
+00:24:35,630 --> 00:24:37,520
+and index conversion just check out my
+
+473
+00:24:37,520 --> 00:24:40,160
+Twitter and I'll I'll tweet you one I am
+
+474
+00:24:40,160 --> 00:24:42,500
+done uploading that anyway let's
+
+475
+00:24:42,500 --> 00:24:48,200
+continue so now as you can see our solve
+
+476
+00:24:48,200 --> 00:24:51,410
+function finally so now this is our salt
+
+477
+00:24:51,410 --> 00:24:53,660
+function and we're taking the expression
+
+478
+00:24:53,660 --> 00:24:56,390
+over here as a variable and so this
+
+479
+00:24:56,390 --> 00:24:59,570
+expression variable is a string and
+
+480
+00:24:59,570 --> 00:25:02,630
+we're returning an int I due to the fact
+
+481
+00:25:02,630 --> 00:25:04,910
+that I just wanted to English and then
+
+482
+00:25:04,910 --> 00:25:06,380
+to turn on a double because it gives you
+
+483
+00:25:06,380 --> 00:25:09,170
+for me to test anyway so now the
+
+484
+00:25:09,170 --> 00:25:12,440
+expression so basically when we are
+
+485
+00:25:12,440 --> 00:25:14,120
+going to be removing all the brackets in
+
+486
+00:25:14,120 --> 00:25:16,490
+this one line because we have an
+
+487
+00:25:16,490 --> 00:25:18,770
+expression handler function so what's
+
+488
+00:25:18,770 --> 00:25:20,750
+gonna happen is we're going to say the
+
+489
+00:25:20,750 --> 00:25:24,530
+expression is equal to expression dot
+
+490
+00:25:24,530 --> 00:25:28,520
+characters dot contains a bracket if it
+
+491
+00:25:28,520 --> 00:25:31,760
+does then use a bracket engine on this
+
+492
+00:25:31,760 --> 00:25:34,090
+expression or else just
+
+493
+00:25:34,090 --> 00:25:36,400
+equal to the expression which is itself
+
+494
+00:25:36,400 --> 00:25:39,490
+and so that's how it will simplify a
+
+495
+00:25:39,490 --> 00:25:42,789
+very complicated bracket filled equate
+
+496
+00:25:42,789 --> 00:25:46,720
+expression with normal expert with a
+
+497
+00:25:46,720 --> 00:25:48,429
+normal expression that it's nice at
+
+498
+00:25:48,429 --> 00:25:51,490
+sewing anyway after that we are creating
+
+499
+00:25:51,490 --> 00:25:54,750
+our operator stack and our operand stack
+
+500
+00:25:54,750 --> 00:25:56,919
+next after that we are creating our
+
+501
+00:25:56,919 --> 00:25:58,960
+tokens which are essentially just the
+
+502
+00:25:58,960 --> 00:26:02,679
+expression separated by each space and
+
+503
+00:26:02,679 --> 00:26:04,870
+that's so that we have all the different
+
+504
+00:26:04,870 --> 00:26:07,419
+tokens and then using that we can look
+
+505
+00:26:07,419 --> 00:26:09,070
+through them check a third operator
+
+506
+00:26:09,070 --> 00:26:12,309
+check number do some logic with them etc
+
+507
+00:26:12,309 --> 00:26:14,620
+etc so as you can see it's converting
+
+508
+00:26:14,620 --> 00:26:16,929
+two plus four plus five minus three
+
+509
+00:26:16,929 --> 00:26:20,220
+times two plus seven into a big array
+
+510
+00:26:20,220 --> 00:26:24,460
+full of all this two plus four plus five
+
+511
+00:26:24,460 --> 00:26:27,549
+minus three and then there's more so
+
+512
+00:26:27,549 --> 00:26:31,270
+that you can't see them here anyway and
+
+513
+00:26:31,270 --> 00:26:33,279
+then so after that we are looping
+
+514
+00:26:33,279 --> 00:26:37,240
+through our tokens so we are enumerated
+
+515
+00:26:37,240 --> 00:26:40,480
+our tokens and so we are taking the
+
+516
+00:26:40,480 --> 00:26:43,570
+index and the token in our tokens array
+
+517
+00:26:43,570 --> 00:26:45,669
+and looping through them after that
+
+518
+00:26:45,669 --> 00:26:47,740
+we're just printing out token at index
+
+519
+00:26:47,740 --> 00:26:49,240
+so it's a little bit easier for me to
+
+520
+00:26:49,240 --> 00:26:52,240
+know what is where just in case I went
+
+521
+00:26:52,240 --> 00:26:54,399
+to the bug sorry about that
+
+522
+00:26:54,399 --> 00:26:57,460
+and so now we can see that I'm checking
+
+523
+00:26:57,460 --> 00:27:00,250
+if the tokens a number no logic required
+
+524
+00:27:00,250 --> 00:27:02,860
+put it onto the operand stack that's it
+
+525
+00:27:02,860 --> 00:27:04,899
+apart from that if it's an operator
+
+526
+00:27:04,899 --> 00:27:06,730
+however this is where stuff gets
+
+527
+00:27:06,730 --> 00:27:09,730
+complicated we're checking if the
+
+528
+00:27:09,730 --> 00:27:12,460
+operator stack speaks precedence is
+
+529
+00:27:12,460 --> 00:27:15,549
+lower than or equal to our current
+
+530
+00:27:15,549 --> 00:27:18,640
+tokens precedence then we want to check
+
+531
+00:27:18,640 --> 00:27:21,580
+if not the operator operator stacks
+
+532
+00:27:21,580 --> 00:27:24,940
+empty meaning that this stack is not
+
+533
+00:27:24,940 --> 00:27:28,169
+empty then create a new variable called
+
+534
+00:27:28,169 --> 00:27:32,140
+result and then do a switch case on the
+
+535
+00:27:32,140 --> 00:27:34,750
+operator stack and then you want
+
+536
+00:27:34,750 --> 00:27:38,669
+to check if it's a plus set the result
+
+537
+00:27:38,669 --> 00:27:42,490
+to the two values right fresh out of the
+
+538
+00:27:42,490 --> 00:27:45,039
+stack add them together and that's the
+
+539
+00:27:45,039 --> 00:27:46,990
+value in resolution
+
+540
+00:27:46,990 --> 00:27:50,890
+result however if it's a - you want to
+
+541
+00:27:50,890 --> 00:27:54,220
+take the the number that's one down from
+
+542
+00:27:54,220 --> 00:27:57,190
+the first number so what you do is you
+
+543
+00:27:57,190 --> 00:27:59,830
+say okay this number I'm not going to
+
+544
+00:27:59,830 --> 00:28:01,960
+explain how I actually get this number
+
+545
+00:28:01,960 --> 00:28:07,120
+but this number is the second highest in
+
+546
+00:28:07,120 --> 00:28:10,540
+V stack so if five were the highest and
+
+547
+00:28:10,540 --> 00:28:14,740
+two were after a five and then there was
+
+548
+00:28:14,740 --> 00:28:16,809
+many other numbers there were many other
+
+549
+00:28:16,809 --> 00:28:19,720
+not many other numbers actually then you
+
+550
+00:28:19,720 --> 00:28:21,940
+would take the two because that's second
+
+551
+00:28:21,940 --> 00:28:25,030
+highest in this stack and then you can -
+
+552
+00:28:25,030 --> 00:28:28,090
+out operand stack top pop because that's
+
+553
+00:28:28,090 --> 00:28:30,280
+going to be the first number anyway and
+
+554
+00:28:30,280 --> 00:28:32,230
+so since that one's gone but the second
+
+555
+00:28:32,230 --> 00:28:34,120
+the second highest element is now the
+
+556
+00:28:34,120 --> 00:28:35,440
+first highest element man it's still
+
+557
+00:28:35,440 --> 00:28:37,480
+there we have to pop that out of our
+
+558
+00:28:37,480 --> 00:28:41,200
+operand stack but multiplication however
+
+559
+00:28:41,200 --> 00:28:43,059
+we don't do that that's because addition
+
+560
+00:28:43,059 --> 00:28:44,980
+and multiplication can be done in any
+
+561
+00:28:44,980 --> 00:28:49,260
+order order gets you do the numbers but
+
+562
+00:28:49,260 --> 00:28:52,179
+actually in most cases it can in some
+
+563
+00:28:52,179 --> 00:28:55,450
+cases it can't but yeah it doesn't
+
+564
+00:28:55,450 --> 00:28:56,910
+really matter for this sort of a
+
+565
+00:28:56,910 --> 00:29:00,790
+conversation sort of a calculator and
+
+566
+00:29:00,790 --> 00:29:06,220
+yeah so sorry multiply multiply in
+
+567
+00:29:06,220 --> 00:29:08,650
+addition you can do in any order like
+
+568
+00:29:08,650 --> 00:29:10,630
+you can put the number the first number
+
+569
+00:29:10,630 --> 00:29:12,429
+on the other side or the second number
+
+570
+00:29:12,429 --> 00:29:13,600
+on the other side and it'll still give
+
+571
+00:29:13,600 --> 00:29:16,630
+you the same result but if you were the
+
+572
+00:29:16,630 --> 00:29:18,820
+if for a multiplication or actually
+
+573
+00:29:18,820 --> 00:29:21,309
+division and subtraction you have you
+
+574
+00:29:21,309 --> 00:29:23,050
+would put the numbers in a different
+
+575
+00:29:23,050 --> 00:29:24,460
+order it would give you a completely
+
+576
+00:29:24,460 --> 00:29:26,080
+different result maybe even negative
+
+577
+00:29:26,080 --> 00:29:27,370
+numbers sometimes and you don't really
+
+578
+00:29:27,370 --> 00:29:30,610
+want that so that's why we are not doing
+
+579
+00:29:30,610 --> 00:29:32,980
+it for addition for multiplication and
+
+580
+00:29:32,980 --> 00:29:35,770
+addition but we are for division and
+
+581
+00:29:35,770 --> 00:29:38,590
+subtraction so in division we're doing
+
+582
+00:29:38,590 --> 00:29:40,770
+the same thing that we did for
+
+583
+00:29:40,770 --> 00:29:45,240
+subtraction however we are not basically
+
+584
+00:29:45,240 --> 00:29:47,830
+mining or subtracting we're dividing and
+
+585
+00:29:47,830 --> 00:29:49,840
+so that's basically how that works
+
+586
+00:29:49,840 --> 00:29:52,990
+anyway but I if there's nothing like
+
+587
+00:29:52,990 --> 00:29:55,120
+that if there's not a plus minus times
+
+588
+00:29:55,120 --> 00:29:56,890
+or divide meaning our algorithm has gone
+
+589
+00:29:56,890 --> 00:29:58,210
+wrong for some reason
+
+590
+00:29:58,210 --> 00:29:59,800
+the result is zero that's the best thing
+
+591
+00:29:59,800 --> 00:30:02,170
+we can do after that just print out the
+
+592
+00:30:02,170 --> 00:30:03,790
+index week but we don't need that
+
+593
+00:30:03,790 --> 00:30:08,230
+anymore because we have result at index
+
+594
+00:30:08,230 --> 00:30:09,820
+meaning if there's something that's
+
+595
+00:30:09,820 --> 00:30:12,430
+modifying something tell me where it's
+
+596
+00:30:12,430 --> 00:30:15,220
+being modified from and what its answers
+
+597
+00:30:15,220 --> 00:30:17,770
+going to be so it's easy for me to debug
+
+598
+00:30:17,770 --> 00:30:20,320
+and also I can show it to you and then
+
+599
+00:30:20,320 --> 00:30:22,570
+I'm just printing out operand stack not
+
+600
+00:30:22,570 --> 00:30:24,490
+self value which I do not need anymore
+
+601
+00:30:24,490 --> 00:30:27,040
+but then I'm popping one out of the
+
+602
+00:30:27,040 --> 00:30:29,530
+operator stack because now we've
+
+603
+00:30:29,530 --> 00:30:32,070
+actually done that we've essentially
+
+604
+00:30:32,070 --> 00:30:35,980
+dealt with that operator and then we are
+
+605
+00:30:35,980 --> 00:30:38,620
+pushing this result on to the operand
+
+606
+00:30:38,620 --> 00:30:40,990
+stack and then once everything is done
+
+607
+00:30:40,990 --> 00:30:45,100
+we are pushing this specific token on to
+
+608
+00:30:45,100 --> 00:30:49,480
+the operator stack sorry operator stack
+
+609
+00:30:49,480 --> 00:30:52,120
+and then once we're done there might be
+
+610
+00:30:52,120 --> 00:30:56,830
+a few opera operators left in the
+
+611
+00:30:56,830 --> 00:31:00,370
+operator stack so what I'm doing is I'm
+
+612
+00:31:00,370 --> 00:31:04,210
+saying while not operator stack dot
+
+613
+00:31:04,210 --> 00:31:07,450
+empty what we're doing is we are again
+
+614
+00:31:07,450 --> 00:31:08,970
+just setting the result to zero
+
+615
+00:31:08,970 --> 00:31:11,850
+switching on the operator stack speak
+
+616
+00:31:11,850 --> 00:31:15,070
+doing all that logic then popping one
+
+617
+00:31:15,070 --> 00:31:16,900
+out of the operator stack and then
+
+618
+00:31:16,900 --> 00:31:18,940
+pushing this result on to the operand
+
+619
+00:31:18,940 --> 00:31:21,280
+stack once we're completely done with
+
+620
+00:31:21,280 --> 00:31:23,830
+that the only value left inside of the
+
+621
+00:31:23,830 --> 00:31:26,470
+operand stack will be the final answer
+
+622
+00:31:26,470 --> 00:31:29,160
+and so we can just return the int
+
+623
+00:31:29,160 --> 00:31:34,170
+typecasted force unwrapped version of
+
+624
+00:31:34,170 --> 00:31:38,230
+operand stack pop that's how that works
+
+625
+00:31:38,230 --> 00:31:41,050
+and so then it will return our answer
+
+626
+00:31:41,050 --> 00:31:43,060
+and then we will be able to see our
+
+627
+00:31:43,060 --> 00:31:44,770
+answer so for example if I were to do
+
+628
+00:31:44,770 --> 00:31:46,300
+something really complicated maybe
+
+629
+00:31:46,300 --> 00:31:49,180
+something like random numbers and random
+
+630
+00:31:49,180 --> 00:31:52,960
+operators at the same time plus four
+
+631
+00:31:52,960 --> 00:31:54,600
+times nine
+
+632
+00:31:54,600 --> 00:32:01,470
+four times right just some random thing
+
+633
+00:32:01,470 --> 00:32:01,919
+here
+
+634
+00:32:01,919 --> 00:32:06,139
+81 and let's see what spotlight gives us
+
+635
+00:32:06,139 --> 00:32:09,210
+81 so as you can see our answer is
+
+636
+00:32:09,210 --> 00:32:11,820
+correct because of course I don't think
+
+637
+00:32:11,820 --> 00:32:15,210
+spotlight Apple's own little calculator
+
+638
+00:32:15,210 --> 00:32:18,000
+thing would be wrong okay so that's
+
+639
+00:32:18,000 --> 00:32:20,309
+essentially how this infix parser works
+
+640
+00:32:20,309 --> 00:32:22,860
+again this entire source code will be
+
+641
+00:32:22,860 --> 00:32:24,360
+down in the description for you to
+
+642
+00:32:24,360 --> 00:32:27,000
+download I will eventually be making a
+
+643
+00:32:27,000 --> 00:32:29,070
+framework for both this and my other
+
+644
+00:32:29,070 --> 00:32:30,929
+postfix one if you want to take a look
+
+645
+00:32:30,929 --> 00:32:33,179
+at that and again this is very simple
+
+646
+00:32:33,179 --> 00:32:34,289
+kind of operators just put its
+
+647
+00:32:34,289 --> 00:32:36,570
+precedents and it's a string extension
+
+648
+00:32:36,570 --> 00:32:39,269
+and handle it in both of these while
+
+649
+00:32:39,269 --> 00:32:42,750
+loops and so I will also be making app
+
+650
+00:32:42,750 --> 00:32:44,220
+versions for both the postfix
+
+651
+00:32:44,220 --> 00:32:46,740
+version and this version again if you
+
+652
+00:32:46,740 --> 00:32:49,470
+want to look at all that news you can
+
+653
+00:32:49,470 --> 00:32:51,539
+just go to my Twitter for me follow me
+
+654
+00:32:51,539 --> 00:32:53,279
+and you'll always get notified whenever
+
+655
+00:32:53,279 --> 00:32:55,679
+I release a tweet and that tweet will
+
+656
+00:32:55,679 --> 00:32:57,000
+probably tell you that I'm releasing
+
+657
+00:32:57,000 --> 00:32:59,879
+something new and so yeah that was
+
+658
+00:32:59,879 --> 00:33:02,159
+pretty much it and again if you like my
+
+659
+00:33:02,159 --> 00:33:03,330
+content you want to see more of it
+
+660
+00:33:03,330 --> 00:33:05,250
+please subscribe to my channel if you'd
+
+661
+00:33:05,250 --> 00:33:07,230
+like this video please make sure to
+
+662
+00:33:07,230 --> 00:33:09,480
+click the like button and if you have
+
+663
+00:33:09,480 --> 00:33:11,879
+any questions dressen's app ideas quite
+
+664
+00:33:11,879 --> 00:33:14,820
+general and general education ideas
+
+665
+00:33:14,820 --> 00:33:17,129
+please comment down below you can even
+
+666
+00:33:17,129 --> 00:33:19,409
+email me a question at tangi mani at
+
+667
+00:33:19,409 --> 00:33:22,799
+gmail.com you can also email me the
+
+668
+00:33:22,799 --> 00:33:25,289
+video of you asking a question at
+
+669
+00:33:25,289 --> 00:33:27,629
+Tazmanian gmail.com my email will be
+
+670
+00:33:27,629 --> 00:33:28,889
+down in the description and again I
+
+671
+00:33:28,889 --> 00:33:31,830
+might just feature a video on one of my
+
+672
+00:33:31,830 --> 00:33:34,350
+next videos and that's gonna be it good
+
+673
+00:33:34,350 --> 00:33:36,500
+bye

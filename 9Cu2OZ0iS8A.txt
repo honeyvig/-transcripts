@@ -1,0 +1,1939 @@
+1
+00:00:00,210 --> 00:00:02,909
+so welcome to the tutorial my name is
+
+2
+00:00:02,909 --> 00:00:04,950
+Tammy Bakshi and this time we're gonna
+
+3
+00:00:04,950 --> 00:00:07,379
+be going over a second revision or
+
+4
+00:00:07,379 --> 00:00:10,429
+second part of my ex coat IPA tutorial
+
+5
+00:00:10,429 --> 00:00:13,200
+now the reason I've been doing this is
+
+6
+00:00:13,200 --> 00:00:15,089
+because there were a few issues with the
+
+7
+00:00:15,089 --> 00:00:17,520
+last one and I also just want to make
+
+8
+00:00:17,520 --> 00:00:19,199
+this better because you think about it
+
+9
+00:00:19,199 --> 00:00:22,130
+the last one wasn't very practical it
+
+10
+00:00:22,130 --> 00:00:25,109
+every time you wanted to build you would
+
+11
+00:00:25,109 --> 00:00:27,510
+have to create a new deal we linked you
+
+12
+00:00:27,510 --> 00:00:29,340
+would have to create a new tiny URL link
+
+13
+00:00:29,340 --> 00:00:33,450
+it was just really annoying but if but
+
+14
+00:00:33,450 --> 00:00:35,790
+this method will require you to setup
+
+15
+00:00:35,790 --> 00:00:38,370
+once but then you can keep building and
+
+16
+00:00:38,370 --> 00:00:40,230
+you will be able to run on your iOS
+
+17
+00:00:40,230 --> 00:00:43,770
+device so now this was actually made for
+
+18
+00:00:43,770 --> 00:00:47,430
+one of my really good subscribers if you
+
+19
+00:00:47,430 --> 00:00:48,510
+go to the Xcode
+
+20
+00:00:48,510 --> 00:00:51,539
+IPA tutorial the original one you will
+
+21
+00:00:51,539 --> 00:00:53,789
+see that in the comments we've been
+
+22
+00:00:53,789 --> 00:00:55,199
+having a little conversation then he
+
+23
+00:00:55,199 --> 00:00:57,809
+also emailed me his name is Wade sellers
+
+24
+00:00:57,809 --> 00:01:00,270
+he actually asked me to create this
+
+25
+00:01:00,270 --> 00:01:02,190
+video not this video will this app
+
+26
+00:01:02,190 --> 00:01:04,409
+because he was having issues with the
+
+27
+00:01:04,409 --> 00:01:07,110
+code signing with the older version so
+
+28
+00:01:07,110 --> 00:01:09,420
+what I decided to do is why not just
+
+29
+00:01:09,420 --> 00:01:11,040
+make a video and share it with all you
+
+30
+00:01:11,040 --> 00:01:13,770
+guys too and while I was at it while I
+
+31
+00:01:13,770 --> 00:01:15,960
+was fixing issues why not just make it
+
+32
+00:01:15,960 --> 00:01:18,600
+better too right so yeah let's get
+
+33
+00:01:18,600 --> 00:01:20,790
+started as you can see I have a little
+
+34
+00:01:20,790 --> 00:01:22,979
+diagram here on how this one we built
+
+35
+00:01:22,979 --> 00:01:27,119
+how this will work the last one was
+
+36
+00:01:27,119 --> 00:01:29,280
+quite a bit more complicated what you
+
+37
+00:01:29,280 --> 00:01:31,140
+would do in the last one is you would
+
+38
+00:01:31,140 --> 00:01:33,299
+convert to IPA with the tool that I
+
+39
+00:01:33,299 --> 00:01:36,240
+created okay then you would send this to
+
+40
+00:01:36,240 --> 00:01:42,780
+Diaw we okay that seems simple enough
+
+41
+00:01:42,780 --> 00:01:45,119
+but that's very manual and then this
+
+42
+00:01:45,119 --> 00:01:52,770
+will go further down into tiny URL then
+
+43
+00:01:52,770 --> 00:01:55,790
+this would go onto your device
+
+44
+00:01:56,400 --> 00:01:59,650
+now how can we go through this entire
+
+45
+00:01:59,650 --> 00:02:01,990
+thing every time you were to build this
+
+46
+00:02:01,990 --> 00:02:07,330
+was like around 90% in manual work 10%
+
+47
+00:02:07,330 --> 00:02:10,750
+automated well I created a method that's
+
+48
+00:02:10,750 --> 00:02:14,020
+basically the reverse this is around 10%
+
+49
+00:02:14,020 --> 00:02:19,630
+manual and 90% automated and the O and
+
+50
+00:02:19,630 --> 00:02:25,600
+5% of this is just the setup so it's
+
+51
+00:02:25,600 --> 00:02:29,860
+pretty easy now now as you can see this
+
+52
+00:02:29,860 --> 00:02:32,920
+method does look much longer but that's
+
+53
+00:02:32,920 --> 00:02:35,080
+because the setting up does take some
+
+54
+00:02:35,080 --> 00:02:37,480
+time now when we're done setting up
+
+55
+00:02:37,480 --> 00:02:41,110
+however it's really easy to use and it
+
+56
+00:02:41,110 --> 00:02:42,640
+still isn't that practical if you're
+
+57
+00:02:42,640 --> 00:02:44,200
+changing a little bit of code then
+
+58
+00:02:44,200 --> 00:02:46,210
+building on your device again changing a
+
+59
+00:02:46,210 --> 00:02:47,680
+little bit of code than building on a
+
+60
+00:02:47,680 --> 00:02:49,660
+device again it's more for those
+
+61
+00:02:49,660 --> 00:02:51,459
+developers that are creating a game and
+
+62
+00:02:51,459 --> 00:02:55,240
+they want to build and then do another
+
+63
+00:02:55,240 --> 00:02:57,550
+code modification for another hour so
+
+64
+00:02:57,550 --> 00:03:01,300
+maybe 30 minutes then build again then
+
+65
+00:03:01,300 --> 00:03:03,190
+make another modification then build
+
+66
+00:03:03,190 --> 00:03:05,260
+again so it's more for that sort of
+
+67
+00:03:05,260 --> 00:03:07,750
+thing because again you can never really
+
+68
+00:03:07,750 --> 00:03:11,830
+achieve a 100% automated build unless
+
+69
+00:03:11,830 --> 00:03:13,750
+Apple actually includes the feature that
+
+70
+00:03:13,750 --> 00:03:16,030
+they did in Expo 4.2 but then they
+
+71
+00:03:16,030 --> 00:03:19,570
+removed it so again let's just go over
+
+72
+00:03:19,570 --> 00:03:22,989
+how this method works now essentially we
+
+73
+00:03:22,989 --> 00:03:25,120
+use someone I forgot what his name is
+
+74
+00:03:25,120 --> 00:03:26,739
+but you'll see in a minute you go to
+
+75
+00:03:26,739 --> 00:03:29,290
+github and you download a person
+
+76
+00:03:29,290 --> 00:03:31,209
+software his I don't know his name yet
+
+77
+00:03:31,209 --> 00:03:33,900
+but I'll show it to you in just a second
+
+78
+00:03:33,900 --> 00:03:36,040
+you have to download a software called
+
+79
+00:03:36,040 --> 00:03:37,900
+Shenzhen or at least I think that's how
+
+80
+00:03:37,900 --> 00:03:41,200
+it's pronounced and then basically this
+
+81
+00:03:41,200 --> 00:03:44,470
+software will help us convert our Xcode
+
+82
+00:03:44,470 --> 00:03:46,480
+project to an IPA from the command-line
+
+83
+00:03:46,480 --> 00:03:48,610
+really easily you just need to type an
+
+84
+00:03:48,610 --> 00:03:51,190
+IPA build that's it no file names
+
+85
+00:03:51,190 --> 00:03:54,670
+nothing then you basically send this IPA
+
+86
+00:03:54,670 --> 00:03:57,820
+to Dropbox which will basically use a
+
+87
+00:03:57,820 --> 00:04:01,630
+drop pages Dropbox app to create a
+
+88
+00:04:01,630 --> 00:04:05,440
+simple web hosting service and this and
+
+89
+00:04:05,440 --> 00:04:07,959
+this will go to your iDevice which will
+
+90
+00:04:07,959 --> 00:04:09,730
+then install the app on itself
+
+91
+00:04:09,730 --> 00:04:12,879
+and yeah that's really how it works so
+
+92
+00:04:12,879 --> 00:04:14,950
+let's get to the Mac and I'll show you
+
+93
+00:04:14,950 --> 00:04:17,940
+exactly how it's done
+
+94
+00:04:18,180 --> 00:04:20,829
+so hello there and welcome to the Mac
+
+95
+00:04:20,829 --> 00:04:23,080
+part of the video so now I'm going to be
+
+96
+00:04:23,080 --> 00:04:25,690
+describing to you exactly how to go
+
+97
+00:04:25,690 --> 00:04:29,110
+through this and how to actually upload
+
+98
+00:04:29,110 --> 00:04:31,950
+your apps wirelessly to your device
+
+99
+00:04:31,950 --> 00:04:33,850
+step-by-step from the beginning
+
+100
+00:04:33,850 --> 00:04:35,889
+using the example code that I will give
+
+101
+00:04:35,889 --> 00:04:38,380
+you in the description so let's get
+
+102
+00:04:38,380 --> 00:04:40,090
+started as you can see I'm on my desktop
+
+103
+00:04:40,090 --> 00:04:43,990
+here I'm just going to one second I'm
+
+104
+00:04:43,990 --> 00:04:48,419
+going to move over to Google Chrome here
+
+105
+00:04:48,419 --> 00:04:51,310
+then I'm going to go to github and
+
+106
+00:04:51,310 --> 00:04:53,620
+actually not even get hub I'm just going
+
+107
+00:04:53,620 --> 00:04:57,610
+to type in Shin Zen and Google and as
+
+108
+00:04:57,610 --> 00:05:00,610
+you can see nope we don't want this we
+
+109
+00:05:00,610 --> 00:05:04,570
+don't want the city we want github so if
+
+110
+00:05:04,570 --> 00:05:07,479
+you go to nomads shenzhen get hub
+
+111
+00:05:07,479 --> 00:05:10,780
+repository as you can see there are some
+
+112
+00:05:10,780 --> 00:05:13,510
+already files and stuff but you just
+
+113
+00:05:13,510 --> 00:05:15,370
+want to come down here and you see this
+
+114
+00:05:15,370 --> 00:05:19,930
+little command just copy this and go to
+
+115
+00:05:19,930 --> 00:05:20,410
+terminal
+
+116
+00:05:20,410 --> 00:05:22,450
+now don't worry this command will be in
+
+117
+00:05:22,450 --> 00:05:23,860
+the description as well if you're too
+
+118
+00:05:23,860 --> 00:05:26,500
+lazy to go to the github website so then
+
+119
+00:05:26,500 --> 00:05:28,960
+in terminal you want to type in sudo and
+
+120
+00:05:28,960 --> 00:05:31,780
+then paste in the command type enter and
+
+121
+00:05:31,780 --> 00:05:35,169
+then type in your password now I've
+
+122
+00:05:35,169 --> 00:05:36,760
+already done this this will take a
+
+123
+00:05:36,760 --> 00:05:38,110
+little bit of time so I'm just gonna go
+
+124
+00:05:38,110 --> 00:05:41,500
+ctrl C and it'll interrupt it now you
+
+125
+00:05:41,500 --> 00:05:45,669
+want to copy in this long command from
+
+126
+00:05:45,669 --> 00:05:50,530
+here and also install now again I've
+
+127
+00:05:50,530 --> 00:05:52,450
+already done this so I'm just going to
+
+128
+00:05:52,450 --> 00:05:55,750
+ctrl C out of it now there is a slight
+
+129
+00:05:55,750 --> 00:05:58,479
+problem with these though the problem is
+
+130
+00:05:58,479 --> 00:06:00,610
+that it doesn't install IPA to the
+
+131
+00:06:00,610 --> 00:06:03,370
+correct folder error to solve that I've
+
+132
+00:06:03,370 --> 00:06:05,169
+created a little package for you
+
+133
+00:06:05,169 --> 00:06:07,900
+so if you go to the description and
+
+134
+00:06:07,900 --> 00:06:11,080
+download from my site or actually from
+
+135
+00:06:11,080 --> 00:06:13,599
+my github then you will get this entire
+
+136
+00:06:13,599 --> 00:06:16,180
+package that has all the files that have
+
+137
+00:06:16,180 --> 00:06:18,909
+to do with Xcode type a2 and also
+
+138
+00:06:18,909 --> 00:06:21,699
+Jensen's current version of I
+
+139
+00:06:21,699 --> 00:06:24,650
+and so if you go into Shenzhen first
+
+140
+00:06:24,650 --> 00:06:26,689
+you'll see these files and if you go
+
+141
+00:06:26,689 --> 00:06:29,030
+into the bin folder you'll see this
+
+142
+00:06:29,030 --> 00:06:32,090
+little executable for Linux if you just
+
+143
+00:06:32,090 --> 00:06:34,310
+click on this and click command C or if
+
+144
+00:06:34,310 --> 00:06:35,740
+you can go down here and click copy
+
+145
+00:06:35,740 --> 00:06:39,680
+where is it copy then you want to click
+
+146
+00:06:39,680 --> 00:06:42,379
+you want to go up here and click on the
+
+147
+00:06:42,379 --> 00:06:45,710
+actual go button then go down here and
+
+148
+00:06:45,710 --> 00:06:48,530
+click on go to folder or you can type in
+
+149
+00:06:48,530 --> 00:06:51,830
+shift command G then what you want to do
+
+150
+00:06:51,830 --> 00:06:59,719
+type in slash USR slash bin go and then
+
+151
+00:06:59,719 --> 00:07:02,000
+you'll get here now you want to paste in
+
+152
+00:07:02,000 --> 00:07:06,710
+IPA and since I've already done this I'm
+
+153
+00:07:06,710 --> 00:07:08,810
+going to stop but as you can see just
+
+154
+00:07:08,810 --> 00:07:10,849
+want to paste it in here now don't worry
+
+155
+00:07:10,849 --> 00:07:12,949
+if you don't already have all these some
+
+156
+00:07:12,949 --> 00:07:14,539
+people might have a million things in
+
+157
+00:07:14,539 --> 00:07:16,580
+here some people might have nothing so
+
+158
+00:07:16,580 --> 00:07:18,770
+it's completely ok no matter how many
+
+159
+00:07:18,770 --> 00:07:20,949
+things you have in here just paste it in
+
+160
+00:07:20,949 --> 00:07:23,960
+ok so now that we have that out of the
+
+161
+00:07:23,960 --> 00:07:26,330
+way we have IPA successfully installed
+
+162
+00:07:26,330 --> 00:07:28,340
+in order to test this you can go to
+
+163
+00:07:28,340 --> 00:07:32,719
+terminal and type in IPA as you can see
+
+164
+00:07:32,719 --> 00:07:35,900
+it basically prints out all this stuff
+
+165
+00:07:35,900 --> 00:07:38,750
+to the screen and so now we can just
+
+166
+00:07:38,750 --> 00:07:41,870
+close the terminal window to exit now
+
+167
+00:07:41,870 --> 00:07:43,669
+that we're done with that part let's go
+
+168
+00:07:43,669 --> 00:07:49,339
+back to my xcode to IPA folder and as
+
+169
+00:07:49,339 --> 00:07:52,279
+you can see we have three files here now
+
+170
+00:07:52,279 --> 00:07:55,699
+what i want you to do is you want i want
+
+171
+00:07:55,699 --> 00:07:57,469
+to create a project a very simple app
+
+172
+00:07:57,469 --> 00:07:59,599
+and we're going to drag it into that
+
+173
+00:07:59,599 --> 00:08:02,060
+folder so let's just go to xcode here
+
+174
+00:08:02,060 --> 00:08:04,610
+and let's click on click on create a new
+
+175
+00:08:04,610 --> 00:08:07,669
+Xcode project let's just create an iOS
+
+176
+00:08:07,669 --> 00:08:09,819
+single view application and called this
+
+177
+00:08:09,819 --> 00:08:14,360
+Wireless hello world okay
+
+178
+00:08:14,360 --> 00:08:17,539
+now let's just go next and let's just
+
+179
+00:08:17,539 --> 00:08:19,819
+save this inside of that little package
+
+180
+00:08:19,819 --> 00:08:21,949
+that I'm going to give you or actually
+
+181
+00:08:21,949 --> 00:08:23,539
+let's just save it to my apps folder and
+
+182
+00:08:23,539 --> 00:08:25,879
+I'll tell you why in just a second so
+
+183
+00:08:25,879 --> 00:08:28,550
+I'm just going to create this and I'm
+
+184
+00:08:28,550 --> 00:08:30,800
+going to go to my main not storyboard
+
+185
+00:08:30,800 --> 00:08:33,349
+and let's just create a quick label that
+
+186
+00:08:33,349 --> 00:08:33,950
+says
+
+187
+00:08:33,950 --> 00:08:37,400
+hello world on screen and so that'll
+
+188
+00:08:37,400 --> 00:08:41,330
+really be it so we see the UI here which
+
+189
+00:08:41,330 --> 00:08:45,800
+I can edit to be iPhone 4.7 inch I'm
+
+190
+00:08:45,800 --> 00:08:48,890
+going to hide that part now I can get a
+
+191
+00:08:48,890 --> 00:08:52,280
+little label drag it to the center of
+
+192
+00:08:52,280 --> 00:08:56,170
+the screen and just name it hello world
+
+193
+00:08:56,170 --> 00:08:58,010
+actually drag it to the center of the
+
+194
+00:08:58,010 --> 00:09:00,320
+screen this time and as you can see we
+
+195
+00:09:00,320 --> 00:09:03,770
+want to run this app on iOS device now
+
+196
+00:09:03,770 --> 00:09:05,390
+I'm going to close this down actually
+
+197
+00:09:05,390 --> 00:09:07,280
+first I'm going to open this in finder
+
+198
+00:09:07,280 --> 00:09:10,520
+then I'm going to close this down then
+
+199
+00:09:10,520 --> 00:09:12,290
+as you can see we have all these project
+
+200
+00:09:12,290 --> 00:09:14,570
+files now what I'm gonna do is I'm gonna
+
+201
+00:09:14,570 --> 00:09:16,670
+make a little copy of my a package
+
+202
+00:09:16,670 --> 00:09:19,130
+really quickly and I'm going to go into
+
+203
+00:09:19,130 --> 00:09:22,520
+our package open up the second folder
+
+204
+00:09:22,520 --> 00:09:25,880
+here Xcode type a2 then you'll see these
+
+205
+00:09:25,880 --> 00:09:27,680
+three files as I've already shown you
+
+206
+00:09:27,680 --> 00:09:29,780
+and you just want to take all these
+
+207
+00:09:29,780 --> 00:09:31,340
+files or project files
+
+208
+00:09:31,340 --> 00:09:35,360
+and copy it into here okay now that
+
+209
+00:09:35,360 --> 00:09:37,790
+we're done with that let's do some more
+
+210
+00:09:37,790 --> 00:09:40,070
+work so now what you want to do is you
+
+211
+00:09:40,070 --> 00:09:41,420
+want to head over to google chrome again
+
+212
+00:09:41,420 --> 00:09:46,430
+and download Dropbox for Mac now you'll
+
+213
+00:09:46,430 --> 00:09:48,350
+see this you don't want to click on this
+
+214
+00:09:48,350 --> 00:09:51,350
+you want to click on this so as you can
+
+215
+00:09:51,350 --> 00:09:54,110
+see it'll go here and then it will allow
+
+216
+00:09:54,110 --> 00:09:56,090
+you to install Dropbox then you just
+
+217
+00:09:56,090 --> 00:09:57,110
+want to go through the installation
+
+218
+00:09:57,110 --> 00:09:59,180
+process for Dropbox which I will not do
+
+219
+00:09:59,180 --> 00:10:01,730
+because that'll take a long time and
+
+220
+00:10:01,730 --> 00:10:04,070
+then once you're done in your favorites
+
+221
+00:10:04,070 --> 00:10:05,750
+under finder and you should also have
+
+222
+00:10:05,750 --> 00:10:08,090
+another Dropbox folder then you want to
+
+223
+00:10:08,090 --> 00:10:09,770
+head over to Google Chrome one last time
+
+224
+00:10:09,770 --> 00:10:12,470
+and you want to type in drop pages in
+
+225
+00:10:12,470 --> 00:10:15,500
+Google then if you go to this one drop
+
+226
+00:10:15,500 --> 00:10:20,140
+pages calm and you click on sign in and
+
+227
+00:10:20,140 --> 00:10:23,170
+you will be able to sign in to your
+
+228
+00:10:23,170 --> 00:10:26,300
+Dropbox account and so I've already
+
+229
+00:10:26,300 --> 00:10:29,240
+created a drop pages account by linking
+
+230
+00:10:29,240 --> 00:10:31,310
+it to my Dropbox well that's a fairly
+
+231
+00:10:31,310 --> 00:10:33,020
+simple process you just sign in with
+
+232
+00:10:33,020 --> 00:10:34,730
+your Dropbox it'll ask you if you want
+
+233
+00:10:34,730 --> 00:10:36,800
+to give this app permission to view your
+
+234
+00:10:36,800 --> 00:10:39,560
+Dropbox and you just click on yes so
+
+235
+00:10:39,560 --> 00:10:41,420
+then you create a simple site I just
+
+236
+00:10:41,420 --> 00:10:42,800
+called my aunt Angie Manny dot draw
+
+237
+00:10:42,800 --> 00:10:44,360
+pages calm because that was
+
+238
+00:10:44,360 --> 00:10:46,160
+email and I just wanted to keep it
+
+239
+00:10:46,160 --> 00:10:48,589
+simple and so that's really it
+
+240
+00:10:48,589 --> 00:10:53,209
+now if I go to Dropbox I could also go
+
+241
+00:10:53,209 --> 00:10:54,800
+in here but I don't want to destroy this
+
+242
+00:10:54,800 --> 00:10:58,850
+for you so then if you go into your apps
+
+243
+00:10:58,850 --> 00:11:03,529
+folder my dot drop pages and then you go
+
+244
+00:11:03,529 --> 00:11:06,260
+to your website and then you've got a
+
+245
+00:11:06,260 --> 00:11:09,529
+public there will just be a main dot CSS
+
+246
+00:11:09,529 --> 00:11:11,959
+when you create this but I want you to
+
+247
+00:11:11,959 --> 00:11:15,589
+create a new file or a folder sorry and
+
+248
+00:11:15,589 --> 00:11:19,089
+let's just name this hello world or
+
+249
+00:11:19,089 --> 00:11:23,570
+actually 8uw for symbol this okay let's
+
+250
+00:11:23,570 --> 00:11:27,430
+create this folder and let's go into it
+
+251
+00:11:27,430 --> 00:11:30,709
+now what I want you to do and go back
+
+252
+00:11:30,709 --> 00:11:32,930
+here take all of this stuff that was
+
+253
+00:11:32,930 --> 00:11:35,000
+inside of the package including your
+
+254
+00:11:35,000 --> 00:11:38,750
+project copy it go to your Dropbox go to
+
+255
+00:11:38,750 --> 00:11:41,360
+your apps my doc drop pages go to your
+
+256
+00:11:41,360 --> 00:11:44,300
+website public and go to this folder
+
+257
+00:11:44,300 --> 00:11:46,550
+that you just created now paste it in
+
+258
+00:11:46,550 --> 00:11:49,040
+and go over here and make sure that it
+
+259
+00:11:49,040 --> 00:11:51,800
+uploads everything to your Dropbox form
+
+260
+00:11:51,800 --> 00:11:55,399
+a files remaining and in just a second
+
+261
+00:11:55,399 --> 00:11:57,589
+it should be done syncing okay now it's
+
+262
+00:11:57,589 --> 00:11:59,630
+done it's all up to date and we've
+
+263
+00:11:59,630 --> 00:12:02,060
+uploaded everything now you're ready to
+
+264
+00:12:02,060 --> 00:12:03,890
+change the links and as I said this is
+
+265
+00:12:03,890 --> 00:12:06,800
+quite a big setup process but it all
+
+266
+00:12:06,800 --> 00:12:09,740
+works out in the long run and it's much
+
+267
+00:12:09,740 --> 00:12:12,050
+better to set it up once and have it
+
+268
+00:12:12,050 --> 00:12:14,720
+work for the rest of the life of your
+
+269
+00:12:14,720 --> 00:12:18,290
+project okay so now let's continue as
+
+270
+00:12:18,290 --> 00:12:20,600
+you can see we're in this folder and so
+
+271
+00:12:20,600 --> 00:12:24,740
+now we have installed HTML we're going
+
+272
+00:12:24,740 --> 00:12:27,649
+to modify this to be able to basically
+
+273
+00:12:27,649 --> 00:12:31,550
+install our app onto our iOS device in
+
+274
+00:12:31,550 --> 00:12:33,980
+order to do that we have to go to this
+
+275
+00:12:33,980 --> 00:12:37,880
+wireless app disk plist file by
+
+276
+00:12:37,880 --> 00:12:40,670
+right-clicking open with and I just
+
+277
+00:12:40,670 --> 00:12:42,560
+recommend Xcode for this because that's
+
+278
+00:12:42,560 --> 00:12:43,730
+the simplest thing you could possibly
+
+279
+00:12:43,730 --> 00:12:47,480
+use and by default you can go to items
+
+280
+00:12:47,480 --> 00:12:51,170
+item 0 if you go into assets then I am 0
+
+281
+00:12:51,170 --> 00:12:54,290
+and you'll see kind software package do
+
+282
+00:12:54,290 --> 00:12:54,950
+not shake
+
+283
+00:12:54,950 --> 00:12:57,680
+change this and you'll see URL and then
+
+284
+00:12:57,680 --> 00:13:00,830
+something called link goes here I put
+
+285
+00:13:00,830 --> 00:13:02,750
+this in for you and what do you what
+
+286
+00:13:02,750 --> 00:13:04,670
+this means is you have to go to your
+
+287
+00:13:04,670 --> 00:13:08,030
+Dropbox and just before you do anything
+
+288
+00:13:08,030 --> 00:13:11,240
+else go to your terminal and type in CD
+
+289
+00:13:11,240 --> 00:13:14,780
+space then go to this folder that you
+
+290
+00:13:14,780 --> 00:13:18,370
+created in your Dropbox and you're sorry
+
+291
+00:13:18,370 --> 00:13:23,000
+drag it into your terminal ok remove the
+
+292
+00:13:23,000 --> 00:13:25,370
+extra space and click enter now you are
+
+293
+00:13:25,370 --> 00:13:28,070
+inside of that folder now if you click
+
+294
+00:13:28,070 --> 00:13:31,700
+LS you'll see all the contents of the
+
+295
+00:13:31,700 --> 00:13:33,830
+directory in Dropbox and so what you
+
+296
+00:13:33,830 --> 00:13:39,320
+want to do type an Sh update ipas H this
+
+297
+00:13:39,320 --> 00:13:41,960
+will create a new IPA file using a
+
+298
+00:13:41,960 --> 00:13:51,130
+predominance name was just check
+
+299
+00:13:57,779 --> 00:13:59,189
+well his link will be down in the
+
+300
+00:13:59,189 --> 00:14:02,879
+description he was I used his little API
+
+301
+00:14:02,879 --> 00:14:08,999
+for the last X coat IPA and so we are
+
+302
+00:14:08,999 --> 00:14:11,519
+also using it here so as you can see it
+
+303
+00:14:11,519 --> 00:14:14,719
+says successfully built and then the
+
+304
+00:14:14,719 --> 00:14:18,149
+location to the IPA file now what we can
+
+305
+00:14:18,149 --> 00:14:20,659
+do is we can go back into Dropbox and
+
+306
+00:14:20,659 --> 00:14:24,059
+you see that in just a second
+
+307
+00:14:24,059 --> 00:14:26,399
+after Dropbox is done syncing it on
+
+308
+00:14:26,399 --> 00:14:29,399
+which it says it'll take four seconds 30
+
+309
+00:14:29,399 --> 00:14:32,159
+seconds and it's almost done ok there it
+
+310
+00:14:32,159 --> 00:14:32,429
+is
+
+311
+00:14:32,429 --> 00:14:34,109
+now what you want to do as you can see
+
+312
+00:14:34,109 --> 00:14:36,329
+there's a little share button here just
+
+313
+00:14:36,329 --> 00:14:38,279
+click on it and you'll get this little
+
+314
+00:14:38,279 --> 00:14:42,029
+link now copy this link and head back to
+
+315
+00:14:42,029 --> 00:14:46,799
+your Xcode now in your url instead of
+
+316
+00:14:46,799 --> 00:14:49,739
+link goes here paste in the link now let
+
+317
+00:14:49,739 --> 00:14:51,389
+me tell you how to modify this link to
+
+318
+00:14:51,389 --> 00:14:51,899
+work
+
+319
+00:14:51,899 --> 00:14:55,679
+remove this question DL is equal to zero
+
+320
+00:14:55,679 --> 00:15:00,049
+just take that out now replace
+
+321
+00:15:00,799 --> 00:15:04,109
+www.sceeto.com just remove this part and
+
+322
+00:15:04,109 --> 00:15:10,099
+replace it with DL Dropbox user content
+
+323
+00:15:10,099 --> 00:15:12,299
+dot-com and then keep everything else
+
+324
+00:15:12,299 --> 00:15:15,779
+the same and yeah that's it now if you
+
+325
+00:15:15,779 --> 00:15:17,519
+go to your metadata tab in the P list
+
+326
+00:15:17,519 --> 00:15:20,009
+you'll see the bundle identifier bundle
+
+327
+00:15:20,009 --> 00:15:22,259
+version the kind which you should not
+
+328
+00:15:22,259 --> 00:15:25,619
+change and the title let's just do these
+
+329
+00:15:25,619 --> 00:15:32,059
+quickly Wireless hello world
+
+330
+00:15:37,070 --> 00:15:41,370
+and then the bundle version which is 1.0
+
+331
+00:15:41,370 --> 00:15:43,620
+now just to make sure that these are all
+
+332
+00:15:43,620 --> 00:15:45,690
+right I'm going to open up my Xcode
+
+333
+00:15:45,690 --> 00:15:51,000
+projects in from Dropbox I'm going to go
+
+334
+00:15:51,000 --> 00:15:51,660
+over here
+
+335
+00:15:51,660 --> 00:15:55,260
+TBS s dot wireless hello world and if I
+
+336
+00:15:55,260 --> 00:15:58,620
+go here just a sec sometimes it does do
+
+337
+00:15:58,620 --> 00:16:00,300
+this because I mean it's from Dropbox
+
+338
+00:16:00,300 --> 00:16:01,770
+and it'll take some time for it to load
+
+339
+00:16:01,770 --> 00:16:08,160
+up okay there so TBS s dot wireless
+
+340
+00:16:08,160 --> 00:16:13,440
+hello world and then so if we go here as
+
+341
+00:16:13,440 --> 00:16:15,870
+you can see it's correct so then we can
+
+342
+00:16:15,870 --> 00:16:19,440
+save this and close out of it now as you
+
+343
+00:16:19,440 --> 00:16:22,650
+can see it will instantly almost sync it
+
+344
+00:16:22,650 --> 00:16:24,330
+because I mean it is a pretty small file
+
+345
+00:16:24,330 --> 00:16:27,840
+then we want to edit this the installed
+
+346
+00:16:27,840 --> 00:16:31,320
+HTML file you want to open this up with
+
+347
+00:16:31,320 --> 00:16:34,230
+well I recommend sublime text to because
+
+348
+00:16:34,230 --> 00:16:35,970
+that's just the best text editor I've
+
+349
+00:16:35,970 --> 00:16:40,260
+seen yet for Mac specifically but I mean
+
+350
+00:16:40,260 --> 00:16:42,240
+you could use any other text editor but
+
+351
+00:16:42,240 --> 00:16:44,910
+do not use TextEdit for my experience it
+
+352
+00:16:44,910 --> 00:16:47,490
+just messes up the HTML and it just
+
+353
+00:16:47,490 --> 00:16:48,780
+doesn't work okay
+
+354
+00:16:48,780 --> 00:16:50,730
+okay so as you can see we have a little
+
+355
+00:16:50,730 --> 00:16:54,000
+link here called install and I have this
+
+356
+00:16:54,000 --> 00:16:56,550
+thing called link goes here remove that
+
+357
+00:16:56,550 --> 00:16:59,000
+again and go back to your Dropbox
+
+358
+00:16:59,000 --> 00:17:01,170
+there's nothing else you need to do this
+
+359
+00:17:01,170 --> 00:17:02,760
+time just look at your wireless app
+
+360
+00:17:02,760 --> 00:17:05,220
+tostop plist and do the same thing that
+
+361
+00:17:05,220 --> 00:17:06,770
+we just did click on the share button
+
+362
+00:17:06,770 --> 00:17:10,440
+find this link copy it go here sublime
+
+363
+00:17:10,440 --> 00:17:13,560
+text paste it in then modify it to the
+
+364
+00:17:13,560 --> 00:17:15,840
+exact same way I told you to so DL
+
+365
+00:17:15,840 --> 00:17:19,680
+Dropbox User Content comm and you also
+
+366
+00:17:19,680 --> 00:17:21,780
+want to change this DL equals 0 to
+
+367
+00:17:21,780 --> 00:17:25,500
+nothing there that's it now if I were to
+
+368
+00:17:25,500 --> 00:17:28,290
+save this and close out of it as you can
+
+369
+00:17:28,290 --> 00:17:30,300
+see in our Dropbox it says that we've
+
+370
+00:17:30,300 --> 00:17:33,090
+just modified this now what I'm gonna do
+
+371
+00:17:33,090 --> 00:17:35,970
+is I'm going to stream my iphone to my
+
+372
+00:17:35,970 --> 00:17:38,360
+Mac so that you can see what I'm doing
+
+373
+00:17:38,360 --> 00:17:39,900
+command
+
+374
+00:17:39,900 --> 00:17:48,200
+chin and so then I guess what we can do
+
+375
+00:17:48,200 --> 00:17:53,060
+stream my iPhone not my face
+
+376
+00:17:59,530 --> 00:18:02,680
+and I can just quit out of these okay so
+
+377
+00:18:02,680 --> 00:18:04,780
+as you can see I'm streaming my iPhone
+
+378
+00:18:04,780 --> 00:18:10,050
+to my Mac now so if I open up my iPhone
+
+379
+00:18:10,050 --> 00:18:14,920
+so as you can see it all works it's
+
+380
+00:18:14,920 --> 00:18:20,490
+perfect however now if I go to Safari
+
+381
+00:18:20,490 --> 00:18:25,180
+you can see that's what I can do let's
+
+382
+00:18:25,180 --> 00:18:26,770
+just head over to the website that we
+
+383
+00:18:26,770 --> 00:18:28,990
+created which is tangi mani not drop
+
+384
+00:18:28,990 --> 00:18:35,650
+pages comm and specifically we want to
+
+385
+00:18:35,650 --> 00:18:38,950
+go to /hw which is what we just created
+
+386
+00:18:38,950 --> 00:18:45,370
+slash installed on HTML okay now we
+
+387
+00:18:45,370 --> 00:18:47,620
+click on go as you can see just I'm
+
+388
+00:18:47,620 --> 00:18:49,890
+gonna zoom in so that you can see this
+
+389
+00:18:49,890 --> 00:18:53,260
+it gives us an install link now what we
+
+390
+00:18:53,260 --> 00:18:54,790
+want to do is we're gonna click on this
+
+391
+00:18:54,790 --> 00:18:56,950
+and it should theoretically install the
+
+392
+00:18:56,950 --> 00:18:59,680
+hello world app to our eye device so if
+
+393
+00:18:59,680 --> 00:19:03,490
+I click on install as you can see we
+
+394
+00:19:03,490 --> 00:19:05,350
+would like to install a wireless hello
+
+395
+00:19:05,350 --> 00:19:07,540
+world let's just click on install shall
+
+396
+00:19:07,540 --> 00:19:10,570
+we now as you can see it's going to wait
+
+397
+00:19:10,570 --> 00:19:12,430
+for a while wait for a while wait for a
+
+398
+00:19:12,430 --> 00:19:15,940
+while and it will successfully put the
+
+399
+00:19:15,940 --> 00:19:19,390
+hello world app on to our iPhone and we
+
+400
+00:19:19,390 --> 00:19:21,580
+will be able to use it now just while
+
+401
+00:19:21,580 --> 00:19:23,020
+that's installing I'm gonna tell you a
+
+402
+00:19:23,020 --> 00:19:25,330
+really good trick as you can see if I'm
+
+403
+00:19:25,330 --> 00:19:27,700
+gonna go back to Safari it's a pain to
+
+404
+00:19:27,700 --> 00:19:29,710
+keep going back to this website just to
+
+405
+00:19:29,710 --> 00:19:31,720
+install your app so what you want to do
+
+406
+00:19:31,720 --> 00:19:33,520
+click on the sender little share button
+
+407
+00:19:33,520 --> 00:19:35,650
+here at the bottom then you want to
+
+408
+00:19:35,650 --> 00:19:38,770
+click on add to homescreen and rename
+
+409
+00:19:38,770 --> 00:19:41,650
+this to instant basically anything you
+
+410
+00:19:41,650 --> 00:19:46,860
+want I'm just gonna name this install HW
+
+411
+00:19:46,860 --> 00:19:52,060
+yeah I'm gonna add this and as you can
+
+412
+00:19:52,060 --> 00:19:54,640
+see well it's also done installing so if
+
+413
+00:19:54,640 --> 00:19:56,830
+I go into this app as you can see it's
+
+414
+00:19:56,830 --> 00:19:59,320
+the correct app completely works in the
+
+415
+00:19:59,320 --> 00:20:03,340
+label spine and just quickly yeah so you
+
+416
+00:20:03,340 --> 00:20:06,640
+see we've also added install HW so we
+
+417
+00:20:06,640 --> 00:20:09,429
+can use that whenever we want and so we
+
+418
+00:20:09,429 --> 00:20:11,290
+also have the app now let's just do a
+
+419
+00:20:11,290 --> 00:20:12,179
+quick lot of
+
+420
+00:20:12,179 --> 00:20:14,639
+Asian and time how long it takes for us
+
+421
+00:20:14,639 --> 00:20:17,850
+to get it onto our I advice just roughly
+
+422
+00:20:17,850 --> 00:20:21,749
+so I'm going to go into Xcode and we're
+
+423
+00:20:21,749 --> 00:20:24,119
+going to open up the wireless hello
+
+424
+00:20:24,119 --> 00:20:30,779
+world from the Dropbox and so what I'm
+
+425
+00:20:30,779 --> 00:20:33,179
+gonna do I'm gonna go to the lane not
+
+426
+00:20:33,179 --> 00:20:35,519
+storyboard and I want to make a little
+
+427
+00:20:35,519 --> 00:20:47,940
+change okay that works now that that's
+
+428
+00:20:47,940 --> 00:20:49,769
+done let's close out of it
+
+429
+00:20:49,769 --> 00:20:52,830
+and once it is done syncing to Dropbox
+
+430
+00:20:52,830 --> 00:20:56,730
+all you do is you go over here and go
+
+431
+00:20:56,730 --> 00:21:03,809
+and delete these two files okay now
+
+432
+00:21:03,809 --> 00:21:08,490
+let's start timing again a rough time so
+
+433
+00:21:08,490 --> 00:21:13,080
+if I go to well I guess isn't there a
+
+434
+00:21:13,080 --> 00:21:15,960
+pro oh yeah clock sorry and then if I go
+
+435
+00:21:15,960 --> 00:21:20,669
+to timer stopwatch so then I can
+
+436
+00:21:20,669 --> 00:21:23,850
+basically just go to terminal again I'm
+
+437
+00:21:23,850 --> 00:21:27,950
+going to update the IPA again
+
+438
+00:21:34,900 --> 00:21:37,560
+okay
+
+439
+00:21:44,000 --> 00:21:46,460
+okay so that's done now we can exit out
+
+440
+00:21:46,460 --> 00:21:51,800
+of this and let's just go to install HW
+
+441
+00:21:51,800 --> 00:21:53,060
+or actually before that we have to
+
+442
+00:21:53,060 --> 00:21:57,290
+delete this app okay now it's going to
+
+443
+00:21:57,290 --> 00:22:08,740
+install HW and install install retry
+
+444
+00:22:08,740 --> 00:22:10,820
+sometimes the reason that happens is
+
+445
+00:22:10,820 --> 00:22:12,740
+because it's not done syncing to Dropbox
+
+446
+00:22:12,740 --> 00:22:14,720
+but then when you click on retry it will
+
+447
+00:22:14,720 --> 00:22:17,980
+sync to Dropbox and then it'll work so
+
+448
+00:22:17,980 --> 00:22:21,880
+just give it a minute or two I guess
+
+449
+00:22:21,880 --> 00:22:26,450
+will successfully install so till now I
+
+450
+00:22:26,450 --> 00:22:31,760
+say it's been around 50 seconds maybe a
+
+451
+00:22:31,760 --> 00:22:35,720
+minute now but if we just wait a little
+
+452
+00:22:35,720 --> 00:22:40,520
+bit longer the only reason it takes this
+
+453
+00:22:40,520 --> 00:22:42,830
+long the installing process is perfectly
+
+454
+00:22:42,830 --> 00:22:44,960
+fine it's just that it's getting it from
+
+455
+00:22:44,960 --> 00:22:46,670
+my server and not just any App Store
+
+456
+00:22:46,670 --> 00:22:50,740
+server which is much faster than mine so
+
+457
+00:22:50,740 --> 00:22:53,750
+yeah again this also does vary your
+
+458
+00:22:53,750 --> 00:22:56,450
+Wi-Fi connection your Wi-Fi speed and
+
+459
+00:22:56,450 --> 00:22:58,910
+another benefit about this I mean it
+
+460
+00:22:58,910 --> 00:23:03,320
+this was also benefit in the last Xcode
+
+461
+00:23:03,320 --> 00:23:05,360
+type EA but a really good benefit for
+
+462
+00:23:05,360 --> 00:23:07,310
+this is that you don't need to be on the
+
+463
+00:23:07,310 --> 00:23:09,710
+same Wi-Fi network as if you would with
+
+464
+00:23:09,710 --> 00:23:12,080
+Xcode 4.2 when you and wirelessly deploy
+
+465
+00:23:12,080 --> 00:23:14,510
+so as you can see it is done and now if
+
+466
+00:23:14,510 --> 00:23:18,830
+we were to go into the clock so yeah I'd
+
+467
+00:23:18,830 --> 00:23:21,800
+say it takes around one minute 40
+
+468
+00:23:21,800 --> 00:23:24,200
+seconds maybe two minutes for each build
+
+469
+00:23:24,200 --> 00:23:26,660
+to go on your device so again as I said
+
+470
+00:23:26,660 --> 00:23:28,640
+it isn't for that developer that's
+
+471
+00:23:28,640 --> 00:23:30,710
+building and running every 20 seconds
+
+472
+00:23:30,710 --> 00:23:32,300
+it's for that developer that needs to
+
+473
+00:23:32,300 --> 00:23:34,130
+build and run around every 30 seconds
+
+474
+00:23:34,130 --> 00:23:36,620
+and so yeah that was basically how it
+
+475
+00:23:36,620 --> 00:23:38,900
+worked I subscribe to my channel if
+
+476
+00:23:38,900 --> 00:23:41,180
+you're new I hope you liked it all my
+
+477
+00:23:41,180 --> 00:23:42,860
+viewers and also specially wide seller
+
+478
+00:23:42,860 --> 00:23:45,080
+because this was made for you also if
+
+479
+00:23:45,080 --> 00:23:46,550
+you have any questions leave it down in
+
+480
+00:23:46,550 --> 00:23:48,560
+the comments like the video if you liked
+
+481
+00:23:48,560 --> 00:23:49,780
+it and yeah
+
+482
+00:23:49,780 --> 00:23:51,430
+that'll be it you can also mail me at
+
+483
+00:23:51,430 --> 00:23:54,070
+tanjung mini gmail.com the source code
+
+484
+00:23:54,070 --> 00:23:56,860
+will be in description and yeah that's
+
+485
+00:23:56,860 --> 00:23:59,520
+it good bye

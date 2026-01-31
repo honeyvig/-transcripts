@@ -1,0 +1,5407 @@
+1
+00:00:00,000 --> 00:00:01,520
+so hello there and welcome to another
+
+2
+00:00:01,520 --> 00:00:03,280
+tutorial my name is tandy bakshi and
+
+3
+00:00:03,280 --> 00:00:04,560
+today we're going to be talking about
+
+4
+00:00:04,560 --> 00:00:06,400
+how you can use cuda to build your own
+
+5
+00:00:06,400 --> 00:00:08,960
+segmented silva vera tostony's based nth
+
+6
+00:00:08,960 --> 00:00:11,519
+prime finder that runs on the gpu now i
+
+7
+00:00:11,519 --> 00:00:13,040
+know that's a lot of words i'll explain
+
+8
+00:00:13,040 --> 00:00:14,719
+exactly what that means but before we
+
+9
+00:00:14,719 --> 00:00:16,400
+delve into it if you enjoy this kind of
+
+10
+00:00:16,400 --> 00:00:17,680
+content you want to see more of it
+
+11
+00:00:17,680 --> 00:00:19,039
+please do make sure to subscribe to the
+
+12
+00:00:19,039 --> 00:00:20,640
+channel as it really does help out a lot
+
+13
+00:00:20,640 --> 00:00:22,320
+turn on notifications so you're notified
+
+14
+00:00:22,320 --> 00:00:24,080
+whenever i release content like this
+
+15
+00:00:24,080 --> 00:00:25,519
+like the video if you enjoyed it and if
+
+16
+00:00:25,519 --> 00:00:27,039
+you have any questions suggestions or
+
+17
+00:00:27,039 --> 00:00:28,720
+feedback feel free to reach out to me
+
+18
+00:00:28,720 --> 00:00:30,560
+down in the comments below or on any of
+
+19
+00:00:30,560 --> 00:00:32,399
+the social media in the description box
+
+20
+00:00:32,399 --> 00:00:33,360
+as well
+
+21
+00:00:33,360 --> 00:00:34,960
+now getting into this what are we doing
+
+22
+00:00:34,960 --> 00:00:37,680
+today we are building an nth prime
+
+23
+00:00:37,680 --> 00:00:39,600
+calculator and we're going to do so
+
+24
+00:00:39,600 --> 00:00:41,600
+using the segmented silva veritosthenes
+
+25
+00:00:41,600 --> 00:00:43,200
+algorithm and we're going to be running
+
+26
+00:00:43,200 --> 00:00:46,000
+it on the gpu using the cuda gpu compute
+
+27
+00:00:46,000 --> 00:00:48,719
+library now this is a pretty fascinating
+
+28
+00:00:48,719 --> 00:00:51,280
+application i will say i've been really
+
+29
+00:00:51,280 --> 00:00:53,600
+interested in optimizing compute or
+
+30
+00:00:53,600 --> 00:00:55,440
+optimizing algorithms rather
+
+31
+00:00:55,440 --> 00:00:57,360
+to make use of compute for finding prime
+
+32
+00:00:57,360 --> 00:00:58,960
+numbers i find that a very fascinating
+
+33
+00:00:58,960 --> 00:01:00,960
+field and recently i actually
+
+34
+00:01:00,960 --> 00:01:04,080
+implemented uh a cuda based version of
+
+35
+00:01:04,080 --> 00:01:06,000
+this algorithm as well
+
+36
+00:01:06,000 --> 00:01:07,600
+before we get into
+
+37
+00:01:07,600 --> 00:01:09,360
+using gpus for this why you would want
+
+38
+00:01:09,360 --> 00:01:10,799
+to do that and what the segmented
+
+39
+00:01:10,799 --> 00:01:12,640
+cellular eratosthenes is let's talk
+
+40
+00:01:12,640 --> 00:01:14,720
+about just the simple plain old classic
+
+41
+00:01:14,720 --> 00:01:17,200
+ancient literally siva veritostomy's
+
+42
+00:01:17,200 --> 00:01:19,439
+algorithm the sea of veritas algorithm
+
+43
+00:01:19,439 --> 00:01:21,360
+doesn't exactly solve the problem that
+
+44
+00:01:21,360 --> 00:01:23,840
+we want to solve it doesn't give you the
+
+45
+00:01:23,840 --> 00:01:26,960
+nth prime number instead what it does uh
+
+46
+00:01:26,960 --> 00:01:29,520
+is it gives you well in in a list of
+
+47
+00:01:29,520 --> 00:01:31,759
+numbers starting from the number two
+
+48
+00:01:31,759 --> 00:01:33,759
+which ones are prime and which ones are
+
+49
+00:01:33,759 --> 00:01:35,520
+composite that's what it'll tell you so
+
+50
+00:01:35,520 --> 00:01:37,200
+for example if you list out the numbers
+
+51
+00:01:37,200 --> 00:01:39,840
+two to fifty you can use this the sieve
+
+52
+00:01:39,840 --> 00:01:41,520
+of eratosthenes to go through those
+
+53
+00:01:41,520 --> 00:01:43,680
+numbers and mark the ones that are
+
+54
+00:01:43,680 --> 00:01:46,240
+composite as composite and only keep the
+
+55
+00:01:46,240 --> 00:01:47,680
+primes
+
+56
+00:01:47,680 --> 00:01:48,880
+let's actually take a look at a little
+
+57
+00:01:48,880 --> 00:01:50,720
+bit of a demonstration as to how that
+
+58
+00:01:50,720 --> 00:01:53,040
+works so effectively we start off with
+
+59
+00:01:53,040 --> 00:01:56,159
+of course our numbers 2 through 50 here
+
+60
+00:01:56,159 --> 00:01:57,280
+and we start off by looking at the
+
+61
+00:01:57,280 --> 00:01:59,119
+number 2. number 2 has not been marked
+
+62
+00:01:59,119 --> 00:02:01,600
+it's just a number and so we take a look
+
+63
+00:02:01,600 --> 00:02:03,600
+at it and we say it's prime but because
+
+64
+00:02:03,600 --> 00:02:05,439
+it hasn't been marked and because we
+
+65
+00:02:05,439 --> 00:02:08,000
+just considered it prime we're now going
+
+66
+00:02:08,000 --> 00:02:10,319
+to loop through all the multiples of two
+
+67
+00:02:10,319 --> 00:02:11,599
+from here on out and we're gonna mark
+
+68
+00:02:11,599 --> 00:02:13,520
+them all as composite which makes sense
+
+69
+00:02:13,520 --> 00:02:15,680
+because they are all divisible by two so
+
+70
+00:02:15,680 --> 00:02:17,040
+it makes sense that we want to mark them
+
+71
+00:02:17,040 --> 00:02:19,440
+down as composite then we take a look at
+
+72
+00:02:19,440 --> 00:02:22,080
+the number three has not been marked yet
+
+73
+00:02:22,080 --> 00:02:24,400
+so we consider it prime we loop through
+
+74
+00:02:24,400 --> 00:02:26,160
+all the multiples of three and we we
+
+75
+00:02:26,160 --> 00:02:28,239
+mark them as composite
+
+76
+00:02:28,239 --> 00:02:29,680
+then we take a look at four four has
+
+77
+00:02:29,680 --> 00:02:31,599
+been marked we ignore it we take a look
+
+78
+00:02:31,599 --> 00:02:33,360
+at five five has not been marked
+
+79
+00:02:33,360 --> 00:02:35,120
+therefore it is prime and we loop
+
+80
+00:02:35,120 --> 00:02:37,120
+through all of its multiples and mark
+
+81
+00:02:37,120 --> 00:02:40,080
+them as composite as well then we ignore
+
+82
+00:02:40,080 --> 00:02:41,599
+six because it's marked then once again
+
+83
+00:02:41,599 --> 00:02:43,360
+for seven we take a look at it and we
+
+84
+00:02:43,360 --> 00:02:45,599
+mark its one remaining multiple in this
+
+85
+00:02:45,599 --> 00:02:48,000
+list well there are other multiples but
+
+86
+00:02:48,000 --> 00:02:49,920
+the one multiple has not yet been marked
+
+87
+00:02:49,920 --> 00:02:53,280
+we mark it as composite
+
+88
+00:02:53,280 --> 00:02:55,200
+we then go ahead and loop through all
+
+89
+00:02:55,200 --> 00:02:56,800
+the rest of these numbers and for each
+
+90
+00:02:56,800 --> 00:02:59,120
+one we ensure that all of their
+
+91
+00:02:59,120 --> 00:03:01,680
+multiples are marked as composite and
+
+92
+00:03:01,680 --> 00:03:04,400
+after we're done all of that we have our
+
+93
+00:03:04,400 --> 00:03:06,720
+list of prime numbers effectively right
+
+94
+00:03:06,720 --> 00:03:10,560
+so we can boil it all down um to these
+
+95
+00:03:10,560 --> 00:03:12,800
+these numbers that we know between 2 and
+
+96
+00:03:12,800 --> 00:03:16,080
+50 are indeed prime
+
+97
+00:03:16,080 --> 00:03:17,760
+however here's something really
+
+98
+00:03:17,760 --> 00:03:19,680
+interesting about the way that this math
+
+99
+00:03:19,680 --> 00:03:21,360
+works and this is sort of our little
+
+100
+00:03:21,360 --> 00:03:23,360
+cheat code that's going to let us speed
+
+101
+00:03:23,360 --> 00:03:26,159
+up the compute a bunch right
+
+102
+00:03:26,159 --> 00:03:28,959
+that is that if you take a look at these
+
+103
+00:03:28,959 --> 00:03:32,319
+numbers again right after we were done
+
+104
+00:03:32,319 --> 00:03:34,000
+marking seven
+
+105
+00:03:34,000 --> 00:03:36,720
+we really didn't need to mark anything
+
+106
+00:03:36,720 --> 00:03:38,159
+else because if you take a look at for
+
+107
+00:03:38,159 --> 00:03:39,920
+example the number 11.
+
+108
+00:03:39,920 --> 00:03:41,680
+if you look at all the numbers that it
+
+109
+00:03:41,680 --> 00:03:43,519
+would have marked if you look at all the
+
+110
+00:03:43,519 --> 00:03:47,120
+multiples of 11 they've already been
+
+111
+00:03:47,120 --> 00:03:50,319
+marked by other numbers before 11. right
+
+112
+00:03:50,319 --> 00:03:52,799
+similarly if you take a look at 13 the
+
+113
+00:03:52,799 --> 00:03:54,799
+numbers that it would have marked as
+
+114
+00:03:54,799 --> 00:03:57,680
+composite have already been marked as
+
+115
+00:03:57,680 --> 00:04:00,560
+composite we don't really need to do
+
+116
+00:04:00,560 --> 00:04:02,640
+anything beyond the number seven why is
+
+117
+00:04:02,640 --> 00:04:04,560
+that though well it's because of a very
+
+118
+00:04:04,560 --> 00:04:06,480
+interesting property here you see the
+
+119
+00:04:06,480 --> 00:04:09,360
+maximum number that we have in this list
+
+120
+00:04:09,360 --> 00:04:12,000
+of numbers is 50. the square root of 50
+
+121
+00:04:12,000 --> 00:04:14,319
+is about seven it's just above seven
+
+122
+00:04:14,319 --> 00:04:15,200
+right
+
+123
+00:04:15,200 --> 00:04:18,000
+what that means is that if we know all
+
+124
+00:04:18,000 --> 00:04:21,040
+the prime numbers up until seven we can
+
+125
+00:04:21,040 --> 00:04:23,280
+just use those and mark all the
+
+126
+00:04:23,280 --> 00:04:27,120
+multiples of those primes as composite
+
+127
+00:04:27,120 --> 00:04:28,800
+and that's all we need to do right we
+
+128
+00:04:28,800 --> 00:04:30,400
+don't actually need to loop through for
+
+129
+00:04:30,400 --> 00:04:32,560
+example 11's multiples and 13s multiples
+
+130
+00:04:32,560 --> 00:04:34,320
+and 17's multiples we don't need to do
+
+131
+00:04:34,320 --> 00:04:37,120
+that as long as we go up to 7 and mark
+
+132
+00:04:37,120 --> 00:04:40,880
+all of 2 3 5 and 7's multiples as
+
+133
+00:04:40,880 --> 00:04:43,199
+composite we're good to go we don't need
+
+134
+00:04:43,199 --> 00:04:45,759
+to lose through any others now
+
+135
+00:04:45,759 --> 00:04:48,320
+this gives us a couple of very sort of
+
+136
+00:04:48,320 --> 00:04:50,320
+interesting alternatives as to how we
+
+137
+00:04:50,320 --> 00:04:51,520
+can compute
+
+138
+00:04:51,520 --> 00:04:52,560
+first of all
+
+139
+00:04:52,560 --> 00:04:54,320
+why do we need to make this better i
+
+140
+00:04:54,320 --> 00:04:55,919
+mean of course it's nice that we only
+
+141
+00:04:55,919 --> 00:04:57,280
+have a couple of numbers that we need to
+
+142
+00:04:57,280 --> 00:04:58,800
+start marking from
+
+143
+00:04:58,800 --> 00:05:00,800
+but what about the siva veritosthenes
+
+144
+00:05:00,800 --> 00:05:02,880
+makes it slow why do we need some you
+
+145
+00:05:02,880 --> 00:05:05,360
+know extra tricks well it's because of
+
+146
+00:05:05,360 --> 00:05:07,759
+this the sieve of eratosthenes is
+
+147
+00:05:07,759 --> 00:05:09,360
+absolutely
+
+148
+00:05:09,360 --> 00:05:12,400
+terrible from a memory perspective now
+
+149
+00:05:12,400 --> 00:05:14,000
+from a computational complexity
+
+150
+00:05:14,000 --> 00:05:16,320
+standpoint it's actually pretty simple
+
+151
+00:05:16,320 --> 00:05:18,240
+but from a memory complexity standpoint
+
+152
+00:05:18,240 --> 00:05:20,160
+in terms of like actually accessing
+
+153
+00:05:20,160 --> 00:05:22,160
+memory on the hardware
+
+154
+00:05:22,160 --> 00:05:24,320
+it is terrible what do i mean by that
+
+155
+00:05:24,320 --> 00:05:25,360
+well
+
+156
+00:05:25,360 --> 00:05:26,560
+if we take a look at this list of
+
+157
+00:05:26,560 --> 00:05:28,479
+numbers again starting off with for
+
+158
+00:05:28,479 --> 00:05:29,919
+example two
+
+159
+00:05:29,919 --> 00:05:32,720
+when we had to mark all of the multiples
+
+160
+00:05:32,720 --> 00:05:36,320
+of two as composite what we had to do is
+
+161
+00:05:36,320 --> 00:05:38,800
+loop all the way from the beginning of
+
+162
+00:05:38,800 --> 00:05:41,759
+this array to the end of the array
+
+163
+00:05:41,759 --> 00:05:44,160
+and then for the number three we had to
+
+164
+00:05:44,160 --> 00:05:46,160
+start all the way back at the beginning
+
+165
+00:05:46,160 --> 00:05:48,240
+and loop all the way to the end
+
+166
+00:05:48,240 --> 00:05:49,840
+now that doesn't sound like much of a
+
+167
+00:05:49,840 --> 00:05:51,360
+problem there's just 50 numbers and
+
+168
+00:05:51,360 --> 00:05:52,800
+that's totally fine with 50 numbers that
+
+169
+00:05:52,800 --> 00:05:54,400
+doesn't make much of a difference but
+
+170
+00:05:54,400 --> 00:05:56,400
+the problem is when you get into the
+
+171
+00:05:56,400 --> 00:05:58,479
+hundreds of billions of numbers or
+
+172
+00:05:58,479 --> 00:06:00,720
+something on that scale because now
+
+173
+00:06:00,720 --> 00:06:02,400
+what's happening is this
+
+174
+00:06:02,400 --> 00:06:04,240
+as you're looping through your array of
+
+175
+00:06:04,240 --> 00:06:06,160
+boolean values to see if this number is
+
+176
+00:06:06,160 --> 00:06:09,440
+marked or not you are moving across
+
+177
+00:06:09,440 --> 00:06:12,240
+sections of the array and every time you
+
+178
+00:06:12,240 --> 00:06:14,160
+move across a certain sized section of
+
+179
+00:06:14,160 --> 00:06:16,720
+the array that entire section needs to
+
+180
+00:06:16,720 --> 00:06:19,759
+be loaded into cpu cache the old section
+
+181
+00:06:19,759 --> 00:06:22,400
+is invalidated thrown out of cpu cache
+
+182
+00:06:22,400 --> 00:06:23,840
+and now you're dealing with that section
+
+183
+00:06:23,840 --> 00:06:25,600
+you do this over and over again until
+
+184
+00:06:25,600 --> 00:06:27,360
+you get to the next uh prime that you
+
+185
+00:06:27,360 --> 00:06:28,960
+need to mark multiples for and then you
+
+186
+00:06:28,960 --> 00:06:30,400
+start at the beginning right you
+
+187
+00:06:30,400 --> 00:06:32,560
+invalidate what's in cpu cache you go
+
+188
+00:06:32,560 --> 00:06:34,319
+grab the beginning of the array put that
+
+189
+00:06:34,319 --> 00:06:36,160
+in cpu cache you start working on it and
+
+190
+00:06:36,160 --> 00:06:37,919
+you keep invalidating cash over and over
+
+191
+00:06:37,919 --> 00:06:40,000
+again that is
+
+192
+00:06:40,000 --> 00:06:42,720
+slow as much as possible you want to
+
+193
+00:06:42,720 --> 00:06:45,120
+avoid invalidating cash when you can't
+
+194
+00:06:45,120 --> 00:06:46,960
+you want to maintain the locality of
+
+195
+00:06:46,960 --> 00:06:48,639
+reference principle you want to make it
+
+196
+00:06:48,639 --> 00:06:50,080
+so that whenever you have subsequent
+
+197
+00:06:50,080 --> 00:06:52,560
+memory accesses as much as possible
+
+198
+00:06:52,560 --> 00:06:54,000
+they're as close to each other as
+
+199
+00:06:54,000 --> 00:06:55,840
+possible to increase the likelihood that
+
+200
+00:06:55,840 --> 00:06:58,240
+you are going to be getting cash hits
+
+201
+00:06:58,240 --> 00:07:01,199
+instead of missing your
+
+202
+00:07:01,199 --> 00:07:01,680
+the cash
+
+203
+00:07:01,680 --> 00:07:03,440
+of eratosthenes does not care about that
+
+204
+00:07:03,440 --> 00:07:04,960
+though and that's a problem
+
+205
+00:07:04,960 --> 00:07:06,960
+and that's why the segmented scene of
+
+206
+00:07:06,960 --> 00:07:10,160
+eratosthenes exists it helps us in a
+
+207
+00:07:10,160 --> 00:07:11,759
+very special way
+
+208
+00:07:11,759 --> 00:07:13,680
+what it enables us to do is i mean think
+
+209
+00:07:13,680 --> 00:07:14,720
+about it
+
+210
+00:07:14,720 --> 00:07:18,000
+if we know that from two to fifty the
+
+211
+00:07:18,000 --> 00:07:20,000
+only primes that we need to know
+
+212
+00:07:20,000 --> 00:07:23,520
+beforehand are two three five and seven
+
+213
+00:07:23,520 --> 00:07:25,360
+then we can go ahead and pre-calculate
+
+214
+00:07:25,360 --> 00:07:27,440
+that with a normal sea of vertositis
+
+215
+00:07:27,440 --> 00:07:29,680
+right we can find all the primes up to
+
+216
+00:07:29,680 --> 00:07:31,199
+the square root of 50 in this case
+
+217
+00:07:31,199 --> 00:07:33,840
+around 7. so we have 2 3 5 and 7.
+
+218
+00:07:33,840 --> 00:07:36,080
+then what we can do is we can take
+
+219
+00:07:36,080 --> 00:07:38,639
+chunks of the rest of the array and in
+
+220
+00:07:38,639 --> 00:07:42,000
+each chunk individually mark multiples
+
+221
+00:07:42,000 --> 00:07:45,360
+of those primes as composite so now for
+
+222
+00:07:45,360 --> 00:07:47,680
+example what we could actually do is
+
+223
+00:07:47,680 --> 00:07:50,240
+take the row of you know from 11 to 20
+
+224
+00:07:50,240 --> 00:07:52,560
+and 21 through 30 and 31 through 40 and
+
+225
+00:07:52,560 --> 00:07:54,879
+41 through 50 those four different
+
+226
+00:07:54,879 --> 00:07:57,360
+individual sections could be computed in
+
+227
+00:07:57,360 --> 00:07:59,840
+a completely isolated environment right
+
+228
+00:07:59,840 --> 00:08:02,000
+given any one of those chunks you can
+
+229
+00:08:02,000 --> 00:08:03,919
+determine which numbers are prime and
+
+230
+00:08:03,919 --> 00:08:06,639
+which numbers are composite uh based off
+
+231
+00:08:06,639 --> 00:08:10,479
+of just the numbers 2 3 5 and 7. so
+
+232
+00:08:10,479 --> 00:08:12,960
+in case you may have also missed this
+
+233
+00:08:12,960 --> 00:08:14,800
+not only does this help with locality of
+
+234
+00:08:14,800 --> 00:08:16,400
+reference because now each chunk that
+
+235
+00:08:16,400 --> 00:08:18,879
+you have to operate on is smaller
+
+236
+00:08:18,879 --> 00:08:21,280
+the chunks are isolated
+
+237
+00:08:21,280 --> 00:08:23,039
+and you know what that means if they're
+
+238
+00:08:23,039 --> 00:08:24,960
+isolated they can all be done at the
+
+239
+00:08:24,960 --> 00:08:27,039
+same time so that means you can
+
+240
+00:08:27,039 --> 00:08:28,800
+multi-thread your code and thereby make
+
+241
+00:08:28,800 --> 00:08:30,160
+it even faster
+
+242
+00:08:30,160 --> 00:08:31,680
+and there's a lot of really interesting
+
+243
+00:08:31,680 --> 00:08:33,120
+other tricks that you can apply here as
+
+244
+00:08:33,120 --> 00:08:35,279
+well like for example instead of having
+
+245
+00:08:35,279 --> 00:08:37,519
+an actual array of booleans where each
+
+246
+00:08:37,519 --> 00:08:40,320
+boolean takes an entire byte eight bits
+
+247
+00:08:40,320 --> 00:08:42,080
+worth of information even though it's
+
+248
+00:08:42,080 --> 00:08:44,080
+only a boolean so it needs a single bit
+
+249
+00:08:44,080 --> 00:08:46,000
+you can use bit arrays where you
+
+250
+00:08:46,000 --> 00:08:48,480
+effectively have eight booleans in a
+
+251
+00:08:48,480 --> 00:08:50,880
+single byte it's really fascinating all
+
+252
+00:08:50,880 --> 00:08:53,040
+the optimizations you can apply
+
+253
+00:08:53,040 --> 00:08:55,200
+and then of course because this compute
+
+254
+00:08:55,200 --> 00:08:57,920
+is incredibly repetitive and almost the
+
+255
+00:08:57,920 --> 00:09:00,240
+same for every individual chunk of
+
+256
+00:09:00,240 --> 00:09:02,080
+course there's some exceptions with you
+
+257
+00:09:02,080 --> 00:09:03,440
+know certain loops maybe being a little
+
+258
+00:09:03,440 --> 00:09:05,760
+bit longer or shorter for individual
+
+259
+00:09:05,760 --> 00:09:07,360
+branches
+
+260
+00:09:07,360 --> 00:09:09,040
+because they're effectively the same you
+
+261
+00:09:09,040 --> 00:09:11,600
+can implement this as cuda code and you
+
+262
+00:09:11,600 --> 00:09:13,279
+can make it so that given a bunch of
+
+263
+00:09:13,279 --> 00:09:15,040
+seed primes like two three five and
+
+264
+00:09:15,040 --> 00:09:17,200
+seven up until 50
+
+265
+00:09:17,200 --> 00:09:19,200
+you can calculate which numbers are
+
+266
+00:09:19,200 --> 00:09:21,440
+priming composite in individual chunks
+
+267
+00:09:21,440 --> 00:09:23,360
+on the gpu now this is pretty
+
+268
+00:09:23,360 --> 00:09:24,959
+fascinating stuff let's go ahead and
+
+269
+00:09:24,959 --> 00:09:26,640
+take a look at how you can actually
+
+270
+00:09:26,640 --> 00:09:29,760
+implement it uh using cuda let's take a
+
+271
+00:09:29,760 --> 00:09:31,120
+look
+
+272
+00:09:31,120 --> 00:09:32,320
+all right now that you understand the
+
+273
+00:09:32,320 --> 00:09:33,760
+idea of the segmented sea of
+
+274
+00:09:33,760 --> 00:09:35,200
+eratosthenes let's go ahead and take a
+
+275
+00:09:35,200 --> 00:09:37,040
+look at the code and see why the
+
+276
+00:09:37,040 --> 00:09:38,800
+application works
+
+277
+00:09:38,800 --> 00:09:40,800
+so as you can see here i've got the code
+
+278
+00:09:40,800 --> 00:09:42,720
+pulled up and you're going to need to
+
+279
+00:09:42,720 --> 00:09:44,959
+bear with me here because it is pretty
+
+280
+00:09:44,959 --> 00:09:46,640
+dense there's a lot of stuff happening
+
+281
+00:09:46,640 --> 00:09:48,640
+there's a lot of logic here that might
+
+282
+00:09:48,640 --> 00:09:50,160
+take a while for you to understand of
+
+283
+00:09:50,160 --> 00:09:52,080
+course as always the code is linked in
+
+284
+00:09:52,080 --> 00:09:53,360
+the description below for you to go
+
+285
+00:09:53,360 --> 00:09:55,040
+ahead and check out for yourself if
+
+286
+00:09:55,040 --> 00:09:56,399
+you'd like to sort of read through it
+
+287
+00:09:56,399 --> 00:09:57,600
+more slowly
+
+288
+00:09:57,600 --> 00:09:59,279
+and sort of reference with the video to
+
+289
+00:09:59,279 --> 00:10:01,440
+understand individual sections of logic
+
+290
+00:10:01,440 --> 00:10:03,120
+and why it works
+
+291
+00:10:03,120 --> 00:10:05,680
+this is of course cuda c plus plus code
+
+292
+00:10:05,680 --> 00:10:07,680
+um which means that we have our
+
+293
+00:10:07,680 --> 00:10:09,440
+traditional c plus includes in the
+
+294
+00:10:09,440 --> 00:10:11,040
+beginning i will be going through these
+
+295
+00:10:11,040 --> 00:10:12,720
+we'll see where we use the functions
+
+296
+00:10:12,720 --> 00:10:15,440
+later on in the code um
+
+297
+00:10:15,440 --> 00:10:18,000
+but we start off pretty simply with our
+
+298
+00:10:18,000 --> 00:10:20,640
+definitions this code is multi-gpu
+
+299
+00:10:20,640 --> 00:10:23,760
+compatible so because i have two gpus on
+
+300
+00:10:23,760 --> 00:10:25,120
+this machine
+
+301
+00:10:25,120 --> 00:10:26,880
+as you can see here or it doesn't want
+
+302
+00:10:26,880 --> 00:10:28,560
+to work inside the docker container
+
+303
+00:10:28,560 --> 00:10:31,519
+maybe we'll do it right outside uh let's
+
+304
+00:10:31,519 --> 00:10:34,000
+do it here there we go you can see that
+
+305
+00:10:34,000 --> 00:10:37,600
+i have the two uh these are 230 90 ti's
+
+306
+00:10:37,600 --> 00:10:40,640
+that are running um enabling us to
+
+307
+00:10:40,640 --> 00:10:42,640
+calculate primes
+
+308
+00:10:42,640 --> 00:10:45,279
+so i am defining two gpus
+
+309
+00:10:45,279 --> 00:10:47,040
+i'm defining a byte type as just
+
+310
+00:10:47,040 --> 00:10:48,399
+unsigned character just because it's
+
+311
+00:10:48,399 --> 00:10:49,839
+easier to write byte than unsigned
+
+312
+00:10:49,839 --> 00:10:51,279
+character everywhere
+
+313
+00:10:51,279 --> 00:10:53,279
+i'm defining that when we invoke the
+
+314
+00:10:53,279 --> 00:10:55,680
+cuda kernel we will invoke it with 64
+
+315
+00:10:55,680 --> 00:10:58,880
+threads and 256 blocks these are numbers
+
+316
+00:10:58,880 --> 00:11:00,320
+that you can play around with to find
+
+317
+00:11:00,320 --> 00:11:02,240
+the most effective values for your use
+
+318
+00:11:02,240 --> 00:11:04,240
+case and i will link to some resources
+
+319
+00:11:04,240 --> 00:11:06,079
+to sort of explain what these mean in
+
+320
+00:11:06,079 --> 00:11:07,760
+more detail down in the description
+
+321
+00:11:07,760 --> 00:11:08,880
+below
+
+322
+00:11:08,880 --> 00:11:10,480
+now we start off with some pretty simple
+
+323
+00:11:10,480 --> 00:11:12,800
+high-level logic functions to create a
+
+324
+00:11:12,800 --> 00:11:15,200
+bit array to get an element from it from
+
+325
+00:11:15,200 --> 00:11:17,279
+a bit array and to set an element from a
+
+326
+00:11:17,279 --> 00:11:19,920
+bit array this uses pretty simple logic
+
+327
+00:11:19,920 --> 00:11:21,600
+for example if you have a number of
+
+328
+00:11:21,600 --> 00:11:22,720
+elements you want to store in the bit
+
+329
+00:11:22,720 --> 00:11:25,440
+array that number divided by eight plus
+
+330
+00:11:25,440 --> 00:11:27,920
+potentially one more byte if it's not
+
+331
+00:11:27,920 --> 00:11:30,000
+divisible by eight is how many bytes
+
+332
+00:11:30,000 --> 00:11:31,839
+you're going to need to represent these
+
+333
+00:11:31,839 --> 00:11:34,399
+number of elements as boolean values in
+
+334
+00:11:34,399 --> 00:11:36,079
+a bit array
+
+335
+00:11:36,079 --> 00:11:38,800
+a bit array get simply takes the index
+
+336
+00:11:38,800 --> 00:11:41,600
+computes which byte and which bit you
+
+337
+00:11:41,600 --> 00:11:43,760
+need to access in order to return that
+
+338
+00:11:43,760 --> 00:11:45,680
+value and bit array set does something
+
+339
+00:11:45,680 --> 00:11:47,760
+similar except it actually sets the
+
+340
+00:11:47,760 --> 00:11:51,920
+value using the masks that it calculates
+
+341
+00:11:51,920 --> 00:11:54,480
+now we have the naive c function the
+
+342
+00:11:54,480 --> 00:11:56,880
+naive c function is basically just a
+
+343
+00:11:56,880 --> 00:11:59,600
+completely normal sea of eratosthenes
+
+344
+00:11:59,600 --> 00:12:01,040
+there's nothing particularly special
+
+345
+00:12:01,040 --> 00:12:02,320
+about it
+
+346
+00:12:02,320 --> 00:12:03,920
+the way that it works
+
+347
+00:12:03,920 --> 00:12:05,920
+is you give an upper bound that you want
+
+348
+00:12:05,920 --> 00:12:08,639
+to see until and you also pass it a
+
+349
+00:12:08,639 --> 00:12:10,639
+pointer to both a
+
+350
+00:12:10,639 --> 00:12:12,480
+an array where you will where you want
+
+351
+00:12:12,480 --> 00:12:14,639
+it to store the primes
+
+352
+00:12:14,639 --> 00:12:17,120
+as well as a number to store how many
+
+353
+00:12:17,120 --> 00:12:19,360
+primes it actually found
+
+354
+00:12:19,360 --> 00:12:21,279
+so the sieve does not return the boolean
+
+355
+00:12:21,279 --> 00:12:23,120
+array instead it actually returns to you
+
+356
+00:12:23,120 --> 00:12:25,440
+which primes it found up until the upper
+
+357
+00:12:25,440 --> 00:12:26,480
+bound
+
+358
+00:12:26,480 --> 00:12:29,040
+we start off by creating a bit array
+
+359
+00:12:29,040 --> 00:12:31,120
+so we can store the true false values of
+
+360
+00:12:31,120 --> 00:12:32,560
+which numbers are prime and which ones
+
+361
+00:12:32,560 --> 00:12:34,720
+are composite we start off by saying
+
+362
+00:12:34,720 --> 00:12:36,639
+that the total number of primes we found
+
+363
+00:12:36,639 --> 00:12:39,440
+so far is equal to the upper bound minus
+
+364
+00:12:39,440 --> 00:12:40,800
+two
+
+365
+00:12:40,800 --> 00:12:42,240
+because of course zero and one don't
+
+366
+00:12:42,240 --> 00:12:44,480
+count and then we start looping so we
+
+367
+00:12:44,480 --> 00:12:46,560
+start off with number two and we loop up
+
+368
+00:12:46,560 --> 00:12:48,480
+until effectively the square root of the
+
+369
+00:12:48,480 --> 00:12:50,480
+upper bound this is just a more sort of
+
+370
+00:12:50,480 --> 00:12:52,480
+concise way of saying that
+
+371
+00:12:52,480 --> 00:12:54,639
+while p times p so p squared is less
+
+372
+00:12:54,639 --> 00:12:56,000
+than the upper bound is just another way
+
+373
+00:12:56,000 --> 00:12:57,839
+of saying um
+
+374
+00:12:57,839 --> 00:12:59,839
+the square root of the upper bound
+
+375
+00:12:59,839 --> 00:13:02,800
+uh and we always increment so if when we
+
+376
+00:13:02,800 --> 00:13:05,440
+loop we see in the bit array that the
+
+377
+00:13:05,440 --> 00:13:07,760
+value is prime not composite meaning
+
+378
+00:13:07,760 --> 00:13:09,600
+that the value is still 0 in the bit
+
+379
+00:13:09,600 --> 00:13:10,560
+array
+
+380
+00:13:10,560 --> 00:13:13,680
+then for all of the multiples of this
+
+381
+00:13:13,680 --> 00:13:16,480
+number we mark them as composite if they
+
+382
+00:13:16,480 --> 00:13:18,720
+are not already marked so we go ahead
+
+383
+00:13:18,720 --> 00:13:20,800
+and check for the multiple is it marked
+
+384
+00:13:20,800 --> 00:13:24,240
+as prime if it is uh then we decrease
+
+385
+00:13:24,240 --> 00:13:25,760
+from the total number of primes and we
+
+386
+00:13:25,760 --> 00:13:27,680
+set it so that it's marked as composite
+
+387
+00:13:27,680 --> 00:13:29,360
+so that in the future we don't end up
+
+388
+00:13:29,360 --> 00:13:31,680
+marking it as composite again the reason
+
+389
+00:13:31,680 --> 00:13:33,519
+that this is important to do is because
+
+390
+00:13:33,519 --> 00:13:35,200
+then we are able to keep track of how
+
+391
+00:13:35,200 --> 00:13:38,399
+many primes we actually found
+
+392
+00:13:38,399 --> 00:13:40,320
+once this is done we go ahead and set
+
+393
+00:13:40,320 --> 00:13:42,160
+the prime count value that was passed
+
+394
+00:13:42,160 --> 00:13:44,720
+into the function as a pointer we then
+
+395
+00:13:44,720 --> 00:13:47,839
+go ahead and set the array to a a memory
+
+396
+00:13:47,839 --> 00:13:49,519
+allocation
+
+397
+00:13:49,519 --> 00:13:52,639
+for the total number of primes times the
+
+398
+00:13:52,639 --> 00:13:55,600
+size of an unsigned 64-bit integer
+
+399
+00:13:55,600 --> 00:13:57,760
+we then loop through our bit array
+
+400
+00:13:57,760 --> 00:13:58,880
+effectively
+
+401
+00:13:58,880 --> 00:14:01,040
+and for every number that is still
+
+402
+00:14:01,040 --> 00:14:03,680
+marked as prime we go ahead and add it
+
+403
+00:14:03,680 --> 00:14:05,600
+to the array and then we free the bit
+
+404
+00:14:05,600 --> 00:14:07,279
+array that we allocated up here once
+
+405
+00:14:07,279 --> 00:14:08,399
+again this is
+
+406
+00:14:08,399 --> 00:14:10,560
+c code c plus technically so we do need
+
+407
+00:14:10,560 --> 00:14:13,839
+to keep track of our memory manually
+
+408
+00:14:13,839 --> 00:14:15,680
+all right so now that's done this is the
+
+409
+00:14:15,680 --> 00:14:17,199
+naive c function out of the way of
+
+410
+00:14:17,199 --> 00:14:18,639
+course we need this to figure out sort
+
+411
+00:14:18,639 --> 00:14:21,360
+of our seed primes so if we are sieving
+
+412
+00:14:21,360 --> 00:14:23,680
+all the way up to uh you know a billion
+
+413
+00:14:23,680 --> 00:14:25,760
+that we don't actually once again need
+
+414
+00:14:25,760 --> 00:14:28,480
+to sieve manually um all the way up to a
+
+415
+00:14:28,480 --> 00:14:30,800
+billion we see up until the square root
+
+416
+00:14:30,800 --> 00:14:33,120
+of a billion and then we use those c
+
+417
+00:14:33,120 --> 00:14:36,959
+primes in order to determine um the uh
+
+418
+00:14:36,959 --> 00:14:38,079
+which which numbers are prime and
+
+419
+00:14:38,079 --> 00:14:40,160
+neutrons are composite in individual
+
+420
+00:14:40,160 --> 00:14:42,800
+chunks leading up to a billion
+
+421
+00:14:42,800 --> 00:14:44,959
+so let's continue from there
+
+422
+00:14:44,959 --> 00:14:46,480
+next we have a function that's meant to
+
+423
+00:14:46,480 --> 00:14:48,880
+create bit arrays multiple bit arrays
+
+424
+00:14:48,880 --> 00:14:51,839
+and particularly for the gpu so the way
+
+425
+00:14:51,839 --> 00:14:54,000
+that this works is it takes as input the
+
+426
+00:14:54,000 --> 00:14:56,560
+number of elements per bit array that
+
+427
+00:14:56,560 --> 00:14:57,839
+need to be
+
+428
+00:14:57,839 --> 00:14:59,120
+created
+
+429
+00:14:59,120 --> 00:15:01,360
+and then it also takes as input a
+
+430
+00:15:01,360 --> 00:15:03,839
+pointer to a size t type called bytes
+
+431
+00:15:03,839 --> 00:15:06,560
+per bit array as well as a size t bit
+
+432
+00:15:06,560 --> 00:15:07,600
+arrays
+
+433
+00:15:07,600 --> 00:15:09,839
+let me explain what this means
+
+434
+00:15:09,839 --> 00:15:11,040
+so
+
+435
+00:15:11,040 --> 00:15:13,839
+when we have our gpu kernel of course
+
+436
+00:15:13,839 --> 00:15:16,079
+the idea of it is that it's going to see
+
+437
+00:15:16,079 --> 00:15:18,240
+multiple chunks at the same time that is
+
+438
+00:15:18,240 --> 00:15:20,720
+why the code is so fast because unlike
+
+439
+00:15:20,720 --> 00:15:22,880
+on an individual cpu core where you can
+
+440
+00:15:22,880 --> 00:15:25,440
+only see one chunk the gpu can see
+
+441
+00:15:25,440 --> 00:15:27,199
+many chunks at once
+
+442
+00:15:27,199 --> 00:15:29,440
+now whenever you're sieving a chunk just
+
+443
+00:15:29,440 --> 00:15:30,959
+like sort of we did here with the naive
+
+444
+00:15:30,959 --> 00:15:33,199
+c you need a bit array this bitter right
+
+445
+00:15:33,199 --> 00:15:34,639
+helps you keep track of which numbers
+
+446
+00:15:34,639 --> 00:15:36,480
+within the trunk are prime and which
+
+447
+00:15:36,480 --> 00:15:38,000
+ones are composite
+
+448
+00:15:38,000 --> 00:15:41,120
+now here's the thing because the gpu
+
+449
+00:15:41,120 --> 00:15:43,839
+kernel is doing thousands at a time
+
+450
+00:15:43,839 --> 00:15:45,600
+we don't necessarily want to have to
+
+451
+00:15:45,600 --> 00:15:48,240
+allocate a thousand different bit arrays
+
+452
+00:15:48,240 --> 00:15:50,320
+and pass each bit array pointer into the
+
+453
+00:15:50,320 --> 00:15:51,920
+kernel for it to use
+
+454
+00:15:51,920 --> 00:15:54,399
+instead what i want to do is allocate
+
+455
+00:15:54,399 --> 00:15:56,959
+one contiguous chunk of memory that has
+
+456
+00:15:56,959 --> 00:15:59,120
+enough space for all the thousands of
+
+457
+00:15:59,120 --> 00:16:00,800
+bit arrays that we need
+
+458
+00:16:00,800 --> 00:16:02,480
+and then just use that
+
+459
+00:16:02,480 --> 00:16:03,839
+that's because it's just more efficient
+
+460
+00:16:03,839 --> 00:16:06,560
+to do one contiguous allocation than to
+
+461
+00:16:06,560 --> 00:16:08,800
+have a thousand separate individual
+
+462
+00:16:08,800 --> 00:16:10,560
+isolated allocations
+
+463
+00:16:10,560 --> 00:16:12,560
+so the way this function works is it
+
+464
+00:16:12,560 --> 00:16:14,480
+takes a number of elements per bit array
+
+465
+00:16:14,480 --> 00:16:15,680
+and the number of bit arrays that you
+
+466
+00:16:15,680 --> 00:16:18,079
+want to allocate it'll tell you how many
+
+467
+00:16:18,079 --> 00:16:20,320
+bytes each bit array will take but then
+
+468
+00:16:20,320 --> 00:16:22,399
+it's actually going to allocate
+
+469
+00:16:22,399 --> 00:16:24,720
+that number times the number of bit
+
+470
+00:16:24,720 --> 00:16:26,320
+arrays that you want
+
+471
+00:16:26,320 --> 00:16:28,639
+so the gpu kernel can now take this one
+
+472
+00:16:28,639 --> 00:16:31,519
+contiguous block of memory and index an
+
+473
+00:16:31,519 --> 00:16:34,240
+individual section of it which is that
+
+474
+00:16:34,240 --> 00:16:37,120
+threads um sort of chunk that it needs
+
+475
+00:16:37,120 --> 00:16:39,519
+to use of the bit array
+
+476
+00:16:39,519 --> 00:16:41,920
+so that's that's what this function does
+
+477
+00:16:41,920 --> 00:16:44,399
+next up is the meat of the code this is
+
+478
+00:16:44,399 --> 00:16:46,399
+this is the fun part right this is the
+
+479
+00:16:46,399 --> 00:16:47,839
+gpu kernel
+
+480
+00:16:47,839 --> 00:16:49,839
+this is what helps us actually achieve
+
+481
+00:16:49,839 --> 00:16:51,600
+this you know wonderful performance of
+
+482
+00:16:51,600 --> 00:16:54,160
+calculating um the the billionth prime
+
+483
+00:16:54,160 --> 00:16:56,240
+and and so on
+
+484
+00:16:56,240 --> 00:16:58,079
+though this actually takes quite a few
+
+485
+00:16:58,079 --> 00:16:59,839
+inputs so let's take a moment to just go
+
+486
+00:16:59,839 --> 00:17:01,440
+through them
+
+487
+00:17:01,440 --> 00:17:03,040
+of course this function is also marked
+
+488
+00:17:03,040 --> 00:17:05,199
+as global this means that it is a cuda
+
+489
+00:17:05,199 --> 00:17:06,480
+kernel function this is something that
+
+490
+00:17:06,480 --> 00:17:08,959
+will run on the gpu all right so back to
+
+491
+00:17:08,959 --> 00:17:10,079
+the input
+
+492
+00:17:10,079 --> 00:17:12,480
+we start off by taking in is prime
+
+493
+00:17:12,480 --> 00:17:14,720
+arrays and is prime bytes
+
+494
+00:17:14,720 --> 00:17:16,319
+this is a
+
+495
+00:17:16,319 --> 00:17:19,600
+the contiguous bit arrays uh that we've
+
+496
+00:17:19,600 --> 00:17:21,679
+allocated using this previous function
+
+497
+00:17:21,679 --> 00:17:24,079
+um and these these bit arrays are going
+
+498
+00:17:24,079 --> 00:17:25,760
+to be used by each chunk to keep track
+
+499
+00:17:25,760 --> 00:17:28,000
+of the primes and the composites and is
+
+500
+00:17:28,000 --> 00:17:31,679
+prime bytes is how many bytes are used
+
+501
+00:17:31,679 --> 00:17:34,559
+by each bit array right so not the total
+
+502
+00:17:34,559 --> 00:17:37,360
+number of bytes in this contiguous block
+
+503
+00:17:37,360 --> 00:17:40,559
+rather how many bytes per individual sub
+
+504
+00:17:40,559 --> 00:17:43,200
+bit array within this contiguous block
+
+505
+00:17:43,200 --> 00:17:46,559
+now default prime count is basically
+
+506
+00:17:46,559 --> 00:17:48,320
+in each chunk because all the chunks are
+
+507
+00:17:48,320 --> 00:17:51,679
+the same sizes uh how many primes do we
+
+508
+00:17:51,679 --> 00:17:53,840
+expect by default right so uh for
+
+509
+00:17:53,840 --> 00:17:55,919
+example if you've got say you know
+
+510
+00:17:55,919 --> 00:17:58,880
+arbitrary number a chunk size of 10 um
+
+511
+00:17:58,880 --> 00:18:01,200
+then we know for example that all of the
+
+512
+00:18:01,200 --> 00:18:04,080
+even numbers within this chunk cannot be
+
+513
+00:18:04,080 --> 00:18:07,440
+prime so by default our default uh prime
+
+514
+00:18:07,440 --> 00:18:09,760
+count is actually five it's ten divided
+
+515
+00:18:09,760 --> 00:18:12,000
+by two uh because we know all the evens
+
+516
+00:18:12,000 --> 00:18:15,360
+cannot be prime uh five is our maximum
+
+517
+00:18:15,360 --> 00:18:18,559
+number of primes uh within the chunk
+
+518
+00:18:18,559 --> 00:18:20,640
+and what we do then in in the actual
+
+519
+00:18:20,640 --> 00:18:22,400
+function is we filter it down because we
+
+520
+00:18:22,400 --> 00:18:24,080
+know that not all the odd numbers are
+
+521
+00:18:24,080 --> 00:18:26,160
+necessarily prime we go ahead and filter
+
+522
+00:18:26,160 --> 00:18:28,480
+it down um to just the ones that
+
+523
+00:18:28,480 --> 00:18:30,160
+actually are prime
+
+524
+00:18:30,160 --> 00:18:32,000
+but this is just by default sort of our
+
+525
+00:18:32,000 --> 00:18:34,320
+maximum our upper bound of how many
+
+526
+00:18:34,320 --> 00:18:37,600
+primes there can be in each chunk
+
+527
+00:18:37,600 --> 00:18:40,400
+there are other ways to optimize this
+
+528
+00:18:40,400 --> 00:18:42,240
+and you can sort of like figure out per
+
+529
+00:18:42,240 --> 00:18:44,880
+chunk a better value um in order to
+
+530
+00:18:44,880 --> 00:18:47,280
+reduce the memory usage but we sort of
+
+531
+00:18:47,280 --> 00:18:49,679
+skip that um and this is just upper
+
+532
+00:18:49,679 --> 00:18:52,400
+bound uh based off of simply uh the
+
+533
+00:18:52,400 --> 00:18:55,039
+chunk size divided by two
+
+534
+00:18:55,039 --> 00:18:58,160
+um then of course we also have the array
+
+535
+00:18:58,160 --> 00:19:01,120
+where we want the gpu kernel to store
+
+536
+00:19:01,120 --> 00:19:04,320
+how many primes it found per chunk so if
+
+537
+00:19:04,320 --> 00:19:06,640
+the if the gpu is processing say you
+
+538
+00:19:06,640 --> 00:19:08,480
+know again arbitrary number a thousand
+
+539
+00:19:08,480 --> 00:19:10,480
+chunks then this array will have a
+
+540
+00:19:10,480 --> 00:19:12,080
+thousand elements
+
+541
+00:19:12,080 --> 00:19:15,200
+and each element will be per chunk how
+
+542
+00:19:15,200 --> 00:19:18,320
+many primes were found within the chunk
+
+543
+00:19:18,320 --> 00:19:20,720
+so just for context the gpu kernel does
+
+544
+00:19:20,720 --> 00:19:22,640
+not actually return the prime numbers
+
+545
+00:19:22,640 --> 00:19:25,840
+that it found rather it will only return
+
+546
+00:19:25,840 --> 00:19:28,880
+per chunk how many primes it found this
+
+547
+00:19:28,880 --> 00:19:31,600
+is useful because then on the cpu end of
+
+548
+00:19:31,600 --> 00:19:33,919
+things we can go through each chunk keep
+
+549
+00:19:33,919 --> 00:19:36,320
+keep keep track of how many primes were
+
+550
+00:19:36,320 --> 00:19:38,559
+counted and right as we see the nth
+
+551
+00:19:38,559 --> 00:19:40,000
+prime number that we're looking for say
+
+552
+00:19:40,000 --> 00:19:41,520
+we're looking for the millions prime
+
+553
+00:19:41,520 --> 00:19:43,200
+right as we see hey this chunk brought
+
+554
+00:19:43,200 --> 00:19:45,280
+us to a millionth prime
+
+555
+00:19:45,280 --> 00:19:47,200
+then we can go ahead and recalculate
+
+556
+00:19:47,200 --> 00:19:49,280
+that chunk on the cpu and figure out
+
+557
+00:19:49,280 --> 00:19:51,600
+which number was the millionth prime
+
+558
+00:19:51,600 --> 00:19:53,360
+this is a lot more efficient than
+
+559
+00:19:53,360 --> 00:19:55,280
+actually sending all of the prime
+
+560
+00:19:55,280 --> 00:19:58,400
+numbers from the gpu to the cpu because
+
+561
+00:19:58,400 --> 00:19:59,840
+of the way that the gpu works and i'll
+
+562
+00:19:59,840 --> 00:20:02,080
+explain that in just a moment
+
+563
+00:20:02,080 --> 00:20:04,080
+next of course is our seed primes and
+
+564
+00:20:04,080 --> 00:20:05,679
+seed prime count
+
+565
+00:20:05,679 --> 00:20:07,840
+c primes is just of course the uh the
+
+566
+00:20:07,840 --> 00:20:10,640
+primes from two to the square root of
+
+567
+00:20:10,640 --> 00:20:12,240
+the upper bound that we're that we're
+
+568
+00:20:12,240 --> 00:20:13,840
+seeing until
+
+569
+00:20:13,840 --> 00:20:15,440
+and this is just how many of those that
+
+570
+00:20:15,440 --> 00:20:17,919
+we found and then finally we have our
+
+571
+00:20:17,919 --> 00:20:20,480
+chunk size which is of course how many
+
+572
+00:20:20,480 --> 00:20:22,960
+like elements we we're dealing with per
+
+573
+00:20:22,960 --> 00:20:25,840
+chunk um and then chunk count which is
+
+574
+00:20:25,840 --> 00:20:27,280
+how many chunks we are dealing with in
+
+575
+00:20:27,280 --> 00:20:30,559
+total and also our chunk offset
+
+576
+00:20:30,559 --> 00:20:32,240
+what is the chunk offset you may ask
+
+577
+00:20:32,240 --> 00:20:34,640
+well basically once again this is
+
+578
+00:20:34,640 --> 00:20:36,960
+multi-gpu code right we are supporting
+
+579
+00:20:36,960 --> 00:20:40,000
+using uh in this case two gpus
+
+580
+00:20:40,000 --> 00:20:42,400
+now the problem with supporting multiple
+
+581
+00:20:42,400 --> 00:20:44,159
+gpus like this
+
+582
+00:20:44,159 --> 00:20:45,919
+is that
+
+583
+00:20:45,919 --> 00:20:47,520
+both of them need to somehow distribute
+
+584
+00:20:47,520 --> 00:20:48,799
+work and make sure that they're not
+
+585
+00:20:48,799 --> 00:20:51,440
+doing the same thing over and over again
+
+586
+00:20:51,440 --> 00:20:53,600
+the way we do this is by evenly
+
+587
+00:20:53,600 --> 00:20:55,600
+distributing the workload
+
+588
+00:20:55,600 --> 00:20:57,760
+let's just say once again we have 10
+
+589
+00:20:57,760 --> 00:21:00,159
+chunks that we need to process
+
+590
+00:21:00,159 --> 00:21:03,200
+what we do is we say gpu one will
+
+591
+00:21:03,200 --> 00:21:05,600
+process five chunks gpu two will process
+
+592
+00:21:05,600 --> 00:21:07,600
+another five chunks
+
+593
+00:21:07,600 --> 00:21:11,440
+however if gpus one and gpu two both
+
+594
+00:21:11,440 --> 00:21:13,679
+start at chunk zero and chunk five
+
+595
+00:21:13,679 --> 00:21:14,559
+chunks
+
+596
+00:21:14,559 --> 00:21:16,960
+both of them will end up processing
+
+597
+00:21:16,960 --> 00:21:19,840
+chunks 0 1 2 3 and 4.
+
+598
+00:21:19,840 --> 00:21:21,840
+that's a problem because now every chunk
+
+599
+00:21:21,840 --> 00:21:23,600
+has been duplicated and the next set of
+
+600
+00:21:23,600 --> 00:21:25,919
+chunks just hasn't been worked on
+
+601
+00:21:25,919 --> 00:21:29,120
+so what we do is for gpu 1 we set chunk
+
+602
+00:21:29,120 --> 00:21:32,240
+offset to 0. that means the gpu 1 will
+
+603
+00:21:32,240 --> 00:21:35,679
+process trunks 0 1 2 3 and 4.
+
+604
+00:21:35,679 --> 00:21:38,960
+however for gpu 2 we set chunk offset to
+
+605
+00:21:38,960 --> 00:21:42,080
+5. so when it wants to process chunk 0
+
+606
+00:21:42,080 --> 00:21:44,000
+it's actually going to add chunk offset
+
+607
+00:21:44,000 --> 00:21:46,720
+and end up processing chunk 5.
+
+608
+00:21:46,720 --> 00:21:49,039
+this makes it so that it's effectively
+
+609
+00:21:49,039 --> 00:21:50,480
+skipping all of the work that we know
+
+610
+00:21:50,480 --> 00:21:53,200
+the first gpu will get done anyway so
+
+611
+00:21:53,200 --> 00:21:56,840
+that's our offset for the gpu
+
+612
+00:21:56,840 --> 00:21:59,919
+kernel then within the kernel uh that
+
+613
+00:21:59,919 --> 00:22:01,600
+was just the input but now we get to the
+
+614
+00:22:01,600 --> 00:22:04,799
+fun part uh within the kernel uh we have
+
+615
+00:22:04,799 --> 00:22:06,880
+to do a little bit of ceremony in the
+
+616
+00:22:06,880 --> 00:22:09,280
+beginning to to get ready right so we
+
+617
+00:22:09,280 --> 00:22:12,000
+calculate our index so of course the way
+
+618
+00:22:12,000 --> 00:22:14,320
+cuda will invoke a kernel
+
+619
+00:22:14,320 --> 00:22:16,960
+is through blocks and threads using the
+
+620
+00:22:16,960 --> 00:22:19,280
+block dimensions and indexes
+
+621
+00:22:19,280 --> 00:22:20,480
+indices
+
+622
+00:22:20,480 --> 00:22:22,880
+and the threat indices we calculate the
+
+623
+00:22:22,880 --> 00:22:25,520
+index of this specific invocation and if
+
+624
+00:22:25,520 --> 00:22:27,520
+it somehow is beyond the chunk count for
+
+625
+00:22:27,520 --> 00:22:30,240
+example we inv we invoked with
+
+626
+00:22:30,240 --> 00:22:32,000
+more threads and blocks than we actually
+
+627
+00:22:32,000 --> 00:22:34,159
+had work to do then this specific
+
+628
+00:22:34,159 --> 00:22:37,039
+invocation of the kernel will return um
+
+629
+00:22:37,039 --> 00:22:38,960
+if if not though if this is a valid
+
+630
+00:22:38,960 --> 00:22:41,440
+invocation then we will go ahead and add
+
+631
+00:22:41,440 --> 00:22:43,120
+that index to the chunk offset and we
+
+632
+00:22:43,120 --> 00:22:45,919
+will use this um as
+
+633
+00:22:45,919 --> 00:22:48,000
+effectively like which index in the
+
+634
+00:22:48,000 --> 00:22:50,799
+global array of work
+
+635
+00:22:50,799 --> 00:22:52,960
+we are we are currently on
+
+636
+00:22:52,960 --> 00:22:55,600
+then we go ahead and get our bit array
+
+637
+00:22:55,600 --> 00:22:58,320
+and we do this by indexing our global
+
+638
+00:22:58,320 --> 00:23:01,280
+set of bit arrays and we add the index
+
+639
+00:23:01,280 --> 00:23:03,760
+that we're on times however many bytes
+
+640
+00:23:03,760 --> 00:23:05,440
+each bit array takes right so this will
+
+641
+00:23:05,440 --> 00:23:08,480
+figure out our memory offset inside this
+
+642
+00:23:08,480 --> 00:23:12,000
+global um contiguous block of bit arrays
+
+643
+00:23:12,000 --> 00:23:13,520
+and then this will give us sort of just
+
+644
+00:23:13,520 --> 00:23:15,600
+our pointer to our bit array that we can
+
+645
+00:23:15,600 --> 00:23:17,360
+safely use and make sure we're not
+
+646
+00:23:17,360 --> 00:23:18,799
+stepping on the toes of any other
+
+647
+00:23:18,799 --> 00:23:21,520
+indications of this kernel
+
+648
+00:23:21,520 --> 00:23:24,159
+um beyond that is some pretty
+
+649
+00:23:24,159 --> 00:23:26,720
+fascinating sieving logic that is
+
+650
+00:23:26,720 --> 00:23:28,799
+as far as i could get it to be
+
+651
+00:23:28,799 --> 00:23:30,799
+branchless because remember as much as
+
+652
+00:23:30,799 --> 00:23:32,720
+you want as much as possible at least
+
+653
+00:23:32,720 --> 00:23:34,960
+you want to make it that gpu code is
+
+654
+00:23:34,960 --> 00:23:36,720
+branchless you want to make it so
+
+655
+00:23:36,720 --> 00:23:38,320
+there's no if statements no branching
+
+656
+00:23:38,320 --> 00:23:39,679
+because
+
+657
+00:23:39,679 --> 00:23:41,600
+gpus are a lot simpler than cpus which
+
+658
+00:23:41,600 --> 00:23:43,440
+is why you can run thousands of these
+
+659
+00:23:43,440 --> 00:23:45,840
+threads at once so if any one thread
+
+660
+00:23:45,840 --> 00:23:46,960
+branches
+
+661
+00:23:46,960 --> 00:23:49,120
+all of your threads actually need to go
+
+662
+00:23:49,120 --> 00:23:51,280
+through the different branches that were
+
+663
+00:23:51,280 --> 00:23:53,200
+that were selected so it makes your code
+
+664
+00:23:53,200 --> 00:23:55,039
+slower basically
+
+665
+00:23:55,039 --> 00:23:57,679
+for example over here what i'm doing
+
+666
+00:23:57,679 --> 00:24:00,720
+is i'm calculating a low and a high
+
+667
+00:24:00,720 --> 00:24:01,600
+sort of
+
+668
+00:24:01,600 --> 00:24:04,080
+lower and an upper bound for the numbers
+
+669
+00:24:04,080 --> 00:24:05,760
+that we're actually dealing with in this
+
+670
+00:24:05,760 --> 00:24:06,720
+chunk
+
+671
+00:24:06,720 --> 00:24:08,000
+and
+
+672
+00:24:08,000 --> 00:24:10,159
+from there i want to skip any even
+
+673
+00:24:10,159 --> 00:24:12,799
+numbers so for example if low is an even
+
+674
+00:24:12,799 --> 00:24:14,000
+number
+
+675
+00:24:14,000 --> 00:24:16,640
+then i want to increment it uh to make
+
+676
+00:24:16,640 --> 00:24:18,559
+it odd and if high is an even number i
+
+677
+00:24:18,559 --> 00:24:20,240
+want to decrement it to make it odd
+
+678
+00:24:20,240 --> 00:24:21,440
+because again we don't want to waste our
+
+679
+00:24:21,440 --> 00:24:22,960
+time dealing with even numbers but
+
+680
+00:24:22,960 --> 00:24:24,480
+instead of doing an if statement where i
+
+681
+00:24:24,480 --> 00:24:26,720
+do a modulo and make sure that it's not
+
+682
+00:24:26,720 --> 00:24:29,039
+uh make sure that it's not
+
+683
+00:24:29,039 --> 00:24:32,080
+even instead i do a branchless mechanism
+
+684
+00:24:32,080 --> 00:24:33,840
+of doing the same thing which is
+
+685
+00:24:33,840 --> 00:24:36,000
+basically a bit wise and against the
+
+686
+00:24:36,000 --> 00:24:39,360
+number one to figure out if it is odd um
+
+687
+00:24:39,360 --> 00:24:41,440
+and if it's we just invert that and then
+
+688
+00:24:41,440 --> 00:24:43,200
+add that to low so it has effectively
+
+689
+00:24:43,200 --> 00:24:44,400
+the same
+
+690
+00:24:44,400 --> 00:24:46,480
+consequence consequence
+
+691
+00:24:46,480 --> 00:24:48,880
+of doing an if statement and an addition
+
+692
+00:24:48,880 --> 00:24:51,440
+uh however we don't actually need the if
+
+693
+00:24:51,440 --> 00:24:52,960
+statement
+
+694
+00:24:52,960 --> 00:24:54,799
+i then go ahead and reset the memory
+
+695
+00:24:54,799 --> 00:24:56,559
+within the actual bit array so that we
+
+696
+00:24:56,559 --> 00:24:58,720
+can we have a fresh slate
+
+697
+00:24:58,720 --> 00:25:01,039
+uh clean slate uh the reason this is
+
+698
+00:25:01,039 --> 00:25:02,320
+important is because there may have been
+
+699
+00:25:02,320 --> 00:25:04,320
+a previous invocation of the kernel uh
+
+700
+00:25:04,320 --> 00:25:06,159
+that has already used the bit array so
+
+701
+00:25:06,159 --> 00:25:08,080
+we just reset it completely
+
+702
+00:25:08,080 --> 00:25:10,080
+and when we actually do the allocation
+
+703
+00:25:10,080 --> 00:25:12,320
+of course over here there's no guarantee
+
+704
+00:25:12,320 --> 00:25:14,960
+of what was in the memory previously
+
+705
+00:25:14,960 --> 00:25:17,360
+and so this is just a sanity check just
+
+706
+00:25:17,360 --> 00:25:18,960
+making sure that everything is nice and
+
+707
+00:25:18,960 --> 00:25:20,640
+clean
+
+708
+00:25:20,640 --> 00:25:22,159
+after that we have the real seating
+
+709
+00:25:22,159 --> 00:25:24,720
+logic so we start off by once again sort
+
+710
+00:25:24,720 --> 00:25:26,720
+of like the naive sieve having a count
+
+711
+00:25:26,720 --> 00:25:29,120
+of how many primes we have so far which
+
+712
+00:25:29,120 --> 00:25:31,600
+in this particular case is just our
+
+713
+00:25:31,600 --> 00:25:33,760
+upper bound that we already specified
+
+714
+00:25:33,760 --> 00:25:36,400
+um and then we loop through all the seed
+
+715
+00:25:36,400 --> 00:25:38,240
+primes we do not start at zero we start
+
+716
+00:25:38,240 --> 00:25:40,240
+at one because the first seed prime
+
+717
+00:25:40,240 --> 00:25:42,000
+which would be at index zero
+
+718
+00:25:42,000 --> 00:25:44,960
+is the number two and once again all the
+
+719
+00:25:44,960 --> 00:25:46,640
+multiples of two
+
+720
+00:25:46,640 --> 00:25:49,200
+i.e the uh the even numbers we are
+
+721
+00:25:49,200 --> 00:25:51,600
+already skipping so we actually don't
+
+722
+00:25:51,600 --> 00:25:53,840
+even need to process that c prime we
+
+723
+00:25:53,840 --> 00:25:55,760
+skip it
+
+724
+00:25:55,760 --> 00:25:58,000
+what we do then is a little bit of funny
+
+725
+00:25:58,000 --> 00:26:01,440
+logic to determine within this chunk
+
+726
+00:26:01,440 --> 00:26:03,760
+what is the lowest multiple what is the
+
+727
+00:26:03,760 --> 00:26:08,000
+first multiple of the c prime
+
+728
+00:26:08,000 --> 00:26:10,400
+that we have uh that that we're
+
+729
+00:26:10,400 --> 00:26:11,919
+currently processing so for example for
+
+730
+00:26:11,919 --> 00:26:13,840
+the number three within the chunk that
+
+731
+00:26:13,840 --> 00:26:15,600
+we're currently processing what is the
+
+732
+00:26:15,600 --> 00:26:18,960
+first multiple of three
+
+733
+00:26:18,960 --> 00:26:21,440
+so we go ahead and run uh this this this
+
+734
+00:26:21,440 --> 00:26:24,400
+this math to figure that out and if
+
+735
+00:26:24,400 --> 00:26:26,720
+for some reason our calculation brought
+
+736
+00:26:26,720 --> 00:26:29,120
+us to a value that is lower than our
+
+737
+00:26:29,120 --> 00:26:30,880
+lower bound
+
+738
+00:26:30,880 --> 00:26:32,880
+then we just simply go ahead and add
+
+739
+00:26:32,880 --> 00:26:34,799
+that seed prime again that should bring
+
+740
+00:26:34,799 --> 00:26:38,480
+us into the range of low to high once
+
+741
+00:26:38,480 --> 00:26:40,159
+again this is a branchless way of
+
+742
+00:26:40,159 --> 00:26:43,200
+basically saying if low multiple less
+
+743
+00:26:43,200 --> 00:26:45,840
+than low low multiple plus equals c
+
+744
+00:26:45,840 --> 00:26:47,279
+primes i
+
+745
+00:26:47,279 --> 00:26:50,880
+except this doesn't use an if statement
+
+746
+00:26:50,880 --> 00:26:53,360
+we then go ahead and run our sieving
+
+747
+00:26:53,360 --> 00:26:55,440
+loop similar to what we had in the naive
+
+748
+00:26:55,440 --> 00:26:56,480
+sieve
+
+749
+00:26:56,480 --> 00:26:58,559
+that will help us mark all of the
+
+750
+00:26:58,559 --> 00:26:59,919
+multiples
+
+751
+00:26:59,919 --> 00:27:03,120
+of this seed prime as composite
+
+752
+00:27:03,120 --> 00:27:05,039
+even though we may already consider them
+
+753
+00:27:05,039 --> 00:27:07,520
+prime so what we do here
+
+754
+00:27:07,520 --> 00:27:10,640
+is we take our low multiple and if this
+
+755
+00:27:10,640 --> 00:27:13,919
+low multiple is an even number we add c
+
+756
+00:27:13,919 --> 00:27:17,760
+primes again right so if the multiple of
+
+757
+00:27:17,760 --> 00:27:19,039
+the c prime that we're looking at
+
+758
+00:27:19,039 --> 00:27:21,279
+currently happens to be an even number
+
+759
+00:27:21,279 --> 00:27:23,440
+we add the seed prime again which will
+
+760
+00:27:23,440 --> 00:27:25,200
+guarantee that we are now looking at an
+
+761
+00:27:25,200 --> 00:27:26,559
+odd number because if you take an even
+
+762
+00:27:26,559 --> 00:27:28,559
+number and you add an odd number you end
+
+763
+00:27:28,559 --> 00:27:31,919
+up with an odd number
+
+764
+00:27:32,159 --> 00:27:35,039
+after that we loop while this value is
+
+765
+00:27:35,039 --> 00:27:38,080
+less than our upper bound uh and again i
+
+766
+00:27:38,080 --> 00:27:39,520
+really don't like doing this because a
+
+767
+00:27:39,520 --> 00:27:40,880
+while loop of course means that there's
+
+768
+00:27:40,880 --> 00:27:43,039
+branching but i couldn't really find a
+
+769
+00:27:43,039 --> 00:27:44,720
+way to avoid this loop there are
+
+770
+00:27:44,720 --> 00:27:46,960
+definitely ways um to do so but this is
+
+771
+00:27:46,960 --> 00:27:48,559
+this is the code that i came up with
+
+772
+00:27:48,559 --> 00:27:50,400
+which is significantly faster than my
+
+773
+00:27:50,400 --> 00:27:53,760
+cpu code so it's still a a win there but
+
+774
+00:27:53,760 --> 00:27:55,600
+i'm looking forward to optimizing this
+
+775
+00:27:55,600 --> 00:27:58,240
+out in the future potentially
+
+776
+00:27:58,240 --> 00:28:00,480
+and then we go ahead and calculate um
+
+777
+00:28:00,480 --> 00:28:02,799
+within the chunk the index of this
+
+778
+00:28:02,799 --> 00:28:05,679
+multiple um of course where in the bit
+
+779
+00:28:05,679 --> 00:28:07,360
+array the byte and the bit that this
+
+780
+00:28:07,360 --> 00:28:09,200
+would actually be located we want to
+
+781
+00:28:09,200 --> 00:28:12,159
+figure out if it's already been set um
+
+782
+00:28:12,159 --> 00:28:14,720
+and if it has been
+
+783
+00:28:14,720 --> 00:28:18,159
+then we update uh the prime count uh
+
+784
+00:28:18,159 --> 00:28:19,120
+because
+
+785
+00:28:19,120 --> 00:28:21,279
+or in this case if it if it was already
+
+786
+00:28:21,279 --> 00:28:24,480
+set as prime uh then we want to
+
+787
+00:28:24,480 --> 00:28:26,240
+reduce our prime count because now we
+
+788
+00:28:26,240 --> 00:28:28,960
+know uh that this is composite uh and so
+
+789
+00:28:28,960 --> 00:28:31,120
+we can we can reduce that and then we go
+
+790
+00:28:31,120 --> 00:28:32,799
+ahead and uh
+
+791
+00:28:32,799 --> 00:28:36,320
+figure out a new value uh for the byte
+
+792
+00:28:36,320 --> 00:28:38,320
+inside the bit array containing this
+
+793
+00:28:38,320 --> 00:28:41,360
+value uh if it needs to be updated and
+
+794
+00:28:41,360 --> 00:28:43,440
+then we use this branchless logic to
+
+795
+00:28:43,440 --> 00:28:45,600
+determine what the new value should be
+
+796
+00:28:45,600 --> 00:28:49,120
+so if it was already set as prime
+
+797
+00:28:49,120 --> 00:28:51,039
+then we want to use this potential new
+
+798
+00:28:51,039 --> 00:28:54,080
+value if it was not set as prime then we
+
+799
+00:28:54,080 --> 00:28:56,559
+want to continue to use the old value
+
+800
+00:28:56,559 --> 00:28:58,799
+that was already in the bit array this
+
+801
+00:28:58,799 --> 00:29:01,279
+is the branchless logic we use for that
+
+802
+00:29:01,279 --> 00:29:03,760
+then we go ahead and add our c prime
+
+803
+00:29:03,760 --> 00:29:06,559
+multiplied by 2 to j why are we
+
+804
+00:29:06,559 --> 00:29:08,640
+multiplying by 2 well think about it we
+
+805
+00:29:08,640 --> 00:29:10,640
+know that j is an odd number we know
+
+806
+00:29:10,640 --> 00:29:12,080
+that this c prime is an odd number
+
+807
+00:29:12,080 --> 00:29:14,159
+because it's a prime odd plus odd that
+
+808
+00:29:14,159 --> 00:29:15,840
+means even but we want to skip all the
+
+809
+00:29:15,840 --> 00:29:19,600
+evens so we multiply by 2 to make this
+
+810
+00:29:19,600 --> 00:29:21,520
+an even number meaning that when we add
+
+811
+00:29:21,520 --> 00:29:23,600
+it to our odd number we get an odd
+
+812
+00:29:23,600 --> 00:29:27,279
+number so we skip the multiple that we
+
+813
+00:29:27,279 --> 00:29:29,679
+know would have been an even number so
+
+814
+00:29:29,679 --> 00:29:30,559
+that's just a little bit of an
+
+815
+00:29:30,559 --> 00:29:32,000
+optimization meaning that we only need
+
+816
+00:29:32,000 --> 00:29:35,279
+to deal with half of the primes or or
+
+817
+00:29:35,279 --> 00:29:37,600
+really values in the chunk at all
+
+818
+00:29:37,600 --> 00:29:39,200
+then we would have had to if we weren't
+
+819
+00:29:39,200 --> 00:29:40,960
+doing so
+
+820
+00:29:40,960 --> 00:29:43,600
+then when all is finally said and done
+
+821
+00:29:43,600 --> 00:29:45,600
+we go ahead and update the prime count
+
+822
+00:29:45,600 --> 00:29:48,799
+in the prime counts array
+
+823
+00:29:48,799 --> 00:29:51,120
+and there we go that's the gpu kernel
+
+824
+00:29:51,120 --> 00:29:52,720
+that it might have looked a little
+
+825
+00:29:52,720 --> 00:29:54,799
+intimidating but really when you break
+
+826
+00:29:54,799 --> 00:29:58,240
+it down the logic is quite i wouldn't
+
+827
+00:29:58,240 --> 00:29:59,760
+say straightforward
+
+828
+00:29:59,760 --> 00:30:01,760
+but it makes sense you know according to
+
+829
+00:30:01,760 --> 00:30:03,360
+according to the logic that i've already
+
+830
+00:30:03,360 --> 00:30:05,679
+described previously
+
+831
+00:30:05,679 --> 00:30:07,520
+then i just have another function this
+
+832
+00:30:07,520 --> 00:30:09,919
+is effectively the same thing as what we
+
+833
+00:30:09,919 --> 00:30:12,320
+just covered except it's not a gpu
+
+834
+00:30:12,320 --> 00:30:15,760
+kernel it is a cpu function
+
+835
+00:30:15,760 --> 00:30:18,080
+that just you know works normally on the
+
+836
+00:30:18,080 --> 00:30:19,279
+cpu
+
+837
+00:30:19,279 --> 00:30:21,279
+we use this because when we figure out
+
+838
+00:30:21,279 --> 00:30:23,360
+from the gpu
+
+839
+00:30:23,360 --> 00:30:25,520
+how many primes there are in each chunk
+
+840
+00:30:25,520 --> 00:30:27,679
+then we need to receive the chunk that
+
+841
+00:30:27,679 --> 00:30:29,919
+contains the nth prime and we want to do
+
+842
+00:30:29,919 --> 00:30:31,919
+that on the cpu because it's wasteful to
+
+843
+00:30:31,919 --> 00:30:34,240
+invoke the entire gpu kernel just for a
+
+844
+00:30:34,240 --> 00:30:35,679
+single chunk so we want to do that on
+
+845
+00:30:35,679 --> 00:30:38,159
+the cpu
+
+846
+00:30:38,159 --> 00:30:41,440
+next we have our logic that helps us
+
+847
+00:30:41,440 --> 00:30:45,440
+to distribute work across gpus so we
+
+848
+00:30:45,440 --> 00:30:46,880
+have this structure over here that i
+
+849
+00:30:46,880 --> 00:30:48,480
+defined
+
+850
+00:30:48,480 --> 00:30:51,600
+which contains information for a gpu
+
+851
+00:30:51,600 --> 00:30:54,159
+worker thread so uh effectively for each
+
+852
+00:30:54,159 --> 00:30:57,520
+gpu i spawn a new cpu worker thread to
+
+853
+00:30:57,520 --> 00:31:00,320
+handle that gpu in particular uh the
+
+854
+00:31:00,320 --> 00:31:02,799
+input to any given worker is of course
+
+855
+00:31:02,799 --> 00:31:05,279
+the gpu index that it must deal with uh
+
+856
+00:31:05,279 --> 00:31:07,039
+the size of the chunks that it will deal
+
+857
+00:31:07,039 --> 00:31:09,360
+with how many chunks this worker needs
+
+858
+00:31:09,360 --> 00:31:11,440
+to deal with the chunk offset which is
+
+859
+00:31:11,440 --> 00:31:13,360
+what i described previously
+
+860
+00:31:13,360 --> 00:31:15,120
+and the chunk prime count which is our
+
+861
+00:31:15,120 --> 00:31:16,960
+maximum sort of upper bound of how many
+
+862
+00:31:16,960 --> 00:31:18,960
+primes are possible per chunk
+
+863
+00:31:18,960 --> 00:31:20,720
+we also need to be past the seed primes
+
+864
+00:31:20,720 --> 00:31:22,880
+and how many there are as well as the
+
+865
+00:31:22,880 --> 00:31:24,559
+output array which is where we are
+
+866
+00:31:24,559 --> 00:31:27,520
+expected to deliver back into sort of
+
+867
+00:31:27,520 --> 00:31:29,760
+this array how many primes were found
+
+868
+00:31:29,760 --> 00:31:31,600
+per chunk once again if there's
+
+869
+00:31:31,600 --> 00:31:33,039
+five chunks then there's going to be
+
+870
+00:31:33,039 --> 00:31:35,120
+five values in this array each one will
+
+871
+00:31:35,120 --> 00:31:37,919
+be expected to set to how many primes
+
+872
+00:31:37,919 --> 00:31:40,559
+are within the respective chunks once
+
+873
+00:31:40,559 --> 00:31:43,519
+the gpu kernel's done being invoked
+
+874
+00:31:43,519 --> 00:31:44,720
+and then there's of course also an
+
+875
+00:31:44,720 --> 00:31:46,720
+atomic variable this is shared across
+
+876
+00:31:46,720 --> 00:31:48,720
+the gpu workers this is actually one
+
+877
+00:31:48,720 --> 00:31:51,200
+common atomic variable that we pass to
+
+878
+00:31:51,200 --> 00:31:52,559
+all the workers
+
+879
+00:31:52,559 --> 00:31:54,159
+and this is how many chunks have been
+
+880
+00:31:54,159 --> 00:31:55,679
+processed so far so if you need to
+
+881
+00:31:55,679 --> 00:31:57,039
+process
+
+882
+00:31:57,039 --> 00:31:59,039
+a million chunks
+
+883
+00:31:59,039 --> 00:32:01,039
+then
+
+884
+00:32:01,039 --> 00:32:02,880
+as as the trunks are being processed we
+
+885
+00:32:02,880 --> 00:32:04,640
+update this atomic variable from all the
+
+886
+00:32:04,640 --> 00:32:06,480
+different threads so the main thread can
+
+887
+00:32:06,480 --> 00:32:08,559
+print out a log of how many chunks have
+
+888
+00:32:08,559 --> 00:32:11,760
+been processed so far
+
+889
+00:32:11,919 --> 00:32:14,480
+once we have that structure defined we
+
+890
+00:32:14,480 --> 00:32:17,440
+can finally go ahead and run our worker
+
+891
+00:32:17,440 --> 00:32:19,600
+function our worker function is simply
+
+892
+00:32:19,600 --> 00:32:21,360
+responsible
+
+893
+00:32:21,360 --> 00:32:23,760
+for handling the invocation of the gpu
+
+894
+00:32:23,760 --> 00:32:25,440
+kernel making sure it gets all of its
+
+895
+00:32:25,440 --> 00:32:27,440
+input correctly making sure it's fed
+
+896
+00:32:27,440 --> 00:32:28,799
+taking a look at what it says and
+
+897
+00:32:28,799 --> 00:32:31,760
+delivering that output back to the main
+
+898
+00:32:31,760 --> 00:32:33,519
+thread so let's go ahead and take a look
+
+899
+00:32:33,519 --> 00:32:34,799
+at how it works
+
+900
+00:32:34,799 --> 00:32:36,799
+so we have this function called process
+
+901
+00:32:36,799 --> 00:32:39,679
+trunks on gpu it takes uh the worker
+
+902
+00:32:39,679 --> 00:32:41,760
+input and returns a void pointer this
+
+903
+00:32:41,760 --> 00:32:43,919
+just we just need to conform
+
+904
+00:32:43,919 --> 00:32:46,640
+to this uh particular sort of function
+
+905
+00:32:46,640 --> 00:32:48,880
+signature because uh this will be
+
+906
+00:32:48,880 --> 00:32:50,799
+invoked via p thread
+
+907
+00:32:50,799 --> 00:32:54,480
+and p thread expects us uh to uh to have
+
+908
+00:32:54,480 --> 00:32:56,640
+this specific function signature so we
+
+909
+00:32:56,640 --> 00:32:58,640
+go ahead and cast the void pointer input
+
+910
+00:32:58,640 --> 00:33:01,519
+into gpu worker pointer uh gpu worker
+
+911
+00:33:01,519 --> 00:33:03,760
+input pointer
+
+912
+00:33:03,760 --> 00:33:05,440
+and then we go ahead and start real
+
+913
+00:33:05,440 --> 00:33:08,000
+logic we first call into the cuda api to
+
+914
+00:33:08,000 --> 00:33:10,000
+set the device to the correct gpu index
+
+915
+00:33:10,000 --> 00:33:12,080
+that we're expected to work on
+
+916
+00:33:12,080 --> 00:33:14,000
+and then we start allocating some memory
+
+917
+00:33:14,000 --> 00:33:15,200
+so
+
+918
+00:33:15,200 --> 00:33:17,120
+the first thing we do is figure out how
+
+919
+00:33:17,120 --> 00:33:18,720
+many chunks the kernel is actually going
+
+920
+00:33:18,720 --> 00:33:20,480
+to deal with and this effectively boils
+
+921
+00:33:20,480 --> 00:33:21,919
+down to how many threads and how many
+
+922
+00:33:21,919 --> 00:33:23,600
+blocks we're invoking based off of the
+
+923
+00:33:23,600 --> 00:33:26,799
+um defines that i had set up ah in in
+
+924
+00:33:26,799 --> 00:33:27,840
+the code
+
+925
+00:33:27,840 --> 00:33:30,320
+um we then also go ahead and calculate
+
+926
+00:33:30,320 --> 00:33:32,799
+how many invocations we're going to need
+
+927
+00:33:32,799 --> 00:33:35,760
+um and so this is obviously starting off
+
+928
+00:33:35,760 --> 00:33:37,679
+at one because we need at least one
+
+929
+00:33:37,679 --> 00:33:39,279
+invocation of the kernel we can't have
+
+930
+00:33:39,279 --> 00:33:41,519
+half an indication
+
+931
+00:33:41,519 --> 00:33:43,039
+however from there we need to do some
+
+932
+00:33:43,039 --> 00:33:44,960
+math to figure out how many times we
+
+933
+00:33:44,960 --> 00:33:46,640
+actually need to invoke the kernel based
+
+934
+00:33:46,640 --> 00:33:49,200
+off of how many chunks we have to deal
+
+935
+00:33:49,200 --> 00:33:50,159
+with
+
+936
+00:33:50,159 --> 00:33:52,559
+so for example if we need to calculate
+
+937
+00:33:52,559 --> 00:33:55,919
+more chunks than threads times blocks um
+
+938
+00:33:55,919 --> 00:33:57,279
+then we need to invoke the kernel
+
+939
+00:33:57,279 --> 00:33:59,760
+multiple times in order to deal with all
+
+940
+00:33:59,760 --> 00:34:03,279
+of the chunks that we need so if the
+
+941
+00:34:03,279 --> 00:34:04,880
+input chunk count is less than the
+
+942
+00:34:04,880 --> 00:34:06,399
+kernel chunk count meaning one
+
+943
+00:34:06,399 --> 00:34:08,639
+invocation deals with
+
+944
+00:34:08,639 --> 00:34:11,359
+more data than we actually need
+
+945
+00:34:11,359 --> 00:34:13,599
+then we're already good to go we only
+
+946
+00:34:13,599 --> 00:34:15,119
+need one invocation and we're going to
+
+947
+00:34:15,119 --> 00:34:16,960
+set the kernel chart count to just the
+
+948
+00:34:16,960 --> 00:34:18,720
+input chunk count because that's all we
+
+949
+00:34:18,720 --> 00:34:22,560
+need to do uh however if the in if if
+
+950
+00:34:22,560 --> 00:34:24,000
+this is not the case if the chunk count
+
+951
+00:34:24,000 --> 00:34:25,359
+is greater than what the kernel can do
+
+952
+00:34:25,359 --> 00:34:27,359
+in one indication then we update
+
+953
+00:34:27,359 --> 00:34:29,280
+invocations and we say it's equal to the
+
+954
+00:34:29,280 --> 00:34:31,679
+input chunk count divided by the kernel
+
+955
+00:34:31,679 --> 00:34:32,960
+chunk count
+
+956
+00:34:32,960 --> 00:34:34,720
+which is our sort of base value here but
+
+957
+00:34:34,720 --> 00:34:36,480
+remember this is integer division so we
+
+958
+00:34:36,480 --> 00:34:40,320
+are uh truncating decimal um and then
+
+959
+00:34:40,320 --> 00:34:42,399
+so in order to deal with that we then
+
+960
+00:34:42,399 --> 00:34:46,000
+check if um the uh input chunk count is
+
+961
+00:34:46,000 --> 00:34:48,399
+divisible by the kernel chunk count and
+
+962
+00:34:48,399 --> 00:34:50,320
+if it is not then we add an extra
+
+963
+00:34:50,320 --> 00:34:51,599
+invocation because we know there's going
+
+964
+00:34:51,599 --> 00:34:53,760
+to be some leftover that we also need to
+
+965
+00:34:53,760 --> 00:34:56,480
+deal with in one final invocation we
+
+966
+00:34:56,480 --> 00:34:58,800
+then go ahead and allocate the memory
+
+967
+00:34:58,800 --> 00:35:01,599
+for the seed primes on the gpu
+
+968
+00:35:01,599 --> 00:35:03,599
+so the um
+
+969
+00:35:03,599 --> 00:35:05,680
+we already have the actual seed primes
+
+970
+00:35:05,680 --> 00:35:07,680
+from our input here but this is
+
+971
+00:35:07,680 --> 00:35:10,079
+allocating the memory on the gpu and
+
+972
+00:35:10,079 --> 00:35:11,680
+then we go ahead and copy over the
+
+973
+00:35:11,680 --> 00:35:13,920
+memory from the cpu to the gpu we then
+
+974
+00:35:13,920 --> 00:35:15,760
+allocate the memory for the bit arrays
+
+975
+00:35:15,760 --> 00:35:18,560
+to keep track of composite versus prime
+
+976
+00:35:18,560 --> 00:35:20,880
+and we go ahead and allocate the memory
+
+977
+00:35:20,880 --> 00:35:23,599
+for the prime counts uh so the gpu can
+
+978
+00:35:23,599 --> 00:35:26,320
+tell us how many primes found per chunk
+
+979
+00:35:26,320 --> 00:35:28,400
+we keep track of how many chunks we've
+
+980
+00:35:28,400 --> 00:35:30,800
+totally processed so far we loop through
+
+981
+00:35:30,800 --> 00:35:32,320
+according to the number of invocations
+
+982
+00:35:32,320 --> 00:35:33,839
+that we've pre-calculated that we will
+
+983
+00:35:33,839 --> 00:35:37,280
+need we determine our offset uh sort of
+
+984
+00:35:37,280 --> 00:35:38,800
+locally
+
+985
+00:35:38,800 --> 00:35:41,280
+based off of the kernel chunk count
+
+986
+00:35:41,280 --> 00:35:43,040
+because of course we start off at zero
+
+987
+00:35:43,040 --> 00:35:45,040
+but as we invoke we wanna
+
+988
+00:35:45,040 --> 00:35:47,920
+sort of increase our offset uh based off
+
+989
+00:35:47,920 --> 00:35:49,520
+of how many chunks we've processed in
+
+990
+00:35:49,520 --> 00:35:52,000
+the kernel indications before we then go
+
+991
+00:35:52,000 --> 00:35:53,839
+ahead and calculate how many uh
+
+992
+00:35:53,839 --> 00:35:55,920
+remaining chunks there are really this
+
+993
+00:35:55,920 --> 00:35:58,000
+variable is how many chunks we're going
+
+994
+00:35:58,000 --> 00:36:01,280
+to process in this invocation um and so
+
+995
+00:36:01,280 --> 00:36:03,440
+it starts off by default being equal to
+
+996
+00:36:03,440 --> 00:36:05,280
+the chunk count minus the offset and the
+
+997
+00:36:05,280 --> 00:36:07,040
+offset being how many we've already
+
+998
+00:36:07,040 --> 00:36:09,839
+processed basically um and
+
+999
+00:36:09,839 --> 00:36:12,480
+what we do here is if this value ends up
+
+1000
+00:36:12,480 --> 00:36:14,000
+being greater than the kernel chunk
+
+1001
+00:36:14,000 --> 00:36:15,839
+count then we go ahead and set the
+
+1002
+00:36:15,839 --> 00:36:18,079
+remaining chunks to the kernel chunk
+
+1003
+00:36:18,079 --> 00:36:21,440
+count um so if this value is less than
+
+1004
+00:36:21,440 --> 00:36:23,359
+that then that's totally fine that's
+
+1005
+00:36:23,359 --> 00:36:24,720
+just how many we need to do that's sort
+
+1006
+00:36:24,720 --> 00:36:26,160
+of like our leftover and the last
+
+1007
+00:36:26,160 --> 00:36:28,880
+invocation however if it is greater than
+
+1008
+00:36:28,880 --> 00:36:30,240
+how many we can do in an invocation then
+
+1009
+00:36:30,240 --> 00:36:32,720
+we're like okay we can only do kernel
+
+1010
+00:36:32,720 --> 00:36:34,800
+chunk count for this specific loop
+
+1011
+00:36:34,800 --> 00:36:36,160
+iteration
+
+1012
+00:36:36,160 --> 00:36:38,560
+we then go ahead and add the chunk
+
+1013
+00:36:38,560 --> 00:36:40,160
+offset that we have from our input into
+
+1014
+00:36:40,160 --> 00:36:41,839
+the offset to make sure that the gpus
+
+1015
+00:36:41,839 --> 00:36:43,680
+don't duplicate each other's work and
+
+1016
+00:36:43,680 --> 00:36:46,240
+then we invoke sieve chunk gpu with all
+
+1017
+00:36:46,240 --> 00:36:48,640
+of the input that we've previously uh
+
+1018
+00:36:48,640 --> 00:36:51,040
+specified i then just for safety go
+
+1019
+00:36:51,040 --> 00:36:53,520
+ahead and do a cuda device synchronize
+
+1020
+00:36:53,520 --> 00:36:55,359
+which will make it that we wait for this
+
+1021
+00:36:55,359 --> 00:36:57,280
+kernel to be finished executing before
+
+1022
+00:36:57,280 --> 00:36:59,839
+we continue our code i then copy over
+
+1023
+00:36:59,839 --> 00:37:02,640
+the prime counts from the gpu
+
+1024
+00:37:02,640 --> 00:37:05,760
+here into the cpu device to host
+
+1025
+00:37:05,760 --> 00:37:07,760
+we then keep track of how many chunks
+
+1026
+00:37:07,760 --> 00:37:10,000
+we've processed so far and we even
+
+1027
+00:37:10,000 --> 00:37:13,440
+update the atomic variable uh so that we
+
+1028
+00:37:13,440 --> 00:37:15,680
+can print out a log in the main thread
+
+1029
+00:37:15,680 --> 00:37:17,839
+when we're finally done we coulda free
+
+1030
+00:37:17,839 --> 00:37:19,680
+all the cuda memory that we allocated
+
+1031
+00:37:19,680 --> 00:37:23,280
+and return no
+
+1032
+00:37:23,280 --> 00:37:24,320
+finally
+
+1033
+00:37:24,320 --> 00:37:26,480
+the function that ties it all together
+
+1034
+00:37:26,480 --> 00:37:29,119
+that invokes all of our rather spawns
+
+1035
+00:37:29,119 --> 00:37:31,440
+all of our cpu worker threads and
+
+1036
+00:37:31,440 --> 00:37:34,079
+enables this application to work let's
+
+1037
+00:37:34,079 --> 00:37:36,000
+take a look so in essence what this
+
+1038
+00:37:36,000 --> 00:37:37,920
+function is doing is it's tying together
+
+1039
+00:37:37,920 --> 00:37:39,200
+all the functionality that we've
+
+1040
+00:37:39,200 --> 00:37:41,280
+described so far the idea of the
+
+1041
+00:37:41,280 --> 00:37:43,839
+function is to help us actually find the
+
+1042
+00:37:43,839 --> 00:37:46,960
+nth or i guess in this case m prime
+
+1043
+00:37:46,960 --> 00:37:48,960
+um what this function does is it takes
+
+1044
+00:37:48,960 --> 00:37:50,560
+the number m
+
+1045
+00:37:50,560 --> 00:37:53,359
+this is for this is as i mentioned which
+
+1046
+00:37:53,359 --> 00:37:55,359
+which prime we would like to find so if
+
+1047
+00:37:55,359 --> 00:37:56,720
+we wanted to find for example the
+
+1048
+00:37:56,720 --> 00:37:58,560
+millionth prime and would be equal to a
+
+1049
+00:37:58,560 --> 00:37:59,680
+million
+
+1050
+00:37:59,680 --> 00:38:00,720
+we then go ahead and do some
+
+1051
+00:38:00,720 --> 00:38:03,119
+calculations this is because the seed c
+
+1052
+00:38:03,119 --> 00:38:05,440
+veritostomies doesn't let us just say
+
+1053
+00:38:05,440 --> 00:38:07,520
+hey give me the millionth prime instead
+
+1054
+00:38:07,520 --> 00:38:10,720
+the civil fairtosthenes has us go up to
+
+1055
+00:38:10,720 --> 00:38:13,359
+a number and it'll tell us which numbers
+
+1056
+00:38:13,359 --> 00:38:16,160
+up until that number are our prime this
+
+1057
+00:38:16,160 --> 00:38:17,680
+is somewhat problematic for this use
+
+1058
+00:38:17,680 --> 00:38:19,119
+case so what we have to do is a little
+
+1059
+00:38:19,119 --> 00:38:21,440
+bit of math the math in this particular
+
+1060
+00:38:21,440 --> 00:38:25,119
+case is to approximate an upper bound
+
+1061
+00:38:25,119 --> 00:38:28,720
+for what the largest possible number is
+
+1062
+00:38:28,720 --> 00:38:30,800
+that could be the nth prime
+
+1063
+00:38:30,800 --> 00:38:32,800
+and this is the math to do that there's
+
+1064
+00:38:32,800 --> 00:38:34,320
+actually multiple ways of calculating
+
+1065
+00:38:34,320 --> 00:38:36,079
+this this is like a simpler way of doing
+
+1066
+00:38:36,079 --> 00:38:38,079
+it and basically what this will tell us
+
+1067
+00:38:38,079 --> 00:38:40,000
+is if you wanted to find say the
+
+1068
+00:38:40,000 --> 00:38:41,599
+millionth prime
+
+1069
+00:38:41,599 --> 00:38:44,800
+this number is guaranteed to be greater
+
+1070
+00:38:44,800 --> 00:38:48,079
+than or equal to the millionth prime um
+
+1071
+00:38:48,079 --> 00:38:50,480
+it may be you know quite a bit over the
+
+1072
+00:38:50,480 --> 00:38:52,320
+millionth prime so you may end up over
+
+1073
+00:38:52,320 --> 00:38:53,680
+calculating a little bit and maybe
+
+1074
+00:38:53,680 --> 00:38:56,079
+finding a couple thousand extra primes
+
+1075
+00:38:56,079 --> 00:38:57,440
+than you wanted to
+
+1076
+00:38:57,440 --> 00:38:59,280
+but it's better than not finding the
+
+1077
+00:38:59,280 --> 00:39:01,359
+millionth prime at all
+
+1078
+00:39:01,359 --> 00:39:03,119
+and so what we do is we calculate all
+
+1079
+00:39:03,119 --> 00:39:04,720
+the primes up until this number and then
+
+1080
+00:39:04,720 --> 00:39:06,800
+we count we find the millionth and then
+
+1081
+00:39:06,800 --> 00:39:09,760
+we return the millionth in specific
+
+1082
+00:39:09,760 --> 00:39:10,960
+of course though we don't just want to
+
+1083
+00:39:10,960 --> 00:39:12,720
+sieve all the way up to the upper bound
+
+1084
+00:39:12,720 --> 00:39:14,560
+because that would be very slow so we
+
+1085
+00:39:14,560 --> 00:39:16,560
+chunk it up we square root the upper
+
+1086
+00:39:16,560 --> 00:39:18,800
+bound that is our chunk size and our
+
+1087
+00:39:18,800 --> 00:39:21,119
+chunk count is literally just that minus
+
+1088
+00:39:21,119 --> 00:39:23,440
+one because the first chunk from two to
+
+1089
+00:39:23,440 --> 00:39:24,960
+the square root of n we're doing
+
+1090
+00:39:24,960 --> 00:39:27,040
+manually and using that as our seed
+
+1091
+00:39:27,040 --> 00:39:29,599
+primes our chunk prime count which is
+
+1092
+00:39:29,599 --> 00:39:31,440
+our sort of upper bound sort of like per
+
+1093
+00:39:31,440 --> 00:39:33,920
+chunk how many primes you can have is
+
+1094
+00:39:33,920 --> 00:39:36,079
+just the chunk size divided by two and
+
+1095
+00:39:36,079 --> 00:39:38,880
+potentially one more if the chunk size
+
+1096
+00:39:38,880 --> 00:39:41,040
+is an odd number from there we just go
+
+1097
+00:39:41,040 --> 00:39:43,280
+ahead and log how many uh chunks we
+
+1098
+00:39:43,280 --> 00:39:45,760
+actually have to deal with um and what
+
+1099
+00:39:45,760 --> 00:39:49,440
+the upper bound is uh for the um
+
+1100
+00:39:49,440 --> 00:39:52,160
+for the like m prime in this case
+
+1101
+00:39:52,160 --> 00:39:53,760
+and then we go ahead and start doing
+
+1102
+00:39:53,760 --> 00:39:55,920
+some actual logic so we start with
+
+1103
+00:39:55,920 --> 00:39:58,960
+calculating the seed primes um which is
+
+1104
+00:39:58,960 --> 00:40:00,800
+a simple naive sieve
+
+1105
+00:40:00,800 --> 00:40:01,920
+and then we go ahead and start
+
+1106
+00:40:01,920 --> 00:40:04,240
+distributing work across the gpu so we
+
+1107
+00:40:04,240 --> 00:40:06,240
+start by calculating how many chunks
+
+1108
+00:40:06,240 --> 00:40:09,200
+need to be dealt with per gpu and if the
+
+1109
+00:40:09,200 --> 00:40:10,640
+chunk count is not divisible by the
+
+1110
+00:40:10,640 --> 00:40:13,040
+number of gpus then how many chunks will
+
+1111
+00:40:13,040 --> 00:40:15,359
+need to be uh dealt with by the last gpu
+
+1112
+00:40:15,359 --> 00:40:18,640
+as extra versus the other gpu so it's
+
+1113
+00:40:18,640 --> 00:40:20,640
+not a totally even distribution of work
+
+1114
+00:40:20,640 --> 00:40:23,520
+it's really just we assign you know a
+
+1115
+00:40:23,520 --> 00:40:26,560
+chunk to each gpu and the last gpu gets
+
+1116
+00:40:26,560 --> 00:40:29,520
+however many is remaining basically
+
+1117
+00:40:29,520 --> 00:40:32,560
+we then go ahead and create the um array
+
+1118
+00:40:32,560 --> 00:40:33,839
+of arrays
+
+1119
+00:40:33,839 --> 00:40:35,760
+that will contain the prime counts from
+
+1120
+00:40:35,760 --> 00:40:39,200
+the gpus so this is an array of count
+
+1121
+00:40:39,200 --> 00:40:44,079
+gpus where each value is a pointer to an
+
+1122
+00:40:44,079 --> 00:40:46,000
+unsigned 64-bit integer which is really
+
+1123
+00:40:46,000 --> 00:40:47,920
+just an array that we keep track of
+
+1124
+00:40:47,920 --> 00:40:48,720
+using
+
+1125
+00:40:48,720 --> 00:40:51,200
+using using memory allocation
+
+1126
+00:40:51,200 --> 00:40:53,440
+we also keep track of all the input that
+
+1127
+00:40:53,440 --> 00:40:56,079
+we're giving our gpu workers uh through
+
+1128
+00:40:56,079 --> 00:40:58,319
+a similar sort of stack allocated array
+
+1129
+00:40:58,319 --> 00:41:00,880
+and then also the uh p thread sort of
+
+1130
+00:41:00,880 --> 00:41:04,240
+handles um the thread ids on a similar
+
+1131
+00:41:04,240 --> 00:41:07,280
+stack allocated array for each gpu we
+
+1132
+00:41:07,280 --> 00:41:09,599
+then create our atomic integer telling
+
+1133
+00:41:09,599 --> 00:41:11,440
+us how many chunks have been processed
+
+1134
+00:41:11,440 --> 00:41:13,599
+so far we then go ahead and loop through
+
+1135
+00:41:13,599 --> 00:41:15,280
+the number of gpus that we actually need
+
+1136
+00:41:15,280 --> 00:41:17,200
+to start working with
+
+1137
+00:41:17,200 --> 00:41:20,000
+we count the number of chunks per gpu
+
+1138
+00:41:20,000 --> 00:41:21,680
+that we need to deal with and of course
+
+1139
+00:41:21,680 --> 00:41:23,440
+if this is the last gpu we add the
+
+1140
+00:41:23,440 --> 00:41:25,599
+overflow that we may have
+
+1141
+00:41:25,599 --> 00:41:28,880
+we then go ahead and allocate uh the
+
+1142
+00:41:28,880 --> 00:41:31,359
+prime counts array for this specific
+
+1143
+00:41:31,359 --> 00:41:33,520
+worker uh we need to call lock it so
+
+1144
+00:41:33,520 --> 00:41:36,160
+that it's clean uh and then once that's
+
+1145
+00:41:36,160 --> 00:41:38,079
+done we put together our input which is
+
+1146
+00:41:38,079 --> 00:41:39,680
+just the type that i had specified
+
+1147
+00:41:39,680 --> 00:41:42,000
+previously gpu worker input
+
+1148
+00:41:42,000 --> 00:41:43,520
+and then we go ahead and invoke the
+
+1149
+00:41:43,520 --> 00:41:46,560
+function uh we do so using pthat create
+
+1150
+00:41:46,560 --> 00:41:49,520
+so that we launch the gpu worker
+
+1151
+00:41:49,520 --> 00:41:51,760
+function on a new thread and then on the
+
+1152
+00:41:51,760 --> 00:41:53,839
+main thread we simply keep looking at
+
+1153
+00:41:53,839 --> 00:41:56,480
+this atomic variable and while it's less
+
+1154
+00:41:56,480 --> 00:41:57,680
+than the total number of chunks that
+
+1155
+00:41:57,680 --> 00:41:59,359
+needs to be processed we just print
+
+1156
+00:41:59,359 --> 00:42:00,800
+however many chunks have been processed
+
+1157
+00:42:00,800 --> 00:42:02,640
+so far and we sleep because we don't
+
+1158
+00:42:02,640 --> 00:42:06,160
+want this to be um a a a lock we don't
+
+1159
+00:42:06,160 --> 00:42:08,480
+want this to be a spin lock here we want
+
+1160
+00:42:08,480 --> 00:42:11,359
+to allow the kernel to use the cpu for
+
+1161
+00:42:11,359 --> 00:42:13,760
+other things for 100 milliseconds
+
+1162
+00:42:13,760 --> 00:42:16,319
+while we wait for this atomic variable
+
+1163
+00:42:16,319 --> 00:42:18,720
+to update then we just print a new line
+
+1164
+00:42:18,720 --> 00:42:21,200
+so that we can uh flush out the the the
+
+1165
+00:42:21,200 --> 00:42:25,119
+logs um we go ahead and join with the uh
+
+1166
+00:42:25,119 --> 00:42:26,640
+other cpu threads that are actually
+
+1167
+00:42:26,640 --> 00:42:28,560
+dealing with the the work just to make
+
+1168
+00:42:28,560 --> 00:42:30,240
+sure that they're genuinely finished
+
+1169
+00:42:30,240 --> 00:42:31,920
+before we start looking at their work
+
+1170
+00:42:31,920 --> 00:42:33,760
+once again this is for safety and then
+
+1171
+00:42:33,760 --> 00:42:35,680
+we run the logic that helps us figure
+
+1172
+00:42:35,680 --> 00:42:38,720
+out which chunk actually contained the m
+
+1173
+00:42:38,720 --> 00:42:39,760
+prime
+
+1174
+00:42:39,760 --> 00:42:41,760
+so we start off by
+
+1175
+00:42:41,760 --> 00:42:43,200
+logging out how many chunks we've
+
+1176
+00:42:43,200 --> 00:42:45,680
+checked so far and how many primes we've
+
+1177
+00:42:45,680 --> 00:42:47,920
+seen this is by default equal to the
+
+1178
+00:42:47,920 --> 00:42:49,599
+seed prime count because of course that
+
+1179
+00:42:49,599 --> 00:42:53,119
+is how many primes we have already seen
+
+1180
+00:42:53,119 --> 00:42:55,839
+in the in the process of checking
+
+1181
+00:42:55,839 --> 00:42:58,000
+we then go ahead and loop through all of
+
+1182
+00:42:58,000 --> 00:42:59,760
+the chunks the way we have to do this is
+
+1183
+00:42:59,760 --> 00:43:02,560
+by looping through all the gpus figuring
+
+1184
+00:43:02,560 --> 00:43:04,400
+out how many chunks that gpu would have
+
+1185
+00:43:04,400 --> 00:43:06,400
+had to deal with based off of the gpu
+
+1186
+00:43:06,400 --> 00:43:08,480
+index and the overflow and then looping
+
+1187
+00:43:08,480 --> 00:43:10,560
+through that number of chunks so these
+
+1188
+00:43:10,560 --> 00:43:12,480
+two loops effectively boil down to a
+
+1189
+00:43:12,480 --> 00:43:14,560
+one-dimensional loop over all the chunks
+
+1190
+00:43:14,560 --> 00:43:16,560
+that were dealt with across sorry worked
+
+1191
+00:43:16,560 --> 00:43:19,839
+on across all the gpus so then for every
+
+1192
+00:43:19,839 --> 00:43:21,920
+chunk basically we take a look at
+
+1193
+00:43:21,920 --> 00:43:23,520
+however many primes were found within
+
+1194
+00:43:23,520 --> 00:43:25,599
+the chunk we add that to how many primes
+
+1195
+00:43:25,599 --> 00:43:28,560
+we've seen so far and if this new added
+
+1196
+00:43:28,560 --> 00:43:32,079
+value suddenly meets or exceeds the
+
+1197
+00:43:32,079 --> 00:43:34,240
+value that we're looking for we know
+
+1198
+00:43:34,240 --> 00:43:36,319
+that we've found the empty prime
+
+1199
+00:43:36,319 --> 00:43:38,640
+in this case we go to foundchunk which
+
+1200
+00:43:38,640 --> 00:43:41,119
+is this this label here but if we have
+
+1201
+00:43:41,119 --> 00:43:43,200
+not met that value yet we just update
+
+1202
+00:43:43,200 --> 00:43:45,280
+however many primes we found update the
+
+1203
+00:43:45,280 --> 00:43:47,839
+number of chunks checked and loop over
+
+1204
+00:43:47,839 --> 00:43:50,160
+and over again if we end these loops
+
+1205
+00:43:50,160 --> 00:43:52,160
+without doing this go to we know that
+
+1206
+00:43:52,160 --> 00:43:54,079
+for some reason we couldn't find the m
+
+1207
+00:43:54,079 --> 00:43:56,319
+prime could be that the gpu kernels
+
+1208
+00:43:56,319 --> 00:43:58,480
+didn't invoke properly our math is wrong
+
+1209
+00:43:58,480 --> 00:43:59,920
+something but we couldn't find it so we
+
+1210
+00:43:59,920 --> 00:44:01,359
+just go to clean up
+
+1211
+00:44:01,359 --> 00:44:02,319
+however
+
+1212
+00:44:02,319 --> 00:44:05,839
+in all normal runs of this program you
+
+1213
+00:44:05,839 --> 00:44:08,800
+should end up going to file chunk
+
+1214
+00:44:08,800 --> 00:44:11,440
+now you know that um total chunks
+
+1215
+00:44:11,440 --> 00:44:15,280
+checked is the index of the chunk
+
+1216
+00:44:15,280 --> 00:44:17,440
+that contains the m prime so what we do
+
+1217
+00:44:17,440 --> 00:44:19,680
+is we create a bit array and we see that
+
+1218
+00:44:19,680 --> 00:44:22,800
+specific chunk once again on the cpu
+
+1219
+00:44:22,800 --> 00:44:25,760
+once we do that we loop through
+
+1220
+00:44:25,760 --> 00:44:27,920
+this new bit array that we've created
+
+1221
+00:44:27,920 --> 00:44:30,560
+and right as we find the empty prime
+
+1222
+00:44:30,560 --> 00:44:32,319
+based off of the markers whereas we find
+
+1223
+00:44:32,319 --> 00:44:34,640
+it we go ahead and print it out and we
+
+1224
+00:44:34,640 --> 00:44:35,680
+break
+
+1225
+00:44:35,680 --> 00:44:38,319
+and just like that we found the amp
+
+1226
+00:44:38,319 --> 00:44:40,240
+prime all we got to do now
+
+1227
+00:44:40,240 --> 00:44:42,800
+is free our memory the reason we don't
+
+1228
+00:44:42,800 --> 00:44:44,720
+free this in cleanup is because this
+
+1229
+00:44:44,720 --> 00:44:46,880
+will only have been allocated within the
+
+1230
+00:44:46,880 --> 00:44:48,400
+found chunk label
+
+1231
+00:44:48,400 --> 00:44:50,480
+through this function call otherwise
+
+1232
+00:44:50,480 --> 00:44:52,000
+that would have been
+
+1233
+00:44:52,000 --> 00:44:54,160
+as far as i know either undefined
+
+1234
+00:44:54,160 --> 00:44:56,480
+functionality or it's just um
+
+1235
+00:44:56,480 --> 00:44:58,319
+it will just ignore your free if you try
+
+1236
+00:44:58,319 --> 00:45:00,880
+to free a null pointer um but now to
+
+1237
+00:45:00,880 --> 00:45:02,160
+think about it you actually shouldn't do
+
+1238
+00:45:02,160 --> 00:45:03,440
+that because this is not going to be a
+
+1239
+00:45:03,440 --> 00:45:04,640
+null point or this is going to be a
+
+1240
+00:45:04,640 --> 00:45:06,160
+garbage pointer because it's just stack
+
+1241
+00:45:06,160 --> 00:45:08,319
+allocated so the logic is correct you
+
+1242
+00:45:08,319 --> 00:45:10,240
+want to free within found chunk
+
+1243
+00:45:10,240 --> 00:45:11,440
+wonderful and then we've just got a
+
+1244
+00:45:11,440 --> 00:45:13,520
+really simple main function all we do is
+
+1245
+00:45:13,520 --> 00:45:15,920
+we get the current time of day run the c
+
+1246
+00:45:15,920 --> 00:45:17,440
+function get the time of day again and
+
+1247
+00:45:17,440 --> 00:45:19,440
+then print out how many seconds it took
+
+1248
+00:45:19,440 --> 00:45:22,000
+for us to do the actual seating um now
+
+1249
+00:45:22,000 --> 00:45:23,280
+we're going to start off with something
+
+1250
+00:45:23,280 --> 00:45:25,440
+a little less ham here
+
+1251
+00:45:25,440 --> 00:45:27,760
+this is this is quite a bit uh for for a
+
+1252
+00:45:27,760 --> 00:45:29,760
+first invocation so
+
+1253
+00:45:29,760 --> 00:45:30,880
+let's go ahead and actually take a look
+
+1254
+00:45:30,880 --> 00:45:32,400
+at the code running shall we i'm going
+
+1255
+00:45:32,400 --> 00:45:34,960
+to do so within my docker container here
+
+1256
+00:45:34,960 --> 00:45:37,440
+i've got a fresh one
+
+1257
+00:45:37,440 --> 00:45:39,119
+and so this is
+
+1258
+00:45:39,119 --> 00:45:41,520
+this actually lets us run nvidia smi
+
+1259
+00:45:41,520 --> 00:45:43,839
+i've got the code over here well let's
+
+1260
+00:45:43,839 --> 00:45:47,200
+go ahead and quickly update it
+
+1261
+00:45:47,200 --> 00:45:49,200
+i'm going to need vim for that
+
+1262
+00:45:49,200 --> 00:45:50,560
+all right so let's go ahead and update
+
+1263
+00:45:50,560 --> 00:45:52,640
+the code quickly to save a more
+
+1264
+00:45:52,640 --> 00:45:54,240
+reasonable number let's just say we
+
+1265
+00:45:54,240 --> 00:45:55,440
+wanted to find
+
+1266
+00:45:55,440 --> 00:45:58,240
+the one millionth prime so what we do is
+
+1267
+00:45:58,240 --> 00:46:00,000
+we update the code
+
+1268
+00:46:00,000 --> 00:46:00,800
+we
+
+1269
+00:46:00,800 --> 00:46:04,560
+run the compile command
+
+1270
+00:46:08,640 --> 00:46:10,160
+and i will explain this in just a moment
+
+1271
+00:46:10,160 --> 00:46:11,599
+so basically
+
+1272
+00:46:11,599 --> 00:46:12,640
+actually let's go through the compile
+
+1273
+00:46:12,640 --> 00:46:14,079
+command first so what this is saying is
+
+1274
+00:46:14,079 --> 00:46:15,440
+we're saying run the nvidia akua
+
+1275
+00:46:15,440 --> 00:46:19,520
+compiler um and we're passing it 03 for
+
+1276
+00:46:19,520 --> 00:46:22,000
+the c plus code and then for the cuda
+
+1277
+00:46:22,000 --> 00:46:23,760
+code we're also telling it to optimize
+
+1278
+00:46:23,760 --> 00:46:25,839
+that and we're saying output to a binary
+
+1279
+00:46:25,839 --> 00:46:28,400
+file called sieve and when you run it um
+
+1280
+00:46:28,400 --> 00:46:29,920
+it's telling you that hey to find the
+
+1281
+00:46:29,920 --> 00:46:32,560
+millionth prime i actually deceive up
+
+1282
+00:46:32,560 --> 00:46:35,680
+until 16441
+
+1283
+00:46:35,680 --> 00:46:38,760
+301 which means i need to process
+
+1284
+00:46:38,760 --> 00:46:41,200
+4053 chunks
+
+1285
+00:46:41,200 --> 00:46:42,960
+but it was able to go ahead and process
+
+1286
+00:46:42,960 --> 00:46:44,560
+all of them so fast that it didn't even
+
+1287
+00:46:44,560 --> 00:46:47,280
+actually log them
+
+1288
+00:46:47,280 --> 00:46:48,720
+and there we go we find that the
+
+1289
+00:46:48,720 --> 00:46:52,680
+millionth prime is 15485
+
+1290
+00:46:52,680 --> 00:46:55,520
+863 which we can go ahead and validate
+
+1291
+00:46:55,520 --> 00:46:57,760
+by going to the nth prime page pasting
+
+1292
+00:46:57,760 --> 00:46:59,520
+it in and it should tell us
+
+1293
+00:46:59,520 --> 00:47:00,319
+that
+
+1294
+00:47:00,319 --> 00:47:02,720
+indeed
+
+1295
+00:47:03,359 --> 00:47:07,200
+there are 1 million primes less than or
+
+1296
+00:47:07,200 --> 00:47:08,319
+equal to
+
+1297
+00:47:08,319 --> 00:47:10,560
+15 million four hundred and eighty five
+
+1298
+00:47:10,560 --> 00:47:12,480
+thousand eight hundred and sixty three
+
+1299
+00:47:12,480 --> 00:47:13,760
+let's go ahead and scale this up a bit
+
+1300
+00:47:13,760 --> 00:47:15,760
+shall we this was this was fun um of
+
+1301
+00:47:15,760 --> 00:47:17,920
+course i don't wanna vim a binary file
+
+1302
+00:47:17,920 --> 00:47:20,319
+uh but we did a million
+
+1303
+00:47:20,319 --> 00:47:22,160
+let's let's even skip ten million let's
+
+1304
+00:47:22,160 --> 00:47:24,880
+just go directly to a hundred million so
+
+1305
+00:47:24,880 --> 00:47:26,640
+i'm going to recompile the code we're
+
+1306
+00:47:26,640 --> 00:47:27,920
+going to run
+
+1307
+00:47:27,920 --> 00:47:30,800
+and there we go just like that in 0.4
+
+1308
+00:47:30,800 --> 00:47:35,200
+seconds we find the 100 millionth prime
+
+1309
+00:47:35,200 --> 00:47:37,040
+which i can paste in oh didn't want to
+
+1310
+00:47:37,040 --> 00:47:38,720
+copy i wanted to paste
+
+1311
+00:47:38,720 --> 00:47:42,319
+so i'm going to go ahead and do that
+
+1312
+00:47:42,319 --> 00:47:44,960
+let's see if there we go the 100
+
+1313
+00:47:44,960 --> 00:47:46,480
+millionth prime
+
+1314
+00:47:46,480 --> 00:47:48,800
+now let's really go crazy so let's go
+
+1315
+00:47:48,800 --> 00:47:52,079
+ahead and calculate the 10 billionth
+
+1316
+00:47:52,079 --> 00:47:54,960
+prime number
+
+1317
+00:47:55,599 --> 00:47:57,119
+all right
+
+1318
+00:47:57,119 --> 00:48:00,359
+let's see here we have to process 511
+
+1319
+00:48:00,359 --> 00:48:03,280
+491 chunks that's quite a bit that means
+
+1320
+00:48:03,280 --> 00:48:05,200
+that we are sieving up until let me see
+
+1321
+00:48:05,200 --> 00:48:07,240
+if i can read this properly
+
+1322
+00:48:07,240 --> 00:48:11,720
+261 billion 624 million 684
+
+1323
+00:48:11,720 --> 00:48:14,960
+681 that is our upper bound for how
+
+1324
+00:48:14,960 --> 00:48:18,400
+large the 10 billionth prime can be
+
+1325
+00:48:18,400 --> 00:48:20,640
+so as you can see the gpus are making
+
+1326
+00:48:20,640 --> 00:48:23,599
+quick work of this and in just 26
+
+1327
+00:48:23,599 --> 00:48:25,920
+seconds just over 26 seconds we're able
+
+1328
+00:48:25,920 --> 00:48:27,440
+to calculate
+
+1329
+00:48:27,440 --> 00:48:28,480
+see here
+
+1330
+00:48:28,480 --> 00:48:31,920
+verify that this is indeed the 10
+
+1331
+00:48:31,920 --> 00:48:34,559
+billionth prime there we go
+
+1332
+00:48:34,559 --> 00:48:37,040
+just like that multi gpu segmented sea
+
+1333
+00:48:37,040 --> 00:48:40,079
+of veritostones to find the nth prime
+
+1334
+00:48:40,079 --> 00:48:42,160
+number i hope you enjoyed thank you very
+
+1335
+00:48:42,160 --> 00:48:43,760
+much everybody for joining in today code
+
+1336
+00:48:43,760 --> 00:48:45,119
+will be in the description feel free to
+
+1337
+00:48:45,119 --> 00:48:46,559
+let me know if you have any feedback
+
+1338
+00:48:46,559 --> 00:48:48,319
+ideas on how to optimize there's always
+
+1339
+00:48:48,319 --> 00:48:50,640
+ways to make this better i'm by no means
+
+1340
+00:48:50,640 --> 00:48:52,480
+an absolute you know expert in the field
+
+1341
+00:48:52,480 --> 00:48:55,200
+of gpu programming um that is an
+
+1342
+00:48:55,200 --> 00:48:57,440
+insanely complicated field and i'm sure
+
+1343
+00:48:57,440 --> 00:48:59,200
+there's ways to make this better so let
+
+1344
+00:48:59,200 --> 00:49:00,480
+me know if you have any ideas down in
+
+1345
+00:49:00,480 --> 00:49:01,839
+the comment section below or any
+
+1346
+00:49:01,839 --> 00:49:04,000
+questions i'd be happy to answer them uh
+
+1347
+00:49:04,000 --> 00:49:05,119
+feel free to reach out to me and of
+
+1348
+00:49:05,119 --> 00:49:06,480
+course if you enjoy this kind of content
+
+1349
+00:49:06,480 --> 00:49:07,440
+and you want to see more of it please do
+
+1350
+00:49:07,440 --> 00:49:08,640
+make sure to subscribe to the channel as
+
+1351
+00:49:08,640 --> 00:49:10,559
+it really does help out a lot and thank
+
+1352
+00:49:10,559 --> 00:49:14,160
+you very much everybody goodbye

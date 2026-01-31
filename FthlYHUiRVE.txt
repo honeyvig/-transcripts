@@ -1,0 +1,2967 @@
+1
+00:00:00,120 --> 00:00:02,159
+since its release in November of last
+
+2
+00:00:02,159 --> 00:00:04,560
+year chat GPT has had so much hype
+
+3
+00:00:04,560 --> 00:00:06,480
+around it and also similar Technologies
+
+4
+00:00:06,480 --> 00:00:08,960
+like Bing chat and Google's Bard and
+
+5
+00:00:08,960 --> 00:00:12,679
+gpt4 and really generative AI in general
+
+6
+00:00:12,679 --> 00:00:15,540
+uh now as you may know I like to say
+
+7
+00:00:15,540 --> 00:00:17,460
+that artificial intelligence is easily
+
+8
+00:00:17,460 --> 00:00:19,800
+the most misunderstood technology on the
+
+9
+00:00:19,800 --> 00:00:21,720
+planet and to be completely honest the
+
+10
+00:00:21,720 --> 00:00:23,460
+past couple of months have only further
+
+11
+00:00:23,460 --> 00:00:26,279
+driven in that belief for me there have
+
+12
+00:00:26,279 --> 00:00:28,560
+been people making very confident claims
+
+13
+00:00:28,560 --> 00:00:31,199
+and statements about uh say a GPT and
+
+14
+00:00:31,199 --> 00:00:33,540
+what it's capable of that I frankly
+
+15
+00:00:33,540 --> 00:00:35,700
+don't really think hold for example I've
+
+16
+00:00:35,700 --> 00:00:38,520
+seen some very confidently claim that we
+
+17
+00:00:38,520 --> 00:00:40,500
+will be replacing all Junior developers
+
+18
+00:00:40,500 --> 00:00:42,540
+and even artists and journalists and
+
+19
+00:00:42,540 --> 00:00:43,739
+that this is the worst thing to happen
+
+20
+00:00:43,739 --> 00:00:47,100
+to education uh I don't really believe
+
+21
+00:00:47,100 --> 00:00:48,899
+that but this does bring up an
+
+22
+00:00:48,899 --> 00:00:50,460
+interesting question in my opinion and
+
+23
+00:00:50,460 --> 00:00:52,860
+that is that you see I love to do a lot
+
+24
+00:00:52,860 --> 00:00:54,539
+of different things I love to write code
+
+25
+00:00:54,539 --> 00:00:56,280
+and build applications as you can
+
+26
+00:00:56,280 --> 00:00:57,539
+probably tell from my YouTube channel
+
+27
+00:00:57,539 --> 00:00:59,879
+but I also absolutely love to share what
+
+28
+00:00:59,879 --> 00:01:01,559
+I learn learn about the world of tech
+
+29
+00:01:01,559 --> 00:01:03,359
+with others through a variety of
+
+30
+00:01:03,359 --> 00:01:04,680
+different media like for example
+
+31
+00:01:04,680 --> 00:01:07,140
+teaching AI courses and my YouTube
+
+32
+00:01:07,140 --> 00:01:09,780
+channel as well as through non-technical
+
+33
+00:01:09,780 --> 00:01:11,640
+media for example doing interviews to
+
+34
+00:01:11,640 --> 00:01:13,560
+help people understand the impact of
+
+35
+00:01:13,560 --> 00:01:15,060
+technology on their lives from a
+
+36
+00:01:15,060 --> 00:01:18,180
+non-technical perspective and so here's
+
+37
+00:01:18,180 --> 00:01:21,840
+uh here's the question today can chat
+
+38
+00:01:21,840 --> 00:01:25,140
+gbt replace me or maybe even at least
+
+39
+00:01:25,140 --> 00:01:28,140
+part of what I do and if so how does
+
+40
+00:01:28,140 --> 00:01:30,479
+that generalize to everyone and things
+
+41
+00:01:30,479 --> 00:01:32,700
+that we all do or maybe if not today
+
+42
+00:01:32,700 --> 00:01:35,939
+will it in the future well before we get
+
+43
+00:01:35,939 --> 00:01:37,979
+to that a little bit of background now
+
+44
+00:01:37,979 --> 00:01:39,420
+you may know that I've always been a big
+
+45
+00:01:39,420 --> 00:01:41,460
+proponent of the idea that the AI
+
+46
+00:01:41,460 --> 00:01:43,259
+artificial intelligence technology we
+
+47
+00:01:43,259 --> 00:01:45,720
+build today isn't really artificial
+
+48
+00:01:45,720 --> 00:01:47,360
+intelligence right it's not actually
+
+49
+00:01:47,360 --> 00:01:50,399
+intelligent rather what we're proving is
+
+50
+00:01:50,399 --> 00:01:53,220
+that there are skills that we have that
+
+51
+00:01:53,220 --> 00:01:55,200
+we previously thought required human
+
+52
+00:01:55,200 --> 00:01:57,119
+cognition and intelligence and instead
+
+53
+00:01:57,119 --> 00:01:59,520
+if we boil it down to enough of a subset
+
+54
+00:01:59,520 --> 00:02:01,140
+of that skill still we can actually
+
+55
+00:02:01,140 --> 00:02:03,600
+replicate it with math and we can do it
+
+56
+00:02:03,600 --> 00:02:05,820
+with the power of technology so take for
+
+57
+00:02:05,820 --> 00:02:08,280
+example deep blue playing chess or
+
+58
+00:02:08,280 --> 00:02:10,679
+Watson playing Jeopardy or alphago
+
+59
+00:02:10,679 --> 00:02:12,300
+playing go right so some of the classic
+
+60
+00:02:12,300 --> 00:02:15,420
+examples of AI technology and how it's
+
+61
+00:02:15,420 --> 00:02:17,700
+grown over the years especially with
+
+62
+00:02:17,700 --> 00:02:19,440
+almost with actually all of these
+
+63
+00:02:19,440 --> 00:02:21,239
+examples all we've really done is we
+
+64
+00:02:21,239 --> 00:02:22,800
+said all right here's a human skill
+
+65
+00:02:22,800 --> 00:02:24,780
+we've had say for example playing chess
+
+66
+00:02:24,780 --> 00:02:27,239
+or playing Jeopardy and if you boil it
+
+67
+00:02:27,239 --> 00:02:28,680
+down to enough of a subset and if you
+
+68
+00:02:28,680 --> 00:02:31,260
+specify the problem really well and you
+
+69
+00:02:31,260 --> 00:02:32,819
+really sit down and think about how to
+
+70
+00:02:32,819 --> 00:02:35,280
+build a pipeline an approach to solve
+
+71
+00:02:35,280 --> 00:02:37,080
+this problem mathematically we can
+
+72
+00:02:37,080 --> 00:02:39,720
+actually do it in in Computing right we
+
+73
+00:02:39,720 --> 00:02:41,099
+can do it with the power of Technology
+
+74
+00:02:41,099 --> 00:02:43,560
+we don't need human cognition for it
+
+75
+00:02:43,560 --> 00:02:45,239
+however this also comes with a pretty
+
+76
+00:02:45,239 --> 00:02:47,580
+fundamental limitation and that is that
+
+77
+00:02:47,580 --> 00:02:49,560
+these systems are not at all flexible or
+
+78
+00:02:49,560 --> 00:02:51,780
+adaptable really all they're doing is
+
+79
+00:02:51,780 --> 00:02:53,700
+what they were programmed to do pretty
+
+80
+00:02:53,700 --> 00:02:55,379
+much like every other technology system
+
+81
+00:02:55,379 --> 00:02:57,300
+except they have more capabilities right
+
+82
+00:02:57,300 --> 00:02:58,500
+they can for example analyze
+
+83
+00:02:58,500 --> 00:03:00,420
+unstructured data like Watson playing
+
+84
+00:03:00,420 --> 00:03:02,700
+Jeopardy but it's still playing Jeopardy
+
+85
+00:03:02,700 --> 00:03:04,800
+you can't tell Watson to do something
+
+86
+00:03:04,800 --> 00:03:07,860
+else in language for example but you can
+
+87
+00:03:07,860 --> 00:03:09,959
+continue to make these capabilities even
+
+88
+00:03:09,959 --> 00:03:11,700
+more complex sort of growing out from
+
+89
+00:03:11,700 --> 00:03:14,040
+there back in 2020 I even built and
+
+90
+00:03:14,040 --> 00:03:15,540
+trained a series of deep Learning
+
+91
+00:03:15,540 --> 00:03:17,640
+Systems myself that I call Auto Lyricist
+
+92
+00:03:17,640 --> 00:03:20,280
+and the goal of the system is to augment
+
+93
+00:03:20,280 --> 00:03:21,959
+songwriters by providing what I call
+
+94
+00:03:21,959 --> 00:03:25,319
+automated inspiration at scale the idea
+
+95
+00:03:25,319 --> 00:03:27,120
+is to eliminate writer's block and
+
+96
+00:03:27,120 --> 00:03:28,500
+actually got the chance to work with a
+
+97
+00:03:28,500 --> 00:03:29,540
+couple different talented
+
+98
+00:03:29,540 --> 00:03:32,280
+singer-songwriters uh to prove out the
+
+99
+00:03:32,280 --> 00:03:35,600
+system and show that it actually works
+
+100
+00:03:35,600 --> 00:03:41,729
+[Music]
+
+101
+00:03:43,080 --> 00:03:45,299
+the line that you just heard and many
+
+102
+00:03:45,299 --> 00:03:47,580
+others in this song by Claudia hoiser
+
+103
+00:03:47,580 --> 00:03:49,680
+titled A Summertime song were actually
+
+104
+00:03:49,680 --> 00:03:52,319
+inspired by the auto Lyricist system
+
+105
+00:03:52,319 --> 00:03:54,959
+however even Auto Lyricist working in
+
+106
+00:03:54,959 --> 00:03:57,180
+language with such complex unstructured
+
+107
+00:03:57,180 --> 00:03:59,220
+data and nuance and art and creativity
+
+108
+00:03:59,220 --> 00:04:01,620
+isn't really flexible you can't really
+
+109
+00:04:01,620 --> 00:04:03,659
+get this pipeline of deep Learning
+
+110
+00:04:03,659 --> 00:04:05,700
+Systems to do something other than
+
+111
+00:04:05,700 --> 00:04:07,680
+generating music lyrics at least not
+
+112
+00:04:07,680 --> 00:04:09,840
+effectively on the contrary it seems
+
+113
+00:04:09,840 --> 00:04:11,939
+that modern AI technology is actually
+
+114
+00:04:11,939 --> 00:04:15,000
+flexible so take for example chat GPT I
+
+115
+00:04:15,000 --> 00:04:16,979
+can actually tell it to write a song
+
+116
+00:04:16,979 --> 00:04:18,840
+containing the line that you just heard
+
+117
+00:04:18,840 --> 00:04:21,000
+and it seemed to just do it without
+
+118
+00:04:21,000 --> 00:04:23,280
+requiring that whole complex pipeline
+
+119
+00:04:23,280 --> 00:04:26,040
+that I put together three years ago I
+
+120
+00:04:26,040 --> 00:04:28,560
+could even ask it to draft a response to
+
+121
+00:04:28,560 --> 00:04:31,259
+an email that I received or I could ask
+
+122
+00:04:31,259 --> 00:04:33,360
+it to write code for me for example and
+
+123
+00:04:33,360 --> 00:04:35,820
+this flexibility is precisely what makes
+
+124
+00:04:35,820 --> 00:04:38,880
+these systems so impressive to us and
+
+125
+00:04:38,880 --> 00:04:40,500
+also the fact that their input and
+
+126
+00:04:40,500 --> 00:04:43,560
+output modality is just language right
+
+127
+00:04:43,560 --> 00:04:45,360
+language in and of itself is super
+
+128
+00:04:45,360 --> 00:04:48,240
+special to us because fundamentally it
+
+129
+00:04:48,240 --> 00:04:50,220
+is the serialization format for our
+
+130
+00:04:50,220 --> 00:04:53,100
+thoughts it is very deeply linked to the
+
+131
+00:04:53,100 --> 00:04:55,500
+way that we think and when you can
+
+132
+00:04:55,500 --> 00:04:58,139
+communicate with an AI system quote
+
+133
+00:04:58,139 --> 00:05:00,840
+unquote that happens to use language as
+
+134
+00:05:00,840 --> 00:05:02,820
+this input output modality and it seems
+
+135
+00:05:02,820 --> 00:05:04,440
+like you can understand this complex
+
+136
+00:05:04,440 --> 00:05:06,240
+language and it seems like it's able to
+
+137
+00:05:06,240 --> 00:05:08,520
+communicate fluently using that language
+
+138
+00:05:08,520 --> 00:05:11,460
+it's very easy to trip up our brain's
+
+139
+00:05:11,460 --> 00:05:13,800
+internal circuitry and assign way more
+
+140
+00:05:13,800 --> 00:05:15,900
+credit and intelligence to the backing
+
+141
+00:05:15,900 --> 00:05:18,780
+system then there really actually is but
+
+142
+00:05:18,780 --> 00:05:20,220
+let's finally go ahead and answer the
+
+143
+00:05:20,220 --> 00:05:23,340
+question can chat GPT replace me or
+
+144
+00:05:23,340 --> 00:05:25,820
+replace you for that matter or anyone
+
+145
+00:05:25,820 --> 00:05:28,199
+there are four tests that I want to run
+
+146
+00:05:28,199 --> 00:05:29,759
+today first we're going to see if chat
+
+147
+00:05:29,759 --> 00:05:31,860
+gbt can answer interview questions for
+
+148
+00:05:31,860 --> 00:05:33,900
+me we'll see if they can draft responses
+
+149
+00:05:33,900 --> 00:05:36,120
+to my emails we're going to see if they
+
+150
+00:05:36,120 --> 00:05:38,400
+can answer my assessments that I've
+
+151
+00:05:38,400 --> 00:05:40,259
+written for my own students and my AI
+
+152
+00:05:40,259 --> 00:05:41,580
+courses like the one that I taught at
+
+153
+00:05:41,580 --> 00:05:43,020
+University of Winnipeg last year and
+
+154
+00:05:43,020 --> 00:05:45,240
+this will see if you know GPT can even
+
+155
+00:05:45,240 --> 00:05:48,000
+teach students which I mean is dependent
+
+156
+00:05:48,000 --> 00:05:49,080
+on it being able to answer the
+
+157
+00:05:49,080 --> 00:05:50,460
+assessments I put together in the first
+
+158
+00:05:50,460 --> 00:05:52,740
+place and then finally we're going to
+
+159
+00:05:52,740 --> 00:05:54,479
+see if chatgpt can replace me as a
+
+160
+00:05:54,479 --> 00:05:56,639
+developer and write my code for me so
+
+161
+00:05:56,639 --> 00:05:58,620
+let's go ahead and try them out alright
+
+162
+00:05:58,620 --> 00:06:00,539
+let's begin our assessment of chat GPT
+
+163
+00:06:00,539 --> 00:06:02,400
+to see if it can replace me we're going
+
+164
+00:06:02,400 --> 00:06:03,720
+to start off with a task that isn't
+
+165
+00:06:03,720 --> 00:06:06,120
+really replacing me as much as it is uh
+
+166
+00:06:06,120 --> 00:06:08,160
+automating a little bit of the job that
+
+167
+00:06:08,160 --> 00:06:10,380
+isn't as fun for me let's see if it can
+
+168
+00:06:10,380 --> 00:06:12,479
+write my emails now this is sort of like
+
+169
+00:06:12,479 --> 00:06:14,160
+a typical example of the kind of thing
+
+170
+00:06:14,160 --> 00:06:17,160
+you would do with gbt taking a look at a
+
+171
+00:06:17,160 --> 00:06:19,500
+hypothetical email that I that I wrote
+
+172
+00:06:19,500 --> 00:06:22,380
+out this is from John and he's saying
+
+173
+00:06:22,380 --> 00:06:23,880
+he's the founder of a startup focused on
+
+174
+00:06:23,880 --> 00:06:25,259
+blockchain and he wants to chat about
+
+175
+00:06:25,259 --> 00:06:27,960
+his web 3.0 platform now let's just say
+
+176
+00:06:27,960 --> 00:06:30,300
+once again fully hypothetical scenario I
+
+177
+00:06:30,300 --> 00:06:32,280
+have a conflict of interest and so I
+
+178
+00:06:32,280 --> 00:06:35,160
+can't work with them uh due to due to
+
+179
+00:06:35,160 --> 00:06:36,600
+this conflict of interest but I'd be
+
+180
+00:06:36,600 --> 00:06:39,419
+happy to chat I can simply tell chat gbt
+
+181
+00:06:39,419 --> 00:06:41,100
+tell John that I can't work with him due
+
+182
+00:06:41,100 --> 00:06:42,660
+to a conflict of interest but I'd be
+
+183
+00:06:42,660 --> 00:06:44,880
+happy to chat and with this very naive
+
+184
+00:06:44,880 --> 00:06:47,639
+prompting I get back actually not that
+
+185
+00:06:47,639 --> 00:06:50,819
+bad of an email draft it says hi John
+
+186
+00:06:50,819 --> 00:06:51,960
+thanks for reaching out introducing
+
+187
+00:06:51,960 --> 00:06:54,300
+yourself I appreciate your interest and
+
+188
+00:06:54,300 --> 00:06:56,280
+basically boils down to you know giving
+
+189
+00:06:56,280 --> 00:06:58,620
+across the message that I wanted to
+
+190
+00:06:58,620 --> 00:07:00,900
+but here's the problem you can tell that
+
+191
+00:07:00,900 --> 00:07:03,600
+I didn't write this right if this is
+
+192
+00:07:03,600 --> 00:07:05,940
+continuing a thread with someone I've
+
+193
+00:07:05,940 --> 00:07:07,940
+been speaking to myself for a long time
+
+194
+00:07:07,940 --> 00:07:10,680
+or if this is you know sending out new
+
+195
+00:07:10,680 --> 00:07:12,060
+emails and eventually I take over you're
+
+196
+00:07:12,060 --> 00:07:13,139
+gonna be able to tell that there's a
+
+197
+00:07:13,139 --> 00:07:15,120
+shift in voice and I don't want that now
+
+198
+00:07:15,120 --> 00:07:17,280
+I gotta go in and do a lot of you know
+
+199
+00:07:17,280 --> 00:07:18,960
+editing in post to make it sound like
+
+200
+00:07:18,960 --> 00:07:20,639
+I'm the one who sent the email
+
+201
+00:07:20,639 --> 00:07:23,220
+so how can we somehow improve this well
+
+202
+00:07:23,220 --> 00:07:25,560
+we can improve it with context so what I
+
+203
+00:07:25,560 --> 00:07:27,419
+did is I built a script that basically
+
+204
+00:07:27,419 --> 00:07:30,720
+scraped every email I have written and I
+
+205
+00:07:30,720 --> 00:07:32,699
+took out pairs of emails where it was an
+
+206
+00:07:32,699 --> 00:07:34,380
+email that I got and then and then my
+
+207
+00:07:34,380 --> 00:07:36,360
+response immediately after and wherever
+
+208
+00:07:36,360 --> 00:07:38,520
+I noticed that pattern across my emails
+
+209
+00:07:38,520 --> 00:07:40,259
+and of course it was like an actual
+
+210
+00:07:40,259 --> 00:07:43,440
+important tagged email I stored those in
+
+211
+00:07:43,440 --> 00:07:45,000
+the database and used the openai
+
+212
+00:07:45,000 --> 00:07:48,060
+embeddings endpoint to index all of
+
+213
+00:07:48,060 --> 00:07:50,220
+these emails and so now when I see an
+
+214
+00:07:50,220 --> 00:07:52,220
+email like hypothetical John's over here
+
+215
+00:07:52,220 --> 00:07:54,599
+I embed that through the same embeddings
+
+216
+00:07:54,599 --> 00:07:56,340
+endpoint look up similar emails I've
+
+217
+00:07:56,340 --> 00:07:58,319
+gotten in the past take the top five
+
+218
+00:07:58,319 --> 00:08:01,560
+most similar emails take my responses of
+
+219
+00:08:01,560 --> 00:08:04,319
+them and then feed those into chat gpt's
+
+220
+00:08:04,319 --> 00:08:06,300
+context telling it to respond with the
+
+221
+00:08:06,300 --> 00:08:08,759
+message that I specify here but then in
+
+222
+00:08:08,759 --> 00:08:10,680
+the voice and writing style of these
+
+223
+00:08:10,680 --> 00:08:13,620
+previous five emails and so now if I
+
+224
+00:08:13,620 --> 00:08:15,840
+were to run this through with the same
+
+225
+00:08:15,840 --> 00:08:18,479
+message and same email but including
+
+226
+00:08:18,479 --> 00:08:21,060
+this sort of contextual prompting I I
+
+227
+00:08:21,060 --> 00:08:23,520
+get an email that is a lot closer to how
+
+228
+00:08:23,520 --> 00:08:27,000
+I would actually word a response to the
+
+229
+00:08:27,000 --> 00:08:29,039
+email that I got if this is what I
+
+230
+00:08:29,039 --> 00:08:30,360
+wanted to say
+
+231
+00:08:30,360 --> 00:08:33,240
+and so you can improve the results that
+
+232
+00:08:33,240 --> 00:08:35,219
+you get from these models significantly
+
+233
+00:08:35,219 --> 00:08:37,380
+and make them much more valuable to the
+
+234
+00:08:37,380 --> 00:08:39,719
+end user by using all sorts of neat
+
+235
+00:08:39,719 --> 00:08:41,520
+tricks and these are ones that you build
+
+236
+00:08:41,520 --> 00:08:43,680
+into your application not just ones that
+
+237
+00:08:43,680 --> 00:08:45,360
+you prompt the language model with right
+
+238
+00:08:45,360 --> 00:08:47,399
+so for example I actually had to go out
+
+239
+00:08:47,399 --> 00:08:49,860
+and index all of my emails scrape them
+
+240
+00:08:49,860 --> 00:08:51,660
+run them through the embedding store the
+
+241
+00:08:51,660 --> 00:08:53,220
+vectors in the database and then
+
+242
+00:08:53,220 --> 00:08:55,140
+implement the lookup to make it so I can
+
+243
+00:08:55,140 --> 00:08:57,600
+construct The Prompt for GPT to begin
+
+244
+00:08:57,600 --> 00:08:59,279
+with so one thing to keep in mind is
+
+245
+00:08:59,279 --> 00:09:00,360
+that when you're building valuable
+
+246
+00:09:00,360 --> 00:09:02,399
+applications it's all about that
+
+247
+00:09:02,399 --> 00:09:04,800
+interplay of using the software that you
+
+248
+00:09:04,800 --> 00:09:06,080
+build in the logic that you build
+
+249
+00:09:06,080 --> 00:09:08,279
+alongside the language model in
+
+250
+00:09:08,279 --> 00:09:10,320
+individual components where it can
+
+251
+00:09:10,320 --> 00:09:12,779
+actually be valuable now let's move on
+
+252
+00:09:12,779 --> 00:09:14,220
+to what I think is a more interesting
+
+253
+00:09:14,220 --> 00:09:16,800
+assessment let's see if we can automate
+
+254
+00:09:16,800 --> 00:09:19,440
+the uh the process of responding to
+
+255
+00:09:19,440 --> 00:09:20,880
+people's questions that want
+
+256
+00:09:20,880 --> 00:09:23,100
+non-technical answers now I receive
+
+257
+00:09:23,100 --> 00:09:25,260
+these a lot in like talks that I do in
+
+258
+00:09:25,260 --> 00:09:27,600
+interviews when people ask me questions
+
+259
+00:09:27,600 --> 00:09:29,160
+and this will be a non-technical
+
+260
+00:09:29,160 --> 00:09:31,260
+audience so say will ask me something
+
+261
+00:09:31,260 --> 00:09:32,940
+like what are your thoughts on
+
+262
+00:09:32,940 --> 00:09:35,279
+generative AI technology like gbt3 do
+
+263
+00:09:35,279 --> 00:09:36,660
+you think that large language models are
+
+264
+00:09:36,660 --> 00:09:38,040
+going to be a bad thing for Education
+
+265
+00:09:38,040 --> 00:09:39,420
+since students are just going to copy
+
+266
+00:09:39,420 --> 00:09:41,519
+the output of these AI systems and not
+
+267
+00:09:41,519 --> 00:09:43,560
+learn anything for themselves and do you
+
+268
+00:09:43,560 --> 00:09:45,240
+think it's going to replace entry-level
+
+269
+00:09:45,240 --> 00:09:46,320
+Developers
+
+270
+00:09:46,320 --> 00:09:48,420
+this is a real question that I got uh
+
+271
+00:09:48,420 --> 00:09:50,519
+just a couple of days ago let's see what
+
+272
+00:09:50,519 --> 00:09:52,380
+gbt4 the sort of state-of-the-art
+
+273
+00:09:52,380 --> 00:09:54,660
+language model from openai has to say
+
+274
+00:09:54,660 --> 00:09:57,120
+about this as you can see
+
+275
+00:09:57,120 --> 00:10:00,240
+it gives us a not bad answer like it
+
+276
+00:10:00,240 --> 00:10:01,560
+gives us something that is technically
+
+277
+00:10:01,560 --> 00:10:02,580
+correct
+
+278
+00:10:02,580 --> 00:10:04,200
+um there are pros and cons regarding its
+
+279
+00:10:04,200 --> 00:10:06,120
+impact on education you know it can be a
+
+280
+00:10:06,120 --> 00:10:08,700
+valuable tool for students but we need
+
+281
+00:10:08,700 --> 00:10:11,880
+to emphasize using these tools
+
+282
+00:10:11,880 --> 00:10:13,860
+responsibly as a supplement rather than
+
+283
+00:10:13,860 --> 00:10:16,260
+a replacement and as per entry-level
+
+284
+00:10:16,260 --> 00:10:18,360
+developers AI systems can automate
+
+285
+00:10:18,360 --> 00:10:19,920
+certain tasks but they're not capable of
+
+286
+00:10:19,920 --> 00:10:21,420
+replacing the human creativity problem
+
+287
+00:10:21,420 --> 00:10:23,519
+solving adaptability that's important
+
+288
+00:10:23,519 --> 00:10:24,839
+for
+
+289
+00:10:24,839 --> 00:10:26,160
+um development
+
+290
+00:10:26,160 --> 00:10:28,800
+and then it might change the nature of
+
+291
+00:10:28,800 --> 00:10:31,920
+some entry level jobs
+
+292
+00:10:31,920 --> 00:10:34,140
+again technically not wrong and it's
+
+293
+00:10:34,140 --> 00:10:35,640
+aligns to what I was going to answer
+
+294
+00:10:35,640 --> 00:10:37,680
+regardless but let's ask more detail
+
+295
+00:10:37,680 --> 00:10:39,420
+because this was kind of high level
+
+296
+00:10:39,420 --> 00:10:41,279
+so I ask what is the interaction between
+
+297
+00:10:41,279 --> 00:10:43,200
+students and AI really look like like
+
+298
+00:10:43,200 --> 00:10:44,700
+why wouldn't they just use it to cheat
+
+299
+00:10:44,700 --> 00:10:46,880
+right and
+
+300
+00:10:46,880 --> 00:10:50,640
+gpt4 comes back with a list of positive
+
+301
+00:10:50,640 --> 00:10:53,339
+interactions between students and Ai and
+
+302
+00:10:53,339 --> 00:10:54,839
+some of the ways that we can encourage
+
+303
+00:10:54,839 --> 00:10:57,060
+students not to cheat and most of it
+
+304
+00:10:57,060 --> 00:10:59,040
+boils down to providing clear guidelines
+
+305
+00:10:59,040 --> 00:11:01,200
+encouraging collaboration you know
+
+306
+00:11:01,200 --> 00:11:02,940
+emphasizing the importance of academic
+
+307
+00:11:02,940 --> 00:11:05,820
+integrity and then also you know finally
+
+308
+00:11:05,820 --> 00:11:07,380
+designing assessments that require
+
+309
+00:11:07,380 --> 00:11:09,120
+students to apply their Knowledge and
+
+310
+00:11:09,120 --> 00:11:10,140
+Skills
+
+311
+00:11:10,140 --> 00:11:11,820
+and so
+
+312
+00:11:11,820 --> 00:11:13,920
+a lot of this was honestly quite high
+
+313
+00:11:13,920 --> 00:11:15,600
+level boiling down to hey you just got
+
+314
+00:11:15,600 --> 00:11:17,339
+to make sure that you really am you know
+
+315
+00:11:17,339 --> 00:11:19,560
+encourage people not to cheat there
+
+316
+00:11:19,560 --> 00:11:22,140
+wasn't a lot of real substance as to
+
+317
+00:11:22,140 --> 00:11:24,300
+something I guess actionable um in these
+
+318
+00:11:24,300 --> 00:11:25,500
+answers
+
+319
+00:11:25,500 --> 00:11:27,600
+uh now for a little bit of context
+
+320
+00:11:27,600 --> 00:11:29,820
+my actual answer to this was something
+
+321
+00:11:29,820 --> 00:11:32,279
+along the lines of you know with these
+
+322
+00:11:32,279 --> 00:11:33,959
+language models sure say software
+
+323
+00:11:33,959 --> 00:11:35,279
+engineering students they will
+
+324
+00:11:35,279 --> 00:11:37,500
+inevitably try to use it to cheat no
+
+325
+00:11:37,500 --> 00:11:38,880
+matter how much you encourage them not
+
+326
+00:11:38,880 --> 00:11:42,300
+to but the point is that's these models
+
+327
+00:11:42,300 --> 00:11:44,279
+fundamentally due to certain limitations
+
+328
+00:11:44,279 --> 00:11:46,620
+and precisely the same ones that made it
+
+329
+00:11:46,620 --> 00:11:48,540
+so they couldn't answer this question in
+
+330
+00:11:48,540 --> 00:11:50,640
+more detail we'll never get everything
+
+331
+00:11:50,640 --> 00:11:52,620
+completely right there will be mistakes
+
+332
+00:11:52,620 --> 00:11:54,480
+that are made especially in fields like
+
+333
+00:11:54,480 --> 00:11:56,640
+software and when these mistakes are
+
+334
+00:11:56,640 --> 00:11:58,320
+made you are forced to then go in
+
+335
+00:11:58,320 --> 00:12:00,720
+understand the content the code and then
+
+336
+00:12:00,720 --> 00:12:02,880
+fix those bugs that is a lot harder than
+
+337
+00:12:02,880 --> 00:12:04,620
+people will necessarily give credit for
+
+338
+00:12:04,620 --> 00:12:06,240
+and then from an entry-level perspective
+
+339
+00:12:06,240 --> 00:12:07,800
+entry-level jobs are going to continue
+
+340
+00:12:07,800 --> 00:12:09,899
+to exist we're not replacing developers
+
+341
+00:12:09,899 --> 00:12:12,120
+right what's going to happen though is
+
+342
+00:12:12,120 --> 00:12:14,160
+the expectations of entry-level
+
+343
+00:12:14,160 --> 00:12:15,899
+developers will significantly change
+
+344
+00:12:15,899 --> 00:12:18,060
+they will be much higher than they are
+
+345
+00:12:18,060 --> 00:12:19,920
+today and the reason is simply because
+
+346
+00:12:19,920 --> 00:12:22,860
+they will have better tools right If you
+
+347
+00:12:22,860 --> 00:12:24,360
+hired two mathematicians one with them
+
+348
+00:12:24,360 --> 00:12:26,760
+without a calculator I imagine that you
+
+349
+00:12:26,760 --> 00:12:28,019
+would expect the one with the calculator
+
+350
+00:12:28,019 --> 00:12:30,000
+to get more work done because they just
+
+351
+00:12:30,000 --> 00:12:32,579
+fundamentally have a better tool and so
+
+352
+00:12:32,579 --> 00:12:34,019
+it's not that entry level developers are
+
+353
+00:12:34,019 --> 00:12:36,000
+going to be expected to have senior
+
+354
+00:12:36,000 --> 00:12:38,160
+levels of experience coming out of
+
+355
+00:12:38,160 --> 00:12:40,500
+school that's unreasonable instead
+
+356
+00:12:40,500 --> 00:12:42,180
+what's going to be expected is that they
+
+357
+00:12:42,180 --> 00:12:44,220
+will be able to provide more than an
+
+358
+00:12:44,220 --> 00:12:46,740
+entry-level developer today because they
+
+359
+00:12:46,740 --> 00:12:49,079
+will have the tools alongside their
+
+360
+00:12:49,079 --> 00:12:50,880
+human creativity and problem solving and
+
+361
+00:12:50,880 --> 00:12:53,100
+that little bit of experience to sort of
+
+362
+00:12:53,100 --> 00:12:54,899
+work effectively with that tool and get
+
+363
+00:12:54,899 --> 00:12:56,519
+more done than they would be able to
+
+364
+00:12:56,519 --> 00:12:58,560
+today but what about replacing me in
+
+365
+00:12:58,560 --> 00:13:01,320
+technical domains let's see if chatgpt
+
+366
+00:13:01,320 --> 00:13:04,139
+could replace me as a teacher now of
+
+367
+00:13:04,139 --> 00:13:05,279
+course in order to replace me as a
+
+368
+00:13:05,279 --> 00:13:06,600
+teacher I would expect that it would
+
+369
+00:13:06,600 --> 00:13:08,160
+actually be able to pass the existing
+
+370
+00:13:08,160 --> 00:13:09,839
+assessments I've already made for some
+
+371
+00:13:09,839 --> 00:13:11,639
+of my students for example as I
+
+372
+00:13:11,639 --> 00:13:13,019
+mentioned I taught a course at the
+
+373
+00:13:13,019 --> 00:13:15,240
+University of Winnipeg last year this AI
+
+374
+00:13:15,240 --> 00:13:17,639
+course was centered around my students
+
+375
+00:13:17,639 --> 00:13:19,200
+actually being able to build an actual
+
+376
+00:13:19,200 --> 00:13:20,820
+application using a machine learning
+
+377
+00:13:20,820 --> 00:13:23,880
+Tech and I had a quiz where I asked why
+
+378
+00:13:23,880 --> 00:13:25,860
+is explainability a problem with modern
+
+379
+00:13:25,860 --> 00:13:28,260
+deep learning techniques select all that
+
+380
+00:13:28,260 --> 00:13:30,779
+apply and in this question there were
+
+381
+00:13:30,779 --> 00:13:34,079
+four possible answers it's because we
+
+382
+00:13:34,079 --> 00:13:35,399
+don't understand the math behind
+
+383
+00:13:35,399 --> 00:13:38,279
+training the models at all the data we
+
+384
+00:13:38,279 --> 00:13:40,500
+train these models on only Maps input to
+
+385
+00:13:40,500 --> 00:13:42,240
+output and doesn't include the reasoning
+
+386
+00:13:42,240 --> 00:13:44,399
+for why the human made the original
+
+387
+00:13:44,399 --> 00:13:47,220
+decision uh also that there's no
+
+388
+00:13:47,220 --> 00:13:49,079
+standard way to explain a model's output
+
+389
+00:13:49,079 --> 00:13:50,760
+because it depends on the domain and the
+
+390
+00:13:50,760 --> 00:13:52,800
+representation of the data and deep
+
+391
+00:13:52,800 --> 00:13:54,120
+learning models are just trained
+
+392
+00:13:54,120 --> 00:13:55,560
+end-to-end with a large number of
+
+393
+00:13:55,560 --> 00:13:57,240
+parameters as a black box
+
+394
+00:13:57,240 --> 00:13:59,040
+and so these are our four possible
+
+395
+00:13:59,040 --> 00:14:01,620
+answers why is explainability a problem
+
+396
+00:14:01,620 --> 00:14:04,440
+with modern deep learning techniques
+
+397
+00:14:04,440 --> 00:14:06,420
+now right now if you'd like go ahead and
+
+398
+00:14:06,420 --> 00:14:09,120
+pause think about the answers and leave
+
+399
+00:14:09,120 --> 00:14:10,500
+them down in the comment section below
+
+400
+00:14:10,500 --> 00:14:12,360
+the reason I chose this specific
+
+401
+00:14:12,360 --> 00:14:15,240
+question from the quiz to give to gbt4
+
+402
+00:14:15,240 --> 00:14:17,279
+is because this was the one that
+
+403
+00:14:17,279 --> 00:14:18,899
+actually stumped the most of my students
+
+404
+00:14:18,899 --> 00:14:21,120
+and looking back in retrospect it was
+
+405
+00:14:21,120 --> 00:14:22,860
+kind of mean toward it this way because
+
+406
+00:14:22,860 --> 00:14:25,440
+it's a little bit misleading but really
+
+407
+00:14:25,440 --> 00:14:28,139
+if you think about the answers and if
+
+408
+00:14:28,139 --> 00:14:30,120
+you think about what they entail and
+
+409
+00:14:30,120 --> 00:14:32,100
+what would be necessary for them to be
+
+410
+00:14:32,100 --> 00:14:34,680
+true or false you realize which ones
+
+411
+00:14:34,680 --> 00:14:37,019
+should be true and false so let's run it
+
+412
+00:14:37,019 --> 00:14:39,660
+through gpt4 and let's see what it gives
+
+413
+00:14:39,660 --> 00:14:40,860
+us
+
+414
+00:14:40,860 --> 00:14:42,300
+once again this is sort of like the
+
+415
+00:14:42,300 --> 00:14:43,440
+state of the art model that we have
+
+416
+00:14:43,440 --> 00:14:46,320
+access to so asking it to both explain
+
+417
+00:14:46,320 --> 00:14:49,199
+each option a little bit as well as say
+
+418
+00:14:49,199 --> 00:14:51,600
+whether they're true or false we see it
+
+419
+00:14:51,600 --> 00:14:53,519
+start with number one then it gets to
+
+420
+00:14:53,519 --> 00:14:56,279
+number two and three and four
+
+421
+00:14:56,279 --> 00:14:58,620
+um and it basically boils down to saying
+
+422
+00:14:58,620 --> 00:15:03,060
+that number one is false because it's um
+
+423
+00:15:03,060 --> 00:15:04,800
+because we do understand sort of the
+
+424
+00:15:04,800 --> 00:15:06,480
+Core Concepts behind training deep
+
+425
+00:15:06,480 --> 00:15:09,480
+learning systems but then two three and
+
+426
+00:15:09,480 --> 00:15:12,600
+four are true number two because given
+
+427
+00:15:12,600 --> 00:15:13,920
+reasoning we could train these deep
+
+428
+00:15:13,920 --> 00:15:16,220
+Learning Systems to use that reasoning
+
+429
+00:15:16,220 --> 00:15:19,560
+number three because of course
+
+430
+00:15:19,560 --> 00:15:21,899
+explainability depends on your data and
+
+431
+00:15:21,899 --> 00:15:23,160
+domain
+
+432
+00:15:23,160 --> 00:15:26,399
+uh and then number four uh because that
+
+433
+00:15:26,399 --> 00:15:27,959
+is how these deep learning systems are
+
+434
+00:15:27,959 --> 00:15:29,279
+trained they are trained as an
+
+435
+00:15:29,279 --> 00:15:32,339
+end-to-end Black Box uh and so we may
+
+436
+00:15:32,339 --> 00:15:33,899
+not be able to understand you know the
+
+437
+00:15:33,899 --> 00:15:37,920
+internal uh reasoning behind decisions
+
+438
+00:15:37,920 --> 00:15:41,040
+now how did gpt4 score
+
+439
+00:15:41,040 --> 00:15:43,740
+well what if I told you it got three of
+
+440
+00:15:43,740 --> 00:15:46,500
+the four correct number two should
+
+441
+00:15:46,500 --> 00:15:49,860
+actually be false now thinking about
+
+442
+00:15:49,860 --> 00:15:51,720
+this for just a moment
+
+443
+00:15:51,720 --> 00:15:54,060
+if you really sort of understand the way
+
+444
+00:15:54,060 --> 00:15:56,100
+deep learning algorithms are trained and
+
+445
+00:15:56,100 --> 00:15:58,680
+if we think about reasoning and if for
+
+446
+00:15:58,680 --> 00:16:01,320
+example data sets contained reasoning as
+
+447
+00:16:01,320 --> 00:16:03,720
+to why certain outputs are correct or
+
+448
+00:16:03,720 --> 00:16:05,760
+incorrect compared to others
+
+449
+00:16:05,760 --> 00:16:08,339
+even if a deep Learning System were
+
+450
+00:16:08,339 --> 00:16:11,459
+trained the way it is today to produce
+
+451
+00:16:11,459 --> 00:16:13,560
+that reasoning as output even if it were
+
+452
+00:16:13,560 --> 00:16:16,139
+part of the data that doesn't change the
+
+453
+00:16:16,139 --> 00:16:18,839
+fact that that reasoning is now just
+
+454
+00:16:18,839 --> 00:16:21,779
+another output of this system
+
+455
+00:16:21,779 --> 00:16:25,019
+and so now your reasoning is another
+
+456
+00:16:25,019 --> 00:16:27,779
+output that must further be explained
+
+457
+00:16:27,779 --> 00:16:30,120
+right you sort of develop the problem
+
+458
+00:16:30,120 --> 00:16:33,120
+back into needing to now explain the
+
+459
+00:16:33,120 --> 00:16:34,860
+reason you came to that explanation
+
+460
+00:16:34,860 --> 00:16:37,259
+because it's just another output of your
+
+461
+00:16:37,259 --> 00:16:39,240
+deep Learning System that is trained end
+
+462
+00:16:39,240 --> 00:16:41,160
+to end as a black box
+
+463
+00:16:41,160 --> 00:16:43,860
+and you know a system that we don't have
+
+464
+00:16:43,860 --> 00:16:45,720
+a standard way of explaining output for
+
+465
+00:16:45,720 --> 00:16:48,120
+and so that answer should have been
+
+466
+00:16:48,120 --> 00:16:50,519
+false but it's true and gpt4 fell for
+
+467
+00:16:50,519 --> 00:16:54,600
+the same uh sort of uh trap I guess that
+
+468
+00:16:54,600 --> 00:16:57,120
+that every human does
+
+469
+00:16:57,120 --> 00:17:00,060
+um or a lot of humans do which is it
+
+470
+00:17:00,060 --> 00:17:03,000
+sounds very correct right it sounds like
+
+471
+00:17:03,000 --> 00:17:05,699
+if there were explanations and reasoning
+
+472
+00:17:05,699 --> 00:17:07,140
+and training data that would be able to
+
+473
+00:17:07,140 --> 00:17:09,660
+train systems to sort of respect that
+
+474
+00:17:09,660 --> 00:17:13,020
+reasoning and to be able to adhere or or
+
+475
+00:17:13,020 --> 00:17:15,480
+produce that kind of reasoning but
+
+476
+00:17:15,480 --> 00:17:17,280
+fundamentally keeping the training
+
+477
+00:17:17,280 --> 00:17:19,620
+algorithms the way they are today we
+
+478
+00:17:19,620 --> 00:17:21,240
+can't do that because then reasoning
+
+479
+00:17:21,240 --> 00:17:24,000
+just ends up being another output and so
+
+480
+00:17:24,000 --> 00:17:26,100
+I think this is really fascinating to
+
+481
+00:17:26,100 --> 00:17:27,780
+take a look behind the curtain to see
+
+482
+00:17:27,780 --> 00:17:30,059
+what some of the very fundamental
+
+483
+00:17:30,059 --> 00:17:33,000
+limitations Behind These large language
+
+484
+00:17:33,000 --> 00:17:35,100
+models are and speaking of fundamental
+
+485
+00:17:35,100 --> 00:17:36,240
+limitations
+
+486
+00:17:36,240 --> 00:17:39,539
+what about code can chat GPT replace me
+
+487
+00:17:39,539 --> 00:17:42,720
+as a developer well let's find out and
+
+488
+00:17:42,720 --> 00:17:44,820
+we're going to find out with the example
+
+489
+00:17:44,820 --> 00:17:48,120
+of the email bot that I showed you just
+
+490
+00:17:48,120 --> 00:17:50,160
+a little while ago now how is that
+
+491
+00:17:50,160 --> 00:17:52,500
+relevant you may ask well
+
+492
+00:17:52,500 --> 00:17:54,840
+as I mentioned I had to build a script
+
+493
+00:17:54,840 --> 00:17:58,140
+that could extract email pairs from all
+
+494
+00:17:58,140 --> 00:18:00,000
+of the emails I've ever sent email reply
+
+495
+00:18:00,000 --> 00:18:02,700
+Pairs and I would then feed them through
+
+496
+00:18:02,700 --> 00:18:04,799
+the openai embedding endpoint I would
+
+497
+00:18:04,799 --> 00:18:06,480
+receive embeddings store them in a
+
+498
+00:18:06,480 --> 00:18:07,919
+quote-unquote database which is really
+
+499
+00:18:07,919 --> 00:18:10,740
+just a numpy file on disk and then
+
+500
+00:18:10,740 --> 00:18:12,840
+attempt to retrieve new vector
+
+501
+00:18:12,840 --> 00:18:14,940
+embeddings and match them against old
+
+502
+00:18:14,940 --> 00:18:16,679
+emails in the future
+
+503
+00:18:16,679 --> 00:18:19,740
+now on one hand people have argued that
+
+504
+00:18:19,740 --> 00:18:21,900
+yes large language models will replace
+
+505
+00:18:21,900 --> 00:18:24,000
+developers in some fashion at least
+
+506
+00:18:24,000 --> 00:18:26,039
+entry level ones and the reason is
+
+507
+00:18:26,039 --> 00:18:28,500
+because of the following if I were to
+
+508
+00:18:28,500 --> 00:18:31,799
+for example throw the code sort of task
+
+509
+00:18:31,799 --> 00:18:35,340
+that I need into gpt4 it seems like it's
+
+510
+00:18:35,340 --> 00:18:37,740
+able to code it pretty well so for
+
+511
+00:18:37,740 --> 00:18:40,320
+example I can tell it that I would like
+
+512
+00:18:40,320 --> 00:18:41,400
+to
+
+513
+00:18:41,400 --> 00:18:45,179
+Implement a script that can take the um
+
+514
+00:18:45,179 --> 00:18:47,520
+that can take you know list of emails
+
+515
+00:18:47,520 --> 00:18:49,500
+that are that are laid out in folders in
+
+516
+00:18:49,500 --> 00:18:52,140
+a certain way and run them through the
+
+517
+00:18:52,140 --> 00:18:54,240
+open AI embedding endpoint and save them
+
+518
+00:18:54,240 --> 00:18:56,460
+to disk and what's really impressive is
+
+519
+00:18:56,460 --> 00:18:57,900
+that it's doing this based off of an
+
+520
+00:18:57,900 --> 00:18:59,760
+example of using the openai embedding
+
+521
+00:18:59,760 --> 00:19:01,980
+endpoint because it's data cutoff is
+
+522
+00:19:01,980 --> 00:19:03,780
+before that endpoint was even released
+
+523
+00:19:03,780 --> 00:19:06,000
+and so it is really impressive to be
+
+524
+00:19:06,000 --> 00:19:08,280
+fair and this sort of conclusion has led
+
+525
+00:19:08,280 --> 00:19:09,660
+a lot of people to think hey we're
+
+526
+00:19:09,660 --> 00:19:11,520
+replacing entry level developers but
+
+527
+00:19:11,520 --> 00:19:14,760
+here's the catch let's take another step
+
+528
+00:19:14,760 --> 00:19:16,799
+back let's go back to the author script
+
+529
+00:19:16,799 --> 00:19:18,240
+that I was talking about that actually
+
+530
+00:19:18,240 --> 00:19:19,679
+extracts
+
+531
+00:19:19,679 --> 00:19:22,140
+the email reply pairs in the first place
+
+532
+00:19:22,140 --> 00:19:24,539
+the problem is that we're trying to
+
+533
+00:19:24,539 --> 00:19:27,000
+extract these pairs from an Mbox file
+
+534
+00:19:27,000 --> 00:19:29,340
+I've actually exported my entire Gmail
+
+535
+00:19:29,340 --> 00:19:31,799
+to two Mbox files in total it's
+
+536
+00:19:31,799 --> 00:19:34,440
+something like 20 Gigabytes large that's
+
+537
+00:19:34,440 --> 00:19:37,140
+a big inbox file if you don't know what
+
+538
+00:19:37,140 --> 00:19:38,640
+these files are laid out like don't
+
+539
+00:19:38,640 --> 00:19:40,740
+worry I didn't until yesterday either
+
+540
+00:19:40,740 --> 00:19:43,919
+but these Mbox files are basically a
+
+541
+00:19:43,919 --> 00:19:46,080
+bunch of text representing all the
+
+542
+00:19:46,080 --> 00:19:48,299
+information in every single email that
+
+543
+00:19:48,299 --> 00:19:51,480
+is in your well email account
+
+544
+00:19:51,480 --> 00:19:52,980
+and
+
+545
+00:19:52,980 --> 00:19:54,720
+this information includes all the way
+
+546
+00:19:54,720 --> 00:19:56,100
+from like the subject and the body to
+
+547
+00:19:56,100 --> 00:19:58,380
+the individual tags of the email when it
+
+548
+00:19:58,380 --> 00:20:00,960
+when the email was sent you know who is
+
+549
+00:20:00,960 --> 00:20:03,240
+from the message ID all these things
+
+550
+00:20:03,240 --> 00:20:05,820
+and the thing is parsing that entire
+
+551
+00:20:05,820 --> 00:20:08,760
+file to begin with ahead of time to then
+
+552
+00:20:08,760 --> 00:20:10,860
+go and extract like a thousand emails
+
+553
+00:20:10,860 --> 00:20:14,400
+from it is insanely wasteful but by
+
+554
+00:20:14,400 --> 00:20:16,919
+default that is the solution that chat
+
+555
+00:20:16,919 --> 00:20:19,679
+GPT will want to provide you what I
+
+556
+00:20:19,679 --> 00:20:21,299
+wanted was a solution in the go
+
+557
+00:20:21,299 --> 00:20:23,640
+programming language that would lazily
+
+558
+00:20:23,640 --> 00:20:26,580
+load one by one individual emails from
+
+559
+00:20:26,580 --> 00:20:28,980
+the Mbox file put them through a channel
+
+560
+00:20:28,980 --> 00:20:31,860
+and allow multiple go routines to parse
+
+561
+00:20:31,860 --> 00:20:34,260
+these emails allowing me to make use of
+
+562
+00:20:34,260 --> 00:20:35,880
+all the resources on my computer at
+
+563
+00:20:35,880 --> 00:20:38,160
+least a lot more of them in order to
+
+564
+00:20:38,160 --> 00:20:39,840
+parse these emails and figure out which
+
+565
+00:20:39,840 --> 00:20:41,640
+ones have replies and which ones don't
+
+566
+00:20:41,640 --> 00:20:43,620
+it's a pretty complex problem because
+
+567
+00:20:43,620 --> 00:20:45,600
+you have to keep track of State you have
+
+568
+00:20:45,600 --> 00:20:48,059
+to keep track of the fact that for
+
+569
+00:20:48,059 --> 00:20:49,679
+example when you see an email you're
+
+570
+00:20:49,679 --> 00:20:51,299
+going to see the reply before you
+
+571
+00:20:51,299 --> 00:20:52,740
+actually see the email because they're
+
+572
+00:20:52,740 --> 00:20:55,080
+sorted chronologically so you've got to
+
+573
+00:20:55,080 --> 00:20:57,600
+store the in reply to tag of a certain
+
+574
+00:20:57,600 --> 00:20:59,280
+email and then match that against the
+
+575
+00:20:59,280 --> 00:21:01,380
+message ID of a future email and if you
+
+576
+00:21:01,380 --> 00:21:02,820
+don't end up seeing one then you don't
+
+577
+00:21:02,820 --> 00:21:04,860
+actually have an original email and you
+
+578
+00:21:04,860 --> 00:21:07,440
+shouldn't save the reply there is
+
+579
+00:21:07,440 --> 00:21:09,660
+complex state that needs to be managed
+
+580
+00:21:09,660 --> 00:21:12,179
+and honestly it's a pretty challenging
+
+581
+00:21:12,179 --> 00:21:14,640
+task it requires a certain level of
+
+582
+00:21:14,640 --> 00:21:17,520
+creativity to come up with a brand new
+
+583
+00:21:17,520 --> 00:21:20,700
+way of this of this sort of parsing that
+
+584
+00:21:20,700 --> 00:21:23,400
+gpt4 may or may not have seen on the
+
+585
+00:21:23,400 --> 00:21:25,440
+internet before sure maybe it's seen
+
+586
+00:21:25,440 --> 00:21:28,039
+individually lazy loading
+
+587
+00:21:28,039 --> 00:21:31,320
+emails from an Mbox maybe individually
+
+588
+00:21:31,320 --> 00:21:33,179
+it's seen things like understanding the
+
+589
+00:21:33,179 --> 00:21:35,760
+in reply to header but putting that all
+
+590
+00:21:35,760 --> 00:21:38,520
+together it's either I Lay It All Out
+
+591
+00:21:38,520 --> 00:21:40,860
+step by step in which case I've still
+
+592
+00:21:40,860 --> 00:21:42,720
+done the creativity and I've still done
+
+593
+00:21:42,720 --> 00:21:44,299
+the problem solving
+
+594
+00:21:44,299 --> 00:21:48,900
+or alternatively I could write the code
+
+595
+00:21:48,900 --> 00:21:51,840
+myself because chat GPT really just
+
+596
+00:21:51,840 --> 00:21:54,960
+doesn't have the capability to come up
+
+597
+00:21:54,960 --> 00:21:57,419
+with these sorts of Novel solutions to
+
+598
+00:21:57,419 --> 00:21:59,340
+novel problems
+
+599
+00:21:59,340 --> 00:22:02,100
+on its own it's just not fundamentally
+
+600
+00:22:02,100 --> 00:22:03,900
+creative enough it's still boiling down
+
+601
+00:22:03,900 --> 00:22:06,059
+to a statistical language model a
+
+602
+00:22:06,059 --> 00:22:08,520
+statistical language model that can
+
+603
+00:22:08,520 --> 00:22:10,380
+interpolate between its own internal
+
+604
+00:22:10,380 --> 00:22:13,080
+data points in a very very sophisticated
+
+605
+00:22:13,080 --> 00:22:15,360
+Manner and then a lot of times ways that
+
+606
+00:22:15,360 --> 00:22:17,659
+look really impressive but it can't
+
+607
+00:22:17,659 --> 00:22:20,460
+extrapolate outside of its own data set
+
+608
+00:22:20,460 --> 00:22:22,020
+outside of its own data distribution
+
+609
+00:22:22,020 --> 00:22:25,620
+that is the limitation with these models
+
+610
+00:22:25,620 --> 00:22:28,760
+and that's why it's not going to replace
+
+611
+00:22:28,760 --> 00:22:31,500
+developers anytime soon now I personally
+
+612
+00:22:31,500 --> 00:22:33,000
+think that these experiments have been
+
+613
+00:22:33,000 --> 00:22:34,679
+incredibly insightful to learn more
+
+614
+00:22:34,679 --> 00:22:36,480
+about how these models work and what
+
+615
+00:22:36,480 --> 00:22:37,500
+they're actually useful for and
+
+616
+00:22:37,500 --> 00:22:39,720
+hopefully you can see why I say that
+
+617
+00:22:39,720 --> 00:22:40,919
+these models aren't going to be
+
+618
+00:22:40,919 --> 00:22:43,620
+replacing me or you or really the
+
+619
+00:22:43,620 --> 00:22:47,100
+majority of people anytime soon however
+
+620
+00:22:47,100 --> 00:22:48,659
+this does bring me to another question
+
+621
+00:22:48,659 --> 00:22:50,700
+which is why did it take so long for me
+
+622
+00:22:50,700 --> 00:22:53,100
+to even cover generative Ai and chat GPT
+
+623
+00:22:53,100 --> 00:22:54,900
+and these sorts of Technologies on this
+
+624
+00:22:54,900 --> 00:22:56,760
+channel in the first place and really
+
+625
+00:22:56,760 --> 00:22:58,679
+it's because and I know this is going to
+
+626
+00:22:58,679 --> 00:23:00,720
+sound weird but I have been struggling
+
+627
+00:23:00,720 --> 00:23:03,659
+to find a need a use case to cover
+
+628
+00:23:03,659 --> 00:23:05,520
+now you're probably thinking there's so
+
+629
+00:23:05,520 --> 00:23:06,480
+much you can do with this there's
+
+630
+00:23:06,480 --> 00:23:08,280
+infinite possibilities why have I been
+
+631
+00:23:08,280 --> 00:23:10,260
+struggling to find a use case well it's
+
+632
+00:23:10,260 --> 00:23:11,760
+because I traditionally like to cover
+
+633
+00:23:11,760 --> 00:23:14,580
+one of two kinds of topics either like
+
+634
+00:23:14,580 --> 00:23:16,620
+to cover very core technical Concepts
+
+635
+00:23:16,620 --> 00:23:18,720
+that in and of themselves don't seem
+
+636
+00:23:18,720 --> 00:23:20,820
+that useful but could be used and sort
+
+637
+00:23:20,820 --> 00:23:23,159
+of abstracted or learned from to then
+
+638
+00:23:23,159 --> 00:23:25,440
+apply into a real application or I like
+
+639
+00:23:25,440 --> 00:23:27,600
+to cover actual applications that I
+
+640
+00:23:27,600 --> 00:23:29,340
+might not scale up myself or put in
+
+641
+00:23:29,340 --> 00:23:31,500
+production but that have the capability
+
+642
+00:23:31,500 --> 00:23:34,620
+to move into production so for example
+
+643
+00:23:34,620 --> 00:23:37,980
+a hard ID is a system that I built that
+
+644
+00:23:37,980 --> 00:23:39,659
+can recognize you based off of the way
+
+645
+00:23:39,659 --> 00:23:41,220
+your heart beats and it uses deep
+
+646
+00:23:41,220 --> 00:23:43,020
+learning and this is an actual
+
+647
+00:23:43,020 --> 00:23:45,000
+application that you know could scale up
+
+648
+00:23:45,000 --> 00:23:46,799
+and be put into production in the future
+
+649
+00:23:46,799 --> 00:23:48,419
+or you know I released a YouTube
+
+650
+00:23:48,419 --> 00:23:50,820
+tutorial on using Nvidia Cuda kernels to
+
+651
+00:23:50,820 --> 00:23:52,440
+brute force hashes similar to proof of
+
+652
+00:23:52,440 --> 00:23:54,659
+work in blockchains and in and of them
+
+653
+00:23:54,659 --> 00:23:56,460
+in and of itself the code base isn't
+
+654
+00:23:56,460 --> 00:23:58,260
+that useful but you can learn things
+
+655
+00:23:58,260 --> 00:24:00,419
+like how to launch Cuda kernels and the
+
+656
+00:24:00,419 --> 00:24:02,940
+basics of blockchain Technology
+
+657
+00:24:02,940 --> 00:24:05,340
+and so when you take a look at those two
+
+658
+00:24:05,340 --> 00:24:07,200
+sorts of things I like to cover
+
+659
+00:24:07,200 --> 00:24:09,600
+Easter realized that chat GPT and the
+
+660
+00:24:09,600 --> 00:24:10,980
+majority of things you can do with it
+
+661
+00:24:10,980 --> 00:24:13,620
+exist in this very weird Middle Ground
+
+662
+00:24:13,620 --> 00:24:15,659
+it's almost an uncanny valley of sorts
+
+663
+00:24:15,659 --> 00:24:17,880
+because on one hand there's the obvious
+
+664
+00:24:17,880 --> 00:24:19,980
+use case which is just chat with it
+
+665
+00:24:19,980 --> 00:24:23,220
+right talk to chat gbt and then sort of
+
+666
+00:24:23,220 --> 00:24:25,380
+guide it through conversation providing
+
+667
+00:24:25,380 --> 00:24:26,940
+more and more instructions as necessary
+
+668
+00:24:26,940 --> 00:24:28,860
+to achieve a certain task that's the
+
+669
+00:24:28,860 --> 00:24:30,059
+obvious one
+
+670
+00:24:30,059 --> 00:24:32,340
+now what I think delivers a real value
+
+671
+00:24:32,340 --> 00:24:34,440
+that people would really want to have is
+
+672
+00:24:34,440 --> 00:24:35,760
+just having these you know machine
+
+673
+00:24:35,760 --> 00:24:37,320
+Learning Systems integrated into an
+
+674
+00:24:37,320 --> 00:24:38,760
+application so you don't need to think
+
+675
+00:24:38,760 --> 00:24:40,320
+about it you don't need to converse with
+
+676
+00:24:40,320 --> 00:24:42,600
+this AI system it just does things for
+
+677
+00:24:42,600 --> 00:24:43,799
+you right
+
+678
+00:24:43,799 --> 00:24:45,299
+but these systems aren't really capable
+
+679
+00:24:45,299 --> 00:24:47,220
+of that yet they're not truly
+
+680
+00:24:47,220 --> 00:24:49,260
+intelligent they can't genuinely pick
+
+681
+00:24:49,260 --> 00:24:51,120
+off of little bits of context and just
+
+682
+00:24:51,120 --> 00:24:52,740
+you know do the things we want them to
+
+683
+00:24:52,740 --> 00:24:55,980
+so I can't really build real world
+
+684
+00:24:55,980 --> 00:24:58,260
+applications with it as a matter of fact
+
+685
+00:24:58,260 --> 00:25:00,900
+it's very hard to do so it's very hard
+
+686
+00:25:00,900 --> 00:25:02,340
+to think of those use cases which is why
+
+687
+00:25:02,340 --> 00:25:04,140
+you see all these cool demos but barely
+
+688
+00:25:04,140 --> 00:25:06,539
+any actual applications that people are
+
+689
+00:25:06,539 --> 00:25:08,880
+using at a very large scale to do things
+
+690
+00:25:08,880 --> 00:25:11,340
+in completely automated ways but on the
+
+691
+00:25:11,340 --> 00:25:13,200
+other hand it's also not really hard to
+
+692
+00:25:13,200 --> 00:25:15,240
+call into as a developer right pretty
+
+693
+00:25:15,240 --> 00:25:17,159
+much any developer with simple rest API
+
+694
+00:25:17,159 --> 00:25:19,140
+knowledge can call into the open AI API
+
+695
+00:25:19,140 --> 00:25:20,700
+so I'm also not really covering a core
+
+696
+00:25:20,700 --> 00:25:23,039
+technical concept so that puts me in
+
+697
+00:25:23,039 --> 00:25:24,960
+this very weird Middle Ground where it's
+
+698
+00:25:24,960 --> 00:25:26,940
+hard for me to cover anything technical
+
+699
+00:25:26,940 --> 00:25:28,620
+because it's just calling an API and
+
+700
+00:25:28,620 --> 00:25:30,419
+openai has decided not to release any
+
+701
+00:25:30,419 --> 00:25:32,279
+details about their models but on the
+
+702
+00:25:32,279 --> 00:25:34,080
+other hand it's also very difficult for
+
+703
+00:25:34,080 --> 00:25:35,880
+me to build anything because sure I
+
+704
+00:25:35,880 --> 00:25:37,559
+could show you some demos where it works
+
+705
+00:25:37,559 --> 00:25:39,720
+but if you actually tried to use these
+
+706
+00:25:39,720 --> 00:25:41,100
+applications in the real world they
+
+707
+00:25:41,100 --> 00:25:43,260
+break down so quickly that sometimes it
+
+708
+00:25:43,260 --> 00:25:45,120
+ends up being more effective just not to
+
+709
+00:25:45,120 --> 00:25:47,220
+use them or to instead take parts of
+
+710
+00:25:47,220 --> 00:25:48,539
+what you were going to do and just
+
+711
+00:25:48,539 --> 00:25:51,240
+converse with chat gbt directly
+
+712
+00:25:51,240 --> 00:25:52,980
+and so that is the problem that I've
+
+713
+00:25:52,980 --> 00:25:54,960
+faced so far and this brings me right
+
+714
+00:25:54,960 --> 00:25:57,120
+back to the fundamental limitations of
+
+715
+00:25:57,120 --> 00:25:58,260
+these models they are large language
+
+716
+00:25:58,260 --> 00:26:00,600
+models they're not intelligent right it
+
+717
+00:26:00,600 --> 00:26:02,760
+takes a fundamental rethinking of the
+
+718
+00:26:02,760 --> 00:26:04,740
+way we do machine learning and AI to
+
+719
+00:26:04,740 --> 00:26:07,320
+make them useful in large scale
+
+720
+00:26:07,320 --> 00:26:09,480
+applications and while there are uses
+
+721
+00:26:09,480 --> 00:26:11,700
+for today's version of this you know
+
+722
+00:26:11,700 --> 00:26:13,679
+large language modeling tech there are
+
+723
+00:26:13,679 --> 00:26:16,440
+use cases but they boil back down to
+
+724
+00:26:16,440 --> 00:26:18,360
+helping us with individual pieces of
+
+725
+00:26:18,360 --> 00:26:20,760
+larger bits of work rather than taking
+
+726
+00:26:20,760 --> 00:26:23,700
+over parts of the work entirely that's
+
+727
+00:26:23,700 --> 00:26:24,779
+that's that's that's really what it
+
+728
+00:26:24,779 --> 00:26:28,200
+boils down to so I know this is a topic
+
+729
+00:26:28,200 --> 00:26:29,820
+that many people have many different
+
+730
+00:26:29,820 --> 00:26:31,740
+opinions on so feel free to leave your
+
+731
+00:26:31,740 --> 00:26:33,000
+opinions down in the comments section
+
+732
+00:26:33,000 --> 00:26:34,679
+below or ask any questions or provide
+
+733
+00:26:34,679 --> 00:26:37,020
+any suggestions I'm happy and in fact
+
+734
+00:26:37,020 --> 00:26:38,580
+I'm very interested to be hearing from
+
+735
+00:26:38,580 --> 00:26:40,679
+you on this one apart from that if you
+
+736
+00:26:40,679 --> 00:26:41,940
+enjoy the video please do make sure to
+
+737
+00:26:41,940 --> 00:26:43,380
+leave a like down below subscribe to the
+
+738
+00:26:43,380 --> 00:26:45,120
+channel as it really does help out a lot
+
+739
+00:26:45,120 --> 00:26:46,860
+and turn on notifications that you're
+
+740
+00:26:46,860 --> 00:26:48,720
+notified whenever I release content just
+
+741
+00:26:48,720 --> 00:26:50,700
+like this apart from that thank you very
+
+742
+00:26:50,700 --> 00:26:54,740
+much for morning and goodbye

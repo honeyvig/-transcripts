@@ -1,0 +1,1259 @@
+1
+00:00:00,980 --> 00:00:14,639
+[Music]
+
+2
+00:00:14,639 --> 00:00:16,720
+so hello there and welcome to another
+
+3
+00:00:16,720 --> 00:00:19,720
+tutorial my name is tany bakshi and this
+
+4
+00:00:19,720 --> 00:00:21,480
+time we're going to be going over how
+
+5
+00:00:21,480 --> 00:00:24,760
+you can use the discovery service in an
+
+6
+00:00:24,760 --> 00:00:29,080
+iOS application in coded in Swift so you
+
+7
+00:00:29,080 --> 00:00:31,560
+know what let's actually be in today uh
+
+8
+00:00:31,560 --> 00:00:33,000
+so what's going to be happening is we're
+
+9
+00:00:33,000 --> 00:00:34,440
+going to be using xcode we're going to
+
+10
+00:00:34,440 --> 00:00:36,879
+be using Swift uh in order to create an
+
+11
+00:00:36,879 --> 00:00:39,640
+iOS application uh which can query the
+
+12
+00:00:39,640 --> 00:00:43,079
+IBM Watson Discovery Service uh and so
+
+13
+00:00:43,079 --> 00:00:45,039
+without any further Ado Again by the way
+
+14
+00:00:45,039 --> 00:00:47,280
+though if you haven't already I'd really
+
+15
+00:00:47,280 --> 00:00:48,760
+really recommend that you watch my
+
+16
+00:00:48,760 --> 00:00:51,360
+previous video of Discovery to which the
+
+17
+00:00:51,360 --> 00:00:54,359
+link will be down in the description uh
+
+18
+00:00:54,359 --> 00:00:56,960
+and that video really just uh shows you
+
+19
+00:00:56,960 --> 00:00:58,879
+how you can actually use the discovery
+
+20
+00:00:58,879 --> 00:01:02,199
+Service uh with it generally and how you
+
+21
+00:01:02,199 --> 00:01:04,000
+can train it and how you can test it and
+
+22
+00:01:04,000 --> 00:01:05,760
+improve its performance and give it data
+
+23
+00:01:05,760 --> 00:01:07,439
+that type of stuff but this video is
+
+24
+00:01:07,439 --> 00:01:08,759
+going to be showing you how you can
+
+25
+00:01:08,759 --> 00:01:11,159
+create a swift iOS interface for that
+
+26
+00:01:11,159 --> 00:01:14,119
+service in X code so let's get right to
+
+27
+00:01:14,119 --> 00:01:16,870
+it now shall we
+
+28
+00:01:16,870 --> 00:01:20,299
+[Music]
+
+29
+00:01:26,000 --> 00:01:32,390
+[Music]
+
+30
+00:01:35,200 --> 00:01:37,280
+all right so let's begin with a quick
+
+31
+00:01:37,280 --> 00:01:39,759
+demo of the application itself so what
+
+32
+00:01:39,759 --> 00:01:41,920
+are we going to be building today well
+
+33
+00:01:41,920 --> 00:01:43,320
+essentially as you can see over here
+
+34
+00:01:43,320 --> 00:01:45,520
+I've got an iPhone simulator opened up
+
+35
+00:01:45,520 --> 00:01:48,200
+here uh and this is the iPhone 7 plus
+
+36
+00:01:48,200 --> 00:01:51,360
+simulator so let's say I were to search
+
+37
+00:01:51,360 --> 00:01:53,479
+for something on Discovery and uh let's
+
+38
+00:01:53,479 --> 00:01:55,560
+just send uh for the sake of Simplicity
+
+39
+00:01:55,560 --> 00:01:57,079
+let's send the same request that we did
+
+40
+00:01:57,079 --> 00:01:59,280
+in the first part of the video series uh
+
+41
+00:01:59,280 --> 00:02:02,360
+and let's send Quest let's say when did
+
+42
+00:02:02,360 --> 00:02:06,320
+T start coding okay I'm going to click
+
+43
+00:02:06,320 --> 00:02:09,560
+on the Discover button and in just a
+
+44
+00:02:09,560 --> 00:02:11,560
+moment you will see this UI t view
+
+45
+00:02:11,560 --> 00:02:13,840
+populate with lots of search results
+
+46
+00:02:13,840 --> 00:02:16,920
+from Discovery and of course we can take
+
+47
+00:02:16,920 --> 00:02:19,160
+a look at the top one which is the exact
+
+48
+00:02:19,160 --> 00:02:21,840
+same one that we saw in part one which
+
+49
+00:02:21,840 --> 00:02:23,920
+of course says meet Tammy bshi an Indian
+
+50
+00:02:23,920 --> 00:02:25,680
+origin preee from Brandon Canada who
+
+51
+00:02:25,680 --> 00:02:27,280
+started coding when he was just 5 years
+
+52
+00:02:27,280 --> 00:02:29,120
+old and of course this sentence is
+
+53
+00:02:29,120 --> 00:02:31,040
+conveying a lot lot of information and
+
+54
+00:02:31,040 --> 00:02:33,760
+this as I said the same sentence I'm I'm
+
+55
+00:02:33,760 --> 00:02:35,440
+I originate from India I'm a Preen I
+
+56
+00:02:35,440 --> 00:02:37,080
+live in brandton Canada and I started
+
+57
+00:02:37,080 --> 00:02:38,920
+coding when I was 5 years old and it was
+
+58
+00:02:38,920 --> 00:02:40,840
+able to extract that contextual
+
+59
+00:02:40,840 --> 00:02:43,920
+similarity to my query in this document
+
+60
+00:02:43,920 --> 00:02:46,440
+and it was able to give me my final
+
+61
+00:02:46,440 --> 00:02:49,159
+answer but now let's take a look at how
+
+62
+00:02:49,159 --> 00:02:51,599
+I was actually able to build this
+
+63
+00:02:51,599 --> 00:02:55,720
+application let's get to it shall we
+
+64
+00:02:55,720 --> 00:02:59,150
+[Music]
+
+65
+00:03:02,720 --> 00:03:04,879
+all right so now let's take a look at
+
+66
+00:03:04,879 --> 00:03:07,120
+the actual user interface of this
+
+67
+00:03:07,120 --> 00:03:09,560
+application so if I switch over here as
+
+68
+00:03:09,560 --> 00:03:11,920
+you can see I've got xcode open and this
+
+69
+00:03:11,920 --> 00:03:14,560
+is a very very simple interface as you
+
+70
+00:03:14,560 --> 00:03:17,200
+can see I've got our UI text field over
+
+71
+00:03:17,200 --> 00:03:19,920
+here uh with prototype text as search
+
+72
+00:03:19,920 --> 00:03:21,799
+query uh which is where the user will
+
+73
+00:03:21,799 --> 00:03:24,360
+type in their query of course the
+
+74
+00:03:24,360 --> 00:03:26,280
+Discover button which actually queries
+
+75
+00:03:26,280 --> 00:03:28,360
+Discovery with your query and then a UI
+
+76
+00:03:28,360 --> 00:03:30,959
+table view which will of course give you
+
+77
+00:03:30,959 --> 00:03:33,680
+a list of the results that Discovery has
+
+78
+00:03:33,680 --> 00:03:36,640
+returned now inside of this UI table
+
+79
+00:03:36,640 --> 00:03:39,239
+view I have a UI table view cell and
+
+80
+00:03:39,239 --> 00:03:41,560
+this is a prototype cell uh and so as
+
+81
+00:03:41,560 --> 00:03:43,599
+you can see this is a very simple cell
+
+82
+00:03:43,599 --> 00:03:45,200
+just I haven't even changed the height
+
+83
+00:03:45,200 --> 00:03:47,840
+whatsoever uh however there is some neat
+
+84
+00:03:47,840 --> 00:03:50,799
+stuff that goes on with this in the code
+
+85
+00:03:50,799 --> 00:03:53,439
+uh and so what happens is each row if I
+
+86
+00:03:53,439 --> 00:03:55,879
+open up our demo back here each row is
+
+87
+00:03:55,879 --> 00:03:57,560
+of different height so of course this
+
+88
+00:03:57,560 --> 00:03:59,239
+article is of different height this
+
+89
+00:03:59,239 --> 00:04:00,879
+article is of different height this one
+
+90
+00:04:00,879 --> 00:04:03,840
+is much bigger uh and this of course
+
+91
+00:04:03,840 --> 00:04:07,000
+this one might be smaller uh but as you
+
+92
+00:04:07,000 --> 00:04:09,480
+can see each row is of a different
+
+93
+00:04:09,480 --> 00:04:11,879
+height and so essentially what happens
+
+94
+00:04:11,879 --> 00:04:13,879
+is this UI table view in this label
+
+95
+00:04:13,879 --> 00:04:16,560
+adjust different heights and widths
+
+96
+00:04:16,560 --> 00:04:18,720
+according to how big the article or
+
+97
+00:04:18,720 --> 00:04:21,239
+result actually is and so I've got some
+
+98
+00:04:21,239 --> 00:04:23,160
+constraints set up on the label uh no
+
+99
+00:04:23,160 --> 00:04:26,000
+constraints on the actual row though uh
+
+100
+00:04:26,000 --> 00:04:27,880
+because of course or the cell
+
+101
+00:04:27,880 --> 00:04:30,280
+technically uh because of course that uh
+
+102
+00:04:30,280 --> 00:04:31,960
+is done in the code but this label has a
+
+103
+00:04:31,960 --> 00:04:34,759
+few constraints on it using uh of course
+
+104
+00:04:34,759 --> 00:04:38,000
+uh Auto layout and so uh I will be
+
+105
+00:04:38,000 --> 00:04:40,400
+leaving you a link to a ray wonderl
+
+106
+00:04:40,400 --> 00:04:42,400
+article which explains exactly how you
+
+107
+00:04:42,400 --> 00:04:44,520
+can do that uh in a very simple way
+
+108
+00:04:44,520 --> 00:04:47,000
+actually so that'll be down in the
+
+109
+00:04:47,000 --> 00:04:49,280
+description but now that you've seen the
+
+110
+00:04:49,280 --> 00:04:51,560
+user interface of this application I'd
+
+111
+00:04:51,560 --> 00:04:53,919
+like to introduce you to the code of
+
+112
+00:04:53,919 --> 00:04:55,800
+this application and how it's actually
+
+113
+00:04:55,800 --> 00:04:58,600
+able to query Discovery with your real
+
+114
+00:04:58,600 --> 00:05:01,039
+query and give you back the results all
+
+115
+00:05:01,039 --> 00:05:04,199
+right let's get to that part
+
+116
+00:05:04,840 --> 00:05:08,260
+[Music]
+
+117
+00:05:10,840 --> 00:05:13,759
+now all right so now let's take a look
+
+118
+00:05:13,759 --> 00:05:15,680
+at how the code of this application
+
+119
+00:05:15,680 --> 00:05:18,080
+works so if I go back to xcode here as
+
+120
+00:05:18,080 --> 00:05:20,080
+you can see I've got our main code open
+
+121
+00:05:20,080 --> 00:05:22,520
+the viewcontroller.swift file uh and
+
+122
+00:05:22,520 --> 00:05:24,639
+over here I have let's just start right
+
+123
+00:05:24,639 --> 00:05:26,800
+off uh right after import UI kit I've
+
+124
+00:05:26,800 --> 00:05:28,840
+got an extension to the string class and
+
+125
+00:05:28,840 --> 00:05:30,639
+this is very simple uh this is from my
+
+126
+00:05:30,639 --> 00:05:33,000
+asked handm code actually uh and so this
+
+127
+00:05:33,000 --> 00:05:34,560
+is an extension to the string class
+
+128
+00:05:34,560 --> 00:05:36,840
+which allows us uh to URL encode a
+
+129
+00:05:36,840 --> 00:05:38,919
+string very nicely and very quickly so
+
+130
+00:05:38,919 --> 00:05:41,680
+you can just do like for example
+
+131
+00:05:41,680 --> 00:05:46,319
+um hi there this is
+
+132
+00:05:46,319 --> 00:05:49,280
+a
+
+133
+00:05:49,280 --> 00:05:53,240
+spring with um
+
+134
+00:05:53,240 --> 00:05:56,360
+symbols and you could URL encode this
+
+135
+00:05:56,360 --> 00:05:59,919
+very nicely just URL encoded and it
+
+136
+00:05:59,919 --> 00:06:02,000
+would be able to um if I just move that
+
+137
+00:06:02,000 --> 00:06:03,759
+over here see it would really easily be
+
+138
+00:06:03,759 --> 00:06:05,919
+able to URL encode this string and then
+
+139
+00:06:05,919 --> 00:06:07,240
+you could put this into sort of like an
+
+140
+00:06:07,240 --> 00:06:10,360
+nsurl or something of that sort and so
+
+141
+00:06:10,360 --> 00:06:12,039
+of course that's what that extension
+
+142
+00:06:12,039 --> 00:06:14,800
+does uh and next we also have a class
+
+143
+00:06:14,800 --> 00:06:16,520
+though this is our table view cell that
+
+144
+00:06:16,520 --> 00:06:18,919
+we created uh and so very simply it only
+
+145
+00:06:18,919 --> 00:06:21,120
+has one label the Discover label which
+
+146
+00:06:21,120 --> 00:06:23,120
+is where the discovery search result
+
+147
+00:06:23,120 --> 00:06:25,840
+will be this is a UI label uh and of
+
+148
+00:06:25,840 --> 00:06:28,280
+course it is connected uh to the actual
+
+149
+00:06:28,280 --> 00:06:30,319
+label uh with an IP
+
+150
+00:06:30,319 --> 00:06:32,840
+Outlet next in our view controller of
+
+151
+00:06:32,840 --> 00:06:35,639
+course we've got this uh in sort of
+
+152
+00:06:35,639 --> 00:06:37,759
+inheriting from UI view controller but
+
+153
+00:06:37,759 --> 00:06:40,080
+it also conforms to the UI table view
+
+154
+00:06:40,080 --> 00:06:42,160
+data source uh and UI table view
+
+155
+00:06:42,160 --> 00:06:44,800
+delegate uh protocols uh and of course
+
+156
+00:06:44,800 --> 00:06:46,840
+we've got our IB it's the table view
+
+157
+00:06:46,840 --> 00:06:49,120
+which is UI table View and our query
+
+158
+00:06:49,120 --> 00:06:51,880
+field which is our UI text field which
+
+159
+00:06:51,880 --> 00:06:54,120
+is what allows us to actually know what
+
+160
+00:06:54,120 --> 00:06:56,680
+the user wants to query of course we've
+
+161
+00:06:56,680 --> 00:06:58,919
+got a data array and this is the final
+
+162
+00:06:58,919 --> 00:07:01,759
+data that Discovery returns back to us
+
+163
+00:07:01,759 --> 00:07:03,680
+and this is actually the really
+
+164
+00:07:03,680 --> 00:07:06,199
+interesting code for the eii table view
+
+165
+00:07:06,199 --> 00:07:07,879
+that I was talking about just uh in the
+
+166
+00:07:07,879 --> 00:07:10,960
+last part here and so this uh UI table
+
+167
+00:07:10,960 --> 00:07:13,039
+view code essentially allows us to set
+
+168
+00:07:13,039 --> 00:07:15,560
+the table views row height to UI table
+
+169
+00:07:15,560 --> 00:07:17,680
+view automatic Dimension which will
+
+170
+00:07:17,680 --> 00:07:19,720
+allow us to automatically set the row
+
+171
+00:07:19,720 --> 00:07:21,479
+height but the estimated row height this
+
+172
+00:07:21,479 --> 00:07:22,919
+is just set to anything real random
+
+173
+00:07:22,919 --> 00:07:26,039
+really uh 140 again the link to the ray
+
+174
+00:07:26,039 --> 00:07:28,039
+wonderl article which explains mostly
+
+175
+00:07:28,039 --> 00:07:30,039
+all of this uh is going to be in the
+
+176
+00:07:30,039 --> 00:07:31,479
+description so if you'd like to know
+
+177
+00:07:31,479 --> 00:07:33,039
+more about how you can use you know Auto
+
+178
+00:07:33,039 --> 00:07:35,120
+layout and how you can use it with UI
+
+179
+00:07:35,120 --> 00:07:36,680
+table views to create self adjusting
+
+180
+00:07:36,680 --> 00:07:39,319
+rows of height uh then of course you uh
+
+181
+00:07:39,319 --> 00:07:42,039
+you can check that link out in the
+
+182
+00:07:42,039 --> 00:07:44,879
+description of course though I also have
+
+183
+00:07:44,879 --> 00:07:47,879
+an IB action and this is the Discover IB
+
+184
+00:07:47,879 --> 00:07:49,479
+action and what's going to happen is
+
+185
+00:07:49,479 --> 00:07:51,560
+here I end editing meaning if the
+
+186
+00:07:51,560 --> 00:07:53,879
+keyboard is up on an iOS device it'll go
+
+187
+00:07:53,879 --> 00:07:56,360
+right back down and I do force it to do
+
+188
+00:07:56,360 --> 00:07:58,520
+that uh and then I call a function
+
+189
+00:07:58,520 --> 00:08:01,240
+called get data uh which will give us
+
+190
+00:08:01,240 --> 00:08:03,280
+our which and will give it the query
+
+191
+00:08:03,280 --> 00:08:05,840
+text uh so it knows what to give to
+
+192
+00:08:05,840 --> 00:08:08,080
+Discovery and then we reload our table
+
+193
+00:08:08,080 --> 00:08:11,319
+views data but of course I also have I'm
+
+194
+00:08:11,319 --> 00:08:13,919
+also uh overwriting the touches began
+
+195
+00:08:13,919 --> 00:08:15,639
+function so that right as the user
+
+196
+00:08:15,639 --> 00:08:17,840
+touches on The View I can end editing
+
+197
+00:08:17,840 --> 00:08:20,599
+meaning I can bring down the keyboard
+
+198
+00:08:20,599 --> 00:08:22,319
+but finally the most important function
+
+199
+00:08:22,319 --> 00:08:24,720
+of them all the get data function this
+
+200
+00:08:24,720 --> 00:08:26,720
+will take our query as a string and
+
+201
+00:08:26,720 --> 00:08:30,080
+it'll of course reset the data variable
+
+202
+00:08:30,080 --> 00:08:31,879
+which is our final data that goes into
+
+203
+00:08:31,879 --> 00:08:34,919
+the table view it'll create a URL string
+
+204
+00:08:34,919 --> 00:08:36,880
+which uh this is actually quite long but
+
+205
+00:08:36,880 --> 00:08:39,080
+this is this will essentially query
+
+206
+00:08:39,080 --> 00:08:41,200
+Watson Discovery uh with of course this
+
+207
+00:08:41,200 --> 00:08:43,680
+long Watson Discovery query URL
+
+208
+00:08:43,680 --> 00:08:45,200
+including lots of information about the
+
+209
+00:08:45,200 --> 00:08:47,240
+actual collection that we want to query
+
+210
+00:08:47,240 --> 00:08:49,399
+but of course the query that we want to
+
+211
+00:08:49,399 --> 00:08:52,800
+give it itself uh and so uh of course we
+
+212
+00:08:52,800 --> 00:08:56,000
+are URL encoding this query using that
+
+213
+00:08:56,000 --> 00:08:57,519
+string extension that I was talking
+
+214
+00:08:57,519 --> 00:08:59,680
+about just a little while ago and we're
+
+215
+00:08:59,680 --> 00:09:02,800
+telling it to return 10 uh results to us
+
+216
+00:09:02,800 --> 00:09:04,680
+we're giving it no offset aggregation
+
+217
+00:09:04,680 --> 00:09:08,320
+filter or return though next I'm turning
+
+218
+00:09:08,320 --> 00:09:11,600
+this into a URL as you know with swift 3
+
+219
+00:09:11,600 --> 00:09:14,279
+uh Apple has sort of just uh stripped
+
+220
+00:09:14,279 --> 00:09:17,680
+out all the NSS uh from you know NS URL
+
+221
+00:09:17,680 --> 00:09:20,240
+NS data uh and so of course we're just
+
+222
+00:09:20,240 --> 00:09:23,000
+left with URL and then I created a new
+
+223
+00:09:23,000 --> 00:09:25,560
+data response constant uh where I
+
+224
+00:09:25,560 --> 00:09:28,720
+forcefully try to get the data uh of
+
+225
+00:09:28,720 --> 00:09:31,600
+that URL the data in that URL so it'll
+
+226
+00:09:31,600 --> 00:09:35,680
+query that URL and give me that data of
+
+227
+00:09:35,680 --> 00:09:38,079
+course though I'm also getting Json so
+
+228
+00:09:38,079 --> 00:09:40,440
+I'm taking this data and I'm forcefully
+
+229
+00:09:40,440 --> 00:09:42,600
+trying uh and so what I'm doing is I'm
+
+230
+00:09:42,600 --> 00:09:44,720
+forcefully trying the Json
+
+231
+00:09:44,720 --> 00:09:47,600
+serializations Json object function and
+
+232
+00:09:47,600 --> 00:09:49,240
+I'm giving it the data response that I
+
+233
+00:09:49,240 --> 00:09:51,480
+got from the URL I'm telling it that I
+
+234
+00:09:51,480 --> 00:09:53,360
+want some mutable containers as the
+
+235
+00:09:53,360 --> 00:09:55,320
+options for this Json
+
+236
+00:09:55,320 --> 00:09:58,200
+sterilization uh and then finally I
+
+237
+00:09:58,200 --> 00:10:01,959
+enforce uh casting that to a string any
+
+238
+00:10:01,959 --> 00:10:03,600
+object
+
+239
+00:10:03,600 --> 00:10:05,839
+dictionary once that's finally done
+
+240
+00:10:05,839 --> 00:10:08,959
+though I'm creating a results constant
+
+241
+00:10:08,959 --> 00:10:11,200
+uh and this will be uh the results from
+
+242
+00:10:11,200 --> 00:10:15,440
+our Json uh and this is essentially a uh
+
+243
+00:10:15,440 --> 00:10:17,839
+this is one of the keys that are that is
+
+244
+00:10:17,839 --> 00:10:19,959
+returned from Watson Discovery itself
+
+245
+00:10:19,959 --> 00:10:22,640
+when it returns its Json so results uh
+
+246
+00:10:22,640 --> 00:10:26,000
+would be the array where uh Watson holds
+
+247
+00:10:26,000 --> 00:10:30,000
+all the results as as the um as it sort
+
+248
+00:10:30,000 --> 00:10:33,320
+of indicates but then I forcefully cast
+
+249
+00:10:33,320 --> 00:10:35,680
+that to an array of dictionaries and
+
+250
+00:10:35,680 --> 00:10:38,399
+those dictionaries are string and object
+
+251
+00:10:38,399 --> 00:10:40,720
+dictionaries but then since this is an
+
+252
+00:10:40,720 --> 00:10:43,200
+array of dictionaries I Loop through
+
+253
+00:10:43,200 --> 00:10:44,959
+this array of dictionaries so every time
+
+254
+00:10:44,959 --> 00:10:47,000
+I Loop I'm getting I which is a
+
+255
+00:10:47,000 --> 00:10:50,040
+dictionary itself and then for every I I
+
+256
+00:10:50,040 --> 00:10:53,560
+get I append that I uh that I's text
+
+257
+00:10:53,560 --> 00:10:57,160
+value more specifically uh to the data
+
+258
+00:10:57,160 --> 00:11:00,120
+variable now once this get data function
+
+259
+00:11:00,120 --> 00:11:02,200
+is called over here in our Discover
+
+260
+00:11:02,200 --> 00:11:04,240
+function now remember get data is
+
+261
+00:11:04,240 --> 00:11:06,040
+synchronous so it'll actually stop
+
+262
+00:11:06,040 --> 00:11:08,480
+execution until it receives the data and
+
+263
+00:11:08,480 --> 00:11:10,639
+then I can run table view. reload data
+
+264
+00:11:10,639 --> 00:11:13,600
+and since this data variable uh has all
+
+265
+00:11:13,600 --> 00:11:16,560
+of the new data from watts and Discovery
+
+266
+00:11:16,560 --> 00:11:19,279
+I can actually tell the table view uh
+
+267
+00:11:19,279 --> 00:11:21,560
+first of all my first uh table view
+
+268
+00:11:21,560 --> 00:11:24,600
+class here would be uh number of rows in
+
+269
+00:11:24,600 --> 00:11:26,399
+section and so I'm just telling it
+
+270
+00:11:26,399 --> 00:11:29,000
+however many uh rows are in or however
+
+271
+00:11:29,000 --> 00:11:31,360
+many elements there are in data that's
+
+272
+00:11:31,360 --> 00:11:32,920
+how many rows there will be in the table
+
+273
+00:11:32,920 --> 00:11:36,079
+view so I'm just returning data. count
+
+274
+00:11:36,079 --> 00:11:38,839
+and for the cell for row at index path
+
+275
+00:11:38,839 --> 00:11:41,120
+uh table view function here I'm just
+
+276
+00:11:41,120 --> 00:11:43,560
+creating the new cell I'm grabbing the
+
+277
+00:11:43,560 --> 00:11:45,360
+Prototype cell that we made in the view
+
+278
+00:11:45,360 --> 00:11:47,720
+controller uh or the actual main.
+
+279
+00:11:47,720 --> 00:11:50,440
+storyboard I'm I'm casting this to a
+
+280
+00:11:50,440 --> 00:11:52,560
+table cell which is the class that we
+
+281
+00:11:52,560 --> 00:11:55,440
+created over here I'm then setting the
+
+282
+00:11:55,440 --> 00:11:58,880
+cells discover labels text to data index
+
+283
+00:11:58,880 --> 00:12:01,920
+path. row that we can set uh it to its
+
+284
+00:12:01,920 --> 00:12:04,320
+respective result that we got from wats
+
+285
+00:12:04,320 --> 00:12:06,680
+and Discovery and then I'm returning
+
+286
+00:12:06,680 --> 00:12:08,760
+that cell and that will finally be
+
+287
+00:12:08,760 --> 00:12:11,360
+displayed on this on the screen for the
+
+288
+00:12:11,360 --> 00:12:14,360
+user to see and so of course that's
+
+289
+00:12:14,360 --> 00:12:16,320
+essentially how this application
+
+290
+00:12:16,320 --> 00:12:19,040
+actually does work out of course though
+
+291
+00:12:19,040 --> 00:12:20,279
+that's actually going to be it for this
+
+292
+00:12:20,279 --> 00:12:21,720
+video it's was quite simple but of
+
+293
+00:12:21,720 --> 00:12:23,800
+course it shows you how you can create
+
+294
+00:12:23,800 --> 00:12:26,920
+an iOS application that disco that uh
+
+295
+00:12:26,920 --> 00:12:29,480
+queries the IMM Watson Discovery service
+
+296
+00:12:29,480 --> 00:12:31,240
+but of course though as I said before
+
+297
+00:12:31,240 --> 00:12:33,000
+the link to the part one of this video
+
+298
+00:12:33,000 --> 00:12:34,440
+series will be in the description just
+
+299
+00:12:34,440 --> 00:12:36,600
+in case you haven't watched it until now
+
+300
+00:12:36,600 --> 00:12:38,480
+but of course though if you really
+
+301
+00:12:38,480 --> 00:12:39,800
+that's going to be it for this video but
+
+302
+00:12:39,800 --> 00:12:42,000
+if you really do like this video please
+
+303
+00:12:42,000 --> 00:12:44,000
+consider leaving a like down below but
+
+304
+00:12:44,000 --> 00:12:45,760
+if you have any more suggestions
+
+305
+00:12:45,760 --> 00:12:47,920
+feedback or questions please do consider
+
+306
+00:12:47,920 --> 00:12:49,920
+leaving them down in the comments below
+
+307
+00:12:49,920 --> 00:12:51,680
+emailing them to me at tajim Manny
+
+308
+00:12:51,680 --> 00:12:54,199
+atgmailcom or tweeting them to me at
+
+309
+00:12:54,199 --> 00:12:57,000
+tajim Manny of course if you really do
+
+310
+00:12:57,000 --> 00:12:58,639
+like my content and you want to see more
+
+311
+00:12:58,639 --> 00:13:00,600
+of it do consider subscribing to my
+
+312
+00:13:00,600 --> 00:13:02,720
+channel as it really does help out a lot
+
+313
+00:13:02,720 --> 00:13:04,360
+and of course that's going to be it for
+
+314
+00:13:04,360 --> 00:13:07,000
+this video today thank you very much
+
+315
+00:13:07,000 --> 00:13:10,000
+goodbye

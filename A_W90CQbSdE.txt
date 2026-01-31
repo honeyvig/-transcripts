@@ -1,0 +1,1131 @@
+1
+00:00:00,210 --> 00:00:07,920
+[Music]
+
+2
+00:00:13,599 --> 00:00:15,639
+so hello there and welcome to another
+
+3
+00:00:15,639 --> 00:00:18,640
+tutorial my name is Tam Baki and this
+
+4
+00:00:18,640 --> 00:00:20,840
+time we're going to be going over IBM
+
+5
+00:00:20,840 --> 00:00:23,400
+Watson a few Services it provides and of
+
+6
+00:00:23,400 --> 00:00:25,920
+course today I'm with my mentor Rob High
+
+7
+00:00:25,920 --> 00:00:28,880
+here at again IBM interconnect 2017 as
+
+8
+00:00:28,880 --> 00:00:30,640
+you saw in the last video was with John
+
+9
+00:00:30,640 --> 00:00:33,719
+con uh talking about the TJ bot and iot
+
+10
+00:00:33,719 --> 00:00:36,200
+uh with the TJ bot that actually Rob I
+
+11
+00:00:36,200 --> 00:00:37,520
+here actually gifted to me on stage
+
+12
+00:00:37,520 --> 00:00:40,520
+during our ey talk uh and so uh we're
+
+13
+00:00:40,520 --> 00:00:41,879
+going to be of course creating many more
+
+14
+00:00:41,879 --> 00:00:43,520
+videos with that but for now we're
+
+15
+00:00:43,520 --> 00:00:45,480
+talking about Watson and doing a quick
+
+16
+00:00:45,480 --> 00:00:47,399
+Q&A session about some of your
+
+17
+00:00:47,399 --> 00:00:50,440
+frequently asked questions about Watson
+
+18
+00:00:50,440 --> 00:00:52,239
+but before we begin Rob would you like
+
+19
+00:00:52,239 --> 00:00:55,160
+to introduce yourself okay I'm Rob High
+
+20
+00:00:55,160 --> 00:00:57,800
+I'm the CTO for IBM Watson I've had the
+
+21
+00:00:57,800 --> 00:00:59,399
+privilege for the last several years to
+
+22
+00:00:59,399 --> 00:01:01,640
+be able to guide the technical strategy
+
+23
+00:01:01,640 --> 00:01:05,680
+for IBM's uh work in cognitive Computing
+
+24
+00:01:05,680 --> 00:01:08,200
+that is great all right so let's begin
+
+25
+00:01:08,200 --> 00:01:10,040
+with one of the most asked questions
+
+26
+00:01:10,040 --> 00:01:12,320
+that my subscribers have for you which
+
+27
+00:01:12,320 --> 00:01:14,520
+is really what's the difference between
+
+28
+00:01:14,520 --> 00:01:17,159
+Ai and cognitive uh versus cognitive
+
+29
+00:01:17,159 --> 00:01:19,240
+Computing or sorry traditional Computing
+
+30
+00:01:19,240 --> 00:01:21,360
+tradition yes what's really the
+
+31
+00:01:21,360 --> 00:01:22,759
+difference here what what makes
+
+32
+00:01:22,759 --> 00:01:25,799
+cognitive Computing so special so one of
+
+33
+00:01:25,799 --> 00:01:27,600
+the key things that cognitive Computing
+
+34
+00:01:27,600 --> 00:01:30,600
+does is it really begins to look at the
+
+35
+00:01:30,600 --> 00:01:32,840
+world the same way that we do you know
+
+36
+00:01:32,840 --> 00:01:34,840
+if you really kind of look at our world
+
+37
+00:01:34,840 --> 00:01:37,520
+around us it's full of signals you know
+
+38
+00:01:37,520 --> 00:01:42,600
+the light is a set of of uh of uh of
+
+39
+00:01:42,600 --> 00:01:45,280
+either particles or waves depending on
+
+40
+00:01:45,280 --> 00:01:47,439
+how you want to look at them that have a
+
+41
+00:01:47,439 --> 00:01:49,520
+certain frequency to them that give them
+
+42
+00:01:49,520 --> 00:01:54,000
+color give them brightness um um that's
+
+43
+00:01:54,000 --> 00:01:56,520
+just one thing you know our voices are
+
+44
+00:01:56,520 --> 00:02:00,000
+carried as as audio signals um the
+
+45
+00:02:00,000 --> 00:02:02,719
+things that we feel the things that we
+
+46
+00:02:02,719 --> 00:02:04,680
+um are able to touch the things that we
+
+47
+00:02:04,680 --> 00:02:07,560
+smell all these things are signals and
+
+48
+00:02:07,560 --> 00:02:11,039
+what's really amazing about human beings
+
+49
+00:02:11,039 --> 00:02:13,640
+is essentially what our brain is capable
+
+50
+00:02:13,640 --> 00:02:16,120
+of doing very very well is figuring at
+
+51
+00:02:16,120 --> 00:02:18,040
+the patterns of meaning in all those
+
+52
+00:02:18,040 --> 00:02:20,000
+signals and that's true whether these
+
+53
+00:02:20,000 --> 00:02:22,480
+are physical signals the signals that we
+
+54
+00:02:22,480 --> 00:02:25,519
+associate with physics and chemistry uh
+
+55
+00:02:25,519 --> 00:02:28,720
+and biology or even more softer signals
+
+56
+00:02:28,720 --> 00:02:31,200
+the signals of emotion the signals of
+
+57
+00:02:31,200 --> 00:02:34,640
+intent the signals of imagination all
+
+58
+00:02:34,640 --> 00:02:36,480
+those are signals as well and one of the
+
+59
+00:02:36,480 --> 00:02:38,200
+things that we've tried to do in the
+
+60
+00:02:38,200 --> 00:02:40,400
+cognitive Computing system is really
+
+61
+00:02:40,400 --> 00:02:43,239
+kind of Follow That same approach to
+
+62
+00:02:43,239 --> 00:02:45,319
+understanding the world that we live in
+
+63
+00:02:45,319 --> 00:02:47,680
+by just picking up all these signals and
+
+64
+00:02:47,680 --> 00:02:50,319
+then looking at the patterns of meaning
+
+65
+00:02:50,319 --> 00:02:52,560
+that we can find in the cognitive system
+
+66
+00:02:52,560 --> 00:02:54,200
+similar to the way that humans do as
+
+67
+00:02:54,200 --> 00:02:56,120
+well and that's just completely
+
+68
+00:02:56,120 --> 00:02:58,200
+different than what we've done in the
+
+69
+00:02:58,200 --> 00:03:00,519
+past where you know to build a program
+
+70
+00:03:00,519 --> 00:03:03,400
+you had to write the logic of every
+
+71
+00:03:03,400 --> 00:03:05,040
+mathematical turn that was going to
+
+72
+00:03:05,040 --> 00:03:07,480
+occur within um that particular
+
+73
+00:03:07,480 --> 00:03:10,000
+algorithm Perfect all right so now that
+
+74
+00:03:10,000 --> 00:03:11,680
+we've gone over really the difference
+
+75
+00:03:11,680 --> 00:03:13,239
+between cognitive and traditional
+
+76
+00:03:13,239 --> 00:03:15,239
+Computing and what makes cognitive so
+
+77
+00:03:15,239 --> 00:03:17,280
+special uh would you like to touch upon
+
+78
+00:03:17,280 --> 00:03:19,200
+a little bit about how cognitive is
+
+79
+00:03:19,200 --> 00:03:21,920
+assisting humans so one of the things
+
+80
+00:03:21,920 --> 00:03:24,080
+that we really focus on is not just
+
+81
+00:03:24,080 --> 00:03:27,480
+simply recreating the human mind uh in
+
+82
+00:03:27,480 --> 00:03:30,040
+part because frankly the human mind is
+
+83
+00:03:30,040 --> 00:03:33,840
+really amazing it's it's you know
+
+84
+00:03:33,840 --> 00:03:36,840
+mysterious um but yet it also is very
+
+85
+00:03:36,840 --> 00:03:39,640
+good at doing certain things instead we
+
+86
+00:03:39,640 --> 00:03:42,120
+look at is how do we augment human Minds
+
+87
+00:03:42,120 --> 00:03:44,319
+how do we take what human beings are
+
+88
+00:03:44,319 --> 00:03:47,920
+really good at and and extend it um give
+
+89
+00:03:47,920 --> 00:03:51,799
+it more strength give us more power by
+
+90
+00:03:51,799 --> 00:03:54,680
+be able to take our mental capabilities
+
+91
+00:03:54,680 --> 00:03:57,280
+and using a cog system to do things that
+
+92
+00:03:57,280 --> 00:03:59,840
+we could not naturally do on our own
+
+93
+00:03:59,840 --> 00:04:02,519
+perfect uh so that's what uh What uh is
+
+94
+00:04:02,519 --> 00:04:04,879
+IBM you know I mean we've all heard that
+
+95
+00:04:04,879 --> 00:04:07,120
+IBM is working with cogni Computing and
+
+96
+00:04:07,120 --> 00:04:09,840
+Watson is a System created by IBM uh
+
+97
+00:04:09,840 --> 00:04:11,720
+that can understand it can reason it can
+
+98
+00:04:11,720 --> 00:04:13,720
+learn it can make decisions for itself
+
+99
+00:04:13,720 --> 00:04:15,439
+based off of learning from these signals
+
+100
+00:04:15,439 --> 00:04:17,160
+and these inputs that it's being given
+
+101
+00:04:17,160 --> 00:04:18,759
+in order to give output that the user
+
+102
+00:04:18,759 --> 00:04:21,759
+would want uh and so now though uh
+
+103
+00:04:21,759 --> 00:04:24,400
+another question how can developers
+
+104
+00:04:24,400 --> 00:04:26,560
+around the world actually use Watson's
+
+105
+00:04:26,560 --> 00:04:28,759
+capabilities in their apps so one of the
+
+106
+00:04:28,759 --> 00:04:30,400
+things that we were able to do over the
+
+107
+00:04:30,400 --> 00:04:33,000
+years of experience with Watson is begin
+
+108
+00:04:33,000 --> 00:04:35,039
+to identify what were sort of the key
+
+109
+00:04:35,039 --> 00:04:37,440
+building blocks that were necessary to
+
+110
+00:04:37,440 --> 00:04:39,600
+construct a really useful cognitive
+
+111
+00:04:39,600 --> 00:04:41,479
+application so we took each of these
+
+112
+00:04:41,479 --> 00:04:43,000
+building blocks and we put them in the
+
+113
+00:04:43,000 --> 00:04:46,039
+cloud given them an API and made those
+
+114
+00:04:46,039 --> 00:04:47,759
+apis available through the cloud for
+
+115
+00:04:47,759 --> 00:04:51,360
+anybody to use so really building an
+
+116
+00:04:51,360 --> 00:04:54,080
+application is as simple as identifying
+
+117
+00:04:54,080 --> 00:04:56,479
+the service that you want to make use of
+
+118
+00:04:56,479 --> 00:04:59,039
+writing the code all these code all
+
+119
+00:04:59,039 --> 00:05:01,639
+these a apis are available as restful
+
+120
+00:05:01,639 --> 00:05:03,639
+services so if you know how to build a
+
+121
+00:05:03,639 --> 00:05:05,960
+Json structure as you have done in many
+
+122
+00:05:05,960 --> 00:05:08,600
+of your videos um you can make use of
+
+123
+00:05:08,600 --> 00:05:10,960
+the services there's a wide variety of
+
+124
+00:05:10,960 --> 00:05:12,440
+them available so all you have to do is
+
+125
+00:05:12,440 --> 00:05:16,560
+go to ibm.com BL miix navigate into the
+
+126
+00:05:16,560 --> 00:05:18,560
+Watson Zone and you're going to find
+
+127
+00:05:18,560 --> 00:05:20,560
+those services and be able to pick them
+
+128
+00:05:20,560 --> 00:05:22,120
+up and make use of them exactly so
+
+129
+00:05:22,120 --> 00:05:24,520
+Watson has things like speech Vision
+
+130
+00:05:24,520 --> 00:05:26,440
+natural language processing and you know
+
+131
+00:05:26,440 --> 00:05:28,280
+General reasoning and logic right that's
+
+132
+00:05:28,280 --> 00:05:30,720
+right and the key ones are things like
+
+133
+00:05:30,720 --> 00:05:32,840
+conversations right because that's a
+
+134
+00:05:32,840 --> 00:05:35,120
+very common use case for people today is
+
+135
+00:05:35,120 --> 00:05:36,960
+they want to build what some people
+
+136
+00:05:36,960 --> 00:05:39,160
+refer to as jaat chat Bots but I like to
+
+137
+00:05:39,160 --> 00:05:41,400
+think of one it's not just a chat but
+
+138
+00:05:41,400 --> 00:05:44,199
+really a conversation right trying to
+
+139
+00:05:44,199 --> 00:05:46,080
+build an application that walks people
+
+140
+00:05:46,080 --> 00:05:48,080
+through their conversational Bots
+
+141
+00:05:48,080 --> 00:05:51,120
+exactly got okay yeah there we go so in
+
+142
+00:05:51,120 --> 00:05:52,360
+fact if you'd like to find out more
+
+143
+00:05:52,360 --> 00:05:53,360
+about how you can build these
+
+144
+00:05:53,360 --> 00:05:55,199
+conversational Bots and use Watson's
+
+145
+00:05:55,199 --> 00:05:56,880
+apis there will be a link to the TM
+
+146
+00:05:56,880 --> 00:05:59,360
+teachers Watson playlist down below and
+
+147
+00:05:59,360 --> 00:06:00,680
+then you you can you know go ahead and
+
+148
+00:06:00,680 --> 00:06:02,199
+check out how you can use those Waton
+
+149
+00:06:02,199 --> 00:06:04,840
+services in your applications but now
+
+150
+00:06:04,840 --> 00:06:07,080
+another question is well what's the
+
+151
+00:06:07,080 --> 00:06:09,440
+underlying technology behind Watson what
+
+152
+00:06:09,440 --> 00:06:11,319
+types of algorithms do you do you use
+
+153
+00:06:11,319 --> 00:06:13,039
+like what what's going on behind it so
+
+154
+00:06:13,039 --> 00:06:14,599
+we've actually gone through a transition
+
+155
+00:06:14,599 --> 00:06:16,800
+over the years and when we first began
+
+156
+00:06:16,800 --> 00:06:19,479
+we were heavily focused on using classic
+
+157
+00:06:19,479 --> 00:06:22,199
+machine learning algorithms um you know
+
+158
+00:06:22,199 --> 00:06:25,800
+things like uh logistical regression uh
+
+159
+00:06:25,800 --> 00:06:29,840
+sbms um even linear regression in basan
+
+160
+00:06:29,840 --> 00:06:32,360
+we've more recently evolved over to
+
+161
+00:06:32,360 --> 00:06:35,000
+making better use of deep learning
+
+162
+00:06:35,000 --> 00:06:38,240
+algorithms um convolutional neuron Nets
+
+163
+00:06:38,240 --> 00:06:40,599
+Uh current neuron Nets or even more
+
+164
+00:06:40,599 --> 00:06:44,280
+exotic variations of uh of long
+
+165
+00:06:44,280 --> 00:06:48,479
+short-term uh memory um algorithms um
+
+166
+00:06:48,479 --> 00:06:49,520
+what we call
+
+167
+00:06:49,520 --> 00:06:53,120
+lstms um and usually in combination it's
+
+168
+00:06:53,120 --> 00:06:55,479
+not usually just a single algorithm it's
+
+169
+00:06:55,479 --> 00:06:57,199
+usually different algorithms that we're
+
+170
+00:06:57,199 --> 00:06:59,639
+leveraging to pick up on different kind
+
+171
+00:06:59,639 --> 00:07:01,879
+the signals and find those patterns
+
+172
+00:07:01,879 --> 00:07:04,160
+exactly uh so that's what goes behind
+
+173
+00:07:04,160 --> 00:07:06,759
+Watson but now another question is well
+
+174
+00:07:06,759 --> 00:07:08,360
+uh and this will be on my YouTube
+
+175
+00:07:08,360 --> 00:07:10,240
+channel soon but I've actually sometimes
+
+176
+00:07:10,240 --> 00:07:12,280
+you know gone ahead and created um I
+
+177
+00:07:12,280 --> 00:07:14,039
+guess you could say mixes of services to
+
+178
+00:07:14,039 --> 00:07:16,280
+create one extremely powerful service
+
+179
+00:07:16,280 --> 00:07:18,199
+like conversation enhanced by Tone
+
+180
+00:07:18,199 --> 00:07:21,560
+analyzer by say for example uh actually
+
+181
+00:07:21,560 --> 00:07:23,000
+combining the conversation and tone
+
+182
+00:07:23,000 --> 00:07:25,840
+analyzer by whenever you send a uh a uh
+
+183
+00:07:25,840 --> 00:07:27,879
+message to conversation it'll actually
+
+184
+00:07:27,879 --> 00:07:29,800
+put the tone of that message into a
+
+185
+00:07:29,800 --> 00:07:31,960
+context variable so that you can of
+
+186
+00:07:31,960 --> 00:07:34,120
+course access uh access the tone and
+
+187
+00:07:34,120 --> 00:07:36,520
+give personalized responses do you think
+
+188
+00:07:36,520 --> 00:07:38,840
+or do you believe Watson uh will I guess
+
+189
+00:07:38,840 --> 00:07:40,639
+you could say start to support like
+
+190
+00:07:40,639 --> 00:07:43,000
+mixes of these apis built in soon
+
+191
+00:07:43,000 --> 00:07:45,800
+mashing them up together in in both uh
+
+192
+00:07:45,800 --> 00:07:48,199
+structured and unstructured ways um the
+
+193
+00:07:48,199 --> 00:07:50,360
+answer is very likely you know there's
+
+194
+00:07:50,360 --> 00:07:52,599
+still choices that we have to make as we
+
+195
+00:07:52,599 --> 00:07:55,319
+move forward making sure that people can
+
+196
+00:07:55,319 --> 00:07:57,240
+Mash these things up in the style that
+
+197
+00:07:57,240 --> 00:07:59,479
+you describe yet at the same time keep
+
+198
+00:07:59,479 --> 00:08:01,440
+keep each individual Service as simple
+
+199
+00:08:01,440 --> 00:08:02,879
+as possible and of course that's a
+
+200
+00:08:02,879 --> 00:08:05,039
+balance we're always trying to measure
+
+201
+00:08:05,039 --> 00:08:07,000
+how complicated we're making things so
+
+202
+00:08:07,000 --> 00:08:09,400
+that we don't and we can keep things to
+
+203
+00:08:09,400 --> 00:08:11,000
+the point where people can do everything
+
+204
+00:08:11,000 --> 00:08:12,720
+they really want to do without being
+
+205
+00:08:12,720 --> 00:08:14,639
+bogged down so yeah you're going to see
+
+206
+00:08:14,639 --> 00:08:16,599
+more and more at least patterns of
+
+207
+00:08:16,599 --> 00:08:18,280
+integration where you can take something
+
+208
+00:08:18,280 --> 00:08:20,240
+like a conversation integrate it with
+
+209
+00:08:20,240 --> 00:08:22,120
+tone analyzer integrate with personality
+
+210
+00:08:22,120 --> 00:08:23,800
+insights integrate it with other
+
+211
+00:08:23,800 --> 00:08:26,039
+services like the weather to be able to
+
+212
+00:08:26,039 --> 00:08:28,080
+understand you know what the weather is
+
+213
+00:08:28,080 --> 00:08:30,120
+like outside where you are or where
+
+214
+00:08:30,120 --> 00:08:32,839
+you're going um what the environment is
+
+215
+00:08:32,839 --> 00:08:34,519
+like the place that you're at you know
+
+216
+00:08:34,519 --> 00:08:36,680
+if that's in your home or in your car or
+
+217
+00:08:36,680 --> 00:08:38,839
+in your office what else is happening in
+
+218
+00:08:38,839 --> 00:08:42,560
+that room that would also inform how the
+
+219
+00:08:42,560 --> 00:08:45,240
+conversational system should interpret
+
+220
+00:08:45,240 --> 00:08:47,920
+what you need to be able to anticipate
+
+221
+00:08:47,920 --> 00:08:50,279
+that need and be able to offer you
+
+222
+00:08:50,279 --> 00:08:52,040
+choices in that context that are
+
+223
+00:08:52,040 --> 00:08:54,399
+meaningful to you or relevant to you in
+
+224
+00:08:54,399 --> 00:08:56,000
+that environment so yes absolutely
+
+225
+00:08:56,000 --> 00:08:57,240
+you're going to see lots of combinations
+
+226
+00:08:57,240 --> 00:08:58,880
+of this kind that is perfect I can
+
+227
+00:08:58,880 --> 00:09:00,519
+imagine that being being very powerful
+
+228
+00:09:00,519 --> 00:09:03,240
+for a lot of developers applications now
+
+229
+00:09:03,240 --> 00:09:06,079
+one more thing how can developers give
+
+230
+00:09:06,079 --> 00:09:08,079
+feedback to the Watson team if they want
+
+231
+00:09:08,079 --> 00:09:10,240
+to say incorporate a new feature give
+
+232
+00:09:10,240 --> 00:09:12,399
+feedback for an existing service so we
+
+233
+00:09:12,399 --> 00:09:14,760
+have a variety of uh social channels
+
+234
+00:09:14,760 --> 00:09:16,519
+that we invite people to come and join
+
+235
+00:09:16,519 --> 00:09:20,079
+us of course we have GitHub slack um
+
+236
+00:09:20,079 --> 00:09:22,880
+Twitter LinkedIn channels where you can
+
+237
+00:09:22,880 --> 00:09:25,120
+provide us input we love to hear from
+
+238
+00:09:25,120 --> 00:09:27,560
+you um we want to hear what is working
+
+239
+00:09:27,560 --> 00:09:31,240
+for you the great case of of of success
+
+240
+00:09:31,240 --> 00:09:33,399
+that you've had doing fun and
+
+241
+00:09:33,399 --> 00:09:36,040
+interesting things uh and where things
+
+242
+00:09:36,040 --> 00:09:37,600
+are not working so well for you CU
+
+243
+00:09:37,600 --> 00:09:39,760
+obviously we always want to make these
+
+244
+00:09:39,760 --> 00:09:41,200
+these things
+
+245
+00:09:41,200 --> 00:09:43,519
+better all right so that's going to be
+
+246
+00:09:43,519 --> 00:09:44,720
+for this video and of course I'd like to
+
+247
+00:09:44,720 --> 00:09:47,360
+say a big thank you to Rob hot Mentor
+
+248
+00:09:47,360 --> 00:09:49,200
+here uh for actually taking out the time
+
+249
+00:09:49,200 --> 00:09:51,399
+from his extremely busy schedule to
+
+250
+00:09:51,399 --> 00:09:54,079
+record this video with me all right so
+
+251
+00:09:54,079 --> 00:09:55,839
+that's going to be it for this video of
+
+252
+00:09:55,839 --> 00:09:57,839
+course Rob High where can my subscribers
+
+253
+00:09:57,839 --> 00:10:01,800
+contact you um I'm on LinkedIn uh and uh
+
+254
+00:10:01,800 --> 00:10:03,720
+under uh H
+
+255
+00:10:03,720 --> 00:10:09,200
+ghr us. ibm.com or on Twitter at um R
+
+256
+00:10:09,200 --> 00:10:13,519
+high rhi G and uh I uh welcome you to
+
+257
+00:10:13,519 --> 00:10:16,480
+join me on either Channel perfect your
+
+258
+00:10:16,480 --> 00:10:18,560
+link your contact information will be
+
+259
+00:10:18,560 --> 00:10:19,839
+down in the description below so if you
+
+260
+00:10:19,839 --> 00:10:21,720
+like to contact Rob please feel free to
+
+261
+00:10:21,720 --> 00:10:23,399
+do so all right so that's going to be it
+
+262
+00:10:23,399 --> 00:10:24,760
+for this video if you'd like to leave
+
+263
+00:10:24,760 --> 00:10:26,560
+any comments suggestions questions or
+
+264
+00:10:26,560 --> 00:10:28,200
+feedback leave them down in the comment
+
+265
+00:10:28,200 --> 00:10:29,560
+section below or you can email email
+
+266
+00:10:29,560 --> 00:10:31,800
+them to me or drop high at tajim Manny
+
+267
+00:10:31,800 --> 00:10:34,160
+gmail.com or his contact information or
+
+268
+00:10:34,160 --> 00:10:36,200
+you can tweet them to me at tajim Manny
+
+269
+00:10:36,200 --> 00:10:37,360
+and of course if you really like the
+
+270
+00:10:37,360 --> 00:10:38,760
+video please make sure to leave a like
+
+271
+00:10:38,760 --> 00:10:40,200
+down below and if you believe it can
+
+272
+00:10:40,200 --> 00:10:42,120
+help anybody else you know develop with
+
+273
+00:10:42,120 --> 00:10:43,880
+Watson and his cognitive abilities
+
+274
+00:10:43,880 --> 00:10:46,360
+please do share the video as well that's
+
+275
+00:10:46,360 --> 00:10:47,560
+going to be it for this video but if you
+
+276
+00:10:47,560 --> 00:10:49,120
+really do like my content though and you
+
+277
+00:10:49,120 --> 00:10:50,760
+want to be notified whenever I release
+
+278
+00:10:50,760 --> 00:10:52,720
+new content and new videos please do
+
+279
+00:10:52,720 --> 00:10:53,839
+make sure to subscribe to the channel
+
+280
+00:10:53,839 --> 00:10:55,519
+and turn on notifications and that's
+
+281
+00:10:55,519 --> 00:10:57,399
+going to be it for this video today
+
+282
+00:10:57,399 --> 00:10:58,920
+thank you very much for watching today
+
+283
+00:10:58,920 --> 00:11:02,680
+goodbye thank you Tam

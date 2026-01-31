@@ -1,0 +1,2563 @@
+1
+00:00:01,480 --> 00:00:03,120
+so hello there and welcome to another
+
+2
+00:00:03,120 --> 00:00:05,440
+tutorial my name is Henry bshi and this
+
+3
+00:00:05,440 --> 00:00:07,480
+time we're going to be going over yet
+
+4
+00:00:07,480 --> 00:00:10,240
+again another revision for my well now
+
+5
+00:00:10,240 --> 00:00:13,559
+series of xcode to IPA uh this time
+
+6
+00:00:13,559 --> 00:00:15,639
+we're going to be going over uh not
+
+7
+00:00:15,639 --> 00:00:18,320
+really part three but more like part 2.1
+
+8
+00:00:18,320 --> 00:00:20,600
+since it's just a little extension uh to
+
+9
+00:00:20,600 --> 00:00:22,880
+what we've had before uh now if you
+
+10
+00:00:22,880 --> 00:00:24,920
+remember this is this is just literally
+
+11
+00:00:24,920 --> 00:00:28,279
+history uh but back in the days of xode
+
+12
+00:00:28,279 --> 00:00:31,199
+2 IPA version one uh it was working fine
+
+13
+00:00:31,199 --> 00:00:33,800
+it wasn't very practical uh it worked
+
+14
+00:00:33,800 --> 00:00:36,320
+though uh and then the problem was that
+
+15
+00:00:36,320 --> 00:00:39,399
+Wade sellers uh commented on my video uh
+
+16
+00:00:39,399 --> 00:00:42,600
+and he had a code signing issue uh so
+
+17
+00:00:42,600 --> 00:00:44,520
+then that encouraged me to just make a
+
+18
+00:00:44,520 --> 00:00:47,559
+second version which fixed 90% of code
+
+19
+00:00:47,559 --> 00:00:50,680
+signing issues and it also was much
+
+20
+00:00:50,680 --> 00:00:53,879
+faster and much more practical to use uh
+
+21
+00:00:53,879 --> 00:00:55,520
+in a real development
+
+22
+00:00:55,520 --> 00:00:58,199
+environment uh and so now I'm going to
+
+23
+00:00:58,199 --> 00:01:00,480
+be expanding on that and and giving you
+
+24
+00:01:00,480 --> 00:01:03,239
+a little extra feature uh that is still
+
+25
+00:01:03,239 --> 00:01:05,239
+under development uh Apple doesn't
+
+26
+00:01:05,239 --> 00:01:07,360
+completely allow it so it won't be the
+
+27
+00:01:07,360 --> 00:01:09,960
+most functional feature uh but it it
+
+28
+00:01:09,960 --> 00:01:12,720
+it's a workaround and that is
+
+29
+00:01:12,720 --> 00:01:15,320
+semi-automatic updates now what is a
+
+30
+00:01:15,320 --> 00:01:18,479
+semi-auto a semi-automatic update uh
+
+31
+00:01:18,479 --> 00:01:22,320
+basically a semi-automatic update uh is
+
+32
+00:01:22,320 --> 00:01:25,000
+something it's a feature in which let's
+
+33
+00:01:25,000 --> 00:01:28,280
+say you just start up your app it if if
+
+34
+00:01:28,280 --> 00:01:30,720
+uh the feature finds a new version on
+
+35
+00:01:30,720 --> 00:01:33,520
+your server of that app it will notify
+
+36
+00:01:33,520 --> 00:01:35,840
+you and say okay here's another uh
+
+37
+00:01:35,840 --> 00:01:38,280
+version of this app uh I'd like you to
+
+38
+00:01:38,280 --> 00:01:39,960
+install it and then you can either click
+
+39
+00:01:39,960 --> 00:01:42,600
+on no or yes uh if you click on no it'll
+
+40
+00:01:42,600 --> 00:01:44,000
+just remind you the next time you open
+
+41
+00:01:44,000 --> 00:01:47,200
+the app and if you click on yes uh it
+
+42
+00:01:47,200 --> 00:01:50,119
+will actually uh it will show a little
+
+43
+00:01:50,119 --> 00:01:52,560
+menu uh where you can again click yes or
+
+44
+00:01:52,560 --> 00:01:54,719
+no if you click no it'll again skip if
+
+45
+00:01:54,719 --> 00:01:56,759
+you click yes it'll exit the app by
+
+46
+00:01:56,759 --> 00:01:59,479
+itself uh and then it'll it'll ask you
+
+47
+00:01:59,479 --> 00:02:02,039
+to install manually and that's what the
+
+48
+00:02:02,039 --> 00:02:04,520
+disadvantage is but before I explain
+
+49
+00:02:04,520 --> 00:02:06,079
+this let's just I'm just going to bring
+
+50
+00:02:06,079 --> 00:02:08,840
+your attention over here uh and as you
+
+51
+00:02:08,840 --> 00:02:10,520
+can see we have one advantage and one
+
+52
+00:02:10,520 --> 00:02:12,640
+disadvantage to this using this method
+
+53
+00:02:12,640 --> 00:02:14,720
+which is basically the only method for
+
+54
+00:02:14,720 --> 00:02:16,879
+this that we have currently U maybe with
+
+55
+00:02:16,879 --> 00:02:19,120
+iOS 10 or something they'll give us some
+
+56
+00:02:19,120 --> 00:02:21,800
+new ways to do this but for now the only
+
+57
+00:02:21,800 --> 00:02:24,720
+thing that we can do uh is the advantage
+
+58
+00:02:24,720 --> 00:02:27,360
+is that it will notify you when a new
+
+59
+00:02:27,360 --> 00:02:29,560
+version is released for the software but
+
+60
+00:02:29,560 --> 00:02:31,720
+the disadvantage is that you have to
+
+61
+00:02:31,720 --> 00:02:34,920
+manually install this onto your device
+
+62
+00:02:34,920 --> 00:02:37,160
+uh the reason we have this disadvantage
+
+63
+00:02:37,160 --> 00:02:40,760
+is due to the fact uh that
+
+64
+00:02:40,760 --> 00:02:43,840
+um in order to install the app we need
+
+65
+00:02:43,840 --> 00:02:46,280
+to delete the old app and we can't
+
+66
+00:02:46,280 --> 00:02:48,400
+delete our own app and we can't delete
+
+67
+00:02:48,400 --> 00:02:51,360
+any other apps on the iOS system so then
+
+68
+00:02:51,360 --> 00:02:53,680
+the problem is that if we can't delete
+
+69
+00:02:53,680 --> 00:02:55,560
+we can't install if we can't install
+
+70
+00:02:55,560 --> 00:02:57,800
+then we can't do it fully automatically
+
+71
+00:02:57,800 --> 00:03:00,519
+and that just basically tells us why we
+
+72
+00:03:00,519 --> 00:03:03,000
+can't do it uh so as you can see I just
+
+73
+00:03:03,000 --> 00:03:05,400
+WR down Wroten down uh that this is xco
+
+74
+00:03:05,400 --> 00:03:09,280
+to IPA 2.1 not three uh and that we have
+
+75
+00:03:09,280 --> 00:03:11,239
+semi-automatic updates finally if you
+
+76
+00:03:11,239 --> 00:03:13,400
+still didn't get it uh so the bottom
+
+77
+00:03:13,400 --> 00:03:16,040
+line is that I've introduced sort of
+
+78
+00:03:16,040 --> 00:03:18,400
+semi-auto updates uh another
+
+79
+00:03:18,400 --> 00:03:20,720
+disadvantage uh to this method uh could
+
+80
+00:03:20,720 --> 00:03:23,000
+be the fact uh
+
+81
+00:03:23,000 --> 00:03:29,360
+that you are required uh to uh use um
+
+82
+00:03:29,360 --> 00:03:32,080
+more code in your apps uh and sorry
+
+83
+00:03:32,080 --> 00:03:34,519
+about that but you are required to use
+
+84
+00:03:34,519 --> 00:03:36,560
+some code in your
+
+85
+00:03:36,560 --> 00:03:40,879
+app use
+
+86
+00:03:42,599 --> 00:03:44,920
+temporary
+
+87
+00:03:44,920 --> 00:03:47,920
+code
+
+88
+00:03:47,959 --> 00:03:50,519
+and
+
+89
+00:03:50,519 --> 00:03:52,079
+view
+
+90
+00:03:52,079 --> 00:03:55,079
+in
+
+91
+00:03:58,680 --> 00:04:02,360
+storyboard so you unless uh it's just a
+
+92
+00:04:02,360 --> 00:04:04,640
+little disadvantage that you have to use
+
+93
+00:04:04,640 --> 00:04:06,560
+some temporary code in your view
+
+94
+00:04:06,560 --> 00:04:08,760
+controller class or whatever main class
+
+95
+00:04:08,760 --> 00:04:11,040
+you're using and also an extra view in
+
+96
+00:04:11,040 --> 00:04:13,480
+your storyboard uh but I mean uh you can
+
+97
+00:04:13,480 --> 00:04:15,120
+always remove this before you actually
+
+98
+00:04:15,120 --> 00:04:17,199
+distribute this and this is more for
+
+99
+00:04:17,199 --> 00:04:19,519
+those like little groups of developers
+
+100
+00:04:19,519 --> 00:04:21,280
+that are just developing a software and
+
+101
+00:04:21,280 --> 00:04:23,639
+don't want to keep manually checking if
+
+102
+00:04:23,639 --> 00:04:25,600
+there's an update but they can just get
+
+103
+00:04:25,600 --> 00:04:28,759
+ma uh just get notified of it uh and so
+
+104
+00:04:28,759 --> 00:04:30,759
+essentially what I've done is I took
+
+105
+00:04:30,759 --> 00:04:33,639
+just a little Remnant or a little block
+
+106
+00:04:33,639 --> 00:04:36,880
+of Swift databases mixed it with excot
+
+107
+00:04:36,880 --> 00:04:41,000
+IPA and we got a result uh now I just
+
+108
+00:04:41,000 --> 00:04:42,960
+took a little Remnant I didn't really
+
+109
+00:04:42,960 --> 00:04:45,479
+use databases I just used PHP it seemed
+
+110
+00:04:45,479 --> 00:04:48,759
+easier uh so let me just explain how it
+
+111
+00:04:48,759 --> 00:04:52,800
+works basically we have a swift
+
+112
+00:04:52,800 --> 00:04:56,880
+end over here
+
+113
+00:04:57,440 --> 00:05:00,759
+sorry we have a swift end
+
+114
+00:05:00,759 --> 00:05:02,199
+over
+
+115
+00:05:02,199 --> 00:05:05,759
+here and we also have a phpn on our
+
+116
+00:05:05,759 --> 00:05:08,160
+server this is where the latest version
+
+117
+00:05:08,160 --> 00:05:10,520
+will be
+
+118
+00:05:10,800 --> 00:05:13,240
+kept and this is where the local version
+
+119
+00:05:13,240 --> 00:05:14,360
+will be
+
+120
+00:05:14,360 --> 00:05:17,919
+kept okay now let's just say the local
+
+121
+00:05:17,919 --> 00:05:19,270
+version for Swift is
+
+122
+00:05:19,270 --> 00:05:21,600
+[Music]
+
+123
+00:05:21,600 --> 00:05:24,800
+0.0.1 and let's just say the PHP version
+
+124
+00:05:24,800 --> 00:05:27,000
+is
+
+125
+00:05:27,039 --> 00:05:30,080
+0.0.1 and I put one for a reason I'm
+
+126
+00:05:30,080 --> 00:05:32,080
+going to tell you why in just a second
+
+127
+00:05:32,080 --> 00:05:33,680
+now it's going to match the local and
+
+128
+00:05:33,680 --> 00:05:36,319
+the latest version numbers and now these
+
+129
+00:05:36,319 --> 00:05:38,560
+are the same so it's going to say hm
+
+130
+00:05:38,560 --> 00:05:40,600
+there's no update so I should not notify
+
+131
+00:05:40,600 --> 00:05:42,120
+the user so it'll just do nothing it'll
+
+132
+00:05:42,120 --> 00:05:44,400
+run the app like normal however let's
+
+133
+00:05:44,400 --> 00:05:46,919
+just say uh one of the lead developers
+
+134
+00:05:46,919 --> 00:05:49,160
+releases a new version of the software
+
+135
+00:05:49,160 --> 00:05:51,319
+and says this is version
+
+136
+00:05:51,319 --> 00:05:55,600
+0.0.2 uh or 0.1.2 or something like that
+
+137
+00:05:55,600 --> 00:05:58,600
+uh then Swift will say that hm okay so
+
+138
+00:05:58,600 --> 00:06:01,280
+these are different now so what I should
+
+139
+00:06:01,280 --> 00:06:02,880
+do is tell the user that there's an
+
+140
+00:06:02,880 --> 00:06:04,960
+upgrade and when there's an upgrade it
+
+141
+00:06:04,960 --> 00:06:07,440
+just uh pops up a little menu and says
+
+142
+00:06:07,440 --> 00:06:11,960
+would you like to install uh stuff like
+
+143
+00:06:13,039 --> 00:06:15,520
+that if that's a little drawing of the
+
+144
+00:06:15,520 --> 00:06:17,680
+view you can imagine it'll ask you then
+
+145
+00:06:17,680 --> 00:06:19,720
+if you were to click on yes it would
+
+146
+00:06:19,720 --> 00:06:22,160
+actually update from PHP if you were to
+
+147
+00:06:22,160 --> 00:06:25,400
+click on no then it just ignores it so
+
+148
+00:06:25,400 --> 00:06:28,199
+yeah that was really it uh and now I
+
+149
+00:06:28,199 --> 00:06:31,199
+will see you at the Mac part uh where we
+
+150
+00:06:31,199 --> 00:06:33,800
+will actually go into the code and just
+
+151
+00:06:33,800 --> 00:06:36,319
+before we actually go to the Mac part uh
+
+152
+00:06:36,319 --> 00:06:38,400
+I'm just going to tell you that that I
+
+153
+00:06:38,400 --> 00:06:40,759
+will be repeating a little section of XO
+
+154
+00:06:40,759 --> 00:06:43,000
+tyia part two so you feel really the
+
+155
+00:06:43,000 --> 00:06:46,000
+continuity of this and how you actually
+
+156
+00:06:46,000 --> 00:06:48,960
+uh embed this in your apps uh but if you
+
+157
+00:06:48,960 --> 00:06:51,080
+do want to skip that then there might
+
+158
+00:06:51,080 --> 00:06:53,960
+just be a little um uh annotation on
+
+159
+00:06:53,960 --> 00:06:57,479
+screen allowing you to do so uh when I
+
+160
+00:06:57,479 --> 00:06:59,759
+actually start the Mac part uh or you
+
+161
+00:06:59,759 --> 00:07:01,360
+can just look in the description for the
+
+162
+00:07:01,360 --> 00:07:03,759
+timing when I start the Mac when I start
+
+163
+00:07:03,759 --> 00:07:07,879
+the real um update checking part so yeah
+
+164
+00:07:07,879 --> 00:07:09,639
+I'll see you at the Mac
+
+165
+00:07:09,639 --> 00:07:12,000
+part so welcome to the Mac part of the
+
+166
+00:07:12,000 --> 00:07:13,319
+video and now we're going to be
+
+167
+00:07:13,319 --> 00:07:15,960
+explaining exactly how to do this stuff
+
+168
+00:07:15,960 --> 00:07:18,199
+uh so let's get started as you can see
+
+169
+00:07:18,199 --> 00:07:20,639
+uh I have already installed Dropbox and
+
+170
+00:07:20,639 --> 00:07:23,080
+shenen uh and you can find out how to do
+
+171
+00:07:23,080 --> 00:07:24,800
+that from my earlier tutorial Swift dat
+
+172
+00:07:24,800 --> 00:07:26,759
+races part 2 which there will be a link
+
+173
+00:07:26,759 --> 00:07:29,120
+to in the description down below again I
+
+174
+00:07:29,120 --> 00:07:31,280
+will will be repeating some parts of X
+
+175
+00:07:31,280 --> 00:07:33,720
+typa part two in this uh so if you wish
+
+176
+00:07:33,720 --> 00:07:35,160
+you can just skip it by clicking on The
+
+177
+00:07:35,160 --> 00:07:37,160
+annotation that's on screen and it
+
+178
+00:07:37,160 --> 00:07:39,280
+should disappear just around
+
+179
+00:07:39,280 --> 00:07:42,120
+now okay so now let's actually get
+
+180
+00:07:42,120 --> 00:07:44,280
+started and I'm just going to go to my
+
+181
+00:07:44,280 --> 00:07:46,440
+Dropbox I'm going to go to my apps and
+
+182
+00:07:46,440 --> 00:07:48,520
+as you can see I've also installed my.
+
+183
+00:07:48,520 --> 00:07:50,840
+drop pages so you also need to do that
+
+184
+00:07:50,840 --> 00:07:54,080
+and again that will be taught in xco IPA
+
+185
+00:07:54,080 --> 00:07:56,400
+part two uh which there will be a link
+
+186
+00:07:56,400 --> 00:07:58,400
+to down in the description uh then you
+
+187
+00:07:58,400 --> 00:08:01,000
+go to your website you go to public uh
+
+188
+00:08:01,000 --> 00:08:01,960
+and I'm just going to create a new
+
+189
+00:08:01,960 --> 00:08:03,759
+folder for this app and I'm going to
+
+190
+00:08:03,759 --> 00:08:06,720
+call this Au for auto update uh and
+
+191
+00:08:06,720 --> 00:08:09,440
+let's just go into it uh as you can see
+
+192
+00:08:09,440 --> 00:08:11,879
+uh it's blank but I have uh first of all
+
+193
+00:08:11,879 --> 00:08:13,840
+the app that can automatically update
+
+194
+00:08:13,840 --> 00:08:15,800
+itself over here I'm just going to take
+
+195
+00:08:15,800 --> 00:08:19,039
+this app and copy it into my
+
+196
+00:08:19,039 --> 00:08:21,960
+Dropbox okay it's done uh then I'm going
+
+197
+00:08:21,960 --> 00:08:23,960
+to take all these files that will help
+
+198
+00:08:23,960 --> 00:08:26,599
+us install to our device and also copy
+
+199
+00:08:26,599 --> 00:08:27,800
+them onto my
+
+200
+00:08:27,800 --> 00:08:31,240
+Dropbox and so that'll do that and so
+
+201
+00:08:31,240 --> 00:08:33,039
+now that once we're done that all we
+
+202
+00:08:33,039 --> 00:08:35,039
+need to do is let's just go into our
+
+203
+00:08:35,039 --> 00:08:36,880
+xcode
+
+204
+00:08:36,880 --> 00:08:38,839
+project and let's just wait for it to
+
+205
+00:08:38,839 --> 00:08:41,680
+load up what I'm just going to do is I'm
+
+206
+00:08:41,680 --> 00:08:43,959
+going to go to main.
+
+207
+00:08:43,959 --> 00:08:46,800
+storyboard and I'm going to go to my
+
+208
+00:08:46,800 --> 00:08:49,240
+view uh which I'm just going to go full
+
+209
+00:08:49,240 --> 00:08:52,959
+screen in uh hide all this extra stuff
+
+210
+00:08:52,959 --> 00:08:55,279
+and then I'm going to add a label to
+
+211
+00:08:55,279 --> 00:08:56,600
+this
+
+212
+00:08:56,600 --> 00:08:59,600
+app which will just basically tell us
+
+213
+00:08:59,600 --> 00:09:02,079
+the current
+
+214
+00:09:03,680 --> 00:09:05,880
+version
+
+215
+00:09:05,880 --> 00:09:09,160
+is okay then I'm just going to move it
+
+216
+00:09:09,160 --> 00:09:11,440
+like this and like
+
+217
+00:09:11,440 --> 00:09:14,640
+this and like that uh then I'm going to
+
+218
+00:09:14,640 --> 00:09:19,800
+go back into my uh uh view controller
+
+219
+00:09:19,800 --> 00:09:21,760
+and I'm going to create an IB outlet for
+
+220
+00:09:21,760 --> 00:09:24,839
+it right as it loads sorry sometimes it
+
+221
+00:09:24,839 --> 00:09:28,920
+does this but I mean you can't really do
+
+222
+00:09:28,920 --> 00:09:31,519
+much about
+
+223
+00:09:32,240 --> 00:09:35,279
+it sorry okay there so now I'm going to
+
+224
+00:09:35,279 --> 00:09:37,320
+create an IB outlet for
+
+225
+00:09:37,320 --> 00:09:39,880
+this uh IB Outlet VAR and let's just
+
+226
+00:09:39,880 --> 00:09:42,880
+call it uh label
+
+227
+00:09:42,880 --> 00:09:45,360
+ver and let's just give this the type of
+
+228
+00:09:45,360 --> 00:09:48,200
+UI label and down here in our viewed
+
+229
+00:09:48,200 --> 00:09:51,000
+load uh or actually viewed appear I
+
+230
+00:09:51,000 --> 00:09:55,000
+guess why not I am going to say label
+
+231
+00:09:55,000 --> 00:10:00,120
+ver. text is equal to current version
+
+232
+00:10:00,120 --> 00:10:04,680
+is and then the current version once
+
+233
+00:10:04,680 --> 00:10:06,959
+that's done uh I'm just going to save
+
+234
+00:10:06,959 --> 00:10:10,120
+this build it do not run
+
+235
+00:10:10,120 --> 00:10:14,079
+build uh and then we should be
+
+236
+00:10:14,079 --> 00:10:18,000
+safe to be able
+
+237
+00:10:18,000 --> 00:10:22,240
+to uh okay so now we should be safe to
+
+238
+00:10:22,240 --> 00:10:24,680
+be able to quit xcode uh and as you can
+
+239
+00:10:24,680 --> 00:10:26,240
+see this will just sync back onto
+
+240
+00:10:26,240 --> 00:10:29,279
+Dropbox and now I'm going to go back and
+
+241
+00:10:29,279 --> 00:10:31,640
+then I'm also going to open up terminal
+
+242
+00:10:31,640 --> 00:10:33,720
+once I have terminal open I'm going to
+
+243
+00:10:33,720 --> 00:10:36,800
+drag in just a sec going to type in CD
+
+244
+00:10:36,800 --> 00:10:40,240
+space then drag in the Au folder that we
+
+245
+00:10:40,240 --> 00:10:42,399
+have on our
+
+246
+00:10:42,399 --> 00:10:46,399
+Dropbox uh over here sorry that's why I
+
+247
+00:10:46,399 --> 00:10:47,720
+like this view
+
+248
+00:10:47,720 --> 00:10:51,000
+better I'm just going to drag back in
+
+249
+00:10:51,000 --> 00:10:53,200
+here and then I'm going to move the
+
+250
+00:10:53,200 --> 00:10:55,079
+extra space and then I'm going to click
+
+251
+00:10:55,079 --> 00:10:58,279
+on enter uh and now that we are in this
+
+252
+00:10:58,279 --> 00:11:02,560
+directory all we need to do is type in
+
+253
+00:11:02,560 --> 00:11:06,720
+IPA build okay once that's done uh we
+
+254
+00:11:06,720 --> 00:11:09,160
+are going to be able to create an IPA so
+
+255
+00:11:09,160 --> 00:11:11,760
+I'm just going to click
+
+256
+00:11:12,880 --> 00:11:16,120
+enter and as you can see it will
+
+257
+00:11:16,120 --> 00:11:17,680
+successfully or at least it should
+
+258
+00:11:17,680 --> 00:11:20,360
+successfully uh create an IPA file for
+
+259
+00:11:20,360 --> 00:11:23,519
+us uh so now we can just wait uh wait it
+
+260
+00:11:23,519 --> 00:11:25,760
+out uh sometimes it does take a little
+
+261
+00:11:25,760 --> 00:11:29,480
+bit time if your app is this big uh uh
+
+262
+00:11:29,480 --> 00:11:31,600
+so that'll just do
+
+263
+00:11:31,600 --> 00:11:34,160
+that and it'll give us some errors but
+
+264
+00:11:34,160 --> 00:11:36,279
+we can ignore them completely because
+
+265
+00:11:36,279 --> 00:11:39,440
+those are just temporary ghost
+
+266
+00:11:39,440 --> 00:11:42,160
+errors as you can see it is generating
+
+267
+00:11:42,160 --> 00:11:45,200
+our IPA and it has successfully built it
+
+268
+00:11:45,200 --> 00:11:47,560
+uh now once that's done we just want to
+
+269
+00:11:47,560 --> 00:11:51,279
+really wait for uh X I mean Dropbox to
+
+270
+00:11:51,279 --> 00:11:53,959
+upload this onto our server or actually
+
+271
+00:11:53,959 --> 00:11:56,959
+just uploaded onto Dropbox and sometimes
+
+272
+00:11:56,959 --> 00:11:57,959
+that'll
+
+273
+00:11:57,959 --> 00:12:00,440
+happen finder
+
+274
+00:12:00,440 --> 00:12:03,000
+crashes yeah apparently finder does
+
+275
+00:12:03,000 --> 00:12:05,959
+crash na cppy 10 so that's one glitch
+
+276
+00:12:05,959 --> 00:12:09,200
+that I just found anyway so once that's
+
+277
+00:12:09,200 --> 00:12:11,760
+done we have it all synced up and ready
+
+278
+00:12:11,760 --> 00:12:14,680
+to go now we can go what we can do is go
+
+279
+00:12:14,680 --> 00:12:19,600
+to the actual um uh uh online version of
+
+280
+00:12:19,600 --> 00:12:22,040
+Dropbox uh so I'm just going to go to
+
+281
+00:12:22,040 --> 00:12:25,279
+dropbox.com and I'm going to go into my
+
+282
+00:12:25,279 --> 00:12:27,440
+apps folder once I'm in my apps folder
+
+283
+00:12:27,440 --> 00:12:30,120
+to my drop pages then my tajim Manu
+
+284
+00:12:30,120 --> 00:12:32,760
+website then public and then my Au
+
+285
+00:12:32,760 --> 00:12:34,839
+folder now I'm going to click on share
+
+286
+00:12:34,839 --> 00:12:37,800
+beside the IPA file and I'm going to
+
+287
+00:12:37,800 --> 00:12:41,079
+copy this link then I'm going to open up
+
+288
+00:12:41,079 --> 00:12:45,199
+the uh pist file over here uh with
+
+289
+00:12:45,199 --> 00:12:48,000
+xcode and then once it opens up I'm just
+
+290
+00:12:48,000 --> 00:12:52,959
+going to change the link uh to a direct
+
+291
+00:12:52,959 --> 00:12:56,639
+link uh you know how in XO tyia part 2 I
+
+292
+00:12:56,639 --> 00:13:00,639
+tell you to remove DL uh and replace
+
+293
+00:13:00,639 --> 00:13:05,360
+www.d www with dl. dropbox.com I think
+
+294
+00:13:05,360 --> 00:13:09,279
+this means direct link probably uh so
+
+295
+00:13:09,279 --> 00:13:11,079
+then we also replace Dropbox with
+
+296
+00:13:11,079 --> 00:13:14,480
+Dropbox user content uh direct link.
+
+297
+00:13:14,480 --> 00:13:17,320
+Dropbox user content.com SL whatever
+
+298
+00:13:17,320 --> 00:13:20,680
+whatever ever slaut update autoa update.
+
+299
+00:13:20,680 --> 00:13:23,519
+IA perfect uh now I can just save and
+
+300
+00:13:23,519 --> 00:13:26,279
+quit and once this uh syncs back onto
+
+301
+00:13:26,279 --> 00:13:31,440
+our server we can go on and we can
+
+302
+00:13:31,440 --> 00:13:34,320
+refresh now what I'm going to do is I'm
+
+303
+00:13:34,320 --> 00:13:36,839
+going to click the share button for this
+
+304
+00:13:36,839 --> 00:13:38,360
+pist
+
+305
+00:13:38,360 --> 00:13:41,600
+file now I'm going to copy this link I'm
+
+306
+00:13:41,600 --> 00:13:44,959
+going to go to install a HTML and I'm
+
+307
+00:13:44,959 --> 00:13:47,680
+going to open this up with Sublime Text
+
+308
+00:13:47,680 --> 00:13:51,279
+to so it's just going to fetch sometimes
+
+309
+00:13:51,279 --> 00:13:56,000
+it takes some time maybe if we redo it
+
+310
+00:13:56,000 --> 00:13:57,720
+okay perfect now I'm going to go into
+
+311
+00:13:57,720 --> 00:14:00,199
+Sublime Text 2
+
+312
+00:14:00,199 --> 00:14:03,079
+and as you can see uh we have the link
+
+313
+00:14:03,079 --> 00:14:05,240
+here and we don't want this link we
+
+314
+00:14:05,240 --> 00:14:08,880
+actually want this link okay now I'm
+
+315
+00:14:08,880 --> 00:14:11,920
+going to remove the DL part and I'm also
+
+316
+00:14:11,920 --> 00:14:15,240
+going to replace www with
+
+317
+00:14:15,240 --> 00:14:19,720
+DL and Dropbox with Dropbox user
+
+318
+00:14:19,720 --> 00:14:22,639
+content perfect I'm going to save and
+
+319
+00:14:22,639 --> 00:14:25,399
+quit once this thing backs onto our back
+
+320
+00:14:25,399 --> 00:14:27,480
+onto our servers we are ready to give it
+
+321
+00:14:27,480 --> 00:14:29,920
+a test run now just going to get my iOS
+
+322
+00:14:29,920 --> 00:14:32,959
+device and plug it into my Mac here uh
+
+323
+00:14:32,959 --> 00:14:35,880
+so theoretically uh this should be able
+
+324
+00:14:35,880 --> 00:14:39,360
+to mirror my iPhone onto my computer uh
+
+325
+00:14:39,360 --> 00:14:40,920
+and yeah I'm just going to plug it in
+
+326
+00:14:40,920 --> 00:14:44,320
+just give me a second really quickly uh
+
+327
+00:14:44,320 --> 00:14:46,519
+uh so just one
+
+328
+00:14:46,519 --> 00:14:49,519
+second
+
+329
+00:14:49,720 --> 00:14:52,399
+um sorry this is taking a little bit of
+
+330
+00:14:52,399 --> 00:14:55,240
+time but I mean
+
+331
+00:14:55,240 --> 00:14:58,160
+yeah I'm just going to freeze that and
+
+332
+00:14:58,160 --> 00:15:00,120
+now I'm just just going to get my iPhone
+
+333
+00:15:00,120 --> 00:15:03,560
+and my lightning connector uh which
+
+334
+00:15:03,560 --> 00:15:05,560
+apparently uh yeah I'm just going to be
+
+335
+00:15:05,560 --> 00:15:07,600
+back in 1 second with my lightning
+
+336
+00:15:07,600 --> 00:15:10,880
+connector and I'll see you
+
+337
+00:15:10,959 --> 00:15:15,600
+then so yeah I am back with another uh
+
+338
+00:15:15,600 --> 00:15:17,240
+part of this and sorry I had to cut
+
+339
+00:15:17,240 --> 00:15:18,839
+there it's just that I didn't have my
+
+340
+00:15:18,839 --> 00:15:20,839
+lightning connector at the time anyway
+
+341
+00:15:20,839 --> 00:15:23,839
+now I am successfully streaming uh to my
+
+342
+00:15:23,839 --> 00:15:25,800
+projector and you should be able to see
+
+343
+00:15:25,800 --> 00:15:28,360
+it right as I click this button perfect
+
+344
+00:15:28,360 --> 00:15:31,720
+okay okay so now I can uh basically go
+
+345
+00:15:31,720 --> 00:15:33,800
+to the drop Pages where this is located
+
+346
+00:15:33,800 --> 00:15:36,360
+and we should be able to use it so if I
+
+347
+00:15:36,360 --> 00:15:38,360
+go to tajim
+
+348
+00:15:38,360 --> 00:15:41,759
+manny. drop
+
+349
+00:15:42,720 --> 00:15:45,720
+pages.com
+
+350
+00:15:46,440 --> 00:15:51,160
+and if I go slash no not emojis I don't
+
+351
+00:15:51,160 --> 00:15:54,319
+want emojis right now I want
+
+352
+00:15:54,319 --> 00:15:56,279
+slash uh
+
+353
+00:15:56,279 --> 00:16:00,600
+Au slash
+
+354
+00:16:01,240 --> 00:16:03,600
+install.
+
+355
+00:16:03,600 --> 00:16:07,279
+HTML perfect now if we go enter it
+
+356
+00:16:07,279 --> 00:16:09,040
+should give us this install link and I'm
+
+357
+00:16:09,040 --> 00:16:11,040
+just going to zoom in so you can see it
+
+358
+00:16:11,040 --> 00:16:12,880
+so I'm just going to click on
+
+359
+00:16:12,880 --> 00:16:15,600
+install and it should ask us if we would
+
+360
+00:16:15,600 --> 00:16:17,199
+like to install auto app update I'm
+
+361
+00:16:17,199 --> 00:16:19,440
+going to click on
+
+362
+00:16:19,440 --> 00:16:22,959
+install uh and this will or at least it
+
+363
+00:16:22,959 --> 00:16:27,360
+should install uh our automatic updating
+
+364
+00:16:27,360 --> 00:16:29,639
+software to our device ice so now we can
+
+365
+00:16:29,639 --> 00:16:31,560
+just wait for a while and just in case
+
+366
+00:16:31,560 --> 00:16:33,120
+you can't see that I'm going to point it
+
+367
+00:16:33,120 --> 00:16:35,440
+out to you right now uh using this
+
+368
+00:16:35,440 --> 00:16:39,319
+pointer apparently uh so as you can see
+
+369
+00:16:39,319 --> 00:16:42,000
+uh if I bring it down a
+
+370
+00:16:42,000 --> 00:16:44,720
+bit right there that's where the app is
+
+371
+00:16:44,720 --> 00:16:46,560
+in case you couldn't see it sorry it's a
+
+372
+00:16:46,560 --> 00:16:48,759
+bit down I just have a lot of apps
+
+373
+00:16:48,759 --> 00:16:50,600
+anyway so it's now
+
+374
+00:16:50,600 --> 00:16:53,680
+installing pretty useful and now it has
+
+375
+00:16:53,680 --> 00:16:56,240
+successfully installed wirelessly you
+
+376
+00:16:56,240 --> 00:16:58,480
+already knew this part uh but when we
+
+377
+00:16:58,480 --> 00:17:01,519
+turn this on apparently it doesn't uh
+
+378
+00:17:01,519 --> 00:17:04,319
+really like this uh I think I know why
+
+379
+00:17:04,319 --> 00:17:06,520
+because if we go into our
+
+380
+00:17:06,520 --> 00:17:09,280
+xcode uh we forgot to hook up the IB
+
+381
+00:17:09,280 --> 00:17:11,160
+Outlet to the actual label itself so
+
+382
+00:17:11,160 --> 00:17:12,679
+it's saying that okay there's a nil
+
+383
+00:17:12,679 --> 00:17:14,319
+value and there's nothing to set the
+
+384
+00:17:14,319 --> 00:17:18,000
+text of so then it just complains and we
+
+385
+00:17:18,000 --> 00:17:20,160
+don't get a chance to test out our app
+
+386
+00:17:20,160 --> 00:17:21,720
+anyway I'm just going to fix that really
+
+387
+00:17:21,720 --> 00:17:23,760
+quickly in front of you so I'm just
+
+388
+00:17:23,760 --> 00:17:26,240
+going to connect from view controller to
+
+389
+00:17:26,240 --> 00:17:29,559
+the current thing label version
+
+390
+00:17:29,559 --> 00:17:33,480
+uh and then just build not onto the
+
+391
+00:17:33,480 --> 00:17:34,960
+device as you can see I'm not building
+
+392
+00:17:34,960 --> 00:17:38,760
+onto my device I'm just building in
+
+393
+00:17:38,760 --> 00:17:41,360
+general by doing control B I mean
+
+394
+00:17:41,360 --> 00:17:43,559
+command B and now that that's done I'm
+
+395
+00:17:43,559 --> 00:17:46,640
+going to quit uh and now it will sync
+
+396
+00:17:46,640 --> 00:17:51,360
+this back on and then I can recreate the
+
+397
+00:17:51,360 --> 00:17:53,640
+IPA uh as you can see it's not really
+
+398
+00:17:53,640 --> 00:17:55,600
+doing anything on the iPhone but then I
+
+399
+00:17:55,600 --> 00:17:57,960
+can also delete this so it isn't taking
+
+400
+00:17:57,960 --> 00:18:02,440
+up space and then there so right as it's
+
+401
+00:18:02,440 --> 00:18:07,720
+done we can open up Safari and we can
+
+402
+00:18:07,720 --> 00:18:10,600
+install again right as it's
+
+403
+00:18:10,600 --> 00:18:13,880
+done this will just take a while I guess
+
+404
+00:18:13,880 --> 00:18:15,640
+and there it has successfully built now
+
+405
+00:18:15,640 --> 00:18:18,120
+I'm just going to wait for it to sink uh
+
+406
+00:18:18,120 --> 00:18:20,120
+which might just take a little a few
+
+407
+00:18:20,120 --> 00:18:23,960
+seconds actually uh so 12 seconds we'll
+
+408
+00:18:23,960 --> 00:18:27,520
+just wait for that to go um in case you
+
+409
+00:18:27,520 --> 00:18:29,559
+can't see where I'm reading the time off
+
+410
+00:18:29,559 --> 00:18:31,720
+of actually I'm just reading the time
+
+411
+00:18:31,720 --> 00:18:34,159
+off of
+
+412
+00:18:34,320 --> 00:18:38,080
+here as you can see it's just almost
+
+413
+00:18:38,080 --> 00:18:42,880
+done and there it's done now that it is
+
+414
+00:18:42,880 --> 00:18:45,679
+done I am just going to go back onto my
+
+415
+00:18:45,679 --> 00:18:48,960
+iPhone and I'm going to go into Safari
+
+416
+00:18:48,960 --> 00:18:50,640
+and I'm going to click on install once
+
+417
+00:18:50,640 --> 00:18:52,559
+again click on
+
+418
+00:18:52,559 --> 00:18:55,919
+install if I go back to my homepage it
+
+419
+00:18:55,919 --> 00:18:58,080
+should theoretically install back onto
+
+420
+00:18:58,080 --> 00:19:02,400
+my device and we should have uh a nice
+
+421
+00:19:02,400 --> 00:19:05,200
+working version yeah so see that's
+
+422
+00:19:05,200 --> 00:19:06,640
+sometimes what happens sometimes you
+
+423
+00:19:06,640 --> 00:19:08,640
+forget to hook up an IB Outlet sometimes
+
+424
+00:19:08,640 --> 00:19:11,000
+you forget to give it a certain string
+
+425
+00:19:11,000 --> 00:19:13,640
+value sometimes you make a r random
+
+426
+00:19:13,640 --> 00:19:16,840
+optional uh thing in Swift it so is a
+
+427
+00:19:16,840 --> 00:19:19,039
+bit annoying when that happens but I
+
+428
+00:19:19,039 --> 00:19:21,280
+mean it does happen
+
+429
+00:19:21,280 --> 00:19:23,760
+sometimes yeah so this is just going to
+
+430
+00:19:23,760 --> 00:19:26,280
+take a little while to install and once
+
+431
+00:19:26,280 --> 00:19:28,679
+it is successfully done we can open it
+
+432
+00:19:28,679 --> 00:19:31,799
+up and of course it doesn't crash so it
+
+433
+00:19:31,799 --> 00:19:34,039
+says that the current version is
+
+434
+00:19:34,039 --> 00:19:37,600
+0.0.1 now there's a problem uh well not
+
+435
+00:19:37,600 --> 00:19:40,240
+really a problem let's just say I were
+
+436
+00:19:40,240 --> 00:19:42,600
+to release version
+
+437
+00:19:42,600 --> 00:19:45,440
+0.0.2 now what I'm going to do is I'm
+
+438
+00:19:45,440 --> 00:19:47,000
+just going to keep this on here and I'm
+
+439
+00:19:47,000 --> 00:19:49,120
+not going to close it just so you can
+
+440
+00:19:49,120 --> 00:19:50,919
+see that I'm not doing anything so I'm
+
+441
+00:19:50,919 --> 00:19:53,640
+going to open up the
+
+442
+00:19:53,640 --> 00:19:55,240
+project
+
+443
+00:19:55,240 --> 00:19:58,240
+okay now I'm going to go back in and I'm
+
+444
+00:19:58,240 --> 00:20:01,360
+I'm going to change the version to
+
+445
+00:20:01,360 --> 00:20:05,520
+0.0.2 well of course has to load first
+
+446
+00:20:05,520 --> 00:20:07,640
+anyway sometimes it's really annoying
+
+447
+00:20:07,640 --> 00:20:09,679
+anyway so I'm going to change this to
+
+448
+00:20:09,679 --> 00:20:12,640
+0.0.2 I'm going to save and I'm going to
+
+449
+00:20:12,640 --> 00:20:15,039
+quit okay now this is just going to
+
+450
+00:20:15,039 --> 00:20:18,240
+refresh onto thing then I'm going to
+
+451
+00:20:18,240 --> 00:20:19,799
+redo IPA
+
+452
+00:20:19,799 --> 00:20:24,640
+build okay just wait for a second or
+
+453
+00:20:27,159 --> 00:20:30,000
+so
+
+454
+00:20:30,000 --> 00:20:32,240
+just going to wait wait wait wait and
+
+455
+00:20:32,240 --> 00:20:34,240
+keep on
+
+456
+00:20:34,240 --> 00:20:38,919
+waiting fake Errors By The X Cod to IPA
+
+457
+00:20:38,919 --> 00:20:42,520
+script uh and yeah in just a second it
+
+458
+00:20:42,520 --> 00:20:44,960
+will be done uh it's also going to have
+
+459
+00:20:44,960 --> 00:20:46,919
+to sync onto the server and while it
+
+460
+00:20:46,919 --> 00:20:51,080
+syncs uh I can show you how I okay there
+
+461
+00:20:51,080 --> 00:20:52,919
+now it's going to start syncing while it
+
+462
+00:20:52,919 --> 00:20:56,799
+syns I'm going to update the PHP uh to
+
+463
+00:20:56,799 --> 00:21:00,240
+reflect 0.0 2 instead so as you can see
+
+464
+00:21:00,240 --> 00:21:02,159
+this is literally the simplest PHP
+
+465
+00:21:02,159 --> 00:21:04,159
+script you could possibly have it's just
+
+466
+00:21:04,159 --> 00:21:07,360
+starting PHP we're echoing 0.0.2 to the
+
+467
+00:21:07,360 --> 00:21:09,799
+screen and we're ending PHP that's it so
+
+468
+00:21:09,799 --> 00:21:12,480
+if we were to go to this
+
+469
+00:21:12,480 --> 00:21:15,679
+website uh then as you can see we would
+
+470
+00:21:15,679 --> 00:21:18,279
+see um
+
+471
+00:21:18,279 --> 00:21:19,880
+update
+
+472
+00:21:19,880 --> 00:21:23,159
+check uh 0.0.2 because we just changed
+
+473
+00:21:23,159 --> 00:21:27,039
+it okay so now it has uh synced and it
+
+474
+00:21:27,039 --> 00:21:28,799
+has successfully built and we have
+
+475
+00:21:28,799 --> 00:21:31,120
+changed it here uh now if I were to
+
+476
+00:21:31,120 --> 00:21:35,159
+close open back up as you can see in
+
+477
+00:21:35,159 --> 00:21:37,039
+just a second or so or maybe actually
+
+478
+00:21:37,039 --> 00:21:39,000
+what I should do is clear this out of
+
+479
+00:21:39,000 --> 00:21:42,279
+memory then okay now if we just wait a
+
+480
+00:21:42,279 --> 00:21:43,360
+little
+
+481
+00:21:43,360 --> 00:21:47,440
+while uh we should be able to see uh
+
+482
+00:21:47,440 --> 00:21:48,600
+sometimes that'll also take a little
+
+483
+00:21:48,600 --> 00:21:51,880
+while to load it's normal it's because
+
+484
+00:21:51,880 --> 00:21:55,279
+yeah see so it just tells us that a new
+
+485
+00:21:55,279 --> 00:21:57,559
+sorry yeah see so what I'm just going to
+
+486
+00:21:57,559 --> 00:21:59,440
+do
+
+487
+00:21:59,440 --> 00:22:01,880
+uh is in our xcode project there's
+
+488
+00:22:01,880 --> 00:22:05,240
+another little thing uh is that if uh
+
+489
+00:22:05,240 --> 00:22:07,000
+you load on to another view this will
+
+490
+00:22:07,000 --> 00:22:09,720
+still be called uh and then it'll say
+
+491
+00:22:09,720 --> 00:22:11,559
+that okay now we're on a different View
+
+492
+00:22:11,559 --> 00:22:13,480
+and this is not no longer there so I
+
+493
+00:22:13,480 --> 00:22:15,799
+have to do if let underscores is equal
+
+494
+00:22:15,799 --> 00:22:18,480
+to
+
+495
+00:22:21,480 --> 00:22:25,720
+label then only do I want to change the
+
+496
+00:22:25,720 --> 00:22:28,600
+text okay so that should work and sorry
+
+497
+00:22:28,600 --> 00:22:30,240
+I just built onto the device there I'm
+
+498
+00:22:30,240 --> 00:22:32,720
+just going to stop that if it were ever
+
+499
+00:22:32,720 --> 00:22:34,799
+to load that
+
+500
+00:22:34,799 --> 00:22:37,279
+is one of the most annoying things to do
+
+501
+00:22:37,279 --> 00:22:40,640
+in the world of programming wait
+
+502
+00:22:40,640 --> 00:22:43,080
+anyway okay I'm going to stop the build
+
+503
+00:22:43,080 --> 00:22:44,360
+from happening and I'm just going to
+
+504
+00:22:44,360 --> 00:22:46,760
+build I'm not going to run onto the
+
+505
+00:22:46,760 --> 00:22:48,360
+device I'm just going to
+
+506
+00:22:48,360 --> 00:22:51,480
+build and in just a
+
+507
+00:22:51,480 --> 00:22:54,159
+second you should see that it
+
+508
+00:22:54,159 --> 00:22:55,559
+successfully builds I'm going to keep
+
+509
+00:22:55,559 --> 00:22:56,760
+the version
+
+510
+00:22:56,760 --> 00:22:59,679
+0.0.2 just just for the sake of
+
+511
+00:22:59,679 --> 00:23:01,880
+Simplicity uh but as you can see that's
+
+512
+00:23:01,880 --> 00:23:06,600
+done now I can quit out uh I can IPA
+
+513
+00:23:06,600 --> 00:23:09,600
+build it is going to create an IPA file
+
+514
+00:23:09,600 --> 00:23:13,760
+for us um and we should be able to see
+
+515
+00:23:13,760 --> 00:23:20,320
+uh the fact that we have a new IPA and
+
+516
+00:23:20,320 --> 00:23:22,880
+yeah yeah that'll take a little
+
+517
+00:23:22,880 --> 00:23:26,559
+time sorry about the
+
+518
+00:23:26,600 --> 00:23:29,640
+wait it's generating a new IPA
+
+519
+00:23:29,640 --> 00:23:32,080
+now as you can
+
+520
+00:23:32,080 --> 00:23:35,360
+see and we can just wait and wait and
+
+521
+00:23:35,360 --> 00:23:38,120
+wait and wait and
+
+522
+00:23:38,640 --> 00:23:41,640
+wait
+
+523
+00:23:42,559 --> 00:23:45,039
+anyway now it's sinking it is done
+
+524
+00:23:45,039 --> 00:23:48,240
+building it is now
+
+525
+00:23:48,760 --> 00:23:51,320
+sinking
+
+526
+00:23:51,320 --> 00:23:53,880
+um yeah it'll take some
+
+527
+00:23:53,880 --> 00:23:57,320
+time quite some time okay now that
+
+528
+00:23:57,320 --> 00:23:58,480
+that's done
+
+529
+00:23:58,480 --> 00:24:02,919
+we can actually get on uh with building
+
+530
+00:24:02,919 --> 00:24:05,000
+so now I'm just going to manually update
+
+531
+00:24:05,000 --> 00:24:07,440
+really quickly uh due to the fact that
+
+532
+00:24:07,440 --> 00:24:09,840
+we have just changed a really critical
+
+533
+00:24:09,840 --> 00:24:11,880
+piece of code and then I'm just going to
+
+534
+00:24:11,880 --> 00:24:13,919
+show you the automatic updates with the
+
+535
+00:24:13,919 --> 00:24:15,400
+version
+
+536
+00:24:15,400 --> 00:24:18,840
+0.0.3 so as you can see it'll do
+
+537
+00:24:18,840 --> 00:24:21,880
+that so till then what I can do is I can
+
+538
+00:24:21,880 --> 00:24:24,600
+start repairing version 0.0.3 so I'm
+
+539
+00:24:24,600 --> 00:24:26,799
+just going to open this
+
+540
+00:24:26,799 --> 00:24:29,799
+up
+
+541
+00:24:33,080 --> 00:24:35,240
+so I'm just going to change this to
+
+542
+00:24:35,240 --> 00:24:37,480
+0.0.3 but I'm not going to change the
+
+543
+00:24:37,480 --> 00:24:40,520
+PHP yet okay because I just want you to
+
+544
+00:24:40,520 --> 00:24:44,159
+see uh that even if we change the xcode
+
+545
+00:24:44,159 --> 00:24:46,440
+projects uh thing it's not going to
+
+546
+00:24:46,440 --> 00:24:48,360
+affect our app in anyway okay we can
+
+547
+00:24:48,360 --> 00:24:50,279
+open it up and it shows us that the
+
+548
+00:24:50,279 --> 00:24:52,080
+current version is
+
+549
+00:24:52,080 --> 00:24:55,320
+0.0.2 uh now of course it will not ask
+
+550
+00:24:55,320 --> 00:24:56,960
+us to update because that's also the
+
+551
+00:24:56,960 --> 00:24:59,480
+version in the pH HP however we had just
+
+552
+00:24:59,480 --> 00:25:01,760
+released a new version called 0.0.3 in
+
+553
+00:25:01,760 --> 00:25:04,840
+this mix uh so what do we do now let's
+
+554
+00:25:04,840 --> 00:25:06,840
+just do this I'm going to go back to our
+
+555
+00:25:06,840 --> 00:25:09,760
+PHP and make this 0.0.3 I'm going to
+
+556
+00:25:09,760 --> 00:25:12,720
+save and then I'm going to clear the
+
+557
+00:25:12,720 --> 00:25:16,880
+app okay now I'm going to close it
+
+558
+00:25:16,880 --> 00:25:19,520
+down uh just one
+
+559
+00:25:19,520 --> 00:25:22,039
+second yeah I didn't want that there
+
+560
+00:25:22,039 --> 00:25:24,120
+okay I'm just going to open it back up
+
+561
+00:25:24,120 --> 00:25:26,360
+and it immediately tells me that a new
+
+562
+00:25:26,360 --> 00:25:28,200
+update is available and what I like to
+
+563
+00:25:28,200 --> 00:25:29,799
+proceed with the update now I'm just
+
+564
+00:25:29,799 --> 00:25:32,320
+going to click no and as you can see it
+
+565
+00:25:32,320 --> 00:25:34,000
+tells us the current version is
+
+566
+00:25:34,000 --> 00:25:36,480
+0.0.2 now I'm going to
+
+567
+00:25:36,480 --> 00:25:38,600
+again open it up this time I'm going to
+
+568
+00:25:38,600 --> 00:25:41,080
+click on yes now I have two options I
+
+569
+00:25:41,080 --> 00:25:43,720
+can either let's do this or I can just
+
+570
+00:25:43,720 --> 00:25:45,600
+change my mind now I'm just going to
+
+571
+00:25:45,600 --> 00:25:47,840
+click on let's do this and it will
+
+572
+00:25:47,840 --> 00:25:51,000
+automatically close the app for me I can
+
+573
+00:25:51,000 --> 00:25:52,640
+delete this
+
+574
+00:25:52,640 --> 00:25:56,679
+app I can re uh rebuild the IPA first of
+
+575
+00:25:56,679 --> 00:25:59,640
+all
+
+576
+00:25:59,640 --> 00:26:02,200
+just wait for that to happen sorry
+
+577
+00:26:02,200 --> 00:26:03,399
+sometimes it does take a little bit of
+
+578
+00:26:03,399 --> 00:26:04,840
+time just make sure that's the right
+
+579
+00:26:04,840 --> 00:26:05,919
+link
+
+580
+00:26:05,919 --> 00:26:09,679
+yeah okay um right as it builds an IPA
+
+581
+00:26:09,679 --> 00:26:11,399
+we will be set
+
+582
+00:26:11,399 --> 00:26:14,960
+to do more stuff that's one of the most
+
+583
+00:26:14,960 --> 00:26:18,039
+uh annoying Parts building the IPA over
+
+584
+00:26:18,039 --> 00:26:21,080
+and over again it is a bit tedious and
+
+585
+00:26:21,080 --> 00:26:22,520
+it does get
+
+586
+00:26:22,520 --> 00:26:25,799
+annoying but again I mean it is useful
+
+587
+00:26:25,799 --> 00:26:28,200
+okay so now it has successfully build
+
+588
+00:26:28,200 --> 00:26:32,480
+and now I can click on the install after
+
+589
+00:26:32,480 --> 00:26:36,840
+refreshing as you can see I can click on
+
+590
+00:26:36,840 --> 00:26:39,399
+install and then I can click on install
+
+591
+00:26:39,399 --> 00:26:42,000
+again and then it should install version
+
+592
+00:26:42,000 --> 00:26:44,480
+0.0.3 and if I were to open up
+
+593
+00:26:44,480 --> 00:26:48,799
+0.0.3 it would well uh just a sec
+
+594
+00:26:48,799 --> 00:26:51,840
+retry it would successfully uh it would
+
+595
+00:26:51,840 --> 00:26:54,679
+actually not uh show me that there is an
+
+596
+00:26:54,679 --> 00:26:56,240
+update available because it would be the
+
+597
+00:26:56,240 --> 00:26:58,440
+latest version and and that this is
+
+598
+00:26:58,440 --> 00:27:00,919
+assuming that you have changed the
+
+599
+00:27:00,919 --> 00:27:04,159
+version number in xcode uh so that it
+
+600
+00:27:04,159 --> 00:27:05,880
+actually has a new version number to
+
+601
+00:27:05,880 --> 00:27:08,520
+look at uh so that it isn't just
+
+602
+00:27:08,520 --> 00:27:11,440
+pointlessly looking in the PHP file and
+
+603
+00:27:11,440 --> 00:27:14,720
+itself for no reason so now it is just
+
+604
+00:27:14,720 --> 00:27:16,279
+going to
+
+605
+00:27:16,279 --> 00:27:20,720
+install sorry about that
+
+606
+00:27:20,720 --> 00:27:23,559
+um yeah the reason it said it couldn't
+
+607
+00:27:23,559 --> 00:27:25,480
+install before is because I didn't wait
+
+608
+00:27:25,480 --> 00:27:27,919
+for the IPA to sync back into Dropbox
+
+609
+00:27:27,919 --> 00:27:30,080
+when you click on retry it's usually
+
+610
+00:27:30,080 --> 00:27:32,440
+synced already so I just clicked on
+
+611
+00:27:32,440 --> 00:27:34,159
+retry and then it
+
+612
+00:27:34,159 --> 00:27:36,320
+works the reason I know it works is
+
+613
+00:27:36,320 --> 00:27:37,760
+because it's taking much longer than
+
+614
+00:27:37,760 --> 00:27:39,720
+usual and when it takes pretty long then
+
+615
+00:27:39,720 --> 00:27:41,760
+that means it is successfully doing it
+
+616
+00:27:41,760 --> 00:27:45,200
+see so now we just wait for second and
+
+617
+00:27:45,200 --> 00:27:47,480
+it installs and we can open it up and we
+
+618
+00:27:47,480 --> 00:27:49,760
+can even wait a few seconds we can wait
+
+619
+00:27:49,760 --> 00:27:51,399
+like 10 seconds just to make sure it's
+
+620
+00:27:51,399 --> 00:27:53,200
+actually connecting and this will not
+
+621
+00:27:53,200 --> 00:27:54,440
+show anything I'm just going to wake
+
+622
+00:27:54,440 --> 00:27:56,640
+another 10 seconds right as it becomes
+
+623
+00:27:56,640 --> 00:28:00,360
+1219 50
+
+624
+00:28:01,039 --> 00:28:03,919
+a.m. okay okay so as you can see it's
+
+625
+00:28:03,919 --> 00:28:06,240
+not loading anything at all because it's
+
+626
+00:28:06,240 --> 00:28:08,159
+seeing that the current version number
+
+627
+00:28:08,159 --> 00:28:10,240
+and the version number in the PHP file
+
+628
+00:28:10,240 --> 00:28:12,200
+are the exact same so it's not taking
+
+629
+00:28:12,200 --> 00:28:15,000
+any action and yeah that was the Mac
+
+630
+00:28:15,000 --> 00:28:17,480
+part of the video uh pretty interesting
+
+631
+00:28:17,480 --> 00:28:19,360
+uh again all source code will be down in
+
+632
+00:28:19,360 --> 00:28:21,080
+the description uh if you have any
+
+633
+00:28:21,080 --> 00:28:23,279
+questions just comment down below you
+
+634
+00:28:23,279 --> 00:28:25,200
+can also email me my email would be down
+
+635
+00:28:25,200 --> 00:28:27,760
+in the description below um you can
+
+636
+00:28:27,760 --> 00:28:29,640
+subscribe to my channel if you like the
+
+637
+00:28:29,640 --> 00:28:31,039
+if you like my content and you want to
+
+638
+00:28:31,039 --> 00:28:33,480
+see more of it uh and you can also like
+
+639
+00:28:33,480 --> 00:28:35,720
+this video if you liked it uh and
+
+640
+00:28:35,720 --> 00:28:38,320
+that'll be it
+
+641
+00:28:38,320 --> 00:28:41,320
+goodbye

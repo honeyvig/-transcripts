@@ -1,0 +1,1139 @@
+1
+00:00:00,980 --> 00:00:05,610
+[Music]
+
+2
+00:00:14,599 --> 00:00:16,800
+so hello there and welcome to another
+
+3
+00:00:16,800 --> 00:00:20,240
+tutorial my name is tamy Baki and this
+
+4
+00:00:20,240 --> 00:00:22,039
+time we're going to be going over how
+
+5
+00:00:22,039 --> 00:00:24,320
+you can use mongod DB with Parson more
+
+6
+00:00:24,320 --> 00:00:26,760
+specifically how pars is able to use
+
+7
+00:00:26,760 --> 00:00:30,199
+mongod DB as a database backend and keep
+
+8
+00:00:30,199 --> 00:00:31,759
+a really nice and simple to use
+
+9
+00:00:31,759 --> 00:00:34,280
+interface for developers and database
+
+10
+00:00:34,280 --> 00:00:37,760
+owners so let's take a look at how this
+
+11
+00:00:37,760 --> 00:00:40,200
+works now one of my subscribers actually
+
+12
+00:00:40,200 --> 00:00:42,520
+originally sent in this question so now
+
+13
+00:00:42,520 --> 00:00:44,800
+I'm creating this video so I'd like to
+
+14
+00:00:44,800 --> 00:00:46,640
+say a big thank you to him who actually
+
+15
+00:00:46,640 --> 00:00:50,000
+sent in the question all right so let's
+
+16
+00:00:50,000 --> 00:00:52,359
+begin now what I'm going to do here is
+
+17
+00:00:52,359 --> 00:00:54,280
+um in case you didn't already know now
+
+18
+00:00:54,280 --> 00:00:56,559
+I'm I'm assuming that you are already
+
+19
+00:00:56,559 --> 00:00:59,640
+familiar with the parse server uh and
+
+20
+00:00:59,640 --> 00:01:02,199
+you used it before uh but now I'm going
+
+21
+00:01:02,199 --> 00:01:04,239
+to show you how it actually works in the
+
+22
+00:01:04,239 --> 00:01:06,920
+back end uh and what happened is the
+
+23
+00:01:06,920 --> 00:01:08,320
+person who's actually sent in this
+
+24
+00:01:08,320 --> 00:01:11,280
+question uh he was actually uh wondering
+
+25
+00:01:11,280 --> 00:01:13,720
+exactly how parse is able to use mongod
+
+26
+00:01:13,720 --> 00:01:16,119
+DB as a backend and how that comes into
+
+27
+00:01:16,119 --> 00:01:17,759
+play when we're hosting a custom parse
+
+28
+00:01:17,759 --> 00:01:19,560
+server so let's take a look at how that
+
+29
+00:01:19,560 --> 00:01:22,799
+works it actually all begins begins with
+
+30
+00:01:22,799 --> 00:01:26,079
+the actual par server itself uh and
+
+31
+00:01:26,079 --> 00:01:27,600
+there are actually two pieces of
+
+32
+00:01:27,600 --> 00:01:29,360
+software that pars has made available to
+
+33
+00:01:29,360 --> 00:01:30,439
+the public
+
+34
+00:01:30,439 --> 00:01:32,000
+uh and I don't want you to get confused
+
+35
+00:01:32,000 --> 00:01:34,079
+between these uh because there are two
+
+36
+00:01:34,079 --> 00:01:35,680
+really distinct types of software first
+
+37
+00:01:35,680 --> 00:01:37,680
+of all the parse dashboard and the parse
+
+38
+00:01:37,680 --> 00:01:39,680
+server now let's take a look at this
+
+39
+00:01:39,680 --> 00:01:41,200
+first of all let's just say that we've
+
+40
+00:01:41,200 --> 00:01:44,200
+got a mongod DB back end okay so this is
+
+41
+00:01:44,200 --> 00:01:46,040
+our back end and this is what's actually
+
+42
+00:01:46,040 --> 00:01:49,320
+storing our data and it's called mongodb
+
+43
+00:01:49,320 --> 00:01:53,840
+okay it's a nosql setup basically uh
+
+44
+00:01:53,840 --> 00:01:56,159
+it's based off of the nosql
+
+45
+00:01:56,159 --> 00:01:58,960
+environment uh now part from mongodb of
+
+46
+00:01:58,960 --> 00:02:00,799
+course we've got part and under parse
+
+47
+00:02:00,799 --> 00:02:03,439
+we've got two categories as I said we've
+
+48
+00:02:03,439 --> 00:02:06,159
+got the parse server uh and so I'm going
+
+49
+00:02:06,159 --> 00:02:07,399
+to say
+
+50
+00:02:07,399 --> 00:02:10,399
+parse
+
+51
+00:02:10,720 --> 00:02:14,040
+server okay uh and apart from that of
+
+52
+00:02:14,040 --> 00:02:17,920
+course we've also got our parse
+
+53
+00:02:17,920 --> 00:02:21,599
+dashboard so we can just write that here
+
+54
+00:02:21,599 --> 00:02:23,760
+so we've got our
+
+55
+00:02:23,760 --> 00:02:26,760
+parse
+
+56
+00:02:28,000 --> 00:02:30,560
+dashboard okay
+
+57
+00:02:30,560 --> 00:02:33,440
+now let me explain exactly how all of
+
+58
+00:02:33,440 --> 00:02:36,480
+this comes into play now the par server
+
+59
+00:02:36,480 --> 00:02:40,040
+uh is basically this uh interface okay
+
+60
+00:02:40,040 --> 00:02:42,280
+and basically what we're doing what our
+
+61
+00:02:42,280 --> 00:02:46,120
+Point our goal is is to make mongod DB
+
+62
+00:02:46,120 --> 00:02:48,560
+accessible and easy to use for everybody
+
+63
+00:02:48,560 --> 00:02:50,599
+whether that's someone who's going to be
+
+64
+00:02:50,599 --> 00:02:53,080
+taking a look at the database internals
+
+65
+00:02:53,080 --> 00:02:54,720
+uh and see how everything's going on
+
+66
+00:02:54,720 --> 00:02:56,760
+inside the database the the actual data
+
+67
+00:02:56,760 --> 00:02:58,640
+in the database they want to simple to
+
+68
+00:02:58,640 --> 00:03:00,360
+use interface like I mean just for
+
+69
+00:03:00,360 --> 00:03:02,879
+example PHP my admin uh to actually see
+
+70
+00:03:02,879 --> 00:03:04,720
+what's in the database and do stuff with
+
+71
+00:03:04,720 --> 00:03:07,080
+it uh and also for developers who are
+
+72
+00:03:07,080 --> 00:03:08,400
+actually incorporating into their
+
+73
+00:03:08,400 --> 00:03:09,920
+applications we want a simple to use and
+
+74
+00:03:09,920 --> 00:03:12,159
+easy interface for all of those people
+
+75
+00:03:12,159 --> 00:03:13,680
+and so that's why we have two separate
+
+76
+00:03:13,680 --> 00:03:16,440
+pieces of software the par server is is
+
+77
+00:03:16,440 --> 00:03:18,560
+basically going to make it easy for
+
+78
+00:03:18,560 --> 00:03:21,360
+developers to have their own uh sort of
+
+79
+00:03:21,360 --> 00:03:24,440
+interface for mongod DB through things
+
+80
+00:03:24,440 --> 00:03:28,799
+like iOS Android Java c node.js a
+
+81
+00:03:28,799 --> 00:03:31,120
+variety of different languages lots of
+
+82
+00:03:31,120 --> 00:03:33,159
+different languages even go uh and the
+
+83
+00:03:33,159 --> 00:03:34,959
+parts dashboard is going to be this uh
+
+84
+00:03:34,959 --> 00:03:36,959
+web interface where you can take a look
+
+85
+00:03:36,959 --> 00:03:39,519
+at what's inside of your database uh and
+
+86
+00:03:39,519 --> 00:03:42,080
+actually uh work accordingly now let me
+
+87
+00:03:42,080 --> 00:03:45,000
+explain how this actually works but
+
+88
+00:03:45,000 --> 00:03:46,959
+let's also just say that we've got your
+
+89
+00:03:46,959 --> 00:03:49,120
+application or the code that's using
+
+90
+00:03:49,120 --> 00:03:51,000
+your mongod
+
+91
+00:03:51,000 --> 00:03:54,000
+DB
+
+92
+00:03:56,519 --> 00:03:59,239
+now okay so this is your application
+
+93
+00:03:59,239 --> 00:04:01,159
+here
+
+94
+00:04:01,159 --> 00:04:03,200
+now let's just say we've got application
+
+95
+00:04:03,200 --> 00:04:05,159
+number two as well this is really going
+
+96
+00:04:05,159 --> 00:04:09,040
+to help me drive across the
+
+97
+00:04:12,959 --> 00:04:15,799
+point Okay so we've got application and
+
+98
+00:04:15,799 --> 00:04:17,720
+application
+
+99
+00:04:17,720 --> 00:04:20,320
+to now the first thing I'm going to take
+
+100
+00:04:20,320 --> 00:04:23,440
+a look at here is par server mongodb now
+
+101
+00:04:23,440 --> 00:04:26,639
+the point of parse server is to be able
+
+102
+00:04:26,639 --> 00:04:28,600
+to have this little communication
+
+103
+00:04:28,600 --> 00:04:32,960
+protocol to and from mongod D oh sorry
+
+104
+00:04:32,960 --> 00:04:34,639
+uh so basically we're GNA have this
+
+105
+00:04:34,639 --> 00:04:36,680
+little communication protocol between
+
+106
+00:04:36,680 --> 00:04:39,600
+par server and mongod DB and the way
+
+107
+00:04:39,600 --> 00:04:40,840
+this is going to work is through a
+
+108
+00:04:40,840 --> 00:04:43,160
+regular mongod DB connection just like
+
+109
+00:04:43,160 --> 00:04:46,039
+how you would implement it in your
+
+110
+00:04:46,039 --> 00:04:48,360
+applications and so of course the mongod
+
+111
+00:04:48,360 --> 00:04:52,400
+DB can communicate back to pars as
+
+112
+00:04:52,759 --> 00:04:56,639
+well now the parse server will provide a
+
+113
+00:04:56,639 --> 00:05:00,080
+rest API and that rest API can then
+
+114
+00:05:00,080 --> 00:05:03,199
+really easily be used with mongod DB and
+
+115
+00:05:03,199 --> 00:05:05,360
+this will also uh this will also sorry
+
+116
+00:05:05,360 --> 00:05:07,039
+with with mongod DB and the rest of your
+
+117
+00:05:07,039 --> 00:05:09,840
+applications here and this rest API has
+
+118
+00:05:09,840 --> 00:05:12,000
+a few credentials as well such as the
+
+119
+00:05:12,000 --> 00:05:14,400
+API key and the master key oh sorry the
+
+120
+00:05:14,400 --> 00:05:16,400
+app key and the master key but I won't
+
+121
+00:05:16,400 --> 00:05:18,120
+be getting into how those work just yet
+
+122
+00:05:18,120 --> 00:05:20,520
+that's a topic for a different video uh
+
+123
+00:05:20,520 --> 00:05:22,280
+but let's just say the par server has
+
+124
+00:05:22,280 --> 00:05:24,039
+this really neat rest API that you can
+
+125
+00:05:24,039 --> 00:05:26,880
+use to contact mongod DB however what
+
+126
+00:05:26,880 --> 00:05:28,560
+happens is let's say this is an iOS
+
+127
+00:05:28,560 --> 00:05:30,280
+application this is a node.js
+
+128
+00:05:30,280 --> 00:05:32,600
+application what's going to happen is
+
+129
+00:05:32,600 --> 00:05:35,639
+let's just say for example um you don't
+
+130
+00:05:35,639 --> 00:05:37,680
+want to use the rest API which uh
+
+131
+00:05:37,680 --> 00:05:39,240
+sometimes you don't want to uh you want
+
+132
+00:05:39,240 --> 00:05:41,759
+to have a really simple interface uh and
+
+133
+00:05:41,759 --> 00:05:43,639
+the way you can do this is by using the
+
+134
+00:05:43,639 --> 00:05:46,240
+language sdks that pars actually
+
+135
+00:05:46,240 --> 00:05:48,160
+provides by default for many different
+
+136
+00:05:48,160 --> 00:05:50,600
+languages including node.js and Swift
+
+137
+00:05:50,600 --> 00:05:54,160
+for iOS uh and so what can happen is
+
+138
+00:05:54,160 --> 00:05:56,199
+let's just say you've got your iOS
+
+139
+00:05:56,199 --> 00:05:58,639
+application what happens is instead of
+
+140
+00:05:58,639 --> 00:06:00,000
+using a really
+
+141
+00:06:00,000 --> 00:06:03,360
+difficult connection from IOS to mongodb
+
+142
+00:06:03,360 --> 00:06:05,960
+it becomes a lot more simple if you were
+
+143
+00:06:05,960 --> 00:06:08,120
+to just have one
+
+144
+00:06:08,120 --> 00:06:11,840
+connection and this is in this case your
+
+145
+00:06:11,840 --> 00:06:15,240
+sorry language SDK uh and this language
+
+146
+00:06:15,240 --> 00:06:17,160
+SDK will then in turn communicate with
+
+147
+00:06:17,160 --> 00:06:18,919
+your par server which will communicate
+
+148
+00:06:18,919 --> 00:06:21,080
+with your mongod DB instance uh get
+
+149
+00:06:21,080 --> 00:06:23,520
+retrieve delete update data do anything
+
+150
+00:06:23,520 --> 00:06:25,280
+you'd like to and of course we'll keep
+
+151
+00:06:25,280 --> 00:06:27,560
+returning the results back to you it's
+
+152
+00:06:27,560 --> 00:06:30,000
+basically as if the application doesn't
+
+153
+00:06:30,000 --> 00:06:32,000
+care about what this is doing it just
+
+154
+00:06:32,000 --> 00:06:33,800
+imagines that there's this big database
+
+155
+00:06:33,800 --> 00:06:36,000
+here but par server isn't actually your
+
+156
+00:06:36,000 --> 00:06:37,479
+database it's your communication
+
+157
+00:06:37,479 --> 00:06:38,720
+protocol
+
+158
+00:06:38,720 --> 00:06:41,240
+basically okay so once you've got that
+
+159
+00:06:41,240 --> 00:06:43,280
+done then let's take a look at parse
+
+160
+00:06:43,280 --> 00:06:45,440
+dashboard and then I'll get into
+
+161
+00:06:45,440 --> 00:06:48,520
+application number two now the parse
+
+162
+00:06:48,520 --> 00:06:50,280
+dashboard is this really simple to use
+
+163
+00:06:50,280 --> 00:06:52,720
+interface just like PHP my admin to
+
+164
+00:06:52,720 --> 00:06:55,599
+basically uh administer your database uh
+
+165
+00:06:55,599 --> 00:06:57,280
+and to take a look at what's inside of
+
+166
+00:06:57,280 --> 00:06:59,879
+your database to update rows to add
+
+167
+00:06:59,879 --> 00:07:02,680
+tables uh to add rows do a lot of
+
+168
+00:07:02,680 --> 00:07:04,879
+different type of stuff uh and so the
+
+169
+00:07:04,879 --> 00:07:08,160
+parse dashboard is actually basically
+
+170
+00:07:08,160 --> 00:07:12,039
+this UI that's built on top of the parse
+
+171
+00:07:12,039 --> 00:07:15,240
+server again it's built in node.js
+
+172
+00:07:15,240 --> 00:07:18,080
+and of course what's happening is it's
+
+173
+00:07:18,080 --> 00:07:20,280
+using that node.js language SDK for
+
+174
+00:07:20,280 --> 00:07:22,080
+parse and it's able to communicate with
+
+175
+00:07:22,080 --> 00:07:24,319
+a parse server of your choosing and it's
+
+176
+00:07:24,319 --> 00:07:28,199
+able to show you your data but now comes
+
+177
+00:07:28,199 --> 00:07:30,039
+in the interesting
+
+178
+00:07:30,039 --> 00:07:34,039
+part mongod DB in the second application
+
+179
+00:07:34,039 --> 00:07:35,520
+now let's just say that you've hired a
+
+180
+00:07:35,520 --> 00:07:37,599
+developer and that developer doesn't
+
+181
+00:07:37,599 --> 00:07:39,879
+have any experience of using the par
+
+182
+00:07:39,879 --> 00:07:42,319
+server but that developer has experience
+
+183
+00:07:42,319 --> 00:07:43,479
+using
+
+184
+00:07:43,479 --> 00:07:46,120
+mongodb now what can happen is your
+
+185
+00:07:46,120 --> 00:07:48,360
+application here application number two
+
+186
+00:07:48,360 --> 00:07:50,199
+which is your node.js application your
+
+187
+00:07:50,199 --> 00:07:51,680
+developer doesn't know how to use parse
+
+188
+00:07:51,680 --> 00:07:53,560
+with with node.js only knows how to use
+
+189
+00:07:53,560 --> 00:07:55,240
+a mongod DB connection but then you're
+
+190
+00:07:55,240 --> 00:07:57,520
+like oh wait what do I do now well I
+
+191
+00:07:57,520 --> 00:07:59,319
+can't use parse but we're using parse
+
+192
+00:07:59,319 --> 00:08:01,960
+what do we do hire you developer
+
+193
+00:08:01,960 --> 00:08:05,639
+no now since par server is basically
+
+194
+00:08:05,639 --> 00:08:08,680
+this this stack sitting on top of mongod
+
+195
+00:08:08,680 --> 00:08:12,400
+DB this little uh this uh development UI
+
+196
+00:08:12,400 --> 00:08:14,720
+basically I like to call it uh and
+
+197
+00:08:14,720 --> 00:08:16,520
+what's happens is your second
+
+198
+00:08:16,520 --> 00:08:19,159
+application can actually directly
+
+199
+00:08:19,159 --> 00:08:22,319
+communicate with mongod DB and what'll
+
+200
+00:08:22,319 --> 00:08:25,840
+happen is those changes will actually be
+
+201
+00:08:25,840 --> 00:08:28,159
+shown across whatever par server is
+
+202
+00:08:28,159 --> 00:08:30,199
+doing the reason I'm saying this is
+
+203
+00:08:30,199 --> 00:08:31,680
+because okay let's say you've got a
+
+204
+00:08:31,680 --> 00:08:34,279
+mongodb instance uh and you register a
+
+205
+00:08:34,279 --> 00:08:36,360
+new user through application number two
+
+206
+00:08:36,360 --> 00:08:38,919
+that data goes directly through to
+
+207
+00:08:38,919 --> 00:08:41,440
+mongodb it does not go through the part
+
+208
+00:08:41,440 --> 00:08:43,839
+server into mongod DB because if you if
+
+209
+00:08:43,839 --> 00:08:45,360
+you think about it this is what's
+
+210
+00:08:45,360 --> 00:08:47,399
+actually storing all of our data it's
+
+211
+00:08:47,399 --> 00:08:49,399
+not doing any processing all this is
+
+212
+00:08:49,399 --> 00:08:51,480
+doing is it's taking the data and
+
+213
+00:08:51,480 --> 00:08:54,760
+storing it the rest is all interface the
+
+214
+00:08:54,760 --> 00:08:57,480
+rest just makes it easy to work
+
+215
+00:08:57,480 --> 00:09:02,120
+with and that is exactly how this works
+
+216
+00:09:02,120 --> 00:09:04,959
+and that is what the actual relationship
+
+217
+00:09:04,959 --> 00:09:07,000
+is between the parse dashboard and
+
+218
+00:09:07,000 --> 00:09:09,519
+mongod DB and of course the par server
+
+219
+00:09:09,519 --> 00:09:11,160
+and mongod
+
+220
+00:09:11,160 --> 00:09:13,560
+DB one more thing I'd like to note here
+
+221
+00:09:13,560 --> 00:09:15,440
+though is that of course these two are
+
+222
+00:09:15,440 --> 00:09:17,800
+basically server software serers side
+
+223
+00:09:17,800 --> 00:09:19,640
+software so they have to run on ports
+
+224
+00:09:19,640 --> 00:09:21,240
+like for example I don't exactly know
+
+225
+00:09:21,240 --> 00:09:23,680
+what the default Port is uh but like for
+
+226
+00:09:23,680 --> 00:09:26,800
+example this could run at 4,000 and this
+
+227
+00:09:26,800 --> 00:09:31,320
+could run at oh I don't no maybe 3,000
+
+228
+00:09:31,320 --> 00:09:33,920
+really whatever it is some sort of Port
+
+229
+00:09:33,920 --> 00:09:35,399
+that these are going to run on and the
+
+230
+00:09:35,399 --> 00:09:37,240
+rest will be able to communicate through
+
+231
+00:09:37,240 --> 00:09:39,560
+that web uh through that web interface
+
+232
+00:09:39,560 --> 00:09:41,560
+and through that web
+
+233
+00:09:41,560 --> 00:09:44,680
+API all right so that's exactly how
+
+234
+00:09:44,680 --> 00:09:46,720
+Parts both the parse server and the
+
+235
+00:09:46,720 --> 00:09:49,399
+parse dashboard are able to use DV
+
+236
+00:09:49,399 --> 00:09:52,000
+to store information and make your life
+
+237
+00:09:52,000 --> 00:09:54,800
+working with databases much much easier
+
+238
+00:09:54,800 --> 00:09:56,440
+in fact if you haven't already heard
+
+239
+00:09:56,440 --> 00:09:58,519
+about the par shutdown for some reason
+
+240
+00:09:58,519 --> 00:10:01,160
+uh pars has has completely shut down now
+
+241
+00:10:01,160 --> 00:10:02,680
+uh at least the services that they
+
+242
+00:10:02,680 --> 00:10:05,160
+provide like uh hosted hosted par
+
+243
+00:10:05,160 --> 00:10:07,079
+servers uh but what they've done is
+
+244
+00:10:07,079 --> 00:10:08,480
+they've made parse server and parse
+
+245
+00:10:08,480 --> 00:10:11,000
+dashboard open source so that's why I
+
+246
+00:10:11,000 --> 00:10:12,120
+keep on emphasizing that you can
+
+247
+00:10:12,120 --> 00:10:13,360
+actually connect these to your own
+
+248
+00:10:13,360 --> 00:10:16,040
+mongodb instances and you can actually
+
+249
+00:10:16,040 --> 00:10:18,519
+use your own uh sort of like servers to
+
+250
+00:10:18,519 --> 00:10:20,399
+host these although there are other
+
+251
+00:10:20,399 --> 00:10:22,560
+hosting services available for pars and
+
+252
+00:10:22,560 --> 00:10:24,480
+there will be some links to them in the
+
+253
+00:10:24,480 --> 00:10:26,360
+description all right so that's going to
+
+254
+00:10:26,360 --> 00:10:28,079
+be it for this video thank you very much
+
+255
+00:10:28,079 --> 00:10:29,920
+for watching and and I really hope this
+
+256
+00:10:29,920 --> 00:10:32,839
+was able to solve my subscribers
+
+257
+00:10:32,839 --> 00:10:34,839
+question all right so thank you very
+
+258
+00:10:34,839 --> 00:10:36,600
+much for watching today if you like the
+
+259
+00:10:36,600 --> 00:10:38,240
+video please do make sure to like the
+
+260
+00:10:38,240 --> 00:10:39,880
+video down below and if you think you
+
+261
+00:10:39,880 --> 00:10:41,240
+could help anybody else you know like
+
+262
+00:10:41,240 --> 00:10:42,720
+your family or friends please do
+
+263
+00:10:42,720 --> 00:10:45,240
+consider sharing the video as well of
+
+264
+00:10:45,240 --> 00:10:46,880
+course though if you have any more
+
+265
+00:10:46,880 --> 00:10:48,959
+questions feedback or suggestions please
+
+266
+00:10:48,959 --> 00:10:50,360
+do feel free to leave them down in the
+
+267
+00:10:50,360 --> 00:10:52,480
+comment section below email them to me
+
+268
+00:10:52,480 --> 00:10:55,000
+at tajim Manny gmail.com or tweet them
+
+269
+00:10:55,000 --> 00:10:57,200
+to me at tedim Manny and if you didn't
+
+270
+00:10:57,200 --> 00:10:58,720
+get that there will be my contact
+
+271
+00:10:58,720 --> 00:11:01,000
+information in the description below of
+
+272
+00:11:01,000 --> 00:11:02,560
+course so if you really like my content
+
+273
+00:11:02,560 --> 00:11:03,959
+you want to see more of it please do
+
+274
+00:11:03,959 --> 00:11:05,399
+make sure to subscribe to this YouTube
+
+275
+00:11:05,399 --> 00:11:07,120
+channel as well as it really does help
+
+276
+00:11:07,120 --> 00:11:09,320
+out a lot and if you would like to be
+
+277
+00:11:09,320 --> 00:11:11,079
+notified whenever I release new videos
+
+278
+00:11:11,079 --> 00:11:13,320
+or content what you can do is actually
+
+279
+00:11:13,320 --> 00:11:15,680
+go to the subscription uh button and
+
+280
+00:11:15,680 --> 00:11:17,079
+click on the Bell beside it and you can
+
+281
+00:11:17,079 --> 00:11:19,079
+enable notifications so you're emailed
+
+282
+00:11:19,079 --> 00:11:20,880
+and notified on YouTube whenever I
+
+283
+00:11:20,880 --> 00:11:23,480
+release new content all right so thank
+
+284
+00:11:23,480 --> 00:11:24,920
+you very much for watching today that's
+
+285
+00:11:24,920 --> 00:11:29,600
+going to be it for this tutorial goodbye

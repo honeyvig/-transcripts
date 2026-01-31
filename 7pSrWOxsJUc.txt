@@ -1,0 +1,3847 @@
+1
+00:00:00,770 --> 00:00:05,850
+Alexa ask answer bot question who played
+
+2
+00:00:05,850 --> 00:00:10,860
+against IBM Watson in jeopardy let me
+
+3
+00:00:10,860 --> 00:00:13,490
+think about that
+
+4
+00:00:13,880 --> 00:00:20,010
+Alexa ask answer bought I think pensions
+
+5
+00:00:20,010 --> 00:00:25,099
+is correct for 35.7% confidence Alexa
+
+6
+00:00:25,099 --> 00:00:29,279
+ask answer bot question which company
+
+7
+00:00:29,279 --> 00:00:33,840
+manufactures Gorilla Glass let me think
+
+8
+00:00:33,840 --> 00:00:35,899
+about that
+
+9
+00:00:35,899 --> 00:00:42,540
+Alexa ask answer bot I think Courtney is
+
+10
+00:00:42,540 --> 00:00:44,700
+correct with 100 point 0 percent
+
+11
+00:00:44,700 --> 00:00:47,010
+confidence now
+
+12
+00:00:47,010 --> 00:00:51,660
+Alexa ask answer bot question which
+
+13
+00:00:51,660 --> 00:00:54,960
+worldwide retail chain makes the most
+
+14
+00:00:54,960 --> 00:01:00,500
+profit let me think about that
+
+15
+00:01:00,500 --> 00:01:06,990
+Alexa ask answer but I think Walmart is
+
+16
+00:01:06,990 --> 00:01:08,580
+correct with forty eight point seven
+
+17
+00:01:08,580 --> 00:01:11,460
+eight seven percent confidence let's get
+
+18
+00:01:11,460 --> 00:01:14,479
+into the video now
+
+19
+00:01:23,920 --> 00:01:26,510
+so hello there and welcome to another
+
+20
+00:01:26,510 --> 00:01:29,420
+tutorial my name is Tammy Bakshi and
+
+21
+00:01:29,420 --> 00:01:31,550
+this time we're gonna be going over how
+
+22
+00:01:31,550 --> 00:01:34,400
+you can use the Alexa skills kit with
+
+23
+00:01:34,400 --> 00:01:37,369
+the Lausanne - IOT platform and IBM
+
+24
+00:01:37,369 --> 00:01:39,590
+Watson in this case my Aston application
+
+25
+00:01:39,590 --> 00:01:41,060
+which we'll be getting into in just a
+
+26
+00:01:41,060 --> 00:01:43,220
+little bit in order to create an
+
+27
+00:01:43,220 --> 00:01:46,369
+intelligent Alexa application or vast
+
+28
+00:01:46,369 --> 00:01:49,130
+skill that can answer your natural
+
+29
+00:01:49,130 --> 00:01:51,200
+language questions getting a little bit
+
+30
+00:01:51,200 --> 00:01:52,820
+deeper into it let's start off with the
+
+31
+00:01:52,820 --> 00:01:55,070
+part I'm sure you're most interested in
+
+32
+00:01:55,070 --> 00:01:58,280
+and that is the Alexa yes that's right
+
+33
+00:01:58,280 --> 00:02:00,619
+in fact just last week I was in Las
+
+34
+00:02:00,619 --> 00:02:02,690
+Vegas and I was there for you know for
+
+35
+00:02:02,690 --> 00:02:04,790
+miles so systems for MIPS conference
+
+36
+00:02:04,790 --> 00:02:06,410
+while I was there and now we're actually
+
+37
+00:02:06,410 --> 00:02:09,410
+getting participants as a welcome gift I
+
+38
+00:02:09,410 --> 00:02:12,290
+was on echo dot and so I got a few as
+
+39
+00:02:12,290 --> 00:02:14,360
+well now I'm ready and I thought you
+
+40
+00:02:14,360 --> 00:02:17,150
+know why not create a YouTube video and
+
+41
+00:02:17,150 --> 00:02:19,550
+how the Alexa skills kit actually works
+
+42
+00:02:19,550 --> 00:02:21,890
+and how you can use it to develop skills
+
+43
+00:02:21,890 --> 00:02:24,440
+for your own Alexa device and then of
+
+44
+00:02:24,440 --> 00:02:26,150
+course publish it to their sort of app
+
+45
+00:02:26,150 --> 00:02:27,890
+stores skills storing as you could call
+
+46
+00:02:27,890 --> 00:02:31,130
+it for other people to use as well and
+
+47
+00:02:31,130 --> 00:02:33,410
+so I thought why not why create a
+
+48
+00:02:33,410 --> 00:02:36,290
+regular skill when I can combine a lot
+
+49
+00:02:36,290 --> 00:02:38,299
+of the other technologies that I use in
+
+50
+00:02:38,299 --> 00:02:40,459
+order to create an even better and even
+
+51
+00:02:40,459 --> 00:02:43,430
+more useful Alexa skill in fact today
+
+52
+00:02:43,430 --> 00:02:45,380
+I'm actually taking one of my very first
+
+53
+00:02:45,380 --> 00:02:47,600
+IBM Watson applications one that's not
+
+54
+00:02:47,600 --> 00:02:49,880
+only maintained but developed actively
+
+55
+00:02:49,880 --> 00:02:52,310
+and is in fact open source online github
+
+56
+00:02:52,310 --> 00:02:53,510
+page called
+
+57
+00:02:53,510 --> 00:02:56,390
+asked ma asked Anna is an LQA or a
+
+58
+00:02:56,390 --> 00:02:58,040
+natural language question answering
+
+59
+00:02:58,040 --> 00:03:00,350
+system that can answer your natural
+
+60
+00:03:00,350 --> 00:03:01,880
+language questions that have a person
+
+61
+00:03:01,880 --> 00:03:04,700
+organization or a location answer type
+
+62
+00:03:04,700 --> 00:03:07,489
+it uses the power of Ivan Watson natural
+
+63
+00:03:07,489 --> 00:03:09,739
+language classifier and natural language
+
+64
+00:03:09,739 --> 00:03:12,410
+understanding in its back-end as well as
+
+65
+00:03:12,410 --> 00:03:14,600
+bi-directional attention to flow by
+
+66
+00:03:14,600 --> 00:03:16,370
+Allen AI Institute
+
+67
+00:03:16,370 --> 00:03:18,110
+alright now let's get a little bit
+
+68
+00:03:18,110 --> 00:03:20,630
+deeper into how the actual Alexa skill
+
+69
+00:03:20,630 --> 00:03:23,570
+works and how this new topic of the
+
+70
+00:03:23,570 --> 00:03:25,880
+Lausanne to IOT platform actually ties
+
+71
+00:03:25,880 --> 00:03:27,950
+in with it let's take a look all right
+
+72
+00:03:27,950 --> 00:03:30,019
+now getting a little bit deeper into it
+
+73
+00:03:30,019 --> 00:03:32,480
+let's start off with taking a look at
+
+74
+00:03:32,480 --> 00:03:35,299
+the flow of the application now of
+
+75
+00:03:35,299 --> 00:03:38,510
+course we have the Alexa itself in this
+
+76
+00:03:38,510 --> 00:03:41,630
+case I've got a doc device but any Alexa
+
+77
+00:03:41,630 --> 00:03:43,880
+will work you could even use a simulator
+
+78
+00:03:43,880 --> 00:03:46,880
+online you could use Amazon's official
+
+79
+00:03:46,880 --> 00:03:49,549
+Alexa simulator all these devices will
+
+80
+00:03:49,549 --> 00:03:52,310
+work perfectly for this now once you've
+
+81
+00:03:52,310 --> 00:03:54,169
+gotten your Alexa device up and running
+
+82
+00:03:54,169 --> 00:03:56,299
+and you're ready to start off what you
+
+83
+00:03:56,299 --> 00:03:58,010
+need to do is sign up for a platform
+
+84
+00:03:58,010 --> 00:04:01,100
+called a losan to IOT platform now when
+
+85
+00:04:01,100 --> 00:04:03,019
+you're designing an Alexa app you have
+
+86
+00:04:03,019 --> 00:04:06,290
+to but you have to wait two methods to
+
+87
+00:04:06,290 --> 00:04:08,989
+go down two rows to go down either you
+
+88
+00:04:08,989 --> 00:04:10,910
+can use AWS lambda which is what's
+
+89
+00:04:10,910 --> 00:04:13,130
+recommended by Amazon and if you use
+
+90
+00:04:13,130 --> 00:04:15,290
+lambda which is Amazon server less
+
+91
+00:04:15,290 --> 00:04:17,389
+compute platform then what happens is
+
+92
+00:04:17,389 --> 00:04:19,820
+you're going to be using this and of
+
+93
+00:04:19,820 --> 00:04:22,310
+course I was on Web Services I'm just in
+
+94
+00:04:22,310 --> 00:04:23,960
+case you are wondering Amazon all-access
+
+95
+00:04:23,960 --> 00:04:26,120
+skills kit is not part of the Amazon Web
+
+96
+00:04:26,120 --> 00:04:28,550
+Services they are entirely separate
+
+97
+00:04:28,550 --> 00:04:30,410
+they're part of the Amazon developer
+
+98
+00:04:30,410 --> 00:04:34,070
+console suite and so in this case though
+
+99
+00:04:34,070 --> 00:04:35,510
+I didn't want how to take you into the
+
+100
+00:04:35,510 --> 00:04:37,430
+world mammals on Web Services just yet
+
+101
+00:04:37,430 --> 00:04:39,949
+let's kiss today let's actually try and
+
+102
+00:04:39,949 --> 00:04:41,600
+develop something with a REST API to
+
+103
+00:04:41,600 --> 00:04:45,290
+keep it local on our own server and so
+
+104
+00:04:45,290 --> 00:04:48,320
+what I've done is actually I guess you
+
+105
+00:04:48,320 --> 00:04:50,960
+could say a different way of creating an
+
+106
+00:04:50,960 --> 00:04:53,360
+Alexa skill and the lausanne to iot
+
+107
+00:04:53,360 --> 00:04:56,000
+platform is a very easy way of doing
+
+108
+00:04:56,000 --> 00:04:58,010
+this because what happens is through the
+
+109
+00:04:58,010 --> 00:05:01,010
+lausanne at the Lausanne DMT platform I
+
+110
+00:05:01,010 --> 00:05:02,500
+don't need to do any manual
+
+111
+00:05:02,500 --> 00:05:04,880
+authorization or the SSL Certificates or
+
+112
+00:05:04,880 --> 00:05:07,580
+anything else that Amazon requires you
+
+113
+00:05:07,580 --> 00:05:09,949
+to do when you're working with this
+
+114
+00:05:09,949 --> 00:05:14,060
+technology and so using Lausanne
+
+115
+00:05:14,060 --> 00:05:19,120
+I actually opened up an HTTP endpoint
+
+116
+00:05:19,120 --> 00:05:23,630
+and this HTTP endpoint can be contacted
+
+117
+00:05:23,630 --> 00:05:25,580
+via Alexa we'll talk about that in just
+
+118
+00:05:25,580 --> 00:05:28,280
+a moment now once we've gotten that
+
+119
+00:05:28,280 --> 00:05:32,340
+Lausanne to IOT platform up and right
+
+120
+00:05:32,340 --> 00:05:34,350
+to take a look at what exactly those
+
+121
+00:05:34,350 --> 00:05:36,990
+avila Laur alexa to communicate with in
+
+122
+00:05:36,990 --> 00:05:39,030
+this case we're actually communicating
+
+123
+00:05:39,030 --> 00:05:42,960
+with of course ask Tanmay which is my
+
+124
+00:05:42,960 --> 00:05:46,199
+cognitive application built using IBM
+
+125
+00:05:46,199 --> 00:05:48,120
+Watson we'll get to that in just a
+
+126
+00:05:48,120 --> 00:05:50,490
+little bit actually
+
+127
+00:05:50,490 --> 00:05:52,650
+there's an entire suite of applications
+
+128
+00:05:52,650 --> 00:05:54,900
+that we're going to be using and they're
+
+129
+00:05:54,900 --> 00:05:56,070
+built in Python
+
+130
+00:05:56,070 --> 00:06:00,740
+so let's observe this section for Python
+
+131
+00:06:02,630 --> 00:06:07,290
+now we've also got a flask so this is
+
+132
+00:06:07,290 --> 00:06:12,419
+actually building these flask API this
+
+133
+00:06:12,419 --> 00:06:19,200
+is a flask HTTP server again apart from
+
+134
+00:06:19,200 --> 00:06:21,450
+that we have a few more modules in
+
+135
+00:06:21,450 --> 00:06:23,789
+Python including this answer cache and
+
+136
+00:06:23,789 --> 00:06:26,280
+I'll talk about what that is in just a
+
+137
+00:06:26,280 --> 00:06:31,590
+second all right now these are the three
+
+138
+00:06:31,590 --> 00:06:34,590
+main components inside of our Python
+
+139
+00:06:34,590 --> 00:06:37,169
+tools suite here and let's take a look
+
+140
+00:06:37,169 --> 00:06:39,419
+at how all of these actually incorporate
+
+141
+00:06:39,419 --> 00:06:41,970
+together however the thing is this is
+
+142
+00:06:41,970 --> 00:06:44,190
+running locally on my system and why
+
+143
+00:06:44,190 --> 00:06:45,870
+mess around with port forwarding but we
+
+144
+00:06:45,870 --> 00:06:48,630
+could just use an croc or ngr okay and
+
+145
+00:06:48,630 --> 00:06:51,419
+so of course in the cloud here we've got
+
+146
+00:06:51,419 --> 00:06:56,190
+n G R and the Jeremy's gonna allow
+
+147
+00:06:56,190 --> 00:06:58,740
+Lausanne to communicate with my flask
+
+148
+00:06:58,740 --> 00:07:02,039
+HTTP server now let's take a look into
+
+149
+00:07:02,039 --> 00:07:04,410
+this now one more thing I would like to
+
+150
+00:07:04,410 --> 00:07:06,090
+say here because I gonna say a huge
+
+151
+00:07:06,090 --> 00:07:07,889
+thank you to market suitor macht who is
+
+152
+00:07:07,889 --> 00:07:10,830
+actually a developer advocate at IBM for
+
+153
+00:07:10,830 --> 00:07:13,080
+actually Helen you build and fix a few
+
+154
+00:07:13,080 --> 00:07:15,720
+issues with the Alexa skills kit so the
+
+155
+00:07:15,720 --> 00:07:17,400
+thing is when you're working with a
+
+156
+00:07:17,400 --> 00:07:20,099
+stamen you want to ask or find the
+
+157
+00:07:20,099 --> 00:07:22,110
+question of the user is asking the
+
+158
+00:07:22,110 --> 00:07:24,450
+system in order to do that you not just
+
+159
+00:07:24,450 --> 00:07:28,080
+want an intent you want the fact you
+
+160
+00:07:28,080 --> 00:07:30,570
+want to raw utterance what the user set
+
+161
+00:07:30,570 --> 00:07:32,160
+unfortunately Amazon does
+
+162
+00:07:32,160 --> 00:07:34,320
+support this however using a workaround
+
+163
+00:07:34,320 --> 00:07:35,940
+that marks help me actually figure out
+
+164
+00:07:35,940 --> 00:07:38,070
+using slots or as we'll be talking about
+
+165
+00:07:38,070 --> 00:07:40,020
+in the actual programming part we've
+
+166
+00:07:40,020 --> 00:07:42,590
+been able to extract that raw utterance
+
+167
+00:07:42,590 --> 00:07:46,260
+and of course using that I can actually
+
+168
+00:07:46,260 --> 00:07:48,570
+send that to over to a standby and then
+
+169
+00:07:48,570 --> 00:07:50,580
+ask ten may can give the answer back a
+
+170
+00:07:50,580 --> 00:07:52,560
+good feeling all right let's take a
+
+171
+00:07:52,560 --> 00:07:54,780
+little bit of a deeper look now now of
+
+172
+00:07:54,780 --> 00:07:57,300
+course when you ask the Alexa a question
+
+173
+00:07:57,300 --> 00:08:00,000
+what's happening is let's just say you
+
+174
+00:08:00,000 --> 00:08:05,250
+say I like so ask and in this case the
+
+175
+00:08:05,250 --> 00:08:07,490
+invocation name for the application is
+
+176
+00:08:07,490 --> 00:08:11,730
+answer box okay so the this is the
+
+177
+00:08:11,730 --> 00:08:15,390
+invocation name and then you say
+
+178
+00:08:15,390 --> 00:08:19,380
+question and let's just say your
+
+179
+00:08:19,380 --> 00:08:21,450
+question is ABC doesn't matter what it
+
+180
+00:08:21,450 --> 00:08:24,270
+is okay now this is what you tell your
+
+181
+00:08:24,270 --> 00:08:28,260
+Alexa now once you give your electorate
+
+182
+00:08:28,260 --> 00:08:29,610
+questions instead of actually having
+
+183
+00:08:29,610 --> 00:08:30,930
+this quote here let's just have
+
+184
+00:08:30,930 --> 00:08:32,610
+questions of variable sleeping zoos a
+
+185
+00:08:32,610 --> 00:08:34,169
+little bit better and as a sort of
+
+186
+00:08:34,169 --> 00:08:37,530
+diagram here so let's just say you've
+
+187
+00:08:37,530 --> 00:08:42,810
+got your question so you can ask the
+
+188
+00:08:42,810 --> 00:08:44,730
+Alexa the question and you've told it
+
+189
+00:08:44,730 --> 00:08:46,740
+that you want this question to go over
+
+190
+00:08:46,740 --> 00:08:49,320
+to the answer bot invocation name
+
+191
+00:08:49,320 --> 00:08:51,990
+now once you've told that the Alexa is
+
+192
+00:08:51,990 --> 00:08:53,400
+going to try and figure out what to do
+
+193
+00:08:53,400 --> 00:08:55,650
+in this case it's going to go ahead and
+
+194
+00:08:55,650 --> 00:08:58,940
+contact the Lausanne HTTP server
+
+195
+00:08:58,940 --> 00:09:01,560
+now what Lausanne is gonna figure out is
+
+196
+00:09:01,560 --> 00:09:04,560
+actually find out what you're asking are
+
+197
+00:09:04,560 --> 00:09:07,140
+you asking a new question or are you
+
+198
+00:09:07,140 --> 00:09:08,940
+trying to figure out the answer to a
+
+199
+00:09:08,940 --> 00:09:10,830
+question you've asked previously I'll
+
+200
+00:09:10,830 --> 00:09:12,900
+talk about why this is important in just
+
+201
+00:09:12,900 --> 00:09:15,120
+a moment now I'll just pretend of course
+
+202
+00:09:15,120 --> 00:09:16,680
+we take this question through Lausanne
+
+203
+00:09:16,680 --> 00:09:18,870
+and on Luzon also sends over to the
+
+204
+00:09:18,870 --> 00:09:21,720
+flask HTTP because remember in this
+
+205
+00:09:21,720 --> 00:09:24,930
+flask HTTP HTTP we've got an endpoint
+
+206
+00:09:24,930 --> 00:09:28,220
+called Alexis
+
+207
+00:09:29,780 --> 00:09:31,610
+all right this is our end point over
+
+208
+00:09:31,610 --> 00:09:34,580
+here this is the HTTP endpoint that
+
+209
+00:09:34,580 --> 00:09:37,310
+little Santa's gonna call through ng on
+
+210
+00:09:37,310 --> 00:09:41,030
+okay and some goes through in gr okay
+
+211
+00:09:41,030 --> 00:09:43,010
+and of course comes over to the Alexa
+
+212
+00:09:43,010 --> 00:09:45,800
+skill endpoint now once it's at this
+
+213
+00:09:45,800 --> 00:09:48,290
+endpoint the interesting stuff starts to
+
+214
+00:09:48,290 --> 00:09:50,780
+happen see this endpoint is actually
+
+215
+00:09:50,780 --> 00:09:53,390
+going to contact the a stem based system
+
+216
+00:09:53,390 --> 00:09:56,510
+which itself is an isolated system now
+
+217
+00:09:56,510 --> 00:09:59,420
+as Tanmay is going to store the answer
+
+218
+00:09:59,420 --> 00:10:02,420
+in an answer - now why is this you may
+
+219
+00:10:02,420 --> 00:10:05,360
+ask you see asked an mate is efficient
+
+220
+00:10:05,360 --> 00:10:07,640
+in fact I've actually rewritten as Tammy
+
+221
+00:10:07,640 --> 00:10:10,670
+from scratch and Python to make it as
+
+222
+00:10:10,670 --> 00:10:12,380
+efficient as possible
+
+223
+00:10:12,380 --> 00:10:14,120
+it's even more a cure than the four as
+
+224
+00:10:14,120 --> 00:10:16,730
+well however it's not efficient enough
+
+225
+00:10:16,730 --> 00:10:19,850
+for Alexa to answer instantly because of
+
+226
+00:10:19,850 --> 00:10:23,090
+this Alexa doesn't really work out with
+
+227
+00:10:23,090 --> 00:10:25,490
+asked an me immediately and this is what
+
+228
+00:10:25,490 --> 00:10:27,260
+you need to do is tell Alexa the
+
+229
+00:10:27,260 --> 00:10:29,390
+question Alexa will tell you that it's
+
+230
+00:10:29,390 --> 00:10:31,100
+thinking of the answer and two or three
+
+231
+00:10:31,100 --> 00:10:33,800
+seconds later you can ask Alexa for that
+
+232
+00:10:33,800 --> 00:10:36,110
+answer because Alexa expects an
+
+233
+00:10:36,110 --> 00:10:38,390
+immediate reply from the as ten main
+
+234
+00:10:38,390 --> 00:10:41,030
+HTTP endpoint in fact let's see a demo
+
+235
+00:10:41,030 --> 00:10:44,180
+of this in action now of course this is
+
+236
+00:10:44,180 --> 00:10:46,130
+on mute so it's actually unmute our
+
+237
+00:10:46,130 --> 00:10:47,480
+Alexa and take a look at how the
+
+238
+00:10:47,480 --> 00:10:53,560
+application works Alexa ask answer bot
+
+239
+00:10:53,560 --> 00:10:58,190
+question which company is a long Musk
+
+240
+00:10:58,190 --> 00:11:02,990
+the CEO of let me think about that
+
+241
+00:11:02,990 --> 00:11:06,140
+alright so as you can see Alexa is now
+
+242
+00:11:06,140 --> 00:11:07,730
+thinking about the answer to this
+
+243
+00:11:07,730 --> 00:11:10,250
+question and now in theory if the speech
+
+244
+00:11:10,250 --> 00:11:11,870
+recognition actually worked out nicely
+
+245
+00:11:11,870 --> 00:11:14,150
+what I should be able to do is this
+
+246
+00:11:14,150 --> 00:11:20,150
+Alexa asked dance Alexa asked answer but
+
+247
+00:11:20,150 --> 00:11:24,680
+I think Tesla Motors is correct with 100
+
+248
+00:11:24,680 --> 00:11:27,140
+point zero percent confidence there we
+
+249
+00:11:27,140 --> 00:11:30,020
+go that's a lot of confidence and so as
+
+250
+00:11:30,020 --> 00:11:34,190
+you can see I asked this Alexa which
+
+251
+00:11:34,190 --> 00:11:36,350
+company a lot of musk was the CEO of and
+
+252
+00:11:36,350 --> 00:11:39,200
+at guest Tesla Motors with a hundred
+
+253
+00:11:39,200 --> 00:11:42,089
+percent confidence I look at something
+
+254
+00:11:42,089 --> 00:11:49,139
+Deaver shall we Alexa ask answer bot
+
+255
+00:11:49,139 --> 00:11:55,910
+question who is the CTO of IBM Watson
+
+256
+00:11:55,910 --> 00:11:57,720
+let me think about that
+
+257
+00:11:57,720 --> 00:11:59,579
+all right it's not the Alexa is actually
+
+258
+00:11:59,579 --> 00:12:01,139
+sent the request or an ass hand meant
+
+259
+00:12:01,139 --> 00:12:02,850
+through the Lausanne Taiji platform and
+
+260
+00:12:02,850 --> 00:12:05,129
+it is now processing now for around two
+
+261
+00:12:05,129 --> 00:12:06,660
+to three seconds processing we can do
+
+262
+00:12:06,660 --> 00:12:07,019
+this
+
+263
+00:12:07,019 --> 00:12:12,720
+Alexa asked answer but I think Rob PI is
+
+264
+00:12:12,720 --> 00:12:14,670
+correct with fifty eight point two one
+
+265
+00:12:14,670 --> 00:12:17,160
+two percent confidence there we go as
+
+266
+00:12:17,160 --> 00:12:19,319
+you can see it says raw high as the
+
+267
+00:12:19,319 --> 00:12:22,199
+correct answer and Rob high of course my
+
+268
+00:12:22,199 --> 00:12:24,149
+mentor is indeed the correct answer
+
+269
+00:12:24,149 --> 00:12:28,079
+here's a CTO now though let's take a
+
+270
+00:12:28,079 --> 00:12:30,449
+look at one last quick demo on the mill
+
+271
+00:12:30,449 --> 00:12:32,490
+get back over to the actual architecture
+
+272
+00:12:32,490 --> 00:12:34,759
+of the system itself let's take a look
+
+273
+00:12:34,759 --> 00:12:39,899
+Alexa ask answer bot question which
+
+274
+00:12:39,899 --> 00:12:43,050
+company is the largest fast-food chain
+
+275
+00:12:43,050 --> 00:12:47,730
+in the world let me think about that all
+
+276
+00:12:47,730 --> 00:12:50,129
+right Alexis thinking again it's sent
+
+277
+00:12:50,129 --> 00:12:52,199
+back request over to ask tan may ask him
+
+278
+00:12:52,199 --> 00:12:54,029
+is doing the old processing using IBM
+
+279
+00:12:54,029 --> 00:12:59,449
+Watson and now Alexa asked answer but I
+
+280
+00:12:59,449 --> 00:13:02,309
+think McDonald is correct with ninety
+
+281
+00:13:02,309 --> 00:13:04,769
+six point six to one percent confidence
+
+282
+00:13:04,769 --> 00:13:07,379
+that went very smoothly and so as you
+
+283
+00:13:07,379 --> 00:13:09,990
+can see as Tammy was able to give us the
+
+284
+00:13:09,990 --> 00:13:12,389
+correct answer and it's to this super
+
+285
+00:13:12,389 --> 00:13:15,029
+portable super convenient Alexa
+
+286
+00:13:15,029 --> 00:13:16,559
+interface anyway back to the
+
+287
+00:13:16,559 --> 00:13:18,089
+architecture hope you enjoyed that demo
+
+288
+00:13:18,089 --> 00:13:19,589
+you'll be seeing a lot more in the
+
+289
+00:13:19,589 --> 00:13:21,749
+programming part all right so now of
+
+290
+00:13:21,749 --> 00:13:23,670
+course we've got this entire system and
+
+291
+00:13:23,670 --> 00:13:26,220
+you now understand why the answer cache
+
+292
+00:13:26,220 --> 00:13:29,009
+is important and this is also why we
+
+293
+00:13:29,009 --> 00:13:31,290
+can't just have one individual endpoint
+
+294
+00:13:31,290 --> 00:13:33,179
+we can't just have the Alexa skill
+
+295
+00:13:33,179 --> 00:13:36,629
+endpoint we need to have one extra now
+
+296
+00:13:36,629 --> 00:13:38,910
+this extra endpoint is going to allow
+
+297
+00:13:38,910 --> 00:13:42,720
+this lausanne HCP to actually grab but
+
+298
+00:13:42,720 --> 00:13:44,550
+the answer once asked Tammy is done
+
+299
+00:13:44,550 --> 00:13:47,970
+processing now this endpoint is called
+
+300
+00:13:47,970 --> 00:13:50,850
+slash yet
+
+301
+00:13:50,850 --> 00:13:54,209
+answer alright
+
+302
+00:13:54,209 --> 00:13:55,859
+in fact gel so you have to see a little
+
+303
+00:13:55,859 --> 00:13:57,689
+bit of a clearer picture of what these
+
+304
+00:13:57,689 --> 00:13:59,639
+endpoints actually do let's list down
+
+305
+00:13:59,639 --> 00:14:02,220
+the endpoints over here now of course at
+
+306
+00:14:02,220 --> 00:14:06,869
+first they are HTTP endpoints we've got
+
+307
+00:14:06,869 --> 00:14:12,720
+the Alexa skill endpoint all right now /
+
+308
+00:14:12,720 --> 00:14:18,749
+Alexa skill now the parameter so this is
+
+309
+00:14:18,749 --> 00:14:23,549
+going to take in first of all it's going
+
+310
+00:14:23,549 --> 00:14:27,959
+to take the question and this is the
+
+311
+00:14:27,959 --> 00:14:32,850
+question that the user asks number two
+
+312
+00:14:32,850 --> 00:14:36,779
+it's going to take the user ID now this
+
+313
+00:14:36,779 --> 00:14:39,749
+is actually just user in the rest call
+
+314
+00:14:39,749 --> 00:14:42,600
+and users a unique user identification
+
+315
+00:14:42,600 --> 00:14:45,479
+number that Amazon gives us it's a very
+
+316
+00:14:45,479 --> 00:14:48,209
+long string that actually gives us the
+
+317
+00:14:48,209 --> 00:14:50,789
+ID of this user it's entirely unique to
+
+318
+00:14:50,789 --> 00:14:53,519
+that user and we use this to store their
+
+319
+00:14:53,519 --> 00:14:55,769
+answer in the answer cache without you
+
+320
+00:14:55,769 --> 00:14:57,359
+can restore the question which other
+
+321
+00:14:57,359 --> 00:15:00,059
+people may have asked as well alright
+
+322
+00:15:00,059 --> 00:15:02,669
+now after that though we of course do
+
+323
+00:15:02,669 --> 00:15:04,649
+have no more end point and an end point
+
+324
+00:15:04,649 --> 00:15:11,519
+is the slash get answer HTTP endpoint in
+
+325
+00:15:11,519 --> 00:15:18,389
+terms of parameters we take only one
+
+326
+00:15:18,389 --> 00:15:21,869
+parameter and this is the user ID
+
+327
+00:15:21,869 --> 00:15:24,659
+parameter and the reason we take this
+
+328
+00:15:24,659 --> 00:15:26,699
+parameter of course is to find out what
+
+329
+00:15:26,699 --> 00:15:29,489
+the users answer is and it returns a
+
+330
+00:15:29,489 --> 00:15:32,339
+string which is exactly what the Alexa
+
+331
+00:15:32,339 --> 00:15:34,139
+needs to say out you know what it said I
+
+332
+00:15:34,139 --> 00:15:36,600
+think MacDonald is the correct answer
+
+333
+00:15:36,600 --> 00:15:39,720
+with such percent confidence that is
+
+334
+00:15:39,720 --> 00:15:42,400
+exactly the string that get answer
+
+335
+00:15:42,400 --> 00:15:44,350
+actually outputs and that's what a
+
+336
+00:15:44,350 --> 00:15:47,620
+steaming computes and so this string
+
+337
+00:15:47,620 --> 00:15:49,870
+will go back over Lausanne and into
+
+338
+00:15:49,870 --> 00:15:51,160
+Alexa Lake south
+
+339
+00:15:51,160 --> 00:15:53,080
+so now imagine this you've asked your
+
+340
+00:15:53,080 --> 00:15:55,300
+question to Alex already but now when
+
+341
+00:15:55,300 --> 00:15:57,910
+you want to retrieve the answer to your
+
+342
+00:15:57,910 --> 00:16:00,310
+question so you send the retrieve
+
+343
+00:16:00,310 --> 00:16:03,610
+command all right so you sent the
+
+344
+00:16:03,610 --> 00:16:06,280
+retrieve command and this is of course
+
+345
+00:16:06,280 --> 00:16:09,130
+with our red to get answer end point and
+
+346
+00:16:09,130 --> 00:16:12,070
+so once you send this over to your
+
+347
+00:16:12,070 --> 00:16:15,070
+Lausanne to HTTP what's going to happen
+
+348
+00:16:15,070 --> 00:16:18,160
+is again through ngr okay lo Santa's
+
+349
+00:16:18,160 --> 00:16:21,270
+going to go over to the get answer
+
+350
+00:16:21,270 --> 00:16:24,160
+once it's applicant answer endpoint is
+
+351
+00:16:24,160 --> 00:16:26,230
+again world of fun starts to come in
+
+352
+00:16:26,230 --> 00:16:28,510
+because what's going to happen now is
+
+353
+00:16:28,510 --> 00:16:30,490
+it's going to go over into the answer
+
+354
+00:16:30,490 --> 00:16:34,120
+cache and it's going to ask for that and
+
+355
+00:16:34,120 --> 00:16:36,910
+for that user IDs answer the answer
+
+356
+00:16:36,910 --> 00:16:39,280
+cache is going to send a response and
+
+357
+00:16:39,280 --> 00:16:41,200
+this time what's going to happen is
+
+358
+00:16:41,200 --> 00:16:44,740
+through ng R okay it's going to respond
+
+359
+00:16:44,740 --> 00:16:48,310
+over to lo sont and the Mossad is going
+
+360
+00:16:48,310 --> 00:16:51,310
+to send this final response and let's
+
+361
+00:16:51,310 --> 00:16:53,500
+just say this goes over through Lausanne
+
+362
+00:16:53,500 --> 00:16:58,300
+it's going to send it over to oral exam
+
+363
+00:16:58,300 --> 00:17:00,070
+and it's going to tell their likes of
+
+364
+00:17:00,070 --> 00:17:03,370
+exactly what it needs to say and this is
+
+365
+00:17:03,370 --> 00:17:05,650
+one of the architecture diagram of what
+
+366
+00:17:05,650 --> 00:17:08,410
+all truly happens see the best part of
+
+367
+00:17:08,410 --> 00:17:10,089
+using the Lassonde as you platform once
+
+368
+00:17:10,089 --> 00:17:12,970
+more is that we need to do almost no
+
+369
+00:17:12,970 --> 00:17:16,660
+code at all for the alexis kill the only
+
+370
+00:17:16,660 --> 00:17:19,750
+real code here is this part this part in
+
+371
+00:17:19,750 --> 00:17:21,730
+this part that's it everything that's
+
+372
+00:17:21,730 --> 00:17:24,580
+not Python requires no code and it's not
+
+373
+00:17:24,580 --> 00:17:26,709
+entirely and a graphical user interface
+
+374
+00:17:26,709 --> 00:17:28,840
+whether it be with the Alexa skills kit
+
+375
+00:17:28,840 --> 00:17:31,360
+console or development environment or
+
+376
+00:17:31,360 --> 00:17:32,710
+whether it be the Lausanne - IOT
+
+377
+00:17:32,710 --> 00:17:34,840
+platform their graphical user interface
+
+378
+00:17:34,840 --> 00:17:36,940
+and gr ok isn't really anything you need
+
+379
+00:17:36,940 --> 00:17:39,160
+to program with anyway and then of
+
+380
+00:17:39,160 --> 00:17:41,260
+course under the Python flask issues if
+
+381
+00:17:41,260 --> 00:17:43,030
+you relatively simple flask server I'll
+
+382
+00:17:43,030 --> 00:17:44,410
+be showing you the code behind that
+
+383
+00:17:44,410 --> 00:17:46,450
+just a minute the ants will catch again
+
+384
+00:17:46,450 --> 00:17:49,150
+very very simple code and asked a mate
+
+385
+00:17:49,150 --> 00:17:51,600
+that's where the real meat comes in
+
+386
+00:17:51,600 --> 00:17:54,370
+itself does have quite a few different
+
+387
+00:17:54,370 --> 00:17:56,650
+steps what it's able to do is actually
+
+388
+00:17:56,650 --> 00:17:59,200
+use a search engine in this case it uses
+
+389
+00:17:59,200 --> 00:18:02,020
+the Google Search API and what it does
+
+390
+00:18:02,020 --> 00:18:05,200
+is it doesn't actually extract pages it
+
+391
+00:18:05,200 --> 00:18:07,150
+doesn't extract four pages from which to
+
+392
+00:18:07,150 --> 00:18:07,750
+find answers
+
+393
+00:18:07,750 --> 00:18:11,530
+it only extracts summaries what do I
+
+394
+00:18:11,530 --> 00:18:13,390
+mean by summaries well it actually is a
+
+395
+00:18:13,390 --> 00:18:15,130
+step called search and results summary
+
+396
+00:18:15,130 --> 00:18:17,710
+extraction and you know when you google
+
+397
+00:18:17,710 --> 00:18:18,940
+something and you see those little
+
+398
+00:18:18,940 --> 00:18:21,190
+descriptions under the little links that
+
+399
+00:18:21,190 --> 00:18:22,930
+show the parts of the webpage that are
+
+400
+00:18:22,930 --> 00:18:25,390
+most important to your query that is
+
+401
+00:18:25,390 --> 00:18:27,550
+what asked and may actually parses it's
+
+402
+00:18:27,550 --> 00:18:29,650
+going to grab all those from the API and
+
+403
+00:18:29,650 --> 00:18:31,570
+it's going to use a bi-directional
+
+404
+00:18:31,570 --> 00:18:34,030
+attention flow from a Linnea I would buy
+
+405
+00:18:34,030 --> 00:18:36,250
+own sort of modifications to that and
+
+406
+00:18:36,250 --> 00:18:38,080
+what it's going to do is try and find
+
+407
+00:18:38,080 --> 00:18:40,090
+some kind of answers to it it's also
+
+408
+00:18:40,090 --> 00:18:42,190
+going to use IBM Watson natural language
+
+409
+00:18:42,190 --> 00:18:45,490
+classifier and to find out what kind of
+
+410
+00:18:45,490 --> 00:18:47,290
+response are looking for whether it be a
+
+411
+00:18:47,290 --> 00:18:50,020
+person organization or location once it
+
+412
+00:18:50,020 --> 00:18:51,550
+knows what they're looking for it'll
+
+413
+00:18:51,550 --> 00:18:53,110
+filter out according to that using the
+
+414
+00:18:53,110 --> 00:18:55,720
+natural language understanding API to
+
+415
+00:18:55,720 --> 00:18:57,460
+find out what all the different answers
+
+416
+00:18:57,460 --> 00:18:59,830
+are and then once it's done that's what
+
+417
+00:18:59,830 --> 00:19:01,420
+you do a little bit of naive answer
+
+418
+00:19:01,420 --> 00:19:03,730
+scoring try and score based off a
+
+419
+00:19:03,730 --> 00:19:05,620
+repetition and if it's also going to
+
+420
+00:19:05,620 --> 00:19:08,170
+score based off a PageRank score so you
+
+421
+00:19:08,170 --> 00:19:09,430
+know that Google uses the PageRank
+
+422
+00:19:09,430 --> 00:19:11,230
+algorithm along with now a different
+
+423
+00:19:11,230 --> 00:19:13,570
+deep learning algorithms but it's going
+
+424
+00:19:13,570 --> 00:19:15,940
+to use that score in order to rank
+
+425
+00:19:15,940 --> 00:19:18,370
+better answers that are towards the top
+
+426
+00:19:18,370 --> 00:19:20,860
+of the list with more confidence and
+
+427
+00:19:20,860 --> 00:19:23,110
+that is how the entire ask 10ms system
+
+428
+00:19:23,110 --> 00:19:25,240
+works of course as Tanmay and how it
+
+429
+00:19:25,240 --> 00:19:27,850
+works is an entire video in itself but
+
+430
+00:19:27,850 --> 00:19:29,230
+in essence it's able to use a
+
+431
+00:19:29,230 --> 00:19:30,430
+combination of tensorflow
+
+432
+00:19:30,430 --> 00:19:31,990
+Watson natural language understanding
+
+433
+00:19:31,990 --> 00:19:33,850
+and what's a natural language classifier
+
+434
+00:19:33,850 --> 00:19:37,950
+in order to get answers from the web
+
+435
+00:19:37,950 --> 00:19:41,650
+from your natural language questions so
+
+436
+00:19:41,650 --> 00:19:43,570
+that's a quick brief of a Stan there
+
+437
+00:19:43,570 --> 00:19:45,820
+what that does and everything else
+
+438
+00:19:45,820 --> 00:19:47,920
+including the Alexa skill the Lausanne
+
+439
+00:19:47,920 --> 00:19:51,160
+platform and John okay the flask HTTP
+
+440
+00:19:51,160 --> 00:19:51,730
+server
+
+441
+00:19:51,730 --> 00:19:54,490
+and the answer - Tammi work together and
+
+442
+00:19:54,490 --> 00:19:57,279
+how they actually enable me to ask this
+
+443
+00:19:57,279 --> 00:19:59,919
+Alexa and natural language question and
+
+444
+00:19:59,919 --> 00:20:03,389
+get an answer around 95% of the time
+
+445
+00:20:03,389 --> 00:20:05,769
+alright so I hope you enjoyed that quick
+
+446
+00:20:05,769 --> 00:20:07,809
+demo and of course the architecture
+
+447
+00:20:07,809 --> 00:20:09,669
+explanation of how exactly this all
+
+448
+00:20:09,669 --> 00:20:12,429
+works now though what I'd like to do is
+
+449
+00:20:12,429 --> 00:20:14,590
+I'd like to take you over to the
+
+450
+00:20:14,590 --> 00:20:16,090
+programming part where I'm going to show
+
+451
+00:20:16,090 --> 00:20:18,789
+you how you can actually build a skill
+
+452
+00:20:18,789 --> 00:20:21,159
+for this Alexa and I'm gonna take you
+
+453
+00:20:21,159 --> 00:20:23,230
+through how exactly I built this entire
+
+454
+00:20:23,230 --> 00:20:26,019
+system how you take the wrong uh turns
+
+455
+00:20:26,019 --> 00:20:31,870
+from the Alexa skills over alright let's
+
+456
+00:20:31,870 --> 00:20:33,389
+get into the programming part now
+
+457
+00:20:33,389 --> 00:20:36,250
+alright so welcome back and now let's
+
+458
+00:20:36,250 --> 00:20:37,510
+take a look at how you can actually
+
+459
+00:20:37,510 --> 00:20:40,690
+implement this Alexa system alright now
+
+460
+00:20:40,690 --> 00:20:42,639
+what I'd like to do first of all is show
+
+461
+00:20:42,639 --> 00:20:44,559
+you what's actually going on in the back
+
+462
+00:20:44,559 --> 00:20:47,169
+end now I've actually got my Alexa here
+
+463
+00:20:47,169 --> 00:20:47,679
+with me
+
+464
+00:20:47,679 --> 00:20:49,090
+and what I'm gonna do is I'm gonna turn
+
+465
+00:20:49,090 --> 00:20:51,940
+this on unmute it and I'm gonna go over
+
+466
+00:20:51,940 --> 00:20:54,880
+to a four so you can see the Amazon
+
+467
+00:20:54,880 --> 00:20:57,220
+Alexa skills get here but I'm also going
+
+468
+00:20:57,220 --> 00:20:58,809
+to go over to these two terminal windows
+
+469
+00:20:58,809 --> 00:21:01,029
+these eternal windows contain of course
+
+470
+00:21:01,029 --> 00:21:03,460
+the ng ROK server is actually running on
+
+471
+00:21:03,460 --> 00:21:06,309
+our custom sub domain actually and of
+
+472
+00:21:06,309 --> 00:21:08,440
+course on this side over here I've got
+
+473
+00:21:08,440 --> 00:21:10,929
+my Python server which is hosting the
+
+474
+00:21:10,929 --> 00:21:15,010
+flask HTTP endpoints of get answer and
+
+475
+00:21:15,010 --> 00:21:17,500
+Alexa skill and of course it's also
+
+476
+00:21:17,500 --> 00:21:20,110
+hosting the answer cache and contacts as
+
+477
+00:21:20,110 --> 00:21:22,210
+Tanmay in fact an entirely new
+
+478
+00:21:22,210 --> 00:21:24,760
+redesigned version of a statement as
+
+479
+00:21:24,760 --> 00:21:26,950
+well all right let's take a look now
+
+480
+00:21:26,950 --> 00:21:29,080
+let's actually I want to run a quick
+
+481
+00:21:29,080 --> 00:21:31,450
+demo on the actual device and let's take
+
+482
+00:21:31,450 --> 00:21:33,549
+a look at how these two terminal widows
+
+483
+00:21:33,549 --> 00:21:36,010
+actually react let's ask it a simple
+
+484
+00:21:36,010 --> 00:21:39,789
+question like just for example Alexa ask
+
+485
+00:21:39,789 --> 00:21:43,600
+answer boffed question who is the CEO of
+
+486
+00:21:43,600 --> 00:21:49,029
+Amazon let me think about that alright
+
+487
+00:21:49,029 --> 00:21:51,039
+as you can see the Alexis now thinking
+
+488
+00:21:51,039 --> 00:21:54,490
+about it and Angra has received the HTTP
+
+489
+00:21:54,490 --> 00:21:57,399
+request it returned 200 ok response and
+
+490
+00:21:57,399 --> 00:21:59,350
+you can actually see that asked Anna
+
+491
+00:21:59,350 --> 00:22:01,840
+over here has actually received a
+
+492
+00:22:01,840 --> 00:22:05,049
+question who is the CEO of Amazon
+
+493
+00:22:05,049 --> 00:22:07,059
+person who actually sucked this is this
+
+494
+00:22:07,059 --> 00:22:09,639
+user ID and as you can see asked him
+
+495
+00:22:09,639 --> 00:22:11,679
+extracted the answer i think jeff bezos
+
+496
+00:22:11,679 --> 00:22:14,289
+etcetera and it said that this answer is
+
+497
+00:22:14,289 --> 00:22:17,710
+for user ID etc etc in fact we can
+
+498
+00:22:17,710 --> 00:22:19,749
+actually now go back over to our Alexa
+
+499
+00:22:19,749 --> 00:22:23,860
+and say Alexa ask answer bot
+
+500
+00:22:23,860 --> 00:22:27,519
+I think Jeff Bezos is correct with
+
+501
+00:22:27,519 --> 00:22:29,590
+seventy two point six to two percent
+
+502
+00:22:29,590 --> 00:22:32,139
+confidence alright so as you can see the
+
+503
+00:22:32,139 --> 00:22:34,929
+Alexa was able to detect that or not the
+
+504
+00:22:34,929 --> 00:22:36,909
+Alexa the election was able to send our
+
+505
+00:22:36,909 --> 00:22:40,389
+user ID over to asked and may ask Tammy
+
+506
+00:22:40,389 --> 00:22:42,519
+is get answer was actually able to take
+
+507
+00:22:42,519 --> 00:22:45,580
+that user ID and I was able to extract
+
+508
+00:22:45,580 --> 00:22:47,799
+the correct answer associated to that
+
+509
+00:22:47,799 --> 00:22:50,590
+user IDs question and that is how the
+
+510
+00:22:50,590 --> 00:22:52,059
+system works in fact you can even see
+
+511
+00:22:52,059 --> 00:22:53,889
+that certified right and you're okay
+
+512
+00:22:53,889 --> 00:22:55,840
+over here who is actually getting those
+
+513
+00:22:55,840 --> 00:22:59,109
+requests but wait even ngr okay has to
+
+514
+00:22:59,109 --> 00:23:00,940
+receive its requests from loccent
+
+515
+00:23:00,940 --> 00:23:02,859
+so let's take a look a little bit deeper
+
+516
+00:23:02,859 --> 00:23:05,739
+into how the system is built in fact I'm
+
+517
+00:23:05,739 --> 00:23:07,509
+actually going to link to a guide on the
+
+518
+00:23:07,509 --> 00:23:09,850
+low sound blog that's how you can build
+
+519
+00:23:09,850 --> 00:23:12,190
+an interactive Alexa skill with no code
+
+520
+00:23:12,190 --> 00:23:15,759
+using this lausanne alright so this is
+
+521
+00:23:15,759 --> 00:23:16,869
+going to be in the description you can
+
+522
+00:23:16,869 --> 00:23:18,700
+actually take a look at this tutorial is
+
+523
+00:23:18,700 --> 00:23:21,070
+going to be very helpful even actually
+
+524
+00:23:21,070 --> 00:23:22,149
+where you're breathing when you're
+
+525
+00:23:22,149 --> 00:23:23,739
+building this application in this
+
+526
+00:23:23,739 --> 00:23:26,049
+tutorial I'd recommend you take a look
+
+527
+00:23:26,049 --> 00:23:28,059
+at this blog as well just to find out a
+
+528
+00:23:28,059 --> 00:23:30,519
+bit more about lausanne - how it works
+
+529
+00:23:30,519 --> 00:23:33,730
+and what it's meant to do in fact to say
+
+530
+00:23:33,730 --> 00:23:36,190
+you know this is actually the arrest API
+
+531
+00:23:36,190 --> 00:23:38,919
+that Alexis till end point is actually
+
+532
+00:23:38,919 --> 00:23:41,049
+calling just for example if I were to go
+
+533
+00:23:41,049 --> 00:23:43,179
+localhost 5000 which is the port it's
+
+534
+00:23:43,179 --> 00:23:45,009
+running on go to the Alexis skill
+
+535
+00:23:45,009 --> 00:23:47,049
+endpoint pass the question in this case
+
+536
+00:23:47,049 --> 00:23:49,059
+who is the CEO of Apple and give it any
+
+537
+00:23:49,059 --> 00:23:52,239
+random user name like ABC I run that go
+
+538
+00:23:52,239 --> 00:23:54,489
+back over here as you can see a Stanley
+
+539
+00:23:54,489 --> 00:23:56,139
+has received the question and the
+
+540
+00:23:56,139 --> 00:23:59,109
+username ask Tammy is now going to reply
+
+541
+00:23:59,109 --> 00:24:02,019
+and as you can see Google Chrome gets
+
+542
+00:24:02,019 --> 00:24:04,269
+the response back and now this is what
+
+543
+00:24:04,269 --> 00:24:05,889
+actually goes back to Lausanne well
+
+544
+00:24:05,889 --> 00:24:07,389
+we're back into the answer cache and
+
+545
+00:24:07,389 --> 00:24:08,950
+then when you ask for the answer
+
+546
+00:24:08,950 --> 00:24:10,509
+Lausanne is going to receive from the
+
+547
+00:24:10,509 --> 00:24:12,609
+answer - and give it back to you like so
+
+548
+00:24:12,609 --> 00:24:15,159
+all right but let's start from the
+
+549
+00:24:15,159 --> 00:24:17,649
+basics here let's start from the Amazon
+
+550
+00:24:17,649 --> 00:24:18,490
+Alexis
+
+551
+00:24:18,490 --> 00:24:20,740
+Gill's k now the Amazon Alexa skills kit
+
+552
+00:24:20,740 --> 00:24:23,110
+we can build chat BOTS and other kinds
+
+553
+00:24:23,110 --> 00:24:25,690
+of skills for the Alexa now I like the
+
+554
+00:24:25,690 --> 00:24:27,640
+new console that they built but you can
+
+555
+00:24:27,640 --> 00:24:29,200
+use the old one as well if you'd like to
+
+556
+00:24:29,200 --> 00:24:32,850
+at least for the time being there we go
+
+557
+00:24:32,850 --> 00:24:35,740
+alright so as you can see these are all
+
+558
+00:24:35,740 --> 00:24:38,860
+my Amazon Alexa skills you know Tenma QA
+
+559
+00:24:38,860 --> 00:24:42,580
+and asked handmade v2 that's Tanmay so
+
+560
+00:24:42,580 --> 00:24:44,700
+it's actually go ahead and click on edit
+
+561
+00:24:44,700 --> 00:24:47,620
+now when I click on edit you can see all
+
+562
+00:24:47,620 --> 00:24:49,720
+the stuff that goes into this
+
+563
+00:24:49,720 --> 00:24:51,520
+application let's start with the
+
+564
+00:24:51,520 --> 00:24:53,530
+interaction model now the interaction
+
+565
+00:24:53,530 --> 00:24:55,120
+model has something called an invocation
+
+566
+00:24:55,120 --> 00:24:57,429
+an invocation is how the user actually
+
+567
+00:24:57,429 --> 00:25:00,700
+begins and talks to Alexa like just for
+
+568
+00:25:00,700 --> 00:25:02,830
+example let's just say your invocation
+
+569
+00:25:02,830 --> 00:25:05,350
+name was daily horoscopes you could say
+
+570
+00:25:05,350 --> 00:25:07,690
+something like Alexa asked daily
+
+571
+00:25:07,690 --> 00:25:09,429
+horoscopes with a horoscope for Jen and
+
+572
+00:25:09,429 --> 00:25:12,040
+I which is the example that Amazon gives
+
+573
+00:25:12,040 --> 00:25:14,920
+us here in this case my invocation name
+
+574
+00:25:14,920 --> 00:25:17,590
+is answer bot so people can say Alexa
+
+575
+00:25:17,590 --> 00:25:20,500
+ask answer bot question who is the CEO
+
+576
+00:25:20,500 --> 00:25:22,720
+of IBM where Amazon or any other kind of
+
+577
+00:25:22,720 --> 00:25:24,790
+question that you may have there are a
+
+578
+00:25:24,790 --> 00:25:26,800
+few requirements to your invocation name
+
+579
+00:25:26,800 --> 00:25:29,380
+like you cannot have phrases like launch
+
+580
+00:25:29,380 --> 00:25:32,620
+ask tell load begin our naval or even
+
+581
+00:25:32,620 --> 00:25:34,840
+wake words like Alexa Amazon echo
+
+582
+00:25:34,840 --> 00:25:37,690
+computer or the word skilar app so these
+
+583
+00:25:37,690 --> 00:25:39,280
+are the different sort of requirements
+
+584
+00:25:39,280 --> 00:25:42,070
+for your a vocation name but that's all
+
+585
+00:25:42,070 --> 00:25:44,410
+once you've got a good invocation name
+
+586
+00:25:44,410 --> 00:25:46,179
+and you're ready to continue we can
+
+587
+00:25:46,179 --> 00:25:48,940
+start off by creating a slot type now
+
+588
+00:25:48,940 --> 00:25:51,010
+before we actually create a slot type
+
+589
+00:25:51,010 --> 00:25:53,260
+though we have to understand intense if
+
+590
+00:25:53,260 --> 00:25:54,630
+you've ever used the IBM Watson
+
+591
+00:25:54,630 --> 00:25:57,010
+conversations in this before or for that
+
+592
+00:25:57,010 --> 00:25:59,200
+matter API today yeah I or any other
+
+593
+00:25:59,200 --> 00:26:01,330
+kind of chat platform you're familiar
+
+594
+00:26:01,330 --> 00:26:03,580
+with these intents but you may not be
+
+595
+00:26:03,580 --> 00:26:05,290
+familiar with slots so let's talk about
+
+596
+00:26:05,290 --> 00:26:08,500
+that now inside of the intents we only
+
+597
+00:26:08,500 --> 00:26:10,540
+have one intent and it's called the
+
+598
+00:26:10,540 --> 00:26:13,150
+everything intent remember this chat bot
+
+599
+00:26:13,150 --> 00:26:15,160
+does nothing the only thing that really
+
+600
+00:26:15,160 --> 00:26:17,890
+does something is asked and a so you
+
+601
+00:26:17,890 --> 00:26:20,140
+want to take what ever the user says no
+
+602
+00:26:20,140 --> 00:26:22,330
+matter what it may be and send it over
+
+603
+00:26:22,330 --> 00:26:24,790
+to lausanne and lausanne can do the
+
+604
+00:26:24,790 --> 00:26:27,760
+actual post processing and understand
+
+605
+00:26:27,760 --> 00:26:31,440
+what the user actually bent so with
+
+606
+00:26:31,440 --> 00:26:32,970
+everything intent we basically try and
+
+607
+00:26:32,970 --> 00:26:34,950
+capture everything that the user says
+
+608
+00:26:34,950 --> 00:26:37,259
+now this includes no matter what they
+
+609
+00:26:37,259 --> 00:26:38,789
+say they can say question they can say
+
+610
+00:26:38,789 --> 00:26:41,070
+everything intent but then after that
+
+611
+00:26:41,070 --> 00:26:43,980
+whatever they say after the first word
+
+612
+00:26:43,980 --> 00:26:45,960
+will be considered part of the
+
+613
+00:26:45,960 --> 00:26:48,809
+everything slot and the everything slot
+
+614
+00:26:48,809 --> 00:26:51,120
+is meant to pick up whatever the user
+
+615
+00:26:51,120 --> 00:26:54,090
+sets doesn't matter what it is and
+
+616
+00:26:54,090 --> 00:26:56,039
+everything slot as you can see over here
+
+617
+00:26:56,039 --> 00:26:58,860
+has under the intent slot is actually a
+
+618
+00:26:58,860 --> 00:27:01,710
+specific slot type the slot type is bag
+
+619
+00:27:01,710 --> 00:27:04,230
+of words now this is a custom slot type
+
+620
+00:27:04,230 --> 00:27:05,879
+Animas on doesn't provide this by
+
+621
+00:27:05,879 --> 00:27:07,980
+default and so what you need to do is
+
+622
+00:27:07,980 --> 00:27:10,590
+create a custom slot type this slot type
+
+623
+00:27:10,590 --> 00:27:13,169
+you can give it any value in this case
+
+624
+00:27:13,169 --> 00:27:15,600
+we've given at hello world unless you as
+
+625
+00:27:15,600 --> 00:27:17,250
+a user specify something else in your
+
+626
+00:27:17,250 --> 00:27:20,970
+intent which is what you should do now
+
+627
+00:27:20,970 --> 00:27:22,379
+of course you don't need to give us any
+
+628
+00:27:22,379 --> 00:27:24,539
+meaningful intent or meaningful value
+
+629
+00:27:24,539 --> 00:27:26,399
+you just need something in order to be
+
+630
+00:27:26,399 --> 00:27:28,019
+able to capture everything and send it
+
+631
+00:27:28,019 --> 00:27:31,830
+over to IBM Watson in fact if you take a
+
+632
+00:27:31,830 --> 00:27:34,350
+look at the IBM code pattern for the
+
+633
+00:27:34,350 --> 00:27:38,190
+Alexa you can take a look over here that
+
+634
+00:27:38,190 --> 00:27:40,440
+as I was mentioning just wait for this
+
+635
+00:27:40,440 --> 00:27:44,549
+to load for a second Marc Stuart Avant
+
+636
+00:27:44,549 --> 00:27:47,159
+and Nicholas haidle off worked on this
+
+637
+00:27:47,159 --> 00:27:49,409
+code pattern together and they use I of
+
+638
+00:27:49,409 --> 00:27:52,409
+the Amazon Alexa and IBM Watson in order
+
+639
+00:27:52,409 --> 00:27:54,000
+to discuss the weather and milla
+
+640
+00:27:54,000 --> 00:27:56,610
+conversations or really just choose one
+
+641
+00:27:56,610 --> 00:28:00,029
+from a library and so this is actually
+
+642
+00:28:00,029 --> 00:28:02,759
+based off of IBM's first of open wisk so
+
+643
+00:28:02,759 --> 00:28:04,830
+this is of course IBM's sort of us
+
+644
+00:28:04,830 --> 00:28:07,769
+compute platform similar to AWS lambda
+
+645
+00:28:07,769 --> 00:28:10,559
+and so of course this code pattern is
+
+646
+00:28:10,559 --> 00:28:14,429
+basically it's quite similar to my code
+
+647
+00:28:14,429 --> 00:28:17,490
+to my code in the way how it actually
+
+648
+00:28:17,490 --> 00:28:19,710
+allows Alexa to communicate with the IBM
+
+649
+00:28:19,710 --> 00:28:21,929
+cloud functions or in this case about
+
+650
+00:28:21,929 --> 00:28:24,480
+the idea functions but Lausanne to IOT
+
+651
+00:28:24,480 --> 00:28:28,259
+platform alright I'll tell a little bit
+
+652
+00:28:28,259 --> 00:28:31,200
+deeper into this now you know how the
+
+653
+00:28:31,200 --> 00:28:33,870
+intents and the slots work once you
+
+654
+00:28:33,870 --> 00:28:35,909
+built your intention your slots all you
+
+655
+00:28:35,909 --> 00:28:37,679
+need to do is save and build your model
+
+656
+00:28:37,679 --> 00:28:39,779
+once you've saved and built your model
+
+657
+00:28:39,779 --> 00:28:41,940
+though you are ready to actually test
+
+658
+00:28:41,940 --> 00:28:44,100
+your application now this is where you
+
+659
+00:28:44,100 --> 00:28:45,340
+can actually test out
+
+660
+00:28:45,340 --> 00:28:48,010
+your Amazon Alexa app before that though
+
+661
+00:28:48,010 --> 00:28:50,500
+let's head over to Lausanne now as I
+
+662
+00:28:50,500 --> 00:28:53,110
+mentioned no code involved however if
+
+663
+00:28:53,110 --> 00:28:54,760
+you want put some code in and get a
+
+664
+00:28:54,760 --> 00:28:56,680
+little bit more flexible there you can
+
+665
+00:28:56,680 --> 00:28:58,270
+and that's what I've gone ahead and done
+
+666
+00:28:58,270 --> 00:29:02,410
+but this is what the Lausanne flow looks
+
+667
+00:29:02,410 --> 00:29:04,390
+like and so as you can see I can just
+
+668
+00:29:04,390 --> 00:29:06,250
+format a little bit here as you can see
+
+669
+00:29:06,250 --> 00:29:08,110
+it's a very sort of graphical user
+
+670
+00:29:08,110 --> 00:29:10,780
+interface similar to IBM IOT ZnO to read
+
+671
+00:29:10,780 --> 00:29:13,650
+which is open source I wanna close on
+
+672
+00:29:13,650 --> 00:29:17,410
+however basically what I'm doing with
+
+673
+00:29:17,410 --> 00:29:18,160
+those on here
+
+674
+00:29:18,160 --> 00:29:20,770
+and I'm creating a web hook now this wet
+
+675
+00:29:20,770 --> 00:29:23,350
+book is basically the HTTP endpoint that
+
+676
+00:29:23,350 --> 00:29:26,560
+the Alexa skills kid calls how does it
+
+677
+00:29:26,560 --> 00:29:28,780
+call it well if you go over to build
+
+678
+00:29:28,780 --> 00:29:32,020
+over here if you just wait for one
+
+679
+00:29:32,020 --> 00:29:35,260
+second as you can see there is a button
+
+680
+00:29:35,260 --> 00:29:37,090
+for the endpoint and of course you can
+
+681
+00:29:37,090 --> 00:29:38,770
+actually get that over here as well if
+
+682
+00:29:38,770 --> 00:29:40,540
+you click on endpoint you can either
+
+683
+00:29:40,540 --> 00:29:44,230
+choose AWS laptop or an HTTP server in
+
+684
+00:29:44,230 --> 00:29:46,570
+this case I've given it to my Lausanne
+
+685
+00:29:46,570 --> 00:29:49,150
+trigger and of course you to choose if
+
+686
+00:29:49,150 --> 00:29:50,860
+this my development endpoint is so
+
+687
+00:29:50,860 --> 00:29:52,390
+domain of the domain that has a wildcard
+
+688
+00:29:52,390 --> 00:29:54,250
+certificate term a certificate authority
+
+689
+00:29:54,250 --> 00:29:55,150
+doesn't matter
+
+690
+00:29:55,150 --> 00:29:57,310
+that's just what Lausanne tells us does
+
+691
+00:29:57,310 --> 00:29:59,020
+choose because that's how Lausanne
+
+692
+00:29:59,020 --> 00:29:59,650
+destructure
+
+693
+00:29:59,650 --> 00:30:02,560
+anyway once the web hook receives
+
+694
+00:30:02,560 --> 00:30:05,400
+information from the alexis skills kit
+
+695
+00:30:05,400 --> 00:30:08,650
+then though we actually call a custom
+
+696
+00:30:08,650 --> 00:30:12,160
+function now this is a function coded in
+
+697
+00:30:12,160 --> 00:30:14,830
+JavaScript that I've created it's a very
+
+698
+00:30:14,830 --> 00:30:17,170
+simple function all this function does
+
+699
+00:30:17,170 --> 00:30:20,080
+is it actually checks whether the intent
+
+700
+00:30:20,080 --> 00:30:23,320
+is to actually ask a question or if the
+
+701
+00:30:23,320 --> 00:30:25,210
+intent is to find the answer to a
+
+702
+00:30:25,210 --> 00:30:27,490
+question that they had asked before if
+
+703
+00:30:27,490 --> 00:30:29,380
+they want to find the answer to a
+
+704
+00:30:29,380 --> 00:30:31,570
+question they've already asked then Dana
+
+705
+00:30:31,570 --> 00:30:34,360
+dot works is at the zero or else it's at
+
+706
+00:30:34,360 --> 00:30:36,790
+to one if they actually want to ask a
+
+707
+00:30:36,790 --> 00:30:39,700
+question once that function actually
+
+708
+00:30:39,700 --> 00:30:41,950
+goes through there's a conditional this
+
+709
+00:30:41,950 --> 00:30:43,810
+conditional is whether or not they
+
+710
+00:30:43,810 --> 00:30:46,960
+actually want to ask a question if they
+
+711
+00:30:46,960 --> 00:30:48,700
+do want to ask question that it goes
+
+712
+00:30:48,700 --> 00:30:51,640
+down through this flow in this flow we
+
+713
+00:30:51,640 --> 00:30:54,970
+actually respond to the alexa and we say
+
+714
+00:30:54,970 --> 00:30:56,740
+let me think about that which is why
+
+715
+00:30:56,740 --> 00:30:58,690
+alexa says let me think about that when
+
+716
+00:30:58,690 --> 00:30:59,200
+you ask
+
+717
+00:30:59,200 --> 00:31:01,750
+question and then over here with the
+
+718
+00:31:01,750 --> 00:31:05,080
+HTTP what happens is your question is
+
+719
+00:31:05,080 --> 00:31:08,559
+sent over to that mg ROK server and of
+
+720
+00:31:08,559 --> 00:31:10,120
+course the question is passed and the
+
+721
+00:31:10,120 --> 00:31:12,580
+question in this case is if I make this
+
+722
+00:31:12,580 --> 00:31:15,940
+a little bit bigger data body dot
+
+723
+00:31:15,940 --> 00:31:18,700
+request on intents lotsa everything slot
+
+724
+00:31:18,700 --> 00:31:21,159
+that value if you go huland JSON that
+
+725
+00:31:21,159 --> 00:31:23,110
+the Alexa skills kit provides in the web
+
+726
+00:31:23,110 --> 00:31:25,179
+hook this is exactly what it looks like
+
+727
+00:31:25,179 --> 00:31:27,279
+and then the user ID is given over here
+
+728
+00:31:27,279 --> 00:31:29,830
+which allows of course asked me to keep
+
+729
+00:31:29,830 --> 00:31:33,039
+its answer cache all right so once asked
+
+730
+00:31:33,039 --> 00:31:35,260
+M has gotten the request and it starts
+
+731
+00:31:35,260 --> 00:31:37,630
+doing its own processing and of course
+
+732
+00:31:37,630 --> 00:31:40,059
+Alexa's already told you that it's it's
+
+733
+00:31:40,059 --> 00:31:42,010
+it's thinking about what the actual
+
+734
+00:31:42,010 --> 00:31:44,769
+response should be and so now two or
+
+735
+00:31:44,769 --> 00:31:46,809
+three seconds later when you ask Alexa
+
+736
+00:31:46,809 --> 00:31:50,289
+to retrieve and when you ask Alexa to
+
+737
+00:31:50,289 --> 00:31:52,149
+actually get the answer to your question
+
+738
+00:31:52,149 --> 00:31:55,000
+then a the conditional goes over through
+
+739
+00:31:55,000 --> 00:31:57,519
+this branch now in the conditional ghost
+
+740
+00:31:57,519 --> 00:31:59,289
+of this branch it still does make an
+
+741
+00:31:59,289 --> 00:32:02,139
+HTTP request in this case the request
+
+742
+00:32:02,139 --> 00:32:03,639
+goes to a slightly different end point
+
+743
+00:32:03,639 --> 00:32:06,130
+they get answer end point and this time
+
+744
+00:32:06,130 --> 00:32:08,380
+not the question but only the user ID is
+
+745
+00:32:08,380 --> 00:32:11,260
+sent now once you actually receive a
+
+746
+00:32:11,260 --> 00:32:13,480
+response from the HTTP endpoint in fact
+
+747
+00:32:13,480 --> 00:32:14,889
+if you were to take a look here it
+
+748
+00:32:14,889 --> 00:32:18,519
+stores that result in data to ask Tammy
+
+749
+00:32:18,519 --> 00:32:21,970
+and then I've got a a custom JavaScript
+
+750
+00:32:21,970 --> 00:32:24,309
+function and what this does is it
+
+751
+00:32:24,309 --> 00:32:26,980
+actually creates an Alexa response now
+
+752
+00:32:26,980 --> 00:32:29,470
+if you remember over here we sent a
+
+753
+00:32:29,470 --> 00:32:32,620
+reply to Alexa and we sent some JSON and
+
+754
+00:32:32,620 --> 00:32:34,840
+the text was let me think about it in
+
+755
+00:32:34,840 --> 00:32:37,210
+this function what I do is I create a
+
+756
+00:32:37,210 --> 00:32:39,970
+similar JSON variable but in this case
+
+757
+00:32:39,970 --> 00:32:43,659
+the text is payload data asked and made
+
+758
+00:32:43,659 --> 00:32:44,320
+up body
+
+759
+00:32:44,320 --> 00:32:47,110
+now remember asked animate is the result
+
+760
+00:32:47,110 --> 00:32:48,760
+from the asked anime endpoint and body
+
+761
+00:32:48,760 --> 00:32:51,429
+is what asked him a returned and so
+
+762
+00:32:51,429 --> 00:32:53,169
+we're basically taking whatever asked an
+
+763
+00:32:53,169 --> 00:32:55,360
+air turned and we are basically we are
+
+764
+00:32:55,360 --> 00:32:57,909
+essentially giving it over to Alexa and
+
+765
+00:32:57,909 --> 00:33:00,639
+then of course we reply with this Alexa
+
+766
+00:33:00,639 --> 00:33:03,340
+response over to the Alexa and again
+
+767
+00:33:03,340 --> 00:33:05,769
+since this happens practically instantly
+
+768
+00:33:05,769 --> 00:33:08,649
+just a little bit of latency it's it's
+
+769
+00:33:08,649 --> 00:33:12,500
+good enough for Alexa to to not say
+
+770
+00:33:12,500 --> 00:33:14,090
+the request timed out or anything that
+
+771
+00:33:14,090 --> 00:33:16,640
+anything of that sort but now though
+
+772
+00:33:16,640 --> 00:33:18,830
+let's see a little bit of a deeper dive
+
+773
+00:33:18,830 --> 00:33:21,530
+into what Lausanne to seize from its end
+
+774
+00:33:21,530 --> 00:33:25,280
+so now what we can actually do is find a
+
+775
+00:33:25,280 --> 00:33:27,770
+few debug notes all right now these
+
+776
+00:33:27,770 --> 00:33:30,020
+debug notes allow us to actually print
+
+777
+00:33:30,020 --> 00:33:33,320
+out what the system is seeing or
+
+778
+00:33:33,320 --> 00:33:35,630
+basically doing at each step so we can
+
+779
+00:33:35,630 --> 00:33:38,630
+actually print out the result from the
+
+780
+00:33:38,630 --> 00:33:41,770
+actual web hook and this the web hook
+
+781
+00:33:41,770 --> 00:33:46,720
+debug and let's just message this as log
+
+782
+00:33:46,720 --> 00:33:51,830
+for web hook all right now when this
+
+783
+00:33:51,830 --> 00:33:54,170
+when when the web hook when the web
+
+784
+00:33:54,170 --> 00:33:56,180
+hooks results printed it's going to tell
+
+785
+00:33:56,180 --> 00:33:58,010
+us that this is the log for the web walk
+
+786
+00:33:58,010 --> 00:34:02,030
+web look we can do a similar debug for
+
+787
+00:34:02,030 --> 00:34:07,820
+for example let's just say over here we
+
+788
+00:34:07,820 --> 00:34:10,670
+can take a similar debug after this
+
+789
+00:34:10,670 --> 00:34:15,920
+function all right and then after this
+
+790
+00:34:15,920 --> 00:34:17,600
+function we can take a look at what the
+
+791
+00:34:17,600 --> 00:34:21,410
+actual result was final function debug
+
+792
+00:34:21,410 --> 00:34:25,010
+or lock and then what's to put one more
+
+793
+00:34:25,010 --> 00:34:28,970
+debug here why not and let's connect
+
+794
+00:34:28,970 --> 00:34:35,120
+this to HTTP there we go all right so
+
+795
+00:34:35,120 --> 00:34:36,860
+now we've got our D bugs in the right
+
+796
+00:34:36,860 --> 00:34:41,570
+places let's just say asked and I'm
+
+797
+00:34:41,570 --> 00:34:44,630
+going to deploy this workflow to figure
+
+798
+00:34:44,630 --> 00:34:46,640
+out there all right so just deploy this
+
+799
+00:34:46,640 --> 00:34:49,370
+workflow and as you can see the workflow
+
+800
+00:34:49,370 --> 00:34:51,830
+has been saved and deployed now if we
+
+801
+00:34:51,830 --> 00:34:53,480
+were to go ahead and ask the Alexa
+
+802
+00:34:53,480 --> 00:34:55,490
+another question it should actually
+
+803
+00:34:55,490 --> 00:34:58,550
+print out everything in lausanne if we
+
+804
+00:34:58,550 --> 00:35:00,290
+go over to our debug I'll just replace
+
+805
+00:35:00,290 --> 00:35:02,960
+remove all the previous locks and let's
+
+806
+00:35:02,960 --> 00:35:06,800
+go over into our alexis field yes go
+
+807
+00:35:06,800 --> 00:35:08,900
+into the testing and now what I'm gonna
+
+808
+00:35:08,900 --> 00:35:11,330
+do is test out the Alexa now either I
+
+809
+00:35:11,330 --> 00:35:12,890
+can talk to my computer and it'll
+
+810
+00:35:12,890 --> 00:35:14,900
+simulate the Alexa or I can just type it
+
+811
+00:35:14,900 --> 00:35:16,910
+in let's try typing it in and then next
+
+812
+00:35:16,910 --> 00:35:19,640
+we'll try actually um saying it so it
+
+813
+00:35:19,640 --> 00:35:25,470
+will say ask answer bot question
+
+814
+00:35:25,470 --> 00:35:31,190
+found it let's just say Amazon why not
+
+815
+00:35:31,190 --> 00:35:36,810
+I'm gonna send this over as you can see
+
+816
+00:35:36,810 --> 00:35:38,880
+Alexa replies let me think about that of
+
+817
+00:35:38,880 --> 00:35:40,500
+course that's exactly what we expect and
+
+818
+00:35:40,500 --> 00:35:42,450
+that's what lausanne replied but let's
+
+819
+00:35:42,450 --> 00:35:44,250
+take a look at what all lausanne to
+
+820
+00:35:44,250 --> 00:35:47,040
+actually saw as you can see we have two
+
+821
+00:35:47,040 --> 00:35:48,990
+different logs here why not three
+
+822
+00:35:48,990 --> 00:35:51,000
+because this was never called now the
+
+823
+00:35:51,000 --> 00:35:52,859
+first one is the log for webhook
+
+824
+00:35:52,859 --> 00:35:55,050
+as you can see Orion as the web hook was
+
+825
+00:35:55,050 --> 00:35:56,940
+actually triggered this is all the data
+
+826
+00:35:56,940 --> 00:35:59,400
+that we had in our payload which is the
+
+827
+00:35:59,400 --> 00:36:00,960
+sort of group of information that we've
+
+828
+00:36:00,960 --> 00:36:04,380
+got in this entire workflow now data is
+
+829
+00:36:04,380 --> 00:36:06,690
+where we actually try or is where we
+
+830
+00:36:06,690 --> 00:36:09,030
+actually start to get all the data that
+
+831
+00:36:09,030 --> 00:36:11,550
+came from the web hook now inside data
+
+832
+00:36:11,550 --> 00:36:13,109
+we've got the body and this is the
+
+833
+00:36:13,109 --> 00:36:15,960
+actual information that the Alexa sent
+
+834
+00:36:15,960 --> 00:36:19,020
+over now inside of request you can see
+
+835
+00:36:19,020 --> 00:36:22,740
+the intent the intent of the attain
+
+836
+00:36:22,740 --> 00:36:24,630
+group over here and the name of this
+
+837
+00:36:24,630 --> 00:36:26,310
+intent is everything intent and there's
+
+838
+00:36:26,310 --> 00:36:29,099
+no confirmation now under slots however
+
+839
+00:36:29,099 --> 00:36:31,800
+and under everything slot you can see
+
+840
+00:36:31,800 --> 00:36:34,099
+that the values who founded Amazon
+
+841
+00:36:34,099 --> 00:36:36,359
+sounds like a little bit of a workaround
+
+842
+00:36:36,359 --> 00:36:37,950
+because we can't get the raw utterance
+
+843
+00:36:37,950 --> 00:36:40,290
+so it is but until Amazon actually
+
+844
+00:36:40,290 --> 00:36:41,970
+provides us the functionality you can
+
+845
+00:36:41,970 --> 00:36:44,190
+get the raw utterance we won't be able
+
+846
+00:36:44,190 --> 00:36:46,079
+to use anything but this kind of
+
+847
+00:36:46,079 --> 00:36:47,849
+workaround but it's a very good
+
+848
+00:36:47,849 --> 00:36:48,839
+workaround nonetheless
+
+849
+00:36:48,839 --> 00:36:50,910
+and of course again huge thank you to
+
+850
+00:36:50,910 --> 00:36:52,290
+mark for actually helping me implement
+
+851
+00:36:52,290 --> 00:36:54,329
+this as you can see of course they're
+
+852
+00:36:54,329 --> 00:36:56,160
+resolutions that doesn't matter all that
+
+853
+00:36:56,160 --> 00:36:58,440
+really matters is the value and since
+
+854
+00:36:58,440 --> 00:37:00,390
+the application realized that the value
+
+855
+00:37:00,390 --> 00:37:03,329
+is indeed a valid question it sent this
+
+856
+00:37:03,329 --> 00:37:06,060
+over through this line instead of this
+
+857
+00:37:06,060 --> 00:37:08,010
+line which meant that as ten may
+
+858
+00:37:08,010 --> 00:37:11,520
+actually received that question and it's
+
+859
+00:37:11,520 --> 00:37:12,990
+now processing in fact if we go over
+
+860
+00:37:12,990 --> 00:37:15,540
+here you can see that ng ROK received it
+
+861
+00:37:15,540 --> 00:37:17,819
+and as you can see asked how they
+
+862
+00:37:17,819 --> 00:37:19,980
+received it here as well and it has
+
+863
+00:37:19,980 --> 00:37:22,650
+created the earth has thought of the
+
+864
+00:37:22,650 --> 00:37:26,490
+answer that has replied and sorted in
+
+865
+00:37:26,490 --> 00:37:29,310
+the answer cache of course all right so
+
+866
+00:37:29,310 --> 00:37:31,050
+after the log for web hook there's also
+
+867
+00:37:31,050 --> 00:37:32,849
+the asked and a result log because
+
+868
+00:37:32,849 --> 00:37:35,400
+remember when you actually call slash
+
+869
+00:37:35,400 --> 00:37:38,010
+Alexis kill endpoint we actually don't
+
+870
+00:37:38,010 --> 00:37:38,850
+return anything
+
+871
+00:37:38,850 --> 00:37:41,220
+the Alexa but the end point itself does
+
+872
+00:37:41,220 --> 00:37:44,100
+return some JSON and so that JSON is
+
+873
+00:37:44,100 --> 00:37:46,770
+never actually saved in the I guess you
+
+874
+00:37:46,770 --> 00:37:50,460
+could say in the payload however it D is
+
+875
+00:37:50,460 --> 00:37:53,880
+actually replied nonetheless alright
+
+876
+00:37:53,880 --> 00:37:55,560
+next though let's go back over to our
+
+877
+00:37:55,560 --> 00:37:58,200
+alexa simulator and let's try actually
+
+878
+00:37:58,200 --> 00:38:02,250
+using the the speaking feature ask
+
+879
+00:38:02,250 --> 00:38:11,100
+answer bot question retrieve okay so as
+
+880
+00:38:11,100 --> 00:38:14,010
+you can see Alexa's voice voice
+
+881
+00:38:14,010 --> 00:38:15,750
+recognition hasn't really worked out
+
+882
+00:38:15,750 --> 00:38:17,280
+that well due to the fact that my
+
+883
+00:38:17,280 --> 00:38:19,140
+microphone setup isn't optimal right now
+
+884
+00:38:19,140 --> 00:38:21,900
+it's a little a little funky but if I
+
+885
+00:38:21,900 --> 00:38:23,520
+were to go ahead and type in our
+
+886
+00:38:23,520 --> 00:38:25,860
+question once more as you can see it's
+
+887
+00:38:25,860 --> 00:38:27,810
+thinking about that once more oh we can
+
+888
+00:38:27,810 --> 00:38:29,820
+go back here in fact let's go over to
+
+889
+00:38:29,820 --> 00:38:32,190
+Lausanne and you delete all of our logs
+
+890
+00:38:32,190 --> 00:38:34,170
+because we don't want all that noise in
+
+891
+00:38:34,170 --> 00:38:36,330
+there let's go back over here and say
+
+892
+00:38:36,330 --> 00:38:43,710
+ask answer bot question retrieve don't
+
+893
+00:38:43,710 --> 00:38:49,530
+worry let's try that once more all right
+
+894
+00:38:49,530 --> 00:38:52,410
+as you can see Alexa does in fact
+
+895
+00:38:52,410 --> 00:38:54,210
+respond with I think Jeff Bezos is
+
+896
+00:38:54,210 --> 00:38:56,040
+correct in forty six point six three
+
+897
+00:38:56,040 --> 00:38:58,110
+eight percent confidence and that is
+
+898
+00:38:58,110 --> 00:39:01,100
+indeed correct Jeff Bezos founded Amazon
+
+899
+00:39:01,100 --> 00:39:03,210
+now of course if we were to go back to
+
+900
+00:39:03,210 --> 00:39:05,190
+Lausanne you know that this time of
+
+901
+00:39:05,190 --> 00:39:07,560
+course a log for web hooks he'll Silla
+
+902
+00:39:07,560 --> 00:39:09,000
+actually went through which is why this
+
+903
+00:39:09,000 --> 00:39:11,490
+is printed out but after that this
+
+904
+00:39:11,490 --> 00:39:13,320
+conditional went through this branch
+
+905
+00:39:13,320 --> 00:39:15,360
+instead of this one and so through this
+
+906
+00:39:15,360 --> 00:39:17,610
+branch the function goes down and we
+
+907
+00:39:17,610 --> 00:39:19,110
+actually print out the result as well
+
+908
+00:39:19,110 --> 00:39:20,880
+now if you take a look in the final
+
+909
+00:39:20,880 --> 00:39:23,070
+function log we have of course our
+
+910
+00:39:23,070 --> 00:39:25,440
+regular body and everything but we also
+
+911
+00:39:25,440 --> 00:39:27,420
+have to ask Tanmay response and this is
+
+912
+00:39:27,420 --> 00:39:29,940
+what asked and they responded from the
+
+913
+00:39:29,940 --> 00:39:32,730
+get answer endpoint and then we've got
+
+914
+00:39:32,730 --> 00:39:35,040
+the Alexa response and this is exactly
+
+915
+00:39:35,040 --> 00:39:37,410
+the JSON that is sent over to the Alexa
+
+916
+00:39:37,410 --> 00:39:39,450
+and then the Alexa is able to make sense
+
+917
+00:39:39,450 --> 00:39:41,520
+of it and actually respond with this
+
+918
+00:39:41,520 --> 00:39:46,140
+text and that is how the lausanne to IOT
+
+919
+00:39:46,140 --> 00:39:48,450
+platform ties in with this entire system
+
+920
+00:39:48,450 --> 00:39:50,910
+in general this is all able to combine
+
+921
+00:39:50,910 --> 00:39:51,950
+in order to
+
+922
+00:39:51,950 --> 00:39:54,890
+to create an Alexis skill that uses the
+
+923
+00:39:54,890 --> 00:39:58,700
+power of ask Tanmay in order to answer
+
+924
+00:39:58,700 --> 00:40:03,020
+your natural language questions and so
+
+925
+00:40:03,020 --> 00:40:05,540
+that sums up how you can build an Amazon
+
+926
+00:40:05,540 --> 00:40:07,460
+Alexis skill and not just any skill in
+
+927
+00:40:07,460 --> 00:40:09,620
+fact quite a complex skill but with
+
+928
+00:40:09,620 --> 00:40:12,200
+hardly any coding involved only answer
+
+929
+00:40:12,200 --> 00:40:14,390
+cash the asset and a system flattens all
+
+930
+00:40:14,390 --> 00:40:16,400
+you need to code everything else on the
+
+931
+00:40:16,400 --> 00:40:18,680
+Alexis skill side is all done without
+
+932
+00:40:18,680 --> 00:40:21,590
+code whatsoever I really do hope you
+
+933
+00:40:21,590 --> 00:40:22,910
+enjoyed this tutorial and that you're
+
+934
+00:40:22,910 --> 00:40:24,140
+able to create your own I like some
+
+935
+00:40:24,140 --> 00:40:26,210
+skills as well of course thank you very
+
+936
+00:40:26,210 --> 00:40:28,400
+much everyone for joining in today if
+
+937
+00:40:28,400 --> 00:40:29,540
+you have any more questions or
+
+938
+00:40:29,540 --> 00:40:31,070
+suggestions or even feedback please do
+
+939
+00:40:31,070 --> 00:40:32,240
+leave it down in the comment section
+
+940
+00:40:32,240 --> 00:40:33,860
+below email it to me at a g-man you to
+
+941
+00:40:33,860 --> 00:40:35,270
+mental comb or tweet it to me at Tai Chi
+
+942
+00:40:35,270 --> 00:40:37,940
+mani or axe had you met me on Twitter
+
+943
+00:40:37,940 --> 00:40:40,940
+apart from that though if you do like my
+
+944
+00:40:40,940 --> 00:40:42,290
+content you do want to see more of it
+
+945
+00:40:42,290 --> 00:40:43,910
+please do consider sharing liking this
+
+946
+00:40:43,910 --> 00:40:45,410
+video and of course subscribe my youtube
+
+947
+00:40:45,410 --> 00:40:47,360
+channel is it really does help out a lot
+
+948
+00:40:47,360 --> 00:40:49,760
+of course turning the notifications if
+
+949
+00:40:49,760 --> 00:40:51,350
+you liked me notify and whenever I
+
+950
+00:40:51,350 --> 00:40:52,220
+release a new video
+
+951
+00:40:52,220 --> 00:40:53,690
+again source code for this application
+
+952
+00:40:53,690 --> 00:40:55,130
+it'll be available down in the
+
+953
+00:40:55,130 --> 00:40:57,230
+description below ask 10-man will be
+
+954
+00:40:57,230 --> 00:40:58,850
+updated on github very soon as well
+
+955
+00:40:58,850 --> 00:41:01,730
+after some minor code cleanup within the
+
+956
+00:41:01,730 --> 00:41:03,050
+next few days you'll be seeing an
+
+957
+00:41:03,050 --> 00:41:04,550
+entirely we were in version of asked him
+
+958
+00:41:04,550 --> 00:41:07,370
+they on its github page where it belongs
+
+959
+00:41:07,370 --> 00:41:09,080
+alright again thank you very much
+
+960
+00:41:09,080 --> 00:41:10,700
+everyone for joining in today that's
+
+961
+00:41:10,700 --> 00:41:11,840
+gonna be all for this tutorial
+
+962
+00:41:11,840 --> 00:41:15,340
+hope you enjoyed goodbye

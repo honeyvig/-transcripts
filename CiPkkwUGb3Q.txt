@@ -1,0 +1,283 @@
+1
+00:00:00,030 --> 00:00:01,740
+so hello there and welcome to another
+
+2
+00:00:01,740 --> 00:00:03,899
+tutorial my name is Hana bakshi and this
+
+3
+00:00:03,899 --> 00:00:05,609
+time we're gonna be going over another
+
+4
+00:00:05,609 --> 00:00:07,470
+Tanmay sorts video I haven't done one in
+
+5
+00:00:07,470 --> 00:00:09,240
+a while and so I'm going to be arriving
+
+6
+00:00:09,240 --> 00:00:12,480
+the series in this one video okay so now
+
+7
+00:00:12,480 --> 00:00:13,620
+today we're gonna be talking about a
+
+8
+00:00:13,620 --> 00:00:16,350
+really quick homebrew tip so if you get
+
+9
+00:00:16,350 --> 00:00:20,689
+this ever in homebrew which is
+
+10
+00:00:20,689 --> 00:00:24,510
+privileges error but I think this popped
+
+11
+00:00:24,510 --> 00:00:27,560
+up in 10.11 OS X El Capitan you rootless
+
+12
+00:00:27,560 --> 00:00:30,300
+but this is the error let's say I need
+
+13
+00:00:30,300 --> 00:00:34,410
+to install a package like get out not
+
+14
+00:00:34,410 --> 00:00:36,989
+brew get sorry brew install get I've
+
+15
+00:00:36,989 --> 00:00:39,660
+done this so many times that we're not
+
+16
+00:00:39,660 --> 00:00:42,390
+okay so now it's saying that I must link
+
+17
+00:00:42,390 --> 00:00:45,570
+XZ to brew before I can do this so let's
+
+18
+00:00:45,570 --> 00:00:48,960
+run brew link XZ and as you can see
+
+19
+00:00:48,960 --> 00:00:51,750
+gives us an error us our local include
+
+20
+00:00:51,750 --> 00:00:54,800
+is not writable now of course as I said
+
+21
+00:00:54,800 --> 00:00:57,840
+it's good to run brew doctor if you have
+
+22
+00:00:57,840 --> 00:01:00,690
+an issue with homebrew so I run brew
+
+23
+00:01:00,690 --> 00:01:04,860
+doctor and as you can see over here we
+
+24
+00:01:04,860 --> 00:01:07,140
+have another error the exact same thing
+
+25
+00:01:07,140 --> 00:01:12,150
+us our local include is not writable so
+
+26
+00:01:12,150 --> 00:01:14,460
+now how do you fix this exactly well
+
+27
+00:01:14,460 --> 00:01:17,040
+it's a ball you do come over here now
+
+28
+00:01:17,040 --> 00:01:20,820
+type in sudo CHM and this means change
+
+29
+00:01:20,820 --> 00:01:24,390
+owner now change owner will change the
+
+30
+00:01:24,390 --> 00:01:26,310
+owner of this specific directory or file
+
+31
+00:01:26,310 --> 00:01:28,979
+to whoever you choose in this case we're
+
+32
+00:01:28,979 --> 00:01:30,930
+gonna choose ourselves so we're going to
+
+33
+00:01:30,930 --> 00:01:34,409
+CH own but recursively meaning if it's a
+
+34
+00:01:34,409 --> 00:01:36,750
+directory go into its subdirectories and
+
+35
+00:01:36,750 --> 00:01:38,640
+its subdirectories and it's files and
+
+36
+00:01:38,640 --> 00:01:41,009
+every single thing in that directory
+
+37
+00:01:41,009 --> 00:01:44,009
+should be change the owner to whatever
+
+38
+00:01:44,009 --> 00:01:45,990
+you give it now we're going to make the
+
+39
+00:01:45,990 --> 00:01:49,110
+owner the current user and we're going
+
+40
+00:01:49,110 --> 00:01:53,970
+to do this for us our /local pretty
+
+41
+00:01:53,970 --> 00:01:56,280
+simple now let's click enter and it
+
+42
+00:01:56,280 --> 00:01:57,329
+would have asked you for your password
+
+43
+00:01:57,329 --> 00:02:00,000
+but I've already knew Doe before so it's
+
+44
+00:02:00,000 --> 00:02:03,780
+not doing that for me so now if I run
+
+45
+00:02:03,780 --> 00:02:07,799
+boob doctor as you can see it doesn't
+
+46
+00:02:07,799 --> 00:02:10,890
+give me that error and now if I do brew
+
+47
+00:02:10,890 --> 00:02:13,800
+link XZ it
+
+48
+00:02:13,800 --> 00:02:16,740
+sit properly were good on that end then
+
+49
+00:02:16,740 --> 00:02:20,850
+we can install get and as you can see it
+
+50
+00:02:20,850 --> 00:02:22,710
+worked it's just that I don't exactly
+
+51
+00:02:22,710 --> 00:02:25,500
+want to install it right now because I
+
+52
+00:02:25,500 --> 00:02:28,620
+already have it installed anyway that
+
+53
+00:02:28,620 --> 00:02:31,440
+was actually quite short video and so
+
+54
+00:02:31,440 --> 00:02:33,000
+again if you enjoy please make sure to
+
+55
+00:02:33,000 --> 00:02:35,130
+hit the like button you can either email
+
+56
+00:02:35,130 --> 00:02:37,590
+me or comment down below in this video
+
+57
+00:02:37,590 --> 00:02:39,110
+if you have any more suggestions
+
+58
+00:02:39,110 --> 00:02:42,090
+improvements ideas or pretty much
+
+59
+00:02:42,090 --> 00:02:43,440
+everything anything else you can
+
+60
+00:02:43,440 --> 00:02:47,760
+concerns you can also email a video
+
+61
+00:02:47,760 --> 00:02:49,350
+question of us and in question to
+
+62
+00:02:49,350 --> 00:02:51,480
+Tasmania gmail.com and I may just
+
+63
+00:02:51,480 --> 00:02:53,430
+feature in one of my next videos you can
+
+64
+00:02:53,430 --> 00:02:54,960
+also subscribe to my channel if you want
+
+65
+00:02:54,960 --> 00:02:57,570
+to show your support and if you want to
+
+66
+00:02:57,570 --> 00:03:00,270
+help make this channel better and of
+
+67
+00:03:00,270 --> 00:03:01,800
+course you can also follow me on Twitter
+
+68
+00:03:01,800 --> 00:03:03,960
+if you're into that so you will get
+
+69
+00:03:03,960 --> 00:03:06,150
+updates whenever I do really select a
+
+70
+00:03:06,150 --> 00:03:08,100
+new video same thing if you subscribe
+
+71
+00:03:08,100 --> 00:03:11,960
+and that's going to be it good bye

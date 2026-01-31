@@ -1,0 +1,1851 @@
+1
+00:00:01,020 --> 00:00:05,650
+[Music]
+
+2
+00:00:10,880 --> 00:00:13,380
+so hello there and welcome to another
+
+3
+00:00:13,380 --> 00:00:16,139
+tutorial my name is Tammy Bakshi and
+
+4
+00:00:16,139 --> 00:00:17,609
+this time we're going to be going over
+
+5
+00:00:17,609 --> 00:00:20,699
+building convolutional autoencoders with
+
+6
+00:00:20,699 --> 00:00:23,760
+chorus or generally neural network
+
+7
+00:00:23,760 --> 00:00:26,820
+auto-encoders let's begin now to start
+
+8
+00:00:26,820 --> 00:00:28,800
+off what in the world is an auto encoder
+
+9
+00:00:28,800 --> 00:00:31,349
+well before I can explain that I'm going
+
+10
+00:00:31,349 --> 00:00:33,149
+to assume you know the basic working of
+
+11
+00:00:33,149 --> 00:00:35,430
+not just neural networks in general but
+
+12
+00:00:35,430 --> 00:00:37,230
+convolutional neural networks in
+
+13
+00:00:37,230 --> 00:00:40,050
+specific although dense neural networks
+
+14
+00:00:40,050 --> 00:00:42,030
+will allow you to understand this video
+
+15
+00:00:42,030 --> 00:00:44,670
+as well so let's begin now we're going
+
+16
+00:00:44,670 --> 00:00:46,649
+to explain this concept let's take a
+
+17
+00:00:46,649 --> 00:00:49,530
+look at image classification now when
+
+18
+00:00:49,530 --> 00:00:51,149
+you want to classify an image with a
+
+19
+00:00:51,149 --> 00:00:53,520
+neural network what do you do you take
+
+20
+00:00:53,520 --> 00:00:55,590
+the image and you input it into a neural
+
+21
+00:00:55,590 --> 00:00:58,949
+network just like this so what you do is
+
+22
+00:00:58,949 --> 00:01:04,920
+you take say an image you've got all
+
+23
+00:01:04,920 --> 00:01:07,080
+right you feed it into a convolutional
+
+24
+00:01:07,080 --> 00:01:10,229
+neural network you'd feed that into a
+
+25
+00:01:10,229 --> 00:01:13,049
+bunch of dense layers that would give
+
+26
+00:01:13,049 --> 00:01:14,820
+you an encoding and then you'd feed this
+
+27
+00:01:14,820 --> 00:01:17,310
+into a bunch of dense layers which would
+
+28
+00:01:17,310 --> 00:01:20,119
+give you your output which is the
+
+29
+00:01:20,119 --> 00:01:26,990
+probability matrix
+
+30
+00:01:27,730 --> 00:01:30,550
+except that's what your architecture
+
+31
+00:01:30,550 --> 00:01:32,620
+looks like now of course you can have an
+
+32
+00:01:32,620 --> 00:01:34,600
+arbitrary amount of CN n layers all the
+
+33
+00:01:34,600 --> 00:01:36,880
+hyper parameters will be tuned but this
+
+34
+00:01:36,880 --> 00:01:39,460
+is a really a bird's-eye view on why
+
+35
+00:01:39,460 --> 00:01:42,010
+your neural network looks like now in
+
+36
+00:01:42,010 --> 00:01:44,500
+between this step and this step over
+
+37
+00:01:44,500 --> 00:01:45,970
+here are things called
+
+38
+00:01:45,970 --> 00:01:48,660
+n coatings and encodings basically
+
+39
+00:01:48,660 --> 00:01:52,360
+represent the input image in a semantic
+
+40
+00:01:52,360 --> 00:01:54,190
+vector and that semantic vector
+
+41
+00:01:54,190 --> 00:01:56,770
+basically just stores all of the useful
+
+42
+00:01:56,770 --> 00:01:59,560
+information of the image in a much
+
+43
+00:01:59,560 --> 00:02:01,570
+smaller vector than the original image
+
+44
+00:02:01,570 --> 00:02:03,910
+like for example we can have a really
+
+45
+00:02:03,910 --> 00:02:06,580
+high high resolution 4k image over here
+
+46
+00:02:06,580 --> 00:02:08,920
+but the output after this dense layer
+
+47
+00:02:08,920 --> 00:02:11,500
+could only be say on thousand one
+
+48
+00:02:11,500 --> 00:02:13,540
+thousand individual values one
+
+49
+00:02:13,540 --> 00:02:15,730
+dimensional correct and so that's an
+
+50
+00:02:15,730 --> 00:02:17,740
+encoding it represents everything that
+
+51
+00:02:17,740 --> 00:02:19,960
+was in the image when did some loss of
+
+52
+00:02:19,960 --> 00:02:21,400
+course because it's impossible to do
+
+53
+00:02:21,400 --> 00:02:24,400
+that magic compression but it represents
+
+54
+00:02:24,400 --> 00:02:26,410
+the meaning of everything that was in
+
+55
+00:02:26,410 --> 00:02:28,600
+the image including things like trees
+
+56
+00:02:28,600 --> 00:02:31,900
+leaves people really whatever is in the
+
+57
+00:02:31,900 --> 00:02:34,270
+image however you have to make sure that
+
+58
+00:02:34,270 --> 00:02:36,880
+the CNN has been trained on that dataset
+
+59
+00:02:36,880 --> 00:02:38,920
+so that it has an appropriate set of
+
+60
+00:02:38,920 --> 00:02:40,900
+filters to filter down and create the
+
+61
+00:02:40,900 --> 00:02:43,720
+correct encodings but what's an
+
+62
+00:02:43,720 --> 00:02:45,790
+autoencoder then well weren't we
+
+63
+00:02:45,790 --> 00:02:47,739
+explained that let's go ahead and take
+
+64
+00:02:47,739 --> 00:02:51,780
+very Cerner and let's erase these layers
+
+65
+00:02:51,780 --> 00:02:54,040
+we're going to remove the probability
+
+66
+00:02:54,040 --> 00:02:57,130
+matrix and our dense layers we're just
+
+67
+00:02:57,130 --> 00:02:59,730
+left with image and a trained
+
+68
+00:02:59,730 --> 00:03:02,500
+convolutional neural network now the
+
+69
+00:03:02,500 --> 00:03:08,020
+output here is an encoding all right so
+
+70
+00:03:08,020 --> 00:03:13,870
+you're outputting and Konan all right so
+
+71
+00:03:13,870 --> 00:03:15,610
+that's what your neural network has in
+
+72
+00:03:15,610 --> 00:03:18,790
+terms of output now this encoding as I
+
+73
+00:03:18,790 --> 00:03:21,070
+mentioned represents everything within
+
+74
+00:03:21,070 --> 00:03:25,030
+the image but one auto encoder does is
+
+75
+00:03:25,030 --> 00:03:28,150
+it tries to decompress the compression
+
+76
+00:03:28,150 --> 00:03:30,190
+that this convolutional neural or death
+
+77
+00:03:30,190 --> 00:03:36,330
+and so if we've got this encoding here
+
+78
+00:03:36,900 --> 00:03:39,269
+then we can decompress what's
+
+79
+00:03:39,269 --> 00:03:41,189
+represented in this encoding with an
+
+80
+00:03:41,189 --> 00:03:44,459
+auto encoder now what you can do is you
+
+81
+00:03:44,459 --> 00:03:46,230
+can use something called ad
+
+82
+00:03:46,230 --> 00:03:50,700
+convolutional neural network okay now D
+
+83
+00:03:50,700 --> 00:03:52,110
+convolutional neural network is
+
+84
+00:03:52,110 --> 00:03:53,939
+practically I mean as the name implies
+
+85
+00:03:53,939 --> 00:03:56,400
+the exact opposite of a convolutional
+
+86
+00:03:56,400 --> 00:03:58,799
+neural network it basically inverses
+
+87
+00:03:58,799 --> 00:04:00,480
+what a convolutional neural network do
+
+88
+00:04:00,480 --> 00:04:02,400
+and actually upscales the image and
+
+89
+00:04:02,400 --> 00:04:05,879
+downscaling it however there are also
+
+90
+00:04:05,879 --> 00:04:08,099
+leaders like pooling layers and so in
+
+91
+00:04:08,099 --> 00:04:09,480
+this case instead of using pooling
+
+92
+00:04:09,480 --> 00:04:11,010
+layers in this d convolutional neural
+
+93
+00:04:11,010 --> 00:04:13,500
+network will use up sampling wares which
+
+94
+00:04:13,500 --> 00:04:14,760
+will help us to actually of course
+
+95
+00:04:14,760 --> 00:04:17,699
+increase the image resolution now at the
+
+96
+00:04:17,699 --> 00:04:20,130
+end this D convolutional neural network
+
+97
+00:04:20,130 --> 00:04:23,880
+should output a very similar image to
+
+98
+00:04:23,880 --> 00:04:26,010
+what was given as input of course not
+
+99
+00:04:26,010 --> 00:04:27,539
+exactly the same because again it's
+
+100
+00:04:27,539 --> 00:04:30,870
+impossible to do exact and such in dense
+
+101
+00:04:30,870 --> 00:04:33,330
+compression you can only compress so
+
+102
+00:04:33,330 --> 00:04:35,190
+much that would move you to information
+
+103
+00:04:35,190 --> 00:04:36,840
+loss if we're going to such a small
+
+104
+00:04:36,840 --> 00:04:39,300
+encoding however again it is completely
+
+105
+00:04:39,300 --> 00:04:41,490
+possible to create a very naive I do
+
+106
+00:04:41,490 --> 00:04:43,440
+enjoy it in this way which compresses
+
+107
+00:04:43,440 --> 00:04:46,050
+your image but the reason I'm making
+
+108
+00:04:46,050 --> 00:04:48,360
+this video is this will serve as sort of
+
+109
+00:04:48,360 --> 00:04:51,630
+a it'll serve as a base because in the
+
+110
+00:04:51,630 --> 00:04:53,669
+next two videos I'm gonna be showing you
+
+111
+00:04:53,669 --> 00:04:55,440
+how to use this island color technology
+
+112
+00:04:55,440 --> 00:04:58,380
+to do amazing things such as neural
+
+113
+00:04:58,380 --> 00:05:00,750
+machine translation to convert from one
+
+114
+00:05:00,750 --> 00:05:02,699
+language to another English to French or
+
+115
+00:05:02,699 --> 00:05:05,400
+French to English and how you can train
+
+116
+00:05:05,400 --> 00:05:07,039
+a neural network for image
+
+117
+00:05:07,039 --> 00:05:09,479
+super-resolution it's gonna be really
+
+118
+00:05:09,479 --> 00:05:11,580
+interesting but for now let's take a
+
+119
+00:05:11,580 --> 00:05:13,710
+look at how you can actually take an
+
+120
+00:05:13,710 --> 00:05:15,449
+image super compress it with a
+
+121
+00:05:15,449 --> 00:05:17,639
+convolutional neural network and decode
+
+122
+00:05:17,639 --> 00:05:19,530
+it with a D convolutional neural network
+
+123
+00:05:19,530 --> 00:05:21,539
+in this case I'll be using a simple
+
+124
+00:05:21,539 --> 00:05:23,940
+convolutional neural network over here
+
+125
+00:05:23,940 --> 00:05:26,310
+as well however cross does support for
+
+126
+00:05:26,310 --> 00:05:28,710
+DITA does this provide support for D
+
+127
+00:05:28,710 --> 00:05:31,470
+convolutional neural networks and today
+
+128
+00:05:31,470 --> 00:05:32,909
+I'll be showing you how to actually
+
+129
+00:05:32,909 --> 00:05:36,060
+implement this on the M nest one zero to
+
+130
+00:05:36,060 --> 00:05:39,780
+ten or zero to nine digits data set but
+
+131
+00:05:39,780 --> 00:05:41,849
+now let's get over to the coding part
+
+132
+00:05:41,849 --> 00:05:44,360
+where I'll show you how exactly you guys
+
+133
+00:05:44,360 --> 00:05:46,970
+implement this auto-encoder with chorus
+
+134
+00:05:46,970 --> 00:05:50,000
+let's get to it alright so welcome back
+
+135
+00:05:50,000 --> 00:05:51,680
+to the Mac part now I'm going to be
+
+136
+00:05:51,680 --> 00:05:52,879
+showing you how you can actually
+
+137
+00:05:52,879 --> 00:05:55,759
+implement this auto encoder system let's
+
+138
+00:05:55,759 --> 00:05:57,710
+take a look now what I'm gonna do over
+
+139
+00:05:57,710 --> 00:05:59,300
+here is I'm going to switch over to the
+
+140
+00:05:59,300 --> 00:06:01,490
+code it is a little bigger for you now
+
+141
+00:06:01,490 --> 00:06:03,650
+as you can see this is a code that
+
+142
+00:06:03,650 --> 00:06:07,039
+powers the auto encoder system now as
+
+143
+00:06:07,039 --> 00:06:08,419
+you can see of course it starts off with
+
+144
+00:06:08,419 --> 00:06:10,729
+our simple imports in this case the
+
+145
+00:06:10,729 --> 00:06:13,639
+imports being of course side PI or do
+
+146
+00:06:13,639 --> 00:06:16,099
+the attained a conversion of course
+
+147
+00:06:16,099 --> 00:06:17,840
+we're going to be using numpy this is
+
+148
+00:06:17,840 --> 00:06:19,340
+just generally for our rays and
+
+149
+00:06:19,340 --> 00:06:21,530
+arithmetic we're going to be using the
+
+150
+00:06:21,530 --> 00:06:23,690
+endless data set that comes with chorus
+
+151
+00:06:23,690 --> 00:06:25,219
+we're going to be using the following
+
+152
+00:06:25,219 --> 00:06:27,919
+layers today in fact we actually do not
+
+153
+00:06:27,919 --> 00:06:29,930
+need batch normalization we're going to
+
+154
+00:06:29,930 --> 00:06:32,060
+be using the functional model type we're
+
+155
+00:06:32,060 --> 00:06:34,129
+going to be using the image from pillow
+
+156
+00:06:34,129 --> 00:06:36,349
+and of course we're going to be using
+
+157
+00:06:36,349 --> 00:06:39,139
+the two categorical function from the
+
+158
+00:06:39,139 --> 00:06:42,620
+utilities inside of chorus now of course
+
+159
+00:06:42,620 --> 00:06:45,139
+this image is going to be 28 by 20 in
+
+160
+00:06:45,139 --> 00:06:46,939
+terms of size and then we have some
+
+161
+00:06:46,939 --> 00:06:49,219
+generic code that loads up the Emnes
+
+162
+00:06:49,219 --> 00:06:51,379
+data converts it to categorical
+
+163
+00:06:51,379 --> 00:06:53,389
+categorical output and then of course
+
+164
+00:06:53,389 --> 00:06:56,569
+reshapes it to work with Tiano and then
+
+165
+00:06:56,569 --> 00:06:59,300
+we just do divide by equals 255 fine
+
+166
+00:06:59,300 --> 00:07:01,099
+order to make it from a zero to one
+
+167
+00:07:01,099 --> 00:07:03,800
+scale instead of 1 to 255 scale so that
+
+168
+00:07:03,800 --> 00:07:05,719
+the neural network can understand the
+
+169
+00:07:05,719 --> 00:07:09,349
+data properly after that what happens is
+
+170
+00:07:09,349 --> 00:07:11,719
+we declare our input layer the input
+
+171
+00:07:11,719 --> 00:07:13,490
+layer takes in the input shape and then
+
+172
+00:07:13,490 --> 00:07:15,830
+we connect to it the encoding functions
+
+173
+00:07:15,830 --> 00:07:18,680
+now the encoding layers will actually
+
+174
+00:07:18,680 --> 00:07:20,719
+take the image and convert them to a
+
+175
+00:07:20,719 --> 00:07:23,509
+small encoded vector and this vector
+
+176
+00:07:23,509 --> 00:07:26,629
+will represent the actual image however
+
+177
+00:07:26,629 --> 00:07:30,050
+this vector is not actually an well
+
+178
+00:07:30,050 --> 00:07:32,659
+image it just represents what the image
+
+179
+00:07:32,659 --> 00:07:35,300
+contains in fewer pixels than the actual
+
+180
+00:07:35,300 --> 00:07:37,930
+image itself it's basically trying to do
+
+181
+00:07:37,930 --> 00:07:41,150
+lossy compression by taking an image
+
+182
+00:07:41,150 --> 00:07:44,300
+really scaling it down and scaling it
+
+183
+00:07:44,300 --> 00:07:46,550
+back up while preserving quality of
+
+184
+00:07:46,550 --> 00:07:49,610
+course though X over here is now equal
+
+185
+00:07:49,610 --> 00:07:52,310
+to the monitor actually encodes the
+
+186
+00:07:52,310 --> 00:07:55,190
+input image and then we set it to
+
+187
+00:07:55,190 --> 00:07:57,020
+another model and this model will
+
+188
+00:07:57,020 --> 00:07:57,430
+actually
+
+189
+00:07:57,430 --> 00:08:00,400
+decode that image back to its full-sized
+
+190
+00:08:00,400 --> 00:08:02,980
+representation now luckily with m-miss
+
+191
+00:08:02,980 --> 00:08:04,870
+we're only working with grayscale images
+
+192
+00:08:04,870 --> 00:08:06,430
+and so we don't need to worry about
+
+193
+00:08:06,430 --> 00:08:08,740
+three different channels in our code or
+
+194
+00:08:08,740 --> 00:08:10,570
+anything of that sort we only have this
+
+195
+00:08:10,570 --> 00:08:12,910
+one channel at the end here remember if
+
+196
+00:08:12,910 --> 00:08:14,950
+you are working with a RGB image at the
+
+197
+00:08:14,950 --> 00:08:16,450
+end you would have a three here because
+
+198
+00:08:16,450 --> 00:08:18,430
+of course you have our G and B channels
+
+199
+00:08:18,430 --> 00:08:20,920
+however we only have one image channel
+
+200
+00:08:20,920 --> 00:08:24,310
+here next now we actually set the model
+
+201
+00:08:24,310 --> 00:08:27,250
+to the new model we create a model and
+
+202
+00:08:27,250 --> 00:08:28,870
+we give the input layer and the output
+
+203
+00:08:28,870 --> 00:08:30,400
+layer output layer being X in this case
+
+204
+00:08:30,400 --> 00:08:32,470
+we print out a summary and then we
+
+205
+00:08:32,470 --> 00:08:34,150
+compile it with a binary cross-entropy
+
+206
+00:08:34,150 --> 00:08:37,780
+loss and an atom optimizer after that I
+
+207
+00:08:37,780 --> 00:08:40,210
+run the fit function with X train and X
+
+208
+00:08:40,210 --> 00:08:43,540
+train as the white rain now why is this
+
+209
+00:08:43,540 --> 00:08:46,030
+because the thing is we do not need
+
+210
+00:08:46,030 --> 00:08:49,120
+these Y train and y test variables now
+
+211
+00:08:49,120 --> 00:08:51,130
+the reason we don't need them is because
+
+212
+00:08:51,130 --> 00:08:53,290
+Y training Y tests contain the actual
+
+213
+00:08:53,290 --> 00:08:55,780
+outputs of whether this image contained
+
+214
+00:08:55,780 --> 00:08:57,910
+a seven or six or a five or three or any
+
+215
+00:08:57,910 --> 00:09:00,250
+other number however this is useless
+
+216
+00:09:00,250 --> 00:09:02,260
+information because all we want to do is
+
+217
+00:09:02,260 --> 00:09:04,140
+learn how to compress and decompress
+
+218
+00:09:04,140 --> 00:09:07,720
+images via neural networks so we can
+
+219
+00:09:07,720 --> 00:09:10,120
+practically discard extra Y train and
+
+220
+00:09:10,120 --> 00:09:12,880
+wide test we only need extra and X train
+
+221
+00:09:12,880 --> 00:09:15,910
+and X text X test and the next test for
+
+222
+00:09:15,910 --> 00:09:17,920
+validation data we're going to be using
+
+223
+00:09:17,920 --> 00:09:19,720
+a thirty-two batch size and running one
+
+224
+00:09:19,720 --> 00:09:22,330
+epoch only we're going to save the model
+
+225
+00:09:22,330 --> 00:09:25,060
+as normal dot H five since this is a
+
+226
+00:09:25,060 --> 00:09:29,020
+normal auto encoder and after that if I
+
+227
+00:09:29,020 --> 00:09:31,120
+had already created a model I would be
+
+228
+00:09:31,120 --> 00:09:32,500
+loading weights instead of saving
+
+229
+00:09:32,500 --> 00:09:34,720
+weights however I do not currently have
+
+230
+00:09:34,720 --> 00:09:36,910
+a model which is why this is commented
+
+231
+00:09:36,910 --> 00:09:40,570
+out after that what I do is I take the
+
+232
+00:09:40,570 --> 00:09:42,640
+first element in the X test array
+
+233
+00:09:42,640 --> 00:09:45,160
+remember this will give us a sampled the
+
+234
+00:09:45,160 --> 00:09:46,840
+neural network has never seen it has
+
+235
+00:09:46,840 --> 00:09:49,420
+only been tested on before and so what
+
+236
+00:09:49,420 --> 00:09:51,040
+I'm going to do from there is actually
+
+237
+00:09:51,040 --> 00:09:53,200
+run that test sample through the neural
+
+238
+00:09:53,200 --> 00:09:55,450
+network model I'll then do some
+
+239
+00:09:55,450 --> 00:09:57,910
+post-processing on the prediction of the
+
+240
+00:09:57,910 --> 00:10:00,130
+model and the original sample that was
+
+241
+00:10:00,130 --> 00:10:02,410
+given into the model and I'll see both
+
+242
+00:10:02,410 --> 00:10:04,930
+out to my disk now the input that we
+
+243
+00:10:04,930 --> 00:10:06,970
+gave to the model will be saved as input
+
+244
+00:10:06,970 --> 00:10:09,880
+normal PNG and the output that came from
+
+245
+00:10:09,880 --> 00:10:11,170
+the model will be save as
+
+246
+00:10:11,170 --> 00:10:13,449
+output level dot PNG and so in theory
+
+247
+00:10:13,449 --> 00:10:14,920
+what should happen is we should be able
+
+248
+00:10:14,920 --> 00:10:16,899
+to give an image and this image is of a
+
+249
+00:10:16,899 --> 00:10:19,779
+digit from zero to nine and so that will
+
+250
+00:10:19,779 --> 00:10:21,910
+be saved to input normal dot PNG this is
+
+251
+00:10:21,910 --> 00:10:24,519
+the image that we give it then what
+
+252
+00:10:24,519 --> 00:10:26,319
+happens the neural network model will
+
+253
+00:10:26,319 --> 00:10:28,959
+take it compress it decompress it
+
+254
+00:10:28,959 --> 00:10:31,749
+stretch it back over and then once it's
+
+255
+00:10:31,749 --> 00:10:33,879
+done and once it has a full sized image
+
+256
+00:10:33,879 --> 00:10:35,889
+it should save it back to the disk at
+
+257
+00:10:35,889 --> 00:10:40,540
+output normal dot PNG that is how the
+
+258
+00:10:40,540 --> 00:10:43,869
+model works let's test it out now of
+
+259
+00:10:43,869 --> 00:10:45,970
+course though I don't have a pre trained
+
+260
+00:10:45,970 --> 00:10:49,299
+model however what I can do now is I can
+
+261
+00:10:49,299 --> 00:10:51,879
+actually go ahead and run Python auto
+
+262
+00:10:51,879 --> 00:10:54,759
+encoder docking why I'm going to run the
+
+263
+00:10:54,759 --> 00:10:57,639
+script as you can see it prints out that
+
+264
+00:10:57,639 --> 00:10:59,649
+it's using a Tiano back-end and it
+
+265
+00:10:59,649 --> 00:11:01,359
+should also print out the model summary
+
+266
+00:11:01,359 --> 00:11:04,569
+here it has given me the model summary
+
+267
+00:11:04,569 --> 00:11:06,819
+give it just a moment and as you can see
+
+268
+00:11:06,819 --> 00:11:08,619
+it's now training the model this will
+
+269
+00:11:08,619 --> 00:11:10,929
+take around 100 seconds so in such me
+
+270
+00:11:10,929 --> 00:11:13,299
+boring you watching this model train I
+
+271
+00:11:13,299 --> 00:11:14,829
+think it would be better if we speed up
+
+272
+00:11:14,829 --> 00:11:23,679
+this clip let's beat it up alright so as
+
+273
+00:11:23,679 --> 00:11:26,019
+you can see our model is now done
+
+274
+00:11:26,019 --> 00:11:28,540
+training now in fact what has happened
+
+275
+00:11:28,540 --> 00:11:30,759
+is it's taken the training data it's
+
+276
+00:11:30,759 --> 00:11:33,220
+actually trained for 112 seconds and
+
+277
+00:11:33,220 --> 00:11:34,809
+after that what it did is it gave us a
+
+278
+00:11:34,809 --> 00:11:37,029
+loss value that's zero point one zero
+
+279
+00:11:37,029 --> 00:11:40,419
+one seven which is relatively low you
+
+280
+00:11:40,419 --> 00:11:41,679
+can also see that it worked on the
+
+281
+00:11:41,679 --> 00:11:43,540
+validation data that we gave it and gave
+
+282
+00:11:43,540 --> 00:11:46,329
+us a validation loss and this is 0.075
+
+283
+00:11:46,329 --> 00:11:50,709
+three again very very low however we can
+
+284
+00:11:50,709 --> 00:11:52,689
+do better but instead of me training for
+
+285
+00:11:52,689 --> 00:11:54,519
+more epochs let's take a look at the
+
+286
+00:11:54,519 --> 00:11:56,949
+results we've already gotten now what
+
+287
+00:11:56,949 --> 00:11:58,389
+I'm going to do with Adam is I'm
+
+288
+00:11:58,389 --> 00:12:00,549
+actually going to open up the input
+
+289
+00:12:00,549 --> 00:12:03,069
+image and I'm going to scale it up now
+
+290
+00:12:03,069 --> 00:12:04,629
+there's no surprise here this is just a
+
+291
+00:12:04,629 --> 00:12:07,119
+regular seven right so as you can see we
+
+292
+00:12:07,119 --> 00:12:08,619
+just happen this seven right it's a
+
+293
+00:12:08,619 --> 00:12:09,970
+little bit crooked over here there's
+
+294
+00:12:09,970 --> 00:12:12,939
+some extra pixels down here but for the
+
+295
+00:12:12,939 --> 00:12:14,379
+most part of me it's a perfect sense
+
+296
+00:12:14,379 --> 00:12:16,139
+hand-drawn seven by regular human
+
+297
+00:12:16,139 --> 00:12:19,269
+however what is really really
+
+298
+00:12:19,269 --> 00:12:21,850
+fascinating is when I open up the output
+
+299
+00:12:21,850 --> 00:12:23,710
+image look
+
+300
+00:12:23,710 --> 00:12:27,310
+the similarity in the image that seven
+
+301
+00:12:27,310 --> 00:12:30,070
+is located almost exactly where the
+
+302
+00:12:30,070 --> 00:12:31,990
+seven in the input images again this is
+
+303
+00:12:31,990 --> 00:12:34,450
+the output this is the input this is the
+
+304
+00:12:34,450 --> 00:12:37,750
+input image this is the output image it
+
+305
+00:12:37,750 --> 00:12:40,930
+is that similar in fact you can actually
+
+306
+00:12:40,930 --> 00:12:43,180
+see that the quality of the seven has
+
+307
+00:12:43,180 --> 00:12:45,610
+increased in the output image why is
+
+308
+00:12:45,610 --> 00:12:48,700
+this it's because whatever it took a
+
+309
+00:12:48,700 --> 00:12:50,410
+look in this image it's all hey this is
+
+310
+00:12:50,410 --> 00:12:53,230
+really looking like a seven and so what
+
+311
+00:12:53,230 --> 00:12:55,270
+did is it called upon its earlier
+
+312
+00:12:55,270 --> 00:12:57,460
+knowledge of other sevens and it seen in
+
+313
+00:12:57,460 --> 00:13:00,280
+the world and it said usually they are
+
+314
+00:13:00,280 --> 00:13:01,330
+drawn like this
+
+315
+00:13:01,330 --> 00:13:04,540
+it is generalised so nicely but you can
+
+316
+00:13:04,540 --> 00:13:06,040
+actually see that it's filling in those
+
+317
+00:13:06,040 --> 00:13:09,190
+details and properly understands what a
+
+318
+00:13:09,190 --> 00:13:11,470
+setting looks like in this case it's
+
+319
+00:13:11,470 --> 00:13:13,840
+only really preserving the position and
+
+320
+00:13:13,840 --> 00:13:16,330
+the size of the set and of course some
+
+321
+00:13:16,330 --> 00:13:17,950
+of the more my new details are being
+
+322
+00:13:17,950 --> 00:13:21,070
+saved or discard it and then recreate it
+
+323
+00:13:21,070 --> 00:13:24,340
+into this masterpiece of a seven however
+
+324
+00:13:24,340 --> 00:13:27,100
+this is still something that machine
+
+325
+00:13:27,100 --> 00:13:28,870
+learning can do if you give it enough
+
+326
+00:13:28,870 --> 00:13:31,750
+time how about we do something that's
+
+327
+00:13:31,750 --> 00:13:34,480
+even more fascinating let's take a look
+
+328
+00:13:34,480 --> 00:13:38,410
+at denoising auto-encoders now this is
+
+329
+00:13:38,410 --> 00:13:41,050
+something I am really excited about why
+
+330
+00:13:41,050 --> 00:13:43,840
+it's because you can give it nosed up
+
+331
+00:13:43,840 --> 00:13:45,940
+data this includes anything like audio
+
+332
+00:13:45,940 --> 00:13:48,430
+images really anything that has noise it
+
+333
+00:13:48,430 --> 00:13:52,450
+and you can denoise it almost perfectly
+
+334
+00:13:52,450 --> 00:13:55,780
+let's take a look now as you can see I
+
+335
+00:13:55,780 --> 00:13:58,030
+no switch over to this Python file here
+
+336
+00:13:58,030 --> 00:13:59,590
+this Python file contains something
+
+337
+00:13:59,590 --> 00:14:01,750
+called a denoising auto-encoder I'm
+
+338
+00:14:01,750 --> 00:14:03,040
+gonna scroll up as you can see for
+
+339
+00:14:03,040 --> 00:14:05,560
+almost the same imports we've got the
+
+340
+00:14:05,560 --> 00:14:08,500
+same imagery pre-processing script
+
+341
+00:14:08,500 --> 00:14:11,590
+however after that I have some code and
+
+342
+00:14:11,590 --> 00:14:14,860
+I will be linking to this code down in
+
+343
+00:14:14,860 --> 00:14:16,270
+the description below I actually got
+
+344
+00:14:16,270 --> 00:14:18,760
+this from the official chorus blog and
+
+345
+00:14:18,760 --> 00:14:21,100
+this actually adds extra noise to the
+
+346
+00:14:21,100 --> 00:14:23,920
+data itself and so now we actually have
+
+347
+00:14:23,920 --> 00:14:26,470
+two different sets of data we have one
+
+348
+00:14:26,470 --> 00:14:28,510
+data which is exactly the same as the
+
+349
+00:14:28,510 --> 00:14:31,450
+second one however it has extra noise in
+
+350
+00:14:31,450 --> 00:14:33,730
+it and the next one is just regular data
+
+351
+00:14:33,730 --> 00:14:35,530
+that does not have
+
+352
+00:14:35,530 --> 00:14:37,810
+and our neural networks job is to find
+
+353
+00:14:37,810 --> 00:14:40,410
+out patterns in the noise and denoise
+
+354
+00:14:40,410 --> 00:14:43,750
+images and try and recreate or
+
+355
+00:14:43,750 --> 00:14:47,410
+decompress into non noisy images and so
+
+356
+00:14:47,410 --> 00:14:48,760
+as you can see we've got the same sort
+
+357
+00:14:48,760 --> 00:14:50,200
+of model here we've got the same
+
+358
+00:14:50,200 --> 00:14:52,840
+compiling and fitting except there's one
+
+359
+00:14:52,840 --> 00:14:54,670
+difference in when you actually fit the
+
+360
+00:14:54,670 --> 00:14:57,130
+model this time instead of doing X train
+
+361
+00:14:57,130 --> 00:14:59,950
+and X train we do extra noise II as the
+
+362
+00:14:59,950 --> 00:15:02,230
+input data and X train which is the
+
+363
+00:15:02,230 --> 00:15:03,820
+regular day as the output data
+
+364
+00:15:03,820 --> 00:15:05,740
+apart from that we want the batch size
+
+365
+00:15:05,740 --> 00:15:08,260
+to be 32 epochs to be 1 we don't need it
+
+366
+00:15:08,260 --> 00:15:10,420
+to be one verbose though because that
+
+367
+00:15:10,420 --> 00:15:12,790
+wouldn't print anything out and of
+
+368
+00:15:12,790 --> 00:15:14,500
+course we just want the same validation
+
+369
+00:15:14,500 --> 00:15:18,310
+data of extreme noisy and X test or X
+
+370
+00:15:18,310 --> 00:15:21,490
+test noisy an X test then we save this
+
+371
+00:15:21,490 --> 00:15:23,740
+model as noise Don h5 and then we have
+
+372
+00:15:23,740 --> 00:15:26,200
+very very similar code here to actually
+
+373
+00:15:26,200 --> 00:15:28,810
+test out the model we save the very
+
+374
+00:15:28,810 --> 00:15:31,810
+first image over the very first test
+
+375
+00:15:31,810 --> 00:15:34,390
+sample of the model as input noise dot
+
+376
+00:15:34,390 --> 00:15:36,250
+PNG this is the image that has a lot of
+
+377
+00:15:36,250 --> 00:15:38,680
+noise and then we save the output as
+
+378
+00:15:38,680 --> 00:15:41,230
+output noise dot PNG this is the image
+
+379
+00:15:41,230 --> 00:15:42,970
+that does not have noise because the
+
+380
+00:15:42,970 --> 00:15:45,430
+neural network model removes that noise
+
+381
+00:15:45,430 --> 00:15:47,830
+from the image itself now let's take a
+
+382
+00:15:47,830 --> 00:15:50,410
+look at how this works with a live demo
+
+383
+00:15:50,410 --> 00:15:52,720
+of it in action now in order to do this
+
+384
+00:15:52,720 --> 00:15:54,490
+though we actually have to run that
+
+385
+00:15:54,490 --> 00:15:57,100
+Python script again though once it
+
+386
+00:15:57,100 --> 00:15:59,410
+prints out the model summary we're gonna
+
+387
+00:15:59,410 --> 00:16:02,320
+have to wait for it to generalize and
+
+388
+00:16:02,320 --> 00:16:04,900
+train so let's just get that around a
+
+389
+00:16:04,900 --> 00:16:07,180
+hundred seconds again and I will be back
+
+390
+00:16:07,180 --> 00:16:09,790
+in 100 seconds let's beat up the clip
+
+391
+00:16:09,790 --> 00:16:14,380
+[Music]
+
+392
+00:16:14,380 --> 00:16:17,150
+all right so as you can see the model is
+
+393
+00:16:17,150 --> 00:16:19,640
+now about to be done training it as apps
+
+394
+00:16:19,640 --> 00:16:21,890
+0 ETA it's currently doing its
+
+395
+00:16:21,890 --> 00:16:24,380
+validation and as you can see our loss
+
+396
+00:16:24,380 --> 00:16:26,900
+is a little bit higher why because we're
+
+397
+00:16:26,900 --> 00:16:29,360
+using the same model that's it's quite
+
+398
+00:16:29,360 --> 00:16:30,920
+deep it's a convolutional auto encoder
+
+399
+00:16:30,920 --> 00:16:32,870
+we're only running one epoch though
+
+400
+00:16:32,870 --> 00:16:34,910
+we're only training with 60,000 samples
+
+401
+00:16:34,910 --> 00:16:37,130
+and of course we have a way more
+
+402
+00:16:37,130 --> 00:16:39,620
+complicated task and this task is to
+
+403
+00:16:39,620 --> 00:16:42,710
+actually T noise a really heavily noise
+
+404
+00:16:42,710 --> 00:16:45,320
+image but let's take a look at the
+
+405
+00:16:45,320 --> 00:16:48,530
+results now let's switch back over to my
+
+406
+00:16:48,530 --> 00:16:51,110
+atom under here and let's take a look at
+
+407
+00:16:51,110 --> 00:16:53,020
+the input first this is the input noise
+
+408
+00:16:53,020 --> 00:16:55,640
+now even as the humans might take you a
+
+409
+00:16:55,640 --> 00:16:57,260
+second text and find out what's inside
+
+410
+00:16:57,260 --> 00:16:59,000
+this image if you squint you can see it
+
+411
+00:16:59,000 --> 00:17:00,500
+quite easily though I'm squinting right
+
+412
+00:17:00,500 --> 00:17:02,420
+now and I can see the sort of like
+
+413
+00:17:02,420 --> 00:17:05,390
+little I can see the sort of shadow of a
+
+414
+00:17:05,390 --> 00:17:09,200
+7 with tons of noise around it though so
+
+415
+00:17:09,200 --> 00:17:10,490
+we can I can see that set in there
+
+416
+00:17:10,490 --> 00:17:12,740
+that's for sure however it like for
+
+417
+00:17:12,740 --> 00:17:14,930
+example here if you take a look a lot of
+
+418
+00:17:14,930 --> 00:17:16,700
+pixels are really annoying stuff they're
+
+419
+00:17:16,700 --> 00:17:19,400
+really just at this point you cannot
+
+420
+00:17:19,400 --> 00:17:21,020
+very much tell that they're part of the
+
+421
+00:17:21,020 --> 00:17:25,340
+7 over here specialty however when I go
+
+422
+00:17:25,340 --> 00:17:29,240
+to the output look at the output of the
+
+423
+00:17:29,240 --> 00:17:33,500
+model that is simply stunning really
+
+424
+00:17:33,500 --> 00:17:37,190
+look at the deep learning capability not
+
+425
+00:17:37,190 --> 00:17:39,640
+only did it remove the noise it
+
+426
+00:17:39,640 --> 00:17:42,710
+hallucinate it realistic details into
+
+427
+00:17:42,710 --> 00:17:45,020
+the 7 you can tell that it's a little
+
+428
+00:17:45,020 --> 00:17:47,330
+bit thinner here than the rest of the
+
+429
+00:17:47,330 --> 00:17:49,760
+line why is that that's because this
+
+430
+00:17:49,760 --> 00:17:51,740
+over here was almost completely
+
+431
+00:17:51,740 --> 00:17:53,930
+corrupted by the noise but the deep
+
+432
+00:17:53,930 --> 00:17:56,210
+learning model realized that look at
+
+433
+00:17:56,210 --> 00:17:58,550
+this drawing signal over here and what
+
+434
+00:17:58,550 --> 00:18:00,470
+it did is it loosening of that detail
+
+435
+00:18:00,470 --> 00:18:03,530
+right back into the set just like that
+
+436
+00:18:03,530 --> 00:18:06,830
+and that is how convolutional
+
+437
+00:18:06,830 --> 00:18:09,740
+autoencoders work that was a simple
+
+438
+00:18:09,740 --> 00:18:12,740
+example of auto-encoders in action thank
+
+439
+00:18:12,740 --> 00:18:14,300
+you very much everyone for joining today
+
+440
+00:18:14,300 --> 00:18:16,370
+I hope you enjoyed this tutorial thank
+
+441
+00:18:16,370 --> 00:18:18,710
+you very much for joining part from that
+
+442
+00:18:18,710 --> 00:18:19,670
+if you have any more questions
+
+443
+00:18:19,670 --> 00:18:20,990
+suggestions or feedback please leave
+
+444
+00:18:20,990 --> 00:18:22,010
+them down in the comment section below
+
+445
+00:18:22,010 --> 00:18:23,750
+email them to me into humanity
+
+446
+00:18:23,750 --> 00:18:25,490
+calm or you can tweet them to me at
+
+447
+00:18:25,490 --> 00:18:27,980
+tanjung many leave a like down below if
+
+448
+00:18:27,980 --> 00:18:29,300
+you really like this video maybe share
+
+449
+00:18:29,300 --> 00:18:30,620
+it if you believe this could help out
+
+450
+00:18:30,620 --> 00:18:31,820
+anyone else you know like your friends
+
+451
+00:18:31,820 --> 00:18:33,710
+or family but apart from that though
+
+452
+00:18:33,710 --> 00:18:35,720
+again if you really like my content you
+
+453
+00:18:35,720 --> 00:18:36,620
+want to see more of it please do
+
+454
+00:18:36,620 --> 00:18:37,880
+consider subscribing to my youtube
+
+455
+00:18:37,880 --> 00:18:39,440
+channel as well as it really does help
+
+456
+00:18:39,440 --> 00:18:41,840
+out a lot and apart from that turn on
+
+457
+00:18:41,840 --> 00:18:43,100
+notifications if you'd like to be
+
+458
+00:18:43,100 --> 00:18:44,920
+notified whenever I release new content
+
+459
+00:18:44,920 --> 00:18:46,940
+thank you very much everyone for joining
+
+460
+00:18:46,940 --> 00:18:48,290
+today that's gonna be all for this
+
+461
+00:18:48,290 --> 00:18:49,940
+tutorial really hope you enjoy I believe
+
+462
+00:18:49,940 --> 00:18:51,200
+the results were stunning with deep
+
+463
+00:18:51,200 --> 00:18:54,850
+learning thank you goodbye
