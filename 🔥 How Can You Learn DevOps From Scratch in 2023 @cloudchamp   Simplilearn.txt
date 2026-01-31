@@ -1,0 +1,256 @@
+the Ops Engineers are one of the highest
+paid Professionals in the tech industry
+today and if you are watching this video
+most likely you are someone who wants to
+get into devops or want to learn devops
+but with so many different tools and
+Technologies like data form and 7 Linux
+AWS Jenkins Docker kubernetes and so
+much more learning devocs can be very
+time consuming and confusing and that is
+why in this video I am going to share
+with you a complete devops roadmap that
+you can follow to learn devops from
+scratch and also an excellent resource
+you can use to learn all the devops
+tools at one place so watch this video
+till the end
+before we start with the video and look
+into the devops roadmap let me introduce
+myself my name is nasiulla Chaudhary
+also goes by Cloud champ on YouTube and
+I work as a freelance devops engineer
+for multiple companies the roadmap
+shared in this video is the exact
+roadmap I followed to learn devops from
+scratch and I'm pretty sure if you watch
+this video till the end you will have a
+clear idea on what things to learn and
+what not to learn and get jobs faster
+a devops engineer is responsible for
+deploying application and automating the
+manual process but how can you automate
+the manual process if you don't know how
+is an application created so first thing
+you need to know is to understand the
+concepts of software development what is
+the build what is software deployment so
+generally try to understand the whole
+software developer life cycle come idea
+to code and to releasing the application
+to end users after you understand the
+software developer lifecycle and now you
+have an idea of how is an application
+created second thing you need to know is
+Linux Linux is very very important at
+the Ops engineer should have a good
+Hands-On knowledge with Linux need to
+know all the important commands because
+every devops tools you look at let's say
+ansible terraform kubernetes talker all
+of them work on commands and you can
+only manage to work with them when you
+have good helps or knowledge with Linux
+so learn Linux in Linux you can learn
+things like shell commands latest file
+systems and permissions SSH Key
+Management virtualization some part of
+networking like load balances how to set
+up firewalls how IP addresses work and
+much more Linux is very important so
+it's also called as operating system of
+the cloud so spend time learning Linux
+now most of you might be confused and
+you might ask let's say I want to know
+all these tools but where should I find
+the resources you can learn this from
+YouTube some of these from blogs some
+from documentation but they are all
+scattered which will waste your time so
+rather than that I would suggest you
+checking out an excellent devops program
+I simply learn this postgraduate devops
+program by simply um is in collaboration
+with IBM which will teach you all the
+important devops tools that you require
+in order to become a devops engineer
+like terraform moving ansible Jenkins
+Docker kubernetes kit and a lot more
+along with industry projects that will
+provide you hands-on experience and can
+help you become the Ops engineer faster
+and also a certification by Caltech
+which will validate your learning in
+devops so you can check out the learning
+path here and reviews by previous
+learner why all of them are five star
+reviews so click on the link in the
+description and click on apply now for
+this program you don't acquire any prior
+work experience you require a bachelor
+degree with an average of 50 or higher
+marks you can be from programming or
+non-programming background which makes
+this program for everyone so click on
+the link in the description click on
+apply now filling all your details and
+proceed to start learning devops with
+simply learn
+next important thing after learning
+Linux is going to be get because every
+company is going to store their code
+online on git repositories like GitHub
+gitlab or bitbucket so what devops
+Engineers need to know how to work with
+Git to clone and push the code from
+local machine to git repositories or
+from git repositories to local machine
+also understand what is branching how
+does branching Works what is merge
+request what is pull request and a lot
+more so adops engineer should have a
+good understanding of git and also know
+all the most used git commands
+once you have cleared your Basics now is
+that I opened in Cloud because devops
+Engineers need to know how to create
+servers databases storage virtual apcs
+and lot more on the cloud you can choose
+any cloud like AWS Azure gcp IBM Oracle
+or anything but other Ops Engineers need
+to know how to create infrastructure to
+deploy their applications and software
+on the cloud once you have learned how
+to create infrastructure and deployer
+applications on the cloud manually you
+need to automate this because teox is
+all about automation so you can automate
+this using infrastructure as code tools
+like terraform ansible Chef puppet and a
+lot more but I would suggest you learn
+only these two tools which are terraform
+and ansible that are highly used in the
+industry today learning ansible and
+terraform can provide you with so many
+job opportunities so start with learning
+terraform and ansible after you have
+mastered creating an application on the
+cloud manually
+due to rise in demand and application
+stability companies are shifting from
+servers to Containers which is why you
+need to learn Docker and kubernetes for
+Docker you need to understand the
+concepts of virtualization and concept
+of containerization also you need to
+know how to continuous application
+Android on a server or a kubernetes
+cluster you need to know the commands on
+how to create Docker file how to create
+Docker image how to run containers
+called networking in Docker and some of
+the parts for kubernetes you need to
+understand the kubernetes architecture
+what its deployment what is replica set
+what is POD what is node and how to
+properly manage a containerized
+application using kubernetes cluster
+either on eks AKs or gke which is going
+cooperate this engine so it is very
+important for you to understand and know
+the commands to properly work through
+containerization which is a leading and
+a popular tool right now in the market
+next very important thing for a devops
+engineer to learn is going to be CI CD
+or continuous integration and continuous
+deployment because if every company once
+you deploy their application
+automatically in devops all code changes
+like new features or bug fixes should be
+integrated in the existing application
+and provided to the end user in an
+automated fashion and you can only do
+this by using CI CD so adoption you
+should know how to set up cicd server
+how to integrate code repositories to
+trigger pipeline automatically when
+there is a change and to fix bug faster
+and to provide better quality software
+to the end user very fast in automated
+fashion some popular cacd tool includes
+Jenkins gitlab Circle CI Travis CI so
+learning cicd will help you land your
+job very very fast and it's very
+important also known as heart of devops
+so you should master cicd
+all the tools that we have mentioned in
+now will help you deploy an application
+on the cloud or on containers anywhere
+but once the software or your
+application is in production it is very
+important for you to monitor it to track
+performance to see if there are any
+issues check system resources like CPU
+or Ram or anything so one of the
+responsibilities of devops engineer is
+to set up software monitoring
+infrastructure monitoring collect logs
+and to visualize data to check if there
+are any issues or if system has Nest
+resources or not so you need to learn
+tools like Prometheus grafana also
+logging tools like cloudwatch or elk
+stack which is very important to make
+sure that your application is running
+without any issues and without any
+problems congratulations now you know
+all the tools and Technologies you
+require to become a devops engineer but
+devops is all about Automation and there
+is always going to be something that you
+can automate so to automate this you
+will require scripting language and some
+of few might argue that scripting is not
+required or you don't need any
+programming language and devops coding
+is not a thing in devops but that's not
+actually true you will require knowledge
+of one programming language or a
+scripting language because you need to
+automate the manual process so some
+popular scripting language can be bash
+Powershell uh which are all OS related
+so you can use batch in Linux in
+Powershell in Windows and non-os related
+our python go Ruby which is what I would
+suggest I would suggest you trying to
+Learn Python which will help you
+automate all the manual process like
+rotating passwords of your database is
+like starting your deployment starting
+your build or appearing cache anything
+that you are doing manually can be
+automated through scripting languages
+using this python or Google or bash my
+solution would be to start with python
+and if you love python you will be
+unstoppable and you will have more value
+as a devops engineer and you don't need
+to learn any programming language at a
+software engineer level you just need to
+know enough python or enough go just to
+write scripts which can automate your
+things you don't need to go deep in DSA
+and all those things which are very
+common questions that I get so just
+focused on learning python in a way
+where you can automate things by writing
+scripts so just the basics not too
+advanced only to automate stuff so there
+you have it a complete devops roadmap to
+learn things from scratch along with
+this make sure you have your LinkedIn
+perfect you attend meetups and also
+enroll to the simply learned devops
+program thank you and have a good day

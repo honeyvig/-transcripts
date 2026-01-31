@@ -1,0 +1,194 @@
+hey everyone welcome to Simply learns
+YouTube channel in this session we will
+be learning about index match function
+in Excel but before that if these are
+the type of videos you'd like to watch
+then hit that like And subscribe button
+and the bell icon to get notified also
+if you're a professional with minimum
+one year of experience and an aspiring
+data analyst looking for online training
+and certification from the prestigious
+universities in collab ation with
+leading experts to enhance your
+credibility then search no more simply L
+postgraduate program in data analytics
+from P University in collaboration with
+IBM is just what you need for more
+details head straight to our homepage
+and search for data analytics
+postgraduate program from P University
+or simply click on the link in the
+description box below now without
+further delay let's get started with a
+onepoint agenda that is index match
+function in Excel so what exactly is
+index match function in Excel so index
+match function is one of the excel's
+most powerful features the older brother
+of match used V lookup and X lookup
+function and index match allows you to
+look up values in table based on the
+rows and columns and like we lookup it
+can be used on rows and columns both at
+the same time so if you have already
+used V lookup or hookup you know that we
+look up functions from left to right not
+from right to left and there are some
+drawbacks in both V lookup and HED
+lookup and we also have got X lookup to
+overcome those but U one other healthy
+alternative to X lookup is index matage
+so that's exactly what we are going to
+discuss today so let's get back to the
+Practical mode so now we are on the
+Practical mode so for the demo here we
+have employee ID name and designation
+Department salary employee date of birth
+and date of Journey so we will use index
+match function in Excel to EXT ract the
+salary of an employee based on the
+employee ID given here so first we have
+to use the index function so index
+function is like your coordinates right
+so you have to know where your result is
+so since we are looking for salary it's
+in the E column give the column number e
+now it needs it has the location where
+your answer is but it needs the exact
+coordinate where is that particular you
+know that row and column intersection
+point and from that particular cell it
+will extract the required result so to
+give that you can give it manually so
+here you have the row number and column
+number so let's say we wanted the salary
+of uh employee number
+one23 so we will be giving the row
+number as 13 right so this is possible
+because we have a small data set but
+what if we had a bigger data set which
+had thousands or lcks of rows so you
+needed some automated method to give you
+the row number based on the match right
+so that's where exactly the match
+function comes into picture now we will
+give the match function and now the look
+up value so where do you want to look up
+right so this is where we have the
+employee ID which is
+J1 right this is the cell where we will
+be writing the uh employee ID and the
+index function will look for the match
+and match function will look up the the
+lookup value in this particular location
+that's the lookup value and now the
+lookup array now the employee IDs are
+present in the First Column which is a
+column right so this is the lookup array
+you will give so this will be the lookup
+array that you will be giving select
+that and comma you will be providing the
+exact match bracket close another
+bracket close enter now enter the now
+enter the employee ID
+so select any of the employee IDs and
+there you go you have the salary details
+over here this is fine but what if let's
+say I have given the employee numbers
+here and uh I wanted their other details
+let's say I wanted to know their name BR
+and now I wanted to know their
+designation seeum I wanted to know their
+salary I want to know their Department I
+wanted to know their date of birth and
+date of joint
+okay so here you might want to change
+the data type here so it it is currently
+General if you change it to date and
+time you will be getting the exact
+result right so what if you wanted to do
+that is it possible yes it is possible
+it is again comes back to the same index
+match but you need to pass another extra
+match parameter here so how to do that
+let's do it so here everything will be
+same equals to index and now we will be
+giving the employee ID right so it's
+based on employee ID first so um now
+close that we will be calling the match
+function and now the match function will
+also look for the employee ID this is
+fine and now the lookup array so the
+lookup array for the employee numbers is
+again a this is fine now the exact match
+select zero
+and close the function now comes the
+critical part another match function
+right so it wants the match based on the
+lookup value present over here right so
+select that and what all the other
+column names you have which are these
+right so give all the column names comma
+again you want an exact
+match close another close bracket
+enter yeah we made a small mistake so
+when you see at Index right we knew that
+the answer what was supposed to be
+coming was only employee ID but here we
+I mean the answer what we are expecting
+can be anywhere right it can be an
+employee ID it can be an employee name
+right if we provide employee name the
+answer from should be coming from column
+B right so we have to change the index
+from a to entire G now we have the full
+scale data set entered into the formula
+if you press enter now you have the
+answer now let's say I'm changing the
+employee ID to
+116 and now I want employee designation
+there you go right if you go to 116 you
+have Mara and the designation is
+contract based and if you want to know
+which department Mara is working with
+then you have the department as
+analytics which is right over here so
+that's how the index match function
+works for more details or any other help
+required from this particular tutorial
+please feel free to let us know and with
+that we have come to an end of this
+session on index match function in Excel
+if you have any queries regarding any of
+the topics covered in this session or if
+you require the data set or any other
+the resources used in this session
+please feel free to let us know in the
+comment section below and our team of
+experts we'll be more than happy to help
+you as soon as possible until next time
+thank you for watching and stay tuned
+for more from Simply learn staying ahead
+in your career requires continuous
+learning and upskilling whether you're a
+student aiming to learn today's top
+skills or a working professional looking
+to advance your career we've got you
+covered explore our impressive catalog
+of certification program programs in
+cuttingedge domains including data
+science cloud computing cyber security
+AI machine learning or digital marketing
+designed in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos turn n up and get certified click
+here

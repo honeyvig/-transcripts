@@ -1,0 +1,313 @@
+foreign
+and welcome to Simply learns YouTube
+channel in today's video we are diving
+deep into the world of computer security
+specifically we'll discuss Trojans what
+they are how to detect them and most
+importantly how to effectively remove
+them from your system by the end of this
+video you'll have the knowledge you need
+to keep your computer safe and secure
+but before we begin if you enjoy
+watching these videos and find them
+interesting then subscribe to our
+Channel because we bring the best videos
+for you daily also hit the Bell icon to
+never miss any updates from Simply learn
+if you want to master the field of cyber
+security then simply learns postgraduate
+program in cyber security in
+collaboration with MIT is clearly the
+right choice for you this postgraduate
+program in cyber security is designed to
+equip you with the skills required to
+become an expert in the rapidly growing
+field of cyber security
+the cyber security program aims to help
+you stay ahead of all the latest cyber
+security Trends key features of this
+program includes simply learned
+postgraduate certificate master classes
+from MIT faculty featuring modules from
+mitscc and EC Council access to ceh Kit
+25 plus Hands-On projects and many more
+the cyber security certification program
+begins with introductory level skills
+and then progresses to advance cyber
+security Technologies
+this program covers all the essential
+skills you will need to become an expert
+in the field of cyber security
+cyber security is indeed one of the top
+concerns of businesses today in an
+industry from securing data to
+anticipating cyber attacks and placing
+enterprise-wide safeguards to prevent
+them employers worldwide are
+increasingly looking for qualified cyber
+Security Professionals to join them so
+what are you waiting for find the course
+link mentioned in the description box
+below and enroll now before we dive into
+the removal process let's have a solid
+understanding of what Trojans are
+a Trojan short form for Trojan horse is
+a type of malicious software that
+disguises itself as a legitimate
+software once inside your system it can
+perform various malicious actions from
+stealing sensitive informations to
+giving hackers unauthorized access to
+computers
+Trojans masquerade as legitimate
+software or files tricking users into
+installing them they often come bundled
+with seemingly harmless software or are
+hidden with enticing email attachment
+detecting Trojans is crucial to
+safeguarding your system some common
+signs that your computer might be
+infected are unusual system Behavior
+sudden slowdowns crashes or freezes can
+indicate atrogen's presence
+you notice that your computer is
+suddenly behaving erratically such as
+becoming unusually slow or crashing
+frequently it could be a sign that a
+Trojan has infiltrated your system
+these behaviors are often a result of
+the Trojans interference with your
+system's normal functioning unexpected
+pop-ups end its if you notice an
+increase in intrusive pop-ups or ads it
+could be a sign of a Trojan Trojans
+often display unwanted pop-up ads on
+your screen even where you are not
+browsing the internet these ads can be
+highly invisible and disruptive and they
+are a common sign that your system might
+be compromised
+unauthorized access if you find
+unfamiliar accounts or activities on
+your system it's time to investigate if
+you notice that there are unauthorized
+accounts on your computer or UC files
+and folders that you didn't create it
+clearly indicates that a Trojan might
+have granted hackers access to your
+system this could lead to Data Theft or
+even remote control of your computer
+changes in files and settings Trojan can
+alter your files and settings and even
+your browser's homepage Trojans often
+manipulate files settings and
+configurations on your computer you
+might notice that your desktop icons
+have been rearranged your browser's home
+page has been changed without your
+permission our files have been deleted
+or modified
+unexplained network activity an
+unusually high amount of data usage or
+network activity might point to a Trojan
+infection
+If You observe a significant increase in
+your network activity or data usage and
+you haven't knowingly downloaded or
+uploaded large files it's a sign that a
+Trojan might be using your network
+connection for malicious purposes
+removing Trojans let's roll up our
+sleeves to start the removal process
+remember it's essential to follow each
+step carefully the first step is
+disconnect from the network first thing
+first disconnect from the internet to
+prevent the Trojan from communicating
+with its suits Trojans often establish
+connections with their command and
+control servers over the internet
+by disconnecting from the internet you
+cut off the Trojan's ability to
+communicate and receive further
+instructions making the removal process
+more effective the second step is boot
+into safe mode reboot your computer and
+enter safe mode this limits the Trojan's
+ability to run and make removing it
+easier safe mode is a special mode in
+which your computer starts with minimal
+essential drivers and processes this
+helps prevent Trojans from loading their
+malicious components making it safer to
+perform removal procedures without
+interference the third step is
+identifying the Trojan use your system's
+task manager to identify suspicious
+processes make a note of any unfamiliar
+names access your computer's task
+manager and look for processes that use
+a significant amount of system resources
+or have suspicious names keep an eye out
+for processes that you don't recognize
+or that seem unrelated to your usual
+programs
+the next step is backup your data before
+proceeding backup your important files
+you want to ensure you don't lose
+anything valuable during the removal
+process
+backing up your data is crucial because
+the removal process might involves
+making changes to your system that could
+potentially result in data loss
+by creating a backup you have a safety
+net in case something goes wrong during
+the removal
+the fifth step is manual removal this
+step is suggested for advanced use only
+if you are comfortable you can try
+manual removal but this is best suited
+for tech savvy use manual removal
+involves directly interacting with
+system files settings and the Windows
+registry this can be risky if not done
+correctly as you could inadvertently
+cause further damage to your system it's
+recommended primarily for experienced
+users who are familiar with system
+mechanics
+the first is delete suspicious file
+search for files that you suspect might
+be related to the Trojan these files
+might be located in your system folders
+or temporary directories be cautious not
+to delete files that are essential for
+your operating systems functionality
+edit the registry to remove Trojan
+related entries accessing the Windows
+registry allows you to remove any
+entries that the Trojan has added
+however modifying the registry can have
+serious consequences if done incorrectly
+so extreme question is advised
+the third is remove startup entries
+associated with Trojan Trojans often add
+entries to your system startup programs
+to ensure they run every time your
+computer boots up identifying and
+disabling these entries can prevent
+Trojan from launching the last step is
+scan with reputable anti-malware
+software for most users using trusted
+anti-malware software is the safer
+choice
+the first step is download and install
+choose a reliable anti-malware program
+and install it select an anti-malware
+program with a good reputation and
+positive reviews make sure it's from a
+reputable source and offers real-time
+protection as this can help prevent
+future infections update the database
+update the software's database to ensure
+it recognizes the latest threats and
+anti-malware programs Effectiveness
+relies on its database of known malware
+signatures regularly updating this
+database ensures that the program can
+detect and remove the latest threats
+including new variations of Trojans
+perform a system check initiate a
+comprehensive scan of your system a full
+system scan checks all files folders and
+areas of your computer for any signs of
+malware including Trojan this thorough
+examination is crucial to ensure that no
+traces of the Trojan Remain the last is
+quarantine and remove if the software
+detects a Trojan quarantine and then
+remove it according to its instructions
+quarantining a suspected Trojan isolates
+it from the rest of your system
+preventing it from causing further harm
+after the quarantine you can review the
+results and then remove the thread
+completely so these are the steps you
+should follow if your system gets
+affected by any project
+in conclusion Trojans are dangerous and
+deceitful fiber threats that can cause
+severe damage to your computer and
+compromise your personal information
+armed with knowledge and the proper
+security measures you can protect
+yourself from falling victim to these
+malicious attacks remember always stay
+vigilant and take precautions when using
+the internet to ensure Online safety on
+that note do you guys know that many
+individuals have attained high salaries
+and better career opportunities through
+a post-graduate program so before we end
+this video let's take a minute to hear
+it out from our users who have
+experienced massive success in their
+career hi I'm Philip I'm 61 years old
+and last year iopskill with simply
+learned postgraduate program in cyber
+security after working 30 years in the
+IIT sector in various different profiles
+I'm happy to tell you that I was able to
+clear and pass my cissp and ccsp
+certification exams on the first attempt
+after taking the course of course I must
+say was packed with practical examples
+but highly skilled certified instructors
+I worked with many companies before the
+security analysts and the architect on a
+contract basis but I needed some
+stability which I got with the job I
+just started with Infosys as a cyber
+security consultant
+happened after I took the course first
+and foremost I've been a learner be a
+learner first
+and with that we have come to the end of
+this video on how to remove Trojans we
+hope you found this video informative
+and helpful if you have any doubts or
+questions regarding this topic then
+please feel free to drop them down in
+the comment section below and if you are
+interested in learning more about
+different Technologies then there are
+plenty of resources available at simply
+loan you can also check out our website
+for more information on different
+certifications thank you for watching
+and we'll see you next time till then
+stay safe and keep learning with simply
+learn
+staying ahead in your career requires
+continuous learning and upskilling
+whether you're a student aiming to learn
+today's top skills or a working
+professional looking to advance your
+career we've got you covered explore our
+impressive catalog of certification
+programs in Cutting Edge domains
+including data science cloud computing
+cyber security AI machine learning or
+digital marketing designed in
+collaboration with leading universities
+and top corporations and delivered by
+industry experts choose any of our
+programs and set yourself on the path to
+Career Success click the link in the
+description to know more
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

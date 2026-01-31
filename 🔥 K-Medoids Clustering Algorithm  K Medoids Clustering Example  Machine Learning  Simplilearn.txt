@@ -1,0 +1,263 @@
+K medoid clustering is a split up method
+that aims to partition a given data set
+into K clusters it is similar to K means
+clustering but uses a different approach
+to determine cluster centers while K
+means calculate the mean of the data
+point in each cluster to update cluster
+centers whereas K medoids uses the
+actual data points themselves as
+representatives of the Clusters which
+are called medoids so you can say the K
+means clustering algorithm uses
+centroids whereas K medoids is an altern
+ative clustering algorithm that uses
+medoid instead so now you are curious to
+know what are these medoids a medoid in
+a data set is a central point within a
+cluster minimizing the sum of distances
+to the other points unlike K means which
+is sensitive to outliers due to
+centroids K medoids mitigates this by
+using medoids it assigns each data point
+to a medoid minimizing distances and
+iteratively updates medoids until
+convergence so here is a quick info for
+you if you want to switch careers in AI
+ml then try giving simply learn
+postgraduate program in Ai and machine
+learning from PD University in
+collaboration with IBM this course
+teaches in demand skills such as machine
+learning deep learning NLP computer
+vision reinforcement learning generative
+AI prompt engineering chat GPT and many
+more so don't forget to check out the
+course link from the description box and
+the pin comment so now let's discuss
+type of kid clustering so there are
+primarily two types of kid clustering
+algorithm the first one is split up
+around medoids P so p is the original
+and the most commonly used kid algorithm
+it is start by randomly selecting K data
+points as initial medoids the second one
+is Clara CLA are a clustering large
+application so Clara is designed to
+handle Law data set efficiently it
+samples subsets of the data multiple
+times applies Farm to each subset to
+find representative medoids and then
+cluster the entire data set based on
+these medoids so these two variants
+offer different trade-off in terms of
+computational complexity and scalability
+making them suitable for different
+clustering scenarios whereas PM is
+preferred for smaller data set where
+accuracy is crucial while Clara is more
+suitable for large data set where
+computational efficiency is a priority
+moving forward let's discuss a brief
+overview of K meds algorithm so first
+step is initialization randomly select K
+data point as initial method the second
+one is assignment assign each data point
+to the closest medoid typically based on
+some distance metric that is ukle and
+distance the third one is update medoids
+for each cluster select the data point
+that minimizes the total dissimilarity
+to all other point in the cluster as the
+new medoid the fourth one is repeat step
+two and step three until conversion
+which occurs when the medoids are no
+longer changed advantages of kids
+algorithms offers rapid convergence
+within a predefined number of steps its
+Simplicity makes it straightforward to
+implement and comprehend additionally it
+overcomes the constant associated with
+the K means algorithms disadvantage of
+KM algorithm is not optimal and may not
+be suitable for clustering nons spheral
+group or objects so this limitation
+arises from its heavy Reliance on
+minimizing distance between non-id and
+medoid points furthermore because of the
+initial ction of kid is random so the
+result may vary across runs on the same
+data set so moving forward let's take an
+example and see how K medoid algorithms
+work so this is our table data set table
+for the K medoid clustering right so
+first step is we select K random data
+points from the data set and use them as
+the medoids okay so now first let's uh
+select the random data right random data
+points okay M1 and M2 like two medoids
+we have to select M1 and M2 okay so if
+you will select so these are our
+randomly selected myid M1 like 34 this
+34 and M2 is 73 M2 is 73 like the sixth
+and the 10th one okay this is x
+coordinate and the y coordinate right so
+now so second step is now we will
+calculate the distance of each data
+points from the medoids so you can use
+like any of the uh formulas like eidan
+or Manhattan distance right so we mostly
+use Manhattan distance so formula of
+Manhattan distance is X2 - X1 + Y2 - y1
+just remember that the value should be
+positive not negative if it is negative
+make it is as a positive right so this
+is our formula this is M1 M2 the
+randomly selected medoid this is our
+data set so now once we find the
+distance of each data point from the
+medoids like each data point from the M
+mids using this formula X2 - X1 + Y2 -
+y1 so we will assign the data points to
+the cluster associated with each medoid
+right so the data points are assigned to
+the medoids at closest distance so we
+will check the distance
+right
+okay so fourth step is after determining
+the Clusters we will calculate the sum
+of the distance of all the non- medoid
+data points to the medoid to the each
+cluster okay so it will cost it will see
+as a cost okay so now moving forward so
+this is our iteration one where we chose
+this M1 M2 like 304 73 okay so this is
+our Manan distance so using this formula
+we calculated these values like 3 4 4 5
+3 3 5 4 right like X2 - X1 + Y2 - y1
+using this right so these are our M1 and
+M2 two
+values okay so now what we will do we
+will assign these points to the clusters
+right this is our cluster one point this
+is our cluster two point right so this
+is our distance of each data point from
+the medoids so now we will assign these
+uh data points to the cluster so this is
+from cluster one cluster one cluster one
+cluster two cluster two so how we decide
+this cluster one and cluster two the
+data points are assigned to the doids at
+the closest distance okay at the closest
+distance using this formula only magetan
+distance formula right so now what we
+will do we will find the cost and the
+cluster first we will find the cluster
+cluster one and cluster two then we will
+find the cost right so so this is the
+cluster made with the medoids 3 4 this 3
+4 and the 73 so points in cluster one
+are 26 38 this 26 38 47 and 34 and the
+points in cluster 2 are 7 4 6 26 6 4 7 3
+85 you can see here cluster 1 means 2
+six this 26 26 38 this 38 47 47 3 4 34
+right like this and same goes for the
+cluster two so after assigning the
+cluster we will calculate the cost so
+how we will calculate the cost using the
+same formula this maget and distance
+right and the value must be in positive
+okay we will take this this as a X2 and
+Y2 okay X1 and y1 we will calculate the
+cost will come here three right so after
+assigning the cluster we will calculate
+the cost for the each cluster and their
+sum the cost is nothing but the sum of
+distances of the all points from the
+medoids right this cost modid of the
+cluster they belong to okay so here the
+value or you can say the cost is coming
+22 so now what we will do we will select
+another non mid point right okay we will
+change one value from this like either
+we can change 34 or either we can change
+the 73 value right so now we will select
+one another non-m Point okay so here we
+have selected 74 right as you can see
+previously we have 73 okay here we have
+74 so now we will go the same process
+finding M1 distance M2 distance
+assigning the Clusters and the points
+and the cost right so so here the cost
+is coming okay we will go through the
+same process here the cost is coming 20
+okay so fun fact is that the cluster
+after this iteration okay so that
+itation was itation one as you can see
+here itation 2 right so the cluster
+after this iteration will be cluster are
+like 26 38 47 34 okay 74 62 64 73 85 and
+7 so the medoids are 34 this 3 4 and 74
+we keep replacing the medoids with the
+non- medoid data points the set of
+medoids for each cost is the least
+whichever is the least we will take
+those medoids right so here we have the
+cost is 22 so now we have cost 20 so we
+will take
+20 right the cost 20 and the associated
+cluster are made permanent so after all
+the iteration you will get the final
+cluster and then doids okay so these are
+our final clusters okay 2 6 38 47 34 and
+the cluster 2 are 74 62 64 73 85 76 and
+the medoids are 34 and the 74 okay so
+these are our final cluster and their
+medoids so the kid clustering algorithm
+is a computation intensive algorithm
+that requires many iteration okay it
+goes like n number of times it can goes
+and number of times so so in each tion
+we need to calculate the distance
+between the medoids these distance
+between the medoids and assign them to
+the clusters right okay we have to find
+the distance and the data points then we
+have to assign the cluster and compute
+the cost okay so hence K medoids
+clustering is not well suited for the
+last data set that is why it's not
+suited for so this is how you can find
+the Clusters and the cost so overall kid
+is a valuable clustering technique
+especially when dealing with the data
+that may have noise or out layers and
+when it's important to interpret cluster
+using actual data points so we have come
+to end of this video if you have any
+question regarding this video please
+feel free to ask in the comment section
+below our team of expert will help you
+soon as possible thank you for watching
+stay safe and keep learning staying
+ahead in your career requires continuous
+learning and upscaling whether you're a
+student aiming to learn today's top
+skills or a working professional looking
+to advance your career we've got you
+covered explore our impressive catalog
+of certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to ner up and get certified click
+here

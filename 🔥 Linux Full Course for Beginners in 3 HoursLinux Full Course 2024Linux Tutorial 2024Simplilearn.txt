@@ -1,0 +1,4464 @@
+hey everyone welcome to a deep dive into
+the Linux Universe I'm aisar and today
+we are starting something awesome for
+everyone from those just stepping into
+Tech to coders aiming to buff up their
+skills this Linux full course is exactly
+what you need we are setting the stage
+with K Linux breaking down its Basics
+and walking you through how to get it up
+and running on your machine next up
+we'll explore the Linux file system
+architecture so you get how things fit
+together so let's run down what we will
+cover in this full course we begin with
+what is C Linux followed by a
+step-by-step installation guide we will
+decode the Linux file system so you'll
+never lose track of your files then a
+side by side Linux versus Windows get
+ready to sport the winner and after that
+I will show you 50 Linux commands that
+are absolute Game Changer then speedrun
+through the 20 Linux dis in just 13
+minutes followed by a quick tour of
+Linux Mint perfect for desktop users
+after that we'll dive into the top 10 K
+Linux hacking tools everyone should know
+and wrapping it up with a clear
+breakdown of Kali net Hunter for those
+interested in network security every
+topic is designed to boost your skills
+with practical task and quizzes to make
+sure you are nailing the content and you
+will hear from a few experts who live
+and breathe Linux they've got the tips
+you won't want to miss craving a career
+upgrade subscribe like and comment
+below dive into the link in the
+description to FasTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back and if you're an aspiring cyber
+security professional looking for online
+training and certification from
+prestigious universities and in
+collaboration with leading experts to
+enhance your credibility then search no
+more simply learns postgraduate program
+in cyber security from MIT University in
+collaboration with CS should be a right
+choice this course is designed to
+accommodate a diverse range of Learners
+and this course requires just a
+bachelor's degree with the 50% average
+and no PR programming experience for
+more details use the link mentioned in
+the description box and pin comment and
+if these are the types of videos you
+would like to watch then hit the
+Subscribe button like and press on the
+Bell icon to never miss on future
+content so stay tuned with us until the
+end of this video and don't forget to
+register your opinion in the comment
+section below so let's get started hey
+everyone it's no secret that the
+majority of our internet usage is at the
+risk of being hacked be it via unsafe
+messaging applications or misconfigured
+operating systems to counteract this
+void of digital security penetration
+testing has become the norm when it
+comes to vulnerability assessment K
+Linux is an operating system that has
+become a well-known weapon in this fight
+against hackers a Linux distribution
+that is made specifically for
+penetration testers K Linux has layers
+of features that we will be covering in
+today's lesson
+let's take a look at the topics to be
+covered in this
+video we start by learning about Ki
+Linux and a basic explanation of its
+purpose we take a look at the history of
+K Linux from the story of its origin to
+its current day
+exploits next we learn a few distinct
+features of Khali that make it an
+attractive choice for penetration
+testers
+worldwide finally we take a look at the
+multiple ways we can install kinu to
+start our journey in the world of
+nutrition testing let's start by
+learning about K Linux in
+general K Linux which is formerly known
+as backtrack Linux is an open-source
+Linux distribution aimed at Advanced
+penetration testing and security
+auditing it contains several hundred
+tools that are targeted towards various
+information security tasks such as
+penetration testing security research
+computer forensics and reverse
+engineering color Linux is a multiple
+plat platform solution accessible and
+freely available to Information Security
+Professionals and
+hobbyists among all the Linux
+distributions K Linux takes its roots
+from the Debian operating system Debian
+has been a highly dependable and stable
+distribution for many years providing a
+similarly strong Foundation to the Kali
+desktop while the operating system is
+capable of practically modifying every
+single part of our installation the
+networking components of Kali become
+disabled by default this is done to
+prevent any external factors from
+affecting the installation procedure
+which may pose a risk in critical
+environments apart from boosting
+security it allows a deeper element of
+control to the most enthusiastic of
+users we did not get K Linux since the
+first day how did it come into existence
+let's take a look at some of its
+history K Linux is based on years of
+knowledge and experience in building
+penetration testing and operating
+systems during all these project
+lifelines there have been only a few
+different developers as the team has
+always been small the first project was
+called wopex which stands for white hat
+nopex as can be inferred from the name
+it was based on the npix operating
+system as its underlying OS opix had
+releases ranging from version 2.0 to
+2.7 this made way for the next project
+which was known as wax or the long hand
+being white hat slacks the name change
+was because the base OS was changed from
+KNIX to slacks wax started at version 3
+as a nod it carrying on from wopex there
+was a similar OS being produced at the
+same time auditor security collection
+often being shed to just auditor which
+was once again using
+knopic its efforts were combined with
+wax to produce backtrack backtrack was
+based on slackware from version 1 to
+version 3 but switched to uban to later
+on with version 4 to version 5 using
+using the experience gained from all of
+this Ki Linux came after backtrack in
+2013 Ki started off using Debian stable
+as the engine under the hood before
+moving to Debian testing when kalii
+Linux became a rolling operating
+system now that we understand the
+history and the purpose of K Linux let
+us learn a little more about its
+distinct
+features the latest version of Khali
+comes with more than 600 penetration
+tools pre-installed
+after reviewing every tool that was
+included in backtrack developers have
+eliminated a great number of tools that
+either simply did not work which
+duplicated other tools that provided the
+same or similar
+functionality the Kali Linux team is
+made up of a small group of individuals
+who are the only ones trusted to commit
+packages and interact with the
+depositories all of which is done using
+multiple secure protocols restricting
+access of critical code bases to
+external asset greatly reduces the risk
+of source contamination which can cause
+K Linux users worldwide a great deal of
+damage as a direct victim of cyber
+crime although penetration tools tend to
+be written in English the developers
+have ensured that Kali includes true
+multilingual support allowing more users
+to operate in the native language and
+locate the tools they need for the job
+the more comfortable a user feels with
+the intricacies of the operating system
+the easier it is to maintain a
+stronghold over the configuration and
+the device in
+general since arm-based single board
+systems like the Raspberry Pi are
+becoming more and more prevalent and
+inexpensive the development team knew
+that Khali's armm support would need to
+be as robust as they could manage with
+fully working
+installations K Linux is available on a
+wide range of armm devices and has arm
+repositories integrated with the
+mainline distributions so the tools for
+armm are updated in conjunction with the
+rest of for the
+distribution all this information is
+necessary for users to determine if K
+Linux is the correct choice for them if
+it is what are the ways that they can go
+forward with this installation and start
+their penetration testing
+Journey the first way to use scal Linux
+is by launching the distribution in the
+live USB mode this can be achieved by
+downloading the installer image file or
+the ISO file from the Kali Linux website
+and flashing it to a USB drive with a
+capacity of at least 88 GB some people
+don't need to save their data
+permanently and a live USB is the
+perfect solution for such cases after
+the iso image is flashed the Thum Drive
+can be used to boot a fully working
+installation of the operating system
+with the cavar that any changes made to
+the OS in this mode are not written
+permanently some cases allow persistent
+usage in live USBS but those require
+further configuration than normal
+situations but what if the user wants to
+store data permanently in the installed
+OS the best and the most reliable way to
+ensure this is the full-fledged hard
+disk installation this will ensure the
+complete usage of the systems Hardware
+capabilities and will take into account
+the updates and the configurations being
+made to the OS this method is supposed
+to override any pre-existing operating
+system installed on the computer be it
+windows or any other variant of
+Linux the next alternative route for
+installing K Linux would be to use
+virtualization software such as VMware
+or virtual box the software will be
+installed as a separate application on
+an already existing OS and K Linux can
+be run as an operating system in the
+same computer as a window the hardware
+requirements will be completely
+customizable starting with the alloted
+ram to the virtual hard disk
+capacity the usage of both a host and
+guest operating system like K Linux
+allows users a safe environment to learn
+while not putting the systems at risk if
+you want to learn more about how one can
+go forward with this method we have a
+dedicated video where Ki Linux is being
+installed on VMware while running on a
+Windows 10 operating system you can find
+the link in the description box to get
+started with your very own virtual
+machine the final way to install Kali
+Linux is by using a dual boot system to
+put it in simple words the K Linux OS
+will not be overriding any pre-installed
+operating system on a machine but will
+be installed alongside it when a
+computer boots up the user will get a
+choice to boot into either of these
+operating systems many people prefer to
+keep both the windows and K Linux
+installed so the distribution of work
+and recreation activities is also
+allotted effectively it gives users a
+safety valve should their custom Linux
+installation run into any bugs that
+cannot be fixed from within the
+operating system there are multiple ways
+to install K Linux we can either install
+it on a normal hard drive in a virtual
+machine software such as VMR or virtual
+box or we can do that in hard bare metal
+machines now for the convenience of
+explanation we're going to install K
+Linux today on a virtual machine
+software known as VMware VMware is able
+to run multiple operating systems on a
+single host machine which in our case is
+a Windows 10
+system to get started with K Linux
+installation we have to go to the
+website to download an image
+file we go to get Kali and as you can
+see there are multiple platforms on
+which this operating system can be
+inverted as per our requirement we're
+going to go with the virtual machine
+section as you can see it is already
+recommended by the
+developers this is the download button
+which will download a 64-bit ISO file we
+can download 32-bit but that is more
+necessary for hard metal machines or if
+you're going to use it for older devices
+which do not support 64-bit operating
+systems yet after clicking on the
+download button we can see we have a
+window archive which will have the ISO
+files for now we have downloaded the ISO
+file and it is already present with me
+so we can start working on the VMware
+side of things once the ISO file is
+downloaded we open up VMware
+Workstation go to file and we create a
+new virtual
+machine in these two options it is
+highly recommended to go with the
+typical setup rather than the custom one
+the custom is much more advanced and
+requires much more information from the
+user which is beneficial for developers
+and people who are well versed with
+virtualization software but for 90% of
+the cases typical setup will be
+enough here we can select the third
+option which will be I will install the
+operating system later in some operating
+systems we can use the ISO file here
+directly and VMR will install it for us
+but right now in the case of K Linux the
+third option is always the
+safest K Linux is a Linux distribution
+so we can select Linux over here and the
+version as you can see here it have
+multiple versions such as the multiple
+kernels every distribution has a a
+parent distribution for example K Linux
+has Debian and there are other
+distributions which are based or forked
+from some parent distribution kinus is
+based of Debian so we can go with the
+highest version of Debian which is the
+Debian 10. X
+64bit go on next we can write any such
+name we can write K Linux so that it'll
+be easier to recognize the virtual
+machine among this list of virtual
+machine instances the location can be
+any location you decide to put by
+default this should be the documents
+folder but anywhere you put it will hold
+up all the information of the operating
+system all the files you download all
+the configurations you store everything
+will be stored in this particular
+location that you
+provide when we go next we are asked
+about the dis capacity this dis capacity
+will be all the storage that will be
+provided to your virtual machine of K
+Linux think of your Windows device if
+you have a one terab of hard drive you
+have the entirety of the hard disk to
+store data on how much data you give
+here you can only store up to that
+amount of data not to mention some
+amount of capacity will be taken up by
+the operating system system itself to
+store its programs and applications for
+now we can give around let's say 15 GB
+of information or if a recommended size
+foran is 20 you can just go ahead at 20
+it depends all on the user case if
+you're going to use it extensively you
+can even go as high as 50 or 60 GB if
+you have plans to download many more
+applications and perform multiple
+different tests another option we get
+over here is storing virtual diss as a
+single file or storing them into
+multiple files
+as we already know this virtual machine
+run entirely on
+VMware sometimes when transferring these
+virtual machine instances let's say from
+a personal computer to a work computer
+we're going to need to copy up the
+entire folder that we had mentioned
+before over
+here instead all virtual machines have a
+portability feature now this portability
+feature is possible for all scenarios
+except it is much easier if the split
+the virtual dis into multiple files now
+even if this makes porting virtual
+machines easier from either system to
+system or software to software let's say
+if you want to switch from VMware to
+Virtual box or vice versa the
+performance takes a small hit it's not
+huge but it's recommended to go with
+storing the virtual L as a single file
+if you have no purposes of ever moving
+the virtual machine even if you do it's
+not a complete stop that it cannot be
+ported it's just easier when using
+multiple files but in order to get the
+best performance out of the virtual
+machine we can store it as a single file
+over
+here this is a summary of all the
+changes that we made and all the
+configurations that have been settled
+until now now at this point of time we
+have not provided the ISO file yet which
+is the installation file for the K Linux
+that we downloaded from this
+website as of right now we have only
+config triggered the settings of the
+virtual machine so we can press on
+finish and we have K Linux in the list
+now to make the changes further we press
+on edit virtual machine
+settings the memory is supposed to give
+the ram of the virtual machine so
+devices with ram of 8 GB or below that
+giving high amount of ram will cause
+performance issues and the host system
+if the memory has some amount of free
+storage left let's say on idle storage
+my Windows machine takes about 2 GB so I
+have 6 GB of memory to provide although
+if you provide all of the 6gb it will be
+much more difficult for the host system
+to run everything properly so for this
+instance we can keep it as 2 GB of
+memory for the virtual machine instance
+similarly we can use the number of
+processors and we can customize it
+according to our liking let's say if we
+want to use One processor but we want to
+use two different Cod course we can
+select them as
+well hard disk is preset up as the SCSI
+hard disk and it does not need to be
+changed for the installation of this
+operating system at
+all CD ID DVD this is where the
+installation file comes you can think of
+the ISO file that we downloaded as a pen
+drive or a USB thumb drive which is
+necessary to install an operating system
+to provide this you're going to select
+use ISO image file you're going to click
+on brow
+browse go and go to downloads and select
+the IMO file over
+here select
+open and we can see it is already loaded
+up next in the network adapter it is
+recommended to use natat this helps the
+virtual machine to draw the internet
+from the host machine settings if your
+host machine is connected to the
+internet then the virtual machine is
+connected as well there are some other
+options such as as host only or custom
+segments or land segments but those are
+not necessary for
+installation rest of them are pretty
+standard which do not need any extra
+configuration and can be left as it
+is press okay and now we can power on
+this virtual
+machine in this screen we can choose how
+we want to proceed with the
+installation we have a start installer
+option over here
+so we're going to press enter on
+that we're going to wait for the things
+to load from the ISO
+file um the first step in the
+installation is choosing the language of
+the operating system for this we can go
+with English as
+standard this is a location this will be
+used for setting up the time and some of
+the internal settings which depend
+depend entirely on the location of the
+user so for this we're going to go with
+India configuring the keyboard it's
+always recommended to go with the
+American English first many people make
+a mistake of going with the Indian
+keyboard if it is possible and it
+provides a lot of issues later on so
+it's always preferred to go with the
+American English and if later we see
+some necessity of another keyboard
+dialect that is NE required we can
+install it later but for now we should
+always stick with American English as a
+basic at this point it's going to load
+the installation components from the ISO
+file it is a big file of 3.6 GB so it
+has a lot of components that need to be
+put into the virtual machine which can
+also be used to detect Hardware
+once the hardware and the network
+configuration is done by the ISO file we
+want to write a host name for the system
+this host name can be anything which is
+used to recognize this device on a local
+network or a land cable let's say if we
+use the name
+Kali domain name you we can skip it for
+now it's not necessary as such for the
+installation this is the full name for
+the
+user let's say we can provide the name
+as simply learn as a full
+name next we're going to set up a
+username this username is going to be
+necessary to identify the user from its
+root accounts and the subsequent below
+accounts for now we can give it as
+something as simply one 12
+three now we have to choose a password
+for the user now remember since this is
+the first user that is being added onto
+this newly installed operating system it
+needs to be a password for the
+administrator we can use whichever
+password we like over
+here and use the same password below and
+press on
+continue at this point it's going to
+detect on the components on which the
+operating system can be
+installed like here there are multiple
+options like the use entire dis use
+entire disc can set up lvm this entire
+disc can set up encrypted lvm for new
+commers it is recommended to just use
+the first one since lvm encryption is
+something that you can learn afterwards
+when you're much more Hands-On with the
+Linux operating system for now we're
+going to use the use entire dis guided
+installation and press on
+continue when we set up the virtual
+machine on vmw we had set up a dis
+capacity that we gave a prose 20gb that
+is the hard disk which is being
+discovered here even though it is a
+virtual dis on VMR it acts as a normal
+hard disk on which an oper operating
+system can be installed so we select
+this one and press on
+continue here there is a multiple
+partition system all the operating
+systems that are installed have
+different components one is used for the
+a keeping of the applications one for
+the files other for the RAM management
+and other things for newcomers it is
+always recommended to keep it in one
+partition and we're going to select that
+and press on continue
+this is just an overview of the
+partition it's going to make as you can
+see it has a primary partition of 20.4
+GB and a logical partition of 1GB used
+for swap memory now these kind of naming
+can be confusing for people who are not
+well versed with Linux operating systems
+or in general virtualization but for now
+you can go ahead and press on continue
+as this will be fine you can press on
+finish partitioning and write changes to
+disk and
+continue it's just a confirmation page
+and as you can see it's WR that scsi3 is
+our virtual hard disk of 20gp disc
+capacity write the changes to the disk
+we press yes and click on
+continue at this point the installation
+has started now this installation will
+take a while depending on the amount of
+ram provided the processors provided and
+how quickly the performance of the
+system is being hampered by the host
+machine on quicker systems this will be
+rather quick while on the the smaller
+ones this will take a
+while since this is going to take some
+time to install as it is being run on a
+virtual machine with only 2GB of RAM
+we're going to speed up this part of the
+video so we don't have to waste any more
+time just watching the progress bar
+now that our core installation is
+completed it's asking us to configure a
+package manager the work of a package
+manager on Linux operating system is
+similar to the Google Play Store on
+Android mobile devices and on the app
+store for the Apple
+devices it's an interface to install
+external applications which are not
+installed by default let's say for
+Google Chrome or any other browser which
+can be used to browse the
+internet at this point of time is ask us
+to select a network mirror we're going
+to select as yes and move forward with
+this next it's going to ask us for an
+HTTP proxy which we can leave it as
+blank and press it as continue
+forward at this point of time it's
+looking for updates to the Kali Linux
+installation this will fetch the new
+builds from the Kali server so the
+installation is always updated to the
+latest
+version now that the package manager is
+configured we have the grub bootloader
+the grub is used for selecting the
+operating system while booting up its
+core functionality is to allow the
+operating system to be loaded correctly
+without any faults so at this point of
+time if it ask install the graub boot
+loader to your primary dive we can
+select this as yes and press
+continue remember the installation was
+conducted on dev
+SDA so we're going to select
+installation of the ground load on the
+same hard disk that we have
+configured we press this one and press
+continue so now the graub bootloader is
+being installed the graub is highly
+essential because it it shows the
+motherboard where to start the operating
+system from even if the operating system
+is installed correctly and all the files
+are in correct order the absence of a
+boot loader will not be able to launch
+the OS
+properly and as you can see the
+installation is finally complete so now
+we can press on
+continue and it's going to finalize the
+changes now you can see K Linux being
+booted up straight away it doesn't check
+for the ISO file anymore since the
+operating system is now installed onto
+the virtual hard disk storage that we
+had configured before
+here we're going to enter our username
+and password that we had set up
+before and we have the coloro system
+booted
+up and this is your homepage we can see
+the installed applications over here
+which are being used for penetration
+testing by multiple security analysts
+worldwide all of these come pre-install
+with K Linux and others can be installed
+using the AP package manager that we had
+configured we can see a full name over
+here and with this our installation of
+the K Linux is complete so if you are
+looking to learn K Linux and get
+certified into ethical hacking explore
+the wide range of cyber security and
+ethical hacking courses by simply learn
+find the course Link in the description
+box basics of K Linux let us take a look
+at the agenda for our demo
+today we start out with a few terminal
+commands that are a basic part of a
+Linux operating
+system configure our own proxy chains to
+maintain anonymity while running
+penetration testing attacks on our
+victims next we run a few nmap scans on
+a local Windows 10 machine to to find
+out the type of information that can be
+gathered in such a
+scenario moving on we use y shock to
+monitor internet traffic and understand
+the importance of encryption and
+security when browsing the worldwide
+web next we learn about metas plit and
+its various applications in the line of
+vulnerability assessment of a device and
+finally we use Mattis plit to take root
+access of a fully updated Windows 10
+computer system let's begin with some
+terminal Basics on
+Linux when most people hear the term
+Linux they Envision a complex operating
+system used only by programmers however
+the experience is not as frightening as
+it appears Linux is an umbrella term for
+a collection of free and open-source
+Unix operating systems there are many
+variants like Ubuntu Fedora Debian these
+are distributions which is will be a
+more precise term when using a Linux
+operating system you will most likely
+utilize a shell which is a command line
+interface that that provides access to
+the operating system Services the
+majority of Linux distributions shipped
+with a graphical user interface also
+known as GUI as their primary shell this
+is done to facilitate user interaction
+in the first place having said that a
+command line interface is suggested due
+to its increased power and Effectiveness
+by entering the commands into the CLI
+tasks that require a multi-step GUI
+procedure may be completed in a matter
+of seconds you can start the terminal by
+clicking on the prompt icon here on
+top once the terminal is open we can put
+up our commands the First Command that
+we are going to look into is PWD PWD
+stands for present working directory as
+of right now what you're seeing is the
+terminal window by default if I write
+PWD and press enter this shows the
+directory in which the terminal is being
+run on as of right now it's in the NF
+folder of my desktop which is
+specifically this folder if I open up
+this folder you can see it is currently
+empty as in it has no contents if I use
+another command known as
+mkdir which is supposed to stand for
+make directory and I write nf2 shortage
+for new folder
+too if I open up the NF you can see the
+new folder is created this is how the
+PWD command Works another important
+command to change directories it's
+called the CD command let's say right
+now if I am in NF I want to create a new
+file in nf2 folder or something else in
+the nf2 folder I have to shift to CD
+nf2 Now if I write
+PWD it'll show the present working
+directory of Home simply learn desktop
+NF and inside that I am in nf2 right now
+it is done to navigate through the Linux
+files and dis directories it requires
+either the full path or just the name of
+the directory
+if we have to move a completely
+different folder on a completely
+different file then we can use the
+entire path like this for now CD Works
+another few commands is we can write CD
+dot dot and it'll come back one folder
+now the PWD will be just NF and not
+nf2 let's say we are in this folder and
+we want to go a different file let's say
+if we just go for
+CD home
+simply
+learn that's
+it right now these are the folders in a
+current present working directory we
+have the desktop the documents downloads
+Etc from here we can again go to the
+desktop using the same CD
+command cross check the changing of
+directories and check the files again
+and yes there we go NF how do we know
+this what are the command that are used
+to show the file and folders that folder
+is known as the ls command LS can be
+used to view the contents of a directory
+by default this command will display the
+contents of your current working
+directory if we add some other
+parameters we can find the contents of
+other directories as well there are some
+hidden files as well in Linux which
+cannot be showed just with ls for
+example if you just go to CD Etc which
+is a configuration folder for Linux if
+you write LS now these are the files
+that can be seen
+if we want to see the hidden files we'll
+have to add one more parameter here like
+LS minus a and as you can see the number
+of files have increased this time
+around there are other things as well
+that we can see with Linux LS minus a
+will show the hidden files along with
+some of the parameters and some of the
+permissions that has been provided for
+each file as you can see many of these
+files have root access ACC some of them
+can write some of them can read it
+differs file to file and the ls minus Al
+command is used to check each of these
+files permission and change them
+accordingly if
+needed the next command that we can look
+for is the cat command or
+concatenate it is one of the most
+frequently used commands and it is used
+to list the contents of a file on the
+output for example let's say if I have a
+file at the desktop in this nf2 folder I
+will create a
+document cre an empty
+file e
+file I'll open up the document and I'll
+write it as hello
+Kali I will save this
+up now to change the directories from
+Etc to NF to we have already discussed
+how to use the CD command using just the
+folder name now if you want to go to the
+entire directory we can write CD home as
+you can see it is already prompting us
+to complete the name of the directory at
+this point we just have to press
+Tab and it completes it for ourself next
+we already know we have to enter the
+desktop NF and
+nf2 and this brings us to the current
+working directory here if we press LS we
+can find a file over here now as
+discussed for the concatenate it is used
+to show the contents of a file so right
+now if we press C A which stands for
+concatenate e file as you can see we
+have written hello K in the text file
+and we can see the output right now we
+can also use it to create new files for
+example if you write
+cat any file name such as e File 2
+here we can write anything Hello Ki
+again once we press cr+ C here we can
+check e File 2 and we have hello Kali
+again printed over here we can see the
+same using the concatenate command as
+well if I press LS you can see we have
+two files here and I can go with cat e
+File 2 and I have hello Cali again this
+is how the concatenate command Works
+apart from this it can be used to copy
+there is a different command like called
+CP which is used to copy the files from
+one place to another mind you this is
+not moving this is only going to copy
+the command for example currently our
+PWD which is the present fcking
+directory is in the nf2 folder as you
+can see over
+here let's copy the E File 2 to the NF
+folder we can write
+CP e File 2
+and give the path of the NF folder which
+will be
+home simply
+learn textop
+nnf now if I press LS I'll find both the
+files and nf2 since I
+copied to go back to the NF folder again
+we can again use the same command
+of no we can again use the home simply
+learn desktop
+and just NF no nf2 this time just NF as
+you can see this will change back our
+present working directory now when we
+press LS we will find the eile to file
+and the nf2 folder and we can confirm
+this using the GUI as well this is the
+NF folder and you can see the nf2 folder
+and the eile 2 document if I write Cat
+eile
+2 cat e File 2 we can see the contents
+of the file now this can be done using
+moving as well for example if I go to CD
+nf2 which is the inside folder it has
+both the document files like e file and
+E File 2 let's say I want to move the E
+file completely from nf2 to NF1 instead
+of writing CP the command I'm going to
+use is MV MV e file and again give the
+path of the folder into which I have to
+copy which will be again home
+simply
+learn
+desktop and NF as you can see the
+contents of the nf2 have appeared here
+and E file has been moved from
+nf22
+NF this is the nf2 and we don't find e
+file here anymore if you press CD dot
+dot and we go back to NF LS right now
+and we can file both the files e file
+that we moved and eile to that we copied
+from the nf2 folder so this is how
+copying and moving will work using the
+terminal now this is just a simple
+oneline statement that might take a
+couple of clicks when using GUI this is
+why the command line interface is
+considered to be much more streamlined
+for Linux operating
+systems another very important command
+for Linux operating system is the pseudo
+command pseudo is short for super user
+do the command enables you to perform
+tasks that require administrative or
+root permissions you can think of it as
+how we run programs as administrator on
+Windows systems it is not advisable to
+use this command for daily use because
+it might be easy for an error to occur
+and the permissions of root are very
+intricate so new beginners are advised
+to use the pseudo command only when
+absolutely necessary for example Pudo Su
+with this command I am giving this
+Terminal A root permission this Su
+stands for this
+user at this point it's going to ask for
+my admin
+password once I enter my
+password and I now have root access note
+how the password that I entered did not
+show up here this is a security measure
+to prevent people from snooping on your
+root password which is the end game of
+all this operating system as you also
+can see the symbol changed if the dollar
+symbol is showing it serves as a
+standard user when you switch to root
+you can easily see a hash
+symbol this opens up a separate shell
+inside this terminal command for example
+we can exit out of the root user to the
+standard user using the command exit and
+once again we have the dollar sign and
+the root has vanished over here there
+are some commands that will only work
+with administrative access for example
+when updating the K Linux system we have
+to use AP
+update as you can see it says problem
+unlinking the file because permission
+denied now let's try this using
+pseudo Pudo APD
+update as you can see it is updating the
+package repositories which work as the
+software installed on the
+system this can be done using either
+writing the pseudo command every time we
+want to perform a root access
+or we can just write pseudo su1 and
+write AP update
+alone the fetching is complete over
+here for the second example let's say I
+just write pseudo Su and this time is
+not going to ask me the password because
+at this current terminal process I've
+already provided the ru password once
+and it is in memory right now now when
+we used to update the system we had to
+write pseudo AP update that was because
+we were running it as a standard user
+now we are running it as a root user so
+all we have to write is APD update and
+it's going to continue its
+work there you
+go another command that can be useful is
+a ping command it's pretty
+self-explanatory it's going to be
+checking the internet connectivity it
+can be used to check internet
+connectivity or you can see if that
+there is a local server on your system
+which needs to be pinged then then you
+can check that for example if we have to
+write ping and we can use either IP
+address or domain let's say if we want
+to check that if we can access
+google.com using this K Linux
+installation or not we can write ping
+google.com and you can see it shows the
+bytes being sent and received and how
+much time it took to take up the request
+this can be done for local systems as
+well for example this installation of Ki
+Linux is being run on a virtual machine
+once this machine is running I still
+have my host machine running over here
+the IP address of which is 192.168 29
+179 if I try to Ping this from
+here as you can see the time to complete
+the request is drastically low compared
+to a website on the internet considering
+this is on the local network this is how
+the Ping command is worked and it can
+show you what kind of packages are
+transmitted how many are received if
+there was any kind of packet loss
+between the connection window and other
+details a very important command when
+working with the terminal for a long
+duration is a history command pretty
+self-explanatory there are so many
+commands that are being run sometimes
+people forget what was the change they
+did or what was the directory name they
+put a history command helps to recover
+some of the commands that you have
+written it doesn't go all the way back
+but it takes up many commands that were
+inputed in the last few processes this
+is how the history command works these
+are some of the most commonly used
+terminal commands if you want to learn
+more about this terminal and every other
+feature of this please let us know in
+the comment section and we'll try to
+make an in-depth tutorial especially if
+you could repeat if you want to learn
+more about the terminal please let us
+know in the comment section and we will
+try to make an in-depth tutorial
+specifically for terminal commands on
+Linux
+moving on we learn how to configure
+proxy chains on our
+system proxying refers to the technique
+of bouncing your internet traffic
+through multiple machines to hide the
+identity of the original machine it is a
+good tool that hackers use to accomplish
+this goal is proxy chains essentially
+you can use proxy chains to run any
+program to a proxy server this will
+allow you to access internet from behind
+a restrictive firewall which hides your
+IP address proxy chains even allows you
+to use multiple proxies At Once by
+chaining them together one of the most
+important reasons that proxy chains is
+used in a security context is that it's
+easy to evade detection attackers often
+use proxies to hide their true
+identities while executing an
+attack and when multiple proxies are
+chained together it becomes harder and
+harder for forensic professional to
+trace the traffic back to the original
+machine when these proxies are located
+across countries investigators would
+have to obtain warranties in their local
+jurisdictions where every proxy is
+located to to see how proxy chain Works
+let's open Firefox first and check our
+current IP
+address write
+Firefox and there we go
+as we can see Firefox is now open let's
+check our current IP address right
+now if you go to an address called my
+ip.com
+and you can see it easily detects our
+country is in India and this is a public
+IP address now if we move to the
+terminal again
+here we can now
+write proxy
+chains minus H what this minus H does is
+it finds a help it it stands for the
+help file this is for help
+file what we found out using this is
+proxy chain has a config file here Etc
+proxy chains 4. NF this is the config
+file found using this config file we we
+can customize how our proxy change
+should work if we want to open that we
+have to use it in a text editor on
+Windows we have notepad and other things
+like that Microsoft Word to edit
+documents on Linux we have a tool called
+Nano to access the Nano we use the
+command Nano and give the path of the
+file that we want to check as of right
+now the proxy chain config file is
+located over here so we're going to
+follow the path
+there chains 4
+do
+CF and here we go we see the config
+file there are three basic types of
+proxy chaining here we have a strict
+chain where all the proxy in the list
+will be used and they will be chained in
+order we have a random chain where each
+connection made through proxy chains
+will be done by a random combo of
+proxies in the proxy list and you have
+dnamic chain it's the same as strict
+chain but dead proxies are excluded from
+the chain
+and here we can set up whichever type we
+want to enable or disable a particular
+type we use the hash symbol here as you
+can see right now all the lines have a
+hashtag symbol at the front except this
+one a dynamic chain this is the current
+one being used let's say if I want to
+use a strict chain method so I can add a
+hash value
+here and remove the hash here at one
+point of time any one of these three
+four types should be enabled let's go
+for the Dynam um Dynamic
+chain we can disable this strict Chain
+by putting the hashtag in front and
+removing the dynamic chain as you can
+see below we have few commands to how to
+handle the Nano text editor this symbol
+is known as the control button on your
+keyboard now if we want to write out
+which is synonymous to saving the file
+supposed to go with control O So if I
+press crol o on my keyboard it says file
+name to right and we have to press enter
+here since we want to overwrite the
+proxy chain 4. CF file we don't want to
+create a new file over here so just
+press
+enter and we get a permission denied
+this permission denied we're getting is
+because we have opened this using a
+standard user Etc is a system folder to
+be able to use make some changes we have
+to use it using a suit command to exit
+this Nano we have to use the control X
+command we use contr
+x we're going to
+clear and this time we're going to use
+the pseudo command pseudo
+Nano
+Etc proxy chains
+4nf and we have the same file open up
+again now this time if you want to make
+a change let's say we're going to add a
+strict chain in instead of a dynamic
+chain which remove the hashtag from
+straight we're going to use contr o for
+the save file option we're going to
+press enter and it says R 160 lines
+again if you want to reverse this change
+we put the hashtag over here enable
+Dynamic chain we press CR o press enter
+and it says root 160 lines now we can
+exit straight away using the contr X
+format right now we have not provided
+any file or a proxy chain we can have
+proxy IP addresses from the internet but
+we have to make sure that they are safe
+and they don't Snoop on our
+data when there is no proxy chains being
+provided personally it going it's going
+to use the T network but for that we
+have to start t t is a service in Linux
+to know more about the store we can
+write Pudo system CTL which is used to
+know the status of services on the Linux
+operating
+system and status of
+t uh system CTL sorry uh instead of STL
+it should be system CTL status Tor as
+you can see it is a to service
+anonymizing overlay Network for TCP
+connections and it's currently inactive
+now to start this up we have to write
+sudo system CTL start T now if we repeat
+the same sudo system CTL status store as
+you can see it's active
+now you can see the green logo over here
+okay to integrate the Firefox and the
+browser we can use the proxy chains
+command directly over here we can write
+proxy chains we can use Firefox to
+launch our web browser and let's say if
+we want to visit
+google.com we press enter and the
+Firefox window is launched
+and it should open up google.com next
+and there we go if we go to myip.com
+once
+again as you can see we have a different
+IP address and the country is unnown as
+well so this is how we can use proxy
+chains to anonymize internet usage when
+using G
+Linux next on our agenda is the ability
+to scan networks using nmap
+at its scoree nmap is a network scanning
+tool that uses IP packets to identify
+all the devices connected to a
+network can learn more about nmap using
+the help
+file as you can see these are some of
+the parameters that can be used when
+scanning ports of a system you can see
+the version and the URL of the we of the
+service over here the primary uses of
+nmap can be broken into three C
+processes first the program gives you
+detailed information on every IP active
+on your network and then each IP can
+then be scanned secondly it can also be
+used to providing a lot of live hosts
+and open ports as well as identifying
+the OS of every connected device thirdly
+nmap has also become a valuable tool for
+users looking to protect personal and
+business websites using nmap to scan
+your own web server particularly if
+you're hosting your website from home is
+essentially simulating the process that
+a hacker would use to attack your site
+attacking your own site in this way is a
+powerful way of identifying security
+vulnerabilities as you already discussed
+The Host Windows 10 machine on the
+system has an IP address a 192 168
+29179 if you want to test the OS scan of
+the system we're going to first get the
+root permission over here we use the
+pseudo command and now we are root user
+we're going to launch the command n map
+minus o which is supposed to be an OS
+detection scan the IP address we can use
+of the host
+system
+192.168
+29179 in a legitimate penetration
+testing scenario we can use the IP
+address of the vulnerabilties device
+over here we are going to let it scan
+for a while and it's going to give us
+some guesses on what can the OS be
+as you can see the scan is done and it
+has shown some of the ports that are
+open you can see the msrpc port open the
+https 443 Port open which is used to
+connect with the internet and it has
+some aggressive OS guesses as well for
+example it thinks there's a 90% 94%
+chance that it's going to be a Microsoft
+Windows XP Service Pack 3 that's partly
+because a lot of the Windows XP update
+packages are still prevalent on Windows
+now that the OS detection is confirmed
+there are multiple more details that we
+can gather from
+nmap let's go with the nmap minus a
+command which is supposed to capture as
+much data as possible there is also a
+speed setting you can call it a speed
+setting or a control setting of the
+minus t minus t ranges from t0 to T1 to
+T2 all the way up to T5
+this basically determines how
+aggressively the victim is being scanned
+if you scan slowly it'll take more time
+to provide the results but it will also
+give a less chance for the intrusion
+detection system on the vulnerable
+machine firewall to detect that someone
+is trying to penetrate the network for
+now if we want to go with somewhat of a
+high speed we can go with the T4 and
+provide the same IP address of the local
+machine I am trying to attack it's going
+to take a little bit of time since it's
+trying to capture a lot of
+information as you can see the results
+are now
+here it launched a scan and took a few
+top ports that are most likely
+vulnerable from a Windows XP perspective
+and it showed a few ports over here it
+has not shown 991 filtered ports which
+could not be attacked anyway since they
+were closed for outside access it shows
+a few fingerprint settings like the
+connection policies and the port
+details it shows an HTTP options some
+other intricate details that can be used
+when you attacking its servers it shows
+a VMware version that it's
+running and some few other ports over
+here apart from that we also have the
+aggressive OS guesses over here just
+like we did with the minus o and you can
+see this time it is showing Windows 7 as
+98% no exact o matches since uh if there
+was any exact oise matches we could have
+seen a 100% chances over
+here this is a trace route a trace route
+will be the time and the path a
+connection request takes from the source
+to the destination for example this
+request went from 19 to 168
+172.2 to a destination address since
+this is is a local machine it took only
+a single step on multiple occasions if
+you're trying to access a remote system
+it's going to be a number of Trace rots
+when it jumps from firewall to firewall
+and router to
+router this is how we can use nmap to
+find information about a system and find
+some vulnerable ports we can
+access moving on we have a tutorial on
+how to use wire shck to sniff Network
+traffic to start using wire shck we're
+going to have to open the application
+first now during installation of wire
+shock there is an option to enable if
+nonroot users can be able to capture
+traffic or not in my installation I have
+disabled that so I will be launching my
+Shark when using the root user
+itself also to capture data we need an
+external Wi-Fi
+adapter you can see it over here in the
+VM tab removable devices
+R link a2.1 NW Lan this is a external
+Wi-Fi adapter which is inserted into my
+USB
+system you can see it over here if I
+write IW config this is the one W l0
+this is absolutely necessary because we
+need to have a monitor mode required we
+won't need it for sniffing data on
+Yar right now but it's going to be
+necessary later on in this tutorial as
+well as we will see for now we can just
+start up via shark by writing its name
+on the command line and it should start
+the
+program here we
+go here it's going to check which of the
+adapters we want to use for example
+right now the eth0 which supposed to
+stand for ethn Z Port you can see data
+is being transmitted up and down we're
+going to select
+eth0 and we have has started capturing
+data you can see the data request from
+The Source the destination from the time
+and the which protocol it is following
+everything we can see and we can see the
+ipv4 flags here as
+well as you can see over
+here to capture internet traffic we can
+try running
+Firefox if Fe just write
+wikipedia.com
+and you can see the number of requests
+increasing okay this is spelling mistake
+Wikipedia here you can see the
+application data of all these request
+going up and they connected to a desk
+destination server of 103 10 to
+16622 4 now if you even if you check the
+transmission control protocol Flags over
+here and so many more things we cannot
+find anything beneficial as you can see
+the information over here is gibberish
+which is supposed to be since it's
+supposed to be
+encrypted now this is possible due to
+this being an https website hence you
+can see the lock symbol over here and
+connection is supposed to be secure now
+what about HTTP ports we have seen a
+many people recommend to not visit HTTP
+ports repeat we have seen many people
+recommend to not visit HTTP websites and
+even if you have to visit to not provide
+any critical information for example
+let's go to a
+random HTTP page over here as you can
+see this is saying connection is not
+secure and this is an HTTP HTTP page and
+not a
+https now let's check for some of the
+information that is passing through this
+this is a login form let's say I have a
+legitimate account over here if I write
+my account
+name and my password is supposed to be
+password 1 2 3 4 I press
+login and uh the password does not match
+because I do not have an account over
+here but let's say I did and I was
+logged in as expected we can go to wi
+shck we can use filters over here now
+all the requests that I'm sending it's a
+TCP request so I can write a filter
+containing
+TCP
+contains whatever string if it is being
+passed let's say for the end username I
+write my account name so I can just
+write my account name over
+here and press enter
+to find a request over here now as you
+can see there are many flags over here
+if we go to the HTT HTML form URL
+encoded and open up some of its flags as
+you can see I can see my account name
+and simply learn password over here this
+is the
+same details that I input on the website
+let's say I did have a legitimate
+account on this website I would have
+logged in with no problems but anyone
+who would be using wi shck to sniff on
+the data can easily get my credentials
+from here this is why it's recommended
+to not provide any information on HTTP
+Pages the security is not up to the mark
+and always look for the lock symbol when
+visiting any website or making any
+internet transactions or providing any
+information this is how we can use wies
+shck to detect transmission and sniff
+packet data that is being transferred to
+the network adapter next we have we have
+to learn about what is
+Metasploit the Metasploit project is a
+computer security project that provides
+information about security
+vulnerabilities and AIDS in penetration
+testing and IDs
+development we can open up the terminal
+here we're going to allow root
+access and to open up Metasploit the
+keyword is msf
+console it's going to take a little bit
+of time to start it
+up now the Metasploit con has been
+loaded from here we can decide what type
+of attack we want to launch and what
+kind of exploits we can launch against
+vulnerable targets for example like we
+had already discussed I'm running this
+virtual machine on a Windows 10 host
+machine so if I open the command prompt
+from my Windows 10 over
+here if I need to check the IP address
+once I go with ip
+config here you can see the the IP
+address of this local
+machine moving
+on if we have to attack that machine
+let's say we want to see what kind of
+exploits are going to work over there
+now we already know that Windows has
+some common vulnerabilities one of those
+vulnerabilities is the HTA server
+vulnerability HTA is supposed to be a
+HTML application but when pass the right
+payload it can be used to open a back
+door into a system this to start off
+with the Metasploit and accessing such
+applications we're going to use the
+command use exploit and the name of the
+reverse HTA server is this
+Windows Misa for misscellaneous
+HDA
+server as you can see it already found
+this
+one all right now the there are some
+options that we need to set for this
+exploit to go through for example you
+can see some of the options over here
+there's a payload the payload is
+supposed to be the malicious file that
+we are going to send on the HTML
+application which allows us to give the
+back
+door for example right now the payload
+which is the malicious file is a Windows
+meter prer reverse
+TCP completely understandable now let's
+set the L host L host and R host and SRV
+host should be the one where we are
+going to launch the attack from for
+example if we launched another tab of
+this
+console and we just press if
+config the IP address is2 + 168
+72130 so we're going to set the L host
+as 1921 68.
+72130 and we're going to do the same
+thing with SRV
+host we're going to set a port where we
+need to capture the back door
+access next the payload has already been
+set this payload will launch a back door
+and give us meter pritter access to the
+system meter pritter is can be
+considered as an upgrade of a normal
+command prompt shell we will look into
+it once we get the access in the first
+place now that we have set the commands
+we can press on exploit and press
+enter now you can see we have a URL over
+here we're going to copy this
+URL once the URL is copied we take it
+into the browser and paste
+it this will ask us to download this
+file now as per browser security
+settings this file should be blocked by
+default we can decide to keep it and
+with the correct formulation of this
+malicious package even the website
+browser antivirus softwares will not be
+able to detect good payloads we're going
+to save this
+file and we're going to open
+it publisher could not be verified if we
+press run and we go go back to our meter
+Peta access over here you can see it has
+already captured a URL of an HT server
+and it is writing delivering
+payload just have to wait for a few
+seconds till the payload is delivered it
+has sent this much amount of data meter
+P session one is
+opened and we should get the access
+soon there we go now to understand where
+is the session set we can write session
+minus
+I as you can see it has a meter over
+here we're going to write sessions minus
+I the session ID is one so we're going
+to write one and we have the meter
+access now to get a fair idea of the
+system we're going to write s info and
+it's going to the computer name the OS
+architecture all these things we can
+write the help command to see what are
+the things that we can get out of the
+system we can take screenshots we can
+control the webcam and start a video
+chat we can take a lot of things over
+here there are other commands as well
+where we can change the file directory
+like the cat command CD command there
+are so many things that work in the
+normal CMD which we can run on the
+metera as well now if you want to access
+this command prompt of the system
+directly we can go with this we have to
+write
+shell and there we go we are in the
+downloads folder right now to see if
+this is the same computer or not we're
+going to write ip
+config as you can see it is our M victim
+machine with 192 168 or
+29171 we can just press exit and we're
+back with the meter AIS this is how we
+can use meter and Metasploit to gain
+access to a Windows 10 machine next
+let's take a look at how we can get root
+access from a Windows 10
+system we just learned how we can get a
+meter perer access from a system we can
+background this meter prer session by
+writing background and pressing enter we
+can still we can still see the sessions
+sessions minus I it's still present over
+here
+now these kind of aess are not
+administrative axess these are the kind
+of back doors that can be created for
+standard users but to get a complete
+access of a system including the program
+files the windows documents we need to
+have root access or administrative
+access to do that we're going to use
+another exploit reminder that the meterp
+session of the standard axis is already
+present and we're not messing with it
+right now we're going to set up another
+session allbe with the same
+machine that exploit name
+is use exploit Windows
+local bypass
+USC Event Viewer
+and there we go now if we check the
+options that we can put in the system we
+have to choose an exploit
+Target we need to put a session as well
+let's say we going to use the session
+one this is the session that has the
+meter PR access with the standard user
+it doesn't have the system
+user we're going to write
+set session
+one and we're going to run exploit run a
+few commands and it open a second meter
+session as you can see it is the session
+two if I write s
+info you can still see I'm not
+the system user right now I'm still just
+a normal user how can we check that if
+you go to
+Shell I still seec users J downloads all
+these things
+if I press exit and go back to the meter
+Peter there is a command on meter Peter
+get system it attempts to elevate your
+privilege to that of the local system
+which basically means you get promoted
+into root access so if we write get
+system and due to pip impersonation we
+now have the system root
+access as you can see now it has become
+x64 and we are the admin users now if I
+go to
+Shell I can easily go
+back
+windows and I can easily access these
+things this kind of control over the
+windows folders and the program files
+folders these kind of things are not
+possible if you're not an admin access
+or the command prompt has not been run
+with admin permissions this this is how
+we can use privilege escalation to get
+into an admin access system we use the
+second exploit which was the bypass us
+Event Viewer exploit and essentially
+used it with the first session as you
+can read here Windows escalation us
+protection
+bypass it was first disclosed on 2016
+but it still works on some
+systems this is how we can get root
+access on our Windows 10 installation
+hello Wizards and digital explorers
+welcome to a journey into the core of
+Linux the operating system powering over
+2.3% of desktop computers globally and
+it's staggering 96.3% of the world's top
+1 million servers I'm abisa and today we
+are deling into one of the most vital
+components of Linux its file systems
+imagine a world where every piece of
+digital information is meticulously
+organized where every bite of data has
+its own unique place that world exists
+right inside your Linux machine so so
+buckle up as we dive deep into the
+intricate Maze of Linux file systems
+exploring how they work why they are
+important and what makes them so unique
+in the realm of operating systems in the
+realm of Linux file systems like ext4
+xfs and btrfs areen just names they are
+sophisticated architectures that manage
+how billions of bytes of data are stored
+accessed and organized these systems are
+the unsung heroes ensuring data
+integrity and efficiency in our digital
+world today we will uncover how these
+file systems support everything from
+your personal blogs to the largest data
+centers hosting pedabytes of information
+we will explore in notes journaling
+mounting and more terms that might sound
+complex but are incredibly fascinating
+once you get to know them and just a
+quick info for you if you're an aspiring
+cyber security professional looking for
+online training and certifications from
+prestigious universities and in
+collaboration with leading experts to
+enhance your credibility then search no
+more simply learns postgraduate program
+in cyber security from MIT University in
+collaboration with EC Council should be
+your right choice through this course
+you will gain knowledge and work ready
+expertise in skills like Advanced
+hacking Concepts Network packet analysis
+ethical hacking network security and
+over a dozen others and that's not all
+you also get the opportunity to work on
+multiple projects and learn from
+industry experts working in top tier
+product and security companies and acadm
+misss from top universities this course
+is designed to accommodate a diverse
+range of Learners and this course
+requires just a bachelor's degree with a
+50% average and no prior programming
+experience and one plus year of work
+experience is preferred if you're
+passionate about making your career in
+this field then make sure to check out
+the link in the pin comment and
+description box to find a cyber security
+program that fits your experience and
+areas of interest and now Linux offers a
+diverse are of file systems each
+tailored to specific requirements and
+now let's explore some prevalent Linux
+file systems so starting with ex2 and
+then we have EX3 ext4 xfs btrfs ZFS JFS
+and then we have Riser FS so now
+starting with the first one that is EXT2
+so EXT2 extended file system to that is
+one of the Linux earliest and most
+commonly used file systems EXT2 has long
+been a default choice for many Linux
+distributions it's known for its
+stability and suitability for small to
+mediumsized partitions though it lacks a
+journaling feature which can complicate
+file recovery post crash now moving to
+the next file system that is ext3
+extended file system 3 building on EXT2
+ext3 introduces journaling to track file
+system changes reducing data loss risk
+after crashes it's a popular choice for
+its stability reliability and
+performance and now move to the next
+that is ext4 extended file system 4 as
+the evolution of ext3 ext4 addresses
+some of it predecessors limitations it
+supports larger files quicker file
+system checks and enhanced performance
+for larger disk features like joural
+check summing also enhances data
+Integrity ext4 is a default file system
+in many modern Linux distributions now
+moving to the next file system that is
+xfs so xfs that is x file system that is
+designed for large scale storage and xfs
+excels in performance and is suitable
+for file systems up to 16 exabytes it's
+a Top Choice for large data centers
+offering scalability reliability and
+featuring like Jing and file level
+languages now moving on to the next file
+system that is btrfs B3 file system a
+newer Linux file system btrfs supports
+copy on right snapshots and sub volumes
+allowing for multiple file systems
+within a single partition it also
+includes rate and compression support
+btrfs is still under development and
+isn't as commonly used as other file
+system systems next we have is ZFS ZFS
+zetabyte file system initially developed
+for Solaris ZFS is a robust system with
+features like snapshots data compression
+D duplication and built-in rate Renown
+for its data integrity and selfhealing
+capabilities ZFS is not typically
+included in Linux distributions du to
+licensing but can be installed
+separately now moving to the next file
+system that is GFS GFS Journal file
+system that is developed by IB M JFS is
+known for its performance and
+reliability it offers Jing file level
+compression and online resizing making
+it a strong choice for high performance
+systems and now the next one that is
+resizer FS so targeted at high
+performance Computing resizer FS
+includes features like journaling file
+level encryption and support for larger
+files while known for its speed and
+reliability it's less common compared to
+other file systems listed here now
+moving to key Linux file system
+directories so the Linux operating
+systems file management is predominantly
+handled through directories commonly
+known as folders these elements are
+crucial in the Linux file system serving
+not just as file holders but also as
+organizational tools imagine directories
+as virtual boxes each capable of storing
+files and other directories directories
+in Linux play a vital role in providing
+an order hierarchical framework for file
+Arrangement this hierarchy commences at
+the root directory denoted as and
+extends into various subd directories
+this approach allows for a logical and
+systematic organization of complex
+systems enhancing the use of file
+management and access so key Linux file
+system directories each directory in the
+Linux file system serves a distinct
+purpose here are some of the significant
+directories starting with the number one
+that is root directory so root directory
+is the highest level in the Linux file
+system hierarchy all other directories
+and files are nested within this through
+now moving to the next directory that is
+bin standing for binaries this directory
+contains essential command line
+utilities and programs vital for basic
+system management and then we have boot
+so here lies the boot loader files and
+the kernel images necessary for system
+startup and then we have Dev this
+directory host device files representing
+both physical like printers and disk and
+virtual devices like Terminals and then
+we have Etc directory that is home to
+system configuration files these are
+utilized by various applications and
+services and then we have home directory
+it houses individual users directories
+providing personal space for file and
+setting storage and then we have Library
+directory this directory stores shared
+Library files needed by System programs
+next we have media directory am mounting
+point for removable media such as USB
+drives CDs and DVDs and then we have MNT
+that is mounting directory that is used
+for temp rarely mounting file systems
+like Network file systems or disk images
+next we have OPD directory a location
+for additional software packages that
+are not part of the standard system and
+then we have standard bin directory a
+directory for system binaries and
+administrative tools essential for
+system upkeep and then we have user
+directory that contains user level
+programs libraries documentation and
+shared data files so these were the
+directories in Linux file distribution
+system and now here are the key Concepts
+in file systems starting with journaling
+file system so these systems maintain a
+log refer to as Journal this log records
+changes to files that are not yet
+permanently saved on the disk this
+feature is particularly useful for
+recovering lost changes in the event of
+a system failure and the next we have is
+versioning file systems these systems
+preserve earlier versions of files
+essentially they save file copies based
+on their previous States at specific
+intervals offering a backup mechanism
+that could be based on minute or hourly
+updates and next we have index nodes an
+i note symbolizes a file or directory
+detailing attributes like size
+permissions ownership and physical
+locations and now we'll see the demo for
+the Linux file distribution
+system so for that we'll open the
+terminal with Control Alt t
+and
+now first we'll see in which directory
+we currently are in so we are in home
+abisara
+so first we'll move to the root
+directory for that we'll write the
+command CD space slash so now we have
+moved to the root directory and here
+we'll see what types of directories we
+have we have bin Dev boot Etc op run
+swap file so now we'll move to the bin
+directory so in bin directory it
+contains binaries or essential
+executable
+files so these are the binaries and
+executable files that we can use in the
+terminal only so
+now as I will show you there's a bin and
+there's sbin also this is
+sbin so now we'll move to the sbin
+directory for that we'll write the
+command CD
+sbin and here we see the directories of
+sbin so what does sbin contain it
+contains system binaries like Mount or
+delete and the user that are used by the
+root user so these binaries can be used
+by the root user only and then we have
+other directories that is
+Library so to move to the library
+directory we'll write the command CD Li
+and now we'll see its
+directories so what does it contains it
+stores common libraries between bin and
+S spin so many directories are stored in
+the library directory
+only so then we have another directory
+that is user directory under the root
+only so to move to that we'll write CD
+user so it says
+that so first we'll move back to the RO
+directory and then we'll move to the
+user
+directory so it says that no such file
+or
+directory is present here we'll just
+check
+I think it's USR for
+user yeah it's USR so user directory is
+named as
+USR we'll move to the user directory and
+to see the director inside user so these
+are the directories in user so user has
+its own bin and sbin directory and the
+binaries here are non essential binaries
+and there's a local directory under user
+so it contains binaries that you can
+combine manually so these are all
+the directories under root and you can
+go to other directories also as I have
+shown you the diagram of all the
+directories under user or under the root
+that I have shown in the previous thing
+so you can check it out so in conclusion
+the Linux file system with its directory
+structure is a Cornerstone of the
+operating system
+it facilitates efficient data management
+while upholding system stability and
+security Linux file system is
+characterized by its hierarchical tree
+like structure with the root directory
+at its apex various file systems in
+Linux cater to different needs each with
+its pros and cons the Linux directory
+structure encompasses an area of
+directories each designated for specific
+function like system binaries boot files
+device files and user files hello Tech
+enthusiast Welcome to our Channel where
+we delve into the fascinating world of
+technology today we are tackling a topic
+that sparked endless debates in the Tech
+Community lenux versus Windows it's a
+showdown between the freedom of Open
+Source and the familiarity of a
+household name whether you are a
+seasoned programmer a casual user or
+somewhere in between this comparison is
+for you we'll explore the INRI cases
+strengths and quicks of each system so
+sit back grab your favorite snack and
+let's dive into the world of operating
+systems it's Linux versus Windows the
+battle of the OS Giants begins now and
+before starting just a quick info for
+you if you are an aspiring cyber
+security professional looking for online
+training and certifications from
+prestigious universities and in
+collaboration with leading experts to
+enhance your credibility then search no
+more simply larns postgraduate program
+in cyber security from MIT University in
+collaboration with EC Council should be
+your right choice through our courses
+you will gain knowledge and work ready
+expertise in skills like Advanced
+hacking Concepts Network packet analysis
+ethic iCal hacking network security and
+over a dozen others and that's not all
+you also get the opportunity to work on
+multiple projects and learn from
+industry experts working in top tier
+product and security companies and
+academicians from top universities this
+course is designed to accommodate a
+diverse range of Learners and this
+course requires just a bachelor's degree
+with a 50% average and no prior
+programming experience and one plus year
+of work experience is preferred if you
+are passionate about making your career
+in this field and make sure to check out
+the link in the pin comment and
+description box to find a cyber security
+program that fits your experience and
+areas of Interest now moving back to our
+topic that is Linux versus Windows so
+Linux an open- source and complimentary
+operating system debuted in 1991
+courtesy of lus stals while he was a
+student at the University of henai
+drawing its foundation from the uni
+system Linux is acclaimed for its robust
+stability and enhanced security and
+versatile adaptability it's extensively
+utilized across various platforms
+including servers supercomputers mobile
+devices embedded systems and desktop
+computers on the other side Microsoft is
+the architect behind the proprietary
+operating system Windows launched
+initially as Windows 1.0 in 1985 it
+served as a graphical overlay for the MS
+St system over the years Windows has
+evolved through numerous substantial
+updates this operating system is
+prevalent across a broad spectrum of
+devices encompassing personal computers
+tablets and other similar Technologies
+while Linux has established dominance in
+server and supercomputer applications
+Windows enjoy widespread popularity in
+the personal Computing realm Windows is
+often loaded for its userfriendly
+interface whereas Linux is celebrated
+for its formidable stability and
+security features in the past few years
+Linux has seen a surge in its adoption
+as a desktop operating system this rise
+in popularity can be attribute primarily
+to the emergence of accessible and
+userfriendly versions like UB 2 and mint
+despite this Windows continues to
+maintain its stronghold as the global
+prefer desktop operating system
+nevertheless Linux is steadily carving
+out a significant Niche for itself in
+the market now moving to the difference
+between Linux versus Windows so starting
+with first that is Windows uses
+different data drives like CDE to store
+files and folders and whereas Linux uses
+a tree like a hierarchical file system
+Linux files are ordered in a tree
+structure starting with the root
+directory whereas in Windows files are
+stored in folders on different data
+drives like C D or E now moving to the
+next difference that is hard drives cdrs
+printers are considered Ed as devices
+and whereas in Linux peripherals like
+hard drives cdrs printers are also
+considered files in Linux or Unix
+systems now moving to the next
+difference that is there are four types
+of user account types in Windows that is
+administrator standard child and guest
+whereas in Linux there are three types
+of user account types regular root and
+service account moving to the next
+difference so Windows administrator user
+has all administrative privileges of
+computers and in Linux root user is the
+super user and has all administrative
+Privileges and now moving to the next
+one so in Windows you cannot have two
+files with the same name in the same
+folder whereas in Linux you can have
+that is the naming convention is case
+sensitive the sample and the case
+uppercase sample are two different files
+in Linux or Unix operating system and
+moving to the next difference in Windows
+my documents is default home directory
+whereas in Linux for every user
+directory is created which is called his
+home directory and talking about more so
+Linux is an open source operating system
+so user can change source code as per
+requirement whereas Windows OS is a
+commercial operating system so user
+doesn't have access to source code and
+Linux is very well secure as it is easy
+to detect bugs and fix whereas Windows
+has a huge user base so it becomes a
+target of hackers to attack Windows
+system and if we compare Windows File
+system versus Linux file system Linux
+runs faster even with older Hardware
+whereas windows are slower compared to
+Linux and in Linux as you can see you
+can have two files with the same name
+and in Linux you would find the system
+and program files in different
+directories whereas in Windows system
+and program files are usually saved in C
+drive we are diving into 50 Linux
+commands that are absolute must knows
+for anyone us using this powerful
+operating system so let's get started
+just a quick info for you if you want to
+upskill yourself master cyber security
+skills and land your dream job or grow
+in your career then you must explore
+simply learns cohort of various cyber
+Security Programs simply learn offers
+various certification and postgraduate
+programs in collaboration with some of
+the world's leading universities like
+MIT I kpur EC Council and many more
+through our courses you will gain
+knowledge and work ready expertise in
+skills like Advanced hacking con cepts
+Network packet analysis ethical hacking
+network security and over a dozen others
+and that's not all you also get the
+opportunity to work on multiple projects
+and learn from industry experts working
+in Top Tire product and security
+companies and academicians from top
+universities after completing these
+courses thousands of Learners have
+transitioned into a cyber security role
+as a fresher or move on to higher paying
+job and profile if you are passionate
+about making your career in this field
+then make sure to check out the link in
+the pin comment M and description box to
+find a cyber security program that fits
+your experience and areas of Interest so
+now let's get started and the first
+thing we have to do is open the terminal
+so we'll just press control alt p and
+here's our terminal and we'll get
+started with the commands now so the
+First Command we'll see here is
+LS so what does Ls do it list all the
+files and directories in the current
+directory so as as you can see we are on
+the home screen only so it has listed
+all them that is desktop documents
+downloads music pictures public snap
+templates and
+videos as you could see uh so this is
+the home screen and these are the
+directories that are listed in the home
+and that this LS command has provided
+all the directories here and I'm running
+the ento in the virtual box for your
+information so if if you have the window
+install on your system so it's well and
+good and I was using Windows so I use
+the virtual box to install the one two
+and here we are running all the commands
+and if we use LS minus Al so it will
+give all the hidden directories also
+hidden stuff so these are the hidden
+stuff that was there so it has listed
+them also so now moving on to the next
+command that would be
+PWD and what what does the PWD command
+do it prints the current working
+directory where we are working so
+PWD so we are at home abisara so this is
+our current working directory and now
+we'll see the next command that is CD
+and what does it does is change the
+directory if you want to move to any
+directory you can just write CD and the
+name of the directory and we'll see
+which one we will go to
+documents we'll just write documents
+and press enter so now we are in the
+documents
+directory and with the command CD dot
+dot you will jump back to the previous
+directory that is CD space dot dot oh
+sorry now you have been redirected to
+the previous directory that is home only
+and if you want to just get back to home
+you can just write CD space and click on
+you'll get back to the home as we
+already on the home so we have not
+changed any directory and the next
+command would be mkd that is to create a
+new directory so for that we'll just
+write mkd and the name of the new
+directory what you want to create so I
+will create the new directory with the
+name abisal so we have created the new
+directory you can check here that abar
+that has been created and if you want to
+remove that directory you just have to
+use the command rmd space abar and press
+enter and that dictive would be removed
+from there that has been removed and now
+we'll see the command to create a file
+and this is the easiest way to create
+any file so we'll just use the touch
+command that is to create a file and
+after touch you just have to write the
+name of the file so I'll write abar do
+txt so you'll see so the txt file has
+been created here so here we have
+cleared the terminal and now we'll see
+another command to create a file that is
+cat so just write cat greater than
+symbol and the name of the file that
+would be abr2 do
+txt okay and press enter and now you can
+write the content you want to insert in
+this file so I'll write my name is
+AAR
+and today I am creating
+of video in Linux
+okay and after writing this you just
+have to press contrl and D so this will
+be inserted into your file so after
+pressing the control+
+D this content has been inserted so we
+can just check
+it you can see here that the content is
+already been insert it in the file
+okay so moving back now we'll see the
+next command that is Echo and Echo is
+mainly used to get something to display
+in the terminal only or you just want to
+talk to yourself you can use the echo
+command so here I will write echo in
+inverted commas I will write simply
+learn and press enter you could see that
+it has returned simply learn so it get T
+the text or anything you want to display
+on the terminal only and now we will see
+another command that is CP and that is
+used to copy files or directories so
+here we'll use the command CP and here
+we'll copy a file that is uh abis 2. txt
+into documents so for that we'll write
+CP after that the name of the file that
+is abar 2 do txt
+and then the folder name that was
+documents and then enter now we'll check
+in the documents we have the visad 2.txt
+file and that has been copied into that
+and the next command is MV so if you
+want to move any file into any directory
+you just write MV and we have the file
+that is abh sr. txt this file we will
+also move into docum commments so we'll
+just write the name of the file that
+is sir. txt
+and
+TT and the name of the directory in
+which you want to move it so that is
+documents Flash and then enter and now
+we'll check it so you can see that it
+has been moved so it has been moved from
+home to
+documents and now uh we'll see another
+command that is RM that is to remove any
+file or
+directories so from the documents only
+we'll remove the file aisar 2.txt
+okay so here we'll write
+rmar
+2.txt
+and from where you want to remove it
+that is
+documents
+okay uh can we it's a directory okay so
+we'll
+just write this
+command we in the home so first we'll
+move
+to
+documents sorry
+CD
+documents and here we will remove the
+file that is RM abar 2.txt and now if we
+see that has been removed from here
+and now we see another command that is
+nano and that is also used to create a
+file or if you have the exact file what
+file name you will enter here if it's
+there it will open that or else it will
+create a new file so we'll write obar
+3.txt
+enter and here you can
+directly like edit the file you could
+just write the
+file so you could edit it here and write
+anything
+that is we are learning
+Linux and to save it we'll just press
+crol x y and then enter so it has been
+saved we learning
+Linux so this is also the mode to create
+a file and you would just go with the
+editor directly and you could just enter
+in the file and then to save it you just
+have to press control x y and
+enter and now uh the next command that
+is shred command if you want to hide
+something or you w don't want to show
+any content in a file to anyone so you
+will just write or use the shred command
+that is shred and after that file name
+that
+is that is file name obar
+3.txt and press enter
+and we'll use cat to open
+that that
+isar 3. txt and press enter you can see
+that it won't show any content to
+anyone so after that we'll see another
+command that is
+htop and what does it do is uh like it's
+not found here and it's not installed so
+if you want to install
+it you could just write this
+command that
+is sud
+sudo to
+inall HED top and press
+enter and now it's asking for
+password and now moving on to the next
+command we will create another window
+for that close these
+windows close this thumbnail and in this
+thumbnail we'll use the command
+less and this command is used to view
+the contents interactively of the
+file so we'll use less and see the
+contents
+of. txt press enter so you could see
+that the contents are I am a
+and see that the content is
+imisa and
+now we will see another
+command and for that we'll create a new
+window and close the previous
+Terminals and in the new terminal we'll
+use the grp command that is used to
+search for specific patterns or words
+within the within the files so G
+and then the special term that is abisa
+we will search and then the file name
+that is abisa do txt and press enter so
+it will return the full sentence in
+which that pattern is found that is I
+aisar and you could see in the file that
+we have aisar text and that is in the
+line I'm Aisa and it has returned us
+that and to the next one we'll use the
+find command and with the find command
+you could search for various files or
+dories based on a given criteria so we
+will find the ab txt file here and like
+it has returned that we are in documents
+only and it has returned the abis txt
+file so this was about the find command
+and moving on to the next command that
+is to change file access permissions and
+that command is
+chmod so missing oint uh so we have to
+add the openend also that is CH mot and
+we'll write
+755 and the name of the file that is
+abisa do txt and press enter so the
+permissions of the file have been
+changed
+here and what does this indicate so we
+have set the file permissions of ab
+visa. txt file to read write an execute
+for the owner and read an execute for
+other sale
+and if you want to change the ownership
+of the file we
+will
+cut and now moving to the next
+terminal and here we will use the
+command gzip that is to compress the
+files so gzip and then the name of the
+file that is
+a.txt and press enter so it has been
+compressed you could see that it has
+been compressed and to un compress or
+decompress the compressed files we'll
+just write the
+command gunzip and then the name of the
+file that
+is resert do txt and it has been
+compressed so the extension has been
+changed not gz and now if you see that
+has been
+decompressed so now we will use another
+command
+and now we will see another command that
+is date so we'll just write date and you
+could see that that date has been
+printed and then we have command who am
+I and it will just showcase the current
+username that is abisara and the next
+command is which and that is to locate a
+program or command in the system path
+you could just write history to get all
+the commands that you have executed in
+today's terminal and there's another
+command that is up time so what does it
+indicates is it display system up time
+and load average so system has been up
+from which time or how much time so that
+is up
+time and then there is another command
+that is DF that is to display this space
+usage and then we have another command
+du that is to display disk usage by file
+or
+directory so this directory has been
+using 12 memories and the next command
+is you
+name so un name is used to check the
+complete OS information of the system so
+we are using Linux here so it has
+provided Linux over here and now moving
+on to the next
+command that is clear command if we use
+use the clear command so all the things
+in the terminal would be cleared so the
+next command is M command the man
+command displays a user manual for any
+commands or utilities available in the
+terminal so we'll just write MN LS and
+so these are the commands that are
+present in the terminal including the
+name description and
+options and now moving on to the next
+command that is we will use the W get
+command to help me download the files
+from the internet so for
+that if I want to download a YouTube
+video just open the Firefox
+browser so we just copy the URL from
+here and get back to a terminal and use
+the command W get and paste the URL here
+and press
+enter so you could see that it has
+downloaded the file for
+us and there's another and we will open
+a new terminal for the
+command that is shutdown command and for
+that you just
+route B for that you will just write
+shut down space and now and press enter
+and the system will be shut down now
+only or you could just write shut down
+and the exact time at which time you
+want to shut down the system so it will
+shut down at that point so these were
+the commands for the Linux today we will
+dive into the vast and vared world of
+Linux a Digital Playground where unique
+versions known as dros offered a
+tailored Computing experience piure DSL
+a compact Powerhouse at just 50 mb
+bringing old computers back to life
+Marvel at tiny core Linux incredible 10
+MB size proving that great things come
+in small packages transition smoothly
+from Windows with the intuitive zorin Os
+or embrace the future with Chrome OS a
+portal to cloud-based living for
+creatives music X gnu plus Linux is a
+symphony of multimedia tools each dis
+draw is a unique pathway offering
+customization power and Community
+Support we have a flavor of lenux to
+match your taste and before commencing
+just a quick info for you if you are an
+aspiring cyber security professional
+looking for online training and
+certifications from prestigious
+universities and in collaboration with
+leading experts to enhance your
+credibility then search no more simply
+learns postgraduate program in cyber
+security from MIT University in
+collaboration with EC Council should be
+a right choice through our courses you
+will gain knowledge and work ready
+expertise in skills like Advanced
+hacking Concepts Network packet analysis
+ethical hacking network security and
+over a dozen others the course is
+designed to accommodate a diverse range
+of Learners and requires just a
+bachelor's degree with a 50% average and
+you require no programming experience
+and one plusus year of work experience
+is preferred if you're passionate about
+making your career in this field then
+make sure to check out the link in the
+pin command and description box below
+now we are about to take a deep dive
+into the world of open- source operating
+systems where diversity is key and
+customization is Limitless each drro we
+will discuss offers its own unique Bland
+of features usability and community so
+let's get started and we'll start with
+the first one that is uban 2 so one2 is
+a Debian based Linux operating system
+that is designed for desktops servers
+and increasingly for cloud and iot
+devices it's known for its user
+friendliness robustness and strong
+Community Support ubu offers a secure
+intuitive and feature Rich experience
+with a focus on accessibility and
+internationalization it provides regular
+releases and a predictable update
+schedule and is often chosen for its
+balance between Cutting Edge technology
+and stability so this was about the
+number one drro now moving to the next
+that is redhead Enterprise Linux and
+before moving to redhead Enterprise
+lenux we will have a screenshot of the
+operating system here and you could see
+how the UI ofu looks like now moving to
+the next that is redhead Enterprise
+Linux so rhel it's a commercial Linux
+distribution designed for Enterprise
+environments it's known for its
+stability security and support rhl
+provides long-term support certified
+ecosystems and subscription based access
+to updates and support services it's
+widely used in hosting cloud computing
+and as a reliable platform for critical
+applications so moving to
+the uiux of the red hat Enterprise Linux
+so this is the screenshot for that and
+now we will move to the next drro that
+is deian so Dean is a free and open
+source operating system known for its
+stability reliability and vast package
+repositories it's governed by a
+community of developers and users and
+prioritize adherence to free software
+guidelines dein is a versatile
+supporting a wide range of hardware and
+suitable for desktops servers and amul
+systems now mve to the next Linux
+that is Seuss Linux Enterprise so Seuss
+is a commercial distribution focusing on
+Enterprise needs offering a robust
+scalable and secure platform it provides
+comprehensive support updates and a
+management system designed for complex
+deployments s is known for its y
+configuration tool making system
+management more accessible now we'll see
+the uiux for this Linux drro so this is
+the present Linux drro uiux now moving
+to the next that is Linux Mint so Linux
+Mint is a one2 based distribution known
+for its ease of use and out of the box
+experience it provides full multimedia
+support a variety of desktop
+environments and focus on user
+friendliness Linux Mint aims to be a
+modern elegant and comfortable OS which
+is both powerful and easy to use now
+moving to the next drro that is
+slackware so slackware is one of the
+oldest distributions known for its
+Simplicity and minimalism it follows
+philosophy of keeping it simple and as
+uni like as possible slack Fair offers
+no formal package dependency resolution
+appealing to users who prefer manual
+system configuration and understanding
+the inner workings of their OS now we'll
+see the uiu so this is the current uiux
+of slackware Linux Dr now moving to the
+next that is gento so gento is a source
+based distribution meaning the user
+compiles the source code locally
+according to their preference known for
+its flexibility and performance
+optimizations gento provides a unique
+system called Portage which makes it
+easy to manage packages dependencies and
+system updates we see the current uux
+for the gento Linux drro so this is the
+current uiux if you will install it and
+see the homepage this will be the same
+so now moving to the next disto that is
+AR Linux so AR Linux is a rolling
+release system focused on Simplicity
+modernity pragmatism user centrality and
+versatility it's known for its
+minimalistic approach where users only
+install what they need R provides a vast
+amount of upto-date software and is
+backed by strong Community documentation
+now moving to the next Linux D that is
+Fedora so Fedora is a Cutting Edge
+community supported distribution backed
+by redhead it's known for its commitment
+to open source software and its role as
+a testing ground for features that make
+it to R
+Fedora emphasizes Innovation features
+the latest software and offers various
+spins tailored to specific use cases and
+now moving to the next Linux dto that is
+Opus so open S offers a stable and
+feature Rich platform for both desktops
+and servers it's known for its
+userfriendly configuration tool yes and
+its two flavors leap stability focused
+and tumble weed rolling release open S
+provides an excellent platform for
+Developers system administrators and
+desktop
+users so you can see the uiux for the
+open source LX testro on the screen now
+moving to the next one that is kubantu
+kubantu is an official flavor of kubantu
+using the KD plasma desktop instead of
+genome it's known for a userfriendly
+experience and a beautiful graphical
+interface KD plasma offers customization
+and a wide range of applications and
+more windows like field UB 2 aims to be
+a versatile and elegant OS suitable for
+both newcomers and experienced
+users now you'll see the uux with the
+same Linux Dr and it's on the
+screen now moving to the next that is
+lantu lentu is a lightweight version of
+entu using the lxqt desktop environment
+it's designed for older computers or
+systems with limited resources despite
+its minimalistic approach lantu is fully
+functional and userfriendly
+offering a simple and fast Computing
+experience with low Hardware
+requirements and this is the uiux for
+the Linux testro luu now moving to the
+next that is ex entu so xubuntu is an
+ubu variant using the xfc desktop
+environment it strikes a balance between
+functionality and resource efficiency
+xfc provides a stable light and
+configurable desktop environment making
+xubuntu suitable for older computers
+while still offering a modern look and
+feel it's a great choice for those who
+prefer a minimalist yet fully functional
+desktop and moving on we'll see the uux
+for the Linux discop xub 2 and the next
+on the list is adub 2 adub 2 was an
+official derivative of om2 designed for
+educational institutions it aimed to
+provide a free open- source platform
+that included Educational Tools for
+students and teachers while no longer
+actively developed it offered a range of
+applications tailored for classrooms
+making making it easy to deploy in
+educational settings now we can see the
+U for the Linux drro ad 2 and and this
+is for the educational institutions now
+moving to the next that is easy pz so
+easy pz was a Linux distribution based
+on ubu for notebooks it aimed to be
+lightweight with a focus on ease of use
+and functionality for mobile Computing
+it featured a custom user interface and
+pre-install applications optimized for
+netbooks and sizing web based
+applications and services and now you
+can see the UI for the same now moving
+to the next Linux drro that is zenal
+zenal is a server OS based on ubu
+designed to manage office servers and
+Network Services it's an easy to use
+Linux alternative for Windows Server
+offering features like a domain and
+directory server mail server and Gateway
+zentel aims to simplify Network
+management with a userfriendly interface
+and modular design and now on the screen
+you can see the UI for the Linux T
+cental and now moving to the next that
+is genu sense so Gus sense is a Debian
+based Linux distribution that focuses on
+free software it's endorsed by the free
+software Foundation genu sense removes
+non-free firmware and software from
+Debian to comply with strict free
+software guidelines offering a
+completely open- Source operating system
+for users who prioritize Freedom now
+moving to the the U for the Linux
+restore Gus sense and the next on the
+list is pingos so pingos is an ubu based
+distribution designed to be user
+friendly and full of outof the boox
+functionality it includes many
+pre-install applications and tweaks
+focusing on user experience and ease of
+use it's tailored for New Linux users
+and those who want a system that just
+works now we can see the present uux of
+the home screen of the pin guy OS Linux
+drro now moving to the next on the list
+that is Bodhi Linux so Bodhi Linux is an
+ubu based distribution using the Moksha
+dtop it's known for its minimalistic
+approach and high customizability B is
+designed for users who want to tailer
+their system to the preferences it's
+lightweight resource efficient and
+suitable for older hardware and now on
+the screen you can see the uiio for both
+the Linux now moving to the zorin OS and
+the last OS on our list so zorin OS is
+designed to be easy for newcomers
+transitioning from Windows it features a
+Windows like GUI and the ability to run
+many windows programs via wine it's
+versatile with several additions
+tailored to different users including an
+educational
+version now you'll see the uiux for the
+zorin OS so this is the current uiux of
+the homepage of zor in welcome to the
+vibrant world of Linux Mint where
+Innovation and accessibility blend and
+seamlessly as we delve into this
+operating system it's intriguing to note
+that Linux Mint has been rapidly
+climbing the ranks in the world of
+open-source software did you know that
+as of 2023 Linux Mint holds a
+significant share in the Linux desktop
+Market standing out amongst hundreds of
+distributions it's not just its
+userfriendly interface that's catching
+eyes statistics show a consistent
+increase in downloads with millions of
+users worldwide embracing its refreshing
+Simplicity and robust performance Linux
+melt a brainchild born from robust ubu
+is celebrated for its elegance and
+efficiency it is particularly favored by
+those transitioning from other operating
+systems owing to its similar layout and
+intuitive Design This OS isn't just
+about its look performance metrics
+reveal a lightweight yet powerful system
+capable of Reviving older hardware and
+providing a smooth experience on the
+latest machines as we explore Linux Mint
+we will uncover why it has become a Top
+Choice for both nowi and Tech
+professionals from its customization
+capabilities to its community-driven
+development Linux Mint isn't just an
+operating system it's a movement a
+movement towards a more accessible
+reliable and user Centric Computing
+future so let's embark on this minty
+journey and unwrap the many layers of
+this Innovative and peppermint power OS
+and before commencing just a quick info
+for you if you're an aspiring cyber
+security professional looking for online
+training and certification from
+prestigious universities and in
+collaboration with leading experts to
+enhance your credibility then search no
+more simply learns postgraduate program
+in cyber security from MIT University in
+collaboration with EC Council should be
+your right choice through our courses
+you will gain knowledge and work ready
+expertise in skills like Advanced
+hacking Concepts Network packet analysis
+ethical hacking network security and
+over a dozen others and that's not all
+you also get the opportunity to work on
+multiple projects and learn from
+industry experts working in top tier
+product and security companies and
+academicians from top
+universities this course is designed to
+accommodate a diverse range of Learners
+and this course requires just a
+bachelor's degree with a 50% of average
+and no prior programming experience is
+required and 1 plus year of work
+experience is preferred if you are
+passionate about making your career in
+this field then make sure to check out
+the link in the pin command and
+description box to find a cyber security
+program that will fit your experience
+and area of Interest so now moving on to
+the demo part and here first we'll see
+the Linux Mint website and do you know
+that Linux Mint has three versions so
+first we'll click on download and here
+you can see the first version is cinemon
+Edition and then M Edition and xfc
+Edition so cinan Edition is the popular
+version of lenux Min and is primarily
+developed for and by Linux Mint only
+like it is Sleek beautiful and full of
+features it has many features and we
+have a demo session for that only where
+we will see the features of cinemon
+version and then we have the matte
+Edition that is for stable robust and
+traditional purposes and then we have
+xfc version that is extremely stable and
+very light on resource usage so I have
+installed the cinamon Edition and that
+to on the Oracle virtual box so if you
+want to install it you can either boot a
+pen drive and install it as your main
+operating system as I was running
+Windows and for this demo I have
+installed this so I have installed it on
+the virtual box so here we'll start with
+the demo for the cinamon Edition so the
+first thing we'll see is first thing
+we'll go for his preferences and the
+display option so here in the display
+option you can set the resolution for
+your Cinema Edition Linux Min like
+which resolution you want so I will set
+this and if you want the rotation for
+your display screen you can do that so
+this was one of the feature and moving
+on in preferences only we have one more
+that is we'll see what we have yeah we
+have accessibility also so in
+accessibility you could either do the
+large text or the smaller text
+you could do for the high contrast
+enable Zoom you could move to keyboard
+and use visual indicator on caps and
+numlock so these are the things you
+could do and yeah uh like there was text
+size increase or the enhancement option
+we can also do with the font selection
+for that we'll go
+preferences in preferences
+only uh there would be one phone
+selection one here here you could just
+select the default font also which font
+you want and the size of the default
+font so you could select that for the
+desktop font document font monospace
+window title and the text scaling Factor
+so we could enlarge it according to your
+requirements and now moving to other
+options in preferences only we'll see
+so we have Mouse and
+touchpad so in Mouse and touchpad you
+could just adjust the pointer size you
+could see the pointer size here pointer
+speed pointer size and accordingly we
+have other options if you have operated
+on any of the operating system you would
+easily have a catch on it so I will show
+you where all the like settings and all
+the things you could get on so in
+preferences on only or we could just
+customize this panel we can just right
+click on it and go to panel settings and
+you could see the font size for the left
+zone so this is the left Zone allow them
+to determine font size and scale two or
+we can just increase the icon size here
+or if we go to the right zone so the
+icon size will increase for these as you
+can
+see so this is how you could assess all
+these and if you want to change the
+desktop background you could easily do
+it you just have to right click it and
+click on change desktop
+background and you could have any
+pictures you want as I have the default
+ones I will use this one so you could
+see that the desktop has been
+changed and
+now uh yeah I want to tell you that
+these settings
+would be changed after you reboot the
+system so all the settings will be lost
+so now we will go to accessories and if
+you want any app on the like this
+navigation bar or on the desktop you
+could just right click on that app and
+add to panel so you could see here it
+has been added to panel and you could
+also unpin from panel also we have
+unpinned it and in accessories like
+calculator only if you want it on
+desktop you could add it on desktop so
+it's on desktop now so similarly you
+could add any app here and now if you
+want to configure menu just right click
+on the menu and there's a configure
+option and here you could configure it
+if you want to increase the size in the
+menu you could do that if you want to
+change any text or add any text you
+would do that and if you use want to use
+any menu animation you can do that so
+these are the features of Linux Mint and
+if you want to capture snapshot then you
+will go to
+administrator and then there's a option
+with time
+shift and it will require a password so
+for that we will enter the password so
+you could create any snapshot here and
+you could have recent ones also using
+the wizard
+option and now we'll see the driver
+manager and that's also in the
+administrator section so driver manager
+so it will show you what are the drivers
+installed on your
+system so it shows that no drivers need
+your computer does not need any
+additional drivers in the current
+landscape of cyber security the tools
+wielded by professionals are crucial in
+defining the balance between
+safeguarding digital assets and exposing
+vulnerabilities K Linux stands at the
+Vanguard of this digital Battleground
+offering an arsenal of tools designed
+for ethical hacking penetration testing
+and security orating the exploration
+delves into the top 10 most known
+hacking tools in Kali Linux serving not
+just an introduction to the capabilities
+within kalii Linux but also as a
+testament to the ethical use and
+profound impact of these tools in real
+world scenarios from uncovering
+unsecured Network ports with n map to
+cracking complex passwords with Jon the
+Raper each tool in Kali Linux embodies a
+specific facet of cyber security they
+enable professionals to anticipate and
+mitigate potential threats ensuring that
+digital fortitude of systems against the
+Relentless advances of cyber adversaries
+through real case studies and scenarios
+this narrative not only highlights the
+Practical applications of these tools
+but also emphasizes the ethical consider
+ations inherent in their use as we
+navigate the complexities of the digital
+age understanding and leveraging the
+power of Ki Linux tools become
+imperative for anyone involved in the
+cyber security domain marking a fine
+line between defense and exploitation in
+the vast cyber security landscape and
+before commencing just a quick info for
+you guys craving a career upgrade
+subscribe like and comment
+below dive into the link in the
+description to FasTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back if you are an aspiring cyber
+security professional looking for online
+training and certification from
+prestigious universities and in
+collaboration with leading experts to
+enhance your credibility then search no
+more simply learn postgraduate program
+in cyber security from MIT University in
+collaboration with EC Council should be
+a right choice for more details use the
+link mentioned in the description box
+and pin and if these are the types of
+videos you would like to watch then hit
+the Subscribe button like and press on
+the Bell icon to never miss on future
+content so stay tuned with us until the
+end of this video and don't forget to
+register your opinion in the comment
+section below so let's get started so
+let's first know the evolving cyber
+security landscape as we step into 2024
+the cyber security landscape continues
+to evolve at an unprecedented Pace what
+does this mean for professionals and
+Enthusiast alike in the field of cyber
+security let's dive in in recent years
+have witnessed a significant
+transformation in the types of cyber
+threats from sophisticated ransomware
+attacks crippling major infrastructure
+to AI driven fishing schemes the
+complexity and scale of attacks are
+escalating one of the key drivers of
+this change is the ever expanding
+digital footprint of businesses and
+individuals with more devices connected
+to the internet than ever before the
+attack surface for cyber threats has
+broadened making cyber security a
+critical concern another critical aspect
+is advancement in technology itself the
+emergence of Technologies like
+artificial intelligence machine learning
+and Quantum Computing has given both
+Defenders and attackers new tools this
+arms race between cyber Security
+Professionals and cyber criminals in
+constantly reshaping the battlefield
+amidst these challenges there's a silver
+lining the field of cyber SECU is
+innovating rapidly and today we'll show
+the top hacking tools to be known for
+the K Linux
+so let's start with the brief
+introduction of Ki Linux so Ki Linux is
+a devian based Linux distribution that
+is designed for digital forensics and
+penetration testing so now we'll see the
+concise background for the Kali Linux so
+first we'll see the origins and
+development so it is developed by
+offensive security K Linux launched on
+March 13 2013 as a rebuild of backtrack
+Linux fully adhering to Debian standards
+now if we talk about the core features
+so the first comprehensive tool set it
+offers an extensive area of tools for
+penetration testing security research
+computer forensics and reverse
+engineering and it is open source freely
+available and open source enabling
+customization to meet specific user
+needs and then we have the regular
+updates it receives frequent updates for
+tools and features incorporating
+security enhancements and new
+functionalities and we talk about
+security and ethical hacking so ethical
+hacking emphasis is that is ad Ates for
+ethical hacking practices using tools to
+find and fix vulnerabilities and then we
+have the legal framework so intended for
+legal and ethical use including
+penetration testing with permission
+security Audits and educational purposes
+and then we have the community and
+support for Kali Linux so there's a
+Vibrant Community that features a
+dynamic community of users who
+contribute through forums tutorials and
+shared experiences and then we have the
+documentation and training so extensive
+documentation and training resources are
+avilable LA from offensive security
+supporting users in maximizing their
+proficiency with Kali Linux and now we
+talk about use cases so there's a
+professional use that is utilized by
+cyber Security Professionals for
+penetration testing security Audits and
+forensic investigations and we have the
+educational use also that is employed in
+educational settings to teach students
+about information security and ethical
+hacking so guys let's move to the top 10
+most known hacking tools in kalii Linux
+and first we'll start with the metas
+sploit framework
+So Meta exploit framework that is
+developed by rapid 7 is a robust
+platform for developing testing and
+executing exploits it includes an
+extensive database of ready to use
+exploits and allows for crafting of
+custom payloads so it features a modular
+architecture enabling the creation of
+custom modules and scripts it offers
+interfaces ranging from command line to
+GUI Armitage catering to both beginners
+and advanced users and it provides tools
+for post exploitation activities evasion
+techniques and Bo net management
+regularly updated with contributions
+from a global community of cyber
+security professionals so this is the
+med exploit framework now we talk about
+practical applications it is ideal for a
+wide range of uses including penetration
+testing security Audits and as an
+educational tool for understanding
+digital vulnerabilities and defenses and
+then we have the next tool that is wi
+shock so Network protocol analysis
+Powerhouse it is old as that so wsh is
+the Premier tool for Network protocol
+analysis crucial for Network trouble
+shooting protocol development and
+educational purposes it enables users to
+capture and analyze live network data or
+work with data captured previously so it
+offers a userfriendly three pain packet
+browser for viewing Network traffic in
+real time V shock's capabilities include
+detailed inspection of hundreds of
+protocols live capture and offline
+analysis and we talk about its ver ility
+and accessibility it is suitable for
+various levels of expertise from Network
+professionals to noices it provides a
+comprehensive set of tools like boip
+analysis which are invaluable for
+diagnosing network issues and
+understanding complex Network behavior
+and if we talk about its widespread
+application and use cases it is widely
+used in cyber security for detecting
+Network and homeless intrusion detection
+and network forensic analysis its
+ability to analyze data from different
+sources makes it a universal tool for
+Network Diagnostics and cice security
+research so this was about the second
+tool that was now coming on the list
+is nmap Network mapper so it's the
+premier network discovery tool and map
+is renowned for its Effectiveness in
+network discovery and security auditing
+it excels in scanning networks to
+identify devices and services making it
+indispensable for cyber Security
+Professionals and we talk about its
+versatility scanning features it offers
+a variety of scanning options including
+host Discovery for scanning and version
+detection nmap's ability to adapt its
+scanning technique based on network
+conditions and configurations makes it a
+powerful and flexible tool now we talk
+about its scriptable and customizable
+nature it features a scripting engine
+nmap scripting engine nsse that allows
+users to write custom scripts for a wide
+range of network task and this makes
+nmap not just a scanning tool but a
+robust network analysis framework and it
+is widely used and community supported
+so widely adopted by Network
+administrators security Auditors and
+penetration testers and map benefits
+from a strong Community with regular
+updates and a vast library of scripts
+contributed by users around the world
+and if we talk about the basic command
+for this tool that is nmap that is you
+could run nmap minus V minus a Target IP
+and now coming to the next tool that is
+BB suit so allinone web security testing
+tool so BB suit offers a full range of
+tools for comprehensive web application
+security testing it's known for its
+capability to intercept inspect and
+modify Network traffic making it
+indispensable for analyzing and securing
+web applications and we talk about its
+features or the interactive and
+automated testing features it includes
+both manual and automated scanning
+options its userfriendly interface
+allows for interactive testing and
+detailed analysis while the automated
+scanner efficiently identifies vulnerab
+ities and then we have the extensive
+tool set for deep analysis so it
+features an array of tools like a
+repetitor for manual request
+modification an intruder for automated
+attack simulations and a decoder for
+data analysis this makes it versatile
+for different types of cyber security
+assessments and then we have the
+community and professional versions so
+it is available in both a freely
+Community version and a paid
+professional version catering to a wide
+range of users from hobbist to
+profession security analyst so the
+professional version offers Advanced
+features for more in-depth analysis and
+if we talk about the basic commands so B
+suit primar uses a GUI that start by
+configuring your browser to use BP as
+its proxy then navigate to the site you
+want to test so this is about the BB
+suit now coming on the list is number
+five air crack NG so Wi-Fi network
+security tool and it is mostly around
+for that purpose only so air crack NG is
+a suit software tools specifically
+designed for auditing and securing Wi-Fi
+networks it's recognized for its
+Effectiveness in testing network
+security monitoring Wi-Fi traffic and
+cracking encryption Keys now talking
+about its wide range of capabilities the
+toolkit includes functionalities for
+monitoring packet capture attacking fake
+access points deauthentication testing
+that is w n WPA WPA 2 cracking and other
+network analysis task and now talking
+about about its userfriendly and
+versatile nature although it is command
+line based air crack is known for its
+straightforward interface making it
+accessible for both beginers and experts
+and it's compatible with various
+operating systems and wireless adapters
+and now talking about its practical
+usage and ethical hacking so primarily
+used for network security assessments
+aircrack NG is a go-to tool for ethical
+hackers and cyber Security Professionals
+for diagnosing and strengthening Wi-Fi
+security protocols and we talk about its
+basic command to start monitoring
+networks so the command is air mode a m
+n hyphen NG space start space w l n o or
+zero and that's you could run the
+command that's the basic command for
+that and the next on the list is Jon
+theer that is the Premier password
+cracking tool so Jon the Raper is
+renowned for its efficiency in password
+cracking originally designed for Unix
+system is now supports multiple
+platforms and is a go-to to tool for
+cracking complex passwords and its
+versatile hash support and attack modes
+so it's capable of handling a wide array
+of hash types it offers various attack
+modes like dictionary brute force and
+hybrid attacks making it highly
+adaptable for different cracking
+scenarios and then we have customization
+and Community Support known for its
+customizable nature allowing users to
+tailor attacks as per their requirements
+it benefits from a strong Community
+providing frequent updates and
+additional functionality through plugins
+and then we have the application in
+security auditing Beyond password
+recovery Jon the repper is an essential
+tool for cyber Security Professionals to
+conduct password strength Audits and
+enforce robust password policies in
+organizational networks and we talk
+about its basic amount to crack password
+hashes that is joone space hyphen iph
+word list equal to pathore toore word
+list and the sum hash hashes do text txt
+that is a file name so this is the file
+name that will use to conduct a password
+checking so this was about the Jon the
+Raper so the next on the list is Hydra
+THC Hydra it's a dbit Network login
+cracker Hydra often referred to an THC
+Hydra is celebrated for its speed and
+efficiency in cracking Network
+authentication credentials it supports
+numerous protocols including FTP https
+SMTP SSH and more making it incredibly
+versatile for various penetration
+testing scenarios and it's parallelized
+attacks for efficiency it's one of the
+Hydra key features that is its ability
+to perform rapid password guessing by
+parallelizing attempts across multiple
+threats or even across different IP
+addresses significantly reducing the
+time required to find successful
+credentials so extensive protocol
+support and flexibility so hydra's
+extensive support for various protocols
+coupled with its ability to be scripted
+and integrated into custom workflows
+making it a favorite among penetration
+testers for automated and targeted Brute
+Force attacks and then we have the
+Practical applications and penetration
+testing that is used by security analyst
+to test the strength of passwords on
+network services and identify potential
+V abilities that could be exploited by
+malicious actors it's a critical tool
+for ensuring the authentication
+mechanisms are robust and secure and the
+basic command for this is that is for
+the Hydra or txc Hydra is to perform a
+Brute Force attack on an FTP server that
+is Bash copy code Hydra minus I user
+minus p/ paath SL2 slw list.txt
+FTP SL that the port number now moving
+to the next on the list is that is Zed
+attack proxy o wsp zap so web
+application security scanner ow ASP app
+is an open- Source tool primarily used
+for finding vulnerabilities in web
+applications It is Well regarded for its
+Effectiveness in automated and manual
+testing or the security testing and if
+we talk about its comprehensive testing
+features it offers a range of
+functionalities including automated
+scanners spidering and ax scrolling and
+its ability to intercept and modify HTTP
+or https request and responses allows
+for thorough testing of web apps now
+talking about userfriendly and
+customizable nature so zap provides a
+userfriendly interface suitable for
+those new to application security as
+well as advanced options for experienced
+testers it supports a wide range of
+scripts and addons making it highly
+customizable and then we have community
+supported and dynamic nature as a part
+of ows project Z benefits from a Vibrant
+Community receiving regular updates and
+improvements it is a tool of choice for
+both learning and professional
+application security testing and then we
+have hashcat on the list that is
+unrivaled password recovery tool hashcat
+is recognized as the world's fastest and
+most advanced password recovery utility
+it's specifically designed for
+recovering lost or forgotten passwords
+offering unpaler efficiency and speed
+and talking about its wide compatibility
+and versatility it supports a vast area
+of hash types and encryption algorithms
+its flexibility makes it suitable for
+various scenarios from simple password
+recovery to complex cryptographic
+analysis and then we have the advanced
+attack modes or the multiple attack
+modes so it features multiple attack
+modes including Brute Force dictionary
+and hybrid attacks so this versatility
+enables hashcat to adapt to virtually
+any password cracking environment or the
+requirement making it a go to solution
+for Security Professionals and about its
+user accessibility and Community Support
+despite it Advanced capabilities hashcat
+is accessible to users of varing skill
+levels it benefits from a strong
+Community backing and shuring regular
+updates and a rich source of shared
+knowledge and strategies and then we
+have gidra on the list that is NSA
+developed software reverse engineering
+suit so G developed by the National
+Security Agency NSA is a powerful suit
+of software reverse engineering tools
+it's designed for analyzing malicious
+code and Mal enhancing cyber security
+defenses and it's reach feature set for
+in-depth analysis it offers a broad
+range of features for diassembly
+assembly decompilation graphing and
+scripting these tools assist in
+understanding complex software and
+detecting potential vulnerabilities and
+it's open source and community supported
+as an open- Source tool G draw benefits
+from Community contributions which
+constantly enrich its capabilities its
+openness allows for widespread use and
+adaption in various security context and
+its versatile application and educ
+ucational value it's widely used for
+malware analysis bability research and
+understanding propriety software get is
+also an excellent educational tool for
+those looking to delve into the entry
+cases of reverse engineering we have the
+malware analysis and that two we have
+talk over the increasing adoption of
+cloud computing Solutions will offer
+robust opportunities for both the market
+of the forecast period and allow
+introduction of newer Technologies the
+use of cloud computing Solutions is
+quickly growing worldwide o to the lower
+cost of cloud-based services and the
+lack of the need to set up separate it
+infrastructure the penetration testing
+Market is predicted to also grow in the
+near future due to the increasing use of
+cloud-based Solutions and services for
+multiple workloads be it email data
+backups CRM and collaborative Services
+Cloud deployment exposes software to
+more vulnerability and makes it more
+accessible to unauthorized users this is
+where penetration testing for security
+testing comes in with handheld devices
+seeming to be the primary device of
+choice for the future one such framework
+that facilitates this service is the
+offensive security back kalii net Hunter
+so let's take a look at the topics to be
+covered in today's video on Khali net
+Hunter we start with a small
+introduction to what Kali net Hunter is
+followed by going through the different
+versions of Kali net Hunter we then
+learn about the different components in
+the Khali framework and some of the most
+helpful attacks or features that are
+featured in this
+distribution finally we take a look at
+the pros and cons of K net Hunter as a
+whole before we get started with the
+video be sure to subscribe to our
+channel for more videos like this and
+hit the Bell icon to never miss an
+update again so let's get started with
+what is khi net
+Hunter khi net Hunter is the very first
+Android penetration testing framework
+for Android smartphones because net
+Hunter is an open source project
+developers can freely utilize it without
+fearing copyright infringement or other
+threats the project grants access to the
+kalii toolkit to compatible Android
+devices which allows penetration testing
+furthermore net Hunter provides several
+unique capabilities unavailable on other
+Hardware
+platforms a userland refers to space
+outside of an operating system kernel
+meaning anything that doesn't have root
+access we can use an app to system
+supported on Nexus or OnePlus and rooted
+Android phones while this is pretty
+incredible there are some limitations to
+this in general you can communicate with
+the instance of whatever Linux device
+you want via SSH or VNC using kly net
+Hunter the best device for hackers is an
+Android phone installed by K Linux
+because mobile phones are more
+convenient and portable than laptops for
+personal purposes the net Hunter
+interface also allows users to work
+easily with complicated configuration
+files through a local web Apache
+interface aside from this functionality
+modified Kernels at Android 802.11
+wireless injections and securely linked
+preconfigured VPN Services comprise a
+strong network security breakthrough and
+a separate Dropbox with K Linux
+constantly at your
+disposal we now have a basic
+understanding of what K Linux net Hunter
+is however there isn't a single
+distribution to learn about here K Linux
+net Hunter has multiple different
+versions depending on the device at the
+hands of the users let's cover them in
+more detail
+so let's cover them in more
+detail while K net Hunter functions as a
+portable operating system designed for
+penetration testing there can be other
+tools you want that isn't pre-installed
+to solve this problem there is a net
+Hunter store at the address store.net
+hunter.com this function is the same as
+a Google Play Store on Android or app
+stores on iPhones except the difference
+is that the tools in this repository are
+more in line with ethical hacking and
+net BR
+penetration the first of the three
+versions that net Hunter provides is the
+net Hunter rootless this works on almost
+all devices without any issues the
+number of tools available in this
+version is the lowest among the three we
+then have net Hunter light which
+requires root privileges to work
+properly it doesn't need any custom
+kernel flashing to power up and has
+comparatively more tools than net Hunter
+rootless finally we have the original
+net Hunter package with all the tools
+available at its disposal however your
+device must have root privileges and the
+custom net Hunter kernel to install this
+version as we can clearly see the more
+open our device settings and preferences
+are the more tools K net Hunter can work
+with root privileges provide
+administrative access to many
+functionalities that net Hunter can
+leverage and ultimately perform Network
+penetration with some tools are
+exclusive to the original net Hunter
+core and net Hunter light so you may
+have to cross shake your requirements
+before installing any version on your
+device now that we have covered the
+different versions of kinet Hunter let
+us cover its different components and
+how they help in the working of this
+distribution we look at the various net
+Hunter components which are effectively
+the building pieces of net Hunter's
+operation net Hunter's room comprises of
+various pieces that communicate and rely
+on one another to function properly
+below you will look at the three
+components that comprise net Hunter the
+first is a modified Android kernel
+followed by net Hunter Android app and
+finally but not least the K Linux chro
+itself let's examine these in
+depth the program that provides a UI to
+simplify the user task is a graphical
+component of net Hunter which is its
+Android app the software provides a
+straightforward interface for
+controlling the K Linux CH rout the fact
+that it has a simple UI does not imply
+that it is not capable of Performing
+comp it tasks this application contains
+all the configuration files necessary by
+net Hunter and is transferred to the SD
+card during the first run aside from the
+UI the program also serves as a bootup
+service allowing the server to activate
+when the device boots
+up the next in line is a custom Android
+kernel the kernel is a system component
+that allows applications to link to
+Hardware that meet users needs aside
+from facilitating communication the
+kernel also Main maintain system
+resources Now the default kernels inside
+Android do not supply at all utilities
+for security and
+exploitation still with a custom Android
+kernel any device can empowered with
+unique features which are not accessible
+in the stock
+bu now we have the Ki CH rout CH root is
+essentially a full K Lance installation
+that allows Android to share network
+storage and other resources the K Linux
+Chu is effectively the heart of net
+Hunter and the configuration settings
+have been updated so that net Hunter
+functions seamlessly with the Android
+ecosystem net Hunter has a CH manager
+that simplifies the download and
+installation of Chu this component is
+stored in an internal app storage region
+and one must meet the installation space
+requirements now that you have covered
+the different components of Kali net
+Hunter let us cover some of the tools
+that distribution offers that may be
+used in penetration
+testing at the top of the chain ize nmap
+nmap stands for network mapper and is a
+free and open source utility for network
+discovery and security auditing many
+systems and network administrators who
+also find it useful for tasks such as
+Network inventory managing service
+upgrade schedules and monitoring host or
+service up time it is most beneficial in
+the early stage of exploitation where a
+hacker must figure out the possible
+entry point to a system before running
+the necessary exploits uses raw IP
+packets in novel ways to determine what
+hosts are available on the network what
+services are being run what hosts are
+offering Etc it was designed to scan
+large networks but it also works fine
+against single host moving on we have
+mitm framework mitm or man in the workk
+framework provides a One-Stop shop for
+man in the middle and network attacks
+while updating and improving existing
+attacks and techniques originally built
+to address the significant shortcomings
+of other tools has been almost complet
+ritten from scratch to provide a modular
+and easily extendable framework that
+anyone can use to implement their own
+version of a Man inth the-middle attack
+it contains built-in SMB HTTP and DNS
+servers that can be controlled and used
+by various
+plugins the next tool at hand is the CeX
+manager it stands for the Khali desktop
+experience K net Hunter desktop
+experience puts the Ki Linux desktop in
+the palm of your hand it provides the
+the graphical user interface or GUI of
+Kali desktop on your Android device
+making penetration relatively easier for
+people not comfortable with the command
+line however the major tools all include
+command line functions so this is more
+of a convenience inclusion rather than a
+functional one finally we have
+Metasploit the metas framework is a very
+powerful tool that can be used by cyber
+criminals as well as ethical hackers to
+prove systemic vulnerabilities on
+networks and servers because it's an
+open source framework it can be easily
+customized and used with most operating
+systems with Metasploit the ethical
+hacking team can use rate or custom code
+and introduce it into a network to probe
+for weaker spots as another flavor of
+threat hunting once the flaws are
+identified and documented the
+information can be used to address
+systemic weaknesses and prioritize
+Solutions we now have a very clear
+understanding of what K net Hunter is
+and its features let's cover some of the
+pros and cons of this particular
+framework when it comes to the
+advantages net Hunter provides features
+that are not by default included in the
+original kernels of Android Fones the
+new tools can be used to perform Network
+penetration and system checks for
+security
+vulnerabilities qualcom checks and
+Snapdragon have monitor support enabled
+monitor mode helps listen to wireless
+traffic and capture data packets which
+can then be unencrypted and snooped
+on the Kernel build presence assess the
+easy creation of kernels that are not
+yet available to the public similarly
+the use of gitlab C or command line
+interface speeds up the release
+timelines it allows the input of other
+developers making the bug squashing
+process easier and the development of
+the tools more
+collaborative the human interface device
+Hardware is fully supported by default
+but it must be enabled and configured
+through user Space
+controls so when it comes to the
+disadvantages of K net Hunter so not
+every Android phone is supported as part
+of the official net Hunter release
+therefore be cautious while downloading
+and running them since the wrong net
+Hunter may break the phone in some very
+rare
+circumstances because some internal
+Wi-Fi systems do not allow monitor mode
+or data packet injection an external USB
+Wi-Fi adapter may be required for some
+devices who want to pursue wireless
+network penetration Professionals in
+security testing penetration testing and
+ethical hacking utiliz l as the
+preferred operating system provides
+several configurable distributions that
+me May configure based on your end use K
+Linux and parat Os are two popular
+penetration testing
+distributions while these operating
+systems each have unique offerings the
+overall Choice can differ between
+Personnel thanks to the various tools
+and Hardware specifications today we
+will look at both these distributions
+and settle on the perfect choice for
+each type of user let's go through the
+agenda for this
+video we will learn about K Linux and
+pilot security Os from scratch while
+understanding their primary selling
+points as a Linux distribution catered
+towards penetration testers next we know
+about some features of these operating
+systems that stand out of their
+package finally we directly compare K
+Linux and Par security OS thereby making
+a clear-cut conclusion on which OS is
+perfect on a per requirement basis
+so let's start by learning about K Linux
+from a ground
+level K Linux which is formerly known as
+backtrack Linux is an open- Source Linux
+distribution aimed at Advanced
+penetration testing and security
+auditing it contains several hundred
+tools targeted towards various
+information security tasks such as
+penetration testing security research
+computer forensics and reverse
+engineering K Linux is a multiplatform
+solution accessible and freely available
+to Information Security Professionals
+and
+hobbyists among all the Linux
+distributions K Linux takes its roots
+from the Debian operating system Debian
+has been a highly dependable and a
+stable distribution for many years
+providing a similarly strong Foundation
+to the K Linux
+desktop while the operating system can
+practically modify every single part of
+our installation the networking
+components of K Linux come disabled by
+default this is done to prevent any
+external factors from affecting the
+installation procedure which may pose a
+risk in critical environments apart from
+boosting security it allows a more
+profound element of security control to
+the most enthusiastic of
+users now let's take a look at par
+security operating
+system paret security OS is a Dean based
+Linux distribution with an emphasis on
+security
+privacy and development it is built on
+the Demian testing branch and uses a
+custom Harden Linux
+kernel par security contains several
+hundred tools targeted towards tasks
+such as penetration testing computer
+forensics reverse engineering and
+security research it is seen as a
+generally lightweight distribution that
+can work under rigorous hardware and
+software
+specifications it features a distinct
+forensic mode that does not Mount any of
+the syst systems hard diss or partitions
+and has no influence on the host system
+making it much more stealy than its
+regular occurrence this mode is used on
+the host system to execute forensic
+procedures a rolling release is a
+paradigm in which software upgrades are
+rolled out constantly rather than in
+batches of versions and software
+development this ensures that the
+software is constantly up to date a
+rolling release distribution such as
+parot security OS follows the same
+concept it provides the most recent
+Linux kernel and software versions as
+soon as they become
+available with a basic introduction to
+the operating systems out of the way let
+us take a look at the unique features of
+both K Linux and parro security
+OS the latest version of K Linux comes
+with more than 600 penetration tools
+pre-installed after reviewing every tool
+included in backtrack developers have
+eliminated a significant number of tools
+that either simply did not work or
+duplicated other tools that provided the
+same and similar
+functionality the K Linux team comprises
+a small group of individuals who are the
+only ones trusted to commit packages and
+interact with the repositories all of
+which is done using multiple secure
+protocols restricting access of critical
+code basis to external assets
+dramatically reduces the risk of source
+contamination which can cause C Linux
+users worldwide a great deal of damage
+as a direct victim of cyber
+crime although penetration tools tend to
+be written in English the developers
+have ensured that Kali includes proper
+multilingual support allowing more users
+to operate in the native language and
+locate the tools they need for their job
+the more comfortable a user feels with
+the intricacies of the operating system
+the easier it is to maintain a
+stronghold over the configuration and
+the device in general
+since arm-based single board systems
+like the Raspberry Pi are becoming more
+prevalent and inexpensive the
+development team knew that kali's armm
+support would need to be as robust as
+they could manage with fully working
+installations Kali Linux is available on
+a wide range of armm devices and has
+armm repositories integrated with the
+mainline distribution so the tools for
+armm are updated in conjunction with the
+rest of the
+distribution let's take a look at some
+of the features of parat security
+operating system
+now along with the giant catalog of
+scripts parad security OS has its own
+hardened Linux kernel modified
+explicitly to provide as much security
+and resistance to hackers as possible in
+the first line of
+defense the configurations in the
+operating system Act is the second gate
+view taking care of malicious requests
+and dropping them off this is
+particularly beneficial since should
+there be a scenario where the latex
+Linux kernel is causing some particular
+issue the paratos development team will
+most likely iron it out first before
+passing it on as an
+update if the custom hardal kernel was
+inreasing enough pallet security
+developers managed to install more
+hacking tools and scripts to ensure a
+smooth transition for the KH Linux users
+all the tools you find in Kali are
+present in parent to us and a few extra
+ones for good measure and this has been
+achieved while keeping roughly the same
+operating system size between both of
+them however it's not all productivity
+points for pirate OS they provide a
+choice between two different desktop
+environments mate which comes
+pre-installed by default and KDE for
+those unfamiliar with Linux terminology
+you can think of desktop environments as
+the main UI for a distribution being
+highly modular in nature one can use par
+security OS while adding another desktop
+environment that they find appealing
+while K Linux has only a single option
+par security has provided two optimized
+builds with M desktop and KD
+desktop one of the primary advantages of
+parro os over Kali Linux is that it's
+relatively lightweight this implies that
+it takes significantly less dis space
+and computing power to function
+correctly with as little as 320 MB of
+ram required in reality paratos is
+designed to operate successfully off a
+USB stick but K Linux does not work well
+from a USB Thrive and is generally
+installed in a virtual machine parat is
+more of a niche distribution if you're
+searching for something lighter than K
+Linux features are great but what about
+Performance Real World metrics let us
+compare both these operating systems
+directly with respect to their Hardware
+specifications and usability in in the
+end we can decide on what distribution
+is fit for each type of
+user for our first point of comparison
+let's take a look at the ram required
+for Optimum performance of the operating
+system which is highly essential when
+trying to crack hashes or something of
+similar nature rme usage is a very
+important facet while K Linux demands at
+least 1 GB of RAM Paras secur can
+operate optimally with a minimum of 320
+MB of
+RAM for correctly displaying graphical
+elements K Linux requires GPU based
+acceleration while this is not the case
+with parent security OS which doesn't
+require any graphical acceleration
+needed from the user
+side once these operating systems are
+installed on VMware using the live boot
+isos they take up a minimum amount of
+hard disk storage both of these
+operating systems have a recommended dis
+storage of minimum of 20 GB in K Linux
+and a minimum of 15 GB in parent
+security so they can install all the
+tools necessary in the ISO
+file when it comes to the category and
+the selection of tools K Linux has
+always been the first in securing every
+single tool available for hackers in the
+penetration testing industry parro
+Security on the other hand has managed
+to take it up up a
+notch while specializing in Wireless pen
+testing parage security makes it a point
+that all the tools that K Linux provides
+has been included in the iso while
+simultaneously adding some extra tools
+that many users will have to install
+from thirdparty sources in K
+Linux being a decade old penetration
+testing distribution K Linux has formed
+up a very big Community with strong
+support signature par Security on the
+other hand is still growing and it is
+garnering much more interest among
+veteran penetration testers and ethical
+hackers a primary drawback of car Linux
+is the extensive Hardware requirement to
+perform optimally it requires higher
+memory than parro security it also needs
+graphical acceleration while demanding
+more virtual hardk Storage parro
+security on the other hand was initially
+designed to run off a USB drive directly
+thereby requiring very minimal
+requirements from a hardware perspective
+like just 320 MB of RAM and no graphical
+acceleration needed this means par
+security is much more feasible for
+people who are not able to devote
+massive resources to either their
+virtual machine or on their laptop hard
+disk
+directly with the comparison done
+between both of these operating systems
+let's take a look at the type of users
+both of these are catered
+to one can go with K Linux if they want
+the extensive Community Support offered
+by its users if they want to go with a
+trusted development team that have been
+working on this distribution since many
+years if they have a powerful system
+which can run K Linux optimally without
+having to bottleneck performance and if
+they are comfortable with a
+semi-professional environment which may
+or may not be very useful for new
+beginners one can decide to go with par
+security if they want to go with a very
+lightweight and distribution that can
+run pretty much on all
+systems it also has a lot of tools
+pre-installed and some of them are not
+even present on G
+Linux it is much more suitable for
+underpowered DS where users do not have
+a lot of Hardware resources to provide
+to the operating system and thereby it
+is much more feasible for people with
+underpowered laptops or no graphical
+acceleration compared to K Linux parad
+secur ities desktop environment is also
+relatively easier to use for new
+beginners for people who are just
+getting into ethical hacking par
+security does a relatively better job of
+introducing them to the operating system
+and to the various toools without having
+to dump them into the entire
+intricacies if you are a Linux developer
+or you are preparing for a Linux
+developer role so this video is for you
+hello everyone and welcome back to
+another video by simply learn this is
+anub and in this video we will be
+learning about lenux interview questions
+but before we begin if you haven't
+subscribed to our Channel already make
+sure to hit the Subscribe button and
+press the Bell icon so you will never
+miss any update from Simply learn so
+without further Ado let's begin and see
+what's in it for
+you first we will see the introduction
+to Linux after that we will see Trends
+and recent changes in Linux commands
+moving ahead we will see how to become a
+Linux developer after that we will see
+the opportunities and salaries of Linux
+developers and after that we will see
+Linux command interview
+questions Linux platform gives its open
+source Natures has integrated a wide
+range of innovation Minds who have given
+their best to introduce world changing
+ideas into reality
+Linux is basically an operating system
+which is popular for its efficiency as
+well as its
+performance it can run on various
+Hardware platforms manufactured by IBM
+Intel and
+HB now let's see some Trends and recent
+changes in Linux
+commands Linux is supercomputing the
+development and deployment of Linux
+powered supercomputers is a trend that
+shows no signs of abing given the
+flexibility structure of the Linux
+system as well as the compatibilities it
+has the usage of Linux as a super
+computer operating system is guaranteed
+to remain one of the most important
+Linux Trends in
+2022 let's see the next Point New Linux
+based
+Hardware the Linux platform has gained a
+repulsion since Raspberry Pi and
+Chromebooks gained the attention of the
+particular domain of viewers these Linux
+based components are breaking new
+grounds as the new pass thanks to their
+small from size and ability to perform
+routine task with ease the platform has
+now witnessed Advanced implementations
+throughout the prior calendar year now
+the next point we will be discussing is
+the cloud and the Linux although Linux
+is popular in the technological
+Community it is going to continue to
+increase in popularity in line with the
+open-minded techniques of
+2022 as cloud-based Technologies and the
+Linux system are so interconnected the
+Linux system is expected to grow with
+the cloudbased alternative now let's see
+the next point which is Chromebooks and
+Chrome OS Chrome OS has transformed into
+the most flexible operating system
+available in the market Chrome OS just
+obtain the ability to connect with
+Google Play Store and run just about any
+Android app giving user one of the most
+trained web ciruit experience possible
+talking into consideration the
+improvements on the operating system it
+is too soon going to be on a quick
+survey towards possibilities becoming
+the most flexible platform compatible on
+running Android and Linux
+softwares now let's see how to become a
+Linux developer
+let us take a look at the required
+skills needed to make a career as a
+Linux developer first one is learn C
+programming the first and the foremost
+thing which is needed is learn C
+programming most of the part of Linux
+are written and C if you want to
+contribute lowlevel parts of the system
+you should know the Assembly Language as
+well however intentionally it is
+important to learn the C language next
+step is to learn algorithms and data
+structure to become a Linux developer
+you should have a fundamental knowledge
+of data structure and algorithms and
+algorithm is basically a step-by-step
+approach to solve a particular problem
+on the other hand data structure works
+on organizations data both these
+components help the programmers to solve
+the problem within a
+minute The Next Step you should learn is
+operating
+system now that you have have acquir
+some knowledge of the programming the
+next thing on your to-do list should be
+learn everything about the operating
+system and then do some
+programming competitive programming can
+help you Master's algorithms and data
+structures it also shows you how to
+solve a program in a short period of
+time a competitive programmer must be
+able to solve an issue in a short amount
+of time now let's see the opportunities
+and salaries of Linux
+programmers when it comes to Linux
+professionals you have two choices you
+can either work towards becoming a
+developer or you can go into
+Administration furthermore the
+professional option are not limited to
+Linux platform they Encompass the wide
+range of application the following are
+the areas where hiring managers are
+looking for hiring Linux developers
+first one is system architecture Linux
+system architecture salary in India rang
+between 6.3 lakhs to 44 lakh with an
+average annual salary of 21.1 lakhs the
+next one is system administration the
+average salary of a system
+administration in India range between R
+2.4 lakh perom to rupes 4.5 lakh perom
+the next one
+is web developer and development Linux
+developer average annual salary in India
+range from rupees 3 lakh to 8.9
+lakhs and for desktop and app
+development every starting salary for
+Linux developer and app developer is in
+India is rupees 3 lakh per year now
+we'll move ahead with the Linux command
+interview questions the first question
+that we will discuss is what is Linux
+Linux is a uni based open source
+operating system lenux to walls was the
+first to introduce Linux
+the primary goal of Linux was to give a
+free and lowcost operating system for
+people who couldn't buy Windows iOS or
+Unix now the next question is Define
+Linux kernel is it legal to edit Linux
+kernel the answer is the Linux kernel is
+a low-level Software System it is used
+to keep track of resources and give a
+user
+interface yes it is legal to edit Linux
+kernel Linux is released under the
+journal public license which is GPL and
+any project which is released under GBL
+can be edited and Modified by the end
+users let's move on to the next
+question which is what is l
+l l l denotes Linux loader it is
+basically Linux boot loader which loads
+Linux operating system into a main
+memory to start execution most of the
+computer systems are featured with boot
+loaders for certain versions for Mac OS
+or Windows OS so if you want to use
+Linux OS you have to install a special
+boot loader for it when a computer gets
+started bios conducts small initial test
+and transfer control to the master Boot
+Road for from here L loads the Linux OS
+and started the benefit of utilizing L
+loo is that it ensures a quick boot of
+the Linux operating system moving ahead
+let's move on to the next question which
+is what are the basic components of
+Linux the following are the basic
+components of Linux first one is
+shell it is a Linux interpreter which is
+used for executing commands the next one
+is Kernel kernel is the co-art of the
+operating system which is used to manage
+hardware and
+operations after that the next one is
+system utilities these are the software
+functions which help users to manage
+their computers the next one is GUI GUI
+donates graphical user interface through
+which the user can interact with the
+system but unline CLI GUI compresses
+buttons images and text boxes for
+interaction the next one is application
+programs software programs are designed
+to complete a particular
+task now the next question is which
+shell are used in
+Linux the following are the most common
+types of shell used in Linux the first
+one is fish friendly interactive shell
+offers some special features such as web
+based configuration fully scriptable and
+auto suggestions with clean scripts the
+next one is Bash borine again shell is
+the default for most of the Linux
+distributions the next one is zsh z
+shell offers unique features like
+starter files file name generation login
+or log out watching and closing comments
+the next one is
+CHS C shell follows C like syn and has
+features like spelling correction as
+well as job
+control now let's move on to the next
+question what is swab space swab space
+is the extra space utilized by Linux to
+temporarily keep concurrently running
+processes when Ram space is sufficient
+when you start a program it is stored in
+Ram so that the CPU can quickly retrieve
+data
+if you have more running programs then
+Ram can accommodate the swap space is
+used to store these programs the
+processor will now search for the RAM
+and swap space for data swap space is
+used in the form of execution of ram by
+Unix let's move on to the next question
+which is differentiate between dos and
+Bash Bash is a command which is SC
+sensitive and do commands are not K
+sensitive in bash there are eight
+characters for file name post fixed with
+three characters for the extension and
+in DOS no naming conventions are used
+again bash is used as an escape
+character and dos is used in the form of
+directory
+spater now let's move on to the next
+question which is what is file
+permission
+in Linux the following are the three
+types of permission in Linux first one
+is the read it allows its user to open
+and read the file the next one is right
+it allows its user to open and edit the
+file and the third and the last one is
+execute it allows its user to run the
+file the next question
+is what are iode and process ID iode is
+is a unique name provided by the
+operating system for each file similarly
+process ID is also a unique ID provided
+to each
+process what are Linux directory
+commands given below are the five main
+directory commands in Linux the first
+one is pwt it displays the path of the
+present working directory the next next
+one is is list all the directories and
+files in the present working directory
+CD it is used for changing the present
+working directory
+rmd it deletes a directory and
+mkd it is used to create a new directory
+mkd is also known as make
+directory now let's move on to the next
+question
+what are the various processes States in
+Linux given below are the process states
+of
+Linux the first one denotes ready the
+process is ready to
+run the second one running is the
+process has been
+executed the third one is wait or
+blocked this shows the process is
+waiting for the input after that it's
+completed or
+terminated this process shows com the
+process is completed execution or was
+terminated by the system the last one is
+zombie the process terminated by the
+information is still available in the
+process
+table let's move on to the next
+question what are Process Management
+System calls the following are the
+system calls used to manage the process
+the first function is Fork function it
+is used for creating a new process then
+next is a exec function which is used
+for executing a new program the third
+one is a wait function wait until the
+process completes the
+execution after that it's exit function
+it is used to exit from the process
+after that it's get P ID function get
+the unique process ID of the
+process and the last one is get PP ID
+function gets the parent process unique
+ID let's move on to the next
+question what are the redirection
+operators the redirection operator is
+used for redirecting the output of the
+specific command as an input to another
+command the following are the two ways
+to use this the first one is this symbol
+which is overwrites the files existing
+content or creates a new one the second
+one is the symbol which shows the add
+the new content to the end of an
+existing file or create a new
+one let's move on to the next question
+which is explain a latch a latch is a
+temporary storage of device that is
+controlled by a training signal which
+can be either stored as zero or or One A
+latch is a primarily used to retain
+State information and has two stable
+States high output or one or low output
+or zero as long as a latch is powered on
+it can store one piece of
+data the next question is what is
+microprocessor a microprocessor is a
+device which is used for
+execution instructions it is is a single
+chip device that fetches the
+instructions from the memory decodes it
+and executes it the following are the
+three basic functions which are carried
+out by a
+microprocessor the first one is addition
+substraction multiplication and division
+are example of mathematical operations
+the next one is make decision based on
+the circumstances and then jump to the
+new different instructions as needed
+last one is move data from one position
+in memory to
+another now let's move on to the next
+question how to rename files in Linux
+there is no such particular command for
+renaming a file in Linux however you can
+use the copy or move command to renew a
+file the First Command which we use is
+move command
+we write it like dollar sign MV which
+donates at move old name and then the
+new name of the file like this only we
+will write a copy command in that there
+will be a dollar sign CP means copy old
+name of the file and then the new name
+of the file like that only if we want to
+delete a command we'll write dollar sign
+RM which donates as remove and the file
+name let's move on to the next
+question how to write the output of a
+command to a file you have to use the
+redirection operator to do this write
+dollar sign the command which you want
+to use and the greater sign and then the
+file
+name the next question is how to copy
+files to a floppy dis the following
+steps will guide you to copy file to a
+floppy dis the first one is Mount to
+floppy disk the second one is copy the
+files and the last one is unmount the
+floppy
+disc let's move on to the next
+question how should we identify which
+shell you are
+using open the terminal and run dollar
+sign e CH o which which is Echo then
+again dollar sign and shell all in
+capital let's move on to the last and
+final question for this interview
+question
+series how would you sort the entities
+in a text file in ascending order you
+can do this by using the sort command
+for this you have to write the dollar
+sign sort sample. text sample do text is
+the file name that I'm using here you
+can use the name of your file you which
+you want to do a sending order operation
+staying ahead in your career requires
+continuous learning and upskilling
+whether you're a student aiming to learn
+today's top skills or a working
+professional looking to advance your
+career we've got you covered explore our
+impressive catalog of certification
+programs in Cutting Edge domains in
+including data science cloud computing
+cyber security AI machine learning or
+digital marketing designed in
+collaboration with leading universities
+and top corporations and delivered by
+industry experts choose any of our
+programs and set yourself on the path to
+Career Success click the link in the
+description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click
+here YouTube channel and click here to
+watch similar videos to nerd up and get
+certified click here

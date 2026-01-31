@@ -1,0 +1,355 @@
+are you new to hacking and struggling to
+distinguish websites from web browsers
+or are you a skilled exploiter who can
+easily handle buffer overflows hello
+everyone and welcome to this video by
+simply learn today we are laying out the
+road map to help you conquer the
+infamous ocp that is offensive security
+certified professional certification on
+your first attempt wherever you stand on
+the Spectrum this certification is going
+to challenge you like nothing before
+it's one of the most prestigious and
+difficult cyber security certifications
+out there unmatched in Prestige and the
+level of skills it demands in today's
+video I'll give you a complete easy to
+follow plan to pass the certification we
+will build a solid cyber security
+Foundation Master web pen testing and
+tactive directory exploitation privilege
+escalation on Windows and Linux is next
+followed by buffer overflow skills
+finally we will prepare for the intense
+24-hour exam itself with time management
+and Reporting writing guidelines craving
+a career upgrade subscribe like and
+comment
+below dive into the link in the
+description to FastTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back we are now ready to embark on this
+epic cyber security Adventure before
+diving into this video if you are
+interested in leveling up your cyber
+cber security skills don't forget to
+check out simply's Advanced executive
+program in cyber security this
+comprehensive course in collaboration
+with triple it Bangalore and npci covers
+everything from fundamentals to Cutting
+Edge Technologies through Hands-On
+project Labs Master ethical hacking
+digital forensics Cloud security cyber
+security analytics and more get trained
+in advanced concepts like cryptography
+risk management and incident response to
+tackle complex cyber threats tailored
+for cyber security profession in India
+this program ensures your industry ready
+whether you are new to the field or a
+seasoned Pro elevate your career with
+this gamechanging opportunity enroll now
+and Kickstart your journey on an elite
+cyber security expert back in by
+industry leaders don't miss out to
+upgrade your skills and stand out from
+the competition today so without further
+Ado let's get started let us now start
+by understanding what is OSP
+certification all about OSP stands for
+offensive security certified
+professional it is an ethical hacking
+certification offered by offensive
+security a renowned organization in the
+field of security the demand for the ocp
+certified professionals is on the rise
+and for the good reason as of February
+20124 an off sex certified professional
+in the United States earns an average
+annual salary of around
+$119 however this can vary significantly
+with some earning a little as
+$22,000 While others command up to
+staggering of
+$168,000 per year so what exactly is the
+ocp and why is it such a sort after
+certification we will now understand is
+ocp worth it or not the OSP
+certification is not just a milestone
+but a stepping stone towards more
+advanced certifications and a Launchpad
+for owning your whad hacking skills it
+serves as a testament to your
+Proficiency in ki Linux and penetration
+testing methodologies when combined with
+other higher level certification the ocp
+can help you build a robust and
+comprehensive portfolio showcasing your
+diverse expertise in cyber security
+domain however whether the ocp is worth
+pursuing depends on your personal and
+professional aspirations let's explore
+some potential outcomes that can Eid
+your decision-making process firstly
+certifications like the ocp can open up
+new job opportunities especially if you
+are transitioning into the ethical
+hacking field from a related role they
+can help bridge gaps in your resume and
+demonstrate your commitment to your
+industry secondly in the ever evolving
+Tech landscape continued education is
+essential for Success pursuing
+certifications like the ocp ensures that
+you stay current with the latest tools
+and methodologies proving your
+dedication to continuous learning lastly
+the ocp provides a tangible validation
+of your proficiency with specific tools
+and procedures such as scly Linux some
+employers actively seek out OSP
+certified professionals or require
+hands-on experience with the tools
+covered in this certification next we
+will be talking about OSP Administration
+you must be now wondering what about the
+exam itself the OSP exam is proctored
+meaning it's closely supervised lasting
+for a full 24 hours you'll only get
+feedback on your exam attempt if you
+fall short of the passing score so it's
+crucial to give all and leave no stone
+unturned during those intense 24 hours
+now let's talk retakes if for whatever
+reason you need to retake the
+examination there's a cool off period
+depending on your package it could be
+either four or 6 weeks before you can
+attempt it again so there you have it
+folks the crazy reality of the ocp
+administration process let us now
+discuss the stepbystep procedure to
+achieve our OSP road map at first we
+have as the famous say goals a wise
+cyber security specialist builds their
+house upon the rock of fundamental and
+that's exactly what we are going to do
+before we delve into the depth of
+advanced exploitation and Pen testing we
+need to establish a strong foundation in
+the core cyber security Concepts which
+include mastering networking Concepts
+like TCP IP HTTP and DNS and
+understanding operating systems like
+Windows and Linux inside and out for
+resources you can check out Simply learn
+cyber security playlist link which will
+be attached in the description box below
+it will give you a solid full grasp of
+networking fundamentals moving on and
+operating system are the backbone of
+every Computer and Network windows and
+Linux are the dynamic duo you need to
+master inside and out from directory
+structures and file systems to user
+management and services you need to
+understand how these operating system
+work under the hood and speaking of
+automation let's not forget the
+importance of coding skills that is
+python bash Powershell these scripting
+languages will allow you to automate
+tedious task pass data and even craft
+custom exploits gradually leveling up
+your skills so there you have it the
+first step in our ocp journey all right
+with our solid cyber security foundation
+in place it's time to level up and dive
+into the exciting world of the web
+application penetration testing web apps
+are the gateway to many initial
+footholds during the ocp examination so
+mastering this domain is very crucial
+you can have all the networking and Os
+skills in the world but if you can't add
+ify and exploit web vulnerabilities well
+you will struggle all the theory and lab
+work in the world won't fully prepare
+you for the real deal let us now talk
+about burp suit which is the web hacker
+Swiss army knife this powerful
+intercepting proxy will become your best
+friend for poking frauding and
+exploiting web apps from basic
+interception and repeater usage to
+Advanced Techniques like Intruder TS and
+extender functions you will become a
+burp suit Wizard and when it comes to
+the ocp that burp Mastery will pay
+dividend but all the theory and the lab
+work in the world won't fully prepare
+you for the real deal and that's why we
+need to get our hands on some authentic
+web app pen testing boxes that will not
+only level up your skills but also
+provide invaluable experience in the pen
+testing mindset and process so there you
+have it the path to web app pen testing
+Mastery now we are diving into step
+number three which is Conquering active
+directory in this new format of the ocp
+examination mastering active directory
+attacks is very crucial it's the
+backbone of many networks and
+understanding how to exploit it
+effectively is key so here are some of
+the key points to help you conquer
+active directory like a pro watch
+offensive security ad courses video and
+understand various ad attacks scenarios
+techniques and best practices platforms
+like hack the Box offer a range of AD
+specific machines to practice on start
+with machines like Forest active and
+real work through the challenges and
+sharpen your exploitation skills dive
+into the attactive directory room to PR
+practice your offensive skills and don't
+forget to explore the post exploitation
+Basics to learn what to do after gaining
+access follow these steps and you will
+be well on your way to master active
+directory exploitation now that we have
+conquered web apps and dominated active
+directory it's time to level up our game
+with some serious privilege escalation
+skills privilege escalation forms the
+code of the ocp examination you could be
+the web vulnerability Wizard and the ad
+Lord supreme but if you can't elevate
+your access on those exam machines well
+you'll need help that's why we must go
+deep into windows and Linux privilege
+escalation techniques it takes serious
+dedication and practice to master these
+skills on both windows and Linux system
+to achieve that we need to stick to the
+plan and solve windows and Linux boxes
+from TJ's orp like track list these are
+the practice puzzles that sharpen your
+skills and get you ready for the real
+deal next we have study priv ESC
+methodologies by watching learning and
+applying the techniques in your practice
+session by following these key points
+you will be well on your way to becoming
+a privilege escalation Pro with web apps
+and active directory in the bag and
+privilege escalation leveled up we are
+getting scarely close to being fully
+prepared for the 24-hour OSP exam let us
+now talk about the classic hacking
+technique that is buffer overflows you
+might think buffer overflows are
+obsolete but they are super important
+especially for the OSP exam even though
+they are not common nowadays is knowing
+how to do buffer overflows will give you
+a big Advantage you never know you might
+come across an old system with sloppy
+coding and that's when your skills come
+in handy well buffer overflows are a
+classic hacking technique and they are a
+key part of the overp exam for a few
+reason first off ocp is all about
+practical skills and not just Theory you
+need hands-on experience that's where
+platforms like tryck me offer rooms
+specially designed to help you practice
+and understand the ins and the outs of a
+buffer overflow they are like the
+ultimate test for your hacking skills
+because they require you to understand
+how a computer's memory work and exploit
+it to gain control so don't overlook the
+importance of buffer overflows in an ocp
+Journey embrace the challenge dive deep
+into the world of Smashing slacks and
+overwriting eips and level up your
+hacking skills like never before now
+that you have owned up your skills it's
+time for the big step which is enrolling
+in offensive security official OSP
+Course once you have enrolled it's time
+to dive into the course exercises and
+bonus challenges these are designed to
+push your skills and limit and solidify
+your knowledge make most of the lab
+environment by practicing extensively
+the more you practice the more confident
+you feel on the exam day completing the
+ocp course PDF and bonus challenges not
+only helps reinforce what you have
+learned but also earns you extra points
+every Point counts last but not the
+least study ocp cheat sheets and
+methodologies like S1 irons these
+resources offer valuable insights and
+tips to help you in as the examination
+now it's time to take the final step in
+our OSP Journey which is acing the OSP
+examination after months of dedicated
+preparation we are now ready to take the
+grueling 24-hour OSP exam remember to
+stay organized St detail notes and
+manage your time effectively get plenty
+of rest before the exam day follow
+systematic enumeration process like S1
+RN method submit a comprehensive report
+within 24 hours of completing the
+examination by following this Ro road
+map and putting the hard work you will
+be well equipped to join the ranks of
+ocp certified Professionals in 2024
+remember the Journey won't be easy but
+the rewards will be worth it and that's
+a wrap for our ocp road map for 2024 by
+simply learn we have covered everything
+from mastering the basics of hacking to
+conquering Advanced Techniques like
+privilege escalation and buffer
+overflows with dedication practice and
+the right resources you are well on your
+way to becoming an ocp certified
+professional to learn more more about
+the cyber security be sure to check out
+the other videos by simply learn if you
+like this session please like share and
+subscribe if you have any questions you
+can drop them in the comment section
+below thanks for watching and I'll see
+you in the next video staying ahead in
+your career requires continuous learning
+and upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our aggessive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to ner up and get certified click
+here

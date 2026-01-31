@@ -1,0 +1,3941 @@
+Jenkins is the PowerHouse behind modern
+software development streamlining the
+entire build and deployment process in
+this comprehensive course we will unlock
+the potential of Jenkins teaching you
+how to automate tasks integrate diverse
+tools and orchestrate the software
+delivery pipeline like a pro from
+setting up Jenkins pipelines to managing
+configurations and scaling for large
+projects we will cover it all whether
+you are a seasoned developer looking to
+boost productivity or a beginner you get
+to dive into devops then this course
+will Empower you to harness the full
+potential of Champions for efficient and
+error-free software development if these
+are the type of videos you'd like to
+watch then hit that subscribe button and
+the bell icon to get notified when we
+host as we speak you might wonder what
+it takes to become an expert devops
+engineer if you are a professional with
+at least one year domain experience and
+is looking for online training and
+certification from the prestigious
+universities and in collaboration with
+leading experts then search no more the
+postgraduate program and devops by
+Caltech University offered by simply
+learn in collaboration with IBM should
+be the right choice for you for more
+details head straight to our homepage
+and search for devops postgraduate
+program or simply click on the link in
+the description box below with that in
+mind over to our training experts
+Jenkins is a web application that is
+written in Java and there are various
+ways in which you can use and install
+Jenkins I have listed popular three
+mechanisms in which Jenkins is usually
+installed on in any system the topmost
+one is as a Windows or a Linux Based
+Services so if at all you have Windows
+like the way I have and I'm going to use
+this mechanism for this demo so I would
+download a MSI installer that is
+specific to Jenkins and install this
+service so whenever installed as a
+service it goes ahead and nicely
+installs all that is required for my
+Jenkins and I have a service that can be
+started or stopped based upon my name
+any flavor of Linux as well one other
+way of running Jenkins is downloading
+this generic War file and as long as you
+have jdk installed you can launch this
+war file by the command opening up a
+command prompt or shell prompt if it
+earlier on Linux box specifying Java
+hyphen jar and the name of this war file
+it typically brings up your web
+application and you know you can
+continue with your installation the only
+thing being if at all you want to stop
+using Jenkins you just go ahead and
+close this prompt you either do a
+control C and then bring down this
+prompt and your Jenkins server would be
+down other older versions of Jenkins
+were run popularly using this way in
+which you already have a Java based web
+server running up and running so you
+kind of drop in this war file into the
+root folder or the httpd root folder of
+your web server so Jenkins would explode
+and kind of bring up your application
+all user credentials or user
+Administration is all taken care of by
+the Apache or the Tomcat server or the
+web server on which Jenkins is running
+this was a very older way of running but
+still some people use it because if they
+don't want to maintain two servers if
+they all already have a Java web server
+which it's being nicely maintained and
+backed up Jenkins can run attached to it
+all right so either ways it doesn't
+matter however you're going to bring up
+your Jenkins instance the way we're
+going to operate Jenkins is all going to
+be very very same or similar one with
+the subtle changes in terms of user
+Administration if at all you're
+launching it through any other web
+server which will take care of the user
+Administration otherwise all the
+commands are all the configuration are
+the way in which I'm going to run this
+demo it is going to be same across any
+of these installations all right so the
+prerequisites for running Jenkins as I
+mentioned earlier Jenkins is nothing but
+a simple web application that is run in
+Java so all that it needs is Java
+preferably jdk 1.7 or 1.8 2GB Ram is the
+recommended RAM for running Jenkins and
+also like any other open source tool
+sets when you install jdk ensure that
+you set in the environment variable Java
+home to point to the right directory
+this is something very specific to jdk
+but for any other open source tools that
+you've installed there is always a
+preferred environment variable that you
+got to set in which is specific to that
+particular tool that you're going to use
+this is a generic thing that is there
+for you know for any other open source
+projects because the way open source
+projects discover themselves is using
+this environment variables so as a
+general practice or a good practice
+always set these environment variables
+accordingly so I already have GDK 1.8
+installed on my system but in case you
+do not what I would recommend is just
+navigate on your browser to the Oracle
+home page and just type in or search for
+install jdk1.8
+and navigate to The Oracle home page you
+will have to accept the license
+agreement and there are a bunch of
+installers that is okay that you can
+pick up based upon the operating system
+on which you're running so I have this
+windows 64 installer that is already
+installed and running on my system so I
+will not be into the details of
+downloading this or installing it let me
+show you once I install this what I've
+done with regard to my path
+so if you get into environment variables
+all right so I've just set in a Java
+home variable
+if you see this C colon program files
+Java jdk 1.8 this is where my my Java is
+located C program files C program files
+Java
+okay so this is the home directory of my
+jdk so that is what I've been I've set
+it up here in my environment variable
+so if you see here this is my Java home
+all right one other thing to do is
+ensure that in case you want to run Java
+or Java C from a command prompt and show
+that you also add that path into this
+path variable so if you see this
+somewhere I will see yes there you go
+SQL and program files Java jdk 1.8 pin
+so with these two I'll ensure that my
+Java installation is nice and you know
+good enough so to check that to double
+check that or to verify that let me just
+open up a simple command prompt
+and if I type in Java iPhone version
+all right and Java C
+yphen version
+so the compiler is on the path Java is
+on the path and if at all I do this
+even the environment variable specific
+to my Java is installed correctly so I
+am good to go ahead with my Jenkins
+installation
+now that I have my prerequisites
+all set for installing Jenkins let me
+just go ahead and download Jenkins
+so let me open up a browser and say
+download
+Jenkins
+all right LTS is nothing but the long
+term support these are all stable
+versions weeklies I would not recommend
+that you try these unless until you have
+a real need for that long term support
+is good enough and as I mentioned there
+are so many flavors of Jenkins that is
+available for download alright so what I
+want is yes this is the war file with a
+generic War file that I was talking to
+you earlier and this is the windows MSI
+installer so go ahead and download this
+MSI installer I already have that
+downloaded so let me just open that up
+all right so this is my downloaded
+Jenkins instance or other installer this
+is a pretty maybe a few months old but
+this is good enough for me
+before you start uh Jenkins installation
+just be aware of one fact that there is
+a variable called Jenkins home this is
+where Jenkins would store all this
+configuration data jobs deposit
+workspace and all that specific to
+Jenkins so by default if at all you
+don't set this to any particular
+directory if at all you install an MSI
+installer all your installation gets
+into SQL and program files 86 and
+Jenkins folder if at all you run a war
+file depending upon the user ID with
+which you're running your War file the
+Jenkins folder there's a DOT Jenkins
+folder that gets created inside the user
+home directory so in case you have any
+need wherein you want to backup your
+Jenkins or you want Jenkins
+installations to get into some specific
+directories go ahead and set this
+Jenkins home variable accordingly before
+you even begin your installation for now
+I don't need to do any of this thing so
+I've already downloaded the installer
+let me just go ahead with the default
+installation all right so this is my
+Jenkins MSI installer I would just I
+don't want to make any changes in into
+the Jenkins configuration SQL and
+program files is good for me yeah this
+is where all my destination folder and
+all the configuration specific to it
+goes I'm happy with this I don't want to
+change this I would just say go ahead
+and click installation
+okay so what typically happens once the
+Jenkins installation gets through is
+it'll start installing itself and there
+are some small checks that needs to be
+done
+so and by default Jenkins Launches on
+the port 8080. so let me just open up
+localhost 8080
+there's a small checking that will be
+done as a part of the installation
+process wherein I need to type in the
+hash key all right so there's a very
+very simple hash key that gets stored
+out here so I'll have to just copy this
+path
+if at all you're running as a war file
+you would see that in your logs
+all right so this is a simple hash key
+that gets created every time when you do
+a Jenkins installation so as a part of
+the installation it just asks you to do
+this
+so if that is not correct it'll
+about it but this looks good so it's
+going ahead
+all right one important part during the
+installation so you would need to
+install some recommended plugins what
+happens is the plugins are all related
+to each other so it's like the typical
+RPM kind of a problem where you try to
+install some plugin and it's got a
+dependency which is not installed and
+you get into all those issues in order
+to get rid of that what Jenkins
+recommends is a bunch of plugins that is
+already recommended so just go ahead and
+blindly click that install recommended
+plugin so if you see there is a whole
+lot of plugins which are bare essential
+plugin that is required for Jenkins in
+order to run properly so Jenkins as a
+part of the installation would get all
+these plugins and then install it for
+you this is a good combination to kind
+of begin with and mind you at this
+moment Jenkins needs lots of bandwidth
+in terms of network so in case your you
+know your network is not so good few of
+these plugins would kind of fail and
+these plugins are all you know all
+available on openly or or mirrored sites
+and sometimes some of them may be down
+so do not worry in case some of these
+plugins kind of fail to install you'll
+get an option to kind of retry
+installing them but just ensure that you
+know at least most or 1995 of all these
+plugins are installed without any
+problems let me pause the video here for
+a minute and then get back once all
+these plugins are installed my plugin
+installation is all good there was no
+failures in any of my plugins so after
+that I get to create this first admin
+user again this is one important point
+that you got to remember
+given any username and password but
+ensure that you kind of remember that
+because it's very hard to get back your
+username and password in case you forget
+it alright so I'm going to create a very
+very simple username and password
+something that I can remember
+I will
+that's my name and an email ID is kind
+of optional but it doesn't allow me to
+go ahead in case I don't so I just given
+an admin and I get a password I've got I
+remember my password this is my full
+name all right I say seven finish
+all right that kind of completed my
+Jenkins installation
+it was not that tough was it
+now that I have my Jenkins installed
+correctly let me quickly walk you
+through some bare minimal configurations
+that is required these are kind of a
+first time configuration that is
+required so and also let me warn you the
+UI is little hard for many people to
+wrap their head around it specifically
+the windows guys but if at all you're a
+Java guy you know how painful it is to
+write UI in Java you would kind of
+appreciate you know all the effort that
+has gone into the UI bottom line UI is
+little hard to you know wrap your head
+around it but once you start using it
+possibly you'll start liking it all
+right so let me get into something
+called as manage Jenkins
+this can be viewed like a main menu for
+all Jenkins configuration so I'll get
+into some of those important ones
+something called as configure system
+configure system this is where you kind
+of put in the configuration for your
+complete Jenkins instance few things to
+kind of look out for this is a home
+directory this is a Java home where all
+the configurations all the workspace
+anything and everything regarding
+Jenkins is stored out here
+system message you want to put in some
+message on the system you just type in
+whatever you want and it's possibly show
+up somewhere up here on the menu number
+of executors very very important
+configuration this just lets Jenkin know
+at any point in time how many jobs or
+how many threads can be run you can you
+can kind of visualize it like a thread
+that can be run on this particular
+instance as a thumb rule if at all
+you're on a single core system number of
+executors two should be good enough in
+case at any point in time if there are
+multiple jobs that kind of get triggered
+the same time in case the number of
+executors are less compared to the
+number of jobs that have that woken up
+no need to panic because they will all
+get queued up and eventually Jenkins
+will get to running those jobs just bear
+in mind that whenever a new job kind of
+you know gets triggered the CPU usage
+and the memory usage in terms of the
+disk right is very high on the Jenkins
+instance
+so that's something that you got to kind
+of keep in mind all right but number of
+executors two for my system is kind of
+good label for my Jenkins I don't want
+any of these things usage how do you
+want to use your Jenkins this is good
+for me because I only have a primary uh
+server that is running so I want to use
+this node as much as possible quite
+better each of these options I've got
+some bare minimal help kind of a thing
+that is that is out here by clicking on
+these question marks you will get to
+know as to what are these particular
+configurations
+all right so this all look good what I
+want to show you here is there's
+something regarding the docker
+timestamps git plugin SVN email
+notifications I don't want that what I
+want the yes I want this SMTP server
+configuration remember I mentioned
+earlier that I would Bond Jenkins to be
+sending out some emails and what I've
+done here is I've just configured the
+SMTP details of my personal email ID
+in case you are in a in an organization
+you would have some sort of an email IDs
+that is set up for a Jenkins server so
+you can specify the SMTP server details
+of your company so that you know you can
+authorize Jenkins to kind of send out
+emails but in case you want to try it
+out like me I have configured my
+personal email ID which is on my Gmail
+for sending out notifications so the
+SMTP server would be
+smtp.gmail.com I'm using the SMTP
+authentication I have provided my email
+ID and my password I'm using the SMTP
+Port which is 465 and I'm you know reply
+to address is the same as mine I can
+just send out an email and see if at all
+this configuration works again Gmail
+would not allow you to allow anybody to
+send out notifications on your behalf so
+you'll have to lower the security level
+of your Gmail ID so that you can allow a
+programmatically somebody to send out
+email notifications on your behalf so
+I've done already that I'm just trying
+to see if I can send a test you email
+with the configuration that I've set in
+yes
+all right so the email configuration
+looks good
+so this is how you configure your you
+know your Gmail account in case you want
+to do that if not put in your
+organization SMTP server details which
+are for the valid username and password
+and it should all be set
+all right so no other configurations
+that I'm going to change here all of
+these look good
+all right so I come back to manage
+inkins okay one other thing that I want
+to kind of go over is the global tool
+configuration
+imagine the scenario or look at it this
+way Jenkins is a is a continuous
+integration server it doesn't know what
+kind of a code base it's going to pull
+in what kind of a tool set that is
+required or what is the code that is
+going to pull in and how is it going to
+build so you would have to put in all
+the tools that is required for building
+the appropriate kind of code that you're
+going to pull in from you know your
+source code repositories so just give
+you an example in case your source code
+is a Java source code and assuming that
+you know because in this a demo this is
+my laptop and I've put in all the
+configurations jdk everything on my
+laptop because I'm a developer I am
+working on the laptop but my continuous
+integration server would be you know a
+separate server without anything being
+installed on it so in case I want
+Jenkins to you know run a Java code I
+would need to install GDK on it I need
+to specify the jdk location of this out
+here this way
+okay since I already have the jdk
+installed and I've already put in the
+Java home directory or rather the
+environment variable correctly I don't
+need to do it git if at all I want the
+Jenkins server to use git git is a you
+know command bash or the command prompt
+for for running git and connecting to
+any other git server so you would need
+git to be you know installed on that
+particular system and set the path
+accordingly
+Gradle and Maven if at all you have some
+mavens as well you want to do this any
+other tool that you're going to install
+on your system which is your continuous
+integration server you will have to come
+in here and configure something
+in case you don't configure it when
+chenkins runs it will not be able to
+find these tools for building your task
+and it'll crib about it
+that's good I don't want to save
+anything
+manage Jenkins let me see what else is
+required yes configure Global Security
+all right the security is enabled and if
+you see by default it's the security
+access control is set to Jenkins own
+user database so what does this mean you
+know Jenkins by default it uses file
+system where it stores all the usernames
+which hashes up these usernames and kind
+of stores them
+so as of now it Jenkins is configured to
+use its own database assuming that you
+are running in an organization you would
+probably want to have a you know some
+sort of an ad or an ldap server using
+which you would want to control access
+to your Jenkins repository rather
+Jenkins tool so you would specify your
+ldap server details the root DN password
+or the manager DN and the manager
+password and all these details in case
+you want to connect your Jenkins
+instance with your ldap or ad or any of
+the authentication servers that you have
+in your organization
+but for now since I don't have any of
+these things I'm going to use this own
+database that's good enough
+all right so I will set up some
+authorization methods and stuff like
+that once I put in few jobs so for now
+let me not get into any of these details
+of this just be aware that Jenkins can
+be connected for authorization to an
+ldap server or you can have Jenkins
+managing its own servers which is
+happening as of now so I'm going to save
+all this stuff that's good for me so
+enough of all these configurations let
+me put in a very very simple job all
+right so job new item you know little
+difficult to kind of figure out but then
+that's the new item so I will just say
+you know first job this is good for me I
+just give a name for my job I would say
+it's a freestyle project that's good
+enough for me I don't want to choose any
+of that so unless until you choose any
+of this this particular button would not
+become active so choose the freestyle
+project and say okay
+at a very high level you will see
+General source code management build
+triggers build environment build and
+post build in case you install more and
+more plugins you will see a lot more
+options but for now this is what you
+would see so what am I doing at the
+moment I'm just putting up a very very
+simple job and the job could be anything
+and everything so I don't want to put in
+a very complicated job for now for the
+demo purpose let me just put in a very
+very simple job I'll give a description
+this is an optional thing this is my
+first Jenkins job all right I don't want
+to choose any of these again there are
+some helps available here
+I don't want to choose any of this I
+don't want to connect it into any source
+code for now I don't want any triggers
+for now I'll come back to this in in a
+while build the environment I don't want
+any build environment as a part of this
+build step you know I just want to you
+know run few things so that I kind of
+complete this particular job so since
+I'm on Windows box I would say execute
+Windows batch command
+all right so what do you want to do I
+let me just Echo something Echo
+uh hello this is my first Jenkins job
+and possibly I would want the date and
+the timestamp
+pertaining to the job I mean the date
+and time in which this job was run all
+right very very simple command that says
+you know this is my first job it just
+puts out something along with the date
+and the time
+all right I don't want to do anything
+else I want to keep this job as simple
+as this so let me save this job
+all right so once I save this job you
+know the job names comes up here and
+then I need to build this job and you
+would see some build history out here
+nothing is there as of now because I've
+just put in a job I have not run it yet
+all right so let me try to build it now
+you see a build number you will see a
+date and a timestamp so if I click on
+this you will see a console output if I
+go here
+okay as simple as that and where is all
+the job details that is getting into if
+you see this
+if I navigate to this particular
+directory
+all right so this is the directory what
+I was mentioning earlier regarding
+Jenkins home so all the job related
+stuff that is specific to this
+particular Jenkins installation is all
+here
+all the plugins that is installed the
+details of each of those plugins can be
+found here all right so the workspace is
+where all the jobs that I've created
+whichever I'm running would you know
+there will be an individual folders
+specific to the jobs that has been put
+up here all right so one job one quick
+run
+that's what it looks like pretty simple
+okay let me do one thing let me put up a
+second job
+I would say second job
+I would say freestyle project
+all right this is my second job
+I just want to demonstrate the
+powerfulness of the automation server
+and how simple it is to automate a job
+that is put up on Jenkins
+which will be triggered automatically
+remember what I said earlier about
+Jenkins because at the core of Jenkins
+is a very very powerful automation
+server all right so what I'm going to do
+I will just keep everything else the
+same I'm going to put in the build
+script pretty much similar to
+second job
+that gets triggered
+automatically
+every minute all right let me do that
+percentage date and I'll put in the time
+all right so I just put in another job
+called second job and it pretty much
+does the same thing as what I was doing
+earlier in terms of printing the date
+and the time but this time I'm just
+going to demonstrate the powerfulness of
+the automation server that is there if
+you see here
+there's a build trigger so a build can
+be triggered using various triggers that
+is there so we'll get into this GitHub
+uh triggering our hook or a web hook
+kind of a triggering later on but for
+now what I want to do I want to ensure
+that this job that I'm going to put in
+would be automatically triggered on its
+own let's say every minute I want this
+job to be run on its own
+so build periodically is my setting
+if you see here there's a bunch of
+help that is available for me so for
+those of you you have written cron jobs
+on Linux boxes you'll find it very very
+simple but for others don't panic let me
+just put up a very very simple regular
+expression for scheduling this job every
+minute
+all right so that's one two three four
+five
+all right come up come up come up all
+right so five stars is all that I'm
+gonna put in and Jenkins got a little
+worried and she's asking me do you
+really mean every minute oh yeah I want
+to do this every minute let me save this
+and how do I check whether it gets
+triggered every minute or not I just
+don't do anything I'll just wait for a
+minute and if at all everything goes
+well Jenkins would automatically trigger
+my second job in a minute's time from
+now
+this time around I'm not going to
+trigger anything look there you see it's
+automatically got triggered
+if I go in here
+yep second job that gets triggered
+automatically you know it was triggered
+at 42 1642 which is 442 my time that
+looks good
+and if everything goes well every one
+minute onwards this job would be
+automatically triggered
+now that I have my Jenkins up and
+running a few jobs that has been put up
+here on my Jenkins instance I would need
+a way of controlling access to my
+Jenkins server this is wherein I would
+use a plugin called role based access
+plugin and create few rules the rules
+are something like a global Rule and a
+project role product specific growth I
+can have different rules and I can have
+users who have signed up or the users
+who might create kind of assigned to
+these roles so that each of these users
+fall into some category this is my way
+of kind of controlling access to my
+Jenkins instance and ensuring that
+people don't do something unwarranted
+alright so first things first let me go
+ahead and install a plugin for doing
+that so I get into manage Jenkins and
+manage plugin
+a little bit of a confusing screen in my
+opinion there's updates available
+installed in advanced as of now we don't
+have the role based plugin so let me go
+to available it'll take some time for
+you to get refreshed all right now these
+are the available plugins these are the
+install plugins all right so let me come
+back to available and I would want to
+search for my role based access plugin
+so I would say search for role and hit
+enter
+okay role-based authorization strategy
+enables user authorization using a
+role-based strategy roles can be defined
+globally or for particular jobs or notes
+and stuff like that so exactly this is
+the plugin that I want I would want to
+install it without a restart
+all right looks good so far yes
+go back to the top of the page yes
+remember Jenkins is running on a Java
+using a Java instance so typically many
+things would work the same way
+understand until you want to restart
+Jenkins once in a while but as a good
+practice whenever you do some sort of
+big installations or big patches on your
+Jenkins instance just ensure that you
+kind of restarted otherwise there would
+be a difference in terms of what is
+installed on the system and what is
+there on the file system you will need
+to flush out few of those settings later
+on but for now these are all very small
+plugins so this would run without any
+problems but otherwise if at all there
+are some plugins which would need a
+restart you know kindly go ahead and
+restart your Jenkins instance but for
+now I don't need that it looks good I've
+installed the plugin so where do you see
+my plugin I install the plugin that is
+specific to the user control or the
+access control so let me go into yes
+Global Security
+and I would see this role-based strategy
+showing up now all right so this comes
+in because of my installation of my role
+based plugin so this is what I would
+want to enable
+because I already have my own database
+set up and for the authorization part in
+the sense that who can do what I'm going
+to install I mean I've already installed
+a role-based strategy plugin and I'm
+going to enable that strategy all right
+I would say save okay now I have
+installed the role based access plugin I
+would need to just set it up and check
+that you know I would go ahead and
+create some roles and ensure that I
+assign users as per these roles all
+right so let me go to
+manage Jenkins
+configure all right let me see where is
+this configure configure Global Security
+is that where I create my rules
+nope not here
+yes manage and assign roles
+okay again you would see these options
+only after you install these plugins so
+for now I have just enabled the plugin I
+have enabled role based access control
+and I would go ahead and create some
+rules for this particular Jenkins
+instance so I would say first manage
+rules
+so I would need to create some roles
+here and the roles are at a very high
+level these are Global rules and there
+are some project rules and there are
+some slave rules I'll not get into
+details of all of this at a very very
+high level which is a global role let me
+just create a row a role can be kind of
+visualized like a group so I would
+create a role called developer typically
+the Jenkins instance or the ca instance
+are kind of owned up or controlled by QA
+guys so QA guys would need to provide
+some sort of a you know limited access
+to developers so that's why I'm creating
+a role called developer and I'm adding
+this role at a global role level so I
+would say add this here and you would
+see this developer role that is there
+and each of these options you can click
+hover over it you would see some sort of
+a help on what what are these uh you
+know permissions specific to so what I
+want is like you know it sounds a little
+you know different but I would want to
+give very very little permissions for
+the developer so from an Administration
+perspective I would just want him to
+have a read
+um kind of a role credentials again I
+would just want to view kind of a role I
+don't want him to create any agents and
+all that stuff that's looks good for me
+for a job I would want him to just
+possibly uh read I don't want him to
+build I don't want him to cancel any
+jobs I don't want him to configure any
+job I don't even want him to create any
+job I would just want him to read few
+things I would not give him possibly a
+role to the workspace as well I mean I
+don't want him to have access to the
+workspace I would just want him to read
+a job
+I'll check you know have read-only
+access to the job run
+um no I don't want him to give him any
+any particular access which will allow
+him to run any jobs view configure yeah
+possibly create yeah delete I don't want
+to read yes definitely and this is the
+specific role so what I'm doing I'm just
+creating a global role called developer
+and I'm giving him very very limited
+roles in the sense that I don't want
+this developer to be able to run an
+agents nor create jobs or build jobs or
+cancel jobs or configure jobs at the max
+I would just want him to read a job that
+is already put up there
+okay so I would save
+now I've created a rule I still don't
+have any users that is there on the
+system so let me go ahead and create
+some user on the system
+that's not here I will say configure
+manage and cans manage users
+okay let me create a new user
+I would call this user as yeah developer
+one sounds good
+some password
+some password that I can remember
+okay his name is developer One D at
+d.com or something like that
+okay so this is the admin with with
+which I kind of configure a bit of the
+system and developer one is a user that
+I have configured so still have not set
+any rules for this particular user yet
+so I would go to manage and games
+I would say
+manage and assign rules I would say
+assign rules
+okay so if you see what I'm going to do
+now is assign a role that is specific to
+that particular deal I will find the
+particular user and assign him the
+developer role that I have already
+configured
+the role shows up here I would need to
+find my user whoever created and then
+assign him to that particular role so if
+you remember the user that I created was
+developer one I would add this
+particular user and now this particular
+user what kind of a role I want him to
+have because this is the global rule
+that had created so developer I would
+assign this developer one to this
+particular Global root and I would go
+ahead and save my changes
+now let me check the permissions of this
+particular user by logging out of my
+admin account and logging back as
+developer one
+if you remember this role was created
+with very less privileges so there you
+go I have Jenkins but I don't see a new
+item I can't trigger a new job I can't
+do anything I see these jobs however I
+don't think so I'll be able to start
+this job I don't have the permission set
+for that the maximum I can do is look at
+the job see what was there as a part of
+the console output and stuff like that
+so this is a limited role that was
+created and I added this developer to
+that particular role which was a
+developer role so that the developers
+don't get to configure any of the jobs
+because the Jenkins instance is owned by
+a cure person he doesn't want to give
+developer any administrative rights so
+the rights that he set out by creating a
+developer role and anybody who is tagged
+any user who is tagged as a part of this
+developer role would get the same kind
+of permissions and these permissions can
+be you know fine-grained it can be a
+Project Specific permissions as well but
+for now I just demonstrated the high
+level permission that I had set in let
+me quickly log out of this user and get
+back as the admin user because I need to
+continue with my demo with the developer
+role that was created I have very very
+less privileges one of the reasons for
+Jenkins being so popular as I mentioned
+earlier is the bunch of plugins that is
+provided by users or Community users who
+don't charge any money for these plugins
+but it's got plugins for connecting
+anything and everything so if you can
+navigate to or if you can find Jenkins
+plugins
+you would see index of over so many
+plugins that is there all of these are
+wonderful plugins whatever connectors
+that you would need if you want to
+connect Jenkins to an AWS instance or
+you want to connect Jenkins to a Docker
+instance or any of those containers you
+would have a plugin you can go and
+search up if I want to connect Jenkins
+to big bucket
+white bucket is one of the git servers
+has so many plugins that is available
+okay so bottom line Jenkins without
+plugins is nothing so plugins is the
+heart of Jenkins for you to connect or
+for in order to connect Jenkins with any
+of the containers or any of the other
+tool sets you would need the plugins if
+you want to connect or you want to build
+a repository which has got Java and
+Maven you would need to install Maven
+and GDK on your Jenkins instance if at
+all you're looking for a net build or a
+Microsoft build you would need to have
+MS build installed on your on your
+Jenkins instance and the plugins that
+will trigger Ms build if at all you want
+to listen to some server-side web hooks
+from GitHub you would need GitHub
+specific plugins if you want to connect
+Jenkins to AWS you need those plugins if
+you want to connect to a Docker instance
+that is running anywhere in the world as
+long as you have the URL which is
+publicly reachable you just have a
+Docker plugin that is installed on your
+Jenkins instance sonar cube is one of
+the popular static code analyzers so you
+can connect Jenkins build build a job on
+Jenkins and push it to sonar Cube and
+get sonar Cube to run analysis on that
+and get back the results in Jenkins all
+of these works very well because of the
+plugins now with that let me connect our
+Jenkins instance to GitHub I already
+have very very simple Java repository up
+on my GitHub instance so let me connect
+Jenkins to this particular GitHub
+instance and pull out a job that is put
+up there all right so this is my very
+very simple uh you know repository that
+is there called hello Java and this is
+what is there in the report there is a
+hello hello to Java application that is
+here or a simple class file that is
+there it's got just one line of system
+dot out so this is already present on
+github.com at this place and this would
+be the URL for this Repository
+if I pick up this GPS URL this is my
+https URL so what I would do is I would
+connect my Jenkins instance to go to
+GitHub provide my credentials and pull
+out this repository which is on the
+cloud hosted github.com and get it to my
+Jenkins instance and then build this
+particular Java file I'm keeping the
+source code very very simple it's just
+the Java file how do I build my Java
+file how do I compile my Java file I
+just say Java C and the name of my class
+file which is hello.java and how do I
+run my Java file I would say Java and
+hello
+okay so remember I don't need to install
+any plugins now because uh what it needs
+is a git plugin so if you remember when
+we were doing the installation there was
+a bunch of recommended plugins so git is
+already installed on my system so I
+don't need to install it again so let me
+put up a new job here it says get job
+let it be a freestyle project that's
+good for me I would say okay
+all right so the source code management
+remember in the earlier examples we did
+not use any source code because we were
+just putting up some Echo kind of jobs
+we did not need any integration with any
+of the source code systems so now let me
+connect this so I'm going to put up a
+source code and git would sure because
+the plugin is already there SVN performs
+any of those additional source code
+management tools if at all you would
+need just install those plugins and
+Jenkins connects wonderfully well to all
+these particular Source control tools
+okay so I would copy the https URL from
+here I would say this is the URL that
+I'm supposed to
+go and grab my source code from but all
+right that sounds good but what is the
+username and password so I'll have to
+specify a username
+and password all right so I would say
+the username this is my username and
+this is my https credential for my job
+okay so this is my username and this is
+my password I just save this I say add
+and then I would say you know use these
+credentials to go to GitHub and then on
+my behalf pull out a repository all
+right if at all at this stage if there's
+any error in terms of not able to
+Jenkins not able to find git or the
+git.exe or if my credentials are wrong
+somewhere down here you would see a red
+message saying that you know something
+is not right you can just go ahead and
+kind of fix that for now this looks good
+for me I'm going to grab this URL what
+am I gonna do the step would pull the
+source code from the GitHub and then
+what would be there as a part of my
+build step
+because this repository just has a Java
+file correct hello.java so in order to
+for me to build this I would just say
+execute Windows batch command and I
+would say Java C
+Hello dot Java that is the way I would
+build my Java core and if I have to run
+it I would just say Java
+hello
+pretty simple two steps and this would
+run after the repository contents are
+fetched from GitHub
+Java that sounds good I would say save
+this and let me try to run this
+okay if you see there's a lot of you
+know it executes git on your behalf it
+goes out here it provides my credentials
+and says you know it pulls all my
+repository and by default it will pull
+up the master branch that is there on my
+repository and it kind of builds this
+whole thing Java C hello to Java and it
+runs this project Java hello and there
+you see this is the output that is there
+and if at all you want to look at the
+contents of the repository if you can go
+here this is my
+workspace of my system hang on this is
+not right
+okay get job if you see here this is my
+hello.java this is the same program that
+was there on my GitHub repository
+okay so this is a program that was there
+on the main GitHub repository all right
+so this was the same program that was
+here and Jenkins on our behalf went over
+all the way to GitHub pulled this
+repository from there and then you know
+it brought it down to my local system on
+my Jenkins instance it compiled it and
+it ran this particular application
+okay now that I've integrated Jenkins
+successfully with GitHub for a simple
+Java application let me build a little
+bit on top of it what I will do is I
+have a maven-based web application that
+is up there as a repository in my GitHub
+so this is the repository that I'm
+talking about it's called AMV and web
+app it's got It's a maven-based
+repository as you would know my one is a
+very very simple Java based uh build
+tool that will allow you to run various
+targets and it will compile it will
+based upon the goals that you specify it
+can compile it can run some tests and it
+can you can build a war file and even
+deploy it into some other server for now
+what we're going to use Maven is just
+for building and creating a package out
+of this particular web application it
+contains a bunch of things and what is
+important is just the index.jsp it just
+contains an HTML file that is there as a
+part of this web application so from a
+perspective of requirements now since
+I'm going to connect Jenkins with this
+particular repository git we already
+have that set we only need two other
+things one is Maven because Jenkins will
+use Maven so in order to use Maven
+Jenkins would have to have a maven
+installation that is there on the
+Jenkins box and in this case the link is
+box is this laptop
+and after I have my Maven installed I
+also need a tomcat server Tomcat is a
+very very simple web server and then you
+can freely download I'll let you know
+how to quickly uh download and install
+the Tomcat all right so download Maven
+first
+at the various ways in which you can
+kind of download this my one there are
+zip files
+binary zip files and archive files so
+what I've done is I've just already
+downloaded Maven and if you see I've
+unzipped it here so this is the folder
+with which I have unzipped my maven so
+as you know I'm having again is is one
+open source build tool so you'll have to
+set in a few configurations and set up
+the path so mvn hyphen iPhone version if
+I specify this after setting my path my
+one should work and if at all I Echo M2
+home which is nothing but the variable
+environment variable specific to my own
+it is always set here so once you unzip
+my oven just set this m to home variable
+to the directory where you unzip your my
+one also just set the path to this
+particular directory slash bin because
+that is where your Maven executables are
+all found
+all right so that's with Maven and you
+know since I've set the path and the
+environment variable Maven is running
+perfectly fine on my system I just
+verified it okay next one is a tomcat
+server
+download Apache Tomcat server 8.5 is
+what I have on my system
+so I'm just gonna show you where to
+download this from
+this is where you download Tomcat server
+and um I already have the server
+downloaded again this doesn't need any
+installation I just unzip it here and it
+kind of has a bin and configuration I
+have made some subtle changes in the
+configuration first and foremost Tomcat
+server also by default runs on port 8080
+since we already have our Jenkins server
+running on port 8080 we cannot let
+Tomcat run on the same port there will
+be a port Clash so what I've done I have
+configured Tomcat to use a different
+port so if I go to this configuration
+file here there is a server.xml
+let me open this up here
+all right okay so this is the port by
+default it will be 80 80. I have just
+modified it to 8081 so I've changed the
+port on which my Tomcat server would run
+all right so that's one chain second
+change when Jenkins kind of tries to get
+into my tomcare and deploy something for
+someone he would need some
+authentications so that he'll be alloyed
+deployment by Tomcat so for that I need
+to create a user on tomcat and provide
+this user credentials to my Jenkins
+instance
+so I would go to
+tomcatusers.xml file here
+I have already created a username called
+deployer and the password is deployer
+and I've added a role called manager
+hyphen script manager hyphen script will
+allow programmatic access to the Tomcat
+server so this is the role that is there
+so using this credentials I will enable
+or I'll Empower Jenkins to get into my
+Tomcat server and deploy my application
+all right only these two things that is
+required let me just start my Tomcat
+server first so I get into my bin folder
+I open command prompt here and there's a
+startup.bat
+pretty fast it just takes a few seconds
+yes there you go tomcatel is up and
+running now this is running on Port 8081
+so let me just check if that looks good
+so localhost
+8821
+okay my Tomcat server is up and running
+that sounds good the user is already
+configured on this that's also fine so
+what I'll do as a part of my first job
+my one is also installed on my system so
+I'm good to use Maven as a part of my
+Jenkins so I will put up a simple job
+now
+I will say job
+mbn
+web app I call this
+freestyle job that's good
+okay so this will be a git repository
+what is the URL of Market repository is
+uh this guy https URL
+okay
+because this URL I will use the
+credentials the old credential that I
+set up will work well because it's the
+same git user that I'm kind of
+connecting into
+all right so now the change happens here
+where after I get this since I said this
+is a simple Maven repository I will have
+some Maven targets to run
+so the simple Target first is let me run
+Maven package this creates a war file
+okay so mvn package is the target
+package is the target so when whenever I
+run this package it kind of creates it
+it builds it it tests it and then
+creates a package so this is all that is
+required maybe let me try to save this
+and let me first run this and see if it
+connects well if there's any problem
+with my War file or the war file gets
+created properly
+okay
+wonderful so it built a word file and if
+you see it all shows you what is the
+location where this war file was
+generated
+so this will be the workspace if you see
+this this war file was successfully
+built now I need to grab this particular
+War file and then I would need to deploy
+it into Tomcat server again I would need
+a small plugin to do this because I need
+to connect Tomcat with my Jenkins server
+let me go ahead and install the plugin
+for the container deployment so I will
+go to manage plugins
+available
+type in container
+container container
+deploy to container okay so let's put
+this the plugin that I would need I
+would install it without a restart
+right seems to be very fast
+nope sorry it's still installing
+okay
+it installed the plugin so if at all you
+see this
+if you go to my workspace
+okay in the Target folder
+I will see this web application War file
+that is already built so I would need to
+configure this plugin to pull up this
+war file and deploy it onto the Tomcat
+server for deploying onto the Tomcat
+server I will use the credentials of the
+user that I've created
+okay so let me go to configure this
+particular project again
+and um
+okay all this is good
+so the package is good I'm going to just
+create a packet that's all fine now
+add a post build step so after the war
+file is built as a part of this package
+directive let me use this deployment to
+container now this will show up after
+you install the plugin so deploy this
+one to the container now what is that
+you're supposed to specify you're
+supposed to specify the what is the
+location
+okay so this is a global uh you know
+configuration that is there that will
+allow you to
+from the root folder it'll pick up the
+war file that is there so star star
+forward slash star dot War that's good
+for me
+okay what is the context path context
+path is nothing but just the name of an
+application that you know under which it
+will get deployed into the Tomcat server
+I will just say mvn web app
+that's the name of my thing now I need
+to specify what kind of a container that
+I'm talking about all right so the
+deployment would be for
+the stormcat 8.5 is what I need
+okay because the server that we have is
+a tomcat 8.5 server that I have so this
+would be the URL so the credentials yes
+I need to add a credential for this
+particular server so if you remember I
+had created a credential
+for my web application so let me just
+find that my Tomcat server yes
+configuration of this
+okay so deployer and deployer username
+is deployer password is deployed okay so
+let me use that credential
+I would say I would say add a new
+credential Jenkins credential the
+username is deployer and the password is
+replyer
+so I would use this deployer credentials
+for that and what is the URL of my
+Tomcat instance so this is the URL of my
+Tomcat instance so take the war file
+that is fine found in this particular
+folder and then you know context path is
+a main web app use the deployer
+deployment credentials and get into this
+localhost which is there
+8081 this is the Tomcat server that is
+running on my system and then go ahead
+and deploy it
+okay so that is all that is required so
+I would say just save this
+and let me run it now
+okay it builds successfully built the
+war file it is trying to deploy it and
+looks like a deployment went ahead
+perfectly well so
+the context path was mvn web app so if I
+type in this
+all right if at all I go ahead into my
+Tomcat server there would be a web apps
+folder you would see the
+you know the date timestamp so this is
+the file that get got recently copied
+and this is the Explorer version of our
+application
+so the application was built the source
+code of this application was pulled from
+the GitHub server it was built locally
+on the Jenkins test and then it was
+pushed into a tomcat server which is
+running on a different port which is
+808.1 now for this demo I am running
+everything locally on my system but
+assuming that you know this particular
+Tomcat instance was running on some
+other server with some other different
+IP address all that you got to go and
+change is the URL of the server
+so this would be the server in case you
+you already have that uh you know if you
+have a tomcat server which is running on
+some other machine that's all fine with
+a different IP that's all good enough
+the whole bundle or the war file that
+was built as a part of this Jenkins job
+gets transferred onto the other server
+and gets deployed that's the beauty of
+Jenkins and automatic deployments or
+other deployments using Jenkins and my
+own distributed build or Master Slave
+configuration in Jenkins as you would
+have seen you know we just have one
+instance of Jenkins server up and
+running all the time and also I told you
+that whenever any job that kind of you
+know gets started on the Jenkins server
+it is little heavy on in terms of disk
+space and the CPU utilization so which
+kind of you know if at all you're in an
+organization where in your heavily
+reliant on the Jenkins server you don't
+want your Jenkins server to go down so
+that's wherein you kind of start
+Distributing the load that is there on
+the Jenkins server so you primarily have
+a server which is just a placeholder or
+like a master who will take in all the
+kind of jobs and what he'll do is based
+upon trigger that has happened to the
+job or whichever job needs to be built
+he if at all he can delegate these jobs
+onto some of the machines or some of the
+sleeves you know that's a wonderful
+thing to have okay use case one use case
+two assuming that you know if you have a
+Jenkins server that is running on a
+Windows box or on a Linux one and if at
+all you have a need where you need to
+build based upon operating systems you
+have multiple build configurations to
+support maybe you need to build a
+Windows you know Windows based.net kind
+of a projects where you would need a
+Windows machine to build this particular
+project you also have a requirement
+where you want to build Linux Linux
+based assistance you also have a Mac you
+you support some sort of an apps or
+something that is built on Mac OS you
+would need to build you know Mac based
+system as well so how are you going to
+support all these needs so that's
+wherein a beautiful concept of Master
+Slave or you know primary and
+delegations or agent and master comes
+into play so typically you would have
+one Jenkins server who will just you
+know configure with all the proper
+authorizations users configurations and
+everything is set up on this Jenkins
+server his job is just delegations he
+will listen to some server triggers or
+based upon the job that is coming in he
+will if there is a very nice way of
+delegating these jobs to somebody else
+and you know taking back the results he
+can control lot of other systems and
+these systems may not have a complete or
+there's no need to put in a complete
+Jenkins installation all that you got to
+do is have a very very simple Runner or
+sleeve that's a simple jar file that is
+run as a low priority thread or a
+process Within These systems so with
+that you can have a wonderful
+distributed build server that can be set
+up and in case one of the servers goes
+down your master would know that what
+went down and kind of delegate the task
+to somebody else so this is the kind of
+distributed build or the Master Slave
+configuration so what I'll do in this
+exercise or in this demo is I'll set up
+a simple slave but since I don't have
+too many machines to kind of play around
+what I'll do is I will set up a slave in
+in one other folder within my hard drive
+so I've got the C drive and D drive my
+Jenkins is on my C drive so what I do is
+I would just use my e Drive and set up a
+very very simple slave out there I'll
+just show you how to provision a slave
+and how to connect to a slave and how to
+delegate a job to that slave let me go
+back to my Jenkins master and configure
+him to you know talk to an agent so
+there are various ways in which this
+client and server talk to each other
+what I'm going to choose is something
+called as gnlp Java Network launch
+protocol so using this I would ensure
+that you know the client and server talk
+to each other so for that I need to
+ensure that I kind of enable this jnlp
+port so let me try to find out where is
+that let me try this
+okay yes
+agents and by default this jnlp agents
+thing would be disabled so if you see
+here there's a small help on this
+so I'm going to use this jnlp which is
+nothing but Java Network launch protocol
+and you know I'll configure the master
+and server to talk to each other using
+jnlp so for that I need to enable this
+guide so I enable this guy instead of
+making the by default the configuration
+was disabled so I make him random I make
+him you know enabled and I say save this
+configuration
+all right so now I've configured ours
+made a setting for the master so that
+the jnlp port is kind of opened up so
+let me go ahead and you know create an
+agent
+so I'll go to manage nodes so if you see
+here there's only one master here so let
+me provision a new node here so this is
+the way you know in which you bring up a
+new node you have to configure it on the
+server a Jenkins would put in some sort
+of security around this particular agent
+and let you know how to launch this
+particular engine so that he can connect
+to a Jenkins master so I would say new
+node I would give a name for my node I
+would say windows node because both of
+these are windows only so that's fine I
+just give an identifier saying that
+Windows node I would say this is a
+permanent agent I would say okay so if
+you see the name let me just copy this
+name here with the description
+number of executors since it's a slave
+node and both of these are running on my
+system I'll keep the number of executors
+as one
+that's fine remote root directory now
+this is where let me just clarify this
+since I have both my
+my master is running on my C drive C
+drive program files 86 or hang on not
+86.
+C colon program files
+it is indeed 86.
+all right Jenkins so this is where my
+master is running so I don't want the C
+drive what I'll do is I'll use something
+called as a drive I have another Drive
+in my system but please visualize this
+like you know you're running this on a
+separate system altogether so I create a
+folder here called Jenkins node and this
+is where I'm going to place my or I'm
+going to provision my slave
+and I'm going to run it from here so
+this is the directory in which I am
+going to provision my slave node so I'm
+going to copy this here and that is the
+remote root directory of your particular
+agent or sleep so I just copy it here
+the label you know probably this is fine
+for me
+and usage how do you want to use this
+guide
+so I would don't want him to run all
+kinds of jobs I will only build jobs
+with label Expressions that match this
+particular node and so this is the label
+of this node so in order for somebody to
+kind of delegate any task to them
+they're allowed to specify this
+particular level so imagine this way if
+I have a bunch of Windows my system I
+name it as Windows star anything that
+says from Windows I can give a regular
+expression and say that anything that
+matches Windows run this particular task
+there if I have some MAC machines I name
+all these Mac agents as Mac star or
+something like that and I can delegate
+all tasks you know saying that start
+with whatever starts with mac and this
+node run the Mac jobs there
+so you identify a node using the label
+and then delegate the task there all
+right so launch method you know we will
+use Java web start because we're going
+to
+we we're going to use jnlp protocol okay
+that sounds good directory I think
+nothing else is required availability
+yes will keep this agent yep online as
+much as possible that sounds good all
+right let me save this
+all right I'm just provisioning this
+particular node now
+so if I click on this node I get a bunch
+of commands along with an agent.jar
+so this is the agent.jar that has to be
+taken down to the other machine or the
+slave node and from there I need to run
+this along with a small security
+credential so let me copy this whole
+text here in my notepad
+notepad plus plus is good for me
+okay I copy this whole
+path there I also want to download this
+alien.jar
+I would say yes
+this agent.jar is the one that is
+configured by our server so all the
+details that is required for launching
+this agent.jar is found in this sorry
+for launching this agent is found this
+agent.jar so typically I need to take
+this jar file onto the other system
+and then kind of run it from there so
+I have this 18.jar I copy this or I cut
+this I come back to my folder my Jenkins
+node I paste it here
+okay so now with this provision
+agent.jar and I need to use this whole
+command Ctrl a control C and then launch
+this particular agent so let me bring up
+a command from right here and then lost
+it so I'm saying in the same folder
+where there is agent.jar I'm going to
+launch this a particular agent Java
+hyphen jar agent.jar jnlp this is the
+URL of my server in case the server and
+client are on different locations or
+different IPS there are specified IP
+address all this anyway would show up
+and then the secret and you know the
+root folder of your Jenkins or the slave
+node
+okay
+so something ran and then you know it
+says it's connected very well it seems
+to Connected very well so let me come
+back to my Jenkins instance and see you
+know if at all you see earlier this was
+not connected now let me refresh this
+guy
+okay now these two guys are connected
+provision a Jenkins node and then I
+copied all the credentials or the slave
+dot jar along with the launch code and
+then took it to the other system and
+kind of ran it from there since I don't
+have another system I've just got a
+separate directory in another folder
+another drive and I'm launching the
+agent from here as long as this
+particular agent is up and running or
+this command prompt is up and running
+the agent would be connected so once I
+close this the connection goes down
+all right so successfully we have
+launched this particular agent now this
+would be the home directory of this
+Jenkins node or the Jenkins slave so any
+task that I'm going to delegate to this
+particular slave would all be run here
+it will create a workspace right here
+all right so good so let me just come
+back and let me kind of put up a new
+task here I will say that you know
+delegate job is good I say freestyle
+project I'm going to create a very very
+simple job here
+I don't want it to connect to gate or
+anything like that let me just create a
+very very simple
+Echo
+relegated to the
+slave negative two I don't like the word
+slave delegated to
+agent
+put this way
+all right so delegated to agent sounds
+good now how am I going to ensure that
+this particular job runs on the agent or
+on the slave that have configured
+right you see this if at all you
+remember how we provisioned our
+particular slave we give a label right
+so now I am going to put in a job that
+will only match this particular label
+so I'm going to say that whatever
+matches this you know Windows label run
+this job on that particular node so we
+have only one node that's matching this
+you know Windows node so this job will
+be delegated around there so I save this
+and let me build this
+this is again a very very simple job
+there's nothing in this I just want to
+demonstrate how to kind of delegate it
+to an agent so if you see this it runs
+successfully and where is the workspace
+the workspace is right inside our
+Jenkins node it creates a new workspace
+delegate a job it put in here so my old
+or the my primary Master job is in SQL
+program files under Jenkins and this is
+the slave job that was successfully run
+very very simple but very very powerful
+concept of Master Slave configuration or
+distributed built-in Jenkins
+okay approaching the final section where
+we've done all this hard work in
+bringing up our Jenkins server
+configuring it putting up some jobs on
+it creating users and all this stuff now
+we don't want this configuration to kind
+of go away we want a very nice way of
+ensuring that we backup all this
+configuration and in case there is any
+failure Hardware crash or a machine
+crash we will want to kind of restore
+from the existing configuration that we
+kind of backed up so one quick way to do
+that would be or one dirty way to do
+that would be just you know take a
+complete backup of a sequel colon
+program files colon Jenkins directory
+because that's where our whole Jenkins
+configuration is present but we would
+don't want to do that let's use some
+plugins for taking up a backup so let me
+go to manage Jenkins
+and click on available
+and let me search for some back there
+are a bunch of backup plugins so I would
+recommend one of these plugins that I
+specifically use so this is the backup
+plugin so let me go ahead and install
+this plugin
+all right so we went ahead and installed
+this plugin so let me come back to my
+manage plugins so this plugin is there
+so hang on Backup Manager so you will
+see this option once you install this
+plugin so first time I can you know do a
+setup I would say back up this
+particular I'll give a folder uh this
+folder is pertaining to the folder where
+I want to check against backup some data
+and I would say the format should be zip
+format is good enough let me give a name
+or a template or a file name for my you
+know backup this is good I want it in
+verbose mode I don't want to shut on my
+Jenkins or should I shut it down no okay
+one thing that you got to remember is
+that whenever a backup happens if there
+are too many jobs that is running on the
+server it can kind of slow down your
+Jenkins instance because it's it's in
+the process of copying few of those
+things and if the files are being
+changed at that moment it's a little bit
+problematic for Jenkins so typically you
+backup your servers only when there is
+very less load or typically you try to
+you know bring it to a shutdown kind of
+a state and then take a backup
+all right so I'm going to back up all
+these things you know I don't want to
+exclude anything else I want the history
+I want the artifacts possibly I don't
+want this guy I would just say save
+and then I would say back him up
+so this would run a bunch of you know
+steps and all the files that is required
+as a part of this is pretty fast but
+then if at all you have too many things
+up on your server for now we didn't have
+too many things up on our server but in
+case you had too many things to kind of
+backup this may take a while so let me
+just pause this recording and get back
+to you once the backup is complete so
+there you go the backup was successful
+created a backup of all the workspace
+the configurations the users and you
+know all that so all this is kind of
+hidden down in this particular zip file
+so at any instance if at all I kind of
+Crash my system for some instance or say
+hard disk failure and I bring up a new
+instance of Jenkins I can kind of use
+the backup plugin for restoring this
+particular configurations so how do I do
+that I just come back to my managing
+canes
+come back to backup manager and I'll see
+restore Hudson or Jenkins configuration
+devops here now devops is basically a
+combination of two practices like that
+is the development and operations so
+development is having their own task of
+doing the development and preparing the
+source code and operation is responsible
+for deploying the source code to a
+specific environment whether it's a
+production or any you know other
+environment so they take care of all
+those tasks creating the virtual
+machines managing performing the
+patching and number of tasks is there
+from the operations perspective now
+development is something which keeps on
+working on the source code there on the
+development and they are responsible for
+keeping a particular uh product up and
+running so they do the performance they
+you know they do the coding they do the
+uh particular interaction with the
+testing to you know validate their
+source code a huge number of activities
+is actually done by the development team
+and they eventually uses a number of
+tools like scripting tools coding tools
+development tools a lot of tools they
+basically use to support their
+development because they are perform
+forming different kind of programming
+they it could be a possibility that more
+than one programming language is being
+used for your project so that's kind of
+you know why the scope is present as
+such over here when we talk about the
+devops here now from the operations
+perspective uh it's basically a team
+which is responsible for managing the
+workforce right and it's something which
+we can use to see that all the daily uh
+activities and operations should be
+managed effectively and efficient so
+that's the main important uh point over
+here that whenever we are working with
+the operations whenever we are working
+on that we should be able to get a kind
+of a decent amount of work and decent
+amount of activities managed with the
+help of operations teams here so
+operation teams is pretty much
+responsible for keeping the environment
+up and running and whatever the
+activities and maintenance work we want
+to do we will be able to do on that
+now devops really helps us to achieve a
+lot of Milestones over here now let's
+talk about that one by one so very first
+one of that is that it helps us to get a
+frequent release of deliveries here now
+we were doing the releases prior to
+devops also but that was not that much
+frequent probably people were doing like
+every quarter every three months four
+months that kind of time duration was
+being used by the team to uh deliver the
+source code or deliver into a specific
+environment but the moment the uh
+specific devops comes in the picture the
+frequency of this release uh really
+increased a lot so some organization in
+fact uh trying to do like every month
+release twice a month so that's the kind
+of frequency which we are getting when
+we move on to the devops so that really
+helped and you know got efficient with
+the introduction of devops here
+now second one is the team collaboration
+now that has also improved drastically
+because earlier the operations and the
+development teams were not working in
+that collaboration they were like
+working involved in their own task but
+with the help of devops they really come
+along and you know had a very good team
+collaborations which really helps them
+to increase the overall productivity and
+the performance of the product so these
+are the prime Milestones which we
+achieve with the implementation of
+devops as such into our project
+uh another one is that it helps to uh
+get a kind of a management a better
+management here so a effective and
+efficient management is what we get with
+the help of devops because ultimately
+you have redefined your processes you
+have implemented certain development
+tools so the certain automations and
+that really helps you to increase the
+overall management of all your unplanned
+work so the planning is something which
+got really improved with the help of
+devops
+and faster resolution of issues because
+the way you are delivering your source
+code to the production environment you
+are pretty much doing it into a less
+duration of time and when that is
+happening definitely there is any kind
+of a increase uh in the number of bugs
+which is getting a result and there is
+another benefit that you know ultimately
+the number of bugs which you're getting
+in production that drastically reduced
+in case of devops so since we are
+getting less number of issues and bugs
+it's very easy for us to do the
+resolutions quite quickly and Implement
+into a specific production environment
+right so devops today is being
+implemented by you know most of the
+major organizations whether it's a
+financial organization whether it's a
+kind of a service organization every
+organization is somehow looking forward
+for the implementation and the
+adaptation of devops because it totally
+redefines and automate the whole
+development process all together and
+whatever the manual efforts we were
+putting earlier that is simply all gets
+automated with the help of these tools
+here so this is something which get
+really implemented because of some of
+the important uh feature like a cicd
+pipeline because cacd pipeline is
+responsible for delivering your source
+code into reproduction environment in
+less duration of time so cicd pipeline
+is ultimately the goal which really
+helps us to deliver more into the
+production environment when we talk
+about from this perspective
+now let's talk about that what exactly
+is a cacd pipeline now when we go into
+that part when we go into that
+understanding so cicd pipeline is
+basically continuous integration and
+continuous delivery concept which is
+used or which is considered as an
+backbone of the overall devops approach
+now it's one of the Prime approach which
+we Implement when we are going for a
+devops implementation for our project so
+if I have to go for a divorce
+implementation the very first and the
+minimum implementation and the
+automation which I am looking forward is
+actually from the particular cicd
+pipelines here so cicd pipelines is
+really a wonderful option when we talk
+about the devops here
+so what exactly is the pipeline term all
+about so pipeline is in series of events
+that are connected together with each
+other it's kind of a sequence of the
+various steps like you know typically
+when we talk about any kind of
+deployment so we have like you know
+build process like we compile the source
+code which under the artifacts we do the
+testing and then we deploy to a specific
+environment all these various steps
+which we use to do it like manually that
+is something which we can do it into a
+pipeline so pipeline is nothing but a
+sequence of all these steps
+interconnected with each other executed
+one by one into a particular sequence
+now the pipelines is responsible for
+performing a variety of tasks like
+building up the source code running the
+test cases probably the deployment can
+also be added up in when we go for the
+continuous integration and continuous
+delivery there so all these steps are
+being done into a sequence definitely
+because sequence is very important when
+we talk about the pipeline so you need
+to talk about the C sequence the same
+way in which you are working on the
+development and in a typical world the
+same thing you will be putting up into a
+specific pipeline so that's a very
+important aspect to be considered now
+let's talk about what is the continuous
+integration here now continuous
+integration is also you know known as
+the CI pretty much you can see that a
+lot of tools are actually named as CI
+but they are referring to the continuous
+integration only so continuous
+integration is a practice that
+integrates the source code into a shared
+repository and it used to automate the
+verification of the source code so it
+involves a build automations test cases
+automation so it also helps us to detect
+the issues and the bugs quite easily and
+quite faster that's a very early
+mechanism which we can do as such if we
+want to resolve all these problems now
+continuous Integrations does not
+eliminate the bugs but yes it definitely
+helps them uh you know easily to find
+out because we we are talking about
+about the automated process we are
+talking about the automated test cases
+so definitely that is something which
+can help us to find out the bugs and
+then you know the development can help
+on that and they can you know proceed
+with those bugs and they can try to
+resolve those things one by one so it's
+not a kind of automated process which
+will eventually remove the bugs bugs is
+something which you have to recode and
+you have to fix it by following the
+development practice but yes it can
+really help us to find those bugs quite
+easy and help them to remove
+now what is the continuous delivery here
+so continuous delivery also known as CD
+is in kind of a phase in which the
+changes are made uh into the code before
+the deployment now in this case what
+happens that uh it's something which we
+are discussing or we are validating that
+what exactly we want to deliver it to
+the customer so what exactly we are
+going ahead or we are moving to the
+customer so that's what we typically do
+in case of continuous delivery and the
+ultimate goal of the pipeline is to make
+the deployments that's the end result
+because coding is not the only thing you
+code the programs you do the development
+after that it's all about the
+deployments like how you're going to
+that to perform the deployment so that
+is a really important aspect you want to
+go ahead with the deployments that's
+when you can go there and that's a real
+Beauty about this because it it's in
+kind of a way in which we can identify
+that the how the deployments can be run
+or can be executed as such here
+right so the ultimate goal for the
+pipeline is nothing but to do the
+deployments and to proceed further on
+that
+right so when both these practices are
+placed in together in an order so all
+these steps could be referred as in
+complete automated process and this
+process is known as cicd so when we are
+talking about like when we are working
+on this automation so in that case what
+happens that we are looking forward that
+how the automation needs to be done and
+since it's in kind of a cicd automation
+which we are talking about so it's
+nothing but the uh end result would be
+like build and deployment automation so
+you will be taking care of both the
+build and the test case executions and
+the deployments as such when we talk
+about as such a cacd here
+the implementation of ched also enables
+the team to do the build and deploys
+quite quickly and efficiently because
+these are things which is you know
+happening automatically so there was no
+manual efforts involved and there is no
+scope of human error also so we have
+frequently seen that while doing the
+deployments we may miss some boundaries
+or some Miss can be there so that is
+something which is you know completely
+removed as such when we talk about this
+the process makes the teams more agile
+productive and the uh confident here
+because the automations definitely gives
+a kind of a boost to the confidence the
+TS links are going to work perfectly
+fine and there is no issues as such
+present now why exactly Jenkins like
+Jenkins is what we typically understand
+or we you know uh here and there that
+it's in ci2 it's a CD tool so what
+exactly is Jenkins all about so Jenkins
+is also known as a kind of orchestration
+tool it's an automated tool which is
+there and the best part is that it's
+completely open source yes there are
+some particular uh paid or the
+Enterprise tools are there like Cloud
+bees and all but there is no as such of
+offering difference between the cloud
+bees and the Jenkins here so Jenkins
+isn't kind of Open Source tool which a
+lot of organizations pretty much
+Implement as itself so even if they
+don't want to go
+um we have seen in a lot of big
+organizations where you know they are
+not going for the Enterprise tool like
+Cloud bees and all and they are going
+for the pretty much you know core
+Jenkins software as such here so this
+Tool uh makes it easy for the developers
+to integrate the changes to the project
+that is something which is very
+important because it can really help the
+teams to say that how the things can be
+done and how it can be performed over
+there so the tools is very easy for the
+developers to integrate and that's the
+biggest uh you know benefit which you
+are getting when we talk about these
+tools as such so Jenkins is a very
+important tool to be considered when we
+talk about all these automations now
+Jenkins achieves continuous integration
+with the help of plugins that is also a
+kind of another feature or benefit which
+we get because there are so many plugins
+which is available there as such which
+is being used and for example you want
+to have an integration with kubernetes
+code Docker and all Maybe by default
+those plugins are not installed but yes
+you have the provisioning that you can
+go for the installation of those plugins
+and yes those features will start
+embedded up and integrated within your
+Jenkins so this is the reason this is
+the main benefit which we get when we
+talk about the Jenkins implementation so
+Jenkins uh is you know one of the best
+fit which is there for building a cicd
+pipeline because of its flexibility uh
+open source nature plug-in capabilities
+the support for plugins and it's quite
+easy to use and it's very simple
+straightforward GUI which is there which
+can definitely helps us you can you know
+easily understand and go through the
+Jenkins and you can grab the
+understanding and as an end result you
+will be able to have a very robust tool
+which using which pretty much any kind
+of source code or any kind of
+programming language you can Implement
+cicd whether it's Android it's a not net
+it's a Java it's a node.js all the
+languages are having the support for the
+Jenkins
+so let's talk about the cicd pipeline
+with the Jenkins here now to automate
+the entire development process a CI CD
+pipeline is the ultimate you know
+solution which we are looking forward to
+build such a pipeline Jenkins is our
+best solution and best fit which is
+available here
+so there are pretty much six uh steps
+which is involved when we look forward
+for any kind of pipeline it's generic
+pipeline which we are looking forward
+now it may have like uh in other steps
+which is available there probably some
+additional steps you're doing like some
+other plugins you are installing but
+these are the basic steps which is there
+like a minimum pipeline if you want to
+design these are the steps which is
+available there now let's see the first
+one is that we have the uh required Java
+jdk like a jdk to be available on the
+system now most of the operating systems
+are already available with the GRE like
+a Java GRE but the problem with GRE is
+that it's only for the build process it
+will not be doing the compilation you
+can run the artifacts you can run the
+jar files you can you know run the
+application run the code base but the
+compilation requires in Java C or the
+Java jdk kit to be installed onto the
+system and that's the reason why for
+this one we also require the jdk and
+certain Linux commands execution
+understanding we need to have because we
+are going to run some kind of steps some
+installation steps and you know process
+so that's pretty much required now let's
+talk about how do cacd Pipeline with
+Jenkins now first of all you have to
+download the jdk and that is something
+which is installed so after that you can
+go for the Jenkins download now
+jenkins.io download is a website is the
+official websites of Jenkins now the
+best part is that there you have support
+for different operating systems and
+platforms from there you can easily say
+that if you want to go for a Java
+package like a war file Docker Ubuntu
+deviant sentos Fedora Red Hat windows
+open Sushi uh FreeBSD ganto Mac
+operating system in fact whatever the
+different kind of artifacts or different
+environment or different uh application
+you want to download you will be able to
+do that so that's the very first thing
+to start upon you download the generic
+Java package like a war file then you
+have to execute it you have to download
+that into a specific folder structure
+let's say say that you have you know
+created a folder called Jenkins now you
+have to go into that Jenkins folder with
+the help of CD command and there you you
+have to run the command called Java
+hyphen jar and the jenkins.bar there so
+these are the executables artifacts so
+our files can be easily executable jar
+files bar files can be easily deployed
+so just because with the Java command
+you can run them you don't require any
+kind of web container or application
+container as such so here also you can
+see that we are running the Java command
+and it runs the applications as such and
+once that is done so you can open the
+web browser and you can open like
+localhost colony80 so Jenkins uses the
+ADT Port just like a tomcat Apache so uh
+if you know once the deployment is done
+installation is done so you can just
+open the localhost colony DT now if you
+want to get uh the Jenkins up and
+running in the browser probably you can
+you know go through the public IP
+address also there so you can put the
+public IP address call in adity and that
+can also help you to you know start
+accessing the Jenkins application now in
+there you will be having an option
+called create new jobs so you need to
+click on that now once the particular
+new job new item new job that's a
+different naming conventions which is
+available there now all you are going to
+do is that you're going to do like you
+are proceeding with the creating the
+pipeline job so you will be having an
+option called pipeline job over there
+just select that and provide your custom
+name what pipeline name or job name you
+want to refer or you want to process
+there now once that is available so what
+happens that it will be in easy task for
+us to see that how exactly we can go
+ahead and we can perform on that part so
+this can really help us to see that how
+a pipeline job can be created and you
+know performed on this modifications as
+such now when the pipeline is selected
+and we can give a particular name that
+is this is the name which is available
+and then we can say okay as such over
+there now you can scroll down and find
+the pipeline section so there what
+happens that when you go over there and
+say that okay this is the way that how
+the pipelines are managed and you know
+those kind of things so you will scroll
+down and find the pipeline section and
+go with that pipeline script now when
+you select that option there are
+different options which is available
+like how you want to manage these
+pipelines now you are you know have the
+direct access also like if you want to
+directly create the create a pipeline
+script you can do that if you feel that
+you want to manage like you want to
+retrieve the Jenkins files also code
+management tool also can be used there
+so you can work on that also so like
+this there are so many a variety of
+things which is available like which you
+can use to work around that how exactly
+the pipeline job can be created so
+either you can fetch it from the source
+code management Tool uh like gets a
+version or something like that or you
+can directly put the pipeline code as
+such over there right now so next thing
+is that we can configure an execute a
+pipeline job with a direct script so uh
+we can one see pipeline is selected so
+you can put the particular script like
+Jenkins file into your particular GitHub
+link so you you may be having like
+already a GitHub link so that the where
+the Jenkins file is there so you can
+make use of that now once you process
+the GitHub link so what we can do is
+that we can proceed with that and once
+the processing is done so you can do the
+save and you know you can keep the
+changes and you know it will be picking
+up the pipelines you know the pipeline
+script is added up into the GitHub and
+you know you have already specified that
+uh let's just go ahead with this Jenkins
+file pipeline script from the GitHub
+repository and proceed further now once
+that is done so what next you can do is
+that you can go with the build now
+process you click on the bill now and
+once that is done so what will happen
+that you will be able to see that how
+the build process will be done and how
+the build will be performed over there
+so these are pretty much a kind of a way
+so you can click on the console output
+you will get all the logs that is
+happening in the inside that whatever
+the pipeline steps are getting executed
+all of them you will be able to get or
+you will be able to you know get on that
+part there so these are the different
+steps which is involved as such and the
+sixth one is that you know uh yes
+whatever the uh particular uh when you
+run the build now you will be able to
+see that source code will be uh you know
+will be checked out and will be
+downloaded before the build and you can
+proceed with that part now later on if
+you want to change the url of this
+GitHub you can configure the job again
+the existing job and you can change that
+URL GitHub link URL whenever you require
+you can also clone this uh job whenever
+you go ahead and you work on that and
+that's also kind of you know the best
+part which is available as such right
+and uh then you can have the advanced
+settings over there so in there you can
+put like your GitHub repository you can
+say like okay the GitHub repository is
+there so I'm just going to put this URL
+and you know with that what will happen
+that the settings will be available
+there and the Jenkins file will be
+downloaded as such and when you run the
+build now you will be able to have a lot
+of steps like a lot of configurations
+going on so uh then the checkout sem so
+we can have a declaration like checkout
+sem which is there so when is there so
+it will check out a specific source code
+after that you go to the log and you
+will be able to see that each and every
+stage which is being built up and
+executed as such
+okay so now we are going to talk about a
+demo here so on the pipeline here so
+this is a Jenkins portal now you can see
+here that there is an option called
+create a job you can either click on the
+new item or you can click on the new uh
+create a job here now here I'm going to
+say like a pipeline
+and uh then you know you can select the
+pipeline uh job type here now you have
+the freestyle pipeline uh GitHub
+organization multi-ability Branch
+pipeline these are the different options
+which is available there but I'm going
+to continue with the pipeline here as
+such so when I selected the pipeline and
+say okay so what will happen that I will
+be able to see a configuration page
+which is related to the pipeline now
+here the very important part is that you
+have all the uh General build trigger uh
+you know options which is similar to the
+freestyle but the build step and the
+post build step is completely removed
+because of the pipeline introduction now
+here you either have the option to put
+the pipeline script all together you can
+also have some particular example for
+example let's talk about some GitHub May
+one uh particular uh tool here so you
+can see that we have you know got some
+steps as such over here and you know
+it's pretty much running over there now
+you run it it will work smoothly it will
+check out some source code but how we
+are going to integrate like the version
+the Jenkins file into the version
+control system because that's the ideal
+approach we should be following when we
+create a pipeline of a cicad now I'm
+going to select a particular pipeline
+from a CM here then go with the git here
+now in there the Jenkins file is the
+name of the file of the pipeline script
+and I'm going to put my
+repository over here in this one now
+this repository is of my gate which is
+like having a miven build pipeline which
+is available there it's having some
+steps related to CI with for the build
+and deployments and that's what we can
+follow as such over here now in this one
+the uh if it is a private repository
+definitely you can add on your
+credentials but this is a public
+repository a personal repository so I
+don't have to put any kind of
+credentials but you can always add the
+credentials with the help of add here
+and that can help you to you know set up
+whatever the credentials the private
+repositories you want to configure now
+once you save the configuration here
+now what it's going to do is that you
+know it's going to give you a particular
+page to let you to build now uh if you
+want to run if you want to delete the
+pipeline if you want to reconfigure the
+pipeline all these different options are
+available there so we are going to click
+on the build now here and when I do that
+immediately the pipeline will be
+downloaded and will be processed now you
+may not be able to get the a complete
+stage view as of now because it's still
+running so yeah you can see that the
+checkout code is done then it's going on
+to the build okay that's one of the step
+which is there now once the build will
+be done so it will continue with the
+next steps with the next further steps
+there so you can also go to the console
+output log here like you can click on
+this or you can click on the console
+output to check the complete log which
+is happening there or in fact you can
+also see the stage wise logs also uh
+because that is also very important when
+you go for the complete logs uh it may
+you know uh have a lot of steps involved
+and you know a lot of logs will be
+available there but if you want to see a
+specific log of a specific stage that's
+where this comes into the picture and as
+you can see that all the different steps
+like test cases executions personal Cube
+analysis the archive artifacts
+deployment and in fact the notification
+so all this is a part of a complete
+pipeline this whole pipeline is done
+here and you know you get a kind of a
+stage view it's success over here and
+the artifacts is also available to
+download so you can download this war
+file is a web applications as such over
+here so this is what a typical pipeline
+looks like that how the automation the
+complete automations really looks like
+as such over here now this is a very
+important aspect because it really helps
+us to understand that how the pipelines
+can be configured can be done and pretty
+much with the same steps you will be
+able to automate any kind of pipelines
+as such so that was the demo to build a
+simple pipeline as such with the Jenkins
+and uh pretty much in this one we
+understood that how exactly the cicd
+pipelines can be configured and we can
+use them and we can get hold on that
+part now in this one we are going to
+talk about that how exactly we can
+integrate both the J Maven and the
+Jenkins here just to implement the CI
+processes over here now what is the
+purpose of Jenkins here now Jenkins is
+normally a kind of a CI tool which we
+use for performing the build automations
+and the test cases automation there it's
+one of the open source tool which is
+available there and one of the most
+popular CI tool also available into the
+market
+now this tool makes it easier for the
+developers to integrate the changes to
+the project here so we can easily
+integrate the changes and whatever the
+modifications we want to manage we will
+be able to do that with the help of
+Jenkins
+now Jenkins also achieves The Continuous
+integration with the help of couple of
+plugins each and every tool which you
+want to integrate have its own plugins
+which is available there for example you
+want to integrate Maven we have a maven
+plugin in Jenkins which you can install
+you can configure in that case you will
+be able to use the maven there now you
+can deploy the mavener to build tool
+onto the Jenkins server and then you can
+prepare or you can configure any number
+of Maven jobs in case of Jenkins
+so uh what exactly the maven or the
+Jenkins really do is the mavenwen
+integrates with Jenkins through the
+particular plugin so you can able to
+automate the pills because for
+automation the build you require some
+integration with the maven and that
+integration is what we are getting from
+the maven plugin so in Jenkins you have
+to install the maven plugin and once the
+plugin is installed so what you can do
+is that you can proceed with the
+configurations you can proceed with the
+setup and this a particular plugin can
+help you to build out some of the Java
+based projects which is available there
+in the git repositories and once that is
+done you will be able to go ahead and
+you will be able to process a complete
+integration of Maven within Jenkins
+right so let's see that how we can go
+for the integration now I have already
+installed the maven onto the Linux
+virtual machine which we are using so
+using the app utility or using the Yum
+utility you can actually download the
+Jenkins package and the maven package
+onto the server onto the virtual machine
+and now I'm going to proceed further
+with the plugin installation and the
+configuration of a maven project so I
+have a GitHub repository which is having
+a maven project Maven uh source code and
+the mavenized test cases over there so
+let's see let's log into the uh Jenkins
+and see that how it works
+so this is the Jenkins interface which
+we have over here now in this one what
+we can do is that we can create some
+Maven jobs over here and once those jobs
+are created we will be able to do a
+custom build onto of these Jenkins so
+first of all we have to install the uh
+particular plugin here
+for that we have to go to the manage
+shankings in manage Jenkins you have the
+manage plugins option there so you have
+to click on that now here you will be
+having different tabs like updates
+available installed Advanced all these
+different tabs are available there so
+what you can do is that you can click on
+the available one when you go to the
+available tab so what will happen that
+here you can actually put up that what
+exactly uh plugin you want to fetch here
+so I can put a plugin called maven
+now you can see that the very first one
+the maven integration tool is available
+so I'm going to select that particular
+plugin and click on download now and
+install after restart
+now once that is done so what will
+happen that the plugin will be
+downloaded but in order to reflect the
+changes we have to do a couple of
+restart now for that you don't have to
+go to the virtual machine you have the
+option here itself that will allow you
+to do the restart over here when you
+click on this button so you check this
+option and say that restart Jenkins when
+the installation is done so what will
+happen that the installation will be
+automatically attempted whenever the
+particular plugin installation is
+completed here so you just have to
+refresh the page again and you will be
+able to see that the particular Jenkins
+is being processed as such here
+right so you can see that the screen is
+coming up that Jenkins is restarting so
+it will take a couple of five to six
+seconds to do the restart and the login
+screen to come up again over there
+you can do the refresh also if you feel
+automatically it will be reloaded once
+the Jenkins is ready but sometimes we
+have to refresh it so that we can get
+the screen over there so once the login
+is done so my Maven integration is done
+so next thing which I will be doing is
+that I will be creating a maven related
+project so I'm going to put the admin
+user
+and the password so whatever the user
+and password you have created you are
+going to put that so that you will be
+able to log into the Jenkins portal now
+this is the Jenkins which is available
+here so all you have to do is that you
+have to click on create a new job or new
+item so both the option is pretty much
+same only
+so here you will be able to see a maven
+project here so I'm going to select like
+maven build that's the name which I'm
+going to give here and the maven project
+I'm going to select here
+and then press ok
+now here you will be providing the first
+of all the repository from which you
+will be checking out the source code now
+I can have a discard old builds over
+here so if I feel that I want to have
+like low rotation so all the previous
+builds should be deleted so I'm just
+saying that dates to keep a build should
+be 10 over here and the number of bills
+which I need to keep over here is 20.
+you can adjust these settings according
+to your requirement but uh over here we
+are you know doing a kind of
+configurations which we are trying to do
+a lot of configurations and settings
+same so these are the particular
+settings which we are looking forward as
+such over here so now we are going to
+have the log rotation here so we can
+have it like how many days we want to
+keep and how many number of bills we
+want to keep here so both the values we
+are providing over here and then now I'm
+going to put the get uh integration here
+like the repo URL so I have this
+repository here in which I have the Java
+source code and some uh particular uh
+genuine test cases and all I also have
+the particular source code and it's kind
+of a maven project so that's what I'm
+trying to clone over here with the help
+of this plugin so this plugin will
+download this repository it will clone
+it on to the Jenkins server and then
+depending on our integration with mav1
+the maven build will be triggered here
+so now I'm going to process with the uh
+Maven here so you can see here that it's
+saying that uh Jenkins needs to know
+that where the maven is installed
+because that Maven version it needs to
+configure it needs to process on that
+part so I'll just do the save over here
+and or I can click on this tool
+configuration so I'll just save or do
+the apply click on this tool
+configuration here
+now here you have the options like where
+you can have the jdk installation but
+what happens that thing Jenkins is
+running there so jdk is automatically
+installed so in the tools configuration
+you don't have to put the jdk
+configuration but at least for the maven
+configurations you have to provide that
+where exactly the maven is available
+there so I'm just saying that maven
+three I want to process and the latest
+Maven Apache web server I want to
+configure here so I just want to have
+like I just want to save this settings
+so that it will be automatically
+download the latest version Apache 3.6.3
+version there and that same should be
+utilized over here in this case now I'm
+just going to the maven Builder
+configuration here and click on the
+configure part so these git repository
+is available here and in the build step
+it automatically builds up that uh what
+a maven environment you want to select
+so you see that previously since I did
+not configure my Maven environment so it
+was throwing an error but once I have
+configured that I have to download it
+during the build process or before the
+build that utility should be downloaded
+so instead of doing the physical
+installation of Maven on the server what
+I have chosen over here is that I have
+selected the particular version like I
+have selected that a particular
+3.6.3 version should be installed for
+the maven purposes over here now once
+the that is done I'm going to put the
+particular
+steps over here you can have it like
+clean install you can have clean compile
+test clean test or test alone you can
+give it's just a part of the setup or
+the goals which you want to configure
+here it by default says that pom.xml
+file is the current one in the current
+directory you need to refer you need to
+pick on that one what it's up to you
+only that how you want to configure and
+how you want to process as such this
+information so according to your
+requirement you can say that okay I'm
+just want to go for these particular
+goals and you can say like save over
+here the particular configuration will
+be saved now you can just click on the
+build now and you will be able to see
+that the first of all the git clone will
+happen and then the desired Mi 1
+executable will be uh the build tool
+will be configured and according to that
+it will be processed here so you can see
+here that uh the maven is uh getting
+downloaded it's getting configured here
+and once it's configured because I have
+explained over there that 3.6.3 version
+I have to select so that specific
+version will be configured and will be
+picked up over here now even if you
+don't have the maven installed on the
+physical machine on which the Jenkins is
+running still you will be able to do the
+processing using this particular
+component here so you can see here that
+we have some particular test cases
+executed and in the end we are able to
+get a particular artifices also there
+since I did not uh call upon the package
+or install goal that's the reason why
+the particular artifacts was not
+generated War file or jar file whatever
+the packaging mode is available at Palm
+level but still what happens that my
+test cases do gets executed and that's
+what I have got over here in this case
+so this is a kind of a mechanism where
+we feel that how we can configure a git
+repository once the git repository is
+configured you are going to integrate
+the maven plugin in the maven plugin you
+are going to configure in the tools
+configuration that this and so and so
+version I want to configure to run my
+build and once that is done after that
+you just have to trigger the build and
+click on the bill now option and once
+that is done you will be able to get a
+particular full-fledged build or
+compilation happened onto the Jenkins
+and this log will give you the complete
+details that what are the different
+steps which has happened on this one so
+what exactly is Jenkins Jenkins is
+nothing but a powerful automation server
+that is written in Java and it is a web
+application which can also be run on any
+web server but what makes Jenkins an
+ideal choice for a continuous
+integration server Jenkins has got
+wonderful plugins that allows it to
+connect to all kinds of our tools
+software development deployment coding
+build source code kind of a tools that
+is what makes Jenkins very very powerful
+from a continuous integration
+perspective Jenkins can connect to
+various source code servers and it has
+also got plugins that allows it to build
+deploy test all kinds of software
+artifacts so this is what makes Jenkins
+an ideal choice for a continuous
+integration server but mind you for me
+Jenkins is nothing but a very very
+powerful automated server at the heart
+of it there's a lot of Automation in it
+but the powerfulness of Jenkins is more
+so because of the tools that it
+integrates with and the kind of plugins
+that it has got what is continuous
+integration from a software development
+life cycle assuming that the software
+delivery is happening in very small
+Sprints maybe three to four weeks is
+your delivery life cycle and there are a
+bunch of developers who are located in
+different locations who are working on
+the same code base on the same Branch if
+the code check-ins do not happen quickly
+as in every day if at all developers
+stagger their code check-ins into the
+repository finding problems at a later
+stage would be very costly for the whole
+project early detection of any such
+issues would be you know quick to
+resolve and would not affect your
+delivery schedules so as a part of
+continuous integration what is requested
+or what is demanded is that every
+developer checks in code pretty much you
+know every day as long as it doesn't
+break the code he checks in code pretty
+much regularly and at the end of a day
+you have an automated server which kind
+of wakes up pulls the latest code so
+this code has got the Integrations of
+all the code bases that has been checked
+in by various developers so it pulls out
+the code it builds on a completely
+different server that is the CI server
+which pulls this code it builds it it's
+got all the tools that is required to
+compile it build it and test it and
+assuming that you got some good
+percentage of test case automation
+you're also having a most of your
+regression test Suites automated if at
+all there is a way by which in a couple
+of hours time when the team is out or
+rather team slipping you have
+verification that happens at a very
+crucial level and then any breakages
+even before the team arrives for the
+next day if these are notified to the
+whole team members saying an email going
+out saying that something got broken
+most of the code would be pretty okay
+from the perspective of compilation
+errors or a build errors it is the
+functionality and the regression that
+the team is worried about so if these
+can be automated test it very very
+quickly and very very fast and then any
+breakages are detected early during the
+day right by the time the next day
+people come in they know what is broken
+and possibly they know what code uh
+check-in broke that particular thing and
+they can have a quick stand-up meeting
+and then they discuss what broke the
+code and able to fix it so this way any
+problem that could possibly Arise at a
+later point in time if at all they kind
+of move to the initial phase of the
+project any detection that is early
+doesn't really hurt the team so this is
+all continuous integration that is about
+and Jenkins plays an important role in
+being the continuous integration server
+because it's got connections to anything
+and everything all kinds of tools I mean
+and then it is also got various ways on
+which triggering the job which is a part
+of its automation strategy now that we
+know what is continuous integration and
+where does Jenkins come into picture
+let's look at the rest of the tasks of
+our software development life cycle so
+if at all I were to visualize the kind
+of steps that is involved in delivering
+my software possibly The Continuous
+integration phase would be somewhere
+here where multiple developers are
+developing on that and then we have a
+little bit of a stable code that is
+there that can be kind of moved across
+because I want to go ahead with the
+particular build that I have and then I
+want to migrate that I want to propagate
+that across various environments so if
+you consider the standard software
+delivery approach in the first cycle you
+just do some minimal testing and then
+you kind of move that to one of the
+environments and from there you kick off
+more and more tests they could be
+integration test they could be
+acceptance tests they could be
+functionality checked they could be a
+stress test they could be a load test
+there could be a system integration test
+all all kinds of tests that you can
+think about and all the way may be
+propagating the build across various
+environments if all this can be
+considered as various steps the workflow
+is such that as and when the build moves
+across various phases if there's any
+failure of course the build propagation
+kind of stops everyone gets notified but
+if at all everything goes well so your
+workflow is progressing well and at the
+end of the workflow you eventually have
+a code which is pretty much good to
+release now mind you I make an
+assumption here that most of your test
+cases are automated and you have a good
+percentage of coverage of your test
+cases but if that is not the scenario
+then possibly there are some automated
+tests or checks that may be required in
+between but if the workflow can kind of
+accommodate all that as well you know
+you can visualize this as the steps that
+is required for your software
+development or software delivery life
+cycle now in Jenkins the way this kind
+of translates is that each of these
+tasks can be put out as a job so now let
+me quickly uh let you know or let me
+quickly demo what existed in preach and
+kins 2.0 where I could put up a couple
+of jobs and I can connect them using the
+Upstream Downstream linking mechanism so
+if this job one if at all it is a
+built-in test cases if at all that
+passes successfully job 2 gets triggered
+if the job 2 is more about running some
+more automated test or possibly
+deploying it to environment and then
+kicking off some more test cases that
+would be job to but if the deployment
+fails or if some of the other test cases
+fail it would not propagate to the third
+shop all right so let me quickly bring
+up my Jenkins instance and put up some
+sample jobs and tell you how to connect
+that or rather how would one connect
+that using Jenkins 2.0 or pre-chenkins
+2.0 release I have now brought up my
+Jenkins instance and in case some of you
+don't know how to install Jenkins or you
+don't know how to bring up your Jenkins
+instance I would strongly recommend that
+you watch our previous videos on simple
+learn YouTube channel where I've
+detailed out this steps that is required
+for you to install Jenkins and bring it
+up so all right so I've brought up my
+Jenkins instance let me put up few of
+those jobs now mind you I'm gonna cover
+the pre-chenkins 2.0 feature here
+alright so let me put up my first job
+all right I hope I don't have that job I
+say it's a freestyle project
+I don't want to change anything I'm
+going to put up a very very simple job
+here it's in batch command let's say
+Echo first job triggered at all right
+that's my first job
+let me put up my second job
+freestyle project
+all right that's my second job
+all right that's my third job I've got a
+very very simple uh Echo statements in
+this so it just prints out the system
+date and the time in it
+all right so I could run these jobs
+individually if I want so and let me
+just check running my third job so this
+is what I get and the console output
+third job triggered at date and time
+oops
+let me fix that
+all right so that should fix it
+let me check my second job
+all right that's my second job all right
+so I've got three jobs now if I were to
+link them together or if at all I want a
+scenario where after the first job is
+successful you'll run I would like to
+trigger my second job so I would do a
+small configuration change in here I
+would say after this first job is run I
+want to trigger the second job so I have
+something called as a post build action
+so I can say that triggers some of the
+jobs from here so if you see this
+publish record deploy all right trigger
+trigger trigger trigger let me check the
+other one build other projects this is
+what I would want to do so after the
+first job is done I want to trigger my
+second job all right I would say save
+this now let me go back to my second job
+and then trigger the third job after the
+second job is done
+all right I will add this post build
+build other projects third job again I'm
+not really sure if you guys notice this
+there is various configurations as to
+when exactly do you want to trigger the
+other job and the default one is trigger
+only if the build is stable so typically
+this is the configuration that would
+need we definitely don't want the third
+job to be triggered in case the second
+job fails all right so this is the
+combination that I want or this is the
+choice that I want and I save this now I
+have three of my jobs if you see this
+the second job the Upstream job is the
+first job so let me check this kind of a
+pipeline what I've said here is a very
+very simple pipeline so after my first
+job gets triggered if I build this guy
+right the second job gets triggered
+after the build first job is built so if
+I click on the second job all right so
+the first job was to get the second job
+and after the second job it is
+triggering the third drop so this is how
+first job second job and third job were
+kind of linked but it's pretty hard to
+visualize this as to you know if I need
+to see one holistic picture where after
+the first job after the second job after
+the third job what was the flow it's not
+possible for me to visualize that that's
+wherein I install a plugin so let me go
+to manage plugins right here I think I
+already have it installed for those of
+you who don't have it installed you can
+go to the available button I mean
+available Tab and click on that the
+plugin is called delivery pipeline
+plugin I already have it installed in
+case you don't have it installed you
+just go to the available you click on
+this and say install without restart
+this is the plugin that I want you to
+install all right so now we have that
+plugin installed so what I want to do is
+after the plugin is installed you see
+something like this so this is where I
+would create a new visualization for the
+pipeline that I've created so I would
+say my first pipeline or I give a name
+for my visualization I would say yes
+this Upstream Downstream dependencies
+this is exactly what I want and there
+are a bunch of settings here I'll not
+look at any of that now what I want is I
+just want to tell this view that you
+know the I can give a name for this I
+would give it as simple line and what's
+important is that I specify what is the
+first job that should be picked up as a
+part of this Pipeline and the final job
+is optional because it knows that if the
+first job is triggering this other jobs
+it knows where to end this whole life
+cycle so I Define a pipeline any given
+name for my component and initialize
+that as my I mean I give it the first
+job so I say okay and there you go this
+is much better this gives you a
+beautiful visualization of as to what
+happened after the first job second job
+was run second job if you click on any
+of these that will in fact take me to
+the shop all right there is also one
+other option which is pretty good option
+in my opinion which is about edit view
+yes this is where it is enable start of
+a new pipeline build let me apply and
+let me click OK on this what it gives me
+is a way in which I can trigger my whole
+pipeline from here so if I click on this
+there you see the first job getting
+triggered the second job is still
+running the green means it's all run
+properly and nicely second one is
+triggered now the Third third one it's
+still running all right so this is the
+pipeline that existed prior to Jenkins
+2.0 this is pretty decent enough and if
+you see there's a one-to-one mapping but
+if at all you remember we could go and
+add multiple dependencies for the
+project that I set in just to give an
+example let's have a go to my first job
+I can do a configuration here and
+Nothing Stops me from triggering
+multiple jobs after this by giving me a
+comma I can trigger multiple jobs here
+in case if I have to run few things
+parallely this also gives me that option
+to do that but having said that this was
+the most primitive way in which the jobs
+were kind of visualized and run prior to
+Jenkins 2.0 now this feature became such
+an important feature the users wanted
+more and more complicated because the
+pipelines was not a lot complicated it
+was not just one job after the other
+there were multiple jobs that has to be
+run and there is also an introduction of
+the Jenkins agents where multiple tasks
+could be parallel run on different
+agents so they wanted to Club all of
+that and the pipeline Lane could have
+all the such complicated stuff that's
+where in post Jenkins 2.0 or in Jenkins
+2.0 Jenkins released a version which has
+got the feature of pipeline which can be
+written in groovy scripts now groovy is
+wonderful scripting language it's very
+very powerful anybody can visualize your
+pipeline or write your pipeline using
+programming language and the point of
+everything is code where this whole
+group script gets into your source code
+repository so instead of putting jobs
+here and in case my Jenkins kind of
+fails you know there's a crash on my
+Jenkins I don't get back these jobs how
+do I bring back all these jobs back so
+everything is code that's the devops
+principle so the pipelines will be
+written as scripts that is what I'm
+going to do in my next exercise in my
+previous example I showed you the crude
+way in my opinion of putting up a
+Jenkins pipeline but this is what
+existed prior to Jenkins 2.0 and now I
+have post Jenkins 2.0 in terms of my
+version Jenkins version is 2.107 so this
+supports something called as a scripted
+pipeline wherein you can write your
+pipeline in terms of groovy scripts no
+need to put up any jobs here and
+remember how exactly you put up these
+individual jobs you can write a pipeline
+script in terms of groovy language Let
+me quickly show you a very very simple
+and Elementary pipeline that I have this
+is what a groovy script would look like
+pipeline any agent can run this stages
+there are individual stages that is
+defined as a subset of these stages so
+the first stage is the compile stage and
+Stage has got some steps in it you can
+have multiple steps in it and once only
+after all these steps successfully
+complete that's wherein the stage gets
+through perfectly with the pass so
+there's a compile a stage there's a
+junit stage there's a quality gate stage
+there's a deploy stage and I'm really
+not doing anything much within this
+other than echoing you know some text
+within each of these stages and what's
+interesting is at the end there's
+something called as a post which is Sim
+similar to or you can kind of equate
+that to what would be there in a try
+catch kind of a block suppost always
+meaning This would run all the time
+success only if at all all the steps
+that were above in terms of the stages
+they were completed successfully without
+any failures so typically you would have
+your email that is going out here saying
+that the build is successful and stuff
+like that failure if something went bad
+if any of the steps resulted in a
+failure this particular block will get
+executed unstable whenever any build is
+marked unstable if at all only few
+things that failed within your test run
+and you would want to Mark the build as
+unstable a changed this is an
+interesting option so this compares the
+present run with the previous run and if
+there's any change meaning if the
+previous run was a failure and the
+present run is a success or vice versa
+this would get triggered so this is what
+a simple pipeline script would look like
+so let me copy this Pipeline and let me
+put up a simple job for running this
+pipeline so let me open up my Jenkins
+say a new I would say script pipeline
+yeah this is what I want I don't want to
+choose a freestyle project this is going
+to be a pipeline project so I would say
+pipeline and say okay all right this has
+got far less options than the other jobs
+that we put up so General I don't want
+anything here I don't want any build
+trigger right so this is where I kind of
+I can paste in whatever ad copied
+there's also something called as a
+pipeline syntax or a syntax generator
+this is like a lookup where you can
+choose what you want to do and choose
+the option that is specific to those
+steps and you will get a pipeline
+generated or a script generated for you
+Jenkins knows that you're not very good
+at understanding these pipelines so this
+gives you this sandbox kind of an
+environment where you can check out
+whatever you want to do as a part of
+your pipeline and then get the
+equivalent groovy script from here let
+me look at this in a bit later so for
+now I have my pipeline syntax already
+copied so what I'm going to do is I'm
+going to paste when I copied alright so
+this looks good okay I'm not connecting
+to any GitHub repository of any of that
+I am just running a very very simple
+pipeline which has got some steps in it
+and it just compiles or rather it just
+puts out some messages saying that this
+stage completed successfully and stuff
+like that so let me save this and let me
+try to run this scripted pipeline all
+right if you see this you'll see each of
+those steps going through and if at all
+I look at the console output compile
+successfully unit passed all the stages
+passed there was a pass the failures
+doesn't show up you will see the
+messages from our post or the try catch
+block that I was mentioning earlier so
+this is how one would put up a pipeline
+and you also get to see the visualized
+view of your pipeline that says which
+stage run after which phase how much
+time did it take and you can click on
+any of these and get into looking at the
+logs from that particular pipeline front
+that was pretty easy wasn't it now let
+me give you another scenario for a
+pipeline wherein the source code of my
+pipeline would be in a GitHub repository
+and I will write scripts to grab this
+particular code and run some part of the
+code which is there as a part of the
+repository so let me look at the
+repository that I have I have a
+repository out here on the simply learn
+GitHub account which is called the
+pipeline script and if you see in there
+there are a bunch of batch files that
+are there so the first batch file would
+be a build.batch so there's nothing in
+it except that it is just trying to
+build a particular project you can
+visualize this as individual batch files
+which actually contain the scripts for
+building running deploying and checking
+the quality gate of your particular
+project so I have a couple of batch
+files that is here and this is on the
+GitHub repository so I would need to
+write Jenkins job which will log into my
+GitHub account and then check out this
+particular repository from my account
+and then run these batch files as a part
+of those individual steps within within
+the scripted pipeline so let me check as
+to how I could do that
+let me put up a new project for this let
+me call this scripted pipeline
+dead
+pipeline from GitHub all right so let
+this be a pipeline project that's good
+enough for me let me see my scripts all
+right now this is where I need to put in
+the scripts for pulling out the code
+repository from my GitHub server and
+running those batch files that are there
+as a part of the repository so what I
+want to do is I already have the
+skeleton of my pipeline that is written
+which is very similar to whatever was
+the pipeline syntax that I showed you in
+the previous step so I just copy this
+out here and then paste it here so what
+I have here is I've written on the high
+level skeleton without really putting in
+the actual steps required for checking
+out rather or rather running those build
+scripts so I've got four steps one is
+the git checkout step the bills tab unit
+test quality gate and possibly the
+deployment all right so I need to put in
+the actual scripts that is required for
+first checking out the repository from
+my GitHub server so this is where I will
+make use of this pipeline syntax so as I
+mentioned earlier you have a bunch of
+help that is available for you to figure
+about the actual scripts that is
+required for you to write within your
+pipeline so what I wanted to do is check
+out something from git so it's git
+related so search on git and you'll find
+this option so I got to specify my git
+repository URL and my credentials so let
+me look at the repository URL this would
+be my repository URL so let me copy this
+I'm going to copy the https URL of my
+repository and branch is good and one
+thing that you got to notice is for now
+the repository is anyway a public
+repository on GitHub so even though if I
+don't specify any credentials that would
+work for me still but in case you have a
+repository which needs strictly a
+username and password to be specified
+you can kind of add it out here using
+add Jenkins and you can give your
+username and password out here but for
+now I don't need any of these things so
+I'm going to just say git checkout or
+rather the URL of my repository and what
+we want is the master Branch for now I
+have only one branch on my GitHub server
+so this is good for me so this is what I
+exactly I want to do as a part of the
+script so if I click this this is the
+script that I need to put in my build
+script so I come over here and this is
+what will check out the code from my
+repository all right so now once I get
+my code onto my repository from my
+repository rather it will grab those
+code all these patch files and get it
+onto my Jenkins workspace now I'll have
+to run these batch files as a part of
+each of my step so let me look at what
+would be the syntax so the first one
+that I want to run would be my build.bat
+all right so I want to run a batch file
+all right and what is the name of the
+batch file that I want to run I want to
+run this build.pat so generate pipeline
+script this is all that I want to
+specify as a part of my build step and
+then unit test I'm going to just change
+this to unit I think that's what I have
+in my repository okay that is unit and
+then deploy and quality Q Capital
+quality and this one would be deploy
+all right so this piece of code will
+actually get into my repository and
+check out my source code and grab it and
+take it to the Jenkins workspace so from
+this workspace since all the files are
+there in the root directory of this
+workspace it will run these batch files
+one after the other all right let me
+save this and let me try to run my
+pipeline
+all right so it runs a lot of things in
+the background trying to get the source
+code from my repository whoa whoa whoa
+that was fast all right so it pulled out
+all the source code from my repository
+the last commit message from where the
+source code was pulled out it was this
+create deploy.bat that looks good I'm
+saying building checked out project
+building the checked out project this is
+what I've had in my build.pad if I'm not
+mistaken okay building the project
+that's what is there with the timestamp
+running unit test cases unit dot Pat it
+is running unit dot bat and then giving
+me the date and time stamp okay so all
+these kind of pass and if I go back to
+the project I will also see this
+beautiful view of how exactly what is
+the time that was taken for checking out
+the repository running the build.bat
+running the unit test cases quality
+Gates and all this isn't that pretty
+simple now let me modify my previous job
+or rather let me put up a new job for
+making use of an agent wherein I could
+delegate a job to an agent typically
+agents can be brought upon any other
+remote machines other than where your
+primary region can server is running in
+case you don't know or you don't know
+how to start up this agents I would
+strongly recommend that you refer to our
+previous Jenkins video on the simply
+learn YouTube channel alright so let me
+just check the status of my agent for
+now yes is offline so let me start this
+agent because agent is not running so I
+have the agent set up in my SQL and
+agents so let me copy the script file
+there is a required for starting my
+agent let me go to the agents folder
+open up a command prompt and let me try
+to bring up my agent all right so the
+agent is up and running for now I don't
+have the luxury of starting my agent on
+a different machine so my agent is
+running on my the same machine but the
+agent's workspace is SQL agent while my
+primary Jenkins server is running has
+the workspace out here C colon program
+files 86 and this is the workspace of my
+Jenkins all right I hope you can kind of
+differentiate those two all right so now
+what I want is I will look at the same
+job that I put in earlier or rather
+modify that let the steps be the same
+but I don't want to run that on my
+master server let me try to delegate
+that using the script so let me put up
+an agent scripted job
+all right it will be a pipeline wrap job
+I would say okay
+and let me copy this was a step that I
+had put in for my previous job so agent
+NE so what I'm gonna do now is I don't
+want this to be running on any other
+agent I want this to be running on the
+agent whose label is let me check what
+is the label of my
+agent that is running okay
+so this is the name of my agent okay
+Windows node so let me just copy that
+there all right so with a very subtle
+change instead of saying agent any I'm
+going to run or rather I'm going to
+specify the agent will be running this
+job is the one who has got the label as
+Windows node so this agent that I
+brought on my system has got the name as
+Windows node and it is configured to
+pick up any job that matches the label
+to which any job is kind of delegated so
+let me come back to my jobs where is my
+scripted agent job
+got too many jobs running all right so
+this is my agent scripted job that I
+left half with room so here in the
+pipeline what I'm going to do is is this
+is all I'm going to need so the job
+Remains the Same git checkout is going
+to check out from the same repository I
+run the batch files accordingly but this
+change is just to ensure that this job
+is kind of delegated on the agent
+all right so this would be my agent job
+let me save this
+let me get back to the dashboard and let
+me run it from here if you see this you
+know the master and agent are both idle
+as of now let me try to run this agent
+scripted job all right so the agent kind
+of kicked in and there was a job that
+was delegated to the agent if I look at
+what is there in the console outboard
+he's pretty much doing whatever was
+there as a part of the job but the
+interesting thing to note is that this
+is the new workspace or rather this is
+delegated to the agent and the agent's
+workspace is this particular folder so
+this is where it's going to get all this
+stuff uh run the whole thing and you
+know the flow is pretty much the same
+the only thing is this whole thing ran
+on the agent if I need to check my agent
+I would see the workspace out here agent
+scripted job if you look at this all the
+batch files are here and this is where
+the job was kind of delegated to run so
+with a very subtle change in in the
+scripting I can ensure that the jobs are
+kind of delegated onto the agent the
+pipeline job specifically as I mentioned
+earlier Jenkins provides you two
+different ways of writing pipelines
+called the scripted and the declarative
+the first one that was launched was the
+scripted pipeline this is heavily based
+on groovy scripting since Jenkins ships
+along with the groovy engine so this was
+the first script or the first support
+for pipeline that was provided by
+Jenkins in 2.0 this needs a little bit
+of a learning curve since uh groovy is a
+wonderful script understanding that may
+be a little cumbersome but then once you
+kind of Master it you can write really
+powerful scripts based on groupie at a
+very high level this is what a typical
+scripted pipeline would look like
+something called as a node node
+represents the agent or the actual box
+on which your job would be running and
+then a bunch of stages are put out with
+each of the stage along with the steps
+that needs to be covered as the part of
+those stages listed one below the other
+so all these stages if they run
+peacefully then the whole task is kind
+of marked as run successfully since
+understanding groovy or learning Ruby
+was a little tough for many of the
+people so this is a new one from Jenkins
+wherein it provides you a much simple
+and friendly Syntax for writing
+pipelines without really needing to
+understand or without nearly reading to
+learn some groovy scripting again
+there's a very subtle change between
+these and you there are a lot of lookups
+for figuring out what is a better
+pipeline for you to kind of write but if
+you can figure out the difference or if
+you can try to find that particular
+piece of code which kind of helps you
+out with your pipeline either of the
+skips is not really any difference in
+writing or kind of delivering your
+pipeline using either of these two
+methods all right so declario pipeline
+is something like this where you have an
+agent you can specify the agent label or
+if you can say agent any it will pick up
+whatever is an available agent and run
+the job and then you have something
+called the stages stages is nothing but
+a collection of stage and Stage could
+have multiple steps defined by within
+this so if any of the steps in any of
+the stage fails then that particular
+complete stage and the build is marked
+as failure so very subtle difference
+between both these two syntax but using
+either of these you can write powerful
+scripts for your pipeline now let me
+come up with an example where I'm going
+to at least demo one of the feature
+where you could run a master and a slave
+job in parallel so let me come up with a
+demo for that particular scenario let me
+put up a new job for my parallel agent
+pipeline let me call this and this would
+be a pipeline project
+I don't want anything here let me look
+at the pipeline script that I have
+pipeline agent none stages and there's a
+first stage where this would be a kind
+of non-parallel stage where there's a
+need for you to possibly pull out the
+source code from one of the repositories
+and possibly unit test it if all the
+unit test cases pass then possibly you
+want to deploy it to one of the test
+environments that would be what would be
+there as a part of a non-parallel stage
+and then you may have a bunch of tests
+that could be run and assuming that you
+know you have a Windows node you have a
+Linux node you have some other kind of
+an operating system based node you could
+run these stages in parallel so for just
+for demonstration I've just put in two
+parallel stages in parallel is the
+keyword that you're going to use for
+running tests parallely so I would say
+parallel stage test on Windows and I'm
+going to run this in my windows node
+well I could run a bunch of steps that I
+want out here and then in the other
+stage or other step what I want is I
+will run something else on on my master
+as long as this parallel keyword is
+encountered Jenkins will ensure that
+these two stages are run parallely for
+now I have both these things running on
+my same machine but assuming that these
+were running on different boxes you
+could kind of visualize it as these two
+steps are going to be started
+paralleling without really any
+dependency on each other and then you
+could wait for the test results and then
+based upon whether both of these steps
+passed or failed if one of them failed
+then we could kind of Mark the build
+accordingly so let me copy this pretty
+pretty simple script let me put this out
+here and now let me save this out and I
+can try to build this
+all right there you go the stage will be
+executed first this is a non-paralleled
+state that's going to happen then the
+Task 1 non-agent task one one master
+followed by as I said since I have only
+one node or rather one system one with
+both these things are running
+simultaneously you're not really see a
+benefit of this but assuming that you
+have couple of boxes on which you have
+multiple agents running you will
+possibly want to run your selenium test
+on the Windows box because selenium
+brings up some of those UI which needs a
+browser you could possibly need some
+regression test that could run on Linux
+boxes or Linux agents and then you can
+kind of break down your tasks into
+multiple things that is running on
+multiple systems at the same time and
+then collate all the results okay one
+final thing all right now I have all my
+particular job or rather the steps
+required for my pipeline put down in in
+terms of the scripts and this is saved
+in this particular job that's not a good
+or a recommended approach so what I'll
+do is I'll copy all of these steps out
+here here and then what needs to be done
+is actually let's say let me go back to
+this repository the most preferred
+approach is where you create something
+called as a Jenkins file Jenkins file
+and paste all the scripts that is
+required for your pipeline now this is
+in a true sense the devops approach
+where I'm going to save this out so if
+at all you have a pipeline defined for
+your project the best place to kind of
+put out your configurations for the
+pipeline is within your repository so
+this may be a different project that I
+was referring to but assuming that you
+have your project where you know you
+have to Define your pipeline instead of
+putting that as a particular job on
+Jenkins and fearing that if Jenkins
+fails other jobs there's a crash and
+then you lose out your job configuration
+the best approach is to use a Jenkins
+file put all the steps that is required
+the tried tested steps that is required
+as a part of your Jenkins file and then
+you can put out a job that can pull the
+source code from here as well as use the
+steps that is defined in the jetkins
+file so let me end up by putting up
+another job which is a true javops kind
+of a job so I would say devops
+Pipeline and this is a pipeline script
+and then I'm not going to say any of
+these things I would say the pipeline
+script is from the source code
+management so my pipeline script is
+already defined it is present in SCM so
+what is my SVN I mean what is my source
+code repository this is my source code
+repository where I already have this so
+let me copy this URL This is My URL I
+don't need any credentials because the
+repositories anyway in public repository
+that is all that is required I would say
+and the scripted file it automatically
+picks up Jenkins file all right so let
+me save this let me open this
+so that's the beauty of devops wherein I
+have a pipeline that is defined and
+instead of putting the pipeline as a job
+because pipeline is nothing but a
+configuration the configuration is also
+checked into the source code repository
+and any changes to this pipeline instead
+of putting that modifications in the job
+these are all captured as a part of my
+repository so the changes are nicely
+configured so that you know we know
+who's done what change so the first
+question you'll be asked about with
+Jenkins is explain a Master Slave
+architecture of Jenkins so the way that
+Jenkins is set up is that the Jenkins
+Master will pull code from your remote
+git repository such as GitHub and we'll
+check that repository every time there
+is a code commit it will distribute the
+workload of that code and the tests that
+need to be applied to that code to all
+of the Jenkins slaves and then on
+request the Jenkins master and the
+slates will then carry out all the
+builds and tests to be able to to
+produce test reports the next question
+you'll be asked is what is a Jenkins
+file and simply put a Jenkins file as a
+text file that has a definition of the
+Jenkins Pipeline and is checked into a
+source code repository and this really
+allows for three distinct things to
+happen one it allows for a code review
+and iteration of the pipeline it permits
+an audit Trail for that Pipeline and
+also provides a single source of troop
+for the pipeline which can be viewed and
+edited so which of the following
+commands runs Jenkins from the command
+line is it Java Dash jar jenkins.war
+Java Dash War
+jenkins.jar Java dot dash jar Jenkins
+jar Java Dash War Jenkins dot wall and
+the answer is a Java Dash jar
+jenkins.war so when working with Jenkins
+you're going to be asked what are the
+key Concepts and aspects of working with
+the Jenkins pipeline and you want to
+really hold out your fingers here and go
+through four key areas and that is
+pipeline node step and stay so pipeline
+refers to the use defined model of a CD
+continuous delivery pipeline node are
+the machines which is which are part of
+that Jenkins environment within the
+pipeline step is a single task that
+tells Jenkins what to do at that
+particular point in time and then
+finally stage defines a conceptually
+distinct subset of tasks performed
+through the entire Pipeline and tasks
+could be build test and deploy so which
+of the following file is used to Define
+dependency in Maven and do we have A
+build.xml B palm.xml C
+dependency.xml or D version dot XML and
+the answer is
+palm.xml working with Jenkins you're
+going to be asked to explain the two
+types of pipeline line used in Jenkins
+along with the syntax and so a scripted
+pipeline is based on groovy script as
+the domain-specific language for Jenkins
+and there are one or more no blogs that
+are used throughout the entire Pipeline
+on the left hand side you can actually
+see what the actual script would look
+like and the right hand side shows what
+the actual declaration for each section
+of that script would be the second type
+of Jenkins pipeline is a declarative
+Pipeline and a declarative pipeline
+provides a simple and a friendly syntax
+to Define what the pipeline should look
+like and then you can actually at this
+point use an example to actually break
+out how blocks are used to define the
+work completed in a decorative pipeline
+so how do you create a copy and backup
+of Jenkins well to create a backup
+periodically back up Jenkins to your
+Jenkins home directory and then create a
+copy of that directory it's really as
+simple as that the question you'll be
+asked as well is how can you copy
+Jenkins from one server to another well
+they're essentially there are three ways
+to do that one is you can move a job
+from one installation of Jenkins to
+another by copying the corresponding job
+directory the second would be to create
+a copy of an existing job directory and
+making a clone of that job directory but
+with a different name and the third is
+to rename an existing job by renaming a
+directory so security is fundamental to
+all the work that we do within devops
+and Jenkins provides the center core to
+all the work that gets completed within
+a devops environment there are three
+ways in which you can apply security to
+authenticate users effectively and when
+you're asked about this question of
+security within Jenkins the three
+responses you want to be able to provide
+is a Jenkins has its own internal
+database that uses secured user data
+from and user credentials B is you can
+use use a l damp or lightweight
+directory access protocol server to be
+able to authenticate Jenkins users or C
+you can actually configure Jenkins to
+authenticate by using such as oauth
+which is a more modern method of being
+able to authenticate users you're going
+to be asked how to deploy a custom build
+of a core plugin within Jenkins and
+essentially the four steps you want to
+go through are first of all copying the
+dot HPI plugin file into the Jenkins
+home plugins sub directory you want to
+remove the plugins development directory
+if there is one you want to create an
+empty file called
+plugin.hpi dot pinned and once you've
+completed these three steps restart
+Jenkins and your custom build plugin
+should be available how can you
+temporarily turn off Jenkins security if
+the administrative user has locked
+themselves out of the admin console this
+doesn't happen very often but when it
+does it's good to know how you can
+actually get into Jenkins and be able to
+resolve the problems of authenticating
+effectively into the system as an
+administrator so when you want to be
+able to get into a Jenkins environment
+what you want to be able to do is locate
+the config file you should see that it's
+set to True which allows for security to
+be enabled if you then change the user
+security setting to false Security will
+be disabled allow you to make your
+administrative changes and will not be
+re-enabled until the next time Jenkins
+is restarted so what are the ways in
+which a build can be scheduled and run
+in Jenkins well there are four ways in
+which you can identify the way a build
+can be scheduled on running Jenkins the
+first is when source code management
+commits new code into the repository you
+can run Jenkins at that point the second
+can be the after the completion of other
+builds so maybe you have multiple builds
+in your project that are dependent on
+each other and when so many other builds
+have been executed then you can have
+Jenkins run you can schedule build to
+run at a specified time so you may have
+nightly bills of your code that
+illustrate the changes in the solution
+you're building and then finally you
+also can manually build a environment on
+request occasionally you will want to
+also restart Jenkins and so it's good
+that when a question around how do you
+restart Jenkins manually comes up that
+you have the answers and there are two
+ways in which you can do it one is you
+can force a restart without waking into
+bills to complete by using the Jenkins
+URL that you have for your environment
+slash restart or you can allow all
+running bills to complete before restart
+are required and in which case you would
+use the command of the URL for your
+Jenkins environment slash safe restart
+and with that we have reached the end of
+the session on Jenkins full course
+should you need any assistance APD
+project code GitHub links and other
+resources used in this session please
+let us know in the comment section below
+and our dream of X Plus we'll be more
+than happy to resolve all your queries
+at the earliest until next time thank
+you for watching and stay tuned for more
+from Simply
+staying ahead in your career requires
+continuous learning and upskilling
+whether you're a student aiming to learn
+today's top skills or a working
+professional looking to advance your
+career we've got you covered explore our
+impressive catalog of certification
+programs in Cutting Edge domains
+including data science cloud computing
+cyber security AI machine learning or
+digital marketing designed in
+collaboration with leading universities
+and top corporations and delivered by
+industry experts choose any of our
+programs and set yourself on the path to
+Career Success click the link in the
+description to know more
+foreign
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

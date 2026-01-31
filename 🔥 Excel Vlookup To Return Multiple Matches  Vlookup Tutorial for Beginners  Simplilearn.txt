@@ -1,0 +1,219 @@
+hey everyone welcome to Simply learns
+YouTube channel today we will learn
+about the we lookup function which can
+written multiple return values or
+multiple R values in one query that's it
+if these are the type of videos you'd
+like to watch then hit that like And
+subscribe buttons and the bell icon to
+get notified just for your quick info if
+you want to upskill yourself master
+business analytic skills and land in
+your dream job or growing your career
+then you must explore simply learn goad
+of various business analytics programs
+simply learn offers postgraduate program
+from PR University in collaboration with
+Amazon Google and Microsoft through this
+program you will gain a knowledge and
+work ready expertise in skills like
+prescriptive and Predictive Analytics
+regression classification and over a
+dozen others that's not all you also get
+the opportunity to work on multiple
+projects and learn from industry experts
+in Top Tire product companies and
+academicians from top universities after
+completing these courses thousands of
+Learners have transitioned into a
+business analytics role as a fresher or
+moved on a higher paying job profile if
+you are passionate about making your
+career in this field then make sure to
+check out the link in the pin comment
+and the description box below now
+without further delay let's get back to
+the Practical mode now I have started my
+Microsoft Excel so here you can see I
+have dealer quantity ordered price sales
+product line country Etc now if I wanted
+to apply vuka function and find out the
+sales what Luxury Motors made and
+obviously vuka will return me the first
+row but if you see there are multiple
+Luxury Motors available in the list now
+what I want to do is whenever I give the
+dealer as Luxury Motors I should get all
+the available rules and all the data
+related to Luxury Motors so we need to
+modify a couple of things in our bookup
+to get this done now let's get that done
+so first we will try to tag the multiple
+reputations of each and every dealer
+that is we want to do a count or runtime
+count so how to do that it's simple
+equals to the first cell where we have
+the values which is B2 and the function
+which is Count
+F and now the first C again and now
+carefully look at that I'm trying to to
+freeze
+it so we have Frozen the first cell so
+starting from the first cell to the last
+cell right so yeah I think it's not
+frozen let's try to freeze it once again
+function F4 should freeze it now from B1
+sorry I I mean to say the first cell B2
+to B3 B4 B5 and BN so the first cell
+will be fixed and the rest one will go
+on as the function will be scrolled down
+comma again B2
+now close it and enter now you will see
+what happens when I scroll it
+down right so somewhere we have Luxury
+Motors here so Luxury Motors is
+available 13 times in this particular
+data set now the first part of it is
+done now we will go to the lookup part
+so here equals to we look up everything
+is absolutely same right you just need
+to make few minor modifications to your
+existing we lookup function the first
+one is the running count which we made
+here which we will be using shortly now
+the lookup value so the V lookup
+function now the lookup value okay we
+did not specify the lookup value Escape
+so we have this particular one let's
+paste the same here and change the color
+a little bit this will be our lookup
+value so here equals to we look up now
+the look up value and remember we are
+not giving the exact value we are trying
+to change a little so let's keep this as
+fixed let's make sure that the lookup
+value is always pointing to this
+particular cell itself so let's freeze
+it and along with that we will give some
+other important attachment remember we
+have the running count for all the
+dealers here luxury mode 1 2 3 similarly
+when you are trying to pull multiple
+values or multiple rows then you might
+want to give the individual identity to
+that right so this is the first
+occurrence second occurrence for that we
+will use the row function so r o w row
+and we are giving the row reference to
+this particular cell right and U we want
+that particular cell to start from
+number one right currently we are at row
+number two so let's give it as minus two
+or sorry sorry minus one so from this
+particular you can see that right here
+it is row two so if you give it here it
+will start with row two so if we
+subtract minus1 the numbers will come
+from one and uh this is the first part
+after that we will give the lookup array
+or table array so this is the table
+array that I will be referring to there
+you go comma now we can just give the uh
+column number right let's say I wanted
+to find sales so I'll give the sales uh
+column number is 1 2 3 4 5 so what if I
+wanted to get all the details right so
+so in that situation we might have to
+take use of index match functions so out
+of that we will take only the match
+function so let's call match function
+press tab to select and now the lookup
+value for match so your lookup value for
+match will be this particular cell let's
+try to freeze it there you go comma Now
+in this particular freezing option you
+might have to freeze the first row I
+mean uh uh the I mean not row you have
+to freeze the First Column that is I
+column right you have to freeze this and
+whenever you are trying to extend your
+function it should dynamically change so
+for that let's freeze it again now you
+can see uh the row number one is frozen
+but the column if you switch from dealer
+to quantity order it will change so you
+will understand this when I completely
+finish the function right now the lookup
+array so this is the lookup array we
+should be looking at so from B this G
+and now let's freeze it there you go
+fora let's take the modified uh address
+as well now the match type will be uh
+true I mean let's me use the RP yes
+match type so we want exact match so
+zero press tab to select and close the
+match function now the last type of or
+the last parameter of the lookup
+function we want exact match so false
+press tab to select enter there you go
+now we will copy Luxury Motors here and
+paste it in the lookup value copy Luxury
+Motors paste it here
+enter there you
+go we forgot to freeze this particular
+address
+yes very good now now what if I scroll
+this we have all the appearances right
+and you can understand wherever you have
+any that is where the data ends you can
+also try to you know modify this
+wherever let's say uh if I adjust my
+lookup function here if
+error right then give
+me zero or nothing or space whatever you
+want let's give
+space enter right now what happens is if
+you extend this after a certain
+occurrence you will only see space
+bars which means it has ended there so
+that's how uh you use multiple uh or
+that's how you extract multiple rows
+from one single lookup function instead
+of this instead of this complex
+calculation you can also use a filters
+and it will also simplify your job so
+it's another lesson for another day and
+with that we have come to the end of
+this session on how to get multiple rows
+using one single V lookup function if
+you have any queries regarding any of
+the topics covered in this session or if
+you require the resources like PP or the
+data set that we used in this session
+please do let us know in the comment
+section below and our te of experts
+we'll be happy to help you as soon as
+possible until next time thank you for
+watching and stay St for more from
+Simply learn staying ahead in your
+career requires continuous learning and
+upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

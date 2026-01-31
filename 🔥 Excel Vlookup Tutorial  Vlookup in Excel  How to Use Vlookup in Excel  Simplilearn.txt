@@ -1,0 +1,274 @@
+hey everyone welcome to Simply learns
+YouTube channel in this session we will
+learn about we lookup function in Excel
+but before we begin let me tell you guys
+that we have daily updates on multiple
+Technologies if you are a take gek in a
+continuous hunt for latest technological
+Trends then consider getting subscribed
+to our YouTube channel and don't forget
+to hit that Bell icon to never miss an
+update from Simply Lo now without
+further Ado let's get started with V
+lookup in
+Excel so what exactly is vlookup
+function basically V lookup function is
+a lookup method involving to fetch the
+data from a tabular data set Now vup
+function is a pre-made function in Excel
+which allows searches across columns so
+basically we have three type of lookup
+functions and B lookup is one of those
+we have B lookup H lookup and X lookup V
+lookup is vertical lookup H lookup is
+horizontal lookup and X is a combination
+of both V and H lookup so the Syntax for
+V lookup is as follows so we will have a
+lookup value that is the cell address or
+the value which you are looking for and
+the table array which is the range of
+elements that you want to look out for
+and the column is the resultant column
+from which you want the result and the
+match is it supposed to be an exact
+match or the nearest match so I believe
+the theoretical explanation of the
+syntax is incomplete without having a
+practical demonstration so let's get
+back to Excel and try to execute some
+view lookup functions so that you have a
+a lookup function and especially a v
+lookup function Works in Excel right we
+are on the Excel spreadsheet right now
+so let's start with our simple one right
+so here I will have car and price so
+here I will give up a drop- down menu
+using data validation so that you can
+simply choose the data right so we will
+go to data data
+validation list and the source will be
+these are the ones for the source and
+press okay you don't have to enter any
+error messages Etc to no error messages
+and more details on data validation in
+Excel please go through the data
+validation in Excel tutorial by simpl
+down and now in the price section we
+will have the V lookup function right
+now the first one lookup value which is
+this particular cell right so we look a
+function will look for the value here so
+let's say I give Lamborghini and then it
+will fetch the cost of Lamborghini from
+the table so where is it looking for the
+value first lookup value is Lamborghini
+which is right in front of car in the
+cell E5 so that is the first parameter
+we need to provide or attribute we need
+to send out then the table array which
+table array should it look for this is
+the table array it looks for and I'm
+eliminating the header over here we need
+to eliminate the header and the column
+index number right now we are giving car
+name and now we want the price so in the
+table car is column 1 price is column
+two right even if this particular car
+price is around anywhere in the table
+car is still considered as column one
+price is still considered as column two
+so we need the value from column two
+right so we will provide column number
+two and the last one exact match we want
+the exact match not appropriate match so
+select that press on Tab to select now
+close the value right close the bracket
+now let's get back to card and now
+select any one of the cars let's select
+PMW right now when you selling BMW what
+lookup is doing is it is first checking
+the value here look up value sbmw so
+since we got the value sbmw it will go
+back to this particular table and fetch
+for the name BMW right and now it has
+the BMW data and now the third
+parameters that is column two right so
+it will check column two and see the
+exact mat what is the value of the car
+75 or
+750 uh million right $7.5 million so
+that will give you the data over here
+that's it so that's how V lookup works
+now this is still a fundamental
+understanding of V lookup let's
+elaborate a little more to understand it
+in a much by right now I I have here the
+flight data right and here you can see
+when I select the
+source and uh
+destination and uh
+flight which I want to fly in then it
+it's giving me the price of the flight
+and the route in which it is going how
+did I do so let's do it practically
+right so we will get back
+here and uh here we'll do some
+changes okay it's okay
+fine now here we have
+everything
+the source and
+destination airline price and route
+let's also
+provide
+route Source will be again data
+validation go to data data
+validation will be a
+list this is the list press okay and and
+destination is again data validation
+select
+list and now the list of
+destinations and the
+airline is again a data validation
+operation where you will give the set of
+or the list of airlines which you are
+offering and okay now comes the price
+equals to we look
+up passing these three
+values and table array which is again
+the
+same the entire table except the
+headers next will be the column number
+so 1 2 3 4 and five price is in the
+fifth column so I will pass column
+number five and I want exact match not
+appropriate match press tap to select
+close the bracket and enter right and
+same applies to Route so equals to or
+you can just copy the formula and paste
+it here and make a minor change that is
+instead of column number five you want
+column number four which has the route
+data right so column number four has the
+route data enter and there you go now
+out of the drop down when you select
+source as any U location here let's
+select Mumbai and the destination as
+Bangalore and Airline as let's fly in
+air India and you have the price details
+and the R so these particular ones you
+can you know hide because the data is
+coming over here so you can copy paste
+it to this
+place and let's hide these
+things and you can also hide this one as
+well
+there you go now the data is visually a
+little more appealing and you can kind
+of have a complete you know dashboard
+where you have uh the data of V lookup
+results right so whenever you select any
+source and give any
+destination from the dropdown and choose
+any of the flights you want to fly with
+and you will have the data over here
+right the price of the flight and the
+root of the flight and that's how you
+use V lookup in Excel so if you want to
+learn more of such interesting skills
+and techniques to become a successful
+business analyst through an online
+training and certification program then
+search no more simply learns
+postgraduate program in business
+analysis from pero University in
+collaboration with Amazon Google and
+Microsoft should be the right choice
+please click on the link in the
+description box below so that you can
+get a complete overview of the program
+being offered and before we end this
+tutorial on V lookup now before we
+conclude let's listen from our learn
+about their success story after getting
+certified by simply learns postgraduate
+program in business analysis from P
+University I have always been passionate
+about learning new things and improving
+my teaching skills about five years ago
+I realize that I have a gap in my
+knowledge and to fill the Gap I needed
+to upskill myself I chose simply learn
+as my upskilling partner because of its
+comprehensive curriculum and its
+connection with hu University hi my name
+is Carlos lares I live in Lexington in
+the CATE of Kentucky in the United
+States I am an assistant professor at
+newway University and I hold a PhD in
+management human resources and
+Leadership I decided to op for the
+postgraduation program in business
+analysis from s which has helped me a
+lot in my professional and personal life
+I have been teaching even before I moved
+to the United States years ago I tried
+to use Excel while teaching research
+classes but since I only had the basic
+knowledge about it and other business
+intelligence studs it was very difficult
+for me at the beginning but after
+completing this class and learning how
+to use tools like Excel Tableau power VI
+power query properly I feel like uh it
+has been a total game changer for me now
+I apply these skills
+everywhere which has also helped me a
+lot in my yearly review I submitted all
+my certificates to my university and
+based on that my University plans to
+develop a class focus on business
+analysis starting in Fall
+2023 and I am really
+excited when I finally decide to go for
+an online program I research a lot and
+finally I chose simply learn and I must
+say it has been a wonderful experience
+if you see how the business world is
+changing now and killing yourself is
+quite essential to keep up with it
+change everything works on numbers now
+data is more valuable and important than
+ever so I encourage you to keep
+learning and keep growing and with that
+we have come to an end of this session
+on V lookup in Excel if you have any
+queries regarding any of the topics
+covered in this session or if you want
+the resources that we used in this
+session then please do let us know in
+the comment section below and our team
+of experts will be more than happy to
+resolve all your queries at the earliest
+until next time thank you stay safe and
+keep learning staying ahead in your
+career requires continuous learning and
+upscaling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to ner up and get certified click
+here
