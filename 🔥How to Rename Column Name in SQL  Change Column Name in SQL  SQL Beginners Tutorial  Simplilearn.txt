@@ -1,0 +1,61 @@
+foreign
+'s YouTube channel in this session we
+will learn how to change the name of a
+column and SQL but before we begin let
+me tell you guys that we have daily
+updates on multiple Technologies if
+you're a tech geek in a continuous hunt
+for latest technological friends then
+consider getting subscribed to our
+YouTube channel and don't forget to hit
+that Bell icon to never miss an update
+from Simply learn now without further
+Ado let's get started with our one point
+agenda that is how to change the column
+name and SQL so let's quickly take a
+look at the syntax that we will be
+following to change the column name in
+SQL so the syntax is as follows we will
+be using the alter and table keywords
+and we will be specifying the table name
+and then we will give the rename column
+keyword then the old existing column
+name and to the new column in which we
+need to change it to so having a clear
+understanding of the syntax let's try to
+execute this command in the Practical
+mode so let's get back to the MySQL
+workbench so now we are on the MySQL
+workbench let's quickly get access to
+the simply learn database
+there you go and now let's quickly take
+a look at the column names in our
+existing table
+now you can see the First Column is the
+employee number let's try to change that
+by using the alter table
+command and then
+and now the rename keyword
+the column name is EMP number
+two
+EMP ID semicolon
+let's quickly execute this command
+very good now let's try to execute the
+select command once again and see the
+output there you go now the employee
+number has been changed to employee ID
+so that's how you change the column name
+in SQL if you have any queries regarding
+any of the topics covered in this
+session or if you require the resources
+like the PPD and the code then do let us
+know in the comment section below and
+our team of experts will be more than
+happy to resolve all your queries at the
+earliest until next time thank you stay
+safe and keep learning
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

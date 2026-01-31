@@ -1,0 +1,794 @@
+hey everyone welcome back to another
+video session by simply learn
+in this video on kotlin tutorial we will
+be learning about kotlin language and
+all the basic concepts that one must
+know to understand this language
+so let's go ahead and understand what we
+will be covering today
+so we will start with introduction to
+kotlin language then we will understand
+the variables in kotlin after that the
+conditional statements like if else and
+when
+then we will cover array loops null
+safety and ranges in kotlin and at last
+we will learn about kotlin functions
+but before we begin make sure to
+subscribe to our channel and hit the
+bell icon to never miss an update from
+simplylearn
+so let's start with introduction to
+kotlin language
+kotlin is a journal purpose statically
+typed programming language developed and
+released by jetbrains in 2016.
+in 2011
+jetbrains revealed the kotlin project
+which is a new language for jvm
+and later in february 2016 its first
+version kotlin 1.0 was released
+this language is concise and more
+expressive than java
+it is fully interoperable with java and
+it is also said that kotlin language is
+made by extracting all the good parts of
+different programming languages like
+scala javascript java c-sharp etc
+google also announced kotlin as the
+first class language for android
+development
+so it is now an official language for
+the development of android and is being
+opted by many organizations across the
+globe
+now let's move on to our next topic
+which is variables in kotlin
+there are two types of variables in
+kotlin which are
+where and well
+first where
+the var variables are mutable which
+means their value can be reassigned
+then there is val the valve variables
+are immutable which means their value
+cannot be reassigned or changed or
+modified
+as you can see in the example where is
+the type of the variable name and the
+value raj is assigned to it after that
+the value is reassigned as said
+so after printing it will display set
+because where is mutable type and its
+value can be reassigned
+on the other hand
+val is the variable whose value cannot
+be reassigned
+which means it is immutable
+as we can see in the example on printing
+the value of the name variable
+it is showing an error because we tried
+to change or reassign the value from raj
+to sid
+and because it is a val type variable
+the value is not going to change
+kotlin
+is smart enough to understand which is
+string and which is an integer
+so it is not necessary to specify the
+type
+like in this example
+name is the string and roll number is
+the integer
+but we haven't specified their type
+and still there is no error
+however it is possible to specify the
+type if you want
+now coming to next topic which is string
+templates
+a string can be defined as a collection
+of characters enclosed in double quotes
+the string templates allows us to
+include the expressions variable
+references inside the string
+the references in a string start with
+the dollar sign
+to print the string
+we need to add the dollar sign before
+the string name
+we can easily add the variables in the
+string instead of concatenating them
+for example here name one and name two
+are two strings and we can include them
+together
+within the same sentence while printing
+like both
+dollar sign name one and dollar sign
+name to our best friends
+it will display the value of string
+within the sentence
+we can also print the expression like we
+did while printing the second sentence
+dot to upper case
+dot upper case is an expression and in
+kotlin expressions start with a dollar
+sign
+and are enclosed in the curly brackets
+as you can see
+so as we have understood about the
+string templates
+let's move on to if-else and when
+statements
+if is used with a condition
+if that condition is true
+then the block of code executes and if
+the condition is not true or false then
+the else block executes
+now in quarterly language the if-else
+statements can also be used as
+expressions that means they can return a
+value
+while using if else as an expression it
+is mandatory to use the else branch
+here in the example we can see if a is
+greater than b is the expression and the
+value of that expression is assigned to
+the variable named great
+now which so ever is greater among them
+that will be assigned to it and is then
+printed
+now
+coming to when statements
+when statements in kotlin is similar to
+switch statement in java
+when statement is used to select one
+code block from the multiple code blocks
+based on a conditional expression
+the code block which satisfy the
+condition is executed
+for example as you can see the value 4
+is assigned to the variable tab
+now
+which server value matches with the
+value of tab
+that particular code block will execute
+in this case there are no code blocks
+but single line branches
+the branch value that matches with the
+value of tap that particular branch will
+execute
+like wrap will execute which is then
+stored in the order variable
+which is then printed
+now
+let's move on to arrays in kotlin
+arrays are generally used to store
+multiple values in contiguous memory
+location in a single variable
+in kotlin language to create an array
+you have to use the address of function
+and then
+write the elements inside the bracket
+for example here name is the array name
+and sid robbie max john
+are the elements of the array
+in order to print the elements of the
+array you can use loops for example here
+we are using for loop
+in this for loop n is the variable
+names is the array name
+and one by one it will print every
+element of the array
+now
+as we have understood about arrays
+now let's understand about loops
+loops are used to iterate through the
+different parts of program
+for example arrays
+ranges several times
+it is a set of instructions which keeps
+on repeating until a certain condition
+is met it is generally used while
+working with arrays
+in kotlin language the for loop is bit
+different to that in java
+in this for loop we use a variable in
+operator and the array name to display
+the elements of the array
+for example as you can see in the
+example
+there is an
+array with elements 4 2 5 12 7 and using
+the for loop we are displaying the
+elements of the array inside the for
+loop
+here n is the variable n is the operator
+and numbers is the array name
+loops are also used to iterate through
+the ranges
+which we will discuss
+later now
+let's understand why loop and do while
+loop
+both these loops are similar to the
+loops in java
+the function of the while loop
+is it checks the condition and executes
+through the block of code as long as the
+specified condition is true
+and the do while loop executes the do
+block once before checking if the
+condition is true
+which means the loop will execute at
+least once even if the condition is not
+true
+so as we have understood about loops in
+kotlin so now let's move on to our next
+topic which is null safety
+so null safety is a feature in kotlin
+language that solves the problem of null
+pointer exception
+if you have worked on other languages
+including java then you must have an
+idea of null pointer exception
+in cotton language you can easily create
+null type variable
+to create a null type variable or string
+which can hold a null value we can
+simply define them by putting the
+question mark at the end
+as you can see in the example name is
+the variable name and string is the type
+and after string there is a question
+mark which means that this variable is
+of null type
+by default all the variables are not
+null in kotlin
+but you can create one by putting a
+question mark with them
+now moving on to the next topic which is
+ranges
+now ranges can be defined as an interval
+from start to end
+expressions are created with double dot
+operator and an in operator here in the
+example 0 is the starting point and 7 is
+the ending point in between them there
+is operator double dot operator which
+means that the loop will iterate from 0
+to 7.
+similarly we can also print the range
+with gaps like in the example i in 0 to
+10 step 2
+means that it will print from 0 to 10
+the gap of 2 digits like 0 2 4 6 8 10
+range can also be used in decrement
+manner for example
+i in 7 down to 2
+means the loop will iterate from 7 to 2
+in a decreasing order
+now
+let's move on to the next topic which is
+kotlin functions
+functions are also known as methods
+they are the block of code which runs
+whenever it is invoked
+in kotlin language functions are defined
+with the fun keyword after that the name
+of the function and parentheses
+are written
+if the parenthesis are empty it means
+function doesn't accept any arguments
+in function with parameters the
+parameters are specified inside the
+parenthesis
+the type of parameter is specified after
+the name of the parameter
+so we can see in the example fun is the
+name of the function
+num1 num2 are the parameters name
+int is the type of the parameters
+then after that the colon there is
+another int data type
+which is the return type that means it
+is the data type of the value which is
+returned
+so these were some important topics of
+cotton language
+now let's go to the code editor
+and do some practical implementations
+so this is our intellij idea here we
+will do some examples of cotton language
+so let's go ahead
+first of all
+we'll create the kotlin file
+so let's name it as example one
+so first we'll do an example of string
+template
+in which we'll have a look
+that how to create those strings and how
+can we use some expressions with them
+so let's start
+so fun is the keyword for function
+now main function
+now inside this main function
+we'll write
+val
+this is immutable as we know
+code is the name of the variable
+now let's say
+code is
+cipher
+in kotlin language you don't need to put
+the semicolon in the end as it is not
+necessary you can do it but it is not
+necessary to do that
+all right now
+after that let's say you want to print
+this
+we'll write
+the code is
+dollar sign
+code so this is how we can
+print this string
+and
+let's see that if it works or not first
+of all we'll have to save it
+so we'll do save all
+and now we'll go to run
+now here we will
+run run and select example one
+all right
+as you can see the code is cipher it is
+getting printed
+now let's say
+we want to use some expression with it
+right
+the code is let's say we want to write
+the code in capital letters all right
+the code is
+dollar sign and then the curly brackets
+and inside the curly brackets we'll
+write code
+dot
+upper case
+yes
+uppercase
+now with brackets
+now after that
+you want to put the semicolon it is your
+choice otherwise it is not required
+so now let's save it again
+evolve and now
+let's try to run it
+as you can see the code is cipher the
+first one the code is
+in capital letters cipher
+so this is how we can do it and we can
+also merge
+the strings we don't need to concatenate
+them
+so we can do like this the code is this
+and
+right
+now let's try to run it again
+so here what we are doing is we are
+merging the uppercase and lowercase
+here we can see the code is cipher and
+cipher
+so this is how we can
+concatenate both the strings easily so
+this is one of the example of string
+template
+now let's do another example of
+if else statements as expressions
+let's go ahead
+right
+now we'll create
+main class fund main
+and inside this main function
+first of all we'll create two variables
+that is
+marks one
+of well type
+and let's assign it value 87
+then another variable marks two
+and we'll assign it as let's say 82
+here we are using if else as expressions
+so what we'll do is
+we'll make a variable result and we'll
+store the value of if or else in that
+particular result and then we'll display
+that particular variable
+and let's say that variable is
+result
+here we will use if else as expressions
+so
+val result equals
+if
+max 1
+is greater than
+max
+2
+then
+in the bracket
+right
+marks one
+equals this is for the printing purpose
+dollar sign
+marks one
+is the greater
+among both
+let's write
+is greater
+than
+max2
+variable marks
+two
+all right
+now similarly we'll do four else as well
+write else
+now similarly
+we'll write
+max2
+equals
+max2 variable
+is the
+is greater
+than
+marks one
+all right so after that we'll print the
+variable result because the result is
+getting stored in this variable result
+so whichever is greater will get stored
+over here and then we will print this
+variable
+println
+and we'll write
+result
+all right
+now it's done and i think we have
+to run this one
+save it and let's try to run
+example 2
+hope it works
+as you can see
+marks 187 is greater than marks 82
+as
+max 1 is 87 and max 2 is 82
+so marks one is greater so that is why
+if block is getting printed
+now
+let's do an example of when statement
+let's create a new file
+go to new
+this
+kotlin file
+now let's name it example
+three
+all right so this is example three
+now let's start with the one example
+function main
+inside this we'll create a variable
+named coupon so let's say the variable
+is where
+coupon and let's assign it a value
+5
+all right now
+the when statement works as switch
+statements
+it is used to select one code block or
+one code branch out of many code blocks
+or code branches based on the
+conditional expression
+which so ever code branch matches with
+the condition that particular code
+branch will execute
+all right so
+let's start with it
+we'll use when keyword
+and let's say
+open is the
+name of the variable and the value of
+coupon is 5 as you can see as we have
+already declared that
+now
+inside when
+the first branch would be
+so this is how you can create a first
+branch
+and if there are multiple lines then you
+have to use the brackets
+all right so here we will print
+here is your
+coffee
+all right so first message is this
+the second message would be like
+forgot to enter t
+yeah
+so the second message let's say here is
+your t we will write
+over here is
+your t
+so in the third branch
+we'll write
+here is your green tea
+the fourth branch you will write
+here is your juice
+and in the fifth line or the fifth
+branch
+we will write here is your water
+so
+this is how we can create this we can
+also create a default
+value that we have to use the else
+statement
+and write else
+right invalid
+input
+all right so this is how we are doing it
+and so the value of coupon is 5
+and
+whichever values among these like one
+two three four five five obviously will
+match it
+that particular
+statement or
+line will be printed
+let's save this one
+and let's try to run it
+so there's an error as you can see so
+for that
+we have to use the arrow operator
+instead of this bracket
+so let's do that
+so now if any value other than these
+five values is there in this variable
+then this
+default message will be printed that is
+invalid input
+so now let's save it
+again
+and now
+run it
+as you can see here is your water as the
+value was five
+let's say the value is
+six
+it must show
+the invalid and input as there is there
+are only five values
+so now let's try to run this and let's
+check
+if it is working fine or not
+as you can see invalid input
+as we have entered six over here
+which is not in this one two three four
+five so that is why it is printing
+invalid input
+now let's do an example of array
+let's create a new file
+portland file
+now let's name it example
+4
+all right
+now the main function
+right now inside this function first of
+all we will create an array
+so how we will do that
+well
+let's say the name of the function is
+arr1
+equals
+array
+off
+as we have discussed already array of
+now the number of elements
+like 2
+4
+6
+8
+12.
+these are the elements of array1 now
+similarly we will create an array2
+right
+array
+array off
+of the elements
+1
+3
+5 7
+9 11.
+all right now
+now here we will use
+a set function
+so if we want to set a particular
+element at a particular position then
+we'll use set and if we want to display
+a particular element of the array then
+we'll use get so first of all we'll
+understand set
+so
+array1 dot
+set
+so first here we will write the position
+let's say 1 is the position and at one
+position we want to set five as an
+element
+so this is the syntax for it
+and let's say for array two
+array array2.set
+now here we want to set
+at zeroth position
+and we want to set
+two element
+so first is the position and second is
+the element
+that we want to set at that position
+all right
+now
+[Music]
+now we'll see the get
+function
+so
+get is used to display the particular
+element of an array
+so let's say array1 dot get
+let's say i want to print the fifth
+element
+that is 14th in array1 case
+so i'll do this
+similarly for array two
+and in array two case i want to print
+this
+fourth element
+that is nine
+now
+after that we'll use println
+so that the result come out vertically
+all right now if we want to print each
+and every element of an array so this is
+how
+we can do it
+for
+element
+in
+arr1 here element is the variable
+array1 is the name of the array
+and one by one it will print
+all the elements so here we will write
+element
+just for the space
+now again we'll use for loop
+here we will display the elements of
+array 2.
+yeah it's done
+let's save it now
+and now let's run it
+as we can see
+14 n9 so as we know here we have set
+five at one position at first position
+so zero one so in at place of four there
+is five now
+and here at zeroth position that is at
+one position there is two
+so first of all here we have
+printed this get five
+so at
+array one position at fifth position
+zero one two three four five there is
+fourteen so that is why it is preventing
+14.
+in array 2 at 4th position there is 9 so
+here it is printing 9
+after that
+here we are printing all the elements of
+the array so as we can see at the first
+position
+we have set 5 instead of 4
+here we are doing that so that is why
+here we can see 2 5 not 4 then 6 8 12
+14.
+similarly as you can see at 0th position
+in array 2 that is here we have set 2
+so we can see
+instead of 1 there is 2 3 5 7 9 and then
+11
+so this is how we can
+add some elements at a particular
+position and print those elements and
+print the array as well
+so now let's do another example
+right so we'll write function main
+now inside this we will create an array
+well arr1
+now in kotlin
+you can create an array having the
+integer elements and character elements
+or string elements as well in a same
+array
+so i'll show you that
+array off
+so first we'll write down the integer
+elements let's say 2 4
+6
+and then
+the string
+elements let's say
+8
+and then 10
+so this is our array
+within the same array there are integer
+elements and string elements
+all right
+now using for loop
+we'll try to print this
+element in
+array one dot
+here dot indices means if we want to the
+print the index of each of these
+elements
+let's say if we just want to print the
+elements so we'll not use this
+we'll simply
+print ln
+and then we'll do is
+array 1
+this is just for printing purpose
+element
+then
+all right
+so now let's save it
+let's run it
+as you can see
+2 4 6 8 10 it is printing without any
+error so we can easily do that
+in kotlin
+and these are the
+indexes for the index if we want to
+print the index of these elements we'll
+do is dot
+indices
+now let's save it again
+and run it
+as you can see array of one with zero
+index zero one two three four
+the index is correct but the elements
+are not
+so i think this yeah we forgot to write
+array off
+in the bracket
+now
+let's save it again
+now let's again try to run this
+a01
+yeah
+now again let's try to run this
+all right as you can see
+array with index numbers will print 2 4
+6
+8 10.
+so
+not only the integer elements are
+getting printed but also the string
+elements are also getting printed along
+with the index number
+because of this dot indices
+we are also able
+to print the index of array elements
+so these were some examples of kotlin
+language you can try some more examples
+on it the more you'll practice the more
+you'll get to know about this language
+all right with that we have come to the
+end of this video
+if you like this video please give it a
+thumbs up i hope it really helped you
+all
+thanks for watching stay safe and keep
+learning
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

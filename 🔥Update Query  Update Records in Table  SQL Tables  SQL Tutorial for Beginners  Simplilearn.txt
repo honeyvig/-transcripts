@@ -1,0 +1,131 @@
+foreign
+'s YouTube channel in today's session we
+will try to learn how to update a table
+in SQL but before we begin let me tell
+you guys that we have daily updates on
+multiple Technologies so if you're a
+tech geek in a continuous hunt for
+latest technological Trends then
+consider getting subscribed to our
+YouTube channel and don't forget to hit
+that Bell icon to never miss an update
+from Simply learn now without further
+Ado let's get started so how to update
+table in SQL let's quickly take a look
+on the syntax for today's function so
+here we have the update keyword table
+keyword and the table name which you
+want to update and followed by that we
+have the set keyword which will help
+this equal to set a particular column
+name to a new parameter to which you
+want to update it now you're giving a
+wear condition over here so where is the
+keyword and the condition as a
+user-defined condition and the
+combination of where and condition will
+help SQL to identify a particular Tuple
+and update the parameter under that
+particular condition now that we have
+understood the syntax let's quickly get
+back to the SQL IDE which is MySQL
+workbench and try to execute a sample
+command so we are on the IDE and
+previously we tried to create an unplug
+table so let's select the same table for
+that let's use the database we created
+that I simply learn
+DB semicolon enter so we are on the
+simply learn database now to update a
+table we need to have some data in it so
+as we remember we just try to create a
+normal table in the previous session now
+let's try to add some data into the same
+table using the insert command so let's
+try to make use of the insert command
+and insert into is the keyword and plot
+table is the table name and these are
+the columns we have in the employee
+table and followed by that we have the
+values keyword and followed by that we
+have the data which we need to enter
+into the table and these items are in
+the form of a tuple and every Tuple is
+covered using parenthesis and inside the
+tuples you have the first one which is
+an integer type data which is as it is
+and when you come into the text type
+data they are covered using the single
+quotes So let SQL identify that it is a
+character type data now after entering
+all the tuples separated by comma we
+have a semicolon which indicates the end
+of the statement now let's try to run
+this particular statement and add the
+data into the employee table so let's
+select the database once again and now
+let's try to add the data there you go
+now we have the data added onto our
+employer table let's quickly check the
+employee table
+select
+start from
+employee
+there you go we have all the data added
+onto the table employee ID employee name
+and employee address let's say the last
+employee Jeremy who's been working in
+Delhi since a past couple of years and
+you decide being the manager you decide
+that he should be relocating to
+Hyderabad and you need to update the
+unplug table now by changing the
+location of Jeremy from Delhi to
+Hyderabad now let's try to run our
+update query so first we have the update
+keyword then employee
+table
+then
+set
+EMP address
+equals to
+Hyderabad
+where
+condition EMP
+[Music]
+ID
+equals to
+1 0 0 6 and semicolon so there you go
+the code is complete we have the update
+keyword followed by the table name then
+set keyword to set that particular
+column that is the employee address to
+the key Hyderabad from Delhi we are
+changing it to the Hyderabad which is
+value or key by whichever you consider
+and since it is a text type value we are
+encoding it using the single quotes then
+the where clause and the condition which
+is employee ID must be equals to 1 0 0
+6. now let's try to quickly run this
+command
+there you go now let's recheck if the
+table has been updated or not so select
+star from employee
+table
+let's run it
+and there you go the last location
+Jeremy which was Delhi is now updated to
+Hyderabad so that's how you update
+values in a table now with that we have
+come to an end of this session and if
+you have any queries regarding any of
+the topics covered in this session do
+let us know in the comment section below
+until next time thank you stay safe and
+keep learning
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

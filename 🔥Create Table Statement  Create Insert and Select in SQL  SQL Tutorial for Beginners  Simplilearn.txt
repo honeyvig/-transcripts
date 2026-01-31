@@ -1,0 +1,164 @@
+foreign
+'s YouTube channel today we will learn
+how to create a table in SQL but before
+we begin let me tell you guys that we
+have daily updates on multiple
+Technologies if you're a tech geek in a
+continuous hunt for latest technological
+Trends then consider getting subscribed
+to our YouTube channel and don't forget
+to hit that Bell icon to never miss an
+update from Simply learn now without
+further Ado let's try to get started
+with our agenda how to create table in
+SQL
+now let's quickly look at the syntax we
+need to create a table in SQL so we will
+be using the keyword create to let the
+SQL know that we're trying to create an
+element which can be a table or database
+followed by that we will be using the
+table keyword to explain the SQL that we
+are trying to create a table here
+followed by that a customized table name
+then inside that we will be starting
+with the parameters which can be the
+elements or columns which are present in
+your table column 1 or parameter 1 its
+data type and constraint so what is a
+constraint we will be understanding
+about the data wrapping constraint when
+we are in the Practical mode Let's
+quickly try to understand the syntax
+over here so these are the things create
+keyword table keyword table name which
+is a customized or user defined name for
+the table then the parameters involved
+in the table that is the columns column
+one two three data type and constraint
+followed by that close the bracket and
+use the semicolon to explain SQL that it
+is the end of the code now let's get
+back to the SQL workbench so we'll log
+into the SQL workbench so now we have
+logged into the SQL workbench now
+previously we had created a database
+that is simply learn database now we
+will try to create the table in the same
+database now we will be using the create
+keyword
+table
+now table name which can be anything
+let's try to create a student database
+or employee database
+you can see that
+I'm using capitals for keywords and
+Smalls for the user defined ones just to
+make it clear for the reader to
+understand what I saw what if it is in
+capital it is a keyword if it isn't
+small it is a user defined name now EMP
+ID
+which is an integer type and then
+the constraint
+not null
+so remember the data type and
+constraints that we discussed earlier so
+this is it so you're trying to tell the
+SQL that the ID what you're creating is
+of integer data type and since this can
+be a primary keyword it should not be
+null right now the next one
+employee name
+which can be character data type so
+let's keep it as c h a r character
+and let's give the size as 115.
+now the next one
+okay I forgot to give the constraint
+default
+okay let's not keep this default now it
+cannot be null as well
+then comes the address
+which can again be character
+and let's give it as 500 as the
+size
+and followed by that
+it can be default
+here we are trying to tell SQL that it
+is okay to keep the employee address
+column as null it can be blank again
+it's your wish if you don't want the
+address column to be empty you can keep
+it as not null and if it's all right for
+you to keep it as null then you can
+provide it as default null right so
+these are the parameters their data
+types and the constraints
+right now we will understand them a
+little more detail in the theoretical
+section now followed by The Columns the
+last one is to dedicate or create a
+primary key let SQL know which is a
+primary key so primary key is very
+important for every database or table
+and I'll explain you that in the
+theoretical section again now which is
+the primary key the ID what we created
+for employees that is EMP ID is the
+primary key this particular primary key
+will be really important when we are
+trying to work with two different tables
+with one single column in common between
+both the tables right so with that we
+have created the code for creating a new
+table in a database now let's quickly
+try to execute it so there is a small
+error let's try to resolve it
+yes so the small error that we created
+is we did not try to select a database
+right before creating a table you need
+to select the database or explain SQL
+which database is supposed to be used
+now for that we have to use the use
+keyword and the database name that has
+simply learn DB
+semicolon now when you run this
+particular code SQL will understand we
+need to use the simply learn DB and then
+it will get access to that particular DB
+then it will read this particular code
+and try to create a new table let's
+quickly run it
+and there you go
+let's try to eliminate this code for a
+while run this now we are using the
+simply learndb
+eliminate this code
+now
+on this particular code once again and
+okay
+so instead of character we can use
+worker
+and run it
+since character limit was 255 and we
+gave 500 instead of character if we
+provide worker we can provide the
+maximum limit so now the table is
+successfully created here so that's how
+you can create a new table in SQL with
+that we have component of this tutorial
+on how to create a new table in SQL and
+if you have any queries regarding any of
+the topics covered in this session then
+please feel free to let us know in the
+comment section below and our team of
+Express will be more than happy to
+resolve all your queries at your list
+until next time thank you stay safe and
+keep learning
+foreign
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

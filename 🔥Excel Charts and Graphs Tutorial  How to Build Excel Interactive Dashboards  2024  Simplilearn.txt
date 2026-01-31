@@ -1,0 +1,2454 @@
+hey everyone welcome to Simply learns
+YouTube channel today we will learn
+about the charts graphs and interactive
+business dashboards in Excel from Simply
+learns Excel data analytics course
+that's it if these are the type of
+videos you'd like to watch then hit the
+like And subscribe buttons and the bell
+icon to get notified just for a quick
+info if you want to upscale yourself
+master business analytics skills and
+land your dream job or grow in your
+career then you must explore simply
+learn goad of various business analytics
+programs simply learn offers various
+certifications and postgraduate programs
+in collaboration with some of the
+world's leading universities like IIT RI
+Purdue and cbab through our courses you
+will gain knowledge and work expertise
+in skills like prescriptive and
+Predictive Analytics regression
+classification and over a dozen others
+that's not all you also get the
+opportunity to work on multiple projects
+and learn from industry experts working
+in Top Tire product companies and
+academicians from top universities after
+completing these courses thousands of
+Learners have transitioned into a
+business analytics role as a fresher or
+moved on to a higher paying job and
+profile if you are passionate about
+making your career in this field then
+make sure to check out the link in the
+pin comment and description box below to
+find a business analytics program that
+fits your expertise and areas of
+interests now let's quickly get onto the
+Practical mode where we will have some
+data sets over which we will be trying
+to apply the charts now there are
+various types of charts in table and
+those are the pie chart the column chart
+the bar chart column versus line pavier
+chart and Spark line charts so we will
+discuss one after the other first let us
+discuss about the pie chart so as you
+can see we have a small data set on my
+screen which I have personally created
+and uh this deals with the companies and
+this deals with the shares of the
+automobile industry so now for this
+let's create a pie
+chart select all the data and then get
+into the toolbar and inside the toolbar
+you can see various options and inside
+that you're going to use the insert
+option and when you select the insert
+option you will have a ribon here and
+inside the ribbon you can see groups
+tables illustrations addin and here
+there you go these are the charts so now
+we needed a pie chart so select on that
+icon and you have various types of pie
+charts you have two dimensional pie
+charts three dimensional pie charts
+donut type of charts Etc right so I
+would like to go with the three
+dimensional pie chart as it looks a
+little more appealing and easy to
+understand and now there you go this is
+the title of the chart and these are the
+legends of the chart and this is the
+chart area and these are the values now
+we can uh you know kind of add the data
+labels as well so you can just have to
+press the plus icon over here and you'll
+have the options you can add the data
+labels which will give you a lot more
+interesting
+values and uh you can also turn this
+around as you can see we on double
+clicking any part of the pie chart
+you'll get this option which is called
+as format data point and uh let's
+imagine that you wanted to show the
+information related to this particular
+one which is Volvo which has the biggest
+share so this is in front right now now
+what if you wanted to show the
+information related to data which is
+over here right for that you can select
+this particular Arrow key and you can
+just twist it and there you go it is
+coming in front this will be a a great
+way of presenting your data to your
+clients
+right yeah and there is another option
+where you can uh directly explode this
+like you can pick it out you can see
+this right Point explosion where you can
+split it out and you can show that
+especially like you can highlight it and
+show it so that's the you know a great
+way of presenting your data so that's
+how you can work with pie charts in
+Excel now let's quickly move to the next
+one that is the column chart and in the
+column chart we have the data related to
+some company and uh the profits of that
+company based on a year so you can see
+that the year has started from 2008 and
+it has gone until
+2021 and these are the profits of that
+company year after year so since we are
+dealing with column chart I'll tell you
+the simplest way to create a column
+chart there is a shortcut key for that
+which is alt F1 and there you go you
+have the chart right on your
+screen now you can uh expand the chart
+just by dragging it like that and you
+can see that there is some problem with
+this chart that is we have numbers here
+instead of es right you can see that the
+First Column is the years which is 2008
+to 2021 but here you can see we have 1 2
+3 4 which is not proper right so to
+change the axis that is you can see the
+axis which is 1 2 3 4 from 1 2 3 4 to
+the years 2008 2009 2010 11 Etc you just
+have to make one change here and also
+you can see I have pressed the plus icon
+over here which will open the option
+where you can include the access titles
+if you have and data labels everything
+right so for now I think I'll keep it as
+it is so you can include the data table
+as well as it is here and you can
+include that in the chart there are
+various options that Excel provides you
+so now let's uh focus on changing the
+axis from 1 2 3 4 to the ears for that
+you need to select the chart design and
+inside the chart design you have an
+option called select data press that and
+here you have various set of options you
+can see profits you can see ears now
+we'll select ears and we will remove
+that and now you can see the edit option
+here right select that and now it will
+ask you which column to be selected for
+the access range for that let's select
+this and now let's select the ears
+here and press okay and there you go
+again press okay so there you go you
+have the ears over here instead of the
+numbers which you had in the first place
+so that's how you create the column
+chart and we have the next type of chart
+which is really simple now you know you
+kind of change this chart directly into
+bar chart there is no big deal in
+that so uh for that you just just need
+to select the change chart type option
+over here you're just changing the chart
+type and you can get the bar graph over
+here column and bar graphs are
+completely same to each other only that
+you can see these uh bars in the
+horizontal way rather than in the
+vertical way let's do that let's not
+create a new thing for that so uh yeah
+there you go when you select the change
+chart type option you have various set
+of chart type options on the menu bar
+over here so what we needed was the bar
+chart now let's select that and there
+you go let's select okay and you have
+the bar
+chart right and you if you want you can
+include the data labels which look a
+little bit more interesting you can also
+include the data table as
+well okay for now I think we have to
+expand the chart to get the Clear
+View yeah that's how you do
+it right now let's move into the next
+typ type of one yeah we dealt with the
+bar chart so we'll directly enter into
+the column versus line chart so we have
+similar kind of data we just had year
+and profits in the previous part now we
+also have included the expenses right we
+needed another column to showcase the
+line chart compared to the columns right
+so for that I've included a new column
+that is expenses Al as well now just
+let's select the
+data and let's select the option alt F1
+to create our
+chart right now automatically uh Excel
+has provided us the column chart we have
+The Columns of expanses we have the
+column of profits and we also have ear
+now let's change the data as we did
+before select uh year and remove it and
+then
+edit select edit and select the year
+that is from here to
+2021 select okay and we have the ears
+over here now what we needed to do is
+change the chart type right select the
+change chart type option and since we
+wanted to create a column versus line
+chart it is a combination whenever you
+want one or two types of charts included
+in one single chart window then it is a
+combo option so here we need to select
+the combo option and inside that we have
+various types of combination charts we
+have clustered column we have clustered
+line on secondary axis we have clustered
+stat areas clustered column and the
+other one is custom combination so let's
+go with the first one that is clustered
+line let's select that and there you go
+we have the line graph with the column
+so that's how we create the column
+versus line and if you want you can
+include the data labels and and you can
+include the data table as well yeah okay
+I think uh we need to expand the canvas
+a little more to get a clear
+view
+yeah so you have Legends over here you
+have the data labels and access
+everything and chart title you can
+always change the chart title so for now
+let's uh rename it as profits versus
+expenses
+yeah that's that's how it
+goes done okay I think I made a spelling
+mistake
+here yeah it's clear
+now now the next type of chart we're
+going to deal with is the P
+chart so uh we have dealt with P chart
+column chart bar chart and column versus
+line now P chart is a little bit
+different it's like you're going to
+create some active chart which responds
+to the variations you're making to your
+data so to understand that better let's
+create a practical chart over here I
+select all the
+data
+okay yeah I have selected the data now
+to create a pivot chart so let's
+select the insert option from the
+toolbar and inside the ribbon we have
+charts group and inside that we have P
+chart now let's select the P chart
+option and there you go now it's asking
+for range and we have selected the range
+over there and uh we are not going to
+create a new worksheet for the entire
+chart we're going to create the uh chart
+inside the existing worksheet itself so
+for that let's select the the uh area
+where we want to select the uh chart to
+be present now for that let's select
+this
+and yeah select
+okay okay there is some
+error let's cancel this and try
+again let's select the
+data and prev chart
+again we have selected the
+range
+yeah that's how you select the range and
+now select the position where you want
+to create it existing worksheet we have
+selected that and press okay yeah that's
+that's the way we've got our PV chart
+over here and you can see our P chart is
+completely blank right now it will
+respond to the changes you made make to
+your P chat for now we have uh serial
+numbers and U these are the names of the
+guys who
+have okay so these are the names of the
+guys you who have some dealerships for
+various car makes such as Ford Ferrari
+Honda Kia Alpha Romeo BMW etc etc so uh
+we're going to change or we're going to
+see um you know we're going to make some
+charts of the persons who own the cars
+or the car brands or dealerships in
+various regions so we're going to work
+on that now let's drag in the
+name and uh let's drag
+region and
+cards and
+units yep so we have our uh chart over
+here column chart which has the
+different different names and the
+dealerships and some of cars over there
+right so you can see that we can also
+change some values over here what if we
+wanted to know only uh the details
+regarding Jennifer you can do that you
+can unselect everything and you can just
+select Jennifer and press okay now
+you'll have the details of only Jennifer
+of having the car brands so we have the
+regions as well so Jennifer owns
+dealerships in two different regions
+that is South and West and uh the sum of
+units and count of cars as well so
+that's how the PV charts are used in
+real
+time and now let's select sales and drag
+the sales as
+well yeah it's been dragged and you have
+the sales of U
+Jennifer the details of her sales and
+let's move the chart a little bit and
+you have the plus icon where you can
+include the labels for a better
+information yeah so that's how you use
+the P charts so we are on the last type
+of charts which is the spark line chart
+Now to create a spark line chart we need
+to get into the insert option and inside
+we have the ribbon and inside the ribbon
+we have the group that is spark lines
+now to generate a spark line chart we
+need to select this particular column
+and then select the type of spark line
+you want to create for now let's create
+the column type of spark line chart yep
+we have to Club these cells together
+first we forgot that because we're going
+to insert the spark line chart right
+above here now for that let's Marge the
+cells
+[Music]
+yeah so uh we wanted to create
+the
+spark line chart of column type and now
+it's asking for the location where we
+want to create the spark line chart so
+this is the location now let's select
+okay and there you go we have the spark
+line chart right over here now you can
+see that we have a negative Point here
+so if you want you can change that from
+negative to positive and it will
+automatically update that and if you
+want to add the access to this
+particular chart you can select the
+options spark line and there you go you
+have certain options like High Point low
+point and if you wanted to add some
+margins and you can also do
+that add data type access and there go
+you have the
+access show access yeah you have the
+access now and you can have the high
+point and low point for that as well
+which is the you know the biggest change
+and the smallest change in this
+particular segment that is few Furniture
+yeah Furniture had the highest sales in
+January and uh Home Appliance had the
+lowest sale and you can also change the
+color and uh let's type of change the
+color again yeah we have a different
+color over here which resembles a little
+bit more better or you can also go with
+this one and if you wanted to add the
+same to all these tables you can do that
+just by dragging it and you have it for
+all the 6
+months now if you wanted to add some new
+data in this row or you wanted to add a
+new complete row then you can do that as
+well and change that and bring that
+change implemented in these charts as
+well now let us try to add a new row
+here which includes the miscellaneous we
+have that data right over here let's
+select that copy and uh let's paste it
+over here so there you go we have the
+extra row here so yeah now we have added
+the miscellaneous row and right now we
+have the spark line chart for only four
+columns or four rows that is Furniture
+technology home appliances and office
+needs and miscellaneous is missing now
+to add that as well let's select spark
+line and inside spark line just select
+edit Group location and data and now
+let's select the entire
+data and and now select
+okay there's something wrong
+again spot line edit
+data select
+range this should be helping yeah there
+you go we have all the five rows now
+including Furniture technology home
+appliances office needs and
+miscellaneous now for this particular
+example we going to use the employees
+data now let's quickly get back to the
+Practical mode and enter into
+Excel now you can see that we are on
+Excel sheet right now so let me expand
+my screen a little
+bit so that the data is a little more
+visible yeah
+so here on my screen you can see that we
+have employees data so the First Column
+is the name of the employees and the
+second column is the start dates of the
+employees that when have they started
+working with the organization and when
+they have ended or resigned to their
+position in that particular organization
+and the duration gives us the number of
+days they have worked in that particular
+organization so to create a g chart is
+really simple you just have to select
+the data and then go to the insert
+option and in there you can see the
+charts icon and select all charts and in
+that select the bar chart and here you
+can see the Stacked bar chart select
+that and press okay and there you go you
+have the Stacked bar chart right on your
+screen let's expand this a little more
+so that we have the clear visualization
+of the dates as well now you can if you
+want you can change the title as org
+data or employe
+data
+and now we are partially done with our
+chart now the next thing we have to do
+is select the bar chart right click on
+it select data and here select the add
+icon now you need to select the series
+name so the series name is duration for
+our Gant chart and series values are
+let's select this and select let's move
+a
+little
+yeah so these are the data series let's
+select okay and you can see the Gan chat
+on my screen right here select okay and
+it's done and still now it's not
+complete yet so to finish it you need to
+select the blue colored bars here and
+right click on them and select format
+data
+series go to the fill icon and select no
+fill
+and it's done for now and you can see
+that there is a difference in this
+particular arrangement we had Joe at the
+first place and Susan at the last place
+but here you can see Joe is in the last
+place and Susan is in the first place so
+we need to make some arrangements here
+for that right click select format
+access and then here you can see
+categorize in reverse
+order and there you go you have your
+Gant chart right on your screen
+right on my screen you can see a
+circular progress tracker so it is
+tracking the percentage of the first
+student that is Stacy now let's try to
+change the marks of Stacy from
+engineering subject from 55 to
+75 and uh engineering subject 4 from 68
+to 84 then you can see the percentage is
+getting changed and also the same is
+getting implemented on the progress
+tracker interesting right would you like
+to create a similar circular progress
+tracker yes that can be done that's
+exactly what we're discussing today so
+let's get started with our onepoint
+agenda that is circular progress tracker
+in Excel now let's get back to the
+Practical mode so let us enter into a
+duplicate sheet which has all the marks
+of the students so now we are on the
+duplicate sheet where we have all the
+students names and the marks list and
+also the percentage now let us create a
+new column which states the the actual
+percentage minus the overall percentage
+so the overall percentage is 100 and the
+actual percentage is uh 75 76 and so on
+let's try to calculate this or let's try
+to convert it into the percentage
+format
+now let's try to change some
+values yeah
+cool now let's try to change this yeah
+we were supposed to add the percentage
+symbol which we forgot now it's
+implemented there now let's drag it
+again so there you go we have the
+remaining percentage as well so we have
+the actual percentage and the remaining
+percentage so we need both of them to
+apply the donut chart so we have
+selected both the percentages and now
+we'll enter into insert menu then you
+can see um pie chart icon over here
+click that and you have a donut chart
+over here select that and you have the
+donut chart so now let's remove the
+symbols which we don't need so we have
+removed the uh details of one and two
+there and uh let's change this to
+Circular
+progress
+tracker so we have removed the Legends
+and we have renamed the chart name as
+circular progress tracker and now let's
+try to insert the percentage icon or the
+text chart so you have the text chart or
+text text box option over here select
+that drag and drop it
+here yeah we have the text box here
+select that go to the formula bar select
+equals to and now select the address
+cell there you go you have it now we
+have the percentage in the text box now
+you can make your edits I'll bring it to
+Center alignment to Center text color to
+Blue as we have it on the Outer Circle
+and you can change the font you can make
+it bold increase the font
+size there you go so we have the
+progress
+tracker okay let's try to group the text
+box with the chart so that we can move
+them all
+together so now you can make some
+changes and see if that's working or not
+so let's make the change to the
+engineering subject one from 32 to 68
+and press enter there you go the changes
+have been applied the percentage got
+changed to 78 from 72 and the same has
+been implemented here and even the
+progress chart is also working on the
+same way so that's how you create the
+circular progress charts in Excel so how
+to create a paper chart you ask it is
+really simple all you need to do is just
+follow few steps and you have your PIV
+chart ready which is completely
+interactive now all you have to do is
+select any cell in the data set you have
+and rush into the insert toolbar then in
+the group of charts you have an option
+called pivot chart select on it now
+you'll be asked to select the data range
+and you can see Excel has automatically
+select all the range that you want to
+include in your pivot chart then you
+have another option which is asking you
+to either create the PIV chart in the
+current worksheet or a new worksheet for
+now let's select a new worksheet and
+there you go voila the pivot chart is
+completely ready you might ask me this
+is completely empty yes the default
+pivot chart what you get from Excel will
+be completely empty but you can add the
+Legends and all the data that you want
+to add onto your pivot chart just by
+dragging and dropping the data from the
+right hand side of your Excel sheet that
+is from the PIV chart Fields so you can
+see we have various options region
+category state subcategory sales
+quantity Etc now I'll add
+region I'll add region to
+access and comparatively we will see the
+sales that are happening in those
+particular regions by dragging sales
+into values now you have all the data in
+the form of pivot chart which is
+completely interactive which which
+represents the sales happening in those
+regions now you can also select a
+particular region right by default all
+the regions are selected but if you want
+to select only Central then you can do
+that by deselecting everything and
+select only Central and select okay and
+there you go you have all the data
+related to the sales happening in the
+central region now if you want to you
+know kind of see all the uh categories
+of sales happening in all the regions
+you can drag the category into values
+again and uh in the region part okay I
+think we have to add category into
+Legends yes now select uh regions that
+that is old regions and select okay and
+you can see the category wise sales in
+all regions at one single go and I hope
+you did not observe it clearly uh the XL
+also gives you the completely prepared
+pivot table as well right which is also
+interactive you can also get to choose
+the data from here as well and select
+okay and you'll see that being reflected
+on the pivot chart so here you can see
+both pivot table and pivot charts are
+completely interactive on my screen you
+can see a small data set the data set is
+about students and their marks in the
+sixth semesters right now we should be
+creating a new heat map to describe
+their rankings Now to create a heat map
+the procedure is really simple just
+contr a select the entire data go to the
+Home tab and there you can see the
+Styles group and in the Styles group
+click on the conditional formatting now
+out of all the options go to the color
+scales and when you open the color
+scales you can see some types of maps
+select the green yellow red Scale map
+which should show Green for highest
+yellow for mediate and red for low right
+this is how you create a heat map just
+select the first option and there you go
+the heat map M has been successfully
+generated the green colored cells
+indicate the highest marks orange and
+yellow color indicate the intermediate
+marks or the average marks and the red
+color indicates the lowest marks that's
+how you create heat maps in Excel hey
+everyone my name is ishan and I welcome
+you all to this session in this session
+we will talk about project plan in Excel
+we will learn about a project plan and
+how we can make an effective plan in
+Microsoft Excel before we begin let's
+have a look at all the topics we will be
+covering today first we will see the
+basics of a project plan then we will
+check the process of project management
+in Microsoft Excel and why should one
+refer to Microsoft Excel apart from this
+we will learn about how to make a gan
+chart in Excel towards the end we will
+check some Microsoft Excel templates so
+without any further Ado let's get
+started let's see what is a project plan
+project plan is a basic thing that is
+needed to execute a project according to
+project management book of knowledge a
+project can be defined as an approved
+elaborative document that guides the
+team during project execution and
+project control when when we making a
+project plan a project plan must answer
+several questions for us these questions
+are like what are we expecting our
+project to deliver how are we expecting
+to get our deliverables within the
+desired time who all will be a part of
+our project and what tasks they will
+have in the project when will the
+project start and when it is expected to
+end that is the deadlines of the project
+now let us learn about project
+management in Excel Microsoft Excel is
+one of the most common application these
+days it is used in both offices and at
+homes Microsoft Excel is an easy project
+management tool that allows the team
+members to easily see the tasks in a
+project develop a plan and track its
+progress before we learn more about
+project management in Excel let's first
+have a look why do we use Excel
+Microsoft Excel is an easy tool to plan
+a project so it can be used by people
+who are beginners in terms of project
+management in Excel one can find several
+analytical tools like concatenate Len
+and counter so this makes data analysis
+easy and effective as the entry of data
+is easy same tracking and controlling of
+project status then there are several
+project management templates in Excel
+that help us to have an effective
+distribution of project data we will be
+checking several project management
+templates towards the end of this video
+now let's have a look at the process of
+making a Gant chart in Excel before we
+begin this it's important we know what
+is a gan chart a gan chart is like an
+horizontal bar chart that is used for
+project management with the help of a
+gan chart we can check the status of the
+task the date they start the date they
+end and their dependencies on each other
+Gan chart helps in coordinating and
+monitoring different tasks in a project
+now let's have a look at the steps that
+will help us in making a gan chart first
+step we have is make a project table we
+have several rows and columns like here
+we have three columns in the First
+Column we have the tasks in the second
+we have a start date and in the third
+column we have the duration or tenure of
+the task the second step is to make a
+bar chart in Excel for this we will
+select the entire second column then we
+will go on the insert Tab and click on
+the bar graph chart there we can select
+staged bar graph in 2D bar charts as a
+result we will have the entitled bar
+graph on the screen in the third step we
+will add the duration to the bar graph
+we will right click on the chart and in
+the menu that appears we will select
+select data option a window that appears
+on the screen in that window we will
+select add option as shown we can also
+see the start date is already in the
+entry section then in the dialog box
+that appears type tenure in the series
+name and click on the Range selection
+icon that's shown in the figure now
+select the relevant data from the tenure
+column and click on okay now we can see
+a bar graph that has two colors on the
+screen this bar graph now has the
+duration of the tasks the fourth step we
+have is adding description to the Gant
+chart now we will open the box again and
+in that box we will select the edit
+option as shown in the figure then we
+will select the tasks as we had selected
+the duration of the tasks before and
+click on okay we can now see the tasks
+have appeared towards the left side of
+the Gan chart the fifth and the
+remarkable step will help us convert
+this bar graph into a a g chart we will
+now click on the bars and select the
+format data series option from the menu
+that appears then in the format data
+series dialogue box we will select no
+fill option we can find our Gan chart on
+the screen now in accordance with the
+data that we had entered now we can see
+the tasks on the left side are in the
+reverse order so what we will do next is
+we will click on the task panel then go
+to the format xess dialog box and select
+the categories in reverse order option
+now we can find our tasks in the right
+order one more thing we can notice is
+Gan chart is starting with some other
+date and not with the dates that we had
+entered so for this we will copy the
+first date in some other cell then
+clicking on the copied cell we will go
+to the home menu to select the dialog
+box as shown in the figure then in that
+drop- down menu you will select the
+number option we can now find a value
+displayed in the copied cell we will
+copy that value click on the dates on
+the chart and as the format access
+dialog box opens we will paste that
+value in the box that says minimum shown
+in the figure as a result we will have
+our final Gan chart on the screen in the
+the last step we can give several
+designs to a Gand chart change colors
+and make it more presentable for us now
+when we know the basic steps of making a
+Gant chart I will show that practically
+to you in Microsoft Excel our first step
+is to open Microsoft Excel and in
+Microsoft Excel we will make a project
+table in a project table we will have
+three columns the First Column will be
+task the second column will have the
+start date the third column will have
+tenure or the duration of the task so
+beginning with tasks we have task one in
+task one we have 1.1 1.2 1.3 then comes
+task 2 in task 2 we have 2.1 2.2 2.3 and
+2.4 then we have task three in task 3 we
+will have two subsections 3.1 and 3.2
+then we will start with the starting
+dates in starting dates we'll put 1st
+January the Task 1 1 .1 will be 1st of
+January then this will be 4th January
+let's say this is 5th January then we
+will put this as 11th of January and
+this will be again 11th January only
+this will be 15th January let's put this
+as 17th January let this be 19th January
+task 3 begins on 23rd January and it the
+3.2 section begins at 26th of January
+now let's put the tenure or the duration
+of the time task we will begin with task
+one it takes 12 days then 1.1 takes 7
+days we say this takes 4 days and this
+takes 8 days then for task two it again
+takes 12 days it takes 5 days 5 days and
+let's say this takes 6 days and this
+takes 4 days then we come to task three
+this takes 8 days and let's say this
+takes 6 days and the 3.2 section takes 5
+days so this is how our project table is
+is ready in the second step we will
+select the entire second column after we
+have selected this column we will go to
+the insert tab in the insert tab we'll
+go to the bar columns and in this we
+will select 2D stacked bar charts now we
+have the entitled bar chart in
+accordance to our data on the screen
+then comes the third step we will add
+the duration of the tasks to the bar
+graph we will click on the chart and
+after we click on the chart we will
+select select data option in the select
+data source dialog box we find the start
+date is already there now we will click
+on ADD and after we click on add in the
+series name section we will put tenure
+then in the series value we will click
+on this icon and select the entire
+tenure series and click on okay so this
+is the bar graph that we have now this
+is now in two colors the orange color
+and the blue color this bar graph now
+has the duration of all the tasks in our
+project table now in the fourth step now
+it's time for for us to add description
+to our Gan chart instead of this 1 2 3 4
+5 we will put task one task two and the
+subtasks so what we will do is we will
+again go to that box we will left click
+on the Gan chart select the select data
+option and then we'll go to the start
+date here we'll select the edit option
+in the edit option we will select all
+the tasks and click on okay now we can
+see all the tasks are aligned towards
+the left of the bar chart as we can see
+this is a bar chart or a bar graph and
+not a gan chart the next step we have is
+converting this bar graph into a gan
+chart so we will click on the bars and
+select the format data series option
+from the menu that appears here we have
+this format data series option now we
+can see the dialog box on the screen
+here we'll go into the color section
+fill section and then we will select no
+fill now we can see the blue lines have
+disappeared so this looks like a g Gand
+chart so now when we have a Gand chart
+on the screen we can notice that the
+task here are in the reverse order so
+what we will do is we will click on
+these tasks and select the format X as
+option here we will select categories in
+reverse order we can see our Gan chart
+is now in order like we have our task
+one on the top and task three at the
+bottom the dates are starting from 11th
+of December but the dates we have
+provided are from 1st of January now we
+will copy this cell then go on the dates
+box here we'll go to format access in
+the format access we can see minimum in
+this minimum we will paste this value
+and press enter as we press enter we can
+see our Gand chart starting from the
+date that we wanted to start and that to
+in the correct order starting from task
+one to task three now as a result we
+have our final Gant chart on the screen
+in the last step what we can do is make
+our Gand chart more representable we can
+change the color of These Bars we can
+give them shapes and we can do many
+other things to make it more presentable
+we will first select the bars like what
+we will do is we will select task one
+and let's say we give it the color blue
+then task two we will give it color
+green and in task three we'll give it
+give it the color black so here the
+subsections will give different colors
+to the subsections as well then we come
+to task 2.1 this is how we can change
+the color of these cells or or apart
+from changing colors we can select a bar
+graph and do the gradient fill so this
+is how we can make a gan chart more
+presentable after changing the colors or
+changing the shapes we have our final
+Gand chart on the screen finally let's
+have a look at some Microsoft Excel
+templates for project management
+Microsoft Excel templates help in
+collecting data putting them into order
+and check their dependencies with each
+other with the help of these templates
+we can monitor the status of the tasks
+and we can also check the progress our
+project has made moving forth we will
+check some important Microsoft Excel
+templates the first template we have is
+Excel project review template this
+template helps us have an overview of
+the project we can have a clear
+understanding of all the tasks that are
+planned and that are completed this
+helps project managers to measure the
+progress of the project and take further
+steps accordingly second template we
+will check is Excel budget template in
+this template we can monitor all the
+expenditures of our project it helps us
+in managing the budget of our project
+and also helps in comparing the budget
+of a project at different phases let's
+have a look at the budget template in
+Excel on we can download this template
+from Office timeline.com the Gant chart
+towards the right is in accordance with
+the dates towards the left if we
+fluctuate the date we can see the
+template working the start date for task
+one could be changed to 10th June if we
+change this date to 10th June we can see
+the fluctuation in the Gant chart so
+this is how we can use this template
+directly let's have a look at the third
+template now third template we will see
+is Excel Sprint Project tracker template
+this template is used majorly in agile
+projects where the project is made in
+several Sprints or sessions this
+template includes the start date the end
+date and the duration of each task we
+can also see the percentage completed of
+each task let's have a look at this
+Sprint Project tracker template as well
+we can see the Gan chart towards the
+right and the data towards the left so
+if we change any data we can see the Gan
+chart changing for example we can change
+the data in Sprint 2 feature 3 let's
+change the start dat to July 2nd we can
+see the Gant chart changing this is how
+we can use this template directly to
+track our sessions let's have a look at
+the fourth Excel template this template
+is Excel project tracker in this
+template we have the data of all the
+tasks with the status and owners we can
+track the percentage of task completed
+and also compare the plann duration of
+the task to the actual duration of the
+task after the critical part tracker
+let's check the Excel project schedule
+template this template helps in
+effective management of the project as
+it helps in monitoring the time that
+each task of the project takes it
+provides a clear view of all the work
+associated with the project let's have a
+look at this template in Excel ones we
+can see the Gan chart in accordance to
+the data if we change the estimated
+hours at two places let's say at the
+design review we make it 15 hours
+instead of 5 hours and at the create
+Staffing plan we make it 2 hours instead
+of 20 hours we can see the Gan chart
+fluctuating this is how we can use this
+template to manage the schedule in a
+project moving forward the next template
+we will see is Excel project status
+report template this template helps us
+having a list of project deliverables
+and the risks associated with that
+project this template helps the project
+managers about different crucial
+activities involved in a project after
+this we have Excel Milestone tracker the
+Milestone tracker helps us in tracking
+or monitoring different tasks in a
+project project managers use this
+template to monitor the project
+performance with respect to the
+timelines the last template we will see
+is Excel project planner Excel project
+planner includes a list of task with the
+respected owners along with the start
+date and the end date of that task this
+helps in monitoring each task and
+comparing the estimated task date with
+the actual ones let's have a look at
+this template in Excel we can see the
+Gan chart with respect to the data
+entered let's make changes at several
+places in the data we can make this 22
+to 24 we will make this 23 go to 2 and
+we can make this 5th September go to
+15th September
+and when we make the changes we can
+realize the Gan chart is fluctuating so
+this is how we can use this template to
+plan a project effectively and
+efficiently hello everyone welcome to
+this video tutorial and dashboards in
+Excel in this video we'll be creating
+two dashboards using a sample sales data
+set so if you want to get the data and
+the dashboard file that we'll be
+creating in this demo then please put
+your email IDs in the comment section of
+the video our team will share the files
+via email now let's begin by
+understanding what is a dashboard in
+Excel a dashboard is a visual interface
+that provides an overview of key
+measures relevant to a particular
+objective with the help of charts and
+graphs dashboard reports allow managers
+to get a high level overview of the
+business and help them make quick
+decisions there are different types of
+dashboards such as strategic dashboards
+analytical dashboards and operational
+dashboards an advantage of dashboards is
+the quick detection of outliers and
+correlations with Comprehensive data
+visualization it is time-saving as
+compared to running multiple
+reports with this understanding let's
+jump into our demo for creating our
+dashboards we'll be using a sample sales
+data set let me show you the data set
+first so here is the sales data set that
+we'll be using for our demo so this data
+set was actually generated using a
+simulator and is completely random it
+was not validated though we have applied
+certain transformations to the data
+using power query
+features so this data as you can see has
+thousand TRS so using the simulator we
+had generated thousand rows of
+data similarly if I go on top you can
+see this data set has 17 columns now let
+me give you a brief about each of the
+columns so first we have the region
+column so we have Middle East and North
+Africa this North America Asia
+subsaharan Africa and others similarly
+we have the country names from which the
+item was ordered the third column is the
+item type so we have different items
+Cosmetics vegetables there's baby food
+cereal fruits Etc then we have the
+representatives name or you can see this
+as the customer name who ordered the
+product then we have a sales Channel
+column so there are basically two
+channels whether the item was sold
+offline or online next we have the order
+priority column now here C stands for
+critical then we have H which is for
+high priority orders then we have M for
+medium priority orders and finally we
+have L which is for low priority orders
+you can see the order date column then
+we have the order ID the ship date next
+we have units
+sold which is basically the total number
+of units sold for each item then we have
+the unit price column this is the price
+at which each product was sold then we
+have the unit cost column which is
+basically the production cost for each
+of the items next we have the total
+revenue the total revenue is actually
+the product of unit sold and unit price
+then we have the total cost column now
+the total cost column is actually the
+product of unit sold and the unit cost
+similarly we have the total profit
+column so total profit is the difference
+between total revenue and the total cost
+and finally we have created two more
+columns that is order year and then we
+have order month now these two columns
+were actually generated using the power
+query features so we use the order date
+column which is this column and
+extracted order year and Order
+month so first we are going to create a
+revenue dashboard where we'll focus on
+generating reports for Revenue by order
+year Revenue by year and region Revenue
+by order priority and much more we'll
+create separate P tables and po charts
+and format them to make them look more
+interesting and presentable We'll add
+slices and timeline to our dashboards in
+order to filter it based on specific
+Fields now let's create our first report
+to see the total revenue generated each
+year so we need to create a pivote table
+for this I'll click on a sell in my data
+set and then then I'll go to the insert
+tab here we have the option to select
+the pivote table I click on this you can
+see my table range is
+selected next I want to place my pivote
+table in a new worksheet and let's just
+click on okay there you go so we have a
+new sheet where I can place my PO
+table so first I need to find the total
+revenue generated by each year so what
+I'll do is I'll drag my order ear column
+under rows and then I'll select the
+total revenue column under
+values you can see I have my P chart
+ready now if you want you can sort this
+so from the data you can see we have
+order Year from 2010 to
+2017 now based on this data let's create
+our pivote chart so so I'll click on any
+cell go to insert and here you have the
+option to select recommended charts I
+click on this now actually I want a line
+chart so I'll click on line here and
+select
+okay there you go so we have
+successfully created our first pivote
+chart now let me show you how you can
+format this chart to make it more
+readable so first let me delete these so
+I right click and select hide all field
+buttons on the chart so this will delete
+the buttons present on the chart now let
+me go ahead and edit the chart title so
+the title I want is total revenue I'll
+type it
+down by
+Year all right next let's do a few more
+Transformations so if I click on this
+plus sign which is actually for chart
+elements we have some options like to
+add access access titles chart title
+data labels this grid lines Legend and
+others okay so let's remove the legend
+now you can see the total Legend is gone
+now let me add access titles so we'll
+label our x- axis and y axis so here
+under xaxis
+I can write it
+as
+ear similarly on the y axis I'll put
+Revenue okay now you can move a bit all
+right
+now let me select this chart Style
+option and go to Colors
+first here I'll select yellow color okay
+and then let me go back to style let's
+select a new style from this
+list I
+want this style okay now you can also
+add data labels so I'll just click on
+data labels you can see we have the
+revenue for each of the years now this
+is not readable at all so we'll format
+this a
+bit if I click on this Arrow here I have
+more
+options if I scroll down you can see we
+have something called this number here
+I'll expand this and under category I'll
+select
+custom now here we'll give a format
+code which is a bit
+different so this is actually a kind of
+a formula so I'll write if my Revenue
+value is greater than let's say 9 lak
+999,000 let me make sure there are six
+nines here so 1 2 3 4 5 and six okay we
+are good to go I'll close the
+bracket I'll give a
+hash give two
+commas so if the revenue is greater than
+9 LH
+99,000 I'll put it in the format of
+millions So within double quotes I'll
+write
+M I'll give a
+semicolon followed by another
+hash and if the value is less than the
+desired
+number it should be 0 million let me
+click on
+add all right you can see how nicely we
+have formatted our data and and you see
+here we
+have added the new format which is in
+millions all right now if you want you
+can go ahead and adjust
+the boxes let me move this a bit up I'll
+delete this now if you notice this line
+chart you can make a few conclusions for
+example if you see here in
+2010 the total revenue generated was
+nearly 175 million now this came down to
+150 million in
+2011 then the revenue constantly grew
+from 2011 till
+2014 it reached 195 million and after
+2014 it again came down to 180 million
+and the revenue dropped significantly
+between 2016 and
+2017 in 2017 the revenue was just 96
+million now before moving ahead to my
+next chart let me just rename this sheet
+so I'll write it as
+Revenue by Year all
+right
+now let's analyze the revenue generated
+each year in different regions so for
+this we'll create another peot table let
+me close this I'll click on any cell go
+to insert and select pivote table I'll
+just click okay so that my P table is
+placed on a new sheet all right now this
+time we want the revenue by each year
+and region so first of all let's drag
+region to
+columns
+then let's drag the order ear column
+under rows and then I'll select total
+revenue onto values so here you can see
+we have the pivote table ready so for
+2010 you can see in Asia this was the
+revenue generated similarly if you see
+for
+2013 this was the total revenue
+generated in Europe and we have for
+other years as well now let's create a
+line chart based on this pivote table so
+I'll select any sell in the pivote table
+I'll go to insert and I'll click on
+recommended charts from this list I'll
+select my line chart and click on okay
+there you go so we have our next weote
+chart
+ready so on the right you see the
+different regions that are present in
+different colors let me just expand it
+so that you can see all the regions we
+have so in total we
+have seven
+regions and each of the regions have
+been represented in different
+colors so if you notice this
+scph for the subsaharan African region
+in
+2012 subsaharan Africa meet the highest
+amount of
+sales now from the sample data you can
+also tell that the revenue for North
+America has been significantly low
+compared to other regions similarly if
+you
+see for
+Europe This was the revenue new trend
+between 2010 and
+2017 so if you see here in 2011 the
+sales where at this level then it
+significantly dropped in
+2012 then in
+2013 there was a huge Spike and then in
+again came down in 2015 and so on so you
+can make your own conclusions by looking
+at these line charts now let's format
+this chart so first of all let's delete
+the field buttons present on the chart
+and we'll
+also delete the Legend all right now let
+me just reduce the size of the
+chart next we'll add a chart title
+so
+we'll give the title as
+Revenue by year and region
+okay you can also format the Y AIS in
+terms of
+millions so I'll right click on this
+axis and I'll select format
+AIS I'll scroll down and here we have
+the number drop down let me scroll again
+under category I'll select custom and we
+use this format that we created for us
+our previous chart there you go you can
+see our access labels have been changed
+in terms of millions now so let's close
+this and let me save it now you can
+reduce the font size or increase the
+font size let me just show you suppose
+you want to increase the font size of
+the chart title so you just select it
+and from here you can either reduce or
+you can increase you can see now it's 12
+if you want you can make it 16 similarly
+you can also edit the access labels also
+by selecting the chart title you can
+also move it to left or right or you can
+place it in the center as well for the
+time being let me just keep it to the
+left all right now we'll see the revenue
+and total cost by each region and we'll
+create a combo chart for this so let me
+show you how to do it I'll go to my data
+sheet I have my cell selected we go to
+insert and click on pivote table let me
+just click on okay all right so for this
+I'll select my region onto
+rows and
+then I'll
+have two columns under values the first
+one is going to be total revenue and the
+next column will be the total cost
+column all right so here we have the
+pivote table ready now based on this
+pivote table let's create our pivote
+chart so I'll go to recommended charts
+and if you see below at the bottom we
+have combo chart so this is the preview
+of the combo
+chart all right now let me just click on
+okay there you go so we have a nice
+combo chart ready here now the way to
+look at it is the bars represent the
+total revenue which is this column
+now the line
+represents the total cost so let me go
+ahead and edit this chart a bit so first
+of all let's delete the field buttons
+all right and let's also remove the
+legend from
+here next we'll add data labels so I'll
+click on data labels here okay so these
+are the data labels
+for the bars or the revenue column now
+let's format the data labels in terms of
+millions so I'll click on this Arrow go
+to more options if I scroll down I have
+number from here I'll select custom
+and I'll choose my type that is in
+millions all right so you can see we
+have formatted our data next thing we'll
+add a chart title so here I'll write as
+Revenue
+by
+region it's actually revenue and total
+cost by
+region before moving ahead let me rename
+the sheets as well I'll write revenue
+and total
+cost
+similarly sheet three also I'm going to
+rename it as
+Revenue
+by year and
+region so this makes your sheet more
+readable all right now moving
+ahead next we are interested to get the
+revenue generated by order priority
+prity and for this we are going to
+create a pie
+chart so let's go to the data sheet and
+create our pivot table first I click on
+okay now I'll select order priority
+under rows and under values I'll select
+total
+revenue so this is a very simple pivote
+table so you have your order priority so
+C is for critical H is for high L is for
+low and M is for medium now based on
+this let's create a pie chart so I'll go
+to recommended charts and here you have
+pie chart I want to select this 3D type
+of pie chart and I'll click on okay all
+right so we have our pie chart ready let
+me just resize it and from here I'll
+remove the field buttons and I also
+don't need the legend so I'll delete
+this as well all right now let's give a
+chart title so this is going to be
+Revenue
+by order
+priority now let's add our data labels
+I'll check this
+option okay now let's again format this
+in terms of
+millions so
+here I'll click on the last option I'll
+go to numbers under category I'll select
+custom and my type is going to be in
+terms of millions there you go let me
+close
+this I will just move this to the
+center all
+right now if you want you can change the
+color of the text as well so let's have
+it in white color and see how it looks
+okay so this looks pretty decent
+cool
+now moving to our next report so this
+time we are going to find the total
+revenue by countries so we have multiple
+countries present in our data set we
+want to visualize the revenue generated
+in each country so for this we are going
+to create a horizontal bar chart so let
+me show you how to do it but before
+moving ahead let me just rename this
+sheet so I'll write Revenue
+by I'll just put op which stands for
+order priority all right now let's
+create our horizontal bar chart I'll go
+to insert click on pivote table and
+select
+okay so I want my Revenue based on
+different countries so I'll select
+country and put it under rows and then
+I'll choose total revenue and place it
+under values so here you have the
+different country names we have
+Afghanistan this Albania let me scroll
+down you have
+Bangladesh there
+are a number of countries you have Czech
+Republic there's Estonia France Gabon
+similarly if you scroll down we have
+India there Jamaica Italy and all the
+way to the bottom if you go we have New
+Zealand there Netherlands Philippines
+Portugal we also
+have Singapore
+lots and lots of
+countries we have the UAE United States
+of America Zimbabwe and
+others all right let me go up so based
+on this pivote table let's create our
+pivote chart so I'll go to insert and
+select recommended charts from here I'm
+going to select the column chart you can
+see the preview here and let me click on
+okay all right so here you can see
+the different country names at the
+bottom and the revenue for each of the
+countries let's go ahead and edit this
+chart so first of all I'll
+delete the field buttons okay and let me
+also remove the
+legend here I'll write
+Revenue
+by
+countries this is going to be my
+chart
+title
+okay let's format this chart a little
+more so I'll click on this option and
+we'll select a new style let's
+say I'll
+select style six okay and let me now go
+under colors and we'll select the color
+of the bars so let's choose this color
+okay so you have a horizontal column
+chart ready and at the bottom you can
+see the different country names and we
+have
+the
+revenue
+cool now let me go ahead and rename this
+sheet so I'll write Revenue
+by
+countries
+and hit enter
+okay and finally we'll create another
+report which is going to be part of our
+Revenue dashboard and this is revenue by
+items so we'll visualize our revenue for
+different items present in the table so
+if you see this we have Cosmetics
+vegetables cereal fruits the cloths
+snacks households and other products as
+well so let's check the revenue for each
+of these
+items so we'll continue the same drill
+I'll create my pivote table on a new
+worksheet and this time I'm going to
+drag item type under rows and we have
+the total revenue under values so here
+on the left of the table you can see we
+have the different item names and then
+we have the total revenue so let me just
+s this
+total
+revenue from largest to smallest so you
+can see here office supplies meet the
+highest amount of Revenue followed by
+household then cosmetics and fruits meet
+the lowest amount of
+Revenue I'll click on this go to insert
+and select recommended charts this time
+I'm going to create a bar chart so this
+is how my bar chart is going to look
+like I'll select okay all right now
+let's format this chart a
+bit I'll delete the field buttons and
+I'll delete the legend as
+well
+and let's edit the chart title so this
+is going to
+be
+Revenue by items
+cool we also want to change the
+color of the bars so I've selected all
+the bars I'll go to my home Tab and here
+let's say I want to select green color
+all
+right I've edited my chart a bit
+now
+let's make
+it
+14 and I'll remove the
+Bold okay here if you want you you can
+change the font Also let's keep it in
+blue color all
+right finally let's rename this sheet so
+I'll write Revenue by
+items
+cool finally now it's time for us to
+merge all the charts that we have
+created to our
+dashboard so let me show you how you can
+create the dashboard I'll create a a new
+sheet and first thing I'm going to do is
+I'll click on The View Tab and uncheck
+grid lines so this will remove the grid
+lines present in the worksheet next I'm
+going to insert an image so we'll have a
+background image on our dashboard so the
+way to do is I'll go to the insert Tab
+and under illustrations I have the
+option to select pictures or insert
+pictures so I'm going to insert
+picture present on the device that is my
+computer I'll go to desktop and here I
+have a folder called Excel dashboard
+files and I'll select this dashboard
+background and hit
+insert so this is going to insert an
+image now let me just drag this image so
+it covers a fair
+portion so I'll hit shift and I'll drag
+it all
+right so you can see I have successfully
+added a background image if you want you
+can
+still expand this background image a bit
+to the right
+cool now the next
+thing is going to be the title of the
+dashboard so I'll click on insert and
+here I have the option to select a text
+box so I'll click on a text box
+and I'm going to place a text box in the
+middle and I'm going to name this text
+box as
+Excel Revenue
+dashboard
+on
+Sals
+I'll centrer line
+it let's do some more formatting so I'll
+select this text box on the top you can
+see shape
+format here I'm going to expand this
+shape fill and I'll select no fill so my
+text box is transparent now and I'll
+also remove the outline all right now
+let me just double click on the title of
+my dashboard and I'm going to
+select a font you can select whichever
+font you
+want let me stick to britanica bold and
+I'll increase the size to let's say
+30 all right I'll just drag the text box
+I'll make the text as white instead of
+black all right so we have
+our title of the dashboard ready now if
+you want you can also insert some icons
+to this dashboard so I'll go to insert
+and I'll click on illustrations again
+and select
+pictures I'm going to
+add these two pictures which is of a
+store and a cart
+to make it
+look visually appealing so I'll place
+the
+icons here and similarly let me just
+copy
+it and I'll place
+the cart and the
+store to the right as
+well all
+right
+next the idea is
+to
+bring in all the charts that we have
+created and place it on the
+dashboard so let me
+copy each of the charts and place it on
+the dashboard so I'll hit control V to
+paste
+it and we'll resize this as
+well all
+right
+similarly let me bring in all the other
+charts as
+well all right so now you can see I have
+added all my charts and graphs to this
+dashboard so you can see here we have
+our line charts our column charts the
+combo charts the Spy chart and others
+now let me go ahead and format these
+charts a little more so you can see this
+looks a bit cluttered so let's adjust
+the labels let me bring this down
+similarly I'll bring 190 million a
+little
+below all right this looks fine
+now one more thing we are going to do
+is we'll remove the white background
+from each of the charts and make it
+transparent so let me show you how to do
+it so I'll select this chart
+then I'll right click and go to format
+chart
+area here on the right you see we have
+an option called No fill so if I select
+no fill you can see the white background
+is gone now similarly let me also remove
+the grid lines so I'll select the grid
+lines and hit delete so you have also
+removed the grid lines from here now
+let's also remove the white outline that
+we have so I'll select this chart go to
+format and here I'll go to shape outline
+and I'll select no outline you see this
+so we have our total revenue by year
+which is a line chart and this is
+completely transparent now now what I'm
+going to do is I'll place this chart
+over a box so I'll go to insert and in
+insert we have the option to create a
+shape so I'll click on illustrations and
+here I'll choose a shape and let me
+select a rectangle so I'll just create a
+rectangle
+here all right and now what I'll do is
+I'll select this and bring this to front
+I'll right click and choose bring to
+front and I'll place this
+shape below it all right now the next
+thing is to edit the shape so first I'll
+change the color of this box so let me
+select this blue color and and let me
+increase the transparency so I'll right
+click and go to format shape here I'll
+increase the transparency let's keep it
+to
+25% or let's say 20% all right next
+thing we'll just convert all the font to
+to white
+color including the access labels the
+chart
+title will
+also convert all
+the access labels to white color so it
+looks better now we'll just adjust
+our chart over here next thing let's
+just remove the outline so I'll go to
+shape outline and I'll select outline
+you see we have now formatted our chart
+let's just pull this a little
+up all right now we'll add this blue
+background to all the other charts so
+we'll first add the background make it
+transparent and then we'll convert the
+font text to white color to make it more
+readable and visible so for the time
+being I'll just pause the video and come
+back
+again all right so now you can see on
+your screens we have nicely formatted
+our dashboard so I have added a few
+logos for each of the charts you can see
+the logos here so for Revenue by
+countries we have a globe then if you
+see here this is kind of a map or a
+location similarly we have all formatted
+the color of the bars then we have also
+formatted the L labs in terms of
+millions if you look on the Y AIS even
+the revenue for year in region are all
+formatted in terms of
+millions if you want this you can also
+format the total year by Revenue in
+terms of millions so the way to do is
+you can select this graph right click
+and go to format
+access here if I scroll down you have
+numbers and under category I'll select
+custom then I'll select my type as this
+format which is in
+millions and you see here we have
+successfully formatted our Y axis
+labels all right so the next thing is to
+add slicers and timelines to our
+dashboard now slicers are used to format
+your data based on a particular column
+suppose if you want to see Revenue by
+certain items you can add item as a
+slicer and you can view the
+entire dashboard similarly for timelines
+you can add date columns so if you want
+to see what was the amount of sales or
+revenue generated on a particular year
+or a particular month you can do that
+using a timeline so I'll select one of
+the charts and then either you can go to
+the insert Tab and here you can see
+under filters we have slices and
+timeline
+or if you go to the pivote Chart analyze
+tab here also you have insert slicer and
+timeline option so I select insert
+slicer here first now it's giving me the
+list of fields present in the data set
+so I'll select country region and let's
+say we want
+to know by item type and sales Channel
+so these are going to be my four slicers
+I'll click on
+okay you can see it here we have our
+four slicers here and these are the list
+of values under region we have Asia this
+Europe North America and others
+similarly we have the different country
+names for Country slices and then for
+item type also we have all the items
+that were present in our data set
+now moving ahead we need to connect all
+the slicers to a dashboard so what I'll
+do is I'll right
+click on this option and I'll go to
+report
+connections okay so under report
+connections you have all the pivote
+tables that we
+created you currently see only one of
+the pivote table is selected so we need
+to select all the peot tables so let me
+check all the p tables present in this
+workbook and click on okay all right now
+that we have connected one of our slices
+we'll now connect the other remaining
+slicers so I'll right click on this go
+to report connections and I'll check all
+the pivote tables present in this
+worksheet click on okay similarly let's
+do it for the country slicer I'll go to
+report connections and let me
+select all the pivote tables
+and finally we have the item type so
+I'll right click go to report
+connections and then I'll select all my
+Pivot
+tables and let's hit okay all right now
+let me just organize this a bit so I'll
+place my Pivot
+tables to the
+right I'll just reduce the
+size
+let me scroll
+down I'll
+add my region slicer
+here
+similarly I'll add my final slicer that
+is sales Channel now in our next
+dashboard which is going to be the
+profit dashboard I'll show you how to
+add a
+timeline all right now now I have
+arranged all my
+slicers so let's say you want to find
+the revenue that was generated for an
+item type let's say beverages so you can
+just select beverages here and all your
+charts show the respective revenues so
+you have the total revenue by year for
+beverages only similarly here you can
+see the revenue by year and region only
+for beverages item type if I scroll
+down now this chart represents the
+revenue that was generated in each of
+the countries only for item type
+beverages let me just uncheck
+it all
+right let's say you want to
+see the revenue generated for a country
+like India so I have selected India here
+and now you can
+see my graph has changed only for
+country
+India you can see here it is showing
+only for India
+now now similarly you can also filter
+your revenues based on the different
+regions let's say you want to know the
+revenue generated based on sales channel
+so we have two sales channel that is
+offline and online suppose you want to
+know the revenue generated offline so
+I'll just select offline you can see the
+values have changed so these were the
+revenues generated for each of the items
+only for
+offline if you see here now these were
+all the offline sales for the different
+regions
+so this is our entire Excel Revenue
+dashboard on sales we create created
+multiple charts and graphs then we
+applied different formatting we added
+different icons then we formatted the
+labels also next we added slicers and
+finally we saw how we could filter our
+data based on these
+slicers likewise now we are going to
+create a profit dashboard based on the
+same data so before moving ahead let me
+rename this sheet as
+Revenue dashboard I'll write
+R dashboard
+okay now we'll move to our data sheet
+and start creating our P tables and po
+charts for the profit
+dashboard all right so let me go ahead
+and create my first pivote table
+so I'll create a new
+worksheet this time I'm going to create
+a line chart to visualize the profit for
+each year so I'll drag my total profit
+column to values and my order year to
+rows so here you can see we have
+our pivote table ready now you can sort
+this data to get an idea as to
+which year had the highest profit and
+which year had the lowest profit so from
+this pivote table you can see since I've
+sorted this data in descending order so
+2014 had the maximum amount of profit
+and 2017 had the least amount of profit
+I'll just do control Z to undo it all
+right now based on this pivot table let
+me go ahead and create my P chart so
+I'll go to recommended charts and click
+on a line chart so this is the preview
+of the chart I'll click on okay let me
+close this
+similarly we are going
+to edit this chart now so first I'll
+hide all the field buttons present on
+the chart and I'll rename the chart
+title as
+total
+profit by
+year next I'm going to remove the legend
+so I'll delete
+this let's do some more
+formatting so I'll go to
+style
+and this time
+I'm going to
+select my style type okay and if you
+want you can choose the colors as well
+for the time being let's have this
+yellow color next let me add the data
+labels so again if you see here this is
+not formatted properly so let's go ahead
+and format
+the data labels so I'll click on number
+and I'll select custom
+here and the type I'm going to select is
+in millions and I'll click on close so
+here you can see we have
+our line chart ready which shows total
+profit by year let's rename this sheet
+as
+profit
+by Year all right now let's move back to
+our data sheet again next we are going
+to show the total profit by countries
+for this I'm going to create a map so
+let me first create my pivote table so
+I'll go to insert and I'll click on
+pivote
+table let me click on
+okay since I want the country names so
+I'll select country under row and then I
+have my total profit under
+values the next thing I'm going to do is
+is I'll just rename the row labels as
+countries and
+then I'm going to delete the grand total
+which you can see at the bottom so here
+we have the grand total let me just
+delete the grand total so I'm going to
+select this P table go to the design tab
+here we have sub totals and Grand totals
+I'll switch off the grand total let me
+just verify it again I'll scroll down
+you see the grand total has gone now all
+right now we want to create a map out of
+this the way to do is I'm going to
+select my
+data copy it I'll go on top and I'll
+paste it here using this data I can
+create my field map now so I'll go to
+insert here we have the option to create
+a field map there you go you can see we
+have our map ready
+I can expand this now as you can see our
+map has a color scale which comes from
+light gray color to dark blue color so
+the countries that are in Gray or you
+can say light blue have the lowest
+amount of profit while the regions or
+the countries that have been shaded
+in dark color or dark blue color have
+highest amount of profit I will go ahead
+and delete this scale
+okay next we need to connect this map to
+the original data source so what I'm do
+is I'll right click on this map and I'll
+go to select data here instead of the
+previous range I'll give my new Range
+now so my new Range will be my original
+poo table that I had created I'll go on
+top and click on okay so we have our map
+ready now now if you want you can change
+the color of the shade so I'll just go
+to colors and let's say we'll keep green
+color so the countries that are shaded
+in dark green have the highest amount of
+profit while those which are highlighted
+in light green color are are the
+countries that made least amount of
+profit okay now moving
+on next we want to create a pivote table
+that will show us the profit by year and
+sales channel so for this we are going
+to create another line chart so I'll go
+to insert and click on pivote table so
+I'll select new worksheet here since I
+want to know the profit by year first of
+all I'll drag my order year column to
+rows and then I'll choose my total
+profit column under values next I'm
+going to select my sales Channel under
+columns there you go so we have our P
+table here based on this P table let me
+create my poot chart so I'll go to
+recommended charts and I'm going to
+create a line
+chart I close
+this you see here based on this chart
+you can tell the profit generated with
+online sales were actually lower than
+that of offline so here the blue l
+represents offline profit and the Orange
+Line represents Online Profit if you
+Mark Clearly in year 2012 the Online
+Profit was actually higher than the
+offline profit so let me go ahead and
+edit this chart a bit so we'll delete
+the field buttons I'll also delete the
+legend for now let me go ahead and add a
+chart title so I'll
+write profit
+by year
+and sales
+Channel
+okay so this is my second report before
+moving ahead let me just rename this
+sheet so I'll write
+profit
+by
+countries similarly let me rename this
+sheet as
+profit by year and let's say SC for
+sales
+Channel
+okay moving
+ahead now I want to create a pie chart
+based on a pivote table that will show
+The Profit by sales Channel only so this
+is going to be a simple pie chart so
+I'll first go to insert click on P table
+and click on okay so I'll drag my my
+sales Channel under rows and then we'll
+have the total profit column under
+values so this is my simple pivote table
+now let's create our pivote chart which
+is going to be a pie chart let me
+explore the other types of pie charts we
+have okay so I'm going to select a donut
+chart here I click on okay let's edit
+this chart I'll remove the field buttons
+let me now remove the Legend as well
+I'll just resize it and this is going to
+be
+profit
+by sales
+Channel
+okay let's also
+add data
+labels and here again I'm going
+to format this label
+I'll select the category as custom and
+my type will be in millions okay let me
+just move
+this to the
+left and this to the right
+okay let's also delete the lines
+cool now let me just rename this sheet
+so I'll write profit
+by let's SC C which stands for sales
+Channel cool finally I'm going to create
+a report that will show the revenue and
+profit by items so I'll go ahead and
+create my pivote table first this time
+I'll choose my total profit under
+values and we'll also have the revenue
+column so I'll put my Revenue at the top
+then I'm going to
+select item type under rows so here is
+my pivote table based on this pivote
+table let me now create a combo chart so
+you can see the preview of the chart the
+blue bars represent the total revenue
+and the Orange Line represents the total
+profit I'll click on okay let me close
+this first let's remove the field
+buttons let's also remove
+the legend
+here then we'll add a chart title I'll
+name it
+as
+revenue
+and
+profit by
+items okay if you want you can also go
+ahead and change the color of the
+bars so let me just select
+one of these colors
+okay all right so we have our five
+reports ready that we are going to use
+for our profit
+dashboard next let's create a new sheet
+and we'll get started with building a
+dashboard so I'll click on a new sheet
+let me just rename this as profit
+dashboard all right we'll continue with
+the previous TR
+so first of all let's go to the view Tab
+and remove the grid lines now we'll
+insert a background image like we did
+for our Revenue dashboard so I'll go to
+insert under illustrations I'll click on
+pictures and select this device I'm
+going to have the same background I'll
+click on
+insert all right so you can see we have
+a picture of a company or you can say an
+organization let's just drag
+this a bit to the
+right we'll adjust the size
+also all
+right now let's copy the title of my
+profit dashboard so here you can see I
+have brought my Revenue
+dashboard and I'll copy the title and
+the logos that we used for the revenue
+dashboard I'll paste it on my new
+dashboard let's just align
+it in the
+center all right the next step let me
+now go ahead and edit the title so this
+is actually going to be
+Excel profit dashboard instead of
+Revenue now we'll copy each of the
+charts that we just created for example
+the revenue and profit by items then we
+had profit by sales
+Channel all this we are going to copy
+one by one and put it on the profit
+dashboard so let me just copy a few
+now I'll paste it
+here and later on we can make the
+adjustment copy this as
+well similarly I'll bring the other
+three charts onto my sales
+dashboard okay so here on my profit
+dashboard I have added all the
+charts and I have aligned and reshaped
+it so that it looks good I've also made
+some formatting for example I've reduced
+the size of the chart
+title now let me go ahead and show you a
+few more formatting that we also did for
+the revenue dashboard first let's remove
+the white background from all the charts
+so I'll select the first chart I'll
+right click and I'll click on format
+chart area here under fill I'll select
+no fill next I'm going to remove the
+grid lines so I'll just delete it let me
+close this now we also have a outline so
+I'll go to
+design format and I'll remove the
+outline next I'm going to
+add a blue box at the back like how we
+did for the revenue dashboard so let me
+select a blue box from here and I'm
+going to paste it here okay and let me
+just select the chart and I'll bring
+this to front and I'll move
+this to the
+back next I'm going to change the font
+color all to White so that it's clearly
+visible and it's more
+readable I'll do it for the x-axis as
+well okay so here I have my first chart
+ready the same I'm going to do for the
+rest of the
+charts okay so now you can see here I
+have formatted all my charts I've also
+added a blue background you see here
+here I have also formatted the V labels
+in terms of millions which is actually
+the profit similarly here I have added
+the data labels this is for
+Revenue some of the charts also have the
+data Legends so here you can see the
+blue color represents
+offline and the red represents online
+similarly here you have the Legends I've
+also formatted the map as well okay now
+now the next thing is to make this
+dashboard more interactive so we'll add
+our slicers as well as timeline first
+let me show you how to add a timeline so
+I'll select one of the charts and I'll
+go to insert under insert I have the
+option to create a timeline so I'll
+just click on
+timelines so timeline is actually based
+on date columns so since in our data set
+we only have two date columns one is
+order date and one is ship date so Excel
+has only shown us two columns so I'm
+going to create my timeline based on
+order date so I'll select my order date
+column and I'll click on okay you can
+see here this is called a timeline I can
+expand this now this timeline is based
+on months now now if I scroll this
+timeline you can see here I have my
+order year 2010 and I have all the 12
+months similarly we have for for 2011
+then we have for 2012 all the way till
+2017 now you can filter this in terms of
+years quarters months or days let me
+just select year now so I have years
+from 2010 till 2017 let me just squiz
+this and I'll place it somewhere here on
+the
+right now let me go ahead and create a
+few slicers for my profit dashboard so I
+have selected one of the charts under
+insert I'll click on
+slicer you can see it gives me the list
+of columns from which I want to create
+slicers so I'll create region let me
+also select
+country let's say I
+want the representatives name or the
+customer's name and I'll click on okay
+so here I have created three
+slicers let me me first resize it and
+I'll place
+it on the
+right similarly I'll place the country
+column
+also then we have the region
+slicer I'll resize this and I'll bring
+it here okay the next thing we need to
+do is I have to connect all the slicers
+and the timeline
+to the P tables for the profit dashboard
+so I'm going to click
+on the multiple select option and go to
+report connections here I'm going to
+select all the pivot tables that are
+related to
+profit so here I have selected four and
+I need one more which is p table number
+10 I click on okay similarly let's
+create or connect my region fi filter to
+all the pivote tables so I right click
+go to report connections here I'll
+choose all my pivote tables which are
+based on
+profit I'll click on okay let's do it
+for the country slicer as
+well click on okay and similarly I'll
+connect my timeline as well I'll go to
+report
+connections and I'll say
+select all the pivot tables related to
+profit then I'll click on okay let me
+now go ahead and create another slicer
+based on sales channel so I'm selecting
+one of the poot charts I'll go to insert
+click on slicer and I'll select sales
+Channel and hit
+okay so I have my sales Channel slicer
+now let me connect it to all the
+respective P tables
+that are based on
+profit click on
+okay now let me just bring it here all
+right the next thing I want to show is
+how are we going to use the timeline
+first so you see we have all
+the years here from 2010 till
+2017 now suppose you want to know the
+profit that was generated in the the
+year 2012 so I'll just click on this
+range and now you can see our charts
+only show information for 2012 so this
+dot represents that was 51 million
+profit in the year 2012 similarly you
+can see
+here the profit by sales channel for
+2012 from the map you can see the
+different countries and the profit each
+of these countries made in 201 12 if I
+scroll down you can see the revenue and
+profit by items now if I
+select another year let's say
+2013 I can just drag this to the right
+and now you can
+see our profit by year and sales channel
+for offline and online you can see the
+map or the line chart for total profit
+by year so in 2012 it was 51 million and
+then it went up to 54 million in
+2013 similarly our map has also changed
+now this is a sort of an information
+that we have you can click on this
+and check the information that Excel has
+prompted all right so this is how you
+can use a timeline now as I said we
+checked by years you can also see it for
+months and quarters as well let me just
+uncheck
+it I'll send it back to the place where
+it was and I'll reduce the
+size okay now suppose you want to check
+the profit made by different
+Representatives you can select them one
+by one let's say Adam Churchill this is
+the profit generated by Adam
+churel similarly you can select multiple
+persons as well now suppose you want to
+see the profit by different countries so
+you can use the country slicer let me
+just bring this to the middle and let's
+expand our chart a
+bit okay so here you have
+the profit by different countries chart
+I'll just bring this to the front so
+that you can see it clearly okay now
+here suppose you want to see the profit
+generated in let's say United Kingdom
+you can select United Kingdom so this is
+the map of United Kingdom and it tells
+you the total profit that was generated
+in United Kingdom and Below you can see
+the revenue and profit for all the items
+that was sold in United Kingdom so you
+had beverages cloths household office
+supplies you can see clearly office
+supplies item meet the highest amount of
+profit in United Kingdom now you can
+also select multiple countries let's say
+I want to know for France as well so
+my map will change accordingly so now I
+have United Kingdom and France selected
+and the other charts present in my
+dashboard change accordingly now I have
+my country select elected as India you
+can see the map of India
+here and these were the respective
+profit values now one thing to note here
+is this is actually not Millions this
+should be in K that is Thousands so
+please mark this as thousand and not in
+millions even for this this is actually
+K and not
+million all right so we have
+successfully created our second
+dashboard that is on profit let me just
+resize this a bit and we'll place it
+where it was
+earlier
+cool so we saw how to create different
+poot tables and poot charts and then we
+formatted our poot charts based on our
+requirement we saw how to edit the
+colors now let me show you one more
+thing you can also change the look and
+feel of of the dashboard by going to the
+page layout tab under page layout you
+have themes so here you can select
+different themes currently we are with
+the office theme now let me just select
+another theme let's say faet you see the
+colors have changed and it
+looks really
+beautiful similarly let me try out
+another theme let's say organic you see
+our chart has changed let me just delete
+this okay so now once you change the
+theme the text also change a bit you can
+see the slicers are in a different
+font let me explore One More theme let's
+say this time I'm going to choose
+depth and this is more of a green type
+of
+color you can play around and select
+whatever theme suits the best all
+right now let me just move back to my
+Revenue dashboard and see how it looks
+there you go so since we changed our
+theme even our Revenue dashboard is also
+impacted
+so this is how it looks
+now you can always go ahead and play
+with different themes colors fonts and
+effects all right
+so in this demo we saw how to create a
+revenue dashboard so we created line
+charts this combo chart pie chart
+horizontal and vertical bar charts and
+then we learned how to add slicers and
+connected to different P tables and we
+filtered our data to see Revenue as well
+as profit by items by countries by
+different regions sales Channel we
+learned how to create a map and lots
+more and with that we have reached to
+the end of this session on charts and
+graphs in Excel should you need any
+assistance and other resources used in
+the session please let us know in the
+comment section below and our team of
+experts will be happy to help you as
+soon as possible until next time thank
+you and keep learning stay tuned for
+more from Simply learn staying ahead in
+your career requires continuous learning
+and upscaling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click
+here

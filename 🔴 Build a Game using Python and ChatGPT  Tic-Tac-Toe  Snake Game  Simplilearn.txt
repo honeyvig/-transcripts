@@ -1,0 +1,525 @@
+foreign
+if you ever wondered how to Leverage The
+Power of charge DPT the AI language
+model to creating compelling creating
+app for your channel you are in the
+right place in this video I will guide
+you through the process of how to make
+an app with the help of chargpt
+capabilities and some of other AI tools
+so let's dive in and unlock the
+potential of AI assistant but before we
+begin let me tell you guys that we have
+regular updates on multiple Technologies
+videos so if you are a tech geek on a
+continuation for the latest
+technological Trends then consider
+getting subscribed to a YouTube channel
+and press that Bell icon to never miss
+any update from Simply learn also
+accelerate your career in AIML with
+Comprehensive postgraduate program in Ai
+and ml gain expertise machine learning
+deep learning NLP computer vision and
+reinforcement learning you will receive
+a prestigious certificate exclusive
+alumni membership and hackathons and AMA
+sessions by IBM
+with three Capstone and 25 plus industry
+project using real data sets from
+Twitter Uber and more you will gain
+practical experience master classes
+papadi faculty and IBM expert ensure
+top-notch education simply run job
+assist help you to get noticed by
+Leading companies live session on AI
+trends like chat Deputy generative Ai
+and explainable AI this program covers
+statistics python supervised and
+unsupervised learning NLP
+neural network computer vision gns Keras
+tensorflow and many more skills so why
+wait and Rule now and unlock exciting Ai
+and ml opportunity the course link is in
+the description box below dive in and
+see how chatbt can help you to make a
+great app so here we have share GPT okay
+you can write here chat dot openair.com
+so here I will ask to charge gbt what is
+chargeability so I will write what is
+chat
+so here you can stop generating if you
+want to okay I will stop generating okay
+so charge bit is a conversational
+artificial intelligence model developed
+by open air it is based on the GPT
+generative pre-trained transform
+architecture specifically GPT 3.5 which
+is at Advanced language model so GPT 3.5
+is trained on a massive amount of tax
+data to generate human like response to
+wide range of prompts and question
+you can ask anything to charge GPT
+okay
+after coming
+chat
+GPT
+software
+Developers
+save
+software developer jobs
+see
+yes after the introduction of charge gbt
+and similar language model software
+developer still have important roles and
+their jobs remain regular while AI
+models like chargpt can generate text
+and provide automated response they have
+limitations see they have limitations
+charitivity have limitation and cannot
+replace the skills and expertise of
+human software Developers
+so here is a few reasons why software
+developer jobs remain valuable okay so
+here are the few reasons so you can ask
+anything to charge gbt
+so what we will do we will create a
+small small gaming app okay so here I
+will write
+uh
+let's make first tic-tac-toe okay so
+here I will write
+give
+me the code
+for tick
+tag to
+game
+see it will give you the step by step
+charge gbt will explain you everything
+see this board
+then player check columns check
+diagonals play game everything switch
+check for the winner play game
+I believe see to play the game simply
+run the python script players will take
+turns entering the row column numbers to
+make their moves the game will
+okay so what I will do okay first I will
+ask the steps to make a game tic-tac-toe
+okay
+give me these steps
+to me
+see positively we will ask for these
+steps then we will ask for the code
+chargity can make your app in 2-3
+minutes in just 2-3 minutes small small
+app and two three minutes
+okay see what what is the first step set
+up the game board create a data
+structure to represent the tic-tac-toe
+board this can be three by three Grid or
+nested list with initial empty values
+okay for example this then second is the
+print the game board write a function to
+display the current state of the board
+on the screen this will help players
+visualize their game
+and the third is get player input prompt
+the player to enter their moves except
+the input for the rows and columns where
+the players want to place their symbol X
+or zero okay
+or you can change the value X or 0
+whatever cross right okay
+update the board after receiving the
+player input update the game board with
+their move make sure to validate the
+move and check if the selected position
+is empty
+okay then check for the winner then
+check for it is draw word then alternate
+turns
+okay then repeat two to seven until the
+game ends optional additional features
+we will first we will make tic-tac-toe
+uh what you can say a simple tic-tac-toe
+then we will add the additional features
+on this okay using charge GPT only Okay
+so
+I will write
+provide me the
+tick
+tag
+to
+a code
+what we will do we will open the visual
+studio and copy it directly
+obviously current player is X
+then o
+see currently row the second player
+switch player
+okay what we will do we will copy it
+from here and we will open the visual
+studio that new file I will write here
+take the
+2 dot P1 okay Enter
+I will save it so here I will directly
+copy the code
+where's my
+it comes in
+okay
+copied this also
+copied the whole thing
+okay I have to remove this or I can make
+it you know comment
+yeah
+so let's try to run it
+what terminal says
+see enter the row
+okay
+two
+enter the column
+two
+okay it made like this
+okay
+what I will do
+I will ask for the geoi
+provide me the
+click
+attack so okay with GUI
+y okay now the Tinker came Tinker is
+python Library used for the GUI in
+Python
+okay okay now uh
+we'll copy the code and just paste it it
+will run okay with GUI and then we will
+add the additional features okay from
+here now I'm copying the code
+now select all replace with this code
+like here no error no red sign so let me
+play it
+it will run I guess no problems
+okay what happened see as you can see
+we got the tic tac toe
+okay so see here x 0 x
+0 x player expense
+so let me add the additional features in
+this
+so what we will do is
+go to chat GPT again we'll ask for the
+additional feature see
+load the code above uses the message box
+module from the Tinker for displaying
+messages ensure that you have compatible
+version to think okay when you run this
+quota graphical windows will appear by
+three by three give and this okay
+players can click on the buttons to make
+their move the game state will okay
+um
+okay
+update you can you know talk to charity
+so I will say update
+my code with some
+good
+phone and scoreboard
+scoreboard
+front scoreboard and color
+update my GUI code I can write
+here is an update see like certainly
+here is an updated version of GUI code
+with improved font scoreboard and color
+if you get error in this you can ask to
+chat GPT okay
+anything you are facing issue about your
+code whatever it is you can ask directly
+to chat GPT
+see we created an App in like two
+minutes just in two minutes
+so charitivity is making our life easier
+okay let me copy this code
+okay
+let's see the changes
+what WhatsApp charge but it does
+okay
+nothing changed I guess
+player expense like this cross
+okay
+I will write here
+see in this updated code the font style
+has been improved with a bold aerial
+font the buttons have a custom
+background color and the overall window
+and discover have a different color
+oh I didn't feel like this
+I didn't feel like this
+okay so
+change
+change the
+grid Style
+of the
+game
+Thanksgiving updating the boat
+seem to change the gradient side of the
+same you can modify variance of the
+buttons and the spacing between them is
+an updated version jio I code with the
+modified register
+it's just a little bit of time taking
+that's it nothing else it's very useful
+chargity you can create your app in 2-3
+minutes
+okay
+continue generating it's a half code
+okay code is copied
+let me select and paste it here
+check see
+player x0 player row zero
+okay it's little bit different I guess
+okay this one two three box why these
+lines there
+okay who cares
+play the expense okay see the scoreboard
+is updated
+okay
+so this is how you can make your Tic Tac
+Toe more beautiful
+okay uh let me write here
+let me write here I want the black and
+white boxes okay or colorful boxes
+so
+um
+code
+provide me the code for a colorful
+okay
+okay here
+foreign certainly here is an updated
+version of the code with colorful boxes
+instead of grid lines
+okay
+so we're waiting for the code update the
+code
+see in this updated code each player's
+button xno has a specific color assigned
+to it the button colors okay let me
+copy the code and paste it here
+and run it
+see the color is changed
+and I will write c x
+o x o x o x
+player expense
+okay so this is how you can make your
+app more beautiful beautiful using
+customization you can ask share GPT
+anything color style font or any
+function
+anything you can ask and you you can
+make your app
+more beautiful okay
+so now let's move on to the next game
+which I want a snake game okay using pi
+game we will make
+so here I will write please provide
+me the code
+of snake
+game
+using
+Fire game python
+okay
+everyone knows what is this next game
+or first you want to ask the steps we
+can ask the steps okay after this I will
+ask this step
+okay
+so till then let's make a new file of
+snake
+game Dot py
+okay
+let me close it
+see it's a long
+code like us just continue generating
+now you can see that see the food and
+all will come okay
+foreign
+you can ask anything like any question
+any language question
+this code sets up the basic structure
+for this game using pi game it include
+the functionality for displaying the
+snake controlling this movement
+detecting collision with the boundaries
+and food and managing the score you can
+run the code and pay the snake game with
+buy game window feel free to customize
+see at the end what chat repeat Road
+feel free to customize and enhance the
+game according your preference okay that
+is what I was talking about
+you can change
+and number of times you can ask n number
+of times for the code new new code
+okay
+there is one why this error is coming
+import buy game could not be resolved by
+lens
+what is the Spy lens okay let me ask to
+charge the video only
+what is
+violence
+island is the language server for python
+developed by Microsoft which provides
+the ones language features including
+code completion type checking
+static analysis and code navigation
+pylons is built on the top of language
+server okay
+let me give the error itself
+copy message
+okay
+I will write debug error
+violence
+okay
+make sure you have a pi game installed
+Pi game is already installed on my
+terminal
+and run the following command okay let
+me open the command prompt
+okay then what I have to write
+let me copy the code
+and paste it here
+what is this
+okay emergency this is this
+if Pi game is not installed you can
+re-install by running
+already installed I guess
+ensure the pylons is using the correct
+python to verify that pylon has
+converted to use the same path which you
+have installed by a game you can check
+the python interpreter setting in your
+code
+editor or ID which make sure it's point
+to correct path environment about bios
+game is installed
+okay
+what I will do
+I will go to terminal and here I will
+write
+babe yes star
+maybe it will be helpful
+okay let me do this
+foreign
+store new pip
+some error of Pi aim I guess okay we'll
+run it online no worries
+won't work in this I will run it online
+okay
+see the requirement is already
+satisfying this this this
+so what we will do we will open
+we'll open the plate and we'll create
+the new rapple
+okay then python
+turn and created
+okay this is the same like you know one
+of the
+ID you can say
+then
+what I will
+I will copy the space code
+and paste it here
+Dot py
+okay
+on that I will copy the code and I will
+run it
+okay
+separate updating the package and the
+project and the buy game
+okay it's running the code is running
+okay it's installing Pi game
+you can let me run now
+what happened what's the error
+what's the error
+okay
+okay some hello from PI game Community
+this is
+T8
+okay
+okay we'll ask to charge GPT
+[Music]
+code showing
+together
+okay
+provide
+me d
+ude
+game code using
+python
+actually
+this time from Turtle okay
+let's see
+because the pie games I don't know Pi
+game is installed on my system it's not
+working
+so we will leave it
+okay we'll ask from this some good GI
+with some good here
+see it is the head everything is the
+keyboard bindings from wsd or you can up
+down left right the keys
+you can use from use the both
+okay
+continue generating
+then the functions the pen the snake
+body everything is a snake head is like
+everything is here what you want
+everything is here
+see the code utilize the turtle module
+to create the basic game with the snake
+that moves collect for the the score is
+registered
+okay feel free to
+let me copy the code
+let me copy here only
+and run it
+see this is the snake
+okay this is the food this is the score
+or high school okay I will run it
+see
+you can customize your snake your food
+everything see the score
+previous time the score was then the
+high score now it changes
+okay the score is 30 now I'm enjoying
+the game
+so this is how you can customize your
+you know game
+okay
+let me play the game
+okay see this is how you can make any
+game or any small small game in two two
+three three minutes okay
+so uh go to chat GPT and you want the
+you know change the color of the snake
+or the food anything you can do using
+chat GPD
+okay
+so while this we have to come end of
+this video I hope you found this video
+informative and interesting if you like
+this video give us a thumbs up and share
+it with your friends also if you have
+any queries about this video this
+particular video please feel free to ask
+in the comment section below our team
+will get back to you as soon as possible
+and the course link for the AIML is
+provided in the description box below
+don't forget to check it out and till
+then thank you and keep learning
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
+thank you

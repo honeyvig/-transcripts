@@ -1,0 +1,2661 @@
+foreign
+and in this video we will be creating a
+YouTube clone but before we begin if you
+haven't subscribed to our Channel
+already make sure to hit the Subscribe
+button and press the Bell icon so you
+will never miss any update from Simply
+learn so without further Ado let's begin
+and see what's in it for you so here we
+are going to create a YouTube clone with
+react.js but before we jump to the
+coding part let's see how the YouTube
+page looks like
+let's see
+here
+as you can see
+there is a navbar upstairs where you
+have your logo
+after that there is a upload button the
+Bell icon notification button
+and that mic button in the search bar
+and it's written here the YouTube
+and in this you will find
+home Explorer shots subscribe original
+YouTube music and all other things
+so let's jump to the coding part and
+create the YouTube clone as it is
+so open your Visual Studio code
+to create this YouTube clone you must
+have node.js installed in your system
+so let's just open one folder or just
+type control
+plastic and inside that write a command
+in PX
+create
+react
+and then the folder name that you want
+to create
+I'll write U to
+flow
+press enter it'll take couple of minutes
+to install all the packages
+so let's wait for few minutes
+it'll take a couple of minutes to
+install all the modules
+before until it's get complete let's see
+the YouTube clone again
+so we'll have this
+videos
+and here we'll write this
+I'll write this
+okay cool
+let's go back to our Visual Studio code
+and let's wait a couple of minutes more
+so
+a folder is
+created
+so let's go to this folder
+to do that I have written a command CD
+YouTube clone and then I'll hit enter
+inside this I will write
+npm start to see how project is working
+or not
+so our react app is working fine
+let's go back to our code
+and open this
+after opening the YouTube project that
+we have created
+let me zoom in a little for you
+let's make it safe
+after going to this let's open the
+app.js file
+inside this let's delete this header and
+let's see it's working fine
+hello
+from CPU
+learn and let's remove the react logo
+save this file inside this let's
+delete all the CSS part let's save this
+also
+and now let's run this control Buffet
+and that's right
+start
+let's see election hello
+yes
+here
+we will write
+can
+let's add another one
+and we write NTM I
+installed react router
+Dom
+let's install this
+meanwhile let's create a folder or let's
+create a file here
+the
+thought she is
+and
+a header dot CSS
+hit enter
+inside this header.js let's burst
+delete this
+and this we will write
+Center
+and then save it
+let's find compilation error so let's
+work on this first
+let's cut this
+chart
+inside this header bar
+let's import first the react
+import react from
+here
+this will install all the modules or
+dependencies that we need
+but before that let's add the header
+here
+inside this we'll write import
+header
+from
+and then the
+fit
+now let's just save this file
+let's go back to our
+header.js file and in this file
+just a second
+yes
+inside this file
+let's go
+let's create a function here first
+inside the function hit the
+now inside this header function
+we will return
+inside this will create it there
+the class name
+Shader
+said this
+so just check
+will write something in
+H1 tag
+hello
+from Simply learn
+let's save it
+and showing some error
+because we have to export it
+we have imported the header inside this
+app.js
+but we haven't
+export this header so in the last
+write export
+default
+in the
+file name which is
+header now let's save it and as you can
+see it's showing
+hello from simpler
+so going back to our code
+let's
+open up
+CSS page
+inside this we'll write some basic CSS
+properties that we are going to fetch in
+this head.js file
+so let's write some approaches
+let's give it all a padding
+we can do this after a while also but I
+have loaded somewhere so let's just give
+it a try of giving
+all
+sizing border box
+after that we'll give it the outline of
+no
+after that let's save this and inside
+this header.js let's delete this and
+inside this
+will write
+header after that
+we'll write the clicks
+after that we will write a line
+we are going to give the property to
+these in the app.js file but before that
+you have to declare it here so we are
+going to write a line
+items
+sent
+will give justify content
+two images right just if I contend
+and then the space between
+after that in the next line
+will give it another
+class name
+item
+of that EP Flex
+and then again the line
+buttons Center
+and the height of Max 30.
+and x y
+save it
+okay
+that's now in this part
+we'll write it
+right
+let's
+first we're going to create a menu bar
+here
+these three lines part we are going to
+create first after that we will create
+this YouTube logo and this premium ion
+so let's go back to our code
+inside this let's give this a good class
+name
+of menu bar only
+bye
+insert this will break
+hpg
+inside this
+the fuse box should be
+0 0 24 and 24
+let's forget this let's copy this from
+the YouTube only
+let's delete it
+you have to go to here hit inspect
+inside this
+will copy this part
+we'll copy this
+let's see
+let's go over this
+let's find it here only
+SVG
+that's
+clear element
+let's paste it here
+and then see as
+it's pasted here but for that
+you need to form a document
+to your code
+is fine
+so it's looking good
+now
+what we have to do is
+we have to save it
+let's see
+we have to add some CSS more properties
+let's
+add some properties here that we have
+declared in the header.js file
+we have created
+this let's go start with the
+body part of this
+go to 40 give it a width of 100
+after that we'll go
+and color
+that would be white only
+but let's skip it
+after that click the fonts and view of
+and
+let's now go to
+six file
+now
+first let's add the CSS properties in
+app.css file
+let's complete this first and then we'll
+move on to the header bar
+so it will be inside it only so let's
+do it first
+like
+overflow
+Maybe
+after that
+one says
+the
+let's make it as two different fields
+after that
+let's try the white
+inside this little color so we will
+write white it will fetch this
+now let's do it for
+black also
+wherever we'll call this black
+it will fetch this
+zero zero zero as you know
+so we'll go back to the container
+everything stores so we'll make this
+container as
+so very tough 80 percent
+and then the margin should be
+of zero percent
+and then we'll make it as photo so we
+can switch the screen like in Facebook
+YouTube
+as we can
+do this in this it'll reduce the size
+according to the desktop
+so we can do that here also
+so let's go back to another
+we have floated the D flick
+it's you can confirm yeah
+I wrote one only so we
+style this
+the flex
+let's make it as click
+after that it should be enough
+let's go to
+line
+items
+Center
+let's head from this also
+yes
+inside this
+will give it a line items
+Center
+after that
+we'll justify
+just if I contend
+face enter
+space between
+now let's check it
+okay now just
+put the flex length in the justification
+space between
+cool so we'll do the Justified content
+inside it space
+between
+after that
+we have also
+got Justified content
+piece between and then the center one
+inside this we'll write justify content
+then Center
+after that
+we have wrote
+nothing as of now but let's go to this
+save it
+and let's see
+a file
+display here right now let's go back to
+this
+and let's edit this
+in this style part let's cut this
+because we have made The Styling there
+and let's not give it a width of 100
+let's give it over 30 percent
+30 pixel would be fine
+this should come under crickets
+so
+okay
+should we get it
+okay
+this should come on the brackets
+no it's fine
+no
+thanks
+okay afterwards
+will also include the height of this
+so it would be
+it's all comes in the
+under this let's scale with height of 30
+pixels in this also
+come under wickets
+after that let's check it
+let's say this file
+and as you can see
+it's showing
+like this only
+let's
+switch and then
+so
+we are back to the we need to give it a
+padding so it will come here
+let's do that let's decrease the size of
+this first
+I think we should decrease it but let's
+see
+foreign this is fine but let's
+give it a try
+yeah it's fine
+okay let's
+move forward
+now
+let's make it as this cursor as a
+pointer because whenever it goes to this
+YouTube sign or this 3D lens it will go
+to pointer
+so let's make it as whenever it rolls
+over this or any of these it should be
+as pointer
+let's go to our code
+and let's write here in the class
+0.2
+icon
+let's save it
+first we need to add the CSS file here
+for that we'll write import
+and then the start and then Flash and
+then the file name the file name is
+header.css
+let's close this
+it's not fetching it let's see
+why
+okay we haven't given it in the brackets
+okay fine
+let's save it
+let's give it a styling here first
+inside this
+save it
+inside this
+inside this
+and give the bedding of
+zero plus seven
+and then the second should be 15 pixel
+let's save it
+and see
+is it working
+yeah
+as you can see whenever we go here
+it's going from Sir cursor to pointer
+okay fine
+now
+let's move on to the next part
+which is the logo
+after that
+we'll create a logo here
+logo
+inside this logo
+will write
+now we go again to YouTube
+and then again search for their SVG if
+this has
+okay
+I think it have the 3G
+oh
+let's find it
+here only
+inside this
+3G
+let's copy
+and let's go back to our code
+let's paste it here
+it's have pasted as a junk part
+so let's delete it and again go back
+here
+and copy it manually
+[Music]
+let's
+copy the element
+and add to our code let's paste it
+here again
+it's just
+here for my document
+and as you can see it's coming
+right
+so let's see the logo again
+okay everything's
+coming right
+in the Styles part
+let's delete this line and let's
+copy this from here
+and let's paste it
+here
+let's save it
+as you can see
+it's coming but it's coming a very
+short so let's edit it here only
+[Music]
+let's increase the size of this YouTube
+premium button
+go to the style in this
+60 would be a little bit let's do it the
+more
+75 be fine yes
+it's coming right
+let's start with fine
+we'll give it a padding but after a
+while because let's create a basic
+structure of a header then we can just
+style it
+okay
+let's first give it a anchor tag so when
+we'll click on this
+it can be clickable
+okay
+let's give it a pointer also
+inside the class
+inside it will write
+enter again let's save it
+as you can see
+you have to make it
+give The Styling in this part let's do
+it after a while
+but before that let's
+attack
+and save this logo
+and create a
+guitar
+and make it as empty now
+good
+so while
+after this let's close it
+now let's save it so whenever we click
+on this premium button and we'll go to
+another page
+let's move ahead
+inside this let's
+give it
+styling
+inside this let's
+put a menu bar
+inside this let's give it a bedding
+foreign
+[Music]
+pixels
+which should come in there
+10 pixels let's save it
+and see
+okay
+foreign
+[Music]
+we need to give padding from here also
+let's first give it the bedding in the
+header
+items that we have saved here
+okay
+that's a box
+let's see
+this
+that's what we can give it a little bit
+of 100
+it will declare it inside this
+now
+coming back to header.js file
+create
+here
+first let's now we'll create we are
+creating a search bar
+okay let's
+name of
+header
+Rod items
+after that we will give it
+The Flicks content space
+align Center
+yes
+or we can just give it this
+so we don't want to give it as left
+so let's save it
+in here because I haven't
+close this one
+now
+inside this
+device
+off input box
+foreign
+type of that would be take
+inside the text
+will write
+again let's
+class name would be
+search box
+that's called
+after that
+to write
+search inside this will you will have
+the use of
+placeholder
+with the help of placeholder
+we can write anything inside this so
+let's write search
+that let's close this
+after that
+let's save it
+let's see it's coming
+like this only but it's having uh we can
+change it after a while
+let's lit
+it's coming okay
+let's go back
+to our code
+and inside this let's give it
+uh
+let's create another Dev
+inside this we will write class name
+let's search
+inbox
+okay
+and then you can just copy it from here
+also
+and then Center
+and then
+justify content Center
+[Music]
+okay fine
+let's first just
+close this and now let's save it
+okay fine
+now
+we need to
+have the SVD file here
+so we'll copy it from the YouTube
+let's see inspect coming back to our
+code
+let's remove this
+save it
+let's do some styling here
+inside this
+let's give it
+height
+oh this would be fine let's go again
+further
+let's get that and put
+a box that we have created right now the
+search box
+let's give it a vertical
+100 percent
+after that let's be preparing of
+0 pixels and 20 pixels
+receive it
+so after that
+let's go to
+input box we have done
+let's see
+let's now go to good
+search box
+here
+we'll give it a width of
+100
+after that
+and give it a height of 50 pixels
+moving ahead
+we'll give it a border of one pixels
+solid
+or we need light but let's
+for now
+okay let's give it a light color 607d
+I have wrote it down
+this color scheme
+8B and 0. let's save it
+as you can see it's much lighter now as
+you can see here will decrease the size
+of search here
+after a while and we need to also need
+to decrease the size of this
+part we can do it after a while and
+we'll create a structure
+let's
+give it a margin
+0 pixels and it should be 10 pixels
+let's see first it is more so we'll give
+it
+fine yeah it's fine for now
+and let's give it a bad thing
+foreign
+and
+then pixels would be fine yes
+after that will come to the search box
+inside this search box
+will give it over top
+for the pixels
+after that will give it a high top 40
+again
+it should be inherit or let's make it as
+one proceed
+after that the top pending should be
+of 30 pixels or 30 percent whichever is
+fine
+let's save it it's not
+so let's do it should be zero percent
+for now
+you can change the stylings after a
+while
+by just creating a
+structure
+solid
+let's just delete it and just copy it
+from here
+inside it here
+after that
+okay fine it's fine
+now let's save it
+it's not showing the importance it is
+[Music]
+let's see
+what we have not
+registration
+uh-huh
+background color is white only
+let's see
+okay let's even
+Fox comes here
+let's reduce the size of speed of box
+think it's
+activated the same let's make it guys
+25
+inside this
+it's all fine
+foreign
+as we can see here
+30 is fine you need to reduce the size
+but we can do it afterwards let's see 30
+is fine but let's make it as
+28 for more per section okay
+let's move on to the high end
+I don't imagine is this
+I think it's
+important
+[Music]
+let's save it
+okay no we don't need that
+big thing question only
+okay
+and the box and it should be more than
+it's fine but let's
+pockets and
+increase the size of the search
+foreign
+this
+so let's move it here
+let's not give it a little bit
+20 would be fine okay now
+not this
+let's see here
+the question would be fine
+in the head we can reduce the width
+and the extra padding that we have given
+you can reduce that
+so let's start with that only
+this one is inside the box that's
+and box
+let's say 10 only
+okay A little quick side
+let's see
+okay
+let's not give it
+a question
+[Music]
+not remote in this okay
+let's now give it the height is fine
+everything looks fine
+but let's see
+what is the mistake
+let's move on
+inside this
+let's make it as a little short
+because it's a very long part
+to reduce the
+this
+no word
+let's reduce it a little more let's
+50
+oh okay fine it's well now
+let's make it as
+or let's do that 36
+foreign
+now we'll move forward
+with this
+now coming back to our JS file
+let's go
+now let's open our header file
+now inside this part
+we will write a SVG
+okay we can copy it from YouTube we need
+to do it
+like this we need to add this search box
+for that we will inspect
+and here
+we can find the SVG
+it's coming for for all
+but we need
+it's the icons so let's
+copy this
+copy this from here
+and then let's paste it here then format
+document
+here let's delete the style of
+U2 and let's add the style that we have
+created earlier
+copy this from here
+in this place added
+make it as 15.
+and then let's save it and see
+okay fine it's coming right but let's
+give it 20 pixels
+then you can do pixel again
+this would be a little big let's
+make it as 15 only
+but it's coming a little this side so
+let's reduce the bedding
+then
+it is fine
+because let's first make it does
+pointer
+so whenever we go here it should be
+yes like this
+or like this
+so let's
+start to our code
+and inside the code
+will also need to do some styling
+foreign
+so we have created our search box here
+so let's move ahead
+let's now create a
+volume button
+for that let's create it a Dev class
+last name would be
+voice search
+let's skip it always
+inside
+again I will go back
+inside
+let's create
+okay let's copy it from here
+let's inspect here first
+inside this we need to
+go to this
+button
+and save this
+we can find
+the SVG
+let's copy this element
+and let's face it here now we need to
+format document
+and it's
+fine
+let's save it
+and let's see
+let's now
+change the style
+and let's delete it and let's copy it
+one of the previous and we are following
+so let's paste this guy here
+okay
+let's again copy
+again let's paste it here
+and insert this let's make it a pointer
+save it
+as you can see it's coming right
+okay fine let's do some editing here
+and set this glass
+let's
+do the voice part
+of heading all
+let's do it
+let's give it the flex
+the flick
+we have to go to earlier
+line item
+Center
+let's save it
+okay fine
+now we need to change the positioning
+here
+all right
+let's size
+let's change this
+okay fine it's fine
+foreign
+paste it inside this
+box and later we'll just save it
+okay
+let's see the issue
+inside it let's talk back okay
+same thing
+let's cut this from here this voice part
+let's
+let's record this from here and
+paste it here
+okay
+let's now do here some edit things
+because
+it's not coming right
+you know
+okay
+so we need not have to write this inside
+this inbox related so let's cut it in
+save it so it's looking fine now
+now let's move to the next part of this
+which is the header right
+so after this
+there let's see
+we'll create another
+class
+let's now create a class right there
+Class E
+the class name will be
+header
+right
+after that okay
+line
+items Center
+off the blunt
+we can
+go to another create another class name
+let's give it a class name create
+options
+inside this create options we will write
+this SVG
+foreign
+let's cut it first
+inspect
+and this let's copy this
+it's very easy right
+let's save it and format
+fine let's delete this style
+and let's copy the style one we have
+created
+save it in C
+it's not coming let's see UI
+okay it's coming but in the end
+the page I must be long here but we can
+reduce it after a while but let's do
+some changes first
+besides is fine
+let's now
+inside this class
+let's
+give it pointer
+and not in this class
+okay select this
+class let's get a pointer
+and then the Mac
+could be 15.
+okay
+now after that
+we'll do here are some changes
+but let's
+find now we'll go to another part which
+is
+the YouTube app button
+this one
+notification bar
+we can go to this
+class see where it's ending
+after giving one
+let's create another class
+of the
+notifications
+notification menu
+inside this will again
+expect
+[Music]
+[Music]
+let's find out
+thank you
+SCT file
+where is this
+3D file of it
+notification button
+it must be inside this
+let's see
+okay
+first we need to make another two parts
+of this notification bar
+first is this ring YouTube ring and then
+the notification button
+so let's not create this as
+notification menu let's name it as
+YouTube
+uh apps
+inside this let's now again
+go to
+the
+bar of YouTube and this icons
+we will
+find the
+okay let's first cut this
+and then inspect
+[Music]
+inside the icons
+we can write it
+copy element
+and then let's
+write it here format the document
+erase this style
+increase the style and copy this style
+from above
+okay
+and let's just paste it here and then
+just save it and see the new
+notification ring bell is here
+now let's
+do the notification bar
+after this
+let's create this
+and first
+whether we need to make it as pointer
+okay let's make it as pointer here so we
+can point it anywhere
+and the
+Mappy
+50.
+I have created the
+CSS app.tss files here
+so
+let's now just save it it's giving it a
+margin of 15
+we can reduce it after a while but let's
+we do this for as of now
+let's move ahead with another Dev of
+class
+notification yes
+so let's create it
+notification
+menu
+inside this let's
+get the SVG of the notification
+inside let's find out
+where the notification one comes
+yes but I can't find it so let's
+dig inside this
+okay
+let me come down
+it's fine let's make it at this only
+but let's
+create it
+let's not create this notification menu
+but let's create this
+logo
+so for that
+let's first create open now I simply
+download it
+inside this
+let's get this
+let's get this
+copy
+let's go back to our code
+creating another menu
+there of class name
+profile
+foreign
+but I am writing this so let's
+format
+document
+formatter
+let's just ID darker we don't need it
+let's move ahead
+with the class and we don't need the
+class also we just need the picture
+is here
+so we can write the
+things after that
+so let's
+just
+go
+you can create it
+and before that let's
+alter
+d
+and then class name
+click B
+d d Max
+let's not save it it's showing an error
+let's find out
+okay
+let's find out the error here
+if you haven't
+okay
+now let's save it and see
+the image is coming very big let's just
+cut this part
+let's add the image
+from my my page only
+thank you
+copy element
+coming back to our code
+yeah
+to just paste it
+just need the
+source code of the picture so let's copy
+it only
+and then the
+and after deleting let's save it now and
+see
+is it coming or not
+okay
+we need to
+format that mind
+let's now save it
+it's not coming still let's see what's
+the issue here
+so the issue here is coming is
+I have to open the
+image in new tab
+then let's copy it from here
+and then
+I have to paste it inside this
+now let's save this file
+and then
+it's not coming still so let's
+form a document
+let's see the issue
+why it's not working
+let's press first and CSS
+image Dot
+because it didn't fit
+we made the class name was DP so let's
+give it a border of
+let's give it for the radius of
+person after that we'll get a height of
+30 pixels
+and then we'll do with
+30 pixels again
+okay
+design
+will give it cursor
+yeah
+let's now save it and like you can see
+the image is coming but it's not coming
+right
+so let's just copy some other image
+it's opening the same language
+copy this
+paste it inside
+let's see the issue
+react rotor let's not see it here first
+inside this
+everything is fine
+[Music]
+foreign
+middle items so we need to fix this also
+but first we need to fix the image part
+so let's see what's the issue here
+copy element let's copy it again we
+don't need
+let's see the
+issue here
+let's open the image the image is
+opening here
+why it's not working here
+okay fine let's add that
+only
+[Music]
+it's
+inspect
+open and then tab
+copy this
+again let's try this picture
+and the two working
+let's just save it
+okay Centrelink logo is coming but I
+don't know why that picture is not
+coming but let's
+it's fine let's cut this
+let's reduce the size of this picture
+let's
+give it
+off
+20
+5 would be fine
+I know it should also be 25 again and
+it's coming fine
+yeah
+now we have created this basic structure
+but first we need to delete this space
+let's go back to our code inside this we
+have
+given our maximum height so let's delete
+that
+we have seen it was in the middle part
+so inside this middle
+let's see
+now it's coming like this I have done
+one few change in this CSS file and give
+the width back it was 100 but now I gave
+it a 65 percent
+so our upper body is ready now we'll
+work on this bar
+now we'll work on this thing
+home button explore shots in this we'll
+add these all buttons after that we'll
+go back to the
+body part
+now that we have created a header part
+we will work on the sidebar which will
+come here for that we have to create two
+files inside this Source folder only
+so we'll click on this and type
+bar
+dot Js
+and another file called
+side
+bar
+dot CSS
+so let's cut this
+and this
+let's open this app.js file
+here we'll write the
+source of this file so we'll write side
+let's save it
+in show error for us for some time but
+let it find
+let's move ahead
+and let's create a sidebar
+for that first we need to import react
+from
+react
+now
+we have to import the
+sidebar
+open the folder we need to write this
+I have two different view also
+sidebar dot CSS
+sidebar is also here
+now let's create a function here
+with that side part
+inside this function we'll read
+everything so let's first return okay
+class
+let's create div
+of class
+Side by
+inside this let's close this
+is inside this let's write
+hello from Simply
+hello
+let's save it
+let's see
+the error and you want to find
+okay let's see what's there
+said bar is not
+okay we have to export it also
+put fault and then
+and let's save it now
+it's still
+error
+let's see
+different
+let's see
+what's the issue come in here
+also
+let's now save it and as you can see
+it's showing
+hello from Simply done
+go back to us calling let's delete this
+file
+we have written here
+so let's
+let's create a another class
+everything will be printed
+so let's create the printer
+let's create another class
+anymore
+so you
+know
+items
+please
+same thing
+like items
+Center
+and then
+we will list
+close this
+and then inside this
+you learn the SVG
+we can create it like this and we can
+create it like this
+let's create it like this only
+or we can create it like this
+one
+let's go here
+inside this
+let's find it CVG
+open let's paste it here
+format
+after that
+we have to delete this
+and so
+instead of this
+right under the style
+that will come into this
+let's give it away
+so we're both
+of 25 pixels and that should also come
+on
+pets
+now
+oh 25 again
+pixels
+imagine
+excellence
+now I'm going back to our
+code
+we have to make give it a name also that
+here it's showing room so we have to
+make it in the name for that we'll use a
+tag called span
+let's
+let's use it
+foreign
+and it's right side but inside it let's
+make this
+right
+foreign
+[Music]
+[Music]
+without effective
+okay we need to
+add here
+is effective but
+so everything
+will come here so here we will let
+active
+let's save it
+here
+all right
+background color for this on
+should be
+99e
+after that let's
+give some stylings too
+that I passed items
+inside if there is just different
+content should be clicks
+start
+after that
+100 percent
+pixels
+to that
+we have created this plan
+okay
+Let's Escape
+let's see what's the issue here
+I have learned some edits here
+on the sidebar.tss file
+let's go to add
+Explorer
+[Music]
+inspect
+you can say this
+let's find it
+SVG file
+s
+[Music]
+upstairs something
+yeah so inside this
+let's call previous element
+and let's just
+please do it after
+this one right before that I have to
+create one
+create one
+another
+class
+let's create here
+last name would be
+items
+clicks
+and then line
+Center
+elements inside it
+let's see
+foreign
+[Music]
+paid
+somebody
+text
+and then let's style it here only
+and repeat
+let's make it as 200 as of now
+let's
+close this inside explore let's save it
+and see how it's looking now
+so it goes away
+let's see what's the issue here
+I think we just need to cut this part
+here
+let's
+again copy this part
+and let's paste it here
+and then as you can see it's showing
+two things
+so we'll name it as explore
+after that
+we need to change the picture here also
+for that
+is it
+okay
+let's go do this
+and looks like this
+let's cut this part
+so you don't need that
+so let's see what station here
+so
+let me put the
+code on the wrong side I have to put the
+code here
+let's see this class to another name
+and now let's save it
+as you can see
+the wishing but it's just a little cut
+so we can just
+let's save it
+so we need to do it
+foreign
+no
+let's complete this and add more cards
+here like short subscription Originals
+YouTube music and we will stop
+we will make it till here so let's count
+it two we have created one two three
+four five six seven eight nine ten and
+eleven
+so we'll move back here
+and after that we'll just simply
+copy this one
+and just create status
+to
+three four
+five six seven
+eight
+nine
+let's just
+take it um
+but let's
+name first here as
+short
+let's
+do another one
+okay let's give it a name
+emotion
+after that
+it's
+oh it's
+let's see the next one let's see YouTube
+music
+let's save it
+to add
+so till now it is completed
+red few more
+let's
+find
+so let's ignore it just dialing here
+this side is done
+everything is done we just need to add
+the image
+let's cut this
+let's move on to the Shorts part
+inspect
+here we'll see it's
+in the icons you will find the SVG
+just copy
+the selector copy let's element
+let's paste it here
+yeah that let's
+just copy it's
+each part
+so we can
+add the lower it let's delete this
+and then said okay YouTube shots
+without these
+let's save it
+and text moment
+as you can see between the same shortcut
+let's move on to the next one
+then simultaneously
+you will do all of these
+cut that
+say this
+okay
+and set this
+inspect
+after going to the spirit inside the
+I couldn't find
+be able to find the speech Style
+please find out
+I can't find this
+particular component
+[Music]
+um
+let's see except icon
+and this is the
+element
+inside
+the last table just
+paste it here for a while and just copy
+the
+sling
+now control set to just delete that part
+now inside the subscription in which
+part
+we'll add this look
+let's save it and see description always
+coming right
+now
+take this we'll do in every here
+so let's go to the originals I don't
+think so we need original so let's
+delete this component
+let's let's see if it is okay
+let's name it as
+YouTube
+music and then set this
+after that let's
+clean this one as Library
+after that
+let's leave it as history
+moving ahead let's
+video videos
+and on the head
+let's see if it does
+watch later
+let's place this w
+ow after that let's just do download
+it's light
+videos
+now let's just save it and you can see
+everything's come here
+smoothly
+let's if you want we can reduce the size
+also for that we need to go to
+this right 11
+what is reduced
+so it's fine now
+that's coming back to our
+paper
+now let's get the logo of YouTube music
+inspect
+in the icons you will just copy element
+let's find out yeah
+okay
+let's paste it here this thing
+let's
+let's copy the logo
+and
+okay
+let's just delete it and paste it here
+only
+something that's
+copy this
+hidden control red
+just delete that
+now
+inside this
+here in the YouTube music we'll paste
+this
+let's save it and see
+the YouTube music link has been updated
+like
+this
+now really at the library history
+buttons
+laptop first
+let's find out
+let's just delete it and
+from here
+here you will find
+let's open this inside second let's copy
+this component
+let's do
+let's paste the code
+last and just copy the image
+for the URL logo
+you know it's like this but it's fine
+I guess
+inside the Library we have to paste this
+code
+now let's save it as you can see
+they're pretty logo is coming right
+let's let's
+see
+here we have
+logo
+but I think
+to get the
+two
+let's copy this
+from here
+paste it inside them
+history one
+save it
+coming back to your videos part
+icularly
+[Music]
+it's history and your videos
+okay we haven't
+got the history button right
+I hasted that
+we need to think that
+logos
+your videos inside the history bar
+let's just copy this thing from here
+and let's just
+paste it inside here all videos part
+let's see that
+let's first find out the logo for
+history
+respect
+inspect inside this
+I will find this copy component
+and at last and copy this
+okay
+copying
+image URL
+inside the History part
+stay save it
+Three is coming afraid
+not two more
+let's
+go ahead
+download
+site to inside this
+copy again
+but
+Google copying that
+now I'm going to do the
+downloads component
+let's see just save it
+see
+watch download
+last one is missing last
+like videos
+[Music]
+like that
+and say this part you will
+get the SVG
+copy that
+okay let's
+just copy this
+and add it inside
+like details component
+let's
+save it let's see how it's looking now
+this is our clone
+this is
+Instagram clone and this is our clone
+so we'll make
+now also
+this part
+fill out these components only
+let's create the filter component
+okay
+it's coming back to our
+code
+let's cut this Pages because there will
+be done
+so let's create a file called swinger
+good
+cheers
+and another one is
+dot CSS
+so let's open the first file
+filter.gl VSS
+not JS
+but first we need to add here the file
+source
+but
+heater
+let's save it
+let's see here but it's fine
+import
+filter from
+filter
+you can save it
+it's nothing but let's
+see you
+scream
+because we haven't wrote anything inside
+this let's start by putting the art
+from here
+moving ahead let's first
+import me part
+which is the styling
+clear the part of that file which is
+filter.css
+okay
+it's not trying because
+of this part
+so we'll remove this part from here
+inside this we will create a class
+let's name this class as main display
+I mean display and inside this
+let me write that
+filter
+now let's save it
+that's my strings there
+let's see the issue what's the issue
+here
+we have given the head the other side
+part and the physical Community let's
+let's first
+[Music]
+basic structure then we can see
+let's just go to filter component
+and inside this filter
+let's create a function
+inside this function
+vertical glass
+you would be filtered again
+inside this filter
+looking great
+H1 to C
+hello from Simply
+love
+to see
+whether it is in the correct format or
+not
+save it it's showing an error let's find
+out after this yes
+we have
+we have a Twitter can
+export default
+and then the file
+let's now save it
+let's see the issue what's coming on
+it's inside the filter only
+module not found okay I have wrote
+with the wrong spelling
+so look at that it's gone fetch the
+filter
+let's save it
+now as you can see
+it's coming straight
+fine
+let's just
+focus on this now
+but
+filter
+I have written here a property of filter
+to give it a flex 0.8 and we are giving
+it a 0.8 if you remember we have given
+this header.css property
+of 0.2
+somewhere inside the side part GSS
+we have given it the property of x 0.2
+so Flex is what this screen is a flex
+and it is divided into so many parts
+so this part is it's taking 0.2
+and the leftover path is taking 0.8 so
+for videos and all of the stuff we need
+this part
+so we are giving it a 0.8 percent and
+into this we are giving it 0.2 percent
+so everything is clear now so let's
+cut this file
+inside this let's see
+okay
+return
+[Music]
+if I haven't done its value
+let's now save it
+and as you can see it will
+show her
+hello from Simply them but it's coming
+here but we want it to come here
+so let's see what we can do
+so it's coming here so let's do
+something to say
+let's let's give it the sky
+enough
+display
+[Music]
+after that
+let's skip
+Flex be fine for this
+now let's save it
+foreign
+[Music]
+[Music]
+[Music]
+let's go just got this part
+let's
+create a class
+here let's edit this in the filter
+D next
+number
+[Music]
+play guns
+Center
+inside this let's create
+creating these filters are very easy you
+can see here
+I'm creating it's very easy to create
+let's just get it's small as just
+remember the filter
+let's just close it too
+it's like this one
+[Music]
+so we can write
+the name
+see first name would be
+all
+right let's filter
+items
+pulling through
+active Roots always show that in this
+page is one
+we are on
+the lastly let's close this
+and inside this Android or
+let's save it and see
+it's showing you here
+let's change its size
+let's go to this part
+property
+over here
+let's write 50 pixel
+so it should come up
+and let's give it to Martin also
+of zero pixels from the left and 10
+pixels right
+let's save it as we can see okay up
+like this
+so
+let's go back to
+fan class with the writing
+okay
+so let's write span
+filter item
+items
+and inside this
+that's right
+now let's give it a font size of 16.
+so let's try
+on size
+16 pixels
+after that
+let's give it a wedding
+10 pixels and from there it will be 15
+pixel
+let's give it a border radius of 23
+pixels
+after
+that let's give the borders so
+come like a box type of thing
+from Pixel solid
+now we'll repair the color the color
+that
+you will be need here is in e
+and e and e 5 C
+31.
+let's save it
+I'm receiving this let's see
+as you can see it's coming
+like this
+let's decrease the size of this box
+yeah it's like
+a little big
+so let's give it on say 12 would be
+final
+eleven
+who wants let's make it 10.
+after that
+it's
+fine
+no
+delete this order again please
+[Music]
+now
+and then we can
+see it's invite sorry it's not
+I'm going to be in this
+video normally
+everything looks fine in here
+it will create a lot of like this
+then we'll get a good idea about how
+it's
+let's give
+let's burn
+filter
+is done
+items
+okay let's go on here
+we'll write Downs
+Lord
+active
+this first one
+okay
+let's give it a background color
+black
+after that in order we have given
+earlier only so we'll say none
+and the color is that is
+from the third law
+then we'll give it a margin
+of zero pixels
+and 10 pixels
+okay let's see what happened here
+let's see
+let's see what's the issue here
+one two destructive
+to find
+this again
+let's give it one more
+[Music]
+let's see let's copy this one
+it's paste again
+mixes
+save it
+so you will put
+the actual remote desk
+now we'll go back to this one
+and now let's see
+okay
+let's see racial
+[Music]
+um
+okay
+let's see
+okay you know you find any difficulty
+including
+let's just go to inspect
+and then you will find everything
+whatever you'll be looking for
+inside this there are
+we'll modulate this one
+this is
+the second module this did this one
+okay these two are coming
+so because I guess
+okay let's just cut this
+right okay fine
+as you can see
+both came up
+so we need another one
+and let's give it more
+moments and
+that would find font says p
+and it's fine what the radius
+I guess
+but it's not showing
+but it canceled on let's see the issue
+here
+now let's find out
+for this
+so there I have given this one active
+now let's see
+pointeractive
+and the prince was
+let's hear the color again then let's
+find out
+what's the issue here
+both is going down
+active one
+body okay this is the reason
+that's seven
+now
+as you can see here
+the mixer is coming right but this one
+is not coming
+let's just give it a background color of
+black
+let's just
+a few blankets like this
+fine they're coming good now
+nowadays we used to just copy paste this
+let's copy paste paste
+paste paste
+and paste paste paste
+now
+Will Open YouTube and then
+watching this
+right follower
+which is
+Music Live
+let's add one as
+simply learn
+let's move guys
+computer
+programming
+react
+which is
+viewed this
+I want to tell you about these amazing
+course that we have on react.js
+let me show you guys here
+after watching this video
+this is a full course
+applications there are so many things
+they have taught in this full course
+you can definitely go for it
+and here you will learn so many things
+about react
+and also you will learn how to create
+projects in India
+coming back to our code
+let's just save it
+and it's coming like this you have to
+give a little padding
+that we can give
+because the rest is fine
+and also we should kill one Arrow like
+this
+you can hear that
+okay let's see it's
+delete everything
+going back to filter.css
+and say this let's give it a high marks
+Within
+suits
+needed
+okay let's
+go for it
+okay
+let's go to border
+left
+which is being none
+after that
+let's
+moderate
+none as well
+after that
+pixel
+solid
+and then the color I want
+five c one okay on its
+foreign
+[Music]
+[Music]
+[Music]
+let's monkey with solid
+but it's
+come
+seven is fine
+okay so we will also go so it's
+it's five
+minutes let's add a pillow here
+to make it look more good
+after going here
+inspect
+inside this icon
+copy this limit
+coming back to our code
+to this it's right
+create the class name
+[Music]
+inside this
+we are going to
+add a c
+and csvg
+form and document
+and after that
+everything is
+let's save it let's see
+okay it went out
+let's see what we have done wrong
+there is good
+let's see
+that it was not coming here
+let's see the issue
+okay you have given it the same studies
+inside this time
+you guys
+red should be not more than
+it would be fine
+because everything or let's get a 70
+pixels
+so now and as you will see
+the alt will come back so let's increase
+the size
+[Music]
+let's now give it up I think so it will
+come a little low
+on this this
+will create this value of this
+let's skip it
+everything is digging it up on you
+it's getting good
+you go but let's see
+this one
+let's go 20 now
+let's
+ this way
+it is not coming right and everything is
+coming right
+so you can see here everything's look
+great
+nice
+now we'll add the videos inside it let's
+just save this one
+this one let's cut it
+you don't need this one also own right
+now but
+this one we don't need right now
+I'm going to use the card the new file
+that we are going to create now
+so let's move ahead
+now we have come to the last component
+of this video
+here we will add the videos
+that
+like this
+it's got this control one
+like this
+we'll add
+no need yourself
+so that let's create
+two files let's name it as
+videos
+Dot Js
+and one for styling
+with your dot CSS
+inside this
+let's import the articles
+the art from react
+after that let's create a function
+let's do that windows
+this time I'll export first
+you will always forget to export
+this time I'll export
+videos let's
+now let's import the CSS file
+use dots
+now inside this
+will be done
+classroom
+okay here
+let's just
+delete it in the class name
+infected
+us new videos
+close it
+and type this we'll write what
+so
+let's cut it because
+this will open the videos file for that
+you also need to create another file
+also
+let's create it
+single
+video
+Js
+in this we'll write our code for one
+videos and inside these videos part
+there will come all the videos like
+the head
+in the video.ds file you will write the
+logo in the description in these views
+and all
+will write inside this video.dss and the
+ID will be done by CSS
+so let's move on here
+let's just cut
+cut the
+let's just cut this filter component
+from here
+and let's add the video company here
+videos
+component here
+let's save it
+now
+coming back to videos component inside
+this
+to inside this
+filter
+let's see
+let's write import and then you will see
+filter will be
+called
+automatically it's open let's just save
+it
+now let's see it's in an error inside
+the wheel reduce part
+okay let's just first give it
+a little
+CSS
+it goes inside this let's give it a flex
+[Music]
+because we are using
+back here
+and let's skip the
+let's just add this area is showing
+because
+we have not
+imported these videos here you just
+remove the filter
+let's import the videos partner
+we just need to write videos and
+everything will be done automatically
+now let's save it
+again it's showing an error on the
+videos that line
+let's it's not returning the function
+let's see the issue here
+okay fine
+we have given in the wrong name
+so let's do the right name here only
+yes yes
+meaning
+set is safe
+now
+you can see it's working perfectly fine
+isn't it looking amazing
+yes
+let's move ahead now
+with the video components
+let's
+insert this let's create a there
+last name
+is row
+Index this
+and then it's
+go back to similar video
+here I will write
+code
+let me get out
+of that
+to create a function
+of single
+video
+inside this
+let's click done
+let's turn the
+where he was here as condominator
+so let's return
+there
+last name would be
+c o n one
+we save this
+let's go straight the next one
+calculating
+hello from
+Simply
+Save It and see your button fine
+let's just see how the files too
+there will be fine
+it's like this you have two
+go back to reduce component and then we
+have also need to call it
+thank you
+cylinder
+DQ
+now we have imported this one here
+let's see
+how it will work single video component
+of this
+will come inside this
+and after that
+we have to declare it against
+single video
+from
+single video
+let's save it
+and let's see
+error
+what is there it is
+fine
+you have to do we have in the video open
+and we are entertaining it strongly
+development
+also here reported
+now I'm going to work on a word
+single video page
+let's open that
+okay there is no
+as I have told you earlier I always
+forget to export the file so
+this is a very bad heaven
+as you can see
+hello from simple learn is shown on the
+screen
+now let's delete this part we don't need
+it
+now
+we will
+let's create one common image
+thumbnail it's just
+simply I'm showing it everything to you
+guys
+please
+inside this will give the image source
+that we are going to give
+let's give it
+alter
+after that class name of
+some
+image
+click save it it's showing another
+let's see what's the error
+you can delete there's no plan but
+whenever we add the source it will go
+automatically
+but let's work on this one only
+okay find your name
+if you want we can just
+make it line by line also
+but it's fine let's create it like this
+only
+let's insert this function
+let's begin with everything
+insert this function
+yes
+let's now want to insert the brackets
+[Music]
+created time
+to add profile
+okay
+okay
+that's like this
+save it now
+you use this obviously
+profile
+change
+after that I tell you all some typing
+channel name that will be clear
+inside mobile
+after that
+so either let's try it
+views
+and sounds
+and the last one is the video
+description
+you can have it or not but it started
+or let's
+go
+it's
+you
+here it is
+now and set the return
+will return the ID of this
+to that
+the image
+in the elective
+let's get some overhead
+test
+image source
+of that
+the image source would be
+thumb
+s
+after that it's
+so whenever we'll click on this picture
+it will show us
+Contour sweets
+save it
+let's type it also here
+it's
+the back it's straight Style
+save this
+let's give it all right
+and the width would be
+after you close these brackets
+let's go
+so you can get a free idea
+let's give this pan
+plus name would be
+videos
+so this
+is
+foreign
+[Music]
+[Music]
+[Music]
+let's do that
+and we'll give it
+another class
+you can say that because
+image
+so let's
+profile image
+inside this let's save this number so
+um
+image source
+image source would be
+okay profile
+Bridge
+now
+set this image only let's kill the class
+name
+off
+so I'm good
+image
+[Music]
+let's create that here only next
+on here
+and after that
+that's not true this
+yes
+moving the head
+let's go back to our we use we haven't
+added any of our
+videos so we have to
+take some time
+let's go here inside here now
+let's go back to our code
+and let's write here as
+we do previous okay
+and it's right here
+the title of that image that we are
+going to add
+after that let's give it a deep fix
+half the time
+a line
+items
+after that he is
+and five
+and
+then
+after this
+let's do it and then also
+classy
+name
+okay
+after that let's see here this
+[Music]
+right
+like this you have to create one
+another one
+inside this the only so we'll write
+class name
+the class will be
+okay
+lastly for this week
+[Music]
+before
+the lessons
+okay fine
+I think it's cool right now
+let's just write here description
+description
+after this one
+inside this
+and
+plus new reviews
+and then
+okay
+please
+can search it see
+after this one
+let's create a narrative and Stamp
+access name
+is
+this
+okay
+a little bit smaller
+activated
+these terms let's look at that kind of
+stuff only
+further
+call it let's call it time stamps
+so
+this is
+ready
+let's see
+Let's scan for this one I have given it
+is
+two
+and
+let's save it
+five let's see
+I think we'll be leaving right now
+because we haven't edited the videos
+if we are going to add inside
+look
+let's just cross check it
+inside this
+now we have given so many
+reads here
+let's see by adding a video here and
+that
+is it working or not
+so let's add the video here
+I'll just add the English link
+so that let's create
+class
+last name
+let's see something similar one and
+let's try this let's directly from the
+thumb image
+inside this let's write the image link
+let's add
+each link from here
+go to ur
+being done okay let's
+add this view only
+copy image address
+email address is copied here now so I
+will list
+paste it here
+then
+let's save it
+and see
+is it coming so beautiful right
+yes
+let's
+more standard
+inside this
+100 question work here next now
+write these things and this let's open
+this video
+thumbnail you can copy it from here
+okay
+hi guys please subscribe to our YouTube
+channel
+thank you so much
+come back to coding
+let's just add the
+let's add
+now
+we'll write
+profile
+image
+inside this
+okay
+we'll add this link only
+one
+[Music]
+okay
+I'm copying it from my iPhone
+let's
+do it here
+after that let's save it
+and see it's coming already big
+let's style this
+let's sign in
+inside this
+let's see what we can do here in the
+profile image
+file would be
+and then Center
+let's write the CSS for video
+okay
+and first
+title
+let's give let's go on size
+16 pixels
+after that let's give it painting of
+zero pixels two
+five pixels
+after that line
+rate would be
+again 600
+and the color would be
+let me again copy this
+CSS from my previous project
+that would be nice let's go save it
+no I'll copy paste some of my previous
+CSS that I have wrote
+let's save it
+here we have declared this uses file of
+video
+save this one you will match
+like I am going to
+let's edit this flicks like this
+time option
+make as you can see now it's coming
+like the logo with that we can see on
+the
+YouTube
+but it's coming like this
+so let's reduce the size of this first
+let's see where the logo is
+Angel names
+[Music]
+foreign
+[Music]
+[Music]
+so that we can add the video full video
+here
+so I'll write the
+after that let's add the description
+title channel name and Views and all
+here
+so for that we'll write title
+inside the title we'll write
+what we have opened here was the
+reactable course so we'll write react
+of course
+2022
+let's now
+let's not
+name here
+and that you know very well is our
+YouTube channel simply done
+very nice
+in
+put on
+after that
+let's see the views
+you can add views here now
+so we'll write
+then give views
+to that
+let's
+try it
+the times and
+the timestamps let's make it as two
+weeks
+two weeks ago
+and the video direction is a full course
+so we have to write
+five hours
+30
+33 minutes
+and
+29 seconds
+let's save it and we can see it's coming
+very
+like this so let's edit this one
+put that let's go back to our
+this let's see what we have done here
+next is good
+you use this size is very privilege
+then would be fine
+font sizes should be 40 would be fine
+now let's 12
+let's learn how to keep one more than
+400
+let's edit this all
+okay let's get this one
+Italian names really you know let's make
+it 14.
+let's see it's coming down with the
+title is coming up so we have to make
+the title up
+so let's make the type the love
+title is not showing here no yes
+let's add the title
+something give me but it's not fetching
+it let's see why
+foreign
+[Music]
+like that
+it will be
+beneficial for us only
+found it save it and let's
+see
+you can it's
+see this
+I'm given the
+anchor tag but it's not
+okay
+let's make this down
+so inside this usdp is called
+search boxes
+also good
+let's
+see
+video duration
+let's see
+[Music]
+Maria
+okay
+you have to keep this hair
+so let's change so as you can see here
+the video of this link is shown in this
+part
+so like this you can add as many videos
+as you want
+here by just copying this part and then
+just pasting it
+so the rest is all fine
+so let's just wind up this video by just
+thanking everybody so thank you for
+watching this video if you want the
+source code for this video you just have
+to comment it down
+and I'll put this source code in the
+description box and also I'll upload one
+file which is this one
+that
+I haven't showed you this app.jss I'll
+add these properties in the description
+box in one file so you can just copy it
+and then just
+do the coding
+so thank you for watching guys
+and stay tuned to Simply learn thank you
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

@@ -1,0 +1,2212 @@
+foreign
+is one of the emerging programming
+languages according to the most recent
+figures python is the most used coding
+language for about 80 percent of
+Developers the syntax of this high-level
+programming language is simple to
+understand
+pythons large Library System makes it a
+best choice for data science machine
+learning and artificial intelligence
+projects so hello Learners welcome to
+Simply learns YouTube channel and today
+we have come up with some amazing python
+projects that will help you to improve
+your python skills we will create an MP3
+player and video player using python but
+before we begin if you love watching
+Tech videos subscribe to our Channel
+like the tutorial and hit the Bell icon
+to never miss an update
+we will create a MP3 player using Python
+and before starting first we should have
+a look on what we would create
+for that we will move to our code
+simply run this
+you can see that the take into window
+has appeared and this is a media player
+we have named it simply music player we
+have the GIF that would be running
+continuously
+and we have the browse music pattern
+which will direct you to the any folder
+you want to open that have the MP3
+player files
+I have selected this folder it has four
+files
+and will play Hey there
+you just click on that and click on the
+play button
+music
+now just click on the post button
+so this is our MP3 player
+so before starting the coding
+I have a simple question for you guys
+so moving to that
+so the question is who wrote the poem
+Zen of python
+and your options are
+diminishly Tim Peters
+where do I do some
+or Kevin Goldsmith
+you could see the poem here also you can
+easily get this poem you just have to
+write import this you know interpreter
+and just press enter you will get the
+poem
+so please answer in the comment section
+below and we'll update the correct
+answer in the print comment
+you can pause the video give it a
+thought and answer in the comment
+section
+so moving to a code
+first we will create a folder
+and name it as
+create
+MP3 player
+using python
+and inside
+will open the command prompt
+and write the command code space
+so appeared and press enter
+this will open up the editor that is
+Visual Studio code
+if you want you can use any editor you
+have hands on animator you can use
+anyone
+and here we will create a file and
+name it as player.py only
+and we would require music also
+for that and some gifs and some images
+for our buttons you can easily
+get those images from any
+three images website or you can just get
+them draw in the paint or photoshop them
+you can
+arrange them from anywhere
+so we have our picks in this folder
+so we'll copy all these and we have the
+music folder
+it has four files and this is the
+copyright free music so we can play on
+YouTube
+we will
+is this enough fold only
+that is create MP3 player using python
+yeah
+going back to our Visual Studio code
+the first thing is we should install the
+python packages before starting our
+coding
+so we would require the take into
+package it is already installed as you
+install the python if you want to
+install it again just
+go to a terminal
+and write the command with install
+TK
+as you can see that the requirement is
+already satisfied so you I don't have to
+install it again
+you can install it just writing the
+command and press enter
+and the next we have to install is the
+pi game to import the mixer class
+sorry the command would be
+pip install Pi game
+and press enter
+you can see that the requirement is
+already satisfied I have already
+installed the pi game module you just
+have to write the command and press
+enter you will get them installed very
+easily in the next module we need is
+time
+so you can install the date time module
+or the time module
+it's your wish
+so we have
+to write the command
+web install date time
+so it was not installed
+on my system
+it has been installed and
+it doesn't have some
+classes in the module it has installed
+them and it says the requirement is
+already satisfied for other modules okay
+so now
+and the last is OS module
+install the
+this window is not going so we will just
+go to the terminal
+just get a terminal
+and write the command here yep
+install
+OS
+o s and press enter
+so it will install the OS module for you
+it is doing for me right now
+foreign
+module to create the GUI and tick enter
+is a python module that is used to
+develop graphical user interface and as
+I told you there's no need to install it
+it is the part of the standard python
+Library so it would be installed as you
+installed python on your system
+so it's downloading till then
+we'll just import our packages
+first we'll import
+time and that we will use an
+to get the GIF setup in our GUI
+so we'll import the time and from tick
+into
+all the classes
+and
+we will import the field dialog
+and from PI game we'll import the mixer
+class to get a buttons functioning to
+make our mp3 music video music
+like MP3 file to start playing to pause
+it and to resume it again
+so for that I'll write the command
+from PI game
+import mixer
+it's still downloading
+till then we'll import the OS also
+it will get it
+download it and install for us
+so first we will create the tick enter
+video window
+for that we'll write the simple command
+root
+equal to
+t k
+and circular brackets and
+hit the command root Dot
+main Loop
+and if we save it and run it
+no sorry it was downloading
+[Music]
+um
+just pause the downloading okay we'll
+see it again so you can see that the TK
+enter window has appeared on the screen
+it's the output
+it's a simple take into video now we
+will add functions to it we will add
+size to it we will add background color
+and we'll do other functionings to that
+so tick enter provides many methods and
+one of them is geometry method
+and it is used to set the dimensions of
+the take enter window as you have seen
+so we will just position the main window
+on the user's desktop we will use the
+command root dot geometry for that
+set the size as 485
+cross
+that is X only
+and for y-axis it would be 700
+and now
+you would get it
+290 points shifted from x-axis
+and
+10 points shifted from y-axis
+we have to put them in inverted commas
+we will save the file and run it again
+you can see that the take into window
+has changed its geometry and it has set
+the x-axis as 485 and Y X is at 700 and
+when it appeared it was
+290
+and see what dimension it uses it was
+290 points apart from the x-axis and 70
+sorry 10 points apart from y-axis yeah
+290 and 10.
+so now we'll give the title to this
+window
+for that we will write the command
+through do title
+and just write that item
+do you want to give it you can give it
+anyway
+so we will name it as simply music
+player
+and now we'll use the configure function
+so take into configure function it is
+used on any widget to change settings
+that you may have applied earlier or
+haven't applied yet
+so for that we'll write the command
+root dot configure
+and we will set the background color
+so
+right
+background
+equal to an inverted commas we'll write
+the hexa code
+for this color
+we are setting the gray color
+for a background we'll save it
+and run the file so you can see the
+output
+so we have set the simply music player
+as the root title for taking top window
+and we have configured background color
+right screen
+so moving on
+now we will use the resizable method it
+is used to allow tick enter root window
+to change its size according to the
+user's need
+as well as it will prohibit like it will
+not allow you to change the size of the
+window
+the window you just sew on the screen
+that was a take enter window so we will
+use the resizable function and we will
+prohibit will not allow anyone to change
+its dimensions
+so for that we will write the command
+root dot resizable
+volts comma
+forwards so in this sizeable method user
+can pass either positive integer or true
+to make them into resizable to make
+window non-recizable user can just pass
+zero or false we have passed faults so
+our window won't be resizable
+and save this file and run it again and
+see now we can't resize it
+so first I will command this command
+and save it and run it for you guys
+you can see that
+you can resize it now but after we write
+this command
+no one is allowed to resize The Tick
+enter window
+so we'll save this
+and run it you can see
+now no one is allowed to resize this
+window you won't get any option
+so now
+moving on as you have
+seen the previous dimensions and the
+demonstration of the simply music player
+will create
+as same as that only
+so we will place the GIF here a label
+here and place the buttons on that and
+beneath that we will just create a label
+and browse all the files there
+foreign
+for that we'll write the command
+first we'll create a
+variable and name it as lower frame and
+a frame is a rectangular region on the
+screen
+it can be used as a foundation class to
+implement complex widgets it is used to
+organize a group of widgets so we'll be
+creating a frame and we'll Place
+different buttons on that that would be
+the play button post button and the stop
+button and the volume
+that is just the image
+we'll place the volume image there
+so lower frame equal to
+we will write frame to get a frame
+and inside we will pass root
+and get a background color as white
+that will write the hexagon
+Ash and the hexa code for white color is
+FFF and that is six times you can go and
+search on the web about the hexagotes
+like which color is associated with
+which hexa code or you can just write
+the simple name of the colors you can
+get your background set as well that
+also
+and here we'll set the width for our
+frame
+so width will set as 485 only it should
+cover the whole window
+in X dimensions
+and for height we will set it as 180.
+we'll create the same simply multiplayer
+as I have shown in new as I have shown
+the demonstration earlier
+so we have set the height as 180
+so
+now
+we will use the Place method that allows
+you to explicitly set the position and
+size of a window or anything like we are
+just creating a frame so it would use to
+position and size of the frame
+it would be either in absolute terms or
+relative
+to another window so for that
+we will write the command
+first
+you will get the frame
+that is stored in the lower underscore
+frame
+variable
+and use the place function
+to place it in a ticket window
+and write the dimensions for that we
+would start from x equal to 0
+and paste it at y equal to
+400.
+now we'll save the file
+and run it
+okay we have one ticket already opened
+so I closed it you could see that this
+is the frame we have set it at x equal
+to 0 and y equal to 400 so it would
+measure
+as y equal to 0 here and y equal to 400
+here
+so we have placed the frame now we'll
+place the buttons on that
+and first we will set
+a logo for simply music player
+that we have
+enough folder
+so this is the logo for our simply music
+player we will set it
+put that will write the command
+first we will create a variable and name
+it as image icon
+and here we will use photo image
+so
+like after writing in this photo image
+it would like it would create a photo
+image object and you can use it
+in other widgets that accept an image
+argument that is some buttons they
+accept image argument photo image
+argument
+you can use the images there also and
+the image object is returned by the
+photo image function
+it's the easy to display a picture in
+Python however the photo image class
+only supports the GIF and PGM PPM
+formats which is a concern jpeg jpg and
+PNG are the formats that are most often
+used
+so now
+in the photo image object we will just
+write the location of the file
+as we have it in the same folder so we
+will write the name only that is logo
+space PNG
+and the extension that is PNG only
+now
+to get it set as icon photo we'll write
+the command root dot icon photo
+and
+past argument as false comma
+image underscore icon
+now we'll save the file
+first we'll close the previous one
+and run it
+you could see that
+the logo has been placed there
+so
+now moving on
+we will create the menu
+we will again run the file
+so here we will create the menu to
+browser music
+for that first
+you will create a variable menu
+and create a photo image object
+and
+write the file name only as here we
+don't have to set the part as all the
+images are in the same folder only
+so for this we will use the menu.png
+that is the white inch I will show you
+what you will get as output
+to
+we have to place this in inverted commas
+and now for this we will create a label
+so in Tinker in dig into some widgets
+can display an image such as label and
+button
+is a widget that is used to implement
+display boxes where you can place text
+or images
+so we will create a label here
+and paste the manual.png image on that
+so to create it we'll write the command
+we have started with label and inside we
+will pass root
+and the image
+we will write the variable name here
+that is menu
+and now we will place it
+will position it in our take enter
+window
+so for that write the command please
+and inside
+write x equal to zero
+and
+the dimensions
+okay
+so y would be
+580
+and would also set the width and height
+for that
+and the width would be 485 so it could
+cover
+the whole
+sorry I didn't try to wait
+it would be 485 and now we will set the
+height
+I will set as 100 only guys
+it would be
+in the bottom section
+so
+you don't get much height so we'll save
+this
+and run the file
+you can see that we have created a label
+here also and a label here also and we
+have pasted the white image place the
+white image on that level
+so this is the label that is of the
+white color and now we have placed
+another image on
+another label
+so I will show you what
+purpose we have done that
+so first we will create a button
+that would be for the browse music
+now it will write
+first pass root and
+then what text we want to show on that
+button
+that would be
+browse music
+and then we will set the width of that
+button
+that would be 59
+and then
+would set its height
+and
+set the height as 1 only
+and now you you can set
+phone tool so like which font you want
+to get displayed on that button
+for that
+you just have to write want
+equal to
+and start the circular brackets
+and inside you can write
+which font you want I will go with
+calibri
+and font size would be 12.
+and I want it bold
+so in inverted commands I will write
+vault
+and outside this circular bracket
+I will set the foreground color
+that is the text color only foreground
+color
+s black
+you can write the hexa code we just
+write the name of the color
+and we will set the background color as
+white for this button
+use hexapod here
+that is 60 Maps
+and now
+what function does this button do
+so it will show us the music that
+would be stored in our folder
+we will browse the folder and it will
+show us the mp3 mp3 files that would be
+contained in that folder
+so in command we would write the name of
+the function that we will create to get
+all the MP3 files
+so we will
+finish and we're also calling
+now outside this bracket
+we'll place it
+showing error as we have not
+to find the add music function so we'll
+place it
+at x equal to zero
+y
+equal to 550.
+no
+and scroll bar
+so that when we get Ola MP3 files we can
+just browse just by scrolling
+so we can get all the MP3 files on that
+small window we will create now
+so we'll set the scroll bar for that
+for that write the command
+scroll bar
+and inside
+get off
+play music
+so first
+will
+set another frame
+and we will
+get it as
+gray color only with that
+we will write the command
+frame underscore music
+we will create a frame
+and inside will pass root
+and set the Border equal to 2
+and
+relief
+equal to Rich
+so we have set the relief equal to Rich
+so relief is a style and it's a style of
+a widget that refers to certain
+simulated 3D effects and we are giving
+the 3D fact to a button and that effect
+is Ridge
+so we will see that but before that we
+have two
+get our add music defined
+showing a soup
+no you won't get the taken term window
+as we have to
+Define the
+and music
+so we have created the frame and now we
+will place this
+and after that we will
+create that music
+function
+for this we will write
+name underscore music
+that
+moves the variable name and
+period place
+and now we will position it in a tick
+enter window
+so we want it at x equal to zero
+equal to
+so we would place it at
+585
+and we'll so Define its width and height
+so width would be 485
+and height
+is 100
+yeah so we were creating the scroll bar
+so first we'll create the scroll bar and
+then Define the add music function
+so now we will set the scroll bar in the
+frame music
+variable as you want the scroll bar in
+that frame
+I will show you in the demo only after I
+create tired music function
+so first we'll create that music
+function only
+so we will create it here
+and music
+going to first you want that it should
+have path and here we would use
+file dialog
+so it would pop out the dialog box
+to the directory way which we would
+assign or take it to
+next
+foreign
+change
+directory
+pass the path here
+Source equal to
+let's Dot
+list of directory
+path
+okay
+foreign
+so first if the path we have chosen
+and here we will change the path and in
+this songs variable
+we'll get the list of all the songs
+in that directory
+and now
+we will
+create or run a for Loop
+or song in songs
+but all the songs we got
+f
+Ong ends with
+MP3
+that is 2 MP3
+foreign
+[Music]
+so we will
+get this playlist variable working in
+another function that would be the play
+music function
+so it should play the music for that
+will
+create the function
+play
+music
+create a variable name
+that would be music underscore name and
+inside
+playlist Dot get and make it active
+and now
+we will
+print
+music name
+and this would be printed in the
+terminal
+first
+active that is which music is playing
+and now you want to use the mixer class
+and music Dot load
+function and pass the playlist
+the function node get and get it as
+diff
+and now
+here we will
+update
+now we are getting errors for playlist
+so first
+create the playlist variable that would
+be
+having all the songs in that
+so with that would look right
+a variable playlist
+and that would be equal to
+it would have the list box
+equal to
+list box
+and inside we'll pass the
+name that we have created for music
+and set its width
+that would be equal to 100
+and now we will set the font for that
+so
+you can see all the names of the MP3
+files in the same font only
+and for
+that would write
+Times New Roman
+and set the font sizes
+10.
+and outside this bracket
+will set the background color for the
+playlist
+called that right PG
+and we'll set it as gray only
+so
+I have support for degree is
+3333
+and that is six times
+we'll close the inverted commas
+and set the foreground color
+as gray only
+now
+a select background
+that would be of the light blue color
+set the cursor
+and send to I will explain you
+what this means
+first it will set the Border
+equal to 0 only
+Vice scroll command
+that would be equal to
+light blue
+now we will set the
+wire scroll command
+that would be equal to scroll dot set
+so it should be used to scroll
+so we have set the cursor equal to N2
+that means that it would convert to hand
+when we scroll on the list box
+that is when we would try to select any
+of the MP3 player files it would show us
+the hand cursor
+and
+the background color is light blue we
+have set and scroll command equal to
+scroll load set
+okay now we will configure it
+okay
+let me have some errors we will resolve
+them and we will see the output also
+just after this
+so first we will configure the scroll
+bar
+so that will use variable only scroll
+load config
+and inside
+we will
+have the command
+equal to playlist
+Dot
+to buy View
+so we should have in the y-axis only
+and now
+go back the scroll bar
+paste it and right
+and fill the y axis
+for that will write fill
+equal to y
+and now
+we will
+pack the playlist
+playlist dot pack
+and paste it
+decide equal to right
+and it should
+build
+both the sides
+I think it should be filled
+so that will write the command
+which I cannot appear after keyword
+arguments
+okay we'll get it sorted
+save the file
+run it
+so you can see that
+we have the browse music button here and
+if we click it we have the functioning
+it will
+select the folder
+create MP3 player and this is the folder
+that is music and we'll select it it has
+four files
+I'll show you in that also so this is
+the folder it has four files
+it is displaying us all the four files
+and you can see that we have the cursor
+as hand here that is we have set it as
+hand to
+so now
+we will do other functionings that is
+place the JF run it and place the
+buttons so first we will place the
+buttons
+and run it
+so for that
+after this Frame music will start with
+the buttons
+so first we'll create the play button
+for that we will create a variable and
+name it as button play
+and we will use a photo
+a picture
+for that button that will create a photo
+image object
+and pass the file for it
+and we have that file name play1.png
+so we'll just write the name of that
+file in inverted commas
+and now
+we will
+set the functioning
+set the pattern will pass
+root
+and the image
+is equal to
+the variable we have set it for that
+that is
+button
+play
+okay
+skeptical play
+and
+will set the background color for the
+button
+that would be white only because we have
+the white label here
+so it would
+be perfect for that and I will set the
+Border
+that would be equal to zero
+and
+okay we have to place it inverted commas
+else it would be
+functioning as a comment Only We have
+set the border that is equal to zero now
+height
+okay
+h a g h t
+oh so just for both the spanning of
+height
+okay so I have to declare the height
+first
+so we will
+get these buttons in 16 to 60 Dimensions
+only we'll set the height as 60 and
+width
+also S60
+and now we would set the command for
+this button so what functioning should
+it do
+for that
+we will write the function name
+that is play music
+and
+now we will place this
+at x equal to
+215
+and y equal to
+487.
+and we have created the play music
+function above
+you can see that
+it has the functioning to play the music
+we have used the mixer.music.lord
+from the pi game
+and it would get the playlist and the
+active contents there and it would play
+it
+so we are done with a play button
+we'll save it and run the file
+I'm going to take into window is opened
+first of all goes right
+started
+first we'll browse so this was the
+folder getting music let's select this
+folder you can see we have these four
+files we'll click on the one and just
+click on the play button
+okay uh we forgot to add one functioning
+so first
+we will
+create all these buttons and then add
+all other functionings
+now we will create the second button
+that would be the stop button
+put that
+you will create a variable and name it
+as button stop
+and here also we'll create a photo image
+object
+dude
+pass file and inverted commas
+we have stop1.png for this
+so we'll just write the file name
+and in the next line we will Define the
+functioning of this button
+so inside button will pass root
+and image
+that is the variable
+button stop
+and set the background color
+equal to White only
+and that would be in the inverted commas
+and now we'll set its border
+that would be zero
+and height and width would be 60 only
+and after that we will set its command
+that would be
+mixer Dot
+music
+dot stop so we are using the mixer
+cast the music class inside that and the
+stop function
+and now we will place this
+window with that we'll write the
+dimensions for that x equal to 130
+and y equal to 487
+so we have created the stop button
+we will save this and run the file
+you can see that the stop button is
+also displaying on a ticket window
+and now
+we will make our third button
+that would be the pause button
+for that we'll use the post one PNG this
+is the image
+so for that
+you can just
+copy these things
+place it here
+so button
+pause equal to photo image and we will
+use the image
+pose one dot PNG
+and
+get it
+as we have set all others as big
+so button pause background color white
+water zero right 60 with 60 command it
+would be mixer dot music dot pose
+and we'll place it at
+300 comma 487
+we'll save this file
+and run it
+you can see that we have the pause
+button
+displayed here
+now
+we will
+get the volume button Note the volume
+button just as image
+so this is the image volume.png
+we will
+get it though
+so for that we will create a variable
+volume one
+and create a photo
+image object
+and set the file location
+and the location is
+already placed in the same folder so
+we'll just write the name of the file
+that is volume.png
+and that would be in the inverted commas
+and now
+we will place this
+at
+x equal to 20. and
+y equal to 487
+now we'll save this
+and run the file
+so we are having some errors
+okay
+we contactly use the place here
+first
+create another variable and create a
+label for this image
+so for that
+to reduce panel
+and equal to
+well
+sign will pass root comma
+that is equal to
+volume one
+and now
+we will use the place
+and place it at
+x equal to
+it was and
+300 and
+why would peace
+that would be 487.
+so now we'll save this file and run it
+you can see
+okay
+we have made a mistake here
+so
+it should be here so X would be less it
+would be around 20 and Y would be same
+for that only
+so we'll change that
+save this
+and run the file again
+yeah you can see that we have the volume
+image
+we have the play button the post button
+and the stop button so we'll get the job
+working for us
+and now we will
+get our GF working but before that we
+will
+make the mixer initialize so that uh
+buttons they should function that is
+play pause and stop
+so we've imported the mixer class so we
+will initialize it
+and save this
+and run the file
+now you can browse the music
+click on the any MP3 file and
+click on the play button
+you can hear that the music is playing
+so I will pause it
+and now we will start with the
+functioning of our gif
+so we have to cut the previous part
+and now
+start with frame count
+so the frame count of rjf is 30 and we
+will store it in a variable
+and now we'll create another variable
+as frames and inside
+start with
+square brackets and create a photo image
+object
+and inside will pass the file
+the GI file
+the name of the file is A1 dot JF
+and here we have to specify the format
+of the file
+put that you write format
+equal to
+in
+commas
+chair
+and
+index
+and we'll set the index
+and
+I
+assume we would be using the list
+comprehension here
+no we will run the loop
+so for that right for
+I
+in
+and use the range
+of the frame count
+so what we will do is
+the GIF has so many images in that so we
+have to run a loop so it would again
+repeat itself
+as the frame count would be equal to the
+count as the images would be repeated in
+a loop we will set the count equal to 0
+and repeat it again
+so for that
+now we'll create a function
+and name it as update
+inside will pass a variable Randy
+create a variable with name frame and
+inside
+we will pass
+IND variable
+names
+and as
+this image would be displayed
+we will increment
+the IND variable
+and if
+IND
+is equal to equal to frame count that is
+if it has displayed all the images in
+the gif
+we will set it at zero and run it again
+and would set the jfn label so
+we will configure it
+and we have to find the label also
+so for that
+right label
+equal to
+label inside will pass the root
+and now we'll configure it
+and pass image
+equal to what
+frame we have
+currently click
+and now
+we will use the after function
+and pass 40 milliseconds so that
+the animation would start again
+and pass the update function
+the current IND
+and now we will place the label
+and x equal to 0 and y equal to 0.
+and again we will run the after function
+and pass zero milliseconds and the
+update function
+zero frames
+okay
+let's find this
+if statement only
+okay
+first we have to
+place the label statement about no
+now
+we are done with a gif
+save this
+and then the file
+so we are getting an error here
+okay
+so
+subtitude
+okay then save this file and run it
+again
+okay
+encode displayed
+so we have this label above
+just browse the files select the folder
+and click on any file and just click on
+the play button you can see that our MP3
+player is working
+we'll just set the UI again
+you close it
+or you could stop it
+so we will
+get this
+the other words
+let's try to go up the buttons
+now we'll save the file
+and click on run button
+you can see that the GIF has taken the
+whole frame
+and now browse the files
+and selected the folder and our if
+statement will find the MPG files and
+click on the file
+I'm just going to play buttons
+[Music]
+you can see that our simply music player
+is working fine
+so I will share the code link with you
+in the description
+then we will create a video player using
+python before starting let us have a
+simple question to brush up on a
+knowledge
+and your question is which of the
+following is the correct extension of
+the Python file and your options are
+first option is dot python
+the second is dot py third is dot PL and
+the fourth one is dot PJ
+please answer in the comment section
+below and we'll update the correct
+answer in the print comment you can
+pause the video give it a thought and
+answer in the comment section
+and insightful for you guys if you have
+focused on building strong fundamental
+skills for career growth in that case
+you can check out a free course to Learn
+Python Basics with a completion
+certificate from scale up by simply love
+you can check the python Basics free
+scale up course with that link in the
+description box below
+and now moving on we'll start with a
+project that is creating a video player
+using python
+so for that
+first we will create a folder
+and name it as
+create
+to video player
+using python
+and
+inside will open the command prompt
+and type the command code space period
+and press enter it will open our Visual
+Studio code as I would be coding in the
+visual studio code only you can code in
+any ideally
+that you are suitable with
+so moving on first I will create a file
+with the name video
+now to start with our project first we
+need to install the python modules we
+don't have to write new code for
+everything
+we can use existing code written by
+experts that are in the form of modules
+so first we will install the modules
+and the modules will require here would
+be the first one would be tick enter and
+take enter is a python module that is
+used to develop GUI that is graphical
+user interface and there's no need to
+install any module for that
+as the take into module is a part of the
+standard python Library so it's already
+installed if you have installed the
+python
+so you don't have to install the take
+enter
+we will also use date time module here
+so for that we'll write the command okay
+space install
+it
+time and press enter
+as you can see that it states that the
+requirement is already satisfied I've
+already installed the date time module
+so I don't have to install that you can
+just write the command pip space
+installed space date time and you can
+easily install the date time module
+I am moving on uh we will also install
+another module that would be TK video
+player for that we will write the
+command tip space
+installed
+TK
+video player
+and press enter
+you can see that the requirement is
+already satisfied as I have already
+installed the module so I don't have to
+install it again
+you can just write the command or you
+can search
+in the browser right take a video player
+installation it will be directed to the
+TK video player official page there you
+will find the command to install the
+module
+so moving on
+we will start
+building our video player
+so for that first we'll import the
+packages
+so first we'll import
+all the classes from taken to
+next
+we will import
+date time
+to imported the date time module
+now we will import
+T into s t k
+we have made an allies for this so we
+will use TK only
+so now we will import the field dialog
+box so that we can open the files that
+we want to browse and play on our video
+player
+so for that we will import
+from take into
+import
+field
+look
+now we'll import take a video player
+that would be taken to video class from
+take a video player module
+so for that we will write from
+take into video
+foreign
+module and create the take into window
+in which we will create a video player
+so for that we'll write a command
+that would be the root
+equal to
+the Allies name that was TK
+Dot
+TK
+so this is the simple command
+that would create a root window and it
+would display it on the screen
+so for that we'll write root Dot
+main Loop
+and save this program
+and run it
+you could say that that take enter
+window has appeared on the screen so
+this is a taken top window
+so in this window only we'll create a
+video player
+so we'll start with that process
+now uh as you've seen the taken down
+window
+I will show you again
+so we will give it a title as we have
+written TK here it's default that TK
+would be here as we have made the last
+name as TK only
+so we will change it and we will write
+as simply video play
+so of course that will write the command
+route to Titan and inside
+we will write what we want to name the
+dig into window
+we will name it as simply
+video
+so tinginter provides many methods and
+one of them is geometry
+this method would be used to set the
+dimensions of the tick enter window as
+you have seen it has appeared in the
+small manner so we will set its
+dimensions
+and it would also use to set the
+position of the main window of the
+user's desktop so for that we'll write
+the command
+root dot geometry
+and inside we will set the x-axis as
+800.
+x and y axis
+with pixel 700
+and
+from above it would be 290 that would be
+the x axis it would be 290 pixels down
+I'll show you like what it would be
+and y axis it would be
+10 so we would save this
+and then the program so you can see that
+we have set the x-axis is 800 y-axis as
+700 and 290 pixels that was x-axis we
+have shifted it from 0
+to here that is 290 and 10 from above
+that is on the y-axis
+and we can see that it has changed the
+name that is it's now simply video
+player
+so we have changed the title of our
+ticket window
+so moving on
+now we'll create a frame
+so for that
+we will write the command frame equal to
+TK that was the Allies for the decanter
+Dot
+frame
+inside we will pass root
+and we will just
+pack it
+so fourth frame if you don't know I will
+just tell you about the frame now frame
+is a rectangular region on the screen
+and it can also be used as a foundation
+class to implement complex widgets it is
+used to organize a group of widgets so
+if we want to organize any button or any
+image so you can just create a frame and
+organize those widgets into the frame
+and we have used the pack here so the
+pack geometry manager packs widgets
+relative to the earlier widget tick
+enter literally packs all the widgets
+one after the other in the window we can
+use options like fill expand and site to
+control this geometry manager that is
+back
+so we will be seeing that back and we'll
+use it many times so you will see the
+functioning of that also
+so now
+we'll save it and run it
+so now we will place an icon here for
+simply video player we want to place
+an icon so for that
+we have created an icon
+you can create your own
+I have stored it in this logo PNG and
+these images
+we would be using
+in a project only
+that would be for the for the
+forwarding and backwarding of the video
+so we'll paste all these pictures here
+and now
+we will place the logo.png
+logo PNG file
+that is we have created the icon for our
+simply video player so we'll place this
+on the top and for that we'll write the
+command
+so for that you will write
+image underscore icon
+we will create a variable
+and that would be equal to we'll create
+a photo image object
+I will tell you about it
+and here we'll write the location
+of the file we want to place it as the
+icon photo
+foreign
+so this is the function here icon photo
+and in this
+we will pass Folds
+comma image icon
+that is in which we have stored our logo
+and now we'll save this
+and
+run it
+so first we have to close up previous
+tick into window
+so I will close it and
+it will run a program
+and you can see that we have placed the
+logo for simply video player
+so
+I will tell you about the photo image
+object first
+and we have used the icon photo
+method
+and that is used to set the title bar
+icon of any tick enter window
+but to set any images the icon of Title
+One image should be the object of photo
+image object we have created the photo
+image object so what this photo image
+object is about
+so when we just use the photo image and
+pass the file location in that it would
+create a photo image object
+so you can use it in any widget after
+you create the photo image object
+and you can pass it as any argument as
+image argument in any widget
+and the image object is written by the
+photo image function it's easy to
+display a picture in Python however the
+photo image class only supports the GIF
+and PPM formats which is a concern
+and JPEG and jpg and PNG are the formats
+that are most often used
+and we are using the PNG so there's no
+any problem to use that
+so moving on
+we will create a frame in a tick enter
+window
+oh that will write the command
+lower underscore frame
+and that would be equal to TK that was
+the last name we are using for tick into
+or period frame
+and inside here we will pass root
+and we'll set the background color
+as white
+and we will write the hexa code for the
+color white here and that is
+6 times f
+and
+now we will use the back function here
+we will place this Frame
+put that you will
+use the variable we have created
+and the pack widget
+okay uh we have to place it in the
+periods and it will show error
+else it would be treated as a comment
+only as we have used the hashtag and we
+didn't place it in inverted compass
+so now we will pack it and inside we'll
+use the properties as fill equal to both
+so it would be fitted in the whole
+window
+and we will
+place this at the bottom of the taken
+turn window
+so for that we'll write send equal to
+bottom and moving on
+now we will create the patterns and
+before creating the buttons first we
+should save the demonstration of what we
+are going to make
+so for that I will take you to a code
+and that stress we will
+run a program and you can see this is
+the ticket window and this is the simply
+video player we have paste icon there
+and we have to add other functions that
+would be the browse
+and then we will place other buttons
+that would be play pose
+forward backward and the slider
+so that you can reach to any duration
+you want to see on the video you would
+be paying so we'll close it
+as we have
+click on the previous button it has yeah
+it has given an error
+so we will run it again
+so when we click on browse it would
+direct us to any path you want
+to play one of our own videos that would
+be MP3 player using python
+and then we'll click on play you can see
+that our video is playing
+so this is the demonstration of what we
+are gonna make
+no
+we will start with placing our buttons
+and after that we will add the
+functioning to them
+so
+we will create the browse button first
+for that we will
+create a variable load button that would
+be equal to
+okay
+load button
+and shine as the root
+and we'll set the text
+equal to browse
+and set the background color
+for button and that would be white only
+one two three four five six
+hexagon for white
+and we will also set the font
+for the browse button
+and we have to place this hexa code in
+inverted commas
+else it would be termed as the comment
+only
+it will be starting with a hash so we
+have to place it in inverted commas and
+now we will set the font
+for
+browse button
+and that would be
+we'll set it as calibri
+and we'll also set the font size
+so first we'll set it as Calgary
+and set the font size as 12.
+and we will also make it bold
+which we have to place it
+round brackets
+yeah
+and now we will
+make a command for this button so what
+does this function
+what function will this will this button
+do
+so for that we'll
+write command equal to and we will
+name our function as plot video only
+we will create this function
+and and the functioning to browse the
+MP4 files
+now
+we'll back this button
+with that we'll write the command
+two button into it
+tag
+and inside we will use
+padding
+in X direction that would be 12.
+and padding
+wired action we'll set it as four
+and anchor anchor is where you want to
+place the button
+so I will place it in the North West
+that is in the
+upper left Direction
+so for that we'll write the command TK
+Dot and W Northwest
+anchor is the positioning of the button
+angle equal to TK Dot
+Northwest sorry
+so we have added the
+padding X and Y
+moving on we will
+create the
+click into video
+download the window in which our video
+would be playing for that
+first we'll create a variable
+video underscore player and that would
+be equal to
+T into video to be using that function
+and inside we will pass root
+scaled equal to
+so you can visit that take into a video
+official page and you can see these
+functions there
+you would easily understand like why
+they are working and what's the
+functioning
+and now we'll pack this window
+suppose that we will use the variable
+and pack it
+we will expand the window
+and ask it
+to fill in both the directions
+I will show you all the functioning as
+we will create all the buttons
+and then we will
+create the functions for them
+so what command we would be placing in
+these buttons after that
+you would be able to see
+heading into window
+so now we will do be making the backward
+button
+so for that
+do a greater variable
+and name it as button backward
+and here we will use a photo
+make a picture
+in this picture
+you could
+eat that
+clearly
+the folder we have paste so this is the
+backboard image we will use this on the
+button
+so for that we will create the photo
+image object
+inside the photo image object we will
+place the location of the file
+as it's already located in the same
+folder so we'll just write the name of
+the file that is backward dot PNG
+okay
+and
+actually it's showing an uh we have to
+place it in inverted commas
+now
+we will create another variable
+aiming as back and inside
+we will create the button
+EK Dot
+button
+and inside
+will pass lower frame as you will place
+all these buttons on the lower frame we
+have created
+so lower frame
+comma and here we will pass the image
+and in image will pass the variable in
+which we have created the photo image
+object and so the name of the variable
+is button backward
+and now we will set this border
+at 0 and height
+equal to 50 and width also equal to 50.
+and now we'll
+ask this to ask this to function and for
+that we'll use the
+command and inside
+will use Lambda
+and we'll create a function with the
+name skip
+and we'll skip five seconds
+the back widget to pack this button
+we will place it in this side
+that would be left
+so it will be defining the function skip
+in the meantime
+before we will
+make another button that would be the
+forward button
+and the play post Button as we have seen
+in the demonstration so first we'll
+create the play post button
+put that we will
+create a variable
+inside will pass North frame
+and here we will name
+text that would be displaying code
+button
+that would be blame and we have to place
+it in inverted commas
+and we'll set the width for this button
+that would be 40.
+and we'll also set its height
+that would be equal to 2
+every sufficient
+and now
+we will
+add the functioning to it we will
+declare
+play post button very limited play pause
+on it
+as it will be functioning play and pause
+now we will pack this button
+so that will use the variable name
+that is play post button
+foreign
+and inside
+we will expand this button as you've
+seen in the demonstration to expand it
+we will use
+expand equal to true
+[Music]
+equal to both sides
+okay and we'll place it
+and site
+so
+and side equal to left
+now we will create the
+forward button so for that we will
+create a variable
+as button forward
+and inside we'll create the photo image
+object
+and inside will pass the file location
+as we have already located the file in
+the same folder so we'll just name it
+will write the name of the file that is
+forward dot PNG
+you can see in the folder that it's
+forward
+we'll use this image
+now we have created the photo image
+object and now
+we built create the button for that we
+will
+write the command
+create variable and name it is play
+button
+create a button with at the command TK
+dot button and inside
+this would be placed on the North frame
+only
+and
+image
+port
+and the variable
+button
+forward
+so now we would set its border equal to
+zero
+ID equal to 50
+and with
+equal to 50.
+and we'll also Define its command
+that would be equal to we'll use Lambda
+and inside here we will
+be forwarding the video for five seconds
+it would peel Lambda
+and now we'll name the function as skip
+we'll create a single function and if we
+pass plus 5 it would be forwarding a
+video with 5 Seconds
+and we pass minus 5 it would be
+backwarding the video with five seconds
+now we will use the pack widget
+to place this button
+and declare
+side is left
+yeah
+so now we have created the buttons
+now moving on
+we will Define some functions now
+we'll start with
+these are the buttons
+now I'll Define some functions
+so we'll start with the duration
+to update the duration both that will
+name the function as
+update underscore duration
+and inside will pass the event
+an event that we would be clicking
+on the slide bar
+so for that
+first we will create a variable duration
+and inside
+we would be using the video info
+entered
+inside the square brackets
+you will pass the duration
+now the end time
+we will create a variable
+so
+with the name end time
+and
+pass
+text in that
+and that would be equal to
+string
+we'll use the date time module here
+and time Delta
+and inside
+seconds would be equal to duration
+so time Delta it's a duration of time
+that is used for manipulating time only
+so
+and now
+you will
+create on the slider
+for that
+you will create a variable
+progress underscore slider
+and inside the square brackets
+pass the duration that is
+to which time
+we would be directing it to
+and
+after that we will create another
+function
+and name it as update scale
+that would be the scale of the
+slide bar
+so we'll name the function as update
+underscore scale and we'll pass the
+event in that
+and
+now
+we will use progress underscore value
+variable and
+set it
+and pass the variable
+ID and scripture
+that we have created for video tab
+that would be the current duration
+so it would fetch the current duration
+we will be updating the scale with the
+current duration
+for that we have used the conjuration
+method and
+we will find another function
+that would be the load video
+and we have base a command also for the
+load video
+so this function would be adding the
+functionality to the browse button
+put that
+we will create a variable a name that's
+file path and use the file dialog class
+and
+the function ask open file name
+and inside if
+file under score
+but
+and if a video player
+it's loading the file path
+so to progress slider
+foreign
+duration
+and the form duration would also be
+equal to zero
+we will declare the progress later
+so do not worry
+and now
+and the functioning
+I know
+some functionality
+scientists only so we will set the
+button as play as you have seen that our
+button would be displaying two options
+that would be play in the pose and if we
+open the file
+so it would set the slider to zero only
+and the button to the play for that we
+will write
+play underscore pause underscore button
+that is the variable of the play post
+button
+and inside would pass the text
+in the square brackets
+that would be play
+when we would be choosing any mp4 file
+so we would be setting the button as
+play
+progress underscore
+value
+note set
+to pass zero
+now we'll create another function
+and name it as seek
+and inside would pass the value
+and we need to
+this function would be using
+to seek a specific time frame
+with that
+will
+use the function seek
+and pass the integer value in that
+and
+now we will declare the skip function
+that will be adding the command to both
+our buttons that would be the forward
+button and the backward button and
+inside will pass
+value in the form of integer
+so this would be used to skip the
+setting a second sorry
+so here
+we would be calling our C function and
+inside
+will pass integer
+progress
+slide
+one duration we want
+to put get function
+the value
+you want to make it forward so we'll
+just declare the progress slider
+variable so don't worry we'll sort it
+out
+you would see that we have used the seek
+function here and we'll also use the
+set function
+I will use some set function that is
+already defined we don't have to create
+and so
+for that I will write the command
+progress underscore value
+dot set
+and inside we will pass
+progress
+underscore slider
+you can use the get function
+foreign
+we will
+declare the
+play post function
+so it would be used to play and pause
+the video
+so we will use Intel statement here if
+foreign
+defining this function first we will
+create the variable that is
+video player
+and here we will use the tick enter
+window module
+side will pass root
+it's scaled
+equal to true
+and now we will use the variable
+and pack it
+spank this
+is equal to true
+both sides
+and T would be capital for two
+so before creating this function first
+we'll create the variables so that we
+don't get confused so we'll start with
+start time start underscore
+time and that would be equal to
+TK
+we'll create a label
+and inside you will pass root
+and text equal to
+ring inside would pass
+date time
+Android
+time Delta
+and it's set
+seconds
+equal to zero
+and now we will use the pack widget for
+this
+so start underscore time
+put back
+and we will
+Place its side
+as left
+and now we will create
+another variable that is progress
+transfer value
+that is equal to TK
+Dot
+where and we'll pass root into it
+and now we will create the variable to
+press slider
+and that would be we will create a scale
+here
+inside we will pass the root
+will pass the variable
+that would be the progress value as it
+keeps on changing
+and we will start this scale from
+0
+and
+2
+0 so in starting it would be in the
+initial Point only for the from n0
+scale
+from N2 equal to 0 okay now we will set
+its orientation
+it's horizontal
+and we will set its command
+equal to seek
+we have defined the C function
+so now
+this would be easy for you guys to
+understand it
+now we'll pack this progress slider
+and set its side equal to
+left
+and it should
+fill the extended width
+so for that we'll write will equal to
+X
+and expand
+equal to true
+so we have created the variable start
+time progress value progress slider so
+we are left with end time
+and
+this will create a label
+pass root into that
+text
+equal to
+we'll convert it into string that would
+be date time
+Dot
+time Delta
+and inside will pass
+seconds
+that would be equal to zero
+and now we'll use the back configure
+a configure widget
+to packet
+so
+back
+and side equal to
+left
+so set
+video player
+we will use the bind function
+and inside
+will pass duration
+okay we have defined it here
+to create this we need
+the video player
+variable
+oh
+you will
+update the duration here
+so first update duration
+and if
+we need to go clear
+we'll do it bind
+and if it's second changed
+so I will update this scale here
+and if video player
+load point
+ended
+so what will pass the video ended
+function
+not created the video ended function so
+we will create that
+compare the update duration update scale
+the video ended
+so we are left with Video Edit function
+and the Playboys function
+so we will complete that first
+so if
+video player
+is post
+foreign
+[Music]
+video player
+to play then click on the player post
+button
+and now we'll set its text
+to underscore
+pause
+underscore
+button and inside the square
+brackets
+will pass the
+text
+and that would be equal to
+if the video player is paused
+so we'll play it and set the button text
+as pause
+and
+else
+video player
+is
+else if the video player is playing we
+will
+make a test pose
+we'll use the pose function there
+and set the text
+and the score
+of course underscore button
+for the text will use the square
+brackets
+and set it as
+a
+so we are done with the play pose
+function now we are left with
+the video ended function
+so
+that
+create the function and pass the event
+through it
+so it would handle the video when the
+video would be ended
+okay so we have to
+press above
+foreign
+[Music]
+first we will complete a
+function
+so
+for that
+use progress slider
+and set it as
+progress underscore slide
+right now
+and pass the two
+that duration at which it would be in it
+and set the play post button text
+pass this in square brackets
+let's play
+as the video would be completed so we
+would
+turn this back into the plane
+and we'll set the progress
+slider
+set
+at zero
+so now let's see what is you getting
+so we are designed with errors
+so I'll save the file and click on play
+button
+so we have got some error
+in 966 and equal to India
+okay
+and then again
+you can browse but they're not showing
+so let's save this and run until
+actually close to previous window and
+run it again
+okay so we are getting our browse button
+downwards
+okay
+based on video player between as
+these are
+in the packings only so first we will
+place our browse button then the video
+player then the backboard button then
+the post button
+and then the forward button
+and we have named it as play
+let's save this
+and run it
+try and close the keyboard stick enter
+window
+now you can see that the browse button
+has
+automated's position so we'll click on
+the browse button
+let's open in the downloads and there is
+MP3 player using python only
+click on the play button
+the file is playing click on the pause
+button
+and you can
+see the functioning of forward and
+backward
+buttons
+so
+we are done with our project if you have
+any doubt you could just
+ping in the comment section and with
+that we have come to the end of this
+session
+and I have something for you guys
+just wait
+so if you are aiming to get certified in
+Python Programming course
+and you want to build up python software
+development career in that case you can
+check this python certificate course by
+simply now which will open the doors for
+the best career options and
+opportunities to find the details of
+this python certification course you can
+check in the link in the description box
+below
+it would be the ideal solution to help
+you build your career in the right
+direction and I hope this session was
+interesting and informative if you liked
+it please let us know in the comment
+section below and also do subscribe to
+our Channel and stay tuned for More
+Foods
+[Music]
+hi there if you like this video
+subscribe to the simple learn YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

@@ -1,0 +1,89 @@
+foreign
+'s YouTube channel in this session we
+will learn about how to change a data
+type of a column in a table using SQL
+now before we begin I would like to tell
+you guys that we have daily updates on
+multiple Technologies if you're a tech
+gig in a continuous hunt for latest
+technological Trends then consider
+getting subscribed to our YouTube
+channel and don't forget to hit that
+Bell icon to never miss an update from
+Simply learn now without further Ado
+let's get started with our one point
+agenda that is
+how to change the data type of a column
+in SQL now let's take a quick look on
+the syntax we will be using to change
+the data type of the column and SQL
+so this is a syntax we'll be using so we
+will be using the alter keyword table
+keyword and table name so Alta is the
+keyword which will help SQL to
+understand that we are trying to modify
+something and we are selecting the table
+by offering the table name and then we
+have the modify keyword which will help
+SQL to understand that we are trying to
+modify something and we are modifying
+the column name from the table selected
+and we are modifying that particular
+column to a different data type which
+will be specified over here in place of
+data type keyword right so now that we
+are clear with the syntax let's proceed
+and execute the command and change some
+column data types now we are on the SQL
+workbench previously we created an
+employee database in simply learndb and
+we will be using the same table here so
+we will be typing use simply learndb
+so that we get access to the simply
+learn DB and the tables we have there so
+let's select all
+employee table
+column let's execute this
+so there you go we have the table on our
+screen and let's quickly describe the
+table using the desc command
+and this will give us the data types of
+each and every column in our table now
+you can see we have pin code in the
+format of worker so let's try to alter
+or modify this particular pin code
+column from worker to integer since it
+only saves the numbers right so our
+Command for that was alter
+table
+table name which is employee table
+modify with the keyword
+modify the column PIN code
+to integer
+semicolon now let's quickly run this
+command
+and there you go the command got
+executed successfully let's try to
+describe the table once again
+and there you go now the PIN code was
+earlier mentioned as worker and now it
+got changed it to integer now that's how
+you alter or modify or change the data
+type of a column in a table in SQL with
+that we have come to an end of this
+session and if you have any queries
+regarding any of the topics covered in
+this session or if you require the
+resources or the commands that we used
+in the session please feel free to let
+us know in the comment section below and
+our team of experts will be more than
+happy to resolve all your queries at the
+earliest until next time thank you stay
+safe and keep learning
+foreign
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

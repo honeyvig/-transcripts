@@ -1,0 +1,1058 @@
+foreign
+and welcome back to another video by
+simply learn this is anubhub and in this
+video we will be creating a vue.js
+project
+but before we begin if you haven't
+subscribed to our Channel already make
+sure to hit the Subscribe button and
+press the Bell icon so you will never
+miss any update from Simply learn so
+without further Ado let's see how our
+application will look like at the end of
+this video
+so I'll open this chrome where I have
+already created this quiz project
+this is how our project will look like
+at the end of this tutorial
+this will give us a hover
+effect whenever we click on
+it will light up as a green
+like this and if we click on the wrong
+option it will click as red
+at the end
+it'll give us a score we can add as much
+as questions as we want
+so
+let's just
+go to our coding part
+before that let's first see a little
+history of UTS and what is view.js
+former Google employee when you is the
+creator of ugs view JS initial version
+was released in February 2014 and is
+currently rated as 64
+828 stars on GitHub making it highly
+well liked so what is vue.js
+this is what a history of UJS was so now
+what is ugs a JavaScript framework
+called ugs is used to create user
+interface it provides a declarative and
+component based programming approach
+that enables you to quickly create user
+interface
+no matter how straightforward or complex
+that may be it works on top of Industry
+standards HTML CSS and JavaScript
+when using bluejs you can add directives
+which are HTML attributes to HTML HTML
+apps can functions thanks to vue.js
+directives
+built-in and user defined directives are
+available in ugs you don't need prior
+knowledge of webpack we will npm or
+anything else to start with View
+but view makes it simple for you to rely
+on them when you are ready
+now
+let's just move on to our coding part
+for that we need to First create a
+folder
+so on our desktop I'm going to create a
+folder
+quiz
+ah
+let's just save it here
+and inside our Visual Studio code
+will open this folder
+this is an empty folder
+now let's start the development process
+for this quiz project
+for that I'll open the terminal but then
+I'll press Ctrl face button
+by just pressing ctrlvis backlink this
+terminal can be opened you can also open
+the terminal from here by just clicking
+on Terminal and then the new terminal
+this will also open this
+here
+let's create a project for that I'll
+write command in VM create
+like
+that's right
+so those who don't know about the white
+white is a powerful engine
+that we'll discuss later
+you'll get to know about it very soon so
+let's click it
+with the help of right we can install it
+when you like JavaScript view react
+pre-react lit silver and other Fringe
+works as well so in this project we are
+using view so we'll go to the view and
+then let's check we don't need
+typescript for that customize with view
+project
+so we'll just click on JavaScript
+so it's showing first you have to go to
+the current directory which is current
+directory White Project this is the
+folder that this has been created
+so in this source file
+we don't need these two so let's suppose
+delete this projects
+I'll delete this folder component
+because it's a big enough to take so
+most of the code will be in this
+app.view
+only
+let's just delete this also
+but first let's run this
+CD white object
+now we have come inside this project
+after that we will install Run npm Run f
+Lex let's run this
+foreign
+right now the issue
+okay I forgot to tell you about the
+extension that we gonna use
+I have installed this extension
+you also have to install this let's cut
+it so you can see it
+so you all have to install this
+extension by just clicking on this card
+extension and then here you will type
+new language features voila and in that
+we have to install this
+let's move on to our code
+now first let's install
+let's first install sure
+because we need npm job
+programs
+so after installing mpm let's now run
+this website
+now
+as you can see it's running fine let's
+see
+so you can now
+just click it's showing Control Plus
+click Ctrl and then click
+delete it some components from here
+these two projects that goes here so
+that's why this error is coming
+so
+this is a code
+console open this approach View
+deleted and then let's start working on
+the function of this program
+let's just leave this part also this CSS
+file because all the CSS I'm inside this
+so vue.js is referred as a progressive
+framework as you all know because
+changes and improvements are made on a
+regular basis because it makes it easier
+for us to construct single page
+application and dynamic user interfaces
+so in this application I'm going to make
+it as a single page application
+for that stay tuned I'm gonna start the
+development process
+so for this I'll write
+sit down
+it just gives me space here inside this
+let's now create a temperature
+let's create a guide
+here
+let's first
+add some styling
+so this star is for
+because we want to add this
+the meaning of this star is globally
+because we want to add this part
+globally
+so let's give it a margin
+0
+and then
+after that the Box sizing
+box
+after that okay on family
+it's good
+because that's important
+okay
+come on
+great
+[Music]
+you kidding
+yes
+let's create the body time
+foreign
+than all the properties
+list
+or D
+inside this body time I'll write the
+background color
+s
+six
+let's give it a legend
+let's
+just save it
+it's not working
+foreign
+foreign
+Control Plus click so this link will be
+open inside the Chrome so as you can see
+it showing the blue background at
+we have written here it's been solder as
+of now
+let's
+list
+C now
+we'll just give it a
+okay
+now let me just move up and let's see
+okay so we can find the mark
+let's see inside the H1 done
+Android
+hello
+let's just save this again okay let's
+see welcome to Simply learn
+so
+as you can see it's working fine let's
+just delete this part
+and something else inside this so let's
+work on the script
+part first then we can
+move ahead
+so let's first import the important
+modules now
+so let's
+swing from view this is
+the refresh module is from
+View
+so let's add one more
+okay
+there's also a few module
+now
+it's just call this first
+it's not fetching it
+so let's now create
+so let's try to go
+and he said this let's create a function
+but let's first give it
+of course the question is
+first we need to add the three parts
+question and then we have to declare the
+answer and then we'll do get the options
+as well then the option that has been
+selected we're gonna add that later
+let's add for this tuition here
+and I had as many questions as you want
+and you can add
+position like so this is a very
+interesting project that
+students create on their degrees
+stay clear the question
+like this let's try to
+question or what
+is
+cheers
+let's skip until later after we
+are doing so
+edit options
+so we're gonna hit options like this
+to
+this reactor free work
+a framework
+so let's give it another option
+with another option
+and
+that will be
+so
+let's give
+it
+it's good
+and then
+yes okay
+so what is VIPs you have all you want to
+get someone's Edition
+you will have to give the answer for
+this part so we have to give the answer
+first here
+so the answer of this question is
+Library so I'm gonna add the answer so
+this
+to add the option here so
+it all works as a star 0 1 2.
+so the zero one is this framework one is
+this library and the
+two is this language so the answer for
+this is one so we will write 1 and then
+let's just save it you have to do the
+scripting or not to make it look like
+that I have shown you well here
+so let's just give it a
+option of selected and the user has
+selected option
+so let's
+okay sensitive
+so let's give it another for now the
+user has not insulated motion
+okay
+after that
+Roots
+just copy this
+control copy
+one and two
+the last part we don't need let's just
+change this question
+that second question would be
+let's give
+what is the full form of HTML yeah that
+would be a nice position
+you all must know this
+foreign
+I
+go
+language
+what is it
+when you go down to this
+let's repeat option only
+that's bad
+foreign
+language
+so we need to declare the answer here
+so we're gonna declare 0 1 2
+it let's just save it
+this selected option would be null only
+let's move on to the final equation for
+this
+it's just
+give this as
+as you're working on view let's
+oh one question of you let's see if you
+delete this and the answer would be same
+only framework like with your language
+so view is a you have to tell me there's
+a framework Library language
+so view is a framework
+let's just now save this part
+and everything
+fine
+let's just see as it
+okay no it's not showing anything
+just move ahead and let's create the
+functionality so
+and then the quiz completed option
+that we are going to give
+let's just add quiz
+and we can't
+he did
+let's give it the reference first
+it will not show
+it's another piece it
+after that really create another point
+in The Cutting question
+the question is that question is showing
+again it will give it their reference
+commission with the portion which will
+start from zero
+get
+now we are also
+which I have shown you inside that the
+score of 3 home score how much score do
+you have
+better questions that you have given
+so we'll write this
+function also
+you did
+give it a function
+just let's just do this
+create a function here so we'll write
+lead
+s
+[Music]
+after that from the
+action that we had having then the value
+of that and then we'll use the map us
+here
+I'll explain it inside
+the function
+after that
+will give it a value for its
+if
+p is equals to question
+color
+if the beta is
+giving selecting the
+answer
+equals to equals to
+keep
+answer
+then you will give the value of
+plus plus
+so this is what whenever we click on the
+right answer it will move ahead
+otherwise it will give us a output of
+wrong
+so let's just complete this
+let's just turn the value in
+value
+reference
+oh okay with you
+or get conclusion so like
+between them
+all right
+questions
+that
+is
+that's conclusion so let's
+see
+okay
+in that third function
+foreign
+[Music]
+questions
+foreign
+X
+equals to call it first
+started
+so let's just now finish this by just
+returning it
+the
+question
+okay
+let's just return this question
+okay
+I'll be Pursuit
+let's open my phone you just need to
+call it
+so what
+let's just see everything's working fine
+or not
+okay
+so the problem is that's why it's not
+fetching so let's just
+because we have returned after that so
+we can return it as let's give
+let
+cool
+now we're talking perfect
+let's move ahead
+and we have done with the question spot
+and now we'll conduct and survive
+the answer we'll take a question part
+only
+let's just twist on the question it's
+done after that
+let's get
+this e to find us equals function
+after that we will give
+questions dot value guess
+the current
+question not value
+and then the answer we just selected so
+we'll write this selected
+value the target
+and then the you will get fetched
+so after that
+subscribe
+let's now give it a value Target
+it's good you know
+let's create a multi-function
+and then we'll click on the next
+question so we are going to write
+function for the next question
+okay
+against
+yeah
+right
+let's give it
+if
+possible question
+is less than
+questions
+okay
+touching them
+10 minus one
+will give
+True Value Plus Plus
+now let's just return this
+this
+last one let's
+further
+we have created one for cat current
+version set answer and the next question
+it's just
+completed
+and then at the end we'll show the value
+like a score
+so it's done so
+the functionalities we have completed
+here only
+now let's work on the UI part
+what the user will see so that all will
+come under memory part
+so inside the template we will give
+us
+now inside this
+let's get a name Plus
+and save this
+mean up
+okay
+inside this mean now and then right once
+it's one time
+save this H1 we will write the heading
+that will come and so I will write the
+quiz
+okay fine you can edit it or however you
+want
+but I think like this it's not
+so after that we'll give it this section
+okay
+after that let's just save this
+showing now it's not showing that's okay
+anyways we haven't gave it some selling
+or not so don't show us anything
+let's give it a section
+after this
+let's create a plus
+so inside this let's clear this and plus
+um
+listening
+it's now a little more red
+it's just
+create the get function got a little bit
+function here
+there it is let's write the equivalent
+question
+because
+foreign
+score
+now we'll display the score so that
+we're gonna write
+score and then this
+click inside this didn't get the
+question name so whenever we click on
+the right question it will get the score
+the questions dot length and I will
+click on the Red version
+will give us 1.2 so yeah
+save it
+after that we let's first see the
+application let's
+this
+you think it's showing the quest from
+similar and the question is and the
+score is this
+okay we have added three questions so
+it's showing us the three score
+but it's not showing us the options
+we're gonna add the option part also
+so let's just after this
+let's work on this option part
+let's create a class of options
+these are these options we're gonna
+label it
+as
+label
+to this as for
+okay let's just just create it simply to
+give you an idea then we'll do
+an input tape
+button or we can use
+oh
+let's just name it as
+Nixon
+so let's
+me
+hit
+current
+okay
+foreign
+so let's save it rest inside this
+yeah
+so now just give it a little bit of B
+for
+inside this will pass through
+option and the index part
+option and then index
+so now it's um
+yeah
+and said that it is really good the
+common question about options
+it's not gonna get there later
+we will press on the key
+it will be index
+okay
+let's
+face it
+okay fine it's showing right
+let's just save it
+and it's true and buttons we're going to
+chain this and we'll work on The Styling
+part
+so now we will on this only
+so okay fine it's so funny
+it's just
+you have a glass
+thank you
+insert the option
+early brackets and then say this
+okay let's make this and set a new line
+so we can play it clearly
+after that let's just wait
+ing
+it's just
+have an option
+the selected
+in order to click on the right question
+because index it
+let's
+index
+now let's move forward
+and set this index part
+we are going to write it's just a little
+different now let's read the code
+it's the index that will be equals to
+the current Edge current equation and
+then to fetch the answer we'll write
+this after that
+if we're going to click on the right
+question
+according to this are correct otherwise
+and then nothing
+just okay
+let's save it and after that I know it's
+looking
+okay
+so I have to put my dick
+let's just move forward
+okay let's create another class
+okay okay inside this it's fine
+inside this
+we're going to create another
+okay
+and this
+is function right
+yeah you know it's looking
+okay let's
+like this the selected option
+Revenue
+have used here as sanity operators
+here next
+time
+this
+okay
+selected
+oops
+actually let's see this okay if I'm
+flipping
+it's just not the output
+so
+let's see
+enough let's just disable this buttons
+so whenever we click on this other
+button if we will hit this button
+of that we need to
+give this one the answer
+just
+trying to move it says
+and then if we don't
+need to answer
+so it's all right let's save this
+you're fine
+no will
+you can go to the new model
+investment grade
+you get current questions selected so
+whenever we select an option we want
+that B shown
+a little bit so if you can save the
+different name
+this one
+who
+and then
+so whenever this is what whenever we
+click on any any question
+of being disabled
+so it's all right
+okay fine let's just read this once more
+so everything is fine
+let's see yeah
+inside this okay no yeah everything is
+looking fine now
+click button part you will click
+any button
+is
+set on
+we have also declared the set answer
+okay
+let's just
+let's just go back to uh
+okay as you can see this is what we have
+created and I will click on this button
+other buttons were disabled
+so
+now
+let me go back to our code
+now we'll fetch the options also
+so by just going here
+now we have given the click on this
+let's write it
+see
+change
+after that let's create
+this and
+we'll see the answers that we have
+created
+so it's the option
+save it for more cleanliness
+so as you can see all the options
+already app is showing so whenever you
+click on the react framework the library
+and the language got disabled we cannot
+click on this once
+okay
+let's go back to code
+now we have gone to the last part of
+this and it's enacted that we'll create
+okay let's go more space
+let's create a button inside this button
+I'm gonna write
+when they will click on the next
+question
+if you will
+disabled
+yet
+it's
+like this let's create
+and I will get in the current question
+index
+e minus one so I will go to the next
+question the length of the equations
+with minus one and this means whenever
+we if we have three questions it will
+just cut the one part and then the two
+will be left it will show like two
+questions will be left
+so when it will be finished
+it will show us the score so for that
+let's read
+finish
+and then we'll get
+in the kit
+and question
+dot selected
+not
+select an option
+okay let's read
+it as soon as
+to that
+Android
+do it a little
+okay fine
+so we can write
+a question
+this next question let's just save it
+and see
+okay perfect
+whenever we click on this let me just
+click on the next question so it isn't
+looking cool
+yeah let's go back to our code
+and then let's see here
+now we will work on the finish last
+screen part
+so inside
+build this section we will create
+another section
+oops
+is
+they have created and else
+so we have created this if if you will
+the answer will be there otherwise
+it will give us whenever the versions
+will end it will give us this so let's
+write if else
+inside this
+okay
+let's do
+for you
+let's just do it in a second
+this was just about this language you
+have finished
+so
+good
+okay
+let's just see what's the issue here
+coming
+despite let's let's see what's the issue
+okay
+well the first just add the paragraph
+name
+after this put down whenever we go to
+the last person it will fetch the spot
+so
+great
+okay using this
+we'll write our score
+is
+the score is and then the
+function per square
+check so we will write
+score
+and then the question
+because in which concussion will leave
+them
+in the left then only you can give us
+the right
+okay you have to go to add the start so
+inside this template
+inside this
+section bar
+I'll write V if
+and then
+I'm gonna say
+repeated
+whenever the course will be completed
+this function will be run and if not
+this function will be run
+smoking
+let's just save it back to our code
+let's just see you have finished the
+quiz and this is
+the same
+um
+[Music]
+let's just go to the section bar at the
+end the template 16 plus okay
+so
+can be fixed
+let's just do it again and just see if
+therefore but anything to add
+see okay
+everything's looks
+okay length section
+yeah
+okay let's just see here
+okay the first question is seeing let's
+add the next
+next next
+and then I will click on this finish
+button
+it's not fetching the right option it
+should show us the
+this part if you have finished the so we
+have to write here
+let's see what's each coming here
+let's find the issue here what's coming
+because the first button is not working
+okay let's first
+if it's complete let's save it
+and let's see
+if you find the quiz I'm simply don't
+react to the framework Library let's
+just
+add this system here so and see okay
+fine
+it's my score also this over is three
+one out of three
+let's just now style this part
+and for styling
+so I'm going to give it a like
+start with the app one
+which will write Dot
+say this let's write display should be
+reflex Direction
+[Music]
+two
+and very tough
+save it
+sorry
+everything's let's
+do some staying here and say did that
+hit
+the
+restaurant
+and say so
+foreign
+after that the code is cf610
+we can maintain the colors also
+okay then
+let's give it a worth of 100
+about
+human oxide would be
+that's where it will be
+six let's write 600 more save it
+and see okay
+fine it's fine good
+we can do some selling of options right
+and then this button also I don't know
+it's freaking cool
+let's move forward
+after that
+let's work on this
+with
+this let's give it a display Flex
+justify contain space between
+the margin
+Construction
+look at that
+it's
+said quiz
+questions
+let's save this
+okay fine for me
+yeah
+color
+zero nine
+I would say it should be
+an endpoint
+you can use
+1.5 and we'll we have the scoreboard
+125.
+on this
+what
+is 44
+score
+save this scoreboard
+White
+and the phone says
+should be one group
+two things now let's save it
+and see how it's looking
+yeah it's looking great
+yeah we will work on this
+in a minute let's hope on the options
+bar now
+what options
+inside this let's give it a margin
+bottom of
+one room
+save it
+to that we work on the option bar
+foreign
+okay
+if
+you know I know it's given now
+then give it a much
+um
+save it
+yep
+yeah you can just change the color of
+this if it's not
+great but that's fine
+now we will make the cursive printer
+which is very important
+of course runs pointer
+see you
+sir
+pointer so we will
+do this it will be pointer let's work on
+the option over
+be covered on any options about it on
+Commercial change
+let's give it the color of
+Orange
+is the event and see if it's looking
+good
+it's not showing the over effect now but
+we will make it happen
+it's still way
+okay let's just
+okay the correct options first
+which is not
+correct
+let's say this
+let's do c c e
+d
+until the color of green to darker also
+and it's fine
+let's just copy this part
+at least
+and then
+it's good
+now we're going to work on this moment
+[Music]
+for the last update
+button
+s
+and it's just
+okay
+let's just go ahead
+and disabled also
+option
+disabled
+this kind of
+projectiles some individuals who work on
+this and you can also
+need the course eyes that is reactive
+level if you want to be a slow stack
+developer you can take a course you can
+call our
+helpline number and get the course
+YouTube channel
+there's so many other courses we have
+created and we create very good content
+on daily basis so you can also check it
+out
+so let's
+write the input now
+let's give it display
+and after that let's work on the button
+now
+save the buttons
+evidence would be done
+foreign
+[Music]
+in it
+okay
+2571d
+hello
+foreign
+foreign
+through this one
+okay
+things like this
+I've got a radius 0.5
+disable button
+oh
+but in British reported this option to
+speak
+shown on the screen
+[Music]
+and then we work on this
+last minute tags
+and
+size
+two run
+Martin
+let's do them
+okay in the text alignment should be
+centered
+and for the students screen let's open
+the diagonal
+and the color of this would be
+let's
+all right
+please
+just save it
+let's see the output now
+it's disabling the other parts
+it's disabling the other parts
+and it's
+I put text next question and
+the framework
+so let's invest it your score is two out
+of three
+so I'm sure you have loved this video
+so if you like this video make sure to
+like and share it
+thank you for watching and stay tuned
+for more from Simply learn
+[Music]
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

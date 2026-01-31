@@ -1,0 +1,147 @@
+foreign
+welcome to Simply learns YouTube channel
+in this session we will learn how to
+insert multiple rows in SQL table but
+before we begin let me tell you guys
+that we have daily updates on multiple
+Technologies so if you're a tech gig in
+a continuous hunt for latest
+technological Trends then consider
+getting subscribed to our YouTube
+channel and don't forget to hit that
+Bell icon to never miss an update from
+Simply Iran now without further Ado
+let's get started with our one point
+agenda that is how to insert multiple
+rows in SQL so let's quickly take a look
+at the syntax that we will be using for
+inserting multiple rows in a table using
+SQL
+now the syntax is as follows now here
+you have the insert and into keywords
+table name is the user defined name for
+the table then you have the columns that
+is column number one two and Etc then
+after declaring the column names you
+have the keyword values which will help
+SQL understand this is a tuple and these
+are the values involved inside the Tuple
+that is Row 1 value 1 Row 1 value 2 so
+on and Row 1 value n so this type of
+syntax will help you to add one Tuple at
+one time and this will take a lot of
+time to process you can see to insert
+the next apple we are writing a
+completely new syntax once again using
+the same insert into table name column
+one two three and values and row number
+two that is the second table right so
+this type of code will take longer
+duration to run as well as it will take
+longer lines or number of lines will be
+extra so is there a way where you can
+add multiple tuples in one single curve
+yes there is so the syntax will be
+completely same right so you will be
+using one insert into keyword one table
+name and once you will be declaring all
+the column numbers and once you will be
+using the values keyword the only
+difference is you will be adding
+multiple tuples under the values bracket
+right you will be declaring the number
+of values you want to include in one
+single go and this whole query becomes
+as a whole and once you run this query
+all the values will be added at once now
+that you are clear with the syntax let's
+quickly get back to the SQL workbench
+and try to run this command
+now we are on the MySQL workbench let's
+quickly login
+there you go we have logged in let's use
+the simply learn database once again so
+that we get access to the data which we
+have so we already have an employee
+stable
+so let's see what's presently included
+in employee stable select star
+from employee
+table semicolon
+so this is the data that we already have
+in our table now let's try to add some
+more data
+so now we will include one single
+element or one single Tuple data related
+to one single employee right using the
+first type of syntax let's quickly
+execute this
+the command got executed again let's
+quickly see what's present in the table
+select start
+from
+employee table again you can see I'm
+using lowercase for the user defined
+keywords and uppercase for the
+predefined keywords just to make sure
+that the code is understandable
+and which is the user defined keyword
+and which is the predefined keyword so
+these are the the ones in small case are
+user defined and the ones in uppercase
+are predefined right so we have
+successfully included one single element
+or one single Tuple the details which
+are related to Prime and now let's try
+to modify the same code and try to
+include few more tuples inside the same
+insert command and try to insert
+multiple rows into the table
+now here you can see we are using the
+same insert into employee table command
+and instead of Brian we replaced or we
+added six more entries under the values
+section right and the only difference is
+we are trying to separate the tuples
+using a comma you can see we are
+enclosing one Tuple inside the
+parenthesis and we are separating two
+tuples with the help of a Karma right
+ensure that you include comma between
+every Tuple and you can ignore the comma
+for the last up you can see we are not
+using any sort of comma or any sort of
+specifier at the end right so and we are
+closing the command using the semicolon
+this explains equal that it is the end
+now we are going to run this command and
+see the output
+so there you go the command got
+successfully executed now let's again
+execute the select command and see if
+the data is involved or included or
+inserted into the given employee table
+now there you go the command got
+successfully executed and you can see
+the table over here and you can see that
+all the data or all the doubles we
+included into the table using the insert
+command in one go are successfully
+included so that's how you insert
+multiple rows into a table using SQL now
+with that we have come to an end of this
+session and if you have any queries
+regarding any of the topics covered in
+this session or if you require the
+resources that we used in the session
+like PPT code document Etc then do let
+us know in the comment section below and
+RT perfect we'll be more than happy to
+resolve all your queries at the earliest
+until next time thank you stay safe and
+keep learning
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

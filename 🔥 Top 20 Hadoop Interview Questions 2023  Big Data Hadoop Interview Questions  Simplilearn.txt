@@ -1,0 +1,1064 @@
+foreign
+welcome to this amazing new video by
+simply learn in this video we are going
+to discuss the top 20 Big Data Hadoop
+interview questions but before we begin
+consider subscribing to our Channel and
+hit the Bell icon to never miss any
+updates from Simply learn big data in
+layman's terms is a vast volume of high
+velocity data think of hundreds of
+gigabytes of data flowing through in
+minutes obviously this cannot be stored
+and processed through traditional data
+processing systems now this is where
+Hadoop comes in Hadoop is an open source
+framework designed to handle big data it
+provides a distributed file system
+Hadoop distributed file system or hdfs
+and a distributed processing framework
+mapreduce that allows for parallel and
+scalable processing of large data sets
+across clusters of nodes hadoop's
+architecture enables fault tolerance and
+high availability making it suitable for
+processing Big Data organizations and
+prices globally are on the outlook for
+skilled professionals who are able to
+handle such vast volumes of data help
+structure and streamline the processing
+of this data the salary of Hadoop
+developer can vary based on factors like
+experience location company size and
+industry but on an average Hadoop
+developers earn anywhere between eighty
+thousand dollars to 150 000 dollars per
+year which can go as high as 250 000 for
+some experienced roles it is therefore
+one of the best times for you to get
+yourself certified and skilled in Big
+Data domain with companies like Google
+Adobe Intuit or active Accenture visa
+and many hiring Hadoop developers you
+must get yourself enrolled in one of our
+amazing certification training programs
+to land yourself your dream job let me
+tell you about this Global certification
+program if you are willing to get lucky
+in this field of data then give a try to
+Simply learn Sports graduate program in
+data engineering some key features of
+this program include postgraduate
+program certificate and alumina
+Association membership exclusive master
+classes and ask me anything sessions by
+IBM eight times higher life interaction
+in live data engineering online classes
+by industry experts Capstone from three
+domains and 14 plus projects with
+industry data sets from YouTube
+classdoor Facebook Etc you will gain
+expertise and skills like real-time data
+processing data pipelining big data
+analytics data visualization
+provisioning data storage Services
+Apache Hadoop and more tools covered in
+this courses are Amazon EMR Amazon quick
+site Amazon redshift Amazon Sage maker
+Kafka mongodb python Scala spark and
+much more so what are you waiting for
+become a data expert hurry up and enroll
+Now find the course Link in the
+description box listen to what I have
+say about our courses after working for
+a long
+for a long moving to Big Data was a
+great challenge for me but by upskilling
+myself I conquered the challenge and
+today I am a certified Big Data engineer
+now I can easily carry out my big data
+products as well as successful Elite a
+team of Engineers I even got a decent
+salary hike
+hi I am Assassin from Canada and I
+recently up together myself with the
+professional certification program in
+data engineering offered I simply
+learned in collaboration with Purdue
+University
+I have been working in the IIT industry
+for 17 plus years now
+and I'm currently working as a tech lead
+in the data engineering projects my core
+experience lies in SQL Server that's why
+I'm moving to Big Data was a challenge
+for me when I started my new job as a
+big data engineer was that I needed to
+upgrade my skills to improve my
+performance in my current role so I
+chose to upskill myself and I couldn't
+have made a better decision after
+completing this course I am now well
+versed in Big Data engineering after the
+professional guidance I received from
+Saint we learn the course curriculum is
+well formulated while industrial
+relevant Concepts and project
+which helped increase deeper knowledge
+about Big Data moreover the courses in
+collaboration refer to University which
+has a great Alumni network and Industry
+experts as instructions how made The
+Learning Experience even better my goal
+is to work as a project manager on Big
+Data projects and after the
+certification I can surely achieve it in
+the coming years with simply Zone I
+could make the change from an SQL to the
+Big Data domain and this learning is
+definitely going to add a lot of value
+to my career journey and
+whenever I get the time off for my busy
+schedule I love to go on to long drives
+with my wife I also enjoy cooking
+whenever I get a chance
+the wall is moving at a much faster Pace
+than we think make sure you don't lay
+behind so obstacle yourself and move to
+a step forward and step closer to your
+dream so without any further Ado let's
+begin over to our tutors
+look at some general Hadoop questions so
+what are the different vendor specific
+distributions of Hadoop now all of you
+might be aware that I do
+Apache Hadoop is the core distribution
+of Hadoop and then you have different
+vendors in the market which have
+packaged the Apache Hadoop in a cluster
+management solution which allows
+everyone to easily deploy manage monitor
+upgrade your clusters so here are some
+vendor-specific distributions we have
+Cloudera which is the dominant one in
+the market we have hortonworks and now
+you might be aware that clouder and
+hortonworks have merged so it has become
+a bigger entity you have mapper you have
+Microsoft is your IBM's infosphere and
+Amazon web services so these are some
+popularly known vendor-specific
+distributions if you would want to know
+more about the Hadoop distributions you
+should basically look into Google and
+you should check for Hadoop different
+distributions Wiki page so if I type
+Hadoop different distributions and then
+I check for the Wiki page that will take
+me to the distributions and Commercial
+support page and this basically says
+that the soul products that can be
+called a release of Apache Hadoop come
+from apache.org so that's your open
+source community and then you have
+various vendor specific distributions
+which basically are running in one or
+the other way Apache Hadoop but they
+have packaged it as a solution like a
+installer so that you can easily set up
+clusters on set of machines so have a
+look at this page and read through about
+different distributions of Hadoop coming
+back let's look at our next question so
+what are the different Hadoop
+configuration files now whether you're
+talking about Apache Hadoop Cloudera
+hortonworks map r or no matter which
+other distribution these config files
+are the most important and existing in
+every distribution of Hadoop so you have
+Hadoop environment.sh wherein you will
+have environment variables such as your
+Java path what would be your process ID
+path where will your log get stored what
+kind of metrics will be collected and so
+on your core hyphen site file has the
+hdfs path now this has many other
+properties like enabling trash or
+enabling High availability or discussing
+or mentioning about your zookeeper but
+this is one of the most important file
+you have hdfs hyphen site file now this
+file will have other information related
+to your Hadoop cluster such as your
+replication Factor where will name node
+store its metadata on disk if a data
+node is running where would data node
+store its data if a secondary name node
+is running where would that store a copy
+of name nodes metadata and so on your
+mapred hyphen site file is a file which
+will have properties related to your map
+reduce processing you also have Masters
+and slaves now these might be deprecated
+in a vendor-specific distribution and in
+fact you would have a yarn hyphen site
+file which is based on the yarn
+processing framework which was
+introduced in Hadoop version 2 and this
+would have all your resource allocation
+and resource manager and node manager
+related properties again if you would
+want to look at default properties for
+any one of these for example let's say
+hdfs hyphen site file I could just go to
+Google and type in one of the properties
+for example I would say DFS dot name
+node dot name dot directory and as I
+know this property belongs to hdfs
+hyphen site file and if you search for
+this it will take you to the first link
+which says stfs default XML you can
+click on this and this will show you all
+the properties which can be given in
+your stfs hyphen site file it also shows
+you which version you are looking at and
+you can always change the version here
+so for example if I would want to look
+at
+2.6.5 I just need to change the version
+and that should show me the properties
+similarly you can just give a property
+which belongs to say core hyphen site
+file for example I would say FS dot
+default fs and that's a property which
+is in core hyphen sci-fi and somewhere
+here you would see core minus default
+dot XML and this will show you all the
+properties so similarly you could search
+for properties which are related to yarn
+hyphen site file or mapred hyphen site
+file so I could say yarn dot resource
+manager and I could look at one of these
+properties which will directly take me
+to yarn default XML and I can see all
+the properties which can be given in
+yarn and similarly you could say map
+reduce dot job dot reduces and I know
+this property belongs to mapreduce
+hyphen site file and this takes you to
+the default XML so these are important
+config files and no matter which
+distribution of Hadoop you are working
+on you should be knowing about these
+config files whether you work as a
+Hadoop admin or you work as a Hadoop
+developer knowing these config
+properties would be very important and
+that would also showcase your internal
+knowledge about the configs which drive
+your Hadoop cluster let's look at the
+next question so what are the three
+modes in which Hadoop can run so you can
+have Hadoop running in a standalone mode
+now that's your default mode it would
+basically use a local file system and a
+single Java process so when you say
+Standalone mode it is as you downloading
+Hadoop related package on one single
+machine but you would not have any
+process running that would just be to
+test Hadoop functionalities you could
+have a pseudo distributed mode which
+basically means it's a single node
+Hadoop deployment now Hadoop as a
+framework has many many services so it
+has a lot of services and those Services
+would be running irrespective of your
+distribution each service would then
+have multiple processes so your pseudo
+distributed mode is a mode of cluster
+where you would have all the important
+processes belonging to one or multiple
+Services running on a single node if you
+would want to work on a pseudo
+distributed mode and using a Cloudera
+you can always go to Google and search
+for cloudera's quick start VM you can
+download it by just saying Cloud era
+quick start VM and you can search for
+this and that will allow you to download
+a quick start VM follow the instructions
+and you can have a single node Cloudera
+cluster running on your virtual machines
+for more information you can refer to
+the YouTube tutorial where I have
+explained about how to set up a quick
+start VM coming back you could have
+finally a production setup or a fully
+distributed mode which basically means
+that your Hadoop framework and its
+components would be spread across
+multiple machines so you would have
+multiple services such as hdfs yarn
+Flume scope Kafka hbase Hive Impala and
+for these Services there would be one or
+multiple processes distribute across
+multiple nodes so this is normally what
+is used in production environment so you
+could say Standalone would be good for
+testing pseudo distributed could be good
+for testing and development and fully
+distributed would be mainly for your
+production setup now what are the
+differences between regular file system
+and hdfs So when you say regular file
+system you could be talking about a
+Linux file system or you could be
+talking about a Windows based operating
+system so in regular file system we
+would have data maintained in a single
+system so the single system is where you
+have all your files and directories so
+it is having low fault tolerance right
+so if the machine crashes your data
+recovery would be very difficult unless
+and until you have a backup of that data
+that also affects your processing so if
+the machine crashes or if the machine
+fails then your processing would be
+blocked now the biggest challenge with
+regular file system is the seek time the
+time taken to read the data so you might
+have one single machine with huge amount
+of disks and huge amount of ram but then
+the time taken to read that data when
+all the data is stored in one machine
+would be very high and that would be
+with least fault tolerance if you talk
+about sdfs your data is distributed so
+sdfs stands for Hadoop distributed file
+system so here your data is distributed
+and maintained on multiple systems so it
+is never one single machine it is also
+supporting reliability so whatever is
+stored in hdfs say a file being stored
+depending on its size is split into
+blocks and those blocks will be spread
+across multiple nodes not only that
+every block which is stored on a node
+will have its replicas stored on other
+nodes replication Factor depends but
+this makes sdfs more reliable in cases
+of your slave nodes or data nodes
+crashing you will rarely have data loss
+because of Auto replication feature now
+time taken to read the data is
+comparatively more as you might have
+situations where your data is
+distributed across the nodes and even if
+you are doing a parallel read your data
+read might take more time because it
+needs coordination for multiple machines
+however if you are working with huge
+data which is getting stored it will
+still be beneficial in comparison to
+reading from a single machine so you
+should always think about its
+reliability through Auto replication
+feature its fault tolerance because of
+your data getting stored across multiple
+machines and its capability to scale so
+when you talk about sdfs we are talking
+about horizontal scalability or scaling
+out when you talk about regular file
+system you are talking about vertical
+scalability which is scaling up now
+let's look at some specific sdfs
+questions what is this why is sdfs Fault
+tolerant now as I just explained in
+previous slides your sdfs is Fault
+tolerant as it replicates data on
+different data nodes so you have a
+master node and you have multiple slave
+nodes or data nodes where actually the
+data is getting stored now we also have
+a default block size of 128 MB that's
+the minimum since Hadoop version 2. so
+any file which is up to 128 MB would be
+using one logical block and if the file
+size is bigger than 128 MB then it will
+be split into blocks and those blocks
+will be stored across multiple machines
+now since these blocks are stored across
+multiple machines it makes it more fault
+tolerant because even if your machines
+fail you would still have a copy of your
+block existing on some other machine now
+there are two aspects here one we talk
+about the first rule of replication
+which basically means you will never
+have two identical blocks sitting on the
+same machine and the second rule of
+replication is in terms of rack
+awareness so if your machines are placed
+in racks as we see in the right image
+you will never have all the replicas
+placed on the same rack even if they are
+on different machines so it has to be
+fault tolerant and it has to maintain
+redundancy so at least one replica will
+be placed on some other node on some
+other rack that's how sdfs is Fault
+tolerant now here let's understand the
+architecture of sdfs now as I mentioned
+earlier you would in a Hadoop cluster
+the main service is your hdfs so for
+your sdfs service you would have a name
+node which is your master process
+running on one of the machines and you
+would have data nodes which are your
+slave machines getting stored across or
+getting or the processes running across
+multiple machines each one of these
+processes has an important role to play
+when you talk about sdfs whatever data
+is written to hdfs that data is split
+into blocks depending on its size and
+the blocks are randomly distributed
+across nodes with auto replication
+feature these blocks are also Auto
+replicated across multiple machines with
+the first condition that no two
+identical blocks will sit on the same
+machine now as soon as the cluster comes
+up your data nodes which are part of the
+cluster and based on config files would
+start sending their heartbeat to the
+name node and this would be every three
+seconds what does name node do with that
+name node will store this information in
+its Ram so name node starts building a
+metadata in its RAM and that metadata
+has information of what are the data
+nodes which are available in the
+beginning now when a data writing
+activity starts and the blocks are
+distributed across data nodes data nodes
+every 10 seconds will also send a block
+report to name node so name node is
+again adding up this information in its
+Ram or the metadata in Ram which earlier
+had only data node information now name
+node will also have information about
+what are the files the files are split
+in which blocks the blocks are stored on
+which machines and what file permission
+now while name node is maintaining this
+metadata in Ram name node is also
+maintaining metadata in disk so that is
+what we see in the red box which
+basically has information of whatever
+information was written to HD
+so to summarize your name node has
+metadata in Ram and metadata in disk
+your data nodes are the machines where
+your blocks or data is actually getting
+stored and then there is a auto
+replication feature which is always
+existing unless and until you have
+disabled it and your read and write
+activity is a parallel activity however
+replication is in sequential activity
+now this is what I mentioned about when
+you talk about name node which is the
+master process hosting metadata in disk
+and RAM so when we talk about disk it
+basically has a edit log which is your
+transaction log and your FS image which
+is your file system image right from the
+time the cluster was started this
+metadata in disk was existing and this
+gets appended every time read write or
+any other operations happen on hdfs
+metadata in Ram is dynamically built
+every time the cluster comes up which
+basically means that if your cluster is
+coming up name node in the initial few
+seconds or few minutes would be in a
+safe mode which basically means it is
+busy registering the information from
+data nodes so name node is one of the
+most critical processes if name node is
+down and if all other processes are
+running you will not be able to access
+the cluster name nodes metadata in disk
+is very important for name node to come
+up and maintain the cluster name nodes
+metadata in Ram is basically for all or
+satisfying all your client requests now
+when we look at data nodes as I
+mentioned data nodes hold the actual
+data blocks and they are sending these
+block reports every 10 seconds so the
+metadata in name nodes Ram is constantly
+getting updated and metadata in disk is
+also constantly getting updated based on
+any kind of write activity happening on
+the cluster now data node which is
+storing the block will also help in any
+kind of read activity whenever a client
+requests so whenever a client on an
+application or an API would want to read
+the data it would first talk to name
+node name node would look into its
+metadata online
+and confirm to the client which machines
+could be reached to get
+that's where your client would try to
+read the data from sdfs which is
+actually getting the data from data
+nodes and that's how your read write
+requests are satisfied now what are the
+two types of metadata in name node
+server holds as I mentioned earlier
+metadata in disk very important to
+remember edit log NFS image metadata in
+Ram which is information about your data
+nodes files files being split into
+blocks blocks residing on data nodes and
+file permissions so I will share a very
+good link on this and you can always
+look for more detailed information about
+your metadata so you can search for sdfs
+metadata directories explained now this
+is from hot and works however it talks
+about the metadata in disk which name
+node manages and details about this so
+have a look at this link if you are more
+interested in learning about metadata on
+disk coming back let's look at the next
+question what is the difference between
+Federation and high availability now
+these are the features which were
+introduced in Hadoop version 2 both of
+these features are about horizontal
+scalability of name node prior to
+version 2 the only possibility was that
+you could have one single Master which
+basically me means that your cluster
+could become unavailable if name node
+would crash so Hadoop version 2
+introduced two new features Federation
+and high availability however High
+availability is a popular one so when
+you talk about Federation it basically
+means any number of name nodes so there
+is no limitation to the number of name
+nodes your name nodes are in a Federated
+cluster which basically means name nodes
+still belong to the same cluster but
+they are not coordinating with each
+other so whenever a write request comes
+in one of the name node picks up that
+request and it guides that request for
+the blocks to be written on data nodes
+but for this your name node does not
+have to coordinate with other name node
+to find out if the block ID which was
+being assigned was the same one as
+assigned by other name node so all of
+them belong to a Federated cluster they
+are linked via a cluster ID so whenever
+an application or an API is trying to
+talk to Cluster it is always going via
+an cluster ID and one of the name node
+would pick up the read activity or write
+activity or processing activity so all
+the name nodes are sharing a pool of
+metadata in which each name node will
+have its own dedicated pool and we can
+remember that by a term called namespace
+or name service so this also provides
+High fault tolerance suppose your one
+name node goes down it will not affect
+or make your cluster unavailable you
+will still have your cluster reachable
+because there are other name nodes
+running and they are available now when
+it comes to heartbeats all your data
+nodes are sending their heartbeats to
+all the name nodes and all the name
+nodes are aware of all the data nodes
+when you talk about high availability
+this is where you would only have two
+name nodes so you would have an active
+and you would have a standby now
+normally in any environment you would
+see a high availability setup with
+zookeeper so zookeeper is a centralized
+coordination service so when you talk
+about your active and stand by name
+notes election of a name node to be made
+as active and taking care of a automatic
+failover is done by your zookeeper High
+availability can be set up without
+zookeeper but that would mean that a
+admins intervention would be required to
+make a name node as active from standby
+or also to take care of failover now at
+any point of time in high availability a
+active name node would be taking care of
+storing the edits about whatever updates
+are happening on sdfs and it is also
+writing these edits to a shared location
+standby name node is the one which is
+constantly looking for these latest
+updates and applying to its metadata
+which is actually a copy of whatever
+your active name node has so in this way
+your standby name node is always in sync
+with the active name node and if for any
+reason active name node fails your
+standby name node will take over and
+become the active remember zookeeper
+plays a very important role here it's a
+centralized coordination service one
+more thing to remember here is that in
+your high availability secondary name
+node will not be allowed so you would
+have a active name node and then you
+will have a standby name node which will
+be configured on a separate machine and
+both of these will be having access to a
+shared location now that shared location
+could be NFS or it could be a quorum of
+Journal nodes so for more information
+refer to the tutorial where I have
+explained about sdfs high availability
+and Federation now let's look at some
+logical question here so if you have a
+input file of 350 tmb which is obviously
+bigger than 128 MB how many input splits
+would be created by sdfs
+what would be the size of each input
+split so for this you need to remember
+that by default the minimum block size
+is 128 MB now that's customizable if
+your environment has more number of
+larger files written on an average then
+obviously you have to go for a bigger
+block size if your environment has lot
+of files being written but these files
+are of smaller size you could be okay
+with 128 MB remember in Hadoop every
+entity that is your directory on hdfs
+file on sdfs and a file having multiple
+blocks each of these are considered as
+objects and for each object hadoops name
+notes Ram 150 bytes is utilized so if
+your block size is very small then you
+would have more number of blocks which
+would directly affect the name nodes of
+M if you keep a block size very high
+that will reduce the number of blocks
+but remember that might affect in
+processing because processing also
+depends on split
+more number of splits more the parallel
+processing so setting of block size has
+to be done with consideration about your
+parallelism requirement and your name
+nodes Ram which is available now coming
+to the question if you have a file of
+350 MB that would be split into three
+blocks and here two blocks would have
+128 MB data and the third block although
+the block size would still be 128 it
+would have only 94 MB of data so this
+would be the split of this particular
+file now let's understand about rack
+awareness how does rack awareness work
+or why do we even have racks so
+organizations always would want to place
+their nodes or machines in a systematic
+there can be different approaches you
+could have a rack which would have
+machines running on the master processes
+and the intention would be that this
+particular rack could have higher
+bandwidth more cooling dedicated power
+supply top of rack switch and so on
+second approach could be that you could
+have one master process running on one
+machine of every rack and then you could
+have other slave processes running now
+when you talk about your rack awareness
+one thing to understand is that if your
+machines are placed within racks and we
+are aware that Hadoop follows Auto
+replication the rule of replication in a
+rack aware cluster would be that you
+would never have all the replicas placed
+on the same rack so if we look at this
+if we have block a in blue color you
+will never have all the three blue boxes
+in the same rack even if they are on
+different nodes because that makes us
+that makes it less fault tolerant so you
+would have at least one copy of block
+which would be stored on a different
+track on a different node now let's look
+at this so basically here we are talking
+about replicas being placed in such a
+way now somebody could ask a question
+can I have my block and its replicas
+spread across three racks and yes you
+can do that but then in order to make it
+more redundant you are increasing your
+bandwidth requirement so the better
+approach would be two blocks on the same
+rack on different machines one copy on a
+different track now let's proceed how
+can you restart name node and all demons
+in Hadoop so if you were working on an
+Apache Hadoop cluster then you could be
+doing a start and stop using Hadoop
+demon scripts so there are these Hadoop
+demon scripts which would be used to
+start and stop your Hadoop and this is
+when you talk about your Apache Hadoop
+so let's look at one particular file
+which I would like to show you more
+information here and this talks about
+your different clusters so let's look
+into this and so let's look at the start
+and stop and here I have a file let's
+look at this one and this gives you
+highlights so if you talk about Apache
+Hadoop this is how the setup would be
+done so you would have it download the
+Hadoop tar file you would have to unturn
+it edit the config files you would have
+to do formatting and then start your
+cluster and here I have said using
+scripts so this is in case of Apache
+Hadoop you could be using a start all
+script that internally triggers start
+DFS and start yarn and these scripts
+start DFS internally would run Hadoop
+demon multiple times based on your
+configs to start your different
+processes then your start yarn would run
+yarn demon script to start your
+processing related processes so this is
+how it happens in Apache Hadoop now in
+case of cloud era or hortonworks which
+is basically a vendor specific
+distribution you would have say multiple
+Services which would have one or
+multiple demons running across the
+machines let's take an example here that
+you would have machine 1 Machine 2 and
+machine 3 with your processes spread
+across however in case of cloud era and
+hot remarks these are cluster Management
+Solutions so you would never be involved
+in running a script individually to
+start and stop your processes in fact in
+case of Cloudera you would have a
+Cloudera SCM server running on one of
+the machines and then Cloudera SCM
+agents running on every machine if you
+talk about hortonworks you would have
+ambari server and ambari agent running
+so your agents which are running on
+every machine are responsible to monitor
+the processes send also their heartbeat
+to the master that is your server and
+your server is the one or a service
+which basically will give instructions
+to the agents so in case of vendor
+specific distribution your start and
+stop of processes is automatically taken
+care by these underlying services and
+these Services internally are still
+running these commands however only in
+Apache Hadoop you have to manually
+follow these to start and stop coming
+back we can look into some command
+related questions so which command will
+help you find the status of blocks and
+file system health so you can always go
+for a file system check command now that
+can show you the files for a particular
+sdfs path it can show you the blocks and
+it can also give you information on
+status such as under replicated blocks
+over replicated blocks misreplicated
+blocks default replication and so on so
+your fsck file system check utility does
+not repair if there is any problem with
+the blocks but it can give you
+information of blocks related to the
+files on which machines they have stored
+if they are replicated as per the
+replication factor or if there is any
+problem with any particular replica now
+what will happen if you store too many
+small files in a cluster and this
+relates to the block information which I
+gave some time back so remember Hadoop
+is coded in Java so here every directory
+every file and file Creator block is
+considered as an object and for every
+object within your Hadoop cluster name
+nodes Ram gets utilized so more number
+of blocks you have more would be usage
+of name node ceram and if you're storing
+too many small files it would not affect
+your disk it would directly affect your
+name node slam that's why in production
+clusters admin guys or infrastructure
+specialist will take care that everyone
+who is writing data to hdfs follows a
+quota system so that you could be
+controlled in the amount of data you
+write plus the count of data and
+individual writes on hdfs now how do you
+copy data from local system onto sdfs so
+you can use a put command or a copy from
+local and then given your local path
+which is your source and then your
+destination which is your sdfs path
+remember you can always do a copy from
+local using a minus F option that's a
+flag option and that also helps you in
+writing the same file or a new file to
+hdfs so with your minus F you have a
+chance of overwriting or rewriting the
+data which is existing on sdfs so copy
+from local or minus put both of them do
+the same thing and you can also pass an
+argument when you are copying to control
+your replication or other aspects of
+your file now when do you use DFS admin
+refresh nodes or the RM admin refresh
+notes so as the command says this is
+basically to do with refreshing the node
+information so your refresh notes is
+Main mainly used when say a
+commissioning or decommissioning of
+notes is done so when in node is added
+into the cluster or when a node is
+removed from the cluster you are
+actually informing Hadoop master that
+this particular node would not be used
+for storage and would not be used for
+processing now in that case you would be
+once you are done with the process of
+commissioning or decommissioning you
+would be giving these commands that is
+refresh nodes and RM admin refresh nodes
+so so internally when you talk about
+commissioning decommissioning there are
+include and exclude files which are
+updated and these include and exclude
+files will have entry of machines which
+are being added to the cluster or
+machines which are being removed from
+the cluster and while this is being done
+the cluster is still running so you do
+not have to restart your master process
+however you can just use this refresh
+commands to take care of your
+commissioning decommissioning activities
+now is there any way to change
+replication of files on sdfs after they
+are already written and the answer is of
+course yes so if you would want to set a
+replication Factor at a cluster level
+and if you have admin access then you
+could edit your sdfs hyphen site file or
+you could say Hadoop hyphen site file
+and that would take care of replication
+Factor being set at a cluster level
+however if you would want to change the
+replication after the data has been
+written you could always use a set rep
+command so set rep command is basically
+to change the replication after the data
+is written you could also write the data
+with a different replication and for
+that you could use a minus D DFS dot
+replication and give your application
+Factor when you are writing data to the
+cluster
+so in Hadoop you can let your data be
+replicated as per the property set in
+the config file you could write the data
+with a different replication you could
+change the replication after the data is
+written so all these options are
+available now who takes care of
+replication consistency in a Hadoop
+cluster and what do you mean by under
+over replicated blocks now as I
+mentioned your fsck command can give you
+information of over or under replicated
+blocks now in a cluster it is always and
+always name node which takes care of
+replication consistent
+so for example if you have set up a
+replication of three and since we know
+the first rule of replication which
+basically means that you cannot have two
+replicas residing on the same node it
+would mean that if your application is 3
+we would need at least three data nodes
+available now say for example you had a
+cluster with three nodes and replication
+was set to three at one point of time
+one of your name node crashed and if
+that happens your blocks would be under
+replicated that means there was an
+application Factor set but now your
+blocks are not replicated or there are
+not enough replicas as per the
+replication Factor set this is not a
+problem your master process or name node
+will wait for some time before it will
+start the replication of data again so
+if a data road is not responding or if a
+disk has crashed and if name node does
+not get information
+replica name node will wait for some
+time and then it will start
+re-replication of those missing blocks
+from the available nodes however while
+name node is doing it the blocks are in
+under replicated situation now when you
+talk about overreplicated this is a
+situation where name node realizes that
+there are extra copies of block now this
+might be the case that you had three
+nodes running with the replication of
+three one of the node went down you
+failure or some other issue within few
+minutes name node re-replicated the data
+and then the failed node is back with
+its set of blocks again name node is
+smart enough to understand that this is
+a over replication situation and it will
+delete set of blocks from one of the
+nodes it might be the node which has
+been recently added it might be your old
+node which has joined your cluster again
+or any node that depends on the load on
+a particular node now we discussed about
+Hadoop we discussed about sdfs now we
+will discuss about mapreduce which is
+the programming model and you can say
+processing framework what is distributed
+cash in mapping
+know that
+will be processed might be existing on
+multiple nodes so when you would have
+your mapreduce program running it would
+basically read the data from the
+underlying disks now this could be a
+costly operation if every time the data
+has to be read from disk so distributed
+cache is a mechanism wherein data set or
+data which is coming from the disk can
+be cached and available for all worker
+nodes now how will this benefit so when
+a map reduce is running instead of every
+time reading the data from disk it would
+pick up the data from distributed cache
+and this this will benefit your map
+reduce
+so distributed Cache can be set in your
+job conf where you can specify that a
+file should be picked up from
+distributed cache now let's understand
+about these roles so what is a record
+reader what is a combiner what is a
+partitioner and what kind of roles do
+they play in a mapreduce processing
+paradigm Paradigm or map reduce
+operation so record reader communicates
+with the input split and it basically
+converts the data into key value Pairs
+and these key value pairs are the ones
+which will be worked upon by the mapper
+your combiner is an optional face it's
+like mini reduce so combiner does not
+have its own class
+it relies on the reducer class basically
+your combiner would receive the data
+from your map tasks which would have
+completed works on it based on whatever
+reducer class mentions and then passes
+its output to the reducer phase
+partitioner is basically a phase which
+decides how many reduced tasks would be
+used aggregate or summarize your data so
+partitioner is a phase which would
+decide based on the number of keys based
+on the number of map tasks your
+partition would decide if one or
+multiple reduced transform we use
+so either it could be partitioner which
+decides on how many reduce tasks would
+run or it could be based on the
+properties which we have set within the
+cluster which will take care of the
+number of reduced tasks which would be
+used always remember your partitioner
+decides how outputs from combiner are
+sent to reducer and to how many reducers
+it controls the partitioning of keys of
+your intermediate map outputs so map
+phase whatever output it generates is an
+intermediate output and that has to be
+taken by your partitioner or by a
+combiner and then partitioner to be sent
+to one or multiple reduce tasks this is
+one of the common questions which you
+might face why is mapreduce slower in
+processing so we know mapreduce goes for
+parallel processing we know we can have
+multiple map tasks running on multiple
+nodes at the same time we also know that
+multiple reduced tasks could be running
+now why does then mapreduce become a
+slower approach first of all your map
+reduce is a batch oriented operation now
+mapreduce is very rigid and it strictly
+uses mapping and reducing phases so no
+matter what kind of processing you would
+want to do you would have to still
+provide the mapper function and the
+reducer function to work on data not
+only this whenever your map phase
+completes
+the output of your map face which is an
+intermittent output would be written to
+X
+and thereafter underlying disks and this
+data would then be shuffled and sorted
+and picked up for reducing phase so
+every time your data being written to
+hdfs and retrieved from sdfs makes
+mapreduce a slower approach here we wrap
+up with top 20 Big Data Hadoop interview
+questions if you like this video do
+share it with your friends and stay
+tuned with simply learn for more updates
+thanks for watching this video
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

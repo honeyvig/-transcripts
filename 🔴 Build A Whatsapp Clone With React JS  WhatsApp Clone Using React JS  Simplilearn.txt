@@ -1,0 +1,1951 @@
+foreign
+welcome back to another video by simply
+learn this is anubhub and in this video
+we are going to create this interesting
+WhatsApp clone using react.js but before
+we begin if you haven't subscribed to
+our Channel already make sure to hit the
+Subscribe button and press the Bell icon
+so you will get all the updates from
+Simply learn so without further Ado
+let's begin and create this interesting
+WhatsApp clone from scratch but first
+let me tell you what react.js is
+so what is react yes react is a
+JavaScript library that is used to build
+mobile and web applications fast and
+Interactive it is an open source
+reusable component based front-end
+library of JavaScript react is a
+combination of HTML and JavaScript which
+provides a re-burst and opinionated way
+to build modern applications now let's
+jump to the coding part and start
+working on the WhatsApp clone now let's
+see how WhatsApp looks like so this is
+WhatsApp app
+and you can see we have two components
+one is this component which you can say
+like chart component or this component
+which is just for dummy purpose but
+whenever we click on any chat from here
+it'll just open the chat here in this
+component so we can
+name it as container component and this
+as contact component contact list
+component okay so let's create this
+amazing app just open your Visual Studio
+code all the code will be done in this
+editor so let's
+close this first
+let's close this let's press Ctrl plus
+backtech and the terminal will be open
+you can also open the terminal from here
+just go terminal and new terminal
+terminal will be open so as you can see
+there are two are terminals so I have
+deleted one
+so let's create this app
+let's write npx
+create
+react
+app
+and then the name of the folder which we
+want to create
+so I'm going to write WhatsApp
+clone
+okay
+let's press enter
+let's wait a couple of minutes
+so all the files modules libraries get
+installed okay
+it'll take a couple of minutes
+just wait and be with me by the end of
+this tutorial I am sure you'll love the
+output because we are going to create
+exact same copy of WhatsApp
+it'll take few minutes
+now as you can see our react project is
+installed so what we are going to do is
+let's see the WhatsApp
+clone enter
+um now we are in the WhatsApp clone so
+we'll write npm start to see whether
+this react predictor is working fine or
+not
+now
+so this react app is installed okay now
+what we are going to do is we are going
+to just
+open the folder
+so this folder is in my C drive you can
+just see the path from there
+where it will show you where the folder
+is created
+now
+a WhatsApp app is open now I'm just
+going to open this
+so in this I'm not you going to use the
+testing component so I'm just going to
+delete this okay
+and this also and this common we don't
+need okay let's save it
+let's close this
+file
+now I'm not going I'm going to open this
+app.js
+okay
+inside this I don't need this part
+also I don't need this
+and from here
+to here let's leave this header
+and let's just
+do this
+let's write
+H1
+simply learn
+so
+and this I'm not going to use the
+CSS I'm going to use the style
+components so for that let's open the
+terminal again
+here I am going to write npm install
+components
+okay press enter
+it will take more couple of minutes so
+let's remove the files that we not going
+to use in this project
+so I'm not going to use this
+also this
+this
+and this
+okay
+so let's just delete this
+so
+this will be the structure of our file
+now
+now let's open the index.js we don't
+need this
+let's remove the client from here
+let's save it
+now what we are going to do is
+let's just
+rework on this
+let's write react
+as we are working with react router
+window
+and this is in the function
+everything will be
+now let's just
+root the elements
+by just clicking
+document
+dot get the element
+by ID
+and then
+root
+okay let's save it
+okay
+why it is showing this
+oh yeah
+now it's fine yeah let's save it
+let's
+yeah
+let's remove this part
+now and next dot JS is ready okay
+so this app
+.js we are going to do all the work
+let's just remove this class from here
+we can just add it after some time
+we don't need it right now
+okay
+yeah fine let's save it and see the
+output
+we'll just start the development
+yeah
+so as you can see it's showing simply
+long
+now let's Analyze This WhatsApp app okay
+so this is divided into two parts okay
+one is this component and the second one
+is this component
+let's create this component first
+inside this Source let's create a folder
+called components
+okay
+and inside this
+let's create two files
+let's name this one as contact list
+okay let's write components also
+Js
+I'm not going to use the CSS because I
+already told you that I'm going to use
+the style component which is installed
+okay the second one is conversation
+let's fit components
+dot Js
+okay
+small mistake
+yeah
+fine
+everything looks good now
+okay
+now let's open the app.js and install
+for import
+the style component which is installed
+okay
+now let's create our first container
+container
+Style
+dot Dev
+and
+bucket
+okay
+yeah
+now inside this I am going to write all
+the style components you can also use
+the CSS file it's fine
+but here I'm just going to use the
+style component okay
+so just be with me
+and you'll love the output I'm sure
+so let's write Flex
+Direction
+which is row
+fine
+let's write 100
+oh yeah
+it's showing an error let's see what's
+the error here
+so it's just saying container is saying
+the value but never used so we are
+assigning the values to this container
+okay but we are not using it right now
+we'll use it here but let's just finish
+it first then we'll use it okay
+let's give it a height
+of 100
+percent
+okay
+let's give it a background so I have all
+the code of the back colors
+you can just copy the source code will
+be in the description box no do not
+worry about that
+so
+I'm going to write f8 F9 and FP
+let's save it it's showing the same
+error don't worry about that
+now let's delete this
+okay
+now
+as we are going to create okay no
+let's just return
+container
+now inside this container I'm going to
+write
+hello from
+simply learn okay
+so
+let's see the output it's showing hello
+from Simply learn
+right
+okay
+let's move forward
+with the code
+now what we will do is we'll work on
+this contactless component
+okay
+let's create another component
+or the
+const
+contact
+list
+components
+not components but
+its component
+the name of the folder
+okay
+so
+I create a function with fat Arrow
+function inside this
+we are going to return
+uh
+contact list
+it's just a simple step do not worry
+about that
+opponent
+let's now
+export it because it will not export the
+component will not work
+let's write
+okay this
+let's
+save it
+now coming back to app.jss
+m.js
+here and after the container
+I'm going to add one more thing which is
+contact
+list component
+but we are not going to write this
+either
+this this is also fine that was also
+fine okay
+so let's open it
+as you can see it's saying
+here and this here
+so we need to give the assigned space to
+both of them
+this one and this one so do not worry
+about that also
+let's first
+this has already been added
+okay
+now
+let's copy this
+paste it here
+rather I'm going to write
+the other
+conversation
+component
+conversation let's just save it it's
+showing an error because
+we haven't
+done anything yet
+now let's just copy this and paste it
+here
+change the names
+and
+here also
+and
+exporting
+and thinner okay
+is defined but never used we'll use it
+if it's just
+telling us again and again so let's use
+it right
+okay
+it's looking fine all the three
+components are here contactless
+component
+container component and this is just a
+dummy text
+coming back to the code
+now let's remove this hello from Simply
+learn
+okay let's save it
+coming back to this contactless
+component
+I'm going to create a container
+okay
+let's create a container but first let's
+import style components
+okay
+this
+let's create
+const
+container
+inside this and again I'll do the same
+style dot Dev
+practice
+in display
+which is
+legs
+okay
+after that
+legs Direction
+which is
+column
+I'll show you why we use this column
+because
+all the chats are written column
+positions so that's why I'm using the
+column part okay
+so
+let's move forward
+okay
+let's give it the height
+now what else we can do is
+let's say no value would never used
+okay it's fine what does it say
+okay inside this return
+let's remove this and let's write
+container
+close it
+let's copy this close bracket and paste
+it here
+and okay
+that's right here
+and here
+now let's save it
+and it's successfully installed now
+let's see
+oh nice
+as you can see
+that's successfully
+okay
+now let's give this as
+Flex because we also sometimes resize
+the window
+okay
+let's add once little space here
+yeah looking very good
+here
+we have that everything fine
+let's
+fashion
+okay
+let's just see here
+now
+let's work on this
+component okay
+here what we'll do is
+will again create first import the style
+component
+because we are going to use it
+import style after that
+let's give it some space here
+now we will write
+const
+container
+again we are doing the same
+I just get some styling
+nerve
+and then the back tick starts
+here I'm gonna write display
+we
+spline no yeah
+flicks
+okay let's just leave this
+now
+we'll lose Flex Direction which is
+column because
+all the things will come under this only
+Now red light height which is again
+hundred percent
+and now
+Flex
+Flex should be here
+let's write 2 first then we'll check and
+see it's showing okay fine
+now let's remove this
+inside this container
+right
+let's copy it from here
+paste it
+save it
+showing an error let's see okay
+closed
+yeah everything looks good let's save it
+and see
+yeah
+so let's divide it evenly
+so this is taking this much of space
+okay let's give
+eight
+okay
+yeah it is fine
+this from here
+we're going to create this part and then
+that we are going to create this
+okay
+yeah this looks good
+okay fine let's move ahead
+with the
+functionalities
+okay
+now
+let's add let's just first see what
+we're gonna create first thing we are
+going to do is we're going to create
+this part okay where the image is
+looking
+so now I'm giving you one task okay you
+have to add these four icons I'm not
+going to do that for sure
+you just have to do
+add these four in your app
+so how you can do it I'll tell you but
+you have to add that isn't it
+interesting okay
+so just open the
+icons for react
+okay
+so you have to first install
+these react icons in your system after
+that you have to work on it okay you
+have to work on how to find the icons
+so here you can find unlimited of icons
+which icon you want okay
+let me just find one for you so you can
+get an idea how to add the icons
+so
+as you can see there are it's a
+messenger
+okay let's
+just find one few ways
+then you can just add all the others
+okay
+here you'll find every icon do not worry
+about that
+so this is one
+but this is
+vertically so let's
+find it again
+let's search for it right
+it'll be a very amazing you can search
+on internet also or you can just go to
+here
+inspect
+add the SVG file
+yeah
+you will find here the SVG of this
+okay
+right now it's not
+yeah
+okay
+so here
+you will find this SVT
+you just have to
+copy this
+copy element
+just I'll just show you
+just paste it and then
+just
+click on it
+and just
+format document
+configure I don't want to configure
+right now but this is how you'll do this
+okay
+you just have to go to this form and
+document
+and then it'll be formatted okay
+now coming back to our code
+we are going to do is let's cut this
+you'll get an idea how to do it okay
+so I'm going to add create this part now
+which is contact list
+component right
+now move ahead
+let's
+create
+const
+profile
+looking for
+Belling mistake shouldn't be here
+so just
+write
+carefully okay
+let's write style dot Dev again
+backtech
+yeah
+yes download there
+let's
+add here display which is
+Flex
+Direction
+row because
+the image we need is here so this is the
+row this is the columns
+so one two three four I'm not going to
+write it leave it and I'll leave it for
+you guys
+okay
+huh
+that'll be very interesting if you'll
+work on your code
+and you'll learn so many things okay
+I can also do that but okay I'll I'll
+add this part and
+code which will get in the description
+box
+so
+I'm going to write
+the color
+for the background
+and then I'm going to give
+heading
+because I don't want the
+picture to be looking
+I have to add this don't worry about
+this
+here
+in the public folder I have added few
+images like this ah this image and some
+other images
+what I'm gonna do is I'm gonna create
+one folder inside this
+and let's name it as
+profile
+okay
+inside this I'm gonna add a few pictures
+so to copy one
+two
+let's drag and drop it inside the
+profiles
+oh no
+let's see the images are coming right
+okay
+yeah so I'm gonna add few more images
+so I have added few images like this
+just dumb images
+if you are mine and fewer dummy okay
+let's open this contact list component
+here we will create close this first
+now let's create another one
+let's write const
+profile
+image
+again style Dot image
+okay
+let's give it a width
+a t
+30
+and the Border radius
+50 percent okay
+let's just save it it's saying you
+haven't assigned a value it is assigned
+a value but never use
+so
+we are gonna use it now okay
+now inside this container
+I'm gonna write
+profile info Dev
+close it
+now we have to add the image also
+so that we are using this
+profile
+okay the spelling is
+fine image
+so it's
+okay
+let's write so first close it
+and let's write the source of the image
+so the source of the image is
+which photo should I put in okay
+let's write this profile dot jpeg
+okay
+let's
+write here
+slash
+it's inside the profiles folder
+so I'm gonna write profile
+profile
+photo
+dot v g
+and it's closed
+now
+boom as you can see
+here is the small logo okay let's give
+it a piece more
+it's just first reduce the size of this
+window
+so we can just
+see the output right
+now we cannot see there it's
+not good so let's now
+some things with the CSS
+yeah 40 would be fine
+yeah 40 oh let's ride now for this line
+I think 40 is fine yeah
+let's give some spacing here
+this would be more
+so let's write
+15
+yeah 15 is perfect
+a logo of image
+is also little small
+is fine
+other images like this only
+okay it's fine it's fine
+yeah as you can see let's insert the
+other side it's not looking very good
+40 was fine with four one
+yeah
+so
+as I have already told you you have to
+add this four logos okay
+the icons
+let's remove this
+let's
+work on the contacts part
+let's see this first
+yeah it's okay fine
+let's move ahead
+now we'll work on this search bar okay
+search box container or search bar
+let's write here
+let's first just close it
+yeah
+after this only we have to write
+another const
+ant antenna no container
+search
+box
+search box
+style Dot
+depth
+back deck
+and
+background color or the background
+should be
+it was that F6 here
+F6 and let's give it some padding
+a little one
+10 pixels
+close it
+you have to declare it here
+yeah
+everything is look good
+yeah let's create this here
+search box
+inside the search box
+um I'll give another
+spaced
+add the container
+const
+contact list component
+here no
+search container will write
+container
+style dot if
+backtech
+background
+which is again the same
+F6 F6 F6 here
+again depending of 10 pixels we could
+have copied it but
+right now
+forgot
+let's head right
+in the search
+container
+remove this space for the clean code
+everything's looks nice let's
+see
+looks good
+okay
+fine
+let's give more styling here
+yeah so what we're going to do is
+first thing let's first just write the
+flex part here
+then the direction of the flex which is
+row
+because it's a search bar
+okay
+the background color we have already
+declared but I'm gonna write White
+because that is not matching with the
+original one
+or the radius I'm gonna give
+16 pixels yeah
+width I'm gonna write
+100
+and
+percent
+okay
+yeah the padding is fine
+let's write five from the right corner
+yeah everything's looking good
+now as you can see here you can find the
+little search kind of thing
+yeah to give it another face color only
+what is not looking fine
+now it's just blur
+a little I can see
+yeah
+a little little I can see
+now it's just as of now let's write it
+white only
+and let's
+give it a little space in check
+yeah 25 yeah fine
+that's the padding of 10 is not fine I
+guess
+hmm
+yeah it's looking fine now right as you
+can see a little white box here
+about the text
+okay let's move forward
+and let's write here icon
+just the search icon that we need
+to make it look more
+as you can see
+so the container is done yeah
+I'm going to write
+which is
+const
+shh
+shh on search
+icon
+again
+style Dot
+image
+back tag and let's give it a little
+width
+of 20
+[Music]
+pixels
+and
+height will be same again
+20 pixels
+close it as you can see it's showing an
+error
+because we have to declare it
+so where we're gonna declare it
+here
+let's try it
+the search icon
+search icon source
+just click close it
+okay
+looks fine what happened here
+that's what I'm saying it's giving me
+some editor
+the line got deleted
+no issues will again like that
+const
+ant on that
+list
+we have
+search icon
+style Dot
+image
+impacting
+we're getting 27
+right here we're given again 27.
+array
+let's close this and save it
+and here inside this
+I was writing
+no search icon
+inside the search icon I'm gonna write
+source
+the images
+uh
+icon
+dot SVG
+no
+but
+um
+let's find
+okay let's close it and see what's
+not showing me the image the
+icon
+let's see
+this is right
+everything just looks good I don't know
+why it's not
+getting okay fine let's find out now
+this is what coders do find out the
+problems
+so
+found the mistake
+yeah
+as you can see a little search logo
+let's give it some space
+30
+and 30.
+you're looking very big no we don't need
+that
+so let's
+face
+25 and 25 only
+because
+okay let's
+28 and 28 again
+yeah
+let's write here also
+20.
+this is looking good
+let's write the padding
+left
+was then so no it's not left yeah
+yeah this is looking good
+a little change maybe but this is also
+looking very good hmm yeah
+now inside this search box
+you have to write this
+right
+so what we're going to do is open the
+code
+after the icons
+I'm going to create one another const
+search
+not let's write input
+Style
+dot input
+move it to give
+100 percent
+okay let's find error it's fine I know
+watching error
+after that let's here only right
+search input
+holder so placeholder is used in the
+JavaScript or any other language to add
+the text inside the code okay so the
+placeholder will exactly copy the code
+or the thing you have written inside
+this curly bracket and paste it over the
+page
+so I'm going to write
+search or start new chat right
+okay it's
+coming in a Bracken we don't need that
+we'll remove it
+so let's go back here
+inside the input
+let's write outline
+you don't need
+for the
+we don't need
+yeah
+this is what we wanted
+right
+is this looking cool
+yeah completely fucking fine
+coming back to the main part
+no
+let's increase the size as it's showing
+very big
+how to
+increase the size is 15.
+left
+then pixel
+this is looking good
+right
+yeah amazing
+forward
+now what we're going to do is we're
+going to add the name component you
+don't want to add this archit because it
+will be very big
+here so rather we'll just start with the
+name components
+now it's the time to delete this
+yeah
+so let's begin and cut this part
+here
+let's again okay close it
+so what we're going to do is
+I'm going to create another
+style component and let's name it as con
+Dot
+component
+yeah contact component
+here
+will be very different from the others
+because here
+we have to do so many other things so
+let's return
+con
+start
+component
+let's
+coming back to the code
+okay
+let's here create
+attack
+item
+and let's copy this text
+paste it inside this and let's save it
+okay okay I know
+this is very
+irritating
+now let's just complete this one
+okay
+it's fine
+let's create another contact component
+now
+and that
+okay
+in this contact item
+let's contact item is written
+okay
+now what we're going to do is
+let's create another const
+ant
+contact
+item
+style dot Dev
+game to back text
+now inside this
+I'm gonna write the name component
+which is
+display which is flex
+and then
+the flex Direction
+yeah what's the
+what's the item here okay it's fine
+it's
+let's save it yeah click on that
+component here
+now
+this is fine
+the return element
+yeah
+let's give it a wait now
+width
+of 100 percent
+save it
+contact
+item
+let's write border
+bottom one pixel is fine
+which is solid
+and F2 F2 F2
+now let's save it
+we are now going to create this
+component yeah
+and coming back to the code
+to this I'm going to write the
+background color
+which is white
+I suppose
+the cursor is pointer
+yeah
+everything's fine
+now
+coming back to the
+now let's create the profile icon
+again we'll create one const
+file
+icon
+which will be placed like the image
+style dot Dev
+oh no it's here we'll write the
+profile which because we need to add the
+image here
+again back take starts
+will give width
+of
+38 pixels
+height of 38 pixels
+let's just
+okay the cursor
+pointer yes
+let's give it a bedding here
+on this
+icon only
+profile icon let's copy this part
+let's
+add the image
+which will come here
+so what we're going to do is we're gonna
+remove this
+part
+and let's write
+the profile
+image
+the source of the image
+is
+profile and the image down and we'll use
+this this profile
+file
+photo
+Dot
+JP EG
+let's close it
+still getting in an error
+let's see
+yeah let's save it first
+it's
+getting us this icon
+like this right
+but what we're gonna do is we're gonna
+add the
+placeholder here
+so
+this is what
+now we're gonna do the contact info
+coming back to the code
+here after this profile icon
+okay
+again create one another
+const of contact
+info
+and then
+tile.dev
+again
+display
+Flex
+Direction
+and the width that we're going to give
+it
+is
+100 percent
+and let's close it
+now
+let's write another one for
+contact name so let's just copy this
+component
+paste it here
+this is contact info and this is contact
+name
+here I'm gonna write span
+and the width
+is 100
+after that I'm going to write the font
+size
+the font size I'm going to write is 16
+pixels
+to that
+I'm gonna give it a color
+of the text which is black
+which is black
+it's not
+getting it let's see
+issue
+font size is 16.
+okay
+okay
+so
+that's seven
+assign but now used it's fine
+Let's scan copy one more
+and add here const
+message
+h text
+okay
+Style
+dot span
+let's write back deck here
+and give it some styling
+like width is 100
+after that the font size
+is 14 pixels
+the margin that we're going to give on
+top is three only
+and the color which will be using is
+with the help of RGB
+and it'll be zero zero zero
+and 0.8
+that's fine yep
+let's close it
+and after here
+we're gonna write another const let's
+just complete the code
+and then I'll
+tell you okay
+let's cut it
+now
+let's paste some other things that we're
+gonna use
+contact info
+okay let's
+just delete this
+right
+let's just save it it's saying so many
+things that we have used but never used
+so what we're gonna do is we're gonna
+use them again
+okay
+let's see what's the issue up here
+yeah this is closed
+yeah
+make the use of this contact info
+the image we have already put in let's
+make it a little more clean
+here after the contact info
+here we'll write the contact info
+after that
+let's write the name of the person
+that
+name
+let's write my name here
+okay
+it's showing but it's just from a little
+problem I guess
+let's see
+find out the problem
+okay
+okay yeah
+okay
+in the email you have put in
+from the folder but it's not
+taking the input
+now we have created this
+one component of name
+so as you can see it's also
+excellently using Plex
+now what I'm gonna do is
+I'm gonna copy this part
+and paste it
+let's save it and as you can see it's
+showing
+yeah let's save it here
+now the one side of the okay this
+one is a little extra
+let's give it a little tin
+19 is fine so this
+and keep the container should be
+not exactly 80.
+it's right 95 is fine for it
+to be precise 94.
+yeah that's and uh
+same line now
+so let's move forward
+and see
+now with the text part you are done
+let's work on the time part
+let's open the code again
+and inside the Clone
+contact component
+I'm gonna write message
+after the info that we have created
+right now only message text
+and then say the message text I'm gonna
+write
+hello from
+simply learn
+again
+and this is not right
+contact we don't need this
+okay
+this I can write on
+here
+and here
+I'm gonna write
+let's read
+10 or 4.
+give it yeah
+it's taking some of the space here
+so let's
+cut the space
+and
+find out the problem
+foreign
+container here yeah
+this one
+got that search box display it's right
+here
+display
+s
+okay
+so
+we have to add
+display
+contact one
+which you have written here only
+and let's reduce the width here
+this one I guess was the issue
+no it's not the issue here
+it's just taking so much of betting
+from
+yeah this was fine
+Style live
+here
+I'm gonna remove
+this okay this is fine
+then it's good
+so
+I have done few edit here like I have
+given this width 20
+so with the help of this the time is
+coming on the correct side okay like
+here you can see the time
+isn't it looking like exactly like
+what's up
+yeah okay
+let's do some more editions here
+okay now
+we're going to work on the container
+component
+let's leave the placeholder for now this
+one or an image you can add here
+WhatsApp one only let's make it after
+some time but let's make this component
+first the image and the chat component
+okay
+so
+let's do that
+coming back to the code
+let's open the
+conversation section
+here
+first we are going to create a
+selector so let's add this
+okay
+background color will give
+no
+no it was done
+F6 F7
+and if it
+let's give full background
+color
+now
+what we're gonna do is
+we're gonna add the const
+profile photo
+all right profile
+let's
+head up
+and again the style.dev
+let's delete it
+and add some
+styling
+so first one is always Flex
+and the direction
+it's row
+after that okay let's just return it
+inside this container I'm gonna write
+after this
+profile header
+and let's just
+copy this and paste it
+there
+okay yes
+remove it because we don't need that
+yeah
+so
+what we're going to do is
+let's create
+the
+let's hit add the
+name
+okay the profile header first I think
+we're gonna need is the image
+so I'm gonna add the image here which
+will which is under
+profile folder
+inside that
+let's add the image as
+IMG
+three four six four
+not
+PG
+okay let's even
+I'm checking there it's a no issue
+because I'm gonna write the name inside
+this
+okay
+the image source is correct
+and then
+with the return should have this
+placeholder
+file header is creating an issue let's
+find out
+okay the first thing was container
+inside the container it was profile
+header
+then the profile here to have the image
+which it will fetch and then the name
+and then the profile header is closing
+yep profile
+header
+after that container is getting closed
+and the end we have declared that
+okay let's find out the issue
+so
+this was the mistake
+let's save it
+still we can see uh entered here
+so let's find out the error
+it is const
+conversation component
+and inside this
+we're returning the same container
+with the profile header
+I'll head there
+okay first let's just complete this part
+then we'll work on that
+let's give it a background color
+Ted
+iting
+10 pixels here
+after that we will work on the
+file
+image
+style Dot
+image
+it let's evaluate 32 pixels
+if let's solve it right then we'll
+change that
+height and
+the Border radius which is
+50 only
+okay
+let's just show this
+now
+let's align this
+Center
+after that
+let's give it a Gap a little
+10 pixels would be fine
+as you can see there is a little tab
+here
+yeah
+looking fine
+so
+let's create another
+chat box
+right Style
+dot Dev
+thick
+and inside this
+I'm gonna write display
+which is flex
+background
+images
+F0 X 0.
+bad thing I'm gonna give
+off 10 pixels
+and then the line item
+is
+Center
+let's just save it let's just call this
+one
+after this header
+Okay so
+we'll chat box
+after this
+I'm gonna write
+bottom
+zero
+it's not fetching it let's just wait a
+couple of minutes
+okay
+let's see the output here
+okay
+export
+coming back to contact list components
+here I'm gonna write here
+this one
+let's export this part
+in this also we need to export
+the yeah
+so we can use it on the other file
+now let's even
+coming back to
+another file let's import this file
+so
+we can
+use
+this search
+container and
+the
+input
+let's search it
+let's find out that we need to search
+input yeah
+okay now we are going to use it
+right
+so we are going to use it inside the
+chat box
+that would be yeah inside this
+so I'm going to write search
+container
+and inside the search container I'm
+gonna write
+search
+input
+and
+will close it
+here
+this one is the
+this part that's fine
+coming back to the code
+let's just give a moment
+window function is working fine
+everything looks
+okay
+yeah
+maybe things looks good
+now coming back to here
+I'm gonna copy this placeholder or just
+write it here
+let's write
+placeholder
+type message
+save it
+okay
+now we're gonna make the use of
+more the icons
+so I'm gonna write
+const
+emoji
+it
+Style
+dot image
+width
+we're gonna give it a little
+T would be fine
+I think I'm gonna give it
+28 pixels
+okay
+and then I'm gonna give it
+and T which is 0.4
+now
+we're gonna use the data CVG inside this
+container I'm going to use it
+so let's write
+Emoji image
+source
+data
+CT
+okay what's you have to write it inside
+them
+save it and see yeah
+it's looking amazing
+coming back to the code
+inside this I'm gonna give it
+here okay so here
+say the search input I'm going to give
+it the margin
+to let the left
+so I'm just gonna write 10 pixels
+wait
+save it and see the output now yeah it's
+looking good
+let's just move on
+I think the box is okay it's fine fine
+coming back to the code
+here
+after this I'm going to write cursor
+just pointer
+after that
+this is fine I'm gonna create another
+const
+um
+container
+where all the messages will be stored
+okay
+style Dot
+diff
+icult
+display
+legs
+then the direction
+as you all know react is a beautiful
+language
+you can create wonders with the help of
+react Library
+just learn a little bit about JavaScript
+HTML CSS JavaScript is the main part and
+the CSS HTML is easy
+great
+so I'm gonna write height
+which is 100
+okay you can also take up any course if
+you like to pursue web development we
+have multiple courses on the scale up
+platform
+the link will be in the description box
+you can just click on the link of skill
+up there you will find so many other
+courses for just for free
+okay
+so let's move on
+yeah
+okay
+container is here
+so after the profile should be placed
+container
+let's save it and see yeah everything's
+looking good now
+wait
+pointer
+and yeah
+this is started looking really good
+okay
+now let's create another
+const
+ant let's write write it
+message
+foreign
+Style
+dot Dev and giving it
+this display
+should be Flex
+and then again the margin
+let's write margin of 5 pixels and
+16 pixels let's save it
+it will just give this a little brief
+inside this container I'm gonna place
+this
+message Dev
+yeah
+let's save it now it's working fine
+yeah
+looks good
+going back to the code
+I'm gonna add the chart components here
+okay
+so
+after this one
+and
+I'm gonna
+create another
+accounts
+message
+and say this
+dialed dot div
+Max width
+50 pixels
+that's right
+percent
+and the color of the
+30 30.
+yeah
+showing its
+so we can have to fetch this
+is completely give the painting here
+of 8 pixel and
+10 pixel
+save it
+okay
+enter this style.dev I'm going to give
+background
+color d a F 8 C B plus
+yeah after that Max to width of this
+because we can just adjust the
+page
+so we have to give the max width
+let's give it 50 percent
+okay
+color I'm gonna give this
+again 30 30.
+search
+okay it was not in this
+it
+and
+here let's add this
+let's just cut this part
+and this part
+and here I'm gonna give a little
+width is fine
+width background
+color we have Kevin burning and the font
+size we have to give
+so I'm gonna give it
+a little font size of 14 at least fine
+okay
+14 is fine here
+let's just save it the message component
+we haven't used yet
+so
+first we need to
+using
+now I'm gonna add the text
+so inside this
+message that we have created this now
+I'm gonna write
+hello
+how are you
+just save it and see the output boom
+so it's saying hello how are you you can
+also adjust the font of this and let's
+make it as 19 for now
+yeah 19 is
+you can't see it but
+19 is way better than
+so hello how are you
+this is looking really good
+we can add as much of
+you cannot
+oh what we're gonna do is
+we're gonna copy this component
+and paste it
+okay let's save it and see
+yeah
+back to the code
+inside this container or the dev
+I'm gonna use is your
+is equals to True function
+then
+message which is
+yours is equals to
+so we need to add this function
+here also save it
+just copy this part
+add this in the
+message div component which is here only
+okay
+I'm gonna add one more thing in the
+message div part
+which is
+justify content
+flexing
+yeah let's see now
+so
+this is coming in the
+this part
+this is really a good looking amazing
+right
+so we need to add one function also but
+this is a demo so we're not going to add
+that
+okay
+because just
+change this to and to start only
+and see now
+yeah
+right it's working fine
+now we will add one function
+dollar
+props we're going to use here
+at this I'm going to write props
+is your which we have created
+inside the message part
+is yours question mark
+and then let's close it
+okay
+showing one error
+so what we're gonna do is
+um
+more thing here
+from here
+and here I'm inside the single brackets
+let's compare this
+and then
+let's write here
+click Start
+or
+Flex
+end
+it's
+should work yeah
+hello how are you
+how are you
+you can't add into the text right now
+but
+we'll do that also no worries
+right
+now what we're gonna do is
+you're gonna copy this line
+paste it
+inside this
+save it let's see
+let's just copy this color from here
+rather writing flexing I'm gonna write
+okay it's just to stick let's just
+copy this
+paste it
+copy it
+paste it
+here
+we're going to write
+not green just White
+which come under
+not like that
+it should come in the curly brackets
+note
+saying again the power server
+okay
+this was maybe because I'm still writing
+this space here
+I'm going to delete the background from
+here
+yes
+this
+right
+on the background color but
+and next
+maybe it's not fetching it right
+I'm gonna make it use it
+props is under
+close here
+here also
+improps open and closing statement has
+here
+now let's see
+is there any difference no
+let's find out what's the issue
+okay
+so I'm going to use this prop again
+it should also come under this
+okay
+prompts flexing start
+located
+inside this this is justify continent
+this is background for that
+not for Justified
+background
+now it should work
+yeah thank God
+it is working clearly really good
+now we're gonna add one file which I
+already have
+wrote
+so let me just copy that
+so I have added one file as data.ts
+so this is the content of that file I
+have
+wrote some names this is for the demo
+purpose
+so
+let's just move forward
+you can just
+see the file
+which is created
+okay
+I'm gonna add the file
+here
+the port
+that list
+from data let's just save it contact is
+defined but never used
+okay
+so we're going to use this contact list
+but here
+okay
+let's just write here
+we don't need these many so I'm gonna
+delete it
+okay
+there's so many
+so
+I'm gonna write one container
+let's write it
+here
+contact list
+Dot
+mapping
+I'm going to use
+that
+component
+with this mapping
+I'm going to add
+I'm gonna use the fatter function
+this is Boom
+hello hello hello hello hello how are
+you
+it's still not catching the data that I
+have provided
+no issues I'll just write down
+but just let's make it a little clean
+okay
+container of that function okay it's
+should have used the brackets
+so I'm gonna write here
+user data
+okay
+here
+I'm gonna call that user data
+user
+data
+inside the curly brackets
+yeah
+it is a complete function
+we're also inside the contact component
+I'm gonna write
+to that
+right
+const
+user data as props
+okay
+yeah it's good
+the contact I haven't wrote here
+okay
+I should have
+put this root here
+here I have to put it
+props not here
+here
+isn't available now we used okay
+use it
+at this
+now you'll see one magic
+all the names will be different another
+so
+I'm gonna again go back to our code
+and just
+use for profile picture
+let's just delete this part because
+I'm gonna write the function here
+user data
+dot profile
+cool
+let's check it was profile back or the
+profile back here
+let's now give the correct path of the
+images
+or let's see the images
+it's not coming correct
+so
+let's go back to the code
+and see whether it is profile pic or
+let's see
+a clone
+so inside the public
+here
+you just find out
+now we'll see the output and it's
+showing two images but the two is not
+coming so let's just see the issue
+what's up with these
+okay
+so
+the issue here is
+this only
+right
+yeah
+now let's save it and see the magic
+Anjali picture is also coming now but
+the commercial pack is not coming
+so we'll find out why
+this is happening
+so
+let's again go through okay the image of
+this one
+is jpg not PNG so
+you need to change the extension
+EG let's save it and now boom
+see the magic
+so the basic structure of WhatsApp has
+been created for you guys and you can
+see
+it's coming very good okay
+guys we have edit few steps here like I
+have added one message list map function
+so inside that I'm using the message
+data which is inside this
+which is I I man hey man what's going on
+bro Baba let's go out no bro these are
+the demo text that I have put
+so as you can see this is the structure
+message lead structure hello the sender
+ID 0 0 is the person who is the first
+person in the first and the one is the
+second person then again the hello
+what's up all good what about you is the
+second person is saying I'm good what
+about you and the first person is again
+saying I'm good as well if this is the
+conversation they have and the subscribe
+to Simply learn is the message they all
+want to know
+so this is how the structure of the
+isn't it looking amazing
+right it's looking like really like
+WhatsApp
+as you can see guys
+I know there are some editions that I
+know you can guys can do like I have
+told you about to add these icons I have
+told you where to find it how to do it I
+have showed you but I don't want you to
+copy it from me I just want you guys to
+do a little things that will improve
+your coding skills you can just add some
+see some reference from our Channel we
+have so many other videos
+so with this I think we have read the
+end of this video If you like this video
+just like the button comment on the
+down and please subscribe to Simply
+learn
+for more such content and be safe and
+please quote
+so I am sure you enjoyed watching this
+video
+thank you
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
+thank you

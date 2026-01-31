@@ -1,0 +1,82 @@
+foreign
+'s YouTube channel in this session we
+will learn how to create a database in
+SQL but before we begin I'd like to tell
+you guys that we have daily updates on
+multiple Technologies if you're a tech
+deak in a continuous hunt for latest
+technological Trends then consider
+getting subscribed to our YouTube
+channel and don't forget to hit that
+Bell icon to never miss an update from
+Simply run now without further Ado let's
+get started with our agenda for today's
+session that is how to create a database
+in SQL so first let's have a quick look
+on the syntax we use to create a
+database so first we have a create
+keyword which will explain the SQL
+Server that we are trying to create a
+new element which can be a database or a
+table next we have the keyword database
+which clarifies the sequel that we are
+trying to create a new database the next
+one is not mandatory if not exist just
+we are trying to make sure that the
+database that we are going to create is
+not already existing so if you use this
+if not exist then SQL will tell you in
+case if there is an existing database on
+the same database name then it will not
+allow you to create a duplicated
+database and followed by that we have
+the database name which can be anything
+so I've just created as database name
+here now that we are clear with the
+syntax let's get back to the IDE that is
+MySQL to execute a command to create a
+new database so now we are on the SQL
+workbench now let's quickly try to log
+in
+there you go now you can see some
+existing databases on the left hand side
+of the workbench sysr system is the
+default one so I already created test
+and trial let's try to create a new one
+right away so the create keyword
+database
+keyword and then if not exists
+so here you can see I'm trying to
+capitalize the keywords so that it's
+easier to understand what is the code
+and what is the user defined names right
+so create a database if not Xs and
+click done
+DB
+that's our code let's try to execute
+this and there you go so here you can
+see in the action output create database
+if not exists simply non-db has been
+executed successfully now we can run a
+new code which says show databases
+this should show us the newly created
+database which is simply learn DB which
+is right over here so that's how you
+create a new database in SQL and with
+that we have come to an end of this
+tutorial on how to create a new database
+in SQL if you have any queries regarding
+any of the topics covered in this
+session or if you require the resources
+like PPT or the demo code we used do let
+us know in the comment section below and
+RTM of X Plus will be more than happy to
+resolve all your queries at the earliest
+until next time thank you stay safe and
+keep learning
+foreign
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
