@@ -1,0 +1,135 @@
+hey everyone welcome to the short video
+on angular in this video we will learn
+about what's new with the new angular 13
+version I'm sure you're aware that
+angular rolled out their new version
+that is angular 13 on November 3rd
+20121 this video brings you all the
+updates you need to know but before we
+begin if if you haven't subscribed to
+our Channel already make sure you hit
+that subscribe button and Bell icon to
+never miss an update so let's dive in
+before understanding what's new let's
+have a quick look at what is angular
+angular is an open- Source JavaScript
+framework written in typescript Google
+maintains it and its primary purpose is
+to develop single page applications as a
+framework angular has clear advantages
+while also providing a standard
+structure for developers on a team to
+work with
+it enables users to develop large
+applications in a maintainable
+manner angular has released several
+versions over the past few years with
+every release it has seen significant
+improvements making it a popular choice
+amongst developers today so let's look
+at what's new with angular 13 so the
+first one is it's completely Ivy
+followed by that we have a new update
+that is API component update next we
+have modifications in the angular
+package format followed by that we have
+bye-bye to Internet Explorer next is the
+framework modifications and dependency
+updates next we have improved testing
+and debugging followed by that we have
+some performance improvements and
+finally we have improvements in angular
+CLI now let's look at each one of them
+in detail the first one it's completely
+Ivy the view engine is no longer
+available with the angular 13 update and
+the framework is now 100% Ivy these will
+help to speed up the compilation and
+boost platform efficiency for your
+projects next the API component update
+before the changes in angular version 13
+the namically creating components
+required a lot of boilerplate code the
+new API removes the need for component
+Factory resolver being injected into the
+Constructor IV creates the opportunity
+to instantiate the component with View
+container ref. create component without
+creating an Associated
+Factory followed by that we have the
+modifications in the angular package
+format the angular package format APF
+has been streamlined and modernized to
+better serve developers to streamline
+the APF in version 13 the team removed
+older output formats including view
+engine specific metadata to modernize it
+they have standardized on more modern
+JavaScript formats such as
+es2020 libraries built with the latest
+version of the APF will no longer
+require the use of ngcc as a result of
+these changes Library developers can
+expect leaner package outputs and faster
+execution now the fourth update bye-bye
+to Internet Explorer 11 removing ie1
+support allows angular to leverage
+modern browser features such as CSS
+variables and web animations via native
+web apis what's more the apps will be
+smaller and load faster because we can
+remove I specific polyfills and code
+paths it also removes the need for
+differential loading developers will
+benefit from improved apis and build
+infrastructure while application users
+will benefit from faster loading and an
+improved user
+experience now the fifth update
+framework modifications and dependency
+updates angular version 13 also features
+some helpful updates and important
+changes first up our rxjs 7.4 is the
+default for apps created with NG new
+existing apps using rxjs version 6 will
+have to manually update using the npm
+install rxjs at 7.4
+command now let's look at the sixth
+update improve testing and debugging
+there are important improvements to test
+bit that now do a better job of tearing
+down test modules and environments after
+each test the Dom is now cleaned after
+every test and developers can expect
+faster less memory intensive less
+independent and more optimized tests now
+let's jump into the seventh update that
+is the performance
+improvements these recent updates in
+angular 13 have undoubtedly resulted in
+major improvements by introducing
+unusual modifications such as the opin
+feature is enabled by default Global
+scripts and bundles have been optimized
+in Union type templates autoc completion
+is supported now let's look at the final
+update that is improvements in the
+angular command line interface angular
+now supports the use of persistent buil
+cach by default for new version 13
+projects the valuable feedback from RFC
+persistent build cache by default led to
+this tooling update that results in up
+to 68% Improvement in build speed and
+more ergonomic options and so with that
+we have come to an end of this short
+video on angular 13 I hope this video
+helped you if you have any questions let
+us know in the comments thank you so
+much for being here and watch out for
+more videos from Simply
+done hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

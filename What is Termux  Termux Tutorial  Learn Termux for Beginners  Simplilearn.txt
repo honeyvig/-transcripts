@@ -1,0 +1,383 @@
+hey there fellow Tech Wizards and mobile
+maestros welcome back to our Channel
+today we are about to embark on a
+training Adventure that will transform
+the way you look at your Android device
+forever get ready to explore the
+fascinating universe of turmerics the
+pocket-sized PowerHouse that brings the
+power of Linux right to your fingertips
+whether you are a coding specialist a
+cyber security servant or a curious
+Explorer yearning for new possibilities
+turmox has something incredible in store
+for you imagine having a complete Linux
+distribution right on your phone a
+virtual playground where you can Tinker
+with packages experiment with
+programming languages and unleash the
+full force of a command line interface
+all without the need for root access in
+this video we will guide you through the
+ins and outs of turmers from its
+seamless installation process to its
+immersive area of packages and tools
+whether you are an absolute beginner or
+a Season Pro will make sure you are
+equipped with the knowledge to make the
+most of this powerful app get ready to
+land up your Android experience like
+never before so buckle up and hit that
+like button if you are as excited as we
+are and if you haven't already be sure
+to subscribe and turn on the
+notification Bell so you won't miss any
+of our future Explorations into the
+realm of tech vendors without further
+Ado let's dive head first into the
+extraordinary world of Thomas and before
+we begin if you are someone who is
+interested in building a career in cyber
+security by graduating from the best
+universities or a professional Wireless
+sets to switch careers with cyber
+security by learning from the experts
+and driving a short to Simply Run's
+postgraduate program in cyber security
+with modules from MIT Schwartzman
+College of Engineering the course link
+is mentioned in the description box
+below that will navigate you to the
+course page where you can find a
+complete audio of the program being
+offered so stay tuned with us until line
+of this video and don't forget to
+register your opinion in the comment
+section below now let's get started and
+the first thing we'll see is what is
+turmox so termex is a powerful terminal
+emulator for Android devices that brings
+the full capabilities of a Linux
+distribution to your smartphone or
+tablet it essentially turns your Android
+device into a command line interface
+allowing you to execute various Linux
+commands and run scripts directly on
+your device Terminix is an open source
+project and provides a versatile and
+accessible environment for developers
+hackers and Tech enthusiasts to explore
+and experiment with various tools and
+utilities turmox is designed to provide
+a convenient platform for developers who
+prefer working with the command line it
+offers a wide range of Linux packages
+that can be installed using the APT
+package manager enabling access to an
+extensive collection of software and
+development tools this powerful tool is
+not just limited to developers it also
+caters to Security Professionals ethical
+hackers and anyone who appreciates the
+flexibility and potential of the command
+line now moving on to termites features
+so access to a full Linux environment
+termex provides a complete Linux
+environment on your Android device
+including a shell terminal and a wide
+range of utilities it enables users to
+perform tasks that are typically
+associated with desktop Linux
+distributions the next is apt package
+manager termux comes with an apt package
+manager which allows users to install
+and manage thousands of pre-built
+software packages making it easy to
+expand functionality and access a vast
+array of tools and the next is scripting
+capabilities termic supports scripting
+using popular programming languages like
+bash and python this feature empowers
+users to automate tasks create custom
+tools and develop scripts for various
+purposes and the next is customizable
+terminal the terminal emulator in term X
+can be customized with themes colors and
+fonts to create a personalized command
+line experience that suits the user's
+preferences and the next is external
+keyboard support turmox supports
+external keyboards making it more
+efficient for users who prefer typing on
+physical keyboards especially when
+performing extensive tasks so these were
+the features we we will have a look on
+the limitations of domics so moving on
+so the first limitation is limited
+access to Hardware resources due to the
+security model of Android turmox
+operates within its sandbox environment
+restricting direct access to certain
+Hardware resources like the camera
+microphone and sensors although the term
+X API provides some interaction with
+Hardware it may have limitations
+compared to Native Android apps and the
+next is lack of root access on known
+rooted devices thermax cannot access
+root privileges or non-rooted Android
+devices which means that certain actions
+and configurations that require elevated
+permissions may not be possible and the
+next is limited graphical interface
+support termux is primarily a command
+line environment so it may not offer the
+same level of graphical interface
+support as traditional Android apps this
+limitation can be a challenge for users
+who prefer graphical user interfaces
+over the command lines so despite these
+limitations turmox remains an incredibly
+valuable tool for those who want to
+explore the power of the command line on
+their Android devices it offers a unique
+opportunity to learn experiment and
+utilize Linux tools and Utilities in a
+portable and convenient manner now
+moving on we'll see the termex use cases
+so the first is we can run Python
+scripts on it second we can run batch
+scripts then we can play command line
+games then we have access VI editor then
+we have make SSH connections and create
+python virtual environment we can
+develop apps as long as you don't need
+GUI access and then we can also install
+additional packages with Pip and PM CPN
+Gem tlmgr and other such package
+managers and with that we'll move to see
+how we can install turmerx on Android so
+termex can be easily installed on
+Android devices from either the Google
+Play store or the Appdroid repository so
+I will show you the website or the
+Android repository and I will also
+mention the link of this repository in
+the description box from where you can
+download the termix APK and install on
+your device so you have to follow these
+steps so first you have to open Google
+Play store or F Droid on your Android
+device so now we'll see a demo on how we
+can install turmox on Android device so
+there are two ways that is from Google
+Play Store and I have Droid repository
+so you can see on the mobile device that
+the first link is afterward repository
+so you can download it from here or from
+the Google Play Store and there are also
+some resources from you where you can
+download from up to down and other
+devices and other links but here we will
+discuss only two types so first we will
+go to afterward repository and when we
+scroll down we can see the download apic
+option that is 97 MIB so you just have
+to click on that and it will start the
+download for you as I have already
+downloaded on my Android device
+so we'll just open the tombox
+so this is the Thomas how it looks after
+installing
+and now you'll see some commands what we
+can do on turmox
+so the first command is to update the
+packages list from the repositories we
+can run the command apt space update
+and when we click on enter you can see
+that it is connecting to Thomas Dot
+mentality.web and you can see it has
+started updating all the packages from
+the repositories so it has been done
+so this is what I have shown you the
+demo so the commands are easy I will
+tell you the commands you can see them
+and run on your terms if you want to
+okay
+so now we will come back to commands
+so when you have downloaded the app so
+when you have downloaded the app the app
+will ask you for the storage access
+permissions so you can allow the
+permissions for it and if it's not
+asking so by default turmox operates in
+its stand box environment and does not
+have direct access to Android devices
+storage however you can grant storage
+access to terminals allowing it to
+interact with files and directories on
+your device so I will tell you how you
+can enable storage access so you can
+open the settings on your mobile device
+and you can scroll down and select apps
+or apps and notifications then find and
+select term Works app from the list of
+installed apps now tap on permissions or
+app permissions look for storage or read
+and write files and toggle it onto
+ground storage access to terminals so
+this was all and installing and managing
+termex packages now we'll move to some
+of the commands so Thomas comes with its
+package manager called APD Advanced
+package tool which allows you to install
+update and manage various package Json
+software here's how you can use apt to
+work with packages so to update the
+package list from the repositories we
+can run the command APD space update and
+to update or upgrade all installed
+packages to the latest version we can
+run the command apt space upgrade so
+installing packages on termos installing
+packages on term marks is
+straightforward you can use the APT
+install command followed by the name of
+the package you want to install for
+example to install the nanotext editor
+you can run the command apt space
+installed space Nano and if you want to
+uninstall packages on tombox you can use
+the APT remove command followed by the
+name of the package you want to
+uninstall for example to remove the Nano
+text editor you can use the command apt
+space remove space Nano so these are the
+essential steps for installing termworks
+enabling storage access and managing
+packages on your Android device with
+termex you can access a full Linux
+environment and enjoy powerful command
+line experience right on your smartphone
+or tablet so will have some cheat sheet
+for other commands I will show you some
+so in this section we will provide you
+with a comprehensive Thomas commands
+cheat sheet to help you get started with
+the terminal emulator the cheat sheet
+will include essential commands that you
+will commonly use in terms for various
+tasks so the basic navigation commands
+are the first is CD that is used to
+change directory the next is LS that is
+used to list files and directories in
+the current location the next is PWD
+print working directory it displays the
+path of the current directory the next
+is mkdir create a new directory and the
+next is touch that is create a new file
+then we have some other commands from
+file manipulation commands so the first
+command is copy files or directories you
+can do that by using the command CP then
+we have move or rename files or
+directories you can do that by using MV
+then we have RM that is to remove files
+or directories then we have cat to
+display the contents of a file then we
+have Nano or VI that is text editors to
+create a or edit files within termos
+then we have package management commands
+that is apt commands so you have already
+seen that is apt update that is to
+update the package repositories to get
+the latest package information then we
+have apt upgrade to upgrade install
+packages to the latest versions then we
+have apt installed install a new package
+apt remove uninstall a package in apt
+search search for a package in the
+repositories then we have networking
+commands that is pink to test the
+connectivity of a server or website then
+we have ifconfig or IP that is to
+display network interfaces and the
+configurations then we have netstat
+netstat that is to Show Network
+statistics such as open ports and active
+connections then we also have some
+Process Management command that is PS2
+display currently running processes
+scale to Terminator running process and
+task automation commands bash or sh to
+run a batch script python or Python 3 to
+execute Python scripts and you can also
+enable other repositories on terminals
+so by default turmox user its official
+repositories to provide a wide range of
+packages however you might want to
+explore other repositories to access
+additional software or packages not
+available in official repositories
+enabling other repositories require
+careful consideration as it may expose
+your system to potentially untrusted
+sources here you here's how you can do
+it that is to edit the source.list file
+to enable other repositories you will
+need to edit the sources dot list file
+in terms be cautious while making
+changes to this file as incorrect
+modifications may lead to issues and you
+can also add third party repositories
+and do other tasks
+and this was all for this tutorial hope
+you guys found it informative and
+helpful now let's take a minute to hear
+from our Learners who have experienced
+massive success in their careers hi I'm
+Philip I'm 61 years old and last year
+iopskill with simply learns post program
+in cyber security after working 30 years
+in the IIT sector in various different
+profiles I'm happy to tell you that I
+was able to clear and pass my cissp and
+ccsp certification exams on the first
+attempt after taking the course of
+course I must say was packed with
+practical examples it was led by highly
+skilled certified instructors with many
+companies before the security analysts
+and the architect on a contract basis
+but I needed some stability which I got
+with the job I just started with Infosys
+as a cyber security consultant happened
+on our first and if you like this
+session then like share and subscribe if
+you have any questions then you can drop
+them in the comment section below thanks
+for watching and stay tuned for more
+from Simply learn
+staying ahead in your career requires
+continuous learning and upskilling
+whether you're a student aiming to learn
+today's top skills or a working
+professional looking to advance your
+career we've got you covered explore our
+impressive catalog of certification
+programs in Cutting Edge domains
+including data science cloud computing
+cyber security AI machine learning or
+digital marketing designed in
+collaboration with leading universities
+and top corporations and delivered by
+industry experts choose any of our
+programs and set yourself on the path to
+Career Success click the link in the
+description to know more
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
+foreign

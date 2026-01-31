@@ -1,0 +1,403 @@
+hello everyone and welcome to today's
+tutorial on W shark at simply Lear do
+you know friends that wi shark is a
+powerful Network protocol analyzer that
+helps you capture and analyze Network
+traffic in real time it allows you to
+Deep dive into Data packets traveling
+through your network giving you insights
+into Network performance security and
+troubleshooting in this tutorial we'll
+guide you through the basics of using v
+shark from setting up your capture in M
+to interpreting the data by the end of
+this tutorial you'll have a solid
+understanding of how to navigate why
+shark interface set of filters and
+analyze the network traffic for
+different use cases so guys let's get
+started craving a career upgrade
+subscribe like and comment
+below dive into the link in the
+description to FasTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your back
+but before we move on just a quick info
+guys simply learn has got an advanced
+executive program in cyber security you
+can become an industry ready
+professional with our Advanced executive
+program in cyber security and transform
+your career in six month this High
+engagement course offers real world
+applications and a Master Class by X
+npci expert it is designed for
+individuals seeking for new and more
+fulfilling career so hurry up now and
+join the course the course link is
+mentioned in the the description box so
+guys let us start first by understanding
+what is V Shar so guys V Shar is a
+comprehensive open-source Network
+protocol analyzer that basically allows
+user to capture and analyze a data
+traveling over the network in real time
+it is widely used by Network
+administrators Security Professionals
+and also Developers for various purposes
+for example guys like Network
+troubleshooting where you have to
+identify and resolve network issues by
+examining the traffic patterns and
+diagnosing the connectivity problems the
+next one is network analysis which will
+also be doing in our Hands-On where you
+have to understand and optimize Network
+performance by analyzing data flows and
+interaction between Network systems the
+third one is security auditing you will
+also have to detect and investigate
+unusual or potentially malaci Network
+activities such as unauthorized access
+or data breaches and finally you have a
+protocol development where you can deug
+and develop Network protocols by
+capturing and analyzing protocol
+messages and behaviors the key features
+of Vias Shar are the first one is Packet
+capture vas Shar captures packets of
+data transmitted over the network each
+packet contains a wealth of information
+including source and destination
+addresses and also you get protocol
+types and payload data so as you can see
+all over here I've already downloaded V
+sh and I'll guide you also how to
+download it but as as you can see these
+are the lines that shows that the Wi-Fi
+packet you know graph is showing that
+this is how the packets are transmitting
+so this is basically the real time
+analysis what you can get through in wi
+Shar next one is you get a detailed
+inspection guys wire shark also decodes
+and displays data at various protocol
+layers example you can get ethernet IP
+TCP HTTP which allows for detailed
+examinations of network communications
+if can also perform filtering and
+searching then you'll also get a chance
+to do data visualization which includes
+features for visualizing Network
+traffics such as flow graphs as you can
+see all over here and also statistics
+which can helps in understanding Network
+behavior and performance W shark is
+available for multi-operating systems
+like for Windows Mac OS Linux and many
+more now there are certain scenarios
+where network security Engineers use it
+suppose for Network performance
+monitoring where you track and analyze
+the performance of network applications
+and services you also get an incident
+response you investigate and respond to
+network security incidents by analyzing
+capture traffic and you also do the
+protocol analysis where you examine and
+troubleshoot Network protocols and
+ensure proper implementation now let us
+start with the wi shark so first let us
+download the wi shark and before we
+download it I expect that you would have
+got some brief idea regarding what is
+wire shark now what what you have to do
+guys you have to go at this link wihar
+org. download. HTML so since I'm using
+Windows so I have clicked on Windows x64
+installer just right click on this so as
+you can see it will start downloading so
+guys since I've already downloaded it I
+may not have to do it again and the
+steps are very simple just you have to
+click yes yes and it's going to download
+all the required dependencies and your
+installer will be ready and after
+clicking all the okays you are going to
+get some like this so this is your entry
+of the wire shark Network analyzer now
+so as you can see all over here you can
+capture the network packets from these
+interfaces so you can see local area
+connection 10 adapter look up graphic
+capture Bluetooth is there then you have
+the eets okay so let us choose the Wi-Fi
+as a network interface okay and just
+click on this so as you can see all over
+here so many of the packets have started
+running up okay and this is a shark icon
+so basically it is uh doing the realtime
+packet capturing where you have all
+these things so now let us try to
+understand what is there in wire shark
+so you can see you have file basically
+for managing files you have open save
+export okay so these kind of options are
+there you can also export the TLs
+session Keys okay you can export the
+objects and uh you can do print quit
+then here in the edit so edit you can
+modify the preferences settings and
+profile files if you talk about view you
+can adjust the layout all over here or
+wire shark if you talk about go you can
+navigate through the packets all over
+here then here is a capture you can
+start or stop all over here you can
+restart it then next is analyze so as
+you can see all over here you have
+display filters display filter macros
+display filter expressions and many more
+okay similarly you have statistics okay
+which helps in viewing Network
+statistics and data summaries here you
+have telepone for using these kind of
+protocols okay then you have wireless
+okay then you have tools all over here
+firewall ACL rules Mac address okay and
+there you have the help icon so this is
+a very basic outview of this application
+now let us do some basic exercises first
+so let us try to capture a traffic first
+okay so since I've already selected uh
+our network interface as Wi-Fi and let
+us restart it so you can just go on
+capture and just start the restart okay
+so this has started now go to your
+browser and just type say
+HTTP okay and say bin org is the file so
+guys this is a basic website that we
+have requested on our browser and let us
+go to our wire shark and stop this for a
+moment so as you can see all over here
+this icon shows applying a display
+filter now go all over here and type the
+filter say HTTP okay and you can say our
+filtering would be done so as you can
+see here you have the source you have
+the destination here you have the time
+here you have the number here you have
+the length of the packets okay and this
+is the info okay so now let us do the
+general analysis of the wire shark
+output so as you can see all over here
+the first one is HTTP request and
+responses so as you can see this is our
+source okay we are sending a request to
+the destination address with
+44219
+81240 the protocol is HTTP and the
+length of the packet is 480 and it is
+basically a get request okay so get
+http/1.1 now there's a reply from this
+destination all over here and to the
+destination at our source the protocol
+is still HTTP now the length of the
+packet is increased is 887 and what we
+are getting guys all over here that the
+status is 200 and it says okay now as
+you can see what we are getting
+basically an HTML file all over here
+okay now similarly we are again
+requesting and we are getting a Json
+file all over here now getting a
+specific Json HTTP 1.1 and similarly
+reply is coming so as you can see it's a
+two and from motion where we are
+requesting to a destination which is the
+browser with the protocol HTTP and
+similarly we are getting a reply from
+our destination so guys this is our
+device and this is the given uh resource
+we are trying to access on our browser
+so basically now we can see these are
+the content types which is text HTML for
+the HTML structure okay and also you can
+see all over here this is a Json type
+okay and uh these are the type of
+content we are trying to access it okay
+and this is the
+uh request what we have uh done to our
+destination which is the browser okay
+with the bin org and it is returning and
+text. HTML file I hope so guys you would
+have got a brief idea like how you can
+do the general analysis of the W shark
+output now let us try to do one more
+example which will make our Concepts
+more clear now guys I will show you one
+more use case of this that you can
+diagnose the network issues with ping
+and Trace command Okay so with the help
+of v shark this can also be done guys so
+what you need next is you can open a
+terminal okay and just right click all
+over here and now in this what we are
+going to do guys we are going to
+generate an icmp traffic so with the
+help of ping command okay so now what we
+do we type ping say
+google.com and you can see all over here
+the request and reply have started and
+now what we will do guys we will use the
+Tracer command for tracing our packet
+flow
+so so you can see something we have got
+all over here we will discuss about this
+but later now let us open our wire shark
+okay
+and what we'll do guys we will type icmp
+okay and just click all over here okay
+so guys go to the filter and type icmp
+okay and just click all over here and
+but before that you have to stop this
+and now let us try so you can see all
+over here that here the destination is
+showing unreachable but here we are
+getting the reply okay now let us try to
+examine this protocol okay so what all
+over here let us try to understand first
+what we did in the terminal okay so guys
+is when we are typing the command ping
+google.com this command is basically
+testing the reachability of google.com
+by sending the internet control message
+protocol or icmp Echo request packets
+and waiting for the replies which is
+Echo response now guys let us break down
+the Ping results so first three replies
+we are going to see that each reply
+shows the IP address of 142 250.1
+93110 which is one of the Google servers
+and you can see the round trip time
+latency for the packets for the first
+time it is showing around 76
+milliseconds for second round trip time
+it is showing around 88 then third is 99
+and fourth one is 30
+milliseconds now you can see uh there is
+something called time to live also and
+in this case the time to live for each
+packet is around 55
+milliseconds okay so basically this
+field indicates how many hops or routers
+the packet can pass through before being
+discarded okay now you can also see the
+request timeout so the fourth packet is
+a request timeout meaning no reply was
+received within this set time and you
+can also see the Ping statistics so you
+can see here sent a four packets
+received four packets and there is no
+loss okay so this is one thing and also
+approximate round trip in milliseconds
+you can see minimum is 30 milliseconds
+and maximum is 99 milliseconds average
+is calculated 73 milliseconds so this is
+statistics what we got now you can see
+all over here we have the tracert
+command okay so here no arguments are
+provided first so let us try to
+understand the d means do not resolve IP
+address to host names okay where H means
+maximum number of hops of routers to
+search and w means time out in
+milliseconds for each reply so suppose
+if I see Tracer google.com so guys this
+will show all the Hops that the packet
+has to travel through reach the Google
+server which will help to diagnose where
+the delays or issues might occur on the
+path now you can see all over here there
+are a lot of options are given so
+similarly you can read this now let us
+try to do the wi shark analysis so you
+can see all over here with our source
+10.10
+1.5.18 and we are sending the request to
+the Google server and this is internet
+control message protocol so you can see
+all over here this is Eco this the Ping
+request with ID
+0x1 and we can see the sequence is also
+given the time to live and we are
+replying in 7641 milliseconds so this
+packet is basically what we are doing
+guys we are 7630 is our packet number
+and this is what we are sending as a
+request then 7641 is a reply from the
+Google server with the given ID okay the
+sequence number of this and the time to
+live and it is also giving the request
+one now what you can do guys you can
+also apply one filter all over here we
+can
+okay
+now with the help of
+this you can just see there are a lot of
+options as a filtering okay so you can
+read the documentation for this
+and whenever it is turning red guys it
+is showing something as error okay and
+now uh let us do this and let us type
+our IP address
+say 101
+okay 1
+do
+5.18 okay so this is also one of the way
+you can apply the filter okay so it's
+going to filter out the IP address okay
+say let's do this so it is going to
+filter out our IP address which is
+basically the same which is sending
+because we have not given any other ping
+requ Quest so guys here what we can see
+so this is kind of the analysis what we
+are doing basically okay so guys this
+was a wire shark analysis for diagnosing
+the network issues with the help of ping
+and frees commands and you can do lot
+more other things with the help of w
+shark basically these tools are used by
+Network administrators hackers and also
+Network Engineers to understand the
+network performance diagnose the network
+issues okay so this was a short exercise
+which I've shown you about the basics of
+wire shark I hope so you would have
+enjoyed our today's video and don't
+forget guys to hit the Subscribe button
+and click the Bell icon for further
+updates thank you guys for watching this
+video staying ahead in your career
+requires continuous learning and
+upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to ner up and get certified click
+here

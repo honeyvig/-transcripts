@@ -1,0 +1,188 @@
+hey everyone i welcome you all to simply
+learn
+in this session we will discuss about
+two important parametric tests that are
+z test and t test and what are the major
+difference between them
+we'll also work out on an example
+to understand
+how the z value and the critical value
+plays an important role in the
+hypothesis testing
+so without further delay let's begin
+we'll start by discussing what is
+hypothesis testing and what is the
+importance of null hypothesis
+then we'll discuss the example for the
+same and then we'll move on to z test
+and t test and understand the difference
+and the major points regarding it
+so what is hypothesis testing
+a statistical hypothesis is an
+assumption about the population
+parameters
+this assumption may or may not be true
+hypothesis testing refers to the formal
+procedures used by statisticians to
+accept or reject the statistical
+hypothesis
+here the alternate hypothesis is usually
+your initial hypothesis that predicts
+the relationship between the two
+variables
+for example
+suppose you answer the question how many
+hours per day are students play outdoor
+sports
+with this data you can make a hypothesis
+students who spend more time on outdoor
+activities stays fit
+in this hypothesis testing there is one
+major term that is null hypothesis
+a null hypothesis expresses the opposite
+of what researcher or experiments
+predicts or anticipates
+it essentially defines the statement
+that no exact or actual relationship
+exists between the variables
+usually it is denoted by h naught
+let's try to understand the research and
+null hypothesis with the help of an
+example
+suppose the research hypothesis says the
+amount of time that is spent on a
+cricket practice results in a positive
+performance in an actual cricket match
+so in accordance with it a null
+hypothesis can be that the amount of
+practice is not positively related to
+the performance in a cricket match
+now that we know about the null and
+research hypothesis let's move on to z
+test so what is that test
+a z test is a statistically significant
+test for hypothesis testing
+it is used to analyze whether the two
+population means are different or not
+when the variances are known and the
+sample size is very large
+in this the sample size should be
+usually more than 30
+and when the z distribution is normal
+the mean is zero and the variance is one
+there are few assumptions that we take
+into consideration when calculating the
+z-test
+the first one is all the observations
+are independent
+there are majorly three steps in the
+hypothesis testing the first one is
+state the null and alternate hypothesis
+and perform the statistical test and
+with the help of a z value
+we can accept or reject the null
+hypothesis
+let's discuss this more clearly with the
+help of an example
+but before that let's discuss the
+formula so to calculate the z value we
+have this formula that is x bar minus mu
+divided by sigma divided by root n
+where x bar represents the sample mean
+and the sigma is the population standard
+deviation
+n is the sample size and we use the
+population mean
+let's see how you can use this formula
+to arrive at a null or alternative
+hypothesis
+let's say that the mean score of
+students in a class is greater than 70
+with a standard deviation of 10.
+if the sample of 50 students was
+selected with a mean score of 80 we have
+to calculate a z value to check if
+there's enough evidence to support this
+claim at 0.05 significance level
+so
+let's point down the important data we
+have the x bar that is sample mean equal
+to 80. the sigma is given to be 70 that
+is the population standard deviation and
+is the sample size which is equal to 50
+and mu is the population mean that is
+equal to 10 putting all the values into
+the formula
+we get that value to be 7.09
+now at the significance level of 0.05
+the critical value is 1.645 which is
+calculated with the help of a z table
+you can get this z table simply by
+searching in google
+so we have a z value to be 7.09 and the
+critical value to be 1.645
+since 7.09 is greater than 1.645 we can
+simply reject the null hypothesis and
+come to a conclusion that there is
+enough evidence to support that the mean
+of the class is greater than 70.
+this is how you can use a z value to
+arrive at a proper conclusion
+now let's move on to t-test
+t-test statistics is a method of testing
+hypothesis about the mean of a small
+sample drawn from the normally
+distributed population
+when the population standard deviation
+is not known
+in this case the data is continuous
+the formula to calculate a t value is x
+bar minus mu divided by s divided by
+root n
+where x bar is the sample mean s is the
+sample standard deviation n is the
+sample size and mu is the population
+mean
+let's discuss with the help of an
+example
+suppose the store wants to improve its
+sales the previous sales data shows that
+the average sales of thirty percent was
+forty dollar per sale
+after some corporate training the
+current data showed an average sale of
+dollar sixty per transaction
+as the standard division is given to be
+twenty dollar we have to calculate the t
+value and we have to arrive at a
+conclusion that did training improve the
+sales or not
+so in this case we have the sample mean
+to be 60 standard deviation to be 20 the
+sample size is taken as 30 and the
+population mean is 40.
+putting all the values in the formula
+will arrive at a value of 5.47
+in this case also we assume the
+significance value to be 0.05
+now moving from right to left in a z
+table
+the critical value will come out to be
+1.711
+which is less than 5.47 so in this case
+also we can reject the null hypothesis
+and we can conclude that the training
+did affect the sales
+and the training was helpful
+so with this we come to an end to this
+tutorial i hope this tutorial was useful
+for you and you understood what is that
+test and t-test is and how it can be
+used if yes do subscribe to our channel
+so that you never miss an update thank
+you again and happy learning
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

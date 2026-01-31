@@ -1,0 +1,403 @@
+with the next generation of internet
+exchanges focused on maximum privacy and
+security a variety of ways have been
+enforced to maintain them as such
+censorship has been shifted from the
+streets to the digital domain forces the
+standard citizen to derive alternative
+ways to maintain anonymity major weapon
+in this battle for privacy and security
+is the tor browser an independent
+browser meant to browse the internet
+while reeling information through the
+tor network it serves as a meaningful
+alternative to the standard internet
+browsing habits to better understand the
+purpose of this browser and such we must
+learn about the work of the tor network
+featuring its own routing protocol the
+top browser is an easy way to maintain
+anonymity while browsing without
+emptying one's wallet
+let's take a look at the topics to be
+covered today
+we start at the explanation of what is
+the tor network and its significance in
+the working of the top browser
+we take a look at the onion routing
+protocol and how it transmits the data
+from the client devices to the tor
+directories in order to circumvent
+government censorship
+moving on we learn a few features of the
+tor browser and the distinct advantages
+the tor network provides
+next we learn the difference between
+using a vpn and a tor to anonymize
+internet usage and finally we have a
+live demonstration of the tor browser
+anonymization features in action
+let's move on to learning about the tor
+network
+tor shot for the onion router it's an
+open source privacy network that permits
+users to browse the web anonymously the
+tor was initially developed and solely
+used by the u.s navy to protect
+sensitive government communications
+before the network was made publicly
+available the digital era has disrupted
+the traditional way of doing things in
+every sector of the economy the rapid
+rise in development and innovation of
+digital products has given way to
+frequent data breaches and cyber thefts
+in response consumers are increasingly
+opting for products that offer data
+privacy and cyber security
+tor is one such underground network that
+was implemented for the purpose of
+protecting users identities the tor
+network is one example of the many
+emerging technologies that attempt to
+fill a data privacy void in a digital
+space plagued by cyber security concerns
+the tor network intercepts the traffic
+from your browser and bounces a user's
+request of a random number of other user
+ip addresses
+then the data is passed to the user
+requester final destination
+these random users are volunteer devices
+which are called as nodes or relays
+the tor network disguises your identity
+by encrypting the traffic and moving it
+across different tower relays within the
+network
+the tor network uses an onion routing
+technique for transmitting data hence
+the original name of onion router
+to operate within the tor network a user
+has to install the tor browser any
+address or information requested using
+the browser is transmitted through the
+tor network it has its own feature set
+which we will be covering over later in
+this video
+as we discussed already the data passing
+through the tor network must follow a
+unique protocol known as the onion
+routing protocol let us learn more about
+its unique characteristics
+in our normal network usage the data is
+transmitted directly
+the sender has data packets to transmit
+which is done directly over a line of
+communication with either a receiving
+party or a server of some kind
+however since the data can easily be
+captured while being transmitted the
+security of this exchange is not very
+reliable moreover it becomes very easy
+to trace the origin of such requests on
+many occasions websites with
+questionable and controversial content
+are blocked from the isp this is
+possible since the isp is able to detect
+and spy on user information passing
+through the network
+apart from isps there is a steady chance
+of your private information being
+intercepted by hackers
+unfortunately easy detection of the
+source and contents of a web request
+make entire network extremely vulnerable
+for people who seek anonymity over the
+internet
+however in the onion routing protocol
+things take a longer route we have a
+sender with the top browser installed on
+the client system the network sends the
+information to node one's ip address
+which encrypts the information and
+passes it on to node 2's address which
+performs another encryption and passes
+it on to node 3 address
+this is the last address which is also
+known as the exit node
+this last node decrypts the encrypted
+data and finally relays the request to
+the final destination which can be
+another device or a server end
+this final address thinks the request
+came from the exit node and grants
+access to it the encryption process
+across multiple computers repeats itself
+from the exit node to the original user
+the tor network obfuscates user ip
+addresses from unwanted surveillance by
+keeping the user's request untraceable
+with multiple servers touching the data
+it makes the tracking very difficult for
+both isps and malicious attackers
+now that we understand the way tor works
+let us learn more about the tor browser
+the top browser was developed by a
+non-profit organization as a part of the
+tor project in 2008 and its first public
+release was announced
+the tor browser is a browser forked from
+the popular firefox that anonymizes your
+web traffic using the tor network
+if you are investigating a competitor
+researching an opposing litigant in a
+legal dispute or just think it's creepy
+for your isp or the government to know
+what websites you visit the top browser
+might be the right solution
+before the top browser were developed
+using that network to maintain anonymity
+was a huge task for everyday consumers
+starting from the setup to the usage the
+entire process demanded a lot of
+knowledge and practice the top browser
+managed to make it easy for users to
+traverse the relay server center and
+guarantee the privacy of the data
+exchange
+a major feature of the tor browser is
+the ability to delete all browser
+history cookies and tracking data the
+moment it is closed
+every new launch of the browser opens an
+empty slate having a usage habits from
+being tracked and singled out
+a major feature that is the highlight of
+the tor network is the availability of
+onion links
+only a small portion of the world wide
+web is available to the general public
+we have the deep web that contains links
+that are not allowed to be indexed by
+standard search engines like google and
+bing
+the dark web is a further subset of the
+deep web which contains onion links
+tor browser gives you access to these
+dot onion websites which are only
+available within the tor network
+onion is a special used top-level domain
+which designates an anonymous onion
+service which is also known as a hidden
+service similar to the links of the deep
+web these onion links provide services
+like online shopping cryptocurrency and
+many other products not available in the
+consumer internet space
+often being considered as a haven for
+illegal activities and sales anya links
+provide both information and assets in a
+private manner without the risk of
+spying by authorities
+browsing the web over tor is slower than
+the clear net due to the multiple layers
+of encryption
+some web services also blocked our users
+door browser is also illegal in
+authoritarian regimes that want to
+prevent citizens from reading publishing
+and communicating anonymously
+journalists and dissidents around the
+world have embraced store as a
+cornerstone of democracy and researchers
+are hard at work at improving tor's
+anonymity properties
+let us take a look at some of the
+advantages of using the tor browser over
+standard web browsers
+the highlight of using the tor browser
+is to maintain anonymity over the
+internet the cause for such requests can
+differ from person to person but all of
+these concerns are answered by the tor
+network doubting the information via
+multiple nodes and relay servers make it
+entirely difficult for the isp to keep a
+track of usage data
+the entire top project is designed to be
+completely free and open source
+allowing the code for the browser to be
+inspected and audited by third parties
+helps in the early detection of faulty
+configurations and critical bugs it is
+present for multiple operating system
+starting from laptops to mobile devices
+a number of websites are blocked by
+governments for a variety of reasons
+journalists under authoritarian regimes
+have difficulty in getting the word out
+regarding the situation
+since the onion routing protocol
+transfers data between multiple servers
+of random countries the domains being
+blocked become available when used via
+tor
+usage of these encryption messaging
+platforms is easily enforced using the
+tor browser which otherwise would have
+been a difficult task under oppressive
+circumstances
+many people believe that a vpn offers
+the same benefits as the top browser
+let's put both of them to the test and
+see the differences between them
+coming to the first point of difference
+tor is completely free and open source
+all of the code for the browser and the
+network can be audited and has been
+cleared for security concerns
+when it comes to vpn there are many
+different brands which have open source
+clients but the same cannot be said for
+their counterparts some have partly open
+source while some have completely locked
+up their code so that they cannot be
+stolen further
+moving on tower has multiple relay
+points in its data transfer protocol
+between the server and the receiver
+there are three different ip nodes that
+number can increase but it will always
+be more than two
+once the data is passed from the
+cylinder it goes through all of those
+delay points while in the case of a vpn
+the connection is made from the client
+device to the vpn server and then to the
+requested destination there is no other
+ip node that comes in to work here
+thereby making the connection a
+one-to-one between the client and a vpn
+as a next point since store handles
+multiple layers of encryption and the
+data passes through multiple systems
+along the way the performance is slow
+compared to a vpn where the performance
+is relatively fast due to the less
+number of nodes the data passes through
+similarly the multi-layer encryption of
+tor is consistent if you use tor browser
+every single request passes through the
+same layer of encryption and follows the
+same routing protocol
+in the case of a vpn different companies
+offer different levels of encryption
+some have multi-hop some prefer a single
+one-to-one connection and these kind of
+differences make the choice much more
+variable
+finally the nodes and relays being used
+in the tor network are volunteer there
+is no company holding over them so
+jurisdiction becomes relatively
+straightforward whereas in the case of
+vpns many such vpns are hosted by adware
+companies or are being monitored by
+central governments to note the usage
+information
+now that we have a better understanding
+of the tor browser and its routing let
+us take a look at how the tor browser
+can anonymize and protect our internet
+usage
+on opening up the tor browser for the
+first time this is the page that you are
+going to be welcomed with we have the
+option of connecting to the tor network
+before we start our browsing
+so let's press connect
+and we can see that it is connected
+coming to the anonymization
+let's check my current location on
+google chrome
+currently is showing as navi mumbai in
+maharashtra
+if we check the same link on the tor
+browser we should get a different
+address
+now every link that we open in the tor
+browser will be little delayed and the
+speed will be hampered because of the
+multiple layers of encryption like we
+discussed now as you can see
+it's showing a german ip and the state
+of bavaria
+this is how the anonymization works
+there is no vpn configured there is no
+proxy attached it's straight up this out
+of the box settings that come inbuilt
+with the tor browser
+similarly we have an option of cleaning
+up the data
+let's say if you want to refresh your
+location and you want to use a different
+id for the next browsing session
+if you just restart it once
+and you can have to check it again
+we should be seeing a different country
+this time
+as you can see we have netherlands right
+now so this is how you can keep
+refreshing your address you can keep
+refreshing your host location so that it
+cannot be tracked when in browsing the
+internet
+like we discussed we have some onion
+links that can only be used on the tor
+network
+as you can see these kind of links do
+not open in the google chrome browser
+but once we copy these over to the tor
+browser
+as you can see we have opened the hidden
+wiki which is available only on the tor
+network
+this is kind of an alternative wikipedia
+website where we can find articles to
+read and more information to learn
+similarly we have another onion link
+over here
+which is once again available only for
+the tall browser
+now these kind of delays are expected
+but they are a valid compromise because
+they maintain the anonymity that many
+people desire
+similarly we have found a hidden wallet
+which is a cryptocurrency wallet which
+is specifically for dark web members
+this operates over the tor network and
+this is used by mostly journalists and
+people who want to anonymize their
+internet transactions when it comes to
+dealing money
+all of the transactions that occur over
+the tor network are almost impossible to
+track therefore these kind of
+cryptocurrency wallets are very big on
+the deep web this is just one example
+while having multiple different wallets
+for every single cryptocurrency
+available
+with this we have reached the end of our
+lesson on the top browser hope you
+learned something new today if you have
+any questions regarding this topic feel
+free to write them down in the comments
+section and we will get back to you as
+soon as possible thank you for watching
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

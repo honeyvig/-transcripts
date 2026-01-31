@@ -1,0 +1,323 @@
+due to the increase in the network
+transactions
+in the modern era there are often cases
+when we face some problems regarding
+network issues
+but
+are there exactly network issues or is
+somebody spying on us
+well such cases are regarded as network
+sniffing cases
+but how exactly a hacker hack into a
+network system
+well for today's topic we'll understand
+the same
+hi guys and welcome to yet another
+interesting video simply learn
+if you love watching tech videos
+subscribe to our channel and hit the
+bell icon to never miss an update from
+us
+for today's agenda we'll understand what
+exactly is network sniffing
+then see some tools that are used for
+network sniffing purpose and lastly
+we'll understand what exactly is the
+wireshark tool
+let's take a look at network sniffing
+to access the network related
+information between devices to gain
+profit or use the hacked data for
+illegal purpose is known as network
+sniffing
+this is a process where a hacker or a
+measures programmer
+spy into the network devices of our
+system
+they can access different websites that
+we visit often or see our network habits
+let's take a look at different tools
+that are suitable for sniffing purpose
+network sniffing tools are software's
+that are available on the internet that
+can be used to sniff into the network
+let's take a look at some of the famous
+network tools
+first one is awk
+this is a networking sniffing tool which
+has specialization in intelligent
+analysis for network packets
+next is wireshark
+this software tool is best to look into
+protocol related data packets that are
+often transmitted over the network
+and lastly we have solar wind network
+packet sniffer
+where the performance of this sniffing
+tool is best where the performance
+management is to be looked into
+let's take a look at the wireshark
+sniffing tool this is an open source
+network sniffing software which is
+specifically designed
+to attack data packets during a
+transmission over the network
+this type of software uses different
+color combinations to represent
+different packets and protocols let's
+take a look at some of the uses for the
+sniffing software
+the first uses it is used to analyze
+network packets
+whereas
+it can also be used to troubleshoot
+different network issues which are often
+used by different engineers
+to test whether the software or a
+network device is susceptible to an
+attack
+and lastly it is also used to check
+malicious and hacking possibilities on
+the network
+now that we are completed with the
+briefing for the software that is known
+as wireshark let's take a look at the
+actual demo how exactly network sniffing
+is done
+you can directly access
+the wireshark software website
+where you can find the download option
+and download the most suitable
+version for your laptop or computer
+device
+after downloading the software when you
+install
+it you will get something like this
+as we can see
+these connections are the connections
+that are connected to my laptop right
+now
+and the difference in the graph that we
+can see over here represent the traffic
+on the network that is present
+to much better understand what exactly
+is going on the network we can access
+one of them let's access the wi-fi
+network on my laptop
+after accessing the network
+we can see some packet settings like
+this
+these represents the packet transaction
+that has been made on my network through
+the internet
+and this is how a hacker or a cyber
+criminal knows how exactly we use a
+network services
+this part of the wireshark represents
+different detailed information about the
+transaction that has been made
+and the last section represents some raw
+data or garbage data
+but how exactly a hacker use all this
+jumbled data and hack into a system
+well
+to clarify this there's an option
+that can be used that is known as
+display filter on the wireshark software
+if you want to search for a specific
+protocol for example tcp
+we can write tcp in the search filter
+and search
+and now as we can see
+we only get the protocols that are
+related to tcp
+this is how we can differentiate
+different protocols and access some of
+them to gain knowledge about what
+exactly is going on in the network
+let's try accessing some other protocol
+now
+for example
+dns
+and as we can see only the protocol and
+the data packet that is related to dns
+protocol is visible to us
+to further enhance the display filter
+let's try accessing a
+different page on the web browser
+for example
+simplylearn.com
+when we access the simplylearn website
+we can see the professional courses that
+are available
+but let's take a look at the changes
+that has been made on the wireshark
+to know this let's write
+tcp and a keyword included contains
+and one more thing to include over eis
+during the display filter if you write
+something that is related to the
+software it will represent in a green
+color
+like this but if you write some error
+related keywords like this it will
+represent in the red
+let's continue with the search setting
+including the contains keyword and
+writing
+simply learn
+and entering
+now as we can see these two related data
+packets represent the simply learn
+website that we access just now
+where the source destination ip address
+represent
+my system address whereas the
+destination that is
+13.224.21.74 represent the simply learns
+ip address let's take a look
+and in the garbage area or the raw data
+we can take a look simply learn website
+to see some more details regarding the
+same
+you can access the transport layer
+security
+and the transmission control protocol
+where we can see the source port the
+destination port which is always 443
+as well as
+the flag
+and the timestamp for the same
+this is how hackers get the data about
+our network settings
+but if we want to search for more data
+related to simply learn website that we
+visited just now
+there's an another filter that we can
+use
+for example
+using ip
+dot add r
+space equal equal and writing the i p
+address for the website simply learn
+that is
+thirteen point two two four
+0.21.74
+and when we press enter we get all the
+related data for the simply learn
+website
+and this is how we can see the related
+data
+to much further enhance our display
+settings let's try another example
+access your internet browser
+and access some other website for
+example
+dot
+for example the state university
+and access the allahabad state
+university
+and
+some other
+part in it for example the university
+state
+pdf
+let's see the changes in our wireshark
+settings
+and try using http
+when we write this we get the data that
+is related to the http but what is the
+use for the same
+when you access this
+and right click on the same
+and choose the option follow
+and http stream
+and over here we can take a look at the
+host that is
+the website that we just visited
+now imagine if we were a hacker and we
+knew all this
+we can access any website that our user
+visited
+and we can hack into his system through
+the website
+guys but the point that has to be noted
+over here is if we use the network
+sniffing tool wireshark or some other
+tool that is
+available on the internet for research
+purpose or experimental use that's fine
+but we shouldn't use all these softwares
+for any malicious activity because that
+is illegal
+now
+some of the options that we can see are
+the red box
+this action is used if you want to stop
+the traffic connection that means if we
+press this option
+and clear this
+and press enter
+this shows
+that the network settings has stopped
+receiving any traffic that is available
+on the network but if we want to access
+them again
+we can choose this bluefin option
+continue without saving
+and the software against
+start recording the websites or the data
+packets that are available on the
+network
+now let's take a look at an example as
+we all know we often visit different
+websites and there are some cases we
+often see when the chrome represent a
+non-secure option
+that represents that the website is
+unprotected against network attack
+for example we can access our
+experimental website
+this is a website that allows us to
+access the non-secure part of a website
+if we write for username as
+admin1213
+and for password as
+simply learn
+and login
+as this is an experimental website it
+says
+it's sorry and the login has failed
+let's see the changes in a wireshark
+software
+now as we already did earlier if we want
+to access a specific website we should
+write
+tcp
+contains
+and the keyword of the website that was
+admin
+through this we can see this was the
+website that we visited just now
+but if we want to access the actual
+important data that was the password
+that we typed
+we can use this option
+and over here we can see the simply
+learn
+which was encrypted earlier in the
+website
+this is how a hacker or a cyber criminal
+use different sniffing softwares and
+gain data about different users
+and with this we have reached the end of
+the session
+if you have any questions regarding the
+topic you can ask them in the comment
+section
+thank you for watching
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

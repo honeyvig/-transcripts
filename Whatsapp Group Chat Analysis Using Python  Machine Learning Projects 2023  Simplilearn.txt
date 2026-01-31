@@ -1,0 +1,825 @@
+foreign
+today we will take you through a hands
+of lab demo of how we can analyze
+WhatsApp group chat using machine
+learning
+before we start I hope this skin is
+clearly visible and the audio is fine if
+yes please type in yes if there are any
+issues do let us know in the chat
+section so that we can resolve them
+let's wait for some more minutes to let
+other people join until then let me tell
+you guys that we have regular updates
+and multiple Technologies if you are a
+tech geek in a continuous hunt for the
+latest technological Trends then
+consider getting subscribed to our
+YouTube channel and press that Bell icon
+to never miss any update from Simply
+learn okay great I think we can get
+started
+so let's move to the programming part
+here we will type
+Jupiter
+notebook
+and press enter
+so this is the landing page of Jupiter
+notebook and it select open new python
+file here we will go new pattern file
+so this is how the python Journal look
+likes jupyter python gonna look like so
+here first we will change the name
+WhatsApp
+group
+okay
+yes
+so here first we will import some major
+libraries
+but first we will import import
+re regular expression and then import
+Rejects
+I will explain one by one
+so don't worry import
+ance
+at PD
+report
+numpy as ND
+and the fifth one is
+import
+ant
+dot Express
+as PX
+okay
+then from collection
+import
+ant
+okay and import
+my plot live
+Dot Pi plot
+as PLT
+okay this is for the graph
+and from
+OS
+import
+and the next one is from pil
+import
+then this is the major One Import
+date
+time
+and this one is important
+word cloud
+.cloud
+Mass top words
+upwards and then
+image
+color
+editor
+okay
+then person
+matplotlib
+[Music]
+and press enter let's see
+uh collection
+could be collections
+[Music]
+from word cloud import toward Cloud
+stopwatch image color generator
+yeah so cannot import name but Cloud
+okay sorry
+it should be small
+okay so rest is fine
+so Nampa is a python Library used for
+this one numpy it's a python Library
+used for working with arrays it also has
+a functions for working in the domain of
+Lillian algebra and matrices it is an
+open source project and you can use it
+freely numpy stand for numerical python
+and the panda panda is a software
+Library written for the Python
+programming language for data
+manipulation and Analysis in particular
+it offers data structure and operations
+for manipulating numerical tables and
+Time series
+this matplotally by plot
+so for Python and its numerical
+extension number mad problem is a
+cross-platform data visualization and
+graphical charting package as a result
+it represents
+a strong open source substitute for
+multiplayer
+the application programming interface
+format probably allow programmers to
+incorporate graphs into giu application
+okay
+then this re regular expression
+so a regular expression is specify a set
+of string that matches it the function
+in this module let you check if a
+particular string matches a given
+regular expression or not
+or you can say if a given regular
+expression matches a particular string
+which come down
+to the same thing
+okay
+X
+regex or angular expression is a
+sequence of character that forms a
+search platform
+okay or you can just search better can
+be used to check if a string contains a
+specified search pattern or not
+and this PX
+okay totally Express
+this broadly Express module usually
+imported as PX contains functions that
+can create entire figure at once okay
+and is refers to as a plotly Express or
+PX
+plotly Express is a built-in part of the
+daily library and
+it is recommended the starting point for
+creating the most common figures
+okay then there is one more this counter
+Library so the counter is a dick
+subclass for counting hashable objects
+it is a collection where elements are
+stored as a directory
+keys and their counts are stored as a
+dictionary values okay counts are
+allowed to be any integer value
+including 0 or negative counts
+okay then there is one more this word
+cloud okay this is the kind of major one
+to visualize so
+not major one but it looks good at the
+end you will see so what cloud is a data
+visualization technique used for
+representing Text data in the which size
+of each word indicates its frequency or
+importance
+significant textual data points can be
+highlighted using word cloud
+our clouds are widely used for analyzing
+data from social network websites okay
+then stopwards
+a stopwatch is a commonly used word such
+as the uh and in so that a search engine
+has been programmed to ignore both
+indexing entries for searching and when
+retrieving them as a result in a search
+query okay
+so let's proceed further and create
+the various function for the author for
+the date and time for the get data time
+for the
+you know data point for the Android and
+for the iOS like things like that Okay
+so
+here I will write Def
+TS
+with
+it
+and
+time
+okay
+it starts with date and time okay
+I will write here pattern
+right pattern
+question
+this if this
+I will write here
+zero time
+okay
+like that 0 to 9 plus
+if
+different stuff
+again
+these are the 40 numbers okay
+us
+yes
+P.M
+okay
+oh
+I am
+okay so result
+equals to
+Rd dot match
+if result
+done
+or else return
+let me give some space for the better
+visual
+yeah
+so now we will find the author okay
+we'll create function for the author
+Def
+fine
+author
+okay
+then here I will write s equals to
+plot
+it
+then
+if
+and of s
+question two
+that
+okay
+and
+return
+well
+now what will will create a function to
+get data point for the Android line okay
+so here I will write Def
+get
+data point
+right
+nine
+and date
+time equals to
+plate
+line
+and date comma 2.
+time
+equals to
+date
+time dot display
+then message
+was soon
+dot join to like split line it
+is
+headline
+Auto
+which
+dot split
+print
+or turn
+goes to split
+page
+thank you
+message
+question
+dot join
+it
+message
+Auto
+question
+and
+eight comma
+okay
+so this is the uh for the getting data
+point for the Android okay language line
+just for the uh I will like
+copy pasted and this is for the this one
+iOS okay
+so in this we are doing the same like
+straight line the same we did for the
+you know Android okay
+so
+moving forward
+will create a function for the split
+count
+okay
+so for that today text here
+I can like emoji
+Lambda
+then why
+then again
+g dot use
+English
+dot keys
+okay
+regex
+that's true
+re Dot
+compile
+drag and write join
+other Dot
+Escape
+pm
+or em
+oji
+index I'm just going to set
+Dot and all
+yes
+enter yeah
+so now we will import our data okay so
+we will
+make a list to keep a track of data so
+it can be used for the you know pandas
+data frame
+and we'll
+it will create a separate every column
+for the daytime author and message okay
+so the major thing is okay let's import
+data first then I will tell you
+okay so this is the list to keep a track
+of data so it can be used for the data
+frame under database okay so like
+Converse
+conversation path
+so my file name is WhatsApp
+dad
+because he's captain
+good
+and placed
+student
+[Music]
+P22
+dog
+this is my file
+so how you can export your chat from
+your WhatsApp bro okay so this is the
+data this is my personal data so I can't
+give you so how you can import your text
+your chat okay so open any group
+just click on the top right corner
+I'll get three dots then you can go into
+mode and then you can explore chat
+including media and excluding media your
+wish okay so you can download you can
+send to the mail you can upload in the
+drive then you can use in your machine
+learning project okay so I will write
+these all these steps in the description
+box below so don't worry
+going forward
+let's do
+a bun
+conversation
+coding
+costume
+UTF
+eight
+you know then device
+question
+first
+let's do FB Dot readline
+print
+first
+if
+if
+base question I
+or else
+twice
+question
+and
+P Dot
+read line
+message
+okay
+come on time comma author
+none
+message content four things date Time
+author message okay so for the message
+this is the message buffer and for the
+so while
+dot read line
+not
+line
+if y says
+device which will go to iOS
+pursue
+dot strip
+it and
+time iOS
+fine
+start with date time iOS line so here I
+will cast
+data
+Dot
+if
+okay so this is the long
+entered here
+so
+so what we did we created if devices iOS
+so the line strip will come and the
+function starts with date time and iOS
+this one we created already
+okay it will capture the date Time
+author and messages
+okay then at the end the message buffer
+will append okay for the both
+foreign
+Panda's data frame okay list
+so let's go ahead and see okay while Dre
+okay
+stop with pattern is not defined
+foreign
+pattern
+so
+okay
+and data point Android line
+maybe the spelling mistake as you can
+see
+Point get data point Android is capital
+and this
+40 line get data pointed right
+we copied from here
+copy
+and
+let me run it
+line okay
+we split line split line is not defined
+okay let me get back to you
+so as you can see everything is sorted
+so
+here you can see this is the group name
+okay brtn PlayStation 2022. and this is
+date
+and this is time and this is the guy who
+created the group okay
+so here I will write if
+device
+project also
+Android
+and
+DF equals to PD
+Dot
+data frame
+pass data
+tolerance question
+eight
+let's
+follow
+[Music]
+and DF
+eight
+I'm setting the columns PD dot to
+date time
+PF
+okay
+then URL
+pattern
+uh
+then https
+Plus
+so again after DF equals to for the URL
+count
+from
+button okay
+you should be capital
+comma X
+PRL
+string length
+so
+it's fine then after it else
+so here we are like initializing the
+data frame Panda's data frame so DF
+equals to PD Dot
+data frame
+because
+data comma
+columns
+question
+date
+comma
+time
+for authors
+yeah
+so this is the Panda's data frame we
+have another site
+that DF equals to DF dot drop and
+here
+date
+here
+dot apply
+and
+because
+if it
+also
+if
+time
+okay comma format
+let's just hear
+okay percentage here
+that
+and URL
+pattern
+equals to
+yes
+that cannot assigned to literal well
+copy it paste it
+turning
+so now let's see the data set so DF dot
+head
+20.
+first 20 rows of the data frame
+as you can see
+see uh this guy doctor something related
+power so he sent the message greetings
+about the date from and in this there is
+one URL
+okay
+and this is the date and this is time
+when he sent uh when she sent
+Okay so this there are three links in
+these two links okay
+is this related to placement this guy
+sent okay
+so these are the top 20.
+the number of links you can see in the
+particular message two three and then
+the zero zero this is the media okay so
+I downloaded
+uh the chat without media okay you can
+chat you can come using media
+let's see the information
+data
+so this is you can see we have five
+column name date Time author message URL
+count Okay so
+I'll count date time this is object and
+this is object and URL count as n64.
+okay
+let's see all the author names only
+author names so here I will add DF Dot
+of us Dot
+unique
+okay
+my bad
+these are the authors all the authors
+number of members you can say in
+particular uh group
+okay
+these are all are the unique authors so
+moving forward let's see the you know
+like let's drop all the null values so
+for that we have to write DF dot equals
+to TF dot drop n
+so
+top end is done and so these are the
+some basic you can say the function of
+machine learning and python
+okay
+and moving forward let's see the total
+messages total
+yes
+plus two
+DF dot shape
+we're going to print
+87 total messages okay the media
+messages
+h
+onestly
+yeah
+let me do
+yep zero
+paint
+media
+why this is 0 I already told you like
+I export chat without media okay
+so you can export with media too okay
+so
+right here URL
+button
+okay
+so this is the you can say the regex
+pattern this one
+okay this is the rejects pattern
+and with the start with the St https and
+the second one this this URL count
+return URL which matches with pattern
+and counts it through the all the Lambda
+function
+okay now I will write one more thing
+sum
+but
+yeah
+what this will do this is sum up all the
+links okay so print
+links
+as you can see there are 47 links in the
+group chat
+okay so moving forward let's uh let us
+separate and media messages and the text
+message okay so this is the
+is the code for that so link message you
+go to URL count okay
+deleted messages and this message was
+deleted okay both the statement
+and this media omitted this image okay
+this video for the video and this is
+stickers and we send okay then the drop
+any deleted messages and the link
+message okay so for that let's press
+enter and
+that's it
+underscore DF
+Dot
+okay
+so now you can see we deleted dropped
+all the you can say the deleted messages
+or the link messages okay as you can see
+87 now 56 only
+okay
+so let's
+calculate words and letters okay
+for that messages underscore DF
+then
+rent account
+that account then it was your messages
+PF
+and
+message
+bye
+live you can see
+okay
+I will write here messages
+or DF then word count
+it is underscore DF
+h
+Dot
+print
+okay messages
+EF then
+message count
+one
+okay
+so here you can see I wrote here split
+so word count will be count as like the
+space you can see space between the
+words
+okay splitting sentence with the white
+space you can say
+okay
+let's see
+sh underscore DF
+Dot
+at 10 press enter
+here I have to write messages
+yeah
+so now you can see this author sang
+this letter count 25 and the word count
+is this and the message count is 1 only
+so this package test dot things and this
+is strange this doctor this Arjun hiring
+work from home kind of things and the
+light account is 201 then one count 31.
+okay and this is something hexa viewed
+things and okay so these are the words
+and letters we calculate
+okay now we will see the stats uh like
+author wise okay for that I will write
+the code and we'll get back to you after
+that
+so this is the code for the you can say
+stats
+okay there's an error
+word count
+okay
+okay so these are the all the stats per
+user per author you can say message sent
+and words per message and media media
+sent is zero because like I haven't you
+know included media in my chat so that's
+fine
+okay the words per message this and
+these all the stats you can see and let
+me explain you the code
+so this is for the like filtering you
+know filtering out the message for the
+particular user
+this message DF message DF author
+friends
+and for this
+like rqdf will contain messages of only
+one particular user so we are printing
+that okay
+um
+this shape this one so uh shall we print
+the number of rows which indirectly mean
+the number of messages
+okay
+so this word count this word count
+so word count contains all the total
+words in one message sum of all the
+words divided by total messages will
+yield what's per message okay so and
+this is for the media messages this is
+zero and this is for the link consists
+of the total links Okay so
+this is all the data so now moving
+forward times of the data let's see the
+times of the day so in this time the
+most message is gone like this so
+message is
+so DF
+that is
+time
+Dot
+value
+Dot
+paragraph Okay horizontal
+than PLT dot X label
+that
+is
+and PLT dot y level
+and times of the day at which the most
+number of message sent
+okay
+this is your top 10 uh
+okay
+so because of
+okay let me do like this now it's good
+time a number of messages okay this is
+it
+what I can do is
+number of messages and the top 10 time
+most number of messages now the time is
+came to see the word cloud okay
+now we'll make the word cloud so for
+that I will let me give
+text
+pursue
+dot join
+or join
+you can say review
+print
+is much words
+or the
+okay
+dot format
+will be length
+and then stop words
+one of my favorite
+set
+stop words
+then we will generate the world cloud
+this is to generate the world cloud
+okay sorry word cloud
+but cloud
+upwards
+background
+White
+Dot
+it
+yes
+so we'll display the generated image and
+deploy using the you know matte broadly
+way so clear the dot figure
+eyes
+let's
+say
+population
+equals to
+set it by linear
+by linear and
+PLT dot axis
+PLT dot issue
+based upwards rate
+as you can see there are nine two three
+five words in all the messages
+so these are the sums the Gmail password
+pressure and it's ready
+test email and there's a student
+and see something like this These Are
+the World Cup
+okay so what if I want to see the
+particular author name World cloud like
+how many messages he sent and all like
+it so
+this is the doctor okay I took from here
+no issues
+so let's see
+so this is uh author doctor
+he sent hiring jobs and fresher student
+and this is Anusha ready joined and save
+the Chandra already join okay so this is
+how you can analyze and you can see
+data uh you can analyze your WhatsApp
+group data okay I will add all the
+you know steps how to you how you can
+explore the chat okay
+so I hope you guys understand how we can
+analyze the WhatsApp group data okay
+what's a group chat data using machine
+learning and python if you have any
+question you can ask in the comment
+section below okay our team will respond
+you as soon as possible and don't forget
+to check the all the courses link from
+the description box below if you want
+this full code just comment for the same
+I can't provide you the data set you are
+I but I will provide the steps how you
+can download the data set for your own
+it will be fun you can
+uh analyze your transcript data who sent
+this message and that message okay
+thank you so much for being here
+if you enjoyed this video please
+subscribe to our YouTube channel and
+give like to this video thank you and
+keep learning
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
+thank you

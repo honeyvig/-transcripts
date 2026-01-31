@@ -1,0 +1,202 @@
+hello everyone and welcome back to
+another video by simply learn this is
+anubhav and in this video we will be
+learning about vuojs but before we begin
+if you haven't subscribed to our channel
+already make sure to hit the subscribe
+button and press the bell icon so you'll
+never miss any update from simply learn
+so without further ado let's begin and
+see what's in it for you
+first we will see the introduction to
+ujs
+after that
+we'll see what is a javascript front-end
+framework moving ahead we'll see what is
+view js after that what is progressive
+framework and then we will see the
+features of ujs
+so let's begin
+before we start using vue.js you must
+have intermediate level knowledge of
+html css and javascript it might not be
+a good idea to start with the framework
+if you are completely new to the
+front-end programming a modern framework
+for creating user interface is called
+view it is in progressive framework and
+an open source
+view gs is used to create dynamic web
+interfaces
+one of the well-known frameworks for
+streamlining web development is this one
+the view layer is where vue.js focuses
+it may be seamlessly integrated into a
+large front-end development projects
+view js installation is pretty simple to
+begin with integrative web frameworks
+are simple to understand and quick to
+construct with any developer formal
+google employee even you is the creator
+of vue.js
+viewdis initial version was released in
+february 2014 and it is currently rated
+as 64 000 plus stars on github
+a progressive javascript framework
+called vue.js is utilized to create
+interactive web interfaces the front end
+or the view portion is given
+considerable attention
+the integration with other projects in
+library is fairly simple vue.js is
+relatively easy to install and beginners
+can quickly grasp its concepts and begin
+creating their own user interfaces
+the javascript framework for creating
+user interfaces called vue.js which is
+also the easiest understand focuses
+mostly on the view part
+view 2.0 will be the version we utilize
+throughout this course in future videos
+we will deal with a lot of html
+javascript and css file because u is
+primarily designed for front-end
+development
+now let's move on to what is a
+javascript front-end framework
+view is the ideal introduction to the
+javascript framework if you are not
+familiar with them modern applications
+are made possible by the javascript
+framework they are frequently utilized
+on the web modern javascript
+applications also serve many desktop and
+mobile application a javascript
+front-end framework is a group of
+javascript code libraries that help
+programmers in performing common tasks
+and functionalities in order to make the
+app easier to develop it also provides
+reusable code components a universal
+development environment compilers tool
+sets code libraries apis etc
+now
+let's move on to what is vue.js
+a javascript front-end framework called
+vue.js used to create user interface
+it provides a declarative and component
+based programming approach that enables
+you to quickly create user interface no
+matter how straightforward or complex
+they may be it works on a top of the
+industry standard html css and
+javascript when using vue.js you can add
+directives which are html attributes
+html app can function thanks to vujs
+directive built-in and user-defined
+directives are also available in vue.js
+you don't need prior knowledge of
+webpack people ntm or anything else to
+start with view but view makes it simple
+for you to rely on them when you are
+ready
+vue.js is referred as a progressive
+framework because changes and
+improvements are made on a regular basis
+because it makes it easier for us to
+construct single page application and a
+dynamic user interface
+vue.js works on top of industry
+standards like html css and javascript
+now let's see what is a progressive
+framework
+first what is the meaning of progressive
+this means the framework is used in
+addition to html markup in short it is a
+data model that is connected to a
+template model a progressive is a
+framework that is progressive just to
+the complexity of a project as it is the
+changes and the improvements are made on
+a regular basis on vue.js
+viewjs makes it easier for us to
+construct single page application and
+dynamic user interface
+now let's move on to the features of ujs
+the first feature of ujs is virtual dom
+the virtual representation of a dom is
+called virtual law
+a javascript object that is identical to
+the real dom is constructed using
+virtual dom every time a modification to
+a dom is required a new javascript
+object is formed and the modifications
+are made later the final changes are
+updated in the actual dom after a
+comparison of the two javascript objects
+the second one is data binding with the
+help of binding directives called b bind
+which comes with vue.js the data binding
+functionalities escitates in
+manipulating or assigning values to html
+attributes changing the styles and
+assigning class
+the next one is components one of the
+vue.js key features components enable
+the creation of the unique elements that
+can be reused throughout html now let's
+move on to the next one
+which is event handling
+in order to listen the events in vue.js
+the dom elements have the property
+called v on which helps them to handle
+the program
+the next one is the transition
+or you can say animations
+when html elements are added changed or
+removed from the dom view ds offers a
+variety of techniques to apply
+transition
+for the transition effects an element
+must be wrapped in a built-in transition
+components of vue.js the interface can
+be made more interactive in third-party
+animation library are also simple to add
+now
+the next feature of view js is computing
+properties one of the vue.js key
+characteristics is computing properties
+it is beneficial to pay attention to the
+ui element changes and makes the
+appropriate calculations
+no further coding is required for this
+the next one is
+the templates
+it provides html based template that
+connect the data from the vue.js
+instance to the dom the templates are
+converted into simulated dom render
+functions
+the templates for render functions can
+be used by web developers who can then
+swap out the template for the render
+function the next one is directives
+the built in directives in vue.js can be
+used to carry out a variety of front-end
+tasks including vf vls vshow v on v-bind
+and v-model
+the next one is routing view routing is
+used to navigate between pages and with
+this
+we have reached the end of this video in
+the next video on view js we will see
+how to install vue.js and we will create
+and learn new things about vue.js so
+make sure to like and share it thank you
+for watching and stay tuned for more
+from simply learn
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

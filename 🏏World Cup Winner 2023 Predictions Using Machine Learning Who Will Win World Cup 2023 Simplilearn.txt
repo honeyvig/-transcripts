@@ -1,0 +1,1116 @@
+hi welcome to this amazing video on ICC
+World Cup winner prediction 2023 so this
+prediction will be based on the data we
+have collected from sources like gagal
+so if you love watching these type of
+videos subscribe to our YouTube channel
+and press that Bell icon to never miss
+any update from Simply learn so without
+any further Ado let's get started so
+this is our jupyter notebook so you can
+use any ID so here I will change first
+name to
+ICC word c
+prediction okay yeah so first we will
+import some necessary libraries for data
+analysis and visualization so here I
+will
+import pandas
+SD then I will import
+numpy
+as numi as
+NP then I will
+import M plot lip
+do
+pyplot as
+PLT P
+plot as
+BL okay and the last one is import
+c as
+SNS so these are some major libraries we
+will use throughout so pandas is a
+python library that provides fast and
+powerful flexible and easy to use data
+analysis and manipulation tools this
+pandas numai numai is a library for the
+Python programming languages like adding
+support for large multi-dimensional
+array and matrices along with large
+collection of high level mathematical
+functions to operate on the arrays okay
+so M plot lip M plot lip is a plotting
+library for the Python programming
+language and its numerical
+mathematics extension num and it
+provides an object oriented API for
+embedding plots into application using
+uh general purpose GUI toolkit like kter
+wxpython or
+gtk and the cbon cbon is a library for
+making statical Graphics in Python it
+builds on top of P plot lip and
+integrates closely with Panda's data
+seure okay so cbon helps you to explore
+and understand your
+data moving forward
+uh we will uh import data set and you
+guys can download these data set from
+the description box
+below so here I will
+write World
+Cup to pd. read uncore
+CSV then World
+Cup
+2023
+CSV then I will import one more file
+results equals to ad.
+read
+underscore
+CSV then
+results do
+CSV okay so I will read these the data
+frame uh results. CSV into the results
+data frame
+right let's run it okay
+fine so let me display uh the World Cup
+frame this first F so here I will write
+World
+Cup okay so this is uh file looks like
+okay these are the you know team and the
+titles or win percentage in Odis welcome
+matches welcome matches
+B so this is all the
+data
+so here uh I will make one small chart
+number of titles wor by E team okay so
+let me write here number of
+titles one by each team right so here I
+will write SNS do
+set then RC equals
+to figure
+do figure
+size okay and 20 ISO
+5 okay so now I will create a barplot
+using SNS do barplot to visualized Team
+titles right so here I will write SNS do
+barplot xals
+to team
+name then then y =
+to
+titles then
+data equals to from
+World
+okay so now I will display the plot so
+PLT do
+show
+okay
+okay
+sorry comma
+5 okay so as soon as team name typ does
+data go World
+Cup could not interpret into the team
+name
+okay team
+name
+titles why it's happening because T here
+is capital okay T here is capital titles
+okay so we need these two columns okay
+so this is Australia India New
+Zealand
+right uh moving forward let's see win
+percentage in ODI by E team okay so here
+I will
+write win
+percentage in ODI by
+eting right so same SNS do
+set
+rc+
+figure do figure
+size same 20 comma
+5 right so again I will create the
+barplot SNS dot
+barplot x equals
+to team
+name comma y equals
+to when
+percentage
+ODI comma data equals
+to World
+Cup okay here I will write pl.
+show
+okay again figure do fig RC paramet
+RC
+okay size spelling is
+wrong my bad yeah so as you can see this
+is a win percentage in ODI uh for the
+respective
+teams
+right so this is all about about the
+data we have okay we are getting these
+uh statistics from the data only
+right so here I will do number of
+matches one
+in World Cup by each
+team right so I will copy from
+here
+and because every mostly the part is
+same so I will again copy
+full and I will change
+[Music]
+here to World
+Cup
+match
+one right so this is World Cup match one
+from the respective
+team so here I have already wrote number
+of matches won in World Cup by E team
+right so here again Australia is
+leading so let's check some recent ODI
+ranking
+so
+recent
+ODI
+ranking right again we
+need I will copy because why do write
+again and again
+so here I will change
+into
+rating again I reading a one Pakistan
+second New Zealand England South afria
+it is all about based on the data
+right so moving forward so let me
+display the first few rows of the uh
+result data frame so here I will write
+results
+results do
+head head if you use head you will
+display it will display the top five
+rows and if you use tail it will display
+the last five rows from the data frame
+okay so this is the
+result uh data frame so here you can see
+the first Was Bangladesh team to was
+Pakistan and winner Was Bangladesh Bor
+by 779 R and ground is this this this
+right and the date is this
+okay so removing uh let's remove the
+rows with match abundant and no result
+from the results data frame because of
+no use so here I will write
+results do drop from
+results because anyways the draw
+matches will not get any uh you know
+analytics it won't help in
+analytics if you want to become an AI
+expert and gain handsome salary packages
+look at wide range of AIML courses by
+simply learn in collaboration with top
+universities across the globe by
+enrolling in any of these certification
+program you will gain expertise in
+skills like generative AI prompt
+engineering chat GPT explainable AI
+machine learning algorithm supervis and
+unsupervised learning model training and
+optimization and there is much more on
+the list with handson experience in
+tools like chat JT Dal ithon open CV and
+tens oflow you will catch the eye of top
+recruiter so what are you waiting for so
+hurry up androll now a year of
+experience is preferred to enroll in
+these courses find the coursing in the
+description box
+below C
+to
+match
+abundant
+okay dot
+index okay forgot
+open here I will write
+okay
+results match
+abandon let
+on I will write in place equals
+to
+True
+right okay I will copy this and paste
+again here for the no
+result here I will
+write
+no
+result fine
+yeah so let's have a setat of top five
+teams in ODI World Cup 2023 okay so I
+will write here
+stats stats
+of top five teams in the
+ODI World Cup
+2023 so let let's start with the Indian
+team okay India
+team let me make this like
+this
+yeah so here I will
+write DF data frame equals
+to uh
+results
+results
+of team one
+one
+rights
+to and we will check this for the top
+five teams
+India
+results
+of team
+to cons to
+India
+right so let's create a new data frame
+India containing all rows from the
+filter data frame right
+India equals to DF do
+iock okay let me display India doad top
+five
+rows so this is team uh okay Bangladesh
+India V Bangladesh B by this is
+right and here I will filter the India
+data frame to create a new data frame of
+like India win containing rows where the
+winner column is India okay so here I
+will
+write
+India Vin to
+India
+winner
+India right so here I will check India
+let's
+go okay so what I did here I you know
+filtered the Indian data frame to create
+a new data frame like where the India
+only India wins so here you can check
+this Bangladesh India India won by 77
+run this this this all the matches won
+by India right van
+Stadium okay
+so so this data is like till 2023 you
+can see it is the latest
+data right so moving forward we'll check
+the number of wins in odis's against
+other team because it it is like ODI
+World Cup so that is why so I will write
+here number
+of wins
+in
+Odis
+against other
+teams so here I will exclude the team
+India's
+name okay
+exclude
+de value
+to India
+so now I will filter out the rows with
+the excluded value so here I will write
+filtered _ dfal
+to India
+when Indore wi
+then team
+two
+it's not equals to flued
+Value
+right then let's count the occurrence of
+each value uh in the data frame filter
+data frame of T2 column Team 2 column so
+value _ counts equals
+to
+filter underscore
+DF team
+to do
+value
+counts right and let's print the
+values so West indes 6 New Zealand 4
+Australia 3 so these are the number of
+wins in Odis against other team right
+so moving forward uh let's exclude Team
+India
+name
+okay so it will be the same so let me
+copy
+here so the it was for the team two
+right let me check for the team
+one so here you can see Zimbabwe South
+Africa
+right as a team one so now let me
+display the team India's wins against
+other team using bar graph okay it will
+look
+good
+goest I can copy from
+here
+okay then I will create the bar plot bar
+chart the PLT do figure
+figure
+size to 8 comma
+5 PLT do
+bar
+list
+filtered
+data Team
+2 Dot value
+counts then 0 ra
+5 dot
+keys right comma
+list of
+filtered data so I'm doing for one team
+so later on we'll just copy paste and
+change the team names okay because we
+have to do for the top five teams and
+filter
+data
+team
+two
+dot
+value
+underscore underscore
+counts zero ratio
+5 and then uh comma
+color will
+be blue
+bold
+right so uh all set and PLT do
+show
+right okay invalid some
+let me check the
+error
+okay okay PLT bar is filter data filter
+data is not
+defined filter data
+okay maybe spelling mistake
+so as you can see I run this and there
+was a spelling mistake so here you can
+see the bar plot okay so moving
+forward what we will
+do we'll make the same for the team one
+right it was for the team two so I will
+copy from here paste it here so here I
+will write team
+one again have team
+one again team
+right yeah so this is for so basically
+this uh is the bar I created for this
+statis right for this data we
+got so let's see the win percentage of
+India against each
+team okay so here I will write whenn
+percentage
+AG of India
+against each
+team
+right
+so I will write this code and come back
+to
+you so here I have already wrote the
+team in counts Okay so out of the 1,32
+ODI matches played by India number of
+matches won against the following team
+particular
+team right and we already
+excluded uh the Abundant matches or Draw
+matches or no result matches right so
+this is the total matches played is
+calculated here and here we are India we
+are getting like India's win percentage
+against each team is calculated by this
+particular line
+of code so we are creating this time the
+piie
+chart right PLT dop you can see and here
+what I'm doing is like I'm setting the
+equal expect ratio show that the pie
+chart is drawn as a circle right this is
+a title okay let me run it so as you can
+see Australia and the some of
+Afghanistan or Netherland I guess huh
+England Bangladesh Sri Lanka
+Pakistan this is the win percentage
+okay larger is from with the Sri Lanka
+23.9
+right so now let this is for the whole
+ODI win percentage of India against East
+team like total matches played from by
+India now let's check the win percentage
+of India in the ODI World Cup okay for
+that I have
+to write the same line of code so what I
+will do I will copy paste and get back
+to you so this is the win percentage of
+India uh for the OD in the OD World Cup
+okay this is the whole ODI matches and
+this is the only for the World Cup India
+played ODI matches right so now I will
+create the same charts for the Australia
+team Pakistan team England team the are
+top five teams okay and I what I will do
+I just copy paste the code for the
+respective teams and just change the
+name right and the stats okay so I will
+do and I will get back to
+you so as you can see here so let me run
+it first so this is win percentage of
+England in the odia team so I have
+created these charts uh for the whole
+five top five teams India Australia
+Pakistan New Zealand and England based
+on the data right I've have create I
+gave so this is the stats for the
+Australia team okay I gave the coloring
+okay as per their Jersey color okay so I
+gave Australia to yellow and see this is
+the stats for the Pakistan teams the
+same stats which I done it for the India
+team right I gave them the green
+color and this is the stats from the for
+the New Zealand team black color and the
+final is for the England team I don't
+know why I gave the red color but it's
+fine right so moving forward now we will
+do some Eda explor data analysis and
+let's see okay so I will create the list
+of cricket teams participating in the
+World Cup now so
+World World Cup
+teams okay
+England
+comma
+South
+Africa come
+on okay let me give some
+space West
+indes
+Goan then New
+Zealand Sri
+Lanka Afghanistan
+from
+Australia
+Bangladesh and
+India
+right so let me filter the matches
+involving only teams in the World Cup
+team list okay so I will write DF _
+teams oneals to results
+then
+results team
+one dot is
+in World Cup
+teams right so here I extracted the
+matches with a team one in the World Cup
+right I will do it for the same for the
+team two
+right so moving forward what I will
+do I will combine the filtered data
+frames team1 and team two so I will
+write DF uncore just teams now to PD do
+conat DF uncore
+teams one and DF
+underscore teams
+2 right so here I will concatenated the
+two data frames
+vertically uh so I will WR
+dfdore teams. drop
+duplicates
+duplicates okay so I have removes the
+duplicate uh rows if
+any and here DF do
+teams dot count right so uh let me count
+the number of rows in the final data
+frame
+okay okay uh data frame object
+no
+DF
+okay so it's not DF
+doore right yeah so this is team one
+team two winner okay margin ground right
+so these are the number of rows right
+date the 725 rows all the values are
+same it's good to go so here let's
+display the first few rowes of the DF
+teams which we
+created just right now
+head right
+okay
+and let's uh remove unnecessary columns
+from the DF teams I'm displaying the
+first five view rows uh we are removing
+unnecessary columns like date uh margin
+ground we don't need this margin ground
+and the dates right we need the team one
+team two and the winner final right so
+for that I will write DF uncore
+teams
+underscore uh let's say
+2019 to DF uncore teams dot
+drop
+date
+comma
+margin
+comma
+ground ground okay and I will give
+access to
+one then DF uncore
+teams this is nothing just a data frame
+name Dore teore
+2019
+head so as you can see we have removed
+the uh margin and the dat
+and the ground
+right so uh let me display the whole
+rows DF uncore teams _
+201199 right so we have now three
+columns 725 rows before we have six
+colum right 725 R okay so now what we
+will do here we will do have feature
+selection okay so I will write DF teams
+201019 to data frame
+DF _
+teams
+201019 do
+reset
+index drop equals to
+true and here what I did I did the reset
+the index of uh this data frame this
+data
+frame while dropping the old Index right
+and now what I will do I will set a
+value of one in the winning team column
+for the rows where the winner column is
+the name
+as okay name as the uh Team one column
+and the same I will do for the team two
+also later on so I will write here DF
+uncore teams uncore
+2019 DOT
+log TF TF
+teams
+2019 dot
+winner equals to
+DF _ teams _
+201019
+Dot
+teamore
+one and uh like
+winning
+team equal to
+one right and okay it's
+DF and I will copy
+this paste it
+down and now I am set I will set the
+value of two in the winning team column
+for the rows where the winner column is
+same as the team two
+okay here I write team
+two team
+two
+right so now I will drop the winning
+team column from the data frame DF
+underscore
+teams
+201019 to
+DF
+teams drop
+winning
+team XIs = to
+one right so now I will display the
+first few rows of the modified data
+frame using uh this DF teams doad DF
+uncore teams
+201019 do head right let's run it
+okay what is saying uh DF _ teams drop
+winning team what's the issue winning
+team not found in
+Access okay W is capital I
+guess
+no now as you can see we have dropped
+the winning team right let me run it
+once again right so moving forward we
+will uh split the data set now theing
+data set and the testing data set okay
+now we will import here the train test
+plate from the escalan model
+selection and so for that I will write
+from SK scalan do model underscore
+selection
+import
+train test split train test split is
+nothing it will uh you know split your
+data side into some portion to training
+some portion to testing as per
+your
+numbers
+right okay so
+here I will
+write so here we will create some dummy
+variables for the team name so I will
+write
+final equals to PD do
+get
+uh
+dummies
+DF
+teams
+29
+comma
+prefix =
+to
+D go
+one
+comma T go
+to and then comma
+columns equals
+to teams okay team underscore
+one
+comma
+team
+teamore
+to right so here x equals to the final
+dot drop
+winner okay then comma AIS to one so
+what I did here uh I'm extracting the
+features by dropping the winner column
+okay so here yal
+to
+final
+winner and here what I'm doing assigning
+the winner column as the target
+variable right and here what I will do I
+will split the data into training and
+the testing sets using a test size of 20
+and a random set of 42 right I will tell
+you
+xcore
+train comma
+xcore test
+Yore train
+y test =
+to
+tr test
+split X comma
+y comma test
+size equals to
+0.20 and the
+random State equals to
+4 so here test size 0.20 means the
+testing will be for the 20% and the
+training will be of the 80% of the data
+set right it will split into 80 and 20
+okay automatically let me run it okay
+pd. Dum
+is some columns name is
+wrong okay one more error
+this winner key
+winner fin to
+winner okay some type of
+mistake will be
+cap okay again X is not
+defined X is not defined now defined so
+here let me see final.
+head
+yeah five rows and 50 columns like team
+one Afghanistan it's a particular from
+the particular team
+right okay uh
+so moving forward let's apply random
+Forest classifier algorithm okay will I
+will first do like this yeah so first I
+will apply the import the random Forest
+module from escan so for that I will
+from SK
+Lear do
+Ensemble
+import
+random
+Forest
+classifier okay then create uh let's
+create a random forest classifier with
+the linear kernel so for that I will
+write RF random Forest equals to
+random
+Forest See
+Fire n
+underscore
+estimators equals to 100 comma
+Max T = to
+20 comma
+random state
+to
+Z
+okay so let's fit the classifier on the
+training data so for that I will write
+rf.
+fit xcore
+train train comma y let's go
+train and let's make the prediction on
+the test data set for that I will write
+prediction equal to RF do
+predict X
+test and let's calculate the training
+set score score = to RF
+doore then xcore train comma Yore
+train
+right so uh let's calculate the test
+score as well so I will write here score
+2
+RF
+score test comma Yore
+test and let's print the training set
+accuracy with three decimal places
+okay how you can do let me training
+set accuracy
+comma this is how you can set the
+decimal points percentage dot
+3F
+right
+percent
+scope okay uh let's set the test set
+accuracy
+print test
+set
+accuracy accuracy
+percent same
+point3
+F percentage for this
+scod
+right okay let me run
+it so as you can see the training set
+accuracy is 75% and the test set
+accuracies
+almost 60% right so now evaluate let's
+evaluate the best model on the test set
+test data right for that I will write
+here
+ranking equals to PD dot we have two
+more uh files like which is ICC ranking
+and the fixtures file right read
+dot fixures mean means uh 2023 fixtures
+who will play with whom and
+when read
+CSV
+ICC ranking dots
+CSV this will read the ICC ranking from
+the ICC ranking. CSC file and the
+fixures
+file bd.
+read CSV
+pictures.
+CSV right and here I will write
+prediction underscore
+set so let's analyze an empty list to
+store prediction results
+okay okay PD do CSV not
+CSV uh mod Panda has
+no oh my bad
+sorry
+yeah so now let's go to insert team
+rankings into the fixures data frame
+based on team one and the team two
+columns right so I will write here
+fixtures do
+insert one
+comma
+the
+first position
+right
+fixures team
+one dot
+map then the
+ranking
+ranking.
+set and
+index for the team
+name
+okay so let's run it
+and so as you can see here the round
+number the first position second
+position team one team two and this is
+the location gr results like this okay
+so let's fill the missing values in the
+first position and the second position
+columns in their respective means so for
+that I will write here with the mean
+value we'll uh fill the missing values
+fixtures
+first
+position
+fixtures
+first
+position dot fill
+n
+pictures first
+position dot
+mean
+so I will copy the same for the second
+position and paste it here right I will
+write
+here second
+position and here
+also second
+position second position do mean right
+fixtures let's see the
+data okay some
+uh first
+position okay spelling mistake is
+there if you want to become an AI expert
+and gain handsome salary packages look
+at wide range of a IML courses by simply
+learn in collaboration with top
+universities across Ross the globe by
+enrolling in any of these certification
+program you will gain expertise in
+skills like generative AI prompt
+engineering chat GPT explainable AI
+machine learning algorithm supervised
+and unsupervised learning model training
+and optimization and there is much more
+on the list with handson experience in
+tools like chat jpt d python open CV and
+tens oflow you will catch the eye of top
+recruiter so what are you waiting for so
+hurry up and roll now a year of
+experience is preferred to enroll in
+these courses find the course Link in
+the description box below
+yeah so now you can see the NN values
+gone uh with the mean value it came
+right okay but not came in the second
+position
+right okay for
+that
+okay here spelling mistake is
+there yeah so as you can see the second
+position andn values Al also
+gone okay
+so now let's uh predict the winning team
+based on the position in the fixtures
+okay
+so so this is the code uh so here what
+we are doing uh we are just uh writing
+the first position uh second position
+team one team two as well the rows wise
+and here we are
+creating a data frame for the prediction
+set and here we are creating a backup of
+the prediction uh set data frame and the
+last one is for the displaying the first
+few rows of the prediction
+data
+right okay so this is come and let's
+transform the data set using like one
+hot encoding for the team one and the
+team two columns
+right for that I will write so what we
+are doing here we are transferring the
+data set using uh one hot encoding for
+the team one and the team two right here
+for the team one and team two here we
+are finding the missing columns in the
+final data set compared to the transform
+uh this uh prediction data set okay what
+we have created here right and the
+setting the missing columns in the
+prediction uh set data frame to zero and
+the then keep Only The Columns and the
+last one is here what we are doing we
+are dropping the winner column for the
+prediction set right let me run it so
+yes 0 0 0 0 okay
+right so now so let's interpret the
+model results so for that I will write
+so here what I will do will make the
+prediction using RF okay random Forest
+on the prediction set and printing the
+winner for each fixture based on the uh
+prediction set okay so here I will write
+predictions equals to RF do
+predict prediction
+set
+right for I in
+range of fixtures
+dot
+shape
+zero then
+print backup
+prediction underscore
+set dot
+iog I comma
+one then
+plus I will write here what this it will
+look good and the backup One
+Plus
+backup underscore prediction underscore
+set do
+iog I comma
+0
+right
+if
+predictions
+I equ = to
+1 then what will happen Okay let me give
+some spaces for the better
+visual okay then print the
+winner
+Okay Plus backup of
+prediction set do
+iog I comma
+1 or else
+else
+Sprint the
+finner
+V of
+Plus backup prediction
+set set.
+then I
+comma
+0 okay 01 will predict
+then for this space I will write
+print it will give the on line space
+okay so okay let me run
+it so as you can see the New Zealand
+okay let me give space between New
+Zealand versus England so I will write
+here
+space yeah so here you can see the New
+Zealand England so England born here
+Pakistan born it's like this okay so as
+sorry so as per the data top four teams
+are
+coming as per the data the teams
+qualify uh okay I like qualified
+teams for the
+semi finals as
+per the
+data on
+vs
+okay so here I will write
+Sami
+to First this
+Pakistan
+comma
+Australia
+comma
+England wait
+comma India so these are the four teams
+which are qualified for the same is as
+for the winning have wins see India wi
+wi Pakistan right so again I'm saying
+this is for
+uh this uh semis are coming from the
+data okay in present anything can happen
+so now I will
+final uh do who will win the semi-finals
+and uh let's see the who which team
+qualified for the finals right so here
+what I did is I in initialized an empty
+list to store the position of the teams
+in the ranking later on uh I did the
+loop through the list of matches and add
+the rankings of the team to the position
+list with this and moving here you will
+see the initialize and empty list to
+store the match predictions okay and
+here I have initialized with the zero
+right for the IJ for the zero for the
+iteration here the
+loop I will it will Loop through the
+positions list to create match
+prediction and later on here it will
+compare the position of the two teams in
+the match
+right and moving down
+uh it will this one it will uh you know
+convert the prediction set list into the
+Panda's data frame here the backup will
+create uh make okay for the prediction
+uh set right and here uh what I'm doing
+I'm identifying the missing columns in
+prediction set compared to the final
+data frame right and
+here I am adding the missing columns to
+the prediction set data frame and set
+their values to zero right okay uh
+here this one it is for the reorder uh
+of the prediction set columns to match
+the final data frames order right and
+later on here for it will again the loop
+through the prediction set data frame
+and print the match prediction and the
+winner the last
+is what it will do it will call the
+clean and predict function with the
+provided arguments right so if you will
+run it the the the first match is
+Pakistan versus Australia Australia won
+England versus India India won so the
+finals between the teams qualified for
+the finals
+are
+okay finals teams
+are ICC for
+C final
+teams as per the data
+are okay so I will WR have finals equals
+to
+Australia
+right
+India
+okay so
+here so here what I do clean the data
+apply ranking and use the classifier to
+predict the final outcome right so I
+will write the clean and the predict
+data function and
+predict
+predict
+finals comma ranking comma final comma
+okay RF RF is for the uh random Forest
+classifier
+right so what it will do it will clean
+the the data then apply the ranking see
+clean the data apply the ranking okay
+and use the classifier to predict the
+final outcomes so let's see who is
+winning so Australia versus India India
+is winning the final World Cup okay so
+this is based on the data what we have
+collected from the kagle or the other
+sources right so anything can happen in
+the present right it's
+Cricket right and the you can download
+these CSV files from the description box
+below and if you
+want uh the full code you can comment
+down uh in the comment section uh you
+want the full code right this full code
+and thank you for watching this video
+till then stay safe and keep learning
+with simply learn thank
+you staying ahead in your career
+requires continuous learning and
+upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to ner up and get certified click
+here

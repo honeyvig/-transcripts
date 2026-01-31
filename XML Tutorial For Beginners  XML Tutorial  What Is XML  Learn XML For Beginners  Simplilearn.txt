@@ -1,0 +1,384 @@
+hello everyone and welcome you all
+so today is very exciting day because
+today we're gonna talk about
+xml
+okay so what is the next symbol so this
+we will be discussing about
+in a today's session along with will be
+also taking you towards a little bit
+hands-on and some detailed description
+about an example so that you will get
+the complete clarity of what xml really
+does so let's get started
+so
+first of all what we have it today so
+we'll be talking about introduction to
+xml
+features of xml some advantages of xml
+limitations of xml and the comparison
+between html versus xml and then we'll
+be having a demo
+now let's get started about an xml
+so we're going to start with the
+introduction what is an xml
+see typically we say xml stand for
+extensible markup language
+it is a language which we use it for
+machine
+okay so that we can send some
+instructions to our
+i would say
+computerize
+developed containers or some softwares
+because xml is one of the very very easy
+language
+which we use it but it is not for a
+human human sense like it is not
+designed to
+uh be read by human it is designed to be
+read by your computer components
+so it is designed to send store and
+receive to display the data so it is
+actually a platform
+and programming language independent
+that means you talk about it as a
+platform and language independent
+language and
+where the html comes with predefined tag
+xml doesn't have any predefined tag that
+means
+you go and create your own tags
+okay
+well
+let's quickly talk about the features of
+xml see as i said extensible and human
+readable humidity means
+it is not like an assembly language
+which human cannot read it okay it is
+not a machine language which human
+cannot read it
+human can read it but it is not a human
+friendly
+the way you see the typical languages
+are there
+okay
+it preserve the white spaces so if you
+give the extra spaces so white spaces
+are actually preserved here
+so the best part is what it is more
+simple to use and implement
+okay and
+xml is all about holding the data where
+the html is responsible for
+presenting the data so normally we say
+html is designed for presenting what
+data we are trying to offer it to
+display and xml is talking about what
+data is
+okay so there are two different ideas
+now undefined tags that means you go and
+create your own tags here
+so
+it is primarily known for holding the
+data so if you want to send some
+information receive some information you
+put it under the xml so it is a well
+structured format so we know it xml is
+w3c standard so it contains all the
+necessary structured information and
+stuff descriptive in nature because
+while seeing this you can itself you
+easily make it out what is going on
+inside
+now advantages of xml
+now the first is it is a platform
+independent it supports a standard
+unicode bits connector set and whenever
+you want to transport any data
+while sending from one language to
+another language you can easily do that
+so overall i can say
+like the two languages which wants to
+communicate with each other like in
+dotnet and java so neither dot net needs
+to know about a java not java needs to
+know about dot net but they can send the
+data
+to each other in the form of xml which
+both of them know how to interpret so
+that is the best part of the xml
+so you can say it is a completely
+compatible
+with java 100 portable in fact xml can
+be also
+be compatible with other languages to
+like in php and dotnet and not
+okay so as i discussed with you
+for the sharing the information
+and
+when you want to talk about
+the dtd called document type definition
+this is the very old and simplified
+version of the
+xml where the dtd will define the schema
+saying that hey this is what a document
+must be formatted in that way
+so when it comes to the formatting like
+you talk about the document has to have
+these many field so you talk about these
+things when it comes to the dtd into
+this picture
+now the limitations of xml number one as
+i discussed with you it is verbose and
+drainage compared to the json because
+json is the modern day language which we
+use it compared to the xml which is far
+more easier but you cannot avoid or you
+cannot ignore the presence of xml in the
+current market
+high storage transportation code for
+large volume data but obvious because
+when you send some information in the
+form of xml so certainly you require
+some additional parsers
+which needs to pass the data and for
+that heavy pass it requires more memory
+and more storage too
+so it doesn't support an array okay so
+just support the normal i would say the
+string data which you want to carry it
+now
+okay so it is file size are usually
+large because due to its variables in
+nature so there are some limitations are
+available in xml
+okay so html versus xml i told you
+earlier
+html is all about
+how to display and xml is all about what
+data is
+okay html is a markup language xml is
+also markup language but it is all about
+it offers a framework to define the
+markup language
+it is not a case sensitive http xml is a
+case sensitive html has its own
+predefined tag xml you go and create
+your own tags as per your own need
+so html contents are more static in
+nature xml is more dynamic because it is
+designed to transport the data from one
+source to another source here
+so it doesn't preserve the y space but
+yes xml does preserve the white spaces
+and then we will talk about demo now
+okay everyone so let's get started it's
+a demo time now
+so here i will tell you about how to
+develop the
+exhibit document so here if you see i
+have got visual studio code this visual
+studio code is very simple and easy to
+use editor and as a front-end developer
+it is
+one of the most favorite tool for
+every users nowadays now here if you
+want to develop this xml based
+so here we have some extensions
+available so if you click on extension
+and search for x7
+so you will see there are some
+okay so xml tools are available in
+formatting
+okay xml documents so you see there is a
+simple xml formatter which is there
+okay which you can use it now so there
+are multiple tools are available you can
+see now
+xml okay so
+you have got multiple tools which are
+there which you can use it
+anywhere to
+you can see for xml formatting
+xpath s query so multiple options are
+there which you can use it as per your
+own
+requirement
+okay so
+it's up to you know which one you want
+to pick it up
+okay so this is the xml format is one of
+the
+tool which is there so you can use it so
+i can use this xml format is
+is one of the very very common tool
+which is there i'm installing this
+well i close this and i go back to my
+code and
+create the new file and
+give the name call anything suppose if i
+get the name called employee.xml
+okay and now you can see this extension
+automatically appears
+and
+inside this xml
+okay so
+if i want to
+go ahead and
+start developing this
+code one by one so how to start now so
+the first thing i would like to always
+starts with
+my data so i'm saying
+employees
+okay so
+you can see now it is also offering even
+support for closing this tag
+so here after that i will be using some
+input by saying
+employ
+and
+inside this employee i'll be giving the
+id
+and say id equal to
+single quotes i can just give the value
+call
+like this
+okay
+and now
+employment closing this
+going forward
+i can use the first name
+so you see like in a first name because
+see
+these tags which i'm talking about there
+are
+custom tags they're not predefined one
+okay i'm just giving the name called
+john here
+and
+after this
+okay so along with this job i just give
+the name called styles
+as a last name i'll be giving
+title
+and here
+i will give the value so we can just say
+engineer
+okay like i can give this another one
+division
+and
+here in this division i can offer
+materials
+okay
+after this i can add one more property
+here called building
+building
+in building i can give the property like
+you can say
+seven like this
+and in the same one we can offer one
+property here and that is called row
+okay
+and i can give the room number here
+which i can say like
+three two seven
+okay i can say room number 19 or
+anything so that's the first set of
+record which i'm having right now
+okay so likewise i can have
+n number of records as we really want it
+now
+okay so let's add few more records here
+here to here is an employee
+and let me add
+few more and here
+i say format document
+we call
+xml format you can see it has
+immediately formatted your data or the
+complete file in a very very beautiful
+way so here v125
+and here we can just give the name call
+and we can just change the name
+account
+and
+change the name
+once again
+like this
+so i like this i would like to
+have few more records
+as i can see here
+we need one two
+five
+and give some different way if you want
+qa
+you can say
+hr
+building number
+337
+room number
+30
+okay
+so like this i haven't got some records
+with me
+okay and now if i want to see how the
+outcome would be so i can just right
+click and select finder
+and here when i
+right click and say open with my chrome
+browser
+so you will see this is how the document
+appears like there will be nothing every
+browser does contain the same format
+whether you use chrome whether you use
+microsoft
+edge or any other browser the option
+gonna be remain
+same so now we talk about one more that
+is called
+json
+formatter and we are just saying xml
+it's not a very very popular tool you
+can see
+xml format from here you can see that
+tree structure
+so here i just copy the code
+and paste it here so that's what my code
+which is there with me so if i just want
+to say format
+beautify so this is how the code would
+actually look like it
+okay if i want this xml tree so we can
+see like there's a one object name
+called implies under this we have about
+three objects are available
+and every object will have
+seven
+child inside this so this is how the
+tree is gonna really look like it so
+this is formatter can really offer
+something very very interesting
+and uh if you want to
+perform
+uh minify or compact so like the size if
+you want to reduce it you can also
+reduce the size also so that you know
+you can contin you can consume the less
+space
+there's a call xml to json so what it
+does it basically takes your xml and
+convert into the form of what json
+so it is a fantastic tool which you
+people can use it for your general
+purpose
+so overall you can see friend the xml is
+very popular tool okay and there are
+so many options are available which you
+can use it and explore it so that's it
+about the next okay thank you
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

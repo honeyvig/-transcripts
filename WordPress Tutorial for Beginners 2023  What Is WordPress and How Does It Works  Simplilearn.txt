@@ -1,0 +1,1085 @@
+foreign
+welcome to the simply learn YouTube
+channel in today's video we are going to
+be talking about WordPress we're going
+to show you how to use WordPress what is
+WordPress what are the skills you need
+to use WordPress why should you use
+WordPress and in the process I'll give
+you a Hands-On demo of the basic
+functionality of Wordpress as usual I am
+Mark campman I am your digital navigator
+for this video and if you like the video
+click the like button if you want to
+subscribe to our Channel don't forget to
+click the Subscribe button and join our
+fantastic community of interactive
+Learners on the simply learn YouTube
+channel but before we start let me share
+something else with you first simply
+learn has a new program together with
+meta to offer you a professional
+certificate in digital marketing it's a
+fan fantastic program it's the
+officially official program together
+with meta and it is the um if we'll go
+into here into the website yeah you'll
+see that it is done together with the
+Purdue University with meta is the
+official partner and there's also
+involvement with marketing land and
+search engine ancient Journal so it is a
+fantastic digital marketing course and
+what the real value is that you will be
+qualifying for The Meta blueprint
+certification and The Meta blueprint is
+Facebook's famous or metas famous
+certification for everything there is to
+know about about Facebook so very useful
+program I can highly recommend this
+training to you
+okay so that was a little uh sidestep
+let's go back to the slides and let's go
+back to the program so what we're going
+to be talking about is first we're going
+to talk about content Management Systems
+WordPress is a Content management system
+to develop a website but to understand
+this how to use this it is important
+that you understand the essence of a
+Content management system we'll then go
+into what is WordPress we'll look at the
+two versions of Wordpress that are out
+there we're going to look at WordPress
+features and I'll give you a a brief
+demo of the WordPress functionality
+we're going to look at one competitor in
+specific who is very trying very hard to
+um to sort of bite into WordPress Market
+leadership and that's a competitor
+called Wix so we're going to do a short
+comparison between Wix and WordPress I'm
+going to then show you how to install
+WordPress us and then once you've got it
+installed how are you going to create
+your website and then we're going to
+close off today's session be having a
+look at some advantages and
+disadvantages right but let me give you
+some facts of Wordpress first WordPress
+was released in 2003 as a blogging
+platform by a guy Matt mullenwick and
+then his friend Mike little it was a
+fork off of an older blogging platform
+called B2 Cafe log and it included basic
+functionalities like the ability to
+create a blog post to manage commands
+and upload images
+yeah it grew in popularity and features
+were added like plugins and custom post
+pipes with lots of different updates
+across the years in 2008 and to 2010 the
+15th 2018 and then new features came
+like a redesigned admin interface a
+theme customizer and a block editor
+which made it a lot easier to develop
+your websites now where is WordPress
+today it is the most popular CMS or
+content management system in the world
+over 40 percent of all websites on the
+internet they use WordPress and it
+continues to be one of the most the
+largest community of contributors to any
+CMS platform here are some other
+WordPress stats WordPress Powers 40 of
+the internet and is available in over
+200 languages WordPress users they
+publish around 70 million new blog posts
+and 77 million new comments each month
+and yoast SEO which is a plug-in for
+search engine optimization for your
+website on WordPress has been downloaded
+over
+372 million times as of today makes it
+one of the basically makes it the most
+popular WordPress plugin that you can
+can use the WordPress Community consists
+of over 78 million active users and over
+1.5 billion monthly unique visitors they
+visit the WordPress websites without
+knowing that of course
+wordpress.com which is a separate
+version of Wordpress and I'll come back
+to that in a in a minute they host over
+5.5 million active websites and
+automatic which is the company behind
+wordpress.com is valued at over 3
+billion dollars and there's over 1500
+remote employees across the world yeah
+so some pretty staggering numbers and it
+clearly makes WordPress the market
+leader when it comes to a CMS or a
+Content management system for your
+website now what is a Content management
+system before we dive into that yeah
+cmss they started in the 1990s but they
+were not widely used until the early
+2000s so the early CMS systems were
+often proprietary expensive and very
+difficult to use
+PHP nuke was like the first open source
+content management system in 2000 later
+followed by Drupal and Drupal became in
+the ocean in those days one of the
+leading development platforms for your
+your website WordPress released in 2003
+evolved into a fully fledged CMS and
+currently is the most popular CMS for
+any website out there other popular
+cms's include Joomla launched in 2005
+and Magento very much for e-commerce
+website today's there are dozens of
+cms's available both proprietary and
+open source now so much kind of an
+introduction on CMS let's define what a
+CMS actually is a CMS also known as a
+Content management system is like a very
+friendly website building tool it is a
+software application that provides a
+hosted a centralized and organized
+method for managing storing and
+Publishing your website or any digital
+content that you want to have yeah it
+helps you create manage and publish
+digital content without having to be a
+tag or a wizkit or learn compare
+complicated coding yeah so it's all
+about ease of use it's about easy
+content creation and management yeah
+they make it simple for non-technical
+users to create edit and manage website
+content without requiring specific
+technical skills or programming
+knowledge it also provides much faster
+website developments yeah because you
+can use pre-built templates you can use
+plugins and that all speeds up the
+website development
+yeah so that reduces the need to start
+from scratch to start programming your
+website from scratch you just pick the
+building blocks and in the process of
+doing that your website sort of comes
+together it's also for improved Website
+Maintenance yeah so a Content management
+system they provide building tools for
+Website Maintenance like updating the
+software security for your website
+backups for your website yeah and
+optimization for search engines so it is
+all about making your life a lot easier
+so with his CMS you can use a simple
+interface and you see that later when I
+show you the web the the WordPress
+backend yeah so you use a simple
+interface to create and organize your
+content design your website and manage
+the different users and their
+permissions who can work on your website
+it also allows you to connect with other
+tools like services to make your website
+go even faster or e-commerce services or
+Google services so they are designed to
+be flexible they are designed to be
+extensible yeah and one of the ways to
+achieve this is by connecting the
+various types of tools to your content
+management system and by connecting to
+databases cmss can store all data and
+your content in a very effective way
+now one of the big advantages of content
+Management Systems is their open
+architecture yeah so you can connect
+what we call third-party apis to enhance
+the functionality of your CMS
+yep so you can add tools like Google
+analytics or
+um
+Salesforce HubSpot all tools through the
+API you can connect you can connect
+social media integration e-commerce
+capability
+Etc so it's a very open platform and
+that makes them so interesting and then
+one of the biggest assets of CNS cms's
+and that's where WordPress is so
+incredibly flexible you can have plugins
+and extensions they are available which
+can be installed to add features like
+SEO contact forms image galleries
+e-commerce you name it and you'll see in
+WordPress there are thousands and
+thousands of plugins for free or that
+you pay for that gives you that added
+functionality in in WordPress so in
+general any website that needs to manage
+and publish content on a regular basis
+can benefit from a CMS
+yeah because it can help you with
+content organization it helps you with
+Version Control with workflow management
+user management and many other tasks
+that are essential for creating and
+managing your website
+so there are many types of websites that
+can benefit from a CMS so take for
+instance a standard block yes so with a
+CMS for a Blog website it's easy to
+create and publish your blog posts as
+well as managing the comments and other
+user generated content
+yeah you have news websites
+they sort of are a big aggregator of all
+the news out there so for them it's easy
+to create and manage blog posts as well
+as they can help with the organization
+and the management of the content
+because they've got a huge amount of
+news articles on their website and by
+setting tags and by setting categories
+you can give people easy access to that
+content
+e-commerce websites they can manage
+product listings yep so that's what the
+cables can do for you managing product
+listings manage pricing manage inventory
+as well as tools to manage the orders
+and the customer data
+and corporate websites they can use a
+CMS as well they can benefit from it so
+it can include product and service
+information news and events career
+opportunities so basically every website
+every type of website can benefit from
+um from a CMS system
+so as I said WordPress is one of the
+leading CMS systems out there
+so let's dive a bit deeper into
+WordPress now bear in mind there are two
+versions of Wordpress
+there is wordpress.com
+and there is wordpress.org
+yeah wordpress.com is a hosted service
+provider yeah that provides a simplified
+version of the WordPress software
+so you don't have to worry about hosting
+it wordpress.com will host it for you
+the only thing you do is to create an
+account select a theme put in your
+content press publish and your website
+is live but it offers a limited set of
+features themes and plugins so users
+have limited control over the technical
+aspects of their website but it is
+really good for those people who want to
+create a website quickly without the
+hassle of any technical
+complications or technical knowledge it
+is literally go to wordpress.com create
+an account select a theme add your
+content press publish and your website
+is live you don't need any longer
+knowledge for that the basic version is
+free of wordpress.com but as soon as
+you're going to add additional
+functionality like your own URL or
+specific search engine optimization
+features then you're going to pay a
+premium fee but they're still not that
+expensive
+wordpress.org
+is a CMS platform it's an open source
+software that can be downloaded and
+installed on your own web hosting server
+and usually you go to a server a web
+hosting server provider like GoDaddy or
+Amazon or wherever you and you install
+WordPress you basically hire a little
+space on their server
+yep and then you install WordPress and
+then you have to develop your website
+within that CMS so it's a self-hosted
+solution and it gives you complete
+control over the website's design the
+website's functionality and the
+customization options through
+wordpress.org you have access to
+thousands of themes thousands of plugins
+and you can even modify the code of your
+website if you would like that but you
+are responsible for installing and
+maintaining the WordPress software as
+well as managing other things like
+backup security hosting
+Etc but it gives you flexibility it
+gives you customization and if you're
+comfortable with that if you have your
+basic technical skills and you're
+comfortable with managing your own
+hosting and server configurations then
+WordPress is definitely the place for
+you wordpress.org right so when we're
+going to talk about WordPress going
+forward in this presentation I'm going
+to be talking about
+wordpress.org yeah so keep that in mind
+I'm not talking about wordpress.com but
+wordpress.org I'm going to talk to you
+about how to set up your own WordPress
+on your own hosted server provider as it
+were
+okay and we're going to go through that
+process so wordpress.org again is free
+software for creating your website and
+your blog so it's a self-hosted solution
+which means you need to find a web
+hosting company and you need to install
+it on their servers against you have
+complete control over your design your
+functionality your customization and you
+can choose from thousands of themes and
+plugins but again you are responsible
+for the hosting and the security right
+so keep that in mind so let's have a
+look at basic features of Wordpress
+there are three basic features it's the
+themes the plugins
+and the widgets yeah so the themes they
+control the appearance of the website
+plugins add new features and
+functionality and widgets display extra
+content or functionality in specific
+areas on the website
+yes so they are used to customize the
+appearance and the functionality of your
+website so die let's dive a little bit
+deeper themes they are pre-designed
+templates that change the look and the
+layout of your WordPress website
+yeah they control the overall design the
+color scheme the fonts that are being
+used and style of the website and there
+are literally thousands tens of
+thousands themes available on the
+website you can select them through
+WordPress you can also go to website and
+I'll show you later theme forest for
+instance where you can just look at
+other themes and you can just either
+there sometimes are for free others
+their premium so you just click on the
+theme and you click install and it will
+activate on your WordPress website
+plugins are add-ons that extend the
+functionality of a WordPress website so
+they can be used used for features like
+SEO contact forms social media sharing
+buttons e-commerce functionality they're
+very useful and there are estimate we
+saw with the the themes there are
+thousands and thousands of free and
+premium plugins available in the
+WordPress directory you can also use
+your own theme which you have or your
+own plugins but you have to be careful
+with your plugins
+because WordPress updates regularly to a
+new version
+yeah but you need to make sure that your
+plugins are compliant with the new
+updates so from from WordPress and
+sometimes if your plugin provider is not
+updating the plugin in line with the
+WordPress updates then your plugin may
+stop working and that may dysfunction
+your your website widgets are small
+modules that can be added to a sidebar
+of a website or a header or a footer so
+it gives you extra functionality or
+extra content in that particular section
+so you can have a search bar recent post
+categories text social media icons or as
+ads that you can have most themes bear
+in mind they come pre-built widgets
+included and users can also create your
+own custom widgets
+so let's look at three examples of
+popular websites built on WordPress so
+you get a bit of an idea yes so the
+first website
+that people may be surprised throughout
+is the Walt Disney Company
+yeah so this is a you see a huge company
+a global Corporation they use a
+WordPress CMS to to sort of build their
+entire website yeah so it's all that's
+the beauty about content web about
+WordPress it's basically a a container
+for the huge amount of content that you
+have on your website
+yeah and you see that here in the new
+section that is where all their articles
+are featured like blog post basically
+yeah and you can access them through the
+um the the website
+okay so that is the Walt Disney Company
+so it's a very user-friendly design very
+easy navigation and it's great way to
+find all the information about the
+company TechCrunch is another one it's a
+leading technology website that covers
+the latest in Tech news for star and and
+startups it's built on WordPress and it
+features a responsive design that looks
+great on both the desktop and the mobile
+yeah so it includes a mix of Articles
+videos podcasts and it allows users to
+easily Browse by topic or search for
+specific articles now what is a
+responsive design a responsive design is
+very important a responsive design means
+that your website will automatically
+resize to the device that the user is
+using
+yes so is basically it's a mobile
+version a mobile-friendly version of
+your website and when you pick a design
+you always need to make sure that the
+design is responsive and the best way to
+test is if you make the website smaller
+that it will automatically resize and
+you can see that here yeah resize
+ultimately to the mobile formats so the
+third example was Star Wars It's the
+official Star Wars blog it's a fan site
+that cover all things related to Star
+Wars from movies TV shows to books and
+comment comics
+it's built on WordPress and it features
+a design that reflects the Star Wars
+Universe complete with their custom
+fonts and background it includes News
+interviews fan content as well as a
+forum where users can discuss here in
+the community where users can discuss
+their favorite Star Wars topics yeah so
+that's an example of three WordPress
+websites yep so
+that's uh that's it yeah so let's have a
+look at the back end system of Wordpress
+to get an idea what sits behind this
+website so if I go to my own website and
+that is react for Russia yeah that is a
+um a kind of a how should I have in in
+Marrakesh in Morocco that I rent out
+that people can it's on Airbnb but
+um besides that this website is built on
+WordPress now a very easy way to find
+out if a website is built on WordPress
+is basically after the URL you just type
+WP hyphen admin yeah that is what you
+need to access
+the backend it will ask you for a user
+ID and a password
+if the website is the the browser comes
+back with URL does not exist then you
+know that this website has not been
+built on WordPress
+okay so let's wait till we get the
+access
+oh I've already logged in yeah so that's
+why we don't see uh the login screen
+um but that's okay yeah you'll get first
+a login screen you sign in and then you
+get to your uh your dashboard so here
+you see your WordPress the dashboard you
+see the theme that I used yep and then
+here is some updates that are required
+at a glance how many posts how many
+pages I can add a quick article
+Etc but here you see on the left you see
+the menu
+yes so you see basically the most
+important ones are your blog posts
+are your website pages
+yeah so WordPress works with pages and
+posts pages are static Pages like your
+home page
+yeah posts are blog posts
+okay so that's the basically the essence
+of the structure of Wordpress then here
+you see your themes
+and then here you see your plugins
+yep and then you have tools you have
+your setting I've set up SEO on the site
+I've set up Google analytics yes if I go
+to my pages
+and look at all pages
+then here you get a list of all the
+pages that you have active on your
+website
+okay so go to posts and you get a list
+of all the posts that you have on your
+website
+the blog posts if you want to add a new
+post you just click here add new if you
+want to add a new page you can also
+hover over the pages and then click add
+new
+you can add different things like
+portfolio
+or testimonials or products or Services
+yeah and here is your media library this
+is where you have all the photos and
+videos that you have that you use on
+your website
+okay and here you have your theme
+options so I selected a specific theme
+and then here you see all the things
+that you can change on your theme
+so nothing to program yeah you can just
+go through all these items and select
+the um the specific options for that
+section so you have the side layout the
+header style
+Etc
+yes so that's the theme options
+so these are all the options that you
+can specify
+and then here you have your appearance
+so here you see the themes and you also
+see the widgets and you can also specify
+the menus
+so when you start your website the first
+thing WordPress will ask you go to the
+themes
+and then it will come default with two
+or three themes
+but you can
+search for themes as well so you see
+there are virtue there are probably a
+handful of themes that I've got here
+yeah but I got these are sort of
+available I can also search for new
+themes
+okay so I can search here in WordPress I
+can also search on outside WordPress in
+a theme forest for instance and then
+bring in the the theme into WordPress
+okay so those are the themes here are
+your widgets
+you see a list of widgets that you have
+available
+yeah so here you see the widgets that
+I've installed and where they are in the
+sidebar the home Widget the footer
+column yeah we have four footer columns
+and here is the available widgets that I
+can add
+okay and then very important here is
+your page with plugins I can search you
+my installed plugins or can or I can add
+new plugins so go to the install plugins
+and then you see what plugins are you
+have installed
+yep and then you can add new plugins as
+well
+so that is a bit a very high level
+overview of the WordPress functionality
+I just want to leave it at this
+um
+it's important to understand yeah if we
+go back to this the features if you want
+to sort of summarize them
+the one big benefit of Wordpress in the
+features it is a very user-friendly
+interface
+it's a very intuitive interface yeah and
+it makes it easy for users to create and
+manage content on the website
+the second big Advantage is the wide
+range of customizable themes and
+templates that you can select from that
+is that's where WordPress is
+second to num the availability of the
+themes now there is a bit of a drawback
+here I just want you to be aware of that
+yeah if you are a WordPress expert if
+you know WordPress quite well you will
+see that a lot of the themes they have
+kind of the same structure yes so I can
+kind of recognize if a website is built
+on WordPress or not yeah because the
+themes are rarely
+um fairly sort of similar but they
+differ by the look and feel of them so
+keep that in mind
+yet always very important make sure that
+the website is adaptive yeah it's
+responsive and that is another big
+advantage of Wordpress that it has a
+responsive and a mobile friendly design
+another big advantage and the features
+of plugin is their extensive of their
+extensive plugin and widget architecture
+yeah and that gives you a tremendous
+library of functionality that you can
+use on your on your website
+because of these plugins you can also
+very easily optimize your website for
+SEO so WordPress has built-in features
+for that but one of the best SEO plugins
+is yoast SEO
+where you can add meta tags site Maps
+permalinks descriptions page titles
+Etc
+and then finally the features in
+WordPress they really stand out when it
+comes to supporting multi-languages
+yes there was multiple languages making
+it easy to create and manage websites
+for international companies
+and then to close very good features are
+around the e-commerce with plug games
+like woocommerce WordPress can power any
+e-commerce website and can handle
+transactions Inventory management and
+and more
+besides that the core engine of
+Wordpress is its blogging platform
+yes so it's still one of the best
+blogging platforms but it is now also of
+course has the capabilities to build
+your entire website around it but the
+blogging capabilities they include
+posting post scheduling commenting and
+social media sharing
+WordPress also offers a fantastic
+library for media management yeah so
+making it easy to upload store manage
+all types of media files like images
+audio video PDFs and what have you
+and to close the feature list off there
+is a very strong Community around
+WordPress very large very active for
+Developers for designers and users they
+contribute to the ongoing development of
+Wordpress they provide support they
+create themes and plugins to extend the
+functionality and if you have a problem
+I'm sure you can find an answer in the
+WordPress Community because other people
+will have experienced those problems as
+well
+okay now let's compare WordPress with
+the comp competition
+and I'm going back now to wordpress.com
+and wordpress.org
+yeah I remember wordpress.com was the
+basic
+um where WordPress would take care of
+the hosting
+yeah so you just open an account and
+publish your site so competitors with
+wordpress.com are Wix webflow
+Squarespace bubble Soho sites
+Square online which was formerly Weebly
+I really like Weebly by the way and odoo
+website builder if you look at
+competitors for website wordpress.org we
+look at HubSpot CMS Hub progress
+sitefinity Drupal Joomla kentico
+contentful and if you look at e-commerce
+competitors we look at Shopify ionos
+Squarespace volusion and big Commerce
+now one of the big competitors although
+they are in the hosted
+um
+section yeah they are in the
+wordpress.com section but they are
+trying to eat in WordPress market share
+in the
+um the the wordpress.org section is wix
+yes so although Wix provides hosting as
+part of its own platform
+WordPress yeah we're talking about a
+comparison of Wix with wordpress.org
+requires users to pay for the hosting so
+keep that in mind
+so Wix has been around for quite a few
+years
+and it was initially you just go to Wix
+yeah you like wordpress.com you create
+an account and you select a theme you
+add your content click publish and your
+website is live
+where Wix stood out where they were
+truly unique was on the quality of their
+designs of their themes
+yeah they were clearly a level higher
+better quality than the WordPress themes
+now in the early days one of the reasons
+why Wix was so so powerful and so so
+popular was because of the quality of
+its themes
+yeah and that that's where it really
+stood out from WordPress now one of the
+reasons why these themes stood out was
+that they were developed only Jaffa
+yep and with Java you have a lot more
+flexibility on creating really nice kind
+of themes but the problem with Java was
+that Google couldn't index pages that
+were built with Java because it was very
+proprietary coding the text was kind of
+buried in the code
+so
+in the early days Wix had a very poor
+reputation when it came to search engine
+optimization
+over the years that has changed Wix is
+now no longer using Java because Java is
+is gone yeah but still there is this
+sort of negative connotation with Wix is
+not good for search engine optimization
+but those are
+um yeah as you know these things they
+Linger on
+so wix
+because it is hosted
+yeah so Wix has a more limited set of
+templates and Designs available
+because they are coming from Wix as it
+were
+yeah where WordPress is highly
+customizable with thousands of plugins
+and themes available
+yeah so you've got to understand that so
+Wix is kind of closed where WordPress is
+open
+now there is another element here which
+is kind of a negative on WordPress
+because WordPress is so open
+with plugins and themes coming from so
+many different sources it is also
+slightly more vulnerable for spam and
+for
+um
+attacks on your website
+yeah where Works where Wix is more
+protected now let's look at those
+themes so if I go to uh
+uh Wix so here you see Wix create a
+website that means business
+still very good themes yep so very easy
+to start very friendly to set up I'm not
+going to log in or get started I'm just
+going to show you the if I go to the
+creation and I'm going to the website
+templates
+yeah 800 plus designer made templates
+and here you see a selection of the
+different templates that you can have a
+look at
+yes so you can uh just click on the
+template you can edit that means you can
+turn it into your website or you can
+view the template how it would look like
+so let's look here on view and then see
+a live version of what the website would
+look like
+SEC they look really good
+usually there's a starting point click
+State onto editing site so you see how
+easy it is to make
+if I go to Wordpress themes I showed you
+how to find the themes on WordPress
+yeah I can also go to a site like theme
+forests
+yep and then here you have a huge
+library of 50
+000 WordPress plugins
+yeah at various prices you can get them
+for free you can get them for premium
+you just look at the the theme so take
+for instance
+um
+total WordPress
+responsive yes so here you see look at
+the live preview
+and then here you can see the different
+demos that they have yeah so you click
+here on the demo and then you see how
+the demo would look like
+and then you can buy the demo and then
+install it on your
+on your WordPress installation
+okay so those are the themes
+that are very important and that is
+where
+um Wix has a more limited set but very
+creative WordPress highly customable
+with thousands of plugins and thousands
+of themes
+so Wix is known for its ease of use
+yeah so anybody can easily start a
+website on Wix but remember you have
+limited control over the technical
+aspects of your website because it is
+managed by wix
+where WordPress
+wordpress.org you have complete control
+so although you need more technical
+skills yeah it gives you complete
+control over the design adding
+functionality even coding the website if
+you want to
+so keep that in mind
+as we said earlier as well Wix has more
+limited set of SEO options
+historically remember with the Java
+format that they had yeah the you may
+need to upgrade your plan on Wix to get
+more SEO features where on WordPress
+you have the most fantastic SEO plugins
+like yoast SEO all-in-one SEO which
+gives full SEO
+functionality on your website and we all
+know how important SEO is
+right now let's look at how we're going
+to install WordPress
+yes so there's two options
+you can
+do it through a hosting provider
+yeah there are two options
+there are two options you can be guided
+by your hosting provider
+or you can do it all yourself
+so let me show you first how to do it
+through your hosting provider
+so here is my hosting provider which is
+GoDaddy
+yeah on GoDaddy I have multiple products
+and one of my products is hosting
+okay and I'll show you later the details
+around that but when you go to your
+hosting section in your service provider
+yeah then here you have a list of the
+websites that you are having installed
+on the provider's server
+if you want to add a new website which
+is Guided by the hosting provider the
+only thing you have to do is to go to
+your admin panel
+and in your admin panel you have all the
+apps that you have access to
+that could be email it could be file
+manager it could be the images but
+there's also apps that you can install
+like WordPress or Magento or Joomla
+so the only thing you need to do if you
+want to install WordPress on your
+hosting providers server you just click
+here on WordPress
+that will then take you into a dialogue
+yep and then you will just fill in the
+details the name of your website the
+user ID password yep and then it will
+install it for you on your
+um on your server so that's one way of
+installing it
+the second way of installing is do it
+yourself
+yeah and that's a bit more complicated
+but these are the steps you will have to
+go through first of all you need to
+decide on what hosting provider you're
+going to use that could be GoDaddy
+Bluehost HostGator and what have you
+then you go and actually download the
+latest version of Wordpress from the
+official WordPress website
+then what you do you're going to upload
+WordPress on your server that you have
+with the server provider yep so you can
+use an FTP client like filezilla or as I
+showed you just now through your web
+hosting control panel when word when go
+dead Go Daddy does it for you yeah like
+when your hosting provider does it for
+you they create your SQL database if you
+do it yourself you will have to create
+your own mySQL database and your hosting
+provider has an app for that
+then you run the WordPress installation
+script it will then create the WordPress
+file and create a database and then you
+can configure WordPress yeah so you log
+into your admin area you choose the
+theme add to plugins create the pages
+and you launch your site
+that is how easy it is when you want to
+do it yourself okay now back to the
+hosting provider for a sec yeah it's
+important that you understand if I go to
+GoDaddy
+yeah then here you see the different
+type of products that you have
+so these are the products that I use I
+have a section on domains so I have
+bought domains
+that they manage for me
+yep so here are my domains I have web
+hosting
+yeah so that is where I buy my slice of
+their web server
+yeah always make sure it has a cpanel
+which is an admin the admin section
+okay then very important make sure that
+you buy web hosting and that you add SSL
+certificates you may have heard of SSL
+certificates they are the S between
+behind HTTP yeah so https which is
+basically a required security feature
+that Google wants to see on your website
+and then Additionally you can buy
+website security
+which is important and backups and
+there's many other products but these
+are the core products that you need from
+your hosting provider okay so we are all
+set up we have WordPress ready let's now
+look at again at the website creation
+so once you've chosen your hosting
+provider and we talked about it you're
+then going to install WordPress either
+do it yourself or through your hosting
+provider and then the first thing you're
+going to do is choose a theme and I've
+shown you the library of themes
+yeah so there are free themes there are
+bait themes that you can choose from and
+you can also install custom themes
+directly from a third-party developer
+website and then you're going to
+customize your theme what I like about
+many of the themes they come with demos
+and you can actually download the demo
+so you see the full website completely
+ready completely installed with the demo
+and the only thing you have to do is to
+change the content of the demo with your
+own content
+then you're going to add your logo
+Etc you're going to add your own blog
+post you're going to change your pages
+upload to texting your pages yep and
+then you're going to add plugins like
+SEO like social media sharing and
+whatever you like forms and then you're
+going to publish your website
+yes so you can then publish it for the
+world to see and share it on social
+media and start promoting your website
+once your website is ready what you
+basically do you link your website to
+your url
+yep and that's the the hosting provider
+can take it can can do that all for you
+one important aspect on the hosting
+provider make sure that you check the
+surface options from your hosting
+provider if you have a technical problem
+how good are they at responding and the
+minimum you should look for is that they
+have a chat capability
+because there's nothing worse than
+having to wait for a call when you call
+them wait for half an hour or an hour on
+the phone before you get an answer I
+always prefer to do that through chat
+right so what are the advantages and the
+disadvantages of Wordpress
+the big approach on WordPress are open
+source customization large community
+very SEO friendly and content management
+yeah so it's the easiest CMS out there
+and because it's open there are
+literally tons of options to customize
+it
+if you have problems there is a huge
+WordPress community that can help you
+find the answers
+if you want to do your SEO for your
+website yeah WordPress has fantastic
+plugins like yoast SEO all in one SEO to
+actually
+make the SEO as easy and smooth as
+possible for your website so the large
+community is really helpful in WordPress
+if you have any problems with your with
+your website and with your WordPress
+installation and of course the content
+management is very important as you can
+see as you saw on the demo is you can
+really access the blog posts the pages
+the media in a very friendly way so
+there's lots of benefits in using
+WordPress but there are some negatives
+as well
+yeah and I think a big negative is its
+open source positive yeah because it's
+open source the security is slightly
+more at risk as it were yes so you're
+more prone to attacks and to spam than
+um on on closed platforms yep and as
+well of course you do need some
+technical skills yeah maintenance is an
+issue as well yeah so and I mentioned
+that earlier if you have an update on
+the WordPress
+um sort of the WordPress sort of a CMS
+then your plugins need to be upgraded as
+well and some plug-in providers they're
+later with upgrading and it may happen
+that plugins stop working after a
+WordPress CMS upgrade so you need to be
+very alert to those things and one final
+issue that may come up with WordPress is
+that they tend to be slightly slower in
+in performance which basically means it
+takes longer to load a page so you need
+to be aware of that you need to track
+that you need to measure that and you
+can get tools in WordPress as a plugin
+that can help you with improving the
+speed of your website
+so that's a wrap folks that's all there
+is as an introduction to Wordpress I
+hope you found this useful there's more
+to come in the future on this but for
+now this is as far as we want to take
+this so if you like the video don't
+forget to click the like button or
+subscribe to our Channel by clicking the
+Subscribe button and join our fantastic
+simply learn online learning community
+that's it and I'll see you next week at
+the next video that we're going to
+publish for you take care for now
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
+foreign

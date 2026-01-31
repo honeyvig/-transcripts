@@ -1,0 +1,317 @@
+hello everyone and welcome to today's
+tutorial on tens oflow explain at simply
+learn do you know friends that the
+latest insights from LinkedIn reveal a
+booming job market in the United States
+with machine learning Engineers leading
+the pack as a fastest growing role
+showcasing an impressive 344 per
+increase in job postings since
+2015 this trend underscores a surging
+demand for machine learning expert
+across various sectors complimenting
+these findings the world economic
+forum's future of job reports projects a
+dynamic Global job market with a churn
+rate of 23% by
+2027 and it's expected that 69 million
+new jobs will be created while 83
+million may be phased out so keeping in
+this mind today we are going to learn
+about tens of flow so you would be
+wondering what exactly is tensor flow
+actually tensor flow is an open-source
+deep learning framework developed by
+Google brains team in this video we will
+explore how to get started with
+tensorflow leveraging its capabilities
+similar to numpy for numerical
+computations we will cover generating
+random tensors manipulating tensor
+Dimensions performing various tensor
+operations you will learn to change data
+types remove single dimensions and apply
+one heart encoding so without further
+Ado let's get started craving a career
+upgrade subscribe like and comment
+below dive into the link in the
+description to FastTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back now before you move on just a quick
+info guys you can advance your data
+science career with this post-graduate
+program in data science in collaboration
+with calex CME and IBM this program
+teaches you skills and tools including
+Python and m t generative AI Chad GPT
+and many more so hurry up now and join
+the course the course link is mentioned
+in the description box so let's get
+started so guys let's start with
+tensorflow as you all know that
+tensorflow is an open-source machine
+learning framework which is developed by
+Google brains team it's designed for
+building and deploying machine learning
+models with a focus on deep learning
+applications tensorflow offers a
+comprehensive ecosystem of tools
+libraries and Comm Community Resources
+that make it easier to build train and
+deploy machine learning models across
+different platforms from desktops to
+mobile devices and to the cloud now
+let's get started with a tensor flow to
+get started with the tensor flow let's
+first understand some of the features of
+tensorflow first of all tensorflow is a
+versatile and flexible library of python
+it supports wide array of algorithm and
+it is adaptable to variety of tasks the
+next one is it has a ecos system and
+tools tensorflow provides a rich
+ecosystem of tools that help researchers
+and developers to deploy ml models more
+effectively and finally it has a very
+good community and support now to get
+started with tensorflow you first need
+to install it and this can be easily
+done using pip you can use the python
+package installer you can install
+tensorflow using the following command
+but before that let me give you a
+highlight what we are going to do so
+guys we are going to install tensorflow
+then we will move with tensor flow with
+numpy and then we are going to generate
+the random tensors let us try to
+complete this task so for the same we
+are going to use Google collab so guys
+as you can see all over here that we
+have open the Google collab so this is a
+cloud-based ID and it's a very wonderful
+ID I will also recommend you to use the
+same now let's get started so first what
+we are going to do we are going to
+install the tensorflow
+so our first task is
+installing tens
+oflow so for the same I have used pip
+install tensorflow now let us try to run
+this but before that you have to connect
+it so let it get connected so as you can
+see it has been connected to Python 3
+Google compute engine now let us try to
+run this
+so guys as you can see all way here that
+our tensor flow is installed and we are
+installing it using the PIP now let us
+move to the next part the next step is
+importing tensor flow as steer so let us
+run
+this okay now we have imported the
+tensor flow let us move to the next step
+now in the next step we are going to
+check the version of tensorflow so first
+the same I am printing TF do version now
+let us try to run this so you can see
+our version of tensorflow is
+2.15 now we are going to use tensor flow
+with numpy tensorflow can be used
+similarly to numpy for numerical
+computations in fact many tensorflow
+operations mirror those found in napai
+making it easy for those with numai to
+transition to tensor flow now here is an
+example of creating a tensor and
+Performing some arithmetic operations so
+you can see all over here I have created
+a tensor with a equal to TF do constant
+and parenthesis and inside that there's
+a square bracket 1 2 and three similarly
+I've created a tensor B now we are going
+to perform an element wise addition so
+for the same I have taken the variable C
+all over here and I am adding TF do add
+a and b now what is this TF guide
+so remember this we are importing tensor
+flow stf so for the same we are using it
+now we are using a keyword called
+constant all over here for creating a
+tensor now in order to perform the
+addition I'm using the add keyword and
+I'm adding these tensors A and B now
+similarly for multiplication I'm using
+tf. multiply and a and b now let us try
+to run this
+so now guys as you can see all over here
+that when I'm adding it it is printing
+t.n 579 and it's telling it shape is
+three and it is of data type integer now
+similarly if I want to check for D so
+you can see all over here it is going to
+print 4 10 and 80 with of shape three
+and data type as integer of 32 bits so
+we have completed this part now let us
+move to the next part
+now guys in the next step we are going
+to generate the random tensors
+generating random numbers is a common
+task in machine learning and tensorflow
+provides various functions to create
+random tensors for instance you can
+generate a tensor of random values from
+normal distribution or uniform
+distribution so for example I have
+distributed random tensor from a normal
+distribution so I have declared a
+variable random normal and tf. random
+and I'm using tf. random. normal and
+three and 3 are the values where mean
+equals to 0.0 and standard deviation I
+have put equals to
+1.0 now let us try to run this so now
+let us try to print it okay
+print so you can see all over here the
+tensor we are generating from the normal
+distribution it's something like this
+and similarly if I want to generate a
+random tensor for uniform distribution
+okay with minimum value equals to zero
+and maximum value equals to 10 okay so
+these are the parameters that you have
+to remember for normal distribution it's
+mean and standard deviation and for
+uniform distribution you have minimum
+value and the maximum value let's copy
+this
+now you can see we have randomly
+generated tensor from the uniform
+distribution the shape of 3 and three
+and data type is float now let us move
+to the next part we are going to add a
+dimension to the tensor in many
+scenarios you might need to change the
+shape of your tensor by adding new
+dimension and this can be easily done
+using the tf. expand dims command now
+suppose this is the code
+so guys you can see all over here this
+is our original tensor and it is
+declared with a variable tensor equals
+to TF do constant and we are adding a
+new dimension which is expanded tensor
+equals to TF do expand dims tensor zero
+now we have added a new dimension all
+over here so this is going to add a new
+dimension at a specified index and it is
+going to transform a 1D tensor into a 2d
+tensor let us see so we are going to
+print the expanded tensor
+so you can see guys I have printed the
+expanded tensor all over here now let us
+move to the next part that is tensor
+operation tensor flow provides a wide
+range of tensor operations such as
+reshaping slicing and mathematical
+operations so here are few examples so
+guys as you can see all over here so I
+have declared a variable called tensor
+all over here and then I'm reshaping a
+tensor okay with the given tensor that
+we have created and I have also added it
+shape 3 and one now we are slicing the
+tensor so tf. slice tensor indexing 0 to
+two and we are also doing the
+mathematical operation all over here
+which is a sum tensor and we are
+reducing the sum to tensor now now let
+us try to run this code and see what is
+our output so you can see all over here
+that this is our original tensor with
+the shape three and reshaped tensor is
+something like this so it has a shape of
+three and one okay now the slice tensor
+you can see all over here that it is 1
+and two and with a shape of two and sum
+of the tensor is six the shape is null
+now let us move to the next part that is
+changing the data type of a tensor you
+can change the data type of a tensor
+using tf. cast this is useful when you
+need to ensure that tensors have the
+correct type for certain operations so
+let us try to do this so you can see all
+over here that I'm creating a tensor of
+integers okay then I'm changing its data
+type to float so I'm using the word
+called cast okay now if I try to run
+this okay so
+print so you can see all over here that
+it is coming 1 do two Dot 3 Dot and it
+has a shape of three similarly we are
+going to remove all the single dimension
+to remove all single Dimensions from a
+tensor you can use TF do squeeze and
+this is particularly useful when you
+have tensors with unnecessary Dimensions
+let me show you
+one so guys as you can see all over here
+that I have created a tensor with a
+single Dimension okay now I'm removing
+all the single Dimensions all the way
+here here now this is squeeze tensor so
+you can see now we have 1 2 and three
+and we have shape three and null so this
+is how we have removed all the single
+Dimensions now moving ahead we are going
+to move on one hot encoding now guys you
+would be wondering what is one hot
+encoding basically one hot encoding is a
+technique that is used to convert
+categorial values into binary Vector
+representation tensorflow provides tf1
+do hot to perform this encoding so here
+is a sample code for the
+same now you can see all over here that
+we have performed the one hot encoding
+into the categories now we can see all
+over here that one hot encoded equals to
+tf. one hot and there's categories and
+depth equals to three now
+and this basically has completed our
+objective of Performing the one hot
+encoding on the categories so this was
+our Tor basically and here we have used
+the tf. one hot for performing the one
+hot encoding on this given tensor with
+depth equals to three so guys that was
+all for today's video I hope so you
+would have enjoyed our today's video on
+tensor flow now before we move on if you
+like this kind of content content guys
+then do not forget to hit the Subscribe
+button and click the Bell icon to get
+the further updates staying ahead in
+your career requires continuous learning
+and upscaling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security
+AI machine learning or digital marketing
+designed in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to to watch
+similar videos to nerd up and get
+certified click here

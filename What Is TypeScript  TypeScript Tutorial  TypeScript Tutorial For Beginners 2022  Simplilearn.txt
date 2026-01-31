@@ -1,0 +1,197 @@
+hey guys welcome to another video by
+simply learn in this video we will learn
+about what is typescript
+let's look at what's in it for you in
+today's session
+we'll first start with understanding
+what is typescript
+followed by which we will look at why
+should we use typescript then we will
+look at the difference between
+typescript versus javascript
+then we will look at some of the
+important features of typescript
+followed by which we will look at the
+applications of typescript and
+proceeding further we will look at
+advantages of using typescript and
+disadvantages of using typescript
+but before we begin make sure you have
+subscribed to our youtube channel and
+clicked on the bell icon so you never
+miss an update from simply learn
+what is typescript
+is object oriented and strongly type
+programming language which is superset
+of javascript
+typescript code is converted to
+javascript which can be executed
+anywhere javascript is supported in a
+browser or node.js and any other
+application
+hipscript was designed by anders
+hegelsberg at microsoft the limitations
+of javascript for the development of
+large-scale application at the microsoft
+and among its external customers led to
+the creation of typescript
+due to the difficulty of working with
+the complicated javascript code there
+was demand for custom tooling to make
+developing javascript components easier
+typescript is javascript with some
+additional features
+to support a strong interaction with
+your editor typescript adds additional
+syntax to javascript
+typescript is a scripting language that
+understands javascript and uses type
+inference to provide powerful
+capabilities without the need for
+additional code
+why typescript compilation javascript is
+an interpreted language there is no need
+to compile it as a result it must be run
+to ensure that it is genuine if there is
+an error that implies you write all the
+code to find out an output
+as a result you will have to spend hours
+looking for the faults in the code so
+error checking is provided via the
+typescript transpiler if typescript
+detects any syntax mistakes it will
+compile the code and generate
+compilation errors this aids in the
+detection of mistakes prior to the
+execution of the script
+typescript provides an optional type
+system for javascript code when a client
+doesn't have a value for a parameter he
+can pass a null optional arguments are
+features of typescript we can declare
+some arguments in the function optional
+by utilizing optional parameter features
+so that the client is not necessary to
+supply a value to optional parameters
+strong static typing javascript does not
+have a powerful static typing system
+does the tls typescript comes with an
+optional static typing and type
+inference system the tls that is a
+typescript language service can deduce
+the type of variable defined with no
+type based on its value
+supports object oriented programming
+such as classes interfaces inheritance
+and other object oriented programming
+principles are supported by typescript
+typescript supports type definitions
+existing javascript libraries can use
+typescript type definitions external
+javascript libraries are defined in
+typescript definition files
+as a result these libraries can be
+included in typescript code
+now let us look at the difference
+between typescript versus javascript
+typescript is an object oriented
+programming language
+whereas javascript is a scripting
+language
+and typescript supports static typing
+whereas javascript does not support
+static typing
+errors can be found and corrected during
+compile time
+in javascript errors can be found only
+during the runtime as it is an
+interpreted language
+there is a concept for es3 es4 es5 and
+es6 in typescript whereas no support for
+compiling additional es3 es4 es5 or as6
+features in javascript
+functions can have optional parameters
+in typescript whereas this feature is
+not possible in javascript
+converted into javascript code to be
+understandable for browsers in
+typescript in javascript this can
+directly be used in browsers
+in typescript proper build setup is
+required for static type definitions
+no build setup is required in javascript
+now let us look at the features of
+typescript
+typescript supports other javascript
+libraries typescript is a new microsoft
+language that is highly typed superset
+of javascript with support for object
+oriented programming and other current
+features like decorators
+because browsers and nodes comprehend
+javascript typescript compiles to
+javascript
+typescript is portable typescript is
+cross browser cross device and cross
+platform it can run in any environment
+that supports javascript typescript
+unlike its competitors does not require
+dedicated virtual machine or a specific
+runtime environment to run typescript is
+superset of javascript
+it's a strong syntactical superset of
+javascript with the addition of optional
+static typing
+typescript is a large scale application
+development language that transcompiles
+to javascript
+typescript is static and typescript is
+object oriented language
+when a client doesn't have a value for a
+parameter he can personal optional
+arguments are a feature of typescript
+when it comes to object oriented
+programming with javascript javascript
+shines because of the class keyword it
+makes object oriented programming look
+quite similar to programming in other
+object oriented languages like c sharp
+or java
+applications of typescript
+typescript can be used to develop
+javascript applications for both
+client-side and server-side execution
+typescript can be deployed instead of
+javascript language since it adds more
+features and gives error directly with
+the code
+typescript is used for building large
+scale application for enterprises
+advantages of typescript
+highlights error at the compilation time
+during the time of development
+in typescript it runs on any browser or
+javascript engine
+typescript has a namespace concept by
+defining a module
+typescript support strongly typed or
+static typing
+disadvantages of typescript
+typescript takes a long time to compile
+the code
+typescript does not support abstract
+classes
+typescript has extra compilation step
+for converting typescript into
+javascript typescript has an overly
+complicated typing system
+so with that we have reached the end of
+this video i hope you liked the video
+thank you for watching keep learning and
+stay tuned to simply learn
+[Music]
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

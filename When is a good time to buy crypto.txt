@@ -1,0 +1,754 @@
+g'day Traders welcome back to another
+pine script lesson today's video I'm
+going to be answering the question
+that's been on my mind for the past few
+months which is when is it a good time
+to buy back into crypto so if you
+followed my channel for a while you know
+I've been involved in crypto since 2017
+and I've been through some crazy ups and
+some pretty nasty downs and over the
+past year we've seen yet another nasty
+bear Market in the crypto space the
+problem is with crypto you never know
+how low it's going to go during the good
+times I'm always Blown Away by just how
+exuberant the Market's getting how far
+crypto Rises and when the bear markets
+hit I'm always shocked at how bad they
+can get and how low prices can go I'm
+always underestimating the upside and
+underestimating the downside which is a
+big problem when you have a lot of money
+at risk and so today I'm going to share
+some thoughts I have on how I'm
+addressing the bear market and when I
+plan to reinvest the profits I took
+during the last bull market so what I
+have here on my chart is essentially a
+regime filter that is taking trades this
+is to test my theory so when this band
+at the bottom turns red I go into
+defensive mode and I remain in cash or
+stable coin however you like to trade
+your crypto and when it's green I am
+invested in the markets now before I
+continue this is not investment advice
+I'm not an investment advisor financial
+advisor I don't know your risk tolerance
+I don't know your financial situation so
+take all of this is just my opinion and
+just how I personally am managing my
+money in crypto so let's zoom in a
+little bit here and I'll explain what
+the script is doing
+um let's have a look at
+the most recent Bull Run that started in
+late 2020. so if I bring this regime
+filter up a bit What's Happening Here
+is the regime filter my momentum filter
+my Trend filter is red all the way along
+here and then in late 2020 it suddenly
+turns green
+and so on this bar here
+the regime filter goes from red to Green
+and once we get a green bar confirmed a
+green filter confirmed on the next bars
+open we enter our position we use a
+trailing stop this red line is a
+trailing stop and the trailing stop uses
+what is called a ratchet kind of system
+so it ratchets up closer to price action
+when the regime filter enters defensive
+mode so you can see it turns yellow here
+or orange when it turns orange the
+trailing stop Rises much closer to price
+action and once we get a candle that
+closes below that trailing stop we exit
+our position and if the market turns
+green again so you can see here we had a
+closed below our trailing stop we got
+out of our position but on the very next
+bar the filter turned green and so we
+enter long on the next open so this is a
+long only investment technique for
+Bitcoin in particular and you can see
+it's had pretty nice metrics here and
+nearly ten thousand percent gain with a
+20 Max drawdown is pretty damn good when
+it comes to crypto given the volatility
+of crypto now obviously this is back
+testing from the very very first sort of
+inception of Bitcoin so all the way back
+in 2015 realistically
+um I mean I didn't start trading crypto
+until early 20s so mid 2017 around here
+around June so if I want to I can apply
+a date filter to June 2017 and now the
+script will only take trades from June
+and we get slightly more realistic
+returns here but keep in mind the bulk
+of exponential profits made in crypto
+are made in alt coins obviously buying
+and holding Bitcoin is the quote-unquote
+safest option when it comes to investing
+in crypto but the big money is typically
+made in all coins these days and so the
+way I would use this filter is I would
+only invest into my old coins when this
+filter is green and Bitcoin is healthy
+because if Bitcoin is healthy the rest
+of the market tends to Trend upwards
+when Bitcoin is unhealthy the crypto
+markets tend to slowly or sometimes
+rapidly bleed right back down to
+valuations that they were in before the
+most recent bull market cycle so I've
+added a few settings to this indicator
+if I turn RSI momentum filter off this
+is how I would use this regime filter
+during the next cycle
+so whenever this turns orange I would
+become extra conservative with my open
+positions so I'm either going to
+increase my trailing stop to lock in
+profits or I'm going to start scaling
+out of a position you know depending
+where we are in the cycle during this
+period here when we were hitting 60k
+when this turns orange I'd be inclined
+to sort of DCA out of my position start
+selling you know maybe every time this
+turns orange sell 10 of my Holdings and
+start taking that profit off the table
+and then when the filter turns red
+I would just stand aside and do nothing
+and wait until it turns green again so
+as you can see here after that initial
+sell-off we were red for quite a while
+and then eventually the market recovered
+this key moving average and a few other
+metrics that I used to analyze the
+Market's momentum and then I would
+reinvest capture most of this next Bull
+cycle and then as soon as this turns red
+around here I would go to cache and
+stand aside and you will get some fake
+outs like here we had a bit of a fake
+out the filter bought back in once
+Bitcoin recovered this key moving
+average but then it immediately went
+into defensive mode the trailing stop
+was significantly raised and we exited
+for a small profit here and then again
+for a small loss here and then once we
+fell back below this 20-week EMA we went
+back into defensive mode and we have
+been in defensive mode ever since which
+is a good thing since we've only bled
+lower since this little fake out
+so anyway with all that said that
+description out of the way let's jump
+into the source code for the script and
+I'll show you how I built this out
+obviously the source code as always will
+be below the video in the video
+description and you can play around with
+this if you have your own ideas to
+implement into this concept I definitely
+encourage you to do that so let's open
+up the pine editor so the first thing is
+always I lay out my strategy parameters
+we're drawing to the Chart my initial
+capital is 10 000 and I should also set
+my default currency currency Dot
+USD T why not you could set this to USD
+or whatever you want but I'm going to
+leave mine as us tether for now so 10
+000 us tether is our starting balance
+our default quantity type is a
+percentage of our total equity and the
+default trade amount the position size
+we are going to invest in each trade is
+100 of our Equity so the first trade
+would invest the full 10 000 and we keep
+reinvesting our profits on each
+subsequent Trade Commission type is set
+to a percentage of our overall position
+size and I've set the commission value
+to 0.1 percent because that is what
+binance charge and binance is my main
+trading platform for crypto but
+obviously if you use a different
+platform or you're on a different
+commission tier whatever you want to
+change this number to reflect that then
+finally I set the decimal Precision of
+this indicator to three decimals that
+was for debug purposes and I don't
+really need that anymore so get rid of
+that we have one two three four five six
+seven user inputs here the first one is
+the time frame of our regime filter its
+default value is the weekly chart let me
+indent these a bit to make it a little
+easier on the eyes so we have a time
+frame resolution weekly by default a EMA
+length uh this is our regime filter our
+higher time frame so by default it's a
+20 week EMA on the current market the
+market time frame is our trading time
+frame so by default that's set to the
+daily chart use RSI is this setting here
+use our assign momentum filter and RSI
+mom is short for momentum that's set to
+70 by default this is turned off by
+default what this does is if this is
+turned on the current RSI value must be
+above this number in order for our
+regime band to turn green
+so if I drop this down to let's say 30
+we'll see a lot more green
+on this regime filter because the RSI is
+obviously going to be above 30 more
+often than it will be above 70. now in
+crypto generally that means that
+momentum is strong especially during
+bull markets during bear markets 70
+could be oversold but when we're trading
+above the 20-week EMA typically a high
+RSI reading is a good thing that means
+momentum is strong so that's why I
+included this filter here you'll notice
+that if you set this to a lower number
+our drawdown increases quite a bit our
+return doesn't increase very much
+but our drawdown definitely does because
+we're taking more trades during week
+market conditions so I like to leave
+this at least 50 or above that gives us
+an even better reading 31 with an 11 000
+return but 70 drops the draw down quite
+a bit so obviously all a matter of
+preference how you would set this up and
+past performance is not indicative of
+future results so don't depend on this
+data even though these numbers look
+really good there's a non-negligible
+chance that these numbers won't hold up
+into the future indefinitely but they
+should be better than just simply buying
+and holding the market and hoping for
+the best at least you're taking
+defensive action when the market turns
+bearish that is key in crypto anyone can
+make a fortune in crypto I've met
+countless people who made tons of money
+in crypto especially during the last
+Bull Run and I know very few who kept
+that money I know a lot of people who
+are very disappointed right now because
+they didn't have a strategy they didn't
+have an Exit Plan and they just thought
+this would go up forever and ever crypto
+does not do that it goes up quite
+strongly and then it eventually
+capitulates and this system can help
+protect your open profits so by being
+defensive in your crypto not getting
+married to your coins and selling them
+when the market takes a turn for the
+worst you protect your Capital so that
+you can accumulate even more of those
+coins you like later on so don't be
+afraid of selling your crypto the big
+question is when do you sell when do you
+buy that's what this script can help
+with so anyway those are our user inputs
+we also have a Time filter so this is a
+start date and day end date I showed you
+already how that works that just tells
+the script when to take trades and when
+not to take trades which helps you do
+some in-depth analysis on how this
+technique performed during various
+periods of time next thing we have here
+is some custom functions so there the
+first one is just a Custom Security
+function that uses the standard
+request.security function this is the
+function we use to reference a higher
+time frame so we pass in our Market we
+pass in our resolution our time frame
+and we pass in the expression we want to
+get from that higher time frame and the
+reason I have this custom function here
+is to eliminate repainting which is this
+code here now if you're not sure what
+repainting is I'd encourage you to go
+and check out my Mastery course where I
+explain a lot of these higher level
+Concepts in great detail that's the
+whole point of that course if I were to
+explain some of these Concepts in every
+video on YouTube my videos would be so
+much longer I just don't have time to do
+that on the channel so if you're new to
+plan script and this line of code looks
+confusing to you I definitely suggest
+you go and check out the Mastery course
+but anyway in this particular script
+repainting is not that big of a deal
+since we are trading the daily time
+frame and weekly time frames when you're
+trading those higher time frames it's
+not the worst thing in the world to have
+repainting in your script but I like to
+address repainting when I can it's just
+a habit I've gotten into the next thing
+we have is our date filter function so
+this function takes two integer inputs
+they're time stamps so St stands for
+start time
+ET stands for extraterrestrial and end
+time and if the current bars time is
+greater than or equal to the start time
+or less than or equal to the end time
+then this function will return true and
+we are permitted to take trades Within
+These two time windows or timestamps we
+use these two functions these custom
+functions later on in the script to get
+our data and filter our trades but we'll
+get to that soon now the next thing we
+do is we get our higher time frame EMA
+value so to do that we use our Custom
+Security function that eliminates
+repainting we pass in the current symbol
+ticker so that's BTC USD we pass in our
+resolution our time frame setting so w
+by default which is the weekly time
+frame and then we pass in our expression
+that we want to get from that higher
+time frame so in this case that's a EMA
+so we're getting the EMA based on the
+closing price over this look back period
+which is 20 bars so we're getting a 20
+week EMA here you can change that in the
+settings if you have a reason to and
+that is what is drawing onto the chart
+here you can see this stepped line
+that is the 20-week EMA drawing over the
+daily chart so obviously there's seven
+days per week so we have seven bars
+plotting before the 20 week EMA updates
+at the end of that week when that Weekly
+bar closes and that's why we get the
+stepped effect it's quite a useful
+indicator actually on multiple time
+frames I have created strategies where I
+can use this higher time frame EMAs kind
+of like a supporter resistance level you
+can see getting tested here and then we
+get rejected obviously that won't happen
+all the time but by combining market
+conditions and rules you can actually
+build a strategy around trading tests of
+these higher time frame EMAs especially
+during strongly trending markets but
+anyway I digress so that's our EMA
+higher time frame EMA the next thing we
+do is get an ATR value so this is on our
+trading time frame in this case the
+daily chart we're getting a five bar ATR
+value and then here is where we actually
+calculate our filter our regime filter
+conditions so the first thing we need to
+do is get the market price of our Market
+time frame so in this case if I scroll
+up that is the daily chart so market
+price is going to be set to the current
+daily charts closing price value or in
+this case we're using a function that
+eliminates repainting so it would
+actually be referencing yesterday's
+confirmed closing price so that's what
+this line of code gets and then regime
+filter checks is our market price so in
+this case the daily closing price of
+yesterday's bar the last confirmed daily
+price is that greater than our higher
+time frame EMA so this red line here is
+our market price greater than the higher
+time frame EMA plus the current ATR
+value of the past five bars multiplied
+by 0.25 so the closing price of the
+daily bar must be at least a quarter of
+it of an ATR above that line so if the
+bar closes right on that line Channel
+just slightly above it that does not
+count as bullish because we might just
+be testing that EMA what we want is a
+sustained move beyond that EMA by at
+least a quarter of an ATR and if we
+close above that EMA by a small margin
+then a regime filter is considered true
+the next thing we do is we get an RSI
+value not a macd value I did initially
+create this script using a macd I found
+that the RSI was simpler to use and gave
+slightly better results so it's a matter
+of preference what you use here but for
+today's purposes I found the RSI to be a
+simpler more appropriate tool so we get
+our 7 bar RSI value based on the closing
+price and then
+this is where we decide whether or not
+to paint this regime filter green so the
+only time this will turn green is if our
+regime filter is passed so the current
+market price is above our higher time
+frame EMA so the daily bar must close
+above the 20-week EMA and our current
+RSI value is greater than our RSI
+momentum setting the setting here or we
+are not using the RSI momentum filter so
+either the RSI value needs to be greater
+than this number or this needs to be
+unchecked in order for this to return
+true so we need our regime filter to
+pass and the RSI momentum filtered to
+pass in order for bullish to be true so
+by not using the RSI momentum filter
+this could be a useful tool for managing
+altcoin positions as I mentioned earlier
+so long as this is green or even Orange
+we don't have a lot of reason to panic
+we can sit tight when the regime filter
+turns orange we should probably be a
+little more defensive a little more
+cautious maybe prepare to sell your
+coins if you've got them in cold storage
+or something you might want to move them
+onto an exchange whenever this turns
+orange or stays orange for a little
+while
+um that's one potential use case for
+this filter there's an active Investment
+Management technique if you turn this on
+then this becomes more of a Bitcoin
+trading strategy than a overall
+Investment Portfolio management
+technique or tool but anyway how you use
+this tool is up to you I've already
+explained how I plan to use it I'll be
+using this to manage probably a
+significant portion of my Bitcoin
+positions but also managing my altcoin
+positions when the next bull market
+starts cycle starts which could be years
+from now to be honest so I'm being
+patient I'm not expecting that to happen
+anytime soon it may never happen but I
+would expect it will in the next few
+years and having this tool built in
+advance will be really helpful in
+managing those positions and knowing
+when to buy back in because who knows
+how much lower Bitcoin will go but I do
+know that when it's above this 20-week
+EMA we tend to see big bull rallies and
+when we fall below that 20-week EMA
+things are not so good it's a very
+simple objective way to decide which
+side of the market I want to be on so
+this line of code here is what turns our
+little band orange and what this does is
+it checks are we bullish so is this
+condition mad so we are trading above
+the 20-week EMA and our RSI momentum
+filter is met
+if that's true but the distance from the
+most recent swing high so this gets the
+highest high over the past seven bars
+and then subtracts the current bars low
+so here's a good example
+um first of all that this regime filter
+is a little bit off you can see it's
+turning red here even though price is
+above the 20 week EMA the reason is
+because I've set the size to huge if I
+set this to Auto or something smaller it
+will actually track much better with
+price action so there you go you can see
+that it didn't turn green until this bar
+here
+um but it gets a little hard to read
+when you zoom out or hard to see what I
+might do is set this to top and set the
+size to normal that's a bit better
+it's kind of kind of in the way a little
+draw of a price action but at least we
+can see what's going on a bit better
+here so if I zoom in here on this top
+here you can see that this turns orange
+on this bar here the reason this turns
+orange is because caution is true and
+the reason this is true is because the
+highest high over the past seven bars up
+here somewhere minus the low of the
+current bar
+so this distance here
+is greater than our five period ATR
+value multiplied by 1.5 so the distance
+between
+our high
+and our low
+on this bar is greater than one and a
+half atrs that means volatility is
+picking up just by definition if the
+current bar is low is greater than one
+and a half atr's distance from the
+recent swing High then we have
+volatility picking up and when this
+happens our trailing stop Rises to lock
+in profit and be more defensive and this
+code here is where we set the color of
+our regime filter so by default it's set
+to red but if the previous bar was
+bullish so we had a confirmed bullish
+close on the previous bar
+it's set to green and if on the previous
+bar caution was true so we had we were
+bullish but the current bars low was
+greater than one and a half atrs from
+the high
+then we set the color to Orange and then
+here I use the plot shape function to
+draw this band you see at the top we
+just plot one so it's always drawing on
+every single bar in our chart and we set
+the color to BG color this variable here
+and then the style is just a square you
+could change this if you wanted to to
+pretty much anything we could make it a
+diamond for example it's really a matter
+of preference what you like to look at
+when you see this on your chart we set
+the location to wherever we want we
+could set it to the bottom we could set
+it to the top
+um I've currently got it set to the top
+let's set it to the bottom so it's a bit
+more out of the way of price action and
+then the size you can set this to
+whatever you want
+if you set it to large then what happens
+is some of these will draw over the top
+of other ones and you won't get an
+accurate reading on um when the regime
+filter turns green or red so you
+probably want to keep the size at normal
+or below then the next thing we do is
+just plot our higher time frame EMA this
+um
+depth line you see here and we change
+the color of that line based on whether
+the current bar is trading above or
+below that key moving average and then
+here is where we handle our strategy
+code so the first thing we do is declare
+our trailing stop our ratchet stop loss
+it's a float type it's persistent VAR
+means it will not reset on every new bar
+it will stay saved across all the bars
+in our chart which is what we want with
+a trailing stop loss and then after we
+declare our stop bus we enter our
+position when our entry conditions are
+met so the entry conditions are is the
+market currently bullish so is our
+regime filter green and do we not
+currently have any open positions so is
+our position size equal to zero and do
+we pass our date filter check so we're
+trading within our start time and our
+end time and the market is not orange
+our regime filter is not orange if it's
+orange we don't want to enter a position
+we want to only enter a position when we
+get a green light we simply use the
+strategy.entry function to enter that
+long position this is a long only
+investment strategy we're not shorting
+Bitcoin today's lesson is about how to
+manage a long investment positions and
+then once we've entered long we reset
+our trailing stop to n a so if we
+already had a trailing stop from our
+previous trade we override that to Na
+and start a new trailing stop and the
+trailing stop code is handled here so
+what we're doing is we're getting the
+highest low over the past seven bars so
+we're looking back at seven bars
+whichever bar has the highest low that
+is what we anchor our trailing stop to
+and then to get a long trailing stop we
+need to subtract
+from the low to get our red line and
+what we do here is we check is the
+previous bar orange is our regime filter
+orange on the previous bar
+if so then we want to have a really
+tight trailing stop so we Trail 20 of
+the ATR below that swing low if I zoom
+in here you can see that the initial
+trailing stop is all the way down here
+that's one ATR below the swing low and
+as price moves up it moves up to lock in
+profit but then on this bar
+we get our caution warning volatility is
+picked up on this bar here the low is
+greater than 1.5 times ATR from the high
+and so our trailing stop ratchets up
+significantly to 20 of the current APR
+below that swing low and our red line is
+here now we don't exit our trade unless
+we get a close below that line so it's
+okay if the market tests this line if we
+get Wix below that line that's fine but
+once we get a close below then we sell
+our position so that's how this ratchet
+trailing stop Works in today's script so
+this gets calculated on every single bar
+on our chart
+and then to update our trailing stop our
+red line here we check is our position
+size greater than zero so do we have an
+open position if so then we check if our
+temporary trailing stop is greater than
+our saved trailing stop our red line or
+we have not yet set a trailing stop so
+Trail stop is n a and we've just opened
+a position if either of those conditions
+are met so our new trailing stop is
+greater than our old trailing stop or we
+don't have a trailing stop then we save
+our trailing stop value to Temp Trail
+stop our temporary trailing stop so this
+ensures that we only update the stop
+loss by moving it higher so whenever a
+new stop loss is calculated and it's
+higher than the previous stop loss our
+current Red Line then we update our stop
+loss we don't want to move the stop loss
+down as that defeats the purpose of a
+trailing stop to lock in profits and
+will never exit our position if we do
+that or if we haven't set a trailing
+stop we you obviously need to set one to
+begin
+trailing our position and then that's
+pretty much it for the script the final
+bit of code here just checks if the
+current Bar's closing price is less than
+our trailing stop our red line or the
+current bar has closed below our 20 EMA
+this stepped line here 20 week EMA if
+that happens then we exit our position
+we close our Buy trade so let's see if I
+can find an example of that happening it
+should be quite rare uh here's an
+example of that happening
+so technically we close both below our
+trailing stop and the 20-week EMA but if
+our trailing stop had been below this
+20-week EMA we would have exited our
+position as well because that's our
+regime filter if the market is not
+trading above the 20-week EMA then the
+market is not healthy and we want to get
+out so that's what this line of code
+here does
+then finally we just draw our trailing
+stop so if our position size on the
+previous bar was greater than zero then
+we plot trailing stop otherwise we plot
+nothing we draw nothing and we use the
+line break style and that's it the
+script is done let me change this back
+to square and now we have a tool for
+managing our Bitcoin positions actively
+and potentially our altcoin positions as
+well depending on how you like to trade
+or invest again none of this is
+investment advice or trading advice this
+is just some ideas some food for thought
+for you guys to go and play around with
+make it your own get the source code
+below this video and go and modify it to
+suit your personality and your beliefs
+about the markets your preferences in
+how you analyze price action maybe you
+want to use a different moving average
+or a different time frame or different
+indicator momentum filter I definitely
+encourage you guys to go and play around
+with my code and make it your own having
+this ratchet technique letting the
+market ride when things are good having
+a wider stop loss when the region filter
+is green and then when things turn red
+bringing that stop loss up much tighter
+allows us to exit much closer to the
+highs and avoid holding through these
+sustained bearish moves and so what I'd
+be looking for in the month to come is
+for Bitcoin to probably most likely
+capitulate at some point before
+bottoming that tends to be what Bitcoin
+does but regardless if it doesn't do
+that if we just go sideways here for a
+while and create a sort of accumulation
+Zone a consolidation and we just go
+sideways for a few months eventually
+this moving average will come down
+Bitcoin will break above it and then
+potentially start trending higher we get
+fully invested yes we might miss some of
+that initial profit by buying at the
+bottom but again where is the bottom how
+do we know that this wasn't the bottom
+this wasn't the bottom this wasn't the
+bottom
+is this going to be the bottom who knows
+we could fall another 50 from here
+easily by having this sort of regime
+filtered investment Technique we wait
+until this moving average comes down
+price action breaks above it starts
+trading above it and then we get
+invested and ride that next Bull move
+or maybe we get faked out maybe price
+breaks above it and then we fall back
+below it we take a small loss and we
+wait for this moving average to get
+lower and lower you know maybe Bitcoin
+comes down to 5K unlikely but possible
+uh and it gets down there we save our
+Capital throughout this whole decline
+because we're not invested and then when
+the markets do turn around we have
+plenty of dry powder in our Arsenal to
+take advantage of that Trend reversal so
+I hope you guys found this idea
+interesting the source code will be
+below as always best of luck with your
+trading be careful out there don't risk
+more than you can afford to lose
+remember that good defenses win
+championships more so than being
+aggressive and I'll speak with you in
+the next lesson take care and have a
+great day

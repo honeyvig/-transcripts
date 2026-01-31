@@ -1,0 +1,323 @@
+hey traders in today's video i'm going
+to be showing you how to use the
+autoview chrome browser plugin to
+automatically manage your
+trading positions and set your stop loss
+to break even when a certain price
+is hit
+so obviously the most valuable thing
+about autoview
+and the most useful application of it is
+to automate your trading scripts
+so automating the trade execution and
+management of your strategy scripts
+and indicator scripts is the main
+advantage of this plugin but one
+other advantage of autoview is that you
+can use it
+to automatically manage your manual
+trading positions
+so for example let's say we enter long
+here
+on aussie dollar and we have our stop
+loss below this
+swing low in here and we are expecting
+price to
+move up but let's say that after we
+enter this position
+we want to go out for lunch with our
+girlfriend or boyfriend
+or partner husband wife whatever and
+we don't want to have to sit and babysit
+this trade but
+we also want to move our stop-loss to
+break even
+when price action hits a certain price
+level
+well of course you could just set an
+alert here you can just set a regular
+alert
+to pop up on your phone push
+notification and you can manage the
+position manually but let's say this is
+a really
+important occasion and you don't want to
+be checking your phone while you're out
+or even let's say you're at a business
+meeting or something well you can use
+auto view to automatically move your
+stop loss
+to break even when your price target is
+hit
+so let's say at one to one when price
+actually gets back up to these highs
+we want to move our stop loss from down
+here to the price where our trade was
+entered well i'll show you how to do
+that now
+first thing i'm going to do is create a
+new order i'm going to go along
+at market there we go so we have filled
+at
+7 6 0 1 2. i'm going to put my stop loss
+at 7
+5 9 7 1 7 5 9 7
+1. there we go and i want my stop loss
+to be moved to break even if
+price session comes back up to these
+highs well the way i can do that with
+auto view
+is if i set an alert at 76057
+so if i just put a horizontal line there
+i can right click that line and create
+an alert on this line if we come down to
+the
+message section what we need to do here
+in order to initiate a breakeven stop
+alert is first we need to clear our stop
+loss
+and then replace it with a new stop loss
+so the oanda api does not allow you
+to update your stop loss as far as i can
+tell at least not through auto view
+i haven't found a way to be able to just
+update my stop loss with a command
+what you need to do instead is delete
+your limit order
+your stop loss order and replace it with
+a new stop loss order
+so the way we do that is we need to
+reference our exchange again so rwanda
+practice we need to reference our symbol
+so i'm on
+australian us dollar and i need to use
+the c
+which stands for cancel or close
+and i need to set c equals to order
+so this will cancel any limit orders i
+have now keep in mind this will also
+cancel your
+take profit so if i put a let me copy
+this order really quickly
+and let's put a take profit on this
+trade up at these highs here
+let's call it seven six one two seven
+six one two
+modify this position so now we have a
+take profit up at 7612.
+let's create a new alert really quickly
+i'll set the condition to less than just
+for demonstration purposes
+let's paste that command in here if i
+create this alert
+when this alert gets triggered it will
+delete
+our stop loss and our take profit so
+watch this let's click create
+and wait for that alert to trigger there
+we go
+now our stop loss and our take profit
+are gone we can now use another alert
+to update our stop loss and take profit
+so the way we do this the way we update
+our orders is i need to change
+c to position so this will now
+update our position if we give new
+parameters
+for our stop loss and take profit so we
+need to first set the book
+so we are long on this position so if i
+set b
+equals long i can now set
+a new fixed stop loss so in the case of
+a breakeven trade we would set
+our fsl to 76012
+but for now i'm just going to replace
+the stop loss that we just removed so
+let's type in
+0.75971
+and i will also replace our fixed take
+profit
+up here at let's change it to 76092
+0.76092 now if i create this
+alert these command parameters will
+replace our fixed stop loss and our
+fixed
+take profit but this is how you would
+move your stop loss to break even or
+even create a manual trailing stop
+let's wait for this alert to be
+triggered there we go our stop-loss is
+back where we wanted it
+i'm not sure what happened to our take
+profit
+not sure why the take profit was not
+replaced let me
+just quickly check the order view logs
+i'm not sure why my take profit is not
+being placed
+let me play around with this for a
+minute that seemed to work
+so i guess we need to use two commands
+here
+one for our stop loss one for our take
+profit so let me change
+fsl to 0.5971
+let me save that delete our orders again
+wait for that alert to be triggered and
+see if this works there we go
+so we need to separate our fsl and ftp
+commands if i copy this command over
+here
+and paste it in now this is where i
+should mention that we can
+execute multiple orders in the single
+alert message
+so we can have multiple commands here
+and what these three commands will do
+is the first command will delete our
+stop loss and our take profit
+the second command will set our stop
+loss to whichever price we want to
+so in this example we're going to set
+this to break even when this blue line
+is hit
+and then we need to replace our take
+profit as well
+so three different commands here to
+manage our position
+automatically let's copy this command
+and delete this alert and add
+that command to this blue line here
+we need to change our stop loss to our
+entry price
+so fsl will now become 76012
+and if i create this alert if price
+action
+gets up to this blue line and triggers
+this alert
+auto view will delete our stop loss and
+our take profit
+it will move our stop loss to break even
+to the price that we entered at
+and it will replace our take profit back
+at 761
+and this will all be done automatically
+without us having to lift
+the finger so long as you have order of
+you running in your browser
+this position will be automatically
+managed so this is a great way to use
+auto view in your manual trading process
+now there have been many occasions in my
+career as a trader over the past four
+years or so
+where i've wanted to move my stop-loss
+to break even if a certain price is hit
+but i end up going to bed and overnight
+at like three in the morning
+price action comes up hits where i
+wanted to move my stop-loss to break
+even
+but i was asleep and i couldn't manage
+the position and then price action has
+come
+back down to stop me out for a loss on a
+trade that i should have been
+stopped out for break even on but i
+wasn't able to manage my position
+now i can use autoview to automatically
+manage
+my trades while i'm not at the computer
+so not only can i fully automate my
+trading scripts
+i can also fully automate my trade
+management even on the strategies that i
+do not
+fully automate which is phenomenal and a
+really powerful
+aspect of autoview that even manual
+click traders can take advantage of
+so now i'm going to leave my screen
+capture recording
+for the next i don't know hour or so and
+hopefully
+with any luck price action will come up
+and hit this blue line
+and my trade will manage autoview will
+auto manage this trade will
+automatically move my stop loss
+to break even and uh with any luck we
+can
+see this in practice so let's wait and
+see what happens and i will be back
+in one second
+and no luck on that trade we just got
+stopped out by the spread
+and yet again we have stopped out i'm
+gonna keep trying until
+we get a trade that plays out
+and demonstrates this break even
+technique
+set our take profit to 7608
+save the alert i'll put on my profit
+tool
+again so we can watch this play out in
+real time
+and we'll see what happens
+here we go and success
+so our stop-loss has now been moved to
+break even
+after price has finally come up to test
+this blue line and you have no idea how
+boring it was sitting here waiting for
+that to happen
+and while recording this i actually just
+made a cheeky two percent
+gain on my main account taking a
+discretionary trade
+uh because i noticed that the one minute
+chart was holding this
+this area down here and so i jumped over
+to my main account
+um on my second monitor while i was
+recording and threw on a trade
+one percent risk stop loss below the uh
+swing low of this bat pattern and hit
+targets
+within an hour or so nice little
+profitable
+video to record can't complain about
+that and our take profit has been put
+up here at 7608 so if i scroll up and
+open up the command
+that did all this first we cleared our
+limit orders
+on this instrument then we replaced
+our fixed stop loss price to our
+breakeven price
+and then we added back our take profit
+limit order all done automatically using
+the autoview
+plugin which is really cool stuff now i
+can delete this
+line and that's it for the break even
+demonstration
+so if you were to do this on a real
+account all you would need to do is get
+rid of practice
+make sure that you've connected your
+real account id
+to autoview and make sure you have set
+all of your
+exchange parameters to awanda and apart
+from that
+none of these parameters need to be
+changed except if you're obviously using
+this on a different market you would
+need to change your symbol
+to the relevant market but that's it for
+today's short lesson hope you found that
+interesting
+good luck with your trading and i'll see
+in the next video

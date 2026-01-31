@@ -1,0 +1,7381 @@
+hi everyone welcome to this fantastic
+video on eiml projects full cuse by
+simply learn in this video we will clear
+your doubts regarding the projects you
+can add to your resume to clear the
+interview or Advance your career in
+artificial intelligence and machine
+learning but before we begin if you
+enjoy watching these videos and find
+them interesting subscribe to our
+Channel as we bring you the best videos
+daily also hit the Bell icon to never
+miss any updates from Simply learn so
+let's get started our inaugural project
+sets the stage for the remarkable path
+ahead the face recognition system after
+that we will see how to predict
+personality by implementing personality
+prediction we will cover the speech
+recognition system and after that we
+will see the projects like fake news
+detection and Loan Approval system
+moving ahead we will see how to classify
+image using CNN after which we will see
+movie recommendation System enter a
+world of algorithms that understand your
+preferences and curate movie suggestions
+tailor made for you moving ahead we will
+see a Time series analysis and text to
+speech converter system in the end we
+will see object detection project so
+buck
+for an accelerating ride through the
+realm of artificial intelligence machine
+learning and Innovation on that note if
+you want to become an AI expert and gain
+handsome salary packages look at the
+wide range of eiml courses by simply
+learn in collaboration with top
+universities across the globe by
+enrolling in any of these certification
+programs you will gain expertise in the
+skills like generative AI prompt
+engineering chat GPT EXP explainable AI
+machine learning algorithms supervised
+and unsupervised learning model training
+and optimization and there is much more
+on the list with hands-on experience in
+the tools like chart GPT Dary python
+open CV and T of low you will catch the
+eye of top recruiters so what are you
+waiting for hurry up and enroll now an
+year of experience is preferred to
+enroll in these courses find the course
+Link in the description box so without
+any further delay let's let's get
+started so in today's session we will
+see what open CV is moving forward we
+will see what is Phase detection and at
+the end we will go through the hands of
+lab demo of how we can create phase
+detection using open CV python we will
+perform different function and use
+different python libraries to create
+phase detection before we move on to the
+programming part let's discuss what open
+CV is and proceed further for the same
+what is open
+CV a collection of python bindings
+called open CV python was created to
+address issue with the computer
+vision python is general purpose
+programming language created by guoon
+rum that quickly gained popularity
+largely due to it ease of use and
+readable code the programmer can express
+Concept in less code without sacrificing
+readability numai a highly efficient
+library for numerical operation with a
+matlb like syntax is used by open CV
+python numai arrays are translated into
+and out of all open CV array forms
+additionally this make it simpler to
+interact with other numai using
+libraries like scipi and matplot lip
+after understanding what is open CV
+let's move forward and see what phase
+detection is so what is Phase
+detection phase detection also known as
+facial detection is a computer
+technology that uses artificial
+intelligence to find and recognize human
+faces in digital
+photographs pH deduction technology can
+be enable realtime surveillance and
+tracking of people in various Industries
+such as security Biometrics law
+enforcement entertainment and personal
+safety from basic computer vision method
+to developments in machine learning to
+increasingly complex artificial neural
+network and related Technologies phase
+detection has advanced leading or to
+ongoing performance
+increases it now serves as the
+foundation from some crucial application
+such as face tracking face analysis face
+recognition the application ability to
+perform sequential tasks subst impacts
+the phas
+direction so dear learner if you want to
+upskill your AI and machine learning
+skills so give a chance to Simply learn
+professional certificate program in Ai
+and machine learning which comes with
+completion certificate and in-depth
+knowledge of AI and machine learning
+check this course detail from the
+description box
+below so here is one question for you
+guys I will give you exactly 1 minute
+for this you can comment or give your
+answer in the chat section so I can see
+if the answers given by you are right or
+wrong so the question is which of the
+following function is a buil-in function
+in
+Python
+factorial print
+seed
+sqrt
+so I am starting the timer of 1 minute
+just type your answer in the comment
+section or in the chat section please do
+let me know your
+answers so I'm starting the timer of 1
+minute which of the following function
+is a buil-in function in Python
+factorial print seed sqrt let us know
+your answer in the comment section
+below I kindly ask that everyone take
+part in this
+session which of the following function
+is a built-in function in
+Python 30 seconds more factorial print
+seed
+sqrt please let me know your answer in
+the comment section
+below 20 seconds
+remaining
+which of the following function is a
+built-in function in
+Python 10 seconds
+more please let us know your answer in
+the comment section
+below so after the allotted time has
+passed Those Who provided the current
+response will receive a response and
+those Who provided the incorrect
+response will receive one so now let's
+move to our programming part to create
+phase detection using open CV
+python so first we will open command
+prompt to write a command to open
+jupyter notebook so here we will write
+Jupiter
+notebook press
+enter so this is the landing page of
+jupyter notebook and here you have to
+select new python
+file so this is how the jupyter notebook
+UI looks like so at first we will import
+some major libraries of python which
+will help us in creating a phase
+detection system so first let me rename
+this
+space
+dection first we will import import
+CV2 press enter then import another
+Library import
+numi as
+NP and the third one is major One
+Import face
+[Music]
+recognition SF
+FR then press
+enter so CV means capturing video the
+CV2 function is a open CV can read video
+video capture by using pass zero
+function parameter we can access our
+webcam we may pass as rtsp URL in the
+function parameter to capture the CCTV
+footage which is quite helpful for video
+analysis and another one is numai napai
+is a python Library used for working
+with arrays it also has function for
+working in the domain of linear algebra
+and matrices it is an open- source
+project you can use it freely numai
+stand for numerical Python and the third
+one is Phase recognition phase
+recognition and manipulation using
+python or the command line the easiest
+facial recognition library in the world
+built using Cutting Edge face
+recognition technology from DLI
+developed using deep learning so moving
+forwards let's import our video capture
+device so for that we have to write Here
+video uncore capture this is our
+variable
+name equals
+to CV2
+Dot
+video
+capture and we have to pass here
+zero then press
+enter okay here
+V should be
+Capital so the video capture function
+from open CV is used to interact with
+the cameras what we can do is video can
+be read shown and saved display the
+image that the the camera
+captured so moving forward let me import
+my image for the further detection
+process okay
+so image equals to fr.
+loore
+image underscore
+file
+then image name or image path
+boy.
+jpg press
+using load image file we can import
+image file to our detection system so
+moving forward let's set encoding for
+the image okay so I will write here
+image underscore phas underscore
+encoding equals to F
+dot
+face
+encodings
+and
+image than
+zero press enter yeah so face encoding
+basically uses 128 computer generated
+measur to represent the face similar
+encoding would be present in two images
+of the same person while being
+completely different in two images of
+two distinct people so moving forward
+let's do let me write first I will write
+here
+known
+encodings equals to
+image
+face
+coding okay then press enter Then
+known
+phase
+names equals
+to then here I have to put my name so I
+will write
+Bank okay then press enter so what I did
+is I assigned known pH and codings to my
+image face and coding so what will
+happen if image matches to my face then
+it will print my name and for the rest
+we will add name unknown okay so let me
+add the function now for phase detection
+system so let me write the full code for
+it first then I will explain you line
+wise okay so just stay tuned with me I
+will write here
+so I will write
+while okay
+true okay so R comma frame I will
+explain you line wise line don't worry
+equals to then
+video
+capture do
+read and
+RGB underscore frame
+equals
+to
+frame then
+colon comma then again column comma then
+two column then minus
+one okay yeah so here I will write FC
+underscore
+locations equals to F do
+face underscore
+locations
+RGB underscore
+frame right here FC FC is for basically
+phase and
+codings alss to F
+FR do
+phore
+encodings and
+RGB under underscore
+frame comma FC
+underscore
+locations okay so
+for
+top comma right comma
+bottom comma
+left okay then have to write your
+face underscore
+encoding comma face underscore encoding
+this is that was encodings this is
+encoding okay so before that I will
+write
+here okay
+so
+I have to write here
+encoding IN
+Zip okay then here I have to write FC
+uncore locations
+locations okay then comma then face
+encodings
+colon then press enter
+so here I have to write
+matches yes
+yeah matches equals to f.
+compare and
+faces then
+known underscore
+phore
+encodings
+comma phore
+encoding
+okay
+so it so what if the image will not
+match so I have to give the name equals
+to
+unknown then we will write pH
+distances equals to F do pH underscore
+distances underscore
+pH underscore
+encodings comma base score and
+coding then I will write match uncore
+[Music]
+index equals to NP
+do a
+r g
+Min okay then I will write here FC
+uncore
+distances okay then moving forward
+I WR
+if
+matches then match
+uncore
+index okay then colon then name equals
+to known underscore
+phas underscore
+names then match uncore
+index
+and I have to write here
+CV2 dot
+rectangle and
+frame
+comma comma
+top comma
+right to give another bracket here
+comma
+bottom then
+comma 0 comma 0 comma
+255 again comma then two for the
+border so then CV2 dot
+rectangle
+comma then
+again left
+comma
+bottom then minus
+35 okay so then I will
+write
+right comma
+bottom comma then again 0 comma 0 comma
+255
+then CV2 do f i l d
+field okay F should be
+Capital
+yeah so then we will set font equals to
+CV2 dot
+font
+okay font
+Dore
+her
+underscore
+Simplex
+okay so then I have to write
+here
+CV2 do
+put
+text
+a comma
+name
+comma
+left +
+6 comma
+bottom -
+6 okay then comma
+font comma
+1.0 then again one comma then we have to
+set location like
+255 comma
+255 comma
+255 then
+comma
+1
+okay and here I have to write
+CV2 do image show am
+show then like simply
+learn this
+detection
+comma
+frame and
+if CV2
+dot weit
+key is
+one
+and like 0
+x
+FF should be Capital FF equals to equals
+to O then
+quit and here I will write
+break I will write
+video undor
+capture dot
+release
+TV2 dot
+destroy
+all
+windows okay
+yeah so let me explain you so in general
+r r is a Boolean value that indicates
+whether or not there was a even or
+return each frame that is returned is at
+the same frame if there is no frame you
+will receive none rather than than an
+error in open CV reading and writing
+videos and reading and writing images
+are quite similar a video is nothing
+more than a collection of pictures often
+known as
+frames so to draw a rectangle around the
+face that was discovered we utilize open
+CV rectangle the rectangle function we
+can draw the rectangle by using the
+points or Corners position that the face
+location
+then en coding this a face en coding
+this
+one so a face encoding basically uses
+128 computer generated measures to
+represent the face similar and coding
+would be present in two images of the
+same person while being completely
+different in two images of two distinct
+people so this there is I use compare
+phase so compare phas is used to compare
+my face to uploaded image one okay if it
+matches it will print my name otherwise
+we have given unknown
+here so the numai ARG AR this
+one where it went this numai ARG
+Min so the numi ARG Min method delivers
+the indexes of the arrays minimum
+element along each axis return an array
+of array indices with the same shape of
+the
+array so this font where is yeah font
+her
+Simplex is normal size of senser font
+okay so put text put text is used to put
+the text on the frame like my name or
+unknown so in order to display an image
+in a window we use the IM show this
+one this IM show
+function okay so the window adjust
+itself to the size of image parameters
+window name a string that identifies the
+window in which the displayed image will
+appear Okay so until a key is pressed
+weight key zero this one okay so until a
+key is pressed weit key zero will will
+keep the window open it is suitable for
+image display and weit key one I write
+here weight key 1 so weight key 1 will
+show a frame for 1 ms before closing the
+display on its
+own so after the script has ended users
+can close or remove all the windows use
+the python like using destroy all
+function function okay you would use the
+function if you wanted to close a window
+while it was open in numerous windows at
+once so let's see our phase detection
+system is working or not so let me close
+this person on your screen first okay so
+let me close this
+first let me run
+this now here you can see this popup and
+I will open so here you can see my name
+is currently
+printing
+okay
+so like I have uploaded my image it's
+directing correctly okay so like what if
+I show uh one more image so here you can
+see this is my
+iard so it is detecting properly yeah so
+what if I will show like another guy
+image from my
+mobile so here you can see it is
+springing unknown in messy
+photo
+yeah so what if if I will write here
+like uh one of the other image this
+random. jpg then it should print unknown
+for me also okay then I will run it
+again okay it's working it'sing has come
+so here you can see it is now printing
+unknown because like I have uploaded
+that another random image here so it is
+importing okay so it is printing unknown
+here so so here you can see like it's
+spining unknown for me also so in
+today's session we will go through Myers
+bricks personalty prediction after that
+a hands off La demo of how to predict
+the person personality using Python and
+machine learning we will perform
+different function and different python
+libraries so before we move on to the
+programming part let's first discuss
+what is Myers Brick's personality
+prediction and proceed further for the
+same so what is Myers brick personality
+prediction
+to better understand personality
+characteristics in the broader
+population the mbti examination was
+created although there is no such thing
+as Better or Worse personality
+preference the MB examination can Aid
+individuals in understanding their
+strength weakness and potential
+difference from the
+others so there are some types of mbti
+indicator there is no best or better
+personality type than another it is not
+a device made to search for
+abnormalities and dysfunction it is sole
+purpose is to assist you in discovering
+more about yourself so there are four
+separate skills make up the actual
+questionnaire first is extrovert and
+introversion second is sensing and
+intuition third is thinking and feeling
+fourth is judging and
+perceiving So based in these four there
+are some types so there are 16
+types istj istp isfj isfp isfj like this
+en NFP ENFJ entp and
+entj so what is meaning of
+istj I means introversion s means
+sensing t means thinking and J means
+judging like
+these so dear Learners if you want to
+upskill your AI and machine learning
+skills so give yourself a chance to
+Simply learn a professional certificate
+program in Ai and machine learning which
+comes with completion certificate and
+indepth knowledge of AI and machine
+learning check this course detail from
+the description box
+below so now let's move to our
+programming part so first we will open
+command
+prom first we will open command prom so
+here I will add
+Jupiter
+enter so this is landing page of jupyter
+notebook so here I will go new python
+file this is how the python kernels look
+like so here I will change
+name B my big personality
+prediction
+okay
+yeah at first we will import some major
+libraries of python which will help us
+analyzing the data so here I will
+write lo
+li
+p
+r for numai as
+NP
+import pandas as
+PD put M plot
+Li P
+plot as PLT
+for
+eor
+SNS then
+put
+LLY do
+offline
+as okay then here
+import
+shortly
+graph bgs object as
+go
+import
+shortly do
+tools as
+DLS
+from
+bs4
+import
+beautiful then here I will write from SK
+learn. model underscore
+selection
+Port
+cross
+valed
+okay then again let me copy from here
+till
+import then here I will import straight
+stratified
+so
+so here I will import
+skar do
+linear
+model
+put logistic
+regression
+so from
+this we'll write here
+skar
+okay
+learn do model uncore
+selection
+learn
+dot
+P
+pleas
+okay so here I will write more
+from Lear do
+decomposition
+p
+truncated
+okay so here I will write
+PR
+skar
+doore
+section
+text import
+okay then from
+Escalon do
+pipeline both pipeline
+from
+Escalon
+doace
+multinomial nomial
+NB
+then py dot
+init conect
+itals
+to is a python Library used for working
+with arrays it also has a function for
+working with domain of linear algebra
+and matrices it is open source project
+and you can use it freely n stand for
+numerical python so panda is a software
+Library written for the Panda's
+programming language for data
+manipulation and Analysis in particular
+it offers data structure and operation
+for manipulating numerical tables and
+time series an open source python
+Library based on matplot lib is called
+cbor it is utilized for data exploration
+and data visualization with data frames
+and the pandas Library cbon function
+with
+these MPL lip for Python and its
+numerical extension numai MPL lip is a
+crossplatform data visualization and
+graphical charting Pro as a result it
+presents a strong open-source substitute
+for metlab the API for met plot Li
+allows programmers to incorporate graphs
+into gii
+application Beautiful soap python
+software called Beautiful soup is called
+Parts HTML and XML text for process
+Pages it generates a pass tree that can
+be used to extract HTML data for web
+scraping pipeline the pipeline goal is
+to put together several phases that can
+be cross validate while using different
+parameters moving forward let's import
+some different data set you can download
+these data set from the description box
+below so here I will write
+train to PD
+dot
+eore
+CSV and then
+here
+PTI
+one
+do and second one is equals to PD do
+read
+_
+ERS let
+see
+okay then there is one more equals
+to PD
+dot
+P
+see that
+Forum
+sages so here I will write
+mbti equals
+to
+I key value so I'm writing a key
+value
+version
+then
+same
+version get
+done
+[Music]
+confusions
+[Music]
+one t then t means
+thinking f
+means
+heing
+J
+means
+there
+loading so still loading for data
+set three different data set mbti 1 CSP
+users and for messages you can download
+these data set from the description box
+below
+okay or you can find this link for the
+Drive
+Link these are like last data set so it
+will take time
+sometime importing his data has done so
+let's use shape function to see how many
+rows columns are present in train data
+set so here I will write
+train dot
+shape as you can see 865 8675 rows and
+two
+columns okay so let's move
+forward so we to take a class I repeat
+so we take a look to classes so it look
+like very unbalanced data set so here I
+will write
+CNT do RS equals to
+train
+typ
+counts so here I will plot do
+figure
+size 12a
+4 so SNS do
+barplot
+[Music]
+NS dot
+values
+0.8
+plot dot y
+leveles
+size types different types than phont
+size LT do show
+here you can as you can see different
+types of personality inj infj inp
+inj so on okay so these are number of
+occurrence and the
+types
+so moving forward let's group user ID
+and messages so I will write
+here better
+visual yeah so here I will write
+PS
+message
+message. fill an
+yes
+doore
+join equals to PS do group
+by
+post
+write
+message
+dot get here I will
+write
+all
+Sor
+hello
+loading moving forward let's check
+accuracy with different classifiers and
+models so first we will check with extra
+tree classifier
+okay so for
+that we write here like E tx. classifier
+equals
+[Music]
+to classifier
+then
+underscore
+estimators to 20 comma
+Max to
+4
+Ops to
+minus so here I will write TF
+IDF
+to let me copy it from
+here and
+[Music]
+Gore
+range
+comma
+1
+upwards
+SVD
+component
+D to
+pipeline
+have
+I right
+TFI I
+here
+there
+here I will write K
+folds
+here I'm doing because of spelling
+mistakes and
+the to
+five comma
+Shuffle
+and here I will write NP dot okay
+sorry NP dot
+random
+do
+in
+sou
+log
+so
+in then type
+write
+scoring
+TOS = to
+minus it is still
+loading
+okay
+now we will print so here I will write
+print
+EV then 0 4
+F I will write
+plus
+minus
+hold
+on
+0.4
+FP
+dot
+mean
+result
+position
+results
+copy it all and CH
+accordingly so now F1 score for F1 score
+we will write here
+F1
+same
+okay then here you have to write np.
+mean that
+is
+accuracy here you will write test F1
+uncore
+micro okay then same
+here test
+F1 for the negative
+losss
+put I will write
+negative
+lore
+loss
+underscore
+log
+underscore done
+it so wait let me make
+it here you can see the accuracy and
+it's it is not that good with xrt
+classifier as the data set is very
+unbalanced
+F1 score is a better metric than
+accuracy so we will check with some
+alternative models so let's try if we
+can find a more accuracy with model
+another model although we haven't got a
+lot of data so here I will write
+DF
+clean
+T
+okay so here I will write
+text to
+beautiful
+oh the do
+sub
+then
+R
+oh
+okay then text equals to r dot
+sub
+then
+HTTP
+SL
+URL
+text here I will addite
+train
+Post
+train
+post dot
+fly in okay done so let's check accuracy
+with first na base
+okay oh I'm done with the code because
+the code are mostly same so I just
+copied it from my docents okay so let me
+enter so here you can see uh the
+accuracy is far better than this extra
+classifier have okay so we will check
+from one more we will let check for
+logistic
+regression so let me write the code
+first then I will get back to
+you I'm done with the code let's see the
+accuracy of logistic
+regression so let me press
+enter loading you can
+see
+yeah so accuracy is far good than the
+[Music]
+both so is this model overfitting could
+we have a better model with more data
+let's see the learning curve okay so
+here I will write train underscore
+sizes comma train
+underscore
+scores
+comma running underscore
+curve
+Post
+in
+type a
+PS
+jobs
+toting equals
+to here I write F1
+underscore sies
+= to
+NP
+space comma
+1
+State
+one and press
+enter okay this G
+FS
+dispatcher so for the learning curve it
+is a long code so let me write it for
+you again it's still
+loading I don't know what
+so I'm done with the code so let me run
+it now let's see the
+curve so for that let's set
+import we
+don't here I will write plot
+learning rning
+cve
+10
+po comma
+train
+typ
+Tres in underscore
+scores comma
+test underscore
+scores comma
+1.0 bigger size should
+[Music]
+be
+sorry not
+15 comma
+6
+pt.
+show here as you can see training score
+cross validation Score Learning graph
+so it's look like that with more data
+the mo model gets better and better so
+that is not
+overfitting so what we will
+do moving forward let's see kaggle user
+personality let's apply our model to
+whole kaggle user commands let's see
+what is the most common kle user
+personality so for that I will write
+here
+psor join
+then
+comments
+toore
+join
+message
+dot
+apply
+nextt I will write model underscore
+learning.
+fit
+train
+type all equals to
+model
+Jo it's loading here so moving forward
+what what we will do let's create a bar
+graph to see kagle user personality
+okay
+loading it will show the warning
+something
+like let me write the code for the
+paragraph okay it's a long code so I
+will write first then I will get back to
+you
+oh I wrote the code so let me run it and
+see the
+personality so here you can see esfp is
+the most used
+personality so let's see the uh count
+personalty count percentage count for
+that I will write
+here
+underscore
+DF percent
+fiction _
+DF
+count underscore DF then again
+count
+okay where I will write prediction
+underscore
+TF
+description
+personality like
+the
+X
+join PTI
+one
+just
+okay here you can see the percentage
+count for every
+personality okay with description exion
+sensing feeling perceiving
+ESF
+so finally at the end we will see the
+personality distribution using pie chart
+okay so here I will write labels equals
+to
+prediction _
+TF I will write
+description
+okay size
+isal to prediction underscore
+dm%
+spal to go dot
+IAL to
+labels
+comma
+use to sizes
+layout should be layout equals to go dot
+layouts
+to kle user
+alties
+data equals
+to
+trace
+that dot
+data to
+data y Dot
+iplot
+okay let me run
+it let me run
+it here you can see the pie
+chart so like most 50% is
+esfp okay then 23 is introversion to
+ution then so on okay so everything is
+written here and every
+color so apparently the most common kle
+user personality is esfp this
+50.6% okay so extroversion sensing
+feeling perceiving but we are getting
+this conclusion based on user's command
+it is reasonable to think that user who
+participate more writing comments are
+more extrovert our sample data don't
+come from the kaggle users population it
+is only based on the
+comments it comes from the kagle users
+comments so our conclusion can't be
+applied to all kagle user so like more
+accuracy models could be obtained the
+more data if you want to become an AI
+expert and gain handsome salary packages
+look at the wide range of e IML courses
+by simply learn in collaboration with
+top universities across the globe so
+what are you waiting for hurry up and
+enroll now and year of experience is
+preferred to enroll in these courses
+find the course Link in the description
+box so in today's session we will go
+through what is a speech recognition
+system moving forward we will see how
+speech recognition system works after
+that we will create a speech recognition
+system using python we will perform
+different function and create speech
+recognition system using different
+python libraries before we move on to
+the programming part let's discuss what
+is the speech recognition system first
+and proceed further for the
+same what is a speech recognition
+system a program capacity to convert
+spoken language into written language is
+known as a speech recognition system
+also known as automatic speech
+recognition computer voice recognition
+or speech to text despite being
+sometimes confused with voice
+recognition speech recognition focus on
+converting speech form a verbal to a
+text format whereas voice recognition
+only aims to distinguish The Voice voice
+of a certain
+person voice and speech recognition are
+two distinct Technologies and they
+shouldn't be confused to recognize word
+in spoken language speech recognition is
+used voice recognition uses biometrical
+Technologies to recognize a specific
+person by their
+voice so after knowing what is speech
+recognition system let's move forward
+and see how does the speech recognition
+system
+work peace recognition in Python works
+with algorithm that perform linguistic
+and acostic modeling acostic modeling is
+used to recognize phonetics in our
+speech to get the more significant part
+of speech as words and sentences speech
+recognition start by taking the sound
+energy produced by the person speaking
+and converting it into the electrical
+energy with the help of microphone it
+then convert the electrical energy from
+analog to digital and finally to the
+text it breaks the audio data down into
+sounds and it analyze the sound using
+algorithm to find the most probable word
+that fits that audio all of this is done
+using natural language processing NLP
+and neural networks hidden Mark models
+can be used to find temporal patterns in
+speech and improve accuracy so here is
+one question for you guys I will give
+you 1 minute for this you can comment or
+you can give your answer in the chat
+section so I can see if the answers
+given by you are right or wrong I'm
+repeating again so here is one question
+for you guys I will give you exactly 1
+minute for this you can comment or you
+can give answer in the chat section so I
+can see if the answers given by you are
+right or wrong so the question is which
+of the following is the correct
+extension for the python
+file I'm repeating again which of the
+following is the correct extension of
+the Python file option A do python
+option
+BPL option C py and option
+DP so let us know your answer in the
+comment section below so I'm starting a
+timer of 1 minute just type your answer
+in the comment section or in the chat
+section do let me know your answers
+please I kindly ask that everyone take
+part in this to make this live session
+exciting so I'm starting the
+timer
+you can comment or you can give your
+answer in the chat section so I can see
+if the answers given by you are right or
+wrong so the question is which of the
+following is the correct extension of
+the Python
+file 37 seconds meaning option a python
+option BPL option C py option D
+dop let us know your answer in the
+comment section
+below I can't ask that everyone take
+part in this to make the live session
+exciting you have 15 seconds
+remaining 10 seconds
+more which of the following is the
+correct extension of the Python file 3 2
+1 after that allotted time has passed
+Those Who provided the correct response
+will receive a response and those Who
+provided the incorrect response will
+receive one okay so now let's move to
+our programming part to create a speech
+recognition system using python so first
+we will open a command prom to write a
+command to open Jupiter notebook so here
+we will write
+Jupiter
+notebook press
+enter
+so this is the landing page of jupyter
+notebook and here you can select new
+python
+file so this is how the jupyter notebook
+UI looks like so at first we will import
+some major libraries of python which
+will help us in creating a speech
+recognition system so here we will write
+first let me REM remain rename
+this speech
+Rec
+so first I will import
+import
+spe
+underscore
+recognition and second
+import pyttsx3
+present enter so the incredibly
+extension I repeat the incredibly
+extensible speech recognition Library
+serves as a rapper for a number of
+well-known speech apis the speech
+recognition Library includes default API
+key for one of these the Google web
+speech API hardcoded that implies that
+you can start moving without needing to
+register for a service and python
+project would benefit greatly from using
+the speech recognition package due to
+its versality and
+usability and then pyttsx3 a python text
+to speech conversion library is called
+pyttsx3
+it is compatible with python 2 and
+Python 3 and work offline unlike
+competing libraries to obtain a
+reference to a pyttsx3 engine instance
+an application calls the pyttsx3 in it
+it is very userfriendly program that
+turns type text to into
+speech so moving forward let's write
+code for actual speech recognition
+system so here I will
+write Sr equals to to
+speech
+underscore
+recognition dot
+recognizer R must be Capital
+here
+yeah here I will write with
+speech
+underscore
+recognition dot microphone
+Source
+two then
+colon
+yeah
+here I will write
+print we'll write here okay silence
+please okay then I will write here Sr do
+adjust underscore 4
+underscore
+ambient underscore
+noise then Source 2 comma
+duration equals to
+two Okay then enter then I will print
+something
+like
+peek now
+please something like that then I will
+write here
+audio audio
+2 equals to
+Sr Dot
+listen source
+to
+and here I will write for text equals to
+Sr
+dot
+recognize
+okay
+underscore
+Google audio
+2 then here I have to print the small
+letters in lower case so I will write
+here text x equals to
+text do
+lower
+this then here I will write
+print it you
+say
+plus text
+uh everything look
+great so a recognizer is a machine
+ability to listen to spoken words and
+identify them you can then use a speech
+recognition in Python to convert the
+spoken words into text make a query or a
+give a reply you can even program some
+devices to respond to these spoken words
+like every time the recognized speech
+from mic function is invoked the
+recognizer is calibrated for changing
+noise condition using the edges for
+ambient noise this one for ambient noise
+the backlog parameter of the listen
+function allow a qu size to be specified
+it will listen to what we are speaking
+or
+saying this recognize Google a function
+on the recognizer class which you have
+now developed will be used to query the
+Google web speech API and convert spoken
+words into text recognize Google needs
+the argument audio data in order to
+function prop L otherwise it will
+fail python built-in function lower is
+mostly used to handle strings the lower
+method converts each Capital character
+in The provided string to lower case
+before returning the lower cost string
+it accept no arguments it return to the
+original text if the supplied string has
+no capital letters now let's check
+whether it's working or not so I will
+run it yeah run
+all
+hello how are you
+doing yeah you can see hello how are you
+doing
+printed so let me try another
+one subscribe to Simply learn YouTube
+channel and press that Bell icon to
+never miss any update from Simply
+learn
+so here you can see subscribe to Simply
+learn YouTube channel and press that
+Bell icon to never miss any update from
+Simply learn is
+printed so speech to text is working
+fine so I hope you guys understand till
+here if you have any questions or any
+queries regarding any code or you have
+any questions just put as in comments
+our team will shortly provide you with
+the correct solution now moving forward
+what if you want that system will write
+what we are saying and speak that to
+this will be printed and now moving
+forward what if you want that system
+will write what we are saying and speak
+that too so for that we will write a
+small line of code so first we will
+do we will create one here like we will
+insert cell below we will write a
+function here so
+DF Speak
+Now
+command
+colon then voice equals
+to pytt
+sx3 do
+init okay then voice do
+say
+command and
+voice do run and
+wait
+yeah so what we will do
+here we will write like
+speak
+now
+then so this voice is nothing just a
+variable to text to spe an in8 py tx3
+engine has started obtains a pointer to
+an instance of an engine that will
+utilize the specified driver if another
+engine instance is already using the
+given driver the other engine instance
+is returned if not a new engine is built
+is speak now is a function in which
+using get function I'm getting the
+values of the text this one I will get
+now let's run this sort of code and
+let's see if it is working or not so I
+will
+run
+hello how are you
+all speak now is not defined
+okay speak now okay and is
+small okay my B run this
+again hello how are you all
+hello how are you all I hope you can
+hear properly so let
+me run this again for another demo
+example subscribe to Simply Lear YouTube
+channel and press that Bell icon to
+never miss any update from Simply
+learn subscribe to simple and YouTube
+channel and press the Bell icon to never
+miss any updates from simple learn yeah
+so I hope you guys understand till here
+if you have any question or any queries
+regarding any code or you have any
+question related to python just put as
+in comments our team will shortly
+provide you with the correct solution
+okay okay moving forward so at last
+let's create a speech recognition system
+from which we can open our websites and
+all like YouTube like Facebook like
+simply learn anything thing so we will
+open open new file for this I will
+create the separate
+one here I will write speech to web
+webites
+okay
+speech to
+web so here I will import import speech
+underscore
+recognition then import pyttsx3
+then one major Library
+import web
+browser okay then I will run it yeah I
+hope you already know these to first two
+libraries so this is third librar is
+used for web browser is the file source
+code the web browser modules offers a
+high level user interface that enables
+user to view web based content in most
+cases executing the open function from
+the this module will result in the
+desired
+outcome so moving forward let me write
+code for it so I will write code first
+then I will explain you line wise so I
+will write
+if uncore
+uncore name then again toore equals to
+equals
+to underscore main then again
+underscore then
+colon yeah then you have to give a path
+like for your browser you can use Edge
+you can use Google Chrome anything
+Firefox anything so here I will give
+path path equals to
+then C drive I have my path
+already
+program
+files and x
+86
+Microsoft and Edge
+then
+then
+application then
+msh do
+exe you have to write at the end this
+percentage
+s don't forget to write this okay so
+path is set so let me create Sr equals
+to
+speech recognition
+dot
+recognizer same as previous
+one and I will write with speech
+underscore
+recognition dot
+microphone as
+source
+then sr.
+adjust
+for
+ambient
+noise then
+Source now everything seems
+good let me write
+print but we have wrote there like speak
+now please so here I will
+write
+please say
+something to
+open
+okay I will write
+audio equals to sr.
+listen listen
+that
+source and I will
+print like what you
+said so it will hear
+[Music]
+hearing then I will here I try and
+accept then try so here I will write
+destination equals to
+Sr
+recognize _
+Google then
+audio
+in where you
+asked to
+open write here plus destination
+okay so then
+web
+browser we browser dot get that
+path then
+open that
+destination
+destination okay so here I will write
+that
+accept
+exception
+exception
+as you can write
+e then
+print if there will be
+error
+error
+sta
+e
+okay so a recognizer is a machine
+ability to listen to spoke converts and
+identify them you can use speech
+recognition in Python to convert the
+spoken word into text you can even
+program some devices to respond to these
+spoken words every time the recognized
+speech from mic function is invoked the
+recognizer is calibrated for changing
+noise condition using the adjust ambient
+noise method a socket is already to
+receive connection after calling the
+listen function prior to performing the
+accept method on the server soet the
+listen method should be called the
+backlog parameter of the listen function
+allow a q size to be specified it will
+listen to what we are speaking or
+saying the recognize Google function on
+the recognizer class which you have now
+developed will be used to query the
+Google web speech API and will convert
+spoken words into text recognize Google
+needs the argument audio data in order
+to function properly otherwise it will
+fail okay
+so okay so let's try this it's working
+or not let me run
+this okay invalid syntax perhaps you
+forgot a
+comma let me
+see that print
+error think it should be here
+okay let me check
+this
+let me run this
+again valid syntax perhaps you forgot a
+comma
+okay try to run this
+again
+two
+okay let me remove this I guess it will
+work fine
+still did input okay okay no
+issues so here I will write again
+accept
+exception
+e
+in
+errors R okay I forgot to write plus
+okay okay
+e yeah now it will work
+fine
+www.youtube.com here you can see YouTube
+is
+open yeah so we will try this one more
+time
+www.fb.com
+so here you can see Facebook is open
+ww.facebook.com
+one more last
+time www.s
+simply.com
+so in today's session we will discuss
+what fake news is and at the end we will
+do a hands-off lab demo of how to detect
+fake news using machine
+learning before we move on to the
+programming part let's discuss first
+what fake news is and proceed further
+for the same what is fake news false or
+misleading information that is reported
+as news is called fake news a common
+goal or fake news is to harm someone or
+something reputation or to profit
+through
+advertising the term fake news was first
+used in 1890s a time when dramatic
+newspaper reports were common even
+though incorrect information has always
+been dissed throughout
+history however the phrase has no clear
+definition and is often used to refer to
+all misleading information high-profile
+individuals have also used it to refer
+to any news that is not favorable to
+them
+so dear Learners if you want to upscale
+your AI and machine learning skills so
+give yourself a chance to Simply learn
+professional certificate program in Ai
+and machine learning which comes with a
+completion certificate and in-depth
+knowledge of AI and machine learning
+check this course details from the
+description box below now let's move to
+our programming
+part so first we will open a command
+prom to write a command to open jupyter
+notebook so here we will write
+Jupiter notebook
+Center and here I have to select new
+python Kel file okay so this is how the
+Kel look lies so first we will import
+some major libraries of python so here I
+will write
+import pandas as
+PD and import
+numai as
+NP then
+import
+cbor as
+SNS okay then
+import
+skarn dot model
+selection ort
+train
+underscore test underscore
+split before that I will
+import mat plot
+Li P
+plot as
+PLT okay
+then I will write here from SK
+Kar dot
+matrix
+import
+accuracy
+four then
+from
+Escalon do
+Matrix
+import
+classification to report
+and import R then import
+string
+okay then press enter so it is
+saying okay here I have to write
+from everything seems
+good
+loading let's
+see okay till then numai is a python
+Library used for working with arrays it
+also has function for working with the
+domain of linear algebra and
+matrices it is an open source project
+and you can use it
+freely number stand for numerical
+python pandas so panda is a software
+Library written for Python programming
+language for data manipulation and
+Analysis in particular it offers data
+structure and operation for manipulating
+numerical tables and time
+series then cbor an open- Source python
+Library based on M plot lib is called
+cbon it is utilized for data exploration
+and data visualization with data frames
+and the pandas Library cbon functions
+with ease then M PL lip for Python and
+its numerical extension numpy met plot
+Li is a cross platform for the data
+visualization and graph iCal charting
+package as a result it presents a strong
+open source suitable for metlab the apis
+for met plot live allow programmers to
+incorporate graphs into gii applications
+then this train test is split we may
+build our training data and the test
+data with the aid of Escalon train test
+split function this is so because the
+original data set often serves as both
+the training data and the test data
+starting with the single data set we
+divide it into two data sets to obtain
+the information needed to create a model
+like hor and test accuracy score the
+accuracy score is used to gge the
+model's Effectiveness by calculating the
+ratio of total true positive to Total
+true negative across all the model
+prediction this re regular expression
+the functions in the model allow you to
+determine whether a given text fits a
+given regular expression or not which is
+known as
+re okay then a string a collection of
+letters words or other character is
+called a string it is one of the basic
+data structure that serves as the
+foundation of manipulating data the Str
+Str class is a built-in string class in
+Python because python strings are
+immutable they cannot be modified after
+they have been
+formed okay so now let's import the data
+set we will be going to import two data
+set one for the fake news and one for
+the True News or you can say not fake
+news okay so I will write here
+efcore fake equals
+to PD
+do read uncore
+CSV or what can I say DF fake
+okay tore fake
+okay then fake do CSV you can download
+this data set from the description box
+below then data dot true equals to PD do
+read _
+CSV sorry
+CSV then fake news sorry true true. CSV
+okay then press
+enter so these are the two data set you
+can download these data set from the
+description box below so let's see the
+board data set okay then I will write
+here
+dataor
+fake do
+head so this is the fake data okay
+then
+data uncore
+true
+do and this is the two
+data okay this is not fake so if you
+want to see your top five rows of the
+particular data set you can use head and
+if you want to see the last five rows of
+the data set you can use tail instead of
+head okay
+so let me give some space for the better
+visual so now we will insert column
+class as a Target feature okay then I
+will write here data let go
+fake
+plus equals
+to0 then data underscore
+true and
+cross = to
+1
+okay
+then I will write here data underscore
+fake dot shape and data underscore
+true do
+shap okay then press
+enter so the shape method return the
+shape of an array the shape is a tle of
+integers these number represent the
+length of the corresponding area
+dimension in other words a tle
+containing the quantities of entries on
+each axis is an array shape Dimension so
+what's the meaning of
+shape in the fake word in this data set
+we have 2 3 4 8 1 rows and five columns
+and in this data set true we have 2 1 41
+7 rows and five column okay so these are
+the rows column rows column for the
+particular data set
+so now let's move and let's remove the
+last 10 rows for the manual testing okay
+then I will write here data underscore
+fake let's go
+manual
+testing to dataor
+fake.
+tail
+for the last 10 rows I have to write
+here
+10 okay so for I in
+range 2 3
+4 8 1 sorry
+0o comma 2
+3
+470 comma
+minus1 okay
+and DF underscore not DF
+data underscore
+fig dot
+drop
+one instead of one I can write here
+I comma
+is equals
+to0 in
+place equals to
+true then
+data not
+here data
+underscore same I will write for I will
+copy from here
+and I will paste it here and I will make
+the particular changes so here I can
+write
+true where I can write
+true
+okay then I have to change a
+[Music]
+number
+[Music]
+21
+416
+write 21 4
+6 minus
+one
+same so press
+enter X =
+to0
+in X maybe you mean d0 or of
+this okay we will put here double
+course I'm putting
+this
+. drop i z in place
+okay also write equals to and equals
+to yeah
+so okay AIS is not
+defined now it's working
+so let me see
+now data
+underscore pick.
+shape
+okay and data dot
+true and data underscore
+true do
+shape as you can
+see 10 rows are deleted from each data
+set yeah so I will write here data
+underscore fake underscore
+manual
+testing
+class equal
+to0 and data
+underscore true
+_ manual _
+testing plus equals to
+1
+okay just ignore this
+warning then let's
+see data
+underscore B underscore menu
+well testing
+doad as you can see we have this and
+then data dot sorry underscore
+truecore
+manual
+testing dot at
+10
+okay
+this is this is the uh true data
+set so here I will merge
+data go
+merge
+to PD
+dot
+concat concat is used for the
+conation dataor
+fake
+data
+underscore comma
+XIs =
+to0 then data uncore
+merge do
+head the top 10
+rows
+yeah as you can see the data is merged
+here okay first it will come for the
+fake news and then with the for the True
+News then let's merge true and fake data
+frames
+okay we did this
+and let's Mery column then data do
+merge
+dot columns or let's see the
+columns it has not defined what data
+underscore
+March these are the column same title
+Tex subject date class
+okay
+now let's remove those columns which are
+not required for the further process so
+so here I will write data
+underscore or equals to data underscore
+March
+prop title we don't
+need
+then subject we don't need
+then
+so
+one so let's check some null
+values it's giving
+error because of
+this that's good then
+data
+dot is
+null
+Su
+Center so no null values okay then let's
+do the random shuffling of the data
+frames okay for that we have to write
+here data equals to data do
+sample
+one
+then data okay
+data do
+head okay now you can see here the
+random shuffling is
+done and one for the true data set and
+zero for the fake news one
+okay then let me write here data
+dot
+reset _
+index
+Place equals to
+True data dot
+drop comma X is = to 1
+then comma in
+place equals to
+True
+okay then let me see columns now data do
+columns so here we have two columns only
+rest we have deleted
+okay
+so me see data do
+add yeah everything seems
+good let's proceed further and let's
+create a function to process the text
+okay for that I will write
+[Music]
+here
+but okay you can use any
+name
+text and text equals
+to text do
+lower okay and
+text to r dot for the
+substring remove these
+things uh from
+the datas okay so for that I'm writing
+herea okay then text equals to
+R do
+substring
+comma comma
+text okay then I have to write text
+equals
+to do
+subring
+W
+ww
+dot
+s+
+comma comma text
+okay then text equals
+to I do
+subing
+then
+okay then text equals to R do
+substring
+then
+percentage
+s again percentage
+for r. SK
+function right here
+string do
+punctuation
+okay
+comma then comma then
+text
+right then text equals to so R do
+substring and
+N
+comma Tex equals to r
+dot
+substring right
+here
+then again
+D then
+again
+okay then
+comma and again text here okay then at
+the end I have to write here return text
+so everything like uh this this type of
+special character will be removed from
+the data set okay let's run this let's
+see
+yeah so here I will addite DF sorry not
+DF
+data
+data
+then
+text to
+data dot
+apply do the function name wordp word
+opt
+okay press enter yeah so now let's uh
+Define the dependent and independent
+variables okay x equal to
+data
+text and Y =
+to
+data
+class okay then splitting training and
+testing
+data okay sorry so here I will write
+xcore
+train comma xcore
+test uh then Yore
+train comma Yore test equals to train
+underscore testore
+split then X comma
+y comma
+test let's go
+size equals to
+0.25 okay press
+enter so now let's convert X to vectors
+for that I have to write
+here that is
+X so here I will write from
+Escalon dot
+feature
+extraction dot text
+import T
+vectorizer
+okay then
+vectorization equals to T fid
+vectorizer okay
+then V
+underscore
+train equals
+to
+vectorization i1 vectorization do
+fit then
+transform
+xcore
+train okay then X Vore test equals
+to
+factorization dot
+transform xcore test okay then press
+enter uh
+so now let's see our first model
+logistic
+regression so here I will write
+from Escalon
+dot linear underscore
+model OKAY
+import
+logistic
+then
+lals
+to
+logistic
+regression and after write here LR
+dot
+fit then XV
+dot not DOT train comma
+X Vore
+test okay
+Center xv.
+TR okay here I have to write y
+train okay and press
+enter will work so here I will write
+prediction
+underscore Le linear
+regression equal
+to l r do
+predict Vore
+test okay let's see the accuracy
+score for that I have to write LR DOT
+score then XV underscore
+test comma yore
+test okay let's see the accuracy so here
+as you can see accuracy is quite good
+98% now let's
+print the
+classification
+P Yore test comma
+prediction of linear regression
+okay so this is you can see Precision
+score then F1 score then support value
+accuracy okay so now we will uh do this
+same for the decision tree gradient
+boosting classifier random Forest
+classifier okay then we will do model
+testing then we will predict this
+score okay so now for the decision tree
+classification so for that I have to
+import from
+skar dot
+Tre
+import
+decision
+three
+classifier okay then at the short form I
+will write here copy it from
+here
+then
+okay then I have to write the same as
+this so I will copy it from
+here
+and
+yeah let's change linear regression
+to is three
+classific
+okay then I will write here
+same go
+DT dt.
+predict X
+Vore
+test
+still loading it's it will take
+time
+okay till then let me write here for the
+accuracy it do
+score
+Vore test comma
+y let's wait okay
+run the accuracy so as you can see
+accuracy is good than this linear
+regression okay logistic
+regression okay so let
+me show you the let me
+predict
+print
+so this is the accuracy score this is
+the all the
+report
+yeah now let's move for the uh gradient
+boosting
+classifier okay for that I write from
+escon dot
+assemble port
+radiant
+boosting
+classifier
+classifier I will write here
+GB equals to let me copy it from
+here
+okay will give here random let go
+State equals to
+zero wait wait wait wait so I will write
+here GB dot
+fit X Vore train comma Yore train okay
+then press
+enter
+here I will write predict underscore
+GBS to GB
+doit sorry
+redit
+three DOT
+test doore
+test till then it's loading so I will
+write here uh for the score then I will
+addite G GB
+doore then Vore test
+comma Yore test okay so let's wait it is
+running this
+part and then let me write for the
+printing
+this
+okay it's taking
+time taking time still taking
+time what if I will run
+this it's not coming because of
+this yeah it's done now so you can see
+the accuracies
+is uh not good than
+decision tree but yeah it is also good
+99.4 something okay
+so now let's check for the last one
+random
+Forest first I will
+do for the random Forest we have to
+write from Escalon
+dot
+symble
+import
+random
+Forest
+classifier
+okay and here I will write
+RF plus
+to right I will copy it from
+here then
+random
+State equals
+to Z
+then RF dot
+fit Spore
+train comma Yore
+train okay then press
+enter and predict underscore
+RC
+RF equals
+to rf.
+predict 3core test
+okay till then I will write here it's
+still loading it will take time so till
+then I will write for the score score
+accuracy
+score XV uncore test comma Yore
+test okay then I will write here till
+then
+print
+classification
+put and Yore
+test
+comma
+it will take time little
+bit
+so uh it run the accuracy score is 99 it
+is also
+good so now I will write the code for
+the model testing so I will get back to
+you but after writing the code
+so so I have made two functions one for
+the output label and one for the manual
+testing okay
+so it will predict the all the from the
+all models from
+the repeat so it will
+predict the it the news is fake or not
+from all the models okay so for that let
+me write here
+news to
+string
+put
+okay then I will write here manual
+underscore
+testing
+okay
+so here I will you can add any news from
+the you can copy it from the Internet or
+whatever from wherever you want so I'm
+just copying from the internet
+okay from the Google the news which is
+not fake okay I'm adding which is not
+fake because I already know I searched
+on Google so I'm entering this so just
+run it let's see what is
+showing okay string input object is not
+callable okay let me check this
+first
+yeah I have to give here s strr
+only yeah let's check okay I have to add
+here again the script yeah manual
+testing is not
+defined let me see manual
+testing okay I have to edit
+something it is just GB and it is just
+RF GBC is not defined okay okay so what
+I have to do I have to remove
+this
+this okay everything seems
+sorted
+now
+as I said to you I just copied this news
+from the internet I already know the
+news is not fake so it is showing not a
+fake news okay so now what I will do I
+will
+copy one fake news from the
+internet and let's see it is detecting
+it or not okay
+so let me run
+this and let me add the news for
+this
+so all the models are predicting right
+it is a fake news or you can add your
+own script like this is the fake news
+okay I hope you guys understand till
+here so I hope you guys must have
+understand
+how to detect a fake news using machine
+learning you can you can copy it any
+news from the internet and you can check
+it is fake or not okay or if your model
+is predicting right or not if you want
+to become an AI expert and gain handsome
+salary packages look at the wide range
+of e IML courses by simply learn in
+collaboration with top universities
+across the globe so what are you waiting
+for hurry up and enroll now an year of
+experience is preferred to to enroll in
+these courses find the course Link in
+the description box in today's session
+we will go through what is loan
+prediction system after that we will
+move on to the hands of lab demo to
+perform loan approval prediction system
+moving forward we will be using
+different classification algorithms to
+implement loan approval prediction
+system we already have a loan approval
+data set with us we will perform
+different function and libraries using
+python you can download this data set
+from the description box below
+before we move on to the programming
+part let's discuss what is loan
+prediction system first and proceed
+further for the same a mechanism called
+loan prediction system gives you a way
+to apply for loans and receive
+notification when they are approved in
+accordance with the data provided by the
+applicant the system notifies the
+applicant of the loans available so here
+is one question for you guys I will give
+you one minute for this you can comment
+or you can give your answer in the chat
+section so I can see if the answer given
+by you are right right or wrong I'm
+repeating again so here is one question
+for you I will give you one minute for
+this you can comment or you can give
+your answer in the chat section so I can
+see if the answers given by you are
+right or wrong so the question is which
+keyword is used for function in Python
+language option one python option two DF
+option C
+fnc option D
+Define so let us know your answer in the
+comment section below okay
+so I'm starting of timer 1 minutes type
+your answer in the comment section or in
+the chat section do let me know your
+answers please I kindly ask that
+everyone take part in this to make this
+live session exciting so I'm starting
+the timer of 1
+minute which keyword is used for
+function in Python language option one
+function option two def option C Funk
+option D Define
+fine which keyword is used for function
+in Python
+language 47 can
+remaining 30 seconds let us know your
+answer in the comment section
+below this is the easy one which keyword
+is used for function in Python language
+function Dev Funk or Define
+I kindly ask that everyone take part in
+this to make this
+exciting second
+more yeah after that a lotted time has
+passed Those Who provided the correct
+response will re receive a response and
+those Who provided the incorrect
+response will Rees
+one so now let's move to our programming
+part to implement loan approval
+prediction system so first we will open
+a command prom to write a command to
+open jupyter notebook so here we will
+write
+Jupiter
+notebook press
+enter so this is the landing page of
+jupyter notebook and here you have to
+select new Python 3 file
+this is how the jupyter notebook UI
+looks like so at first we will import
+some major libraries of python which
+will help us creating a loan approval
+prediction system so here I will write
+import
+numai as
+NP so numai is a python Library used for
+working with arrays it also has a
+function for working in domain of linear
+Al albra and matrices it is an
+open-source project and you can use it
+freely numai stand for numerical
+Python and the second one
+is
+Port pandas SD panda is a software
+Library written for the Python
+programming language for data
+manipulation and Analysis in particular
+it offers data struction and operations
+for manipulating numerical tables and
+Time
+series and the third one is
+import matplot
+lip P
+plot as
+PLT so M plotly Python scripts can be
+used to create 2D graphs and plots using
+the matplot LA module with features to
+control line Styles font attributes
+formatting AIS and other features it
+offers a module called pip plot that
+makes simple for
+plotting so the fourth one
+is
+import
+cbor as
+SNS so cbone an open source python
+Library based on M plot Li is called
+cbone it is utilized for data
+exploration and data visualization with
+data frames and the pandas Library c one
+function with these
+so there is one more like
+prom
+Escalon
+Port
+svm so after importing libraries let's
+move forward and import data set so DF
+equals
+to pd.
+rore
+CSV
+phone.
+CSV you can download this data set from
+the description box
+below so
+yeah so data set is imported let's see
+our data set so we will write DF do
+head
+here yeah here you can see we have data
+set of top five rows so basically head
+is used for showing first five rows of
+the data set if we will use tail instead
+of head so it will show the last five
+rows of the data set so let's move
+forward and use info function to see the
+information about the data
+set okay so here we will write DF
+doino so the data frame information is
+printed by the info method the data
+includes the total number of columns
+their labels data kinds memory use range
+index and the number of cells in each
+column that is non-null values note that
+the info method does indeed print the
+information okay so here you can see
+loan ID is
+object then this applicant income is
+N64 then co- applicant income is float
+so nonnull values like
+this so we know all the column names
+data types and information let's move
+forward and see missing values in the
+data set so for that we will use here I
+will write DF dot is
+null then
+bases dot
+sum yeah isnel do sum the data set total
+number of missing values is returned bya
+sum es skip rows in the data set that
+have missing values as a straightforward
+solution for the missing value
+data so we have missing values in loan
+ID is zero gender is 13 then loan amount
+is 22 self-employed is
+32 so I hope you guys understand till
+here if you have any questions or any
+query regarding any code so just put as
+in comments our team will shortly
+provide you the correct solution I'm
+repeating again I hope you guys
+understand till here if you have any
+questions or any query regarding any
+code or any question related to python
+just put as in commments our team will
+shortly provide you the correct solution
+moving forward we will create one more
+column that is loan amount log using
+loan amount detail and then we will
+display a histogram for that okay so let
+me do first for the better view I can do
+this yeah I will write here
+DF
+loone
+amount _
+log Yeahs to
+NP do
+logf now we will do
+DF
+loan amount underscore log
+do his for the histogram then bins I
+will
+take
+20. log a mathematical function that
+helps user to calculate natural
+logarithms of X where X belongs to all
+the input array elements you can see
+histograms it's looking fine let's see
+the null values in our new column so I
+will write right
+here PF dot is
+null
+sum so here you can see in loan amount
+log there are 22 missing
+values so moving forward let's create
+one more column named total income in
+this we will add two columns applicant
+income and co- applicant income and we
+will display histogram for the same
+EF like total
+income equals to
+DF applicant
+income and we will add one more data FR
+TF
+that
+is co
+applicant
+F total
+income underscore
+log to NP
+DOT
+log
+DF
+toal
+DF
+income underscore
+log
+HT P equals to
+20 yeah so here you can
+see histogram of the total income log
+moving forward let's fill those null
+values in all the respective columns so
+here for that we will
+write
+DF
+gender fill and
+na
+DF
+gender dot
+mode
+zero comma in
+place to
+true and what I will do I will copy from
+here change here gender to
+married also
+married and here for selfemployed
+I will do
+self
+deployed for
+dependent just everything will be same
+so here I will write DF
+Dot
+loan
+amounts
+to DF
+dot loan
+amount fill
+na BF dot loan
+amount do
+me
+so here I will write instead of this I
+will copy from here and paste it here
+yeah SC
+log l is
+small
+so here I will write again that we can
+take it from
+here change column
+name to
+loan
+amount
+um
+on
+amount
+some credit underscore
+history
+again credit
+underscore
+history
+so here I will write DF dot is
+null
+some it's it's for giving
+error s selfemployed
+okay what the isue is that E
+capital
+in
+dependent okay okay it's
+dependence
+okay yeah so there is no missing values
+now what we going to do is we will
+select some specific columns and Row for
+the training and testing so for that I
+will write
+here x =
+to dot
+iock dot
+r
+column
+11 comma 13 column
+15 DOT
+values y = to DF dot
+iog then colum comma
+12 dot
+values let me see the X
+values okay okay so male no these are
+the X values and let me see the Y
+values okay so the iog function in
+Python is defined in the pandas module
+that helps us to select a specific row
+or column from the data set using the
+iog method in Python we can easily
+retrieve any particular value from a row
+or column by using index values so
+moving forward let's see the percentage
+of missing genders from the data set and
+we will do it for many other
+columns okay so it if it will be zero so
+it will be great for us so we will write
+print
+percent
+of
+missing
+gender
+is percent
+to f
+then we will write
+thisf in gender
+column is
+null dot
+sum F do
+shape
+zero
+multiply by
+100 is saying function object has no
+attribute
+sum okay
+why
+because
+here percent of missing gender is zero
+great so like uh so moving forward we
+will see number of people who take loan
+as a group by
+gender okay so for that we will write
+print numbers like of
+people who take loan as
+Group by
+gender for
+that
+print
+DF
+sender dot
+value value
+counts SS do
+count
+plot x equals
+to
+Sender
+comma data equals to DF
+valet equals to set one you can use
+either set two either set
+three let me see okay so here you can
+see like male is 502 female are 112 you
+can see the bar plot so the number of
+observation in each category beans are
+displayed using bars using the count
+plot technique the following parameters
+are accepted by the procedure and are
+listed below this parameter accept
+optional variable names for data or
+vector data inputs for long form data
+plotting so moving forward we will do
+for the same like number of people who
+take a loan Group by medal status so
+what I will do I will just copy from
+here and I will change it to
+here so I will
+write my
+status and the guys were
+married here I have to write
+the
+eight so here you can see like
+401 are yes like and 213 are
+no
+okay so moving forward we will see
+number of people who T loan Group by
+dependents so same what I will do I will
+paste it here I will just change the
+name
+here
+[Music]
+dependence change it to
+here
+here you can see the dependent and the Y
+label is the count so like Z are 360 102
+101 and 51 and many more so moving
+forward we will see number of people who
+take loan group as a
+self-employed okay for that what we have
+to do is we have to just change names
+e is capital
+here okay let's see the graph so mov
+forward we will see number of people who
+take loan Group by loan amount for that
+I have to write
+here wait let me make a better
+visibility yeah so as a loan
+[Music]
+amount
+don't
+mount
+Capital
+yeah here you can
+see bar
+graph so at the end we will see the
+number of people who take loan Group by
+credit
+history okay so I will write
+here
+same
+as credit
+history credit
+history
+three credit
+underscore
+history
+okay yeah so here you can see 525
+and this
+89 So based on my assessment we don't
+have any missing values in the data set
+now so moving forward let's import
+psychic learn library for training and
+testing data set so here I will write
+from Escalon do
+model
+model
+underscore
+selection
+Port
+train underscore test underscore
+split so here we WR train comma X test
+comma y train comma
+y
+test
+okay so here I will
+write
+train underscore test underscore
+split comma
+y comma
+test underscore
+size equals to
+0.2
+random
+State equals to
+Zero from
+SK SK
+learn dot
+preprocessing
+processing import
+label
+encoder okay so
+label score X = to
+label
+encoder SK
+learn
+my
+bad X is not
+defined
+there we
+have
+psychic learn or SK learn is the one of
+the most robust library for machine
+learning it is open source and built
+upon numai scipi and M plot lip it
+provides a range of tools of machine
+learning and statical modeling and train
+test split function of the skarn model
+selection package in Python splits
+arrays or matrices into random subsets
+for train and test data and label
+encoder encode label with a value
+between zero and N classes minus one
+where n is the number of distinct
+label moving forward let's fit and
+transfer data for
+training so here we will write
+for I
+in I in
+range 0 comma
+5 xcore train
+I equals to
+label and
+orderer underscore X do
+fit
+transform and xcore
+train colon comma
+I then xcore
+train
+7 equals
+to
+_
+x dot
+fit
+transform underscore
+train
+7 let's see X
+underscore oh
+sorry go
+train and yeah this
+I this is capital
+x with transform joins these two steps
+and use for the initial fitting of the
+parameter on the trating set while also
+returning the transform X internally the
+transform object just calls first fit
+and then transform on the same data and
+we will
+perform same for the Y so I have I will
+write
+here encoder _
+y
+label
+label
+encoder
+okay Yore
+10 equals to label
+encoder underscore y do
+fitore
+transform see the results
+yeah so training of the data set is done
+let's do for same for the testing data
+so I will write here for I in
+range 0 comma
+5 underscore
+test
+I equals to label
+_ X do
+fitore
+transform underscore
+test
+I then again
+xcore
+test col comma
+7 equals to
+label
+encoder
+underscore dot
+fitore
+transform _
+test then colum comma
+7 yeah and see the results xcore
+okay it seems good all the
+values so we will do for the same y
+test so we will write here
+label and
+coder let me
+put y to
+labeler
+so Yore test equals
+to
+_ Y do
+fitcore
+transform underscore
+test just let's
+see
+okay moving forward we will import
+standard Scala for the further process
+so for that we will write
+here from
+Escalon do
+preprocessing
+import
+[Music]
+standard
+scalar say
+to like assign this
+standard I will do I will copy it from
+here so X
+train equals to ss.
+fitore
+transform
+xcore
+TR then xcore test equals to SS do
+fitore
+transform underscore
+test okay skillon do pre-process
+okay escal and
+preprocessing standard
+scalar okay
+sorry and again like standard okay
+ER yeah so standard scaler removes the
+mean and scales each feature variable to
+unit variance this operation is
+performed feature wise in an independent
+way everything is done let's see which
+classify is best for prediction by
+seeing their
+accuracy so for that I will write
+here let me do one
+thing
+yeah so like I will write
+from
+Elan do
+emble sample yeah
+import
+random
+Forest
+classifier so I will write if
+under class clf
+classifier equals
+to random
+Forest
+sorry my
+bad so
+RF uncore
+clf do
+fit
+xcore
+train comma Yore
+train
+in so I will write here
+from
+skar import
+Matrix ycore prediction equals to RF
+underscore
+classifier dot
+predict do
+predict X _
+test so here I will
+print
+accuracy of
+random random
+Forest classifier
+is comma
+Matrix
+get dot
+accuracy score
+score then y underscore
+prediction comma y underscore
+test Yore
+prediction so let's see the prediction
+from the using random Forest classifier
+and the accuracy a random for is a meta
+estimator that employs averaging to
+increase predicted accuracy and reduce
+overfitting if Boost stab equals to true
+the size of the subsample is determined
+by the max sample argument otherwise
+each is constructed using the entire
+data set so here you can see the
+accuracy is like
+78% and here prediction you can see like
+here one denotes that loan approv and
+zero means loan will not approved so
+accuracy is quite less so let's see for
+another classification methods na
+base so here I will write from
+Escalon oh
+put
+goian NB na
+base okay so NB
+classifier equals
+to goian
+NB B underscore
+classifier equals
+to sorry do fit
+strain comma y
+train a not equals
+to like goian Okay g is capital
+sorry
+yeah so let's predict the
+value Yore
+predict to
+[Music]
+NB scope
+classifier dot
+predict X
+underscore
+test
+and
+print
+accuracy
+of Nave
+base
+is comma like
+Matrix dot
+accuracy score
+score y and underscore
+prediction comma y underscore test so
+accuracy of goian NB is 0.8 means
+82% let's predict the value why
+predict prediction like one is like loan
+approved and zero is loan or not
+approved so Nave base is a
+classification algorithm for binary two
+classes and multiclasses classification
+problem it is called n based the
+calculation of the probabilities for
+each class are simplified to make their
+calculation trackable so the accuracy is
+82% and here prediction you can see one
+denotes loan approved and zero means
+loan will not approved so let's see for
+another classification method like
+decision tree
+classifier for that I will write
+here
+from
+Escalon do tree
+import
+import
+decision
+tree
+classifier here I will write DT
+underscore
+classifier
+to I will copy it from here
+I will write here
+dtore
+clf equals
+to so dot
+fit xcore
+train comma Yore
+train
+why is
+small here I will see the
+accuracy to
+DT underscore
+classifier dot
+predict underscore for
+test so here I will
+print accuracy
+of
+dentry
+is comma
+Matrix
+accuracy
+underscore underscore predict
+comma
+Yore
+test so here you can see the accuracy
+70% so let me
+predict so decision Tre the
+non-parametric supervised learning
+approach used for classification and
+regression application it is organized
+hierarchically as and has a note rout
+branches internal nodes and leaf nodes
+the so so the accuracy is 70% and here
+prediction you can see one denotes the
+loan approved and zero means loan will
+not approved so let's do one more
+classification we will do it from the
+kabers using
+kabers so here we will write
+from
+skan
+ver
+import K
+neighbors
+classifier K and
+classifi we will
+assign
+this
+so here we will write Kore
+classifier dot
+fit X under
+train comma Yore
+train okay SK
+skar
+sorry then
+[Music]
+again okay
+Capital
+here Capital
+here
+yeah it
+yeah so here I will see the
+accuracy
+okay by prediction equals to
+knore
+classifier
+dot
+predict xcore
+test
+print
+accuracy
+of K neighbors
+is at
+do
+accuracy score
+score y underscore
+prediction comma y underscore
+test so let's see the accuracy so
+accuracy is 79% and it is quite good so
+the K neighbers the five closed
+neighbors are sought for the k neighbers
+classifier the classifier must be
+splitly instructed to utilize ukan
+distance to determine the proximity of
+nearby points so the accuracy is
+79% and here prediction you can see one
+denotes the loan approved and zero means
+loan will not
+approv so you can
+see Nave
+base where's na base yeah so here you
+can see we have na based classifier with
+the best accuracy of 82% so we we can
+use it for the loan approval prediction
+system so in today's session we will
+discuss what image classification is and
+moving ahead we will discuss what CNN is
+and at the end we will do a hands of lab
+demo of image classification using
+CNN so before we move on to the
+programming part let's discuss what
+image classification is and proceed
+further for the same what is image
+classification the process of
+classifying an entire image is known as
+as image
+classification images are anticipated to
+have just one class per image models for
+image classification taken an image as
+input and produce a prediction of the
+class to which the image belongs so we
+can utilize image classification models
+when we are not interested in individual
+instance of items with position
+information or their
+shape so let's see what is
+CNN machine learning includes
+convolutional neural networks also known
+as convents or CNN it is a subset of the
+several artificial neural network models
+that are employed for diverse purpose
+and data sets a CNN is a particular type
+of network design for deep learning
+algorithm that is utilized for task like
+image recognition and pixel data
+processing and so more okay although
+there are different kinds of neural
+network in deep learning CNN are
+preferred neural architect for identify
+and recognizing object therefore they
+are rarely suited for computer vision
+activities and application where
+accurate object recognition is crucial
+such as facial and self-driving
+automobile system so moving ahead so
+dear Learners if you want to upskill
+your AI and machine learning skills so
+give yourself a chance to Simply learn
+professional certificate program in Ai
+and machine learning which comes with
+the completion certificate and in-depth
+knowledge of AI and machine learning
+check this course out details from the
+description box below so now let's move
+to our programming part of how to do
+image classification using CNN if
+getting your learning started is half
+the battle what if you could do that for
+free visit scaleup by simply learn click
+on the link in the description to know
+more so first we we will open a command
+prom to write a command to open jupyter
+notebook so here we will write
+Jupiter
+notebook press enter
+so this is the landing page of jupyter
+notebook so here you can select new
+python
+file so this is how the kernel look like
+okay jupyter notebook kernels look
+like so first we will import some major
+libraries of python which will help us
+in like analyzing the data okay so in in
+this file we will classify small images
+of C if 10 data set from tens oflow data
+set there are total 10 classes as shown
+below so we will use CNN for the
+classification purpose okay so here I
+will write
+import tensor
+flow as
+TF okay so from tensor
+flow
+dot
+Kus
+import data
+sets comma
+layers
+models okay so we will
+import numpy as
+NP right and
+import met plot
+Li as PLT
+right okay so here I will write P
+plot as
+PLT right so tensor flow this one this
+so tensorflow is a free and op Source
+machine learning and artificial
+intelligence software Library it can be
+used for variety of applications but it
+focuses on mainly deep neural network
+training and the inference purpose okay
+got it and this numpy numai is a python
+Library used for working with the arrays
+it also has a function for working with
+the domain of linear algebra and
+matrices it is an open source project
+and you can use it freely numai stand
+for numerical
+Python and this third one matplot lip
+for Python and its numerical extension
+numai matplot lip is a crossplatform
+data visualization and graphical
+charting package as a result it present
+a strong open source substitute format
+lab the apis application programming
+interfaces format plot La allow
+programmers to incorporate graphs into
+GUI
+applications got
+it so let's run
+this let me change
+image
+classification
+using
+CNN okay
+so let's load the data set okay we will
+load the data set from the
+uh load data function so here I will
+write
+xcore
+train comma Yore
+train
+okay and one for test
+xcore test T comma Yore
+test okay then equals to data
+set dat sets dot we are using CER 10 C
+far 10 far
+10 do
+load dot
+underscore data
+okay
+it will load our data so let's load the
+data so data is loaded let's see
+X
+score test dot
+shape
+okay
+yeah so as you can see so we have th000
+rows and and one Moree
+xcore
+train.
+shap let me run
+this so here you can
+see like we see like training
+data like training images are 50,000 and
+the test images are 10,000 okay
+so this is for testing this is for
+training and so moving ahead we will see
+for the
+Y
+train dot
+shape
+okay th000 and here we will see the
+array so Yore
+train
+five okay let's on this first let me
+give some space
+yeah so here Yore train is a 2d array
+like for our classification having 1D
+array is a good enough so what we will
+do we will convert this to now 1D array
+this is 2D array we will convert into 1D
+array okay
+for
+that will write here Yore
+train equals to Yore
+train dot
+reshape minus one
+comma okay then ycore
+train and again semicolon
+5 let's r this okay so now this is 1D
+array so Yore
+test = to Yore
+test
+dot d
+shape minus
+one here I will
+write
+classes
+to there are some classes okay in the
+data set like
+airplane comma
+automobile
+B
+comma cat
+comma
+here dog
+Rog
+Course
+Truck okay so these are the some classes
+like airplane automobile bird cat deer
+so it will be help in classifying the
+images so let's plot some images to see
+like what they what they exactly are
+okay so we will what we will do we will
+create one
+function for that let me write
+here def plot underscore
+sample okay then X comma y
+comma
+index
+okay then I will write here plot. figure
+PLT do
+figure then figure size should
+be comma 2 equals
+to PLT do
+show image show to I am show
+X
+index
+PLT do X
+label
+classes y index
+okay so let's see some samples of the
+images so I will write a
+plot underscore
+sample uh xcore
+train comma Yore
+train okay comma let's see the fifth
+image okay then
+enter should be
+Capital so as you can see this is a car
+so it is showing automobile okay so
+let's see once more
+like plot underscore
+sample xcore
+train comma Yore
+test comma we'll see the 10th
+one okay it is not quite
+visible so we'll go for the
+11
+okay okay I
+am why it is showing wrong because I use
+your test I have to use here train
+instead of test then it will show I
+think correct yeah you can see HS then
+HS then what about 2011
+image see you can
+see so we will see once more
+500 can see frog it's not quite
+visible yeah so you can see
+here the proper shape
+okay so what we will do now we will
+normalize the images to a number from 0
+to one image has three channels like RGB
+colors so and each value in the channel
+can range from 0 to
+255 hence to normalize in 0 to one range
+we need to divide it by 255 okay
+so now what we will do we will normalize
+the
+data so here what we'll do at xcore
+train equals to X train divided by 255
+and0
+okay and same for
+test to X
+test divided
+by
+25.0 okay to range between 0 to
+1 yeah we will build simple artificial
+Nal Network for image classification
+first okay so we will write here
+Ann
+alss to models dot
+sequential okay then I will write here
+layers
+dot
+plattin in put
+underscore shape equals
+to
+32 comma 32 comma
+3
+okay then again layers dot
+10
+3,000 comma
+activation to
+rlu got
+it then again for the, so I will what I
+will do I will copy it and paste it here
+okay so
+th000 so uh let me add one more one more
+layer dot
+10s then we let 10 comma
+activation to soft
+Max
+okay here I will okay let me give for
+the better
+visuals yeah
+Ann NN do
+compile
+Optimizer okay to
+SGD and
+comma I will write here
+loss equals
+to
+sparse
+categorical cross entropy
+okay so here I will write comma then
+Matrix equals
+to
+accuracy
+andn do
+fit xcore
+train comma Yore
+train comma
+EPO
+okay so number I will give a boxal to
+5 right so it will take time to
+run it's
+running yeah there is some
+[Music]
+issue
+train box equals
+to
+five
+what it is
+saying in user code the file program
+C engine
+okay I will copy
+it and P it
+again R it
+again okay now it's
+working
+okay so it will take time and then I
+will get back to you
+okay then
+import numai you guys already know what
+numai is
+NP Yore
+prediction to Ann do
+predict
+xcore
+test okay then y
+underscore prediction
+underscore
+classes equals
+to NP
+dot argu
+Max
+element for
+element
+in Yore
+prediction
+print
+classification
+for comma
+classification
+_
+report then y underscore test comma
+ycore
+prediction
+underscore
+classes okay so let me run
+this
+this
+Capital yeah it will take less
+time now we will create a graph
+okay like X text is like we have
+thousand images so CL graph will be like
+messed up still let's see so I write
+here
+import
+cbor as SNS
+Okay Okay C
+Bor yeah me give some
+space here I will write PT dot
+bigger size should
+be 14a 7
+okay then as in as we will create a heat
+map for this and Yore
+prediction not equals to
+true then PLT doy
+label this
+truth PLT do X
+label
+then PLT do title should
+be
+Vision okay then PLT do
+show let me run this
+okay see why prediction has X
+text it's still
+running let's
+wait so now let's make CNN model
+okay to train our images so for that I
+will write CNN equals
+to models
+dot
+sequential
+okay write C paste yeah so let me run
+this so this is our CNN model from which
+we will train our
+images and CNN like
+compile then
+optimize
+Optimizer equals to
+ADM
+okay okay
+comma right here then loss equals
+to sparse
+categorical then
+cross
+entropy okay and comma I will write here
+Matrix equals
+to
+accuracy run this
+okay
+Lo
+yeah same goes for
+[Music]
+you
+okay
+loss I do I will rewrite
+this okay now let's check CNN model for
+the 10 epox
+okay let's see the accuracies increasing
+or
+not
+CNN let's go
+train comma Yore
+train
+comma
+box
+let is
+started it will take less time than the
+previous one
+okay
+see
+you want this whole code you can comment
+down the same
+okay after completing this I will get
+back to
+you oh it is almost done like 27 seconds
+for the 10
+epox till then let me write CNN do do
+evaluate xcore test comma Yore test
+okay
+so with CNN the N5 epox accuracy was
+around like 70% and which is a
+significant improvement over Ann okay
+Ann we have like just
+49 okay and CNN are the best for image
+classification and gives the superb
+accuracy also competition is the much
+less compared to simple Ann as Max
+pooling reduces the image Dimension
+while still uh preserving this uh
+features okay so let me run
+this take some
+time till then I will write Yore
+prediction equals to
+CNN dot
+predict then xcore
+test
+okay then I will write here Yore
+prediction then colum
+5 let me run
+this so you can see the accuracy and all
+the array
+okay yeah so
+let's classes equals to NP do ARG
+Max
+element
+or element in y
+prediction okay then
+Yore
+classes
+then these are the number of classes
+then yore
+test is column
+five these are the array so it's
+converted into array then now let's see
+the it is predicting Right image or
+wrong image okay by not with the
+training data here we predict from the
+training data why training X train okay
+now we will predict from the test data
+so here I will write
+plot andore
+sample then xcore test comma Yore test
+and you can write the random one so here
+I will write
+60 let's see so you can easily see here
+this is H and it is predicting right
+HS and let me okay
+plot
+sample then
+xcore test comma Yore
+test comma
+100 okay PR
+enter okay X is
+capital yeah so you can see this is
+De okay so our model is predicting the
+correct image okay then what we like
+let's see it is predicting the right
+class or not okay we made the classes
+like random
+classes okay where are these these so
+let's see it is predicting right or
+wrong okay for that I have to write
+classes Yore
+classes it's like which number 60 okay
+60 60 is not defined because like number
+of
+classes okay okay so there are 1 2 3 4 5
+6
+7 okay 0 to 9 I can
+choose so here what I will
+do I will take small one like I will
+five okay this is
+frog
+okay this frog right
+so I will take instead of 60 here I will
+see
+frog okay y class is not
+defined Yore
+classes is defined see okay there are 3
+S yeah so as you can see frog this is
+frog so our classes is defining right so
+here I will write it again like
+60 it was HSE and let me write here
+60 you can see the right prediction
+okay
+so this is what how you can you do image
+classification using CNN I hope you guys
+must have understood this concept like
+how to do image classification using CNN
+you can ask in in the comment section
+below if you have any queries if you
+want to become an AI expert and gain
+handsome salary packages look at the
+wide range of e IML courses by simply
+learn in collaboration with top
+universities across the globe so what
+are you waiting for hurry up and enroll
+now an year of experience is preferred
+to enroll in these courses find the
+course Link in the description box in
+today's session we will go through what
+is movie recommendation system after
+that we will see how movie
+recommendation system work moving
+forward we will see filtering strategies
+for movie recommendation system and at
+the end we will see handson lab demo
+like how to create movie recommendation
+system using python in detail we already
+have data set with us we will perform
+different function and Implement a movie
+recommendation system using python
+before we move on to the programming
+part let discuss what is movie
+recommendation system actually is and
+proceed further for the same
+so renting CDs and DVDs reading local TV
+listenings watching film strip
+projectors or recordings all of this is
+a thing of the past today all of the
+world biggest film collection have been
+digitized and moved to the online
+streaming services like Netflix HBO or
+YouTube this platform can now help us
+with what is possibly the most difficult
+task of all choosing a movie they have
+been enhanced with AI powered
+capabilities
+well that is no longer a concern for you
+it is finally time for machine learning
+to put its skills on display in the
+modern cinematic landscape to create
+Advanced predictive system for True
+movie expert data scientists are
+prepared to investigate our behavioral
+patterns and those of movies a movie
+recommendation system also known as a
+movie recommended system uses machine
+learning to predict or filter user fil
+preferences based on their prior
+decision and action s it is an advanced
+filtration system that anticipate the
+consumer in question potential like
+selection for a domain specific item a
+movie so after seeing what is movie
+recommendation system let's move forward
+and see how movie recommendation system
+actually works a movie recommendation
+system fundamental idea is a pretty
+straightforward every recommended system
+primarily consists of two components
+users and items user receive more
+prediction from the system and the
+actual movies are the products filtering
+and predicting only the movies that are
+matching user is most likely to wish to
+seen the main objective of movie
+recommendation system the user
+information from the system database is
+used by the ml algorithm for these
+recommendation system based on
+information from the past this data is
+used to forecast the user in questions
+behavior in the future data should be
+handled by expert because because it is
+so crucial to ml projects including the
+movie recommendation
+system after seeing how movie
+recommendation system works let's see
+some filtration strategies for movie
+recommendation
+system to assist user in finding the
+most elevant films movie recommendation
+system employ a variety of filtration
+techniques and algorithm the contain
+based filtering and the collaborative
+filtering system subcategories of the ml
+algorithm used for the movie
+recommendations are the most well-liked
+ones filtering based on content or
+content based filtering a method of
+filtering movies in a movie
+recommendation system that makes
+advantage of the items data this
+information which is taken from the just
+one user is quite important in this case
+this technique uses an ml algorithm to
+suggest movies that are comparable to
+the user's past choices therefore the
+information about the prior movie Cho
+choices and likes just one person is
+used to generate similarity in content
+based
+filtering and the second one is
+collaborative filtering as the name
+implies this filtering techniques is
+based on the interaction between the
+relevant person and the other user for
+the best outcomes the system contrast
+and compare these behaviors it combines
+the film choices and uses patterns of
+several people like there are two types
+of collaborative filtering algorithm
+the first one is collaborative filtering
+based on users the goal is to find
+patterns in Target users and other
+database users like movie preferences
+and the second one is collaborative item
+based filtering the fundamental idea
+behind this is to find comparable
+products products like movies that
+Target users rate or interact with after
+seeing the filtering strategies for
+movie recommendation system so here is
+one question for you guys I will give
+you one 1 minute for this you can
+comment or you can give answer in chat
+section so I can see if the answers
+given by you are right or wrong I'm
+repeating again so here is one question
+for you guys I will give you one minute
+exactly 1 minute for this you can
+comment or you can give your answer in
+chat section so I can see if the answers
+given by you are right or
+wrong so the question is which is the
+best language for machine learning
+programming
+which is the best language for machine
+learning the first one is Java the
+second one is python the third one is R
+language and the fourth one is
+C++ so this is the question I'm
+repeating again which is the best
+language for machine
+learning the option one is Java second
+python our language and C++ so I'm
+starting timer of 1 minute just type
+your answers in comment section or in a
+chat section do let me know your answers
+please I want that everyone should
+participate in this and make this live
+session
+interesting so I'm starting
+timer oh your time starts
+now please guys do let me know your
+answers in chat section or in you can
+comment
+down
+42 seconds to
+go you can comment or you can give your
+answer in the chat section so I can see
+if the answers given by you are right or
+wrong 30 seconds
+more which is the best language for
+machine
+learning you can give your answer chat
+section or you can
+comment so I can see if the answers
+given by you are right or wrong guys
+come on please I want that everyone
+should participate in this and make this
+live section
+interesting come on guys 5 Second
+more one yep time up so time is over we
+will give reply those who gave correct
+answer and those who didn't give correct
+answer we will give you a reply with the
+correct answer so now let's move to our
+programming part to perform movie
+Commendation system using
+python so first we will open command
+prom to write command to open jupyter
+notebook so we will write
+Jupiter notebook press
+enter so this is the landing page of
+Jupiter notebook and select here new new
+python
+file so this is how jupyter notebook UI
+look likes so at first we will import
+some major libraries of python which
+will help us in mathematical functioning
+so so the first one is numpy import
+numpy as NP so nump is a python Library
+used for working with arrays it also has
+a function for working in the domain of
+linear algebra and matrices it is an
+open source project and you can use it
+freely numai stand for numerical
+python so here NP NP is denoting numai
+so we will import the next
+Library import pandas
+as PD
+this should be space
+yep so pandas is a software Library
+written for the Python programming
+language for data manipulation and
+Analysis in particular it offers data
+structures and operation for
+manipulating numerical tables and time
+series so so after importing libraries
+we will move ahead and import data set
+so for importing data set we have to
+write like we have two data set with us
+let me show you the data set we have two
+data set with
+us first one is
+credits this
+one and the second one is movies
+one one movies one so don't worry you
+can get these data set link in the
+description box so let me
+write
+here
+credits go data frame equals to pd.
+read unor
+CSV here you have to give your location
+of the data
+set
+credits do CSV
+the second one is
+movies let's go data frame this is for
+movie data frame pd.
+read
+SV so here you have to give the movie
+location movie data set location
+movies do
+CSV okay okay everything seems good let
+me run
+this
+yeah so
+then here PD is for the pandas Library
+read is used for reading the data set
+from the machine and CSV is used for the
+type of file which you want to read
+after this let's write code to see the
+data set so we will write here credits
+uncore
+DF and we will run it so this is our so
+this is our credit data set and next one
+is movies
+underscore so this is our movie data
+set so this is how our board data set
+look like so here you can see three
+dots this one and here
+also this one so so we are unable to see
+our full data set like what if we want
+like full 4803 rows so at that case we
+can write
+here PD do
+set underscore
+option
+okay and here we will write
+display do
+maxcore call
+colums
+this and here we will write
+none same for the row PD do
+set
+option
+display do
+Max underscore
+rows
+none
+okay
+none let's run
+this so now if we will write credits
+uncore
+DF it is running
+yeah so now you can see your full data
+set like full credit data set with 4803
+rows or 4802 rows because there is
+this is starting from zero that's why so
+what about movies data
+set okay wa
+running it is still running you can see
+here so here you can see um full data
+set set movie data set with 4802
+rows or if you want to see only five top
+rows so you can write here
+credits DF do head so by this only five
+top rows so from head you we can see our
+five top rows and if we will use tail
+instead of head we can see our last five
+rows so here let me do with the movies
+one DF
+dot
+tail yeah so here you can see 4798 row
+4799 till
+4802 so with tail we can see our last
+five rows so moving forward let's merge
+the credit data set to movie data set
+because if we will combine them the
+confusion will be less and at the end it
+will be better for us so we will write
+here
+movies
+underscore equals to movies
+underscore data frame and
+credits underscore
+DF
+on it okay T is a small I guess yeah
+perfect
+title so let me do something something
+like
+this
+okay it is saying data frame object is
+not
+callable
+editore
+DF
+movies
+okay why because we haven't wrote merge
+here now it will
+work yeah perfect it's working so data
+is merged let's see the number of rows
+and column using shave function so now
+we have only one so
+moviescore DF do
+shape okay let's run it 4809 and 23 23
+but if you see here like in movies data
+set so in movies data set here here yeah
+here there are 20 and in here we are
+four columns in Credit Data
+set
+so like so you will be thinking that's
+why not 24 why only 23 columns that is
+why on title you can see here on title
+the titles in both titles are same you
+can see
+here both titles are
+same in
+both okay let me show you like this okay
+avar Pirates of the Caribbean Spectra
+and so on here you can see AAR PIR of
+the caran Spectra and so
+on so that is why on title written while
+merging so title are same so moving
+forward let's see our mer data set so we
+will write only
+moviescore datf frame.
+head
+yeah so our data is merged you can see
+the last C cre movie ID yeah you can see
+here movie ID title are the same they
+mer C crew okay
+guys let me give some
+more for the better view
+yeah so you can see all Columns of
+credit data set are added to movies one
+so moving forward let's see another
+function like
+moviescore DF do
+info so by this yes you can see so by
+this the data frame information is
+printed via the info method the data
+includes the total number of columns
+their labels data kinds memory use rage
+index and the number of cells in each
+columns like non-null values note that
+info method does indeed print the
+information so here you can see the all
+the information is
+printed
+okay like columns name and the all null
+values count and data types to like this
+int object
+INT in which we are working most so
+after this let's move forward and select
+some main column in which you are
+working most so we will write
+moviescore DF equals to
+moviescore
+DF comma and another one is o
+overview
+why okay here we have to like this yeah
+so here we have to write
+joner joner is complete and we will work
+on what keywords keywords are the
+main keywords okay keywords then to
+cost then we
+will we will do recommendation with the
+crew as
+well
+okay by running this let me see our data
+again with seven okay okay there is one
+error okay this is movie movie idea Jon
+yeah not in index okay got it got it why
+not joner
+it's jonuts I
+guess what it is it's jonuts
+that's
+why it's joners
+okay yeah so let's see our data again
+with seven columns so I will write so I
+will write here moviescore
+DF do
+head
+here so you can see only our we have
+like movies ID same title overview
+joners keywords cast and crew
+only so here you you can see the
+selected columns okay so let's move
+forward and once again let's see the
+info again like
+moviescore DF
+dot info is come with selected columns
+and let's move forward and see how many
+missing values are present in particular
+column so like the columns is full we
+can see here but we don't know about
+that 4,803 values are filled or not so
+what we will do it we will see how many
+missing values are present there so here
+we will write like
+movies underscore DF do is
+null
+do
+sum not like
+this yeah
+perfect so the function data frame is
+null this one is null do sum do sum
+Returns the number of missing values in
+the data set so here you can see
+overview have three missing values so
+what we can do is we can write here W
+moviescore
+DF
+DF
+dot drop
+na
+Place equals to
+True
+okay we will run it it's sayings okay
+document Dr
+A
+so true okay
+fine doore drop and yeah it will not
+create an issue so if you set in place
+equals to true the drop any method will
+modify your data frame directly that
+means that if you set in place equals to
+true the drop any will drop all missing
+values from your original data set let's
+move forward and see
+movies
+underscore DF
+dot
+duplicated so the duplicate method
+returns a series with true or false
+values that describe which rows in the
+data frame are duplicated or not use the
+subset parameter to specify if any
+column should not be considered when
+looking for duplicates
+so here let me run this first so here we
+we are getting zero why zero so if you
+are like thinking there is no true or
+false return return so if you write it
+without sum like if I will write it
+without
+some okay let me copy from here yeah and
+I will run this so here you can see
+false false false in whole data set so
+sum will combine them and return you a
+value at the end zero represent false
+itself so we need to not need this so we
+will write something else so moving
+forward let me write first
+movies _ DF do I
+location
+0 dot
+Jers let me run
+this so the iog fun function this one
+iog function first let me do something
+like this it will go up okay huh okay so
+from iog function in Python is defined
+in the pandas module that helps us to
+select a specific row or column from the
+data set using the iog method in Python
+we can easily retrieve any particular
+value from a row or column by using
+index value so here zero position line
+is
+coming
+which is here you can
+see so name action like name action name
+Adventure name fantasy this s
+fiction this one science fiction yeah so
+this is because I'm giving here Jer that
+is why you can see here see ID 28 name
+action name something something
+something like that okay so let's import
+something called ASG abstract syntax
+tree so this is one of the major Library
+import
+a let me run this import is a class
+defined is the EST module that is used
+to express the import statement in
+python in the form of abstract syntax
+tree so so an abstract syntax tree or
+just syntax tree is a tree
+representation of the of the abstract
+syntactic structure of text written in a
+formal language each node of the tree
+denotes a construct occurring in the
+text so let's convert some like literal
+to object and append them so here I will
+write
+def
+convert obj
+object like
+L equals
+to blank
+array for I in in STD
+do bit
+May Which
+object okay like l
+doen
+return here we are converting is like
+here is a convert is a function and L is
+a array to append by using follow Loop
+we can append them to name so let me
+write code then I will explain like what
+is happening so let me write full code
+so
+movies _
+DF like
+doners okay goes to
+movies
+jut and then dot
+apply
+but so then movies under score
+DF then I will write
+keywords to
+moviescore
+DF
+keywords
+Li
+DF
+dot so if we will see our old data set
+in that like we will see old data set in
+that joner and this keyword this keyword
+apps ID name and so on like ID that name
+like this type of things so it will
+create a mess in retrieving them so by
+using as Library we just convert them to
+the normal one like title so got it guys
+so I hope you guys understand till here
+if you have any question or any query
+regarding any code or question just put
+as in commment our team will shortly
+provide you the correct solution I'm
+preting again I hope you guys understand
+till here if you have any type of
+questions regarding any code or
+something so just put as in comments our
+team will shortly provide you the
+correct solution so moving forward let's
+convert C two and like same as previous
+way like like this only so what we will
+do here we will write def
+convert here I'm
+using so l equals
+to counter equals
+to0
+St do
+literal if
+counter
+does
+not equals to 3 then l
+dot l
+dot do append okay then here I have to
+write I to
+name
+okay
+cter
+equals to 1 if you want to write like
+counter equals to counter + 1 it is like
+both the
+same
+else
+like
+turn
+l so let me run this let me run
+this
+okay so after this small code we have to
+assign the values like we are doing it
+for cast now so
+[Music]
+movies okay
+moviescore DF then
+cast to
+moviescore
+DF
+past
+convert everything seems
+good so let's see the changes are
+visible or not so we will write here
+moviescore DF do
+head you can ignore this like this is
+nothing so here you can see cast is also
+same like keyword and joner so like
+let's do for the cre to so like we are
+converting you can say in a structured
+way so let's do for the cre one to so
+let me put
+some
+yeah so here we will add Dev like
+fetch f is nothing like a function name
+fet Direct
+obj
+okay colon l equals
+to for I
+NST do
+literal
+obj
+if
+I like
+job equals to like we can say
+director so then L do
+append L do
+[Music]
+append app to the same
+name go
+J okay capital
+[Music]
+L so we have to again write that
+movies equals to
+movies
+in
+crew
+apply just remember F director is a
+function name let's see
+changes so here I have to write movies
+then press enter so yeah crew is all set
+so changes are visible and data is
+looking good so what we like if I want
+to see the first movie ofar overview
+this like this dot dot dot dot so I have
+to write here like
+movies
+overview Overview at Jero
+place so yeah so this is a full overview
+of AAR movie like let me read for this
+in this 2
+Century a paric marine is dispatched and
+blah blah blah blah and
+civilization so moving forward that what
+we want to recommend movie in the basis
+of overview genre keyword cast so for
+that we need a separate separate words
+like in the then 22nd century
+along so if you will see in other
+columns all the words are separated but
+like here if you will see all the words
+are separated like action is separated
+Adventure is separated fantasy separated
+so there is a long sentence in this this
+one in the overview one this is a long
+sentence so it's difficult to recommend
+from this so what we are going to do is
+well we will separate them like like
+other columns so here we will
+write
+movies
+overview was to movies
+then
+overview and Dot
+apply apply my bad
+sorry then
+Lambda colon x dot split
+yeah ER so let's see the results so
+movies yeah you can see in the set one
+so now you can see all the words are
+separated by comma so now it will easy
+to match overview to recommend a
+particular movie so moving forward so
+what we are going to do is if there is a
+two word and space between there so we
+we are going to remove that space so
+here you can see science fiction are
+separate separate okay so we are going
+to like remove this one this is space so
+let's write code for that so here I will
+write
+like overview is already done so we will
+do not do for that so let's write code
+for the rest
+columns so here I have to
+write
+movies like
+Jers to
+movies then again
+juts not
+apply
+Lambda
+x i dot
+replace
+space to no
+space uh it seems
+good then I have to write for everywhere
+so for I in
+X it's 4 I in x 4 I in
+X movies Jers equals to movie Jers do
+apply Lambda X i. replace this to this
+for seems Cod so let's copy paste this
+see one for keywords and one for cost
+and
+crew
+C
+first then
+you test is same so let me run
+this okay no error seems good so let's
+see the change changes so
+movies
+yeah so now you can see the science
+fiction space is gone like here is
+science fiction space is there now
+science fiction space is
+gone so like uh okay let's move forward
+and create one new column name as tag
+and put all the column data in a
+particular column okay let me do first
+yeah let me write
+movies is a column of column name goes
+to
+movies then first we will put
+overview Plus
+movies and
+geners
+and
+movies and what we have to give uh
+keywords
+keywords then again
+movies
+then
+p
+me run
+this okay so let's see the data frame uh
+movies okay still coming so like there
+is one problem I guess yeah no no no so
+here you can see all the data is merged
+in a under tag column yes you can see
+like in the second sensory blah blah
+blah
+so I hope you guys understand till here
+if you have any question or any query
+regarding any code or anything just put
+as in comment or our team will shortly
+provide you the correct solution okay so
+I'm repeating again I hope you guys
+understand till here if you have any
+question or any query regarding any code
+or like any question just put as in
+command our team will shortly provide
+you the correct
+solution so from here let's create a a
+new data
+frame
+okay so let me create new data frame
+because now we don't need this overview
+C crew joner like columns like this we
+have already merged into a one one
+column like tag column so we will write
+here
+new DF equals to
+movies
+okay so like movies we need more movie
+ID new data frame we need movie ID comma
+we need
+Title and we have everything in tag
+column TX column so we need TX
+column okay let's run this let's see our
+new data
+frame yeah so this is how our new data
+look lies with only three columns like
+movie ID title and text so here you you
+can see array brackets like this this
+aray
+brackets so we are going to uh remove
+them so we will do what we will write
+here we will write
+new data
+frame that
+intax equals to
+new data
+frame
+TX do
+apply
+Lambda
+X then I will give
+space dot
+join same good everything is okay okay
+fine
+yeah so let's see the results
+so we will write here newcore data
+frame
+so you can see the brackets are removed
+now let's see the data which is present
+in the zeroth index in tag column like
+this dot dot dot in the okay for that we
+have to write
+here uh a
+new data
+frame
+TX we did it before like for the
+overviewer so here we have to yeah so
+this is the whole data in the first
+like first index zeroth index so some
+part of the overview like from
+civilization and some are you can see
+this action adventage fantasy science
+fiction these are some like
+Jers
+and uh like here you can see like these
+are some Crews
+members
+and yeah like Sam warington like there
+are some cast crew okay so like moving
+forward like what we are going to do is
+just make them in lower case for the
+better prediction like something in
+capital and something like smaller so
+let's make it to lower case so newcore
+DF
+TX equals to
+newcore
+DF
+tax
+do
+apply scum X do
+lower
+okay so don't worry about this
+error let's see the result uh newcore DF
+Dot
+yeah now all the data present at TAG
+column is in a small case or you can say
+lower case moving forward let's do some
+feature extraction using count
+vectorizer so let let me write first
+from
+skar dot
+feature
+extraction feature extraction okay cool
+do
+text import
+count
+factorer CV equals
+to
+count
+Riser
+underscore
+features
+features equals to like
+5,000
+ofp
+words equals to
+English and this yeah so count
+vectorizer okay there is
+a I cannot import C vectorizer from
+eSalon from
+user
+okay okay sorry sorry my bad here V is
+capital okay guys so he V is capital
+yeah so no error so count vectorizer is
+a great tool provided by the psychic
+learn library in Python it is used to
+transform a given text into a vector on
+the basis of the frequency count of each
+word that occurs in the entire text
+so let me write something CV
+dot pit
+uncore
+transform
+f x like dot 2
+aray shape
+okay so the fit method like learns a
+vocabulary dictionary of all tokens in
+the Raw documents that is it creates a
+dictionary of tokens by default the
+tokens are words separated by spaces and
+like punctuations so that Maps each
+single token to a position in the output
+Matrix so here CV is a like here CV is a
+counter vectorizer so let's convert into
+Vector to array so for this we have to
+write V
+vectors vectors equals to CV do
+fit okay then
+transform
+X
+in so here we have to write Dot
+to
+array yeah then we have to write
+Vector it's
+vectors yeah you can see Vector 2 array
+all the
+zeros Okay so so moving forward let's
+get the feature Name by
+writing okay so we will write
+here Lean l cv.
+get
+Feature
+Feature
+names feature names okay then
+bracket yeah
+so okay we have like 500 feature names
+so I'm repeating I'm saying again like I
+hope you guys understand till here if
+you have any question or any query
+regarding any code whatever it is so
+just put as in comments our team will
+shortly provide you the correct solution
+okay guys like any code or you are not
+understand anything just put as in
+comment our team will shortly provide
+you the correct solution so let's import
+some major Library which is import
+nltk so what is nltk the natural
+language toolkit nltk is a platform used
+for building python programs that work
+with human language for applying in
+statical natural language processing NLP
+it contain text processing libraries for
+tokenization parsing classification
+stemming taging and semantic
+reasoning so moving forward like from
+let me write first from n
+nltk dot
+stem dot
+Porter
+import
+pter yes equals
+to
+order
+timing is a process for reducing a word
+to its word stem that suffix and prefix
+are to the roots of words known as Alma
+stemming is important in natural
+language understanding nlu and natural
+language processing
+NLP so here like I have to write so here
+I will write def stem
+to
+text y equals
+to for I in text.
+Split y dot
+aen dot stem
+done
+join
+y so let's apply timing to a tag column
+so here we will write new
+DF Tex
+equals to
+newf
+tag do
+apply so let's import cosine similarity
+from skarn so we will write from SK
+lar dot
+matrices do pairwise
+import
+cosine underscore
+similarity okay it seem good from escal
+and
+matrices Matrix sorry Matrix dot
+pairwise it
+is PIR
+wise pairwise import cosine similarity
+okay let's run this no error so cosine
+similarity May measures the similarity
+between two factors I repeat cosine
+similarity measures the similarity
+between two vectors of an inner product
+space it is measured by the cosine of
+the angle between two vectors and
+determines whether two vectors are
+pointing in roughly the same direction
+it is often used to measure document
+similarity in text analysis so here we
+will
+write
+cosine underscore
+similarity
+vectors so these all are the vector
+present let's see the cosine similarity
+Vector column and row using space so
+here I will write
+cosine go
+[Music]
+similarity
+vectors do
+shape it's still running you can see
+here yeah so 4806 rows and 4806 columns
+are there let's assign variable
+similarity to this okay so let's
+similarity we'll write like this to
+cosine similarity
+underscore
+here why I did this because we don't
+have to write always this long sentence
+a long keyword you can
+say moving forward let's see First
+Column like we will add similarity
+yeah so this is our first column uh so
+let's see the rows only so we will write
+here
+Clarity
+Z
+dot
+shape
+okay 4806 okay so let's move forward and
+let's create some like sorted list so
+for that sort
+it
+okay
+T
+enumerate spelling is
+fine okay one more like seei
+similarity
+similarity
+zero there I have to write
+reverse equals to
+True comma key = to
+Lambda colon X not capital x
+x have to write
+one one colon
+six seems good yeah so the enumerate
+function in Python converts a data
+collection object into an enumerate
+object enumerate returns an object that
+contains a counter as a key for each
+value with an object making item within
+a collection easier to access so finally
+let's create the recommend function to
+check the movie recommendation
+system
+okay
+so so let's write here
+DF
+recommend
+to
+new
+DF and the
+TF
+title equals to equals to
+movie
+x
+z
+tenses to
+similarity and
+movie okay so
+movies list equals to
+sorted
+list
+numerate r
+rate
+distances
+reverse to
+True
+keyword sorry key only key equals to
+Lambda colon X
+1
+six or I in
+movies
+list
+F do
+iock
+I
+zero Z do title we because we need Title
+only so yeah it seems good
+okay so finally that like time is
+G
+so finally the time has come to check
+the recommendation of your favorite
+movies so you can commment in the chat
+section so I can check so let me write
+first
+recommend recommend for movie
+Avatar okay so here you can see the
+recommendation system is working fine so
+Titan a. small soldier Independence Day
+are the recommendation for the movie
+ofar so let me me check for the another
+one
+recommend like
+for one of my favorite movie Iron
+Man so here you can see Iron Man 2 Iron
+Man 3 Avengers agage of Ultron Captain
+America and the Avengers are the
+recommendations for the movie Iron Man
+so let me check for the one more
+recommend
+liar
+liar T's Going on 30 and the last one is
+last one I want to check is Captain
+America Civil
+War let me copy from here
+only yeah you can see the Captain
+America the First Avenger the vter
+soldier Iron Man 3 Age of Ultron The
+Avengers so I hope you guys understand
+till here if you have any questions or
+any query regarding any code or question
+just put as in comments our team will
+shortly provide you the correct solution
+if you want to become an AI expert and
+gain handsome salary packages look at
+the wide range of eiml courses by simply
+learn in collaboration with top
+universities across the globe so what
+are you waiting for hurry up and enroll
+now an year of experience is preferred
+to enroll in these courses find the
+course Link in the description box so in
+today's session we will discuss what
+time series forecasting is after that a
+hands off lab demo of how you can do
+time series forecasting using machine
+learning we will perform different
+function and different python libraries
+for analyzing the data before we move on
+to the programming parts let's discuss
+time series forecasting and proceed
+further for the
+same what is time series
+forecasting making scientific projection
+based on the data with historical time
+stamps is known as time series
+forecasting it entails creating model
+through historical study using them to
+draw conclusion and guide strategic
+decision making in the
+future the fact that the future result
+is wholly unknown at the time of the
+task and can only be anticipated through
+analysis and evidence-based priors is an
+essential distinction in forecasting
+give yourself a chance to Simply Lear
+professional certificate program in Ai
+and machine learning which comes with
+completion certificate and in- depth
+knowledge of AI and machine learning
+check this course detail from the
+description box
+below so here is one question for you
+guys I will give you exactly one minute
+for this you can comment or you can give
+your answer in the chat section so I can
+see if the anwers given by you are right
+or wrong okay so the question is which
+type of programming does python support
+I'm repeating again which type of
+programming does python support option A
+objectoriented programming option b
+structured programming option C
+functional programming and option D all
+of the
+above so let us know in your answer in
+the chat section or in the comment
+section so I'm starting a timer of 1
+minute just type your answer in the
+comment section or in the chat section
+do let me know your answers please so
+I'm starting the timer of 1
+minute which type of programming does
+python support object oriented structure
+programming functional or all of the
+above do let me know your answers
+please you can comment or you can give
+your answer in the chat section so I can
+see if the answers given by you are
+right or
+wrong which type of programming does
+python support objectoriented structured
+functional or all of the
+above 30 seconds
+meaning
+which type of programming does python
+support objectoriented structured
+function or all of the above let us know
+your answers in the chat section or in
+the comment section
+below 10 seconds more which type of
+programming does python support 5
+Seconds
+more so the allerted time is over we
+will give a reply to those who gave the
+correct answer and for those who didn't
+give the correct answer we will give you
+reply with the correct answer okay now
+let's move to our programming
+part so we will open command prom to
+write a command to open jupyter notebook
+so here I will write Jupiter
+notebook press okay
+Jupiter notebook press
+enter you take
+time
+open so this is the landing page of
+jupyter notbook and here I will select
+new python kernel
+file so this is how Jupiter Kel look
+lies so
+here what we will do we will import some
+major libraries of python which will
+help us in analyzing the data
+okay import
+numai as
+NP okay then
+import
+pandas
+SD then
+import
+cbor as
+SNS the fourth one is
+from M plot
+Li
+Port pip
+plot as
+PLT okay then we will import some model
+libraries so here I will write
+from
+stats
+models
+TSA do
+API import
+exponential
+muting and comma
+then
+simple XP
+smoothing then one more
+old we will write here import sorry
+from Escalon dot
+linear underscore
+model
+import
+linear
+ression
+okay then
+import
+warnings
+warnings then we will write here
+warnings
+dot filter
+warnings it should be
+ignore
+yes there will be no error it's still
+loading yeah so numpy numai is a python
+Library used for working with arrays it
+also has a function for working with the
+domain of linear algebra and matrices it
+is an open source project and you can
+use it freely numai stand for numerical
+python second is Panda pandas is a
+software Library written for the Python
+programming language for data
+manipulation and Analysis in particular
+it offers data structure and operations
+for manipulating numerical data and time
+cities then cbone an open- Source python
+Library based on M plot lab is called
+cbon it is utilized for data exploration
+and data
+visualization with data frames and the
+Panda's labor cbone function with
+ease M plot lip for Python and its
+numerical extension numai met PL Li is a
+crossplatform data visualization and
+graphical charting package
+as a result it presents a strong open
+source substitute for
+MPL the apis for matplot Li allow
+programmers to incorporate graphs into
+GUI
+applications linear regression the
+machine learning method regression built
+on linear supervised learning analysis
+regression is done regression creates a
+value for the aim prediction using
+independent variables as
+inputs it main goal is to investigate
+the relationship between factors and
+forecasting exponential
+smoothing the exponential Windows
+function is a general method for
+smoothing time series data known as
+exponential smoothing it contrasts to
+the ordinary moving average which
+weights previous data
+quality exponential function use weights
+that decrease exponentially with time
+and there is one more simple exponential
+smothing the simple exponential
+smoothing classes use Simple exponential
+smoothing models to give very simple
+time series
+analysis a weight average of the most
+recent value and the preceding smooth
+value constitute the predicted value the
+contribution of older value degrade
+exponentially as a result of the
+smoothing
+parameter okay so after importing
+libraries let's import data set for this
+I will write here
+DF or you can write data frame PD do
+feore
+CSV here I will write
+monthly underscore
+CSV do
+CSV okay this is my file name you can
+download this file from the description
+box
+below and for seeing the data I will
+write here DF dot
+head and then press enter
+yeah so here PD is for Panda's Library
+read is used for reading the data set
+from the machine and CSV is used for the
+type of file which you are using okay or
+which you want to
+read and if you want to see the top five
+rows of your data set you can use head
+and if you want to see the last five
+rows of your data set you can use tail
+instead of head okay this one you can
+write here
+tail so moving forward let's see how
+many rows and columns are present in our
+data set for that I have to write DF do
+shape okay then press enter okay it will
+give error why
+because this
+yeah so here you can see 847 rows and
+two columns date and price
+only so moving forward let's do some Eda
+explorat data analysis okay for that I
+have to write here
+print
+data date
+range
+of of gold
+prices available
+from
+then here I have to give C brackets then
+DF dot location
+Lo then
+colon
+comma
+date okay D is capital here so I have to
+write
+date then from location
+zero to
+again same thing DF
+dot
+LC
+date to the length
+of
+BF minus
+one
+oh everything seems good yeah then press
+enter
+okay we have date range of gold prices
+available from this 1950 to 2020 okay in
+our data
+set then here I will write
+date equals to PD
+Dot
+date
+range start
+from
+slash1 SL
+1950
+comma and equals
+to 8 slash
+1/2020
+comma
+frequency equals to
+median okay
+then then here I will write
+date then press enter
+yeah so here you can see T time index
+okay from starting till end these dot
+dots and here I will
+write DF
+month equals
+to
+date we have dot
+drop
+State comma XIs is
+one comma in
+place to true
+T should be
+capital okay then DF equals to
+DF do
+set
+index and
+month and
+DF dot
+head press enter
+so instead of this
+date we have adjusted this
+month okay for particular
+value so moving forward let's see the
+graph different different graphs okay DF
+do
+plot then figure set should
+be
+to 20 comma 8
+then
+plot dot
+title
+is like
+gold
+prices
+monthly
+since
+1950 and
+onwards okay title should be this then X
+level should be PLT do X
+label will be
+months then PLT do y
+labels should be
+price then I will write here PLT dot
+grid okay press
+enter okay title spelling my bad tle
+okay then press
+enter oh y label it is
+sorry
+yeah here you can see gold prices
+monthly since 1950 and on
+onwards okay till from 1950 and from
+till 2020 okay this is the
+price then moving forward let's see
+another graph so I will write here for
+that round DF dot
+describe comma
+3 and here you can see the count
+variable and the average is
+46.57 standard deviation that minimum
+price value is this 20% this and the
+maximum value is this okay
+so so the average gold price in last 70
+years is this 4 16.55 7
+okay only 25% of the time the gold price
+is above
+447
+the highest gold price ever touched this
+this one 1840
+807 so we will do visual analysis so
+here I will
+write ax equals to PLT do
+subplots SUB
+plots okay then and figure
+size to
+25 comma
+art okay then SNS dot box
+plot is
+xals
+to DF do
+index do ear comma y equals to DF do
+values colum comma
+0 comma ax = to a
+x
+okay then same PLT do
+title gold
+price
+monthly
+1950 same graph will come but in the
+different format
+okay let me remove
+this then PLT do dot X
+label must be
+here LT dot y
+lbel
+PR and PLT
+dot
+xticks will be
+rotation
+to okay I will give rotation
+90 PLT do
+grid can write here instead of grid I
+can write here directly show so grid is
+this format this box format okay so
+press
+enter it's loading yeah so here you can
+see from 1950 every year is here till
+2020 so how the gold prices are
+decreasing and increasing
+okay let's see the another
+graph I will write here
+from that'ss
+models
+models dot
+Graphics Dot
+TSA
+plots
+Port month
+plot okay then I will write here figure
+comma ax equals to then PLT
+dot
+subplots figer
+size
+equals to 22 comma
+8 okay then month
+plot DF comma y
+Lael to
+gold
+price okay comma then a x equals to
+ax I will give the title PLT
+dot
+title I will copy from
+here
+okay and PLT do X
+label
+month and PLT dot y
+Lael the
+price PLT dot
+grit so here you can see gold prices
+monthly since
+1950 like for every month like January
+February March April so on till December
+okay we will cover one more
+graph okay and many many more
+graphs
+so we
+will go with the next
+graph for that I will WR
+here let's go
+comma
+ax equals to PLT do
+subplots then figure
+size equals
+to 22 comma
+8 then same
+SNS Dot
+boxplot x equals
+to DF do
+index do month
+name okay then y =
+to DF do
+values comma Z
+0 comma ax = to
+ax okay then PLT do
+title we put same title so I can copy
+from it
+here let's copy from here and paste it
+here
+okay and pl
+dot X
+label and PLT do y
+label
+price and PLT do
+grit
+okay.
+show this time let's let's not use
+grid
+Okay okay something PDS month
+name yes you can
+see for every month this is another type
+of
+graph okay box plot graph so why we are
+creating so much graphs because we are
+doing Eda exploratory data analysis in
+this we have to see the multiple
+different and different different types
+of
+graph okay so moving forward let's see
+average gold price per year like Trend
+since
+1950 so for that I have to write here
+DF go
+yearly let go sum
+to DF do
+resample
+sample
+then
+a dot
+mean DF
+uncore underscore
+sum do plot
+dot PLT dot
+title and here I will write
+average gold
+price
+yearly
+since
+1950 or you can write onwards from
+onwards 1950 so so here I will write PLT
+do X
+Lael
+here and PLT do y
+label
+ice okay then PLT do grid this time
+we'll use
+grid
+so here you can see the average gold
+price yearly since 1950 okay this is the
+chart till 2020 like sometimes up
+sometimes down
+okay and we will see now like average
+gold price per quarter like trends like
+since
+1950 so here I will write DF
+dot not DOT DF dot
+quarterly
+okay underscore sum equals
+to DF do
+resample water
+[Music]
+Q dot
+mean
+okay
+okay move this
+then DF
+underscore
+quarterly score
+sum do
+plot then the same PLT do
+title from
+here
+here I will write average good price
+waterly
+quarterly okay since
+1950 then PLT dot X
+label label is now here
+quarter
+PLT do y
+lbel is
+price okay now PLT do
+show this
+time
+okay F
+quarterly okay
+quarterly yeah
+here you can see the price prediction
+okay let me set to the grid
+only it's not
+this visuals are not good so
+crit yeah so here you can see the
+quarterly prices
+prediction okay average gold price
+quarterly
+prediction so like moving
+forward we will see now average gold
+price per decade like per 10 years okay
+so from 1950 only so here I will write
+DF underscore
+DEET underscore
+sum to DF do
+resample every 10 year okay 10
+year
+do
+mean we are writing mean because we are
+like putting out
+average okay so DF underscore
+DEET underscore
+sum do
+plot PLT dot
+title average
+goal
+price per
+decade
+since
+1950
+okay since 1950 yeah
+perfect so here I will get PLT dot X
+label then decade decade is of like
+every 10 year p LT do y
+label PLT do
+grid yeah so here you can see the
+average gold price per decade like from
+1950 to 1960 like this straight then
+again straight then up then sometimes
+down then up and down okay every 10
+years you can see 1992 20 2010 and
+2020 so moving forward let's do like
+analysis in coefficient of variation the
+coefficient of variation CV is a
+statical measure of the relative
+disperson of data points in a data
+series around the
+mean and in finance the coefficient of
+variation allows investor to determine
+how much verality or risk is assumed in
+comparison of the amount like amount to
+the return expected from investors
+okay the lower the ratio of the standard
+deviation to mean return the better risk
+return
+tradeoff okay let's like let us look now
+the CV values for each year in gold
+prices so CV means coefficient of
+variation in prices okay so here I will
+write DF underscore 1 equals to DF dot
+Group
+by
+have.
+index
+do do
+mean
+name do
+columns equals
+to iate
+price
+and
+mean okay then again
+df1 equals to
+df1 dot
+range or what we can do instead of range
+we can write
+merch DF do group
+by go DF Dot
+Tex dot
+EO standard
+deviation theen
+name
+columns equals
+to
+PR standard deviation
+comma
+left
+index to
+true then comma right
+index Al so
+true
+okay
+and here DF uncore
+1
+SC
+to efcore
+1 standard
+deviation slash DF uncore
+1
+to
+100 like
+dot round figure should be like two
+after decimal how much like numbers you
+want to
+see then
+df1 do
+headit
+enter yeah so here you can see for every
+year I have mean standard
+deviation and this coefficient of
+variation okay for every
+year
+so like moving forward let's see the
+average gold price per year
+again so for that
+figure
+underscore
+figer dot comma
+ax equals to
+PLT dot
+subplot bigger
+size 15
+comma 10
+yeah then I will write here
+df1
+is like
+coore
+do
+plot elt do
+title average gold price
+yearly
+since
+1950 okay then PLT do X
+LEL is
+here or PLT
+do y
+label y
+label
+coefficient of variation I'm writing
+CV in
+percent okay then PLT do
+show get DF uncore invalid syntax
+okay what C
+Capital do
+plot okay so DF uncore 1 DF uncore
+1
+here
+syntax
+okay so here you can see average gold
+price since
+1950
+okay this is like percentage CV in
+percent
+okay like
+good you can say the
+chart so the CV value reached its
+highest in 1978 like somewhere here like
+198
+1978 okay like near to 25% which could
+have made the asset as a highly risky
+but in 2020 the CV value is closer to 5%
+which makes the asset variable by good
+investment okay so now what we will do
+we will do time series
+forecasting okay we will train model we
+will build model different different
+model we will train and test split to
+build time series forecasting model so
+for that let me do like this
+first
+yeah so here I will write
+train equals to DF
+DF do
+index dot per
+year okay equals to
+2015 and for the testing we will write
+DF DF do
+index.
+2015 okay for training we are taking
+till 2015 for and for the testing we are
+taking till 2020 from 2015
+okay then I will write here how many
+columns present in train or test so for
+that I will write print
+train do
+shape and print
+test. shift press enter 792 rows and one
+column in train training for training
+the model and 55 to test the model
+okay so now let's see the training data
+and testing data so
+train like square brackets
+so
+price do
+plot then figure
+size =
+to 13 comma
+5
+and font size should
+be to
+15
+ize Dot
+Plot bigger
+size bigger
+size let me
+give same 13 comma
+5 and font size should
+be six
+okay then PLT dot let me add
+grid PLT do
+gr then
+PLT dot
+Legend
+Training
+data
+comma test
+data okay okay then
+PLT show I will tell you what the legend
+is
+okay so here you can see the training
+data in blue and the testing data okay
+this is known as the legend this this
+portion and yeah so here you can see
+month
+wise okay till 2020
+and from
+1950 right these are the
+prices and this is the chart so moving
+forward let's do model formation now
+okay we will do two models
+linear linear regression and the Nave
+base one okay so first we are first we
+will go
+from linear regression for that I will
+write train underscore time
+= to I +
+1
+1
+for I in
+range test underscore time equals
+to I +
+length like
+train one for I
+in range then length should be
+test okay so for
+length training
+time comma length should be
+tested
+prenter okay this is the training and
+this for the testing 792 rows and here
+55 rows
+interesting
+so
+lror LR means linear regression let me
+make it
+capital R equals to make a
+copy
+L
+rore test equals to test
+copy dot
+copy then
+LR
+okay
+so
+LR
+R
+train
+time to train
+time okay and
+LR underscore
+test
+time equals to test
+time okay underscore
+is
+yeah so here I will write LR equals to
+linear
+regression do f F to the
+model LR
+train and for the
+time
+lot
+CL underscore
+Train
+Price
+values linear regression is not defined
+okay my bad L should be Capital
+yeah so now see the graph so test
+underscore
+prediction let's go model
+one equals to l
+dot
+predict
+lore
+test
+time lore
+test
+C was to
+test underscore
+predictions score
+model
+one okay let's create the graph
+figure figure size should
+be so 14 comma
+6
+PLT do
+plot
+R price
+comma label should
+be
+train okay then
+plot PLT do
+plot
+test
+device label equals to
+test PLT do
+plot then LR train or
+tests
+forast
+label equals to regression on time okay
+regression on
+time then again PLT do
+Legend
+l equals
+to
+best PLT do
+git that's
+enter
+okay here I have to
+write
+loading one more
+error
+price
+price okay
+is the
+price so here you can see regression on
+time test data is this green one and
+this training data and the testing
+data okay let's find the map now so for
+this we'll write here
+DF m
+n comma
+prediction then
+return
+round we do
+mean
+ABS
+actual
+setion
+jeel
+by
+100 comma
+2
+okay for to give the
+yeah so for for getting map you have to
+write here map
+underscore
+model let's go test equals to
+map
+test
+price dot
+values
+comma test
+underscore
+section model
+one
+okay then
+print
+is person
+3 Dot 3
+F then here after
+percent AP
+model 1 underscore
+test
+comma
+percentage press
+enter
+next
+okay is not
+defined m
+test model one
+test May
+T value use the
+test
+FS model
+one okay here a is
+small
+so map here you can see
+29.760426
+so you are bit confused like what is map
+map is a measure of prediction of
+accuracy of a forecasting method in a
+statical model OKAY is a measure of
+prediction accuracy of forecasting
+method in statical
+method and
+now this
+equals to PD
+do data
+frame test
+map in
+percent
+underscore model
+one comma
+index equals
+to
+regression on
+time okay then I will print the
+results okay D should be
+Capital pandas has no attribute data
+frame
+OKAY model one is not
+defined that's go
+t Val perhaps you got to forget a
+comma
+colon model one
+okay here you can see the test map
+regression on time so let's do it with
+the name now we have to perform the same
+pattern so what I will do what I I will
+write the code and get back to you okay
+so I'm done with the code uh so here you
+can see I have same pattern train and
+test copy and this is the name forecast
+on the test data so this is the line and
+this is the training and this orange one
+is
+testing the same we have got M like
+19.38
+Okay so and regression is
+this the name model so what we will do
+we will create now final model of HS
+okay and we will forecast final
+forecasting we'll
+do
+for that I have to write
+final model equals to
+exponential
+smoothing okay DF
+comma
+and equals
+to
+netive comma
+seasonal purum
+additive comma
+fit
+smoothing level to
+0.4
+smoothing
+Trend to
+0.3 comma
+smoothing
+seasonal = to
+0.6 okay press
+enter exponential
+exponential
+so
+map final andore model is equals
+to
+map like
+DF
+price dot
+values comma
+final let's go
+model
+dot fitted
+values then
+print
+M comma
+map
+score final underscore
+model okay
+so map is 17.24 which is quite good for
+the final
+model
+okay so getting the prediction for the
+same number of time stamps at the
+present time in the test data so I will
+write here
+predictions equals to
+final underscore model dot
+forecast
+steps equals to length.
+test
+center now we will compute 95 5% of
+confidence interval for the predicted
+value so TF equals to PD dot data
+frames
+then
+low
+CI
+prediction
+1.96
+into NP do standard deviation of
+final mod
+dot
+one
+okay and
+comma right here
+prediction okay then upper
+CI
+action plus
+1.96
+into dot standard
+deviation the same final model
+so
+one okay then
+prediction uncore DF dot
+head okay so this is lower CI prediction
+and the upper CI okay how much it will
+forecast or
+now at the end at the final State what
+we will do we will plot a graph okay
+forecast graph along with the confidence
+band So for that X is equals to DF do
+plot
+label equals
+to
+actual comma figure
+size
+16 comma 9
+addtion
+DF dot
+dot ax equals
+to
+this from a
+label underscore
+DF it's lower CI
+what I will do inste of
+this label equals
+to
+forast comma
+Alpha = to
+0.5 okay
+this do
+fill
+between
+Shore
+DF dot
+index comma prediction underscore
+DF lore
+CI comma prediction underscore
+DF this
+CI
+then
+coloral
+to
+M
+comma
+Alpha equals
+to5
+okay then
+XIs do
+set score X
+label year
+month
+AIS do
+set y
+lab PLT do
+Legend should be
+locational to
+best then PLT dot
+grid PLT Dosh
+show okay this is PLT only then press
+enter okay 16 comma 9 positional
+argument follows keyword
+argument right
+15 oh
+okay okay I have to give
+you upper
+CI upper
+C so here you can see our final model
+forecasting so till 2020 it is showing
+like normal and after that till
+2030 okay this will be the forecast as
+per the
+data
+okay so here you can
+see you can see we have the map is
+17.24 okay then here I did the
+prediction for the testing data and here
+I created the data
+frames these are the data frames lower
+CI prediction and upper C and then I
+have
+created the and then I have created the
+final graph of the forecasting if you
+want to become an AI expert and gain
+handsome salary packages look at the
+wide range of e IML costes by simply
+learn in collaboration with top
+universities across the globe so what
+are you waiting for hurry up and enroll
+now an year of experience is preferred
+to enroll in these courses find the
+course Link in the description box in
+today's session we will go through what
+is text to speech converter after that
+we will create text to speech converter
+application using python this we will
+create this
+one we will perform different functions
+and create amazing UI for application
+using different python libraries before
+we move on to the programming part let
+discuss what is text to speech converter
+and proceed further for the same text to
+speech is an API cloud service that
+enables you to turn written text into
+real sounding audio in a range of
+languages and voices by connecting with
+people in their own language you can
+give your business a voice and enhance
+customer experience and engagement
+increasingly accessibility of users of
+diverse abilities offering audio
+alternatives to prevent driving while
+disected or automating customer service
+interaction to reduce hold
+items let's move to our programming part
+to create a text to speech converter
+application using
+python so first we will open command
+prompt to write command to open jupyter
+notebook so here we will write
+Jupiter notebook to open jupyter
+notebook press
+enter yeah so this is the landing page
+of jupyter notebook and select open new
+python
+file so this is how the jupyter UI looks
+like so at first we will import some
+major libraries of python which will
+help us in creating UI and to convert
+text to speech so the first one is
+import sorry
+import
+TK
+enter as
+TK so TK enter is also known as TK
+interface the default python interface
+for TCL TK GUI toolkit is the TK inter
+package or tiker
+interface majority of unique System
+including Mac OS as well as Windows
+machine support TK and TK inter TK inter
+which is part of all common python dist
+distribution is The Binding legal method
+for creating graphical user interface
+GUI in Python it is the only framework
+included in the python standard library
+in
+fact so the next one
+is first we will write here
+import sorry from PK
+enter
+so
+from PK
+enter
+for
+file
+dialog file dialogue TK enter provides a
+number of built-in methods and class
+Library function to create application
+component and user actionable elements
+one of the TK inter modules called file
+dialogue offers classes and Library
+functions for making windows for
+selecting files and
+dictionaries when you need to request
+that a user browse a file or directory
+on the system you can use file
+dialogue so the next one
+is
+from TK
+enter.
+ttk
+import combo box
+combo box combines an entry field and a
+list box one of the TK enter visits it
+has down arrow to choose from a menu of
+possibilities it aids consumer in
+choosing from the list of available
+options a pop off of a scrolling list
+box it displayed down the entry field
+when user clicks on the drop- down arrow
+on the entry field only when option from
+the list box is selected will the select
+option be shown in the enter
+field one
+is it is one of the major One
+Import
+py TT
+X
+sx3
+okay so a python text to speech
+conversion library is called pyttsx3
+it is compatible with python 2 and 3 and
+works offline unlike competing libraries
+to obtain a reference to a py TTX
+Library engine instance an application
+called the pytt X3 in it Factory method
+it is a very userfriendly program that
+turns type text to speech the saif5 for
+windows program offers two voices that
+the pytt sx3 module supports a female
+voice and a male voice three TTS engines
+are supported by it Windows sappy I5 NS
+speech for Mac OS e speak is available
+on all other
+platform so the next one
+is
+import
+OS so the OS module in Python has
+function for adding and deleting folders
+retrieving their contents changing the
+directory locating the current directory
+and more before you can communicate with
+the underlying operating system you must
+import the OS
+module the next one
+is
+from
+gtts
+import
+gtts
+from play
+sound
+import
+sound so gtts python has a variety of
+apis that can turn text into speech the
+Google text to speech API often known as
+gtts API is one of these apis gtts is a
+simple to use program that turns enter
+text into audio that can be saved as MP3
+file
+languages including English Hindi Tamil
+French German Spanish and many more are
+supported via gtts
+API any one of the two accessible audio
+speeds Rapid or slow may be used to
+deliver the speech theice of created
+audio however cannot be changed as the
+most recent
+version so let me run
+this so after importing major libraries
+let's move forward and start creating
+user interface
+so I will write here import sorry root
+equals
+to
+PK put dot
+title simply
+learn to speech
+converter root dot
+geometry I will give here
+1,000
+580 uh plus 200 from y axis
+and then 80 from
+Top okay root dot de
+sizable we make it to like false false
+and again
+false okay
+then
+root.
+configure background should be BG equals
+to we use here
+hash
+F7
+AC
+40
+then okay first I will explain this so
+here TK stand for TK inter Library every
+word in the string returned by the title
+method begins with with an uppercase
+letter like a title or a header the
+following letter will be changed to
+uppercase if the word contains a number
+or a
+symbol one of the built-in methods in TK
+inter is geometry which is used to
+specify Dimension while TK inter vigit
+windows are mostly used to set the
+application Windows Dimension
+length the TK enter root Windows size
+can be changed in accordance with the
+needs of the user using the resizable
+this
+one
+or we can forbid resizing of the TK
+enter window in other words this
+approach can be used to generate a
+window with a defined size Simple Text
+changes can be made to labels using
+python TK inter config function two vets
+are shown in the example
+below a label and a button when the
+button is pressed a function that is
+attached to the button execute the label
+config method you can give background
+color as per your choice I've gave this
+arrange something so let's run this and
+see the first look of UI by writing here
+I will write here
+root dot main
+loop I will run run all
+yeah
+okay so this is how our UI looks like
+first UI so I can't resize because I
+gave here false false I can't resize
+it so if I will write
+here set of false I will write here
+true and
+again through
+here so then I will run
+[Music]
+again so now I can resize it as per my
+choice okay yeah so I will write
+here false and again
+false
+it okay let's move forward and add some
+logos in the
+application I have already some PNG
+images on my system you guys can use any
+picture of your choice I have some
+images
+here images
+so you guys can use any picture of your
+choice so I will write here like
+simply _
+logo was
+to
+photo
+image
+file then part of
+file
+CS SL
+SLP 09
+375
+top
+then ETS
+folder s
+folder
+then simply do
+PNG okay then I will set
+label
+put image equals
+to Simply
+image simply logo
+sorry then
+background I can copy from
+here
+do
+place to 880 and Y AIS should
+be like I will give here uh
+5
+30
+okay let's run this
+loot do main
+Loop here there is something
+error
+search file
+directory okay there is one now let me
+run
+this yeah now you can see simply learn
+is there I need little bit
+down so let me write again give here
+39 run it
+again
+see okay now it's looking good
+yeah the image object is returned by the
+photo image function output it's that
+easy to display a picture in Python
+however the photo image class only
+supports the GIF and PNG
+images which is a concern
+jpeg NG gpg and PNG are the formats that
+are most often used the container box
+where the text or images can be placed
+is specified by the label the wiget is
+used to inform the user or other wigets
+that are utilized in the python
+application the text or a portion of the
+text shown in the label can be
+configured using a number of different
+parameters the root window is where all
+the wigets are placed this one the root
+window window is this all the widgets
+are
+placed even TK inter application must
+include precisely one increase of the
+class TK which is an instance of app is
+a subass of frame and app is an instance
+of app by positioning them in a precise
+location with the parent visit the put
+manager organize visits the option used
+by the geometry manager are anchor
+border mode height width real width x
+and Y anchor shows the location where
+the widget is
+anchored okay let's move forward and add
+logo here instead of this add One logo
+here so I will make it comment
+[Music]
+down R it
+yeah so for that I will write logo
+uncore
+image equals
+to photo
+image then
+file
+to we'll copy the path from
+here it
+here okay so let me change it to
+speech. PNG perfect so
+root dot icon photo
+false for my
+logo uncore
+image put dot
+main let me run
+this yeah now you can see a logo here
+so the image object is return by the
+photo image function output it is the
+easy to display a picture in Python
+however the photo image class only
+supports the GIF and PGM which is a
+concern JPEG gpg and PNG are the formats
+that are most often used the title bar
+icon of the TK enter top level window is
+set using the icon photo but in order to
+set any image as a title bar icon it
+must be an object of the photo image
+class so okay logo is
+added this logo is added now we will
+make one upper frame like this one upper
+frame till here something like here and
+we will add the heading and logo in the
+frame okay so let me do this let me make
+it as a
+command okay so I will write here upper
+frame
+to
+frame then
+root then background should
+be you can use any color I will write
+here #
+14
+a 7
+DD cool then width should
+be500 yes I can give it 1200 is
+enough and height should
+be 30 is
+fine
+upper M do
+Place equals
+to 0 and Y = 0 X and Y = to 0 why
+because we need at the top
+so I will add one picture there so
+picture
+was again
+photo
+image I can copy
+from
+yeah same image I will add then
+label then when I'm where I'm adding
+here is like
+upper
+frame image equals
+to and
+background should be the
+same
+and Dot
+place = to
+150 and Y should be like I will give
+here
+20 okay so let me run this root do main
+Loop we'll run this run all yeah
+okay okay there I have to
+write y = to
+20
+again here what they sh f is
+capital hope now now it will run
+properly so the image is added here yeah
+for the purpose of grouping and
+arranging other wigets in a user
+friendly manner the frame wiget is
+crucial it functions like a container
+that organizes the positioning of other
+wigets to arrange the layout and provide
+these wigets the screen uses rectangular
+regions the root window is where all the
+wigets are placed even TK enter
+application must include precisely one
+instance of the class TK and the label
+is specifies the container box where the
+text images can be placed these wigets
+used to inform the user or the other
+wigets that are utilized in the python
+application the text or a portion of the
+text shown in the label can be
+configured using several different
+parameters okay so logo is added and
+it's looking great so I hope you guys
+understand till here if you have any
+question or any query
+regarding any sort of code so just put
+as in comment our team will shortly
+provide you the correct solution I'm
+repeating again I hope you guys
+understand till here if you have any
+question or any query regarding any code
+or if there are any question related to
+python just put as in comments our team
+will shortly provide you the correct
+solution moving forward let's add a
+heading to the application so I will
+make it as a
+command first I will add
+[Music]
+some cells
+below better
+view okay so for that I will write here
+label I have to head adding at the upper
+frame so I will write here upper
+frame could be
+will
+give X
+to
+each
+converter F should
+be
+new
+Comm okay side should be 40 is enough I
+guess and it should be
+bold BG background color should
+be I will add this one only so
+copy paste it
+here and foreground should
+be
+white and Dot place
+at X = to
+250 and Y should be the same I guess I
+should
+be I will write
+35
+to let's run this
+root dot main
+Loop okay
+done
+this okay it's like option
+front Okay this is font
+i f sorry my
+bad how it will work I
+guess yeah so here you can see text is
+added so for the purpose of grouping and
+arranging other wigets in user fling
+manner the frame wiget is crucial it
+function like a container that organize
+positioning of the other wigets and the
+label is specify the container box where
+the text or images can be placed this
+wigets used to inform the user of other
+widgets that are utilized in the python
+application and in TK enter there are
+three different ways to specify a viget
+type to put it simply use the string
+format TK direct font format time 20
+italic or
+bold font family size styles is the
+structure of the string where style can
+be any legal mhup of text style
+keywords okay so heading is added now
+let's move forward and make a text box
+for writing text to
+it so let me make first this as a
+command
+okay so we are creating text box so I
+will write here text
+box equals
+to
+text then root window so I will write
+here root
+font so let me tell you first I will
+create a text box like this or
+this so font equals to
+I
+20 and background should be black or
+white okay let's do black
+first I did take it bite only
+bite then relief is something relief
+equals to
+groove and uh
+wrap eords into word or characters
+word
+word and Border width should be
+zero okay so
+text box do
+place or should I place it x equals to
+30A y =
+to
+150 comma
+width
+width should be I will make it the
+longer one so I will write
+here
+940 then
+height should be
+180
+so let's run this first root dot main
+Loop let me run
+it so yeah text box is created hello
+guys
+yeah so text box is created so the
+python application uses the text visits
+to display text Data the single line
+text box is implemented using the entry
+visits which TK enter offers the
+multi-line style text is with a variety
+of styles and characteristics is shown
+using the text viset instead of group
+you can use raised flat R and many more
+it is used to make contact with within a
+text document with using the r features
+in TK inter we may include the
+characters or words in the TK wigets you
+can use word c or none are the available
+default values for the W
+properties the TK enter button BD option
+determines the width or a stroke of the
+border that encircles the button the
+width of the border around a button can
+be changed using the
+BD so by positioning them in a precise
+location with the parameter the put
+manager organized visits the option used
+by this geometry manager are anchor
+border mode height width
+X and Y and many more so our text box is
+created can write
+anything now let's move forward and add
+some combo box for selecting voice and
+speed so first I will what I will do it
+I will make it
+command here I will
+write
+gender box for male
+female so equals
+to
+combo
+box
+put
+value equals
+to female
+okay and font should
+be could
+be yeah font should be
+r o b
+o e then 12 sh should be 12 then there
+is something called state to
+R and
+then
+width
+12
+and gender
+box but
+place so I will PR something here
+something here like gender should be
+here and speed should be here
+so I will write
+here equals
+to
+40a Y =
+to
+400 then gender
+box.
+set to
+mail run it so root do main
+to let me run
+this yeah so you can see male female
+there this is combo box so a combo box
+combines an entry field and a list box
+one of the Tinker visits it has down
+arrow to choose from a menu of
+possibilities it aids consumers in
+choosing from the list of available
+option a pop off of a scrolling list box
+it displayed down the entry field when
+the user clicks on the drop- down arrow
+on the entry field only when an option
+from the list box is selected with the
+selected option be shown in the entry
+field if I will select here then it will
+show female now
+male so some variables supported by TK
+enter can be used to change the values
+of TK inter visits these variable
+operates as a typical variable would the
+values of these variable are set and
+retrieved using the set and get
+methods combo box combines a list box
+wiget and an entry wiget you can choose
+one value from a group of values using a
+combo box widget you can also input a
+custom value in
+addition so set text is used to set the
+text in the entry box in the python TK
+enter it serves the purpose of entering
+text into the entry box when used as a
+function we will write a function
+function and use as a button to invoke
+it so okay so it's look great moving
+forward let's add one more combo box for
+the speed one like Fast medium and slow
+so what I will do I will copy first I
+will make it as a
+command so first I will copy this and I
+will paste it
+here then I will
+write speed box
+again Heat box
+again
+box then I will set it to
+medium and that there will be three
+values
+like
+fast
+and
+slow and I will place combo
+box where should I
+place we'll place it
+something like here I will place it here
+so for
+that I have to give X
+as around
+540 and why should be same so let me run
+this and let's
+see so yeah so it's looking fine
+function I Ed here is same as the
+previous one that we did for the gender
+one for this one so I hope you guys
+understand till here if you have any
+question or any query regarding any code
+any sort of code so just put as in
+comments our team will shortly provide
+you the correct solution I'm repeating
+again I hope you guys understand till
+here if you have any question or any
+query regarding any code just put as in
+comments our team will shortly provide
+you the correct solution so moving
+forward let's add play button to playing
+the return txt but before that let's add
+something called select voice and select
+speed label for these two combo Bo for
+like select select voice type and select
+speed so let's add them quickly so I
+will write here
+label I am adding it to the root window
+so I will write here root and text
+equals
+to
+select voice
+type and font
+could
+be
+timesan and size should be like 15 is
+enough I guess uh it should be
+bold
+Comm background color should be I will
+here copy
+past yeah foreground color should be
+white or
+place equals
+to
+340 and Y =
+to 37
+20 okay let me copy this for the
+speed copy it and I will paste it here I
+will write here
+speed everything same cut it and I will
+paste it here for the
+running so let me run
+this El speed is there I don't know
+where you select okay okay I gave the
+same X values I guess yeah so here I
+have to write
+540 let me run this
+again yeah select voice male female
+select speed fast medium
+slow so the python application uses the
+text visit to display the text Data the
+single line text box is implemented
+using the entry viget which TK enter
+offers
+the foreground color of a button is set
+using the TK enter button FG parameter
+alternatively the text color on the
+button so it is looking cool now moving
+forward let's add play button somewhere
+here
+so I will write code for
+it
+play
+button
+I have one photo for it
+photo me copy the
+path it
+here
+and light
+Play and play
+go
+BTN was to
+button
+text equal to X should be
+play there is something called
+compound so that
+left
+Mage
+to a
+button comma background should
+be
+white and
+width is
+130 font
+to
+aial
+hold border
+width should
+[Music]
+be1 c means
+centimeter and there is something called
+command
+to PE
+now
+say let
+go etn
+dot
+Place X should
+be
+435 y should
+be
+450
+let me see root do main
+Loop can make it
+comment okay okay okay so this is a
+function we haven't created function yet
+so I will add it at the
+last so till see
+see this border
+width okay okay W
+th I hope now it will
+work TK
+enter sorry my bad
+yes
+yeah so a python application can add
+buttons by using the button vigit these
+button can show text or images that
+explain what they are for when a button
+is
+clicked you can connect a function or
+method that is called automatically
+using that command so here compound
+determine the best way to display text
+and an image or the label
+cursor Define how the mouse will look
+when it over the
+wiget so the TK enter button BD option
+control the Border width or stroke
+surrounding the button and some TK inter
+viets let you use command binding to
+link a call back function to an event it
+entails that you may specify a function
+name in the widgets command option
+so that it will be called whenever an
+event occurs on the viset okay so our UI
+for the text to speech converter
+application is created and it is looking
+fabulous so now let's add function for
+converting the text to speech sound let
+me write the code first and then I will
+explain you line wise okay now we can
+write
+here command equals
+to
+speak
+now
+okay so what I will do I will add a
+function
+here I will add function
+here so let me write the code first then
+I will explain you line wise lies so
+here I will write TTS TTS is nothing
+just text to speech variable pytt sx3
+do
+init EF for function speak
+now XT equals to text underscore box dot
+get
+1.0 till the
+end gender equals
+to
+Tender
+Box dot
+get and speed equals to
+speedcore
+box dot
+get
+voices equal to TTS do
+get
+property
+voices okay so there is one another
+function set
+voice
+if gender to equals
+to
+male TTS
+dot set
+property
+should be
+Capital
+Property yeah
+voice The Voice ID voices ID should be
+Z do
+ID
+TS do say whatever written on
+text
+PS
+dot
+run run
+and I'm done for then
+else
+pts dot
+set property
+voice
+voes do
+ID pts do
+say
+text and again TTS
+dot done and
+so by here I will for I will write code
+for that speed if
+text and again
+if speed plus to equals to
+fast then pts do
+set
+property and
+rate rate should
+be
+250 at two
+voice if
+or else if
+speed Al equals
+to
+M so then ETS dot set
+property and rate should
+be
+150 set voice function will be
+called
+else TTS do
+set
+property itts dot set property then rate
+should
+be eight should
+be
+60
+that
+voice okay so function is created dog
+dog get property find text okay now let
+me run
+this yeah so let me explain you pts is
+nothing just a variable to text to
+speech and in it py TTS X3 engine has
+started obtains a pointer to an instance
+of an engine that will utilize the
+specified driver if another engine
+instance is already using the given
+driver the other engine instance is
+returned if not a new engine is
+built so speak now is a function which
+using get function I'm getting the
+values of the text box voice I will show
+you
+wait
+so from this
+from this is speak now I'm getting the
+value of text male and female then
+speed and using the get property I'm
+getting the voices of male and female in
+set voice what I did using ID zero for
+male and assenting into the male and
+using ID 1 for female and assigning it
+to the
+female and in this LC flader I'm setting
+speed to a particular values using the
+rate function and assigning them speed
+in frames per second so now let's see
+text to speech converter is working or
+not so what I will write here
+hello
+coders
+welcome to Simply
+learn so I will
+play Hello coders welcome to simple
+learn
+hope you hear the
+sound I repeat hope you heard the sound
+then same thing I will from from
+female okay object run and
+wait okay there is an
+error run and wait
+I will
+write let me run this
+again hello simply
+learn hello simple
+learn and again with female
+voice hello simple
+learn will write here hello simply
+Learners
+subscribe to our
+YouTube
+channel
+hello simple Learners subscribe to our
+YouTube
+channel then I will play it to
+fast hello simple Learners subscribe to
+our YouTube channel then I will play to
+slow hello simple
+Learners subscribe to our YouTube
+[Music]
+channel
+so I hope you guys understand till here
+if you want to become an AI expert and
+gain handsome salary packages look at
+the wide range of eiml courses by simply
+learn in collaboration with top
+universities across the globe so what
+are you waiting for hurry up and enroll
+now an year of experience is preferred
+to enroll in these courses find the
+course Link in the description
+Box open CV open source computer vision
+library is an open source computer
+vision and machine learning software
+Library it is WR in C++ but has a
+binding for various programming
+languages such as python Java MLB open
+CV was designed with a goal of providing
+a common infrastructure for computer
+vision applications and to accelerate
+the use of machine learning perception
+in commercial product open CV is widely
+used in the variety of indues including
+robotics automative and Healthcare it's
+supported by a large community of
+developers researchers and users who
+contribute to its development and
+provide support to its users it is
+supported by a large community of
+developers researchers and users who
+contribute to its development and
+provide supports to its users so now
+let's see what is object detection
+object detection is a computer vision
+technology that involves identifying and
+localizing the object of interest within
+an image or a video it is a challenging
+task as it involves not only recognizing
+the presence of an object but also
+detecting its precise location and size
+within the image or video object
+detection algorithm typically used deep
+learning techniques such as CNN to
+analyze the image or video for
+identifying the objects these algorithm
+can also determine the boundaries of the
+object by drawing a bounding box around
+them so after understanding what is
+object detection now let's move on to
+the programming part so this is a kernel
+python kernel here we will change this
+name so here I will write object
+detection
+demo Okay so
+so first we will import some major
+Library like open CV so for that we will
+write import CV2 and the next one is
+import M plot
+lib P
+plot as PLT so why we are writing PLT
+because we can't write again and again M
+plot li. P plot okay it's a long one so
+we can write a short form
+PLT so yeah
+so let's run this so what is opencv
+opencv is an open source software
+library for computer vision and machine
+learning the open CV full form is open
+source computer vision Library it was
+created to provide a shared
+infrastructure for application for
+computer vision and to speed up the use
+of machine learning perception in
+consumer products open CV as a BSD
+license software make it simple for
+companies to use and change the code
+okay so there are some predefined
+packages and libraries that make our
+life simple and and open CV is one of
+them second one is mat BL Li mat BL Li
+is a easy to use and an amazing
+visualize library in Python it is built
+on numpy array and designed to work with
+broader CPI stack and consist of several
+plots like line bar scatter histogram
+and many others okay so moving forward
+we will import our file okay so here I
+will write
+config file equals to this is our file
+name SSD
+uncore
+mobilet
+V3
+large
+Coco
+202 14.
+BB okay so you can find this file on the
+description box below
+Frozen model equals
+to I explain you every single
+thing
+inference
+graph. PV okay so let me run it first
+mobile net as a name applied the mobile
+net model is designed to use in mobile
+application and it's tflow first mobile
+computer vision model mobile net used
+depthwise separable convolutions it
+significantly deduces the numbers of
+parameter when compared to the network
+with regular convolutions with the same
+depth in the NS this result in the
+lightweight of the deep neural network
+so mobile net is a class of CNN that was
+open source by Google and therefore this
+gives us an excellent starting point for
+training our classifiers that are
+insanely small and insanely fast okay so
+what is this large Coco this is a data
+set Coco data set like with applications
+such as object detection segmentation
+and captioning the Coco data set is
+widely understood by the
+state-of-the-art of neural network its
+versatility and the multi-purpose scene
+variation serve best to train a computer
+vision model and Benchmark its
+performance okay so what is coko the
+common object in context is one of the
+most popular large scale label images
+data set available for public use it
+represent a handful of object we
+encounter on a daily basis and contains
+image notations in 80 categories I will
+show you the categories I have with over
+1.5 million object instances okay so
+modern day AI driven solution are still
+not capable of producing absolute
+accuracy and result which comes down to
+the fact that coko data set is a major
+Benchmark for CV to train test and
+polish refined models for faster scaling
+of The annotation Pipeline on the top of
+that the Coco data set is a supplement
+to transfer learning where the data used
+for one model serves as a starting point
+for the another so what is frozen
+insurence graph like freezing is the
+process to identify and save all the
+required graphs like weights and many
+others in a single file that you can
+usually use a typical transl model
+contains four files and this contains a
+complete graph okay so forward let's
+create one model here I will write model
+to CV2 do
+DNN model
+chenel and then config
+file so here I'm giving the parameters
+two parameters like frozen model and
+config
+file score here yeah run it first okay
+there is error
+return okay so error is CV2 DNN
+detection model return is
+result an exception set the question
+comes what is the meaning of deduction
+model or DNN deduction model so this
+class represent the high level API for
+object detection networks detection
+models allows to set parameters for
+pre-processing input image detection
+model creates net from file and with
+train weights and config sets it
+processing input runs forward pass and
+return the result
+deductions okay moving forward let's set
+the class
+labels okay
+class
+labels file
+name to labels.
+dxt I will put this file on the
+description box below you can download
+from there
+open file
+name
+as
+labels this
+St
+so here I created one array of name
+class labels so this is the file name
+what I'm doing I'm putting this label
+file into these class labels okay so
+here if I will
+print class
+labels so these are the 80 categories in
+the Coco data
+set okay this person bicycle car
+motorbike aerplane bus train these all
+are the a
+categories I will put this file label.
+txt in the description box below you can
+find download from there okay
+fine so let's print the length of the
+Coco data set or you can see class
+labels
+this 80 as you can see I have already
+told
+you the length will be
+0 so here let's set this some model
+input size scaling mean and all so I
+will write here model dot set
+putut
+size 320 comma
+320
+do
+set
+input
+scale
+1.0 SL
+127.5 okay I will explain you don't
+worry model do
+set
+set
+input
+[Music]
+mean
+127.5 comma
+127.5 comma
+127.5 okay and then model do
+set
+input
+we
+B will
+be what is set input
+size
+okay so set input size is a size of new
+frame a shape of the new blob less than
+zero okay so this is the size of the new
+frame the second one is set input scale
+the set input scale is a scale factor of
+the value for the frame or you can say
+the parameter will be the multiplier of
+the frame values or you can say
+multiplier for the frame values okay so
+input mean so it set the mean value for
+the frame the frame in which the photo
+will come the video will come or my
+webcam will come so it set the mean
+value for the frame or the for
+parameters mean scalar with the mean
+values which are subtracted from the
+channels you can see and the last one is
+set input swap RB so it set the flag
+swap RB for the every frame we don't
+have to put every time a single frame
+for a particular image it will be set
+the true for the all the images
+okay so parameters will be swap I'll be
+flag which indicates the swap first and
+the last channels so moving forward we
+will Port one
+image I am
+read bo.
+jpg
+do I am
+show
+so this is the size of 320x 320 okay so
+first thing is you can download this the
+random picture from the Google I took
+from Google itself so now what we will
+do we will set the class
+index the confidence
+value
+value the B box B box is the boundary
+box which I will create for that
+particular person cycle motorbike and
+the car okay equal to
+model the confidence
+threshold threshold is used
+for if my model will confirm it's the
+particular image which is the texting is
+correct it will print the name okay
+so let me
+print
+print
+Plus Class index is coming 1 2 3
+4 okay so one means person two means
+Bicycle three means car and four means
+motorbike this is the class index index
+for particular label what I will do I
+will print the
+boxes
+font
+scale = to 3 and the font equals to CV2
+dot font
+her
+plane
+for
+class index and the confidence and the
+boxes
+and Dot
+P
+conf
+that
+box the boundary
+box
+okay then I will write here CV2 do
+rectangle to make the
+rectangle set the
+image and
+boxes five comma 0 comma 0 this is the
+color of the box and this will be the
+thickness
+okay then I will write CV2 dop
+put
+text image
+then class
+labels I will write class index minus
+one because always index start with zero
+that's why and the box
+is
+zero
+and comma
+boxes
+one
+4 okay
+F
+comma
+scale font
+scale
+scale
+coloral
+to this will be the text color 0 comma
+255 comma
+0 and the
+thickness three let me run
+it uh no error okay now PLT do I am
+show then CV2 do
+CVT
+color
+then
+cvt2 dot
+color color then
+BGR to
+brg that is why we wrote swap RB equals
+to true because every time we will
+convert BGR to
+brg sorry GB RGB so we don't have to
+write again and again it will convert
+all the files into RGB okay run
+it okay as you can see the motorbike is
+coming
+bicycle is coming the person is coming
+the car will car is coming okay so it's
+detecting the
+right for the image now we will do this
+for the video and for the
+webcam we are done with this image one
+and then now I will write
+here okay so this is will do for the
+video for the video I will write here
+cap equals to capture you can write any
+name so CV2
+dot
+video
+capture so you can take any random video
+I took this
+pexels
+George can comment
+down
+share the
+link have dot is
+open so here I will write
+cap equals
+to
+CV2 sorry CV2
+dot
+video
+capture
+zero and if
+not cap dot is
+open
+then and
+raise input output
+error
+can't open the
+video can't open the
+video here everything will be the same
+font
+scale = to
+3 okay font equals to CV2
+dot
+front
+her okay so here I will write while
+true comma
+frame equals to cap dot sheet
+this is for the reading of the
+file the same I will write class
+index comma
+confidence boundary
+boxum model do
+detect flame and the
+confidence
+threshold to
+0.55 okay every thing is the same we did
+before so here I will
+print
+class
+index okay so here I will write
+if
+and of the class
+index does not equals to
+zero
+then what to perform is here I have to
+write
+for class
+index comma
+confidence comma
+boxes
+insip
+CL index do
+flatten flatten is a layers okay
+confides
+flatten e
+box and
+if
+class index is greater than equals to
+80
+then what to do then I will copy from
+here
+okay the same thing I have to write
+here so here I will write CV2 Dot I am
+sure this will be the return in the
+frame object
+detection by simply
+learn and
+frame so if CV2 dot vit
+key
+2
+and 0o
+FFX =
+to
+o q okay
+then here I will write
+break will be break when it get into two
+the weight key will be two okay I will
+tell you what is the weight
+key here I will write cap dot release
+is and CV2
+dot
+destroy
+all
+windows
+okay so now let me
+run let's see error there will be error
+okay
+see Python Programming
+modules let me run it
+again the
+keys
+okay video is
+here the video is here as you can see
+see bicycle the person the person the
+bus car traffic light the person person
+so our object object detection for the
+video is coming right okay person okay
+person traffic light
+buz this is how you can do for the video
+okay so now let's we will do for the uh
+webcam
+live so this is for the video
+so if we want to do for the webcam we
+okay so we need to just
+change one one thing only we have to
+change instead of giving the file we
+have to write one here okay the rest
+will be the
+same got it so I have to just shut down
+my webcam so let me shut down the webcan
+and get back to
+you
+as you can
+see this is a 320x 320 box
+so so this is coming right okay so I if
+I will show this the mobile phone is
+coming right now okay so this is how you
+can do the correct object detection and
+with that we have come to the end of
+this video on AI ml projects full course
+I hope you found it useful and
+entertaining please ask any questions
+about the topic covered in this video in
+the comment section below our experts
+will assist you in addressing your
+problems thanks for watching stay safe
+and keep learning staying ahead in your
+career requires continuous learning and
+upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+hi there if you like this video
+subscribe to the simplylearn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click
+here

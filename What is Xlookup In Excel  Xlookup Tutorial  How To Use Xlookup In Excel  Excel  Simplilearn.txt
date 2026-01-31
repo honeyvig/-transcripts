@@ -1,0 +1,165 @@
+hey everyone welcome to simply learns
+youtube channel in this session we will
+be discussing about x lookup x lookup is
+a new addition to lookup functions and
+it is smarter than both vlookup and
+hlookup together
+now before we begin let me tell you guys
+that we have daily updates on multiple
+technologies so if you're a tech geek in
+a continuous hunt for latest
+technological trends then consider
+getting subscribed to our youtube
+channel and don't forget to hit that
+bell icon to never miss an update from
+simply learn now without further ado
+let's get started with our one point
+agenda that is x lookup in excel now for
+that let's get started with the excel
+now we are on the practical mode that is
+microsoft excel now here you can see the
+first chart so this particular data is
+converted into a table format to avoid
+confusion while you're fixing the data
+so here you can see the name of the
+employee employee id department salary
+and date of joining and here you can see
+the salary column and the bonus
+percentage of each and every employee
+based on their salaries
+now coming to the new data table and
+here on the table 2 which is an updated
+table here you can find we are going to
+find out the department of the employee
+and the current department of employee
+and the bonus percentage based on his or
+her salary so why are we finding current
+department again
+so here you can see that we have an
+intern emily who has joined in the year
+2020 but recently she got promoted as a
+developer so her department has been
+changed from department intern to
+department developer in 2021 so that's
+what we're gonna find out here in the
+current department using x lookup now
+let's start to implement x lookup so for
+that
+equals to x lookup
+and for lookup you can see if you need
+to find out the lookup value lookup
+array written array and all the other
+two are
+not important right now but you can use
+them to get some exact matches in the
+future we'll also use that in the future
+for now let's try to use the first three
+parameters that is lookup value lookup
+array and written array so the lookup
+value is the name of the employee mary
+and lookup array is right here which is
+this one
+now we are going to select the lookup
+array then comma and
+we're going to look up the department so
+this is the department
+lookup array
+and that's all we need
+close the bracket and press enter okay i
+think we missed out the lookup value
+so the employee or the lookup value
+which we required was missed so i've
+added it here so that is the lookup
+value the first one which is mary and
+there you go
+press enter and you have the department
+here now let's add it to all the rows
+and here you have all the rows and all
+the data related to all the employees
+now we will find out the current
+department as you can see here you have
+emily as intern which is the older data
+but what if you needed the latest data
+that is the developer in the year 2021
+right for that you might want to to work
+the x lookup formula a little bit so
+let's try that
+x lookup
+lookup value which is the same
+and comma
+now where you have to look for the array
+that is lookup array this one
+and the return array which happens to be
+this one
+and next
+you can find the exact match for this
+one so that's all right exact match and
+here comes the important part where you
+have to search last to first by default
+x lookup searches for first to last that
+is like this in the starting place to
+the last place so that's the reason why
+we had emily as intern so now if we give
+last to first then it retrieves the
+latest data where emily will be shown as
+developer now select that and now you
+can close the brackets and press enter
+so let's add that to all the rows there
+you go now you can see emily clark peter
+and james all they have got their
+updated job profiles as you can see in
+the original data emily is a developer
+now so is clark who was originally a
+tester and he got promoted to
+development team in 2021 similarly peter
+became a senior finance executive in
+2021 and james the manager of sales now
+let's try to find out the bonus for all
+these employees based on their salary so
+this one is quite simple
+so x lookup
+now the lookup value is their existing
+salary
+comma
+and the bonus part so the lookup array
+is the salary range
+then here is another important point
+so here you might want to find the exact
+match but finding an exact match will
+not help you here you might want to
+declare another type of value where you
+can get exact match or next smaller item
+so you'll understand it why i'm
+selecting that so now let's close the
+bracket and enter
+so
+so now we have the bonus values now
+let's add the bonus value to all the
+factors all the rows i mean so you can
+see we have different variety of
+salaries that is 38 000
+2239 etc but here in the ranges we have
+provided 10 20 30 40 and 50. so what if
+the value is between 30 and 20 that's
+when you want the
+less number right that's when you want
+the number which is equal to 30 or less
+than 30 which happens to be 15 percent
+so that's how it has worked here that is
+0.15 bonus to the actual salary so
+that's how you use x lookup in excel if
+you have any queries regarding any of
+the topics covered in this session or if
+you need the data set that we have used
+in this particular session then please
+feel free to let us know in the comment
+section below and our team of experts
+will be happy to resolve all your
+queries until next time thank you stay
+safe and keep learning
+[Music]
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

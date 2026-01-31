@@ -1,0 +1,343 @@
+hello everyone and welcome to today's
+session on Windows function at simply
+learn by looking at the job posting we
+can see enormous demand for SQL
+developers across the globe from Finance
+to tech companies all of them deal with
+massive amounts of data therefore these
+industries need to process and extract
+meaningful information from the data SQL
+is basically used for accessing and
+managing data in relational databases
+one of the advanced feature of SQL that
+makes the data analysis more powerful is
+the use of window function so guys in
+this video we are going to uncover the
+fundamentals of window functions that
+are going to help you understand various
+aspects of how they work we will cover
+everything from what is a window
+function to different types of window
+functions providing clear examples and
+practical use cases craving a career
+upgrade subscribe like and comment
+below dive into the link in the
+description to FasTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back so guys before we move on just a
+quick info guys you can boost your
+career with the simply learns data
+analytics course in partnership with per
+University and in collaboration with IBM
+it features master classes and follows
+an applied learning model designed with
+real life projects and business case
+studies so guys before we move on I
+request request you that do not forget
+to hit the Subscribe button and click
+the Bell icon for further updates so
+let's get started so guys let's start
+with what is a window function so guys a
+window function performs a calculation
+across a set of table rows that are
+somehow related to the current row this
+is comparable to the type of calculation
+that can be done with an aggregate
+function however window functions do not
+cause rows to become grouped into a
+single output Row the rows retain their
+separate identities so you'll be
+wondering what exactly is an aggregate
+function so guys an aggregate function
+performs a calculation on a set of
+values and returns a single value common
+aggregate functions include like we can
+have a
+sum we can have an
+average we can have
+Max we can have count okay so these are
+some of the aggregate functions these
+functions typically used in in
+conjunction with Group by Clause to help
+the rows to have the same values in the
+specified columns into the summary rows
+for example the sum function can be used
+to calculate the total salary of each
+employees in a department so how let me
+show you a command suppose we can write
+select so Suppose there is a an
+employees table we have a department
+okay so from the Department column
+say some
+say we can take salary as argument okay
+salary field and we can use alas as and
+we are going to return the total
+salary from
+employees and then we use the group by
+clause
+so guys in this case the result set is
+grouped by department and each
+Department's total salary is calculated
+resulting in a one row per department so
+guys you'll be wondering what's the
+difference between aggregate function
+and a window function while both
+Aggregate and window functions perform
+calculations across set of rows but they
+defer them how they present the results
+aggregate functions reduce the number of
+rows in the result set by grouping them
+while window functions maintain the
+individual rows and add the calculated
+values as additional columns for
+instance guys using a window function to
+calculate the cumulative sum of the
+salaries so suppose we have this command
+okay and we have this employee table
+same so suppose select empid okay and
+here we have the department
+column then we have the salary column
+then we are using the aggregate function
+all over
+here and that's
+salary this is over and in this we can
+take order
+by so this is our clause and we can take
+ID all over
+here and we can use the Alias as and in
+this we are trying to find the
+cumulative
+salary from the table
+employees so guys in this example each
+row retains its individual identity and
+the cumulative sum of the salaries is
+calculated and displayed for each row
+this allows for more detailed and
+flexible data analysis without losing
+the context of individual records
+so guys I hope so you would have got a
+brief idea regarding this now let's move
+on and understand about what exactly is
+a window in SQL in SQL a window is
+defined as a set of rows that are
+related to the current Row the window is
+defined by the Over clause which can
+include Partition by order by and rows
+or range okay so these are the certain
+things so we have all over here
+Partition by
+okay so let us discuss each one of them
+one by one so guys in a SQL basically a
+window is defined as a set of rows that
+are related to the current row and the
+window is defined by the oveross which
+can include Partition by which basically
+divides the result set into partitions
+to which the window function is applied
+next is order by so guys order by
+defines the order of rows in each
+partition next we have rows or range
+which basically defines a subset of rows
+within the window frame now let us
+discuss what exactly is a function fun
+in SQL a function is a predefined
+operation that can perform calculations
+data manipulation and formatting
+functions can be scalar returning a
+single value or an aggregate returning a
+summarized value for a group of rowes
+now let us discuss the different types
+of window function so
+guys
+for for
+[Music]
+so guys our first function is aggregate
+function we have already discussed about
+aggregate function which includes sum
+average Max Min count and basically it
+Returns the summaries next we have the
+ranking function so guys ranking
+functions are a type of window function
+that assigns a rank to each row within
+the partition of a result set these
+functions are useful for the scenarios
+where you need to rank rows based on a
+specific criteria so our common ranking
+functions include the row number which
+ass assigns a unique number to each row
+starting from one for each partition
+next we have the rank which assigns a
+rank to each row within partition with
+gaps in the ranking if there are ties
+the third one is dense rank similar to
+the rank but without gaps in the ranking
+sequence when there are ties next we
+have antile n it basically divides the
+rows into the partition into n groups
+and assigns a group number to each row
+for example guys using rank function to
+rank employees based on their salaries
+within each department so you can type
+the same command like select employee ID
+Department salary okay and then you can
+use the rank or Partition by Department
+order by salary in the descending order
+and you can use the alas as rank from
+the employees table so guys this was a
+pretty simple example so you can try
+with the rank function now let us move
+on to our next function that is the
+value function value functions are the
+window functions that provide access to
+the value of a column from another row
+in the result set these functions are
+basically useful for comparing values
+from different rows common value
+functions include lag basically lag
+provides access to a value in a previous
+row within the same result set then we
+have the lead which provides access to a
+value in a subsequent row within the
+same result set next we have the first
+value which basically Returns the first
+value in an ordered partition next we
+have the last value which basically
+Returns the last last value in an
+ordered partition so guys Let Me Show
+You by using a lag function we can get
+the previous employee salary within each
+department so guys as you can see all
+over here we have taken select statement
+and then with employee ID Department
+salary these are the column names and
+here we are using the lack function
+which is a kind of a window function
+okay and we have taken this salary and
+one we have used a clause over then we
+have used Partition by Department order
+by employee ID
+as previous salary and here from the
+employees table so this is how the
+window function is generally used so
+below here what we are doing basically
+so with the help of lag function we are
+getting the previous employee salary
+within each department now guys consider
+this following table okay so we have the
+column name employee ID department and
+salary from the employee table all over
+here now we are going to understand what
+is a syntax of window function function
+so basically first you apply the window
+function then you take an Over clause
+and here use the Partition by then you
+have to use the partition expression
+then you can order by and you can do the
+sort expression and finally you conclude
+it with a frame Clause let us go through
+example to understand the SC so suppose
+in order to calculate the cumulative sum
+of the salaries how we are going to
+write the syntax so guys all over here
+you can see that we are using the select
+keyword then we selecting the employee
+ID department and the salary okay and
+then we are using a aggregate function
+which is a type of a window function and
+then what we are doing we are taking
+this column as our argument and then we
+are using over all over here okay so if
+you see the syntax guys then here
+Partition by okay then here is a
+partition expression so after over what
+we are basically doing we are using the
+partition buy so here partition buy is
+your order Buy in the same place and we
+are taking employee ID then you are
+writing the alas s basically calculating
+it as the cumulative salary from the
+employees table so this is a sample
+example of how we are achieving the
+window function using these syntax now
+let us try to understand how you can use
+a window function with the partition buy
+so guys as you can see all over here in
+this scenario we are selecting the
+employee ID the department and the
+salary and we are using the aggregate
+function sum and then we are using the
+Partition by keyword okay and with the
+Department this is our expression and
+then we are doing the order by Clause
+with the employee ID from the employees
+table so this is how the overall Syntax
+for this is I hope so you have got a
+brief idea that how we can apply the
+window function with the Partition by
+keyword so basically we are calculating
+the cumulative sum of salaries for each
+department with the help of window
+function now let us try to understand
+and next part so guys with the help of
+Select statement we are typing the
+employees ID department and salary we
+will be using row number as our window
+function over Partition by and
+Department order by salary description
+and then we are taking alas as from the
+row number and from the employees table
+so basically if you see this code so
+it's similar but here we are using row
+number as our window function let us
+take one more example now guys in the
+next example we we are going to learn
+how to use a dense rank function
+basically what we can do all over here
+we can select the required columns that
+is employee ID department and salary and
+then we can apply our dense rank
+function Over clause and you can use the
+partition buy by department and you can
+use order bu through the salary
+description from the employees so this
+is how you can apply the denr function
+so guys basically dense rank function is
+a ranking window function which is used
+to assign rank lank to each of the row
+within the partition of the result set
+and you can also see all over here that
+there should be no gaps within the
+ranking values so this function is
+basically useful when you need to find a
+dense ranking of the rows without
+skipping any rang numbers when there are
+any ties okay so guys this is a sample
+description which I have given for dense
+rang function so similar example we have
+used all over here so guys this was a
+short example I hope so you would have
+got a brief idea regarding this thank
+you guys for watching this video on sqls
+window function staying ahead in your
+career requires continuous learning and
+upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in Cutting Edge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos videos to nerd up and get
+certified click here

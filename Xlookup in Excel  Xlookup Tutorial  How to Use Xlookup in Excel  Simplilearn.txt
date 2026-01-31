@@ -1,0 +1,195 @@
+hi welcome to Simply Run YouTube channel
+on the tutorial on Excel X lookup X
+lookup was released by Microsoft 365 in
+2019 and is meant to replace vlookup
+hlookup and index match functions it
+enables users to search a specific value
+in table or range in this tutorial we
+will show you how to use xlookup to
+locate specific values in a column or a
+row
+or how to use filter the search result
+and how to use x lookup with other
+function like vlookup and if by the end
+of this tutorial you will have all the
+tools you need to X lookup to automate
+repetitive tasks and improve your data
+analysis skills so whether you are an
+Excel beginner or a seasoned Pro join us
+as we explore the power of xlx lookup
+before we begin let me tell you guys if
+you are an aspiring data analyst looking
+for online training and certification
+from prestigious universities and in
+collaboration with leading expert you
+have the most robust function skills
+knowledge and what it takes to be the
+best then search no more simply learns
+post graduation program in data
+analytics from Purdue University in
+collaboration with IBM should be your
+right choice for more details use the
+link in the description box below also
+want to get access to more informative
+content like this one get subscribed to
+our YouTube channel and hit the Bell
+icon so that you are the first to know
+when we host with that mind let's get
+started so this is our data set for the
+X lookup on Excel you can down load this
+data set from the description box below
+so here let's start with X lookup so
+here I would like equals to X
+lookup
+thank you so first we have to write this
+this is the formula for the X lookup X
+logo value X lookup lookup array return
+array and these three are the optionals
+okay if not found match model and the
+search mode these three are the option
+so the lookup value for me is the this
+stock number okay because only the stock
+number are the common on the both you
+know sheets you can say
+so B2 comma so now we have to see the
+lookup array so lookup array will be
+over this
+I will press the shift down arrow
+okay then enter
+okay
+so
+here the next thing is written array so
+what we want to return in this
+particular column okay that will be the
+price I want to print the price
+yes
+so before that what I will do I will add
+you can add the dollar sign using F4 I'm
+here adding manually
+okay
+the Anthology dollar 12 why we are
+adding the dollar sign for the range
+yeah so when I will drag from here to
+here all the price value will become
+okay yna because this stock number is
+not present in the particular this seat
+okay so this is how you can get the
+price but
+if you want
+if you want particular like the size
+brand and price all three what you can
+do you can simply drag here
+okay and you can add the dollar here
+or using you can add the dollar using F4
+um adding the manually press
+ok
+so as you can see we have this size we
+have the brand name and we have the
+price what I will do I will drag down
+okay so this is how you can you know
+fast the particular value using X lookup
+from the different different sheets
+this is how you can select the
+particular range
+what if you don't want
+all the three columns but you want the
+size and the price and you don't want
+the brand
+for that what you will do
+you will hear right
+choose
+then bracket
+here you will start with the curly
+brackets
+here you will write the how many columns
+do you need one two three four five six
+okay so here I will write the
+I need the two columns
+okay then
+what will be your first column
+uh
+I want my first column
+should be the price
+so
+here I will select zip
+I will select the price
+as my first column
+okay
+okay my bad
+I want
+my first column
+here I will add the dollar sign
+you can use the F4
+and I want my second column should be
+the size
+okay
+here I will add the dollar sign
+why we are adding dollar sign for the
+particular range for the full range of
+the size
+okay so here I will enter
+so I will drag down
+okay
+so as you can see here in the First
+Column we have the price and the second
+column we have the particular size
+okay so this is how you can select the
+particular cell for the X lookup
+okay not dragging and dropping but you
+found to this and this size okay how
+this is you can select so now as you can
+see we are getting this n a value here
+okay for that what you can do
+double click here so
+here
+I will give a comma so here as you can
+see if not found okay for that but I can
+get the double
+this is and hit the enter
+and I will drag down
+so as you can see the blank space
+because we haven't wrote here something
+okay so here I will write the no
+match enter
+okay I have already here
+enter
+then I will drag it down then as you can
+see here we have the custom value now no
+match
+so
+this is how you can
+fill the blank space or the not matching
+values from your custom values
+so this is how you can use the X lookup
+but here we are using in a particular
+single sheet you can add the multiple
+sheet
+and you can same way you can use the X
+lookup as we did in the this sheet
+that's how you use xlookup if you have
+any queries regarding X lookup you can
+comment down below our team of expert
+will help you as soon as possible till
+then thank you and keep learning staying
+ahead in your career requires continuous
+learning and upskilling whether you're a
+student aiming to learn today's top
+skills or a working professional looking
+to advance your career we've got you
+covered explore our impressive catalog
+of certification programs in Cutting
+Edge domains including data science
+cloud computing cyber security AI
+machine learning or digital marketing
+designed in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+foreign
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
