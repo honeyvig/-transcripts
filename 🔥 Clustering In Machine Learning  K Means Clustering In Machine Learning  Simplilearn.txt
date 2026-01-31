@@ -1,0 +1,1093 @@
+clustering in machine learning welcome
+to Simply learn in this video we will
+see what is clustering and understand K
+means clustering in machine learning so
+before we begin consider subscribing to
+Simply learn and hit the Bell icon to
+never miss any updates from us so what
+is gin's clustering gan's clustering is
+an unsupervised learning algorithm in
+this case you you don't have labeled
+data unlike in supervised learning so
+you have a set of data and you want to
+group them and as the name suggests you
+want to put them into clusters which
+means objects that are similar in nature
+similar in characteristics need to be
+put together so that's what K means
+clustering is all about the term k is
+basically is a number so we need to tell
+the system how many clusters we need to
+perform so if K is equal to 2 there will
+be two clusters if K is equal to three
+three clusters and so on and so forth
+that's what the k stands for and of
+course there is a way of finding out
+what is the best or Optimum value of K
+for a given data we will look at that so
+that is K means cluster so let's take an
+example K me's clustering is used in
+many many scenarios but let's take an
+example of Cricket the game of cricket
+let's say you received data of a lot of
+players from Maybe all over the country
+or all over the world and this data has
+information about the runs scored by the
+people or by the player and the wickets
+taken by the player and based on this
+information we need to Cluster this data
+into two clusters batsmen and Bowlers so
+this is an interesting example let's see
+how we can perform this so we have the
+data which consists of primarily two
+characteris itics which is the runs and
+the wickets so the bowlers basically
+take wickets and the batsman score runs
+there will be of course a few Bowlers
+who can score some runs and similarly
+there will be some batsmen who will Who
+would have taken a few wickets but with
+this information we want to Cluster
+those players into batsmen and Bowlers
+so how does this work let's say this is
+how the data is so there are information
+there is information on the Y AIS about
+the Run scored and on the x-axis about
+the wickets taken by the players so if
+we do a quick plot this is how it would
+look and um when we do the clustering we
+need to have the Clusters like shown in
+the third diagram out here so we need to
+have a cluster which consists of people
+who have scored High runs which is
+basically the batsman and then we need a
+cluster with people who have taken a lot
+of wickets which is typically the the
+Bowers there may be a certain amount of
+overlap but we will not talk about it
+right now so with C in's clustering we
+will have here that means K is equal to
+2 and we will have two clusters which is
+batsmen and Bowlers so how does this
+work the way it works is the first step
+in cayman's clustering is the allocation
+of two centroids randomly so two points
+are assigned as so-called centroids so
+in this case we want two clusters which
+means K is equal to 2 so two points have
+been randomly assigned as centroids keep
+in mind these points can be anywhere
+there are random points they are not
+initially they are not really the
+centroids centroid means it's a central
+point of a given data set but in this
+case when it starts off it's not really
+the centroid okay so these points though
+in our presentation here we we have
+shown them one point closer to these
+data points and another closer to these
+data points they can be assigned
+randomly anywhere okay so that's the
+first step the next step is to determine
+the distance of each of the data points
+from each of the randomly assigned
+centroids so for example we take this
+point and find the distance from this
+centroid and the distance from this
+centroid this point is taken and the
+distance is found from this centroid and
+this Cent and so on and so forth so for
+every point the distance is measured
+from both the centroids and then
+whichever distance is less that point is
+assigned to that centroid so for example
+in this case visually it is very obvious
+that all these data points are assigned
+to this centroid and all these data
+points are assigned to this centroid and
+that's what is represented here in blue
+color and in this yellow color the next
+step is to actually determine the
+central point or the actual centroid for
+these two clusters so we have this one
+initial cluster this one initial cluster
+but as you can see these points are not
+really the centroid centroid means it
+should be the centrer position of this
+data set Central position of this data
+set so that is what needs to be
+determined as the next step so the
+central point or the actual Cent is
+determined and the original randomly
+allocated ated centroid is repositioned
+to the actual centroid of this new
+clusters and this process is actually
+repeated now what might happen is some
+of these points may get reallocated in
+our example that is not happening
+probably but it may so happen that the
+distance is found between each of these
+data points once again with these
+centroids and if there is if it is
+required some points may be reallocated
+we will see that in a later example but
+for now we will will'll keep it simple
+so this process is continued till the
+centroid repositioning stops and that is
+our final cluster so this is our so
+after iteration we come to this position
+this situation where the centroid
+doesn't need any more repositioning and
+that means our algorithm has converged
+convergence has occurred and we have the
+cluster two clusters we have the
+Clusters with a cide so this process is
+repeated the process of calculating the
+distance and repositioning the centroid
+is repeated till the repositioning stops
+which means that the algorithm has
+converged and we have the final cluster
+with the data points what are the types
+of clustering there are primarily two
+categories of clustering hierarchical
+clustering and then partitional
+clustering and each of these categories
+are further subdivided into into
+agglomerative and divisive clustering
+and K means and fuzzy c means clustering
+let's take a quick look at what each of
+these types of clustering are in
+hierarchical clustering the Clusters
+have a tree like structure and
+hierarchical clustering is further
+divided into agglomerative and divisive
+agglomerative clustering is a bottom of
+approach we begin with each element as a
+separate cluster and merge them into
+successively large clusters so for
+example we have a b CDE e f we start by
+combining B and C form one cluster d and
+e form one more then we combine d and f
+one more bigger cluster and then add BC
+to that and then finally a to it
+compared to that divisive clustering or
+divisive clustering is a top- down
+approach we begin with the whole set and
+proceed to divide it into successively
+smaller clusters so we have a b CDE e f
+we first take that as a single cluster
+and then break it down into a b c d e
+and f then we have partitional
+clustering split into two subtypes k
+means clustering and fuzzy c means in K
+means clustering the objects are divided
+into the number of clusters mentioned by
+the number K that's where the K comes
+from so if we say k is equal to 2 the
+objects are divided into two clusters C1
+and C2 and the way it is done is the
+features or characteristics are compared
+and all objects having similar
+characteristics are clubbed together so
+that's how K means clustering is done we
+will see it in more detail as we move
+forward and fuzzy seans is very similar
+to K means in the sense that it clubs
+objects that have similar
+characteristics together but while in C
+in's clustering two objects cannot
+belong to or any object a single object
+cannot belong to two different clusters
+in C means objects can belong to more
+than one cluster so that is the primary
+difference between K means and fuzzy c
+means so what are some of the
+applications of kain's clustering kain's
+clustering is used in a variety of
+examples or variety of business cases in
+real life starting from academic
+performance diagnostic system search
+engines and wireless sensor networks and
+many more so let us take a little deeper
+look at each of these examples academic
+performance So based on the scores of
+the students students are categorized
+into a b c and so on clustering forms a
+backbone of search engines when a search
+is performed the search results need to
+be grouped together the search engines
+very often use clustering to do this and
+similarly in case of wireless sensor
+networks the clustering algorithm plays
+the role of finding the cluster heads
+which collects all the data in its
+respective cluster stuff so clustering
+especially K means clustering uses
+distance measure so let's take a look at
+what is distance measure so while these
+are the different types of clustering in
+this video we will focus on K means
+clustering so distance measure tells how
+similar some objects are so the
+similarity is measured using what is
+known as distance measure and what are
+the various types of distance measures
+there is you ucan distance there is
+Manhattan distance then we have squared
+ukian distance measure and cosine
+distance measure these are some of the
+distance measures supported by K means
+clustering let's take a look at each of
+these what is ukian distance measure
+this is nothing but the distance between
+two points so we have learned in high
+school how to find the distance between
+two points this is a little
+sophisticated formula for that but we
+know a simpler one is square root of of
+Y2 - y1 s + X2 - X1 s so this is an
+extension of that formula so that is the
+ukian distance between two points what
+is the squared ukian distance measure
+it's nothing but the square of the ukian
+distance as the name suggests so instead
+of taking the square root we leave the
+square as it is and then we have
+Manhattan distance measure in case of
+Manhattan distance it is the sum of the
+distances across the x- axis and the Y
+AIS and note that we are taking the
+absolute value so that the negative
+values don't come into play so that is
+the Manhattan distance measure then we
+have cosine distance measure in this
+case we take the angle between the two
+vectors formed by joining the points
+from the origin so that is the cosine
+distance measure okay so that was a
+quick overview about the various
+distance measures that are supported by
+K means now let's go and check how
+exactly K means clustering works okay so
+this is how K Main's clustering works
+this is like a flowchart of the whole
+process there is a starting point and
+then we specify the number of clusters
+that we want now there are couple of
+ways of doing this we can do by trial
+and error so we specify a certain number
+maybe K is equal to 3 or four or 5 to
+start with and then as we progress we
+keep changing until we get the best
+clusters or there is a technique called
+elbow technique whereby we can determine
+the value of K what should be the best
+value of K how many clusters should be
+formed so once we have the value of K we
+specify that and then the system will
+assign that many centroid so it picks
+randomly that to start with randomly
+that many points that are considered to
+be the centroids of these clusters and
+then it measures the distance of each of
+the data points from these centroids and
+assigns those points to the
+corresponding centroid from which the
+distance is minimum so each data point
+will be assigned to the centroid Which
+is closest to it and thereby we have K
+number of initial clusters however this
+is not the final clusters the next next
+step it does is for the new groups for
+the Clusters that have been formed it
+calculates the mean position thereby
+calculates the new centroid position the
+position of the centroid moves compared
+to the randomly allocated one so it's an
+iterative process once again the
+distance of each point is measured from
+this new centroid point and if required
+the data points are reallocated to the
+new centroids and the mean position or
+the new centroid is calculated once
+again if the centroid moves then the
+iteration continues which means the
+convergence has not happened the
+clustering has not converged so as long
+as there is a movement of the centroid
+this iteration keeps happening but once
+the centroid stops moving which means
+that the cluster has converged or the
+clustering process has converged that
+will be the end result so now we have
+the final position of the centroid and
+the data points are allocated
+accordingly to the closest centroid I
+know it's a little difficult to
+understand from this simple flowchart so
+let's do a little bit of visualization
+and see if we can explain it better
+let's take an example if we have a data
+set for a grocery shop so let's say we
+have a data set for a grocery shop and
+now we want to find out how many
+clusters this has to be spread across so
+how do we find the optimum number of
+clusters there is a technique called the
+elbow method so when these clusters are
+formed there is a parameter called
+within sum of squares and the lower this
+value is the better the cluster is that
+means all these points are very close to
+each other so we use this within sum of
+squares as a measure to find the optimum
+number of clusters that can be formed
+for a given data set so we create
+clusters or we let the system create
+clusters of a variety of numbers maybe
+of 10 10 clusters and for each value of
+K the within SS is measured and the
+value of K which has the least amount of
+within SS or WSS that is taken as the
+optimum value of K so this is the
+diagrammatic representation so we have
+on the Y AIS the within sum of squares
+or WSS and on the x- axis we have the
+number of clusters so as you can imagine
+if you have K is equal to 1 which means
+all the data points are in a single
+cluster the with's value will be very
+high because they are probably scattered
+all over the moment you split it into
+two there will be a drastic fall in the
+within SS value and that's what is
+represented here but then as the value
+of K increases the decrease the rate of
+decrease will not be so high it will
+continue to decrease but probably the
+rate of decrease will not be high so
+that gives us an idea so from here we
+get an idea for example the optimum
+value of K should be either two or three
+or at the most four but beyond that
+increasing the number of clusters is not
+dramatically changing ing the value in
+WSS because that pretty much gets
+stabilized okay now that we have got the
+value of K and let's assume that these
+are our delivery points the next step is
+basically to assign two centroids
+randomly so let's say C1 and C2 are the
+centroids assigned randomly now the
+distance of each location from the
+centroid is measured and each point is
+assigned to the centroid which is
+closest to it so for example these
+points are very obvious that these are
+closest to C1 whereas this point is far
+away from C2 so these points will be
+assigned which are close to C1 will be
+assigned to C1 and these points or
+locations which are close to C2 will be
+assigned to C2 and then so this is the
+how the initial grouping is done this is
+part of C1 and this is part of C2 then
+the next step is to calculate the actual
+centroid of this data because remember
+C1 and C2 are not the centroids they've
+been randomly assigned points and only
+thing that has been done was the data
+points which are closest to them have
+been assigned to them but now in this
+step the actual centroid will be
+calculated which may be for each of
+these data sets somewhere in the middle
+so that's like the mean point that will
+be calculated and the centroid will
+actually be positioned or repositioned
+there same with C2 so the new centroid
+for this group is C2 in this new
+position and C1 is in this new position
+once again the distance of each of the
+data points is calculated from these
+centroids now remember it's not
+necessary that the distance Still
+Remains the or each of these data points
+still remain in the same group by
+recalculating the distance it may be
+possible that some points get
+reallocated like so you see this so this
+point earlier was closer to C2 because
+C2 was here but after recalculating
+repositioning it is observed that this
+is closer to C1 than C2 so this is the
+new grouping so some points will be
+reassigned and again the centroid will
+be calculated and if the centroid
+doesn't change so that is a repetative
+process iterative process and if the
+centroid doesn't change once the
+centroid stops changing that means the
+algorithm has converged and this is our
+final cluster with this as the centroid
+C1 and C2 as the centroids these data
+points as a part of each cluster so I
+hope this helps in understanding the
+whole process iterative process of K
+means clustering so let's take a look at
+the K means clustering algorithm let's
+say we have X1 X2 X3 n number of points
+as our inputs and we want to split the
+into K clusters or we want to create K
+clusters so the first step is to
+randomly pick K points and call them
+centroids they are not real centroids
+because centroid is supposed to be a
+center point but they are just called
+centroids and we calculate the distance
+of each and every input point from each
+of the centroids so the distance of X1
+from C1 1 from C2 C3 each of the
+distances we calculate and then find out
+which distance is the lowest and assign
+X1 to that particular random centroid
+repeat that process for X2 calculate its
+distance from each of the centroids C1
+C2 C3 up to CK and find which is the
+lowest distance and assign X2 to that
+particular Cent same with X3 and so on
+so that is the first round of assignment
+that is done now we have K groups
+because there are we have assigned the
+value of K so there are K centroids and
+uh so there are K groups all these
+inputs have been split into K groups
+however remember we picked the centroids
+randomly so they are not real centroids
+so now what we have to do we have to
+calculate the actual centroids for each
+of these groups which is like the main
+position which means that the position
+of the randomly selected centroids will
+now change and they will be the main
+positions of these newly formed K groups
+and once that is done we once again
+repeat this process of calculating the
+distance right so this is what we are
+doing as a part of step four we repeat
+step two and three so we again calculate
+the distance of X1 from the centroid C1
+C2 C3 and then see which is the lowest
+value and assign X1 to that calculate
+the distance of X2 from C1 C2 C3 or
+whatever up to CK and find whichever is
+the lowest distance and assign X2 to
+that Centro and so on in this process
+there may be some reassignment X1 was
+probably assigned to Cluster C2 and
+after doing this calculation maybe now
+X1 is assigned to C1 so that kind of
+reallocation may happen so we repeat the
+steps two and three till the position of
+the centroids don't change or stop
+changing and that's when we have
+convergence so let's take a detailed
+look at at each of these steps so we
+randomly pick K cluster centers we call
+them centroids because they are not
+initially they are not really the
+centroids so we let us name them C1 C2
+up to CK and then step two we assign
+each data point to the closest Center so
+what we do we calculate the distance of
+each x value from each C value so the
+distance between X1 C1 distance between
+X1 C2 X1 C3 and then we find which is
+the lowest value right that's the
+minimum value we find and assign X1 to
+that particular centroid then we go next
+to X2 find the distance of X2 from C1 X2
+from C2 X2 from C3 and so on up to CK
+and then assign it to the point or to
+the centroid which has the lowest value
+and so on so that is Step number two in
+Step number three We Now find the actual
+centroid for each group so what has
+happened as a part of Step number two we
+now have all the points all the data
+points grouped into K groups because we
+we wanted to create K clusters right so
+we have K groups each one may be having
+a certain number of input values they
+need not be equally distributed by the
+way based on the distance we will have K
+groups but remember the initial values
+of the C1 C2 were not really the
+centroids of these groups right we
+assigned them randomly so now in step
+three we actually calculate the centroid
+of each group which means the original
+point which we thought was the centroid
+will shift to the new position which is
+the actual centroid for each of these
+groups okay and we again calculate the
+distance so we go back to step two which
+is what we calculate again the distance
+of each of these points from the newly
+positioned centroids and if required we
+reassign these points to the new
+centroids so as I said earlier there may
+be a reallocation so we now have a new
+set or a new group we still have K
+groups but the number of items and
+actual assignment may be different from
+what was in step two here okay so that
+might change then we perform step three
+once again to find the new centroid of
+this new group so we have again a new
+set of clusters new centroids and new
+assignments we repeat this step two
+again once again we find and then it is
+possible that after iterating through
+three or four or five times the centroid
+will stop moving in the sense that when
+you calculate the new value of the
+centroid that will be same as the
+original value or there will be very
+marginal change so that is when we say
+convergence has occurred and that is our
+final cluster that's the formation of
+the final cluster all right so let's see
+a couple of demos of uh K mean's
+clustering we will actually see some
+live Demos in uh python notebook using
+python notebook but before that let's
+find out what's the problem that we are
+trying to solve the problem statement is
+let's say Walmart wants to open a chain
+of stores across the State of Florida
+and uh it wants to find the optimal
+store locations now the issue here is if
+they open too many stores close to each
+other obviously the they will not make
+profit but if they if the stores are too
+far apart then they will not have enough
+sales so how do they optimize this now
+for an organization like Walmart which
+is an e-commerce giant they already have
+the addresses of their customers in
+their database so they can actually use
+this information or this data and use ke
+means clustering to find the optimal
+location now before we go into the
+python notebook and show you the Live
+code I wanted to take you through very
+quickly a summary of the code in the
+slides and then we will go into the
+python notebook so in this block we are
+basically importing all the required
+libraries like numpy matplot Leb and so
+on and we are loading the data that is
+available in the form of let's say the
+addresses for Simplicity sake we will
+just take them as some data points then
+the next thing we do is quickly do a
+scatter plot to see how they are related
+to each other with respect to each other
+so in the scatter plot we see that there
+are a few distinct groups already being
+formed so you can actually get an idea
+about how the cluster would look and how
+many clusters what is the optimal number
+of clusters and then starts the actual K
+means clustering process so we will
+assign each of these points to the
+centroids and then check whether they
+are the optimal distance which is the
+shortest distance and assign each of the
+points data points to the centroids and
+then go through this iterative process
+till the whole process converges and
+finally we get an output like this so we
+have four distinct
+clusters and um which is we can say that
+this is how the population is probably
+distributed across Florida State and uh
+the centroids are like the location
+where the store should be the optimum
+location where the store should be so
+that's the way we determine the best
+locations for the store and that's how
+we can help Walmart find the best
+locations for the store stores in
+Florida so now let's take this into
+python notebook let's see how this looks
+when we are learning running the code
+live all right so this is the code for K
+means clustering in Jupiter notebook we
+have a few examples here which we will
+demonstrate how K means clustering is
+used and even there is a small
+implementation of kin's clustering as
+well okay so let's get started okay so
+this block is basically importing the
+various libraries that are required like
+M plot lib and numpy and so on and so
+forth which would be used as a part of
+the code then we are going and creating
+blobs which are similar to clusters now
+this is a very neat feature which is
+available in psychic learn make blobs is
+a nice feature which creates clusters of
+data sets so that's a wonderful
+functionality that is readily available
+for us to create some test data kind of
+thing thing okay so that's exactly what
+we are doing here we are using make
+blobs and we can specify how many
+clusters we want so centers we are
+mentioning here so it will go ahead and
+so we just mentioned four so it will go
+ahead and create some test data for us
+and this is how it looks as you can see
+visually also we can figure out that
+there are four distinct classes or
+clusters in this data set and that is
+what make blobs actually provides now
+from here onwards we will basically run
+the standard K means functionality that
+is readily available so we really don't
+have to implement K means itself the K
+means functionality or the the function
+is readily available you just need to
+feed the data and we create the Clusters
+so this is the code for that we import K
+means and then we create an instance of
+K means and we SP specify the value of K
+this ncore clusters is the value of K
+remember K means in K means K is
+basically the number of clusters that
+you want to create and it is a integer
+value so this is where we are specifying
+that so we have K is equal to four and
+so that instance is created we take that
+instance and as with any other machine
+learning functionality fit is what we
+use the function or the method rather
+fit is what we use
+to train the model here there is no real
+training uh kind of thing but that's the
+call okay so we are calling fit and what
+we are doing here we are just passing
+the data so X has these values the data
+that has been created right so that is
+what we are passing here and uh this
+will go ahead and create the Clusters
+and uh then we are
+using after doing uh fit We Run The
+predict
+which basically assigns for each of
+these observations which cluster it
+belongs to all right so it will name the
+Clusters maybe this is cluster one this
+is two three and so on or will actually
+start from zero cluster 0 1 2 and three
+maybe and then for each of the
+observations it will assign based on
+which cluster it belongs to it will
+assign a value so that is stored in Yore
+K means when we call that is what it
+does and we can take a quick look at
+these Yore K means or the cluster
+numbers that have been assigned for each
+observation so this is the cluster
+number assigned for observation one
+maybe this is for observation two
+observation three and so on so we have
+how many about I think 300 samples right
+so all the 300 samples there are 300
+values here each of them the cluster
+number is given and the cluster number
+goes from 0 to 3 so there are four
+clusters so the numbers go from 0 1 2 3
+so that's what is seen here okay now so
+this was a quick example of generating
+some dummy data and then clustering that
+okay and this can be applied if you have
+proper data you can just load it up into
+X for example here and then run the C so
+this is the central part of the cin
+clustering program example so you
+basically create an instance and you
+mention how many clusters you want by
+specifying this parameter andore
+clusters and that is also the value of K
+and then pass the data to get the values
+now the next section of this code is the
+implementation of a k means now this is
+kind of a rough implementation of the K
+means algorithm so we will just walk you
+through I will walk you through the code
+uh at each step what it is doing and
+then we will see a couple of more
+examples of how K means clustering uh
+can can be used in maybe some real life
+examples real life use cases all right
+so in this case here what we're doing is
+basically implementing g means
+clustering and there is a function for a
+library calculates for a given two pairs
+of points it will calculate the the
+distance between them and see which one
+is the closest and so on so this is like
+this is pretty much like what K means
+does right so it calculates the distance
+of each point or each data set from
+predefined centroid and then based on
+whichever is the lowest this particular
+data point is assigned to that cide so
+that is basically available as a
+standard function and we will be using
+that here so as explained in the slides
+the first step that is done in case of
+kin's clustering is to randomly assign
+some centroids so as a first step we
+randomly allocate a couple of centroids
+which we call here we are calling as
+centers and then we put this in a loop
+and we take it through an iterative
+process for each of the data points we
+first find out using this function
+pairwise distance argumen for each of
+the points we find out which one which
+Center or which uh randomly selected
+centroid is the closest and accordingly
+we assign that data or the data point to
+that particular Cent roid or cluster and
+once that is done for all the data
+points we calculate the new centroid by
+finding out the mean position with the
+the center position right so we
+calculate the new centroid and then we
+check if the new centroid is the
+coordinates or the position is the same
+as the previous centroid the positions
+we will compare and if it is the same
+that means the processor has converged
+so remember we do this process till the
+centroids or the centroid doesn't move
+anymore right so the centroid gets
+relocated each time this reallocation is
+done so the moment it doesn't change
+anymore the position of the centroid
+doesn't change anymore we know that
+convergence has occurred so till then so
+you see here this is like an infinite
+Loop while true is an infinite Loop it
+only breaks when the centers are the
+same the new center and the old Center
+positions are the same and once that is
+uh done we return the centers and the
+labels now of course as explained this
+is not a very sophisticated and advanced
+implementation very basic implementation
+because one of the flaws in this is that
+sometimes what happens is the centroid
+the position will keep moving but in the
+change will be very minor so in that
+case also with that is actually
+convergence right so for example the
+change is
+01 we can consider that as convergence
+otherwise what will happen is this will
+either take forever or it will be never
+ending so that's a small flaw here so
+that is something additional checks may
+have to be added here but again as
+mentioned this is not the most
+sophisticated implementation this like a
+kind of a rough implementation of the K
+means clustering okay so if we execute
+this code this is what we get as the
+output so this is the definition of this
+particular function and then we call
+that find underscore clusters and we
+pass our data X and the number of
+clusters which is four and if we run
+that and plot it this is the output that
+we get so this is of course each cluster
+is represented by a different color so
+we have a cluster in green color yellow
+color and so on and so forth and these
+big points here these are the centroids
+this is the final position of the
+centroids and as you can see visually
+also this appears like a kind of a
+center of all these points here right
+similarly this is like the center of all
+these points here and so on so this is
+the example or this is an example of a
+implementation of K means clustering and
+uh next we will move on to see a couple
+of examples of how K means clustering is
+used in maybe some real life scenarios
+or use cases in the next example or demo
+we are going to see how we can use K
+means clustering to perform color
+compression
+we will take a couple of images so there
+will be two examples and uh we will try
+to use Cam's clustering to compress the
+colors this is a common situation in
+image processing when you have an image
+with millions of uh colors but then you
+cannot render it on some devices which
+may not have enough memory uh so that is
+the scenario where where something like
+this can be used so before again we go
+go into the python notebook let's take a
+look at quickly the the code as usual we
+import the libraries and then we import
+the image and uh then we will flatten it
+so the reshaping is basically we have
+the image information is stored in the
+form of pixels and uh if the image is
+like for example 427 by 640 and it has
+three colors so that's the overall
+dimension of of the of the initial image
+we just reshape it and um then feed this
+to our algorithm and this will then
+create clusters of only 16 clusters so
+this this colors there are millions of
+colors and now we need to bring it down
+to 16 colors so we use K is equal to 16
+and U this is how when we visualize this
+is how it looks there are these are all
+about 16 million possible color colors
+the input color space has 16 million
+possible colors and we just some
+compress it to 16 colors so this is how
+it would look when we compress it to 16
+colors and this is how the original
+image looks and after compression to 16
+colors this is how the new image looks
+as you can see there is not a lot of
+information that has been lost though
+the image quality is defitely reduced a
+little bit so this is an example which
+we are going to now see in Python
+notbook let's go into the python notbook
+and once again as always we will import
+some libraries and load this image
+called flower. jpg okay so let we load
+that and this is how it looks this is
+the original image which has I think 16
+million colors and uh this is the shape
+of this image which is BAS basically
+what is the shape is nothing but the
+overall size right so this is 427 pixel
+by 640 pixel and then there are three
+layers which is this three basically is
+for RGB which is red green blue so color
+image will have that right so that is
+the shape of this now what we need to do
+is data let's take a look at how data is
+looking so let me just create a new cell
+and show you what is in data basically
+we have captured this information
+so data is what let me just show you
+here all right so let's take a look at
+China what are the values in China and
+uh if we see here this is how the data
+is stored this is nothing but the pixel
+values okay so this is like a matrix and
+each one has about for for this 427 by
+640 pixels all right so this is how it
+looks now the issue here is the these
+values are large the numbers are large
+so we need to normalize them to between
+0er and one right so that's why we will
+basically create one more variable which
+is data which will contain the values
+between zero and one and the way to do
+that is divide by 255 so we divide China
+by 255 and we get the new values in data
+so let's just run this a piece of code
+and this is the shape so we now have
+also yeah what we have done is we
+changed using reshape we converted into
+the three-dimensional into a
+two-dimensional data set and let us also
+take a look at
+how let me just
+insert probably a cell here and take a
+look at how data is looking all right so
+this is how data is looking and now you
+see this is the values are between zero
+and one right so if you earlier noticed
+in case of china the values were large
+numbers now everything is between 0 and
+one this is one of the things we need to
+do all right so after that the next
+thing that we need to do is to visualize
+this and uh we can take random set of
+maybe 10,000 points and plot it and
+check and see how this looks so let us
+just plot this and so this is how the
+original the color the pixel
+distribution is these are two plots one
+is red against Green and another is red
+against Blue and this is the original
+distribution of the color so then what
+we will do is we will use K mean's
+clustering to create just 16 clusters
+for the various colors and then apply
+that to the image now what will happen
+is since the data is large because there
+are millions of colors using regular K
+means maybe a little time consuming so
+there is another version of K means
+which is called mini batch K means so we
+will use that which is which processes
+in the overall concept Remains the Same
+but this basic basically processes it in
+smaller batches that's the only thing
+okay so the results will pretty much be
+the same so let's go ahead and execute
+this piece of code and also visualize
+this so that we can see that there are
+this this is how the 16 colors uh would
+look so this is red against Green and
+this is red against Blue there is uh
+quite a bit of similarity between this
+original color schema and the new one
+right so it doesn't look very very
+completely different or anything
+anything like that now we apply this the
+newly created colors to the image and uh
+we can take a look how this is uh
+looking now we can compare both the
+images so this is our original image and
+this is our new image so as you can see
+there is not a lot of information that
+has been lost uh it pretty much looks
+like the original image yes we can see
+that for example here there is a little
+bit uh it appears a little dullish
+compared to this one right because uh we
+kind of took off some of the finer
+details of the color but overall the
+high level information has been
+maintained at the same time the main
+advantage is that now this can be this
+is an image which can be rendered on a
+device which may not be that very
+sophisticated now let's take one more
+example with a different image in the
+second example we will take an image of
+the Summer Palace in China and we repeat
+the same process this is a high
+definition color image with millions of
+colors and also uh
+three-dimensional uh now we will reduce
+that to 16 colors using K means
+clustering and um we do the same process
+like before we reshape it and then we
+cluster the colors to 16 and then we
+render the image once again and we will
+see that the color the quality of the
+image slightly deteriorates as you can
+see here this has much finer details in
+this which are probably missing here but
+then that's the compromise because there
+are some devices which may not be able
+to handle this kind of high density
+images so let's run this code in Python
+notebook all right so let's apply the
+same technique for another picture which
+is uh even more intricate and has
+probably much complicated color schema
+so this is the image now once again uh
+we can take a look at the shape which is
+427 by 640 by 3 and this is the new data
+would look somewhat like this compared
+to the flower image so we have some new
+values here and we will also bring this
+as you can see the numbers are much big
+so we will much bigger so we will now
+have to uh scale them down to values
+between 0er and one and that is done by
+dividing by 255 so let's go ahead and uh
+do that and reshape it okay so we get a
+two- dimensional Matrix and uh we will
+then as a next step we will go ahead and
+visualize this how it looks the the 16
+colors and this is basically how it
+would look 16 million colors and now we
+can create the Clusters out of this the
+6
+cin clusters we will create so this is
+how the distribution of the pixels would
+look with 16 colors and then we go ahead
+and uh apply this and visualize how it
+is looking for with the with the new
+just the 16 color so once again as you
+can see this looks much richer in color
+but at the same time and this probably
+doesn't have as we can see it doesn't
+look as rich as this one but
+nevertheless the information is not lost
+the shape and all that stuff and this
+can be also rendered on a slightly a
+device which is probably not that
+sophisticated okay so that's pretty much
+it so we have seen two examples of how
+color compression can be done uh using
+K's clustering and we have also seen in
+the previous examples of how to
+implement K means the code to roughly
+how to implement uh kin clustering and
+we use some sample data using blob to
+just execute the C's clustering thank
+you moan that was really informative now
+on to Richard to help you learn more
+algorithms so the decision tree one of
+the many powerful tools in the machine
+learning library begins with a problem I
+think I have to buy a car so in making
+this question you want to know how do I
+decide which one to buy and you're going
+to start asking questions is a mileage
+greater than 20 is a price less than 50
+will it be sufficient for six people
+does it have enough airbag anti-lock
+brakes all these questions come up then
+as we feed all this data in we make a
+decision and that decision comes up oh
+hey this seems like a good idea here's a
+car so as we go through this decision
+process using a decision tree we're
+going to explore this maybe not in
+buying a car but in how to process
+data staying ahead in your career
+requires continuous learning and
+upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to ner up and get certified click
+here

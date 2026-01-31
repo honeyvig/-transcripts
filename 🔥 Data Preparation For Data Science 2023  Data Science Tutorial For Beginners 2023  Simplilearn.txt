@@ -1,0 +1,771 @@
+welcome to Simply learn in this video we
+will see what is data science need of
+data science skills in data science data
+preparation for data science so before
+we begin consider subscribing to Simply
+land and hit the Bell icon to never miss
+any updates from us now you must have
+already heard about autonomous cars so
+I'm sure you must be excited to have a
+car driving by itself which will take
+you from home to office or office to
+home right and that's where one of the
+examples where data science is used now
+the car needs to take a lot of decisions
+in this whole process whether to speed
+up whether to apply the break take a
+left turn right turn or slow down so all
+these decisions are basically a part of
+data science and there is a study that
+says that self-driving cars will
+minimize is accidents and in fact it
+will root out more than 2 million deaths
+caused by car accidents annually
+self-driving cars right now there's a
+lot of research and there is a lot of
+testing going on and not a lot of cars
+are yet in production in terms of usage
+but it's going to happen every
+automotive company worth its name is
+investing in self-driving cars so in
+about 10 15 years some of the studies
+say that most of the cars will be
+autonomous or self-driving cars where
+else there are issues for example if we
+take Airlines this is another area where
+data science contributes in a major way
+flights get delayed due to weather
+conditions because the weather is not
+predicted in time and the demand of
+passengers is not probably seen ahead of
+time for all the these un need data
+signs then this could be improper route
+planning and uh some customers might
+miss some flights that again needs data
+science and similarly it could be
+incorrect decisions in selecting the
+right equipment so which plane should
+fly in which route that's the equipment
+that's being mentioned here if that is
+not planned properly then you might end
+up in a situation where the plane is not
+available whereas you have planned for a
+flight in a particular routee so these
+are some of the challenges in one of the
+representative Industries we are talking
+about which is Airlines so if we use
+data science properly all of these or
+most of these problems can be avoided
+and that will help in reducing the pain
+both for the Airlines and also for the
+passengers a few more examples what else
+can we do here are some of the other
+things that we can do and we will stick
+to the A line industry we can do better
+route planning so that there are less
+cancellations and less frustrated people
+we can predict use Predictive Analytics
+and predict any delays that are there so
+that some flights can be rescheduled
+ahead of time and there are no last
+minute changes data science can also be
+used to make promotional offers and the
+last but not least is what kind of
+planes should be used on the different
+classes of planes that should be used in
+different routes for better performance
+so these are some examples of how data
+science can be used in Airlines and
+under example or under industry where
+data science can be used and benefited
+would be in logistics so companies like
+FedEx they use data science models to
+increase their efficiency drastically to
+optimize the roots and cut costs and so
+on so before there delivery truck
+actually sets out they determine which
+is the best possible route to ship their
+items to the customers and based on
+various inputs they also predict or come
+up with the best suited time to deliver
+and last but not least they determine
+what is the best mode of Transport for
+this delivery as well so what is data
+science used for these are some of the
+main areas where data science is used
+for better decision making there are
+always tricky decisions to be made so
+which is the right decision which way to
+go so that is one area then for
+predicting for performing predictive
+analysis like for example can we predict
+delays like in the case of Airlines can
+we predict the demand for certain
+products let's say in e-commerce that is
+the second area the third area is
+pattern Discovery or pattern recognition
+is there a pattern in which people are
+buying items for example it could be
+seasonality if you take the data sales
+data for multiple years there may be a
+pattern in the way people are buying
+that that's a buying pattern certain
+months probably the sales will increase
+certain months the sales will come down
+certain quarters traditionally the sales
+will be higher certain quarter so that
+is a pattern and this pattern Discovery
+is another area where data science is
+applied so what is data science now
+let's take an example a real life
+example on a day-to-day basis we use or
+we we try to make some decisions let's
+say we want to buy some furniture online
+for our new office so how do you go
+about doing this you need to take a
+bunch of decisions to actually do the
+purchase so we start with which website
+which portal or which website you should
+use so we try to find out let's say you
+want to buy the furniture obviously you
+don't go to a online grocery store
+because you need Furniture because there
+are several websites so that is the
+first decision you need to take which
+website I should use so once we have
+multiple websites you kind of discard
+all the websites which don't sell
+furniture and you stick to those
+websites which sell Furniture now within
+that we try to find out what is the
+ratings of this websites if the ratings
+is more that means they are reliable the
+quality probably is good and so on and
+so forth so only then you want to buy
+from that particular website so anything
+that doesn't satisfy this criteria you
+close all those websites close in the
+sense you close the browser right so you
+still are left with maybe a few of these
+which satisfy your criteria that is
+which sell web pages or websites that
+sell furniture they have a rating of
+four and above and then you look for
+Discount is somebody providing discount
+greater than 20% then again you filter
+out some of them which probably are not
+providing any discount and zero down to
+one or two websites which are probably
+providing those discounts and go ahead
+and select the furniture and purchase it
+so this a very basic example you
+probably don't follow this always
+exactly the same way but just to
+illustrate drive home the point so we
+can answer a lot of questions using data
+science for example when we take a cab
+when we book a cab now to go from
+location a to location B what is the
+best route that the cab can take to
+reach in the fastest way or in the least
+amount of time there could be several
+factors there could be traffic there
+could be bad Road there could be weather
+now all these come as inputs and a
+decision needs to be taken as to which
+is the best route another example is TV
+shows so Netflix and uh maybe even other
+a lot of other TV channels they have to
+perform this analysis to find out what
+kind of shows people are viewing what
+kind of shows people are liking and and
+so on and so forth so that they can then
+sell this information to advertisers
+because their main source of Revenue is
+advertising so this is again major
+function of data science predictive
+maintenance we need to find out will my
+car break down will my refrigerator
+breakdown in the next year or two years
+should I be prepared to buy a new
+refrigerator you can potentially apply
+data science here as well and then in
+politics a lot of data science is
+applied in politics you must have seen
+on TV about us elections or in UK or
+even in India nowadays everybody is
+applying data science in elections and
+trying to capture the votes or rather
+the vote vers influence the voters
+personalized messages providing
+personalized messages and and so on and
+so forth and that is one not only that
+people use data science to even predict
+who is going to win the elections it's a
+different matter that probably not all
+predictions come out to be true but then
+yes this is they use data science to do
+this uh predictions so what is the
+process or what are the various steps in
+in data science the first step is asking
+the right question and exploring the
+data basically you want to know what
+exactly is the problem you're trying to
+solve so that is asking the right
+question so that is the this circle out
+here then the next step is after
+exploring the data so as a first step
+you will ask some questions what exactly
+is the problem you're trying to solve
+and then obviously you will have some
+data for that as input and you perform
+some exploratory analysis on the data
+for example you need to clean the data
+to make sure everything is fine and so
+on and so forth so all that is a part of
+exploratory analysis and then you need
+to do the modeling let's say if you have
+to perform machine learning you need to
+decide which algorithm to use and which
+model to use and then you need to train
+the model and so on and so forth so
+that's all part of the modeling process
+and then you run your data through this
+model and then through this process and
+then you come out with the final results
+of this exercise which includes
+visualizing the results and preparing a
+way to communicate the results to the
+concerned people so it could be in the
+form of PowerPoint slides or it could be
+in the form of a a dashboard which is
+basically what we call as a
+visualization and so all the insights
+that have been gathered through through
+this exercise that has to be
+communicated in a proper way in a easy
+to understand way which is again a a key
+part of this whole exercise
+communicating the results so what are
+the prerequisites for data science there
+are three essential traits required for
+to be a data scientist one is curiosity
+you need to be able to ask questions the
+first step in data science is asking
+question what is the problem you're are
+trying to solve if you ask the right
+question only then you'll get the right
+answer very often this is a very crucial
+step where a lot of data science
+projects fail because you're you may be
+asking the wrong question and then
+obviously when you get the answer that's
+not the answer you're looking for so it
+is very important that you ask the right
+question needless to say then the second
+part or the second trait is common sense
+so you need to be creative you need to
+come up with ways to use the data that
+you have and try to solve the business
+problem on hand in many cases you may
+not have all the data that you need in
+many cases the data may be incomplete so
+that is where you need to come up with
+ways what are the best ways to fill
+these gaps wherever this is missing and
+that's where Common Sense comes into
+play last but not least after doing all
+this analysis if you are unable to
+communicate the results in the right way
+the whole exercise will fail so
+communication is a key trait for a data
+scientist maybe technically you may be a
+genius but then if you are unable to
+communicate those results in a proper
+way once again that will not help so
+these are the three main traits
+curiosity common sense and communication
+skills in a way you can say these are
+the three C's okay so what are the other
+prerequisites the first one so machine
+learning machine learning is the
+backbone of data science data science
+involves quite a bit of machine learning
+in addition to the basic statistics that
+we do so a data scientist needs to have
+a good hang or need to be very good at
+data science the second part is modeling
+so modeling is also a part of machine
+learning in a way um but you need to be
+good at identifying what are the
+algorithms that are most suitable to
+solve a given problem what models can we
+use and uh how do we train these models
+and so on and so forth so that is the
+second component then statistics
+statistics is like the core Foundation
+of data science so you need to
+understand statistics and you need to
+have a good hang of Statistics in order
+to be a good data scientist and this
+will also help in getting good results
+programming is to some extent required
+at least some program or the other would
+be required as a part of executing a
+data science project the most common
+programming languages are Python and R
+python especially is becoming a very
+popular programming language in data
+science because of its ease of learning
+because of the multiple uh libraries
+that it supports for performing data
+science and uh machine learning and so
+on so python is by far one of the most
+popular languages in data science if
+anyone of you is is wanting to learn a
+new language that should be Python and
+then of course you need to understand
+databases how databases work and how to
+handle dat databases how to get data out
+of databases and so on so these are some
+of the key components of data science
+now coming to the tools and skills that
+are used in data science these are some
+of the skills from a language
+perspective it is python or R and from a
+skills perspective in addition to some
+of the programming languages it would
+help if you have a good knowledge or
+good understanding of statistics and
+what are the tools that are used in data
+analysis SAS is one of the most popular
+tools it's been there for very long time
+and uh that's the reason it is very
+popular and however this is compared to
+most of the other tools it is a
+preparatory software whereas Python and
+R are mostly open source the other tools
+are like Jupiter Jupiter notebooks you
+have R Studio these are more development
+environments and development tools so
+Jupiter not books as a interactive
+development environment uh similarly our
+studio is for performing or writing our
+code and Performing analytics and um
+performing data analysis and machine
+learning activities you can perform in
+our studio it has a very nice UI and
+initially R was not so popular primarily
+because it did not have user interface
+and R studio is a relatively new edition
+and after the Advent of R Studio R
+became became extremely popular and
+there are other tools like matlb and of
+course some people do with Excel as well
+as far as data warehousing is concerned
+some of the skills that are required are
+ETL so in order to extract data and uh
+transform load ETL stands for extract
+transform load so you have data in the
+databases like your Erp system or a CRM
+system you need to extract that and then
+do some Transformations and then load it
+into your Warehouse so that all the data
+from various sources looks uniform then
+you need some SQL skills which is
+basically querying the data writing SQL
+queries Hadoop is another important
+skill especially if you're handling
+large amounts of data and also one of
+the specialities of Hardo is it can be
+used for handling unstructured data as
+well so it can be used for large amounts
+of structured and unstructured data then
+spark is a excellent computing engine
+for performing data analysis or machine
+learning in a distributed mode so if you
+have large amount of data the
+combination of spark and Hadoop can be
+extremely powerful so you store your
+data in Hadoop hdfs and use spark as
+your computation engine it works in a
+distributed mode similar to Hado in like
+a cluster so that those are excellent
+skills for data warehousing and there
+are some standard tools that are
+available like Informatica data stage
+talent and also AWS red shift if you
+want to do some on the cloud I think AWS
+red shift is again a good tool data
+visualization tools for data
+visualization some of the skills that
+would be required are let's say R you R
+provides some very good visualization
+capabilities especially for for
+developing during development and then
+you have python libraries matte plot lib
+and so on which provides very powerful
+visualization capabilities and that is
+from skills perspective whereas tools
+that can be used are Tableau is a very
+very popular visualization tool again
+that's a proprietory tool so it's a
+little expensive maybe but excellent
+capabilities from a visualization
+perspective then there are tools like
+cognos which is an IBM product which
+provides very good visualization
+capabilities as well and then coming to
+the machine learning part of it the
+skills required there are python which
+is more for programming part and then
+you will need some mathematical skills
+like algebra linear algebra especially
+and then statistics and maybe little bit
+of calculus and so on and the tools that
+are used for machine learning are spark
+MLB and Apachi Maho and on cloud if you
+want to do something you can use
+Microsoft as your ml Studio as well so
+these are by no means an exhaustive list
+there are actually many many tools and
+problem probably a few more skills Also
+may be there but this is this gives a
+quick overview like a summarizing of
+summarization of the tools and skills
+now moving on to the life of a data
+scientist what does a data scientist do
+during the course of his work so let's
+see so typically a data scientist is
+given a problem a business problem that
+he needs to solve and in order to do
+that if you remember from the previous
+slide he basically asks the question as
+to what is the problem that he needs to
+solve so that is the first thing he has
+got the problem then the next thing is
+to gather the data that is required to
+solve this problem so he goes about
+looking for data from anywhere it could
+be the Enterprise very often the data is
+not provided in the nice format that he
+would like to have it or we would like
+to have it so first step is to get
+whatever data that is possible what is
+known as raw data in whatever format so
+it could be Enterprise data it could be
+there is a probably a required to go and
+get some public data in some cases so
+all that raw data is collected and then
+that is processed and analyzed and in
+prepared into a format in which it can
+be used and then it is fed into the
+analytic system be it a machine learning
+algorithm or a statistical model and we
+get the output and then he puts these
+output in a proper format for presenting
+it to the stakeholders and communicate
+those insights or the results to the
+stakeholder so this is a very high level
+view of like a a day in the life of a
+data scientist so Gathering data raw
+data performing some quick analysis on
+that and maybe processing or
+manipulating this data to bring it into
+a certain good format so that it can be
+used for the analysis feeding this into
+that analysis system that has been
+designed be it mathematical models uh
+machine learning models and then get the
+results the insights and then present it
+in a nice way so that the stakeholders
+can understand how about machine
+learning algorithms so let's see what
+are the various machine learning
+algorithms that would be required for a
+data scientist so these are a few of the
+algorithms again this not an exhaustive
+list we have regression is one of the
+supervised learning models or techniques
+so in case of regression you try to
+let's say come up with a continuous
+number so the difference between
+regression and let's say a
+classification is that in case of
+classification those are discrete values
+whereas here we are talking about
+regression where you let's say you are
+trying to predict the temperature which
+is a continuous value or the share price
+which is a continuous value so that is
+regression so you need to know what is
+regression how to perform regression and
+we we need to understand clustering so
+clustering is one of the unsupervised
+learning techniques in this case there
+is no label data that is available and
+you get some data and then you want to
+put this into some shape so that you can
+analyze it and you try to make sense out
+of it let's say you have one example is
+you have a list of cricketers and they
+have not being marked as Bowlers and
+batsmen or all-rounders or whatever
+right so you just have their names and
+maybe how many runs they scored how many
+wickets they have taken and so on but
+there is no readily available
+information saying that okay this person
+is a batsman this person is a bowler and
+so on so I'm talking about Cricket
+hopefully most of you are familiar with
+the game of cricket so how do we find
+out so then we put this into a
+clustering mechanism and then the system
+will say that okay these are the people
+who are all who have all scored good
+amount of runs so they belong to one
+cluster these are all the people who
+have taken good amount of wickets so
+they belong to one cluster and maybe
+here are some people who have taken good
+amount of wickets and they have made
+good amount of runs so they may be
+belonging to one group and then we take
+a look at it and then we label them as
+okay people who have all together and
+those who have you know scored many runs
+they are we label them as batsmen people
+who have taken a lot of wickets we label
+them as Bowlers and people who have
+taken good amount of wickets and also
+made some good runs we label them as
+all-rounders but the system will just
+say okay this is cluster one cluster two
+cluster three the names we give the
+human beings have to give the names now
+decision tree is used for what is known
+as classification primarily it can also
+be used for regression but by and large
+it is used for classification and here
+again it's a very logical way in which
+the algorithm goes about about
+classifying the various inputs one of
+the biggest advantages of decision tree
+is that it's very easy to understand and
+it's very easy to explain why a certain
+object has been classified in a certain
+way compared to maybe some of the other
+mechanisms like say support Vector
+machines or logistic regression and so
+on so that's the advantage of dis Tre
+but that is also very popular algorithm
+then we have support Vector machines
+primarily for classification purpose and
+and uh then we have KN base this is
+again a statistical probability based
+classification method so these are a few
+algorithms there are a few more that are
+not listed here but there are some more
+algorithms as well and by the way there
+are more detailed or there are detailed
+videos about each of these algorithms
+available you can check in the playlist
+so now let's talk about the life cycle
+of a data science project
+okay the first step is the concept study
+in this step it involves understanding
+the business problem asking questions
+get a good understanding of the business
+model meet up with all the stakeholders
+understand what kind of data is
+available and all that is a part of the
+first step so here are a few examples we
+want to see what are the various
+specifications and then what is the end
+goal what is the budget is there an
+example of the this kind of a problem
+that has been maybe solved earlier so
+all this is a part of the concept study
+and another example could be a very
+specific one to predict the price of a
+1.35 karat diamond and there may be
+relevant information inputs that are
+available and we want to predict the
+price the next step in this process is
+data preparation data Gathering and data
+preparation also known as data monging
+or sometimes it is also also known as
+data manipulation so what happens here
+is the raw data that is available may
+not be usable in its current format for
+various reasons so that is why in this
+step a data scientist would explore the
+data he will take a look at some sample
+data maybe pick there are millions of
+Records pick a few thousand records and
+see how the data is looking are there
+any gaps is the structure appropriate to
+be fed into the system are there some
+columns which are probably not adding
+value may not be required for the
+analysis very often these are like names
+of the customers they will probably not
+add any value or much value from an
+analysis perspective the structure of
+the data Maybe the data is coming from
+multiple data sources and the structures
+may not be matching what are the other
+problems there may be gaps in the data
+so the data all the columns all the
+cells are not filled if you're talking
+about structured data there are several
+blank blank records or blank columns so
+if you use that data directly you'll get
+errors or you'll get inaccurate results
+so how do you either get rid of the data
+or how do you fill this gaps with
+something meaningful so all that is a
+part of data monging or data
+manipulation so these are some
+additional sub topics within that so
+data integration is one of them if there
+are any conflicts in the data may be
+data may be redundant yeah data res
+redundancy is another issue there may be
+you have let's say data coming from two
+different systems and both of them have
+customer table for example customer
+information so when you merge them there
+is a duplication issue so how do we
+resolve that so that is one data
+transformation as I said there will be
+situations where data is coming from
+multiple sources and then when we merge
+them together they may not be matching
+so we need to do some transformations to
+make sure everything is similar we may
+have to do some data reduction if the
+data size is too big you may have to
+come up with ways to reduce it
+meaningfully without losing information
+then data cleaning so there will be
+either wrong values or you null values
+or there are missing values so how do
+you handle all of that a few examples of
+very specific stuff so there are missing
+values how do you handle missing values
+or null values here in this particular
+slide we are seeing three types of
+issues one is missing value then you
+have null value you see the difference
+between the two right so in the missing
+value there is nothing blank null value
+it says null now the system cannot
+handle if there are null values
+similarly there is improper data so it's
+supposed to be numeric value but there
+is a string or a non-numeric value so
+how do we clean and prepare the data so
+that our system can work flawlessly so
+there are multiple ways and and there is
+no one common way of of doing this it
+can vary from Project to project it can
+vary from what exactly is the problem
+you're trying to solve it can vary from
+data scientist to data scientist
+organization to organization so these
+are like some standard practices people
+come up with and and of course there
+will be a lot of trial and error
+somebody would have tried out something
+and it worked and it'll continue to use
+that mechanism so that's how we need to
+take care of data cleaning now what are
+the various ways of doing you know if if
+values are missing How do you take care
+of that now if the data is too large and
+um only a few records have some missing
+values then it is okay to just get rid
+of those entire rows for example so if
+you have a million records and out of
+which 100 records don't have full data
+so there are some missing values in
+about 100 record so it's absolutely fine
+because it's a small percentage of the
+data so you can get rid of the entire
+records which have missing values but
+that's not a very common situation very
+often you will have multiple or at least
+you know large number of data set for
+example out of million records you may
+have 50,000 records which are like
+having missing values now that's a
+significant amount you cannot get rid of
+all those records your analysis will be
+inaccurate so how do you handle such
+situation so there are again multiple
+ways of doing it one is you can probably
+if a particular values are missing in a
+particular column you can probably take
+the mean value for that particular
+column and fill all the missing values
+with the mean value so that first of all
+you don't get errors because of missing
+values and second you don't get results
+that are way off because these values
+are completely different from what is
+there so that is one way then a few
+other could be either taking the median
+value or depending on what kind of data
+we are talking about so something
+meaningful we will have put in there if
+we are doing some machine learning
+activity then obviously as a part of
+data preparation you need to split the
+data into training and test data set the
+reason being if you try to test with a
+data set which the system has already
+seen as a part of training then it will
+tend to give reasonably accurate results
+because it has already seen that data
+and that is not a good measure of the
+accuracy of the system so typically you
+take the entire data set the input data
+set and split it into two parts and
+again the ratio can vary from person to
+person individual preferences some
+people like to split it into 50/50 some
+people like it as
+6333 and 33.3 is is basically 2/3 and
+1/3 and some people do it as 80/20 804
+training and 20 for testing so you split
+the data perform the training with the
+80% and then use the remaining 20% for
+testing all right so that is one more
+data preparation activity that needs to
+be done before you start analyzing or
+applying the data or putting the data
+through the
+model staying ahead in your career
+requires continuous learning and
+upscaling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to ner up and get certified click
+here

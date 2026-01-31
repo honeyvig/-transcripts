@@ -1,0 +1,691 @@
+do you know that Java the
+object-oriented language follows right
+ones Run Anywhere principle which makes
+it highly portable and platform
+independent Java code runs on any
+platform with the help of java virtual
+machine nowadays Java is used for
+various applications including web
+development mobile apps and enterprise
+software this created a huge need of
+java experts in the industry according
+to Glassdoor the average annual salary
+of a Java developer in United States is
+dollar 94 000 if someone holds a senior
+Java developer position their average
+illness salary increases to 114 000 the
+upper limit of the salary range reaches
+280 000 annually hope this excites you
+to explore more in the world of java if
+you are looking to become a Java
+developer then have a look at post
+graduate program in full stack
+development with this amazing program
+you will be benefited with Caltech ctme
+postgraduate certificate receive up to
+25 CEUs from caltex ctme attend master
+classes from caltex ctme instructors
+live virtual classes led by industry
+experts Hands-On projects and integrated
+Labs by the end of this course you will
+be skilled with agile Java hibernet and
+jpa spring core 50 HTML5 and css3 AWS
+JavaScript and there is a huge list on
+the board expertise in tools like
+angular css3 Docker git HTML5 Jenkins
+mongodb MySQL will add value to your
+resume so hurry up and enroll Now find
+the complete course details from the
+link in the description box millions of
+Learners are benefited with our courses
+listen to the success story in their own
+words learning is growing and we not
+only decided to grow together in life
+but learn and succeed together as well I
+successfully switched my career to full
+stack Java domain with a 15 salary hike
+and I was able to grab new opportunities
+in my current organization and also
+receive a 10 salary hike hey I am
+swamijit Basu I am a senior QA engineer
+at Encore Inc and I am show me and I
+work as a senior quality Analyst at
+doodle blue Innovation we started our
+upscaling journey together which simply
+learned and certainly we made the right
+choice after our marriage I had to
+relocate to Bangalore and take a year
+Gap after working 45 years but I decided
+to restart my career again and make a
+switch to software domain so I enrolled
+myself in full stack Java developer
+program from Simply learn seeing my
+wife's passion for learning every day
+inspired me to take up a course on
+simply learn as well I've always been
+passionate about technology and learning
+devops was always in my bucket list when
+I saw simply learns collaboration with
+Caltech ctme I decided to take a course
+on PG devops after the course I not only
+switched my career to post a Java
+development with person and
+increase salary but now also I can work
+from home since it's a software domain
+and being the new mom that's the best
+thing one could ask for to spend time
+with little one during these early years
+for me learning devops was fun and
+fulfilling at the same time earlier I
+had to rely on others at work but after
+upskilling myself I single-handedly can
+set up the entire blueprint on my code
+base alone and get the desired output
+and because of that I could grab new
+projects in my organization with a 10
+percent salary high we enrolled to
+upscale ourselves when we were
+first child so upscaling Journey with
+learn would be undoubtedly very special
+to both of us while doing the course we
+did come across a lot of challenges due
+to the pregnancy but my wife showed me
+was a great inspiration for me as she
+was handling it all together and she
+kept motivating and inspiring me all the
+way moreover the recorded classes and
+the weekend class helped us maintain the
+balance between work and learning apart
+from work we love to spend time with our
+little one learning with simply Learned
+was quite a fulfilling experience for
+both of us we believe that growth
+doesn't happen overnight rather it's a
+journey of several small steps and
+upskilling is one of them hello guys
+this is vikesh and let's get started
+with the first topic of this series
+which is about introduction to Java so
+when we talk about Java it is one of the
+most popular programming language out
+there and it was created way back in
+1991 but it was publicly released only
+in 1995. it was developed by one of the
+famous developers of Our Generation who
+is James Gosling at Sun Microsystems and
+then later Java was acquired by Oracle
+and today Oracle owns Java Java is very
+simple and easy to use and we will look
+at different aspects of how it is easy
+and simple to use it's a write once Run
+Anywhere type of programming language
+again we will look at details into into
+into this particular concept as well and
+when we talk about the usage of java you
+can use it to build web applications
+mobile applications desktop applications
+even command line application Asians and
+at the same time you can also use it to
+build complex applications like gaming
+applications building microservices or
+building distributed computing Etc let's
+talk about the features of java so one
+of the most prominent features of java
+is that it's an object-oriented
+programming language which means that
+everything which happens in Java happens
+around objects objects enable the
+execution of the program objects talk to
+each other to exchange data and messages
+we will look about a look at the concept
+of objects in details in the upcoming
+lectures it's a platform independent
+language which means that again going
+back to the previous point of write once
+Run Anywhere it basically enables the
+program to be run on any platform once
+compiled so once you have prepared your
+program and you have compiled your
+program then your compiled program can
+be run on any platform it is a strong
+type checking language which means that
+it will force you to respect the
+contracts of the variables to the data
+types for example if you have created a
+collection which should accept strings
+then you can only insert strings in that
+collection and it will not allow you to
+add an a number or an integer into that
+collection so it's a strongly typed
+checking language so when you run your
+program it's a two-step process in Java
+you compile the program and then you it
+then you execute the program which we
+also call as interpretation so you have
+a Java compiler and you have a Java
+interpreter you first compile your
+program and then you run the program
+using the help of java interpreter Java
+also provides automatic garbage
+collection it's a really important
+feature and if you talk about the
+languages prior to Java like C or C plus
+plus they did not offer this capability
+and this capability made Java really
+popular because it could automatically
+find the unused objects and variables
+and remove them from the memory to free
+up memory space for the program
+execution it also provides
+multi-threading support which means that
+you can build multi-threading
+applications like a gaming application
+if you take the example of a racing game
+for example so there's they can be one
+thread which is monitoring your
+leaderboard score there can be another
+thread which is displaying the speed of
+the car there can be another thread
+which is displaying the graphic there
+can be another thread which is
+displaying the sound so you see all of
+these threads are working parallely and
+Java provides the support to create such
+applications using the multi-threading
+capability it has Java is secure by
+default because there are no pointers in
+Java so there are no possibilities of
+having any memory leaks or any reference
+leaks from the application again if you
+take the example of programming
+languages like C or C plus plus you had
+the concept of pointers and the we
+witnessed lot of a lot of scenarios and
+lot of incidents where there was a
+memory leakage happening in the in the
+production application which was which
+was really a bad experience for the
+organizations so Java removed the
+concept of pointers totally from its
+programming language it's also a very
+robust language because it provides a
+really great exception handling
+framework out of the box which
+developers can use and Implement to
+build really resilient applications so
+now let us understand how a Java program
+is run so at first you basically write
+your Java program and you store your
+Java program into a DOT Java file then
+you compile your Java file with the help
+of the Java compiler once the program is
+compiled the compiler is going to
+generate another file which is a DOT
+class file and this dot class file is
+basically the compiled file or also
+known as the byte code file so this byte
+code or the dot class file code can be
+run on any platform be it a Linux
+platform or a Windows platform or a Mac
+OS platform or any other platform to
+give you some more context the first two
+steps where you write your Java program
+and you compile your Java program can be
+run on any machine let's take an example
+that you ran these two steps on a
+Windows machine so you ran your you
+write your program and you compile your
+program on a Windows machine which
+generated a DOT class file then you
+transported this dot class file to a
+Linux machine and it also worked there
+you transported your dot class file to a
+Mac OS machine and it worked there as
+well and that's what brings the platform
+Independence concept of java that you
+can write the program once on any
+platform and once you have the byte code
+available then you can run this program
+on any other platform of your choice
+okay so that was about how the Java
+program execution works and how the
+platform Independence is actually
+achieved now let us spend some time to
+understand the anatomy of java so once
+you download Java and install Java on
+your local machine you will hear the
+term jdk actually if you will see that
+in the next lecture that when you try to
+download the Java it will say jdk
+download jdk stands for Java development
+kit so the Java development kit is the
+installation of the Java this is what
+you're going to install on your machine
+once the jdk or Java development kit has
+been installed the jdk will provide lot
+of other components as well like Java
+runtime environment or JRE Java virtual
+machine or jvm some class libraries and
+some other supporting libraries so let
+us understand what happens when your
+program is run and how these components
+work together to make sure that your
+program runs as expected let's start
+from here so you install jdk or the Java
+development kit you write your program
+and then you compile your program with
+the help of java compiler which is
+provided by jdk once the program is
+compiled your dot class file will be
+generated and then you can run
+that.class file using GRE in fact if you
+just run your program on your local
+machine JRE will automatically kick in
+and run your dot class file so the Java
+runtime environment or GRE runs your dot
+class file with the help of these three
+components let's talk about first
+component which is Java virtual machine
+or jvm so the Java virtual machine is
+actually the virtual environment inside
+which your program runs this is the real
+main environment inside your dot class
+file is running so when when this
+program is running how does it achieve
+this environment for achieving this
+virtual virtual machine environment it
+would need some runtime libraries and
+that is provided by these class
+libraries for example there would be a
+runtime jar or rt.jar as a shorthand
+which will be supplied to the program at
+the runtime to make sure that the
+program runs smoothly then there are
+other supporting libraries as well which
+your program may be using for example if
+this program this dot class file is
+let's say a calculator program then it
+might be using a square root function
+from java.math package so how do how
+does the java.net package gets supplied
+at runtime it would be supplied by the
+other supporting libraries which are
+present inside GRE so GRE will make sure
+that your program runs inside the Java
+virtual machine it gets the required
+runtime libraries and it also gets the
+libraries which are referred in your
+program at runtime and this all together
+will make sure that your program is
+running so you can see jdk basically
+provides GRE automatically and jvm
+automatically but you can also install
+grg separately if you talk about that
+use case where you compile your program
+on a Windows machine using jdk and then
+you exported your dot class file to
+another machine and there you just
+install the GRE you don't install jdk
+there you just install the runtime
+environment and you can run the dot
+class file just using the runtime
+environment and that brings us to the
+end of this lecture let's get started
+with installing Java we will basically
+look at how we can install Java on a
+Windows machine so the first step to
+install Java is to download it from the
+official Oracle website so for that
+let's open a web browser and let's type
+jdk Java download and hit enter then you
+need to find the link which says
+oracle.com because like we discussed in
+the previous lecture uh Java is owned by
+Oracle so we need to download it from
+the official website only so we can
+click on this link which says Java SE
+downloads it will bring us to the
+downloads page and we will see different
+versions of java you can see the Java
+sc15 you can see Java se14 you can also
+see Java se11 and all the previous
+versions another thing which you will
+notice that it says LTS here which means
+long term support basically long term
+support are the releases for which
+Oracle is going to provide long-term
+security patches and updates for the
+non-lts releases Java will not provide
+long-term support and long-term patch
+fixes and long-term security fixes so
+it's a good idea to analyze and evaluate
+on which version you want to develop
+your applications on for this demo I
+think it is fine we can go with the
+non-lts version and even for your for
+your customer facing applications you
+can start with a non-lts version and
+then upgrade to the latest LPS version
+whenever that is available so for this
+demo we can download Java se15 and you
+can also do the same on your machine it
+will work exactly the same way as an LTS
+works so you can click on the jdk
+download option here let's click on that
+it is going to bring up the downloads
+detail page and you can see there are
+multiple options given here in terms of
+what platform you want to install Java
+on whether it is a Linux platform or it
+is a Mac OS machine or it is a Windows
+platform so like I said in the beginning
+of the demo that today we are going to
+see how we can install this on a Windows
+machine so I'm going to download the
+windows x64 installer here if you are
+working on a Linux machine or a Mac OS
+machine you can download those
+respective installers as well so you can
+see the exe here so let's click on this
+once we click on this we'll get this
+pop-up which will ask us to accept the
+Oracle technology Network license
+agreement so we can hit this checkbox
+and click on download jdk 15
+and this shall start the download and
+you will see some some exe getting
+downloaded in in your download box here
+but as the download is going to take
+some time and uh I'm not going to wait
+for that and that's the reason I have
+already downloaded the jdk 15 for this
+particular demo and that jdk is is
+sitting here on my desktop which I have
+downloaded prior to this demo so we'll
+just run this particular exe which is
+exactly the same exe as the one which is
+being downloaded so let us double click
+on this it will ask you for this pop-up
+in some cases so you can just hit yes
+basically it is asking whether you trust
+this exe or not but as we downloaded
+this from official Oracle website then
+we can trust this particular exe so I
+will hit yes and now the installer is
+going to unpack and you might get a
+screen like this which will be an
+installation wizard for the Java SC
+development kit 15. another thing which
+before I proceed I just wanted to
+highlight that as well that you might
+have noticed about jdk here it's exactly
+the same term which we covered in the
+last lecture that when you install Java
+you basically install the jdk which is
+the Java development kit and this is
+also visible here when it says Java SC
+development kit 15. so let's hit next
+then on this particular page you have
+the option to change the installation
+location of java if you want to by
+default it is going to install in C
+program files slash Java slash jdk15 but
+if you want to change the location and
+you want to install Java to a particular
+custom location of your choice that is
+also possible you just hit change here
+and then you can choose whatever
+directory or folder or place you want to
+install this Java on and you can
+basically select the appropriate
+location for this particular case I
+don't want to change that I'm happy with
+the default location which is available
+here so I'm just going to proceed with
+this particular location here so I will
+just hit next and then Java is going to
+install and it's it's very fast
+installation It generally takes few
+seconds as you will see in this demo
+basically it is going to unpack all the
+all the libraries and all the runtime
+libraries and all the class path
+libraries which we discussed in the
+previous lecture and put all that into
+the location which we specified to
+install Java it will also set up the
+rest of the prerequisites which are
+required to run Java successfully so
+looks like the Java has been
+successfully installed as is visible in
+this message and there's also a next
+step if you want to access the tutorials
+or the API documentations the developer
+guides the release notes Etc I don't
+want to do that so I will just hit close
+here and now if we want to just verify
+if Java is is installed or not then we
+can verify that from the command and
+prompt let me just exit this and let's
+go to the command prompt to very verify
+to see if Java has been successfully
+installed so to do that we'll we'll just
+open the search bar and we'll type CMD
+it is going to show us this command
+prompt here we'll click on this and it
+will open the command prompt for you
+like it has opened for me and there you
+just need to type Java hyphen version
+and you hit enter if you get a message
+like this it means Java has been
+successfully installed if you get a
+message saying that Java is not
+recognized as a command it means that
+Java is still not successfully installed
+and something has gone wrong in your
+installation and in that case you might
+want to restart you might want to go
+back and reinstall this Java exe again
+so in this case it looks like it has
+been successfully installed and we can
+also get some interesting information
+from here we can see which version of
+java has been installed it says Java
+version 15. we can also see that the JRE
+is also installed the Java SE runtime
+environment or JRE is also installed and
+and we can also see that the jvm is also
+installed which is Java hotspot server
+VM VM means the virtual machine so if I
+connect this back to the previous
+lecture we can see that the Java jdk
+basically installed the JRE as well as
+the jvm as well and the complete Java
+package has been successfully installed
+now we are ready to use Java a Java
+program and run Java programs on this
+machine and at this step I would like to
+conclude this lecture in in the next
+session we will be discussing how we can
+install Eclipse because that would be
+the natural next step for any Java
+developer that they want to install Java
+and then they want to install eclipse
+and start working let's get started with
+installing eclipse on a Windows machine
+so the first thing which we need to do
+is to download Eclipse so for that I'm
+just going to open my web browser and
+type Eclipse download press enter and
+then you need to find the link which
+says eclipse.org downloads which is the
+first link in my search results you can
+also see it says Eclipse downloads the
+eclipse Foundation an eclipse Foundation
+is the is the organization which
+maintains the eclipse installers so we
+can click on this once we click on this
+we will be redirected onto the eclipse
+downloads page and there again you will
+see bunch of options you will see the
+default option highlighted which would
+be the eclipse in installer for for GRE
+for Mac OS windows and Linux and then
+you have some other tool platforms
+option as well like Eclipse G or Orion
+which you might want to use for advanced
+cases but for running Java applications
+all you need is an eclipse installer
+which is coming from here so based on
+your machine Eclipse will automatically
+detect whether you want a 64-bit
+installer or a 32-bit installer and you
+can just click on this particular link
+which says download 64-bit here so I'm
+just going to hit download 64-bit it is
+going to open this particular screen
+where based on your current location
+Eclipse will suggest the nearest
+possible distribution mirror
+distribution mirror is basically a
+server which is present somewhere in
+this world which contains this Eclipse
+installer exe and Eclipse has created
+these servers all across the Globes
+these servers are basically called the
+mirrors and based on your current
+location which will be deducted taken
+taken from your ISP from the internet IP
+address from which you are accessing
+this particular website so based on your
+ISP location it is going to suggest you
+the nearest possible mirror location so
+that your download is the fastest so in
+my case the nearest location is
+Netherlands here as you can see and I
+get a download option this is the file
+name which says Eclipse installer GRE
+windows 64.exe and if you think that
+this mirror doesn't make sense just
+click on this option select another
+mirror and then you can choose another
+mirror but generally it works really
+well it works based on it works based on
+your IP location and it's generally the
+download speed is pretty good based on
+the suggested mirror so I'm not going to
+change the mirror location because I
+think this works fine for me so and I'm
+just going to click on this particular
+button which is going to start the
+download of the eclipse installer so now
+I have I have hit the download button
+and you can see see right now and exe
+has been download has begun to download
+uh it is going to again take some time
+and uh I have already downloaded this
+particular exe just to save us some time
+and I'm going to use that exe to
+Showcase how we can install it another
+thing just wanted to highlight is that
+eclipse is an open source organization
+it works on donations so if you feel
+generous about it and if you feel that
+eclipse is doing really great work you
+can also donate to it which will show
+here so we can move to the next step
+which is about installing so you can see
+here I have an installer here an exe
+file basically which I have
+pre-downloaded to Showcase this demo I'm
+just going to double click on this and
+it is going to unpack the installer you
+can see this this icon will be presented
+to you which says Eclipse installer by
+oomph oomph is basically the provider
+for this particular installer who
+manages the installer and based on your
+computer's capacity and speed it is
+going to take few seconds and I in the
+background what it is doing is basically
+it is unpacking this installer and
+creating all the installation files
+which it needs to successfully install
+it on your computer once that is done
+you will be presented with this kind of
+screen and you will see that Eclipse
+provides multiple different kind of Ides
+for different set of developer
+communities you will see an option which
+says Eclipse IDE for Java developers you
+will also see Eclipse IDE for Enterprise
+Java developers you will see the IDE for
+C plus plus and C developers web and
+JavaScript PHP Eclipse committers who
+basically contribute to the eclipse
+organization or RCP rap tester
+scientific Computing there are tons of
+Ides which Eclipse maintains for our use
+case throughout this series I think we
+will be focusing on this particular IDE
+which says Eclipse IDE for Enterprise
+Java developers you can also use this
+particular IDE but this is a very bare
+bone IDE with very limited set of
+integration like it says it includes a
+Java IDE a git client an XML editor a
+maven plugin and a Gradle plugin but if
+you look at the Enterprise you will get
+more Integrations you can use this
+particular IDE to work on whatever you
+work here so these all will work here
+but in addition you can also use this
+IDE to build a web application build a
+web service build a jpa application data
+tools Java server Pages faces Etc so
+this is more a more advanced I would say
+and we will go with this particular IDE
+and you can also choose this ID if you
+want to but for this demo we are going
+to choose this one I will click on this
+then it is going to show me which
+virtual machine it is going to use so if
+you remember in the previous lecture we
+installed Java 15 it has automatically
+detected that location by reading by C
+program files folder and it has
+automatically taken that if you have
+multiple jdk installations on your
+machine you can click on this icon and
+change a different Java virtual machine
+I am going to leave it as is again the
+installation folder is also by default
+taken to your C user's username slash
+Eclipse slash the Jee version number and
+again if you want to change this you can
+also change a different installation
+folder I'm going to leave everything as
+default it will automatically create a
+start menu entry and a desktop shortcut
+and now I hit install it might come ask
+you for a user agreement so you can hit
+accept now and now it has begun the
+installation the installation generally
+takes a bit of time to complete in some
+cases so again it depends upon your in
+your in your computer's capacity and
+speed basically if it's a good robust
+machine with the with good capacity the
+installation might be very fast as you
+can see in my computer and if you have a
+computer which is not very strong on
+configurations you can just be patient
+and wait for some time and the
+installation will be finished once the
+installation is finished you will see
+this launch option here you will also
+have an option to keep an installer if
+you want to show the readme file but I
+think the the main option here which we
+are going to use is the launch option so
+if you hit the launch option now

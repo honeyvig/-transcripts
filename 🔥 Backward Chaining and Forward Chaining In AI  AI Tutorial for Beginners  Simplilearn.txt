@@ -1,0 +1,299 @@
+foreign
+welcome to this new video on backward
+chaining versus forward chaining by
+simply learn to stay updated with our
+content make sure to subscribe to our
+Channel and hit the Bell icon to never
+miss any updates imagine you're solving
+a mystery in the world of computers
+backward chaining is like starting with
+the answer you want to find and figuring
+out the clues that lead to it on the
+other hand forward chaining is like
+starting from the facts you already know
+and using the rules to uncover new
+information both techniques are like
+paths that computer take to solve
+problems one starts with the goals and
+find the path to it while the other
+starts with what it knows and keeps
+adding to it until the solutions become
+clear these strategies make AI systems
+smart and capable of cracking integrate
+problems the job opportunities in
+machine learning are as wide-ranging and
+abundant as a technology applications
+the average annual salary for machine
+learning engineer is hundred and forty
+thousand dollars in U.S and in India the
+average annual salary is 20 lakh rupees
+per annum on that note if you are an
+aspiring AIML engineer then there is no
+better time to train yourself in
+exciting field of machine learning with
+our Caltech AIML boot camp in
+partnership with IBM this course covers
+everything from fundamentals to Advanced
+Techniques like machine learning
+algorithm development and unsupervised
+learning this Ai and machine learning
+boot camp in collaboration with Caltech
+will help you advance your career as an
+eiml specialist the AIML bootcamp
+includes the live classes delivered by
+industry experts Hands-On industrial
+relevant projects and master classes by
+caltic professors key features of this
+amazing machine learning course include
+22 C's from caltex ctme online
+convocation by caltex ctme program
+director simply run career service helps
+you to get noticed by top hiring company
+is earn a bootcamp certificate from
+caltex ctme industry relevant Capstone
+projects in three domains Caltech ctm is
+circle membership 25 plus Hands-On
+projects across industry verticals and
+integrated Labs so why wait join now
+seats are feeling fast find the course
+Link in the description box so without
+any further Ado let's get started what
+is backward chaining backward chaining
+backward deduction or backwards is also
+a reasoning method that acts in the
+reverse direction to forward chaining
+the top-down approach involves using
+decision or goals to reach the facts the
+backward chaining is the backtracking
+process of finding usage in diagnostic
+debugging and prescription here is a
+simple real world example of backward
+chaining scenario diagnosing an illness
+here we have a goal to determine if a
+patient has a flu rules and facts
+if a patient has a fever and body aches
+they might have the flu if a patient has
+a runny nose and cough it could be a
+cold
+if a patient has a fever they might have
+infection
+if a patient has body aches it might be
+due to physical exertion in this example
+let's say we start with the goal of
+determining if a patient has a flu
+so how does a backward chaining process
+works look at tool one the patient has a
+fever and body aches at rule 3 the
+patient has fever look at rule 2 the
+patient has runny nose and cough this
+rule doesn't apply look at rule 4 the
+patient has body aches based on the
+backward chaining process the evidence
+suggests that patient might have the flu
+because of a fever and body aches this
+is the chain of reasoning that leads to
+the conclusion that patient could have
+flu in essence backward chaining starts
+with the desired outcome and traces the
+path backward through rules and facts to
+find supporting evidence it's commonly
+used in diagnostic systems
+troubleshooting and other scenarios
+where the goal is to determine the
+causes or conditions that lead to a
+specific result moving to the advantages
+and disadvantages of backward chaining
+advantages of backward chaining backward
+chaining offers optimal resource usage
+by efficiently concentrating on
+essential loss or requirements for goal
+achievement resulting in time and
+computational savings its goal oriented
+commencing from predefined objectives
+and tracing back to identify AI relevant
+supporting situations or rules
+additionally its adaptability allows
+easy customization across various
+applications showcasing a broad range of
+problem solving capabilities
+disadvantages of backward chaining while
+employing backward training for problem
+solving it functions unidirectionally
+potentially lacking the ability to
+generate innovative solutions or
+insights not explicitly programmed there
+are instances of limited exploration
+where it may yield incomplete outcomes
+and Overlook comprehensive solution
+exploration additionally conflict
+resolution can be challenging with
+backward chaining especially when
+reconciling discrepancies or clashes
+among various laws or facts move to
+forward training forward chaining
+forward deduction or forward reasoning
+is a method involving inference or
+logical rules facts for data extraction
+it is a bottom-up approach perform
+redundant currently to reach the end
+point or goals it begins with evaluating
+existing information followed by
+manipulation based on the knowledge base
+the existing information can be as facts
+derivations and conditions let's move to
+a real world example of forward training
+here we have a scenario of diagnosing an
+illness we will consider following facts
+patient has a fever and patient has body
+aches so let's look at the rules
+if a patient has a fever and body aches
+they might have flu if a patient has a
+runny nose and cough it could be a cold
+if a patient has a fever they might have
+infection so how does this forward
+chaining process works start with the
+available facts the patient has a fever
+and body aches apply rule one the
+patient has a fever and body aches
+suggesting they might have flu this
+conclusion might have the flu becomes a
+new fact at this point forward chaining
+process has derived a new conclusion
+based on the available facts and the
+rules the process could continue with
+additional rules and facts to derive
+further conclusions in in a sense
+forward chaining begins with the known
+facts and applies rules to generate new
+information or conclusions it's often
+used in systems where initial data is
+available and the goal is to reduce new
+information or outcomes based on the
+data and predefined rules so what are
+the advantages and disadvantages of
+forward chaining advantages of forward
+chaining forward chaining demonstrates
+its efficiency by leveraging existing
+facts or conditions to achieve Solutions
+potentially resulting in time and
+computational resource preservation
+compared to alternative methods its
+flexibility shines through its adeptness
+at tackling various problem types and
+its Simplicity of adaptation for
+differing goals furthermore due to its
+capacity to swiftly deduce conclusions
+from a given set of facts or conditions
+forward chaining is particularly
+suitable for real-time decision making
+situations however it's important to
+consider the potential disadvantage of
+chaining so here are few disadvantages
+of forward chaining forward chaining May
+exhibit partial exploration leaving some
+potential Solutions inadequately
+explored or generating incomplete
+results the methods limitation is
+considering only current facts or
+conditions might result in an absence of
+a Global Perspective potentially leading
+to inaccurate conclusions due to a lack
+of broader contextual understanding
+furthermore handling conflicts within
+forward training especially when faced
+with inconsistencies or clashes among
+multiple facts or rules can prove to be
+challenging now let's see the major
+difference between backward training
+versus forward chaining backward
+chaining and forward training are two
+distinct inferences techniques used in
+artificial intelligence and expert
+systems for problem solving and
+reasoning they differ in their
+approaches and how they derive
+conclusions and available information
+here's a comparison between two backward
+chaining starts with a specific goal or
+conclusion and works backward through a
+set of rules and facts to find evidence
+or conditions that supports the goal
+power chaining starts with known facts
+or conditions and uses rules to derive
+conclusions or reach goals it
+iteratively applies rules to non-facts
+to generate new information backward
+chaining is commonly used in diagnostic
+systems troubleshooting and scenarios
+where the goal is to determine the
+causes or conditions leading to a
+specific outcome power chaining is often
+used when the initial data is available
+and aims to deduce new information or
+outcomes based on that data and
+predefined rules backward chaining can
+be efficient when goals is known and the
+system seeks to establish the reasons
+behind goal forward chaining can be
+efficient when the initial data is Rich
+and the system seeks to infer new
+information backward chaining is
+typically more directed and efficient
+but might not explore all the POS
+possible solutions if not guided
+properly chaining explores new
+conclusions as they have become
+available potentially exploring a
+broader range of solution but it might
+not be detected if not properly guided
+and with that we have come to the end of
+this video on backward versus forward
+chaining I hope you have find this
+information valuable do check a
+postgraduate program in Ai and ml in
+partnership with Purdue University and
+collaboration with IBM to upskill
+yourself in thrilling field of machine
+learning don't forget to check the
+course Link in the description box let's
+take a minute to hear from our Learners
+who have experienced huge success in
+their career
+you need to keep updating your skills
+the course material was comprehensive
+and the faculty was extremely
+experienced The Faculty was able to
+adjust their teaching style in order to
+cater to the overall skill set of the
+class in the rapidly evolving world of
+technology it's important to keep up
+Skilling for every working professional
+stay relevant continue learning
+please ask any questions about the topic
+covered in this video in the comment
+section below our experts will assist
+you in addressing your problems thanks
+for watching stay safe and keep learning
+staying ahead in your career requires
+continuous learning and upskilling
+whether you're a student aiming to learn
+today's top skills or a working
+professional looking to advance your
+career we've got you covered explore our
+impressive catalog of certification
+programs in Cutting Edge domains
+including data science cloud computing
+cyber security AI machine learning or
+digital marketing designed in
+collaboration with leading universities
+and top corporations and delivered by
+industry experts choose any of our
+programs and set yourself on the path to
+Career Success click the link in the
+description to know more
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
+foreign

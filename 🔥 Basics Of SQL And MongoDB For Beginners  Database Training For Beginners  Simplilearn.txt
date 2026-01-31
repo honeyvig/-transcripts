@@ -1,0 +1,5161 @@
+foreign
+welcome to the world of data management
+this comprehensive course explores the
+foundation of SQL empowering you with
+the ability to interact with relational
+databases from complex queries and
+manage data effectively Additionally you
+will dwell into the mongodb occurring as
+nosql database to master document based
+data storage and retrieval Unleash the
+Power of SQL and mongodb and analog
+Endless Possibilities in the data
+manipulation and storage let's embark on
+this transformative journey together if
+you're an aspiring data engineer looking
+for online training and certifications
+from the prestigious universities and in
+collaboration with leading experts then
+search no more simply learns
+postgraduate program in data engineering
+from Purdue University in collaboration
+with IBM should be your right choice for
+more details use the link in the
+description box below with that in mind
+over to our training experts there is no
+business online that would not benefit
+from using a database whether you are
+running a small startup or a billion
+dollar company not only are they most
+common and efficient way of storing data
+but they also form the foundation of
+business intelligence and information
+management today and if you want to
+communicate with these databases you
+must learn SQL SQL are often referred to
+as SQL by many as considered as one of
+the oldest languages in technology
+domain which is used to design build and
+maintain database applications tailored
+to specific needs of the client's
+business requirements some popular and
+widely used SQL databases are MySQL
+Microsoft SQL Server Oracle database and
+postgradu SQL SQL developers are high in
+demand with companies like Microsoft
+cognizant meta Accenture IBM entity data
+and many other Tech genes hiring SQL
+developers with an average salary of
+seventy two thousand dollars and going
+as high as hundred and thousand dollars
+per year SQL is unquestionably one of
+the first steps towards a career
+involving data crunching and learning it
+will add Great Value to your array of
+skills which requires little to almost
+no coding knowledge will SQL ever be
+replaced anytime soon well probably not
+SQL is here to stay and will continue to
+be the go to query language for many
+years to come first we will understand
+who is a SQL Developer SQL Developer is
+a person who is accountable in creating
+and managing huge data assets of a
+company
+in other terms SQL Developer is a person
+who can develop SQL databases as well as
+write-in test code let's understand this
+with the help of an example let's say we
+want to search a particular product on
+Amazon website and Amazon has stored all
+its data about products in a database
+now we will write the product name in
+the search bar and when we click on the
+search button it will run a SQL query
+that fetches all the information about
+the product and displays us on the
+website so this is the basic task done
+by a SQL Developer
+now we will understand the
+responsibilities of osql developer all
+databases have a structure and logic
+behind how data is stored and retrieved
+a SQL Developer designs the database
+accordingly for businesses that is
+called database modeling after the
+database is created and deployed it's
+the SQL Developer who is responsible for
+fixing the general issues of the
+database
+escrow developer should be well versed
+with structured query language to create
+optimized SQL queries and refines the
+existing ones to extract information
+from the database
+SQL developers run several diagnostic
+tests to keep a check on the server and
+the database in order to understand how
+to organize company's data SQL
+developers must communicate with
+tactical and non-technical persons from
+the business and SQL Developer also
+gathers client requirements and
+identifies the features that the
+database owners want
+as data is an asset to a company SQL
+developers backup and restore data for
+the clients they also perform tasks like
+data management and data migration that
+is if a company has stored all its data
+on a local storage and now it pawn its
+data to be stored in a cloud storage so
+the safe transmission of the data from
+local storage to cloud storage is known
+as data migration and that is done by
+the SQL developers after knowing the
+responsibilities now we should look for
+skill set required to be a good SQL
+Developer
+one should have a good knowledge of SQL
+commands functions joints and procedures
+let's have a look at few commands such
+as create drop alter and truncate these
+commands come under data definition
+language we also have insert update and
+delete commands these commands come
+under data manipulation language we have
+Grant and before commands these commands
+come under data control language we also
+have Commit rollback and save point
+commands these come under transaction
+control language these are the basic
+commands a SQL Developer should be
+familiar with and a SQL Developer may
+have a little command on any one
+programming language you don't have to
+be expert in programming all you need is
+how to interface between application and
+your database for example you are using
+MySQL and your web application is based
+on PHP then you should know how to
+connect your application to the database
+and how to issue queries
+how to fetch results and then how to
+display it to the users
+one should have a good understanding of
+various database Management systems such
+as MySQL Microsoft Access Oracle post
+way SQL dbase Fox Pro SQL Lite IBM db2
+LibreOffice base mariadb and Microsoft
+SQL Server one should know integration
+of databases with data visualization
+software such as power bi and Tableau
+which helps businesses to make better
+decisions and give you an add-on as a
+SQL Developer one should develop
+critical thinking and problem solving
+skills to create optimized queries
+now we'll see how a SQL Developer is
+compensated in both United States and
+India
+in the United States SQL developers grow
+an average salary of dollar 72 282 per
+annum in India the average salary of a
+SQL Developer is rupees 4 lakh 49532.
+now we'll see how person can become a
+good SQL Developer for that one should
+have a good command on structured query
+language and know how to interact with
+database management system and can issue
+queries to get the desired result
+earning industry recognized SQL
+Developer certifications such as
+Microsoft certified professional
+developer mcpd or Oracle PL SQL
+Developer certified associate which
+usually require a passing score on an
+exam
+and it's important to accumulate as much
+practical experience as possible start
+by designing creating and querying small
+databases connected with your hobbies
+and interests for example your favorite
+music videos or your personal finances
+this will enable you to gain experience
+test your knowledge and build your
+project portfolio which will be highly
+beneficial when you start applying for
+your first full-time position
+now we will see some major companies
+recruiting SQL developers first we have
+the multinational Financial Services
+Corporation American Express followed by
+the multinational Professional Services
+Network ernstein young we also have the
+messaging company WhatsApp then we have
+the e-commerce giant Amazon as well as
+the technology and Computer Solutions
+company Dell finally in a list of
+companies we have the multinational
+technology company Google have you ever
+wondered how this big e-commerce
+companies manage their tons of data that
+keeps updating every second and these
+data sets keep on updating in the
+databases to perform operations on this
+data they should have a conceptual
+understanding of these databases and
+this is done by understanding ear
+diagrams of the databases so let's
+understand what 10 year diagram is
+an entity relationship diagram
+describes the relationship of entities
+that needs to be stored in a database ER
+diagram is mainly a structural design
+for the database it is a framework made
+using specialized symbols to define the
+relationship between entities ear
+diagrams are created based on the three
+main components entities attributes
+relationships let's understand the use
+of ER diagram with the help of a real
+world example
+here a school needs all its Student
+Records to be stored digitally so they
+approach an I.T company to do so a
+person from the company will meet the
+school authorities not all their
+requirements describe them in the form
+of ER diagram
+and get it cross-checked by the school
+authorities as the school authorities
+approve the ear diagram the database
+Engineers would carry further
+implementation
+let's have a view of an ear diagram
+the following diagram showcases two
+entities student and course and the
+relationship the relationship described
+between student and course is many to
+many as a course can be opted by several
+students and a student can opt for more
+than one course here student is the
+entity and it possesses the attributes
+that is student ID student name and
+student age and the course entity has
+attributes such as core Smiley and
+course name
+now we have an understanding of ER
+diagram let us see why it has been so
+popular
+The Logical structure of the database
+provided by ear diagram communicates the
+landscape of business to different teams
+in the company which is eventually
+needed to support the business
+ear diagram is a GUI representation of
+The Logical structure of a database
+which gives a better understanding of
+the information to be stored in a
+database
+database designers can use ER diagrams
+as a blueprint which reduces complexity
+and helps them save time to build
+databases quickly ear diagrams helps you
+identify the entities that exist in a
+system and the relationships between
+those entities
+after knowing its uses now we should get
+familiar with the symbols used in ear
+diagram
+the rectangle symbol represents the
+entities oval symbol represents
+attributes a rectangle embedded in a
+rectangle represents a weak entity a
+dashed oval represents a derived
+attribute a diamond symbol represents a
+relationship among entities double all
+symbol represents multi-valued
+attributes now we should dive in and
+learn about the components of ER diagram
+there are three main components of Air
+diagram entity attribute
+and relationship
+entities have weak entity attributes are
+further classified into key attribute
+composite attribute multi-valued
+attribute and derived attribute
+relationships are also classified into
+one-to-one relationships one to many
+relationships many to one relationships
+and many to many relationships
+let's understand these components of
+rear diagram
+starting with entities
+an entity can be either a living or a
+non-living component an entity is
+showcased as a rectangle in an ear
+diagram let's understand this with the
+help of an ER diagram here both student
+and course are in rectangular shape and
+are called entities and they represent
+the relationship study in a dimension
+let's transition to weak entity
+an entity that makes Airlines over
+another entity is called a weak entity
+the weak entity is showcased as a double
+rectangle in ER diagram
+in the example below the school is a
+strong entity because it has a primary
+key attribute School number unlike the
+school the classroom is a weak entity
+because it does not have any primary key
+and the room number attribute here acts
+only as a discriminator and node or
+primary key
+now let us know about attributes
+attribute an attribute exhibits the
+properties of an entity an attribute is
+Illustrated with an oval shape in an ER
+diagram in the example below student is
+an entity and the properties of student
+such as address age name and row number
+are called its attributes
+let's see our first classification under
+attribute that is key attribute the key
+attribute uniquely identifies an entity
+from an entity set the text of a key
+attribute is underlined in the example
+below we have a student entity and it
+has attributes name address row number
+and age but here roll number can
+uniquely identify a student from a set
+of students that's why it is termed as a
+key attribute now we will see composite
+attribute
+an attribute that is composed of several
+other attributes is known as a composite
+attribute an oval showcases the
+composite attribute and the composite
+attribute over is further connected with
+other roles in the example below we can
+see an attribute name
+which can have further supports such as
+first name middle name and last name
+these attributes with further
+classification is known as composite
+attribute now let's have a look at
+multi-valued attribute an attribute that
+can possess more than one value are
+called multi-value attributes these are
+represented as double old shape
+in the example below the student entity
+has attributes phone number roll number
+name and age out of these attributes
+phone number can have more than one
+entry and the attribute with more than
+one value is called multi-valued
+attribute
+let's see derived attribute an attribute
+that can be derived from other
+attributes of the entity is known as a
+derived attribute in the ER diagram the
+derived attribute is represented by
+dashed over and in the example below
+student entity has both date of birth
+and age as attributes here age is a
+derived attribute as it can be derived
+by subtracting current date from the
+student date of birth
+now after knowing attributes let's
+understand relationship in ER diagram a
+relationship is showcased by the diamond
+shape in the ear diagram it depicts the
+relationship between two entities in the
+below example student study course here
+both student and course are entities and
+studies the relationship between them
+now let's go through the type of
+relationship
+first is one-to-one relationship when a
+single element of an entity is
+associated with a single element of
+another entity this is called one-to-one
+relationship
+in the example below we have student and
+identification card as entities we can
+see a student has only one
+identification card and an
+identification card is given to one
+student it represents a one-to-one
+relationship
+let's see the second one when too many
+relationship when a single element of an
+entity is associated with more than one
+element of another entity is called when
+too many relationship in the below
+example a customer can place many orders
+but a particular order cannot be placed
+by many customers
+now we will have a look at many to one
+relationship when more than one element
+of an entity is related to a single
+element of another entity it is called
+many to one relationship for example
+students have to opt for a single course
+but a course can be obtained by number
+of students let's see many to many
+relationship when more than one element
+of an entity is associated with more
+than one element of another entity is
+called many to many relationship
+for example an employee can be assigned
+to many projects and many employees can
+be assigned to a particular project
+now after having an understanding of PR
+diagram let us know the points to keep
+in mind while creating the ear diagram
+first identify all the entities in the
+system embed all the entities in a
+rectangular shape and label them
+appropriately this could be a customer a
+manager an order an invoice a schedule
+Etc
+identify relationships between entities
+and connect them using a diamond in the
+middle illustrating the relationship do
+not connect relationships
+connect attributes with entities and
+label them appropriately and the
+attribute should be in our chip assure
+that each entity only appears a single
+time and eradicate any redundant
+entities or relationships in the ear
+diagram make sure your ER diagram
+supports all the data provided to design
+the database make effective use of
+colors to highlight key areas in new
+diagrams
+how to install MySQL and Ubuntu but
+before we begin if you are an aspiring
+data analyst then I have the perfect
+cause for you we have the professional
+certificate program in data analytics
+both your carrier over this data
+analytics program in partnership with
+Purdue University and in collaboration
+with IBM which features master classes
+and follows an applied learning model
+with real-time projects and business
+case studies now that we have a clear
+understanding of the pgp data analytics
+certification with simply learn in
+collaboration with IBM from Purdue
+University we will get started with our
+tutorial for today's session so now
+we're on the Ubuntu operating system
+let's quickly start our terminal the
+shortcut key for that is control alt D
+so now we have the terminal opened so we
+might have to run a few couple of
+commands
+so the first one would be pseudo apt
+upgrade or update
+I will ask for the host password
+now you have the update
+so usually what happens is when you try
+with the default method or when you try
+with the default codes or the commands
+you might miss a couple of updates or
+two or files right so what happens when
+you try with the default codes or
+default commences you might miss a file
+or two so when you update the Ubuntu you
+will get the missing files as well now
+if in case if you find I've got all the
+updates but in case if you find some
+files are missing you might receive a
+message from Ubuntu saying can't update
+or not fetched right in that case you
+can try upgrade command
+even
+then if you miss a couple of files there
+is another similar command which says
+sudo apt full upgrade we should also try
+that as well
+so basically what happens is you might
+have one single command which says sudo
+app install MySQL right so that
+particular command will run but
+unfortunately sometimes it misses to
+face
+complete get I mean it misses to get all
+the files So to avoid that we will try
+the brute force method which will get
+all the files all the updates on all the
+executable files you require to run
+MySQL and Ubuntu right
+just a couple of minutes yes
+so similar to upgrade we have full
+upgrade
+it's done
+and in case if you wanted to remove some
+unnecessary files you have a command for
+that as well so let's take a look at
+that
+so the sudo apt Auto remove will remove
+any of those old packages which you no
+longer need after the complete for
+Library let's run that
+there you go so now we are done with the
+open to update let's clear the screen by
+pressing Ctrl C shortcut with me
+the shortcut key control L has been
+press and the screen has been cleared
+now now we are going to go with our SQL
+installation command which is sudo APD
+get installed
+my SQL
+yeah so again we Face some issues
+regarding the installation so this means
+that we might have some files which we
+might not need related to mySQL so my
+suggestion would be to eliminate those
+particular files using the sudo app get
+remove Purge MySQL server MySQL client
+MySQL common yes
+that is why so we're trying to remove
+any of the existing files so let's again
+let's try to get Auto remove
+and auto clean
+again the update
+there you go we have the update and now
+we shall try to install the MySQL server
+with the following command but the
+difference is we are trying to install
+it with yes that is hyphen y
+providing the permissions
+there you go you can see my SQL is
+running as
+pid6045 anyways let's also check the
+status once the update is done
+there you go let's quickly check the
+status by using pseudo system control
+status MySQL
+and there you go
+it says the server is operational and
+the main PID is
+6240 let's quickly clear the screen
+using Ctrl L key combination and now
+let's start SQL by using the command so
+do MySQL they should start MySQL for you
+there you go that's how you install
+MySQL and Ubuntu operating system again
+you can run all your queries based on
+MySQL and in case if you want to quit
+just type in quit so to install SQL
+server in Windows you will need two
+different software packages the first
+one being the SQL Server itself and the
+second one is a SQL Server management
+tool let's download these let's go back
+to Google
+foreign
+server
+download
+now you can choose the first option SQL
+Server downloads from Microsoft ensure
+that you are choosing the software from
+the service provider which is Microsoft
+itself not the third party software
+files
+now if you scroll down you can see two
+different versions of the SQL Server the
+first one being the developer and the
+second one being the express if you are
+a learner then I would recommend you to
+go with the express version because it
+has more features than the developer
+version and also it is open source now
+let's go with the express version
+download now
+the software file should be downloaded
+shortly
+so we express the XE file has been
+downloaded successfully click on it and
+it should be running
+now it is asking for the admin
+permission get the admin rights and then
+you should be good to go
+once you provide the admin rights the
+SQL Server installation will begin so
+here you can see the window or the
+dialog box which will give you three
+different options basic
+custom and download Media I would
+recommend you to go with the basic
+version
+select that and now read all the terms
+and agreements post that accept
+and check the location where the SQL
+Server is being installed if you're
+comfortable with it you can click on
+install or if you want to change go to
+browse and select your folder I'm
+comfortable with this particular
+location which is program files so I'll
+click on install
+it should be installing in a while
+there you go the download is successful
+the installation phase might take a
+little while
+so the downward has been successfully
+done and the installation has also
+completed successfully now only the
+first phase of the installation process
+is done right the SQL Server is done but
+we need another tool which is ssms or
+SQL Server management story that you can
+get right over here just click on
+install ssmv and it will redirect you to
+a different web page just click on the
+web page you want to go or the web
+browser you want to choose foreign
+scroll a little
+towards them and you can see the option
+saying free download for SQL Server
+management studio version
+19.0.2 so you might be having the latest
+versions in the future as well let's go
+with the current version click on it
+and there you go the system setup is
+being downloaded here
+it's 629 MB so it might take a while
+there you go the Microsoft SQL Server
+management Studio has already downloaded
+and is being installed right now so now
+you can see there is one bottleneck you
+need to restart the system or you can
+close and start it anyways but let's
+choose the restart option
+so after the restart the SQL Server
+management studio is downloading a few
+more packages and the installation
+should be done in a while
+there you go the installation has been
+complete and you have the server
+management Studio ready to execute open
+that
+so here you have the server type server
+name and authentication if you want to
+change them you can but I'm comfortable
+with these and just press connect and
+you should be good to go and get started
+with you
+query editor
+then you can start writing your queries
+on your SQL Server first let's
+understand what is MySQL workbench or
+MySQL workbench
+so
+MySQL workbench is a graphical tool for
+working with mySQL servers and databases
+you may use the MySQL workbench for
+Server Administration for creating
+entity relationship diagrams and for
+running SQL queries
+MySQL server is cross-platform meaning
+that it can run on number of different
+platforms such as Windows Linux Mac OS
+and others
+now
+we will see the MySQL workbench
+functionalities
+so first we have SQL development or SQL
+development MySQL workbench enables you
+to create and manage connections to
+database servers along with enabling you
+to configure connection parameters MySQL
+workbench provides the capability to
+execute SQL queries on the database
+connections using the built-in SQL
+editor
+next we have data modeling
+the data modeling functionality of MySQL
+allows you to create models of your
+database schema graphically
+reverse and forward engineer between a
+schema and a live database and edit all
+aspects of your database using the
+comprehensive table editor the table
+editor provides easy to use
+functionalities for editing tables
+columns indexes triggers partitioning
+options inserts and privileges routines
+as well as views
+the third functionality is server
+Administration
+it enables you to administer MySQL
+server instances by administering users
+performing backup and Recovery
+inspecting audit data viewing database
+health and monitoring the MySQL server
+performance
+fourth we have data migration
+now this functionality of MySQL
+workbench allows you to migrate from
+Microsoft SQL Server Microsoft Access DB
+cybase SQL Lite SQL anywhere
+postgres SQL and other relational
+database management system tables
+objects and data to mySQL
+migration also supports migrating from
+earlier versions of MySQL to the latest
+releases
+and finally we have MySQL Enterprise
+support
+the MySQL workbench has support for
+Enterprise products such as MySQL
+Enterprise backup MySQL firewall and
+MySQL audit
+now
+let's have a look at the MySQL workbench
+additions available to us
+first we have the Community Edition so
+this workbench Edition is open sourced
+and can be downloaded free of cost
+it came under the GPL license and is
+supported by a huge community of
+Developers
+then we have the standard edition of
+MySQL workbench
+the standard edition of my S12 workbench
+is the commercial Edition that provides
+the capability to deliver high
+performance and scalable online
+transaction processing that is popularly
+known as oltp applications
+so the last addition that is the
+Enterprise Edition we have is the
+commercial Edition that includes a set
+of advanced features management tools
+and Technical Support to achieve the
+highest scalability security reliability
+and uptime
+now this Edition also reduces the risk
+cost complexity in the development
+deployment and managing MySQL
+applications
+now with this theoretical knowledge
+let's go ahead and see how to download
+and install MySQL workbench on Windows
+okay so I've searched for MySQL download
+on Google and let me go ahead and click
+on the first link which is from
+www.mysql.com
+this will lead us to the downloads page
+I've opened in a new tab and in the
+download section if I scroll down
+you will find something called as
+MySQL Community GPL downloads this GPL
+stands for general public license which
+is for free so we will install the
+community edition of MySQL workbench
+if I click on this it will take you to
+another page where you have all the
+MySQL Community downloads and here you
+will find something called as MySQL
+installer for Windows
+I'll click on this
+and here you can see we have the MySQL
+installer 8.0 version
+please go ahead and install from this
+link you can just click on download
+now we already have a video published on
+how to install MySQL on windows so
+please click on the above link to know
+the steps for installation let me show
+you the video so this is the video I'm
+talking about which is already published
+on our channel that is install MySQL
+server and workbench on Windows all
+right
+now once the installation is complete go
+ahead and launch the MySQL workbench so
+here
+in the search bar if I just type MySQL
+you can see here I have the MySQL
+workbench 8.0 version installed I'll
+open this
+so this is how the interface
+looks like it says welcome to mySQL
+workbench it tells you what MySQL is and
+here I've already created a MySQL
+connection now let me show you how to
+create a new connection
+I'll just click on this plus button and
+it will open setup new connection
+now here you can give a connection name
+let me
+type my name as MySQL underscore demo
+now the connection method you can keep
+it as standard TCP
+now the host name will be the default
+port number should be 3306 the username
+I have kept it as root because this is
+what I gave while installing
+MySQL
+if you want you can also set the
+password
+if I click on this you can enter
+the password
+I'll suggest you to give a strong
+password I'll click on OK
+and let's
+try to test the connection
+you can see here it says successfully
+made the MySQL connection you have the
+host the port number user and
+it says
+a successful MySQL connection was made
+with parameters defined with this
+connection just click on OK and I'll
+click on OK again
+you can see here we have made a new
+connection which says MySQL demo
+I'll click on this
+and it will open my query editor
+so let me open my MySQL workbench where
+we will perform some Hands-On
+demonstrations and look at how to use
+MySQL functions write different commands
+and we'll see the results
+so here on the search bar I'll type
+MySQL
+so it says MySQL workbench 8.0 version
+let me open it
+okay you can see I have a
+local instance connection I'll connect
+to this
+and I'll enter the password
+so this is how my MySQL workbench
+interface looks like let me just drag
+this to the top
+okay
+now the white workspace that you see
+here is called the SQL visual editor and
+below
+you will have the result Pane and the
+history output window I'll show you once
+I run a query and on the right hand side
+you can see we have a help pin or a help
+window
+so if you want to
+check the documentation
+or the usage of a certain command you
+can just type here and it will give you
+the documentation as you can see I just
+choose one command that is Select here
+and it has returned me the syntax and
+what select statement really does all
+right
+and here on the
+left side you can see we have something
+called Administration and schemas these
+are the different databases that I've
+already created so for this demo
+we will start by creating a new database
+so the command I'll write is create
+database if I hit tab it will
+autocomplete
+and the database name I'll give us SQL
+workbench
+give a semicolon
+I'll select this and you see this
+thunder button if I click on this it
+will execute my query
+okay you can see here
+it has returned me one row affected and
+my query was successful
+all right
+now to move inside this database I'll
+use
+the command called use SQL underscore
+workbench which is my database name
+let's run this
+you can see we have successfully entered
+into our database now we can create any
+tables perform any calculations
+operations data manipulations retrieve
+data of fetch data insert data and lot
+of other operations
+now under the schema let me just refresh
+this so that you can see our new
+database this is our database you can
+see SQL workbench currently we haven't
+created any tables if I
+create a table it will show here you can
+see here views stored procedures
+functions and other things
+so first let's get started by
+looking at some of the numeric functions
+that are available
+in MySQL
+so I am giving a comment by typing shift
+and then my comment that is numeric
+functions
+first and foremost we'll see how to use
+the absolute function in MySQL
+so
+for using the absolute function I'll
+write select
+abs
+and inside this ABS function I'll pass
+in a value let's say 22
+now if I run this
+it gives me a result that is 22 since
+the absolute value of 22 is 22 because
+22 we have passed in as a positive value
+now let's say I'll pass in minus 22. and
+let's run it
+there you go you can see here
+my absolute function has dropped the
+negative sign and has written me a
+positive value which is 22 you can try
+for other values let's say I'll
+select minus 50.
+if I run this it returns me 50
+all right
+next
+we'll see how
+the mod function works
+so the mod function Returns the
+remainder of a division
+so if I write select
+mod
+and I want to divide
+10 by 4.
+let's run this and see the result
+you can see it has written me to
+because the remainder for 10 divided by
+4 is 2. you can also give an alias name
+to this
+I'll write as remainder
+the reason why I am giving an alias name
+is because
+the result we have got you see the
+column this is not very readable
+now if I run this
+you can see the difference there you go
+now the output is much readable than the
+previous one
+okay so let's see
+I want to find the mod of another
+division 15 comma 3
+as remainder again
+I'll run it again
+you can see 15 divided by 3 the
+remainder is 0
+let's try for one more let's say
+50.6
+divided by 2
+you can already guess the result it
+should be 0.6 there you go you can see
+this is my
+remainder
+now as I said
+the below window is called the history
+output window or the pane and this is
+called the query result pane
+which is part of the MySQL workbench
+let me just drag this a bit okay
+now moving on to the next numeric
+function we will explore the power
+function
+now suppose I write select
+power
+4 raised to 2.
+let's see the result
+I'll run it it gives me
+16 which is correct
+let's see
+I'll write select power
+10 raised to 3.
+you can already
+think of the result it should be 1000.
+okay
+now like how you
+use the power function similarly you can
+use the square root function in MySQL
+the square root function is written as
+sqrt
+so you can
+get the square root of a number by using
+the sqrt function
+let's say I want to find the square root
+of 4.
+if I run this
+it gives me 2 which is the square root
+of 4 I'll edit here itself let's say I
+want to find the square root of 144.
+where on this
+it gives me 12 which is the
+square root of 144.
+now moving ahead
+let's say you want to find the greatest
+number within a range of numbers you can
+use the greatest function that is
+available in MySQL
+I'll write select
+greatest I'll give a range of numbers
+let's say 2 5 18
+6.
+and let's say 12.
+you give a semicolon and let me run it
+it returns me 18 because 18 is the
+largest of the greatest number
+in my range of numbers
+similarly you can also find the least
+number for that you can use the least
+function
+this will return me the minimum number
+present in my range of numbers in this
+case it is 2. all right
+there's another function that is
+available in MySQL is truncate so the
+truncate function truncation number to
+the specified number of decimal places
+so suppose I write select
+truncate
+22.897 comma 1.
+let's see the output
+okay you can see here
+so the truncate function has returned us
+22.8 and it has truncated the rest of
+the decimal places
+I want to truncate up to two decimal
+places let's see the result again
+you can see here it has given us 22.89
+next
+you have another function called round
+so the round function MySQL is used to
+round a number to a specified number of
+decimal places if no specified number of
+decimal places is provided to around a
+function
+the round of function rounds the number
+to the nearest integer so let's see a
+few examples
+suppose I want to round the value 22.897
+this time I am not passing
+the specified number of decimal places
+we'll see the result
+it has returned me 23 which is the next
+highest integer
+suppose you want to
+round it to two decimal places
+we'll give a comma and then say 2
+I'll run it it has given us 22.90
+so this 8 9 it has converted to nine
+zero similarly if you want to
+round the number to one decimal please
+it will give you 22.9
+all right
+now
+let's create a student's table and store
+it in our MySQL workbench
+so I'll just give a
+comment called student table or students
+table
+all right
+so the way to create a table in a
+database in MySQL workbench is you write
+create table followed by
+the table name that you want in this
+case I am going to create a student's
+table
+then you start with parenthesis and
+give the
+columns that you want in your table
+so first I want the student ID you can
+think of this as the student rule number
+give us peace and then give the data
+type of the column now student ID should
+ideally be of type integer I'm assigning
+this as primary key
+oh
+so the primary key will uniquely
+identify each record in a table
+and it cannot have any
+duplicate values
+so ideally if you think all the students
+in a school will have a unique roll
+number
+no two students will have the same roll
+number
+next column I want is the student name
+now the name is of type worker
+and I'll give the length as let's say 25
+then I want the age of the student age
+is also of type integer
+and I'll write in the same line
+then I need the gender
+of the student should be of type
+character and
+the size I'll give us
+one
+then we have
+DOA which stands for date of admission
+and it is of type date
+then we have the city to which the
+student belongs to then city is also a
+type
+where care
+all right you close the bracket and give
+a semicolon let's run this
+there you go here you can see in the
+history window it says
+the table was created successfully now
+let's just refresh this again
+so that you can see the table
+here under MySQL workbench database
+under tables you can see we have a
+student's table let me expand this
+further so that you can see the
+columns that we have there you go we
+have the student ID the student name
+yield gender date of admission and the
+City
+okay
+now it's time to insert a few
+records to this table for that you need
+to write the insert statement now I am
+going to open a notepad where I have
+already written the insert statement so
+let me just copy paste it here
+okay so here on my notepad I have my
+insert statement already written I'll
+just copy this and I'll paste it on my
+workspace
+OK if I go to the top you can see this
+is how my insert into
+command look like
+you have insert into followed by the
+table name which is students then you
+have the values keyword and we have the
+set of Records so the first
+value represents the student
+ID or the rule number then you have the
+student's name you have the age you have
+the gender then we have the date of
+admission and then we have the city to
+which the student belongs to
+all right
+now let me go ahead and run my insert
+query I'll just select everything and
+I'll hit on execute
+you can see here you have successfully
+inserted 20 rows of information to our
+table
+no
+if you want to
+check all the records in a table
+the SQL command is Select start from
+table name that is students
+if I run this
+this is my output you can see we have
+the student ID the student name e gender
+date of admission and City if I scroll
+down there are total
+20 rows of information in my table
+now the star represents you want to
+select all the columns in the students
+table suppose
+you want to return specific columns from
+the table you can mention that in the
+select statement itself
+suppose I want to select the student
+name the age of the student and the city
+to which the student belongs to so I
+will write select
+Stu underscore name which is my column
+name comma
+the age
+comma
+the city
+from my table name that is students
+let's run it
+you can see the output we have only
+three columns displayed in the result
+okay now
+let's see how to use the where clause in
+SQL or MySQL
+so the where Clause helps you filter
+specific records based on certain
+condition
+or conditions
+suppose I want to see the students who
+are from Pune so I want to
+display only the records of students who
+are from
+Pune City so the way to do is I'll write
+select
+star from
+students
+where
+City equal to
+Pune
+now this Pune is a
+character type so you need to mention it
+within single quotes
+let's run it
+there you go in the output you can see
+there are total four students who are
+from Pune you have Joseph
+anubhav Akshay and Anand
+all right
+now
+let's say you want to
+filter only those students who are from
+Miami and their gender is male
+again you are going to use the where
+clause and along with the where Clause
+we will use the and operator
+so I'll write
+select
+start from
+students
+where
+CT equal to
+I'll say Miami
+this Miami should be within quotes
+I'll use my and operator
+and then write the gender should be
+equal to
+M or meal
+again
+M should be within single quotes I'll
+give a semicolon and let's run it
+you can see here
+we have Whipple
+ishan
+tanishq and
+Amrit who are from Miami city and that
+gender is male
+cool
+now moving ahead
+suppose you want to know the students
+who are either from City Boston or
+Chicago in that case you are going to
+use an or operator
+I'll just copy this
+SQL command and I'll paste it here and
+I'll edit in the same query so this time
+we want the students who are from
+City Boston or Chicago so here instead
+of Miami I'll write Boston
+I'll use an or clause or an R operator
+and instead of gender equal to mail I'll
+again write
+or city equal to
+Chicago
+let us
+run the SQL query and see what we have
+so there are total
+six students who are either from City
+Chicago or from Boston we also have a
+female student Eliana
+all right
+now moving further
+let's say you want to
+display the records of the students
+who belong to any city rather than
+Chicago
+in that case you are going to use the
+not operator
+so I'll write select star from
+students where
+not City equal to
+Chicago
+let's run it and see the result
+all right you can see total we have
+returned 17 rows of information which
+means
+there are total 17 students who belong
+to other cities apart from Chicago if
+you see the result you won't find any
+student who is from
+Chicago City
+okay
+now there's another important
+feature of MySQL where you can group
+certain rows of information based on a
+particular column or columns
+so let's see how to use Group by in
+MySQL
+I'll give a
+comment called Group by
+now in this group by Clause we are going
+to find the total number of students
+present in each City
+so the way to do is I'll write select
+I want to select this city
+and then I'm going to use the count
+function this is an inbuilt MySQL
+function
+I am going to count the student IDs
+I'll give an alias as
+total students
+from my table that is
+students
+then
+I am going to group my result based on
+each City
+let's run this and see the output
+there you go you can see here
+so our table has total six cities you
+have Pune New York
+Miami Chicago Detroit and Boston and
+here on the right hand side you have the
+total students that we just created
+using an alias name and this total
+students column has the total number of
+students from each City so if you see
+here
+New York has four students Pune has four
+students in Miami Chicago we have four
+and three students and in Detroit we
+have two students respectively
+all right
+the next class we are going to see is
+having
+now having and where are kind of similar
+but there are certain differences
+now
+for our example we are going to find the
+cities where the total number of
+students are more than three if you see
+the results pin
+so we have Pune we have New York and
+Miami as the cities where there are more
+than three students
+so let me show you how to return these
+three records so I'll write select
+City
+comma
+I'll count
+the students using the count function
+and I'll pass my column as student ID
+and I'll give an alias as total students
+from
+my table that is students
+I'll use the
+Group by Clause Group by City
+and then I am going to use having
+the count of
+student ID
+greater than 3.
+let me run it and show you the result
+there you go
+as expected we have Pune New York and
+Miami where the total number of students
+are more than three
+let's see
+how the order by
+Clause works
+so the order by Clause is used to
+filter the records based on a particular
+order in ascending or descending order
+so suppose
+see I write select star from
+students
+and then I'll write
+order by let's say City
+let me show you the result first
+okay you can see
+the city column has been ordered in
+alphabetical order
+so first the city start with b then we
+have c d m and then we have n and p
+what if I want to order the resultant
+descending order
+so again it will
+alphabetically sort my result in
+descending order of City so
+on the top we have Pune
+because
+alphabetically in descending order Pune
+starts with p so it appears on the top
+then we have New York followed by Miami
+Detroit Chicago and Boston
+now it's time to explore some string
+functions in MySQL
+so I have given a comment string
+functions
+first
+let's say you want to convert a certain
+string into upper case so I can write
+select
+the function I'll use is upper
+and within this function you can pass in
+the string let's say
+I'll write India
+if you want you can give an alias name
+as let's say uppercase
+I'll give a semicolon
+and let's run it
+there you go so my input was in sentence
+case and using the upper function we
+have converted everything into uppercase
+similarly let me just copy this
+and
+I'll show you
+if you want to convert a string into a
+lowercase you can use the lower function
+I'll run this you can see the result
+everything is in lowercase now of course
+I need to change the Alias name to
+lowercase
+instead of using lower as the function
+there is another function that MySQL
+provides which is called the L case
+so I'll just edit this and write L case
+and let's see I'll write India in
+uppercase
+let's run it returns me the same result
+cool
+moving on
+let's say you want to find the length of
+a string you can use the character
+length function
+I'll write select
+use the function character length
+and I'm again going to pass in my
+string as India as let's say total
+length
+let's run it this time I'm going to hit
+Ctrl enter to run MySQL command
+there you go
+it has given us the right result which
+is 5 because India has five characters
+in it
+now these functions you can also apply
+on a table
+now let me show you how to do it let's
+say we already have the students table
+and you want to find the
+length of
+each of the student names
+so here you can pass
+Stu underscore name
+and you can give the same Alias name
+let's say total length
+and then you can write from
+table name that is students
+if I run this
+you can see the output it has given me
+total 20 rows of information
+it is not readable actually let me also
+display these student names so that we
+can compare their
+length
+all right
+I'll run this again
+and now you can
+see the result so Joseph has six
+characters nilis has six Whipple has
+five anubhub has seven similarly if you
+see Akshay has six then it has 7 Raga
+was six
+come in size 7 rabada has six so on and
+so forth
+now instead of using this character
+length you can also use the function
+car length
+it will work the same way let's see the
+result
+there you go it has given us the same
+result you can either use character
+length or care length
+foreign
+function called concat so the concat
+function adds two or more Expressions
+together let's say I'll write select
+use the function
+concatenate
+the function is actually concat
+and I'm going to pass in
+my
+string values let's say India
+is
+in Asia
+let's run this NCR result
+you can see here it has concatenated
+everything
+let us make it more readable I'll give a
+space in between so that you can read it
+clearly
+now this is much more readable India is
+in Asia
+and if you want you can give an alias
+name as well as let's say merged
+there you go
+now the same concat operation you can
+also perform on a table
+I'm going to use the same students table
+let's say I want to return the student
+ID
+followed by the student name
+and then
+I am going to merge
+the student name
+followed by a space
+followed by the age of the student
+and I can give an alias as let's say
+name underscore each
+from my table that is students
+let's see how this works
+okay you see here the result is very
+clear
+we have the student ID the student name
+and the concatenated column that we
+created which was name underscore each
+where we have the
+student name with a space followed by
+the age of the student
+so scroll down you can see the rest of
+the results
+cool
+now moving ahead
+let's see how the reverse function Works
+in MySQL
+so the MySQL reverse function returns a
+string with the characters printed in
+reverse order
+so suppose I write select
+reverse
+I'll use the same string again let's say
+I have
+India
+let's run it
+you will see all the characters printed
+in reverse order again you can perform
+the same operation on
+a table as well let's say I'll write
+select
+reverse
+and I'll pass in the column as student
+name
+from my table that is students
+let's run it
+it gives you 20 students and all the
+names have been
+printed in reverse order
+okay
+now
+let's see what the replace function does
+so the replace function replaces all
+occurrences of a substring within a
+string within a new substring
+so let me show you what I mean
+I'll write select
+replace
+I'll pass in my input string which is
+let's say orange is a
+vegetable
+which is ideally incorrect I am
+purposely writing this so that I can
+replace the
+word vegetable
+with
+fruit
+okay
+so what this replace function does is it
+is going to find where my word vegetable
+is within the string my input string and
+it is going to replace my word vegetable
+with fruit
+let's run it and see the output there
+you go now this is correct which is
+Orange is a fruit
+all right
+now
+MySQL also provides some trim functions
+you can use the left trim right trim and
+just the trim function
+so let me show you how this
+left trim works
+left rim or L trim removes the leading
+space characters from a string passed as
+an argument
+so see I write select
+I'll use the left trim function which is
+L trim
+and then I am going to purposely give a
+few spaces
+in the beginning of the string I'll give
+a word let's say India
+and then I'll give some space after the
+bird India
+and see how the
+Ultram box if I run this it gives me
+India which is fair enough
+but before that
+let's first find the length of my string
+so I'll use my length function here and
+within this function I am going to
+find the length of my string which has
+India along with some leading and
+trailing spaces I'll paste this here
+give a semicolon and I'll run it
+okay so the entire string is
+17 characters long or the length of the
+string is
+17. now see I use l trim on my same
+string
+what it returns me is India
+and if I
+run length over it you can see the
+difference
+as in you can see how many spaces were
+deleted from the left of the string you
+can see here now it says 17
+and
+I'm going to use l trim
+let's see the difference it gives me 12
+the reason being it has deleted
+five spaces from the left you can count
+it
+one two three four and five so 17 minus
+5 was
+12 which is correct similarly you can
+use the r trim function which removes
+the trailing spaces from a string
+trailing spaces are these pieces
+when you use left Rim it deletes the
+leading spaces which is this
+now let me just replace L term with r
+trim which stands for right trim and see
+the result
+so the length is 10 now the reason being
+it has deleted
+seven spaces from the right of the
+string if you can count it one two three
+four five six and seven
+cool
+you can also
+use the trim function which will delete
+both the leading and the trailing spaces
+so here if I just write trim
+and I'll
+run it
+it gives me five
+because India is total five characters
+long and it has deleted all the leading
+and the trailing spaces
+all right
+there's also a function called position
+in MySQL the position function Returns
+the position of the first occurrence of
+a substream in a string so if the
+substring is not found with the original
+string the function will return 0.
+so let's say I'll write select
+position
+I want to find
+where
+fruit is
+in my string that is
+Orange
+is
+a fruit
+I'll give an alias as name
+the sum error here
+it should be within double quotes
+now let's run it and see the result okay
+it says at the 13th place or at the 13th
+position we have the word fruit in our
+string which is Orange is a fruit
+now the final function we are going to
+see is called ASCII so the ASCII
+function Returns the ASCII value for a
+specific character let's say I write
+select
+ASCII of the letter small a
+if I run this
+it will give me the ASCII value which is
+97
+let's say you want to find the ASCII
+value of
+4.
+let's see the result
+it gives me 52.
+all right
+so that brings us to the end of the demo
+session on MySQL workbench
+let me go to the top and show you the
+things that we covered so first of all
+we created a new database called MySQL
+workbench which you could
+see it here under schemas there was
+a database created called MySQL
+workbench then we entered into the
+database using the command use MySQL
+workbench or SQL workbench we explored a
+few numeric functions where we saw how
+to use absolute mod power square root
+least greatest truncate round
+and then we created a table called
+students we inserted some 20 rows of
+information of different students and
+their age date of admission City
+we saw how to use where Clause how to
+use the and and R operator
+we used Group by to group our records
+based on certain conditions we also used
+having
+we used order by and then we look at a
+few
+string functions such as lower upper
+concat character length reverse replace
+ASCII and position
+all right
+if you're an aspiring data engineer
+looking for online training and
+certifications from the prestigious
+universities and in collaboration with
+leading experts then search number
+simply learn Sports graduate program in
+data engineering from Purdue University
+in collaboration with IBM should be your
+right choice for more details use the
+link in the description box below
+so what exactly are temp tables in SQL
+so temp table is a temporary table so
+the term temporary is self-explanatory
+you know that every database and SQL has
+tables right now let's say you created
+10 tables in your database and you close
+your MySQL workbench or you close your
+database
+and you restart it after a while and
+then you will have all your 10 tables
+intact in your database but temporary
+table is not like that it is something
+different which has its existence until
+the session of the database is running
+let's say you open the database now you
+have this session of database running
+you created the 11th table as a
+temporary table and that particular 11th
+temporary table will be existing in the
+database only until the current database
+is running and active once you close it
+once you turn it off or once you restart
+it the temporary 11th table that you
+created will type or it will be
+eliminated so that is the meaning of
+temp table now let's see how we can
+create a temporary table
+so the syntax is completely similar to
+the temporary or to the table what we
+usually create right it is similar to
+the table what we regularly create but
+the only catches we will be using the
+keyword temporary
+create temporary table table name which
+is user defined name and inside that the
+parameters may be the employee ID
+student IDM learning student ID name Etc
+right so this is how we create the
+temporary table now let's quickly get
+back to the simple workwage and try to
+create a temporary table add some data
+into it and try to display the temporary
+table if getting your learning started
+is half the battle what if you could do
+that for free visit scale up by simply
+learn click on the link in the
+description to know more
+now we are back on the SQL workbench and
+meanwhile we are logging in
+you might have a question right
+when you say that the temp table will be
+existing or running only until the
+database is active then why create those
+temporary tables in the workbench right
+the sole purpose of using temporary
+tables is
+in a few cases the intermediate results
+of the data analytics process are
+important and you can have a quick
+reference on intermediate results and
+you don't want them to be existing in
+your database in a permanent basis right
+for such scenarios you can use a
+temporary database now here on my
+workbench we have a simple code for
+creating a temporary table so I'll be
+creating the temporary table on the name
+of student and we have student ID
+integrated by student name worker and
+department and student ID will be the
+primary key now let's use the database
+that is used simply learn database to
+get access and we have the access num
+let's quickly see what and all tables we
+have using the show command
+show it's
+enter
+and we have two tables employee and
+employee table 2 but not student
+right now let's quickly execute this
+control
+enter
+and now let's use the insert command
+same like we inserted in the previous
+tables insert into table name student
+parameters ID name department and values
+comma separated values student ID name
+and departmental Group whatever he took
+in college
+right now let's execute this code
+the data has been successfully included
+now let's Select Staff from Sprint that
+is view the contents in this particular
+table we have the values in this
+particular table and let's also see if
+we have that particular data included in
+the database or not let us show tables
+there you go it's not included in the
+database but it is active when you try
+to you know print the values in that
+particular table which is in the
+database it will show you but when you
+try to fetch that particular existence
+or the permanent existence of that
+particular table it will not be present
+and this particular table will be active
+only until the database is active now
+let's restart this particular work which
+I'm closing it
+restarting it
+now if I run this I will not get it you
+can see the error the database
+right okay then let's have the database
+selected
+and let's try to run the command
+there you go
+table simply learn DB dot student does
+not exist
+right
+previously when you try to execute the
+table was giving us values now we have
+the error saying the table does not
+exist right that is how a temporary
+database runs SQL so first let's have a
+quick look on the syntax we use to
+create a database so first we have a
+create keyword which will explain the
+SQL Server that we are trying to create
+a new element which can be a database or
+a table next we have the keyword
+database which clarifies the SQL that we
+are trying to create a new database the
+next one is not mandatory if not exist
+just we are trying to make sure that the
+database that we are going to create is
+not already existing so if you use this
+if not exist then SQL will tell you in
+case if there is an existing database on
+the same database name then it will not
+allow you to create a duplicated
+database and followed by that we have
+the database name which can be anything
+so I've just created as database name
+here now that we are clear with the
+syntax let's get back to to the IDE that
+is MySQL to execute a command to create
+a new database so now we are on the SQL
+workbench now let's quickly try to login
+there you go now you can see some
+existing databases on the left hand side
+of the workbench sys or system as the
+default one so I already created test
+and trial let's try to create a new one
+right away
+so the create keyword
+database
+keyword and then if not exists
+so here you can see I'm trying to
+capitalize the keywords so that it's
+easier to understand what is the code
+and what is the user defined names right
+so create a database if not Xs and
+simply done
+DB
+that's our code let's try to execute
+this
+and there you go so here you can see in
+the action output create database F not
+exists simply non-db has been executed
+successfully now we can run a new code
+which says show databases
+this should show us the newly created
+database which is simply learn DB which
+is right over here so that's how you
+create new database in SQL
+now the syntax is as follows now here
+you have the insert and into keywords
+table name is the user defined name for
+the table then you have the columns that
+is column number one two and Etc then
+after declaring the column names you
+have the keyword values which will help
+SQL understand this is a tuple and these
+are the values involved inside the Tuple
+that is Row 1 value 1 Row 1 value 2 so
+on and Row 1 value n so this type of
+syntax will help you to add one Tuple at
+one time and this will take a lot of
+time to process you can see to insert
+the next apple we are writing a
+completely new syntax once again using
+the same insert into table name column
+one two three and values and row number
+two that is the second table right so
+this type of code will take longer
+duration to run as well as it will take
+longer lines or number of lines will be
+extra so is there a way where you can
+add multiple tuples in one single curve
+yes there is so the syntax will be
+completely same right so you will be
+using one insert into keyword one table
+name and once you will be declaring all
+the column numbers and once you will be
+using the values keyword the only
+difference is you will be adding
+multiple tuples under the values bracket
+right you will be declaring the number
+of values you want to include in one
+single go and this whole query becomes
+as a whole and once you run this query
+all the values will be added at once now
+that you are clear with the syntax let's
+quickly get back to the SQL workbench
+and try to run this command
+now we are on the MySQL workbench let's
+quickly login
+there you go we have logged in let's use
+the simply learn database once again so
+that we get access to the data which we
+have so we already have an employee
+stable
+so let's see what's presently included
+in employee stable select star
+from employee
+table
+semicolon
+so this is the data that we already have
+in our table now let's try to add some
+more data
+so now we will include one single
+element or one single Tuple data related
+to one single employee right using the
+first type of syntax let's quickly
+execute this
+the command got executed again let's
+quickly see what's present in the table
+select start
+from
+employee table again you can see I'm
+using lowercase for the user defined
+keywords and uppercase for the
+predefined keywords just to make sure
+that the code is understandable
+and which is the user defined keyword
+and which is the predefined keyword so
+these are the the ones in small case are
+user defined and the ones in uppercase
+are predefined right so we have
+successfully included one single element
+or one single Tuple the details which
+are related to Prime and now let's try
+to modify the same code and try to
+include few more tuples inside the same
+insert command and try to insert
+multiple rows into the table
+now here you can see we are using the
+same insert into employee table command
+and instead of Brian we replaced or we
+added six more entries under the values
+section right and the only difference is
+we are trying to separate the tuples
+using a comma you can see we are
+enclosing one Tuple inside the
+parenthesis and we are separating two
+tuples with the help of a Karma right
+ensure that you include comma between
+every Tuple and you can ignore the comma
+for the last up you can see we are not
+using any sort of comma or any sort of
+specifier at the end right so and we are
+closing the command using the semicolon
+in this explains equal that it is the
+end now we are going to run this command
+and see the output
+so there you go the command got
+successfully executed now let's again
+execute the select command and see if
+the data is involved or included or
+inserted into the given employee table
+now there you go the command got
+successfully executed and you can see
+the table over here and you can see that
+all the data or all the doubles we
+included into the table using the insert
+command in one go are successfully
+included so that's how you insert
+multiple rows into a table using SQL so
+how to update table in SQL let's quickly
+take a look on the Syntax for today's
+function so here we have the update
+keyword table keyword and the table name
+which you want to update and followed by
+that we have the set keyword which will
+help this equal to set a particular
+column name to a new parameter to which
+you want to update it now you're giving
+a where condition over here so where is
+the keyword and the condition as a user
+defined condition and the combination of
+where and condition will help SQL to
+identify a particular Tuple and update
+the parameter under that particular
+condition now that we have understood
+the syntax let's quickly get back to the
+SQL IDE which is MySQL workbench and try
+to execute a sample command so we are on
+the IDE and previously we tried to
+create an employee table so let's select
+the same table for that let's use the
+database we created that I simply learn
+DB semicolon enter so we are on the
+simply on database now to update a table
+we need to have some data in it so as we
+remember we just try to create a normal
+table in the previous session now let's
+try to add some data into the same table
+using the insert command so let's try to
+make use of the insert command and
+insert into is the keyword and clock
+table is the table name and these are
+the columns we have in the employee
+table and followed by that we have the
+values keyword and followed by that we
+have the data which we need to enter
+into the table and these items are in
+the form of a tuple and every Tuple is
+covered using parenthesis and inside the
+tuples you have the first one which is
+an integer type data which is as it is
+and when you come into the text type
+data they are covered using the single
+quotes so let's equal identify that it
+is a character type data now after
+entering all the tuples separated by
+comma we have a semicolon which
+indicates the end of the statement now
+let's try to run this particular
+statement and add the data into the
+employee table so let's select the
+database once again and now let's try to
+add the data there you go now we have
+the data added onto our employer table
+let's quickly check the employee table
+select
+start from
+employee
+there you go we have all the data added
+onto the table employee ID employee name
+and employee address let's say the last
+employee Jeremy who's been working in
+Delhi since a past couple of years and
+you decide being the manager you decide
+that he should be relocating to
+Hyderabad and you need to update the
+unplug table now by changing the
+location of Jeremy from Delhi to
+Hyderabad now let's try to run our
+update query so first we have the update
+keyword then employee
+table
+then
+set
+EMP address
+equals to
+Hyderabad
+where
+condition EMP
+[Music]
+ID
+equals to
+foreign
+so there you go the code is complete we
+have the update keyword followed by the
+table name then set keyword to set that
+particular column that is the employee
+address to the key Hyderabad from Delhi
+we are changing it to the Hyderabad
+which is value or key value whichever
+you consider and since it is a text type
+value we are encoding it using the
+single quotes then the weight loss and
+the condition which is employee ID must
+be equals to 1 0 0 6. now let's try to
+quickly run this command
+there you go now let's recheck if the
+table has been updated or not so select
+star from employee
+table
+let's run it
+and there you go the last location
+Jeremy which was Delhi is now updated to
+Hyderabad so that's how you update
+values in a table
+now you might be having multiple
+questions is adding a date is that tough
+and SQL tables no you can add a date and
+SQL in the format of worker or character
+everything but if you want to perform
+analytics then using the date format or
+date data type would be more beneficial
+right so for the SQL table you do have
+some formats to follow so that's exactly
+what we are going to discuss in this
+particular tutorial now let us imagine
+that we're going to create a table using
+the following syntax that is create
+table keywords table name which is a
+user defined table name and the
+parameters their respected data types
+and at the end let's say we have a date
+element as date of joining and for date
+of joining we will have the data type as
+date right then let's see the code
+and you need to make sure that when you
+are trying to enter the date element
+into your table you need to be a little
+more cautious to follow a pattern SQL
+has predefined approach to store dates
+which is in the format of YY here mm for
+month DD for dates you need to follow
+this particular way of writing your date
+and if you make some minor at let's say
+you add a date first then the month and
+then the year then obviously SQL will
+throw an error so we don't want that to
+be happening so in that case let's try
+to follow the approach that SQL has now
+let's quickly go back to SQL workbench
+and see how exactly it works so here we
+are back on the SQL workbench let's run
+this use database command to get access
+to our database there we go now let's
+see we have a freshly created database
+and it doesn't have anything
+right now we will add these particular
+details into the data table and here you
+see we are following the
+year month and date approach right now
+let's quickly run this command and there
+you go the date has been updated into
+the table let's now run the command
+again now we have the dates here now
+let's say we try to break the rules now
+we will try the DD mm and the YY format
+here right now let's try to run this
+particular code once again so let's
+eliminate all the previous elements
+and let's consider this as a new entry
+right now let's try to execute this
+there you go so it will automatically
+throw an error saying the date value is
+incorrect you need to change this back
+to the original form that is Wi-Fi month
+and the date
+only then it will accept this particular
+value
+there you go
+so that's how you add date to your SQL
+tables let's quickly take a look at the
+syntax that we will be using today so we
+will be using the alter keyword and the
+table keyword followed by that we will
+be specifying the table name in which we
+want to add a new column then we have
+the add keyword and name the column
+which you want to add to your existing
+table then the data type of that
+particular column with constraints if
+you have any now that we're clear with
+the syntax let's get back to the SQL
+workbench where we can execute this
+particular command now we are on the SQL
+workbench and let us execute this
+particular command and see what we have
+in our existing table okay I think we
+might have to use this particular
+command first you need to get the access
+to your database then you can get access
+to your tables in your database right so
+we have this particular data let's try
+to add a new column which explains about
+the phone number of a employee working
+in your organization
+okay now we can use this particular
+command which is called the table
+there you go so we have added column
+phone number data type and the
+constraint not null and if anything is
+not added in that particular column the
+default value should be n a right let's
+quickly execute this particular command
+there you go now let's check if the new
+column is added or Not by running the
+cell command
+there you go the new phone number has
+been successfully added and by default
+since we did not add any number we have
+N A in that particular column so that's
+how you add a new column to your
+existing table in SQL how to change the
+column name in SQL so let's quickly take
+a look at the syntax that we will be
+following to change the column name in
+SQL so the syntax is as follows we will
+be using the alter and table keywords
+and we will be specifying the table name
+and then we will give the rename column
+keyword then the old existing column
+name and to the new column in which we
+need to change it to so having a clear
+understanding of the syntax let's try to
+execute this command in the Practical
+mode so let's get back to the MySQL
+workbench so now we are on the MySQL
+workbench let's quickly get access to
+the simply learn database
+there you go and now let's quickly take
+a look at the column names in our
+existing table
+now you can see the First Column is the
+employee number let's try to change that
+by using the alter table
+command and then
+and now the rename keyword
+the column name is EMP number
+two
+EMP ID semicolon
+let's quickly execute this command
+there you go now let's try to execute
+the select command once again and see
+the output there you go now the employee
+number has been changed to employee ID
+so that's how you change the column name
+in SQL
+how to change the data type of a column
+in SQL now let's take a quick look on
+the syntax we will be using to change
+the data type of the column in SQL
+so this is a syntax we'll be using so we
+will be using the alter keyword table
+keyword and table name so Alta is the
+keyword which will help SQL to
+understand that we are trying to modify
+something and we are selecting the table
+by offering the table and then we have
+the modify keyword which will help SQL
+to understand that we are trying to
+modify something and we are modifying
+the column name from the table selected
+and we are modifying that particular
+column to a different data type which
+will be specified over here in place of
+data type keyword right so now that we
+are clear with the syntax let's proceed
+and execute the command and change some
+column data types now we are on the SQL
+workbench previously we created an
+employee database in simply learn DB and
+we will be using the same table here so
+we will be typing use simply learn DB
+so that we get access to the simply
+learn DB and the tables we have there so
+let's select all
+employee table
+column let's execute this
+thank you
+so there you go we have the table on our
+screen and let's quickly describe the
+table using the desc command
+and this will give us the data types of
+each and every column in our table now
+you can see we have pin code in the
+format of worker so let's try to alter
+or modify this particular pin code
+column from worker to integer since it
+only saves the numbers right so our
+Command for that was alter
+table
+table name which is employee table
+modify with the keyword
+modify the column PIN code
+to integer
+semicolon now let's quickly run this
+command
+and there you go the command got
+executed successfully let's try to
+describe the table once again
+and there you go now the PIN code was
+earlier mentioned as worker and now it
+got changed it to integer now that's how
+you alter or modify or change the data
+type of a column in a table in SQL
+now let's quickly take a look at the
+syntax that we will be following to
+execute this particular command
+the syntax is as follows we will be
+using the alter table keyword then the
+table name we want to eliminate the
+column followed by that the drop column
+keyword and the column name now let's
+get back to this equal workmans to
+execute this particular command now here
+on the SQL workbench and you can see we
+have five different columns over here
+and we have the phone number column
+which does not have anything now we will
+try to eliminate this particular phone
+number column since we do not need that
+for our purposes now the command is
+really simple as discussed before we
+will be using the alter table keyword
+and the table name and the drop column
+keyword and the phone number which is
+the column name now let's quickly
+execute this particular command and see
+the output there you go now the column
+phone number has been successfully
+eliminated now let's run the select
+command once again and see the new table
+there you go the phone number column has
+been successfully eliminated now with
+that we have come to an end of this
+session on how to eliminate a selected
+column in an existing table in SQL
+how do you delete a row and SQL let's
+quickly take a look at the syntax
+so we will be using the delete keyword
+and the from keyword adding the table
+name and giving a where Clause with a
+user defined condition so this will be a
+basic Syntax for the process of deleting
+a single Row in the SQL table now to
+understand in a much better way let's
+get back to the SQL workbench so now we
+are on the SQL workbench and previously
+we tried to create table add some data
+using the insert command and update a
+value using the update command now let's
+say we have to delete the last row which
+is 1006 Jeremy Hyderabad let's say
+Jeremy found a new job in a new
+organization and now you need to
+eliminate his credentials from your
+database so we will be using the
+following code
+that is delete
+from table name as employee
+table
+and the back loss
+now the condition
+which is
+EMP ID
+is equals to one zero zero six now let's
+try to run the code
+there you go the employee is being
+eliminated from that particular database
+now let's try to recheck the table
+so select
+star from EMP
+loyee
+okay
+table
+run the code and there you go the last
+ID which was one zero zero six has been
+eliminated from your database and that's
+how you delete a row in SQL that is how
+to print or how to obtain current date
+in SQL now the syntax is really simple
+we have two different commands to do
+that we can just type in select get date
+or we can just type in select current
+date or Cur date so these particular
+commands or functions will fetch as the
+current date in SQL now to execute these
+commands let's get back to the Practical
+mode which can be a SQL workbench so now
+we're on the SQL workbench let's login
+there you go so we have both the
+commands let's try to execute them
+so enter and there you go so we have the
+current date so that's how you can fetch
+current date using get date function or
+the current date function in SQL let's
+try to take a quick look on the syntax
+that we will be using today right it is
+simply the Select Staff from table name
+using the where clause and the column
+which you're choosing for that and the
+between operator and we are giving some
+constraints and those different
+constraints are encapsulated between an
+and command here let us say that your
+manager tells you to select all the rows
+where selecting one single column that
+is salary where the employees have the
+salary from 10 000 to 20 000 right then
+you will write the command select star
+from table name with salary between the
+value 10 000 and the value 20 000. so
+this is how the between command works
+now let's execute the same practically
+let's get back to the MySQL workbench if
+getting your learning started is half
+the battle what if you could do that for
+free visit scale up by simply learn
+click on the link in the description to
+know more
+now we are back on the MySQL workbench
+let's make some edits to the same
+command select star from employee where
+salary
+between operator
+so we are using floater integer type so
+we will not need the single crochet
+double quotes number 10 000
+and operator number 20 000.
+right now let's execute this command
+there you go now we have all the
+employer list which have or who have
+their salary ranging from 10 000 to 20
+000 now we can eliminate the duplicate
+records in SQL by a few methods so we
+will use the most simplest ones the
+first one is using the inner join along
+with the work loss and the second one is
+a sample and the humble distance command
+now we have a brief idea on the methods
+let's understand them in a much more
+detailed way through a practical
+demonstration now let's get back to the
+MySQL workbench to understand the codes
+in a much better way so now we are on
+the MySQL workbench and we will get
+access to our simply learn database and
+we are in the simply learn database so
+previously we used to work on our
+employee table so let's not work on the
+same employee table since we have actual
+data there let's try to duplicate that
+table so that we will have some
+duplicate entries in between so we will
+be changing the employee ID numbers and
+we will also be using the same employee
+ID numbers so the employee ID has some
+details to it so we'll be understanding
+that in a much more detail while we are
+executing the commands and we will also
+try to remove the primary key from the
+table so I'll also explain why we are
+going to include the primary table and
+also we'll explain the usage of
+eliminating it so when you have the
+primary key in the table SQL workbench
+or any SQL will automatically stop you
+from adding duplicated value yes but
+let's say if you add a duplicate entry
+with a new primary key right then it
+will not stop you so we'll also have a
+demonstration about what to do in such
+scenarios so now let's try to quickly
+create a duplicate employee table which
+will be employed table 2 and then we
+will try to add some duplicate entries
+into it remember we will not use the
+primary key here if the code will be
+create
+table
+emply
+ee table
+two
+and everything will be same which is
+from the previous table which will be
+the employee ID integer type employee
+name character type this character type
+pen code will be integer and normally we
+include the primary key in this way
+primary key brackets open
+em
+so this is the way how we add the
+primary key but we are not going to add
+it since we want to know what happens if
+we enter data which also has the
+duplication of the primary key right so
+we will not give any primary key over
+here
+let's quickly run this
+then I got the new duplicated table of
+employee table has been created let's
+try to insert the same values with some
+duplication
+there you go I have pasted the command
+for inserting the values and if You
+observe clearly at the end I have
+repeated the values of Tony KT summer
+June and Gloria so these five will be
+the duplicate values and also we are
+trying to enter the duplicated primary
+key since we did not declare the ID as
+the primary key it will accept all these
+values let's quickly run this and there
+you go the values have been successfully
+entered into the table let's quickly see
+if we have the duplication
+select star
+from
+employee table
+enter there you go so you can see the
+duplicate values are also added onto the
+table now how do you remove these
+duplications remember we discussed the
+distinct one distinct method which is
+the second one so that happens to be the
+most simplest one let's see how it works
+so here we will write a simple select
+command
+select
+distinct
+star
+from the employee table 2.
+now this will give us the distinct
+values
+right but again when you run this
+particular command which is Select star
+you will have all the details back again
+right our job is to eliminate them so
+what we will do is we'll create a
+duplicate table
+so let's name it as the up table
+so create table
+duplicate table will be the name now
+quickly execute this command
+and there you go now we have
+the
+data
+which we obtain from the distant command
+is stored into the table named as
+duplicate table
+now let's quickly drop the employee
+table 2.
+okay the table has been successfully
+dropped
+so when we ran the same command once
+again it says simply learned we did not
+find any table by the name employee
+tables too that means it's been
+eliminated now the next thing we need to
+do is rename it
+so what we're trying to do is we are
+trying to use the alter table and we are
+trying to rename duplicate copy to
+employee table 2 so that we have the
+actual table here after eliminating the
+duplicated values it's not to copy it's
+actually Duke table
+right
+there you go
+now let's execute this
+successfully done now if we execute this
+particular select command you can see we
+have the cleaned data without any
+duplicate entries this was one of the
+simplest ways of eliminating duplicates
+in a SQL table now let's try to get a
+step ahead and try to use some join
+commands and
+where commands and where conditions and
+using those we will try to eliminate the
+duplications in a table now we are
+talking about a table which does have
+the you know primary key
+and the datas will be duplicated let me
+explain you how now let us that layer
+the
+primary key as employee ID
+e
+s e m p ID
+right now we do have a primary key now
+there is no way okay let's try to create
+this before that let's try to truncate
+employee table 2.
+so we can use the
+not the drop table we can use the
+truncate so let's replace drop with
+runki so that the data which we have an
+employee table will be removed there you
+go now
+we will or let's quickly drop the table
+because we are trying to create the new
+table right so let's create the new
+table
+so once we have executed the drop table
+command the table has been successfully
+removed now let's try to create this
+particular table
+enter there you go 3 will got
+successfully created now let's try to
+duplicate the same entries remember I'm
+not changing the primary key here
+now when I run this command I will get
+an error which says primary key cannot
+be duplicated
+so here you can see duplicate entry for
+9 and you cannot have the duplicate
+entries right this is one way to avoid
+duplications but what if someone comes
+up with a brilliant idea to replace the
+primary key now if I change the primary
+key
+as
+17 18.
+let's say we also
+have this data copy
+let's duplicate
+that right this will be our 19 and this
+will be R20 now we have unique primary
+keys for all our data and we also know
+there are some duplications let's try to
+execute this command and see the output
+so somewhere something is not correct
+yet
+okay this one
+so Tony has been repeated so we can have
+a different ID for Tony
+let's say we have Tony as 21
+try to execute the command once again
+it should be clear now
+okay it still has some duplication
+somewhere yes it's right here
+let's keep this as 22.
+okay I think we made a lot of
+duplications somehow
+let's quickly take a look if all the
+major keywords are duplicated or not
+so we copied from Gloria
+so after Gloria we
+we will remove these
+so Gloria so we just make sure we're
+trying to make sure that the primary
+keys are unique here so 10 11 12 13 14
+15 16 17 18 19 20.
+20
+.
+22
+there you go so now we believe that all
+the primary keys are unique let's try to
+run this command and see if we get the
+same error or not no so now all the data
+has been inserted into the duplicate
+table which is employee table 2 and we
+also have some duplicate entries now how
+would you recognize that we don't have
+any duplicates or how would you
+recognize which data has been exactly
+duplicated and how do you even remove it
+now the old distinct command is not
+going to work
+anyhow let's see if it works by any
+chance so when I try to run the distinct
+command it will give me all 22 rows with
+all the duplicate entries right in this
+case we can use the first method which
+was the join and where condition method
+right let's try to do that so we are
+going to use the delete command
+delete T1
+from employee
+table
+to
+T1
+in a join
+in a join employee table 2 as T2 so we
+are declaring two different tables so we
+are
+considering T1 as one table and T2 as
+the next or second table so T1 and T2
+are the copies of the same existing
+employee table 2 right now we are
+joining these two tables and we are
+having a fair condition over here so
+from table T1 we're going to eliminate
+table 1 from table two where we have an
+intersection and where we have the
+employee IDs greater than employee ID in
+amplitude
+okay let's not confuse so
+let's execute the command first okay
+let's
+execute this to understand what I mean
+here so here when we go a little down
+you can see
+14 for Tony right actual employee ID of
+Tony is 9 but we have 14 for Tony and
+Gloria we have 18 19 20 and again for
+KTV we have 22 the actual number of KT
+is
+10 right so now it will try to recognize
+the highest number of employee ID so it
+will recognize the highest employee ID
+number and it will retain it and rest
+all the numbers will be eliminated so
+this is the first where condition and
+we're also giving a string comparison
+function where SQL will try to identify
+if there is a similarity between the
+employee name of the first table and the
+employee name of the second table and we
+know that when you give the string
+comparison operation if it results in 0
+it means the strings are equal if it
+results in 1 it means the strings are
+not matching now that we understood the
+logic of this particular statement let's
+try to execute it
+so there you go so we have executed the
+command now let's try to see what's left
+in the table there you go now we should
+be having the usual 13 number of
+employees in our table and you can see
+that the records are retained where the
+employee ID number is the highest
+remember we had the number 10 as
+employee ID for KD and we have that over
+here in case if you want the actual
+numbers to be placed however they were
+you can make a small change to your
+command all you need to do is keep this
+particular or change this particular
+greater than symbol to lower than symbol
+and you will retain the actual numbers
+of the employee records so that's how
+you can eliminate the
+duplicate entries in the table
+and if you ask me
+hey only two conditions are enough don't
+you think the PIN code and you know we
+also have PIN code and the address of
+the employees don't you think that is
+also important yes you can also do that
+you can make some minor modifications to
+your code and try to include all those
+remaining things and again you can do
+the same right now let's try to
+eliminate the data in our table let's
+truncate it and we should be having no
+data left in our table and let's try to
+insert the duplicate entries once again
+and okay before that let's try to do
+this particular execution remember we
+tried to keep the employee ID let's try
+to execute that and try to print it and
+we should be having the actual numbers
+over here right as expected
+now let's again truncate the data and
+try to compare the conditions or we will
+be using the where condition and we'll
+have all the parameters included in our
+condition let's truncate the table and
+let's try to add the duplicate entry so
+once again
+there you go we have all the duplicate
+entries enter now what we will be doing
+is we will be using the same command but
+the only change will be the string
+comparison or the where condition right
+so you can keep this string comparison
+if you want or if you can change that
+let me change that actually
+so insteader
+yes we will use this particular command
+where we are trying to compare the
+employee ID so let's keep the employee
+ID as
+lesser than so that we have the actual
+employee ID numbers and we are using an
+and condition over here so that uh this
+particular condition should be valid and
+the employee name should be equal to the
+employee name in T1 and T2
+yeah and the the next one is here we
+have the employee address so the
+employee address in T1 and T2 should
+also be same and pin code from both the
+table should also be seen so what we are
+trying to compare here is we are trying
+to keep the employee ID with the least
+number or the least value and the names
+of the employee should be same the
+address of the employee should be same
+and the PIN code of the employee should
+be seen in that particular condition you
+can try to delete the record let's try
+to execute this and there you go the
+command got executed and now let's try
+to execute the select command which
+should give us the final result
+so here you go control enter
+and you have the data here so now we
+have successfully eliminated all the
+duplicates by comparing the values in
+each and every single column and we also
+have reading the original ID of each and
+every employee now that's how you try to
+eliminate duplicates in SQL tables so at
+first let's take a quick look on the
+syntax that we will be using for getting
+the like operator operation
+right so it's really simple so all you
+need to do is Select star from table
+name so instead of star you can also
+give your selected columns here but by
+default I'm using to select the entire
+table right and it can go with a where
+Clause so after the table name you will
+be given the where clause and the column
+name that you want to extract and you
+will be using the like operator with the
+constraints and I am using the single
+quotes here right because this
+particular like operation can be used
+upon string or worker or character type
+data types right so we will represent
+that particular data type using single
+code now that we are clear with the
+syntax let's go to the Practical mode
+that is the SQL workbench or MySQL
+workbench and execute the like operator
+command if getting your learning started
+is half the battle what if you could do
+that for free visit skillup by simply
+learn click on the link in the
+description to know more
+SQL working
+at the employee name so we have some
+text or worker type of data type in the
+employee name as well as the employee
+Department right let's use that
+particular data and here we have the
+command and Select Staff from employee
+table 2 where we can edit the same
+command employee name
+uh
+like
+and remember the single quotes right and
+we will be using the percentage
+operation here right we can give the
+full name so we have Jennifer here right
+Jennifer or let's remove Jennifer and if
+somebody asks you give me all the names
+which start with the G right in that
+particular situation we will using the
+modulus symbol or percentage symbol
+right now what we will get is all the
+names that start with the alphabet G and
+now let's say we found all the names
+that include a certain alphabet let's
+say r
+right then we can use the modulus symbol
+again it can start with anything and it
+can end with anything but it should have
+alphabet R so this is how it works so we
+have all the names which start or
+include the alphabet are in them right
+and that's how we can use the like
+operator in SQL you can also use like
+operator in this way where you can get
+the entire name let's say somebody asks
+you to get one single row which has the
+employee name as beta right you can also
+do this in this way
+there you go you have Peter if you're an
+aspiring data engineer looking for
+online training and certifications from
+the prestigious universities and in
+collaboration with leading experts then
+search number one simply learns
+postgraduate program in data engineering
+from Purdue University in collaboration
+with IBM should be your right choice for
+more details use the link in the
+description box below first
+what is Group by in SQL so the group by
+statement or Clause groups records into
+summary rows and returns one record for
+each group it groups the rows with the
+same group by item expressions and
+computes aggregate functions for the
+resulting group
+a group by Clause is a part of Select
+expression
+in each group no two rows have the same
+value for the grouping column or columns
+now below you can see the syntax of
+group by so first we have the select
+statement and Then followed by the
+column names that we want to select
+from we have the table name
+followed by the where condition and next
+we have the group by clause and here we
+include the column names finally we have
+the order by and the column names
+now here is an example of the group by
+Clause so we want to find the average
+salary of employees for each department
+so here you can see we have the
+employees table it has the employee ID
+the employee name the age of the
+employee we have the gender the date on
+which the employer joined the company
+then we have the department to which
+each of these employees belong to we
+have the city to which the employees
+belong to and then we have the salary in
+dollars so actually we'll be using this
+employee stable on MySQL workbench as
+well
+so if you were to find the average
+salary of employees in each department
+so this is how your SQL query with Group
+by Clause would look like so we have
+selected department and then we are
+using an aggregate function that is AVG
+which is average and we have chosen the
+salary column and here we have given an
+alias name which is average underscore
+salary which appears in the output you
+can see here
+from employees and we have grouped it by
+department so here in the output you can
+see we have the department names and the
+average salary of the employees in each
+department
+now let me take you to my MySQL
+workbench where we will Implement group
+buy and solve specific problems if
+getting your learning started is half
+the battle what if you could do that for
+free visit scale up by simply learn
+click on the link in the description to
+know more
+okay so I am on my MySQL workbench so
+let me make my connection first
+I'll enter the password
+so this will open MySQL editor
+so first of all
+let me
+check the databases that I have
+so I'll use my query that is show
+databases
+let's run it
+okay you can see we have a list of
+databases here I am going to use my
+SQL underscore into database so I'll
+write
+use
+SQL underscore intro
+so this will take us inside this
+database I'll run it all right now you
+can check the tables that are present in
+SQL underscore into database
+if I write show tables you can see the
+list of tables that are already present
+in this database to do our demo and
+understand Group by as well as having
+let me first create an employee table
+so I'll write create table
+employees
+next
+I'll give my column name as employee
+underscore ID which is
+the ID for each employee
+I'll give my data type as integer and
+I'll assign
+employee ID as my primary key
+next I'll give employee underscore name
+and my data type would be work r
+I'll
+give the size as 25
+my third column would be the age column
+age would obviously be an integer
+then I have
+my gender column
+I'll use character data type and assign
+a value of 1 or size of 1.
+next we have the date of join
+and the data type will be date
+we have the
+Department column as well this is going
+to be of
+and 20 will be the size
+next
+we have the city column
+which is actually the city to which the
+employee belongs to
+and finally we have the
+salary column which will have the
+salary for all the employees okay
+now let me select and run this
+you can see here we have successfully
+created our table
+now to check
+if our table was created or not you can
+use the describe command
+I'll write describe employees
+you can see the structure of the table
+so far
+all right now it's time for us to insert
+a few records into this employees table
+so I'll write insert
+into
+employees
+and I'll
+copy paste the records which have
+already
+written on a notepad so let me show you
+so this is my EMP notepad and you can
+see I have already
+put the information for all the
+employees so let me just copy this
+and
+we'll paste it here
+all right let me go to the top and
+verify if
+all the records are fine
+all right
+so let's run our insert query
+okay so you can see here we have
+inserted 20 rows of information
+and
+now let's check
+the table information or the records
+that are present in our employees table
+I'll write select star from employees if
+I run it you can see here
+I have my employee ID the employee name
+age gender
+we have the city salary and in total we
+have
+instead 20 records
+now
+let me run a few SQL commands to check
+how the structure of our table is
+let's say I want to see the distant
+cities that are present in our table
+so I'll write select distinct City from
+employees
+if I run this
+you see here there are total
+eight different cities present in our
+employees table so we have Chicago the
+Seattle Boston we have New York
+Miami and Detroit as well
+now let's see
+you want to know the
+total number of departments that are
+present so you can use distinct
+Department
+if I run this
+all right you can see we have seven rows
+returned and here are the department
+names so we have sales marketing product
+Tech I.T finance and HR
+all right
+now let me show you
+another SQL command
+now this is to use an aggregate function
+so I want to find the average age of all
+the employees from the table
+so I can write select
+AVG which is the aggregate function for
+average
+inside that I have passed my
+each column from employees if I run this
+so the average age of all the employees
+in our table is 33.35
+now
+say you want to find the average age of
+employees in each department
+so for this you need to use the group by
+clause
+I'll give a comment here I want to find
+the
+average age
+in each department
+so
+I'll write select
+Department
+comma
+I'll write average of age
+from
+employees
+Group by
+Department
+now if I run this
+you can see here
+we have our
+seven departments
+on the left and on the right you can see
+the average age of employees in each of
+these departments now you can see here
+in the output it says AVG of age which
+is not readable so I can give an alias
+name as
+average age
+all right
+I can bring this down
+and if you want you can round the values
+also
+so you can round the decimal places so
+I'll use a round function before the
+average function
+and the round function takes two
+parameters one is the variable and
+the decimal place you want to round it
+to
+so if I run this there you go you can
+see here we have the average each of all
+the employees in each of these
+departments
+all right
+now suppose you want to find the total
+salary of all the employees for each
+department so
+you can write select
+Department
+comma
+now I want the total salary so I'll use
+the sum function
+and I'll
+pass my column as salary
+from
+employees
+Group by
+Department
+let's run this query
+you can see here
+in the output we have the different
+departments and on the right you can see
+the total salary of all the employees in
+each of these departments now here also
+you can give an alias name as
+total underscore salary
+let's run it again
+and you can see the output here
+all right now moving ahead
+you can also use the order by Clause
+along with the group by Clause let's say
+you want to find the total number of
+employees in each City and group it in
+the order of employee ID so
+to do this I can use my select query
+I'll right select
+count of let's say employee ID
+and I want to know the city as well
+from
+employees
+Group by
+City
+and next you can use the order by clause
+I'll write order by
+count of
+employee ID
+and I'll write desc which stands for
+descending
+if I run this query
+you can see here on the left you have
+the account of employees and on the
+right you can see the
+city names so in Chicago we had the
+highest number of employees working that
+was four then we had Seattle Houston
+Boston Austin
+and the remaining also had two employees
+so in this case we have ordered our
+result based on the count of employee ID
+in descending order so we have the
+highest number appearing at the top and
+then followed by the lowest okay
+now let's explore another example
+suppose we want to find the number of
+employees that joined the company each
+year we can use the year function on the
+date of joining column then we can count
+the employee IDs and group the result by
+each year
+so let me show you how to do it
+so I'll write select
+I am going to extract here from
+the date of join column I'll give an
+alias as year
+next
+I'll
+count the
+employee ID
+from my table name that is employees
+and
+I am going to group it by
+year
+date of join
+I give a semicolon
+all right
+so let's run this
+grid you see here in the result we have
+the year that we have extracted from the
+data join column and on the right you
+can see the
+total number of employees that joined
+the company each year so we have in 2005
+there was one employee similarly we have
+in 2009 there were two employees
+if I scroll down you have information of
+other years as well
+now if you want you can order this as
+well based on year or count
+okay
+now you can also use the group by to
+join two or more tables together
+so to show you this operation let me
+first create a sales table
+so I'll write create
+table
+sales
+and the sales table will have columns
+such as the product ID which is going to
+be of integer type then we have the
+selling price of the product
+now this will be a a float value
+then we have the quantity sold for each
+of the
+products so I'll write
+quantity
+quantity will of integer type
+next we have the state in which the item
+was sold
+and state I'll put it as worker and give
+the size as 20.
+let's run this so that we'll create our
+sales table all right
+so we have successfully created our
+sales table
+next we need to insert a few values to
+our sales table so I have already
+written the records in a notepad let me
+show you
+okay so here you can see I have my sales
+text file let me just copy these
+information
+I'll just paste it on
+the query editor
+okay
+now let me go ahead and
+run this
+insert command all right so you can see
+here we have successfully inserted nine
+rows of information so let me just run
+it through what we have inserted
+so the first
+column is the product ID column then we
+have the selling price at which this
+product was sold then we have the
+quantity that was sold and in which
+state it was sold so we have California
+Texas Alaska
+then we have
+another product ID which is one two
+three
+and these are the states in which the
+products are sold
+so let me just
+confirm with the
+select statement I'll write select star
+from
+sales
+where on this you can see we have
+successfully created our table
+okay
+now suppose you want to find the revenue
+for both the product IDs one to one and
+let's say one two three since we have
+just two product IDs here
+so for that you can use the select query
+so I'll write select
+product ID
+next I want to calculate the revenue so
+revenue is nothing but selling price
+multiplied by the quantity so I'll use
+the sum function to find the total
+revenue
+and inside the sum function I'll use my
+selling price column
+multiplied by
+quantity column
+I'll give this
+an alias name as Revenue
+from
+my table name that is sales
+finally I'll group it by
+product ID
+let's run it
+there you go so here you can see we have
+the two product IDs one two one and one
+two three and here you can see the
+revenue that was generated from these
+two products
+all right
+now let's see
+we have to find the total profit that
+was made from both the products one to
+one and one to three so for that I'll
+create another table now this table will
+have the cost price of
+both the products so let me create the
+table first
+I'll write create table
+let's say the table name is C product
+which stands for the cost price of the
+products
+I'll
+Give My First Column as product ID
+this will be an integer
+and I'll have my second column as cost
+price
+cost price will have floating type
+values
+let's run this so we have successfully
+created our product cost table
+now let me insert a few values into the
+C product table so I'll write insert
+into
+C underscore
+product
+I'll give
+my values
+for one to one
+let's see the
+cost price was 200 and
+70 dollars
+for each
+and next we have my product is one two
+three and let's say the cost price for
+product one two three was
+250 dollars
+let's insert these two values okay next
+we'll join our sales table and the
+product cost table so this will give us
+the profit that was generated for each
+of the products
+so I'll write select
+C Dot
+product underscore ID
+comma
+I'll write sum
+s dot cell underscore price now here C
+and S are Alias names
+so if I subtract my
+cost price from the selling price that
+will return the profit that was
+generated
+I'll multiply this with s dot
+quantity
+close the bracket
+I'll give an alias name as
+profit
+from
+seals as s
+so here s stands for the sales table
+I'm going to use inner join
+C underscore
+product table
+as
+the Alias name should be C
+where
+s dot
+product underscore ID is equal to C Dot
+product underscore ID we are using
+product underscore ID because
+this column is the common column to both
+the tables
+and finally
+I am going to
+group it by
+C dot product underscore ID
+all right
+so let me tell you what I have done here
+so I am selecting the product ID
+next I am calculating the profit by
+subtracting the cost price from the
+selling price and I have multiplied the
+quantity column
+I'm using an inner join to connect my
+sales and the
+product cost table
+and I am joining on the column that is
+product ID and I have grouped it by C
+dot product ID let's run this there you
+go so here you can see for product ID
+one to one we made a profit of
+eleven hundred dollars and for product
+ID one two three we made a profit of
+eight hundred and forty dollars so now
+that we have learned Group by in detail
+let's learn about the having clause in
+SQL the having clause in SQL operates on
+grouped records and returns rows where
+aggregate function results matched with
+given conditions only
+so now having and where Clause are kind
+of similar but where Clause can't be
+used with an aggregate function
+so here you can see the syntax of having
+Clause you have the select statement
+followed by the column names from the
+table name then we have the WHERE
+conditions next we have the group by
+finally we have having and at last we
+have order by column names so you can
+see here we have a question at hand
+we want to find the cities where there
+are more than two employees
+so you can see the employee table that
+we had used in our
+Group by Clause as well so if you were
+to find the cities where there are more
+than two employees so this is how your
+SQL query should look like so we have
+selected
+the employee ID and we are finding out
+the count using the count function
+next we have selected the city column
+from employees we have grouped it by
+City And then we have user having clause
+so we have given our condition having
+count of employee ID should be greater
+than 2. so if you see the output we have
+the different city names and these were
+the cities where the
+count of employees was greater than 2.
+all right so let's go to our MySQL
+workbench and Implement how
+having box so suppose
+you want to find those departments where
+the average salary is greater than 75
+000 you can use the having clause for
+this so let me first run my table which
+is employees
+if I run this you can see we had
+inserted 20 rows of information and
+the last column we had was salary so the
+question we have is we want to find
+those departments where the average
+salary is greater than 75 000 dollars
+so let me show you how to do it
+so I'll write
+select
+Department comma
+I'll use the aggregate function that is
+average
+salary
+I'll give an alias name as
+AVG
+underscore salary
+from
+employees
+next we'll use the
+Group by clause and I want to group it
+by each department
+and then I am going to write my having
+Clause so in having Clause I'll use my
+condition that is having
+average of salary
+greater than
+75 000 dollars
+let's run it
+and see the output there you go so here
+you can see there were total three
+departments in the company that is sales
+finance and HR where the average salary
+is greater than 75 000 dollars
+okay
+next let's say you want to find the
+cities where the total salary is greater
+than two hundred thousand dollars
+so this will again be a simple
+SQL query so I'll write select City
+comma I want to find the total salary so
+I'll use the sum function
+and I'll pass my column as salary as
+I'll give a
+Alias name as total from
+employees
+Group by
+City
+and then I am going to use my having
+clause
+I'll pass in my condition as having
+sum of salary
+greater than
+two hundred thousand dollars
+all right
+so let's run this query
+there you go
+so
+so the different cities are Chicago
+Seattle and Houston where the total
+salary was greater than two hundred
+thousand dollars now suppose you want to
+find the Departments that have more than
+two employees so let's see how to do it
+I'll write select
+Department comma this time since I want
+to find the number of employees I am
+going to use the count function I'll
+write count Star as
+employee underscore count or EMP
+underscore count which is my Alias name
+from
+employees
+next I'll group it by
+Department
+having
+I'll give my condition
+count star greater than 2.
+let's run this
+okay
+so you have departments such as sales
+product Tech and it where
+there are more than two employees
+okay now you can also use a where Clause
+along with the having clause in an SQL
+statement
+suppose I want to find the cities that
+are more than two employees apart from
+Houston
+so
+I can write my query as select
+City comma
+count star
+as
+EMP count
+from
+employees
+where
+I'll give my condition shitty
+not equal to
+Houston I'll put it in double quotes
+since I don't want to see
+the information regarding Houston
+I'll group it by
+City
+having
+count
+of employees greater than 2.
+so if I run this query
+you see we have information for Chicago
+and Seattle only
+and we have excluded the information for
+Houston
+now you may also use aggregate functions
+in the having Clause that does not
+appear in the select clause
+so if I want to find the total number of
+employees for each department that have
+an average salary greater than 75 000 I
+can write it something like this
+so select
+Department
+comma
+count
+star
+as
+EMP count
+from
+employees
+Group by
+Department
+and in the having clause
+I am going to provide the column name
+that is not present in the select
+expression so I'll write having
+average salary
+greater than 75 000.
+this is another way to use the having
+Clause let's run this
+all right you can see we have department
+sales finance and HR and you can see the
+employee count where the average salary
+was greater than 75 000.
+okay
+so let me run you from the beginning
+what we did in our demo so first we
+created a table called employee then we
+inserted 20 records to this table
+next we explored a few SQL commands like
+distinct then we used average and
+finally we started with our
+Group by clause
+followed by
+looking at how Group by can be used
+along with another table and we joined
+two tables that was sales and product
+cost table to find out the profit
+then you learned how to use the having
+clause
+so we explored several different
+questions and learned how to use
+having an SQL
+now before we execute the actual code
+let's take a quick peek on the syntax
+that we will be using today now the
+syntax is completely similar to the
+regular syntax that we usually use but
+we'll have the select keyword parameters
+that you want to print in your table the
+from keyword and the table name which
+you are trying to access the only
+difference is you will have a new
+keyword that is the group by keyword and
+based on a certain parameter right now
+we would get back to the Practical mode
+that is the MySQL work means to
+understand the practicality of group by
+clause in a much better way if getting
+your learning started is half the battle
+what if you could do that for free visit
+scale up by simply learn click on the
+link in the description to know more
+now we are on our SQL workbench now
+let's get access to our simply on
+database there you go now let's quickly
+take the look at the tables we have we
+have two different tables now let's get
+access to our
+employee table
+now we have all the employee numbers
+employee names Department designation
+salary Etc right let's say you wanted to
+know the average salary of all the
+employees right so that would be select
+that is the AVG
+average function of salary
+plus a bracket from
+employee right
+let's execute this
+there you go now you have the average
+salary of the entire office but what
+happens when your manager asks you to
+find the average of each and every
+Department average salary of the
+employees in each and every Department
+how would you do that
+right every organization has multiple
+departments HR development testing etc
+etc right now your manager wants the
+individual Department's average salary
+then you can use this particular clause
+which says Group by department so the
+entire table will be categorized based
+on the Departments and it will be
+grouped on the basis of the department
+and I'm also using the order by here
+which we will discuss in the next
+session but to give you a brief
+understanding of why we're using order
+by let's say your manager asks you to
+find the department which has the
+highest average salary right then you
+will be ordering the tables or ordering
+the rows based on the descending order
+of the salary now let's quickly execute
+this query and see the output there you
+go the query got successfully executed
+and we have the average salary of each
+and every Department it's how to find
+the second highest salary in SQL so this
+particular type of questions will be
+most frequently Asked in data analytics
+interview questions so let's try to
+understand the syntax of how to find the
+not just second but any number of
+salaries given in a SQL table let's say
+your interviewer asked you to find the
+top third salary or top fourth salary
+you can find that using the same syntax
+so the syntax is something similar to
+this as shown now but before we begin if
+you are an aspiring data analyst then I
+have the perfect cause for you we have
+the professional certificate program in
+data analytics both your carrier over
+this data analytics program in
+partnership with Purdue University and
+in collaboration with IBM which features
+master classes and follows an applied
+learning model with real-time projects
+and business case studies now that we
+have a clear understanding of the pgp
+data analytics certification with simply
+learn in collaboration with IBM from
+Purdue University we will get started
+with our tutorial for today's session
+so here you can see select star you can
+also use these specific columns you want
+that is name and salary but I'm
+selecting star that is every single
+column in my table that is Select star
+from employee table Group by salary so
+you'll be grouping by salary here and
+order by salary descending since we
+wanted to find the highest we will be
+choosing the descending order that is
+increased number that is the highest
+number to the lowest number in case if
+your employer or if your interviewer
+asks you to find the lowest salary then
+you will be using the ascending order
+right so since we are given the
+condition that we have to find the
+highest we will use the descending order
+then limit n minus 1 let's say You're
+supposed to find the fifth highest
+salary then the formula will be 5 minus
+1 and the limit one that is you just
+want one single row to be displayed on
+your output right so that's the reason
+we'll be giving limit as one right so
+this is the simple syntax you will be
+following now let's quickly execute this
+on MySQL workbench and try to get our
+results
+back to the Microsoft SQL workbench so
+now we are on the MySQL workbench let's
+quickly use the database and get access
+to our all tables now we have access to
+the tables and the employee table which
+we were working on
+so let's quickly have the show tables
+here and
+we have employee and employee table 2 we
+will be accessing the employee table
+which has the salary details so there
+you go we have Rakesh Jack Regina Etc
+right so here you can see Karen has the
+highest salary and the next second
+highest salary is Rajesh so we need to
+fetch this particular column here right
+since our expectation is to find the
+second highest salary let's try to
+write the following code that is Select
+star from employee
+Group by
+salary
+earned by salary
+descending order since we want highest
+salary and the limit
+n minus 1 that is 2 minus 1 or you can
+also write as 1 comma 1. and done
+and let's quickly execute this code and
+there you go now let's say we want to
+find the third highest salary so here n
+minus 1 3 minus 1 is 2
+and execute this
+and there you go you have Regina so
+that's how you can extract second
+highest salary or any number of highest
+salary of the lowest salary based on the
+query changes you're doing let's say if
+you want the highest salary then you
+should be using descending order let's
+say you want the lowest salary should be
+using the ascending order so that's how
+you can extract the second highest
+salary from SQL tables how to create
+views in SQL
+if you are an aspiring data analyst
+looking for online training and
+certification from prestigious
+universities and in collaboration with
+leading industry experts then search no
+more simply launch professional
+certification program and data analytics
+from Purdue University in collaboration
+with IBM should be your right choice for
+more details use the link in the
+description box below with that in mind
+go to our PPT now how do we create a
+view in Excel so it's as simple as
+creating a new table the syntax is as
+follows you just need to add create a
+view and your customized view name as
+the statements now what are the
+statements statements usually have the
+statements of what you quoted the query
+statements for example select start some
+data what you want to fetch from your
+table
+yes I totally understand select might be
+a really short one but sometimes you
+might have to add some wear conditions
+you might have to add some sub queries
+and the entire query length might go up
+to 10 to 15 lines
+right now you might not be able to
+execute that query for every single time
+so if you create a view for that and if
+you just write select that particular
+View and you get all the data now let's
+understand this more easily by going
+through a practical demonstration on
+MySQL now we are on the MySQL workbench
+we are having a small database which is
+flights and in that we have a table by
+the name slide data and this is the data
+which we have added into a flight data
+right let's run this and get the table
+so here you have the information on your
+table about a few flights you have the
+airline date of Journey departure
+destination total stops additional
+information
+etc etc right now let's say if someone
+asked you to fetch a flight from Indigo
+which is completely Non-Stop
+control enter now you have this right
+now you finish this query for once and
+what if someone asks you to get this
+data for 10 times a day maybe you have
+10 clients who are asking for the same
+information would you write this thing
+for you 10 times
+no right similarly here you have let's
+say someone wanted to go to Delhi and
+they asked you to get information for
+the flights which are going to Delhi
+and someone asked for the flights which
+are going from Bangalore to Delhi
+right similarly you have many of such
+things so what would be helpful here so
+let's say you add one more query
+which reads as
+create
+View
+now the customized view name could be
+anything let's say View
+Indigo Non-Stop
+as
+your query
+right let's quickly execute this query
+and it should create a new view for you
+the new view is currently done
+similarly let's try to create a new view
+again
+create a view let's name it View
+lights
+Delhi
+Kolkata
+and the Bangalore daily flights
+right now you have the queries ready
+or the views ready
+now all you have to do is just get the
+select statement
+star from the view name
+this is simpler right
+it's Ctrl enter and you have the data
+over there now let's say somebody asks
+you to fetch the data for flights from
+Bangalore to Delhi all you have to do is
+Select star and you should be having the
+data
+there you go right as simple as that so
+that's how you can create a view in SQL
+and in case if you wanted to drop it
+let's say you don't need it anymore so
+it's simple just drop the view
+and the view name let's say you want to
+drop this particular View
+paste it there and Ctrl enter there you
+go the view got successfully dropped now
+when you try to run this query you will
+not get it as simple as that
+now I'm sure you must have heard about
+databases but mongodb is a popularly
+used not only SQL database
+now without further delay let's begin
+and understand what exactly mongodb is
+so here's what's in store for you first
+we'll understand what mongodb is
+then we'll understand why exactly
+mongodb is used
+then we understand the characteristics
+of mongodb
+after that we'll understand the working
+of mongodb and how it functions we'll
+also look at some of the commonly used
+applications of mongodb and finally we
+look at the top companies that readily
+deploy mongodb so what exactly is
+mongodb
+it is a document oriented nosql database
+it was initially released in August 27
+2009.
+mongodb replaces the concept of rows of
+conventional relational data models with
+something called documents it offers
+developers the flexibility to work with
+evolving data models since its document
+based mongodb allows embedded documents
+arrays and represents complex
+hierarchical relationships using a
+single record it is also schema free
+which means that the keys defined in the
+document are not fixed as a result
+massive data migrations can be ruled out
+but you must be wondering when there's
+something like SQL why is nosql or
+mongodb used
+there are a few reasons why mongodb is
+widely used
+first up is flexibility
+mongodb's notion of documents that can
+contain sub-documents nested in complex
+hierarchies is really expressive and
+flexible
+flexible query model a user can
+selectively index some part of a
+document or a query based on attribute
+values regular expressions or ranges
+next up is native aggregation native
+aggregation allows its users to extract
+and transform data from mongodb and
+either load them in a new format or
+export it from mongodb to other data
+sources it makes it extremely compatible
+lastly as mentioned earlier the schema
+free model now applications get the
+power and responsibility to interpret
+different properties in different ways
+now that you know what mongodb is and
+why exactly it's used let's have a look
+at the characteristics of mongodb
+firstly it's a general purpose database
+now mongodb can serve heterogeneous
+loads and multiple purposes within an
+application
+again it has a flexible schema design
+document oriented approaches with
+non-defined attributes that can be
+modified on the Fly is a key contrast
+between mongodb and any other relational
+database
+next up is scalability and load
+balancing it's built to scale both
+vertically but most importantly
+horizontally using sharding an architect
+can share load between different
+instances and Achieve both read and
+write scalability
+when it comes to load balancing this
+happens automatically and transparently
+to the user by the sharp balancer
+again we have aggregation framework now
+mongodb offers an extract transform and
+load framework that eliminates the need
+for complex data Pipelines
+native replication now data will get
+replicated
+across a replica set without complicated
+setup
+security features both authentication
+and authorization are taken into account
+in mongodb
+next up is Json now Json is widely used
+across the web for front-end and API
+communication and as such it's easier
+when the database is also compatible
+with the same protocol
+lastly we have mapreduce now again
+mapreduce is an excellent tool to build
+data pipelines and mongodb uses
+mapreduce readily now let's quickly have
+a look at the working of mongodb
+data is stored in documents with the
+help of key value pairs now the data is
+stored in the bson format at the back
+end mongodb converts Json data into a
+binary format known as bson
+mongodb also makes provision for nested
+data now all of these documents are
+stored in a collection these collections
+hold multiple documents and since
+mongodb is schema less the documents in
+one collection need not be similar now
+again these collections are stored in
+the entire mongodb database as mentioned
+earlier mongodb makes provision for
+nested data this makes fetching of data
+extremely efficient when compared to
+other databases now you must be
+wondering where exactly mongodb can be
+applied or used so let me help you with
+that several areas of Technologies use
+mongodb as their dbms currently some of
+them are Internet of Things mobile
+applications real-time analysis
+personalization catalog management and
+content management
+now all said and done let's look at some
+of the companies that use mongodb
+currently
+companies like Toyota sap AstraZeneca
+Adobe Verizon Cisco Barclays and Google
+among others readily deploy mongodb as
+their database management system how to
+basically install momodb
+inside your MacBook
+many people today use MacBook and
+there's a common question we receive
+like how to do the necessary setup it is
+very simple first of all you have to go
+back to your terminal
+okay and inside this terminal to just
+type the command name called
+preview
+a space update
+number one
+in case
+if you do not have a preview I would
+like to request you that new
+first of all try to install the preview
+first
+okay so make sure that you install the
+query first and in case if you do not
+have the success or the privilege
+available to you so you first use pseudo
+command before to make it possible
+okay number one so you have to just say
+preview update
+well next step all the blue update is
+happening Next Step will be you have to
+do the same command called sudo in case
+if you do not have a privilege we can
+use sudo space Brew
+a space
+install space
+mobile
+DB okay so blue install mongodb that is
+the first commandment to type it
+once you say will install mongodb the
+mongodb will get installed in your
+system it will take some time depends on
+your internet speed once it is
+downloaded then in Next Step all you
+have to do you have to basically go back
+and create a new folder where because
+it's since it is a nosql database so it
+has to have some folder in which
+you have to provide the location where
+the data will get stored
+so after downloading you have to create
+a DB directory
+this is where the files or the
+mongodata files will actually stay you
+can create this directory in the default
+location by running this called mkdir
+okay space hyphen p
+and say slash data slash DB
+I'll be clear
+and also you have to make sure that you
+have the proper write permission because
+in MacBook this is one of the very very
+common challenge
+okay you do not have a permission so
+make sure that the data DB have a
+correct flight permission so in order to
+do this you have to use this command
+called sudo
+space
+okay see you soon and after that you
+will say hyphen R and then
+you have to use ID space hyphen even
+okay and then you have to use slash
+so like this you will be in position to
+give the permission so It'll ask you the
+password post that you have to give the
+password whatever the password of your
+MacBook it is
+and that's it
+and once it is ready
+your mogodb is all set
+and to start this memory
+or mongodb you have to start the mongod
+as a server so if I just have to start
+so you have to start with this
+okay
+I'll be clear now so mobile D then after
+up to you iPhone hyphen DB bar
+after that you have to give the standard
+sign slash data slash TV
+you hit enter and you can see now your
+mobile database is now starting up that
+is now waiting
+for your
+ client to get connected to so you
+have to open the other terminal
+parallely
+I'm saying
+new tab
+and here we are just typing
+and there we go you are connected
+successfully
+just type show DBS
+anywhere done so friends it is a very
+simplified way of how the mongodb can be
+installed into your MacBook very very
+simplified steps I told you there are
+other options are also available but
+this seems to be more better
+you will have to navigate to the
+official mongodb website
+and here you can see
+software
+so go ahead and click on community
+server under software
+and you can see that the current version
+is 4.4.4 and the platform is Windows and
+make sure that the package is MSI all
+right now go ahead and press download
+so this could take a while
+all right so once it's downloaded
+go ahead and install it
+now since it's already installed on my
+system uh the installation process will
+be different but you just need to follow
+the steps there and finally install it
+so once you're done with the
+installation you can go to your C drive
+and here you can click on program files
+and you can see that mongodb is
+installed and inside of it you have the
+server folder and then you have the 4.4
+folder and then you have the bin folder
+right so here you have the application
+that is your and the mongod
+applications both are executable files
+now the mongod file or the application
+is the Daemon process now this is the
+background process that makes sure you
+retrieve the data from the database
+access the data so it does all the
+background tasks so after the
+installation now you need to create a
+path to this file by doing this you
+don't have to always go to the bin
+folder and then execute the file you can
+directly execute the file on your
+command prompt right so for that let's
+just
+go to our environment variables
+but before that let's just uh
+copy this path
+right
+and here under the user variable section
+click on path and say edit
+and go ahead and just paste it right
+I've already pasted mine so just go
+ahead and paste it and click on OK
+and
+say okay
+right so now you've created the path
+successfully now let's head to our
+Command Prompt and run the file so
+here you can just directly type
+since the path's already been created so
+just go ahead and say
+[Music]
+and here you can see that your
+server has been generated
+and with this you know that your in
+mongodb has been successfully installed
+and your server is up and running right
+so just for confirmation let's see if
+there are any databases and how much
+space they've occupied so you can right
+now just type show DBS
+[Music]
+and when you click on it it says admin
+config and localhost and all of it is
+zero so with that you have successfully
+installed mongodb on your system and
+it's up and running
+now we have moved to something called
+very important that is installing
+mongodb on Linux this demo will show the
+steps to install mongodb on Linux 64
+plate
+so what's we're gonna do
+this command will download the mongodb
+from the internet
+so this command is gonna enter the
+downloaded mongodb which we have done as
+you can see we can see the bin
+we're creating a directory called
+mongodb
+foreign
+of the mongodb
+to The Bash RC file so that I can
+execute mongodb bin from wherever I want
+it's like and one variable setting the
+way we do for javafa.net in Windows we
+have environment variables similarly in
+Linux we have the bashashi files
+so that is how the
+installation will happen of
+mongodb on Linux system and now we will
+see how the mongodb gets installed on
+the windows so this is something which
+again I would really uh want all of you
+to really focus on
+it's again simple the same way as we did
+in Linux
+so what we do is so we have mongodb
+installation going on so what I do okay
+so I'm again talking about Windows and
+would recommend if all of you also
+follow the same so first step is
+download
+you will get some dot zip version
+second step
+or rename
+it as mongodb so again I'm telling you
+the
+scenarios so that everyone can go along
+and place it under C
+place it and the C you can place it
+anywhere again for better
+let us keep it in the C so now I'm
+assuming all of you have your mongodb
+under I'm assuming your mongodb will be
+over
+okay this will be a folder inside this
+you should be able to see bin now
+and the bin should have all of the
+different commands
+now what I would recommend is instead of
+just double click in mongodb open a
+command prompt
+open
+a command prompt
+go to
+see
+mongodb bin
+go to this path
+up till the bin and now when you are in
+the bin
+type
+mongod
+and put an enter
+it means you're saying that start the
+ database instance you should see
+on the screen you should see on the
+screen
+waiting
+for
+connections
+to open
+on the port
+27017
+this is what you should see on the
+command prompt
+fifth step
+open
+another command prompt
+go to
+see mongodb
+and type
+ and put an enter
+now what you should see in the current
+your current command prompt should tell
+should say
+connected
+to test
+and your
+previous command prompt
+that is on the step four
+should now say
+one
+Connection open
+okay so this is what your scenario
+should be so please all of you follow
+these steps if you're an aspiring data
+engineer looking for online training and
+certifications from the prestigious
+universities and in collaboration with
+leading experts then search no more
+simply learns postgraduate program in
+data engineering from Purdue University
+in collaboration with IBM should be your
+right choice for more details use the
+link in the description box below
+mongodb is a document-based database
+the basic idea behind shifting from
+relational data model to a new data
+model is to replace the concept of a row
+with a flexible model the document the
+document based approach allows embedded
+documents arrays and represents a
+complex hierarchical relationship using
+a single record
+this is how developers using
+object-oriented languages want to
+represent their data mongodb is schema
+free the keys used in documents are not
+pre-defined or fixed without a fixed
+schema massive data migrations have
+become unnecessary
+while migrating data to mongodb any
+issues of new or missing keys can be
+resolved at the application Level rather
+than changing the schema in the database
+this offers developers the flexibility
+of working with evolving data models
+the table given on the screen depicts
+the various SQL terminology and Concepts
+and the corresponding mongodb
+terminology and Concepts
+in mongodb the table and view structure
+is known as collection
+typically these Collections Group
+documents that are structurally or
+conceptually similar
+mongodb allows embedding of related
+document to one another
+these documents are used to query
+related data the data for a table in
+mongodb are distributed among different
+shards which is similar to the concept
+of partition in relational database
+Management systems or rdbms
+after grouping structurally similar
+documents into collection
+mongodb groups different collections
+into databases
+for instance a single instance of
+mongodb is capable of Hosting multiple
+independent databases
+ideally you should store data related to
+a single application at one database
+you need separate databases when storing
+multiple application or users data on
+the same mongodb server
+the data model in mongodb is document
+based although documents provide Rich
+structure they need not conform to any
+pre-specified schema
+in a relational database rows are stored
+in a table and each table has a strictly
+defined schema that specifies the
+permitted types and columns if a row in
+a table requires an extra field the
+entire table needs to be altered
+mongodb on the other hand groups
+documents into collections that do not
+follow any schema each individual
+document in collection can have a
+completely independent structure
+in practice documents in a collection
+are relatively uniform
+for example if you are creating a
+collection review underscore comments
+for storing review comments given by the
+customer then every document in this
+collection will have Fields such as
+title tags comments and so on
+the lack of schema offers many
+advantages
+first since structure is defined by the
+application code not the database this
+speeds up initial application
+development when the schema tends to
+change frequently
+second a schema-less model lets you
+represent data with variable properties
+compared to rdbms such as MySQL which
+supports two-phase commit mongodb only
+supports a single phase commit at each
+document level
+a write operation in a single document
+is considered Atomic in mongodb even if
+the operation Alters multiple embedded
+documents however the entire operation
+is not Atomic and other operations May
+interlave
+some of the key features of mongodb are
+as follows
+ad hoc queries
+mongodb allows performing of search
+functions by field range queries and
+regular expression searches
+queries can return specific document
+fields and may include user-defined
+JavaScript functions
+querying for document retrieval mongodb
+uses Rich query language it also allows
+you to write any complex condition to
+retrieve documents fast In-Place updates
+mongodb allows you to choose write
+semantics enable journaling and thus
+control the speed and durability
+All rights are sent across a
+transmission control protocol or TCP
+socket and do not require a database
+response
+to get a response use the special safe
+mode of the drivers and perform a write
+this generates a response acknowledging
+the receipt of the right with no errors
+server-side JavaScript execution
+mongodb uses JavaScript inquiries and
+aggregation functions such as mapreduce
+which are sent to the database for
+execution
+capped collections capped collections
+are fixed size collections supported by
+mongodb these collections maintain
+insertion order and once the specified
+size has been reached behaves like a
+circuit or Q
+ongodb supports other data types while
+retaining json's essential key value
+pair characteristic
+how values of each type are represented
+depends on the language used
+following is a list of the commonly
+supported data types null is used to
+represent both a null value and a
+non-existent field for example field X
+has null value
+undefined is used in documents
+JavaScript has distinct types for null
+and undefined for example field X is
+undefined
+Boolean is used to represent true and
+false values for example field X is a
+Boolean variable whose value is true
+32-bit integer cannot be represented on
+the shell
+JavaScript supports only 64-bit floating
+Point numbers hence 32-bit integers will
+be converted to 64-bit
+64-bit integer the shell cannot
+represent these and will display them
+using a special embedded document
+64-bit floating Point number
+all numbers in the Shell must be of this
+type
+here are a few more data types supported
+by mongodb
+maximum value
+Basin contains a special data type that
+represents the largest possible value
+the shell does not support this type
+minimum value
+Beeson contains a special data type that
+represents the smallest possible value
+the shell does not support this type
+object ID
+object ID data type is unique fast to
+generate and ordered these consist of 12
+bytes where the first four bytes
+represent the object ID creation time
+string Beeson strings are utf-8
+compliant typically when serializing and
+deserializing Basin programming
+languages convert language strings to
+utf-8 format this allows easy storing of
+international characters in bees and
+strings
+symbol symbols are not supported by the
+shell when the shell gets a symbol from
+the database it converts it into a
+string time stamps Basin offers a
+special timestamp for internal mongodb
+use that is not associated with the
+regular date type
+note that within a single mongod
+instance timestamp values are always
+unique
+date
+date and Beeson is a 64-bit integer that
+denotes the number of milliseconds since
+the Unix epic it can represent a date
+range of about 290 million years into
+the past and future
+regular expression documents contain
+javascript's regular expression Syntax
+for example
+X is the field whose value contain
+substring simply learn
+following are some more data types
+supported by mongodb
+code documents can contain JavaScript
+code for example logic inside function
+binary data it is a string of arbitrary
+bytes it cannot be manipulated from the
+shell
+array sets or lists of values can be
+represented as arrays
+courses is the field whose value is an
+array this array holds three elements
+PMP cloud and mongodb
+embedded document
+documents can contain entire documents
+embedded as values in a parent document
+for example course underscore duration
+is the embedded document which has field
+name mongodb the value for this field is
+24 hours
+the core database server of mongodb can
+be run as an executable process called
+mongod or
+mongodb.exe on Windows
+the mongod process receives a command to
+run the mongodb server over a network
+socket through a custom binary protocol
+the data files for a mongod process are
+stored by default in the directory slash
+data slash DB
+you can run a mongod process in several
+modes the most common mode is the
+replica set typically replica set
+configurations comprise two replicas and
+an Arbiter process that reside on a
+third server
+the auto sharding architecture of
+mongodb consists of mongod processes
+configured as per Shard replica sets it
+also consists special metadata servers
+called config servers
+in addition s a separate routing
+server is used to send requests to the
+appropriate Shard s queries from
+the application layer and locates the
+data in the sharded cluster to complete
+these operations a s instance is
+identical to any mongodb instance
+mongodb tools consists of the following
+JavaScript shell database drivers and
+command line tools
+the Java Script shell the command shell
+in mongodb is a javascript-based tool it
+is used to administer the database and
+manipulate data a executable loads
+the shell and connects it to a specified
+mongod process
+in addition to inserting and querying
+data the shell allows you to run
+administrative commands
+database drivers
+the mongodb drivers are easy to use
+it provides an application program
+interface or API that matches the syntax
+of the language used while maintaining
+uniform interfaces across languages
+10gen a company behind mongodb supports
+drivers for C C plus plus C hash erlang
+Haskell Java Perl PHP python Scala and
+Ruby
+command line tools mongodb contains the
+following command line utilities
+mongodump and restore are standard
+utilities that help back up and restore
+a database
+mongodump can save the data and the
+Beeson format of mongodb and thus is
+used for backups only this tool is used
+for hot backups and can be restored with
+ restore easily
+ export and import are used
+to export and import Json comma
+separated value or CSV and tab separated
+value or tsv data these tools help you
+get data in widely supported formats you
+can use import for initial Imports
+of large data sets however you need to
+adjust the data models for best results
+in such a case you can use a custom
+script to easily import the data through
+one of the drivers
+ sniff is a wire sniffing tool used
+for viewing operations sent to the
+database
+this tool translates the Beeson that is
+transmitted to human readable shell
+statements
+ stat is similar to iostat
+mongostat provides helpful statistics
+including the number of operations per
+second for example inserts queries
+updates deletes and so on
+it also provides information such as the
+amount of virtual memory allocated and
+the number of connections to the server
+this demo will show the steps to install
+mongodb on Linux
+in this demo you will learn how to
+install mongodb on Linux machine
+first download the latest mongodb binary
+for Linux platform
+to download type the command shown on
+the screen
+after the mongodb binary is downloaded
+untot by executing the command shown on
+the screen
+next create a directory slash mongodb by
+executing the command make directory
+hyphen P slash mongodb
+next copy the untarred directory by
+executing command shown on the screen
+to run mongodb from anywhere in Linux
+you need to add mongodb installation
+path in the dot bash RC file
+to do so execute the command v i space
+slash root slash dot bash RC
+next type the two commands given on the
+screen
+note that your dot bash RC file location
+may be different based on your username
+and profile
+reload the environment variable by
+executing the command Source slash root
+slash dot bash RC
+next execute the command Echo dollar
+mongodb underscore home to verify
+whether the environment variable mongodb
+underscore home has been set or not
+this concludes the demo on installing
+mongodb on Linux computer
+this demo will show the steps to install
+mongodb on a Windows computer in this
+demo you will learn how to install
+mongodb on a Windows computer
+mongodb 4 Windows runs only on Windows
+Server 2008 R2 Windows Vista or the
+later versions
+the dot MSI installer includes all
+software dependencies
+if you have an older version of mongodb
+installed on your computer the dot MSI
+file will automatically upgrade it to
+the latest version
+to install first go to the site given on
+the screen
+in the download and run mongodb page
+scroll down and click download to MSI
+and then click run
+once the MSI file is downloaded the
+installation wizard opens automatically
+next follow the default options on the
+wizard to install mongodb
+this concludes the demo on installing
+mongodb on a Windows computer this demo
+will show the steps to start mongodb on
+Linux in this demo you will learn how to
+run the mongod server and the
+shell on Linux
+to start the mongod server type mongod
+in the command prompt the mongod script
+file is in the slash bin directory of
+your mongod home path
+once mongod server starts running open
+another terminal
+to open the shell type in
+the second terminal
+in the shell perform the mongodb
+insert operation by executing the
+command given on the screen
+to check whether document was inserted
+use the find method on courses
+collection
+this concludes the demo on starting
+mongodb on Linux this demo will show the
+steps to start mongodb on Windows in
+this demo you will learn how to run
+mongod server and shell on Windows
+machine
+to begin navigate to The Path C colon
+backward slash program file slash
+mongodb slash server slash 3.0 slash bin
+to start the mongod server double-click
+mongod.exe
+once the mongod server starts running
+open another command prompt to open the
+mongod shell
+to open the shell double-click the
+mongo.exe in the same directory
+to perform the insert operation in the
+ shell execute the command given on
+the screen
+to check whether the document was
+inserted execute the command DB dot
+courses dot find
+this concludes the demo on starting
+mongodb on Windows something which used
+to happen earlier and it
+and I didn't think it gave way to
+something called replica sets so the
+Master Slave replication is the oldest
+mode of replication that mongodb
+supports in the earlier versions of
+mongodb the Master Slave replication was
+used for failover
+backup and the retailing in the new
+volumes it is replaced by replica sets
+for the most number of use cases here
+you can see there is a master and there
+are slaves attached to that so replica
+sets are recommended for new production
+deployments to replicate data in a
+faster than a Master Slave
+architecture
+so again how does a replica in mongodb
+works so a replica set consists of a
+group of mongodb instances that we just
+saw that holds the same data set that
+again we saw the replica set functions
+is followed the primary mongodb receives
+all the right operations and the
+secondary mongod replicates operations
+from the primary this is something which
+Sandeep would have seen in a live I'm
+working on his replica set the primary
+node receives the right operations from
+the clients the primary logs any changes
+or updates to data sets in its AppLock
+the secondary is replicate the op log of
+the primary and apply all the operations
+to their data sets
+so replica set in mongodb
+an extra mongodb instance can be added
+to a replica set to act as an Arbiter so
+what is an Arbiter node so this is
+specifically added to the replica set so
+that you know the total number of uh
+instances we can have a can be odd so
+that if in case if the primary goes down
+we can have a majority if an election
+takes place so following are some of the
+characteristics of an Arbiter so
+Arbiters do not maintain a data set
+Arbiter is the node we just participate
+in an election to select the primary
+node so the only purpose of it is to
+take part in the election it doesn't
+even store the data so again orbitals do
+not require radicated Hardware again it
+can just work as a command prompt you
+know as we have done in our systems
+secondary members in a replica set or
+synchronously apply operations from the
+primary important point to be noted over
+here is Earth synchronously it's a lazy
+right
+these replica sets can function without
+some secondary members as a result all
+skin remembers may not return the
+updated data to the clients so again
+when I told Sandeep that you know you
+make a right to the primary or an update
+to the primary and see the data back in
+the secondary so you guys would have
+seen again that you know you are not
+able to see the data over there in the
+secondary it'll come after some time
+because again it's a lazy ride to the
+secondary
+so a primary can convert to a secondary
+or vice versa however an Arbiter remains
+changed
+automatic failover so there's something
+which talks about the replication in
+detail and what it talks about is when
+the primary node of a replica effect
+stops communicating with other members
+for more than 10 seconds another member
+is selected as the new primary
+selection happens through an election
+process the secondary note that gets
+majority of the votes becomes the
+primary a replica set supports
+application needs in the following ways
+again deploying a replica set in
+multiple data centers
+manipulating primary election by
+adjusting the priority of the member so
+that's what again when we initiate an
+instance I can also when I specify the
+config I specify the config again ID the
+members along with that I can specify
+the priority as well that you know if
+the priority of the guy will be more I
+can ensure that whether the secondary
+will be able to become a primary ever or
+not
+supporting dedicated members for
+functions such as reporting Disaster
+Recovery or backup so again we can see
+in the diagram that another primary goes
+down what happens is election for a new
+primary happens and again we see that
+you know the new primary is elected one
+of the secondary becomes the primary and
+the other secondary just follows what
+the primary shares
+again the application members a replica
+set can also have a arbiter Arbiters do
+not replicate or store data but again
+play a crucial role in selecting a
+secondary to take the place of a primary
+when the primary becomes unavailable a
+typical replica set contains a primary
+secondary and an Orbiter so again what
+we see is we have a primary node we have
+a secondary node and we have an Arbiter
+and you can see there is a heartbeat
+going constantly between all the nodes
+again this heartbeat is on similar lines
+in our heartbeat we see in Hadoop in
+Adobe we see all the secondaries that is
+the data nodes you know
+share a heartbeat with the name node so
+again like this all the nodes over here
+in mongodb as well
+share a heartbeat among themselves
+an application in mongodb version 3.0
+can have maximum 50 members with only
+seven members capable of voting in the
+election
+so okay now we are specifically talking
+about who our priority is zero
+replication members again when we set a
+member a priority of zero what will
+happen that will become a that will be a
+secondary which can never become a
+primary so again a priority zero member
+is a secondary member that cannot become
+the primary the characteristics of a
+priority zero are it cannot trigger any
+election
+it can maintain data set copies except
+and perform read operations and again
+choose in electing a primary so again he
+can vote an election though he cannot
+trigger an election
+so by configuring a priorities you
+remember you can prevent secondaries
+from becoming the primary in a
+three-member replica set
+one data center hosts both the primary
+and the secondary and a second data
+center hosts one priority zero member so
+again you know I've just kept one copy
+of the data in some other data center
+just to ensure if the full data center
+goes off I still have some data with me
+safe in some other Data Center
+a priority zero member acts as a backup
+and can immediately replace an
+unavailable member in a replica set
+because again it has the data so always
+we recommend that you know we have a
+priority zero uh a replica set member as
+well in our replica set
+now we have something called hidden
+replica set members again hidden members
+of those which are not you know seen to
+the client what again that means hidden
+members of a replica set are invisible
+to the client applications the
+characteristics of a hidden member are
+restore a copy of the primary's data
+their priority zero members again they
+mean thermody sheep right is zero the
+main thing which should come to your
+mind is it's a secondary and it cannot
+ever become a primary their priority
+General members can elect a primary but
+cannot actually become a primary or
+replace a primary they're not given
+appropriate read and write rights they
+can be used for dedicated functions like
+reporting and the backup so there's
+something you see there is a primary
+there is secondary secondary secondary
+and again there is a secondary drivers
+priorities
+then there are some you know replicases
+again an important thing which you know
+is asked in the interviews quite often
+for a delayed replica set members again
+I can even set some members in a replica
+set with a delayed you know I can
+specify that you know you copy you start
+copying the data from the primary after
+these particular minutes so those are
+called delay replication numbers
+so again delayed replication members are
+secondaries that copy data from the
+primary nodes AppLock file after certain
+interval or delay delayed replication
+members reflect a previous version or
+delayed state of the store data set it's
+like you know I create a backup of the
+data after every some T hours what
+happens is in case of a failure or
+something I can again make the system
+come back from whatever time it was
+earlier
+so delayed replica asset members are
+secondaries that copy data from the
+primary nodes of log file after certain
+interval delay delayed replicated
+members reflect the previous version or
+delay Etc state of the store data set so
+again uh what I was saying to you guys
+was very importantly they are basically
+used so that you know we can a
+checkpoint you know some data so that if
+in case of some failure I can still
+bring the data back to the system to the
+place it was earlier
+so delayed members perform a role backup
+or on a historical snapshot of the data
+set they help manage various human
+errors and recover from errors such as
+unsuccessful application upgrade and
+drop databases and collections
+the characteristics of a delayed member
+are as follows it must be a priority
+zero member it must be hidden and not be
+visible to Applications it again must
+participate in electing a primary now
+again we can see over here what is this
+so what we're talking about is you can
+configure delete you can remember with
+the seconds given below so okay delete
+sync and remember it again has to have a
+priority value of zero which again means
+that it is a secondary which cannot ever
+become a primary hidden value is true it
+means it'll be hidden and again slave
+delay value means again how much seconds
+you want the system to wait till it
+mates
+a copy of the op log to set an one hour
+delay issue the operations given below
+again you can see over here what we are
+setting is we are setting a
+configuration so config is equal to
+rs.com
+and again what we give over here is
+config members zero dot priority we are
+giving a zero again members so again
+please see that you know what you see
+over here the members
+the members you see over here is the
+array which you had in your
+configuration
+so the first member his parade team
+setting is zero his hidden and setting
+is true his slave delay I'm sitting here
+3600 and again after I made some
+configuration changes I can reconfigure
+first let's look at what exactly is
+mongodb
+now as you all know mongodb is an open
+source document oriented nosql database
+it is document based which means that
+the data stored is represented in a
+hierarchical relationship using a single
+record
+and also mongodb is schema free which
+means there's no set schema to Define
+how the data is being stored in the
+database this causes lesser data
+migrations but what exactly is MySQL
+then
+now MySQL is an open source relational
+database management system unlike
+mongodb which is document oriented MySQL
+is a relational database system now this
+uses something called as a structured
+query language and this is used to
+access data which is stored in the form
+of rows and columns now as mentioned
+earlier data here is stored in the form
+of tables with rows and columns and each
+data field comes with an index
+representing the data in the table
+and SQL is developed and maintained by
+Oracle
+so then what exactly sets them apart so
+in the coming section we look at some of
+the differences between MySQL and
+mongodb depending on certain features
+first up is the data structure
+now MySQL requires you to Define your
+tables and columns before you can store
+anything and every row in a table must
+have the same columns
+in mongodb you just drop the data in
+these documents also the data and the
+mongodb database is stored in a binary
+format called as bson next up we have
+schema now as discussed earlier MySQL
+requires a set schema to define the
+tables in the database now the database
+administrator is requested to define a
+schema which defines how the different
+tables are being stored in the database
+now this schema is crucial in case of
+MySQL on the other hand mongodb doesn't
+require a prior definition of a schema
+next up is languages
+MySQL uses the structured query language
+to perform actions on the database it is
+used to retrieve data add data update
+create a new data set Etc in case of
+mongodb it supports a Json query
+language to work with data next up is
+foreign keys now MySQL supports the
+usage of foreign Keys now if you don't
+know what exactly your foreign key is
+then SQL uses foreign keys to link one
+table to another now these foreign Keys
+make data retrieval easy especially when
+there are multiple tables interlinked
+with one another in case of mongodb
+there's no support for foreign keys
+next up is replication now MySQL
+supports the Master Slave and the master
+master application in this setup data
+set from one master database server can
+be copied to other servers
+in case of mongodb
+it uses something called as sharding now
+sharding allows partitioning of data
+across multiple servers using a Shard
+key don't worry if you're not able to
+understand these Concepts well in the
+coming videos we'll explain these
+Concepts in detail
+next up is scalability now SQL database
+can be scaled vertically while mongodb
+can be scaled both vertically and
+horizontally now horizontal scaling
+means scaling by adding more machines to
+your pool of resources while vertical
+scaling refers to scaling by adding more
+power like for example CPU or Ram moving
+ahead let's look at performance now
+MySQL is optimized for high performance
+joins across multiple tables while
+mongodb is optimized for write
+performance
+talking about Community Support some of
+the popular GitHub repositories and
+MySQL currently are MySQL JS MySQL and
+then there's MySQL server and at the
+time of writing there were about 222
+000 repositories on GitHub with 7
+million comments for MySQL in case of
+mongodb a few popular GitHub
+repositories are mongodb and
+Doctrine mongodb and at the time of
+writing there were about 177 000
+repositories with about 923 000 comets
+according to Google Trends MySQL is
+largely used compared to mongodb
+so now the question arises which one
+should you choose
+well if your application requires multi
+row transactions like for example in
+accounting system then a relational
+database would be more ideal
+but if you're using mongodb then it is
+more suitable for real-time analytics
+content management Internet of Things
+mobile applications and so on also MySQL
+is a great choice if you have structured
+data and need a traditional relational
+database
+in case of mongodb it is an ideal choice
+if you have an unstructured set of data
+so you could pick your choice and if
+you're partial towards one dbms let us
+know in the comment section below as to
+why you like that particular dbms and
+with that we have reached the end of
+this session on the entire SQL and
+mongodb Basics fill course should you
+need any assistance based on PPT project
+code or any other resources used in this
+session please let us know in the
+comment section below and our team of
+experts would be more than happy to
+resolve all your queries at the earliest
+until next time thank you stay safe keep
+learning and get ahead stay tuned for
+more from Simply learn staying ahead in
+your career requires continuous learning
+and upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in Cutting Edge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here
