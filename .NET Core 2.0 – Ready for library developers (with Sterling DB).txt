@@ -1,0 +1,506 @@
+Hi, welcome to another episode of visual studio toolbox semi host...and
+today have got a special guest jeremy...introduce yourself welcome to show.
+Thanks time here and nice and cool at...actually we had
+a front come through so the temperatures drop feels a little bit like
+redmond weather when it's good whether or not the not
+...the health case that we have right now and the crazy stuff but yeah,
+so, I'm a client developer advocate with microsoft of 
+joined the team I've worked with microsoft and the capacity of an mvp in a
+consultant for about ten years and just recently joined the team
+a couple months ago pretty excited...stoked about the
+...we're excited to have you and the...you ran into each other a 
+think digitally before I mean a million names been around for quite a while you before the community but there's this
+...pose the did the trick this episode so...you kick-off and 
+tell people about the kind of your journey the product built an answer what why you 
+wrote the blackboards they think they'll set the stage for why we're talking today sure absolutely
+so the story begins many years ago in fact the very first
+commit that I did this particular tool was in two thousand and ten and,
+you know, like to think I haven't been a big code
+...fan of writing a solution just to try to find a
+course solution most of the things that I write...solving problems 
+right and the problem at the time was we had this great technology
+called silverlight and people were using it everywhere but there wasn't
+a really good local database solution for that, yeah, and, it wasn't a case where
+...trying to build a full-fledged database we know that we can use web service calls and
+connect the database front-ends but even for simple things like caching storing local
+data it just wasn't there and when I went to look for
+solutions most of the solutions required you to buy into the solution
+what do I mean by that if I was creating an app for food,
+for example, and,...I'm using that because I have a great...example I
+might build classes that are food related classes
+world to use these tools you had actually inherit from their base classes
+are implement certain interfaces and go through a lot of changes to make it work
+with silverlight so out of pure frustration I built a tool?
+That my rule is very simple I shouldn't have to
+change the classes that are already had my application but this tool should allow me to
+be able to define what is the unique key on the class store the class
+...bring it back and have some indexing capabilities and basically give 
+me a local database capability with really low friction really
+low on boarding, yeah, paradigm a lot of us were familiar with right back then, you know,
+silverlight ask we needed that I was already developer back into the cipher the
+appreciated the need you are trying to solve and that kind of back and forth clean civilization without a
+lot of complexity is a must...still must today and most modern oops or
+whatever so the problems the same but you had a very particular moment in time you try to solve...yeah,
+I had a particular moment in time and at the time, you know,
+we were following the in the model of you model pattern
+and needed ways to store sessions we used it a bit and silverlight but
+the irony and I didn't see this coming was that right around the corner was a release
+of windows phone and windows phone was released it was released with silverlight
+supporter so as a very easy pathway to take sterling which
+is what I named the database and I'll tell you why in a second but I
+...sterling and
+...it to the phone and it was one of the first database solutions
+available locally on the phone so that really drove adoption some early fitness
+trackers and some gps systems and a few pretty prominent
+apps picked up sterling in the early days just because it was
+...the first databases to get the market there,...but,
+just a quick side story the name was actually I wasn't too super
+creative obviously it's silverlight and this was sterling but I was always fascinated by the
+fact that there was this deal in a silverlight as the core dl if
+you've done it programming, you know, there's a core clr
+...base classes and silverlight it was called ag core
+and it is so obvious now that I know why but when I first saw that I was like why would they call this
+egg core what is this a core...and I realized
+...the chemical abbreviation
+for silver ag I didn't know that that's
+...only this over course I said I want to do something sneaky like that
+from my database that let's call it sterling cool so
+...create this product right this database technology in like what
+...framework where you talking at the time and this was silverlight right I...my
+...fuzzy like what was civilized...version or 
+other even worked right so when I first built it was
+definitely silverlight for but around that time I think and,
+this is actually important because it brings us to the present time too there was a 
+new title library that was just becoming popular called portable class library so once we
+get to the phone we realize we have a code base for silverlight now we
+have code base for the phone you ride around the corner was the whole windows
+eight launch and some of that technology so they're needed to be
+the solution so the portable class library came out and what was
+nine libraries that covered enough api surface area that I was able to
+quickly take sterling and build it as a portable class library so the way it was
+architect it was all the core pieces that the serialized
+nation and indexing and understood how to manipulate the database that was all
+portable code back in the day which is interesting 
+I'll talk a little bit about that in a second but then the very specific items,
+for example, and, silverlight in the browser with
+isolated storage in the phone we had a special phone type
+of storage device deliberations you always had to consider a pc I'll give you that you generic
+code that there was always that's extra thing had to do right exactly...
+Analog people realize this...pc I'll was sort of a
+clyde right it was an illusion it a created these
+type forwarding classes but at the day there were 
+there were two challenges with a pc all that I think you know, dot net standard
+a addresses today but the first challenge was that you had a lowest
+common denominator right so when you want to target platform xy and z is.
+Minimum set of api that can be accommodated on these
+platforms the second problem
+those as more platforms came out that matrix became so complex 
+it was like if I checked these three what is the magic combination
+of api that are supporting became tough so I kind of call that
+the framework down approaches like here's the frameworks let's make it down,... what's common
+...dot...standard is the standard out approaches let's implement a
+standard that has a core set of api and then build these other projects
+to adhere to that standard which in my opinion is a much better approach,
+yeah, I mean plus the time solve the real problem we needed to share code across all of these places
+with that was running at the time that the silverlight oops of the world the windows phone 
+the windows eight I was developer and all of those platform so pc...spent a lot of time like you said
+check boxing just enough to get to work...building the specific libraries wherever,
+wherever they were needed for something really device specific or platform
+specific and you're right it was...I like the way describe that I never thought about it that way but it is
+the approach of really building to the lowest common denominator I think I think today's world is very different
+and...cool that we sort of...your project always...so what is 
+just a little bit about like what was your black postal about because it kinda takes that,
+you know, your database project pc...work all of that and brings it to the modern era so how did you
+gets today's points and what...you do so who is interesting it's
+a small world at the time I was not working for microsoft but ten
+cure was very involved with silverlight and in
+two thousand eleven I think it was he treated oppose so when is jeremy get
+...stereo?
+I said well that sounds like a good challenge let me go see so I cracked open
+...net cord the time the one that overs and,
+let's go ahead and serialized something wait there's no binary writer
+ok let's reflect on the class because remember the whole
+rule for sterling was that I wouldn't have to modify my classes
+...reflection to look at him wait the full wave guy surface areas...there so...really a
+...for me and what's interesting is done at 
+core the first release addressed a lot of scenarios and we
+use that actually quite a bit at my last consulting
+company for greenfield projects if we're building something fresh we had the tooling
+...where I think a lot of frustration came from was from
+authors of tools and frameworks and libraries and even enterprises
+ahead existing code...want to migrate there code
+well they kept slapping into that barrier right of the api doesn't exist
+there's just not enough overlaps, yeah, definitely...fear I think we have is developers
+...it's even less about existing projects exhausting you don't touch those
+...nearly as much as you'd like to it's more about the community of projects that, you know,
+you depend on for the next project and can they get their with their
+libraries because we all depend open-source so much compared to the silverlight days let's face
+it it's even back then we were starting to more and more with project like yours
+and today I can't imagine any real-world project on windows or dot net framework
+in general without support from various framework so it sounds like you were part of the
+problem space, yeah, I was definitely part of the problem space and what is interesting at the
+time is the iteration that sterling grew too so it built support for the windows
+runtime several because it was open-source and this was before
+...you know, open sources been out for a long-time but in the dot net community it was
+...as popular at the time
+it was open-source on cope like so we had a lot of interested individuals on
+...projects contributing and solving problems and it was really
+neat for me as a developer to see that concept of,
+... someone doesn't just have to come in and say hey there's an issue but they would literally
+...here's an issue here's a match you can fix that so
+it's frustrating not to be able to bring it into this the net core but,
+you know, quite frankly at the time it was brand new too and I'm not sure the demand was so
+I sort of set it out there said, you know,
+what for a lot of the mobile applications now there's other solutions there's ports
+...sequel light there's a lot of other tools that are available so I'm
+...and, as much time at which brings us
+to now because the announcement of the release of
+done it core was coming up and I was very curious about what the
+story is what the changes so I started looking into
+...core to data and of course to do that you really have to
+understand the separation between done at core which is the implementation
+...standard which is the interface and describes what that
+implementation needs to it here too right so it becomes a minimal requirements
+...dotted core adhering to done...standard
+...says minimally it's going to support all of the api into
+...great let's to api are in
+...and I started digging and I don't
+...the exact figure but I think it's something like thirteen thousand
+api that were in one that six the previous data
+...jump to thirty two thousand,
+yeah, it's in fact the natural of a change right it's a lot more api they're bringing
+dot net really to the point where it's quite productive even for existing project right and that's a 
+thing where you try to look at it again, yeah, looked at it again and said okay, you know,
+we've got xml serialized...we've got the binary readers and writers
+reflection had thousands of new methods ported over so
+it really...to the point that I said I wonder how hard it will be
+to migrate sterling because I keep hearing, you know,
+one of the challenges and stop gaps dot net core great for
+new projects what about migrating existing I said I've got this perfect progress
+our project that I put on the shelf that uses reflection uses
+...realization uses a lot of advanced api and surface area let's see what
+it takes, yeah, so, I...down the project literally?
+Built a new class library targeting done
+...standard two edges dropped all the files into that projects I use the
+dynamic...new class.
+At...which does the done it standard drop them in...to compile
+the...compiler issue that I got was the resources
+are using size using res x file and it was an old way of doing
+you localization and that resource living compact 
+to it so I really quickly hacked it by making a static class and just
+server surfacing are coded because this was for exceptions that were being thrown
+site quickly went through the listen just copy them from the resource file into the class compiled
+it worked I said well this can't be right.
+We're next...for work and that someone's going to work us to have, 
+yeah, let's write a little test app wiring wire
+in some objects and query them out and lo and behold it worked so
+I was stunned and in my mind you have been consulting for a lot of
+years and I've talked to a lot of people just in the past few years about
+down at core and I think a lot of people were concerned about that aps surface area
+so my mind it wasn't really about sterling that I wrote the
+post-it was about all the new capabilities for two data and sterling was
+way to show how that's change that story
+change from literally two thousand eleven didn't even...touch it
+to here we are two thousand seventeen with just one small tweak I'm able to 
+get compiled imported nice how many other libraries are like that well there is a blog
+post that came out with theannouncement for dot net core to and, by that
+teams estimate they said in looking at new get and scanning the api surface area
+...get seventy percent of the projects should be ai compatible
+we've done it standard so that's a lot of people that if they're not aware of
+this new capability are missing out on having their library available
+and a lot of different places right because we've got...and support for done
+it standard with...we've got the dot net core we've got the net framework and
+in preview I believe coming out I don't know when is a universal windows
+platform yet...they actually...that already citing that just came out very recently but, yeah,
+it's basically, you know,
+up to each ecosystem to get up to dot net standard to your compatibility...with
+...specification so it is a bit more work but I really feel for the
+community of projects out there...it really is zero right we did we can't always have
+...the minimum we have to head towards something that people can
+actually build real solution towards and I think they would be cool to show the people
+you're converted project is...you can demo for us all but absolutely I.
+I have a screen here the I'm going to share for
+you what I did is this project is out on get hub.
+Let me just pull this up.
+I'm going to show the...have four so it's sterling net core.
+And, originally I just on a very simple test that I'll show you
+what I wanted to write immediate test the demo today so I'm going to walk through
+with that looks like in a second let me pull up my.
+Visual studio code so basically in this project you can see
+sterling course these are the bits of sterling we could spend hours going through
+the pieces and, 
+I think it's a lot easier to demonstrate with how do I hook up into sterling, you know, 
+I'm just project including it I haven't
+packages and you get package or anything but I'm just local reference but 
+...was literally created a cat class.
+That has a stream key in a string name I created a cool color class
+there's a good idea in a string name and then I created a planet class.
+That has an integer id and a string name.
+Sterling actually supported triggers went ahead and created a good trigger so that
+if I don't initialize that id it can initialize it for me
+generated do you do it for that and then I've got this database definition so 
+the database definition doesn't hair from an instance but you notice these classes have no 
+attributes no yo inheritance or anything it's very clear.
+...so there's this fluent interface that defines what is the key so for
+cat the keys...so...for core color it's a good
+for planet it's an integer and then we've got this combo and
+the combo class aggregates has an idea that has a core color planet...a
+cat also one of the things that is unique about sterling...
+behaves sort of like object document database but it maintains reference on tiger
+...so smart enough if I save one of these combo
+objects instead of serialized in the fall color just...serialized the key
+and go look at the color serialized nation two-d serialized that so that was one of the
+features to reduce the footprint of the size because remember this was phone days
+...size...go out and buy two hundred fifty six...you know, 
+small cards that we could slip in there so the database does this we've
+gotten initialization I've just created colors red-orange yellow blue
+...panther cougar links these are just initialized there's it's 
+creating the objects building up its own key for some of them and this is literally it
+...just db safe and
+...serialized...sterling has everything it needs to know to do that and then
+in our main program what this is doing is it's registering the database.
+And, what I did with sterling is I separated the driver that
+persists everything from the database logic itself so that man I could have
+...in memory driver...in memory database like a...an isolated storage
+driver I even had someone who wrote an as your table storage that's
+...so there's it's extensible in that way so what this does is it
+populate the database and then it...korean it does the queries
+a couple ways just going to run this really quickly let me pull this and, get into the
+right folder so this is my little get back shell so if I go
+into sterling consul test?
+We're just going to do it on build-out do release build.
+And, let that spin out target what you'll see is it's going to
+pull in the sterling.
+Core base and build that so that's 
+the sterling core and then it's going to build the test app.
+And, it's going to complete and then if I do a dot net and I actually
+I'm just giving it...path to the application right now sterling
+counsel.
+If I could type correctly I only do this for a living, yeah,
+so, it's saving colors I just put a thread...that's why it took that it's gap
+...for...combinations it picks a random color.
+And, then it's actually integrating through that combo box based on the
+colors.
+And, that's what you're saying come out
+and then it just tells you the time to complete which is really slow here I think because I'm
+sharing a landscape...runs a lot more quickly when I don't have the screen share
+running into a sort of the most amazing thing about what...showing is that foundation the 
+once you got to that net standard to this now can...windows can run linux can run
+...bp when that environment supports it anywhere without the standard is supported,... have this
+...platform database engine from a project that you built in silverlight
+days just to give our audience
+...context on the time here and that's a great contacts in fact the end of
+my blog post is literally pointing out that?
+In two thousand eleven I wrote this little apps
+...two thousand seventeen for the first-time I'm able to run it on
+a linux machine without modification without doing anything special and that to me
+is huge so I'm going to start this running now this is a little bit more advanced
+example so what's running I'm going to go through the code what this does is goes out to
+the publicly available usda nutrition database so those files are hosted
+on a site I've got parsers in this important 
+that read the text files and parse them into actual full
+model so that's what you're seeing here is like a food group which.
+Is a pretty straightforward class if I can get it to pull up here actually memory 
+the man
+...group is just a code...description but then we've got nutrient
+so nutrient has two parts to it maps to food id so think
+of protein carbohydrate fat content and then it maps
+...definition because there's a very standardized definition for these so these are
+...that objects now I'm just going to go and go to the food item
+has an idea belongs to group we can mess that group inside of it
+got description short description list the weight so that's if it's a cup dry a cup,
+you know, code to whatever
+and nutrients so what is happening down here?
+Is we're actually reading those files and parsing them into these?
+Classes and then storing them in the sterling database so I can run
+accord in a second and just to show you again
+we're just looking at straight csharp classes and if I look at my
+use the database what I'm defining is I'm telling it
+...has a string he nutrient definition as a nutrient key
+sterling also supports the concept of indexes and this is why I tell people, you know,
+sterling is not intended to be a sequel server cosmos db replacement it's
+meant to be a local lightweight cash in fact the most popular use
+case for sterling was what's called tombstone ing and the phone days and that was
+...we models for your application state and one an easy way to save it off when someone
+...the applications so that's the idea here but
+what sterling does with indexes is because everything serialized
+in the serialized with an index it'll keep that index
+in memory which if you think about complex large objects and you
+have thousands of those that's a huge memory footprint if I'm just storing,
+for example, id and simple strings then I can store a pretty good amount
+of those so in this index what I'm telling you to do and I can even create my own keys
+on-the-fly that's what's beautiful about a sterling just calls my lambda expression to 
+evaluate the key so I'm telling it store is an aggregate key the food idea nutri
+ninety but create an index on the amount in a hundred grams
+...say there's this much protein and a hundred grams or
+there's this much water in a hundred grams so what it's doing
+is in that index it's keeping that in memory so even though does have the full food items
+of memory it has the index of memory so you can very quickly get to the energy
+that you want and then you can lazy load the full entity for the...mean those
+...real-world scenarios...any sort of application and I've had to tackle
+...multiple times you'll sometimes have to lower a lot of data and you want people to kind of as they
+tried to look up various values...you just need a little bit help that doesn't come
+for free especially when you get to hundreds of thousands of objects sometimes of data in them so,
+it's kind of cool that you're able to take all those investments you made I mean this is called
+...again like six seven years ago right it's old code it but it's code that's
+well-written for...needed to do and you just freaking converted to that non-standard I'm very impressed
+and this thing is still going as...is putting a lot of data, yeah,
+it's a lot slower actually kicked off sooner again I think the sky this long my
+system down but we can lou back to...I want to show this part this is my import
+strategy so this literally takes a list of items?
+And, you can see I'm using generics and imports it by box saving it now
+this is a little walk e this is something ninety-degree factor because before we had
+our awesome thread library with tasks we use background work omega
+...backer
+...go way back hereso, I know there's some conversion between the two but I just
+use what was there so this is using a background in order to save
+...list but what I love about being able to use generics
+rate is csharp is a language is I
+could have a strategy where even though I don't know ahead of time that type that I'm trying to
+...my database...based on generic
+...capacity food item for group and the same
+save routine works and it just recording percentage done you can
+see we're getting close to the end here but what blows my
+mind is that this code using generics reflection and everything
+else is the same code now that's going to run a mac.
+And, this example everything I'm showing here this entire screen
+this-is visual studio code so visual studio code will run on 
+mac it'll run on linux and it's done
+...core which will run on all those target areas so all of this experiences 
+is the same no matter where you go you want done is...loaded the collection so now I'm doing a
+query I just want to run this real quick and then show you the code and then...
+acts...core is listing in the serial category foods by
+...contents of we...comes out on top and then pass the
+whole we stand here just in the top twenty and then we do it
+again for carbohydrate content and then we do it again for fat
+contents we can see okay what foods are I'm protein are high in fat the
+way that looks if we come back over to the program.
+And, I expand my terminal back.
+Is using a link chord?
+Some literally coming here.
+According my nutrient key.
+joining it to the full food item using my split key remember
+aggregated the key so I can actually is part of my
+link worries they split than just compare one side of it so this time I'm just
+looking for protein order descending selected to
+bowl and then I lazy load the food value that's why you saw a little
+pause so even though it figured out a whole list of items only as I
+...formed...serialized that full food
+item from the dc realization and this at the time and again, you know,
+I stress there's a lot of different very optimize solutions now but at
+the time for very simple in obtrusive way to basically
+...store some your view models or some of your cash data and then be able to korea
+this was what the magic of sterling was about at the time, yeah,
+that's awesome I think this sends a really clear message
+...you know, if I was a library developer out there you know, it's easy to hear some
+team at microsoft give some percentage right and say this percentage that percentage of the, you know, 
+developers can now look at their libraries and convert to this thing but you're, you're one of those people you're you
+had a real project this wasn't conceived to demonstrate this was a 
+good example they just happen to be there and to me that's what media blog...authentic and I love authentic stuff
+and there you go you showed running so definitely no-smoking there's this was real...you converted it's 
+up and get hub people should definitely take a look and if you're if you're starting a project today,
+you know,
+from the other side of the fence and you're a developer that that's looking dot net core you know,
+what message would you give them...net core...in general like I think this
+releases is from my perspective very solid by love to hear your thoughts on how far that has come
+as a general framework I think it's come a long ways and there's,
+there's certainly very specific scenarios that need very specific parts of the
+library and the full framework if
+you will that makes sense for that but in general especially?
+If you're starting to embrace this concept and I hate to use overloaded terms I know
+everyone saying microsoft mrs today right here but if you
+think about it let's not focus so much on the name 
+and just the concept and that concepts been around awhile let's focus on one thing
+do that one thing well test that one thing package that one thing share that one thing right
+it's a component as part of an application if you're looking at components
+I believe developers will find eighty ninety maybe close to a
+hundred-percent of their surface area can be handled by something
+lie net core and what's nice about it is what the current versions you can
+mix and match right so the net framework and reference done
+at standard so I don't believe developers are losing anything if they take a
+core first approach and then if they need to build the bits
+in the full framework that the...the writing small services
+...guys endpoints there's a lot of advantage to doing core
+first the lessons learned from how many years right of the
+fall down at framework this was an opportunity even though the api surface area is
+the same for that team to build it from the ground-up and there's been plenty of blog posts about
+benchmarking and performance that's pretty impressive what those capabilities
+are so we've got that coupled with the fact that for free.
+As a developer you now can create a library or code base
+that will run on so many different platforms and you never know when that little utility
+your library right may become useful may take off someone else might need it
+you may not think that your app is going to end up on a tablet or phone right
+...if it does some day this sort of buys it to you for free
+in the last thing I'll say that I think is important too is it 
+starts to be a developer today and not talk about the cloud that's what
+...do day-in-and-day-out is the cloud but when I look at
+software today I don't worry as much about how cool the technologies
+of the language I'm worried about what does it take to get it from the concept
+to then deployment right because that's cost of business how fast can 
+you get it to market how much of that pipeline...you focused on innovating
+and doing what's important versus doing all this side stuff this
+...be down every project, you know,
+standing up a virtual machine configuring it and what's nice is
+today we're recording this general availability of web
+app on linux and container web app was announced
+it that announcement just came out, yeah, 
+genetics what's that you just came out like today literally like as we
+...preparing to record this episode right and I think,
+you know, programming aside and what does it take, you know,
+does it support generics whatever what is that pipeline for continuous
+integration and deployment and there's some very mature pipelines that can package
+...at core apps into container there's tooling that's built
+in developers I'm showing visual studio code developers don't have to leave the
+full visual studio to get this experience but what's nice is
+with tools like this I can take something like container web apps I can
+container eyes my dot net application take...core right click
+at doctor file create image...out and deploy that
+to an infrastructure that will automatically scale instances gives me a
+...want five I want ten or based on cpu are
+based on requests have all this auto scaling capability without the overhead of
+me having understand all the nuances of the infrastructure behind...I think that's huge
+is that coupling with this technology and what we have available in the
+cloud for rapidly provisioning nodes infrastructure to run the
+...core apps and that's what gets me excited about it,
+yeah, it's really it's really come a long way I think if I had any hesitation to tell somebody to go tried
+...core before I think to all...standard to already has taken those away
+...they speak that in a centigrade like you I come from consulting background I know-how important it is for 
+people to actually solve real problems and be productive and
+...budgets and all of that I mean that's the real-world people live...we get to play
+...this cool...the other side of it so when we give a suggestion we're asking people spend their time
+...their money and I think for once we can do this without that core
+to on the really confident they've got a great web story that...story they've got component
+...they can go to the clouded they could run...linux taken windows the skies
+...it to take some puns...there but
+yeah, that's awesome and we...the...you came on to show this to us...
+...you...I had no clue just like when I wrote sterling it was 
+the solve a specific problem I had no clue
+...solve it and become popular the way it was back in the day but this blog
+...that I wrote I 
+wrote because I was excited I saw what was possible...I want to write about this and,
+share plus and, 
+you know, this is kind of a guilty pleasure but defined it...that six-years-old and 
+finally be able to reply to that's us and at the end of the day
+I replied when he said when you can import...that have out now
+...at least...that was a lot of selfish fun but it went viral
+...a lot of people picked it up and I think it is because there is a
+desire to tap into the features and functionality and there was a little bit
+of reluctance based on the history
+...the track record not of issues which is lack of api surface area so I
+really do feel with done it standard tuned net core.
+...a major game changer and that people should take it seriously take a look at it and,
+you know, what I'm going to put myself on the hook and
+on the line for this but go take a look at try it out if you have issues...problems with
+that reach out to me I'm very reachable my blog as contact information might get
+hub does and because I'm interested in removing friction and helping make this happen I
+can do myself obviously but I'll bang I'm?
+Very transform of and I would love to see 
+that seventy percent of new get packages that can support on
+...standard to score on standards...be really awesome night
+...think jeremy symmetric coming on the show and we'll put the links to you
+...have repo the blog post and your twitter handle so folks can actually reach out to even
+...given some questions and...people have them and...you know, hooked evian again when you're symbols
+...stuff to show us sounds cool I will do my best to work
+...how awesome thanks again for me on the show...if...being here and the thanks for watching
+...to detail...hope you come back again take your folks.
+Inverse.

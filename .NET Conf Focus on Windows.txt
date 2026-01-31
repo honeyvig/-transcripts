@@ -1,0 +1,551 @@
+>> I'm having some deja
+vu because it seems like
+we had a.NET conference
+a couple of months ago,
+but we're having another one
+that's all about Windows.
+Join me with Beth Massi as
+we learn more about the
+upcoming.NET Conference on this
+episode of Visual Studio Toolbox.
+[MUSIC]
+>> Hey, everyone welcome to
+another episode of
+Visual Studio Toolbox.
+I'm your host, Leslie Richardson.
+Today I'm joined by Beth Massi,
+who is a Product Marketing Manager
+on the.NET team. Welcome Beth.
+>> Hey, thanks for having
+me, Leslie, I appreciate it.
+>> Sweet. Nice to have you here.
+It's always cool that I'm here.
+I'm the host, so what do you know?
+Word on the street, is that there is
+a conference coming
+up that's.Net Conf.
+But didn't we just have.Net
+Conf a couple of months
+ago. What's going on?
+>> That's right, we
+have it every year,
+the main three day event,
+happens every year and
+from now on it'll happen
+every November when we
+launch a new version of.NET.
+It happened with.NET Core 3 were
+released in September 2019.
+But then we went on the every
+November release train.
+Now we're going to have
+it every November.
+Last November, you're right,
+in 2020, we had done it five.
+That happens every year and we've
+been doing it for a long time.
+It started out in the community.
+Javier Lozano is still
+on the Planning Team.
+He started it ten years ago.
+Last one was the ten year
+anniversary of the main event.
+Now what we started last year though,
+is these series of smaller
+events that are just one day.
+The main event has an
+open call for content and
+we run it like a real
+conference basically,
+except it's always been
+a virtual conference.
+It's a little easier
+for us to adjust to
+this pandemic situation to be honest,
+we were pretty set up for that.
+But we started a series of
+smaller events actually
+before the pandemic hit.
+It was started in January last year,
+we did a Focus on Blazer.
+It was a test to just say,
+hey let's invite some of
+the community experts and
+get some product team members
+together for just a one day thing.
+We had no idea how it would
+perform or what it would do.
+Well, it turned out it was an
+actually very successful event.
+We had a lot of viewers.
+We're like, "Hey, this
+is an easier version,
+a little scaled down
+version of.NET Conf."
+People understand
+what.NET Conf is about,
+so we're like let's call
+it Focus on- something.
+Because you can do
+anything with.NET so it's
+nice to be able to focus
+on a topic for the day.
+We actually started that last year,
+we had Focus on Blazer in January,
+it was on January 14th.
+I remember we flew up
+there and it snowed in.
+We got completely snowed
+in to the studio.
+We ended up bringing
+up all the speaker.
+Nobody could come in
+the studio at all so
+we had to bring all
+the speakers remote.
+We really only had half the speakers
+remote and then the product team
+members coming in the studio.
+Well, they couldn't even do that.
+We literally were like, okay,
+we're going to have to go pick
+up the crew from their house in
+an SUV and bring them.
+Then we planned one from March
+and that was Focus on Xamarin.
+We were doing all the mobile
+development with Xamarin.
+That one was March 23rd,
+which was actually one day
+before Governor Inslee,
+the governor of Washington State
+shut down the state
+because of the pandemic.
+>> That feels like an eternity ago.
+>> Yeah, it feels
+like an eternity ago,
+it was literally less than a
+year ago that that happened.
+We didn't plan on traveling
+because we knew this
+was going to happen.
+I ended up staying home.
+Javier, stayed home,
+Jeff stayed home,
+so we were all at home except that
+James Montemagno was the host
+and they did go into the studio.
+But we ended up calling everybody
+in remotely for that one,
+except we had a few
+like a skeleton crew.
+Then we did a third one and this
+is full blown into the pandemic.
+We did a third one on
+microservices in July,
+and that was our first real test
+run of everything in the Cloud.
+We basically built a
+studio in the Cloud.
+Instead of having these
+channel line studios,
+we created a big
+Azure VM running OBS.
+We actually still at that,
+we didn't use StreamYard.
+I think we were still using
+Skype to call people into it.
+But it ended up being a
+super successful event.
+We ran it through Learn TV.
+That one is probably our
+biggest event that we've done.
+They'd been successful. We've
+got another one coming up.
+We think we have
+streamlined the process,
+almost like a cookie-cutter
+blueprint of doing these events.
+As you know, you guys
+are using StreamYard,
+we're using Learn TV
+to do the player.
+Everything is pretty smooth,
+let's knock on wood.
+It's a live event so you
+never know exactly what's going
+to happen on that moment.
+But yeah, so we've got Windows,
+I got my screen up here.
+If you go to "Focusdotnetconf.net",
+Focus on Windows is
+happening on February 25th.
+I'm going to blow it, Leslie. This is
+recorded so by the time. [inaudible]
+>> Yeah, don't pay attention to
+the countdown here, it's a lie.
+>> The countdown is a
+little off you guys.
+>> Yeah.
+>> It's happening 15 days.
+>> Look at the date,
+not the countdown.
+>> We've got some speakers
+from the community
+and the product teams,
+so guys are all working on,
+you're making Windows desktop
+apps and Windows development
+awesome with.NET 5.
+You can see a little bit about
+what is.NET Conf here and you
+can check out our past events
+which I just walked through.
+All the content, the
+code, the slides,
+all the stuff that our
+speakers did in the past,
+you can grab here, and
+even the main event,
+this was the one you were
+mentioning at the beginning.
+That's the main.NET Conf 2020,
+go ahead and grab all
+the content there.
+But anyways, we've
+got a great lineup.
+We just announced, or just
+maybe published the agenda.
+I haven't actually announced it,
+this is my announcement right now.
+The agenda: We've got
+Scott Hunter and Olia.
+They're going to kick off the
+day with the Welcome Session,
+which is an hour-long session.
+We're actually building
+that, it's like the keynote.
+We're building that right now.
+I can't tell you-all the details
+because we're building it,
+but it's going to be pretty cool.
+We're going to focus
+a lot on the What's
+New in WinForms and WPF
+development on.NET 5.
+Then Cathy is going
+to come in there and
+she's going to talk about how to take
+your.NET Framework-based apps
+and get them to.NET Core/five.
+There's a tool we're working
+on to help you do that too.
+She'll walk through the
+preview of this tool.
+That's a little teaser on
+the slip out a little.
+We're going to have a
+little announcement there.
+Okay. So cool. Don't tell anybody.
+>> My lips are sealed.
+>> We figure we had a
+ton of what's new in C#.
+We do a lot of C# content
+because we know we have
+a lot of C# developers.
+We also have a lot of
+Visual Basic developers.
+So we said, you know what,
+on.NET 5, that we've done a
+lot of work in Visual Basic.
+To light up the Visual
+Basic framework,
+it has a whole
+development framework for
+building wind forms apps actually.
+Klaus, who actually used to be an
+MDP and now works for Microsoft,
+super passionate about Visual Basic,
+is going to be speaking with
+Kathleen Dollard on taking
+full advantage of
+Visual Basic and what's
+new for Visual Basic
+developers on.NET 5.
+So hopefully, that's an appreciated.
+>> Yeah.
+>> That's really cool,
+because I get questions
+about Visual Basic on my
+day job sometimes too.
+I'm like, "Oh, shoot."
+I feel like that's
+underrated language,
+but as like being used and
+it deserves more love.
+>> It's very close to my heart.
+People might know me
+from 20 years ago,
+I'm a huge developer.
+When I was hired by Microsoft, I was,
+a Visual Basic developer advocate
+and I definitely love VB,
+it will always be close to my heart.
+I don't really code anything
+anymore because I'm in marketing.
+Sam Basu from Progress is
+going to come in and show
+us how to use Azure SignalR
+service with your desktop apps.
+I think a lot of people
+think like signalR,
+it's a web real-time communications,
+web communications protocol.
+I don't need that from a desktop app.
+Sure, there's a lot
+of scenarios where
+desktop apps can take
+advantage of this as well.
+Your stock trading apps and those
+things that have really rich,
+rich UIs and or built native on
+native platform like Windows
+and can totally take
+advantage as well.
+He's going to talk to us
+about setting that up.
+The cool thing about
+Azure SignalR service
+is it's a total turnkey service.
+You don't have to host
+it or do anything
+yourself so that's really cool.
+Jessica Engstrom is a
+Windows Developer MVP
+and she is all about UX.
+She's going to talk to us
+about some UX principles
+and how as developers,
+we stroll and socket
+building great UIs,
+what we can do to build better UI,
+and usability in general.
+Then we have Dmitry, your friend,
+he's probably come and talk about-
+>> Yeah, I know Dmitry.
+>> He's basically the XAML tool guy.
+He's going to show us some
+of the new enhancements,
+NBS for billing XAML-based,
+WPF and UWP apps,
+and Visual Studio so this
+should be pretty cool.
+>> I'm going to pivot
+you for a second.
+Obviously, people should definitely
+check out this conference,
+especially if they're into Windows
+Apps and Windows desktop apps.
+But what if people want to
+be able to have a say in
+what the next focus conference
+events are, what should they do?
+>> That's a good point. How we
+usually do it is this one was
+based on feedback that we
+got from a survey that
+we did at the end of the last
+conference, the main event.
+We looked and saw, the
+people loved the main event,
+it was really good,
+good feedback from that event.
+But I saw some comments
+around it would've been
+nice to have more Windows content
+because it was really web heavy.
+I thought I looked back and I'm like,
+"Hey, we did a Blazer event,
+and we did Microservices,
+we did a mobile thing,
+but we haven't done anything
+for Windows developers."
+This was already pretty much based on
+the feedback that we got from
+the survey on the last event.
+I did say, you can add Beth Massi
+and I take that as feedback too.
+As the Executive
+Producer of.NET Conf,
+I do take feedback that way.
+But we also send a survey out,
+join that mailing list.
+So if you subscribe to notifications
+just down at the bottom here,
+that just puts you on a
+list that anytime we have
+another.NET Conf or a survey
+or asking for feedback,
+we just e-mail people and then they
+fill out the survey and
+then we know what to do.
+Then a lot of times, it coincides
+with something we're
+doing in the product too,
+like Blazer, for instance,
+was newly released at the time,
+Blazer's serverless, and we were
+working on the WebAssembly,
+so it's like right in between.
+We saw just a ton of
+people asking questions about
+it and how do I use this thing.
+We provide these scaling events.
+We just look and see
+what's the community
+doing and asking questions
+all up and then we pick.
+It has a lot to do with
+feedback but it also has a
+lot to do with marketing
+as well and where do we want to
+drive people next based
+on what the product is.
+Some of the things that I don't
+think other people know about
+Windows or at least WinForms and
+WPF is that they're open source.
+They'd been open-sourced
+for like over a year.
+So we're going to bring
+in some contributors
+from the WinForms and WPF
+projects to talk about how
+people could actually get
+started contributing in
+generals on GitHub or to those
+particular projects as well.
+It's not always like our
+shiny web technologies
+that are open source.
+Now Wind Forms is like 20
+years old, the framework.
+To actually take something that
+wasn't initially ever meant as
+an open-source project
+to actually get
+it open source was actually
+an accomplishment in itself,
+and now see the
+community contribute to
+it is even more rewarding
+was put that way,
+so we'll have some of
+those books on as well.
+Take a look at the agenda, I
+hope that we've covered a lot.
+You'll see most of the content
+is about what you can do today,
+but we do have some future sessions.
+If we look at the end
+of the day, here we go.
+We're building.NET
+hybrid apps with Blazer.
+Dan Roth will come in and
+we'll talk a little bit about
+hybrid apps using their native
+apps that use web technologies.
+If you want to use
+more of a Webby syntax
+or Blazer syntax to do
+native development,
+he's going to show us where that's
+going and what it'll be like,
+the experience would
+be in like in.NET 6.
+We've got someone from
+the Windows team.
+[inaudible] about
+the project reunion.
+Project reunion is about
+making that experience
+a lot better and across
+all the different Windows
+10 versions and basically
+building one app that can take
+advantage of all those devices.
+Then we'll have Maddie and
+David in to give us an update
+on the.NET multi-platform
+app UI,.NET MAUI,
+which is in Preview,
+actually by the time this airs,
+I think it'll be in Preview,
+one will be dropped.
+By the time we release in November,
+it's a new app model for building
+apps that not just mobile apps,
+but also desktop apps as well,
+all native applications using XAML.
+Hopefully, we'll have
+a good show for you.
+>> Yeah, that sounds great.
+Hopefully people go
+check out that site,
+get hyped about all the different
+talks on different ways
+and get involved with the
+community as a whole.
+>> Don't forget the swag. We
+did have free digital swag.
+Take a look at the swag.
+We've got free digital swag,
+we've got [inaudible] code theme,
+you can create your own little bot.
+We also have sponsors.
+Our sponsors are sponsoring
+a bunch of swag this time.
+This is the first time we're
+doing swag for a focus event.
+This was swag bag was really
+popular for the main event,
+and so our generous sponsors are
+donating 25 different prizes.
+You'll have a bag of stuff basically.
+You can enter to win right here.
+Especially the mystery prize pack.
+Apparently, Progress did that
+last time and they're like,
+people love the mystery part.
+>> I personally hated
+mystery surprise pack.
+I was like, I don't know what
+I'm getting myself into.
+I want to know what
+I'm going to get in,
+but it's each their own.
+>> I hope you get items
+in the stores and
+people can pick from more t-shirts
+and that kind off stuff too.
+Hopefully we make it fun.
+>> Awesome. February
+25th is the magic date.
+>> Starting at 8:00 AM Pacific.
+>> Great. Thank you so much
+for coming and sharing that.
+I think that is super cool.
+I'm sure there's a lot of people
+out there who would love to
+have a full conference of
+nothing but Windows apps,
+both desktop and mobile and
+beyond. That's really exciting.
+>> Awesome. Thanks for having me.
+>> Remember February 25,
+don't look at the countdown
+on this video is wrong.
+>> Save the date.
+>> All right. With
+that, happy coding.
+[MUSIC]

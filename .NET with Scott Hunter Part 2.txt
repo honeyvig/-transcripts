@@ -1,0 +1,546 @@
+>> Today's Visual Studio Toolbox,
+part 2 of my conversation
+with Scott Hunter.
+In part 1, he gave an overview
+of what was revealed at Build,
+and in this part,
+we have a nice
+discussion about what it
+all means for.NET developers.
+[MUSIC]
+>> But then there's the question of,
+what do you use to lay
+out a design time?
+Is it XAML or does it wind up being
+something entirely
+different, I suppose?
+>> I think it ends up
+being a couple of things.
+First off, there are
+different flavors of XAML.
+That's a good point you made before.
+Xamarin.Forms is a flavor of XAML,
+and UWP is a different
+flavor of XAML,
+and then WPF is yet a
+different facility for XAML.
+There's three of them that
+are slightly different.
+I think for.NET MAUI,
+we're probably, Robert,
+we're going to use the Xamarin XAML
+because we want to be compatible
+with the previous Xamarin apps.
+I wouldn't want to have.NET MAUI
+come out and it'd be
+very difficult for
+a developer to move their
+existing application to.NET MAUI.
+But we want to do
+something new as well,
+and so there's a pattern that has
+gotten popular with some of
+the web frameworks today.
+For example, maybe
+you've seen flutter,
+Robert that where you've actually
+defined your UI in code.
+There's SwiftUI on
+the Apple platforms
+where you define your UI with code.
+So we are going to take
+a step at that as well.
+So with.NET MAUI., we're going
+to give you two choices.
+One is to go build your UI
+with XAML like you're used to.
+The other one is going to be to
+build your UI directly with C#.
+That gives you a couple
+of cool benefits.
+If you might use XAML,
+XAMLs are really rich,
+really powerful platform,
+and it's got some
+complex bindings to it.
+Sometimes those bindings
+are complicated.
+If you want to bind a
+boolean to your screen,
+you have to write some code
+to convert the boolean into
+a format that Xamarin
+understands the display.
+If you've ever build a Blazor
+application, it's much simpler.
+You just put a boolean in there,
+and running your UI with C#
+will be very similar to that,
+we just put a boolean in there
+and we'll just deal with it.
+So it's going to give you
+a simplified binding.
+It's going to give you a new way of
+running UI and we're not
+going to choose for you,
+you can choose if
+you're a XAML customer,
+then you continue to use XAML.
+If you want to try the new C# syntax,
+it's catching on for other
+platforms that we want to
+experiment with it and see if
+it's good for our customers too.
+>> Or maybe, which would
+be my ideal world,
+we have actually a designer,
+where you don't have
+to write any code.
+Thinking all the way back to
+the WinForms days when you would
+use the designer and sure,
+you could write code,
+but who would do that?
+Now, obviously, it's a lot harder.
+Web forms was very much,
+you dragged a button and you put it
+down there and that's where it was.
+XAML is more adaptable,
+but given that all the XAML I
+write is essentially an
+object with properties,
+and then hooking up with events.
+I don't know, I'd love.
+I had this conversation
+with Dimitre all the time,
+but I would love there
+to be a designer,
+which sure, maybe it spits out XAML,
+maybe it spits out C#.
+Maybe it could spit out either
+one depending on what
+button I clicked,
+but that would be my
+ideal cool world.
+>> Yeah, the designers
+are interesting.
+We struggle with designers,
+especially when you get to
+something like.NET MAUI.
+Because when you [inaudible]
+different devices,
+the designers were great,
+especially in the WinForms era.
+In fact, I would say
+WinForms is unusable,
+better design your iDesk,
+you can do simple stuff,
+but building a complex
+UI would be very hard.
+The challenge we run in with
+the WinForms designer is,
+WinForms is all based
+on pixels, which means,
+you'd basically say draw
+this control at pixel
+10 by 10 and then make it 30
+pixels wide and 20 pixels tall.
+The WinForms designer tends
+to struggle when you get to,
+here's a 4K laptop or an 8k laptop.
+Because of that pixel perfection,
+it doesn't scale very well
+and you struggle with it.
+We hit the same problems with
+the web form designer as well.
+The web form designer
+basically it wrote
+HTML in a page that
+absolutely placed a control
+on the exact same place,
+which means if you
+resize the browser,
+the controllers disappear
+off the screen.
+So there's been a trend as
+of late away from designers.
+You're probably super
+aware of this Robert.
+It's got a notion of what we
+call hot reload or hot restart,
+and the idea is, well,
+what if I just change my source code?
+My device reflects that
+change instantaneously.
+What if in a web app,
+I change my HTML and the web
+app reacts instantaneously?
+Is that a better experience
+or a worse experience?
+It sounds crazy because we're
+like 18 years with the stuff.
+I think we're still learning.
+I think the challenge is, nobody
+has built a good designer
+that handles these displays at
+scale across all these sizes.
+But that's it. Does
+that mean now ever
+we're working on is going to be
+a mix of XAML with the designer,
+and it will be a mix of C#
+starting without a designer?
+But you never know. Have you
+ever seen SwitchUI, Robert?
+>> No, I haven't.
+>> They take a pretty cool approach.
+I'm not used it a lot,
+but they've melded a
+designer and swift
+into the developer
+tool at the same time.
+So as you're moving over
+some of the source code,
+you get some pop-outs
+and stuff like that
+that do some pretty cool stuff.
+I think that's an area
+that we'll explore to.
+Is there a way to
+take that native C#,
+lets see it in a source code file.
+But as you hover your mouse
+over the various parts of it,
+you get some of those
+designer features.
+We actually did this around
+2010 for ASP.NET Web Forms.
+We found the problem with
+the ASP.NET Web Forms was
+the designer struggled to
+show you what the market would look
+like across the various browsers,
+Firefox, Chrome, now, Edge.
+So we had an approach
+where instead of actually
+trying to be in the designer,
+we brought the designer
+to the source code.
+So as I'm moving
+through my ASPX file,
+I get the little chevrons
+around the code that will bring
+up the designers and the
+dialogues and stuff like that.
+But I think this whole space is
+a space you should just keep
+following us on Robert and try the
+best as you come out
+and give us feedback.
+>> I am writing a couple
+apps that need to run
+on multiple platforms.
+I'm writing apps that both
+me and my wife will use.
+It needs to run on my Android or iOS.
+We both have surfaces.
+So I'm obviously doing
+the apps and Xamarin,
+and they look great on Android,
+they look great on iOS,
+and out of the box,
+they don't look as great on Windows.
+This is not meant as a criticism,
+it's just statement of fact.
+So if I want to write an
+app just for Windows 10,
+I could use WPF or I could use UWP
+and then transition into WinUI,
+if I'm writing the app
+for iOS and Android,
+I can use Xamarin,
+but I could also use UWP
+and then use something
+like UNO to get it
+into iOS and Android,
+and that also gives me WebAssembly.
+So if I'm doing just iOS and Android,
+it seems like a pretty clear choice,
+Xamarin, because that's
+first-class scenario.
+But for somebody that also
+wants to build the app that's
+going to run on Windows,
+what's your recommendation
+as to how to handle that?
+>> I think for what you
+just described and where we
+are exactly today, you are correct.
+I think that you really
+have two choices.
+One of those choices is you
+can build a web application
+and the web app,
+you can make a web app
+that is responsive,
+meaning that it changes size
+according to the device you run on,
+so it look good on an
+iOS or Android device,
+it can look good on
+the Windows device,
+but that requires web technology.
+>> Right, or requires me to
+learn it at my advanced age.
+>> Well, advanced age, no.
+But I would say for you,
+if you're used to building
+native apps for a long time,
+it is a learning curve,
+but we want to make sure that we
+address in the [inaudible] space,
+especially we want to say,
+if you're a web developers,
+we're going to help you bring
+your web developer skill so the app
+can look good on all the devices.
+But I think you really
+nailed it when you
+said if you wanted to run an app that
+runs on Windows and iOS and Android,
+you can do it with
+Xamarin.Forms today,
+but maybe it doesn't look as
+good on the Windows device.
+I think that's something and done it,
+now we went to address.
+We've done it now, we want to
+get you to a point where you
+can build a pretty thing,
+good-looking app that
+runs on Windows,
+Mac, iOS, and Android.
+Right now, Xamarin.Forms,
+as you said,
+has been primarily optimized for
+the iOS and Android
+devices, in some ways,
+the ability to run it
+on Windows is actually
+just a historical thing of
+making where you could
+run it locally for
+better inter-loop performance.
+Then, as you said.
+>> Which is regardless of
+whether the apps ever
+going to shift on Windows,
+if you're building a Xamarin app,
+you need to do the Windows app
+because that's the
+best way to debug it.
+>> Right. Fastest way to build it,
+but we have not spent a
+lot of time making that
+a great experience and I think
+that's one of the goals,
+we've done [inaudible] he has
+to make a great experience.
+Then of course, as you said,
+if you just want to run
+it on Windows only,
+you've got a variety of choices.
+You have WinForms, you have WPF,
+which are the things we've
+historically shipped,
+and a lot of developers,
+I still find that I can be
+most productive in WinForms.
+Even though that the tech for
+WPF is better or the tech in
+some cases of UWP is
+better and there's
+nothing faster than just going
+and dragging a button
+and double-clicking,
+and it stays exactly
+where you want it to and
+it's so easy and you said the
+designer is so amazing there.
+But I don't think there is a trend,
+as well when UI is going to come out,
+and as it does, I think
+it will replace UWP.
+I think of UWP/WinUI
+is if you want to
+take advantage of the best
+hardware on the Windows device,
+that means you want to be
+the best touch support,
+you want to run all the monitors,
+you want to run on all the
+versions of Windows 10
+consistently, I think that,
+in the long run will be
+the best experience,
+but it hasn't shift yet.
+Then of course, I loved your
+notion of the UNO stuff.
+UNO's got some stuff where
+you can bring a lot of
+the UWP style tech and they
+can run it using webassembly,
+at the same [inaudible] uses,
+they can run that on iOS,
+Android devices as well.
+So I do think that we are at a
+point where we have a UI soup,
+and just like I've
+tried over the last couple
+of years to really clean
+up .NET with .NET
+Standard and now .NET5,
+I think it's one of the things that
+my team was to work on is making
+these UI stories an easier
+choice for developers.
+>> Yeah, I mean, there will always
+going to be multiple
+ways to do things,
+unless you really did come up
+with the designer that was so
+cool that no one would
+ever again write code.
+But other than that,
+there's always going to be
+multiple ways to do it,
+it's just I don't know.
+I'm almost to the point where I
+think I'm going to write the app.
+The beautiful thing is all
+the code is the same, right?
+>> Yeah.
+>> All the views, the
+models, the view models,
+all the helper functions,
+that code is all written once
+and can be used everywhere.
+So that's nice.
+Then, the UWP XAML would look
+pretty similar to the Xamarin XAML,
+I've already get the
+screens all laid out,
+so it's just a question of
+duplicating and most of the
+properties are the same.
+So it wouldn't be that hard to
+redo it in UWP and then start
+exploring WinUI later on,
+then you get UNO,
+so you get WebAssembly.
+So you wind up for
+not a huge amount of work
+getting everything you want.
+So I don't know, maybe that may
+sound like the best
+way to go about it.
+>> I was going to say, in
+the future WinUI could be
+the rendering tag underneath
+a .NET value application.
+Which point you're going to
+get to what you were asking
+for, Robert, where basically,
+you write that XAML once and
+you get all the power of
+WinUI on the Windows
+device and you get
+a good looking app on the
+iOS, Android device too.
+We'll actually go do another one of
+these in a year and
+see where we're at.
+>> So one last thing I wanted to
+ask about Blazor and WebAssembly.
+I know Rocky Latika, for example,
+has been telling me
+for five years that
+WebAssembly is going to be
+the end of desktop apps.
+Is that true, is it now true?
+What do you think about that?
+>> I don't think it's now true.
+To me, I think that WebAssembly
+is something different.
+I think of it, it could be the way
+that all apps are built and run
+on WebAssembly in the long run.
+The cool thing about WebAssembly is,
+today it runs inside of
+the browser and it runs
+inside of a Sandbox,
+which means it's not allowed
+to touch the file system or
+the registry or all the
+things you don't want
+to have any of the app touch.
+WebAssembly is supported
+by a ton of languages,
+C++, .NET, Go, variety of others.
+So there's a lot of potential
+there that imagine you have
+an operating system that
+can run WebAssembly, well,
+now you can use all these
+different technologies and
+the apps run on that device.
+There are some limitations
+in WebAssembly today,
+if you took your
+WinForm application or
+your WPF application
+instead of having
+to go make the WebAssembly
+version of those,
+WebAssembly doesn't
+yet support threading,
+so if you're doing multiple threads,
+you're going to have some challenges.
+Anytime you want to touch some
+resources on the machine,
+you might run into challenges
+as well because as I said,
+it runs in the Sandbox.
+So if you want to talk to the disk,
+you need to go either
+through storage APIs,
+which don't really land in the
+real disk or you have to go build
+a web back-end for
+your application and you
+call the web back-end and it
+talks to the file system.
+But give us a couple of years
+and let's see where things are.
+I think it does have some
+exciting possibilities of
+being a universal
+run-time for all apps.
+>> Cool. Thanks so
+much for your time,
+thanks for the great overview
+of what we did it build,
+and then I really enjoyed
+this type of conversation.
+Thanks for doing this.
+>> Thanks for having me. These are
+good questions and hard questions,
+and I think you're not the first
+developer to ask these questions.
+>> Horrible, I'd be
+the last, I suspect.
+>> No.
+>> Hope you guys enjoyed that,
+and we'll see you next time
+on Visual Studio Toolbox.
+[MUSIC]

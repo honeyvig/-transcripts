@@ -1,0 +1,697 @@
+>> No matter what you're coding,
+what project you're working on,
+or what your development
+environment even is,
+I'm thinking it's safe to say that
+everyone wants to know how
+to be more productive.
+Find out some cool tips and tricks on
+how to do so on this episode
+of Visual Studio Toolbox.
+[MUSIC]
+Hey, everybody. Welcome
+to Visual Studio Toolbox.
+I'm your host, Leslie Richardson,
+and today I'm joined by Mika Dumont,
+who is a PM on the.NET Team.
+How's it going, Mika?
+>> Good. How's it going, Leslie?
+>> It's going all right.
+It's a lovely sunny afternoon
+in Seattle right now.
+>> It is.
+>> Yeah. You're PM on the.NET Team,
+which is such a broad giant team.
+.NET is so huge, especially
+in Visual Studio world.
+Can you talk a little bit more
+about what it is that you do?
+>> Yeah. I'm a Program
+Manager on the .NET Team.
+My team, what we try to
+do is we try to make.NET
+Developers productive as possible,
+so whether that's different
+code fixes or refactorings,
+as well as different code generation,
+and completions, and tooling.
+We just try to give you
+all the productivity
+features in order
+to supercharge your
+Developer productivity.
+>> I love that word, supercharge.
+Speaking of productivity, that's
+what we're going to be
+talking about, right?
+>> Yeah. Leslie, since
+you work on the debugger,
+I thought that I can go ahead and
+start with our debugger refactoring.
+Let me go ahead and share my screen.
+There we go.
+The very first feature
+that I wanted to show,
+again, this is brand new.
+It's a refactoring where
+you can pin property
+programmatically in your code by
+adding this
+DebuggerDisplay attribute.
+>> I love that attribute.
+>> It's pretty awesome. This will
+also automatically generate a method,
+and its default return is ToString.
+But if I want, I can actually
+go ahead and have it
+return the first element of an array.
+I'm going to go ahead and save that.
+I had already set my
+breakpoint over here,
+and I can just debug this
+test real quick just to show
+you what this feature does.
+>> You already get 50 bonus points
+from me for starting your demo
+out with DebuggerDisplay
+or just anything
+debugger related, so congratulations.
+>> Cool. Yeah. Here, you can see that
+the first value is the
+zero index of the array,
+which is this little dog emoji.
+Without having to go ahead and
+manually pin these properties
+using the debugger UI,
+I can just programmatically
+do that in my code.
+I'm just refactoring.
+>> That's neat. Yeah. Because
+now, you can have it both ways.
+If you like DebuggerDisplay as
+an attribute and you want to
+get crazy complex with it,
+then you can use that,
+except now you can access
+that feature a lot better, it seems.
+I loved that you made that
+a refactoring option.
+Conversely, if you like
+debugging and you just like playing
+around in the Watch window,
+then you can use that pin
+icon that Mika just explored.
+>> Yeah, exactly.
+The next one since we're here,
+you might notice that we have
+a couple of these
+regular string literals.
+It's, I don't know, Leslie,
+it's hard to [inaudible]
+to say, right?
+>> Yeah. How do you even
+know what type in for that?
+>> Exactly. We actually
+have a refactoring
+now where you can actually convert
+this to a verbatim string.
+Makes it a bit more legible.
+If I want, I can also convert
+it back to a regular string.
+That's just a neat near
+refactoring that we just added.
+>> That's really nice because
+sometimes I might add an
+extra n or something,
+or an extra backslash and I don't
+know if it's actually
+going to work until
+I print it out or it goes
+wherever the string needs to be.
+>> Yeah. Now, you can
+just easily see what
+you're typing and just switch around.
+>> Instead of having to
+process it every time you
+go past that line [inaudible].
+>> Exactly. Yeah. Over here,
+I do want to show you this side too.
+some going to uncomment this.
+The keyboard shortcut for
+toggle blog comment is
+control, shift, forward slash.
+I just wanted to point that out.
+Here, you might notice
+that I'm getting an error.
+If I hover over this error,
+quick info is letting me know that
+this expression cannot
+be implicitly cast.
+Luckily, we have a code fix
+to add an explicit cast.
+>> That's so exciting. [inaudible]
+>> Yeah. I don't know if you're
+familiar with just having to
+go and hover over to learn
+what the type is declared as.
+This will just go ahead and
+serve that right up for you.
+>> That's what's so cool about
+refactoring tips like that.
+It's just they're small
+but mighty quality of
+life improvements to me that
+just make my life easier.
+>> Yeah, it's just the
+little things. What else?
+I do want to point out, hopefully,
+you're pretty familiar or
+the audience is pretty familiar
+with this light bulb icon.
+This light bulb
+represents quick actions.
+Quick actions allows
+you to easily refactor,
+generate, or modify code
+with a single action.
+I can go ahead and invoke
+this by either selecting
+the light bulb icon or I can
+just type control
+period or alt Enter,
+and it will also invoke it.
+This leads refactoring
+that we have is converting
+a switch statement to the
+new C# 8 switch expression.
+>> Look at that.
+>> Yeah. It's like magic. Exactly.
+This will just go ahead and provide
+a more concise syntax
+without having to
+write out the returns in each case.
+>> Right. It saves
+you a lot of trouble.
+>> Yeah. It also just helps you learn
+about new C# language features too.
+It's pretty cool. I don't
+know if you noticed
+all of these XML comments over here.
+>> Yeah. Always fun to write
+whenever you need to explain what
+a given class or method does.
+>> Yeah. We actually now have
+a quick info style
+support for XML comments.
+If I go ahead and
+hover over this class,
+you will notice that quick
+info will display italics,
+bullets, numbers, bold,
+and clickable link.
+It's really cool.
+While I'm talking about
+XML comments over here,
+you can see that this DogCard is
+inherited from this AnimalCard class.
+Let's see, if I go ahead and
+add this inheritdoc tag,
+you will see that
+DogCard now will inherit
+from different base
+clauses or interfaces.
+It just depends where you want
+to add that inheritdoc tag.
+This just eliminates
+the unwanted copying
+and pasting of
+duplicate XML comments,
+and it will automatically keep
+your XML comments synchronized.
+>> Yeah. That's pretty sweet.
+So before that keyword existed,
+you'd have to remember to go back to
+the base class and
+update accordingly?
+>> Yeah. You would
+just have to copy and
+paste them in here if you
+wanted to remember. Yeah.
+>> Yikes. Yeah. Time savers.
+>> I'm trying to think what else
+I have that I can show you.
+Let's see. Here's a good one.
+You notice how I have comments just
+to remind me. I'm always
+[inaudible] code fixes.
+>> I do that too. I write demo
+in big bold letters to teach me.
+>> Yeah, exactly.
+>> Total natural,
+don't worry about it.
+>> So anyways, ternary
+conditions can be great,
+but sometimes at the end of editing
+a cell logic you realize
+things could be a bit simpler.
+There's a lot going on here.
+>> I always have to go on
+Stack Overflow and look up
+what does this mean again?
+What part is the L statement?
+>> Yeah, exactly.
+We just want to make things easier to
+read and we just want
+our code to just be
+easily read and consumed.
+So we do have this code fix to
+simplify conditional expressions.
+That just makes it so much clear.
+Can you believe that they
+both meant the same thing?
+>> So you mean I just
+spent five minutes
+deciphering this just to
+find out [inaudible]?
+>> Did your brain hurt a little bit?
+Mine did.
+>> Yeah. It's 2:00 AM.
+I'm looking at this code.
+>> Those are just some of the
+latest code fixes and refactorings.
+Next, I want to show some
+tooling improvements.
+This one's actually my favorite one.
+There's tons of excitement from
+the community about this one.
+We added IntelliSense inside
+DateTime and TimeSpan
+literal strings.
+So in this piece of code,
+I'm taking a DateTime and
+I'm calling toString on it.
+If I start typing a DateTime
+string literal, you will notice.
+>> I'm getting suggestions.
+>> These are completion options and
+explanations as to what each
+of these characters mean.
+So you can see here,
+this is what it looks
+like. It's pretty snazzy.
+>> So useful.
+>> While I am talking about
+IntelliSense completions,
+I'm missing a quotation mark,
+I do want to point out we
+also have IntelliSense completion
+for regular expressions.
+I can go ahead and just
+show you that real quick.
+Let's see.
+Here, I'm just going to
+write a regular expression.
+Notice how I get these
+completion options
+and explanations as to what
+each of these characters mean.
+What's really cool too is
+that I also get a tool tip.
+Quick info will actually
+let me know if I'm
+missing my closing parentheses.
+It's pretty smart.
+It's really awesome.
+>> This, seriously, would've been so
+useful to me a couple of
+months ago when I was
+writing the calendar app
+and writing date formats
+everywhere and trying to look up
+what format I needed to be using.
+>> Yeah.
+I actually remember that
+calendar app that you showed me.
+It's awesome. It's a great app.
+>> Good times, five
+years ago in March.
+>> I know. It feels like
+forever ago. It's crazy.
+These are just nice in-line
+experiences that we
+offer instead of having
+to go to the browser and
+learn how all of this works.
+>> Sweet.
+>> Yeah. Let's see. I
+have another tool tip.
+We've had change signature
+for a long time,
+where you can go ahead and
+reorder parameters or
+remove parameters,
+but we just recently added the
+capability to add a parameter.
+So here, I can go ahead and add
+the type as well as
+the parameter name.
+I can also make this
+required or optional with
+a default value and I
+can decide what I want to
+inject into the call site.
+I can also introduce to-do variables.
+This will basically put a to-do in
+my code so I can visit those errors
+and go through each
+call site independently
+and decide what needs to be passed.
+>> That's awesome.
+>> For optional parameters,
+I can choose to omit the
+call site completely.
+It's pretty cool.
+Once you select "Okay",
+you will see a preview of
+the new method signature
+and you will see that this
+is the new parameter.
+So it's pretty awesome.
+This is one of our highest
+requests from the community,
+so we're really excited
+to get this one out.
+>> That's really great.
+I especially like the
+adding the to-dos just automatically,
+instead of having to
+remember where you
+called this function everywhere.
+That's pretty nice.
+>> It's a pretty awesome new feature.
+Let's see. I have another one real
+quick too that I want to show.
+We added file header support.
+This allows you to
+add file headers to
+existing files within a project
+or a solution using an editor config.
+This is an editor config file,
+for those of you that don't know.
+It's a single file
+that documents all of
+your code cell or code
+quality options that lives
+at the root of your repository
+and can be managed by
+your regular source control and
+shared across your entire team.
+You can think of it
+as a universal way of
+enforcing code cell or code quality
+preferences across your team.
+>> Sweet.
+>> It's pretty cool. Here, we
+have this file header template,
+and you would just have
+to set the value to
+equal the file header
+that you'd text,
+that you would like to get applied to
+your C Sharp or Visual Basic file.
+This currently only works for
+C Sharp and Visual Basic.
+If you go to the first
+line of your file,
+you can go ahead and
+select this file header.
+It's pretty awesome. Not only that,
+I just want to point out
+a lot of our code fixes,
+and for the file header
+feature as well,
+you can really actually apply
+all of these fixes to
+your entire document,
+project, or solution so you
+can scope it however you like.
+If I want, I can add
+this file header across
+my entire project and it will open
+this Preview Changes window
+where I can just select or
+deselect which files I
+want this to apply to.
+Can go ahead and do that.
+You can see that it was added.
+If I go to other classes, you
+can see that was added too.
+So it's pretty cool.
+>> That's pretty cool. I'm
+going to add emojis to
+all my file headers
+from here on out too.
+>> That's the only way
+to write file headers.
+>> Yeah. Well, [inaudible] it
+up a bit. It seems there's
+a lot you can do in that editor
+config window in general.
+How can people learn more
+about what they can and can't
+do in there specifically?
+>> Well, we have documentation
+that I can always point users to.
+We also have for all the
+different code style options,
+you can go to "Code Style".
+You can just use Ctrl+Q
+Search over there.
+Here, it's a little bit
+easier to understand
+this UI that we have and you can
+actually see all the different
+code style preferences that you
+want and have it applied to
+your editor config as well.
+>> That's neat.
+>> Yeah. So if you want,
+you can do tabs versus spaces.
+I don't want to bring anything up.
+I know there's a lot
+of controversy there.
+So you can just enforce
+these code style and code quality
+options across your team.
+If you're really adamant about tabs,
+you can just sneak that
+word in there and then just
+push your code to everyone
+just have to use tabs.
+>> That's the dream
+of being a manager.
+You get to assert your belief
+of tabs versus spaces,
+no matter what, by
+accessing editor config.
+>> Yeah. We're doing a lot
+of work with this too.
+Stay tuned with the EditorConfig.
+It's exciting stuff
+happening with that.
+>> Yeah, it is.
+>> Yeah, go on.
+>> I was just going to say,
+speaking of exciting things coming,
+it feels like, I look away
+for five minutes and all of a
+sudden there's 20 new cool
+refactoring items added.
+What's coming soon in
+productivity land?
+>> Let me show you.
+Let's see. Some new
+features that are coming.
+The first one I can show is,
+so here we have,
+let's see which one should I
+show first. I can show this one.
+There's now a refactoring
+that introduces
+the new C# 9 Pattern Combinators.
+Over here, I just place
+my cursor and select,
+let's see, "Use Pattern Matching".
+It will go ahead and use those
+Pattern-Matching combinators.
+>> Wow.
+>> That's a new C# 9 feature
+or the Pattern Matching
+Combinators. It's really exciting.
+>> That's what it looks.
+>> Another one that we
+recently just added,
+so these are all coming in 16.8 PV 1.
+Everyone who wants to learn
+more about it can just check
+out the release notes as well.
+>> I think this is really cool.
+>> This one here, we now
+have a Suppression Operator
+Warning and Code Fix,
+and this helps you
+easily identify and fix
+suppression operators
+that have no effects.
+In this case, I wanted to express
+that something isn't type string.
+This operator here makes sense,
+but it's not actually
+checking for that.
+We have a hotfix where you can
+either remove the operator
+completely or if you want
+to actually check it,
+you can use the Is Not.
+That's if you're checking if
+it's not a type string. Yeah.
+>> That's great.
+>> Yeah. That's a new one
+that we just came out with,
+and let's see what
+else do I have here.
+We have another one
+where you can remove
+the in keyword where the argument
+should be parsed by reference.
+That's just also a
+quick little fix too,
+and trying to think what else.
+We have another one, let's
+say here I can see it,
+let's say, I want to just
+go ahead and let's see.
+Let's say, I want to just create
+a Abstract Method, let's see.
+Over here, you'll just
+notice that I have
+an error and that's because
+my class isn't abstract.
+We have a quick fix to also
+make a class abstract,
+and you can see here that.
+>> Wait, that wasn't there before?
+>> No.
+>> Yeah.
+>> Wow, it just seems something that
+would naturally be there or
+something but that's there.
+>> Yeah. Those are the latest
+code fixes refactorings coming
+to a 16th on a preview one.
+>> That is very exciting.
+There's not a bad one in the
+bunch from what I can tell,
+they all just seem
+super beneficial to
+anybody who's just coding away no
+matter what you're working on,
+which is the cool part about
+productivity tools like that.
+>>Yeah, it's really awesome,
+and I don't know if we have time,
+but I can also just show a couple on
+the Solution Explorer
+that was recently added,
+that are just really cool.
+>> Yeah.
+>> Okay. Yeah, here I
+have a test project,
+and it's just for demo purposes.
+I'm going to delete this reference.
+So I'm referencing my projects here.
+Now, I'm not referencing
+anything and if I
+want to go ahead and add
+a project reference,
+I would have to go to Add and
+then add the project reference.
+But we just added the ability
+to drag and drop the project
+you'd like to reference.
+Notice how this project
+reference is added,
+and it was also added underneath
+the dependencies node within
+the Solution Explorer.
+>> Great. No need to
+worry about syntax,
+typos, any of that?
+>> Yeah, just so you
+can just drag and drop.
+>> Yeah. Another last
+thing about with
+the Solution Explorer that
+I wanted to point out
+is we added the
+capability of copying,
+pasting, and dragging files
+from File Explorer to
+Solution Explorer.
+Instead of having to right-click
+and add an existing item,
+and we then have to really navigate
+to where your path already is.
+You can now simply drag
+and drop this file,
+and it will get copied
+right to your source.
+It's pretty awesome.
+>> That is so great.
+>> Yeah, it's really cool. Gosh.
+>> Are these features available
+in 16.8 or they out now?
+>> They are already available,
+yeah, they're out now.
+>> So exciting
+>> Yeah, it's pretty
+exciting stuff. Let's see.
+I think that's all I have today,
+but definitely, check out the
+release notes and also all
+of our code fixes or refactorings
+are at aka.ms/refactorcode.
+That's where you can just learn about
+all these new tips and tricks,
+then you can be the coolest
+person on your team that
+everyone goes to learn and all that.
+>> Just sitting in your
+office chair like, "Yeah,
+so did you know that you can now
+drag and drop into the solution file,
+I mean, I figured everybody knew,
+but just in case you
+didn't, here you go."
+Well, that's a really
+exciting. I'm going to have to
+make a trip to that website too,
+because I keep missing
+out on all of these wonderful
+refactorings that I
+should totally be taking advantage
+of, as should everybody.
+Thanks for being here Mika,
+that was super informative.
+I feel supercharged in my
+self experience, definitely.
+>> Awesome.
+>> Thanks. Again, if
+you want to learn more,
+check out the website that
+Mika just mentioned aka.ms/
+>> Refactorcode.
+>> Awesome.
+>> Yeah.
+>> Sweet. With that, happy coding.
+[MUSIC]

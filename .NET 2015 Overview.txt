@@ -1,0 +1,333 @@
+hi I'm Jay smells er the director of
+program management on the.net team in
+this video I'm going to provide an
+overview of dotnet 2015 and related
+updates and visuals to do 2015 update 1
+first let's talk about the way we
+approach our investments in the.net
+framework it really centers around three
+primary pillars the first is ensuring
+that we're providing a dotnet
+application platform that meets the
+needs of the applications you've been
+developing and the direction that you
+need to take those going forward as well
+as providing a platform upon which you
+can build the next application that
+you're being asked to create we're also
+ensuring that we do this in a way that
+is open transparent and collaborative
+with the application development
+ecosystem finally I wanna ensure that
+we're creating a platform that not only
+can be used to be great applications for
+Windows but Apple any application
+deployed to any platform we talked about
+dotnet 2015 we're really talking about
+two framework profiles the dotnet
+framework for 6 or what I typically
+refer to as the full framework this is
+the version the dotnet that we've been
+working with and you've been building
+applications on for years provides
+everything you need for building
+applications from desktop applications
+through high scale web services a little
+over a year ago we introduced dotnet
+core an optimized framework designed for
+today's modern application types across
+all of this we have a set of common
+investments investments in things like
+the runtime the compilers and core
+library packages that extend the
+experience and apply to all types of
+applications so let's drill into each of
+those areas starting with the the common
+layer across across all let's talk a
+little in the runtime in the runtime one
+of the big areas of investments in net
+46 was around the new 64-bit JIT
+compiler provides increased performance
+of applications and the opportunity for
+us to create new and interesting
+libraries for example support for sim D
+in the language space we invested in a
+faster compiler we've invested in
+creating a set of language features that
+smooth the overall language
+usage and programming experience we
+don't have big paradigm shifting
+features like a sink or link in this
+release instead we focused on the things
+that just make your life easier as a
+developer things like string
+interpolation or the name of capability
+in visual studio we focused a lot on
+continuing to have the best of muggin
+experience in the world we used to call
+it the Cadillac of IDE s I think now we
+probably refer to that as the Tesla of
+IDE s and really expanding that
+experience that you could take advantage
+of modern language capabilities like
+lambdas and Link while working in the
+debugger and finally in the core
+compiler space we have the new Roslyn
+compiler the re-implementation of the
+c-sharp and vb.net compilers that
+exposes the intimate details that the
+compiler has of your application to tool
+vendors allowing tool vendors like
+ourselves with Visual Studio and the
+ecosystem to create richer and more
+immersive experiences for your
+application developers a couple great
+examples of where this comes into play
+are around code analysis or we're now
+able to move beyond just static code
+analysis and get into semantics
+understandings of what your application
+is doing providing even richer set of
+tools for ensuring you're building the
+best applications you can for library
+and framework authors we have what we
+refer to as coda where frameworks the
+ability to include a compiler extension
+with that library that gives an
+interactive experience for using the
+library using the framework in the way
+it was intended and flagging users that
+may be not as optimal including the
+ability to offer fixes to the developer
+right within the IDE if we move up a
+little bit and talk about the
+application types that that sit on top
+of you know these runtimes we see that
+we there's a number of different things
+we have first we have a couple great
+desktop UI presentation stacks Windows
+forms is a great UI platform for
+building Windows desktop applications
+it's actually probably one of the most
+complete platforms we have it's a great
+set of experiences across the design
+time the runtime and the third-party
+ecosystem for supporting create great
+desktop applications the team is focused
+on the fundamentalism in this stack
+really bending our energy and ensuring
+that we're providing the best
+performance work in the most current
+hardware platforms
+addressing that the key bugs that you as
+customers have told us about WTF is
+another great desktop presentation
+technology stack we continue to invest
+heavily here in performance as well as
+modern hardware so doing investments
+around high DPI resolutions improve
+touch support and so forth we also in
+Visual Studio 2015 really made a lot of
+investment from the tooling experience
+for WPF in this case took a lot of the
+great experiences that we created for
+Windows Universal projects and the
+diagnostic tools and made them available
+for WPF developers as well we also took
+technologies and approaches we used in
+the web design stack and applied them to
+WPF doing things like allowing the
+application and the surface if the
+application to be used as the designer
+as the navigation tool for figuring out
+where these UI elements were coming from
+and of course the Windows Universal
+platform the universal Windows platform
+really allowing us to create a single
+runtime a single designs API surface
+that can work across the full family of
+Windows devices from small embedded
+Windows devices to phones all the way up
+through large wall mounted displays X
+boxes and so forth as part of this we've
+brought to market the dotnet native
+experience dotnet native is a compiler
+technology that allows us to extend the
+dotnet compiler tool chain so rather
+than stopping with the intermediate
+language we now hook up the back end C++
+compiler and produce a native binary as
+a result this is the same c++ come back
+in compiler that you would use if you
+were a C++ developer so you get the
+optimizations of a C++ application with
+the productivity of a c-sharp and net
+developer experience of course it is a
+heterogeneous world up there especially
+in devices and we want to make sure that
+dotnet developers are able to use those
+skills to build native iOS and Android
+applications taking advantage of their
+existing C sharp and dotnet skill set we
+do this with a great partnership we have
+with the folks at xamarin they enable
+you to extend that's those skills to
+build native iOS and Android
+applications while also having an
+opportunity to do reuse of code across
+the specific implementation
+so it's the best of both worlds you get
+a 100% access to the platform API
+specific to iOS or Android but you can
+share a lot of the common code that
+exists across all valves and all those
+implementations and of course for the
+web developer there's asp.net 5 this is
+the new re-envisioning of the a sprint
+net web stack to create designing it for
+more modular use designing specifically
+around new modern cloud workloads giving
+you the ability to create a consumes
+only the components of the framework
+that you you actually need giving you
+smaller deployment sizes which result in
+higher density on the servers you're
+deploying to we've dramatically improved
+the tooling experience to continue
+ensure you have the most productive
+experience when building web
+applications with Visual Studio and
+asp.net now let's talk a little bit
+about dotnet core data core is really
+there to move net beyond Windows
+historically when you think of net you
+think about it as a platform built for
+building great Windows applications with
+dotnet core we're breaking that we're
+changing the mold there and we're making
+dotnet be a technology that can be used
+by any developer building any app on any
+platform we're doing it through a few
+core design principles specifically
+we've designed a net core to be modular
+from the beginning it's all package
+based rather than thinking about
+assemblies you think about packages and
+you allow nougat our package manager to
+ensure you have the right packages
+available and the right dependencies
+that your application requires we also
+designed net Cora with specific
+workloads in mind specifically modern
+workloads so things like Universal
+Windows platform ability to work across
+devices as well as the modern asp.net
+web workload and dotnet core is the
+implementation of dotnet that we've
+implemented entirely and in the open
+working in github and his supports
+cross-platform so the ability to build
+and he's been in application and deploy
+it to a Linux environment or build it on
+a Mac we think about dotnet open source
+it's not just about the source being
+open it's about how we go about building
+the software it's about how we the
+approach we take to designing the
+product
+we've done a number of things over the
+last year we've really started to to see
+increased maturity in the team in the
+way they work so we see everything from
+the early design ideas around the next
+version of the c-sharp language being
+posted out on github and having
+conversations with you as the community
+of developers about the direction we're
+taking the language we see every pull
+request that's made whether it's from a
+Microsoft engineer or an on Microsoft
+engineer go through the same open code
+review process in the public so everyone
+is learning from the best practices that
+we have the contributions and the
+reactions we've seen here have been
+tremendous we've seen everything from a
+big portion of the Mac platform
+abstraction layer for the common
+language runtime to fix this - error
+message strings coming from the
+community and everything in between
+we've also seen this way we work have an
+influence on the way we work with other
+platforms a couple weeks back we saw the
+first merge requests going into the
+Linux kernel that referenced the
+Microsoft core CLR project as one of the
+justifications for making a change to
+the Linux kernel that's just a
+tremendous example of the kinds of new
+collaboration that's happening across
+our industry to give you more of a feel
+for it let's take a look at what the new
+dotnet core experience looks like for
+someone trying to develop an application
+on a Mac in this demo we'll take a look
+at building an asp.net 5 application
+on.net core on a Mac now i've already
+gone through the steps to install both
+asp.net 5 and dotnet core so i have a
+set of commands that are now available
+to me as part of this experience one of
+them is a dotnet version manager so I
+could say D nvm list when I see our list
+of the versions of.net core and aims but
+not that I have available on this
+machine here's how you can start seeing
+that side-by-side support that we now
+have with the.net core implementation in
+this case beta 8 is the active
+installation on my machine and that's
+the one that we'll use by default for
+any commands to create an application I
+can take advantage of the asp.net
+extension to yeoman and just say yo asp
+net which will launch ilmin and our
+asp.net generators will choose
+the basic web application give it a name
+I'll call it hello connect and that will
+now scaffold out the basic files we need
+for our asp.net application so let's go
+change directories to that we can take a
+quick look and we see that it's
+generated the basic set of views
+controllers and project files that you
+would expect for an asp.net 5
+application next thing we need to do is
+just restore the packages used for this
+application in this case we'll probably
+grab a lot of them out of the cache so
+you can looked at the project file and
+has done that the last thing when you do
+is we'll just launch this application by
+typing DNX web what this is going to do
+is launch a lightweight cross platform a
+sprinter net host we have called Kestrel
+now that is up we'll switch over to our
+browser and we'll just go to localhost
+and here we see our asp.net 5
+application on dotnet core running
+locally on my Mac that was a quick
+summary of the Ares investment in dotnet
+2015 hopefully it gave you some insight
+into the kinds of scenarios we're going
+after and the things were thinking about
+this is a collaboration so I encourage
+you to get connected with us work with
+us and github work with us in the code
+track the issues comment on the designs
+follow us in social media via Twitter or
+just engage reading and commenting on
+the blog whatever mechanism is best for
+you get involved get connected thanks a
+lot for watching

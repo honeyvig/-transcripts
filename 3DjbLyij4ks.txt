@@ -1,1859 +1,465 @@
-1
-00:00:08,639 --> 00:00:11,259
 so hello there and welcome to another
-
-2
-00:00:11,259 --> 00:00:14,049
 tutorial my name is Henry Bakshi and
-
-3
-00:00:14,049 --> 00:00:15,879
 this time we're gonna be going over how
-
-4
-00:00:15,879 --> 00:00:18,039
 I can use the T MySQL kit that I've
-
-5
-00:00:18,039 --> 00:00:21,009
 created in order to communicate MySQL
-
-6
-00:00:21,009 --> 00:00:23,710
 with Swift natively in your iOS watch
-
-7
-00:00:23,710 --> 00:00:26,579
 OST vos and even Mac OS applications
-
-8
-00:00:26,579 --> 00:00:29,439
 let's begin it's not first of all we
-
-9
-00:00:29,439 --> 00:00:31,090
 know that we have two things over here
-
-10
-00:00:31,090 --> 00:00:33,640
 now first of all let's pretend we have a
-
-11
-00:00:33,640 --> 00:00:37,530
 my SQL Server
-
-12
-00:00:38,070 --> 00:00:41,500
 okay so we have my SQL Server now we
-
-13
-00:00:41,500 --> 00:00:43,780
 also have a now I'm going to make a
-
-14
-00:00:43,780 --> 00:00:49,739
 dotted box here and I'm going to say
-
-15
-00:00:49,739 --> 00:00:59,770
 swift basically we have a soft end and
-
-16
-00:00:59,770 --> 00:01:03,190
 we have a MySQL end now in the swift end
-
-17
-00:01:03,190 --> 00:01:07,210
 we have an application your application
-
-18
-00:01:07,210 --> 00:01:10,360
 okay and the MySQL now the thing is your
-
-19
-00:01:10,360 --> 00:01:12,219
 application stores data let's say it's a
-
-20
-00:01:12,219 --> 00:01:15,069
 chatting app it stores its data in the
-
-21
-00:01:15,069 --> 00:01:18,100
 MySQL server now there's a problem we
-
-22
-00:01:18,100 --> 00:01:20,859
 know that's Swift and MySQL don't
-
-23
-00:01:20,859 --> 00:01:22,600
 communicate with each other they don't
-
-24
-00:01:22,600 --> 00:01:24,189
 know that each other's language they're
-
-25
-00:01:24,189 --> 00:01:26,950
 completely different and so usually what
-
-26
-00:01:26,950 --> 00:01:28,869
 you need to do is you need to create
-
-27
-00:01:28,869 --> 00:01:34,179
 your own sort of PHP bridge between your
-
-28
-00:01:34,179 --> 00:01:38,709
 MySQL server and Swift okay now there's
-
-29
-00:01:38,709 --> 00:01:41,229
 a big problem with this happening first
-
-30
-00:01:41,229 --> 00:01:43,630
 of all it's very specific to this vast
-
-31
-00:01:43,630 --> 00:01:45,939
 scale server and this Swift application
-
-32
-00:01:45,939 --> 00:01:48,219
 okay it's not Universal if you want to
-
-33
-00:01:48,219 --> 00:01:49,270
 put this bridge in a different
-
-34
-00:01:49,270 --> 00:01:50,439
 application it won't work you're gonna
-
-35
-00:01:50,439 --> 00:01:52,539
 have to change a lot of parameters it's
-
-36
-00:01:52,539 --> 00:01:55,450
 very hard coded into the system and even
-
-37
-00:01:55,450 --> 00:01:58,029
 if you do manage to not hard-coded that
-
-38
-00:01:58,029 --> 00:02:01,689
 takes a bit of time to code in however T
-
-39
-00:02:01,689 --> 00:02:03,789
 MySQL kit solves all of those problems
-
-40
-00:02:03,789 --> 00:02:05,859
 for you essentially what team I asked
-
-41
-00:02:05,859 --> 00:02:09,390
 you Elka does is it erases this bridge
-
-42
-00:02:09,390 --> 00:02:13,270
 between MySQL and Swift and one of
-
-43
-00:02:13,270 --> 00:02:15,970
 dozens of places the bridge with a very
-
-44
-00:02:15,970 --> 00:02:21,290
 convenient wrapper of PHP around MySQL
-
-45
-00:02:21,290 --> 00:02:22,849
 so for example I can just create a
-
-46
-00:02:22,849 --> 00:02:26,750
 little wrapper here around - well now
-
-47
-00:02:26,750 --> 00:02:30,590
 this is built in PHP alright it's not
-
-48
-00:02:30,590 --> 00:02:37,099
 PHP does this now this PHP end is noted
-
-49
-00:02:37,099 --> 00:02:47,989
 I call this t t my SQ okay all right so
-
-50
-00:02:47,989 --> 00:02:50,000
 this is T my install kit that PHP end
-
-51
-00:02:50,000 --> 00:02:53,180
 however T MySQL kit has two parts
-
-52
-00:02:53,180 --> 00:02:56,060
 it has a PHP part and it has a swift
-
-53
-00:02:56,060 --> 00:02:58,640
 part so there's another part apart from
-
-54
-00:02:58,640 --> 00:03:01,099
 the just your application there's the T
-
-55
-00:03:01,099 --> 00:03:08,720
 MySQL ok here's what all right so there
-
-56
-00:03:08,720 --> 00:03:11,450
 are two parts the to tina SQL kits now
-
-57
-00:03:11,450 --> 00:03:14,480
 the thing is your application instead of
-
-58
-00:03:14,480 --> 00:03:17,450
 communicating directly with MySQL you're
-
-59
-00:03:17,450 --> 00:03:19,609
 going to communicate with T MySQL kit
-
-60
-00:03:19,609 --> 00:03:21,889
 however you will feel right at home
-
-61
-00:03:21,889 --> 00:03:24,560
 because T MySQL kit runs in it
-
-62
-00:03:24,560 --> 00:03:26,060
 essentially you could call it natively
-
-63
-00:03:26,060 --> 00:03:29,419
 it allows you to use the same my SQL
-
-64
-00:03:29,419 --> 00:03:33,379
 syntax the say MySQL queries everything
-
-65
-00:03:33,379 --> 00:03:35,720
 you can give it your query in string
-
-66
-00:03:35,720 --> 00:03:37,639
 format for example select star from
-
-67
-00:03:37,639 --> 00:03:39,859
 table name and the table name could be
-
-68
-00:03:39,859 --> 00:03:43,069
 users as a string to team I ask you LK
-
-69
-00:03:43,069 --> 00:03:44,900
 you'll feel as I said you'll feel like
-
-70
-00:03:44,900 --> 00:03:46,669
 you're communicating directly with MySQL
-
-71
-00:03:46,669 --> 00:03:49,760
 and your application will give T MySQL
-
-72
-00:03:49,760 --> 00:03:51,410
 kit a request
-
-73
-00:03:51,410 --> 00:03:54,109
 okay now you pretend as if you're
-
-74
-00:03:54,109 --> 00:03:56,780
 talking with MySQL because T MySQL can't
-
-75
-00:03:56,780 --> 00:03:59,299
 returns you the result but what happens
-
-76
-00:03:59,299 --> 00:04:01,910
 is in order for T MySQL kit to actually
-
-77
-00:04:01,910 --> 00:04:04,819
 return that result what it'll do is
-
-78
-00:04:04,819 --> 00:04:06,829
 it'll take your request and it'll do a
-
-79
-00:04:06,829 --> 00:04:09,019
 bit of processing on that it'll convert
-
-80
-00:04:09,019 --> 00:04:12,530
 that request to a URL request then what
-
-81
-00:04:12,530 --> 00:04:15,530
 happens is that gets sent over to this
-
-82
-00:04:15,530 --> 00:04:20,180
 PHP end alright and so here in the PHP n
-
-83
-00:04:20,180 --> 00:04:22,909
 some sort of conversions happen and some
-
-84
-00:04:22,909 --> 00:04:24,860
 processing and then it goes straight
-
-85
-00:04:24,860 --> 00:04:28,280
 into the MySQL once MySQL you know does
-
-86
-00:04:28,280 --> 00:04:30,650
 it's loading once it's done handling
-
-87
-00:04:30,650 --> 00:04:31,740
 your request and it has
-
-88
-00:04:31,740 --> 00:04:36,750
 response for you that goes in in JSON
-
-89
-00:04:36,750 --> 00:04:39,840
 format to a PHP but it's not just JSON
-
-90
-00:04:39,840 --> 00:04:42,539
 of course it's encoded and so
-
-91
-00:04:42,539 --> 00:04:44,750
 essentially PHP will then take that
-
-92
-00:04:44,750 --> 00:04:48,870
 decode that okay send that back to T
-
-93
-00:04:48,870 --> 00:04:52,020
 MySQL ket and then what that's gonna do
-
-94
-00:04:52,020 --> 00:04:54,449
 is it's gonna convert the JSON string to
-
-95
-00:04:54,449 --> 00:04:56,400
 NS data which they've now renamed to
-
-96
-00:04:56,400 --> 00:04:58,410
 data with sort three in the next release
-
-97
-00:04:58,410 --> 00:05:00,630
 of the foundation framework they've
-
-98
-00:05:00,630 --> 00:05:03,870
 converted an estate out to data and then
-
-99
-00:05:03,870 --> 00:05:05,759
 s URL to URL and you know stuff like
-
-100
-00:05:05,759 --> 00:05:08,880
 that and essentially this goes to TR t
-
-101
-00:05:08,880 --> 00:05:11,659
 MySQL kit on the swift end and then
-
-102
-00:05:11,659 --> 00:05:14,669
 finally after some processing and
-
-103
-00:05:14,669 --> 00:05:17,220
 conversions it goes back to your
-
-104
-00:05:17,220 --> 00:05:18,150
 application
-
-105
-00:05:18,150 --> 00:05:19,669
 where you feel just at home
-
-106
-00:05:19,669 --> 00:05:23,250
 communicating with my SQL and it doesn't
-
-107
-00:05:23,250 --> 00:05:24,180
 even look like it's actually
-
-108
-00:05:24,180 --> 00:05:26,280
 communicating with a server just seems
-
-109
-00:05:26,280 --> 00:05:28,650
 like it's running locally on Swift and
-
-110
-00:05:28,650 --> 00:05:30,419
 that is essentially what I'm going to be
-
-111
-00:05:30,419 --> 00:05:32,819
 showing you how to do now again the real
-
-112
-00:05:32,819 --> 00:05:35,069
 advantage to this is that this wrapper
-
-113
-00:05:35,069 --> 00:05:37,800
 and this framework are universal they
-
-114
-00:05:37,800 --> 00:05:40,560
 will run with almost any MySQL server in
-
-115
-00:05:40,560 --> 00:05:42,810
 the world all right you just load this
-
-116
-00:05:42,810 --> 00:05:45,180
 onto the Apache server that accompanies
-
-117
-00:05:45,180 --> 00:05:47,400
 the MySQL server you put this into your
-
-118
-00:05:47,400 --> 00:05:49,500
 Swift application technically this would
-
-119
-00:05:49,500 --> 00:05:51,330
 also work on an objective-c application
-
-120
-00:05:51,330 --> 00:05:52,770
 because you could integrate Swift into
-
-121
-00:05:52,770 --> 00:05:55,250
 your objective-c project and they're off
-
-122
-00:05:55,250 --> 00:05:58,530
 and so that's going to be its Fort Lee
-
-123
-00:05:58,530 --> 00:05:59,520
 white worker today
-
-124
-00:05:59,520 --> 00:06:01,409
 one more thing just before we get into
-
-125
-00:06:01,409 --> 00:06:03,900
 the Mac part though is that this
-
-126
-00:06:03,900 --> 00:06:05,880
 application can be quite a good and
-
-127
-00:06:05,880 --> 00:06:08,250
 useful parse alternative if you have
-
-128
-00:06:08,250 --> 00:06:09,659
 let's say a website like a GoDaddy
-
-129
-00:06:09,659 --> 00:06:13,560
 website where you have MySQL hosting and
-
-130
-00:06:13,560 --> 00:06:15,479
 for example you wanted to you know
-
-131
-00:06:15,479 --> 00:06:17,550
 migrate to from parse because of course
-
-132
-00:06:17,550 --> 00:06:19,050
 that's shutting down and you want to
-
-133
-00:06:19,050 --> 00:06:21,180
 migrate from parse - let's say MySQL
-
-134
-00:06:21,180 --> 00:06:23,490
 instead of some other database like
-
-135
-00:06:23,490 --> 00:06:24,960
 MongoDB you don't want to self host
-
-136
-00:06:24,960 --> 00:06:26,639
 parse because that would be let's say
-
-137
-00:06:26,639 --> 00:06:27,930
 too hard to set up for you or you don't
-
-138
-00:06:27,930 --> 00:06:30,810
 have enough resources and so essentially
-
-139
-00:06:30,810 --> 00:06:33,300
 you can use TI my SQL kit which if you
-
-140
-00:06:33,300 --> 00:06:35,310
 were wondering T stands for 10 made 10
-
-141
-00:06:35,310 --> 00:06:38,340
 name is cool kit so you can use T MySQL
-
-142
-00:06:38,340 --> 00:06:41,669
 kit on your GoDaddy server which is just
-
-143
-00:06:41,669 --> 00:06:44,620
 a PHP file PHP wrapper you can
-
-144
-00:06:44,620 --> 00:06:47,080
 connect to your MySQL sir database I
-
-145
-00:06:47,080 --> 00:06:49,750
 mean you're my school database and you
-
-146
-00:06:49,750 --> 00:06:51,820
 were Swift and can you communicate with
-
-147
-00:06:51,820 --> 00:06:54,660
 that team is ql PHP n with its swift end
-
-148
-00:06:54,660 --> 00:06:57,639
 and that's going to be it so as you can
-
-149
-00:06:57,639 --> 00:06:59,800
 see that really makes it easy to Meyer
-
-150
-00:06:59,800 --> 00:07:02,020
 it from parse to something like MySQL
-
-151
-00:07:02,020 --> 00:07:04,449
 that's gonna be it for the tutorial
-
-152
-00:07:04,449 --> 00:07:06,400
 today all right so now let's move over
-
-153
-00:07:06,400 --> 00:07:08,530
 to the Mac part where I'm going to be
-
-154
-00:07:08,530 --> 00:07:10,750
 explaining to you how exactly you can
-
-155
-00:07:10,750 --> 00:07:14,199
 use T MySQL kits along with just a MySQL
-
-156
-00:07:14,199 --> 00:07:17,020
 server and actually you know host
-
-157
-00:07:17,020 --> 00:07:19,660
 database and accents would Swift and
-
-158
-00:07:19,660 --> 00:07:20,590
 feel right at home
-
-159
-00:07:20,590 --> 00:07:23,560
 communicating with MySQL with its normal
-
-160
-00:07:23,560 --> 00:07:28,240
 queries let's get right to it so welcome
-
-161
-00:07:28,240 --> 00:07:30,250
 back to my part and now I'm gonna be
-
-162
-00:07:30,250 --> 00:07:32,590
 showing you how exactly you can use
-
-163
-00:07:32,590 --> 00:07:36,520
 MySQL get in your iOS and watch us and
-
-164
-00:07:36,520 --> 00:07:39,699
 TV us and Mac OS applications let's
-
-165
-00:07:39,699 --> 00:07:41,410
 begin so as you can see I have this
-
-166
-00:07:41,410 --> 00:07:43,479
 little sample application ready but I
-
-167
-00:07:43,479 --> 00:07:45,130
 will actually be showing this to you a
-
-168
-00:07:45,130 --> 00:07:48,250
 bit later but to begin first of all on
-
-169
-00:07:48,250 --> 00:07:50,500
 my server over here I am I'm running PHP
-
-170
-00:07:50,500 --> 00:07:53,410
 myadmin and as you can see I actually
-
-171
-00:07:53,410 --> 00:07:55,599
 have this products available database
-
-172
-00:07:55,599 --> 00:07:57,370
 and inside the products available
-
-173
-00:07:57,370 --> 00:08:00,370
 database I have an ice-cream table and
-
-174
-00:08:00,370 --> 00:08:02,680
 then the ice-cream table I have a flavor
-
-175
-00:08:02,680 --> 00:08:06,490
 and quantity sort of column or columns
-
-176
-00:08:06,490 --> 00:08:08,650
 and the first of all the flavor is text
-
-177
-00:08:08,650 --> 00:08:11,680
 and the quantity is an int all right so
-
-178
-00:08:11,680 --> 00:08:12,970
 now let's begin first of all our
-
-179
-00:08:12,970 --> 00:08:16,000
 objective is to be able to use Swift to
-
-180
-00:08:16,000 --> 00:08:18,729
 run these queries insert into ice cream
-
-181
-00:08:18,729 --> 00:08:21,520
 flavor quantities value I mean flavor
-
-182
-00:08:21,520 --> 00:08:24,669
 quantity values chocolate 5 meaning 5
-
-183
-00:08:24,669 --> 00:08:28,300
 chocolate ice creams and also 3
-
-184
-00:08:28,300 --> 00:08:29,919
 strawberry ice creams we want to get
-
-185
-00:08:29,919 --> 00:08:33,339
 those into the database and then select
-
-186
-00:08:33,339 --> 00:08:35,140
 star from ice cream meaning select
-
-187
-00:08:35,140 --> 00:08:37,469
 everything from ice cream and then
-
-188
-00:08:37,469 --> 00:08:40,690
 convert that data to a string and then
-
-189
-00:08:40,690 --> 00:08:43,779
 print self and so first of all I know
-
-190
-00:08:43,779 --> 00:08:45,750
 these don't exist these aren't real
-
-191
-00:08:45,750 --> 00:08:48,070
 functions in Swift what I've created
-
-192
-00:08:48,070 --> 00:08:50,350
 extensions that allow this to happen so
-
-193
-00:08:50,350 --> 00:08:52,180
 now in order to explain what I mean
-
-194
-00:08:52,180 --> 00:08:53,770
 let's actually get to the source code of
-
-195
-00:08:53,770 --> 00:08:56,540
 T my SQL kit lets me
-
-196
-00:08:56,540 --> 00:08:58,580
 so first of all of course I'm importing
-
-197
-00:08:58,580 --> 00:09:00,950
 foundation and then I have an extension
-
-198
-00:09:00,950 --> 00:09:03,380
 to the data class now of course they're
-
-199
-00:09:03,380 --> 00:09:06,410
 renaming NS data to data and nsurl to
-
-200
-00:09:06,410 --> 00:09:08,660
 URL and stuff like that they're moving
-
-201
-00:09:08,660 --> 00:09:09,650
 the next step
-
-202
-00:09:09,650 --> 00:09:11,840
 NS actually since for next step fun fact
-
-203
-00:09:11,840 --> 00:09:13,760
 and so they're stripping that off
-
-204
-00:09:13,760 --> 00:09:15,800
 because the next step is years old like
-
-205
-00:09:15,800 --> 00:09:18,020
 almost a decade now more than more than
-
-206
-00:09:18,020 --> 00:09:19,550
 a decade technically
-
-207
-00:09:19,550 --> 00:09:23,140
 and so there's removed ns so now also
-
-208
-00:09:23,140 --> 00:09:25,940
 they're basically I've created an AZ
-
-209
-00:09:25,940 --> 00:09:30,830
 string sort of you call this computer
-
-210
-00:09:30,830 --> 00:09:35,240
 property and so what I can say is I've
-
-211
-00:09:35,240 --> 00:09:36,710
 created this asteroid computer property
-
-212
-00:09:36,710 --> 00:09:38,780
 which is a string and essentially it
-
-213
-00:09:38,780 --> 00:09:42,260
 returns a string data of self and then
-
-214
-00:09:42,260 --> 00:09:43,820
 the encoding string of encoding that
-
-215
-00:09:43,820 --> 00:09:46,430
 utf-8 now of course in a real sort of
-
-216
-00:09:46,430 --> 00:09:48,020
 application scenario you probably
-
-217
-00:09:48,020 --> 00:09:50,450
 wouldn't use this because I mean it
-
-218
-00:09:50,450 --> 00:09:53,210
 assumes utf-8 encoding which is pretty
-
-219
-00:09:53,210 --> 00:09:56,000
 common that's why I did that and of
-
-220
-00:09:56,000 --> 00:09:57,860
 course it also forcefully unwraps is
-
-221
-00:09:57,860 --> 00:10:00,050
 optional which is not the best way to do
-
-222
-00:10:00,050 --> 00:10:01,850
 things but for an extremely simple
-
-223
-00:10:01,850 --> 00:10:04,250
 application this works and so
-
-224
-00:10:04,250 --> 00:10:05,930
 essentially this will convert data to a
-
-225
-00:10:05,930 --> 00:10:09,260
 string really easily then essentially
-
-226
-00:10:09,260 --> 00:10:12,080
 there's an extension to the string class
-
-227
-00:10:12,080 --> 00:10:14,230
 and essentially I'm using the URL
-
-228
-00:10:14,230 --> 00:10:16,160
 encoded computer property that I'm
-
-229
-00:10:16,160 --> 00:10:18,290
 creating and essentially this is going
-
-230
-00:10:18,290 --> 00:10:20,300
 to return a string and it will return
-
-231
-00:10:20,300 --> 00:10:22,340
 self dot adding percent-encoding with
-
-232
-00:10:22,340 --> 00:10:24,200
 allowed characters and its character set
-
-233
-00:10:24,200 --> 00:10:26,480
 URL path allowed and so essentially this
-
-234
-00:10:26,480 --> 00:10:29,360
 will just URL encode a string so like if
-
-235
-00:10:29,360 --> 00:10:31,730
 I have this this query that I want to
-
-236
-00:10:31,730 --> 00:10:34,490
 send to my skew well I'm going to URL
-
-237
-00:10:34,490 --> 00:10:36,830
 encode before I actually send it to
-
-238
-00:10:36,830 --> 00:10:40,100
 MySQL because of course it's going over
-
-239
-00:10:40,100 --> 00:10:43,910
 an HTTP request then also to uh in the
-
-240
-00:10:43,910 --> 00:10:47,060
 same string extension I have a function
-
-241
-00:10:47,060 --> 00:10:49,430
 called print self which returns a string
-
-242
-00:10:49,430 --> 00:10:52,250
 so essentially it prints self and then
-
-243
-00:10:52,250 --> 00:10:55,070
 returns itself so that sort of is pretty
-
-244
-00:10:55,070 --> 00:10:56,420
 convenient instead of putting print
-
-245
-00:10:56,420 --> 00:10:58,250
 around the entire thing it becomes a bit
-
-246
-00:10:58,250 --> 00:11:02,210
 more clean to read and then finally the
-
-247
-00:11:02,210 --> 00:11:06,230
 juicy parts MySQL kit T - welcome and so
-
-248
-00:11:06,230 --> 00:11:08,150
 essentially team il kit inside of that
-
-249
-00:11:08,150 --> 00:11:09,740
 we have a very
-
-250
-00:11:09,740 --> 00:11:12,950
 called msk handler my SQL kit handler
-
-251
-00:11:12,950 --> 00:11:15,050
 and now this is the link to that PHP
-
-252
-00:11:15,050 --> 00:11:16,790
 script on your website which I will be
-
-253
-00:11:16,790 --> 00:11:19,160
 showing you in just a moment that's on
-
-254
-00:11:19,160 --> 00:11:21,950
 my server right now and so essentially
-
-255
-00:11:21,950 --> 00:11:24,830
 that's going to be a string or actually
-
-256
-00:11:24,830 --> 00:11:27,890
 in this case a mil string it currently
-
-257
-00:11:27,890 --> 00:11:30,260
 has no value and also a database
-
-258
-00:11:30,260 --> 00:11:32,630
 variable because when you initialize
-
-259
-00:11:32,630 --> 00:11:34,400
 minus QL can you give it the database
-
-260
-00:11:34,400 --> 00:11:36,350
 that you want to connect to so then it
-
-261
-00:11:36,350 --> 00:11:38,540
 gives my the MySQL kit on the server and
-
-262
-00:11:38,540 --> 00:11:40,550
 that database so it knows what to
-
-263
-00:11:40,550 --> 00:11:41,900
 connect to and then it gives it the
-
-264
-00:11:41,900 --> 00:11:43,460
 query and so that's pretty interesting
-
-265
-00:11:43,460 --> 00:11:45,770
 as well so in the initializer I just ask
-
-266
-00:11:45,770 --> 00:11:48,170
 for an msk handler as a string and a
-
-267
-00:11:48,170 --> 00:11:50,390
 database is a string and then I set the
-
-268
-00:11:50,390 --> 00:11:53,690
 self values to exactly that whatever
-
-269
-00:11:53,690 --> 00:11:55,240
 they gave through the initializer
-
-270
-00:11:55,240 --> 00:11:57,290
 however I mean they actually currently
-
-271
-00:11:57,290 --> 00:12:00,710
 cannot initialize without giving those I
-
-272
-00:12:00,710 --> 00:12:02,360
 mean you could create like nil my
-
-273
-00:12:02,360 --> 00:12:04,580
 shortcut object but you cannot
-
-274
-00:12:04,580 --> 00:12:07,550
 initialize my ex Trel kit without an msk
-
-275
-00:12:07,550 --> 00:12:10,160
 handler in a database all right so next
-
-276
-00:12:10,160 --> 00:12:12,140
 we have I have a function that I've
-
-277
-00:12:12,140 --> 00:12:14,420
 created called run request underscored
-
-278
-00:12:14,420 --> 00:12:16,520
 data now I'm going to be creating more
-
-279
-00:12:16,520 --> 00:12:17,870
 functions in the future and later
-
-280
-00:12:17,870 --> 00:12:20,590
 releases of the MySQL case framework or
-
-281
-00:12:20,590 --> 00:12:23,870
 scope my SQL cake code and essentially
-
-282
-00:12:23,870 --> 00:12:26,990
 right now it returns data but soon also
-
-283
-00:12:26,990 --> 00:12:29,870
 creates a JSON array
-
-284
-00:12:29,870 --> 00:12:32,240
 you know integers stuff like that for
-
-285
-00:12:32,240 --> 00:12:34,550
 eternity as well instead of you having
-
-286
-00:12:34,550 --> 00:12:36,740
 to convert the data to whatever else
-
-287
-00:12:36,740 --> 00:12:39,050
 you'd like but anyway so Kourt basically
-
-288
-00:12:39,050 --> 00:12:41,990
 this function will run our quest to the
-
-289
-00:12:41,990 --> 00:12:44,930
 team is cricket's side on the PHP end
-
-290
-00:12:44,930 --> 00:12:47,930
 and essentially what happens is this
-
-291
-00:12:47,930 --> 00:12:49,670
 function asks for a query from the
-
-292
-00:12:49,670 --> 00:12:52,280
 developer and so that's as a string of
-
-293
-00:12:52,280 --> 00:12:55,400
 course just normal MySQL query which is
-
-294
-00:12:55,400 --> 00:12:58,310
 really what is so powerful about my SQL
-
-295
-00:12:58,310 --> 00:13:00,560
 kick you can give it a normal MySQL
-
-296
-00:13:00,560 --> 00:13:03,500
 query and then it will return data at
-
-297
-00:13:03,500 --> 00:13:05,420
 you again they're stripping and as from
-
-298
-00:13:05,420 --> 00:13:08,240
 NS data to make it just data then
-
-299
-00:13:08,240 --> 00:13:10,250
 essentially what I do I create a final
-
-300
-00:13:10,250 --> 00:13:13,070
 URL which is equal to the MS Cahan order
-
-301
-00:13:13,070 --> 00:13:15,380
 that was given to us which is the PHP
-
-302
-00:13:15,380 --> 00:13:18,920
 and the URL to PHP and and then I just
-
-303
-00:13:18,920 --> 00:13:20,750
 add question mark meaning now the
-
-304
-00:13:20,750 --> 00:13:23,139
 parameters come in of the URL of
-
-305
-00:13:23,139 --> 00:13:26,139
 HTTP requests and for the DB which was
-
-306
-00:13:26,139 --> 00:13:29,319
 database I send the database variable
-
-307
-00:13:29,319 --> 00:13:32,670
 over here but I do RL encode that first
-
-308
-00:13:32,670 --> 00:13:35,439
 and once I URL encode that that goes
-
-309
-00:13:35,439 --> 00:13:36,939
 into the string and then another
-
-310
-00:13:36,939 --> 00:13:39,609
 parameter is query and so I just URL
-
-311
-00:13:39,609 --> 00:13:43,329
 encode it's a query that's that and also
-
-312
-00:13:43,329 --> 00:13:47,799
 I return force try data contents of URL
-
-313
-00:13:47,799 --> 00:13:50,709
 string of this URL that upgraded again
-
-314
-00:13:50,709 --> 00:13:53,980
 in a real-life situation I guess you
-
-315
-00:13:53,980 --> 00:13:56,439
 wouldn't exactly use exactly this code
-
-316
-00:13:56,439 --> 00:13:58,689
 because the thing is with this code
-
-317
-00:13:58,689 --> 00:14:00,519
 we're first of all forcefully trying
-
-318
-00:14:00,519 --> 00:14:02,649
 something and forcefully unwrapping the
-
-319
-00:14:02,649 --> 00:14:04,540
 URL so if the URL is not valid that's
-
-320
-00:14:04,540 --> 00:14:07,119
 gonna crash if the data doesn't return
-
-321
-00:14:07,119 --> 00:14:09,730
 then it's gonna crash and so you would
-
-322
-00:14:09,730 --> 00:14:11,139
 probably want to implement some error
-
-323
-00:14:11,139 --> 00:14:13,959
 handling but this is the bare bone sort
-
-324
-00:14:13,959 --> 00:14:15,309
 of code that you're going to be putting
-
-325
-00:14:15,309 --> 00:14:17,350
 in in order to actually make your
-
-326
-00:14:17,350 --> 00:14:20,319
 application able to contact MySQL after
-
-327
-00:14:20,319 --> 00:14:21,790
 that you can implement your hair error
-
-328
-00:14:21,790 --> 00:14:23,199
 handling as well the way you'd like it
-
-329
-00:14:23,199 --> 00:14:25,629
 whatever you'd like it to do this is how
-
-330
-00:14:25,629 --> 00:14:27,610
 it's actually going to contact it all
-
-331
-00:14:27,610 --> 00:14:30,309
 right so now let me also show you over
-
-332
-00:14:30,309 --> 00:14:32,949
 here if I open up the file manager on my
-
-333
-00:14:32,949 --> 00:14:36,579
 server here if I scroll down as you can
-
-334
-00:14:36,579 --> 00:14:40,119
 see I have this PHP file called get
-
-335
-00:14:40,119 --> 00:14:42,459
 anything and if I go to the code editor
-
-336
-00:14:42,459 --> 00:14:45,009
 here or I believe I already have that
-
-337
-00:14:45,009 --> 00:14:47,559
 open but anyway as you can see basically
-
-338
-00:14:47,559 --> 00:14:49,779
 I have my username filled out and I have
-
-339
-00:14:49,779 --> 00:14:52,389
 my password filled out now essentially
-
-340
-00:14:52,389 --> 00:14:55,509
 these username and password credentials
-
-341
-00:14:55,509 --> 00:14:59,410
 need to be of your MySQL database and
-
-342
-00:14:59,410 --> 00:15:01,360
 the host of course needs to be the host
-
-343
-00:15:01,360 --> 00:15:04,119
 of the MySQL database as well in this
-
-344
-00:15:04,119 --> 00:15:05,319
 case since I'm running it on my own
-
-345
-00:15:05,319 --> 00:15:06,309
 server
-
-346
-00:15:06,309 --> 00:15:08,919
 this is localhost but if you were
-
-347
-00:15:08,919 --> 00:15:11,110
 running this remotely like those PHP and
-
-348
-00:15:11,110 --> 00:15:13,779
 or the Apache or the yeah a PHP script
-
-349
-00:15:13,779 --> 00:15:16,179
 is let's say running locally on an iOS
-
-350
-00:15:16,179 --> 00:15:19,449
 device for example and your MySQL server
-
-351
-00:15:19,449 --> 00:15:21,669
 is on the cloud then you actually want
-
-352
-00:15:21,669 --> 00:15:23,589
 to give it the host of the MySQL server
-
-353
-00:15:23,589 --> 00:15:26,019
 but since I'm running the PHP and in the
-
-354
-00:15:26,019 --> 00:15:28,209
 - Trillian side by side on the same
-
-355
-00:15:28,209 --> 00:15:31,559
 server which GoDaddy happily does for me
-
-356
-00:15:31,559 --> 00:15:34,269
 even though I mean Mac and cloud does as
-
-357
-00:15:34,269 --> 00:15:35,350
 well
-
-358
-00:15:35,350 --> 00:15:38,699
 or really any Mac Mac hosting service
-
-359
-00:15:38,699 --> 00:15:41,620
 you can just use localhost because of
-
-360
-00:15:41,620 --> 00:15:43,389
 course they are beside each other and
-
-361
-00:15:43,389 --> 00:15:45,910
 don't really need to go remote to find
-
-362
-00:15:45,910 --> 00:15:48,279
 each other alright so then as you can
-
-363
-00:15:48,279 --> 00:15:50,139
 see just you know in my other database
-
-364
-00:15:50,139 --> 00:15:53,980
 tutorials the normal connecting to MySQL
-
-365
-00:15:53,980 --> 00:15:56,230
 code but except for the fact that I'm
-
-366
-00:15:56,230 --> 00:15:59,259
 not giving it a database to connect to
-
-367
-00:15:59,259 --> 00:16:01,540
 I'm actually finding a database from the
-
-368
-00:16:01,540 --> 00:16:03,670
 parameters which I'm using underscore
-
-369
-00:16:03,670 --> 00:16:06,430
 get to a richer root tree from the URL
-
-370
-00:16:06,430 --> 00:16:10,000
 and so I'm using DB which is the
-
-371
-00:16:10,000 --> 00:16:12,699
 parameter that is passed in order to you
-
-372
-00:16:12,699 --> 00:16:15,940
 know give the database to the PHP script
-
-373
-00:16:15,940 --> 00:16:18,279
 so I've connects the database and if
-
-374
-00:16:18,279 --> 00:16:19,630
 it's unable to do that it's just gonna
-
-375
-00:16:19,630 --> 00:16:22,029
 say unable to connect however if it is
-
-376
-00:16:22,029 --> 00:16:24,639
 able to do that then it will get the
-
-377
-00:16:24,639 --> 00:16:28,269
 query into a query variable and then get
-
-378
-00:16:28,269 --> 00:16:31,360
 the results as JSON and echo them to the
-
-379
-00:16:31,360 --> 00:16:33,850
 screen and after that what happens is
-
-380
-00:16:33,850 --> 00:16:35,800
 Swift will take that convert that to NS
-
-381
-00:16:35,800 --> 00:16:38,889
 data and send that off back to your
-
-382
-00:16:38,889 --> 00:16:42,370
 application and that is quite a bit but
-
-383
-00:16:42,370 --> 00:16:44,440
 now as you can see back to PHP myadmin
-
-384
-00:16:44,440 --> 00:16:46,990
 in the ice-cream table there's currently
-
-385
-00:16:46,990 --> 00:16:49,149
 nothing no quantity of ice-cream and
-
-386
-00:16:49,149 --> 00:16:50,860
 that's not good for business we can't
-
-387
-00:16:50,860 --> 00:16:53,110
 sell anything okay so let's say we
-
-388
-00:16:53,110 --> 00:16:55,209
 receive a shipment of five chocolate ice
-
-389
-00:16:55,209 --> 00:16:57,790
 creams and three strawberry okay and so
-
-390
-00:16:57,790 --> 00:16:59,380
 basically you want to insert into
-
-391
-00:16:59,380 --> 00:17:01,870
 ice-cream with flavor and quantity the
-
-392
-00:17:01,870 --> 00:17:04,000
 values chocolate five and strawberry
-
-393
-00:17:04,000 --> 00:17:05,949
 three all right let's try this out so
-
-394
-00:17:05,949 --> 00:17:08,709
 now essentially what should happen is it
-
-395
-00:17:08,709 --> 00:17:10,959
 should insert five chocolate in there it
-
-396
-00:17:10,959 --> 00:17:12,939
 should insert three strawberry and then
-
-397
-00:17:12,939 --> 00:17:16,630
 it's print exactly what happened with
-
-398
-00:17:16,630 --> 00:17:18,939
 this select command however one more
-
-399
-00:17:18,939 --> 00:17:20,620
 thing I'd like to do is do this one by
-
-400
-00:17:20,620 --> 00:17:22,390
 one so you can actually see it happening
-
-401
-00:17:22,390 --> 00:17:24,790
 in phpMyAdmin so if I comment out these
-
-402
-00:17:24,790 --> 00:17:27,579
 two lines of code then if I run this on
-
-403
-00:17:27,579 --> 00:17:30,700
 my simulator here then you'll be able to
-
-404
-00:17:30,700 --> 00:17:32,610
 see that first of all the simulator
-
-405
-00:17:32,610 --> 00:17:35,380
 shows nothing but right after this is
-
-406
-00:17:35,380 --> 00:17:37,809
 done printing lots of stuff or which I'm
-
-407
-00:17:37,809 --> 00:17:40,360
 not exactly sure why this prints out I
-
-408
-00:17:40,360 --> 00:17:41,890
 have done a little bit of researchers
-
-409
-00:17:41,890 --> 00:17:44,890
 because of you know the data how it's
-
-410
-00:17:44,890 --> 00:17:46,510
 synchronous and how it's not able to
-
-411
-00:17:46,510 --> 00:17:47,360
 connect
-
-412
-00:17:47,360 --> 00:17:50,510
 to the server properly but again you
-
-413
-00:17:50,510 --> 00:17:51,710
 don't need to worry about this these are
-
-414
-00:17:51,710 --> 00:17:53,870
 just warnings and these don't these are
-
-415
-00:17:53,870 --> 00:17:56,240
 ones actually errors so now this should
-
-416
-00:17:56,240 --> 00:17:58,280
 be done inserting into the database
-
-417
-00:17:58,280 --> 00:18:01,130
 let's see let's not might go over to PHP
-
-418
-00:18:01,130 --> 00:18:03,740
 myadmin and I click on ice cream as you
-
-419
-00:18:03,740 --> 00:18:06,950
 can see chocolate 5 MySQL kit is working
-
-420
-00:18:06,950 --> 00:18:09,049
 till now let's try and see what happens
-
-421
-00:18:09,049 --> 00:18:11,630
 when I insert something of let's say
-
-422
-00:18:11,630 --> 00:18:14,750
 strawberry all right so I'm going to run
-
-423
-00:18:14,750 --> 00:18:18,140
 this once more into the simulator all
-
-424
-00:18:18,140 --> 00:18:19,700
 right as it loads up on the simulator
-
-425
-00:18:19,700 --> 00:18:21,410
 and it's done printing lots of stuff all
-
-426
-00:18:21,410 --> 00:18:22,309
 its warnings
-
-427
-00:18:22,309 --> 00:18:24,919
 well no it's done no it has to print one
-
-428
-00:18:24,919 --> 00:18:28,940
 more thing I believe yeah there we go
-
-429
-00:18:28,940 --> 00:18:31,370
 and it should be done if i refresh in
-
-430
-00:18:31,370 --> 00:18:33,950
 PHP myadmin as you can see it's inserted
-
-431
-00:18:33,950 --> 00:18:37,760
 strawberry now all I need to do is just
-
-432
-00:18:37,760 --> 00:18:39,350
 uncomment this last line of code which
-
-433
-00:18:39,350 --> 00:18:41,120
 will actually select from the ice-cream
-
-434
-00:18:41,120 --> 00:18:44,030
 database convert that NS or data just
-
-435
-00:18:44,030 --> 00:18:46,130
 down out with a smile moved NSO convert
-
-436
-00:18:46,130 --> 00:18:48,740
 that data to a string and then print the
-
-437
-00:18:48,740 --> 00:18:51,970
 string let's try it out shall we
-
-438
-00:18:51,970 --> 00:18:59,240
 alright so now if I run this as you can
-
-439
-00:18:59,240 --> 00:19:00,530
 see the simulator is gonna load up
-
-440
-00:19:00,530 --> 00:19:05,090
 iphone SE and in just as you can see it
-
-441
-00:19:05,090 --> 00:19:09,110
 is done and it has selected this result
-
-442
-00:19:09,110 --> 00:19:11,210
 as you can see here it says flavor
-
-443
-00:19:11,210 --> 00:19:13,669
 chocolate hi this is actually an array
-
-444
-00:19:13,669 --> 00:19:15,530
 of dictionaries and the first dictionary
-
-445
-00:19:15,530 --> 00:19:19,040
 is flavored chocolate quantity 5 and I'm
-
-446
-00:19:19,040 --> 00:19:21,740
 just gonna highlight that there add
-
-447
-00:19:21,740 --> 00:19:25,549
 flavor strawberry quantity 3 and that's
-
-448
-00:19:25,549 --> 00:19:28,309
 how my astir l can't hurt works i really
-
-449
-00:19:28,309 --> 00:19:29,809
 hope you enjoyed that tutorial and if
-
-450
-00:19:29,809 --> 00:19:31,250
 you did please make sure to leave a like
-
-451
-00:19:31,250 --> 00:19:33,140
 and subscribe to my youtube channel you
-
-452
-00:19:33,140 --> 00:19:34,700
 can actually contact me if you have any
-
-453
-00:19:34,700 --> 00:19:38,150
 questions suggestions or ideas at my
-
-454
-00:19:38,150 --> 00:19:40,309
 email tangi manage email calm down in
-
-455
-00:19:40,309 --> 00:19:42,650
 the comments below or on my twitter @jj
-
-456
-00:19:42,650 --> 00:19:44,570
 many the source code will as always be
-
-457
-00:19:44,570 --> 00:19:46,730
 in the description and again i hope you
-
-458
-00:19:46,730 --> 00:19:48,169
 enjoyed and if you did please make sure
-
-459
-00:19:48,169 --> 00:19:49,910
 to leave a like and share it with anyone
-
-460
-00:19:49,910 --> 00:19:52,100
 you think that it might help again thank
-
-461
-00:19:52,100 --> 00:19:54,260
 you very much and if you really liked it
-
-462
-00:19:54,260 --> 00:19:55,760
 you can even subscribe to the channel it
-
-463
-00:19:55,760 --> 00:19:57,590
 really does help out a lot that's gonna
-
-464
-00:19:57,590 --> 00:19:59,120
 be it for my tutorial today I hope you
-
-465
-00:19:59,120 --> 00:20:02,770
 enjoyed thank you goodbye

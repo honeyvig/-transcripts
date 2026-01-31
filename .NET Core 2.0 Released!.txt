@@ -1,0 +1,2255 @@
+hi I'm Scott hunter and I'm here today
+to talk about net especially not net
+core today we just released net core 2.0
+and you can grab it today at do tnat
+slash core go out there and grab it
+right now and for the next hour so I'm
+going to go through all the new features
+all the new cool things in net core that
+you want to check out so first off
+before you can get into that we have our
+virtual conference net comp which comes
+out September 19th through the 21st this
+is a great virtual conference that you
+should block out some time for and
+you're going to have all the experts at
+Microsoft on the team you're going to
+have a lot of the experts in the
+community talk about net over those
+couple of days and all the new stuff
+that's in.net core 2.0 so you can check
+it out at net comp net and we will see
+you there next let's jump into dotnet
+core 2.0 I think that a quarter point O
+is the kind of the first real release we
+shipped out to core 1.0 last summer and
+it was a great version but it had
+preview tooling and we know we got
+feedback from customers that all the
+api's we're not there and so then a core
+tune kind of rust over all the rough
+edges and the coolest thing is as part
+of that McDonough core 1.0 we talked
+about how AFC net core was one of the
+fastest web frameworks on the planet
+we've made dotnet even faster in dotnet
+core 2.0 so now we're about a web app is
+about 20% faster depending on how you
+run it Dan Ross going to talk about that
+limit later today more AP is one of the
+biggest feedbacks we got on deck or 1.0
+was hey a lot of my favorite API is the
+old dotnet EP has them used to things
+like data sets are not there they're all
+back we have a bunch new project
+templates so now if you want to build an
+angular app with asp net core or react
+with app with a ethnic or those are all
+in the product more distros one of the
+cool features of dotnet core is the fact
+that we are multi-platform it runs on
+Windows Mac and Linux we've added a
+whole bunch more Linux distros in.net
+core to and even better for a developer
+we have a the ability to target generic
+Linux and that means you can actually
+run net core to on most linux's without
+even installing a specific version for
+that particular
+Lenox simplified packaging if you follow
+this in decor 1.0 we broke the framework
+into a lot of packages thinking that
+would be a great way to update all those
+individual pieces separately but into
+being that it was too hard for us and
+it's too hard for you you don't want to
+have to reference all these individual
+packages and find out we're going to
+guess where which api's are in which
+packages and so now we've made it very
+simple in asp.net you reference one
+package for dotnet core you reference
+one package and you're good to go
+we have new and improved visual studio
+tooling we'll do some demos of that a
+little bit later on but much better
+tooling and we have great BS for Mac
+support as well so everything I show in
+dotnet core to you can run the same
+stuff in Visual Studio for Mac so let's
+also talk about this is exciting as well
+with the release of that net core 2.0
+just a couple days after we ship Red Hat
+will have the Red Hat version of.net
+core 2.0 as well and they have a great
+no-cost developer license that you can
+grab at the URL here to try dotnet core
+2.0 on Red Hat so really excited to have
+Red Hat following us so quickly into the
+- oh wave let's talk about the the open
+source aspect of net this is one of the
+things that really excites me is two
+years ago when we first started saying
+we're going to open to arsenic core we
+had no idea what the reaction is going
+to be was the community can come and
+come join us and help grow Nets and the
+cool thing is they really have if you
+look at this chart you can see the
+amount of pull requests by the community
+over the months we're at a point now
+where about half of our pull requests
+are actually from the community and even
+better you can see that we've had a
+bunch of cool companies embrace us
+because of the Samsung is building their
+Tizen platform for their televisions
+their mobile devices and their
+appliances and wrist wrist watches on
+dotnet core so you can actually use
+dotnet to program all those things we
+have earlier games they've moved a game
+they were building their own web server
+and net and they recognize one day that
+we were trying to make net core super
+high performance and so in
+trying to build a competing web stack
+they actually came and helped us make
+dotnet core way way faster and so when
+you see the tech and power benchmark
+where we scored really well last
+November
+it gains helped us a whole bunch and you
+can see here as well we have a
+foundation a dotnet foundation by big
+people industry you can see we have Red
+Hat Samsung jetbrains
+uni and Google that are all participants
+in this so it's the open source thing
+has been great for net now let's talk
+about dotnet standard this is my
+favorite part of net core and and.net
+and and even xamarin and when we started
+working on that core a couple years ago
+one of the challenges we had with dotnet
+was there's lots of nets there's not net
+framework there's Ameren there's there
+was not net core there's mono there's
+lots of dot nets out there in the world
+and they each had different sets of
+api's and so we said as the dotnet team
+let's stop this we want dotnet to be
+consistent across all platforms and so
+dislike html5 is a specification for web
+applications dotnet standard is a
+specification for dotnet and what that
+means is if you're a dotnet platform and
+you want to be you want to be known as
+a.net platform you have to implement the
+dotnet standard and that's basically a
+contract of a bunch of AP eyes and so
+any net that we consider a real net that
+influenced at that standard has to have
+all those AP eyes and that's pretty cool
+because it means you can easily move
+your code from xamarin app to agentic or
+app to a dotnet framework application
+and later this year with rs3 of Windows
+you people do the same thing with you to
+PP applications as well
+so let's look what that looks like what
+we basically did with that net standard
+2.0 is we added about 20,000 api's back
+we took the intersection of all the
+api's that were in xamarin and all the
+api's that were in dotnet framework and
+use that as the basis of what this would
+look like and then we went through and
+added all those api's back to dotnet
+core 2.0 and so much bigger surface area
+the other cool thing about that standard
+too is when we look 70 percent of all
+the nougat packages in new georg
+actually support
+standard to today which means as a
+especially as an asp net developer or
+done in core developer a lot more of
+those nuga packages will work out of the
+box in your applications you might ask
+why don't some of them not work well
+some of those 30% that don't work with
+their referencing things like windows
+forms or WPF or technologies that don't
+exist on all the dotnet platforms the
+other cool thing about the dotnet
+standard is it doesn't require you to
+recompile any code and so in a demo I'll
+do in a second I'll take some a library
+compiled back in 2002 and just add it to
+my project and it'll just work and
+that's what's cool about that net
+standard 2.0 here's an example if you're
+a done it core 1.0 customer and you've
+been using it for a while here's a hint
+of the stuff coming back all of xml came
+back all serialization came back all the
+networking stacks came back all of i/o
+all threading all of core so I'm super
+excited we don't have it on the slide
+here but data came back as well so all
+the data sets data tables I've used
+those a ton in pass code and they all
+work great with that in standard two so
+let's do a quick demo so what I have
+here is I have an AF core one one app
+and I went out looking on the web for
+zip libraries and I found sharp zip Lib
+and if I look here look at this package
+it was built in 2011 s been out there
+for a long time so let's try to
+reference this in my h-net core 1.1
+project so I'll bring up the nougat
+package manager here
+you
+we'll go browse
+find sharp
+and I'm going to add this to my project
+and notice that the package restorer
+and it rolled back that happened because
+dotnet core 1.0 did not support the api
+is required for sharp cichlid to work so
+let's instead let's move to a dotnet
+core 2 project here so I've got a dotnet
+core to project here I'll do the same
+thing again and first up this to show
+show this off a little bit I'm going to
+add the CS proj file and you can see
+this is using.net core 2.0 zoom in a
+little bit here this is a dotnet core
+2.0 application
+and because of Sutton at core 2 I can
+come back to the same example and say
+manage NuGet packages I can browse and
+let's sign sharp as if Lib
+and I'm going to add it
+and this time because we added
+TI's back notice that now getting the
+dialogue saying this is going to succeed
+the nougat package is added and I should
+be able to do a build here successfully
+added restoring
+to build
+everything works great so this is
+showing you that now I can take a dotnet
+core 2.0 application and because of
+dotnet standard 2 and the support we
+have for that suddenly all this existing
+code out there is available to my apps
+so that's not in that standard 2.0
+the next thing is let's talk about
+performance improvements so one of the
+cool things about being open source is a
+lot of places where we don't have time
+this we're always focusing on you know
+new web frameworks or new libraries to
+bring into dotnet making it
+cross-platform we don't always have a
+chance to look at all the bugs out there
+and dig into all that code one of the
+cool things is being an open source
+project we've had tons of submissions
+from the community the diff fix
+performance problems in low-level pieces
+of nets that we've never had time to go
+look at and those are all in net core
+2.0 we have profile guided optimization
+this is where we actually run
+applications through the system and
+measure how net behaves in those
+situations we do optimizations based on
+the profiles that we create by running
+the applications and then obviously
+we're we're running the same jitters
+that we are on the full framework on
+that net core as well one of my favorite
+examples here is ray gun they have a
+product called ray gun i/o and they use
+a node base back in a couple years ago
+and I ran into them and talk to them
+about dotnet court at the time and said
+hey we're doing all this perf work they
+actually took their same application
+which was doing a thousand requests per
+second on nodejs
+moves it's dotnet core and we're able to
+get 20,000 requests a second and that's
+mainly because of they are an i/o heavy
+application and we can do more
+background i/o than note can so that's
+kind of cool the next thing is as part
+of our launch today we also launched
+Visual Studio 2017 15.3 you can download
+it today at Visual Studio calm and we're
+going to talk a little bit what's new in
+it
+first off better together dotnet core
+plus vs is an awesome tool for building
+applications we have full support for
+dotnet core 2.0 and 15.3
+and we also have full support for net
+standard 2.0 thought that standard 2.0
+can be used in your win for Maps your
+WPF apps your estimate apps your attic
+or apps your console at school
+everything can use that in standard 2.0
+the other thing we did is we made it
+very simple to have a
+project files that work both across the
+CLI and Visual Studio so we have great
+support from the command line if you're
+building net core from a command prompt
+or on a Linux machine or a Mac and these
+projects go back and forth we're going
+to show later today that you can also
+transfer these same projects back and
+forth between Visual Studio for Mac and
+Visual Studio for Windows one of the
+areas that I really love is code
+navigation improvements so today a lot
+of our customers actually have to go
+install third-party extensions to get
+the best out of Visual Studio and so
+we've been spending a lot of time over
+the last year trying to find the most
+common things that people are trying to
+use those extensions for and make sure
+we have support for those just in the
+box we're doing that because loading a
+third-party extension uses more memory
+slows the product down and so we're
+trying to get you all those same
+features faster with less memory another
+exciting part of vigil City of 2017 15-3
+is we have CI CD support for containers
+this means if you're building containers
+in dotnet core you can basically go
+through a wizard and have a CI CD
+pipeline set up using V STS which will
+either target Azure app service or our
+asher container registry so right from
+vs as you make code changes builds will
+kick off in the cloud the land if they
+pass all their tests the land either an
+app service or the land and a container
+registry all built in another cool
+feature that we shipped in march with
+visual co 27:17 RTM was liveing at
+testing and the idea behind this was
+today typically you do test kind of an
+afterthought you write some code for
+awhile and at some point you run your
+tests also because it's a kind of an
+afterthought you don't really see when
+you're writing your code you have no
+idea what code is covered by a test what
+code is not covered by a test and so the
+idea behind logit testing is as you're
+developing you can see live in the in
+the ide which code has tests which code
+doesn't have tests even more so than
+that as you actually make source code
+changes in the product we actually will
+identify which tests have to be rerun
+we'll run them on the fly as you're
+editing and typing and you can see
+whether they're succeeding or passing
+and you get so great great visual
+coverage in the
+the IDE so that's life in your testing
+and next I'm going to do is I'm going to
+have Casey come on and she's going to do
+a demo of the editor work and lugnut
+testing
+so let me there's Casey from the team
+she works on net productivity on the
+tooling for.net yeah hi guys I'm here to
+show you how vigil studio 2017 it's
+going to make you as productive as
+possible as you're coding Visual Studio
+2017 has a lot of the awesome features
+that we have for other dotnet projects
+also for dotnet core for the first time
+ever we brought like live in your
+testing over to.net core yeah I think
+you're going to show the do project
+system as well yeah and so you'll see
+all code analysis I'll show a little bit
+the new project stem and bunch of
+different things that you can do in
+dotnet core so here I have a simple net
+core 2.0 app it's basically just lets me
+yell at my Alexa in the morning figure
+out when my bus is coming and the first
+thing I want to do is show file globbing
+so files globbing allows me to just drag
+a file from here from the file explorer
+into my project and then you'll see it
+immediately appear over here on my
+solution explorer so this is automatic
+syncing between the file and solution
+Explorer now we're at existing file yep
+so Don to manually add the file yourself
+and sort one two merge from source
+control and things like that can you
+open the CSV file as well yeah I can
+also show you the new CS Praja
+so rather than having to unload a
+project and reload it to edit your CSS
+prajapati's now just do it directly from
+here so I can click on this and you'll
+see that the new CS proj file for dotnet
+core projects is really small and if you
+look closely you'll notice that when I
+added that direction file it doesn't
+exist in here I was not there yeah which
+means which will save it's a ton of time
+when you have ton merge conflicts in
+your CSS proj file from all the
+different files that you and your team
+have added and removed super cool yeah
+so they're just some of the productivity
+enhancements I've done for dotnet core
+project specifically you'll notice in
+this direction file that I added that I
+have a merge conflict in here so it's a
+result that we added actually a ton of
+newer factorings and visuals to your
+time 17 and you can see here I can you
+know choose to take the head the
+upstream or both of the changes that I
+had and so here I was on take the head
+and again I access this for factoring
+with control dot and now it's resolved
+this merge conflict for me
+hi so probably my favorite saying that
+we've added is I should feature we've
+had for a while but now we've remapped
+it and renamed it is ctrl T or go to all
+this allows me to quickly navigate to
+any file type member or symbol
+declaration from a single location so I
+know I want to go to this type that I
+have called plus helper so I can just
+use camel case matching to just type in
+the like the humps or whatever you want
+to call it of the letters and then it
+will navigate me directly there so as I
+was talking about we have live unit
+testing support for dotnet core now so I
+can go to test live unit testing and I
+can click start so what is live unit
+testing typically when we're unit
+testing we have this kind of like
+tension where we're trying to route what
+is the smallest number of tests I can
+run so that my R unit tests run in a
+reasonable amount of time but also a big
+enough sets that I can feel confident
+I've run enough tests to actually know
+that my change hasn't broken something
+else and so we're always trying to
+figure out what that but that compromise
+is between smalls number and the biggest
+summer for confidence and so once you
+actually find that set then you have to
+manually go click a button to run all
+your tests and then you have to go to a
+different window to actually find the
+results of your unit test and so live
+unit testing is actually removing all of
+that and doing it for you automatically
+so live unit testing will figure out
+what code is impacted by your code
+change and run those tests and then
+display:inline the results so you can
+see a red X means that this line of code
+is hit by at least one failing test a
+green check means a sign code is hit by
+all passing tests and a blue dash means
+this line is not covered by any test at
+all to me this is the coolest feature is
+just being that quick visualization what
+I have tested what I don't have tested
+what failing we have open up other
+windows or run other scoffs yeah you
+never have to lose the context of your
+development to see the impacts of your
+changes is awesome I can click on icon
+and see exactly what tests are hitting
+that line and you can just double click
+to actually navigate directly
+to the test itself so if I don't
+actually know why this is failing which
+I don't I can just right-click and
+choose the debug this test so this is
+all on dinette core so we have all
+assumed debugging support live unit
+testing support for dotnet core projects
+that we have with all the rest of the
+dotnet projects so if I should hit a
+breakpoint here and debugging a new
+feature that we added in Visual Studio
+2017 is to run the click where if you
+hover next to different lines this
+little icon that pops up I can zoom in
+to show you that or I can say run on my
+program to this point so I can just do
+that and when I do that my execution
+failed because I've actually thrown an
+exception and this is a new exception
+helper that's part of Visual Studio 2017
+where we cleaned it up and we try to put
+at the top level the most important
+information so here I'm throwing a
+reference exception so it would be nice
+if I knew what was null and this is
+actually telling me that the lot
+variable is null now I know exactly what
+I need to do I just go through all the
+air text behind that air anymore
+yeah I don't need to restart my
+debugging session to figure out and step
+into different things so again I was
+talking about we added a ton of new
+refactoring the Visual Studio 2017 so I
+who's come directly up to my parameter
+list and press control dot and now I
+have the option to add an old check for
+this parameter I can do the same for my
+longitude parameter as well and now in a
+single click I've added all this
+boilerplate to actually test my or do my
+node checks for me and without me having
+to think about it I don't know as I did
+that live unit testing figure out what
+tests was impacted by my change ran them
+for me and updated in the editor in the
+context of my development let me know
+that now all my tests are passing that's
+what's pretty great romaine anything
+yeah so now that we've shown debugging
+and summer factorings
+let's show a couple more so it just so
+happens so I'm going to use again
+control P to go to any place that I want
+so I want to go to the file called stop
+so I'm going to put an S to filter by
+files and type in stop it just so
+happens when you're trying to catch the
+bus
+in the morning it depends what direction
+the bus is going for which stuff you go
+to learn that the hard way when I first
+moved to Seattle so what I'm going to do
+here is now my stops we're going to have
+directions associated with them so I
+need to actually add a parameter to my
+construction constructor subdueth a time
+type direction and you'll notice now
+Visual Studio is actually suggesting a
+variable name for me for this parameter
+so like hey resurrection you probably I
+just want to name this parameter
+Direction and I can immediately do that
+also while my cursor is here I can press
+control dot and then I can create and
+initialize the property direction for me
+and I can do control dot again and add
+the nil check automatically as well and
+so again this is a bunch of quick little
+things just help you scaffold out your
+app without you having to really move
+anywhere and so it makes you a lot more
+productive I would use every one of
+those that's awesome
+yeah so now because actually added this
+for my serialization have to add
+adjacent convertor so again you can do
+the camel chase matching in here so I
+can type Jason C and they can see all
+the different things that match type of
+and again use the camel case matching to
+help me autocomplete
+unit testing is actually letting me know
+that nothing is covered by this and
+that's because I haven't actually used
+my updated constructor anywhere so to do
+that I'm going to go to final references
+to figure out all the places that I have
+this constructor lucky me it's only one
+place in this app and now I can just add
+my last parameter and here where I'm
+adding the direction of my stop to my
+unit test to check that it's working and
+again live unit testing went through
+figured out what code was impacted by
+this change figure out the tests that
+need to run and then ran them for me and
+now I can tell that all my tests are
+passing despite me adding a new
+parameter to constructor shuffling
+things around and stuff like that yeah
+so you might notice in here now are
+these pink dots over here which they're
+actually gray by default but pink is a
+lot better-looking to look at and
+matches the blue color scheme so I made
+it that way and this is a code
+suggestion code suggestions allow you to
+like hint best practices or alternate
+coding patterns to developers so if I
+investigate here you can see that's
+telling me to use the explicit type
+instead of var and this is part of the
+code style configuration enforcement
+that we've added to Visual Studio 2017
+that's one of my favorite features where
+you can actually on a project basis go
+and set these rules and say these are
+the rules of the project everybody has
+to hear those rules in the write
+warnings or errors or whatnot and so we
+actually allow you to like codify all
+these different conventions you have in
+an editor config file so I can just
+navigate to an editor config which is an
+open source file format that we worked
+with the community and extended to work
+with dotnet code style and to see here
+all my different of our preferences so
+I've chosen four built-in types so when
+the type of the parent to use bar
+otherwise I want you to use the explicit
+type and you can configure this at the
+directory level so if you want to at the
+project or the solution level you can do
+those kind of things as long as it's in
+that directory
+you
+you'll also notice and here that when I
+actually converted to the explicit type
+I've used a c-sharp seven two pole which
+is my favorite c-sharp seven feature
+which allows you to return multiple
+values from a method so here I've
+returned both a route and a stop and
+you'll see that there's now pink little
+dots down here and if I investigate
+those I can see that this code
+suggestion is helping me learn the new
+language features where I saw me hey
+I've named my tuple element route unstop
+and so rather than using the item one
+and item two which is really hard to
+understand when you're just trying to
+access these different members we can
+now just directly use the explicit name
+instead
+so again code suggestions are really
+great for enforcing code style across
+your team and learning your language
+features but the other things are good
+for is helping learn best practices so
+we've actually in version 15 3 we have a
+beta version of the FX cop code
+analyzers where we've written all the FX
+cop rules which are just a ton of rules
+on best practices with performance and
+security we've written them as live
+analyzers in the code to get live
+feedback inside the editor on different
+code violations people use those before
+that used to be an external tool that
+you ran statically against your code and
+that was like being as an analyzer it's
+live in the product you don't have to
+actually do an extra step it just runs
+all the time and so here's an example of
+one that's here on my bus helpers if I
+do control dot to see what it's asking
+me to do I can see that saying hey you
+have all static members inside this
+class you should probably just make this
+class static so no one can instantiate
+it and again in a single click it will
+now make this fix for me we went through
+all the FX copper rules and took the
+ones we thought were most pertinent
+today and with the ones ones we're
+moving into analyzers yes so we took
+like the most commonly used ones that
+people were saying that they used and we
+made them into this extension that you
+can install today's I have installed
+here on the last thing I want to show is
+we have all these grades added lines
+going on editor here which are indent
+guides this allows me to hover over and
+just kind of get a better idea of like
+I'm
+that kind of like code and so I can see
+here that I have another class
+besides bus helpers in here and how the
+class called my stop info which is
+basically what my file is named so I'm
+just going to use the refactoring that
+we have to move this bus helpers type to
+a file with the same name because that's
+how my team likes to do it where you
+have a different file for every type and
+so in two seconds or less I was able to
+now make it into a new file and so those
+are just an again will let me notice the
+whole time live unit testing has been
+running and still let me know in the
+context of my development without me
+having to navigate to a different window
+or run a test or click a button that all
+my tests are still passing and so those
+are just my favorite things that we've
+added in Visual Studio 2017 to help make
+your dotnet development awesome those
+are awesome thank you very much good
+yeah thank you
+okay so now we're going to move on and
+do as you're functions in Visual Studio
+so there's been is huge push in the last
+year so this interest around building
+serverless computing and what this is is
+instead of building a full web
+application just building the small
+snippet of code that you actually want
+to run when something happens in the
+cloud whether a REST API gets called or
+you have a trigger that's fired from a
+vent or a file is added to a storage
+account something like that that's that
+this new model of programming called
+serverless computing and we want to make
+sure that c-sharp dotnet and visual C
+are the best ways to build those types
+of applications so with Visual Studio
+2017 15.3 we've added support for Azure
+functions directly in the box and visual
+studio and this tooling is pretty cool
+you can basically build c-sharp
+functions and what's what makes the
+tooling so awesome is you can actually
+develop them locally first we have a
+emulator so you can run them locally in
+Visual Studio put breakpoints in them
+all that kind of stuff then when you're
+ready you can push them up to the cloud
+and you don't lose any of that
+functionality you can actually still put
+the breakpoints and run the breakpoints
+in the cloud just like you do locally so
+it's a great experience
+and we've changed the way that functions
+actually work they are now class
+libraries in Visual Studio which means
+you get all the supports of c-sharp all
+the tooling all the cool features that
+Kasey showed they all work with Azure
+functions now and so next I'm going to
+bring Andrew Hall up and he's gonna do a
+quick demo of Azure functions
+cool so this is Andrew Hall Andrew works
+on visual studio tooling all up for.net
+and today let's let's talk about added
+functions yeah so as Scott mentioned
+already we've put it in the box for
+visual studio 15.3 update all you need
+to have is the Azure development
+workload selected you'll notice here
+that I don't have any of the optional
+components not because I don't want them
+just to prove that we don't need them so
+it's included by default in the azure
+development it's really tiny only adds a
+couple megabytes to the installation
+just check check out your development
+and you're good to go just check as your
+development you're good to go you'll get
+everything I'm about to show you so when
+you come into the cloud node in Visual
+Studio this is the new project
+experience you'll see the Azure
+functions project template shows up so
+you can pick that how do you have one
+that I've created and by default you'll
+see that it drops a empty project and I
+have two files so one is host Jason that
+I can configure settings this is all
+documented online but we're going to go
+ahead and build a queue trigger so when
+we push things into a queue we're going
+to pick those message up and process
+them and I've set the max polling
+interval I've upped it just for the
+purposes of our demo because I want it
+to process relatives and explain to
+people what this means is I've got a at
+your table table storage set up in the
+cloud and I've got a queue inside of
+that and you're saying anytime somebody
+puts an event into that queue it's going
+to call your code that's correct okay
+and so one of the great things about
+Visual Studio is we have a schema you
+can see we know the schema for host at
+JSON that we've created and I can
+configure settings so for example I
+mentioned what this max point interval
+is going to do is it's going to say this
+is a millisecond value check the queue
+every thousand milliseconds or once a
+second but if I hit control space
+because this is visual studios JSON
+editor so control space you can see I
+get intellisense for all the possible
+things that I can configure about my
+application so just by virtue of working
+in Visual Studio I don't necessarily
+have to remember the exact commands I
+just control space or start typing I get
+the intellisense that I would expect in
+visual studios first-class JSON editor
+let's go ahead and back back out of that
+the second thing I have is a local
+setting set JSON file and what this is
+is this is a file that lets me specify
+things like connection strings or
+whatever it's not it's by default going
+to be
+go dude from source control because it's
+supposed to be your local settings so
+the default get ignore that gets dropped
+with this will prevent that learn and
+source control but in this particular
+case I've populated a required property
+as your web job stored just as the
+required storage account for working
+with as your functions required for
+every function type except an HTTP
+trigger so now that we have this
+configured we have our storage account
+connection string plugged in we have our
+polling interval set up to make sure
+that we're it's going to pick up quickly
+let's right-click on this and let's say
+add let's add a new item and we're going
+to pick the Azure function template so
+let's call this which we call this let's
+call this our cue trigger and bring up
+dialog so let's go ahead and pair it so
+you have a whole bunch of types there so
+I'm seeing blobs event hubs generic
+webhook HP triggers Wow lots of lots of
+services in Azure yeah so these are
+these are all pre-baked in templates in
+visual studio these match the types of
+triggers that you can create in the
+portal as you mentioned on the portal by
+default you're working with a c-sharp
+script file so tsx as you already told
+people in the introduction one of the
+things that we've done in business
+videos we've made these class libraries
+to give you a first-class development
+experience it also gives you better
+startup performance and Azure because
+we've already done the work on the
+dessert on the on the client side to
+compile that into a dll right so you're
+not going from source every time so
+that's the face locator what does what
+does that do
+base locator I believe this is a
+cognitive service that actually find
+spaces in your images that's cool
+yes there's a lot of fun stuff to play
+with you can really waste a lot of time
+or I guess is not waste you can spend a
+lot of valuable time playing with
+creating your own as your as your
+function triggers with this hopefully a
+lot of people watching have already had
+the chance to try this because we had an
+extension that we shipped at build that
+was available to install on top of
+Visual Studio 15.3 so the big thing is
+we cleaned up cleaned it up a little bit
+fixed some bugs and as I mentioned we've
+now made it part of the azure workload
+as opposed to happy to be something you
+have to go install separately so let's
+call this our cue trigger and we have a
+connection string here so this will use
+our as ur/web job storage here as your
+web jobs storage
+and the path is my cue item this is
+going to be the name of the queue so if
+I go over here I have storage explorer
+open and I can see that I'm going to use
+this Andre how Channel 9 I can look at
+my cues and I can see that I have my
+cues items so the name of that's all
+going to line up and we're about to see
+one of the big benefits of going to pre
+compiled functions that we've done with
+the work that we've done in Visual
+Studio 15 got three after I create this
+for people to watch this if you see as
+your storage Explorer that's a great
+tool if you're actually using Azure
+storage you can search for that download
+that and it gives you a visual
+representation and in fact I actually
+use it to copy my connection strings so
+I when I do this exact same demo like it
+I connect that thing first in a copy of
+my connection string format your storage
+Explorer into vs yeah and that's exactly
+what I did that's a really good point I
+did went cooking show style a little bit
+I have that might you know pie in the
+oven what the connection strings already
+pasted in but exactly that's where I
+would have gotten the connection strings
+from one of the big differences I want
+to point out here now that we've
+generated our cue triggers es file for
+the pre compile function is you've moved
+away from a world where you're mapping
+between your Azure function and what
+you're going to trigger off of me
+information is decoupled so if you look
+at in the portal for example for Azure
+functions you have it at the SX file and
+then you have a separate function that
+JSON file where you specify all the
+information of what is the connection
+string and what is the cue that you're
+going to map to what we've done in
+Visual Studio 15.3 is we've brought in
+the azure web jobs attributes along with
+this new attribute called function names
+so the function name attribute indicates
+that it's the this is going to be an
+azure function so that's how the runtime
+will find it the private attribute all
+the configurations being moved
+attributes on the actual code correct so
+my CS file in this particular case is an
+entirely self-contained thing so I can
+see it I can edit it I can do it all in
+the same place that no more decoupling
+of those things so what's right so let's
+go ahead and run it so one of the things
+as you mentioned is we have a fully
+local loop so let's just go ahead and
+hit f5 to start debugging this
+application and so once it spins up
+we'll see that we'll have the console up
+this is the local as your functions
+runtime that you mentioned I think you
+called it your emulator in the
+introduction and so now let's open
+storage Explorer and let's go ahead to
+my
+q and let's push a new message into the
+Q and I'm going to expect that that
+break point is going to be hit so let's
+say hey Scott we push that into the Q
+and within a second I've hit in Visual
+Studio and that's why I upped that
+polling interval just to make sure that
+happen quickly
+and if I look at the my Q item that's
+been pulled from the Q I can see my
+string that says hey Scott so this is
+the message we just pushed into the Q
+ourselves cool so let's say that we were
+happy with the way that this is working
+locally it's a pretty powerful function
+right we can say hello to ourselves and
+log it to the console I had the ability
+from Visual Studio directly to
+right-click say publish and I can
+publish it directly to Azure and I can
+try that out in the cloud so we're going
+to go ahead and create a new as your
+function app so I'll click my publish
+button there and you can see that it's
+going to query my subscription it's
+going to populate some information from
+the cloud it's going to show me my
+options resource group I created a
+channel 9 resource group that we're
+going to use for this I want to create a
+new app service plan in this case going
+to show one of the powers of functions
+is this consumption plan and consumption
+plan is only available for service
+computing but what this means instead of
+these machines where have dedicated
+resources and I have a cost associated
+with paying for dedicated resources a
+consumption plan is only going to charge
+me by the millisecond that my
+application right this is really the
+benefit of serverless computing is I
+only pay for what I use correct and so
+we're going to go ahead and pick this
+same storage account we're working off
+before which is my channel 9 storage
+account and so now when I click create
+it's going to create all the resources
+that I want up on the cloud and then
+it's going to copy this application of
+the cloud that should be running up and
+Azure we should have the ability to go
+hit it so you can see that we're on step
+2 of 3 so this will take a couple
+seconds ok I make an assets in the cloud
+this is a copy of stuff up at the cloud
+and then once you're done we can run and
+do all that kind of stuff perfect so now
+I have a summary I can see the time that
+I've been successful so let's go to my
+Azure portal I'm going to open up my
+list of function apps in this particular
+case I only have one which is the one
+that we just created I can see my
+function app when I click the
+this it's going to populate so I can go
+into my queue trigger function and so
+this is showing me the gist the JSON
+that's generated that mapping file that
+I mentioned that we used attributes for
+on the locally but it generates it and
+so if I look at my logs if I open up my
+storage Explorer and I push another
+message into my to which says this is
+the cloud and I click OK when I come
+back to the portal I can see that the
+message I just added this is the cloud
+so from visual studio I took my function
+app I compiled as a DLL I was able to
+right click publish it directly to Azure
+and it's now running an azure and it's
+going to fire and execute anytime that
+the events that I've chosen the trigger
+off of you're only paying for when it
+when it's called and we're not going to
+show it but if I wanted to I could also
+open the clot Explorer in Visual Studio
+found that same function and attach the
+debugger to it right some videos to you
+that's correct yeah you can just right
+click on it you can say remote debug so
+if for some reason it's working locally
+but you get it up into the cloud it's
+not working correctly you have the
+ability to debug it absolutely cool
+awesome as your functions
+okay let's move on from functions the
+next thing I want to talk about is we
+just today also shift Visual Studio for
+Mac version 7.1 you can also download
+this today at Visual Studio calm what's
+cool about this is digital scene for Mac
+has full support for dotnet core 2.0 you
+can build console apps API apps web apps
+all with digital to you for mac and it's
+got full support for dotnet standard 2.0
+as well so all the stuff that I was
+showing a Visual Studio for Windows you
+can do in Visual Studio for Mac next I'm
+going to have James come out and we're
+going to show videos to you for Mac
+okay so I'm happy to introduce James
+from the mobile developer tools team
+working on xamarin and visual cue for
+Mac and all things mobile yeah you name
+it I do mobile I love it you know me I
+love this stuff and honestly I'm super
+excited to talk about all the brand-new
+Visual Studio for Mac features we have
+for.net core 2.0 I'm crazy excited about
+yeah me too I've got this I want to show
+a hard example so you know we could've
+done file new and and built that and
+copied it from my machine of yours but I
+found this complicated app it's got all
+the stuff you might have in a real app
+if I scroll up here I've got data models
+I've got tests I've got a back-end front
+end let's run this thing it's a real app
+I can click see users need is going on
+so how about we copy this app from my
+machine to a memory stick and see if you
+can run it on the Mac that sounds good
+often I'm working with teams with
+multiple machines often on PC or Mac and
+this is the stuff that you have to do
+you have to be able to work on multiple
+machine so you got a dip great zip file
+on your stick for you okay and I'll give
+this to you all right
+and while we're waiting for him to set
+up one of the cool things that I like
+about visual Cu for Mac is both of our
+teams are working really close together
+to take the features of Visual Studio
+and move them to the Mac so my team
+especially we worked on living the HTML
+the CSS the Jason editor directly from
+Visual Studio to the Mac so when he's
+showing those in vs for Mac it's the
+same code that we have in Visual Studio
+yeah so all I did is I copied it the zip
+file to my desktop I went ahead and
+simply DoubleTap the solution and see
+here it should launch Visual Studio for
+Mac there we go
+and Visual Studio for Mac will give you
+a whole bunch of different file new
+project things and I'll walk through
+those in a second but already as soon as
+I open it up we can actually say that
+it's restoring all of my packages
+because you're kind enough to delete all
+of the need to get packages so it's a
+nice small zip which is nice and hold we
+can see is we have the same exact folder
+structure file structure intact so every
+single project in solution in the
+solution actually loads from my tests to
+my models to my actual web application
+here so you'll see all the dependencies
+all the files everything like that there
+we go it's gone ahead and packages are
+restored
+I'll hit go at this point is going to
+build up my donek web donna core 2
+application and then deploy
+hopefully just like we saw just over
+there so let's give it it's building
+building building because it's a big
+rush it's a big app and I like it you
+didn't just do file new because that'd
+be way too easy right there we go launch
+into the browser there we go localhost
+5,000 loads up visitors blows up my
+records and there we go the same exact
+app so you and I could be working in
+source control together and one one of
+us on a Mac one of us in a PC and just
+being productive
+exactly yeah I love it and then I can
+have all my normal debugging everything
+that you would expect all powered on
+Visual Studio for Mac now let me
+actually walk through some of the other
+things that we've done here because it's
+more than just ability to open the stuff
+so let me go ahead and actually walk you
+through Visual Studio for Mac a little
+bit so anyone new will have a little bit
+of experience when I go into a new
+project and I'll zoom in a little bit
+here we have kind of multi-platform
+applications that I'll walk through we
+have iOS applications Android Mac TV OS
+and right here is the dotnet core
+applications from libraries asp.net core
+and of course libraries right here I can
+come in create a dotnet standard library
+awesome right here if I go in and I say
+oh I want to what do I want to target
+down at standard - oh that is a single
+library that I can then share between
+all of not only my asp.net core donít
+core my Dameron applications and uwp
+applications - so kind of everything now
+we talked about getting started it
+couldn't be easier let's say I just
+wanted to create a blank council
+application I can come in pick between F
+sharp or C sharp
+I'm a C sharp guy so I'm going to say C
+sharp and again kind of a very similar
+flow of what flavor of dynacord I want
+and of course I want donek core - so say
+awesome da net core - now what this will
+do is it'll go off and just like we saw
+earlier it's going to go will see all of
+our dependencies here or SDK and we can
+see that we have our tool of to go to oh
+SDK now at this point I can just simply
+go ahead and hit a breakpoint set a
+breakpoint on hello world command line
+comes up and in just a few seconds
+debugging a dotnet core application
+right there
+here we go stop debugging from the
+council
+but it's more than just file blank new
+application right I can come in and I
+can do everything that you we're talking
+about with asp.net core in fact even the
+razor pages as well we wanted to bring
+over that similar experience so here if
+I come in and say awesome
+razor pages there what we'll see is that
+Visual Studio for Mac will of course not
+only scaffold out and bring in all my
+dependencies and nougat and SDKs but
+we're going to come in and we can look
+at our pages that are here so if I want
+to go into my about page I have my CF
+HTML I have my c-sharp code behind files
+and you can of course come in and modify
+any of the files you get full
+intellisense
+right inside of there if you want to
+come into your web root you of course
+can modify your JavaScript your CSS
+files so if I wanted to come in and
+adjust the padding we have the full
+intellisense coming in right it's the
+same CSS editor from visual studio for
+Windows so brought right over so now
+again just like we saw your application
+I can come in I can start actually
+building my application deploying my
+very first Rick I love Razer bridge is
+so cool from Visual Studio for Mac again
+it loads up it deploys as you'd expect
+and boom it's running I think this is
+awesome I can build my mobile apps in
+either vs for Windows or vs for Mac I
+can hold my web apps in vs windows ES or
+Mac yeah great experience yeah and you
+nail that you nailed on the head
+actually I want to talk about one final
+thing well I have the stage is that
+often I'm building back ends with donek
+corneas get on a core with web api's for
+my mobile applications and we made a
+drop-dead simple for developers to
+create a full multi application so under
+multi platform here I can select a
+salmon forms a mole based application or
+native iOS and Android app when I select
+that with one button click you can add
+an asp.net core Web API now I've done
+that here so I brought in all the
+packages and it scaffold out a full
+master detail application brings in
+master detail shared code for your
+mobile apps add on a standard library
+and an asp.net core application
+everything with Web API and a full
+website everything like that and what I
+love here is that you can see that I
+actually have
+i OS and a web as my startup projects
+was cool is that we actually have multi
+process debugging built-in so I can come
+in and set my iOS and my web application
+as the startup so I can actually debug
+my iOS app a my web has a service
+running and the mobile operating at the
+same time exactly so when I hit debug
+what we're going to see is that the iOS
+simulator is going to pop up it's going
+to launch my application at the same
+time over here launch my actual web site
+and here it's actually going to start
+hitting breakpoints so will actually let
+it spin up fully as we have some items
+there we go so we have an item here we
+have a website here and I can actually
+go to flash API flash item and we see we
+have one item C sharp is very sharp over
+here C sharp is very sharp now this is
+cool and I hit add let's hit an add new
+item here and I'm actually break
+pointing inside of the iOS project right
+when I have that item I'll sterilize it
+send it out to my back-end now what's
+really cool is it hits a breakpoint in
+my asp.net core application and it
+brings me to the code file right here
+another thing super cool continue on we
+can see that the actual item is now
+added not only in the iOS app but in the
+web app is right there then when I'm all
+done guess what you can do you can right
+click publish and publish to Azure cuz I
+need to put that actual asp.net core
+application right up into Azure I've
+logged in with my asher account so to
+quarry all of my services I can go ahead
+and select one or I can go ahead and
+create a brand new app service plan and
+everything all from Visual Studio for
+mac which is super awesome same
+experience and individual tee for
+Windows same experience in visual to you
+from Mac yeah that is a great experience
+we think developers are going to love it
+so go to visual studio comm and download
+the S or Mac today
+so let's move on next thing is a s
+phonetic or 2.0 lots of good stuff in a
+student core - first off faster in
+certain circumstances like running the
+Tekken power benchmarks it's about 20%
+faster than a s connect core 1.0 so very
+happy about that
+we have a new framework called razor
+pages and it's meant for people to want
+to build web apps
+sometimes the Model View pattern MVC
+requires you to have a bunch of files in
+different folders and stuff like that if
+you just want to go get some stuff to
+the web quickly we just want to write an
+API sometimes a simpler programming
+model might be more interesting and so
+that's what razor pages it I'm going to
+have Dan come up in a second and show
+that we've also added support for
+c-sharp 7.12 razor so when you use razor
+in asp net core 2 you get all the latest
+c-sharp features one of my favorite
+features is azure diagnostics and live
+analysis and i'll do a demo that in a
+second as well and this is you as you
+start publishing your apps to the cloud
+things change I no longer have access to
+the local machine how do I diagnose and
+debug these applications we've built a
+lot of capabilities in to.net core 2
+that enable this to happen automatically
+and Azure and I'll show that in a little
+bit another one is we know a lot of
+developers are building applications
+with angular and react and so we put
+templates for both of those programming
+models directly in the box it gives you
+a front-end application with a s connect
+or back-end as well so it's all wired
+together so it's a great starting place
+and then we always want our temples to
+give people best practices and so most
+of us probably use to factor off to
+access some of our popular websites and
+we typically do that with an
+Authenticator app on a mobile device and
+we built that same feature into a s
+connect core so if you want to build
+applications for your company and have
+them support two-factor authentication
+we've got great support for all of those
+those applications so next I'm going to
+have Dan Roth come up
+so I wanted to introduce Dan Roth from
+the eighth net team he's here today with
+me to talk about a s net core 2.0 oh
+yeah so let's just jump in I've got a
+quick demo before you go and I've got
+the same instant core application I was
+showing before that I added the old
+library from so it's you know it's with
+that in standard but what I want to show
+is I'm going to publish this out to the
+cloud and show this new diagnostic
+feature so week so let's go over here
+and right click on our app we'll publish
+click publish so this is going to help
+me diagnose my problems when my app is
+live yes so some of the feedback we got
+with a snake for 1.1 was we put a pin
+sites directly into the project
+templates and so some people complain
+there's a pin sites NuGet packages
+there's some stuff inside of my web app
+I'm trying to help I know we're trying
+to help and so what we've done in the
+incident core 2.0 all those same
+features exist but if I look there is no
+app insights in my new capacity my will
+just go and list let's show that real
+quick oops here comes the browser join
+my live app if I go look at my
+dependencies and I look at nougats
+there is no app insights there so we
+took it out so we'll know where that's
+what's gone so my apps running up in the
+cloud now what I'm going to do is I'm
+going to go to portal
+and here is my app and I'm going to
+click on it and once it loads up in the
+portal something new is going to happen
+here notice this banner that you look at
+the top here click here to access app
+insights from monitoring profiling your
+Assn core application so instead of
+having to install app insights in my
+project inside a visual studio I can
+have inject it right from the portal so
+I'm going to click that button so this
+is without any like adding any packages
+or code to the actual appliqué a package
+is no code nothing just go right to the
+portal and say because typically maybe
+my developer is already published and I
+need to sit these insights I just go and
+let's enable it and this is going to
+create a app insights for my application
+and it's going to wire up all the new
+diagnostics so give it a second to
+finish that and notice once that
+happened the new banner shows up again
+no data automatically instrument your
+asp net application restart required so
+if I click this button this is going to
+relaunch my application and when the
+application relaunches it's going to
+actually load those assets like nougat
+packages that we did not install in the
+actual app on my developer machine okay
+so like it'll light it up just like it
+is liked it up bolt it on after the fact
+so let's watch here interpreting my
+application
+take a few seconds
+okay so I'm going to close the app
+insights panel real quick and show a
+couple other cool features about this my
+app is now running in the cloud and if I
+go down to diagnostics logs I'm gonna do
+something that you never could do before
+so before if you wanted to see logging
+inside of app service you had to
+actually go add a nougat package and
+hook some stuff up so I'm just going to
+go say hey I want some logging and I
+want my logging to be at the information
+level and I'm gonna click Save so I
+didn't republish my app my apps is still
+running that's been successful so let's
+go to log stream and what's gonna happen
+now is the portal is going to connect to
+the logging in in my ethnic core
+application and here it is live so let's
+go back to the web app and let's click
+around a little bit
+so is this like the asp.net core logging
+infrastructure like all the stuff that
+goes through I lager and lager factory
+it's just wired up just wired up no plea
+as I as I click around the application
+all of my logging goes in and what's
+cool is if you notice before I can set
+the information level so if I have
+information so a lot comes through I
+change it to warning and click Save then
+less information will come through
+because I've changed the warning level
+so I don't have to go and republish my
+application or do any configuration
+right from the portal I can live control
+the amount of information that I see the
+next thing if I go back there I can come
+down to the same section and I can click
+app insights app insights actually takes
+a little bit of time to actually open up
+so well hope things are hooked up here
+like provisioning from some app insights
+resource well for performance reasons it
+takes a while for your after I clicked
+around my app a little bit it takes a
+while for this to actually kick over in
+app insights because it doesn't want to
+slow your application down so it's
+actually slowly seeing that data around
+so we might not see it here for a second
+but let's go back let's click around a
+little bit more in the app
+go back to the portal let's do a refresh
+so look at there so now you're starting
+to see data flow through I didn't
+actually do anything as I said it takes
+it takes a minute or so for it doesn't
+start flowing through but the cool thing
+here is now developers can publish their
+apps to Azure without having any app
+inside configuration turned on right
+from the portal they can set their the
+log level they want see the live
+streaming logs in the portal they can
+also go to the app insights tab and see
+all the app insights data just flowed
+through automatically just by publishing
+doc just like okay logging and
+diagnostics so at this point let's flip
+over to you and I think you're going to
+show us what raised your pages yeah I'm
+going to show you a you know creating an
+application with asp.net core 2.0 so HP
+dotnet core 2.0 is all about making
+things easier like making it easier to
+get started making it easier to develop
+your app making it easier to build great
+UI let me show you what I mean so here
+in in Visual Studio I've already created
+an asp.net core 2o application this is
+just an empty web app and I just want to
+build some UI but let me let me show you
+some of this little difference your
+pages folder there yeah yeah that's
+that's where we're going to add our
+pages but I want to show you a few
+things first that are that are simpler
+now in this model like if I show you the
+the CS proj file for this product for
+this application you'll notice it's got
+just one package that's it and you don't
+need any other packages this package
+literally brings in all of asp.net core
+into this application so you no longer
+have to go hunting over the web to find
+which package do you need to get that
+feature that you want to use it also has
+just one version so you don't have to
+figure out like which version of which
+package you need to use with that other
+package over there you pick the version
+of the product you pick the version of
+the package and you're done and you're
+that's all you got to do and and
+literally everything's there if you want
+to reference individual packages they're
+all still there like if I expand the the
+node in the solution Explorer you can
+see them all now you might worry like
+isn't this going to make like package
+restore like crazy slow no because all
+the packages are already there as part
+of installing dotnet core yeah they're
+catch all these things with your machine
+so you don't have to worry about that
+and when you publish you don't need to
+bring all that stuff with you either
+because in dotnet core 200 we have this
+new feature called a runtime store so
+all those binaries are actually already
+there as part of dominant core - oh so
+and they're warmed up in cross-gen
+they're ready to go so you don't need to
+publish them with your apps your publish
+size is actually significantly smaller
+than it was in one Yanase to the core
+1.1 or 1.0 application we were actually
+publishing 15 Meg's of MVC every single
+time you public was really good MVC bits
+but yeah if you did have to bring with
+you now you don't have to do that at all
+you can just just leave them behind
+they're already going to be there ready
+to go if we look at like program CS like
+that's also a lot simpler in this app
+there was a lot of stuff here that you
+had to do before like setup the server
+like wire up kestrel setup is
+integration set up your content route
+none of that you have to do anymore
+because we just do it for you by default
+and we do a lot more actually like we'll
+set up your ear config for you will
+actually put config in di by default and
+we'll wire up the like Jason config
+providers for app settings Jason we'll
+set up the user secrets file stuff so
+that you can keep your secrets out of
+the source code logging is actually
+enabled by default because the config
+specified one of my favorite one of my
+biggest complaints about AF snake or 100
+or 1 1 was developers told me all you
+get to create an object but your
+configuration inject that into the I and
+I'm like just put the configuration in
+there for me so I'm going to access it
+from any of my controllers we did that
+for it's already there you can just use
+it from wherever you want to and as a
+result my startup code now it's much
+cleaner like I don't have to set up that
+that config object anymore I'm not
+setting up logging because it's already
+set up for me we've already set up the
+console logger that the bug logger so it
+just feeds right into Azure for example
+and it just works but if I want to set
+this stuff up manually I still can right
+again that's where all those api's are
+still there we're just trying to help
+you get started faster to actually build
+your app which is what I want to do I
+want to build some UI like I'd like to
+just add some pages to this app how do I
+do that so I'm going to use what you
+were talking about which is razor pages
+razor pages is a new app model in
+asp.net core - oh it's built on NBC that
+allows you to just add pages to your app
+that render dynamic HTML so let me show
+you I've got that pages directory that
+you mentioned I'm going to add a new
+item right here show you how quick and
+easy it is to get started now writing
+dynamic you I'm gonna add a razor page
+index CS HTML that means it's just going
+to be the home page of my app and we
+should get some razor and there it is
+alright cool so I got a razor file with
+nothing in it yet because I found like a
+student webpages
+although that it's it a different
+much more fleshed out model like it's
+literally built on MVC so all the
+features that you know and love from MVC
+they actually still continue to work
+like you might notice I actually do have
+a view imports file in this directory
+that sets up you know the namespace for
+all my pages
+that's from M you see it just works you
+start that just works tag helpers that
+just works because it's built on top of
+MVC I get all the power in VC and I get
+the ability to do CS HTML files in a
+folder just like I could with web pages
+so I get the best of both world you get
+the best of both worlds exactly so I
+have a code behind file this is my page
+model this is the mod I'm going to be
+going to use to decide what to render on
+the page so let's add some stuff like
+it's just let's do something simple so
+I'm gonna add a property let's add a
+string let's call this I don't know like
+current time great so that property is
+on my model and it's referenced from my
+page so it's not it's now going to be
+accessible from this piece of razor now
+we want to populate that property with
+some data so in my on get page handler
+so this is where you can handle the
+request as it comes in whether it's a
+get request or a post request I'm going
+to set the current time to be I don't
+like date time now and we'll make that a
+string so that we can easily render it
+on the page alright okay so now if I
+save that on my page let's now go
+actually you know render that current
+time we'll just add a header and we'll
+say at model to refer to the model
+current time perfect let's run it let's
+see what we get hopefully we'll see what
+time it is
+on our server in big beautiful text and
+all right great there it is and if I
+keep hitting refresh you know the
+seconds tick by as the app refreshes
+that's how easy it is to get started
+with razor pages you just add a page and
+you got and you're ready to I love this
+I don't have to have a controller folder
+or views folder I don't have to have
+routes I don't understand how writing
+works between all that stuff yep you can
+still do those things of course you have
+controllers and and views you can
+absolutely use all that but this is we
+think this is a much simpler way to do
+UI now this was a very simple app let's
+do something a little bit more real I'm
+going to file new project up now and we
+have of course templates for razor pages
+I'm going to select to create a new a
+spinet core Alek and mix the two systems
+together I can have some views and
+controllers as razor pages on the same
+applicator you can do them both and they
+work beautifully side by side you can
+have some Web API is that our letter
+embassy controllers and have some UI
+with Razer pages that just works while
+you're on the screen we should point out
+these new templates ago I was about to
+do that time to do this so here I'm
+going to create a new razor pages based
+app first of all you'll notice that I
+now have two web application templates
+so the web application Model View
+controller that's the one that has use
+and controllers the same template that
+we've always had still works can
+continue to use it web application
+template now that's using razor pages
+because we think it's just a simple way
+to get going with building UI and adding
+pages by the way you'll notice that we
+also have the templates that you
+mentioned earlier for angular 4 reacts
+for react plus Redux that's just an easy
+way to get started with building a spa
+with asp.net core as a back-end we're
+going to work with razor pages so let's
+add that this is going to give me a
+template that has the standard you know
+three pages that we have on almost all
+of our templates the home page the about
+page the contact page now what I want to
+do here is add a form razor pages is
+great for doing forms based programming
+so I'm going to open up the pages folder
+and the routes to the pages are just
+determined by where they are in disk so
+if I want to go to the contact page I
+just go to slash contacts so there's
+there's index that's the home page
+there's contact and there's about you
+notice that we also have you imports do
+you start those or it's just built on
+NBC so those things just work we even
+have a layout the layout just works it's
+like MVC so let's go to this contact
+page and we want to add a data form here
+that lets you submit your contact info
+so that you can we can contact you about
+our great products you know something
+like that super easy so what we're going
+to do is we're going to go to the
+code-behind file and I'm just going to
+add a little class here let's call it a
+contact and then let's just add a couple
+properties on this let's add a name and
+let's add a email address so that we can
+actually contact you now I want to I
+want some validation on this guy so I'm
+going to make this this property
+required using data annotations the
+annotations just work with razor pages
+it's all MVC required for the email
+address as well you've got to give me
+both okay so now I want to render a form
+on my page using this this contact model
+so I'm going to add a property to my
+page model of type contact okay and
+that's going to allow me now in my
+contacts HTML this model type will have
+that property and I can use that to
+render the form I'll spare you the the
+typing on that I've got actually already
+pre typed here and we'll just copy this
+and put it into the page so I don't have
+to do that manually but the super acts
+are pretty easy to do but there we go so
+there's our form now this form you'll
+notice that it doesn't actually have an
+action attribute that's because the form
+tag helper will automatically set the
+action attribute to just post to the
+page by default that's the obvious thing
+to do then we have two fields one for
+the contact name and one for the email
+address and that's it and a button to
+submit we run this we should be able to
+see that form now now there's nothing
+that this is going to post to yet we
+need to add that in a second but let's
+just make sure we've got our UI so let's
+check this should brought us to the home
+page we go to contact great we've got
+our little form so now let's go back to
+our model we need to have some logic
+here now for handling the post requests
+so we're going to add another page
+Handler instead of on yet we'll have an
+on post I got that here as well just to
+save some typing so let's go ahead and
+copy this onto the page model there we
+go resolve a namespace so we can get our
+action result action results because
+then we see you again so what's this
+going to do so when we post the form
+data it's going to check the malla state
+to see if it's valid or not if it's not
+it'll just render the page and say like
+here's the errors the things that were
+wrong then you would normally like save
+the data someplace like in a database
+we're not going to do that here but you
+would just have a DB context you you
+inject it into the page model like you
+would have controller it goes in the
+constructor works just like like
+that-like is NBC you could also inject
+in
+the page itself with that inject all the
+directives work and then if things are
+all good then we're just will you know
+what's a post redirect get so we'll
+redirect back to the page just to show
+that yes everything was good now I would
+like to do something here so what I'm
+going to do is I'm just going to set it
+like a success message like yes thank
+you for your contact information we got
+it you're good to go so I don't like
+thanks I'll just reference that saying
+property contact uh name wherever you
+are
+we'll contact you soon via and then the
+email address of that person okay great
+now we should probably render that on
+the page as well I think I've already
+got like a header that renders that
+message but let's change that to like a
+like a P tag and just set up some
+bootstrap so that shows up and green so
+like text to a success because this is a
+success message and I think there's also
+one more thing I got to change which is
+on this um get I don't want to clear the
+message I want to actually leave it as
+it was now this is almost done that
+message property will get populated when
+the post comes in but first of all like
+how do I actually get the contact data
+like I should buying someplace like I
+could I could actually put it in the
+post arguments that's there's like you
+good with an MVC action but instead of
+doing that because I'm already got this
+property right here I'm just going to
+bind it right here to this property
+that's super convenient and you can do
+that on your MVC controllers too like if
+you want to use that same feature there
+you can also that message property I
+need that to survive the redirect we
+have a feature in MVC that makes it easy
+called temp data what you can now do is
+you can attribute a property and say
+please back this we buy a temp data and
+so that means when I set that property
+it'll populate into temp data when I
+read from that property you'll read it
+out of temp data and that should be it
+okay so let's go back to our like view
+our page and let's uh let's click Submit
+and I didn't put any data and so I
+expect to get like some some validation
+errors that say like you didn't provide
+a name we didn't provide an email
+address and there they are
+okay now if I put my name in and my
+email address there it is and then
+thanks Dan we'll contact you soon
+that's raise it very cool very simple if
+you publish it it'll be smaller also
+when you publish it and run it it will
+start up faster than it would in 1:1
+because the the runtime store is already
+crossed
+also we will pre compile these pages and
+your views so that you don't have to do
+any runtime compilation that just
+happens in demo that's a new feature
+that we have into o as well is we are
+pre compiling CSS HTML files as part of
+public as part of public by default you
+just want to do anything it'll just
+happen and then at runtime like you said
+it'll be faster because the throughput
+of 200 is faster than 1:1 as well
+awesome thank you
+so let's move on next we have entity
+framework core 2.0 any framework core is
+a new version of any of you framework
+that we built as we built net core the
+primary goal of Adichie framework or was
+to have obviously a version of energy
+framework that ran cross-platform just
+like that in core does but one of the
+things I like to think about with any
+framework core is it's a version of.net
+core kind of internally we used to call
+it any of you framework everywhere
+because the idea is it can run anywhere
+today so it used to be the engine
+framework could only run on the.net
+framework that runs on net core it's not
+that standard compliant as well which
+means it technically can run on uwp as
+well so whether or xamarin so whether
+you're building a dotnet framework app a
+dotnet core application xamarin
+application or even a uwp application
+and the rs3 time frame you have the same
+data data data framework that can go all
+those places another cool thing about a
+new framework is we have a couple goals
+here and one of them is to obviously
+make it very easy to build awesome
+applications with address equal and
+sequel server and so we've actually
+enabled features in sequel server like
+in-memory tables you can actually do
+with attributes with energy framework
+they've already shipped that and we've
+also done all the stuff for accessing
+databases in the cloud where you might
+actually need to have like retry
+policies and stuff that's all built into
+any framework or and I've got a couple
+of features in on the screen here that
+we're that are needed framework or to my
+favorite one is probably the performance
+improvements if you're used to
+programming at a do net level you're
+probably familiar with connection
+caching where we actually have a pool of
+connections and keep using those we've
+got a great new feature where you can
+actually have a pool of context and so
+if you're having an app that's running a
+lot and doing a lot of requests you can
+cache these contexts and reuse them so
+it's kind of like connection pooling for
+energy framework contexts I'm going to
+have a Diego Vega come up and present
+some of these features
+so if people can go to the dotnet blog
+to read the announcement and see an
+overview of the new features this one is
+about the the fact that we look at
+performance profiles of some 80 or
+netcode applications that we are using
+EF core 2.0 sorry previous version and
+we realized that we were spending a lot
+of time creating instances of the ideal
+context yeah pretty much anytime we
+create a controller yeah which every
+time a request comes in we create a
+controller we're going to create a
+context cuz most people make the context
+a member of their controller yes that's
+it and and we we try to address this in
+two different ways in 2:01 is first make
+it cheaper to create you know like we
+have a view context that is using
+dependency injection internally to
+create its own dependencies and those
+are scoped they get created every for
+every request and then they go away and
+we will use the number of a object need
+we created for each one but we also took
+a more radical approach based on on the
+same idea that we have been using for
+connection token 11 for all the years
+and that is well basically we can have
+like a pre created set of the context
+instances that are ready to use every
+time there is a new request that comes
+in we pass that to the controller and
+when the controller finishes the work we
+can take it by the pool then we use it
+for the next request that has the token
+and all we need to make sure is that we
+are cleaning up all the state that means
+we cannot that we are disposing all
+those that need to dispose and things of
+that so we want to show a demo that is
+actually one of the simplest demos that
+I have seen we have a a this is actually
+a console application that is simulating
+everything that a an external
+application would do with a real context
+it has this small D context with just
+one entity and then it has this section
+where we are configuring services this
+is a line here that has the call to the
+context is important that's the
+registration of the D context type that
+are going to use in the application and
+then to simulate what would happen in a
+normal application
+I have created this method request async
+that is basically doing the work that
+was happening in a controller action
+yeah and this one is doing a lookup in
+the database so we're going to run this
+the way it is and we are going to see
+some numbers so this is executing a
+bunch of requests is creating a bunch of
+threads to simulate what is happening a
+real application in this in this
+particular case for creating contexts a
+lot of times every time when it is
+request from the ESRI recruiting in
+context so we're throwing a bunch of
+memory out there a bunch of times it's
+just like a snake or went and optimized
+a lot of memory usage away now you're
+going to show a new version of this it
+actually yeah doesn't do doesn't work as
+hard
+exactly so the two numbers that I want
+people to remember here that are
+important is the total number of
+contexts that were created to do this
+works a lot that were like more than
+70,000 and also the number of requests
+per second is the throughput that we
+achieved with this way of doing things
+yep now I said that this is a very easy
+mo because all I need to do to enable
+the new feature is to change this call
+to add three contexts to a new API that
+is called happy context pool and this
+one the way it work is basically running
+up the same capabilities in dependency
+injection but instead of giving you a
+new instance of the D context every time
+is going to give you one from the pool
+so a one line code change we run the
+application and what we see
+so we are seeing that very quickly we
+achieve it better to put but before I
+can see the very throughput and add at
+the end here we're going to see that
+look at that only 32 content created
+versus 70,000 yeah that's dramatically
+dramatic difference because there's
+going to be much less of our patients to
+serve the same number of all right when
+I take my existing es core code I change
+one line of code and my web application
+and suddenly I'm using a lot less memory
+and my applications faster awesome
+let the iris collection as well so one
+one detail a people you said you asked
+about this is that why is that we are
+not adding this to the default template
+even even that is so good and that
+performance is so much better with this
+way and the reason we we don't do that
+is because we want people to be aware
+that the feature changes how things are
+going to work right and for instance
+when you create this blow in context
+this is your own user class it's derived
+from the mini context and you can put
+your own state in there and if you are
+not careful using this feature if you
+have your own context you're right young
+okay if you put your own set in there
+well then you're going to be in trouble
+because somebody else is going to see
+that same state over and over again and
+it's not really your state you're
+sharing that today with everybody so yes
+you pull something you need to be aware
+don't don't we putting your own private
+user data inside of that DB context
+because it's not your own private data
+yeah exactly so the feature knows how to
+reset all the state of the duty context
+that we know about on every time we we
+put it back in the pool but you don't
+know about what the user put subject on
+a class yes that's something that we can
+improve in the future but currently we
+don't have a way to do that yeah we
+should probably do an analyzer in the
+future that actually tells you not to do
+that or we can give you a method yeah
+for that okay what else you got so the
+other feature I wanted to show is a very
+simple feature and this one is also very
+easy and I think that this is say I want
+to yeah I like this feature too yeah I
+want to give the language team a some
+some trades here actually all the credit
+because they build these these features
+is reading revelation string
+interpolation we added the Sierra if you
+if you look at this code what is doing
+is basically using an EF model and is
+using a feature that we call from
+which you can use to execute your own
+sequel in a composable way so you can
+invoke some sequel with with some sequel
+and then you can continue adding link
+operators on top of it but I want to be
+careful arrived and I don't have any
+like sequel injection here because I'm
+passing a parameter in here so this is
+pretty against sequel injection I would
+assume so this is this protecting you
+from sequel injection but in the way
+that we did it in the first version of
+EF code so if I show you how how this
+works basically sucking for a 10 a turn
+I'm going to type cut here this is
+showing me the secret that gets
+generated
+I'm putting the select I can see the
+variable there yeah there was a
+parameters and created for it and it's
+being passed to this this is actually a
+table body function in sequel server
+based in both yes and this is safe but
+it's not as nice so one one thing I may
+want to do is I'm using the new features
+in c-sharp the exemption of seeing a 0
+here which is undoing yeah bye bye order
+so C sharp allows you to do I can
+actuate the variable directly and yeah a
+dollar sign there and then just say okay
+I want to put term here sorry I'm in
+turn and this is a more concise way of
+writing this query I know myself and
+I've done sequel in the past I've had I
+passed so many things in I was 0 1 2 3 4
+5 and by the time and all the parameters
+scrolled off his right side of the
+screen and so I wasn't sure what they
+are and so the interpolation feature
+being able to put the name of the
+variable directly in a place I want is
+amazing yep and now you support that
+with any different work or yes the
+things that if you did this with the
+first version of anti-fungal cord it
+would expose you to I mean it will fail
+but if you if you add some quoting here
+probably turn this to the string then it
+would be exposing you to C code in
+general injection so what we wanted to
+do is say ok we want people to be able
+to use this nice way of writing the
+equation and incorporating the
+parameters in line in the query but we
+want it to work the right way so we
+wanted to create parameters for them and
+we want to we want it to be site perfect
+I love it so I get all the features of
+string interpolation in c-sharp
+I get all the protection from sequel
+injection all with the F core 2.0 yep
+also if we execute this now is the same
+say we ask for fish and it's also
+generating the parameter on the and
+using it in the call to the table of the
+function here so the way this works
+people are excused when we see when they
+see this demo is really because the
+language team invented this in a very
+small way they created a new type that
+is called formattable string that can
+hold all the information for an
+interpolator string including like the
+text and also the parameters so we
+created an overload of from sequel that
+takes a formatted string so we can
+actually capture the whole intent in one
+variable and then we create a sequel for
+you cool awesome okay thank you for the
+demos no problem thank you thank you
+okay so let's move on I want to close
+with something I think is really
+important earlier this year we launched
+a new part of the.net website do tnat
+and it's our architecture guides we got
+a lot of feedback from customers saying
+that hey we're looking at moving to the
+container micro service world or I want
+to look at how I would move my
+application from on-premise to the cloud
+and so we are now building some patterns
+and practice style guides and what's
+cool about these guides is they're in an
+eBook format if you want you can
+download a PDF of these books and read
+them offline you can also read them
+online on Doc's not Microsoft comm but
+even better after you click one of these
+to download it'll take you to a page
+afterwards showing you all the resources
+for the guide that you selected and the
+best resources each of these content
+contains a sample as well so if you
+select microservices and containers you
+get a great book to learn how to build
+and and ripe micro services that run in
+containers with net in the cloud but
+also you get a great sample application
+that shows you the best practices and a
+lot of things you're going to find in
+the sample applications or things like
+you can see health checks those types of
+things or patterns we're going to
+actually move out of the samples and put
+into the actual dotnet core in the
+future so if you're looking at how to
+build modern acid net and dotted core
+please come to this page and learn more
+key takeaways I think the biggest things
+as a.net developer that people should
+take away from this is that in a
+standard - I think it's the most
+important thing here because it means
+all of our all of my dinettes xamarin
+dotnet framework dotnet core all have
+the same set of common api's across all
+the great code sharing you can continue
+to see we have performance you know we
+had great performance results with
+dotnet core 1.0 we're continuing to push
+that envelope again as Dan was saying
+earlier 20 percent improvement in the
+tech and power benchmark for a snit core
+and then the other part of this is
+nothing makes gotten that better than
+awesome tools and we have Visual Studio
+Visual Studio for Mac and Visual Studio
+code which are all great platforms for
+building applications with nets and
+don''t core to is supported across all
+of them
+so go out download dotnet core to today
+at DLT got any tea slash core and give
+us feedback on how it works

@@ -1,0 +1,734 @@
+>> On today's Visual Studio Toolbox,
+Scott Hunter recaps all of
+the amazing things the
+.NET team showed it build.
+[MUSIC]
+Hi, welcome to Visual Studio Toolbox.
+I'm your host and joining me today
+is Scott Hunter. Hey, Scott.
+>> How's it going, man?
+>> Right. Thanks for
+coming on the show.
+>> I'm super excited to be here.
+It's right after Build.
+>> I know. I know you've
+been pretty busy with Build,
+they're a lot of things
+that were announced.
+What I thought we
+would do in this show
+is review what you
+guys said at Build,
+what you shipped, what you announced,
+and then we'll spend time
+talking about what it all means.
+We'll give people
+pointers to the videos
+and the demos you and
+Scott Hanselman did,
+a great 30-minute video and
+a really great hour-long
+video that will
+show people will have pointers to
+everybody should go watch that.
+Then what I really want to do is go
+a little bit more high level and
+figure out what it all means,
+what you guys are thinking,
+what we as .NET developers can
+look forward to coming down the pike.
+We'll do that all on our
+reasonably short period of time.
+>> Cool.
+>> So let's start off
+with a recap of Build.
+>> Yeah, let's show a
+couple of the slides
+that I had at Build and share.
+We always start off
+talking about, Robert,
+when you probably started using .NET,
+you probably remember we used
+to only have desktop and web.
+>> I do.
+>> Then over the years,
+we've added Cloud,
+mobile gaming, IoT, AI,
+.NET's grown a ton.
+People always ask me when
+they see me, it's like,
+well, .NET's been around 18 years.
+How is .NET doing?
+So we've added 1.5 million
+.NET Core developers.
+We shipped .NET Core
+in March of 2017,
+that's when the tool
+showed in Visual Studio.
+So it's only been about three years,
+little more than three years.
+Stack Overflow just ranked us in
+their 2020 developer survey as
+the most loved web framework
+and the most loved
+other frameworks that was both
+ASP.NET Core and .NET Core.
+For a project that
+open-sourced in 2014,
+we are one of the fastest,
+highest velocity projects in GitHub.
+C# is number 5 language in GitHub.
+We're seven times
+faster than NodeJS in
+this tech environment benchmark, a
+public benchmark that we work on.
+A lot of the people that are
+using our tools are brand new.
+We have 40 percent of our NET
+new developers are students.
+>> Not only is ASP.NET core
+seven times faster than NodeJS,
+but it appears to be
+dramatically faster than
+ASP.NET based on the full framework.
+>> That is true.
+There's a variety of
+reasons that come to that.
+When we built ASP.NET web
+forms on the version of
+AS2 net system web that's
+in .NET Framework,
+we tried to maintain the most
+compatibility we could with
+classic ASP or ASP
+server pages as what they
+were called at the time.
+So what we did is we took
+all the objects from
+ASP.NET or ASP server pages and
+we cloned them into ASP.NET.
+What this means is every request
+that comes in to system web,
+allocates all of those
+objects which should have
+been upwards of 20
+or 30K per request.
+If you look at something
+like .NET core,
+it allocates on the order
+of 1 or 2K per request.
+So there's a 28K difference
+in the amount of memory used.
+What you find as a developer
+is the less memory you
+allocate, the faster you go.
+>> Yeah.
+>> Let's talk about adoption.
+So once again, I just said earlier,
+we're 18 years into this thing.
+Last year, we added over a million
+brand new .NET developers.
+Never used the tool before.
+I think that 18 years into
+the life of a framework,
+that's a great number.
+>> Yeah, it's amazing.
+>> Six hundred thousands of
+those were .NET core developers.
+So you see that momentum
+happening around our open-source,
+cross-platform, lightweight
+version of .NET.
+Then the crazy thing is,
+one of the visions of .NET core
+was to run on Linux because we
+saw the world of servers
+moving to the Linux platform in
+containers and stuff like that.
+So we saw over a
+million developers use
+our tool chain to actually output
+a Linux publish from that,
+which is amazing to think,
+we were Windows-only tech in 2014.
+In 2019, we have over a
+million publishes not
+necessarily to the Cloud,
+but at least to your local machine,
+which you could copy somewhere.
+>> Right.
+>> Robert, you're so
+familiar with this.
+As we shipped .NET over the years,
+whether it was 1.0 or 1.1,
+2.0, 3.0, 3.5, 4.5,
+most of our developers took years to
+move from one .NET the next .NET.
+When I first joined Microsoft,
+I struggled with
+this, it's like, man,
+it takes forever to get the
+customer on the new version.
+With .NET core 3, 75
+percent of all of
+our customers have at least
+tried the new version within
+the first six weeks of shipping it,
+which is, that's never
+been done before for us.
+So it's super exciting.
+Now, let's talk about some of
+the new stuff that we
+announced at Build.
+We had two things that
+we announced at Build.
+We shipped Visual Studio 16.6,
+which is the new version, supports
+some of these new features.
+That's the stuff that you can try
+right now and then after that,
+we're going to talk about some of
+the stuff that goes beyond that.
+First off, we shipped the new product
+with .NET core 3.0 in September
+of last year called Blazor.
+Blazor isn't pretty cool tech.
+It's like, if you go
+to modern websites,
+they all have what we call a
+SPA, single-page application.
+They feel desktopy when you click
+around on the whole screen,
+isn't redraw, they're very fluid.
+Every app that you build
+with Blazor works that way,
+except normally those
+SPA applications,
+you write it with a
+JavaScript framework like
+Angular or React review.
+But now, we let you actually
+write these apps fully in .NET.
+C#, they can run on the client and
+C# they can run on the server.
+At Build, we introduced
+Blazor WebAssembly.
+This is a really cool,
+upgraded the tech
+where we actually can
+run C# inside of your browser.
+So why might you want to do that?
+Well, if your C#'s from
+running in the browser,
+it can take advantage of the
+CPU on the user's computer.
+It can run offline,
+meaning that you
+unplug the network, or
+we did a demo at Build where we're
+showing an app you might check at
+a rental car facility
+and maybe sometimes it
+can't find the Internet.
+Well, because the C# is
+running in the browser,
+it can keep running and storing
+stuff in local storage.
+Then when the network comes back,
+I can re-synchronize to it.
+When you build one of these
+Blazor WebAssembly app for
+you to checkbox to make
+it a progressive web app,
+and that's when the browser will say,
+"Hey, this app can actually
+run as a desktop app.
+You want to install it as a desktop?"
+You click that box in your
+browser and then suddenly,
+it'll show up on the Start menu.
+It'll run without the
+browser Chrome on it.
+It's super cool.
+It's now available in
+the .NET Core 3.1 SDK.
+We also announced that Dynacore 3
+came out with WinForms
+in individ get support.
+Even today, we still have
+millions of developers building
+desktop apps because
+these frameworks are
+super fast and easy to build.
+But we've been trying to catch
+up on the tool side of this
+and we shift 16.6 at Build,
+but with 16.6 also came
+to previews of 16.7,
+and preview one of
+16.7 is available now.
+These can run side-by-side,
+is close to having all of
+the controls in the WinForm
+designer available for you to use.
+Once we ship 16.7 preview 2,
+then we'll work on
+third party controls.
+But as a WinForm developer,
+it's going to be easier to move
+from .NET Framework to .NET Core
+because you get that same designer
+support that you expected.
+Finally, the last big
+announce at Build is,
+we shipped a framework called
+ML.NET about a year ago.
+It's a done at framework for
+building machine learning.
+Machine learning is complicated.
+Examples of ML.NET you're using
+today that you're not aware of
+is if you have a device that
+supports Windows Hello,
+that's where you can look
+at the screen or the
+camera and it will sign you
+in, that's using ML.NET.
+If you're using PowerPoint
+and it suggests
+some styles to you, that's ML.NET.
+Our job in Visual Studio is to
+make your life as a developer easier.
+What we've done here is,
+we have a tool inside of Visual
+Studio where you can actually
+go click the machine learning
+kind of thing you want to do,
+we'll walk you through
+a wizard asking
+for images or text or whatever,
+and then we'll actually build
+a model for you and inject
+the source code to consume that model
+directly in your application that you
+don't have to know a lot
+about machine learning.
+We think this is a super
+exciting direction.
+>> That's cool. It seems like it has
+the possibility of hiding a lot of
+the plumbing that you might
+eventually want to learn,
+but to just get started,
+be nice to not have to
+figure that out first.
+>> Exactly. Then we
+go off the rails here a little
+bit and we talked about,
+this was a dream of mine.
+I joined Microsoft in 2007,
+and a bunch of my
+colleagues, Phil Haack,
+Scott Hanselman, Damon Edwards,
+we all talked about this notion
+of .NET at that point
+in time was fragmented.
+There was Silverlight,
+there was Windows Phone,
+there was compact framework,
+there was Mono for Xamarin,
+and could we get .NET back
+to a simple platform?
+We started with .NET Core,
+but now that we've
+shipped out in Core 3,
+we want to drop that Core
+Moniker and switch to .NET 5.
+The idea here is,
+let's take the best parts of .NET
+Framework, .NET Core, and Mono,
+and when I say the
+best parts, I mean,
+if you're going to build
+a brand new app today,
+we don't want to take the oldest tech
+from .NET Framework and move it in.
+We want to take the modern tech
+you would use building a
+brand new application.
+>> Right.
+>> Well, .NET might
+have had .NET remoting.
+Today, we think GRPC is
+a much better solution.
+So we don't want to bring it over.
+We take the best of
+those three frameworks,
+we merge them together,
+and that becomes .NET 5.
+This will shift this November.
+It has a single SDK that can
+build all of those app types.
+It's got a single BCL.
+I mentioned before Mono,
+and .NET Core, and .NET.
+We want to have just one base
+class libraries that
+stands for the rest
+of your strings and date-times
+and a lot of the types user.
+With .NET Core, we introduced this
+new ability to say .NET new run.
+We want all that to actually
+be for all the app types.
+We want to have awesome support
+for cross-platform native UI.
+If you want to build apps using
+Native Controls that run on Windows,
+Mac, Linux, iOS, Android,
+we'd love to do that.
+We want to have awesome
+cross-platform web UI,
+and I showed some of that today with
+the blazer stuff we talked about.
+We want to have, everybody's
+heard these terms,
+and I'm sure you've heard of
+it a million times, Roberts,
+Containers, Kubernetes,
+Microservices, Docker.
+We want .NET to be
+awesome in that space.
+Then of course, we always
+want to make it better in
+size and speed and diagnostics
+and stuff like that.
+We really think that the end of
+this wave of .NET 5 and .NET 6,
+that we're going to have
+the best breed solutions
+for all those different workloads.
+>> But the one .NET
+really appeals to me
+because you wind right now,
+there are three things.
+There's .NET Framework,
+there's .NET Core,
+there's Xamarin running on Mono.
+There might be something
+that you want to use in
+an App and then you discover
+that that version of
+the framework you're using
+doesn't support that, right?
+So I wanted to use Async
+Main in a Xamarin App,
+and it's possible I couldn't find it,
+but I think it's because
+Mono doesn't support it.
+I'm not going to admit
+how much time I spent
+messing around with it until
+it suddenly occurred to me,
+"Oh, this just isn't
+supported. Time to move on."
+>> Yeah. One of our goals is,
+and we hope this is
+going to happen with
+transition is we break
+those seams down.
+You get exactly the same features
+for every one of those app types,
+whether it's a desktop App,
+a Cloud App, a mobile App,
+an IoT App, a gaming App,
+the exact same feature set
+across every single thing,
+the exact same tool chain.
+I think it will really
+help the platform.
+We're going to do something
+else cool as part of this
+too, they're things exciting.
+When I say single SDK,
+one of the things that
+.NET Framework sometimes
+gets because it's big and
+it's got a lot of stuff.
+We want to make even the SDK modular,
+which means when I
+install the .NET 6 SDK,
+all I'll get by
+default is many class,
+library and console Apps.
+I'm not going to give you
+desktop or ASP.NET or mobile
+unless you ask for it.
+So imagine having a
+really, really tiny
+lightweight SDK and you
+do something like .NET
+add mobile or .NET add Web.
+I think that's going to be cool too.
+We want to open it up to
+the third parties as well.
+So third party libraries
+can actually do .NET add
+their library and they can use
+the same features that we're using
+to compose our own framework.
+>> Right.
+>> This is a big area of stuff
+that we talked about at Build.
+Windows has some really cool
+new features that's came out,
+but any version of Windows just
+came out about a week ago as well,
+and that is the Windows 10, 2004.
+It supports something called WSL.
+WSL stands for the Windows
+Subsystem for Linux,
+and it lets you actually run Linux
+native on your Windows machine.
+This is cool for a .NET developer
+because I can actually do,
+build a Microservice, maybe
+my target is actually
+going to be Linux.
+I'm going to run it on a
+Linux server in the Cloud.
+I can develop locally
+in Visual Studio
+and control that file
+and F5 directly into
+Linux just as fast and
+naively as I can run it on
+Windows on that same machine.
+Always trying to make
+microservices smaller.
+So in this case, I showed a demo
+where I took a microservice.
+It was 45 minutes in .NET Core 3,
+and .NET 5, it was 17 minutes.
+>> Cool.
+>> Then probably, the coolest
+thing on his list of things
+here, I'm sure you've
+done this, Robert,
+you need to have a .NET app and
+maybe it's got a front-end app,
+maybe it's a web front-end
+and it's got a back-end app,
+that's an ASP.NET Web API,
+maybe it even needs a SQL Server.
+Getting Visual Studio tool chain
+to launch all those the right way
+and swap the ports
+between them is all
+complicated, so we have
+this good thing called tie.
+With tie, I can
+literally run the app one time
+and will run all the apps.
+Those apps can be either .NET
+apps or they can be containers.
+But you don't have to
+write docker files.
+That's if you just say, "I
+want to run this image."
+We'll go and do all the
+heavy lifting for you,
+and that's our investment
+in the microservice space.
+This is something that
+you and I have talked
+about before this, Robert,
+and this is Cross-platform
+Native apps.
+>> Yes.
+>> This is the exciting thing.
+We're introducing .NET Multi-platform
+App UI. That's a mouthful.
+So we're going to abbreviate
+that down to .NET MAUI.
+Obviously, .NET MAUI runs
+on the .NET platform.
+What it gives you is it gives
+you Cross-platform Native UI.
+So against all those targets,
+it'll do Windows, Mac,
+iOS, and Android.
+Hopefully, we can do Linux as well.
+This is one of the coolest aspects.
+If you've ever used a Xamarin
+project, they're complicated.
+They have a project for
+each of the platforms.
+So you have an Android project,
+and an iOS project,
+and a Windows project,
+and Shared class library.
+In this case, it's
+one single project,
+one single codebase to
+build all those targets.
+From that single project,
+you use "Right click"
+and say "Deploy".
+From that deploy,
+you'll get a list of
+all the devices that you
+might want to deploy to
+and they'll just run.
+One of the things that I showed
+Robert a couple months ago,
+is one of my favorite features,
+it's a feature we've added to
+Xamarin where I can
+basically take a Windows PC,
+plug in iPhone into the Windows PC,
+and run my app on the iPhone.
+>> Yeah.
+>> I don't have to have a
+Mac or any special things,
+I can do it all with a free
+developer account from Apple.
+So for the first time ever,
+you can actually build and
+deploy for your own testing,
+apps directly from
+Windows to your iPhone.
+>> Yeah.
+>> This tech is actually just
+an evolution of Xamarin.Forms.
+I like to think that this is
+the next gen of Xamarin.Forms.
+So you're taking in what was
+successful and then made it easier
+to use with the single SDK,
+the single projects that
+run on multiple devices.
+Something else I should
+call out here is because
+we can run on those multiple devices,
+I can now build the app locally with
+no emulators because I can just
+run it on Windows or on my Mac.
+I can build it locally
+and run it on the Mac,
+which means I don't have to wait for
+the slower emulator to actually
+work to get that app tech to run.
+The .NET MAUI is going
+to actually DNS,
+they're calling the one .NET
+is a .NET 5/.NET 6 wave.
+We'll have previews of
+.NET MAUI out with .NET
+6 towards the RC of
+.NET 5 later this year.
+This is awesome Native UI.
+One more thing I want to talk
+about in this space, Robert,
+is you might have had to
+ask me, "What about UWP?"
+A lot of customers
+have asked us, well,
+what are we doing with UWP?
+>> Yeah, because the Windows
+guys are talking about WinUI 3,
+and then I've heard about their
+plans for WinUI 4 and beyond.
+So WinUI 3, I think, targets .NET 5,
+and then they're talking
+about WinUI 4 as being
+the UI that will be
+Native Cross-platform.
+>> Exactly. So a lot of
+customers have asked us, "Hey,
+with .NET Core 3, where was
+UWP?" Robert just nailed it.
+The Windows team was already working
+on something called WinUI 3,
+and this is basically
+an evolution of UWP.
+It gives the developer more choices.
+UWP requires our app to run
+in a contained environment,
+a container, which gave
+it security constraints.
+If you want to go to the file
+system, that's hard to do.
+UWP had different features
+depending on the version
+of Windows 10 you ran on.
+WinUI 3 is very similar to .NET core
+where they shift the actual
+framework with your application,
+which means it works on all
+the versions of Windows 10.
+As Robert said, it supports
+both .NET 5 and C++.
+The coding is, as you said, Robert,
+if they get to the point
+when there's a WinUI
+4 that actually works
+on all those platforms,
+maybe even .NET MAUI uses
+WinUI 4 as its back-end.
+We don't know that yet. We have
+to wait and see where things shift.
+>> In addition to or instead
+of Xamarin.Forms XAML?
+>> Let me step back a second.
+So what Xamarin.Forms does
+today is it actually uses a
+variety of different techs.
+So if you're on iOS, it's
+using the frameworks on iOS.
+If you're using Android,
+it's using the
+frameworks for Android.
+If you're using Windows today
+with a Xamarin application,
+it's using UWP as its implementation.
+So for all the platforms that Xamarin
+runs on or .NET MAUI in
+the future will run on,
+we use whatever the best Native tech
+is for that platform to
+render the controls.
+So when you write a button,
+it's a Windows button on Windows,
+it's an iOS button on iOS,
+it's Android button in Android.
+So the .NET MAUI apps,
+that's the rendering platform.
+I think you were asking the question,
+what about the XAML
+that you actually use?
+>> Yeah, that's true, and
+there's a distinction.
+>> Yeah. Separate those
+two things a little bit
+>> Okay. So as the set
+of native controls,
+that's what you were saying
+MAUI would use moving forward?
+>> Yes.
+>> Then, there's the
+question of what do you
+use to layout the design time?
+Is it XAML or does it wind up being
+something entirely different?
+So it was a great
+conversation with Scott.
+We then went on to talk
+for another 20 minutes, so
+we decided to split
+the episodes in half.
+Please join us for
+Part 2 where we talk
+about what this all
+means for developers.
+[MUSIC]

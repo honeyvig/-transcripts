@@ -1,0 +1,531 @@
+the interview plays a vital role in any
+job selection process
+for that reason preparation is key
+technical questions are part of the
+interview process which impact more in
+the interview
+hey everyone i welcome you all to this
+session in this session we will see
+asp.net interview questions with answers
+if you are planning to start your career
+as a developer
+you have to possess some development
+skills that empower your ability to
+crack the interview
+if you want to make a career in software
+development and improve your chances
+then this video on asp.net interview
+questions and answers will help you make
+your preparation easy
+but before we begin make sure you have
+subscribed to our youtube channel and
+clicked on the bell like so you never
+miss an update from simply learn so
+without wasting any further time let's
+get started
+we will look at the first category of
+asp.net interview questions that is
+beginner level interview questions
+what is
+asp.net asp.net is a server-side
+technology used for developing dynamic
+websites and web applications on the
+internet
+it also produces data-driven web
+application
+microsoft released asp.net in 2002 to
+build dynamic websites and web
+applications using the.net framework
+what platform does asp.net use
+asp.net is a cross platform which works
+on the dotnet framework and runs on
+linux windows mac os and docker
+what is the asp.net lifecycle and lists
+the types of lifecycle
+when asp.net pages run it goes through
+several steps of the lifecycle which
+performs a series of actions like
+initialization running restoring and
+rendering
+lifecycle is classified into two
+categories
+application lifecycle and page lifecycle
+in application lifecycle the user
+requests for accessing the application
+page lifecycle has faces like
+initialization restoring execution and
+page rendering
+what is mvc
+so mvc is basically a software
+architectural pattern that divides an
+application into three main parts
+that is model view and controller
+model helps to create the data domain of
+the application and represents the
+public properties and business logic of
+the application
+view view represents the data tables
+charts and diagrams by collecting the
+data from the model
+controller the controller helps in
+handling the user interactions and
+controls the flow of the application
+list the languages used for asp.net
+asp.net uses object-oriented programming
+languages that provide a framework and
+patterns which are easy to use languages
+used by asp.net framework are c sharp or
+vb.net
+c-sharp is a programming language
+developed by microsoft that runs on the
+dotnet framework it is used for
+developing web applications on the.net
+framework
+vb.net is a modern object oriented
+programming language developed by
+microsoft to combine the features of clr
+and dot net
+what type of library is used in asp.net
+a library is a precoded object oriented
+programming template collection used to
+develop web-based and desktop
+applications in asp.net
+asp.net uses a web library to develop
+web applications
+what is clr
+clr is the basic common language runtime
+virtual machine component of the dotnet
+framework used to run the code it
+manages the executing.net programs and
+implements a virtual execution system
+internally
+services that clr provide are
+verification
+garbage collection security and memory
+management
+what is iis and why do you use it
+internet information server iis is the
+most popular web server used to host and
+provide internet-based services to
+asp.net and asp web applications
+iis has its own process engine to handle
+the request
+using an iis computer one can work as a
+web server and provides functionality to
+deploy asp.net web applications
+it is also responsible for providing
+responses to the request made by the
+users
+list the types of application lifecycle
+application lifecycle is of 5 types
+application start object creation http
+application dispose and application end
+application start is a method that you
+execute when a user makes a request
+object creation contains all the
+information about current request and
+browsing information
+http application processes all
+subsequent requests sent to the
+application
+dispose
+dispose is responsible for releasing
+manually unwanted resources
+application end helps to unload the
+memory of an application
+list the advantages of using asp.net
+asp.net is a development framework that
+is used for developing web applications
+it is one of the most preferred web
+development technologies at present
+there are a lot of benefits of using
+asp.net here are some of its advantages
+applications created using asp.net show
+better performance
+asp.net provides multi-development modes
+for the applications
+applications created using asp.net can
+be used across the globe
+asp.net is a language independent
+what is an active server page
+active server page is an html page used
+to develop dynamic web pages it includes
+one or more scripts on the microsoft web
+server before sending the request to the
+user esp was first released in december
+1996 it is used to generate the content
+that is sent to the client web browser
+via the http response
+describe web forms
+web forms are web pages that a user
+request using a browser it is built
+using asp.net technology
+it executes on the server and generates
+output to the browser it also allows you
+to add and create custom controls
+some of the custom controls provided by
+asp.net are label text box button
+hyperlink and image button
+what is a solution explorer
+solution explorer displays the folder
+and files of a project that appears on a
+physical hard drive
+list the components of asp.net
+asp.net provides data-driven web
+applications on the internet using
+various components
+some of the components are common
+language runtime language library common
+type system and windows forms
+what is the difference between asp and
+asp.net
+esp is the first server-side scripting
+language developed by microsoft to
+design dynamic web forms whereas asp.net
+is a server-side technology used for
+developing dynamic websites and web
+applications on the internet
+asp uses ado that is activex data object
+to connect with the database
+whereas asp.net uses
+ado.net to connect with the database
+asp is written in vbscript asp.net is
+written in c sharp
+what type of protocol is used to call
+web service
+web service is a web-based functionality
+accessed by using protocols
+it uses xml to exchange the software
+using common internet protocols
+web service in asp.net has three aspects
+they are
+creating web service creating a proxy
+consuming the web service
+the http protocol is used in asp.net to
+call a web service
+explain users of global.asax
+global file is used to execute the
+application level events and set
+application level variables
+global.asax is used to handle high-level
+applications like application start
+session end and session start
+now let us look at some of the
+intermediate level asp.net interview
+questions and answers what is a web
+library
+web library is a part of a website that
+accesses all libraries from the browser
+and helps in adding collections online
+it contains base and user defined data
+types
+it supports to create web services
+describe a view state
+view state is a page level state
+management technique that is used to
+preserve the values of the page and
+controls
+view state contains the sections like
+features background
+scenario and class reference
+what is a multi-view
+multi-view is a parent control for the
+view it is used to control all types of
+the view multiview has the prefix mv
+this is the syntax of multiview
+what is early binding
+early binding is used to check the
+methods and properties during
+compilation
+it is fast and easy to code and also
+reduces the compilation time it also
+reduces the time by identifying the
+errors
+what is lead binding
+lead binding takes more time to compile
+it is hard to find out the object
+through late binding late binding has
+dynamic objects and is achieved by
+virtual machines
+how asp.net is different from asp.net
+core
+asp.net is used to build application for
+windows whereas asp.net core is used for
+windows mac os and linux
+asp.net uses.net framework whereas
+asp.net core uses dot net core framework
+asp.net is a single version
+asp.net core has multiple versions
+what is catching
+caching is a technique used to sort the
+user data or information in memory
+it boosts the performance of the
+applications and creates pages
+automatically
+caching is also essential for data
+related transactions
+what is the role of page directives
+page directives describe the attributes
+of specific page file for the compiler
+below is the syntax of page directives
+where code file specifies the name of
+code behind the file
+and debug enables or specifies
+compilation debug
+and client name specifies the class name
+of the page
+and decline target browses the server
+controls
+list the types of states in asp.net
+staten asp.net is used to store the
+information between request and to
+retrieve it when required and holding
+the information
+asp.net provides four types of states
+application state cookie state view
+state and session state
+application state in this state all
+collections of web pages and files in a
+single directory on a web server
+cookie state it stores the information
+on the client machine view states
+view state states the state of web pages
+and its control
+session state this state is used to sort
+the application data
+list the sources of data allowed by
+asp.net
+data sources are responsible for
+operations like insertion deletion
+sorting and updates some of the data
+sources allowed by asp.net are sql data
+source object data source and access
+data source
+list the events of calendar control
+calendar control is a function used to
+provide a calendar on a web page
+it also enables you to change and move
+to the previous months and years
+the events of calendar control are of
+three types selection changed day render
+and visible month changed
+what is a trace
+tracing enables view diagnostic
+information about a single request at
+runtime and debug the application
+the trace contains features backgrounds
+code examples and class references
+how can we add a style sheet in visual
+studio
+to add a style sheet open solution
+explorer and right click on the option
+then click on new and a pop-up will
+appear to choose
+how can a page layout help in asp.net
+page layout provides an overall
+container for the pages on the website
+for example navigation area and footer
+page layout also includes the main event
+list the advantages of using html server
+controls
+html server controls are the standard
+html controls used to enable server side
+processing
+some of the advantages of using html
+server controls are
+html server control does not possess any
+mechanism to identify the capabilities
+of a client browser coding can be easy
+by adding run nut is equal to server
+attribute
+controls can interact with the client
+side scripting
+explain about event bubbling
+even bubbling is used by data bound
+controls when a parent control contains
+child controls and when an event occurs
+in the child controls it bubbles the
+event to the parent this is called even
+bubbling
+even bubbling is classified into two
+categories on bubble event that handles
+the even data
+rise bubble event that sends the event
+data
+list the most common built-in objects of
+asp.net
+built-in objects access the information
+from the web server
+it is also responsible for recognizing
+the client who is accessing the web page
+some of the commonly built-in objects of
+asp.net are context application request
+server trace and response
+list types of caching
+caching is a technique used to sort the
+user data or information in memory
+catching is divided into three types
+output catching it specifies the
+duration of catch and the attribute
+fragment catching
+it is user control caching used in a
+basic web form page
+data caching it is used for caching the
+data of the data source controls
+what are break points
+breakpoint helps to specify the runtime
+to run a line and stop the execution
+it is used to examine and perform
+various debugging functions and methods
+now let us look at some of the advanced
+level interview questions
+list any five web controls in asp.net
+web controls are html elements used for
+script tagging and functionality for web
+forms and pages
+the five web controls in asp.net are as
+follows
+html controls html server controls user
+and custom controls asp.net server
+controls
+asp.net ajax server controls
+what are button controls
+button controls in asp.net are used to
+display a push button on a web page
+this is the syntax for button controls
+where you provide button id
+and run at server and the text is of the
+type button
+what is range validator and its syntax
+range validator checks the input values
+that lie in between the specified ranges
+the validator has three main properties
+that is type minimum value and maximum
+value
+this is the syntax of range validator
+wherein we have provided minimum value
+as 1 and maximum value as 6 and it is of
+the type integer
+what is a thread priority
+in multi-threading its thread has its
+own priority that gains access to cpu
+resources
+whenever a thread is created in c sharp
+it always possesses some priority
+it is mainly used to set a value
+what is the role of postback in asp.net
+pushback is a request sent from a client
+to the server from the page on which the
+user is working
+it pose the complete page back to the
+server for a new page
+postback is submitted to a server before
+processing the page and holds
+credentials such as verification like
+username and password using a database
+list the types of authentication in
+asp.net
+authentication is a process of ensuring
+the user identity it is divided into
+four types form authentication windows
+authentication custom authentication and
+passport authentication
+define web configuration
+web configuration is used to describe
+the property and behavior of web
+applications
+it also helps to manage settings each
+file of a web configuration is an xml
+file that contains a set of
+configuration elements
+explain client-side script events
+client-side script runs on the browser
+and speeds up the execution of the page
+some of the client-side events are as
+follows
+on click it is used when the control is
+clicked on focus it is used when control
+receives the focus
+on change is used when the value of
+control is changed
+on blur is used when the control loses
+focus
+on key press is used when the user
+presses the key
+what is anonymous personalization
+anonymous personalization helps and
+allows the user to personalize this site
+before identifying themselves for
+example enable anonymous identification
+by passing the value true
+provide the cookie name cookie timeout
+and cookie path
+and set cookie sliding expiration as
+true and keep the cookie protection
+encrypted and cookie less is equal to
+user
+what is form-based authentication
+form-based authentication is used to
+edit the web configuration files and add
+a login page to authenticate
+it is used for web applications
+form-based authentication also provides
+a way to handle authentication using
+custom logics in asp.net applications
+define the types of configuration files
+right
+configuration files help to manage the
+settings of a website settings of
+configuration files are stored as xml
+files which are separate from the
+application
+configuration files are of two types
+web configuration and machine
+configuration
+web configuration contains the machine
+specific value for all settings of the
+applications
+machine configurations help to extend
+restrict and override the settings
+list the different types of cookies used
+in asp.net
+cookies are a small piece of information
+stored at the client side the cookies in
+asp.net are provided into two types
+session cookie valid for a single
+session
+persistent cookie valid for multiple
+sessions
+explain the difference between custom
+controls and user controls
+custom controls is designed for a single
+application
+whereas user control is designed for
+multiple applications custom control is
+loosely coupled user control is tightly
+coupled
+user interface can be changed in custom
+control whereas in user controls the
+user interface is fixed
+then the difference between web
+configuration and machine configuration
+files
+web configuration is automatically
+created when application is created
+whereas machine configuration is
+automatically installed with the visual
+studio
+in web configuration file inherits
+settings from the machine configuration
+whereas in machine configuration only
+one machine configuration exist
+so with that we have reached the end of
+this video
+like and share it if you found it
+interesting thank you for being here
+keep learning and stay tuned to simply
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

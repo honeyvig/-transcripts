@@ -1,0 +1,1046 @@
+excited because right over here in the
+back we have Scott hunter and Mike harsh
+with Beth masse I want you to grill them
+all about dotnet let's go to that right
+now
+hey guys this is Beth and I am the
+product marketing manager for dotnet and
+I'm here with Mike and Scott you guys
+want to induce yourselves sure Mike are
+Sean Matt GPM on the windows platform
+team it's got Hunter the director of
+p.m. on the.net team all right so we had
+some amazing net announcements today
+didn't we indeed okay so I think the
+number one on hacker news all day has
+been the open sourcing of WPF win forms
+and when you eyes ammo library yeah what
+is that thing okay so yes it's being
+trending on one spot on hacker news all
+day which has been awesome that's I
+think there's like 25 comments already
+so it's been awesome to see so there's
+been some comments on Twitter to some
+folks have talked about what is the
+story with uwp why is that not being
+open source so there's a little bit of
+naming confusion and so I just want to
+straighten that out a little bit so
+windows UI sam'l is the official name
+what we're calling the UI stack that's
+in uwp so the UI that you know is in
+built into Windows for the UW PE program
+model we're calling windows UI sam'l
+that name is actually reused that is the
+the name of the new gate control package
+that we released a build and that is
+what was the first part of Windows a
+sam'l it was open source today that will
+be the project on github that we
+eventually put all of the windows UI
+controls and the rest of the windows UI
+sam'l framework into and so timing wise
+that will you know kind of happen
+throughout 2019 okay gotcha so so not
+everything is open right away but
+whereas we make more code available in
+the company much the primary thing ever
+leave the controls today what's what's
+available is a set of the controls and
+the things that are in the windows UI
+library the good package today those are
+all open sourced and then we're gonna be
+rapidly adding more controls to that and
+then a little more slowly but still
+hopefully in the next year all of the
+rest of the framework so the app layout
+self will actually be there as well yeah
+and we know the layout engines all of
+the data binding all of the things that
+make a UI framework or UI framework not
+just controls awesome and I know this
+was like one one really big ask from the
+commune
+so it's really nice to see this happened
+today so really exciting do we already
+have pull requests and everything
+actually so there's some really
+interesting discussion I've been paying
+a lot of attention to the WinForms repo
+so I I'm kind of I should admit I I
+started my first job at Microsoft in
+2000 was as a p.m. on the WinForms team
+so I worked there for about six years so
+I have a lot of a lot of passion for the
+wind-borne space and so I've been really
+staying attention very close to that
+that repo today and there was a I think
+two really interesting discussions I
+mean Oren had the first boy request that
+Scott did on stage that was really cool
+to see one kind of spontaneous thing
+that happened the community today was
+some of the icons so the wind forms had
+to work all the way down to Windows 98
+and Windows 8 didn't have a built-in
+hand icon okay and so there was a
+hard-coded resource and that meant that
+you always got the hard cut resources
+and if they changed system you didn't
+get the new ones and so there was a pull
+request to say why don't we update this
+and I use the hard-coded one anymore
+because you know done that quest really
+works down to Windows 7 obviously
+Windows an idea hasn't been supported
+for a minute and so that that was a
+pretty cool thing to see and then
+there's this other thing called a task
+dialogue which is uh it's a Windows
+feature it's like a super message box
+and there was basically a discussion
+around adding a new class for that to
+both WinForms and WPF so you can get
+kind of a super message box so it's
+already like the community is kicking in
+good things are happening well okay so
+let's talk a little bit about done at
+core three and it's supporting WPF and
+WinForms it's pretty cool too right yes
+why what's the big benefits that of that
+Scott what do we get when dotnet core
+was created the the it was meant to
+solve some of the problems we've learned
+over the years building done in
+framework the primary one being I'm
+sorry for my my boy you're sick as a dog
+um the primary one being how many done
+your frameworks can you have one mission
+so you know we technically support two
+today dotnet core - have you done it
+framework - and I'm a 4 X 3 5 is
+actually a variant of - so there's
+always been only 2 versions on on a
+Windows machine at a time so what have
+benefits sheet with core is obviously
+you can have as many cores side by side
+by side as you want no longer you have
+to worry about risking an application
+breaking because of framework changes I
+think and you know we don't try to break
+anybody's applications but the reality
+is fixing a bug
+maybe you depend on a bugging you don't
+know you depend on a bug that happens I
+mean stuff just happens we want to give
+customers more control another cool
+thing you get without in a core is you
+don't even have to depend on a framework
+being on the machine you'll be able to
+actually take your winform WPF
+application compile it down to a single
+eggsy that is self contained contains
+the framework your application all of
+those things and I think what it really
+means was as a developer you can decide
+to be on the latest version of a
+framework and not worry about IT having
+to go and update all the boxes so it's
+like xcopy deploy for WinForms it is
+awesome
+and then there's one final other you
+know big advantage I think and that is
+core is where we will try new api's and
+so the latest greatest api's are in core
+today some of the new c sharp features
+will only be in core so if you want to
+if you want to be on the bleeding edge
+of api is the bleeding edge of language
+features core is the place to be
+that said diner frameworks not going
+away it will never go away i said this
+my talk today i'm like it's part of
+Windows you have a lot of applications
+are Microsoft my laptop called visual
+studio.net framework right so it's yeah
+but it will be supported as long as
+Windows is support okay so the idea is
+that dotnet framework itself is going to
+be safe and reliable and always support
+hit on Windows ok and that dotnet core
+will have more of the bleeding edge
+features if you want to take something
+you can you can deploy it with the app
+so you don't risk breaking other
+applications and so that's why we can
+move faster with donut court right and
+you can be on there's two diamond core
+trains there's the LTS train which is
+the long-term supported train which
+about one of those comes out a year ok
+and there's the I want the every other
+month MIT's got it faster track so you
+can choose which track of core you want
+one Apple yes are we on like no.21 2.1
+2.1 ok and so the next LCS will be 3.1
+ok gotcha
+so we'll ship a 3.0 sometime in the July
+August timeframe I would hope of of 2019
+and that means that the LTS build would
+show up somewhere in the October
+November time frame
+if we hit those dates so what about on
+the server side I mean we've got have to
+have some improvements in dotnet four
+three four asp.net developers - right
+that's the biggest misconception I think
+that people had we were so heavily
+focused on talking about desktop at
+build this year yeah we were so excited
+about bringing winform the wp uptick or
+that we didn't talk a lot about the the
+server the server is just as exciting as
+to me as the as the client-side one of
+the coolest features we're gonna have is
+something that we've been it was called
+it was codenamed laser and this was
+letting you actually write c-sharp code
+in the in the browser and this is not
+like fake c-sharp code this was actually
+the Assembly's download and running in a
+sandbox browsers are using webassembly
+okay and we've been showing that for the
+last year so the first flavor of that
+will ship as part of core 3 as well
+it'll be part of a Hispanic or 3 your
+code of luxury runs on the server but
+the programming model is still the
+programming model where it appears that
+your C sure you're writing c-sharp in
+the browser I see inside of the HTML
+inside of instead of that so you write
+is they're called razor components right
+great great UI it's all in c-sharp and
+so you have a full stack web development
+with C sharp after like right JavaScript
+at all you don't have to rely on angular
+react view you can don't have to write
+JavaScript I mean we're not trying to
+this is not a war against JavaScript I
+love to use the skills that you have if
+you're if you have a lot of c-sharp
+skills and you wanna use those in the
+browser bang
+you know you those in the browser it's
+you know what context switching
+sometimes do you know I mean I think
+that's why the appeal of node you know
+no js' cuz you're just using javascript
+on both sides right so please c-sharp
+developers can enjoy that as well I
+think that's fantastic
+actually there's a question here that
+kind of relates to asp.net are there any
+modification and requirements to move
+asp.net MVC core to project 2 core 3 can
+it be done now so the best way to answer
+that question would be we just shipped a
+snake or 2.2 today as well so not only
+do we have the three Oh announcements
+right we just had the 2.2 announcement
+what I would tell the customer is they
+should move to 2.2 first all we did for
+three oh the three Oh bill that came out
+today basically has the exact same
+espenak or 2.2 bits I see that shipped
+is part of 2.2 ok so there's no benefit
+to move to 3 yet won't be till later
+this
+not later this year sometime next year
+actually start having the next
+innovations beyond the 2.2 stuff they'll
+start showing up in the 300 bids but
+today your best bet is to stay on 2.2
+but we aren't anticipating any major
+like changes that you would have to make
+our goal is to make it as easy as
+possible to move I mean there'll always
+be some breaking changes 202 3 oh is
+there's some breaking changes we
+assemble the product differently than we
+did before I mean if you're asking a
+customer the Astra networks have
+traditionally came as NuGet packages and
+so there was a core and then there was a
+spinet core which is kind of separate ok
+now we're shipping the whole thing as a
+monolith again and that's that's to
+enable a bunch of cool scenarios we have
+partners like Red Hat
+that have a version of.net core they
+ship we went asking a quarter being part
+of that so I'll ask you can build from
+source so cool so how will we acquire
+like this is the wind forms in WPF is
+that gonna also be like NuGet packages
+or how is that gonna work it's it's you
+just you just go download the 300 SDK
+and I've done it new wind forms and
+you're you're good to go good right so
+I'm gonna show a little demo I can do a
+little demo I'm kinda gonna be intrigued
+reporting a twin forms out of here I'm
+gonna take wind forms up on framework
+and you're gonna report it to core yeah
+so I've got a first off on it and he'd
+also preface preview one is pretty rough
+I mean we knew it was gonna pretty rough
+we went we primarily focused on the
+actual runtime so most of the work has
+been done in the core three runtime the
+tooling is a little bit behind us okay
+meaning that file new in vs 2019 doesn't
+have wind form for core or WPF or core
+will have more previews it will have
+more previews we don't have we don't
+have visual designers okay yet but I'm
+gonna show you how you can actually
+build a core project and actually use
+the designers from the full framework
+application so if you look at my laptop
+I've got visual studio 2019 here which
+is required for core apps core 3 apps
+and if I run it this is a memory
+matching game you know you have you keep
+clicking these things until you find the
+the ones that match and you click
+through and and so we thought hey let's
+pledge support this decor so it's gonna
+be look crazy what I'm gonna do is I'm
+gonna go here my command prompt
+and I'll do dinette new WinForms and
+I'll say outputs we'll do matching game
+core so that Biscay builds me a skeleton
+of a wind form application encore so
+let's go back to our solution and we'll
+go add that existing project so now we
+have a core win for map in here and I
+said it in I start a project
+it runs in builds hello doesn't it core
+awesome but really what I want to do is
+I want to get that that game running
+over here so I'm gonna cheat a little
+bit okay so one of the features we've
+had in core for a long time as our
+project system is pretty cool that if
+you look on the screen here I'll get the
+forums the program CS and whatnot if I
+look at my project file they're not in
+the project foot just points to the
+folder it points at the folder and we
+glob in all the c-sharp files I can also
+add a glob in from somewhere else so
+what I'm gonna do is I'm gonna cheat a
+little bit here I'm gonna go take all
+the all the all the code let's just
+erase it and then let's go back and open
+that that CS project again and I've just
+four let's screw this up on stage let's
+paste some code over here and what I'm
+gonna basically do is paste in a item
+group that tells the system to basically
+include files from a particular folder
+so in our case we'll just erase this
+there you go so as I say that notice
+that all the files from the full
+framework app just showed up in the core
+app oh that's pretty cool so I'm Cheney
+I'm a liasing into the existing project
+I see so any coaching's that makes these
+files happen in both the full framework
+and the core application
+it's got good engineer's don't cheat
+they're efficient so now the next thing
+is if I build this I'm gonna see a
+couple errors so let's do a build and
+first off those I get a duplicate type
+assembly company attribute attribute and
+that's because in a dot in framework
+application we typically have a
+properties app with an assembly info
+okay in core we said why have a file
+that was basically place to put metadata
+we said in corylus for the metadata in
+the project file and so what's happening
+is in this particular case I'm trying to
+dot a course trying to dynamic the
+generate generate one from the project
+file and so there's two of these things
+inviting so we'll tell it to generate
+assembly info false better now my
+matching game uses this game logic and I
+need a reference that as well so I'll
+just come over here my reference
+so you're basically switching project
+systems and so you're kind of doing some
+manual changes around the project system
+it's so good if not the source code
+exactly so the source codes all the same
+now that reference is there and now I've
+got the exact same app running on core
+cool and it works just the same as it
+did before okay so that's a little
+manual because we don't have all the
+tooling yet but as you can see guys you
+can take some of your apps that you have
+today and you can see if they're running
+on core and then they perform and that
+kind of thing then they read those have
+instructions on how to do this come on
+both one forms in WPF right and also if
+you hit more than just project system
+issues you can you can use the API port
+tool to find out which API is right part
+the party aren't supported
+and you know the set of API is it's
+going to be in 3s and flick baked yet
+too so if you open an issue with the API
+we can we can take a look at that I
+think that back if you look at my my
+gaming logic DLL or assembly if you look
+I actually had a pointing problem and
+because I had a porting problem you can
+see that I installed the microsoft
+windows compatibility pack that's a
+nougat package so donít core by itself
+as it was designed to be cross-platform
+which means we can't ever put Windows
+specific things in a diamond core yeah
+so we have a new gate package we put out
+a while ago and then in the two to
+actually the two one time frame I think
+and what it does is it basically brings
+a lot of Windows things back it brings
+registry back brings directory services
+backs to management back and so if you
+try to pour some your code and you find
+API is missing the first thing to look
+at is go and grab this NuGet package
+stick it in in my case the game actually
+saved your high score in the registry I
+see so I brought this in the registry
+got it
+alright so that's good that's cool so
+there's another interesting announcement
+and feature of Valcour 3 that i wanted
+to ask you about these things called
+sam'l islands yes yeah sam'l island so
+so Sam Islands is a Windows feature
+ok that first shift in the release
+that's I think he's just starting the
+wallet now internally we called it
+redstone 5 I forget what the actual
+official misfit the marketing team picks
+forgettable names on purpose such
+Windows 10 and there will be some some
+additional improvements on that feature
+that are coming out and spring release
+that's not for Windows but basically the
+idea is you can take a piece of windows
+UI sample control and you can embed it
+in a WinForms or wff or anything with
+really MH wins it's effectively an h1
+house okay and then you can start to use
+new UI features that's what Scott
+Hanselman showed on stage today with the
+signature control that's the main canvas
+in the toolbar from from the windows you
+guys am a librarian just plop that into
+an existing app so that's that's what
+that feature is all about and that works
+in both on eight core three apps as well
+as done that frameworks cool so
+basically you're saying I could take my
+app and
+take up you know onesie twosie approach
+I'm moving it to Windows 10
+yes I mean the you know our goal here is
+to really bring all these platforms
+together so you know you can use any
+feature in any app type regardless of
+where you started from you know you
+shouldn't think of it them as different
+platforms it's just one set of API is
+you can choose from based on what you
+want to do so I can get a modern browser
+in my WinForms out there right okay
+that's very similar to that concept is
+very similar we do with enas minute
+years ago we call it one asp net which
+was hey you might started with a web
+form application but you want to add NBC
+or you want to add signal are well now
+we don't care if you start with the wind
+for map a WPF application
+you wanna go dad add a saml UI control
+boom just to do that right let's choose
+the UI tech that you're comfortable with
+that's fantastic
+yeah and get all the features or have a
+giant codebase and you don't obviously I
+want to either start from scratch or you
+write correct large things if you know
+what WinForms is like 2002 right I mean
+it started from the beginning and in WPF
+is late 2007 8 so these pieces probably
+apps are probably about that old they've
+got some yeah but they're probably
+business critical mm-hmm and you know
+they have to be modified and they have
+to be updated there's still a lot of
+people you know actively doing when
+foreign ws development there's you know
+over 1 million monthly active which was
+developed yeah it's two minutes I think
+is more than that but so so do we get
+like performance benefits as well as
+part of being on the core runtime so you
+you will get some performance benefits
+primarily and in the standpoint that
+we've uh you know obviously a unicorn
+core has been performance has been a big
+push with us you've seen us take the web
+stack and be in the Tekken power
+benchmarks and as a result of that
+there's been features added the language
+span mm-hmm
+there's been modifications to some of
+the bcl-2 make some of those results
+happen you might ask well why did you
+make those same changes into that in
+frame work well the reality is like we
+we change from the file API is to fix
+bugs that were none in framework but I
+can never put it in your frame or
+because it would break stuff I see and
+so there are API improvements also
+dynacord open source so anybody can
+contribute and so maybe something that's
+too small that we would not look at but
+somebody who makes up a formas fix from
+the community and we accept it
+so you will find that you know core is
+gonna be a little faster than done
+different work yes so um kind of a
+discussion going on on twitch right now
+what we should kind of address maybe um
+so how does uwp fit into kind of all of
+this you kind of started to say like
+before what the example the sam'l
+library is um what is how is this whole
+thing kind of fit together with you WP
+so you should really think about
+basically if you have that when forms of
+your application and you're happy with
+that and you want to add some you know
+new Windows 10 features to a desktop app
+and you haven't existed that's how that
+you can start adding those features I
+mean there's many of the 1rt api's you
+could you could use already with Tim
+Islands we kind of closed most of the
+gaps of things that you can't use an
+existing application if you want to
+build an application that you know is
+fully top-to-bottom brand new and modern
+you can't you can start with UDP
+application there are there's a lot of
+investment we're doing in the UI stack
+there to to kind of address some of the
+gaps that you know customers have told
+us about for building line of business
+applications you know like shore up that
+some of the data story and form
+validation that we're actively working
+on but the real reason that you would
+pick a UDP to start with especially if
+you don't if you're building a new
+application is you can target other
+Microsoft devices if you want to go to
+an app on Xbox or service hub that's
+your that's your route for that got it
+okay so zamel islands are really desktop
+related only got it okay that's very
+cool
+cool all right so uh I want to talk
+about a couple more announcements Scott
+I want to show one more demo real quick
+I don't know one second Wow two demos
+from mr. hunter well we showed before we
+showed making that that game yeah using
+wind forms oh this is gonna be the
+browser let me shrink this so it fits in
+the screen for everybody we also took
+that same game it just happened to be
+that that game was written in a great
+way where all the logic of the app was
+written inside of that game logic
+assembly or class library so it was very
+easy to go take the same UI and build it
+in the web and so I shared that that
+same project
+it's a Dutton standard 2 class library
+they shared it across a blazer app and
+here I have the same game
+running in the browser oh that's so hot
+that's cool
+that's so hot so Wow that I thought I
+would just show that that that is the
+goal is you know whatever you are you
+want to build whether it's desktop UI or
+web UI
+you know cores gonna be a great place to
+be for that that's cool and we keep
+innovating and innovating and bringing
+in more work load snare like we have ml
+net as well for machine learning I think
+she runs on some yeah some done core
+stuff and so in the blog post on done in
+cor three today we talked about getting
+serial port access in IOT for Linux
+we're gonna do some fun IOT stuff today
+there's crazy stuff all across done now
+that's very cool um so actually let's
+ask here's a question from no content
+really cute handle I like that
+well dotnet native also become for WPF
+and wind forms now since it's on dotnet
+core so you want to talk a little bit
+about what net native actually even is
+so Mike yeah so dot n native is the
+ahead of time compilation story that you
+do yeah it's used today and so if you're
+super familiar with it from developing
+you there's definitely some quirks
+around it because it basically looks
+over all your code and basically ahead
+of time compiles it to x86 or or arm
+your there's some some features in net
+like reflection if you don't have a type
+there that it's already been generated
+you basically will you know kind of get
+a Miss you mouth exception there's some
+some bad things can happen there on the
+flip side dude you'll get a bunch of
+great performance out of it so it is a
+very interesting story but I believe
+that Scott can talk about the the äôt
+story for done at core is going to go in
+a slightly different direction
+I believe yeah we haven't really
+announced that direction but I will I
+will talk about you said which is a
+great point as we started building the
+web assembly work that's the Blazer
+stuff you need a neo T solution and like
+do we use dotnet native or do we use
+something else
+currently the Blazer work uses mono
+actually okay because they that that
+runtime had more support for web
+assembly type types of things the one
+thing we want to be very good at we
+wouldn't be very clear about is when we
+do a new native implementation
+we'll do it where dotnet can be done at
+all the time like Mike said I
+that native made some sacrifices for
+security and performance by removing
+parts of net whatever we do in the
+future will give you an A ot ahead of
+time compiled it actually runs all of
+your damn code so it might mean that we
+have to use a interpreter along with
+some of the native code
+Thanks ah but I want to make sure that
+whatever dotnet we give you is the full
+net and then if you want to go dial some
+of it down if you want to go turn
+reflection off for security reasons or
+size of device or whatever you can do
+that but because you made this decision
+to do that you understand that you know
+there's less compatibility there than
+there was before no surprises oh but I
+don't think the äôt wave will be after
+the done in court three waves
+okay so we'll ship tonic or three with
+blazer running on the server side and
+hopefully we'll start previewing some of
+the hey ot stuff after that cool and I
+think to close the question a little bit
+for no content there basically we want
+to make sure that the AOC story that we
+develop a core also applies to TP so you
+have again one can you know what all
+this is about having a consistent done
+that story everywhere and we want to
+make sure that we kind of close that gap
+we've slowly been trying to get to what
+we call 1.9 which is you know one set of
+compilers one set of garbage collectors
+one set of jitters one set of api's I
+see you continue to see us shrink and
+share stuff more and more across them
+the various runtimes today the runtimes
+would be mono done at core done in
+framework and write native gotcha
+so like and and because open source is
+really kind of like change to that
+culture so now we can actually kind of
+do this now right
+I mean before it was easier easier but
+it takes them a ot is hard so it'll take
+some time you know take some time cool
+all right by the way skull crusher for
+life you are awesome
+did he just build that demo while in the
+middle of the session nice so that's a
+shout out to Scott nice job dude one
+more question here can I now use WPF
+and/or wind forms from powershell core
+and or on Linux or Mac so I don't
+actually know how to answer the
+PowerShell core question the Linux or
+Mac is so basically wind forms and WPF
+still rely on a bunch of windows API is
+for input/output for drawing and so you
+know those are still
+Windows desktop only components so we
+have nothing more to share there as far
+as announcements I'd like to add to that
+though I people asked this question all
+the time it's like we've been talking
+about Titanic or three and desktop for a
+while and Psyche hey you're gonna make
+WPF cross-platform or you make WinForms
+cross-platform I don't really think you
+want a WinForms app looking like a
+WinForms app on a Mac or a Linux machine
+so I I think we haven't decided or even
+the industry's not decided yet what the
+best cross-platform UI story is and so
+while it sounds great to say WinForms
+could run on a Mac a Mac user would go
+why do I have this weird X I don't have
+the dots over on the left side I that
+doesn't feel like they match well why
+did you make my my Mac look like Legos
+95 like a wins not whereas I it would be
+it makes making a Mac look like Windows
+95 so I don't think these are the right
+technologies for that
+I don't think Microsoft today has a
+story on what cross-platform UI is
+that's something that Mike and I would
+love to work on in the future but we're
+not there yet and so I but yeah these
+are Windows Tech I think for the power
+show and that PowerShell core unns on
+Windows Mac and Linux so yeah you could
+probably call some I mean there's
+probably you know a bunch of types like
+if you wanted to go use the system dry
+dock drying recs you could you know like
+there's a bunch of types that are don't
+actually have you know UI backing I'm
+sure you could use inside but you know
+if it's good if it's going to you know
+basically if it's one form it's gonna do
+anything each one related or you know
+doing vogue it's not gonna work yeah
+that's not gonna work cool okay make
+sense um okay how close is dotnet core
+to to build self-contained executables
+it's it's similar to go Ling that's a
+good question
+yeah so that's that's kind of a long
+road maps discussion again so what we'll
+do in the three Oh time frame is we will
+give you a will have some some
+technology we have they will basically
+take the assemblies that make up your
+application and compact them into a
+single eggsy
+okay it still has all those individual
+components there does compact package
+better into a single XE for you okay
+the go question is more of are we going
+to provide native eggsy's
+on those platforms and that comes back
+to the AFT store we talked about earlier
+for webassembly and for dotnet native
+and what
+um ahead of time compiled a of t is
+something we are definitely looking at
+post the three old wave okay great
+exciting all right so one more question
+here are you going to enable enable
+application domains and DLL unloading so
+app domains is a good one that is that
+is something that's obviously as we've
+been working with partners to port their
+wfe1 farms apps it's come up in it
+no it's pretty rare that people actually
+need that this kind of process level
+isolation like features but there
+there's some API is an optimum that are
+useful and so we're working to create an
+app domain class that has a lot of kind
+of API functionality that you know more
+or less but doesn't actually have the
+kind of code isolation of an optimum but
+it has some of the additional features
+that people who found people using from
+that perspective a lot of customers use
+abdomens today that load extensions and
+like even visual studio albums you're
+using domains when you install some
+other extension individuals to you it
+lets them load some third-party dll's
+into the application and you can unload
+them we're gonna build a new library on
+top of core for doing that very cool it
+won't be up to mains abdomens actually
+combined a whole bunch of random stuff
+together and some of you didn't work
+very well and so we don't want to bring
+the stuff that didn't work very well for
+to the core but but like just adjusting
+things together that we you know and at
+we could make a nap after main API shell
+a sort of shim it would use the you know
+do we do the loading unloading but but
+you know so would be API compatible with
+your existing code but then could call
+the the new better functioning actually
+if he has other covers but we give you
+the same functionality that most people
+want to use at the end which is loading
+extensions
+well we're building a new API right now
+for that Co as a general shout out to
+any API questions the best thing to do
+is to use API port on your on your code
+and you know either send us a report or
+share that via a github issue so we can
+we can keep track of these things
+because now we have a public place if
+you track it really helps us steer the
+roadmap yeah we had a blog post about
+yeah I don't I don't know it off my head
+the URL we had a blog post nothing in
+August that alia on the team put up and
+we actually had a tool you could
+actually run just pointed at your eggsy
+and it would basically look at the the
+api's and all it
+so you felt safe it would show you the
+output what it was gonna send and then
+you would press send it sends us the API
+is that information helps us a lot to
+know what what API support okay so that
+we can take a look and say hey we know a
+lot of people use API X we're gonna
+support it and this is not my stupid
+basically just says these API is many
+times not necessarily what you use them
+for any variable minutes or anything
+like gotcha
+okay that's awesome that's awesome
+privacy spell let me throw a question in
+just yeah myself of it it's a common
+question would you like to host the next
+session okay another one that comes up a
+lot is what is our story for dub CF I
+thought before I wait heard show up on
+the screen I thought we just we just
+talked about talking about WCF a lot of
+data framework applications are using
+dub CF or they using.net remoting we're
+not bringing either of these
+technologies to core at this point but
+we are looking at alternatives there is
+G RPC which is an RPC model which is
+very similar to a remoting or a WCF
+model okay
+and so the asp net core team is working
+with the g RPC project themselves to
+make that thing have first-class dotnet
+support and actually make it like it
+like it feels very similar to like an
+asp net or something else would so we're
+looking at that okay and we're also
+potentially looking at our the purchaser
+part service model which is the guts the
+low-level bits of dub dub CF that we
+could bring forward without bringing all
+of dub see how so we're we're looking at
+at various angles of how do we solve the
+RPC problem because that is it's a valid
+concern and we need to have one I'm done
+yet that's that's a good point
+do you guys want to talk a little bit
+about the dinette foundation
+announcement today before we little bit
+of time hear of anybody that should talk
+about a dozen foundation announcement
+the chairman of the diamond foundation
+should really talk about this so yeah
+today so I just hope they're talking
+about done then let's give let's talk a
+little bit about the Donette foundation
+and I think you know who better to talk
+about it than us because we're on net so
+one of the announcements was about the
+governance model changes okay so
+basically expanding the board from three
+to seven people and six of them being
+able to run anybody that has contributed
+anything to any dotnet foundation
+project can run
+or or can vote I think that's going to
+let the foundation really scale its
+efforts more right so why does this like
+really why do I care as a developer
+well you care about your platform you
+care about the longevity of your
+platform and the size and the health of
+your ecosystem right so that's kind of
+what the foundation is about in general
+writes that center of gravity for open
+source around net and if we have more
+people that have a stake in that and are
+volunteering to do something they're
+passionate about and help that move that
+forward we're only going to have more
+growth and more success with a platform
+so that's how I took it
+and yes I am the appointed member on the
+board from Microsoft so I have huge
+passion in this area so I I think that's
+gonna be like a fantastic new era for
+for.net well I think another big point
+in the dungeon foundation is its
+historically if you look at the last
+couple of years the tight-knit
+foundation feels more like the Microsoft
+dinette foundation yeah yeah and with
+the governance model really is about is
+about making it equal for everybody
+there's only a a single Microsoft
+representative that has to be in the
+foundation the rest of it is community
+elected so it is not heavily tilted
+towards Microsoft the foundation
+historically has also been funded by
+Microsoft and it's gonna go to a self
+funds I come more of a independent
+foundation that's run by the community
+and not something that you know you
+could interpret the old the older
+version of the foundation is more of a
+Microsoft run thing right and I think
+there's like even like rules in there
+like we're only 2 max I think board
+members can be from the same company so
+yeah Zack do you get stacker yeah so
+that makes it even more open more fair
+and get better the idea is to get more
+ideas as well from other companies as
+well and to be more open it to be more
+or less Microsoft I mean we're you know
+we're we're writing this open source
+wave and we want the the net and the
+dotnet foundation to be as open as
+possible and I think there's just a lot
+of things that we can do right when we
+have that you know extra money we have
+those extra bodies we can scale more we
+can have you know different types of
+examples we can help you know help our
+community do the things they really want
+to do do so I think that's pretty cool
+so I'm excited it's been sitting on the
+front page of hacker news all day as
+well so exciting yeah
+I'm actually pretty excited about that
+so so we worried about voter fraud for
+any of the position we only use done yet
+for that so your phone so there is a
+question here so there's looks like
+they're having a discussion of what are
+the benefits of joining the board so
+that's actually a really good question
+and when Scott asked me me I was like
+first of all why me and then I was
+thinking about it really though it's
+it's a it's a volunteer position and you
+really are about directing the platform
+directing the ecosystem it's really
+about making choices that are going to
+benefit net and when I say dotnet I mean
+the platform itself as well as the
+community around the platform so that's
+that's kind of what you why you would
+join the board you have some passion
+around dotnet open source and you want
+to help the community and that's that's
+how I see it joining the board I am
+excited I have some ideas and I can't
+wait to see who else is going to be on
+that board so elections will start in
+January so yeah if you guys want to run
+we'll have all the information on and
+dotnet foundation org websites about
+that so that's very cool cool are you
+gonna run I guess we have one more stuff
+and we have one right slight slot from
+Microsoft you see the competition cool
+so we got a couple more questions here
+let's go ahead and say any plans for UI
+automation for core or uwp so we do have
+UI testing for for you to BP and for
+Windows apps with one app driver I'm
+assuming you're actually talking about
+the UI automation class though I'm
+assuming that would be I'm not sure
+there's there's a bunch of different
+scenarios that you automation you know
+it can be used for accessibility tools
+you can use for testing it can be used
+for for actually doing some other
+scripting of scenarios so I think I I
+don't think there's any plans right now
+for any of the frameworks to have you
+automation at least in UDP but it would
+be really into know what the scenarios
+they're looking for because that's the
+thing that we probably have a good
+answer for based you know
+cool well is there anything else so you
+guys want to say to the dotnet community
+out there on Twitch before we wrap it up
+big thing is download done in cor 3 try
+the bits out give us feedback I mean the
+reality is this is preview 1 I said it
+was really early really raw but you know
+we have like 10,000 people that ran that
+tool showing us what API is they they
+needed what we need is more people to
+try it and give us feedback well and and
+definitely go downloading up core to 2
+which is released today so make sure you
+get on those do bits so thank you so
+much Mike thanks thanks Scott thank you
+alright thank you

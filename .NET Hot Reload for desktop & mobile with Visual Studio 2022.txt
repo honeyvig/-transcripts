@@ -1,0 +1,267 @@
+[MUSIC]
+>> Hello folks. Welcome to my video.
+My name is Dmitri Lyland and I'm
+a Program Manager in the
+Visual Studio and .NET team.
+Today I'm going to show
+you the Hot Reload
+user experience in
+Visual Studio 2022.
+This is a brand new experience
+we've added to Visual Studio,
+our goal is to save
+you time restarting
+your app in order to apply code
+changes. It's quite simple.
+We think, in fact, we know
+many times when you're
+running your application,
+you're going to run into some
+change you want to make.
+The app is already running,
+and traditionally having
+to shut that app down,
+apply the code change, and
+spend all that time rebuilding
+restarting can be very expensive
+for many applications.
+With highly reload experience,
+we're making this better,
+at least we hope so, for
+.NET and C++ developers.
+Today, I'm going
+focus on .NET desktop
+applications and show
+you how our hardware is
+going to make working with
+those applications just a
+little bit easier when it's
+set to make that code change.
+Let's go ahead and
+jump into the demo.
+Here we have our first
+demo application.
+These demo applications are
+available in the public.
+These are public samples
+of a desktop application,
+part of WPF sample applications.
+You can go ahead and find
+that over at GitHub.
+In this application that
+I'm already running,
+it's a little particle displayer.
+It's an app that's
+very visual and it
+makes it really easy for me
+to show you how to reload,
+so let's jump right into it.
+How do we load work exactly?
+Here we have an app that was
+started without the debugger.
+If you look at the top,
+you can see there's
+no debugger attached,
+and that's okay because
+this is a .NET 6 app.
+If you combine Visual
+Studio 2022 with .NET 6,
+you can use Hot Reload
+without the debugger.
+For everybody else, working
+with .NET Framework or
+older versions of .NET,
+you can use the debugger and Hot
+Reload will also be available.
+In this demo, my app is running and
+the Hot Reload button
+up here is available.
+This Hot Reload, it does all
+the magic when you press it.
+After you have a code change,
+the code change gets applied
+to your running app.
+Not only that, but we've made it
+available on File Save as well.
+If you prefer not to click
+the button, you can opt in.
+It's not on by default,
+but you can opt into this new
+setting called Hot Reload and Save.
+Let's go ahead and use
+the feature by changing
+some code and pressing "Save"
+and hopefully seeing the magic.
+Here I'm going to go ahead and I'm
+going to just do something fun.
+I'm going to add another
+variable here called P5,
+I'm going to add P5
+into our collection.
+The moment I did that,
+the app went crazy.
+Now, traditionally,
+just to make even that
+simple code changes to
+experiment with my application,
+I would have to have shut
+it down and we get started.
+As you can see here, I made
+a code change and right
+away it's taking effect,
+doing some crazy things.
+The Hot Reload is really easy
+to undo the mess you started.
+Great. We're back to a
+much nicer particle.
+I'm going to continue editing
+this app live without stopping.
+I'm going to go in here
+and make some changes.
+First of all, we've
+got this value here.
+I'm going go ahead
+and add one to it.
+By adding one, as you can see,
+my app is changing quite
+drastically three,
+four, able to change it again
+without ever having to stop.
+Now, you don't even see me pressing
+the Hot Reload button
+up here because I'm
+using this unsave features.
+All I'm doing is on
+the keyboard hitting
+the "Save" button and the app
+is changing quite dramatically.
+It's pretty cool demo. Now,
+this is fun and all,
+me just tweaking values in
+this application to make
+the particles change.
+But let's do something
+a lot more dramatic.
+Let's switch to a
+different application.
+This one is called
+the calculator demo.
+I'm going go ahead and
+set that start-up.
+This time, just for a difference,
+we're going to start
+with the debugger.
+Again, all of this is available with
+other debuggers since these
+are all targeting .NET 6,
+but we're going to use the
+debugger in this case,
+and we're going to start
+this second application.
+This is a little calculator.
+Because we're using the debugger,
+we're not only just
+getting the calculator,
+we're getting this really
+cool related feature
+called XAML live preview
+because this is a XAML app.
+That's not my demo today,
+but if you want to
+learn more about it,
+we have other videos, they'll
+tell you all the details.
+I'll close this down just
+to get out of our way,
+and let's take a look at our
+application source code.
+Here, it's a very simple demo,
+I would not recommend making a
+calculator using same logic,
+but we have this really
+large method here,
+let's go find it, called
+process operation.
+For better or worse,
+this calculator demo is
+using a very large method
+to process your edit.
+If let's say press 5 plus
+5 and you press equals to,
+it does the math over here, as
+you can see, gives me the output.
+Now, all of that is handled through
+this giant processing method.
+What I'm going to go
+and do, it just proves
+the how powerful Hot Reload is,
+I'm going go and I'm going
+to remove this whole method.
+I'm going to take out
+all the logic out of it.
+I'm going to press the button
+just to show you I'm
+really doing it.
+I'm Hot Reloading, changes were
+applied successfully down here.
+We know the changes made
+it to the running app,
+and I'm going to start pressing
+all buttons in this application.
+You're not going do anything
+to actually execute.
+The logic numbers might
+be going up here,
+but none of these
+buttons are functional
+because we're hitting process
+operations and exempting.
+Now let's believe I
+retyped all that code.
+I did cheat in pressing "Control+Z"
+to put the code back,
+but that's okay.
+I could have retyped that,
+there really is no difference.
+Now that all this code is back,
+I'm going to once again press
+the "Hot Reload" button,
+go back to my calculator,
+and now I'm going to clear it.
+Now I'm going press 5 plus 10
+and it's going to tell me 15.
+At all levels possible
+with Hot Reload.
+Hot Reload can truly make
+a lot of changes while
+you're app is running.
+It's not that there's
+no limitations,
+there should be limitations
+and you will get
+an error message if you try to make
+an edit that we don't support.
+But we're hopeful that with some of
+these edits being supported
+and more over time,
+that adds a lot of value to you.
+Hope you enjoyed those demos,
+this is just a fraction of what
+Hot Reload can do for you and
+I really hope you try it
+in Visual Studio 2022.
+Definitely give it a
+try, give us feedback.
+We're hoping this feature
+is really useful to you.
+Again, I want to emphasize
+it's really broadly available.
+Even if you're working in a
+really old .NET application,
+a really new .NET application
+or an unoptimized C++ app,
+Hot Reload user experience is in
+Visual Studio and hopefully
+save you a lot of time.
+Thanks for watching and let us know
+what you think of our feature.

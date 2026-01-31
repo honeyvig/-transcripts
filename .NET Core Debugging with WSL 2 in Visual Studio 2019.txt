@@ -1,0 +1,118 @@
+howdy mike morton here program manager
+on the visual studio team
+my team typically works on the container
+tools
+inside of visual studio and visual
+studio code
+but today i'm going to show you
+something a little different this
+feature i'm going to show you is great
+for you.net core developers that are
+using visual studio
+so let me just go ahead and jump right
+in and show you what this is
+i have a new asp.net core application
+that i created i'm just going to open up
+the index page here and
+add a little snippet to this
+and we'll let intellisense help me here
+and basically what i'll show is i'm just
+going to print out the os version
+so i'll go ahead and click to debug this
+in is express
+and my application will start up
+and you'll see that we'll print out the
+os version which as expected
+is microsoft windows nt basically we're
+running in windows
+but often when you're building a net
+core application
+your target environment will be a linux
+and uh machine
+so one way to do that is to use
+container debugging
+and that's great and that works
+extremely well for many situations
+but we've created a lighter weight
+scenario if i go here now in the drop
+down
+you'll see i have an option to use wsl 2
+to debug my.net core application in so
+if i just switch that debug target
+and go ahead and click on the green
+arrow to start debugging again
+what you'll see is when my application
+starts up
+that environment os version is actually
+a linux environment
+we're debugging from windows inside of a
+linux distribution inside of wsl2
+so i can have that great productivity of
+visual studio but i can also test my
+application right inside of linux
+what uh actually happens when you select
+that wsl 2 is you'll see
+we update our launch settings and we add
+an additional
+launch setting for wsl2 and you'll
+notice here the distribution name
+by default is left blank i can actually
+set that to
+a specific distribution name if i want
+otherwise if you leave it blank
+we'll go ahead and use the default
+distribution that you've set up on your
+machine
+if needed you can actually have multiple
+launch targets if you'd like
+so i'll go ahead and copy that and i'll
+put a comma there and just paste in a
+second version here
+and what i'll do is i'll set this to
+debian
+which is not my default and then i'll
+set the that's just the friendly name
+and then i'll set the distribution name
+also to debian
+and if i wanted to i could set this one
+because i know my default is ubuntu i
+could set that to ubuntu if i wanted to
+and by leaving this blank again we'll
+use the default
+distribution if i go ahead and save that
+now
+you'll see up here in my drop down i now
+have
+a misspelled ubuntu we'll go ahead and
+fix that real quick save that again
+and we'll see that i have ubuntu and
+debian so let's go ahead and switch to
+debian
+and just to show you that debugging
+works let me go ahead and set a
+breakpoint there
+and we'll go ahead and start the
+debugger and this time
+our tools will do the the linux
+debugging inside the debian
+distro rather than the ubuntu distro and
+here you can see
+that we have our linux environment as
+expected i can hit continue
+and of course i'm debugging inside of
+linux
+if you'd like to try out the new wsl2
+debugging
+head on over to the visual studio
+extension gallery or the marketplace
+and install the.net core debugging with
+wsl2
+it's currently in preview and we'd love
+to get your feedback
+so if you don't mind go ahead and click
+download and then when you restart
+visual studio
+you'll be presented with the wsl2
+options like i showed you here today
+all right thank you very much have a
+great day

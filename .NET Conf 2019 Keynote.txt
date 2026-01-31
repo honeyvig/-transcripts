@@ -1,0 +1,1948 @@
+hi I'm Scott hunter and I'm here today
+with my team
+to announce dotnet core 3 to start off
+let's talk about what da net is dotnet
+is this platform we've built for
+building any kind of application you
+have whether it's a desktop application
+a web application cloud mobile gaming
+IOT AI dotnet is a general-purpose
+framework for building all of these
+types of applications I'm super excited
+to talk about dotnet core and how far
+it's progressed it's only been out for a
+few years and we've already grown to
+over a million active net core
+developers that it core is our first
+fully open source dotnet framework and
+in the short time we've actually been
+open source we've already taken a
+hundred thousand PRS so we're building
+this not just by ourselves but with the
+community and of course Visual Studio
+2019 is the faster the fastest adopted
+version of Visual Studio ever here's a
+couple of our customers that we build on
+top of dotnet we have an awesome page on
+the dotnet website you can go to to see
+all of these customers and read the
+stories behind them so I highly
+recommend you go and check that out
+after the conference let's talk about
+down in core 3 you can actually download
+this right now you can go to the dotnet
+website and get it right now the bits
+are available and it brings a bunch of
+awesome enhancements to dotnet core
+first off we brought desktop support for
+WPF and windows forms any.net core
+application gets the ability to be fully
+side-by-side and self-contained meaning
+dotnet doesn't have to be on the machine
+we just introduced we're going to
+introduce a brand new way of building
+web applications where every web
+application is a spy' occasion and then
+of course we're always making you more
+productive with Visual Studio C sharp
+and we're gonna talk about a lot of
+these things today with my team to start
+off as well
+Visual Studio 2019 16.3 just shipped as
+well along with Visual Studio 2019 for
+Mac 8.3 both of these versions of Visual
+Studio support dotnet core 3 C sharp 8
+they have a ton of productivity
+improvements performance improvements
+and if you're a mobile developer they
+support iOS 13 and Android 10 so they
+support all the latest stuff
+bunch of our partners have released
+brand-new tools today for dotnet core 3
+if you're a web developer and you're
+gonna use blaze or our new spa
+application there is controls by
+DevExpress telluric and more that are
+available today so please try these
+things out as well so the first thing I
+want to talk about is micro services
+micro services is a is a new developer
+phenomenon it's taken over in the last
+couple of years when I first arted doing
+development we build these what we call
+monolithic app monolithic applications
+where you build your database and your
+front-end and your back-end all together
+in a combined application that was great
+when we were had small teams building
+applications but as these applications
+have gotten bigger and crossed into more
+spaces it's more important to break them
+out into smaller pieces so those
+individual teams can actually work on
+those pieces so not only can you build
+micro services but you can also host
+micro services really really well in
+kubernetes what kubernetes does for you
+is it's an Orchestrator and that
+Orchestrator will basically take your
+application and manage all the
+components whether it's configuration
+whether it's scaling whether it's making
+sure the application is still running
+well and we have an awesome one of these
+called agile kubernetes that runs in our
+Azure cloud now with dotnet core 3 it's
+the first version of.net core that
+really really really enables you to
+build micro services so what we've done
+is we've added a bunch of new features
+one is we have something called G RPC
+what G RPC is it's a it's a form of
+communication that gives you strongly
+typed contracts between the application
+but what makes it unique is it actually
+works across all developer technologies
+we're gonna show it in the context of
+dotnet and c-sharp today but what's cool
+is you can actually build a micro
+service using G RPC and you can call it
+from Java you can call it from node you
+can call it from Python any of the
+languages you want will support this the
+next thing is worker services while we
+build great web frameworks the last
+couple of years as you start thinking
+about micro services you want these long
+running applications that handle
+responses requests in responses and so
+we now have a first-class template
+inside of Visual Studio and dotnet core
+3 they'll let you build these worker
+services what's cool about this is you
+get all the same features you get to
+configuration that pin
+Injection all the logging all those
+things that dotnet core brings or
+available there as well we're gonna show
+that a little bit later on and then
+finally as you abilities api is you want
+to make sure they're super secure and so
+what we've done is we've actually worked
+with one of our partners to make sure
+that you can actually securely secure
+your endpoints using identity server and
+so with that what I'm gonna do next is
+we're gonna have Glenn Condren come on
+stage and we're gonna build a dotnet
+core three micro service and host it up
+in Azure
+oh hey Glenn hi how's it going it's
+going great why don't you switch your
+machine and let's show us your service
+yeah so a bit of context for what we're
+gonna do here is I am gonna build this
+weather micro services service and then
+all of my friends after this they're all
+going to come in and they're gonna
+consume this thing from an IAS cluster
+so I am going to encapsulate the logic
+of going and grabbing the weather data
+I'm gonna cache it locally make sure we
+honor expires headers do it's not it's
+not complicated but it's not trivial so
+we'll make our own service for it
+instead of having everybody talk to the
+weather API themselves so what I have
+here is I have a just a normal file new
+G RPC service I have a console app and I
+have a standard class library we're
+gonna use later but they're all standard
+except that in my weather app I have
+already set up some config for the URI
+and I've put in some user secrets and
+stuff so that you know you all don't try
+and steal all of my tokens so first
+thing we need is a worker so I am going
+to add this class we're going to call it
+weather worker all right and this
+thing's responsibility is going to be to
+go and grab the weather data and get it
+in the cache locally Ram and like this
+so I have some snippets for pretty much
+all of my all of my code and so this
+inherits from background service which
+we had a little while ago this is how
+you can add a service that will run
+forever you know I've got do some
+logging some config I need config to get
+my URI and then in kubernetes it
+actually uses the kubernetes config
+provider to grab all the secrets from
+kubernetes secrets which is kind of cool
+I have a hard-coded location ID because
+you know you don't need any other
+weather than that what's in Redmon's and
+then the mead
+this execute async method and all its
+gonna do is loop for as long as the app
+is going make a HTTP client
+gonna go and call the weather API get
+some get some JSON response use the new
+system text Jason that we added to
+deserialize that to a type and then
+cache it and then it's gonna do that
+every 10 minutes forever for as long as
+the apps running and so I'm missing this
+forecast data this is how does the
+weather endpoint I'm hitting represent
+the weather and so I'm going to add
+another class to represent that call a
+weather model not see us you know if I
+can not put some some extra caps in so
+what I did to generate this I have a
+snippet here for this now what I did to
+generate this and what you can do is I
+just grabbed an example Jason payload
+from the API and I just copied and
+pasted as c-sharp into visual studio and
+just made this whole thing for me and
+I'm just going to ignore it that's a
+cool feature video convictive take your
+jason and can convert it to see chart
+types yeah absolutely it's a super cool
+feature then okay so now i have a worker
+this is done i'm good now but except i
+need to tell the app that it's going to
+go run that worker service so now over
+here i'm going to start doing some code
+I'm gonna add add hosted service which
+is the name of this feature add weather
+worker right and then this needed a few
+things it needed like HTTP and like
+caching right so services dot add HTTP
+client so I can inject the HTTP client
+and then I'm gonna add the memory cache
+memory cache so that it has a memory
+cache right this now when I boot this
+app it's gonna go into every 10 minutes
+ago and get some more weather data
+pretty simple pretty cool now I need an
+endpoint so Scott talked earlier about G
+RPC and some strongly typed this so so
+this J PC is a very contract driven
+approach to our PC so I have a snippet
+here which gives me this proto file
+which is the contracts for a G RPC
+service and so I have this proto file
+that says I'm gonna make a weather
+service it's gonna have a get weather
+streaming endpoint which it should
+stream weather constantly and it has a
+get where though that just returns you a
+single whatever the current weather is
+and it also defines what the actual
+response-type is nice thing about making
+our own like proxy for this where the
+data is we get to choose the actual
+surface for our clients and make it
+relevant and not have too much
+extraneous data right so if we just call
+this weather dot proto and then in here
+the way this actually works is in my CS
+proj I have this protobuf element which
+references that way the proto you see
+the rename worked good job team and it
+says it's going to generate server
+because the way that G RPC works is you
+create a contract and then you generate
+a lot of code and you just deep lament
+the bits that matter and you leave all
+the rest to be generated right I write
+that contract and I generate either a
+client or a server using the tools yeah
+exactly and so then we're gonna go
+create a weather service now from my
+from my snippet and so what we have here
+is a service that implements this
+weather base and that's that generated
+code that we just talked about where so
+we just controlled on my way to glory
+here I have the base class I have a
+memory cache because I need to get the
+data out of the memory cache and then G
+RPC doesn't want you to have empty
+method calls but because I'm hard coding
+the weather for Redmond in this case
+I've just got this empty type - to fill
+in for the request type you would
+probably in most cases have an actual
+type here that has your data right yeah
+past your location or something yes I
+think yeah and then I just have this get
+current weather response all it does is
+left hand right hand code to say take
+that just pasted code the pasted model
+earlier converted to the one that we
+want to actually give to all of our all
+of our friends later and then get where
+the returns one and then forget where
+the stream it just loops for as long as
+the person is connected it just grabs
+the data out of whatever is in the cache
+currently and then loops right and then
+this is to every ten seconds just so
+that it's easy so you can see something
+for the sake of the demo we might
+actually even make this two seconds just
+so you can see some data constantly
+changing we know the data will only
+actually change every ten minutes or so
+but you want to Keane just can to kind
+of keep a constant stream happening
+right
+and then that's it that's greatest
+service so if we will rename this to
+Weather Service so that you know just
+because we can't have a class with a
+different file name it'll be terrible
+and then you know startup CS the way you
+register these services is we have a map
+G RPC service endpoint right so now I
+can change this to Weather Service
+and that's it at this point my app can
+run and it'll go do its job and so now
+you want a client to go grab some of
+this weather data to test it out so I
+added this console app earlier
+conveniently but I also added this
+weather client Lib so I could go over
+here to my client console and then add a
+ref to the proto file and have you
+generate the client code straight into
+my console app or any other like dotnet
+stuff that we're gonna show today but
+what I can also do is I can come over
+here I have a completely empty net
+standard class library except for either
+default class which I'm going to delete
+all right and then I can right-click on
+this and say add service reference and
+then click add new G RPC service
+reference browse to the proto file that
+I had earlier that are the same profile
+that my weather app is using to generate
+the server code and then I can say
+generate client though here in this
+drop-down right instead of there's some
+other options for what you can generate
+I'm generating a client in this case I'm
+just going okay this is gonna go install
+the new Yeti goodness that you need to
+make a Geo PC generate code and generate
+all the types that you need so this is
+pretty cool so you built a service if we
+build our first micro service we install
+G RPC into that mm-hm and now you want
+to write a client so all you had to do
+is basically reference that same proto
+file from your service in your client
+and will generate all the code for you
+absolutely and you just then it
+generates you kind of the basic yeah it
+generates you all the codes for the
+clients class yeah absolutely now all I
+can do is new it up and start making
+calls yeah so let's look at what that
+looks like so I'm just gonna add a
+normal project reference now to my
+client class library because everybody
+can now share this net standard class
+library that has the client code
+generated in it all they can choose to
+reference it directly and then in my
+program CS I have a have another snippet
+here where the client alright and I
+think it's actually the whole the whole
+class I did this time and then what I'm
+so yeah you can see here like as you
+just said this weather client was all
+generated for me I just I just knew it
+up I used this channel type to give it
+the address and then I have a strongly
+typed method forget whether async which
+was my contract file you start calling
+them and start getting results back and
+write them out to the console absolutely
+so now I can make ctrl f5 this weather
+service it'll spin up on my local
+machine you'll see
+we'll see the console output in a sec
+it's gonna see the output go fetch the
+data and then sit there and be a gr PC
+endpoint and then so here you can see it
+going and getting the data and then
+being ready and then over here I can
+then like go debug start new instance of
+my of my client console and my client
+console a ping up it's gonna grab a
+single weather and then just say done in
+this case cuz that's I'm just grabbing
+is calling a single weather endpoint
+asynchronously I'm using async like
+console app that we added a little while
+ago and then it's like apparently 53
+seems reasonable that's pretty awesome
+so in just a few minutes we built a
+brand new project using the worker
+service a long-running process like you
+would build a micro service yep
+that goes out and fetches weather from
+an in point somewhere and then we
+actually added G RPC to that service so
+a client can call in to that and get
+that weather data back yep absolutely
+well let's switch back to the slides for
+a second and we'll talk about c-sharp so
+along with that Nikora 3 we're also
+shipping the next version of c-sharp
+c-sharp 8 it has a bunch of new stuff
+and we kind of broke it down into
+buckets one that one of the things we
+think about is we always want to make
+your code safer to write want to make it
+easier for you to catch the errors early
+or prevent the errors from ever
+occurring and so there's some new
+features of called nullable and c-sharp
+8 to try to address some of that stuff
+modern as well as we as we look at
+language we always are looking at other
+languages and we're looking at the
+patterns that developers are using today
+and so one of the cool features we have
+in c-sharp 8 is async streams and we're
+gonna show those in a little bit and
+then productive we always want to make
+you more productive so the goal of
+c-sharp is to add the right features and
+stuff to make it easier for your write
+code and write code faster with less
+less text in the screen at the same time
+also tooling all that with Visual Studio
+family so you can actually be more
+productive so what I'm gonna do next I'm
+gonna bring Mads on and we're gonna take
+the demo that Glenn had and you know
+Glenn didn't really write it the best
+way you could we're gonna we're gonna
+make it use async streams well I think
+Glenn did a fantastic job it's just that
+when he switched back to the last let's
+switch back to the laptop and look at
+the the proto
+that Len put up there there were
+actually two end points here there was a
+get whether that he used that he called
+just before from the client and there's
+a get whether stream which continues to
+stream whether down so that's the one
+we're going to investigate now and find
+my way back to the program here so
+there's if you look at the if you look
+at the client here it also has a get
+weather stream method so that's probably
+the one we're going for and that can't
+be awaited instead we get something that
+we're gonna explore a little bit so
+let's just call it response for now and
+let's start drilling into it so if we
+say responds dot we see that it has a
+response stream that sounds stream e
+let's do that and that one has to read
+all async that sounds streaming and
+async that one's pretty good right let's
+do that one so if I call that then what
+do I get back that's we can actually
+drill into that as well let's try to it
+just f12 our way through there's read
+all async it returns something called ia
+singen or mobile of T and Ising
+enumerable if people remember
+I know mobile is a core type and I know
+mobile of T is a core type and net that
+you can for each and and produce new
+ones from the language as well with with
+your return with iterators and so I I
+think normal is just a it's just an
+async version of that and we can
+actually take a very quick look down the
+rabbit hole here I think a normal ball
+just like enumerable has a gate
+enumerator this has to get async
+enumerator and if we drill into that you
+can see that it has a current property
+for the value that we're currently
+looking at and it has a move next method
+but this one is async right so if you
+think about it this is a stream where
+you can pull elements but every time you
+pull a new one you do it asynchronously
+so it might take time and you might you
+have to wait it okay so that's how that
+works under the hood now at the language
+level we would like to support for
+reaching over these so let's try to for
+each over there the thing that we got
+back from our drilling here so let's
+call that for casts with an s because we
+hope there are multiple and then we can
+let's try to for each over its reach VAR
+forecast in forecast
+and now what we get is oh this thing
+can't actually be for each you and
+that's because in c-sharp we decided you
+shouldn't just be able to for each over
+acing things because then you can't look
+at your code and see and know the racing
+and know that you're doing something
+anything right we want every a weight to
+be visible in the source code so you can
+know that you're sort of getting off the
+thread you're doing an icing thing
+you're it's a point where context might
+switch and so on so what we have instead
+is an a weight for each syntax that then
+you use when you have an eye and eye
+async enumerable and that you just put
+the right Curly's in there for for the
+beauty contest and and we're good
+so now we've actually called this
+training in points and now we set it a
+async loop around that end point yes it
+the code honestly to me Mads you just
+took a for each and an edit await in
+front of it yeah works I tried to make a
+big deal of it but it's actually pretty
+amazing I mean yeah it's it's a
+complicated feature but it looks so
+simple when you actually use it right
+and some you know they're more there's
+more to it you can actually you'll
+return in an async method as well now
+returning I think you know mobile so we
+have you know async you'll return that's
+pretty useful right amazing and also
+there's cancellation built in that I
+kind of skipped over here but that's a
+little more to it well it's the idea
+it's it should be simple
+later today you're gonna have more talks
+on c-sharp babe we're gonna drill into
+more and more features than just the
+async stream that's exactly right yeah
+so so just after the little after the
+keynote there'll be two Thaksin perfect
+thank you let's go back to the slides
+and we're gonna talk about desktop so
+today we have still millions of
+developers building desktop applications
+you might ask why well because desktop
+applications are simple to write web
+applications are hard they require
+knowing HTML CSS JavaScript and a bunch
+of stuff desktop applications in dotnet
+you can just drag some controls to a
+form write some code they're very quick
+and simple we've made them much much
+better in dotnet core three so in.net
+core three we've brought wind forms in
+WPF to dotnet core but you get all the
+benefits of dotnet core so one of those
+benefits is side by side deployments you
+no longer have to worry about an update
+of the framework breaking your
+application
+you can even take the app our our the
+the the framework and compile it
+directly into a single XE for your
+application so you just hand that that
+application to any machine it doesn't
+even have to have dotnet core on it
+that's a cool feature in.net core 3
+we've made all of the windows 10 api's
+available to these applications as well
+so you can call all the things if you
+want to get bluetooth or something like
+that you can do that from a win for more
+WPF application and then finally because
+it's done at core we do all of it open
+source and so we've open sourced
+WinForms and WPF now what I'm gonna do
+next is talk about App Center this is a
+new announcement today I'm I'm I started
+off as a web developer and App Center
+for desktop applications really excites
+me because for the first time ever if
+you're a web developer you can just add
+some kind of analytics to your website
+and your to know how many people called
+it where they're from how long they were
+on the site wouldn't you want that same
+information for your desktop
+applications if you're building a
+desktop application you likely want to
+know how many times it's been used or
+all the features being used and so by
+adding App Center to your application
+you get all those benefits absent can
+also be used to deploy the application
+including beta versions of the
+applications to a smaller set of people
+so super excited to announce that what
+I'm gonna do next is I'm gonna bring Ali
+on stage and we're gonna go build a
+dotnet core 3 desktop application and
+then we're gonna actually hook it up
+with App Center so we can get to limit
+tree on it as well right so let's switch
+the machine here and a theme we're gonna
+have today is as we start building
+applications you know we built that
+micro service now what you're gonna see
+us do is basically build more
+applications on top of that thing
+showing you can build on it everywhere
+and share your code right so I happen to
+have a weather application myself and
+that's application it's a ving firms app
+that sits on your desktop and shows you
+what is the weather right now let me
+show it to you it's very simple and but
+it has one problem
+I haven't actually finished development
+of that app I put together UI I put some
+dummy data that shows the weather on
+Alderaan planet right now that planet
+doesn't exist anymore so I
+all cold yes but I would like to
+actually show the real data for say
+Seattle and I just heard that Glen has
+amazing service running in kubernetes
+and he also has a client library that I
+can just use in my fin from supplication
+to that right and not only that we can
+actually use it from any dotnet
+application right mobile web WPF so
+let's take a look at the library that
+Glenn created for us if I right click on
+properties I can see that this library
+is targeting dotnet standard 2.1 which
+is great because that's the latest
+version of.net standard understand or
+two point one ships with dotnet core
+three so it's the it's the latest
+version under standard that supports
+dotnet core 3 but it also only runs on
+done in court three so that probably
+means yes
+executive your application a dotnet core
+three desktop A+
+no it's framework because I developed it
+a while ago where I did not have a
+choice between core and framework so if
+we go to properties we can see that my
+app is targeting dotnet framework four
+point eight I cannot reference the
+library right now but what I can do I
+can port my framework application to
+dotnet court and then I will be able to
+use Glenn's library and to do that we
+created a tool called try convert that
+will take your dotnet framework project
+file and it will try to convert it to
+new SDK style dotnet core project file
+it's a simple command-line tool I'm
+gonna type try converting Z and as a
+parameter I'm going to send the path to
+my project file and understand for
+Donnie core the project files are
+different than they are for done in
+France and so what we built as we built
+a global tool that can be installed on a
+machine it's a sample to help people
+convert their cs proj from an old-style
+cs proj to a dotnet course now seus yes
+exactly and now when i click on
+properties in my visual studio i can see
+that now my application is targeting
+dotnet core 3.1 right so is it in just a
+few seconds i ported my framework
+application to.net court so now I can
+reference the library and to do so I'm
+gonna right click on dependencies add
+reference find whether clients sleep
+click ok and once I did that let's go
+ahead and update my code that is pulling
+dummy data at this moment so I have this
+method pool weather that just gets demo
+data and I'm not gonna need this code
+anymore I will also not need they get
+Diamond data and here I was using the
+local weather response class but I'm
+gonna be using the one from the client
+library so I'm gonna delete that code as
+well now I will insert a few lines of
+code I will add users and I will talk to
+those lines so first thing that I do
+here I'm creating a client from the
+library then based on that client I am
+creating JIRA PC weather forecast
+service and for this forecast service
+I'm calling get streaming weather so
+every time the service on kubernetes is
+sending out the weather data every two
+seconds I'm getting the data on my app
+and let's see how that works so this
+code looks almost exactly like the same
+code that cool yes yes exactly second
+ago what they were calling my name await
+the same stuff yep so we're showing
+sharing dotnet code across all my
+application types and that looks like a
+real data Seattle 53 degrees and weather
+doesn't change that often but you can
+see that I am actually receiving new
+data every two seconds so once I built
+the application now I probably want to
+share it with my friends maybe even
+community right I'd love to have it have
+this look at that new feature we talked
+about single XE that's that's a great
+idea let's publish it as a single eggsy
+file and to do that I'm going to
+go to project file and let me move
+everything down so it doesn't distract
+us and I'm gonna insert three lines of
+code
+the first line published single file
+will make package my application and
+dotnet core in the single is all done it
+cool all your application is at one
+single Lexi yeah so nothing has to be on
+the machine that you give them exactly
+yes it's completely dependent on from
+the environment it's going to be running
+on the cool the second one runtime
+identifier specifies which platform I
+exist should target and by default that
+not quark can run on any platform but if
+we're publishing it as a single MZ file
+we need to specify runtime and into fire
+and the third one is published tree that
+is a new feature that will trim out all
+assemblers from your.net core that are
+not used by your application so that way
+you don't get the entire dotnet core you
+get on the assemblies that you need for
+your app which makes the size much
+smaller all right once I added that to
+my project file I'm gonna right click
+and go publish and publish one more time
+and while it's publishing we can see
+that here you can specify the password
+that symbol exe will be put you can also
+specify configuration target framework
+target runtime all those settings can be
+set from this page as well and it takes
+a while because right now
+dreamer feature is working so it's
+actually analyzing what we can throw
+away if she goes and looks at your app
+figures out what the dependencies are is
+best and it's not perfect we call it
+experimental disk yes so yeah you might
+find it actually trims too much stuff
+out and you have to go back to your CS
+proj and manually reference to whatever
+it turned out to hard that is true it
+will build better tech around this in
+the future and we'll build better
+cooling but it is a first step that we
+wanted to ship and donate core 3 yes and
+as you said if it trims something out
+it's very easy to edit back to your
+project row ok so we published our
+single egg Z and here it is just one
+exists
+that I can send to my friends that they
+can put out for the community and they
+will be just able to run it and use the
+app on any computer that has you doesn't
+even require down in core yes yes so the
+last thing that I would like to show
+today is an integration with App Center
+because as you mentioned web developers
+have been spoiled for a few years where
+they could see analytics for their
+websites they could see how many users
+they got which devices that what it was
+accessed from and so on and we would
+like to enable our desktop developers
+with the same features so for that you
+can use App Center let me go to my
+epicenter portal it's App Center dot
+Emma's I created an account and here you
+can create a new application you can
+configure it but I already did it for my
+app it's weather Vin forms up once you
+do it you will get very detailed
+instructions on how to add integration
+with App Center in your program and it's
+super simple you just add a few new grid
+packages and then you add a few lines in
+your project program dot C s file so I
+will do exactly that I'm gonna first go
+and add new get packages that are
+required which are Microsoft App Center
+analytics
+and the second one is Microsoft
+epicenter crashes
+right once I edit it I'm gonna go to
+program dot CS file and I will add some
+museums and this is how I enable
+epicenter in my lines of code yeah it's
+basically just one line epicenter that
+start and I send the key that I get from
+the console and I specify what I want
+from my app Center it's analytics and
+crashes
+now you can detail crash analytics and
+you're gonna get monitoring as well
+letting you know that people actually
+tried the project exactly and I'm gonna
+run it but it will take the portal a few
+seconds so if we go here and we go to
+analytics you can see some analytics so
+you can see that I was testing that
+demoed September 20 and September 23rd
+just today and you can see a few spikes
+we will have another demo later today
+with Danielle and Matt that will go
+deeper and dive into all details of all
+the great features that App Center can
+offer and was that awesome so so to
+recap what you can do now is you can
+basically build desktop applications
+with dotnet core 3 WinForms in WPF you
+can make them into single legs ease it
+can easily be distributed
+you can add rich analytics with Azure
+wrap Center awesome I'm so so excited
+about this so let's move back to slides
+next I want to talk about mobile app
+design right so xamarin is awesome
+technology that lets you take all the
+goodness of nets and make it available
+to all the mobile devices so the idea
+here is you can build any iOS and
+Android app with c-sharp and why would
+you want to do this where you want to do
+this because dot Nets got all this rich
+libraries that you can share across all
+these applications so for example that
+micro service that we showed before we
+probably can share that across Android
+and iOS that's one of the tenants of
+dotnet and C sharp and xamarin is being
+able to actually share the same logic
+across all your app types Android or iOS
+another cool part of it is we have a
+library for building apps called Zen
+forms basically you build it once and it
+runs on all the devices and of course
+also all the xamarin tech is open-source
+like the rest of dotnet today we have
+two awesome announcements
+the first one is sam'l hot reload
+imagine you're in your application and
+you're gonna change some of the sam'l
+files well you don't really want to
+recompile and republish and wait for all
+that kind of stuff to happen what you
+want to do is you want to basically save
+your sam'l file and have your device
+refresh immediately even better than
+that sam'l are xamarin hot restarts
+which is the ability to also change the
+source code normally when you change the
+source code that's a full recompile copy
+back to the device I wanna be able to
+change that code and refresh very fast
+as well and so this one's in private
+preview today you can go to the URL and
+sign up and you might get access the hot
+reload is actually available to download
+today and so next what I'm gonna do is
+I'm gonna bring up James and he's gonna
+show us how to get some xamarin apps Oh
+awesome
+Thank You Scout so much I'm here in my
+way cuz you know I need to get to my Mac
+get to your man okay awesome well like
+Scott said I love don''t development
+with xamarin inside a visual studio what
+I love is that like Scott said you can
+share all of your c-sharp and Dada and
+knowledge across all of your
+applications and that's what we've done
+I decided that I wanted to take that
+weather app import it to iOS and Android
+and at the same time leverage that same
+exact 2g RPC logic that olya use and
+that we're gonna use throughout the rest
+of the day now two important things to
+remember like Scott said we have all
+sorts of different texts of pieces of
+technology for cross-platform
+development but with xamarin you have
+access to a hundred percent of the api's
+in ios and android and always up-to-date
+we just shipped iOS 13 and Android 10
+support so on top of that we have
+xamarin forms for cross-platform UI and
+xamarin essentials for cross-platform
+native API access so let's go ahead and
+port that exact same weather application
+to iOS and Android taking advantage of
+mobile features so here I am on my Mac
+which looks the Mac yes there's my Mac
+boom and of course I need to get started
+with a great design I'm not a designer
+Scott sorry but Guzman bar Quinn was
+nice enough to have this amazing weather
+application on up labs which is one of
+my favorite websites to use for mobile
+and reached out to him super happy that
+were able to use it and I'm super happy
+that he's an amazing designer so that's
+what we're gonna do and I'm over inside
+a visual studio for Mac we just launched
+a brand new version with all sorts of
+new tech so I want to show that off too
+but where you get started is file new
+project you have cross-platform apps you
+have iOS Android dotnet core apps as
+your functions Mac TV OS and watch OS
+everything is possible with xamarin and
+dotnet so what I've done over here is
+I've added an android and an iOS project
+and I also have this mobile core it's a
+dotnet standard library just like we can
+use to share across all things of dotnet
+but it has xamarin forms in there and
+this is my mobile specific code so this
+is things like my user interface with
+xamarin forms my models my view models
+my app state but notice that I have that
+wider client Lib that olia use that Glen
+had created so it's inside a visual
+studio for Mac and I can reuse it right
+here inside the weather app so that
+mobile core that's the differentiator
+for xamarin right that mobile core is
+the code that is shared across the iOS
+and Android apps right at once and it
+gets to be used in all the all the
+devices you can think of it most of my
+apps have two different Donna Center
+libraries one that can be shared with
+anything so restful service calls models
+things that are just hey this is Don net
+code then I have my platform specific
+code or mobile specific code and this UI
+runs on iOS and Android right so so for
+instance here if we take a look at how I
+built this app is I have a weather page
+and a weather view model so here up top
+I have a view model I have a weather
+client and this G RPC weather forecast
+service the same exact code that olya
+was showing earlier and since I'm going
+to be using sam'l and data binding I
+have some backing fields so for instance
+I have a used Celsius a temperature
+condition time stamp these are things
+that my user interface is going to
+display and I can tell it to update via
+set property but here if we look at this
+message weather service get streaming
+weather same code the only difference
+here is that I'm telling it how to
+render the user interface so here's a
+bunch of items I want to display in a
+list and
+then I want to update the UI I use Samer
+and essentials to say begin invoking
+this logic on the UI thread because that
+G RPC could be coming in from anywhere
+right so let me just go ahead and run
+this really quick so I'm just gonna hit
+debug this is gonna take my application
+logic compile up my Android application
+and then deploy it to an android
+emulator right here running on my Mac so
+there we go
+my application is starting up and what
+we should see hopefully is a beautiful
+weather application that I built inside
+of sam'l alright it's doing some stuff
+but let's go ahead and fill this in a
+little bit more so I have my user
+interface code down here and let's see
+here I have a pancake view which is a
+beautiful third-party control that will
+allow me to do the gradients in the
+background think I'm missing some stuff
+okay so I have a label with nothing in
+it so let's just put in Seattle now I'm
+going to use that zamel hot real Oh so
+I'm gonna hit command save it's gonna
+save that and push the changes over into
+my device so Seattle right there now
+what we can also note down here is I'm
+missing some other things in my UI so
+for instance here we can go ahead and
+maybe put in a new column and then I'm
+gonna say binding and the brand new
+sam'l intellisense will kick in and I
+can say temperature there we go now it
+does look like for some reason my
+internet has stopped so that's good and
+I'm getting no updates so things are
+working exactly as planned because we're
+doing it all alive just super great but
+I have zero degrees so it did show up so
+that's really good alright very cool
+it's very cold in here yeah so other
+things that we can do inside of here for
+instance is like this this Monday here
+so that's just showing a blank so if I
+look here on the date what we can see is
+that I have current weather conditions I
+have this date property here and maybe I
+want to change this to a Capitol casing
+so I can say use a case converter say
+true hit a save and now that Monday is
+completely updated 100% now what I'll do
+because I did change internet right
+before we're gonna go ahead and stop and
+redeploy again and bring up a new
+emulator and see if we can get our
+internet back on our machine which would
+be very helpful if so you can see
+actually how fast the emulator rebooted
+here so let's go ahead and see if this
+is gonna spice up for me because having
+real data would be useful always fun to
+show the real Mike reserves but you can
+see how rapidly iterating I was on that
+user interface using zamel ha
+reload inside my application so there we
+go we have lather Oh a cool so one last
+thing I want to do down here actually
+two things is I like this collection
+view which is like all the different
+humidity UV down here and that's a brand
+new feature inside of xamarin form so
+here I can say horizontal or vertical
+but I'm using a pancake view so I'm
+gonna add a fancy corner radius here and
+hit save again again Zam aha reload
+kicks right in boom I got beautiful
+rounded so fast so fast but you know I
+like teardrops which are new hotness I
+think everyone's gonna pick up boom look
+at that and I can prove that this is
+running in real time because down here
+if I wanted to I could go ahead and say
+time stamp large and now we can see the
+time stamp from that gr PC client
+updating in real time or right there
+which is super awesome and that's Sam
+aha reload right there inside a visual
+studio for Mac with all that gr PC
+client beautiful user interface boom
+right there now what I need to do though
+is also deploy this to iOS so normally I
+would just say you know set that as my
+start up project go into my iOS
+simulator boom did it go but I want to
+show off some brand new features of hop
+restart so I'm gonna actually head to my
+Windows machine right now and do iOS
+development so let's swap places over
+here I love this there we go Android on
+the Mac and iOS on the Windows machine
+that's correct so I'm right over here
+now what I want to talk about though is
+that it is the same projects same
+solutions that I just had open in Visual
+Studio for Mac so no matter where you're
+working you're good to go I know your
+Mac guy I'm a Windows guy so ideal setup
+right here so that's gonna make it
+really easy to go back and forth and
+again I have my shared code and also
+that iOS proj
+and that shared code and everything else
+that I have in here now what we wanted
+to do with hot restart is that every
+once in a while you're changing c-sharp
+code for a saml hot rila user interface
+code you need to be able to rapidly
+iterate on your app but what happens
+when you want to get it on your device
+and that's some of the cool tech built
+into hot
+restart so what you're able to do and
+what I have here is my iPhone right here
+my iPhone 7 that's plugged in to my
+Windows machine ok and what I have up
+top is my iPhone right there it's
+connected it's good to go and what's
+nice here is that all I have to do is
+hit debug if you've ever done this
+before you got to worry about
+configurations and connections and
+profiles and certain sand all this stuff
+but what you're able to do with this
+technology is restart your application
+directly on to your device so here for
+instance I have my device that should be
+screen mirroring let's go ahead and see
+if it's gonna cooperate with me let's go
+ahead and maybe shut it down and reopen
+it let's do this really quick here there
+we go and perfect so there's my device
+I'll put it right over here so there's
+my device right there on the screen now
+what's great about this is that I can
+come into my UI let's go ahead and just
+make this sticky on top cool that looks
+good and what I can do is add some new
+technology into here so for instance
+maybe I want to convert this into
+Celsius so again I'll just uncomment
+some code I have a checkbox I have a
+label this is data bound to that use
+Celsius I'm gonna hit save now sam'l ha
+reload will kick in and notice that it's
+reloaded I hit a breakpoint I'm
+debugging my app right here on my device
+so I can go ahead and continue on good
+to go all right that's good I must have
+made some changes to my code that
+weren't compatible but no worries I can
+just literally use hot-hot restart here
+to redeploy again so let's go ahead and
+deploy there we go and you just saw like
+I stopped took that took some changes
+good to go I see you'd back on the phone
+already and that's back on the phone
+yeah so this is initializing that debug
+session and Zam aha Rilla so here's our
+app here's everything is good and now we
+have this little back and forth but as
+you can see Scott or have some issues
+because I hot reloaded that UI but the
+temperature is not changing now the
+background is so my converters my code
+is running so let's fix this if I go
+into my view model here we have that
+temperature property now it's returning
+temp so that's not good so what I'll do
+is I'm gonna say use Celsius I full
+intellisense everything here we're gonna
+use xamarin essentials what's cool about
+this is it has a bunch of unit
+converters built-in so you can do like
+Hertz 2 degrees Kelvin 2 Celsius here
+I'm going to say Fahrenheit to Celsius
+and I'll pass it the temp else just temp
+there we go
+make that temp there we go now what we
+can see is that the UI is telling me
+that hey I've made c-sharp code changes
+to my application you need to restart
+your app and what we can do right here
+is hit the restart button and this will
+take all of my code changes that I made
+redeploy it to my device without having
+to compile it at all and what's great is
+that this is literally right to my
+device in just mere seconds those
+squiggles go away the application is now
+back into a debug session that I would
+expect earlier and what we should
+hopefully see here once hot reload
+initialize I can hit Celsius now we're
+in Celsius and I can use my app my real
+data use sam'l hot reload for my UI and
+ha restart when I'm making code changes
+and play directly to my device and
+seconds with nothing in between that is
+amazing I have never seen mobile
+development on either platform of the on
+the Mac or Windows deploy 2 devices and
+restart as fast as I seen with the hot
+reload and the hot restart yeah this is
+a game changer we want to focus on
+developer productivity make sure that
+our developers building mobile apps with
+dotnet have the most enjoyable time
+without anything in between
+no big set up and boom between those two
+technology would be hyper productive and
+share all of your dotnet logic like
+you've seen before across all the
+devices all your apps thanks James let's
+go back to the slides and what we're
+talking
+about next is building web applications
+with blazer so the way I like to think
+of this is if you're building web
+applications we've had awesome web
+frameworks in dotnet for many many years
+but the web is transition to this new
+new place where all apps are spa and so
+what if we could just take the
+technology we already have the day and
+say you build any brand new asp.net core
+blazer application that's an it looks
+like razor blades your razor and those
+applications just become spas by default
+that's what blazer is all about it's
+full stack web development you build an
+application in net it's a spy out using
+the same frameworks and the same
+technologies you're used to already you
+don't have to relearn a bunch of new
+stuff the cool thing about this tech is
+it also runs in all the browsers so it's
+compatible with all the browsers that
+are out there whether it's mobile or
+desktop and even cooler there's one one
+final piece which is we have a prototype
+or in preview thing called web assembly
+and web assembly lets you take your web
+application and run it directly on the
+device that means you don't have to
+actually that it can be completely
+disconnected it can be running on a
+desktop it can be running on a mobile
+device and running as I like a real
+desktop application we do that because
+we can compile your c-sharp directly
+into web assembly that can run natively
+in all the browsers so what I'm gonna do
+next is I'm gonna have Dan Roth come on
+stage and he's gonna show us how to
+build a blazer wrap hi Scott core 3 yeah
+great shall we build a single page web
+app for our weather application using
+only net and c-sharp no no JavaScript no
+JavaScript required alright cool so I'm
+gonna get close on some of this stuff so
+I can see my there we go okay so to get
+started with blazer all you need is not
+in a course Rio because support for
+Blazer server apps is now in the box so
+I'm gonna stop the change this app and
+I'm gonna open up a new visual studio
+instance and we'll just go ahead and
+create our first blazar app so we can
+just get a feel for how it's done so I'm
+gonna create a new project and let's
+create a blazer app there it is right
+there in the box please drop one sounds
+like a great name and then for this app
+I'm gonna pick the Blazer server version
+we'll talk more about the webassembly
+version and just
+a second alright and then we'll go ahead
+and get this running all right so we can
+take a quick look at this application in
+the project and see that there's no
+there's no JavaScript here right it's
+just razor files and c-sharp let's go
+ahead and ctrl f5 so we can see what the
+application does these razor files the
+same razor files our developer has been
+using for the last nine years yeah so
+these are a combination of HTML and C
+sharp and it's use of dynamic
+dynamically render your application so I
+want to start I'm sorry start without
+the debugger and let's go ahead and then
+we'll see what this app does now this
+will be a simple spa style app like
+it'll have some interactivity some tabs
+you can tap around there we go so we
+have a home page account or fetch data
+page I can use the back and forward
+buttons in the browser so I can do
+client-side routing all those
+navigations are actually being
+intercepted in the browser by Blaser and
+then handled in the browser without the
+requests ever coming to the server the
+home page just has a little bit of
+static HTML nothing too exciting there
+the counter has this button that if I
+click the count goes up and there's no
+page refresh happening there it's all
+happening that like a client-side app
+would normally work and then we have
+fetch data and fetch data is
+conveniently enough showing a table of
+weather forecast data now how how is
+this working how is this possible
+there's no JavaScript in my project well
+that's F 12 and look at what is going on
+in the browser dev tool so I'm gonna
+refresh so we can see the network
+traffic and if you look here we can see
+that there's not much being downloaded
+it's only about 400 kilobytes of stuff
+but if we look at the little more
+carefully we see there's a WebSocket
+connection being set up between the
+browser and the server that WebSocket
+connection is being used to send all the
+UI events to our components that are
+running server-side which then executes
+the components figures out how the UI
+should be updated and sends the updates
+back down to the browser to be applied
+to the actual Dom so that's how it's
+working and we can we can see that in
+action let's look at the WebSocket
+connection a little more closely we'll
+clear all the messages they've been sent
+so far and I'm just gonna
+click you see that see the binary
+messages flying that's you I events
+being sent and UI updates being
+processed that's how that's all it's all
+happening now let's go look at how that
+code is actually implemented for that
+counter component here it is
+it's a razor syntax a combination of
+HTML and C sharp we can see it's
+routable because it has this app page
+directive at the top to say that the
+route for this component is slash
+counter we have some normal HTML markup
+and then we're using razor syntax to
+render the value of the current count we
+also have a button which has an onclick
+handler normally this would have to be
+JavaScript but here it's c-sharp we're
+pointing to a c-sharp method then
+whenever time the button is clicked the
+count gets updated the componentry
+renders and that's how you see those
+updates on the screen now each of these
+razor files is actually compiled into a
+just a normal dotnet class that captures
+the rendering logic from from the dot
+razor file and those component classes
+can be compiled into dotnet assemblies
+they can be then shared on new Guetta's
+nougat packages you can build a reusable
+component library after those component
+vendors we showed earlier can actually
+you know have these components we can
+actually just drop into our apps that's
+right it makes your life so much more
+productive you can just grab existing
+components and go let me show you how
+that's done how you can build your own
+component class libraries I'm gonna add
+a new project to this solution and this
+time instead of a blazer app I'm gonna
+pick a razor class library now what is
+that well a razor class library is
+actually just a normal dotnet standard
+class library but it's been set up to
+also be able to compile dot razor files
+to compile razor components here we have
+a razor component that's in the new
+class library it's pretty simple it's
+just a div but it does have some styling
+and this is interesting the the project
+has this WW root folder with a couple of
+static files it's kind of styles that
+CSS it's got a background image that's
+also used this is a new feature in
+asp.net core in dotnet course Rio where
+your class libraries can carry static
+files that then are made available to
+the application when the project is
+referenced or when the new get package
+is referenced so I'm going to add a
+reference to that class library like so
+so I can use that component now to make
+the these files available in my app I do
+have to add a link to the styles that I
+want and we use a simple convention to
+do that I'm gonna copy this existing
+link and I'm just going to update it so
+the convention is its underscore content
+is the the prefix and then the name of
+the class library so razor class library
+1 and then the path to the file that you
+want so Styles dot CSS and that's all
+you got to do now we can use our
+component in our app so let's just start
+typing here component 1 I think is the
+name yep there's intellisense let's
+close that out we say just go back to
+the browser you can see that the browser
+already knows that the app has been
+changed
+we just refresh and so we can hopefully
+see the changes on the home page aha
+there is our styled component that came
+from that component class library easy
+so simple so that's gives us hopefully
+the basics that's not going to build
+that weather app I've already started it
+over here and this solutions we go into
+the blazer folder I'm gonna set the
+blazer server version of this app as the
+startup project there we go
+now this this blazer app is a little bit
+interesting in that there's no much in
+it like it actually doesn't have like
+hardly any RAZR files in the app project
+like hardly at all that's because it
+references this blazer weather core
+project down below that's a razor class
+library that contains all the components
+that's used by the Apple explain why we
+did that in just a bit but you can look
+in here and see there's the forecast
+that razor page and there's all the
+razor syntax that renders the app let's
+go ahead and run this let's see what the
+app looks like this app borrows the same
+beautiful design that James used for the
+mobile application there it is so looks
+pretty good we got the current
+temperature that's all working now let's
+look at the code and see how that is
+done at the top of this page it's got a
+route just like before it also is
+injecting an eye weather forecast
+service that's the same G RPC based
+service that Jane used using his mobile
+app same code like so yeah all the code
+runs everywhere browser mobile desktop
+anywhere you want and then we've got the
+razor markup that's just rendering out
+the the Dom elements for the for the
+page down below in this code block
+here's a component life cycle event that
+fires when the component has rendered
+and this is kicking off this get weather
+updates async process which is in this
+method down here here you see that
+think for each loop that we saw before
+who seen before so it's getting the live
+updates from the server we should be
+able to see that in the app if I let's
+zoom in here so 48:45 yeah so that the
+tics are coming in from the dating
+all right great now we're missing our
+ability to actually change the
+temperature units let's go ahead and fix
+that I already wrote a little
+temperature unit picker component it's
+another dot raiser file in the class
+library it's just a div let's expand it
+again it's just a div that has an
+onclick handler that when it's clicked
+it will toggle the units from Fahrenheit
+to Celsius and then it has this
+parameter temperature unit changed so it
+can let the parent component know so now
+we just need to use that so let's go
+back to our weather forecast page after
+the temperature let's add the
+temperature unit picker and we're going
+to add bind the temperature unit from
+that component to the temperature unit
+field in my page and that's all we
+should need to do I'm gonna control f5
+again not control it for you no control
+it for does I was maybe search or
+something all right there we go so we're
+up and running and now we've got this
+little widget down here by the
+temperature I can click on it and you
+can see the temperature automatically
+updates between Celsius and Fahrenheit
+now that's a blazer server version of
+the app but when the cool things about
+blazer I'm gonna stop you and say we're
+gonna we're gonna stop on the blazer
+stuff and we can quickly talk about the
+webassembly thing so yeah I got you
+basically webassembly allows you to take
+these same applications and actually
+build them where all the code runs on
+the browser not on the server this is
+the same app same components it's just
+instead of running in a blazer server
+app on the server this is all executing
+client-side in the browser there's the
+web assembly file coming down with the
+app so you can host your app on the
+server or on the client and take
+advantage of both sides of the wire cool
+I am super excited with this blazer
+stuff this is like you know all my
+asp.net knowledge now lets me build spy
+applications without using any
+JavaScript at all if I want so super
+cool then full stack web development
+with dotnet ok let's switch back to the
+slides real quick when talk about one
+more big thing
+machine learning we introduced ml net at
+Build that's May of this year
+1.0 they just shipped and I'm just gonna
+quickly talk
+about it and we're gonna bring Bree up
+and choke a couple demos the whole idea
+behind ml net is if you're a c-sharp
+developer you don't want to have to go
+out and use some other technology or
+some other language to go and build
+machine learning into your applications
+and so you can build ml models and stuff
+directly in C sharp F sharp without
+having to go anywhere else we also know
+that it's hard to actually build you
+know machine learning models and so we
+have an awesome preview tool called
+model builder that you can use to
+actually just point out some of your
+data tell it what you want to predict
+and it'll actually go and write all the
+code and models for you Bri is going to
+show that and then finally we want to
+make sure that anything that we do in ml
+net it can be extended with all the mo
+buzzwords you've heard like tensorflow
+and stuff so what I'm gonna do next is
+bringing Bri up on stage and what we're
+gonna do is we're gonna build a yeah
+come on we're gonna build a machine
+learning application that does weather
+as well yes we are so if we take a look
+we still have Dan's Blaser app up on
+here but what we're gonna do is actually
+make this app smarter using ml net all
+it does is it right now is it pulls
+weather data from from Glenn's micro
+service that's hosted in a Draper
+Nettie's but we're gonna use machine
+learning to take images from around the
+city and actually predict if it's sunny
+cloudy or rainy so it's gonna predict
+the weather because we all know that the
+weather is not always accurate you're
+better off going and looking yourself to
+see if it's actually right exactly so
+we'll close out of all these over here
+all right so if we go back to let's see
+the forecast appraisers that we saw
+before
+all right so Dan talk a little bit about
+components which are just UI elements
+that you can have in your plays or
+applications and I creative one of those
+for the machine learning and I just
+called it ml weather cam that's just
+gonna go right below the weather data
+that we saw before and then what this
+does is it if we look at this ml weather
+cam don't raise ur right here there's
+gonna be three buttons that are gonna
+link to three separate photos which are
+then going to be put into this classify
+weather method and if we go to the app
+it's gonna show you a couple pictures
+that we got from cams around the area
+and then it tells us kind of what it
+thinks those cams are showing us whether
+it's rainy or sunny or or what not
+exactly so here you can see there's
+nothing really implemented right now we
+just have it returning a string so if we
+go ahead and run this real quick you
+give it a second and we'll see that new
+component added on there it's just when
+you click on it oh you know what
+actually we're gonna try it on the
+server version instead because that's
+where it's implemented so let's retry
+that mm-hmm
+Dan caught you up yeah he really did he
+really did let me try this again so
+we're gonna rebuild our solution and
+it'll take just a second just I want to
+show you that it's implemented without
+the machine learning service or machine
+learning yeah examine the application
+will show the pictures yeah and then
+we'll run model builder to go and create
+the actual model for us right exactly
+so should never rebuilt the full
+solution but get a second the big
+solution is it's a big solution yeah
+something I should talk about is you
+know while we have the solution we're
+actually gonna make this entire all the
+demos we have the day I'll be available
+on github later today right exactly
+buddy watch that keynote can actually do
+this himself and so here are the three
+pictures that I was talking about here's
+that new component and of course it's
+just returning the same
+every time so to add machine learning
+we're just going to use model builder
+which is UI tool and Visual Studio it's
+just an extension that you can download
+once you download that extension you add
+machine learning and there's a variety
+of scenarios here that you can see like
+sentiment analysis price prediction but
+we're going to do image classification
+because we want to predict the weather
+and images so then we'll choose our
+training data which is how you create
+the machine learning model in this case
+I've already put it in the format that
+it needs to be with three different
+labels here and we can actually see once
+we choose that that I have my images
+here a preview of my images for cloudy
+rainy and sunny you gave it a bunch of
+images to learn from great and I'm gonna
+have it train for about 90 seconds
+because it's a small data set with
+larger data sets you want it to train
+for a little bit longer so this this
+this whole tool kind of makes me laugh I
+remember a year or two ago we were
+building a demo in the team it was a it
+was called github classifier and what
+get up classifier did is it basically
+looked at the issues were being filed in
+our github repos and would automatically
+classify them to the right places it's
+kind of a bots I remember sitting on my
+team and I was looking at the code and
+I'm like I don't know if I'd ever be
+able to write that code and it's kind of
+the genesis of a model builder thing I
+couldn't figure out how to write the
+code and then the next thing was I
+remember asking the team well how did
+you choose the algorithm and the answer
+kind of was well we tried this one and
+it seemed to work and to me model
+builder is like taking that to the next
+step further where you basically instead
+of doing that give me a data file of
+existing data run this tool on it it
+will try things doing it right now it's
+trying all the different algorithms we
+have in ml nets and will write the code
+for me mm-hm
+so you're making ml where I can use the
+code right yeah so building and
+fine-tuning the performance of a machine
+learning algorithm can be really
+difficult especially if you don't have
+that machine learning knowledge so what
+model builder does is use automated
+machine learning or auto ml for short to
+explore different algorithms and
+settings to give you the best model
+based on your scenario and your data so
+it's really really cool because you
+don't have to have that machine learning
+knowledge and as well you're showing the
+graphical version of this inside of
+Visual Studio but if I am on a map
+or on a Linux machine I can also drop
+the command line and run the same tool
+that you're running with inside of
+Visual Studio on all those platforms as
+well right exactly so if you you don't
+use Visual Studio you can actually use
+this ml net CLI and any command prompt
+which is really nice so it's done
+training we're gonna head over to
+evaluate screen it actually found this
+one model here which uses a resonant
+neural network architecture for that
+image classification and we'll move on
+here and so it's really nice as once you
+have your trained model you can add your
+projects and if we zoom in here give it
+a second you can see that there's this
+console app here which is actually where
+the model training code is then you have
+your model consumption code and your
+actual serialized zip file which is the
+model so if we come back out here and
+now if we go back to model builder you
+can see it gave you the code for
+consumption right here all you have to
+do is copy this code and go back to our
+weather classifier will uncomment the
+name space that model are actually adds
+the reference to the model for you and
+right here so we've created our input
+we're going to set the file path here
+it's a full path and then we're going to
+actually load this into here and return
+result dot prediction and so actually
+we're gonna add the reference here
+because I think it was added to the
+wrong no it's there let's see what it's
+giving us here Oh
+so we've got our Weather Service ml dot
+model Oh what we have to do is actually
+I think I called it on the wrong one
+projects yeah the wrong project it
+actually needs to be called on this
+project so whichever project you add
+machine learning to it'll add that
+reference to automatically but since I
+did it on the wrong one we're just going
+to add the model here and then we'll so
+then sorry it's a mouse I'm not really
+used to here so we're gonna do input dot
+image source equals full path and then
+we'll be able to do about that
+all right so now we can see that it
+detects this CenturyLink Field is cloudy
+Paramount Theater is looking a little
+bit rainy and Golden Gardens park is
+looking sunny so in less than five
+minutes we were able to use ml net and
+modelbuilder to add machine learning to
+this blazer application which is really
+really cool that's amazing let's go back
+to the slides and we'll talk about IOT
+so IOT kind of a new space in net ionic
+core kind of enabled us by being able to
+run on different platforms and
+architectures and so the big thing here
+is you can run dotnet core on all these
+small devices where I raspberry PI's
+including all about net you can run
+asp.net on these things we have a GPIO
+library for reading and writing data to
+some cool hardware that Richards going
+to show us and you can actually deploy
+these applications to IOT either
+directly on the device or using a
+container on the device so let's switch
+over here and bring rich on and let's
+talk about IOT and dotnet hey Scott
+so this is more of a Show and Tell type
+of setup today so we we have a Raspberry
+Pi right here so this is a Raspberry Pi
+3 actually and it's got this hat on it
+sometimes they're called shields but
+this is a hat or a bonnet and this is
+controlling this set of led matrices so
+actually there's four of them here it's
+really hard to tell because I did such a
+good job making this set up but there's
+actually four of these and it's all
+c-sharp code that is running this from
+from top to bottom and so the the
+libraries that we built actually are
+able to figure out like the address
+translation to deal with the fact that
+there's four of these and they're kind
+of like in this set up and so it's kind
+of cool we've got a message here about
+Dona Kampf that's kind of one row then
+we have this other one with the time
+then we built a analog clock an analog
+clock and you can see this isn't an
+image this is actually a code driven I'm
+watching the second hand go around and
+in real time it's amazing yeah so this
+is this is how you're staying on track
+right so this is actually a kind of a
+canvas and then it's actually raining in
+Seattle this won't be much of a surprise
+you're following the same service that
+we showed everywhere else right
+absolutely right great
+exactly and then so it's showing it's
+raining so really what this is
+demonstrating is this device is like
+really low powered compared to you know
+like Intel x64 blah blah blah machines
+that we've been used to and it's showing
+that yep
+you can write c-sharp run it on here and
+it's capable of like doing a lot of
+things at once that's the cool part
+about c-sharp and net is you can
+actually run it on what arm 32 arm 64
+but if you want you can also run it on
+the big Intel CPUs as well yeah and and
+it's all the same the other thing is
+because it's all c-sharp it means that
+you can actually use the c-sharp
+debugger that you're used to using a lot
+of the other solutions out there depend
+on native libraries and some of those
+are GPL ours is MIT so it's super
+attractive to people that work in this
+county ecosystem cool I'm still super
+excited by this because we never could
+have done this five years ago oh yeah
+totally this is this is definitely new
+so but we're I'm really happy - happy
+awesome - thank you back to the slides
+real quick and I want to happen to be
+really cool dotnet core is all open
+source and even though it's open source
+we actually want to consume some of the
+open source libraries so there's a
+couple of references you've heard today
+like gr PC gr PC is an open source
+project and we Microsoft have been
+contributing to that to that project
+our engineers are working on that
+project to make sure that the c-sharp
+support there is first-class at the same
+time I mentioned earlier identity server
+identity server is an open source
+project that helps you add
+authentication to your AP is and dotnet
+core we are actually contributing to
+identity server we actually are helping
+fund them as a sponsor of their project
+giving them money you know G RPC we're
+giving them code identity server we're
+giving them money via github and then
+also swashbuckle which is a common
+library for building swagger for dotnet
+poor projects if you want to if you want
+to use any of our rest stuff we can
+generate rest in points the same way we
+generated those G RPC endpoints to do
+that you have to have a library like
+swashbuckle and so I'm happy to announce
+that we're also helping fund them as
+well
+dotnet 5 so we just shipped out into
+core 3 and of course the team is super
+excited we're working on that core 3.1
+right now but I want to briefly talk
+about that net 5 - so you know after
+that in core 3 the next big thing is you
+know we talked about xamarin and we
+talked about dotnet core what if we put
+all that together into a single
+framework and so dotnet 5 is the genesis
+of this the next the next iteration of
+dotnet will be done at 5 and the idea
+here is all the runtimes collapsed so we
+have one common set of runtimes we have
+one BCL that sits on top of that and
+then we have all the app models on top
+of this and so in the.net 5 wave they'll
+just be one dotnet not multiple nets
+let's talk about our schedule so we just
+shipped a technique or three today
+dotnet core 3.1 is going to ship in late
+November early December that'll be our
+LTS that's our one if you want long-term
+support but we're gonna go way beyond
+that we want to make dotnet predictable
+so you can see here now dot at five will
+ship next November dotnet six will ship
+to November afterwards so on and so on
+and so on each of these nets every other
+year will be an LTS so it's very clear
+which ones are long-term supported and
+which ones are faster but we're trying
+to make it easier for you to consume
+nets and understand the schedule I do
+want to do one quick thing I'm going to
+grab my laptop slide it over here I
+thought I would do one demo of some of
+the tech that we have coming in dot net
+five and so Dan showed the blazer wrap
+I'll you show the desktop app James
+showed the the the xamarin app and Bri
+showed the ml app well we want to take
+the step this stuff even even further so
+we're gonna switch to my laptop here he
+jump out of presenter mode
+get my laptop back and I want to show a
+preview of one of the things we're
+thinking about in dotnet 5 so I'm gonna
+run that same blazer app that Dan showed
+but now what I've done is I've actually
+wrapped it in an electron shell electron
+is the technology we use to take make
+things like Visual Studio code run on
+the desktop and so now you see that same
+exact web weather application running
+it's it's it's a blazer application so
+it's web but it's now running in a
+desktop window
+it's got file menus I can do file and
+exit this is one of the examples of the
+technology we'll bring in the.net 5 wave
+so I want to close with one thing here
+which is we have an awesome unified
+platform you can build every type of
+application on dotnet core my advice to
+customers today with the shipping of
+dotnet core 3 if you're building new
+applications build them on top of the
+core 3 it now has all the capabilities
+that should be important for modern
+applications if you have existing
+applications you're likely should keep
+them on net framework there's no reason
+to move them off of Dutton and framework
+dotnet framework is going to be
+supported forever so new applications
+are done at core 3 leave your existing
+applications where they are everything
+that I'm showing here is downloadable
+today and I want to thank everybody very
+much
+go get the bits and build some new
+applications on tanja core thank you
+very much

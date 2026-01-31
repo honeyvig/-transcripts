@@ -1,0 +1,568 @@
+>> Today's Visual Studio toolbox,
+Dan Roth joins us to
+get us excited about
+Tuesday's .NET Conf: Focus on Blazor.
+[MUSIC]
+>> Hi, welcome to the first
+Visual Studio Toolbox of 2020.
+I'm your host, Robert Green.
+Joining me is Dan Roth. Hey, Dan.
+>> Hello.
+>> Thanks for coming on the show.
+>> Thanks, good to be here.
+>> We are all very excited here
+about Tuesday, this coming Tuesday.
+>> January 14th.
+>> Which is the .NET
+Conf: Focus on Blazor.
+>> Yes.
+>> A day long deep dive
+into all things Blazor.
+Probably not all things
+because it's a day
+but lots of cool things Blazor.
+>> We'll have people
+from the product team,
+we'll have people from the
+community giving all sorts of
+pretty awesome and cool talks
+about things related to Blazor,
+things that we're working on,
+things that we've already
+shipped. It should be pretty fun.
+>> So this is an extension
+of the.NET Conf,
+the typical thing that
+happens on an annual basis,
+and it's usually two or three days.
+But now, it's been expanded to
+these individual focus days.
+Tell us a little bit about that.
+>> Well usually,.NET
+Conf is a yearly event.
+We typically do that sometime
+at near the end of the year.
+We have like you said,
+multiple days of
+content cover all things.NET.
+But it was just too long to wait in
+between each of those events,
+so we thought, "Well,
+maybe we could do a few
+more .NET Confs in between
+to cover specific topics
+in a more deep way."
+We decided to do the first
+focus to .NET Conf on Blazor.
+>> Cool. So, today's episode
+is a bit of a teaser for that.
+So we want you guys to show
+up on Tuesday for it live.
+It's focus.dotnetconf.net.
+>> That's right, this is the website.
+You can take a look, we've
+got a whole bunch of
+great speakers that are queued up
+including myself and people from
+the ecosystem, people from Microsoft.
+We'll be showing things that-
+>> Our good friend Ed,
+friend of the show.
+He's been on the show multiple
+times talking about Blazor.
+>> Yeah. A bunch of people
+have partnered companies
+that been working on
+Blazor component libraries
+and people who have
+just been active in the ecosystem
+building great open-source projects,
+like Egil has been working
+on a great testing library.
+Some stuff that we're
+working on in the future,
+looking at how can we take Blazor
+beyond the web not just doing
+web applications but also doing maybe
+native mobile desktop applications,
+those types of things.
+We'll be talking about all
+that stuff at Blazor Conf.
+You can check out the full agenda.
+Like you said, at
+focus.dotnetconf.net.
+There's the full list of talks.
+>> So let's just take
+a short amount of time
+and give us an overview of Blazor.
+We've had it on the
+show a number of times.
+A lot of people are fairly
+familiar with it but
+some people might be new to it.
+So give us the high-level overview,
+and that'll get people even
+more excited about Tuesday.
+>> Sure. Yeah, I'd be happy to.
+I have a little diagram
+here to help out.
+So if you're a .NET Dev,
+been building web applications,
+then you're probably familiar
+with our various server rendered
+web frameworks that
+we've shipped over
+the years under the ASP.NET brand,
+ASP.NET web forums,
+ASP.NET web-pages.
+We see, we have a whole buffet
+of server-rendered web
+frameworks that you can use,
+and they all share
+one characteristic in common
+which is you write your code,
+and you run it on the server,
+and that code then
+generates some HTML or some
+JSON that thing gets sent down
+to the browser and rendered.
+But if you ever wanted to do
+something that actually ran
+on the client machine like
+in the browser itself,
+well, that meant you had
+to use one of these guys.
+You had to use some sort
+of JavaScript framework
+like Angular, or React, Vue,
+or whatever your favorite
+JavaScript framework
+of the day is which is fine.
+But having to bridge those two
+different developer ecosystems,
+there's a cost to that.
+I don't know about you but
+my strengths tend to be more
+in in.NET and writing C#.
+I can write some JavaScript
+but it's not my forte.
+I think of this as being very
+similar to like humans
+spoken languages.
+My first language is English,
+and I know English pretty well.
+I can speak a little
+bit of Portuguese
+but don't get too far beyond like,
+"Hello, my name is," and "Where's the
+bathroom," those types of things.
+I think developers
+skill sets are similar.
+There's tools and languages that
+you are really familiar
+with and strong with,
+and there's others that maybe
+you would prefer to
+avoid if you could.
+>> An ideal world is where
+you can leverage what
+you already know and move to
+different places instead of going to
+these different places and
+having to start from scratch.
+>> Exactly. So that's what
+Blazor is really all about.
+Is enabling Full
+Stack Web Development
+with .NET where you can use C#, .NET,
+Visual Studio, both
+sides of the wire.
+We think this probably has a lot
+to appeal to even people who
+are new to .NET as well.
+You get to leverage the tooling
+great tooling that's
+in Visual Studio.
+You have a very stable
+set of build tools,
+libraries, languages that you get to
+leverage when you're building
+on top of the .NET ecosystem.
+>> Right, and because it's .NET,
+and you can use C#,
+it works the same.
+>> Exactly. Yeah. You
+can share code at
+this point where you have .NET
+on both sides of the wire.
+Have a full stack solution.
+If you have some model types
+or some validation logic.
+Instead of having to
+rewrite that code twice,
+say once in.NET and then
+once in JavaScript,
+you can just reuse
+the same assemblies
+even on both sides of the wire.
+>> Cool.
+>> So we've been working
+on this for a while to
+enable full-stack development
+for the web with C# and
+JavaScript on top of a
+core capability of being
+able to leverage the
+browser with DotNet code.
+We built a reusable component
+UI framework on top,
+so you can build your UI
+as a set of components.
+The components can
+call other components.
+You can grab components
+off of NuGet or
+from various component vendors and
+use them in your applications,
+so you can build your
+app really, really fast.
+You get the benefits of.NET
+on both sides of the wire.
+If you do need to dive
+down into JavaScript,
+we still give you the
+capability of doing that.
+I think it was like a
+P/Invoke in.NET world.
+If you need to call down into
+native code, that's still possible.
+It's not the most common
+thing in the world.
+But with Blazor, that's possible
+as well where you can call down into
+JavaScript libraries if you have
+existing libraries that you still
+want to leverage and reuse.
+To get started with Blazor,
+you just go to blazor.net.
+You'll need.NET Core 3.1,
+which we just shifted
+very recently..NET Core
+3.1 is a long-term support release,
+and it includes Blazor specifically
+includes support for what
+we call Blazor server.
+Blazor Server is a mode for Blazor
+where your code still is
+running on the server,
+but we manage all the client-side UI
+over our real-time web
+socket connection.
+Using SignalR under the covers.
+If you're familiar with
+ASP.NET Core SignalR.
+That's in the box with.NET Core 3.1,
+has the full support life-cycle.
+You can use it in production today.
+We've also been working
+on a second mode
+for Blazor that we call
+Blazor Web Assembly.
+Blazor Web Assembly
+runs in the browser
+on a WebAssembly-based.NET runtime.
+So you can download
+your assemblies into
+the browser and
+execute them directly.
+That's still in preview,
+but you can try that out
+as well by installing our
+Blazor Web Assembly template.
+>> So what's the primary use case for
+server mode versus client mode,
+do you mix and match?
+>> Well, servers what's
+available today.
+If you were trying to
+write out an app that's
+going to go into
+production right now,
+you're going to want
+to use Blazor server.
+Blazor server's really great for
+a number of reasons, the app.
+It stays on the server,
+so it has a very thin client,
+which means you don't
+need to download
+very much to get it up and running.
+So the app starts really fast.
+It doesn't require much from
+the client device to
+actually execute.
+Because most of the
+guts are going to run
+server-side in a Blazor
+Server application,
+but you still get all the
+benefits of that component model,
+of having what is effectively
+a single page app,
+a SPA, but written in C#.
+So that's the nice thing
+about Blazor Server.
+Blazor Web Assembly allows you to
+actually leverage the client device.
+Your code will move to the client,
+and you can leverage the hardware
+and compute the memory that
+the client machine has.
+Blazor Web Assembly
+apps can run offline,
+because you ship the code
+over into the client, and
+you're running it there.
+You don't, actually, technically need
+a server piece in order
+for the app to function.
+Whereas with a Blazor
+Server app, you do.
+Then if you need any really tight
+low-latency UI interactions,
+if we're trying to do a drawing app,
+Blazor Web Assembly, you're right
+there on the user's machine.
+With a Blazor Server app,
+those don't work quite as well
+because you're going over the
+network for your UI gestures.
+>> Okay.
+>> Yeah, and you can get any
+version of Visual Studio you want.
+The latest version of VS on Windows,
+VS on Mac 8.4,
+has Blazor tooling support that
+should be shipping any day now,
+if it hasn't already shipped already.
+Then we also have tooling
+available in Visual Studio Code.
+I thought I would show you
+a quick Blazor application.
+>> Yeah, let's see.
+>> Let me hop over to, just
+show you the blazor.net page.
+This is where you go
+ahead and get started.
+Click on "Get Started" at blazer.net,
+and this has all those
+steps that I just went
+through for getting
+the machine set up.
+To create your first application,
+you're just going to
+File, New Project.
+I select Blazor App,
+that'll show up in the template list.
+BlazorApp1 sounds like a lovely name.
+Then I'm going to pick the
+Blazor Server version.
+This is the one that runs over
+that live WebSocket connection.
+Well, let that whole
+go ahead and create
+the project for me. So here's my app.
+I'm just going to go
+ahead and run this,
+so we can see what it does.
+Whoops, I ran a little too fast.
+>> Uh-oh.
+>> That's just because the NuGet
+restore hadn't completed yet.
+>> [inaudible] till it come down.
+>> So what this app is
+going to give me is,
+it's going to look like a
+simple, single page application.
+It's going to have a set of tabs
+and some components
+that we can play with.
+It seems like it's up and running.
+There it goes. All right.
+So on the left-hand side here,
+we've got a few tabs.
+We can click around.
+If we go back and forth
+with the browser Nav tools,
+all of the browser Nav
+tools just worked.
+That's client-side routing in play.
+We're actually intercepting
+all those navigations,
+client-side in the browser,
+and just loading the correct
+component accordingly.
+We're not actually
+having to go back to
+the server and do a
+full page refresh.
+That's client-side routing.
+This counter page, we have
+a button that we can click,
+and the count goes up, and there is
+no page refresh
+happening here either.
+Yeah, normally, that would require
+you to write some JavaScript,
+didn't have to write any
+JavaScript to make that happen.
+That's all done just with with C#.
+We can take a quick look
+at that counter page
+just so you can see
+what it looks like.
+Here's Counter.razor.
+We'll zoom in just a
+little bit so we can see.
+We've got a page directive
+at the top that just
+makes this component
+routable using that
+client-side routing system.
+Got some static content,
+where we're rendering
+the current count.
+Here we're using Razor syntax to
+render the value of a C# field.
+Then we got a button, where
+every time we click the button,
+it increments the count.
+You can see this increment count
+method is what's being wired up.
+Increments the field, the field gets
+updated and then the page re-renders.
+So it's all C# code.
+No JavaScript require.
+>> Cool.
+>> I've been working on another
+slightly more involved app,
+but not too bad, for the
+conference next week.
+This is a simple recipe application,
+where it just shows
+a list of recipes.
+This is again all written
+with with C# and Blazor.
+We can do some simple searches
+here where we search for a recipe,
+like I want to search for some soup.
+Soup. I didn't have to go
+back to the server to
+do a full page refresh.
+>> That was supposed to go
+and get that data, right?
+>> The data actually was
+retrieved at the initial
+load of the application.
+Then we're just filtering
+and searching over
+that data with every keystroke
+in the search text box.
+I can actually show you the
+search text box really fast.
+This is a little bit more
+code that's involved here,
+but it's just an input.
+>> That font.
+>> Oh, yes. Sorry.
+>> There we go. Oops.
+>> So we have an input and then we're
+binding this search
+query string on inputs,
+so every text stroke,
+where we're going to go
+and trigger an event,
+so that this component can
+do something with the data.
+This is a search text box.
+So we don't want to do a search.
+Every single time I type a keystroke,
+we'd like to have a little delay.
+Maybe wait 300 milliseconds,
+or something like
+that, after I'm done
+typing and then do the actual search.
+So we're using just
+a normal.Net timer,
+that we're kicking off every time.
+That the search query property
+gets set using that bind,
+we start that timer.
+Well, we stop if it's already
+running and then started again.
+Once the timer or completes,
+if we got through
+the full 300 milliseconds before
+and other keystroke was hit,
+then it just triggers this
+SearchQueryChanged event,
+so that my parent component can
+then filter the set of recipes.
+We can see that on the homepage.
+So if we go over to Index.razor,
+here's the homepage of the app.
+So at the top, we've
+got that search box and
+we're wiring up to that
+SearchQueryChanged event.
+Then we just listing
+all the recipe cards.
+Again, another component
+that I wrote to
+display to the images
+and the recipes.
+Then down below, whenever that
+SearchQueryChanged event fires,
+it calls this the search method,
+which then gives me
+the search query and
+then I run it on my data storage.
+>> Just C# code.
+>> Yep.
+I didn't have to write a line of
+JavaScript to get that working.
+>> The client in the
+browser. That's very cool.
+>> So that is Blazor,
+and if you want to
+learn all about it,
+like all about routing and JavaScript
+interop and data handling,
+all of those topics are going to
+be covered at this conference.
+In addition to some fun new things
+that we're going to be sharing,
+you should join us on January
+14th live on Channel 9.
+>> If you miss that,
+I assume it'll be
+available on demand.
+>> All of the videos will
+be available on YouTube.
+Another cool thing, if
+you are though live,
+instead of watching a later,
+the benefit is that
+you can join us on
+Twitter and ask questions
+of the speakers
+live by using the hashtag
+dotNETConf. Cool.
+>> focus.dotnetconf.net,
+and that's Tuesday.
+We'll see you there. Thanks
+so much for coming on.
+>> No problem. My pleasure.
+>> We'll see you next time
+on Visual Studio Toolbox.
+[MUSIC]

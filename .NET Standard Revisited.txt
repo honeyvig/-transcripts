@@ -1,0 +1,992 @@
+I think there's still some confusion
+around dotnet standard particularly
+around why it was invented and how it
+affects the apps you're currently
+building on this episode of visual
+studio toolbox
+Kathleen dollars gonna do her best to
+clear up that confusion hi welcome
+Visual Studio toolbox I'm your host
+Robert green and joining you today is
+Kathleen dollar hey Kathleen hi how are
+you doing great
+we've talked quite a bit about dotnet
+standard we being Microsoft emo has done
+several videos on channel 9 it was
+featured at connect you talked about
+into conferences and yet I think there's
+still some confusion about it and yet
+and yet so what we had to do in today's
+show is clear up some of the confusion
+not so much about how it works because I
+think that's been covered very well but
+more about the why it was invented why
+and when people should care so you know
+just for example if I'm maintaining
+existing wind forms of WPF apps do I
+need to care about this well to start
+with if all of your code is in your wind
+forms up and your WPF app you can't use
+dotnet standard it's really not in the
+picture but on your wind forms app or
+your WPF app you might have some of your
+code in the wind form and WPF
+application itself in that in that entry
+level in that entry point and then you
+might also have some class libraries
+that you're using that I've already
+written you've already written or now I
+inspire you to split them out and put
+them into something but you've got now
+this class library you can take the
+class library and have it target dotnet
+standard and that's what that's what you
+can do and we could talk more about why
+you want to do that right so do you want
+to go there now or do you want to talk
+about all the other ways you might wind
+up caring about dotnet standards another
+example okay so I do a bunch of xamarin
+and I do file new project there's always
+been two buttons shared project and the
+other button which used to say portable
+class library right and magically it
+said dotnet standard library I always
+choose that one because it's not the
+shared project right then I do the exact
+same things I write the
+Aksum co2 put the code and the sam'l in
+the exact same place and when I build
+the application I understand its
+using.net standard instead of a part of
+a class library but I haven't done
+anything different so so in that case
+that's great behind the scenes you are
+using dotnet standard instead of a PCL
+and there are some key differences
+between the two so let's start off with
+why that happened why portable class
+libraries alright anybody checked when
+we did a an episode on it a couple of
+years ago they were awesome
+so I'm ceremoniously dunk yeah how did
+they do they were actually pretty cool
+so they were great it's just that dhania
+standard he's that much greener in that
+much cooler so let's talk about the
+difference so portable class libraries
+walked into a world where there were a
+lot of frameworks and across all these
+different frameworks there were
+different rules that API was just a
+little bit different okay so what a PCL
+does it says those things you have in
+common you can use right if it's not in
+common between these two things you
+can't use it and if you add a new target
+you're going to change what you can do
+so you could have like dotnet you would
+use PCL and it could be like xamarin and
+something else and you're out there in
+the field and everybody's happy and all
+of a sudden somebody says let's target
+Silverlight and then as you add that
+other requirement in you lose a bunch of
+api's and you can actually break
+yourself in the field
+so because PCM was always an
+afterthought they don't fit into today's
+world as well as we want them to so
+everybody took a step back and they said
+well instead let's create the standard
+ahead of time that html5 is a standard
+okay that's what a standard is it's
+basically a word document somewhere so
+there's a dozen standard people got
+together and said this is the things we
+can agree on and there was a lot of work
+to actually get the right set of
+features in that now if any platform any
+framework is going to say I support
+dotnet standard they have to follow
+those rules so instead of being an
+intersection of what was already written
+it's a standard that then gets pushed
+out and people have
+to adopt now that doesn't mean that
+dotnet saiful framework or xamarin has
+to make internal changes because it
+doesn't matter how they implement this
+it can be any way in the world a lot of
+the zamarons stuff actually pretty well
+aligned and so it can just call straight
+in and it's just fine for the rest of
+the stuff there needs to be for like
+dotnet framework there needs to be a
+redirect so it says oh you said you want
+to call this but I know what you really
+mean is this API that's just a little
+bit different and will just redirect you
+over there weird weird surprise Robert
+me on that one okay I'm I write some
+code hmm
+targeting what I think is the dotnet
+framework but I'm not okay I just said
+if you're targeting dotnet standard
+you're actually targeting dotnet
+standard it's what we call a reference
+DLL and let me show you real quick what
+that looks like so if I come over here
+and I go to the dotnet standard this is
+actually github dot net standard pick
+one which one do you want to pick just
+am not data will do data okay so I'm
+just going to open that just open it
+no right-click just open it come on okay
+so in this opens you're going to see the
+actual coded on it standard so it's a
+standard it's a document it's a document
+written in code okay you're with me yep
+all right so this is what actually looks
+like and it has enums because of course
+we need those to define the API surface
+level okay but it also has a class now
+there's something kind of unusual about
+that class it doesn't do anything right
+it's either empty or it throws okay
+that's it so a reference library is a
+library that's empty so this works just
+fine you can target this and Visual
+Studio or your bill system or anything
+that needs to understand your libraries
+can look at this and go hey I get it
+okay because they don't care that
+nothing actually happens and then when
+you go to run on your full framework
+machine then it's this is called net
+standard DLL that's what this builds so
+when you that's on your your box where
+you're doing your build and then you go
+to production and you go over and
+whether it's a Linux box or a Mac box or
+a Windows box goes there and it says
+well there's an
+standard DLL associated with the
+framework I'm running now use that and
+at standard DLL which doesn't have empty
+places okay instead of the one that you
+compiled against so inside of those
+brackets it may say oh don't do this do
+that okay so the brackets here may call
+a different API or an API that's just in
+a different spot and all of that gets
+worked out
+however the that framework wants to do
+it the only requirement is that there be
+a net standard DLL specific to that
+framework so that when you write your
+app and you target net standard DLL and
+you target this empty reference library
+it can get thrown out and a real one
+that actually works can be put in place
+now the purpose of this document here is
+to set the rules on what you can call
+just like a portable class library said
+you are allowed to call this subset and
+if yes if you try to write something
+that isn't supported you'll get a
+compiler error because it doesn't exist
+this is now a better more flexible way
+of accomplishing that right yes compile
+time if I call something that isn't in
+thought Nets standard and I've said I'm
+targeting dotnet standard right then
+I'll be alerted that I'm calling code
+did doesn't essentially doesn't exist in
+case he calls that's correct yes so all
+of that works very similarly and the
+difference is that with PCL there was no
+way to change the API surface if it was
+just a little bit different it did the
+same thing but it was just a tiny bit
+different kind there wasn't a way to
+really resolve that in a PCO world now
+we resolve it because on the machine
+that's actually running we're house
+actually executing it's not empty
+there's something in there and whatever
+that thing is it might just do the job
+if it's simple it might ask something
+else to do it it might do a there's even
+some binding redirects and things that
+can be involved and so all of that stuff
+happens behind the scenes that's part of
+what Iman talks about if folks want to
+see that on the in his videos because he
+wrote this stuff he really understands
+that deep level what what I want us to
+talk about is why people care and what's
+the when we step back was the impact
+this on individual developers going
+forward so just like with portable class
+libraries the main impact is one of the
+main impact servers that the main impact
+comes if you're writing code it's going
+to run on multiple platforms
+it is a main impact that the main impact
+it's not the only impact but it is the
+main impact and the other impact comes
+from the fact that this is also a
+statement of what Microsoft has
+determined is the commonality across
+platforms so another way we can say that
+is this is the definition of the future
+for the non what I'm calling an entry
+level but the non UI pieces so for
+everything else including some things
+around console apps for all of these
+things this is what's defined as where
+we're going in the future and so even if
+you're not actually going to run on a
+different platform if you go ahead and
+target dotnet standard then you're able
+to say hey I know I'm within the bounds
+of what the future is likely to look
+like and if it's something that's
+outside of that then I can look for some
+help for how I get that job done okay
+because it doesn't its standard 2.0 and
+there's been a couple of iterations of
+it was not randomly created a lot of
+code was evaluated in order to see what
+do people actually do and it covers the
+vast majority of what people actually do
+so if you're writing an application and
+you say oh I want to do this thing let
+me see if it's in dotnet standard let me
+see what to do a little different for it
+to work another standard and this also
+supports some of the deprecated and
+out-of-date ways of doing things so when
+we look at areas like XML and areas like
+that we've had a few iterations of how
+to approach those and this lets you say
+hey this is the one that I expect to use
+going forward so where there's something
+missing there's often a replacement that
+is a better way going forward okay so
+I'm working on an existing WPF ever I'm
+creating a brand new WPF F and I want to
+build a class library uh-huh I can just
+build the class library the way I always
+do not worry about dotnet standard I
+have access to the full framework from
+within WPF and I can go and do that and
+if yes ciello is only ever going to be
+called from that WPF app
+then I can just happily do that and not
+have not need to think about that NIST
+standard and if I don't think about it I
+haven't lost anything and the only thing
+I'm in a challenge on that is I'm gonna
+say that it's very hard for you to say
+never ever anybody else will ever want
+my class library it's easy to say Robert
+but let's look at the world around us
+and how much change we've seen and your
+class library is important in your class
+library you want it to last for five or
+ten or fifteen years so if you want to
+write it with that kind of thinking and
+you say well I'd like to still be on WPF
+in 10 or 15 years and have that still be
+cool but I don't really know what's
+going to happen there I do know that the
+core way that we write applications has
+been pretty static now for a really
+really long time and Microsoft has found
+a way to move forward across a lot of
+technology change using pretty much the
+same code and the API is is now this is
+an API level conversation and this is a
+way to say the api's are going to have a
+pretty long life not that they'll never
+change it's just as skin as it's going
+to change in a very slow level so you do
+the best job you can to say that my WPF
+app that work in the background this
+business logic that extra work that's
+going on I'm going to future proof that
+by having it understand dotnet standard
+now you don't actually have to target
+dotnet standard you can you can do this
+a different slightly different way if
+you'd like you want me to show you how
+you can yeah okay I can about that in a
+second so I decide okay future proofing
+is probably good right so I'm going to
+target that nest in and I'll create the
+closet a heat class library targeting a
+standard so finally project on its
+standard library I assume right exactly
+and I target the latest version of the
+dotnet standard source depending on what
+version of Visual Studio I'm in right
+because each version targeted a
+different version of the dotnet
+framework but the dot knits how do I
+know that dotnet standard to supports
+all of the things that I would have done
+in my app if I was directly going
+against the framework am I going to are
+there things not available to
+me and is there a way to know that ahead
+of a time
+there is more than one way to know that
+ahead of time so I'm going to open a new
+browser window here and I'm going to
+type api's api's of dotnet mm-hmm I'm
+going to go there and what is your
+favorite what is your favorite class or
+method in in side of net so it's gotta
+be something in system dot data you like
+system data I do that let's get a little
+more so let's go to link link yeah okay
+and let's go to I don't know pick one of
+those okay we'll just pick anything
+we'll just pick a refresh mode
+refreshment table payment no table no
+idea what we're gonna get here so let's
+just pick that come on we can do this
+okay so what we've got done is we've
+gone to a evaluation of the API itself
+the API surface layer itself and so we
+can see the what this class is when you
+find out some things about it we can
+find out how many people use it okay so
+0.3% of users in one of the ways that
+this gets evaluated so this information
+was used in order to build the surface
+area of the of the.net standard okay and
+so they also make it available because
+Microsoft has a at least the dotnet core
+we share our sin of apps points very
+high that does not very high this is
+does not get used very often well this
+is system data dot link and that's not a
+real common thing okay we can see where
+it is it's in.net full framework yeah
+3.5 and for coming forward all the way
+it's in mono and it's in Windows Phone
+Silverlight okay okay now I'm going to
+pick one my turn
+so I'm gonna look for system system dot
+string and I bet yours mine is more but
+this is you know this is rig this is a
+rig a mobile four okay okay so we can
+find out some things about the system
+that string class and we can look at its
+usage and I just wonder about the 15 or
+so percent that don't use a string but
+most things use a string most
+applications use a straining not
+surprisingly now let's find out some
+more
+things about it it's in.net core
+remember yours was not in net core so
+now I can see so when I know the actual
+the actual thing I'm looking for I can
+find out where it's used okay okay this
+is one of the things you might want to
+do more commonly I think what you're
+going to want to do is look at your code
+to see hey well this past muster will
+that can this be a dotnet standard
+applicants to be a dotnet standard class
+library what am i what am i using and
+how would that go and there's something
+called the dotnet portability analyzer
+which you can get off of I click this so
+you can see it go it's in the gallery
+Visual Studio Gallery or marketplace I
+guess we call it marketplace now and I
+have that open I have just a little
+silly little sample this is just a one
+of the links samples and I just grabbed
+one randomly so we could see what's
+going to happen when we run this so
+because I have installed that tool it's
+a physics it's a normal installation
+because it's installed when I go to the
+solution Explorer and I right-click I
+have an option to analyze okay I also
+have an option to set settings so let's
+do that first because it helps show
+what's gonna happen here so this is a
+kind of an ugly dialogue but you can see
+what it does
+you get to pick what it analyzes look at
+all your choices Wow okay so if you want
+to know if something will run on Windows
+Phone Silverlight 7 you can find out ok
+okay so let's come up and look at the
+ones we care about which is dotnet core
+and I've got dotnet core 2.0 clicked
+I think I'll also do dotnet standard 1.4
+1.5 1.6 and to those seems like some
+pretty good so pretty good pretty good
+ones okay unless there's something you
+see there you just really want me to
+close mine okay so because I've got that
+I'm gonna cancel out of this dialog
+because I made no changes I'm gonna
+right-click and then I'm gonna say go
+ahead and analyze and if assuming I have
+an internet connection because this does
+rely on internet connection and I could
+doesn't it it found the Internet it was
+just fine if it doesn't have it
+connection then you're going to have to
+find that before this works because it's
+real time it looks it up right away so
+now what I'm going to do is open the
+report and it's going to open because I
+actually had an option in that dialog
+that it would open in Excel right so
+that's how it knows to open this and
+it's a little small for being on screen
+here so let me just make it a tiny bit
+bigger and what we know now is that the
+dotnet core it's a hundred percent
+compatible with that dotnet framework
+and I click this so up at the bar at the
+top you'll see that this is dotnet
+framework right there click that this is
+the dotnet framework dotnet standard 1.4
+1.5 and 1.6 this is dotnet standard 1.6
+and dotnet standard - oh okay so you can
+see that's 100% compliant with - and not
+the others because 2 contains more than
+the other sitting right so something's
+going on here and you're going okay so
+that's not very helpful yet should Cori
+I can't fix my bursting but it I can't
+x-men don't know what the exact question
+you asked which is how do I know what I
+need to target I've got code and I want
+to know what I could target I do know
+that now and I know that I can target
+dotnet standard 2.0 right now out of the
+box and code as it exists no changes
+okay but the question I'm probably going
+to want to ask if I'm interested in
+targeting something lower is yeah what
+did I do
+right where did I mess up where did I
+cause a problem and so you find that on
+the details tab so when I switch to the
+details tab and again I'm going to click
+this up just a little bit not that far
+see if I can't get it
+we'll see if I can do that let me just
+use this mouse over here see if I can
+get a little bit better at this okay
+that's probably good okay so now what we
+can see is that the description
+attribute in the category attribute each
+of which was used twice in the sample is
+what's the problem and I can then go
+over to here and find out where it came
+in so in dotnet core and dotnet core it
+came in in 2.0 because in the.net core
+column it says supported in 2.0 and
+above in the.net
+full framework it was supported in 1.1
+and above okay I haven't seen anything
+that's one point now it made one point
+one maybe the baseline and then for
+dotnet standard it says it's supported
+2.0 and above which is exactly what the
+previous page told us is that we need to
+go to what is it that is supported join
+operators no join operators is the name
+of my assembly yeah okay that's the name
+of my so let's go back we're talking
+about it so it does not tell me the line
+of code it simply tells me what I'm
+doing so now I can go and look for where
+I'm using the description attribute and
+the category attribute and that's what I
+know I have to pull out in my app so I
+could just use a search or something to
+find this okay okay okay so now I know
+what it is I'm using I love doing
+feature requests there if I could could
+actually know the lines of code that and
+then compiling it would show me the
+actual line red yellow green squiggly is
+exactly code so I realist in the task
+list yeah cool that would be that would
+be great if you want that one way to do
+that is to try to target what it is that
+you're interested in and then if you
+target it and it doesn't work out then
+you're going to be able to go straight
+to that code and then this one I might
+do that
+for this application it doesn't seem
+like it's going to be a huge wall of
+problems but now I know if I bring my
+application up in here and you might
+want even run a unique to find out how
+many different things you're using and
+just how big the jobs going to be to
+take your application into the dotnet
+standard or anything else you saw that
+list you can check out in it I mean
+there's a bazillion different frameworks
+that you can select there to see how
+your code lines up with and you can take
+code you've currently you've previously
+written right correct take you know go
+and find representative samples of code
+you've already written mm-hmm
+put it into a dotnet standard library or
+run the analyzer on it don't you move in
+yeah you don't have to move it yet yeah
+and then when you discover that there
+are hopefully fewer but maybe more
+incompatibilities than you thought then
+you could actually
+that is a dotnet standard library try to
+compile it and go see what code doesn't
+run if it's too much then you then you
+have the choice of either not doing it
+or figuring out how to accomplish the
+same thing with code that is supported
+correct and and I would suggest that
+just about everyone who already has a
+class library should think about doing
+this because it gives them information
+for that moment that their boss or
+somebody says oh I heard about this
+dotnet core thing and if you know that
+man you've got problems and you already
+know that then you know just wave off
+the conversation and if you know hey we
+don't think we're that far then you can
+say and we might be able to do that but
+the problem is going to be what we're
+going to do on our on our UI side
+because we don't have cross-platform UI
+we have that is very specific to what
+you're doing and so if you're on if
+you're running xamarin and then that's
+great and the Samer can call into a
+class library and then you WP or
+WinForms or web forms can call into the
+same library which can see a scenario
+you have a desktop client application
+whether it's uwp or WPF or WinForms or
+you've got a web app with middle tier
+code and now someone says we want to put
+a mobile front end on that let's reuse
+the logic exactly exactly that could
+easily happen and hopefully does easily
+happen that is absolutely what dotnet
+standard is designed to do this makes it
+a lot easier for you to target that
+scenario
+dönitz standard is the set up to target
+the scenario and there's these tools
+that are set up to make it easy for you
+to first of all just assess it's just I
+have no idea I've no idea how I sit do I
+have to convert and then see what goes
+wrong and fight through that or is there
+a way that you can just in just a couple
+of minutes give me a report which is
+what the portability analyzers for most
+people it's going to take longer to
+install and run across there okay so
+it's a pretty fast tool so there's one
+more thing that's also available in the
+analyzers which I'll show you real quick
+which is if I can close that okay
+there's something else I also have
+installed which is just an analyzer and
+analyzers are installed per project
+where the tool I just showed
+because it's actually a visual studio
+tool first of all doesn't run in code
+sorry and second of all it does it's not
+per project it's always available after
+you install it but here I have an
+analyzer I mean just get that open here
+if I go under references and I go under
+analyzers I have one installed which is
+called the compatibility analyzer I'll
+move that over something to see it it's
+a compatibility analyzer I get that off
+a new gap because that's where we get
+analyzers and so now if I use a great
+variable name I use my favorite variable
+name uh-huh and like I'm going to say
+new web client that happens to be a
+deprecated API so I can find out that
+it's needed in what its deprecated in
+dotnet framework okay okay so dotnet
+standard doesn't have deprecated things
+they're not all the definitions got left
+behind so now I can hover over that and
+I can see that that's that's deprecated
+and it shows up on both the VAR and the
+the new because the VAR is effectively
+telling me web client again so in both
+cases it's a deprecated type so those
+are the three big tools for helping you
+stay in the rails of what you really
+mean to be doing so that's an
+interesting thing to do as you're
+writing if you're writing currently
+writing code that's not targeting
+standard yet but you want to prepare
+yourself for a future where you might
+get this analyzer on right it's a green
+squiggly it'll still come trial and
+you're told as you're writing code guess
+what this isn't going to work and don't
+assume it will work perfectly well
+targeting the whole framework which
+you're currently doing your apps gonna
+run but it's letting you know that the
+code you're writing is not compatible
+with dotnet standard and it's gonna it's
+not going to show you everything that's
+not compatible with diagnose that it
+will show you all the deprecated stuff
+is a big chunk okay
+so if you put WinForms code in here that
+would not be compatible with on its
+standard but you wouldn't get a green
+squiggly because you would still be
+targeting dotnet full framework to get
+the ok norms there all right okay so now
+the big gnarly table that everybody
+shows but not only tailor
+yes I do okay well let's come over here
+to and open a new browser window because
+I want to actually kind of show people
+how to find this as well okay because
+we'll put some links up yes well you
+know we're not always they're not always
+going to come back here and so if you
+just say dotnet standard version table
+okay that's pretty easy if you hit enter
+there you will see something in the docs
+yeah you get some tables too that's okay
+you get some tables but it's this
+standard that versions empty
+yeah the dotnet standard any thought
+that we didn't go far enough
+making net Mouse so we had to make Mouse
+dotnet so we literally made table dot
+yeah all right okay do you all see the
+pretty one no you want to see the ugly
+one is there a pretty one there's a
+prettier one let's see the pretty one
+it's right up here with this little tiny
+lighting is this Internet let's go to
+the interactive let's just get colors
+okay okay so alright mystified by this
+one is the other one by now less so this
+conversation several times yeah okay why
+what is this telling me what do I do
+with this besides go get some aspirin
+okay well this is not as bad as it looks
+although I do understand that on first
+blush this is actually looks pretty
+crazy so the first thing is that I dice
+just like to say that by default dotnet
+standard 2.0 is green good to go
+okay so dotnet standard 2.0 is really
+where a lot of things came together the
+platform support dotnet stain or two dot
+oh that's the one that was based on
+these evaluations of what real code
+looked like it wasn't like what somebody
+thought was going to happen a lot of
+stuff happened for dotnet Stan or 2.0 to
+sort of be the place to be if you can be
+okay so for you you're writing winforms
+WPF apps and you're just interested in
+what full frameworks you can run on
+other than that you don't care right
+you're not worried about reach you're
+only worried about where you're at at
+this moment so if you are on dotnet full
+framework 4.6.1 or above you're good to
+go okay because
+4.6.1 is in the table next to framework
+under two so you can target dotnet Stan
+or to not uh assuming that your you that
+you were running the actual framework on
+your production machine is dotnet full
+framework 4.6.1 or above but not
+everything in 4.6.1 is in standard 2.0
+right but dotnet standard 2.0 is
+supported by full framework 4.6.1
+okay so if you if so if your oh I see so
+if you yeah so if you let me let me say
+this yes come correct so if you've
+targeted down to standard 2.0 and on the
+machine you have 4.6.1
+it will work it will work I want you
+back at your 5:1 on the machine there
+are potentially things that you wrote -
+that aren't in there but wouldn't your
+compiler of caught that in the first
+place no because your compiler is
+looking at net standard 2.0 DLL the
+reference DLL I showed you earlier
+so it's compiling against net standard
+DLL 2.0 and dotnet full framework 4.5
+dot one does not have a net standard DLL
+2.0 it has a net standard DLL 1.2 and it
+says I can't even start I can't do
+anything I try again and so if you want
+to stand for whatever reason if you need
+to target
+dotnet full framework 4.5 dot 1 you
+would have to use dotnet standard 1.2
+okay and for most people at that point
+I'd say what are you going to gain from
+it if you can target 2.0 then you're
+sort of in this nice friendly space but
+it's much more painful I'll show you a
+little bit about what that pain looks
+like so we're going back to 1.2 oops I
+need to be that's not what I needed to
+click so we're going to try it again
+we're going to go here and we're going
+to say 1.2 ok so now you see all of the
+things that you can run on there's a lot
+of things now that you can actually run
+on ok but do you remember what the blue
+bar at the top looked like before was
+all the way across right that's like
+just a
+bar graph of what's available to you so
+you have 30% of your api's are available
+70% are not available so you're gonna
+have problems you're gonna run into
+something you're doing that is not
+supported and so if you have a
+compelling reason to do that hmm I can
+give you one compelling reason if you
+were a library author planning on some
+putting something on nougat right and
+you wanted as many people as possible to
+use yours yeah and you tested with the
+analyzer I showed or some other way you
+just targeted to see what happened and
+you said hey you know what I can do it
+no problem everything I want is in there
+then at that point you can target dotnet
+standard 1.2 have the broadest possible
+reach and you haven't hurt yourself
+right but for you writing your win forms
+or WPF ever I'm going to say what are
+you gaining you know why you trying to
+do this if you're back here so 2.0 is
+really the the the sweet spot and I do
+want to just say with a little caveat
+that 4.6.1
+up until 4.7 the the way that the the
+location of things were shifting around
+on a couple of pieces inside the full
+framework that caused a bit of headaches
+for dotnet standard so the dotnet
+standard DLL had to be aligned with what
+was on the machine there was a couple of
+things that it just wasn't quite wasn't
+quite as solid as you want your
+production machines to be so you might
+want to still target dotnet full
+framework 4.6.1 or for that 6.2 or 4.7 I
+guess and then use that analyzer to see
+if you're ready to go and then maybe
+look at actually targeting net standard
+in like the 4.7 one a 4.7 - time frame
+because these these shifts around that
+needed to happen just to get us fully on
+to net standard they're done and so
+there's a little bit of time in there
+where the it was just not as solid as
+you probably want a production machine
+it's not I don't want to scare you on
+that it's just that some things move
+from out of box to in box and that was a
+challenge for dotnet standard because it
+was here and now it's there and a few
+things like that just wound up with it
+with a few problems and just
+keeping those problems on production is
+a great idea so let's let's close with
+how often dotnet standard will change
+all of the things under here constantly
+changing there's a 4 7 foot there's a 2
+1 core coming out
+iOS 11 is out in Visual Studio will have
+support for it potentially by the time
+this post if not even after that Android
+9 is gonna be out eventually you WP
+there's a new version which is a couple
+weeks away or so I'm told some of these
+other things don't change
+well the dotnet standard change every
+time one of these changes okay that's a
+great question so first of all let's be
+clear that all of those numbers are
+anything higher than that will also
+support so immediately right now you
+know 4:71 2.1 of dotnet core which is
+available in preview right now all of
+those things support dotnet standard -
+oh right now so all of the numbers in
+that column is those or anything greater
+so when iOS 11 comes out then there
+there may be a little bit of work that
+has to happen if there's again these
+things when things move that standard
+has to point to the right spot the net
+standard dll on you know that might need
+a little bit of tweaking I can't promise
+that won't happen but people working
+very hard for that to be smooth and not
+so is that the standard 2.0 one or a 2.1
+because one of the interesting things is
+if you remember all of the bracket curly
+brackets are empty in the reference dll
+okay and so Dinah standard itself will
+never have a patch release because
+there's no code to patch it only has
+changes to its API surface layer because
+it is just an API services so that
+standard only needs to change when there
+are api's that need to be added to it
+that yes it doesn't necessarily happen
+just because iOS went from version 10 to
+11 or Android went from 8 to 9 or UWP
+went from 10 oh 16 to 99 to 0 17 blah
+blah blah right and so the the
+interesting thing about that especially
+for right now because we're you know in
+a lot of conversions in so many numbers
+in the air and it's all very confusing
+is that dotnet core
+is in preview on dotnet core 2.1 it's
+moving forward but there haven't been
+any changes right now to dot it standard
+so dotnet standard is independent of
+dotnet core and it will stay on dot nest
+an or two dot o-- for the next in the
+next foreseeable future the next few
+months at least until there's something
+so we have span now in dotnet core
+updated versions 2.1 of dotnet court has
+span and all of its friends and or to oh
+it is not in standard to okay but that's
+the kind of thing that would push dotnet
+standard into net Stan or 2.1 and
+there's going to be a little bit of a I
+think a conversation about whether
+dotnet standard should be aggressive in
+versioning and as soon as somebody has
+an idea when we look at uses yeah why
+don't we go look at percentage of
+existing apps today use span it's
+probably a less than system data dot
+link so I think there's priests over
+time but I think there's two pieces that
+are super important one is exactly that
+right and the other is remembered inot
+standard in and of itself does not
+matter it only matters from platforms
+supported so if you create a dotnet Stan
+or two dot one and the only thing in the
+planet that supports it is dotnet core
+2.1 did you gain anything right because
+nobody else can use it
+so it's not just people using span but
+it's also other frameworks being ready
+to support span or you know whatever the
+API is I'm just using that as an example
+and so it's when those kinds of things
+start happening that we want to see
+dotnet standard evolve so the new
+features that I could use cross-platform
+if you just let me our end on it stand
+or have the ability to extend it because
+I believe Dutton it core there's the
+ability to extend it to call missing
+pieces of the framework is that correct
+so there's a couple of things you might
+be referring to there one is that
+there's a compatibility pack which is
+Miss named which is Miss named I just
+want to say that I had nothing to do
+with his name it's called a windows
+compatibility right so you'd think it
+was just for Windows wouldn't do ya know
+about half of it will also run
+cross-platform code and half of it will
+that is a way of adding things that
+aren't in core and call
+I'm your coach so you can potentially
+see something similar for standard you
+want span that's not in standard yet
+here's a way to kind of shove it in on
+the side so that might happen in the
+nature right now it that would wind up
+being something through a through new
+get that you would be getting a span
+that made sense in your world and as of
+today that's that's not something that I
+see out there at all I think that as we
+get into done in standard I mean our
+first step is just to explain this crazy
+thing and have people understand it and
+understand why they care and then we'll
+see how it evolves as we see what people
+ask for is they start really hopefully
+embracing it and embracing a way that
+there's no reason to write your
+application class libraries anymore that
+are specific to a framework unless there
+is a reason right so there's no they
+used to be that was the only way to
+write it and that was not a problem when
+our frameworks were like all over the
+map and hitting really different targets
+so Windows Phone versus pro framework
+those are really different but now we
+have dotnet core and dotnet full
+framework and they both run on a Windows
+machine and you're already figuring out
+which of those you want to do and dotnet
+standard gives you a way to say that
+decision can be a kind of temporary
+decision it doesn't have to be a locked
+in stone decision for your class
+libraries cool so yes we're out today
+right thank you I think this I think
+this cleared up a lot of the confusion I
+hope it did I think it's good to see you
+confused if I'm confused you can imagine
+viewers are - it's not just about me
+it's not just about not just about you
+Robert I hope you enjoyed that and we
+will see you next time on visual studio
+toolbox
+[Music]

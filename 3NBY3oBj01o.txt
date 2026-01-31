@@ -1,1955 +1,489 @@
-1
-00:00:00,020 --> 00:00:02,040
 solo there and welcome to another
-
-2
-00:00:02,040 --> 00:00:03,959
 tutorial my name is Senator vaccine this
-
-3
-00:00:03,959 --> 00:00:05,910
 time we're gonna be going over parsed
-
-4
-00:00:05,910 --> 00:00:08,820
 push notifications in iOS 9 using Swift
-
-5
-00:00:08,820 --> 00:00:12,389
 too now I haven't really found many
-
-6
-00:00:12,389 --> 00:00:15,420
 resources on this online and I've mostly
-
-7
-00:00:15,420 --> 00:00:18,690
 only found a resources for partial push
-
-8
-00:00:18,690 --> 00:00:23,310
 notifications for Swift 1 and iOS 7 and
-
-9
-00:00:23,310 --> 00:00:25,609
 8 which is not very convenient
-
-10
-00:00:25,609 --> 00:00:28,199
 considering the fact that all these
-
-11
-00:00:28,199 --> 00:00:31,710
 videos are also really really long and
-
-12
-00:00:31,710 --> 00:00:33,960
 they're very hard to understand in fact
-
-13
-00:00:33,960 --> 00:00:35,730
 this took me quite a while to make and
-
-14
-00:00:35,730 --> 00:00:37,890
 so since this took me quite a while to
-
-15
-00:00:37,890 --> 00:00:40,440
 make I'm creating a video on it now I
-
-16
-00:00:40,440 --> 00:00:41,460
 wasn't orig
-
-17
-00:00:41,460 --> 00:00:42,960
 I didn't come up with the idea for this
-
-18
-00:00:42,960 --> 00:00:45,989
 app it was actually sent to me by one of
-
-19
-00:00:45,989 --> 00:00:48,480
 my subscribers so his name is Ali echoey
-
-20
-00:00:48,480 --> 00:00:51,469
 and I want to show a picture of him now
-
-21
-00:00:51,469 --> 00:00:55,500
 this is ali Ocoee he's asked me to make
-
-22
-00:00:55,500 --> 00:00:58,050
 a video of how you can actually use
-
-23
-00:00:58,050 --> 00:01:00,750
 parse to display push notifications on
-
-24
-00:01:00,750 --> 00:01:03,809
 iOS and other platforms I'm only
-
-25
-00:01:03,809 --> 00:01:05,820
 covering iOS in this video but I may
-
-26
-00:01:05,820 --> 00:01:07,860
 cover other operating systems as well in
-
-27
-00:01:07,860 --> 00:01:10,500
 the future anyway let's get to the
-
-28
-00:01:10,500 --> 00:01:12,479
 actual video so we can explain the
-
-29
-00:01:12,479 --> 00:01:14,790
 question so now that you've seen Ali's
-
-30
-00:01:14,790 --> 00:01:17,490
 question let's actually get to the video
-
-31
-00:01:17,490 --> 00:01:19,470
 now essentially what I'm going to do in
-
-32
-00:01:19,470 --> 00:01:21,540
 this app we're going to have two
-
-33
-00:01:21,540 --> 00:01:25,590
 separate I devices these AI devices will
-
-34
-00:01:25,590 --> 00:01:28,080
 be able to send push notifications to
-
-35
-00:01:28,080 --> 00:01:31,140
 each other but wait a minute they don't
-
-36
-00:01:31,140 --> 00:01:32,670
 send them to each other they're going to
-
-37
-00:01:32,670 --> 00:01:35,759
 send them to all iOS devices connected
-
-38
-00:01:35,759 --> 00:01:39,630
 to this app however in the next part I'm
-
-39
-00:01:39,630 --> 00:01:41,310
 going to be showing you how you can send
-
-40
-00:01:41,310 --> 00:01:44,490
 to specific people so now let me just
-
-41
-00:01:44,490 --> 00:01:46,020
 really quickly explain how the push
-
-42
-00:01:46,020 --> 00:01:47,790
 notifications will work then we'll get
-
-43
-00:01:47,790 --> 00:01:52,170
 to the coding part okay so let me just
-
-44
-00:01:52,170 --> 00:01:54,810
 open up here so let's say we have a few
-
-45
-00:01:54,810 --> 00:02:00,649
 clients like iPhone number one
-
-46
-00:02:03,110 --> 00:02:10,470
 okay so this is iPhone number one then
-
-47
-00:02:10,470 --> 00:02:14,459
 we also have number two who has a bit
-
-48
-00:02:14,459 --> 00:02:21,090
 bigger iPhone I guess and this is number
-
-49
-00:02:21,090 --> 00:02:29,700
 two okay now let's say over here we have
-
-50
-00:02:29,700 --> 00:02:32,069
 the parse database which I guess I'll
-
-51
-00:02:32,069 --> 00:02:37,980
 just draw like this and this is the
-
-52
-00:02:37,980 --> 00:02:46,560
 parse database now my instance of this
-
-53
-00:02:46,560 --> 00:02:50,940
 let's just say it's this this is my
-
-54
-00:02:50,940 --> 00:02:58,470
 instance of parse okay
-
-55
-00:02:58,470 --> 00:03:04,470
 now this has a little section for push
-
-56
-00:03:04,470 --> 00:03:06,500
 notifications
-
-57
-00:03:14,500 --> 00:03:18,290
 so essentially what we're doing is these
-
-58
-00:03:18,290 --> 00:03:21,349
 two AI devices in their app delegate
-
-59
-00:03:21,349 --> 00:03:23,810
 we're setting them to keep on looking
-
-60
-00:03:23,810 --> 00:03:27,500
 for push notifications over here but
-
-61
-00:03:27,500 --> 00:03:28,819
 wait just a minute this can't be too
-
-62
-00:03:28,819 --> 00:03:29,359
 simple
-
-63
-00:03:29,359 --> 00:03:33,700
 there's also Apple coming in the way
-
-64
-00:03:34,329 --> 00:03:36,500
 here what we're just going to do apples
-
-65
-00:03:36,500 --> 00:03:37,909
 just going to act as like a little
-
-66
-00:03:37,909 --> 00:03:42,680
 bridge in between us well it's going to
-
-67
-00:03:42,680 --> 00:03:45,739
 happen is let's say I create a new push
-
-68
-00:03:45,739 --> 00:03:50,409
 notification over here with text like
-
-69
-00:03:50,409 --> 00:03:57,280
 let's say you push notification hello
-
-70
-00:03:57,280 --> 00:04:07,400
 use my app okay so now it's going to
-
-71
-00:04:07,400 --> 00:04:11,000
 happen this push notification will make
-
-72
-00:04:11,000 --> 00:04:15,799
 its way over to Apple Apple will make
-
-73
-00:04:15,799 --> 00:04:19,630
 its way over to these two devices and
-
-74
-00:04:19,630 --> 00:04:24,169
 that on here will either see a little
-
-75
-00:04:24,169 --> 00:04:29,060
 notification here or if you're on the
-
-76
-00:04:29,060 --> 00:04:29,780
 lockscreen
-
-77
-00:04:29,780 --> 00:04:32,780
 it'll open up say the time and stuff and
-
-78
-00:04:32,780 --> 00:04:37,190
 then show the notification on the
-
-79
-00:04:37,190 --> 00:04:41,300
 lockscreen so that is really simple
-
-80
-00:04:41,300 --> 00:04:42,860
 actually even though it seems very
-
-81
-00:04:42,860 --> 00:04:45,860
 complicated and so what we're going to
-
-82
-00:04:45,860 --> 00:04:47,479
 be doing first in this video we're going
-
-83
-00:04:47,479 --> 00:04:50,419
 to be handling the Apple part which is
-
-84
-00:04:50,419 --> 00:04:52,699
 the most complicated part out of all of
-
-85
-00:04:52,699 --> 00:04:53,090
 this
-
-86
-00:04:53,090 --> 00:04:56,330
 then we'll handle the actual coding of
-
-87
-00:04:56,330 --> 00:05:01,039
 the app this is the second part this is
-
-88
-00:05:01,039 --> 00:05:03,560
 the first part and then we'll actually
-
-89
-00:05:03,560 --> 00:05:07,610
 handle the parse database which will be
-
-90
-00:05:07,610 --> 00:05:10,570
 our third part
-
-91
-00:05:11,790 --> 00:05:14,460
 so let's get to the Mack part now and so
-
-92
-00:05:14,460 --> 00:05:17,240
 we can code this up so let's get to it
-
-93
-00:05:17,240 --> 00:05:19,860
 so welcome back to the Mac part and now
-
-94
-00:05:19,860 --> 00:05:22,950
 I'm going to be showing you the actual
-
-95
-00:05:22,950 --> 00:05:26,400
 implementation of this in Swift so to
-
-96
-00:05:26,400 --> 00:05:27,990
 get started we're going to do a bit of
-
-97
-00:05:27,990 --> 00:05:30,450
 preparation so first of all what we're
-
-98
-00:05:30,450 --> 00:05:32,730
 going to do is I'm just going to make my
-
-99
-00:05:32,730 --> 00:05:34,650
 face smaller can't have a youtube video
-
-100
-00:05:34,650 --> 00:05:37,320
 without one of those drills then I'm
-
-101
-00:05:37,320 --> 00:05:43,730
 going to come over here into Xcode and
-
-102
-00:05:44,600 --> 00:05:48,230
 I've I have a little template actually
-
-103
-00:05:48,230 --> 00:05:50,880
 for this app which you're going to have
-
-104
-00:05:50,880 --> 00:05:53,940
 to just open up in your own version of
-
-105
-00:05:53,940 --> 00:05:55,770
 Xcode and a link to it will be in the
-
-106
-00:05:55,770 --> 00:05:58,290
 description along with source code and
-
-107
-00:05:58,290 --> 00:06:00,090
 so what you're going to do inside of
-
-108
-00:06:00,090 --> 00:06:02,790
 this little template is you're going to
-
-109
-00:06:02,790 --> 00:06:05,520
 see first of all this is very very
-
-110
-00:06:05,520 --> 00:06:09,660
 crucial you have to change bundle ID
-
-111
-00:06:09,660 --> 00:06:13,500
 enter from comm dot fill got me up to
-
-112
-00:06:13,500 --> 00:06:16,440
 comm dot so whatever your usual bundle
-
-113
-00:06:16,440 --> 00:06:17,730
 identifier would be for this sort of
-
-114
-00:06:17,730 --> 00:06:21,110
 thing for me it would be TBS s dot parse
-
-115
-00:06:21,110 --> 00:06:24,240
 tester something like that make sure you
-
-116
-00:06:24,240 --> 00:06:29,010
 choose your correct team and then yeah
-
-117
-00:06:29,010 --> 00:06:32,340
 you have to go into capabilities make
-
-118
-00:06:32,340 --> 00:06:35,190
 sure push notifications is on and if you
-
-119
-00:06:35,190 --> 00:06:37,020
 see this little error here click on the
-
-120
-00:06:37,020 --> 00:06:43,830
 fix issue button and then in a second it
-
-121
-00:06:43,830 --> 00:06:46,710
 should give you a check mark perfect
-
-122
-00:06:46,710 --> 00:06:48,390
 you have successfully set up the
-
-123
-00:06:48,390 --> 00:06:51,720
 template next what you're going to do is
-
-124
-00:06:51,720 --> 00:06:53,250
 you're going to go into your Apple
-
-125
-00:06:53,250 --> 00:06:58,200
 developers member Center and they're
-
-126
-00:06:58,200 --> 00:07:00,300
 going to sign in to your developer page
-
-127
-00:07:00,300 --> 00:07:03,000
 and go into your certificates
-
-128
-00:07:03,000 --> 00:07:07,470
 identifiers and profiles page open up
-
-129
-00:07:07,470 --> 00:07:12,510
 identifiers and then just our actually
-
-130
-00:07:12,510 --> 00:07:16,050
 I'm going to search for parse and as you
-
-131
-00:07:16,050 --> 00:07:18,750
 can see I see parse tester I'm going to
-
-132
-00:07:18,750 --> 00:07:21,050
 click on it and click on the edit button
-
-133
-00:07:21,050 --> 00:07:23,580
 we're going to scroll down until we see
-
-134
-00:07:23,580 --> 00:07:25,260
 push notifications
-
-135
-00:07:25,260 --> 00:07:27,300
 and where it says development SSL
-
-136
-00:07:27,300 --> 00:07:30,860
 certificate click on create certificate
-
-137
-00:07:30,860 --> 00:07:33,060
 now all you need to do is open up
-
-138
-00:07:33,060 --> 00:07:37,980
 keychain access then we're going to
-
-139
-00:07:37,980 --> 00:07:39,780
 click on this keychain access button
-
-140
-00:07:39,780 --> 00:07:43,740
 over here certificate assistant and then
-
-141
-00:07:43,740 --> 00:07:45,660
 request a certificate from a certificate
-
-142
-00:07:45,660 --> 00:07:49,410
 authority then it already feels
-
-143
-00:07:49,410 --> 00:07:51,060
 everything in form but I believe you're
-
-144
-00:07:51,060 --> 00:07:52,380
 going to have to fill in stuff for
-
-145
-00:07:52,380 --> 00:07:54,570
 yourself so your user email just can be
-
-146
-00:07:54,570 --> 00:07:57,240
 anything really your name then the CA
-
-147
-00:07:57,240 --> 00:07:59,700
 email address make sure that is blank
-
-148
-00:07:59,700 --> 00:08:02,700
 and then click on the you're saved to
-
-149
-00:08:02,700 --> 00:08:07,340
 disk option and do not check this box
-
-150
-00:08:07,340 --> 00:08:10,500
 continue and then it'll ask you where to
-
-151
-00:08:10,500 --> 00:08:11,960
 store it so I'm just going to call it
-
-152
-00:08:11,960 --> 00:08:22,040
 I'd say just a second push certificate
-
-153
-00:08:22,040 --> 00:08:24,330
 request okay
-
-154
-00:08:24,330 --> 00:08:25,950
 then I'm going to just save this to my
-
-155
-00:08:25,950 --> 00:08:27,330
 desktop because we're going to delete
-
-156
-00:08:27,330 --> 00:08:29,810
 this anyway and click on the Save button
-
-157
-00:08:29,810 --> 00:08:31,980
 you don't need to show in finder so you
-
-158
-00:08:31,980 --> 00:08:33,630
 can just click on the done button come
-
-159
-00:08:33,630 --> 00:08:34,830
 over here and click on the continue
-
-160
-00:08:34,830 --> 00:08:38,030
 button then click on choose file and
-
-161
-00:08:38,030 --> 00:08:42,260
 choose the file that you've just created
-
-162
-00:08:42,260 --> 00:08:45,150
 ok perfect click on the generate button
-
-163
-00:08:45,150 --> 00:08:48,150
 and then you don't need to download this
-
-164
-00:08:48,150 --> 00:08:49,620
 certificate just yet or actually
-
-165
-00:08:49,620 --> 00:08:52,950
 nevermind yes you do ok once you've
-
-166
-00:08:52,950 --> 00:08:55,110
 downloaded the certificate just click on
-
-167
-00:08:55,110 --> 00:08:58,140
 the done button and now you're done on
-
-168
-00:08:58,140 --> 00:09:00,510
 your Apple Developer page now click on
-
-169
-00:09:00,510 --> 00:09:02,340
 the certificate you just downloaded and
-
-170
-00:09:02,340 --> 00:09:04,830
 it should open it up into peach ain't
-
-171
-00:09:04,830 --> 00:09:07,020
 access make sure you click on the button
-
-172
-00:09:07,020 --> 00:09:09,690
 my certificates if you do not do this it
-
-173
-00:09:09,690 --> 00:09:11,700
 usually will not work unless you select
-
-174
-00:09:11,700 --> 00:09:14,460
 the correct entry so click on my
-
-175
-00:09:14,460 --> 00:09:18,030
 certificates then search for the one
-
-176
-00:09:18,030 --> 00:09:22,410
 where it says your app ID which is this
-
-177
-00:09:22,410 --> 00:09:25,500
 one parse tester for iOS push services
-
-178
-00:09:25,500 --> 00:09:27,810
 and make sure it hasn't expired or
-
-179
-00:09:27,810 --> 00:09:29,970
 anything I just created mine so it of
-
-180
-00:09:29,970 --> 00:09:32,520
 course won't expire just yet but just in
-
-181
-00:09:32,520 --> 00:09:34,020
 case you're using an older one make sure
-
-182
-00:09:34,020 --> 00:09:37,700
 it isn't expired or else it's no use
-
-183
-00:09:37,800 --> 00:09:40,440
 okay then right-click on it and click
-
-184
-00:09:40,440 --> 00:09:43,950
 export then make sure you're using the
-
-185
-00:09:43,950 --> 00:09:46,470
 person personal information exchange
-
-186
-00:09:46,470 --> 00:09:50,040
 file format and if you aren't if you
-
-187
-00:09:50,040 --> 00:09:51,570
 don't have this option if it's grayed
-
-188
-00:09:51,570 --> 00:09:54,120
 out like these two then you're probably
-
-189
-00:09:54,120 --> 00:09:56,070
 using it from all items you're using a
-
-190
-00:09:56,070 --> 00:09:58,260
 different version of the certificate so
-
-191
-00:09:58,260 --> 00:10:00,180
 just make sure you use the one in my
-
-192
-00:10:00,180 --> 00:10:03,329
 certificates so then I'm going to just
-
-193
-00:10:03,329 --> 00:10:07,399
 name this something like parse push
-
-194
-00:10:07,399 --> 00:10:10,050
 tester
-
-195
-00:10:10,050 --> 00:10:11,899
 yeah that's it click on the Save button
-
-196
-00:10:11,899 --> 00:10:14,579
 now do not give this a password so just
-
-197
-00:10:14,579 --> 00:10:16,649
 click OK then type in your computer's
-
-198
-00:10:16,649 --> 00:10:20,029
 admin password and click on always allow
-
-199
-00:10:20,029 --> 00:10:23,880
 or just allow okay now you're done
-
-200
-00:10:23,880 --> 00:10:26,459
 keychain access now you have to do stuff
-
-201
-00:10:26,459 --> 00:10:30,329
 in parse go over to parse and click on
-
-202
-00:10:30,329 --> 00:10:34,470
 go to your apps after signing in create
-
-203
-00:10:34,470 --> 00:10:37,140
 a new app and I'm just going to call
-
-204
-00:10:37,140 --> 00:10:41,250
 this parse tester click on the create
-
-205
-00:10:41,250 --> 00:10:47,459
 button and then click on push and then
-
-206
-00:10:47,459 --> 00:10:52,290
 go to settings then click on push again
-
-207
-00:10:52,290 --> 00:10:55,620
 but this time from over here then what
-
-208
-00:10:55,620 --> 00:10:57,209
 you want to do now listen to this very
-
-209
-00:10:57,209 --> 00:10:59,579
 carefully you're going to have to enable
-
-210
-00:10:59,579 --> 00:11:01,950
 client push this will allow your I
-
-211
-00:11:01,950 --> 00:11:07,350
 devices to push to parse then over here
-
-212
-00:11:07,350 --> 00:11:09,770
 where it says Apple Post certificates
-
-213
-00:11:09,770 --> 00:11:12,420
 wherever it says certificate file dot
-
-214
-00:11:12,420 --> 00:11:16,760
 p12 click on select your certificate and
-
-215
-00:11:16,760 --> 00:11:22,170
 open up your certificate file ok perfect
-
-216
-00:11:22,170 --> 00:11:24,480
 now it has uploaded this certificate on
-
-217
-00:11:24,480 --> 00:11:28,140
 to parts now that you're done this step
-
-218
-00:11:28,140 --> 00:11:33,089
 you just want to go into Doc's and click
-
-219
-00:11:33,089 --> 00:11:37,769
 on launch the QuickStart then yeah
-
-220
-00:11:37,769 --> 00:11:39,540
 there's a little thing I found in the
-
-221
-00:11:39,540 --> 00:11:41,790
 parse website it resets the app over
-
-222
-00:11:41,790 --> 00:11:43,910
 here so make sure you click on the app
-
-223
-00:11:43,910 --> 00:11:49,440
 scroll down until you find the app that
-
-224
-00:11:49,440 --> 00:11:50,730
 you were just working on yet the poster
-
-225
-00:11:50,730 --> 00:11:51,620
 example
-
-226
-00:11:51,620 --> 00:11:57,899
 okay then click on push or actually just
-
-227
-00:11:57,899 --> 00:11:59,040
 give me a second
-
-228
-00:11:59,040 --> 00:12:01,050
 you won't need to do this I'm just
-
-229
-00:12:01,050 --> 00:12:10,529
 checking yeah for myself so I know yeah
-
-230
-00:12:10,529 --> 00:12:16,680
 so if I just go over to my apps yeah I
-
-231
-00:12:16,680 --> 00:12:18,180
 selected the wrong one I'm supposed to
-
-232
-00:12:18,180 --> 00:12:22,589
 click on parse tester okay so if I click
-
-233
-00:12:22,589 --> 00:12:24,389
 on parse tester which is my real app
-
-234
-00:12:24,389 --> 00:12:26,759
 then currently working on and then I go
-
-235
-00:12:26,759 --> 00:12:29,220
 over to iOS because I'm using iOS you
-
-236
-00:12:29,220 --> 00:12:30,509
 can really just skip through these just
-
-237
-00:12:30,509 --> 00:12:33,630
 randomly select something and then all I
-
-238
-00:12:33,630 --> 00:12:35,459
 really need are these application keys
-
-239
-00:12:35,459 --> 00:12:41,130
 so double-click your application ID go
-
-240
-00:12:41,130 --> 00:12:43,290
 over to your app delegate and paste it
-
-241
-00:12:43,290 --> 00:12:46,829
 in for a by D select your client key and
-
-242
-00:12:46,829 --> 00:12:51,180
 paste that in for your client ID perfect
-
-243
-00:12:51,180 --> 00:12:54,209
 now what we're going to do is actually
-
-244
-00:12:54,209 --> 00:12:55,529
 you know what
-
-245
-00:12:55,529 --> 00:12:59,940
 currently our push message is this push
-
-246
-00:12:59,940 --> 00:13:02,399
 notification was sent that's AB or I
-
-247
-00:13:02,399 --> 00:13:04,589
 will spice it up a bit because you know
-
-248
-00:13:04,589 --> 00:13:06,480
 what we're learning is programming so
-
-249
-00:13:06,480 --> 00:13:11,149
 let's just do this hello iOS programming
-
-250
-00:13:11,149 --> 00:13:14,970
 ok so now I'm going to run this app on
-
-251
-00:13:14,970 --> 00:13:18,930
 both on both of my iPhone so first of
-
-252
-00:13:18,930 --> 00:13:25,709
 all this one then this one so put it on
-
-253
-00:13:25,709 --> 00:13:34,500
 to both okay now right as they start up
-
-254
-00:13:34,500 --> 00:13:37,980
 I'm just going to show you over here as
-
-255
-00:13:37,980 --> 00:13:42,540
 you can see now they are both asking me
-
-256
-00:13:42,540 --> 00:13:44,300
 if they'd like to send me notifications
-
-257
-00:13:44,300 --> 00:13:47,699
 and so I'm just going to click OK so
-
-258
-00:13:47,699 --> 00:13:50,180
 that they can send me notifications and
-
-259
-00:13:50,180 --> 00:13:55,639
 as you can see they work perfectly now
-
-260
-00:13:55,639 --> 00:13:58,199
 how do I send push notifications to
-
-261
-00:13:58,199 --> 00:14:00,449
 these well it's quite simple really
-
-262
-00:14:00,449 --> 00:14:04,670
 let's just take our Google Chrome window
-
-263
-00:14:04,670 --> 00:14:08,180
 make it really small actually a little
-
-264
-00:14:08,180 --> 00:14:14,450
 small that's in small bring it over to
-
-265
-00:14:14,450 --> 00:14:19,310
 our view with the iPhones a bit smaller
-
-266
-00:14:19,310 --> 00:14:21,920
 so it fits in between them then what I'm
-
-267
-00:14:21,920 --> 00:14:29,990
 going to do is if I come over to so not
-
-268
-00:14:29,990 --> 00:14:31,730
 right now we're in the parse page now
-
-269
-00:14:31,730 --> 00:14:34,070
 I'm going to click on push see this
-
-270
-00:14:34,070 --> 00:14:38,839
 little here push then we're going to
-
-271
-00:14:38,839 --> 00:14:40,760
 scroll over here and click on send a
-
-272
-00:14:40,760 --> 00:14:46,220
 push now actually I'm just going to make
-
-273
-00:14:46,220 --> 00:14:48,529
 this big again so you can see what we're
-
-274
-00:14:48,529 --> 00:14:52,760
 doing and since there are no oh yeah so
-
-275
-00:14:52,760 --> 00:14:54,649
 forgot the main rule that I've been
-
-276
-00:14:54,649 --> 00:14:57,950
 teaching you this app gets reset select
-
-277
-00:14:57,950 --> 00:15:01,040
 parse tester again and now what we can
-
-278
-00:15:01,040 --> 00:15:05,690
 do click on send a push I'm just going
-
-279
-00:15:05,690 --> 00:15:08,630
 to choose every one so that it sends to
-
-280
-00:15:08,630 --> 00:15:12,199
 all my devices I'm going to go down down
-
-281
-00:15:12,199 --> 00:15:14,779
 down and over here where it says what
-
-282
-00:15:14,779 --> 00:15:20,120
 message let's just say this is from
-
-283
-00:15:20,120 --> 00:15:27,079
 parse hello iOS programming so that we
-
-284
-00:15:27,079 --> 00:15:29,329
 can distinguish between the message sent
-
-285
-00:15:29,329 --> 00:15:32,000
 by our iOS device and the one sent from
-
-286
-00:15:32,000 --> 00:15:36,220
 the parse dashboard okay let's continue
-
-287
-00:15:36,220 --> 00:15:40,760
 so let's send this now immediately if I
-
-288
-00:15:40,760 --> 00:15:42,680
 come over here both my iPhone just
-
-289
-00:15:42,680 --> 00:15:46,250
 vibrated on my table and it shows us big
-
-290
-00:15:46,250 --> 00:15:48,320
 notification over here parse push this
-
-291
-00:15:48,320 --> 00:15:52,279
 is from parse hollow iOS programming ok
-
-292
-00:15:52,279 --> 00:15:54,890
 sure that works but there's nothing
-
-293
-00:15:54,890 --> 00:15:56,360
 really too big in that I could show a
-
-294
-00:15:56,360 --> 00:15:57,769
 message from a database whenever I
-
-295
-00:15:57,769 --> 00:15:59,570
 wanted to I just need to use the code
-
-296
-00:15:59,570 --> 00:16:02,120
 that I use in Swift databases well let's
-
-297
-00:16:02,120 --> 00:16:05,390
 see what happens if I click ok and let's
-
-298
-00:16:05,390 --> 00:16:08,649
 see what happens when I exit the app
-
-299
-00:16:08,649 --> 00:16:12,350
 once I actually exit the app and then I
-
-300
-00:16:12,350 --> 00:16:16,670
 send a push notification guess what I
-
-301
-00:16:16,670 --> 00:16:18,420
 think you've already guessed
-
-302
-00:16:18,420 --> 00:16:20,370
 but if I go down here choose something
-
-303
-00:16:20,370 --> 00:16:22,310
 like hello
-
-304
-00:16:22,310 --> 00:16:28,139
 iOS programming from the NC I you can
-
-305
-00:16:28,139 --> 00:16:31,829
 guess what NC means and so if I send
-
-306
-00:16:31,829 --> 00:16:35,970
 this now that standard stood for
-
-307
-00:16:35,970 --> 00:16:37,800
 Notification Center because as you can
-
-308
-00:16:37,800 --> 00:16:39,899
 see it has actually put these on to
-
-309
-00:16:39,899 --> 00:16:42,389
 Notification Center and it has showed me
-
-310
-00:16:42,389 --> 00:16:47,070
 the actual notification using push so
-
-311
-00:16:47,070 --> 00:16:50,899
 now if I go into the Notification Center
-
-312
-00:16:51,050 --> 00:16:54,300
 it shows me the notification over here
-
-313
-00:16:54,300 --> 00:16:56,940
 and here so if I click on it it actually
-
-314
-00:16:56,940 --> 00:17:03,360
 brings me into the app and that works ok
-
-315
-00:17:03,360 --> 00:17:06,929
 so now what happens if I click on the
-
-316
-00:17:06,929 --> 00:17:11,990
 send text button on one of my iPhones
-
-317
-00:17:12,230 --> 00:17:14,640
 well then it does exactly what you would
-
-318
-00:17:14,640 --> 00:17:17,010
 expect it actually sends the text that
-
-319
-00:17:17,010 --> 00:17:21,929
 we put in to our code now let's see what
-
-320
-00:17:21,929 --> 00:17:23,069
 happens when I do that on my other
-
-321
-00:17:23,069 --> 00:17:27,360
 iPhone as you can see it pushes on to
-
-322
-00:17:27,360 --> 00:17:32,570
 both now let's close the app on one and
-
-323
-00:17:32,570 --> 00:17:38,490
 send it as you can see it pushes now
-
-324
-00:17:38,490 --> 00:17:40,500
 let's close the app on this one and open
-
-325
-00:17:40,500 --> 00:17:44,580
 it up on this and as you can G see just
-
-326
-00:17:44,580 --> 00:17:46,110
 to prove to you one last time
-
-327
-00:17:46,110 --> 00:17:50,100
 it pushes okay so that was actually
-
-328
-00:17:50,100 --> 00:17:52,980
 quite simple for the demo of this app
-
-329
-00:17:52,980 --> 00:17:55,799
 now let's get into the actual code and
-
-330
-00:17:55,799 --> 00:17:59,130
 how that works okay so now let's get
-
-331
-00:17:59,130 --> 00:18:01,799
 over to the actual code part of this so
-
-332
-00:18:01,799 --> 00:18:05,059
 I'm just going to move myself over here
-
-333
-00:18:05,059 --> 00:18:10,080
 over these and stop the apps okay
-
-334
-00:18:10,080 --> 00:18:12,870
 so now let's start from the app delegate
-
-335
-00:18:12,870 --> 00:18:15,330
 which is the simplest part again I just
-
-336
-00:18:15,330 --> 00:18:17,970
 took these parsed our project and I made
-
-337
-00:18:17,970 --> 00:18:21,390
 it much better so that you can use this
-
-338
-00:18:21,390 --> 00:18:23,280
 with ease because the power starter
-
-339
-00:18:23,280 --> 00:18:27,330
 project still wasn't good enough it had
-
-340
-00:18:27,330 --> 00:18:29,850
 lots of extra code I just clean that all
-
-341
-00:18:29,850 --> 00:18:32,400
 out for you added some more stuff in
-
-342
-00:18:32,400 --> 00:18:35,530
 okay so interact delegates did finish
-
-343
-00:18:35,530 --> 00:18:38,080
 launching with options function we are
-
-344
-00:18:38,080 --> 00:18:39,700
 just setting the application ID and the
-
-345
-00:18:39,700 --> 00:18:41,470
 client key to well the application
-
-346
-00:18:41,470 --> 00:18:45,430
 client ID you get from parse we are
-
-347
-00:18:45,430 --> 00:18:48,790
 setting the UI user notification type to
-
-348
-00:18:48,790 --> 00:18:54,940
 alert badge and sound that means that in
-
-349
-00:18:54,940 --> 00:18:56,800
 the notification settings if you are to
-
-350
-00:18:56,800 --> 00:18:57,940
 your Settings app and click on
-
-351
-00:18:57,940 --> 00:19:00,400
 notifications these are the three things
-
-352
-00:19:00,400 --> 00:19:06,190
 that we are going to use for the you
-
-353
-00:19:06,190 --> 00:19:10,450
 know notification types then settings is
-
-354
-00:19:10,450 --> 00:19:12,700
 just going to be really simply what
-
-355
-00:19:12,700 --> 00:19:14,500
 types can we use and what categories
-
-356
-00:19:14,500 --> 00:19:16,510
 categories can be nil meaning default
-
-357
-00:19:16,510 --> 00:19:18,880
 but the types will be the types that we
-
-358
-00:19:18,880 --> 00:19:22,900
 just created then what we do is
-
-359
-00:19:22,900 --> 00:19:25,030
 application which is a Cy application
-
-360
-00:19:25,030 --> 00:19:26,020
 that we're getting in this function
-
-361
-00:19:26,020 --> 00:19:27,820
 we're just going to register user
-
-362
-00:19:27,820 --> 00:19:30,010
 notification settings and then those
-
-363
-00:19:30,010 --> 00:19:31,360
 settings that we gave it so it were
-
-364
-00:19:31,360 --> 00:19:33,820
 registering those notification settings
-
-365
-00:19:33,820 --> 00:19:36,370
 so we can actually give notifications
-
-366
-00:19:36,370 --> 00:19:38,260
 and then it shows up that little pop up
-
-367
-00:19:38,260 --> 00:19:41,560
 this so-and-so app would like to show
-
-368
-00:19:41,560 --> 00:19:43,060
 you notifications and so these are
-
-369
-00:19:43,060 --> 00:19:45,370
 clicks okay or no and then we have
-
-370
-00:19:45,370 --> 00:19:47,920
 permission to show notifications then
-
-371
-00:19:47,920 --> 00:19:49,420
 next we're doing application dot
-
-372
-00:19:49,420 --> 00:19:51,850
 register for remote notifications this
-
-373
-00:19:51,850 --> 00:19:53,170
 means that we can receive notifications
-
-374
-00:19:53,170 --> 00:19:55,270
 from a remote source like the parse
-
-375
-00:19:55,270 --> 00:19:58,500
 database then we're just returning true
-
-376
-00:19:58,500 --> 00:20:01,180
 then this function is not required at
-
-377
-00:20:01,180 --> 00:20:04,650
 the moment so I can just remove it
-
-378
-00:20:04,650 --> 00:20:07,150
 however day to register for remote
-
-379
-00:20:07,150 --> 00:20:09,550
 notifications with device token again
-
-380
-00:20:09,550 --> 00:20:10,810
 that's just a default function that
-
-381
-00:20:10,810 --> 00:20:12,520
 parse requires I'm not going to go into
-
-382
-00:20:12,520 --> 00:20:16,570
 it and so is dead fail to register for
-
-383
-00:20:16,570 --> 00:20:19,120
 remote notifications with error again
-
-384
-00:20:19,120 --> 00:20:21,430
 that comes inside of the templates and I
-
-385
-00:20:21,430 --> 00:20:22,750
 wouldn't really recommend touching them
-
-386
-00:20:22,750 --> 00:20:26,890
 you don't need to then in application
-
-387
-00:20:26,890 --> 00:20:29,440
 did receive remote notification again
-
-388
-00:20:29,440 --> 00:20:31,870
 this is just par stuff where we're
-
-389
-00:20:31,870 --> 00:20:34,750
 handling the push and if the application
-
-390
-00:20:34,750 --> 00:20:38,830
 is inactive we are calling the track app
-
-391
-00:20:38,830 --> 00:20:40,570
 open through the remote notification
-
-392
-00:20:40,570 --> 00:20:42,220
 payload which is just something to do
-
-393
-00:20:42,220 --> 00:20:43,750
 with personal attacks you don't need to
-
-394
-00:20:43,750 --> 00:20:45,590
 get into that
-
-395
-00:20:45,590 --> 00:20:48,150
 anyway now let's get back to our
-
-396
-00:20:48,150 --> 00:20:50,460
 viewcontroller in our viewcontroller
-
-397
-00:20:50,460 --> 00:20:53,460
 right as we open up the view like just
-
-398
-00:20:53,460 --> 00:20:55,800
 as we're loading our view we are
-
-399
-00:20:55,800 --> 00:20:57,810
 immediately connecting to a channel
-
-400
-00:20:57,810 --> 00:20:59,370
 which I like to call
-
-401
-00:20:59,370 --> 00:21:02,010
 well test channel let's just say test
-
-402
-00:21:02,010 --> 00:21:05,850
 name but basically what this is is you
-
-403
-00:21:05,850 --> 00:21:06,960
 know there are multiple different
-
-404
-00:21:06,960 --> 00:21:10,260
 channels of post notifications that you
-
-405
-00:21:10,260 --> 00:21:12,750
 can have on parts like for example let's
-
-406
-00:21:12,750 --> 00:21:16,250
 say we have different Facebook users
-
-407
-00:21:16,250 --> 00:21:18,150
 different Facebook users would have
-
-408
-00:21:18,150 --> 00:21:20,010
 their own channels the channels would be
-
-409
-00:21:20,010 --> 00:21:23,070
 named their own name and let's say
-
-410
-00:21:23,070 --> 00:21:25,290
 someone else post something to their
-
-411
-00:21:25,290 --> 00:21:29,630
 timeline that will be sent to that
-
-412
-00:21:29,630 --> 00:21:32,610
 person's channel and then it'll show a
-
-413
-00:21:32,610 --> 00:21:34,700
 push notification on their channel only
-
-414
-00:21:34,700 --> 00:21:37,680
 or on their devices only or else just
-
-415
-00:21:37,680 --> 00:21:39,960
 imagine this you would be getting
-
-416
-00:21:39,960 --> 00:21:41,940
 notifications on Facebook for pretty
-
-417
-00:21:41,940 --> 00:21:45,270
 much everybody else that's using
-
-418
-00:21:45,270 --> 00:21:47,220
 Facebook which wouldn't make sense so
-
-419
-00:21:47,220 --> 00:21:50,700
 that's why we use channels so basically
-
-420
-00:21:50,700 --> 00:21:53,150
 these three lines of code are just
-
-421
-00:21:53,150 --> 00:21:57,510
 connecting us to test Channel and also
-
-422
-00:21:57,510 --> 00:21:59,670
 one last thing I'd recommend just in
-
-423
-00:21:59,670 --> 00:22:02,460
 case their Wi-Fi is a bit slow freeze
-
-424
-00:22:02,460 --> 00:22:04,770
 the app until it saves the channel or
-
-425
-00:22:04,770 --> 00:22:08,790
 else there will be glitches then once
-
-426
-00:22:08,790 --> 00:22:11,040
 the view does appear however we are
-
-427
-00:22:11,040 --> 00:22:15,740
 checking is the height of our frame
-
-428
-00:22:15,740 --> 00:22:21,320
 greater than or equal to 736 if no
-
-429
-00:22:21,320 --> 00:22:25,800
 perform a segue to 6 that's the actual
-
-430
-00:22:25,800 --> 00:22:28,140
 identifier so what this will do is if
-
-431
-00:22:28,140 --> 00:22:30,660
 we're running an iPhone 6s plus or an
-
-432
-00:22:30,660 --> 00:22:33,030
 iPhone 6 plus or something of that size
-
-433
-00:22:33,030 --> 00:22:37,680
 then great good job stay or else what's
-
-434
-00:22:37,680 --> 00:22:39,030
 going to happen is we're going to make a
-
-435
-00:22:39,030 --> 00:22:41,220
 segue towards a different view that'll
-
-436
-00:22:41,220 --> 00:22:45,510
 work on 6 and 6s and also we're checking
-
-437
-00:22:45,510 --> 00:22:49,070
 if the views tag is 0 this is so that
-
-438
-00:22:49,070 --> 00:22:52,710
 once we open the second view for the
-
-439
-00:22:52,710 --> 00:22:55,980
 iPhone 6 that's going to call this
-
-440
-00:22:55,980 --> 00:22:57,720
 function as well and then we
-
-441
-00:22:57,720 --> 00:22:59,970
 want to go into an endless loop a loop
-
-442
-00:22:59,970 --> 00:23:02,910
 of just calling just going to its own
-
-443
-00:23:02,910 --> 00:23:05,280
 view over and over again so we don't do
-
-444
-00:23:05,280 --> 00:23:09,450
 that next what we have is the IP action
-
-445
-00:23:09,450 --> 00:23:12,450
 function for sending messages here we
-
-446
-00:23:12,450 --> 00:23:14,460
 are forcibly trying because I know this
-
-447
-00:23:14,460 --> 00:23:16,350
 won't give an exception in my case you
-
-448
-00:23:16,350 --> 00:23:18,810
 can put in the full do catch statement
-
-449
-00:23:18,810 --> 00:23:22,620
 but I don't need to at this point and so
-
-450
-00:23:22,620 --> 00:23:24,270
 what we're trying to do or at least
-
-451
-00:23:24,270 --> 00:23:26,760
 forcing Swift to do is we're going to
-
-452
-00:23:26,760 --> 00:23:29,700
 take a PF push I don't know what the
-
-453
-00:23:29,700 --> 00:23:33,240
 stands for a parse push basically dot
-
-454
-00:23:33,240 --> 00:23:37,860
 send person push message to channel then
-
-455
-00:23:37,860 --> 00:23:39,870
 the channel name and then the message
-
-456
-00:23:39,870 --> 00:23:43,200
 that we want to send so the channel in
-
-457
-00:23:43,200 --> 00:23:45,300
 this case is test channel and the
-
-458
-00:23:45,300 --> 00:23:48,870
 message as well as you know hello
-
-459
-00:23:48,870 --> 00:23:52,620
 iOS programming and that is all the code
-
-460
-00:23:52,620 --> 00:23:54,060
 I'm just going to show you the UI really
-
-461
-00:23:54,060 --> 00:23:55,710
 quickly really simple nothing you
-
-462
-00:23:55,710 --> 00:23:59,520
 haven't seen before this is the this is
-
-463
-00:23:59,520 --> 00:24:02,270
 the six view this is the two six segue
-
-464
-00:24:02,270 --> 00:24:05,070
 this is the view and then these are the
-
-465
-00:24:05,070 --> 00:24:07,770
 two buttons these are the same class so
-
-466
-00:24:07,770 --> 00:24:09,240
 these are the exact same view just
-
-467
-00:24:09,240 --> 00:24:10,800
 different sizes so this is also a few
-
-468
-00:24:10,800 --> 00:24:13,670
 controller this is also view controller
-
-469
-00:24:13,670 --> 00:24:17,310
 and that was it for this video if you
-
-470
-00:24:17,310 --> 00:24:20,040
 have any questions concerns or comments
-
-471
-00:24:20,040 --> 00:24:22,140
 really leave them in the comments you
-
-472
-00:24:22,140 --> 00:24:23,910
 can also email me at Taji mani at
-
-473
-00:24:23,910 --> 00:24:26,850
 gmail.com if you'd like to with any more
-
-474
-00:24:26,850 --> 00:24:28,830
 questions concerns you can also email me
-
-475
-00:24:28,830 --> 00:24:31,800
 a video question if you'd like to that
-
-476
-00:24:31,800 --> 00:24:36,920
 has that where you talk just a second
-
-477
-00:24:36,920 --> 00:24:48,180
 yeah oh yes quickly before I go I would
-
-478
-00:24:48,180 --> 00:24:51,480
 say in part 2 I'm going to tell you how
-
-479
-00:24:51,480 --> 00:24:53,730
 you can target specific devices anyway
-
-480
-00:24:53,730 --> 00:24:55,350
 continuing you can also send me a video
-
-481
-00:24:55,350 --> 00:24:58,830
 question of you saying a question and I
-
-482
-00:24:58,830 --> 00:24:59,820
 might just feature it in one of my next
-
-483
-00:24:59,820 --> 00:25:01,860
 videos you can also subscribe to my
-
-484
-00:25:01,860 --> 00:25:03,510
 channel if you'd like to contact me on
-
-485
-00:25:03,510 --> 00:25:05,250
 Twitter at tad you many all the links
-
-486
-00:25:05,250 --> 00:25:06,600
 will be in the description source code
-
-487
-00:25:06,600 --> 00:25:07,710
 will be in the description on my github
-
-488
-00:25:07,710 --> 00:25:09,780
 page and that's going to be for this
-
-489
-00:25:09,780 --> 00:25:12,590
 video good

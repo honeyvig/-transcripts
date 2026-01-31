@@ -1,0 +1,1421 @@
+[Music]
+hello and welcome to another episode of
+Visual Studio toolbox I'm your host
+Dimitri Lyin and I'm excited to have
+somebody from the net team with me
+Richard Lander Richard welcome to the
+show thanks this is great yeah we we'd
+love to have you here and uh we're going
+to talk today about net core and
+specifically net core2 preview to
+release so Richard why don't you tell us
+a little bit about what net core is
+because you know as much as we want to
+talk about the newest preview that's why
+you're on the show today there's
+probably somebody out there who doesn't
+know what that net core even is all
+about okay um definitely so um we
+started this project the net core
+project uh maybe three years ago
+something something like that it's been
+a while I this is version two we're
+talking about of that yeah and we did
+two versions before that 1.0 and
+1.1 um and obviously there was a
+development period and um for those of
+you who are familiar with the project
+you know we had kind of an elongated
+development period and had a few
+different names so it's been about a
+three-year project um if I think about
+um what it was we tried to build we
+wanted a crossplatform project um we
+wanted to have side by-side installs we
+wanted a project where we could move
+quickly and innovate and deliver a lot
+of value to customers yeah and um yeah
+and I think we've done that we've done
+those three things uh we this doesn't
+seem quite as relevant now as it once
+was but Project's all open source as
+well we've said about a million times
+now I that was one of the biggest things
+that people are surprised about we're
+going to build you know I think it was
+around the same time vs code right was
+announced as well I don't remember who
+was first or second there but two two
+open source projects two really big
+important projects to Microsoft and and
+with core like you said right the whole
+it's going to run on Linux it's going to
+run on the Mac thing um you know it's
+going to be super optimized it's going
+to run side by side x file deployments
+all of that was exciting exciting stuff
+yeah I mean uh uh the the open source
+thing we we felt like if we're going to
+do um a Linux friendly and a Mac
+friendly product it has to be open
+source there's just no no other option
+yeah um you know I said we've said this
+a million times like now that's just
+what we do every day so every day
+everyone on the team is on GitHub doing
+you know pull requests working on issues
+building in the open I mean building the
+open that's the scar cool and scary
+thing at the same time when we first
+started um it was just us talking to one
+another um for the most part we
+definitely had and community members
+right from the start yeah some people
+were there from the beginning yeah but
+now it's completely different now
+there's this extremely constant
+engagement um with the community every
+single day um and uh a big part of my
+job and a number of other people on the
+team is answering their questions if
+they're having trouble or there's a ton
+of people that are actually suggesting
+ways to change the product sometimes
+that looks like a good direction and we
+go there sometimes it has to be altered
+a little bit so that's a big part of I
+think the biggest thing that I when know
+when I talk to people about what that
+net core is all about I told them it
+it's not just any longer being built
+just by Microsoft right we have
+Community contributions we're accepting
+those contributions it it is it is kind
+of a cool thing to think about that
+anybody out there like you you folks out
+there in audience right as you're as
+you're working with core you might
+realize oh this this function really
+should have always been there right let
+me put some helper thing in there and
+you could submit that as a poll request
+and see if the team accepts it or or
+maybe gets inspired by it you you guys
+still decide what gets in or out but
+it's it does work yeah another part
+that's uh close to what we've just been
+discussing is we actually have daily
+builds as well so um uh and each branch
+actually produces daily builds yeah so
+um for people who are really wanting to
+keep up on the bleeding edge of what
+we're doing you know you can install one
+build yester Day a different build to
+today and a different build tomorrow and
+then um you you know if if the the issue
+that you you posted finally got fixed it
+got fixed today then tomorrow morning
+when you wake up you can try that build
+and validate that it actually was fixed
+if it wasn't fixed then you can
+reactivate that issue um and say you
+know folks I don't know what it was you
+fixed but it wasn't my thing um and that
+level of Engagement was definitely not
+available before at all yeah so that's
+you can look you know as a customer you
+can look behind the scenes how the code
+is actually running so there's no more
+there's no more secrets there the whole
+library is up in the open and and so so
+is a bunch of other stuff so apnet is up
+there Entity framework is up there I
+mean everything is part of this core
+initiative right this CORE family of
+product yeah so maybe we could um talk
+about something um else which is its
+relationship to Net Framework um so in
+many ways it's very very similar toet
+framework um actually most of the
+runtime implementation is shared between
+the two products so um that's very very
+similar um uh and it's uh um for the the
+framework libraries the most of the code
+base itself isn't shared but um the
+behavior is very similar the same apis
+and all that kind of thing I think the
+big difference is that um we have like a
+DNA framework on over a billion machines
+and so there's a ton of responsibility
+that comes with that to make sure that
+all those apps in you know hundred of
+countries used by millions of people
+that they all work every day um with
+dnet core we have an opportunity to uh
+move much faster uh try out new things
+and um see how they work so uh in theet
+core 20 project um we added um a few new
+somewhat revolutionary features um span
+of tea and memory of tea um or maybe
+those are going to two one I actually
+can't remember but that's that's that's
+not the point but it's it's part of the
+immediate Road you guys are able to
+evolve and add something and so we get
+to because um a there aren't nearly as
+many people using net core today and B
+because of the side by-side installs
+it's really this one that's the
+important point it means that we get to
+try out these new features collect some
+information about um like feedback about
+how they're working and then once
+they're tried and true then we can bring
+them back to D framework where we have
+um much more responsibility well that
+that's an important kind of thing to say
+to the audience like that NET Framework
+is still the thing we work on right it
+is not going anywhere they don't have to
+worry about you know that NET Framework
+going your way or having to move
+everything it's just a parallel project
+that's designed for very specific things
+and able to take advantage of you know
+and optimize and do do things that we we
+just can't do it when it's installed on
+billions of machines with the framework
+oh for sure and I think actually the
+existence of core will actually help us
+add value to DNA framework more quickly
+just because we have this testing ground
+that's a safer place for us to work as
+Engineers um whereas with DNA framework
+that's a little bit harder yeah and also
+you know that NE I don't want to scare
+people when I talk to them about it and
+I often have to explain this part which
+is yes it's open source it's moving fast
+but there there is a point where you
+guys ship an MSI right there's a stable
+point you download you you don't have to
+worry a daily build done by the team is
+going to break your Dev environment or
+something it's up to you at that point
+if you adopt the newer bits but there is
+a stable point that we're gonna keep
+shipping oh yeah and also these daily
+bills don't just magically end up on
+your machine you have to really work to
+get them yeah you have to really work to
+get them and to find them um and um yeah
+so we do we ship um preview releases
+back to the D coure 20 project we've Shi
+preview one we ship preview two yeah uh
+we're about to ship another release
+relatively soon and um we tell people
+exactly what's in them we actually
+publish detailed release notes yeah yeah
+the relase notes are good and there's a
+road map and that's all up on GitHub
+yeah and so people can kind of make
+decisions about what it is they want to
+to build and then once it goes um RTM or
+rtw um then we're just on like a
+servicing plan where um we actually have
+an extremely high bar um somewhat
+similar actually to our NET Framework
+bar um for taking changes and uh it's
+very hard to get servicing changes in
+place which is actually a good thing
+yeah those are just for reliability
+security and um you know severe
+performance problems and then most of
+the effort would go into 2-1 at that
+point that makes sense and as part of
+all of this you know the the last thing
+probably we should talk about iset
+standard I think it's worth saying that
+net core 20 andet standard 20 come handy
+hand right so we're shipping those
+together and so what does that in a
+standard mean for folks sure so um it's
+a totally just a spec um so we had this
+it's a promise it's a it's a promise
+although uh it's I would say it's
+stronger than that because um it's
+actually part of the you know Visual
+Studio experience like it has actual
+artifacts around it but um uh so we had
+portable class libraries before that was
+a good a good is um code sharing
+solution but it didn't kind of make any
+forward-looking statements on what new
+new.net implementations needed to do
+whereas what net standard does is it
+says these are the minimum apis that you
+need in your product in order to be part
+of the to be a proper net implementation
+based on a certain version of the
+standard yeah and so um we have multiple
+versions of the standard uh so one
+analogy that people have been using is
+HTML um HTML is a spec you can't um use
+it for anything in and of itself you
+have to implement it as as a company or
+whatever as a and then um so there's
+several versions of HTML and then there
+are browser
+um there are several of those um
+Microsoft even makes one or or or two um
+depending how you count um and then uh
+those browser
+makers um you know there's like Chrome
+version 50 or something like that and it
+will say we support HTML 5 plus these
+you know Extensions Plus these CSS
+versions so don net standard is very
+much like that so net core2 will
+Implement net standard 20 NET Framework
+461 I believe and above also Implement
+um D standard 20 and the zamon products
+um at the same time we ship net core 20
+we'll also Implement net standard 20 and
+then the only other one to discuss is
+our wwp dnet implementation yeah and
+that will uh support dnet standard 2o
+later in 2017 yeah so the thing though
+is is that it's like oh okay I see the
+versions match um so when you ship donet
+core 21 will ship a net standard 21 and
+the answer is probably not um net
+standard is actually intended to be
+relatively slow moving um because it's
+it's completely for class
+libraries and um yeah D standard is not
+about the zaml right I mean there's a
+zaml conversation we can have with with
+zaml standard but but just the scope of
+our thing today is it's about making
+sure that you can reuse code and
+therefore it's about the class Library
+conversation yeah so um or then you get
+package right whatever whatever to those
+are mostly the same thing so we'll
+decide um uh what are the next things
+that we want to put in D standard but um
+I'm not seeing that in the next six
+months that we're going to put out a new
+donet standard version so it'll be donet
+standard 20 will kind of be the thing
+for a while number two is is the theme
+of the show because we're like we're
+talking about net core2 it's the preview
+two release and we're going to talk
+about that non standard to not to
+confuse you folks too much so two arms
+and legs
+yeah and we have two arms and legs and
+and hopefully more fingers but um but
+the reality is that that this just
+coincidence that that C2 that the
+standard to lineup but but that's not
+the shipping intent going forward it'll
+just whatever makes sense we'll do that
+yeah some people actually asked us so we
+had um a set of done standard 1.x
+versions all the way up to 1.6 and some
+people said well when you if you think
+about sver semantic versioning um you
+really uh
+use a major version number in case of a
+breaking change so they said to us like
+oh are you is there a Breaking change
+that's coming in doet standard and the
+answer is no um but uh we decided to
+create a major version for two main
+reasons one was um we're adding
+something like we're overd doubling the
+number of apis that are inet standard
+from 1.6 to 2.0 I think it's like 130%
+increase it's some crazy yeah so that's
+quite large uh and then the other one is
+is the way net standard is structured
+kind of under the hood is changing uh
+quite a bit it's not anything that
+Library developers have to worry about
+like from a breaking change standpoint
+or anything like that but we felt like
+those two things um kind of the
+architectural change and the increase in
+apis meant that a 2 was warranted so
+okay that makes sense all right yeah
+let's talk about what's new in yeah in
+20 so that makes sense so let's switch
+gears to to the current release right so
+now we're going to go talk about that
+net core 20 the preview two release of
+it which enables a bunch more
+capabilities so why don't you go through
+it and then we're going to talk through
+a blog post so there is a blog post on
+the visual studio team blog and there's
+other supporting blog posts we'll link
+all of those in the show notes so let's
+go through what's in yeah so this is
+actually theet team blog oh sorry the 19
+blog I have my blogs a little confused I
+SP too much time reading them uh so yeah
+let's go through this
+um I have some other things that I think
+are maybe not covered in depth here but
+we'll go through this first sure so we
+care a lot about platforms um on our
+team uh so when we had do NET Framework
+it was always Windows Windows Windows um
+with net core it's definitely a broader
+set of releases that we um work on so
+the first thing is uh Azure is quite
+important to our team and so we worked
+with the Azure um app Services team to
+uh make sure that net core2 was
+supported yeah and some some people
+don't don't always realize that like app
+uh app Service is like the websites
+right so if you're deploying your
+websites to the manage infrastructure
+you're not just doing your own VM and
+your own thing but if you want to use
+app Service website capability you can
+deploy net core2 prev2 now there right
+yeah yeah no it's essentially
+essentially um a SAS service right you
+don't have to do much and so um one of
+the great scenarios that they have for
+websites is you can put all your code in
+a GitHub repository public or private or
+Visual Studio team system I think you
+know about that yes um and put that in
+on Visual Studio team system you can
+either use git or TFS and then team
+Services though oh sorry team Services
+thank you I I almost didn't catch it
+myself okay because you know you say
+something that close yeah it's a bit
+hard yeah so um you can check in your
+source code and then you can set up um a
+trigger such that every time you commit
+at least to a particular Branch uh then
+you kind of have a cicd flow and then
+your code gets um pushed to production
+in your Azure website so I actually do
+that on some of my sites and um it's
+awesome but when you do that you're not
+you're not the one who's shipping net
+core you're just effectively shipping
+source code yeah and so donet core has
+to be in the cloud in Azure um for that
+to because it's so so we we control
+what's in there what's enabled and app
+service belief supports like no GS and
+net the you know Standard Version and
+now that net course up to preview to for
+the F release yeah so when anyways
+whenever we ship we try and have um same
+day shipment to to Azure and so we have
+to work with that team um and they're
+awesome actually um to make sure that if
+you want to host your Preview 2 site in
+Azure also on same day you can cool um
+another one is we do a lot of work with
+Docker uh we've had Docker images now
+for I want to say like two years on uh
+dockerhub and we've actually learned a
+lot um in that time frame and also
+Docker has changed a fair bit and those
+are Linux images behind the scenes right
+uh no both we have Linux and windows
+images there um that's actually that's
+was an awesome segue actually so
+in the past Docker was Linux only and
+then um the windows team started talking
+to the docker folks and said ah we think
+um Windows would be good here and so
+many changes needed to be made to Docker
+not just to make it Windows friendly but
+just to enable it to support another
+operating system no matter what that was
+doer started a small company Linux was
+the thing that they started with it made
+sense for them to do that yeah so we've
+been working closely with um the docker
+team
+um the windows team has but so has um
+the net team and so there's been cases
+where something about Docker didn't work
+super well for us and um they've
+actually made changes to the public
+Docker implementation yeah which has
+been awesome and their tools and windows
+are getting much better I mean they you
+know they didn't start there but now
+it's it's beautiful I can install it and
+just works most of the time yep so one
+of the things we did is um there's this
+concept called U multiarch uh which U
+Maybe describe a little bit later and um
+it basically says what's the default um
+Linux version that you'll use and so
+Debian 8 also called Jesse um was the
+one that we've been using for the past
+two two years and so this new version
+called stretch Debian 9 came out um and
+they're all named after Toy Story
+characters um cool yes um it came out
+like two weeks before we shipped Preview
+2 and so we decided that that was the
+time to start uh making stretch our
+default there actually is a a quicker
+path to security fixes going into
+stretch than Jesse so that was actually
+the biggest motivator for us we felt
+that for customers that aren't that are
+basically just trusting our default
+Choice which I think is probably a lot
+of customers we wanted to make sure that
+they were absolutely in the best spot
+and we felt Dean stretch was that
+because of this
+um it's it's the latest so it's probably
+got all the goodness but we also saw
+that they fix security issues there the
+fastest so cool that seemed like an Easy
+Choice yeah it looks good um sus Linux
+we've started to talk to the sus company
+they wanted us to support
+sle2 and we did cool
+um um Mac OS High Sierra so Apple puts
+out you know one or two Mac releases um
+so far they always break us um during
+their beta period and so we always have
+to make changes um High Sierra is
+turning out to be more work for us to
+support than Sierra was Sierra was
+actually quite small what the issue was
+and so we don't have um in preview two
+uh we don't have support for Mac OS High
+Sierra even though it says it here um
+it's it's limited uh so we are an issue
+that but maybe there's more there is
+we're still in preview like that's one
+thing I want to tell the audience
+likeo this is still a preview release
+we're not here talking about something
+that's you know supported in production
+or or ready for prime time this is to
+get people ready for the newest thing
+yeah so what happened is uh in this time
+frame yeah we fixed a bug which is you
+couldn't even run the net command um or
+you could run the net command but you
+couldn't run net new or restore right
+you couldn't do anything with it you
+couldn't do anything useful yeah that
+was fixed in the preview two time frame
+but then we found another set of bugs
+that we I think didn't know about when I
+wrote this blog post so we're very
+actively it's actually the uh if I think
+about what's left in the net core 20
+release that is the most the most active
+effort right now so we're putting a
+bunch of effort into it we've filed I
+think four bugs um with apple that
+they're looking into so we're doing
+everything we can that's cool and then
+when we um do support um High Sierra
+we'll do it for two
+and the 1.x releases yeah and and we're
+talking about the dev environment for
+people right so if you you work on on
+Windows today you're fine if you deploy
+to Linux you're fine in the sense that
+you can you we don't know of anything
+that should block you in theory right
+this is the one Dev environment where we
+we're still working for some problems oh
+yeah no this is um not every customer
+for sure is going to be affected by this
+and it will get
+fixed it's just we we want the Mac
+developer to be happy yeah and I mean
+this is mostly about now people who have
+already adopted it being successful MH I
+completely um believe that we'll have
+all of this fixed by the time high sier
+ships um so I imagine 99% of people
+using MacBooks are not on higher it's
+not out there either we're just we're
+just that forward looking we want to be
+sure we're there when they do ship yeah
+I mean actually you need a developer
+account with apple to even download this
+uh which I actually I I have I have
+another MacBook that um has higher on it
+um which I've actually lent to the dev
+team so they can fix this issue cool um
+couple more things uh net restore is
+this um command that people had to use
+all the time to restore their noua
+packages um every time you changed your
+project file it would invalidate the the
+restore that you had run and you would
+have to run it again uh I think that was
+annoying to a lot of people certainly
+was to me so we've made that command
+implicit for all the other commands that
+require restore to have occurred so
+build and run and publish are and test
+are all good examples of those so do you
+check for changes I guess and run it as
+needed or you guys always yeah no it's
+it's smart um it so uh so that's huge we
+got a lot of people happy about that
+yeah I think I saw that during build
+when I think Hanselman was demoing
+something or Daman somebody was doing
+the demo and yeah yeah that was cool it
+is cool um you can now reference NET
+Framework libraries fromet standard so
+this one's a little bit surprising um
+and is is not um kind of in alignment
+with some our decision-making from the
+past the way we used to do things um and
+I this is a little bit tongue and cheek
+so hopefully no one is upset by this
+comment but it's we used to kind of
+think like oh dear developer we we know
+better than you so we're going to set
+some policies that keep you safe um and
+it's uh it's not like all of those
+decisions were bad clearly a ton of them
+um helped people who wouldn't
+necessarily have known that they were
+supposed to go left instead of right um
+in this particular case
+um uh clearly not every single NET
+Framework Library that's been written
+will run on net core on Linux for
+example sure clearly if you're um newing
+up WPF buttons then that's not going to
+work at all but we did this analysis and
+we found that uh over 70% of libraries
+on nuget.org actually that sorry 70% of
+NET Framework libraries on noua org.org
+actually fit within the um the
+constraints of doet standard 20 and so
+we said to ourselves why would
+we not those those libraries not all of
+them is are going to get converted to
+net standard 20 on day one yeah at day
+365 um a bunch of them won't have been
+converted and anybody that's been for
+the cycle knows this is going to be like
+the the point of like oh I can't move
+forward right like that net stand net C
+get gets released it's great it's in
+production I can use it and then I need
+some library now I can't that would have
+been really bad for people yeah so we
+decided um we're going to enable people
+to depend on any D framework Library
+they want um actually is a warning in
+the product to um to tell you that this
+is a decision point that you need to
+make um so you're taking out a
+dependency that's only going to work
+when The NET Framework of whatever
+version or that component of whatever
+version that depends on the framework
+will now have to be there when you're
+running your application and your
+environment so it won't work on Linux if
+you deploy it because there won't be
+that no no that that's not quite how it
+works okay so tell us um so you don't
+need DNA framework in place um
+all it means
+is uh like inside a doet framework
+Library you know it's just IL code it's
+just a bunch of I instructions there's
+nothing there's no windows per se that's
+in there um so if in the best case
+scenario you have a DNA framework
+Library the apis that it use uses fits
+within the spec of dunet standard 20 and
+that will absolutely work
+on um
+net core on any one of the operating
+systems and you don't need to install
+anything other than net core in order to
+make that work Mak sense right um
+because it's just code um just it's
+super simple now um like I said we put a
+there's a little warning there and you
+actually have to and we can show you
+this later although um it's not quite
+working yet um uh there's a little
+warning there that you have to put on
+each package reference to make it very
+clear that you've made a decision
+because it's um kind of a buyer beware
+scenario but like I said we didn't feel
+like we should be the ones putting this
+policy in front of people and preventing
+them from getting their jobs done right
+we we removed the the inflexibility
+right so we made it flexible you can do
+what you want but then we tell you when
+you're paying potential price that okay
+uh I guess the only other thing I'll
+mention is we got teased actually a
+little bit we had um we've had these
+somewhat crazy file names now you would
+think like why do people care care so
+much about file names but so for you
+know our msis our Zips our
+pkgs
+um uh not only did people not like them
+I think they kind of thought we were
+insane and um there was some reason for
+them to believe that uh so in D Core 2
+we did a complete revamp of all the file
+names and all the package names like as
+it relates to like appg on Linux um a
+group of us sat down months ago now
+and we wrote up a spec which is actually
+now on GitHub and um we said we know you
+haven't liked our file names here's our
+new our new proposal for how the file
+names are going to work and we got a ton
+of thumbs up and then we implemented
+Building open down to the file names
+back oh yeah down to the file names back
+that's awesome um but people cared about
+that a lot so and and I and I get it so
+cool um I guess I'll just show one more
+um I know we probably want to get to
+demos um so this isn't really a net core
+20 thing per se but um c 7 kind of
+landed in the same general time frame as
+us it shipped um with vs
+2017 um RTM and so I just want to remind
+people so we're not going to go through
+this whole this whole document but I
+want to remind people that c 7 is kind
+of like um sibling project to core 20 um
+it's c 7 is absolutely supported inet
+core 20 so one one before actually no no
+no you should be no you can use it there
+too um but if you're using vs 2017 C 7's
+there for you if you're using that neor
+it's definitely there for you and you
+should you should take a look some of
+the cool things we've done with that
+yeah so it's it's just in the same time
+frame um they're actually started work
+on C 7.1 yeah um already that's
+definitely not shipped yet but um it's
+definitely a sibling project that um we
+work super closely with these folks I
+felt the need to mention it yeah and you
+guys also Shi like Entity framework core
+20 also had a preview release at the
+same time so again we can't cover
+everything in this episode but we'll
+have links in the show notes for for all
+of these things and did I miss anything
+else I asp.net core too aspet core oh
+yeah so when I think of net core I
+somehow think of ASP but it's not the
+only thing it is yeah it's also the core
+Library yeah for sure um just one other
+tab um so in GitHub we created this um
+repository called
+um uhet announcements um there's
+actually an asp.net announcement so we
+we copied um that um and uh we've
+actually started posting announcements
+here on a fairly regular basis and so
+you can watch this repository and um so
+use the issues tab to post something
+that you you're changing as you guys
+head towards RTM right and uh so one
+thing we do is uh whenever I post one
+I'm not the only one who does this but
+we actually lock the conversation right
+from day one and the reason we do that
+isn't because we're trying to prevent
+discussion it's that um for people that
+watch the repository all they get are
+our announcements there's no additional
+conversation which could be an immense
+oh yeah set of traffic some change could
+like a file name I don't know you guys
+say oh that's F spec we forget it we're
+going back to the old file names yeah so
+um what we do is there's always this
+detail section and then these are the
+actual issues on GitHub where this thing
+was discussed and then you can click on
+those and have the discussion there if
+you would like cool so um yeah that that
+makes sense people should go to where
+you're actually working on the issue
+because that's tracking that change and
+this is just the summary for for like
+the high level overview this is what
+we've changed why we've changed it yeah
+that's exactly of that but I encourage
+people to go check out this repos
+and watch it so they keep I missed this
+so even I'm learning something today yes
+very cool we'll link we'll link it as
+well okay um awesome yeah we have some
+notes Here I was wondering if there's
+anything that we missed that we wanted
+to talk about we've got um I think we
+covered the majority of it okay so we'll
+just go to some more demo oriented stuff
+yeah so let's let's look at some demos I
+think the first one that you had on
+there was uh you're going to use the Mac
+we're going to show a visual studio for
+Mac so folks maybe you missed this
+release so uh we we have G8 a product
+called visual studio for Mac so that is
+available out there for you and uh rich
+is about to show you how uh visual
+studio for Mac can be used not just for
+mobile development but for web
+development yes with net core too yeah
+so
+um uh right now um net core2 is not
+supported in the stable channel so right
+now I'm in the beta Channel when VS1
+15.3 ships then the bits that I'm using
+now will go to the stable Channel and
+everyone will be able to use this this
+is actually almost identical to what's
+happening with uh Visual Studio for
+Windows is if you want to doet Core 2
+development you need 153 153 which also
+preview which is also in preview so it's
+it's basically the same yeah I just
+wanted PE we've had a lot of people come
+to us and say like oh I tried to use vs
+for Mac or oh I tried to use Visual
+Studio on Windows and I couldn't doet
+core 20 development we're in this period
+where you need preview releases of these
+Ides and in order to play along right
+because there's a whole toing experience
+that goes with it so therefore it has to
+evolve and and get to a g at some point
+but like I'm assuming vs codee's a bit
+more straightforward because just a code
+editor you can edit your code you don't
+need do you need to be I guess I'm just
+asking the question to be on some
+unstable version code no that's that's
+that's right you do not okay so code is
+the only one you can just pick up RTM
+version of yeah so code ships quite um
+regularly yeah very regularly uh well
+sorry it's it's actually has almost
+nothing to do with code per se it's
+actually the C extension that is the the
+thing that's giving you theet support
+yeah the experience the bugging the
+intellisense all that comes from so that
+also ships quite regularly
+so as long as you're on the latest one
+you'll be you'll be fine so there's no
+like preview version of that c extension
+no well there there are preview versions
+as well you yeah but you don't need them
+for for this okay
+cool okay so I'll just show the super
+basic
+experience um I'm just doing full screen
+just so we don't have to look at all the
+stuff on my desktop and so um yeah if
+you haven't seen visual studio for Mac
+before this is what it looks like
+there's a a set of different kind of
+categories um there and so naturally we
+will go down to theet core
+area uh we have uh console app and then
+um asp.net core app so let's we might as
+well start with that sure
+and so the first screen that you see is
+a target framework so for this demo
+we're definitely going to use net
+core2 um and pretty soon that's what
+everyone is going to be using and then
+um
+toolbox and create a
+project and and would I would assume
+that this solution checked into your G
+repo on vsts or GitHub somebody with a
+PC and the Mac can work on the same
+project that just works oh for sure um
+by default there is nothing OS
+specific um that is added to your
+projects uh you you would have to do uh
+something in particular yeah to make it
+your code would have to break the
+runtime for your Mac colleague right or
+vice versa it's not about our tools it's
+not about our framework definitely and I
+and I do that all the time there's um a
+project that a personal project of mine
+that I work on where um sometimes I'm on
+my desktop PC at home sometimes I'm on
+my desktop PC at work and sometimes I'm
+on this MacBook on the plane and um I'm
+just always going um back and forth cool
+and uh it all works so yeah we start
+here with this blank screen and uh this
+is kind of like solution Explorer from
+VSS sure and all of this kind of looks
+normal yeah I mean it's it's the
+solution yeah you got the code and uh we
+have new get dependencies
+and we're just just dependent on umet
+core2 so that all looks normal um if you
+want you
+[Music]
+can uh how do you do this oh I can't
+quite see it anyway I was going to say
+you can edit the project file but I'm I
+can't I can't this is the one time I'm
+not helpful yeah edit file there that
+might do it um but I think that's edit
+the file okay that is that okay okay so
+you can uh look at your project file you
+can see it's relatively
+small um yeah and you can edit here if
+you want anyway let's um I'm just going
+to run the
+app uh this is where
+um full screen is probably not going to
+be the best
+choice
+oops um okay oh wow that was quick
+um so that opened up that application so
+local local run local debug yeah and so
+here you'll see actually we're on Local
+Host 5000 Port 5000 which is the default
+you can certainly change
+that and if we go here and set a break
+point in this controller that's the home
+controller yeah that all that all works
+and you've got your Freds you've got
+your call stack all all well not
+everything from Visual Studio on the PC
+but with quite a bit of those
+capabilities are are there in the Mac
+version yes all the basic things that I
+would expect to be there are there yes
+they're they're totally there
+um yeah so we're we're all kind of at
+home there and like you said you can
+move this project your your PC and it
+would all work every time I see this I'm
+still blown away that we have a Mac ID
+that we have a code Ed editor that can
+run on Linux that you guys ship into
+Docker containers I mean it it's just a
+whole new world it is a they F open US
+Open sourcing this thing years ago would
+be the big thing and now it's like a
+open source whatever this is you know
+this is the really awesome part of it
+all because the productivity you get
+with with an ID sometimes is just much
+better than just a code editor and some
+vice versa so we give you the choice and
+we have a community version right so
+this a free version of vs4 for Mac it is
+um yeah it's amazing you can just go and
+download this and just start using it
+and um I mean there are some rules about
+um sure there's a license you should
+read the license we we're not lawyers
+blah blah blah disclaimer that's not our
+um well Richard might be a lawyer I
+don't know I hav asked him that question
+um yeah okay I was trying to see if this
+one uh this other demo actually might be
+on my other machine I was wanting to
+show some stuff with unit tests yeah
+that's the second demo that we wanted to
+do the unit test
+one uh oh yeah no it's here cool it's
+this label got on on top of
+um what I was trying to show right so
+we're switching to to a different
+solution different project yeah this is
+actually one of my it's not really a
+personal project as in when I work at at
+home or for it is actually a work
+project but um it's not really part of
+my main job sure it's this this isn't
+building that net for a living but yes
+um something related and you've got some
+unit tests in there yeah so let's
+see um I've actually never seen how you
+do unit test in vs from Max so uh I have
+similar yes I have done this um let's
+see I hope so if I do I have done this
+um uh actually quite
+recently
+um where are the test oh run unit test
+there we go so what we should see so I
+have two projects here reder is the
+actual
+um uh yeah the project you're the
+project and reader tests yeah there we
+go yeah so you got like a test test
+Explorer or whatever it's called in in
+the PC version nowadays and you can see
+how they did once you run them yes so
+you can click this run all button and
+uh these are the so actually I guess I
+have I think I had 21 or 24 tests it
+only seems to be finding 16 but um yeah
+but I guess the the big fact here is
+that it you know what we're trying to
+demonstrate we've got you know that net
+core it's running in a Mac we got an ID
+it's running in a Mac we're debugging
+we're running locally to to debug with I
+with a local well not IAS I almost said
+IAS I don't think a Mac has I but they
+have a web server where you guys brought
+something with it and you can actually
+unit test against that as well so it's a
+full normal life cycle yeah so you might
+actually not know this um but um so we
+have this web server called kest kro
+right yeah so that's our default web
+server in all cases yeah even on Windows
+Windows um and so with done framework
+the way that uh it integrates with is in
+process um so it it has a very kind of
+close relationship and they're kind of
+tied together at the hip um whereas with
+kerol we kind of went with this
+different model which is actually more
+similar to um the the way other people
+build um web Frameworks in the world and
+so testerol runs in its own process um
+it's actually not intended uh in this
+time frame frame to be a front-facing
+web server you actually put another web
+server in front of it like I like
+enginex um like Apache that is actually
+the thing that takes traffic and then it
+kind of proxies that traffic see to
+kestel and so there's a whole series of
+um attacks for lack of a better term or
+um challenges that Kestrel doesn't have
+to deal with because this front-facing
+web server deals with it it's not taking
+the traffic so the the attack would hit
+that first whatever exactly and now at
+some point we may decide to make keral
+appropriate for those scenarios but in
+certainly in the net core 20 time frame
+it's this behind front-facing web server
+scenario cool I I forget it's cestal
+open source it is yeah awesome it is uh
+and under the hoods um something didn't
+work well with this test I have no idea
+it's almost like we're showing a preview
+release it's almost like we're showing a
+preview releas and your machine which
+might even for you remember have some
+bits you didn't intend to so actually
+the next thing was um we were going uh
+Docker yeah well I I want to
+um
+oh oh uh I was on the wrong
+machine I want to try oh you want to try
+run I want to try it on this so that
+people think that um I was truthful
+about my uh there we
+go actually this project is
+um oh yeah test explorers up y um this
+project uh has a it it's hosted in git
+and um it has that uh continuous
+deployment experience with Azure
+websites that I talked about before okay
+cool um and so I know that when I'm
+working in it when I check into master
+than it does the auto deploy your tests
+have to pass first I'm assum yeah
+exactly makes sense and so we'll run all
+the
+tests uh it has to build them all
+first unexpected eror okay there must be
+a problem with this but uh yeah but the
+test passed the test all passed shows
+you that and um so that's good yeah 21
+tests passed they're just a warning it
+seems like but otherwise um I think that
+probably fits into our oh actually the
+warning has to do with my code um that
+actually has nothing to do with Don
+Corey it's because um there's an await
+I'm using in a non-standard way i' I've
+seen these in my own in my own life
+quite a few times that that exact
+warning okay so so I think I proved to
+everyone that I have I have tests for
+that project so let's let's talk about
+um Docker Docker so here's the
+experience so you underneath the web
+node and then there's a um net core web
+application on net core scenario I'll
+just quickly explain what the other two
+options are so the very first one is NET
+Framework asp.net web app that that's
+going to enable you to build a web forms
+or an MVC application onet framework
+that's that's not core right that's
+that's what was there before that's your
+web application and core is the same
+thing but using core so you don't have
+certain things like web forms yeah and
+then the very last one is we enable a
+scenario where you can build use the as
+p. net core web framework but run it on
+top of NET Framework and so um that's a
+good choice if you want to opt in to the
+new web framework but um you have
+dependencies on um components or apis
+that are not inonet core um or if you
+want to kind of do
+a um you don't want to do the whole
+migration at once to donet core it's
+like let's let's change our web
+framework to asp.net core get get that
+in place and feel comfortable and then
+we'll move the base toet core as a
+second step so you could do that too
+that makes sense so are you pointing
+this out because you need to use the
+middle one the core web application for
+the docker scenario right uh actually
+yes um Docker might work in the I think
+Docker works in the first one as well I
+believe we don't yet support it for the
+third one but we intend to okay so what
+happens is you pick you get this menu it
+tells you which um Target Frameworks are
+available obviously we use 20 and then
+um there's a check box called enable
+Docker support I have it checked and you
+get to decide whether you want to Target
+windows or Linux yeah and and basically
+just the docker tools should be
+installed on on the dev machine before
+that's a very good idea otherwise won't
+work otherwise it won't
+work and so it creates your project in
+the very bottom you've got a whale got a
+whale it doesn't seem to have any errors
+which is also a good sign as I learned
+the other day uh when I was cursing at
+my computer only slightly yes but that
+was all my fault it turned out uh it's
+possible so right now I'm on Windows
+containers if you can see here it's says
+switch to Linux containers yeah so um I
+I use
+both and so here's the the docker file
+um I actually write these Docker files
+all day long um this is actually this
+piece here is
+the um
+Zoom here I always forget where that is
+200% yeah that's the base image um that
+you're using it's actually going to be
+downloaded from dockerhub it actually
+isn't downloaded from Microsoft although
+we push um our images there um ourselves
+yeah well well it's it's their rep
+Docker has a repository of images if
+anybody new like like me to the daer
+world I'm still ramping up and we
+publish our image with with certain path
+over here you can specify which one of
+those images you want to pull from us or
+from whoever yeah and this Docker file
+is is the thing that tells Docker what
+what's your intent yeah so when you
+press the the the button here so that
+that is normally the debug button here
+it says Docker what it's doing is it's
+um making sure you have all the right
+assets on your machine from dockerhub um
+I did that ahead of time so we should be
+good is it going to show you what it's
+doing in the alpha window because it
+seems like you hit the button right and
+it's doing something is there some
+activity okay so there you can actually
+see like I as a developer love to know
+what's going on call me paranoid but
+yeah actually we're going to um do some
+more work in this experience so that
+people that don't know they're supposed
+to go to the output window to see
+progress will get some kind of a
+progress experience because some parts
+of Docker um just can take a long time
+um particularly if you have a slow
+internet connection and uh so what it
+does is it downloads all the right
+required assets from Docker Hub it then
+builds a Docker image
+uh and then it runs it yeah um and the
+first time takes longer than um other
+times so it's the usual rules apply
+first R yeah and then then we get that
+same website because we're using the
+same cool template and um and and the
+great thing here is that now you're
+you're you could be sure that once you
+build it against your Dev environment
+using this Docker approach it's going to
+work when you push it to the next
+environment the the thing that Docker
+does for us right one of the big biggest
+things and and the thing from vs now
+that I've had time myself to play with
+it you can attach you know break points
+right all that stuff your Dev experience
+works the way you you expect it to
+basically right so we can change this
+press
+save and I believe that was the about
+one which is actually the one we're
+on cool so I actually then just stop
+debugging to change your your HTML
+that's cool yeah so I would have so
+stopped debugging that I'm so used to
+that it called me person have it but
+yeah so I did not um I didn't change
+anything yeah so it's watching the file
+system as you change project files yeah
+and I
+think I think I can even change this
+change this razor syntax it's probably
+going to say something not very useful
+now
+but oh okay changes to nothing but that
+still proves the point yeah that um it
+did take the change it just didn't
+compile I guess to to read the page or I
+don't know what actually was um what was
+in this actually if we if we switch it
+back now let's let's see yeah that's
+that's a good test yeah there you go so
+um the main point is you know we've had
+features like I didn't continue to try
+and make people super productive as
+we've adopted this you know fairly
+significant technology like Docker we've
+actually tried to retain as many of
+those high high productivity
+experiences um and I think I just
+demonstrated that yeah yeah it's very
+cool now I know we we also um had a
+multi-stage build that did you want to
+show that sure yeah so that one I'm
+going to show from the command line um
+it's very new um so what what is it I
+could describe because even I'm not sure
+what what you're going to demo yeah so
+one of the things with Docker that on
+the face of it is actually there's two
+goals that are a little bit
+contradictory um meaning up until
+multi-stage build it was hard to um be
+green on both of them um even though you
+want it to be so I'll tell you what the
+goals are one is you want to be using
+Docker all the time meaning um I'd like
+to both build my application in Docker
+containers and then host my application
+in Docker containers and also do the
+thing in the middle which is test in
+Docker containers because the promise
+that you get from Docker of consistency
+and reproducibility
+is is equally valuable at all three
+points and then the second goal is that
+um I want my prod my runtime based
+stcker container to be as small as
+possible I don't I don't really care
+nearly to the same degree about my um
+Dev time and my test time sure
+containers the reason why this was um I
+won't say contradictory but um there was
+friction in achieving both these of the
+same time is because you had to write
+these scripts that took ran you know
+built uh your app with one Docker
+container pulled out some assets and
+then put them into a test container and
+then took the results of that um and
+then finally you build a runtime
+container so this was all possible but
+not very easy so a lot of people didn't
+do it so what multi-stage build is is
+you can build a single Docker file
+that describes this whole thing there's
+no scripts you can actually in a
+declarative way take the output of one
+Docker container and use it in the Pro
+in another one and um even better yet
+you can actually dock or run so imagine
+you have like a four stage multi-stage
+build you can actually dock or run to
+just the second or third stage if you
+want so you don't even have to do the
+whole thing that's cool so show it over
+um yeah so we have I'll take you to
+another GitHub thing
+umnet
+neter
+samples and um if you actually go down
+here to the read me it actually says
+multistage build I'm just going to
+summarize this it says we've updated the
+samples to use multi-stage build uh
+which is awesome and
+[Music]
+so um if I oh I guess I'll I'll show you
+one of
+them so I would actually say we're
+probably one of the first um developer
+platforms to adopt multi-stage
+builds so here is the first from and
+we're saying um this is my base image
+and then I'm giving a name to um this
+thing I'm about to build I'm calling it
+build environment and then this whole
+thing um
+through here is build environment and
+then I'm creating a new runtime image
+right so so the the from command is is
+declaring the start of yes yeah that's
+basically your demarc decator yeah and
+so I'm using another base image I don't
+have an as here because there's no need
+because you only really need an as if
+someone after you is going to use you
+and in this case there's there's no one
+else this is only a two-stage one yeah
+but this second one is is in the
+copyright it's referencing that build
+environment from the from parameter
+exactly so you you you followed the the
+syntax yeah I've never seen this before
+but here it's simple enough yeah so
+you're saying from this other guy the
+first one please grab this directory
+from that first image and then copy it
+to the to the working director and um
+and then let's go so all I'm going to
+show you is um actually we can just do
+it right here because one of the cool
+things about Docker oh no I need to
+never mind
+uh need to get to where your sour yes
+sorry
+yeah that's the one trick you still have
+to follow yeah um let me just see just
+make sure yeah I tried it on this
+machine so um actually we we did um
+windows before how about this is
+probably a really bad idea for um you
+mean something you didn't prepare to
+demo and you're just like oh I'm just
+going to demo it yeah let's go why not
+this is toolbox this isn't uh bu key you
+should be all right okay I think it
+worked so let's do Famous Last Words
+Richard yeah Docker build minus t we'll
+say toolbox demo and then dot so it
+means I'm going to pick up the dot oh
+I'm in the wrong directory so that's I
+was about to say I tyed in I typed in
+awesome command line um and I'm gonna go
+into prod that's the one I think we were
+looking at yeah so Docker build um minus
+t tool toolbox demo Dot and so oh it's I
+ran this before um here um okay well it
+was really fast I'm not going to undo
+the fact that I ran this before it
+actually Dem maybe this is a good demo
+actually it demonstrates that um the
+docker tools are really smart so when
+there's when it's already done the work
+yeah and no changes I guess yeah it
+knows that there were no changes so it's
+like I'm I'm good cool so but then we
+can whatever that spelled um so that was
+an awesome command if that existed I was
+like what is it doing uh I think it was
+toolbox demo is that what we called it
+toolbox demo I
+believe and so that that that was pretty
+fast this is I guess actually has net
+core 111 in it although Linux doesn't
+really matter um and I'd say that
+startup time
+was was pretty good we're booting up a a
+Linux container M on Windows and then
+we're boo up net core uh inside that
+container and running this app and in
+case you can't tell what this is this is
+our our friend netbot saying yeah I love
+I love this thing welcome to using net
+core cool um cool was there anything
+else we were going to show or well we
+wanted to talk about that net standard
+but I think I think we we've covered a
+lot today so I'd love to have you or Emo
+or somebody come back and and I think we
+can do a whole show just on that I think
+so and we still need to deliver that
+that n Stander message to a lot of folks
+and clar ify things and as it evolves
+too who knows but uh I think this has
+been a good s demos awesome I love this
+all right well thank you so much Richard
+I think our fightings there appreciate
+it and we want to thank you for being in
+toolbox and thank you folks for watching
+if you have questions please uh post
+post the questions down the FR and we'll
+make sure all the links that we showed
+you are available and please come back
+to the next episode of toolbox thank you
+very much thank you
+[Music]

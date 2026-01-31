@@ -1,0 +1,715 @@
+oh I didn't see you there hi I'm Scott
+and right he's talking to this
+microphone cool how's it going friends
+I'm here with with Adrian how are you
+doing well thank you very much one of my
+top 10 favorite Canadians and we brought
+a bunch of things to show which I think
+would be fun yeah and will you push the
+buttons or do you push the what we want
+to talk about is is dotnet specifically
+for tiny devices right how tiny like I
+have a Raspberry Pi but it runs an
+entire operating system right so the
+Raspberry Pi I'm a huge fan of it's
+really it's a it's a tiny computer it's
+a full micro processor processor yeah
+works Iran dotnet on a micro controller
+okay
+microprocessor microcontroller it's
+small but like processor controller
+you know potato potato yeah so think
+less power a lot less power so much more
+people running out battery doesn't
+require full operating systems we're not
+gonna have this whole Windows
+environment that we see on sale Windows
+laptop or a Raspberry Pi okay so these
+don't boot into full operating systems
+that are multi-layered with kernels and
+drivers and haut and user mode and a
+show and write yes
+so is it essentially these into being
+when you write your app for a micro
+controller you're in basically a single
+purpose product you're going to run the
+application and the only thing that
+really beats definitely running and
+executing is your application okay about
+how like we know when you run something
+in a container
+you don't necessarily run like a full
+Ubuntu and then you're ten yet you run
+like Alpine or something with a tiny
+surface area these little operating
+systems are they call real-time
+operating systems right there have a
+very small surface area right yes they
+do the minimum and so they needs a
+minimum so your application gets the
+most the resources oh and they're
+constrained rich devices but well they
+also end up being very very stable it's
+really just running your application you
+boot almost you booting into dotnet
+effectively you're putting into a tiny
+operating system which runs your one app
+yes okay and this case mono as well can
+we share the screen or do we do a
+picture-in-picture
+push this is all right cool so this i'm
+not associated with this company i just
+think it's really cool will
+labs they have like we know and meadow
+and what we're talking about here is
+meadow so it's a platform that runs
+dotnet standard 2.0 and dotnet standard
+2.0 is really great because it means
+that it's c-sharp code that you're
+writing to a standard that you know I
+could write a console app and it would
+do stuff I could write a constant could
+write that library and put it in the
+cloud or I could take a library and
+depending on how I wrote it if I wrote
+it to a standard I could put it on this
+tiny device absolutely so you can use
+all the great c-sharp skills that you
+develop building mobile applications
+desktop applications cloud applications
+and apply those skills to making IOT
+application right right and one of the
+things that's really interesting about
+this idea of a microcontroller is that
+as as Brian from wilderness labs likes
+to say is it's going to become the
+dominant form of computing like there's
+more microcontrollers than there are
+like people yeah absolutely we think
+about this a lot in consumer world
+things like like nest and you know home
+automation but that's really a small
+horse of that market I think truly it's
+it's industry and automation where
+there's huge numbers these devices
+already deployed we see a really big
+growth in that area so when you think
+about Internet of Things these things
+are not gonna sorry gonna boot into
+Windows or Mac or boot into a boon to it
+they're gonna put into a a tiny
+real-time operating system yeah I think
+the way I think about it is often you
+don't need those full os's and there are
+ok there are cases where you want that
+and you're Nam you know like the guy
+point-of-sale systems or they might have
+a little more functionality but for a
+lot of things running behind the scenes
+for automation we want those things
+super efficient super super stable
+mm-hmm and and obviously very secure
+exactly and who needs the headache of an
+entire giant operating system when you
+can go and do something like this now
+let's think about specifications we know
+when the Raspberry Pi spent $35 to micro
+processor 35 bucks and it has no
+gigahertz right milk quad processor
+gigahertz 4 gigs
+8 gigs of RAM look at this 16 Meg's of
+RAM
+200 megahertz but it's also got Wi-Fi
+Bluetooth and it can go and do things
+like jpeg acceleration but with these
+small specs I can still run a dotnet
+application absolutely so John and I
+think about as being either interpreted
+just-in-time compiled or ahead of time
+compiled
+we doing that so we are running the full
+mono on this so it is Oh make sure it
+must speak here but I believe we are it
+should be je compiled and then well in
+this case here we're gonna boot into
+this little application with a a build
+that we built locally and then we sent
+across the wire onto this tiny device
+let me actually do a little trick here
+if you don't mind get frisked and I just
+want to run my camera locally here so
+this is my camera surprise it's gonna be
+freaky hey friends Hey look at this
+this is what the device looks like well
+tiny that is like a stick of gum
+hey smaller than the size of your finger
+a little tiny thing very very light runs
+battery life could be a measured in days
+and weeks and not hours as it is
+absolutely if I okay so check this out
+look at this friends like we did for you
+know if this will actually work because
+of mirrored images let's do this will
+change and you talk about the sides here
+and keep in mind this actually is a
+prototyping board this is adult men
+board and so this will be an open source
+open hardware project so you can of
+course make this into your own hardware
+projects and make this even smaller and
+that fun so this is the development
+board and user to your point it could be
+smaller you could build this into
+anything yes and what's fun about this
+is that you can go and use whatever
+makes you happy for example we've got in
+my little kit here all kinds of stuff we
+could potentially play with I've got a
+soil moisture sensor I've got LCD screen
+and a segmented display I've got a ink
+you can see here we wrote on e you could
+potentially do a tricolor ink here that
+we got from Adafruit there's potential
+there lots of different things that we
+could do but when I'm writing this code
+well let's see what it looks like is
+that cool yes absolutely
+alright so this is a part that I'm so
+excited about so I'm just gonna go into
+visual studio here and let's do this
+I've got two things to show you first
+let's open up visual studio again and
+I'm going to go into my github and let's
+look at this e ink display
+okay yes absolutely you know a paper I
+think we call that and I point here that
+we're of course you're opening up Visual
+Studio 2019 yeah that's a good point I
+could open up visual studio code and
+edit it as a text file did you just see
+sharp but let's look at this this is
+actually a Visual Studio 2019 and I just
+added a physics you know I added an
+extension to it to make this work with
+with meadow but let's take a look at for
+example this ePaper I'm just gonna right
+click on this and I'm going to say edit
+project file okay and look at that see s
+proj here okay we're targeting look the
+meadow SDK in this sense now in this
+here it's pretending to be net 472 which
+is what mono supports but if we go and
+look at one of these displays go look at
+these so we've got these different
+libraries that use the meadow foundation
+and then let's go and look at the
+program itself check this up I'll go
+ahead and make that bigger here just
+make an instance of our new app and then
+basically chill out so we look inside
+this I love this it's an app of type f7
+micro which is that chip that we're
+using here on this particular device
+right yeah exactly so this will match
+the the hardware the form factor so in
+the future other board will come out and
+you can swap in make sense because the
+meadow platform could work on other
+things and you'd have an app of that
+type as well which is really really cool
+if we go in here and we say like
+initialize hardware I understand that
+with microcontrollers there's different
+buses there's different ways to talk to
+things what is an SPI bus so that's the
+serial peripheral interface that's a
+fairly well-known it's a standard
+communication protocol
+generally it's good for high speed
+devices and you'll see it's used in a
+lot of these types of displays for
+example because that's good for pushing
+a lot of data and this is interesting
+because you see right here there's this
+this right this ribbon almost river
+effectively made our own ribbon cable
+here yes yeah exactly right and it looks
+like we've got eight bits going across
+that into a number of things you've got
+your ground your power and then a little
+bus here how BIG's the bus for these or
+three or six of these so the bus itself
+was actually two wires but there's
+there's a few extra things for various
+bits control so there's um get your
+power and your ground over here pairing
+the ground
+and you've got do through do three and
+then you've got scx and then mosey yeah
+so there's there's a clock signal for
+SPI which is just to make sure that the
+two devices are talking at the same time
+and then mosey is master out slaving
+which is sort of old school technology
+we don't use it it's a master slave
+anymore but that's the standard for SPI
+the meadow in this case is the master
+and this screen is the it would be the
+slaves I see there yeah and you see the
+Mesa which would be if you had devices
+that were sensors or reading data in
+from the world I had to push that data
+back to the metal board and then there's
+a reset painted a to command pan they're
+just some extra pins generally use an
+SPI I'm good until details right now but
+they're so common to wire up and we use
+those when the GPIO pins on meadow and
+what I'm finding really great about this
+platform I'm on Windows and you're on a
+Mac I'm gonna go out here because
+there's a tool that I'm gonna be using
+to just plug this in I wrote a blog post
+about this so you can just flash this on
+Windows was really easy with this thing
+called dfu I did this one time just to
+install the operating system and I
+haven't thought about this since this is
+not it used to be hard to do this kind
+of work and you'd go and install generic
+USB drivers and all this kind of stuff
+but all I had to do is just plug the
+meadow in with USB
+showed up as a serial port yes yeah that
+seems to be the nice clean generic way
+to do things it showed up as a serial
+port and I said oh it's on comm port 3
+yes exactly and then from within my
+application here in Visual Studio look I
+can go and say right-click deploy and I
+got a nice clean experience yes and you
+do have this one visual to you on the
+Mac as well absolutely on the Mac and
+and you mentioned the comm port one
+thing that's really nice about that of
+course is Windows Mac OS supports
+multiple courts which can allow us to
+have multiple devices plugged in
+simultaneously and select which ones to
+deploy in the future yeah and then the
+we have this concept of a driver and
+this isn't like a driver like a dot sis
+file or something on I've got a question
+well you can feel free to just throw
+questions in it's open question your
+script 23 is is the board powered only
+by the USB port a great question is a
+great question so depends on if you're
+developing or not yeah yeah exactly so
+when we're developing we'll just plug in
+the micro USB cable and that will power
+the board now of course
+if you are using peripherals that
+require more power you know our displays
+are probably you'll see one is backlit
+and that's put to limit to how much
+power we wouldn't pull through the
+meadow so you might want to have
+external power and then once you've got
+you know a hardened solution you want
+deploy in the field meadow can be
+powered up battery as well and there's
+actually a battery port right on the air
+and they reminder again there this is in
+fact a and I'll go ahead and bring the
+camera up again this is a development
+board but when we switch back over to
+here you can see come something
+interesting you can see your micro USB
+here and then I can power that off a
+lipo yes yes I've done that or have a
+little bit the Impala battery and that
+works really great as well and those can
+last for a very long time and again this
+is the development for the other one
+will be a different size and to this
+point actually let's try something a
+little more sophisticated than eating
+because the e-ink is effectively hello
+world yeah I wanted to challenge us to
+do something more interesting perfect
+let's do that I'm gonna go back over
+here and I'm gonna say recent projects
+and I want to go back over into my FM
+radio basically check that this here
+this was a challenging we've been
+working on this this afternoon and and
+by we I mean you and I was also there
+but I get to what to take lots of credit
+for it and I thought this was super fun
+because what Adrienne Witten did here is
+he made an FM radio yes
+and I wanted to explain this concept to
+folks that understand dotnet because I
+thought it would be a fun way to do it
+here so what we've got I'll go ahead and
+put my camera back on here we're gonna
+do this check this out okay friends so
+we've got a radio there we go thank you
+sir you've got a radio here we've got
+the meadow board here we've got some
+buttons over here there's the meadow we
+happen to be powering it over USB but
+doesn't have to be that way but I want
+to be able to debug it and you know come
+to this if I want to and here you go
+looking actually it's oh it's upside
+down
+well not it's I've got it upside down
+here what I want to flip around the
+others
+it's okay like this there we go alright
+so what we're doing here is we're
+listening to the local public radio
+station here and Seattle or in Redmond
+where we happen to be okay so what I'm
+gonna do friends is why don't you give
+me a favor Jeff which I want you to hold
+this and I'm gonna hold that there and
+what we've got is our speakers now we're
+getting the Sun I think we're in a
+building here so yeah that cool so what
+we've done here I'll go ahead and unplug
+the speakers cuz this that's fun oops so
+how would we do a radio right how do we
+do a radio friends let's look at this
+it's it's fun because I like it cuz its
+model-view-controller okay think about
+this gold ass is requesting radio
+stations I guess so
+no now there's a question RadioShack
+come on we're not taking requests here
+people what's wrong with you
+when I say model-view-controller this is
+my construction not a meadow thing but I
+thought about this and it's like well
+there's the view right absolutely
+here's them here's the model here's the
+database to thing the webservice the
+object the the model the physical model
+and then in this context the dotnet code
+is the controller yeah I love this in
+that great and then you've got your
+buttons there that will set it to mute
+or to scan forward to the next FM radio
+station which is really really cool this
+is the kind of cool stuff now again this
+is a prototype that we've made if we're
+gonna go and sell our radio now we need
+to put an enclosure in a box yeah
+exactly quartz you get one with it it's
+a great app you sir you know 3d printing
+to get your first first engineering
+sample going mm-hmm
+and then yeah I don't quote me on all
+the parts but Moses are standard
+off-the-shelf so you should be no
+problem to you know big a custom board
+and okay so could this run dotnet core
+three right so right now it's using mono
+but in some theoretical future as dotnet
+core
+mono merge that I should have share that
+code yeah so um maybe in the dawn at
+5:00 timeframe yes I think you do Baron
+I whip I I believe there's some some
+there's something so the intent the
+intent is to reconcile the dot Nets into
+a single dot net and mono right now is
+really let's talk about that for a
+second mono makes sense for something
+like this because it's clean portable C
+code it's got a great easy to build code
+environment yes mono is portable mono
+can run on a Nintendo switch or a we
+write because it's so portable so the
+ability to be able to go and take mono
+and then take some of the ahead of time
+compilation things and modify it in such
+a way that it works it's a small device
+is important but in the future we're
+gonna take down at core framework and
+mono and merge them into some kind of
+unified thing now those plans or years
+out two years out but certainly I don't
+see any reason why they couldn't but I
+don't know if I can speak for folks at
+the news life yeah and I'm overstating
+the goal is to make sure the sillies if
+the want is for it to be a modern
+development experience yeah so I think
+as dotnet evolves you'll see the meadow
+platform evolve and you know he's me
+mention the start you know supporting
+dotnet standard yeah and that's really
+nice way to share your Cove between
+dotnet Accord on that framework well and
+let's talk about that for a second
+because if we look at the code here
+let's remind ourselves so the individual
+said could it run down at core three and
+the question is does it matter because
+in this case if it is running to a
+standard if you have the functions that
+you're used to having then it doesn't
+matter your code is reusable exactly
+yeah but in the context of these kind of
+single tasked applications let's call
+this a single tasked radio application
+as soon as I do something that's
+specific to a piece of hardware if I'm
+on Windows and I decide to go and do
+talk to the registry right I'm using
+done at core three but now talking to
+the registry race now you've got a
+desktop cific application sir I just
+became Windows specific I can't do the
+registry on a boon to if I am doing a
+Raspberry Pi application and I talked to
+a GPIO pin let's say that I hard-coded
+two GPIO seven now it's not only
+Raspberry Pi specific but it's specific
+to a wiring diagram the way I made it
+then again with no matter what dotnet
+it's been written and it's now married
+to the the system so if we go back over
+here I like the way you did this you've
+got your digital output for your led
+your input for your mute button let's
+look at initialize hardware what's great
+about this is that c-sharp do we know
+how to read it and you go and you say
+hey this pin is for output and this pin
+number 12 which we've looking at our
+thing here yes we in that for 12 and
+then you go and get the bus ready and
+then you let us know
+0 1 2 those are the pins that that
+device for the display is sitting on set
+the contrast then we have an i2c bus
+another kind of bus and the bus exactly
+that's the one to be FM tuner is using
+mm-hmm and then we've got this te a 57
+67 you can go in Google for that with
+Bing and learn about that particular FM
+radio which sits on that bus you see how
+you're chaining those together and then
+here we're just hard coding it in the to
+start out with the local radio station
+and then we've got a search button the
+button is then hooked up and you'll see
+that there's a nice event there to go
+and say button chain so it's very
+familiar experience yeah and one thing I
+love to call out here is typically for
+these kind of applications you're able
+to do all the hardware have the you know
+the also with the software wiring but
+the hardware plumbing in a single method
+with an initialize method yeah and
+that's really the only place you need to
+do that any hardware interaction
+otherwise it's just C sharp and dotnet
+so it's all just familiar coding in a
+familiar environment and look how easy
+it is so after you have initialized
+Hardware then we just have an update
+display and then update display gets
+updated yes as soon as anything changes
+in this case and we're going to say draw
+text at zero zero I mean like I don't
+know IOT but I know this that's what
+makes me happy look the ternary operator
+in c-sharp like this is C sharp that you
+already know which is super fun yeah and
+I think that's what's really means about
+mono when it's running all these devices
+that yeah our skills are transplantable
+absolutely look it sounds like some of
+our friends in the chat room are little
+inspired and they want to know well the
+source code be sure I don't see why not
+actually we've got this source code
+right now over here I think it's hidden
+but there's
+no reason we couldn't make this thing
+that we were messing around with oh yeah
+absolutely
+now it's early days but you can see
+right now this is a an hour ago when we
+got all this stuff working you can see
+the FM radio code we were working on
+that as much as recently as an hour ago
+and then the ePaper display I want to do
+point out to be clear that this is a
+beta we're on beta theory yeah of meadow
+I think it's like what made us be a
+meadow beta 3 bi 3.1 I believe 3.1 beta
+3 and it's so it's very early here who
+knows what will be done things will
+change your mileage may vary yes but go
+and explore our friends at wilderness
+labs in their website and talk to them
+this was actually a successful
+Kickstarter and they're kicking out
+these now you can go and watch a video
+about how this this project works and
+how it is gonna hopefully move forward
+and do a lot of really cool stuff yeah
+absolutely lots still coming so if we
+sell let me add Wi-Fi support for some
+Bluetooth there's some performance
+improvements coming plus a lot more
+driver surface yeah yeah if I go and
+look at my device manager right now and
+I can see right here I can see ports and
+there's sure them I know this is
+actually kind of a fun thing or fun hack
+that folks do if you have a circuit
+python device from Adafruit you plug it
+in it looks like a disk drive in this
+case it looks like a comport because
+it's kind of a universal bus like it's
+talking to these things really really
+easily and in fact if I remember
+correctly there's also a I mean I'm on
+my desktop here let's go to desktop
+meadow there is a actually a CLI as well
+a command line interface maybe we can do
+a little something with that yeah
+absolutely so the CLI is really it's the
+the proof of concept all the
+communication to meadow this is what's
+actually powering the visual to you
+attention mm-hmm so if I go and say can
+I see like file system lists look like -
+- list files yes
+definitely see if that works there you
+go so I just said list file said port
+com3
+opened hitting a list of file types you
+can see there that it says mono is
+currently enabled so it's turned on
+right here if it was disabled we might
+be formatting the file system or -
+flashing a new firmware on top of it
+well so actually so interesting for the
+command line well double mono off and on
+so we can work with the device without
+not the executing application so we
+mentioned it right now you plug it in
+runs just runs right that idea that the
+single purpose so it automatically runs
+the it looks for actually a BAC mono
+fires up so you can disable mono allow
+you to you drop the file system without
+the app running hmm and then these are
+just the deals
+yes exact right in the mono right so
+let's think about the layers here right
+you get like sister not object the
+meadow foundation you can see the
+drivers for your your FM radio on your
+screen right the meadow stuff that's
+underneath meadow that foundation and
+then the graphics library to output to
+the screen draw the text ya decode get
+maps whatever needs to go and not
+actually that's a good call Oh in that's
+just code to me play data in memories
+just buffering which is a really great
+point actually if we go back over to
+that and take a look at the graphics
+library what's fun about these things is
+you can find out about the underneath
+like there's nothing hidden here you're
+not hiding anything from us you're like
+look that's a real font what's in there
+it's the width of a height in 8x8 right
+this is actually we build little tools
+actually had it was a lwith application
+you design the fonts my hands you just
+went and draw it and it's saved into a
+complete the bytearray fire exactly and
+when you go and you do these things it's
+like okay you know pull it out of the
+font table yeah this is it when there's
+nothing else hiding from you there look
+there's all your fonts yeah
+and that's very common in this kind of a
+tiny environment right yeah cuz of
+course they're they're super small super
+efficient right so we go back to our
+camera here take a look at what this
+font looks like I'm just gonna bring it
+around to the other side of the camera
+here well the cameras coming out is this
+were coated to a particular version of
+mono where can he be updated so I will
+actually show you in just a moment here
+seaton there you go so there's the font
+that we're drawing on the screen right
+there and that's the 8 by 12 the 8 by
+1200 exactly so
+about the versions and the how these
+things work for example I received my
+board when I got mine for my Kickstarter
+on version 3.0 of this operating system
+so I plugged it in and you have to think
+about the layers right and correct me if
+I'm wrong here but it by default it
+boots up in the mano with mano enable
+that looks for a PXE and it run so you
+turn it on and it runs but if I hit
+reset while it's plugged in it's gonna
+go into this device firmware updating
+mode and then I could go and run DFU
+util lash the operating system on top of
+it yeah all that's bundle and included
+with that so when I downloaded it this
+is mono here yes exactly and the stuff
+in it and that comes with with the
+meadow so we are kind of dependent upon
+the folks that are working on this with
+their version of mono to make this work
+yes and so yeah I mean there are as
+there there are some parts of other
+deployed with the deployment the OS you
+sell itself and actually that MS core
+live what we deploy as NuGet package
+yeah a separate pulldown in terms of
+being up to date last version mono
+without miss I don't want to overstate
+my understanding his intentions to keep
+it up to date yep and so when changes
+are made to mono does we pulled into the
+verse of model gets deployed on meadow
+so pretty amazing stuff I just wanted to
+share it with you all I thought it was
+so cool again I'm not affiliated with
+this company but they seemed really cool
+wilderness labs dot Co they had a
+Kickstarter I'm a supporter I think it's
+great you can see I've got my kit that I
+got from them as well as the the
+wilderness labs piece of wood on which
+the breadboard is mounted so this is
+just an example of kind of the great
+stuff that happens with open source and
+dotnet and thank you for for hanging out
+with me thank you so much for inviting
+me in so yeah absolutely
+cool now what Jeff rinsed now we're
+gonna bring in our other host and we're
+gonna set up for our next yes
+deuces this is how later all right

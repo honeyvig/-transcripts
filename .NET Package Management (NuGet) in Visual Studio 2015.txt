@@ -1,0 +1,132 @@
+hi there I'm Jeff Fritz a senior program
+manager on the new getet team in this
+video I'm going to talk about net
+package Management in
+2015 today we're going to talk about why
+we need package management what's in it
+for me and how does it simplify working
+with my code in Visual Studio we've seen
+many advances in how developers work
+with their libraries their colleagues
+and the technical community to simplify
+the interactions with these tools and
+organizations we've updated the new get
+package manager to handle these new
+requirements I'll show you how to add a
+package update the package and then
+remove that package from a sample
+project let's get started with the
+why why is package management important
+well package management with net allows
+us to deliver a bundle of files that
+contain libraries for various versions
+of The NET Framework and configuration
+information as well as any static
+resources that are needed to support
+that bundle the new get package manager
+simplifies placement of those resources
+on disk adding appropriate references to
+your project and updating the package
+where
+appropriate additionally packages can
+take dependencies on other packages for
+example I could install a package that
+allows me to send messages to an Azure
+queue using the Azure storage package
+and that package has the dependency on
+the Microsoft o dat package nuget will
+automatically gather those dependencies
+and add them them to my project for
+me packages can support multiple
+Frameworks including the Net Framework
+mono and the new net core framework this
+is important for package authors because
+they want to be able to provide
+functionality targeted to different
+devices or different operating systems
+appropriately in our Azure storage
+example that package will use the
+network differently if it is
+communicating from a Net Framework
+application an asp.net core application
+or a Windows phone application let's
+take a look at Visual Studio 2015 and
+see how we can start working with
+packages in an asp.net 5
+application here I am inside of an brand
+new asp.net 5
+application and for this demo I want to
+add that Azure storage package to my
+project I can enter the new get package
+dialogue by right-clicking on my project
+and choosing manage new get package
+packages from here I have several
+options to work with this dialogue I can
+see my list of available packages on the
+left initially and then the
+appropriately selected packages details
+on the
+right across the top I can change the
+filter of the packages that I'm looking
+at I can also choose to look at
+pre-release versions of packages but in
+this case I want to search for that
+Azure storage package
+there it
+is I can select the action that I want
+to take place and then I have a version
+here that I can choose from any of the
+versions of the package that are
+available in the new get
+repository I'm feeling a little
+conservative here so I'm going to choose
+version
+4.0.0 let's show the preview window so
+that I can understand what changes nuget
+is going to make to my project
+I'll click
+install I'm presented with those changes
+that Nugget's going to make I'll
+accept and now I'm presented with the
+licenses that I need to
+accept
+yes and now you can see on the bottom in
+the output window we've successfully
+installed the package
+great but maybe a couple months go by
+and I'd like to upgrade that package and
+in the latest stable version in this
+case in my combo box I can see that the
+latest stable version is
+4.3.0 I don't want to see the preview
+window this time I'm already familiar
+with the changes it's going to make and
+I can click
+upgrade I'll accept the
+license and my package is
+updated we can see those results in the
+output window down here
+well now if a few months go by and the
+requirements to my project
+change I can come through and uninstall
+that package by just clicking the
+uninstall
+button and very quickly the package has
+been removed from my
+project finally I have some resources
+online for you if you'd like to learn
+more about nuget and package management
+with Visual Studio the nouet gallery is
+available online at
+www.net.org we'll share news about
+upcoming features information about
+packages we find interesting and updates
+for our existing tools on our blog you
+can find that at blog. nuget.org are you
+interested in checking out the nuget
+source code or maybe you have some
+feedback you want to share with the team
+you can visit our source code repository
+online at github.com slne slome we'll be
+happy to answer your questions on GitHub
+issues thanks for watching

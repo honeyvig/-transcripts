@@ -1,0 +1,811 @@
+>> On today's Visual Studio Toolbox,
+James is going to
+show us how to write
+less boilerplate code
+in our MVVM apps.
+[MUSIC]
+>> Hi, welcome to
+Visual Studio Toolbox.
+I'm your host, Robert Green.
+On today's show, my good friend,
+James Montemagno is joining
+us to talk about the.NET
+Community Toolkit.
+Hey, James.
+>> Hey, Robert. How are you?
+>> Good. Welcome on to the show.
+Welcome back to the show.
+>> I know, it's an
+honor and a privilege.
+It has been a long time
+since we've been together
+back in my Xamarin days,
+and we can start that off.
+>> Yeah, then you had your own show.
+>> Now I have a another one though.
+They keep giving them to me.
+Now I have this on.NET over on
+the.NET YouTube and on
+the docs page of course,
+where we talk about all.NET
+stuff, which is really fun.
+>> Yeah. We were at a conference,
+the DEVIntersection Conference down
+in wonderful Las Vegas
+a couple weeks ago.
+You showed the demos that
+you're going to show today.
+I was so blown away.
+I said, you got to come on
+Toolbox and show these.
+I know you did in on.NET episode
+on the Community Toolkit,
+We'll have links to that but
+I really wanted to focus on
+the stuff in there that is just
+super cool for MVVM developers.
+I was just blown away at
+how much code I now don't
+have to write thanks to
+this wonderful creation.
+>> Yeah. This is really fun
+because you actually attended
+my Don in MAUI workshop,
+which is really fun,
+and we'll put a link to
+that in the show notes.
+Through that, I talk about a lot
+of how to get up and running
+with any XAML based application
+and MVVM model, View Model.
+Then we specifically do in.MAUI app.
+But what I was telling
+you was that, hey,
+the stuff that I'm teaching
+actually applies to
+any XAML based MVVM
+application and you're like,
+oh really what about WPF and
+framework and core and
+that's I said all of them.
+I think in the world of MVVM,
+I'm big MVVM person,
+a big XAML person,
+I've done all the frameworks,
+all the UI stuff over the
+years and I focus a lot on,
+client development for iOS, Android,
+Mac and Windows cross-platform
+stuff was Xamarin and now.MAUI.
+For me, there are
+amazing libraries and frameworks
+out there that introduce,
+let's say like architecture
+best patterns.
+You have like prism,
+and things like this that are
+really lovely libraries or
+MVVM light and these are a
+little bit more opinionated.
+I myself, I always wanted
+just a little helper libraries that
+would not give me a full
+architecture pattern.
+Let me decide, but give me the
+things that I don't want to write,
+like Commands and different
+observable collection stuff.
+I had a library MVVM helpers
+for a long time that did this.
+Then I stumbled upon
+the.NET Community Toolkit,
+which was an evolution of the
+Windows Community Toolkit,
+which came from the WPA committee,
+get all the things right.
+I had Sergio on one of
+the maintainers of this,
+and there's actually a
+whole organization on
+GitHub called Community Toolkit.
+GitHub.com slash Community
+Toolkit and there's tons of them.
+There's one for Windows,
+one for Don and MAUI and
+one specifically for.NET,
+which is just generic
+that you can use in any
+application that's.NET based
+and introduces all stuff.
+This one specifically is
+the MVVM Community Toolkit,
+which is really cool.
+I'm not even going to
+show any Don Maui code,
+I'm just going to show
+actually some WPF code.
+But I think what's really cool about
+this is it's all the
+things that I wanted,
+which was MVVM helpers that
+was really optimized code that
+didn't have any framework that I
+needed to change the
+fundamentals of my application.
+>> Yeah. I think and
+we'll see this later on,
+but one of the cool
+things about using
+this toolkit and we're going to see
+that it uses source generators to
+write a lot of the code for you.
+What I would wind up doing is
+I'd go look at one of your
+sample applications and I'd say,
+oh, his base View Model, yeah,
+I'm going to start using that
+and then I'd use that forever.
+I don't know if you invented
+new things in it or other people
+invented new things in it,
+but that then became my
+standard boilerplate code
+until the next time I saw you do
+a demo app and you changed it.
+This way, you've got not just
+leveraging from one person,
+but you've got this community
+building this thing,
+and then every time you use it,
+you're going to get the up-to-date
+latest and greatest and
+whatever's in there.
+Not only do you not
+have to write code,
+but you're ensured that
+the code that you're not writing
+is the latest and greatest.
+>> Oh, well, do you want to see it?
+Do you want to get into it?
+>> Yeah, absolutely.
+>> Cool. Let's go out
+and bring out my screen.
+Yeah. This is the GitHub
+page that's actually part
+of the Dana Foundation,
+which is really cool.
+Lots of people working
+on it inside of
+Microsoft and outside
+of Microsoft too.
+You can see here there's all stuff.
+There's the.NET 1, the Windows,
+the MAUI 1, and a bunch of other
+libraries that are really great.
+I'm going to start off
+here first with a WPF app.
+Look at this. This is my beautiful,
+look at it. It's beautiful.
+>> Mm hmm.
+>> But check this out. It's
+all set up so if I type
+in James Montemagno,
+boom, it really does stuff.
+If I click then submit it
+submitted to the back end
+and it clears it off.
+This is standard MVVM and
+we've got data binding here,
+and we got an I Command. Beautiful.
+>> Mm hmm.
+>> Nothing special there.
+Let's look at the code here.
+Here, it is inside a Visual Studio.
+I'm in 2022, but this is preview,
+but standard will work as well.
+This is a WPF app.
+It is.NET 6. However,
+this does a work with.NET
+framework applications.
+If you're using.NET
+standard libraries to share
+your view models works
+with when you UI,
+UWP Xamarin forms, .MAUI
+all the things that I'm
+going to show today.
+This is very simple and
+some people are like,
+don't do a data context
+there, but I'm doing it.
+Very simple, just
+standard data binding.
+We have a first name property,
+a last name property,
+a full name property and
+a ''Submit'' Command.
+>> Okay.
+>> I have a View Model.
+This code will look very familiar
+to many MVVM developers.
+I have an I notify
+property change if I scroll
+the bottom down here,
+I have a very simple
+implementation of it.
+>> Yeah.
+>> Maybe not the best
+and then I have my
+own I command implementation that is
+totally not good because I stole
+that off of Stack Overflow
+from 100 years ago and
+it's just in here.
+Then we have things like this,
+which is a bunch of
+getters and setters,
+and here I have my first name.
+I raised my property changed.
+I also changed the full name,
+property changed, last name.
+Here's my full name here that just
+concatenates those two
+together and I have my
+beautiful I command that literally
+submits and clears out the first
+name last name, so boom, MVVM.
+>> Beautiful, it's like
+a classic definition of
+boilerplate code in there.
+>> Now, now many people
+will say like, "Oh,
+I have a base view model,
+I'm using other helper libraries."
+Totally understandable in general.
+Even when I do that,
+some of this code still ends up
+looking like this where I have
+set property and it's still multiple
+lines of code inside of here.
+What we want to do is get rid
+of all of this code and really
+get really optimized,
+really tight code.
+What we're going to do is we're
+going to bring in this library.
+I've already added it here to
+the CommunityToolkit.Mvvm.
+>> You just got it
+off of NuGet, right?
+>> Just off of NuGet. I
+just went into NuGet,
+bum, right here, bum. That's it.
+>> Okay.
+>> Right now, as of this recording,
+this is Version 8.0,
+it's in Preview 3 today,
+so you'll definitely want to
+grab whatever the preview is.
+Make sure you check that checkbox,
+this source code will be
+available so you can grab it,
+run it locally on your machine.
+The team is still
+updating documentation,
+so the best way to do it is go to
+the GitHub page and browse through
+samples for all the stuff,
+but they're also putting
+out blogs as well,
+and I'll give you-all those too.
+Here's what we do, we add that
+one single NuGet, nothing special.
+Now, what I'm going to
+do is I'm going to just
+delete a bunch of code, Robert.
+I'm just going to
+delete all this code.
+I'm going to delete all of it, so
+deleting all code, so much code.
+Look at all the code, just
+deleting all of it.
+Right now, it's all mad.
+It's like super mad, there
+used to be 100 lines of code,
+now there's like 30.
+I'm going to get rid of all these.
+Robert, I don't want any of it.
+>> Yeah.
+>> I don't want any of it, done.
+In fact, let's get
+rid of this thing.
+I can fit it all on
+one page, Robert.
+>> Nice.
+>> That's what I want. Now,
+nothing works. Let's do this.
+Using CommunityToolkit.Mvvm.
+I'm also going to be using
+CommunityToolkit.Mvvm.Input.
+I also want to do that
+in ComponentModel.
+Those are the two name spaces and
+there's a bunch in here
+that we're not get into,
+like validation, there's
+all this other stuff.
+Sergio and I went through that,
+so definitely check that out.
+Here's the first
+thing that I can do,
+is I can come in and I'm
+going to add an attribute.
+Instead of inheriting from
+INotifyPropertyChange,
+I'm going to go in and I'm
+going to add this attribute.
+This comes from the
+CommunityToolkit.Mvvm.ComponentModel.
+When I do that, few things
+are going to happen.
+First, it's going to tell me,
+this is really cool, it says,
+"Hey, you're missing
+a partial modifier."
+I'm like, "Oh, it's
+okay, let's do that."
+We're going to say partial.
+Now, if I actually came in and
+I said public main view model,
+we would notice that all of a
+sudden there's new things in this,
+like OnProperty or SetPropery.
+Where did those come from, Robert?
+They're not in my source code,
+but where did they come from?
+>> They're probably
+in the partial class,
+but you haven't written that
+partial class, have you?
+>> I have not. In fact,
+as you mentioned earlier,
+these are source generators
+that is using this.
+Where do we find that?
+I'm glad that you asked, Robert,
+because they're hidden
+over here under Analyzers.
+Here's the community toolkit,
+source generators, and specifically,
+here's all of them
+that are in there.
+There's one for ICommand,
+Messenger, Nullability,
+Observable Object, Observable
+Property, bunch of stuff.
+If I go ahead and expand this,
+here's the partial class.
+Now, this is code.
+>> So that code's
+already been written?
+>> It's all been written.
+It was generated.
+>> It was generated, and it
+doesn't generate at build,
+it generates real time.
+>> Real time. I didn't
+do anything at all.
+It's all right here. This is cool.
+This gives you every single
+thing that you need in here.
+Now you would never
+touch this code, ever.
+Like, is this is
+generated, it tells you,
+don't do it, don't change it,
+but this is giving me things.
+>> You can look at it to
+understand what's going on and
+confirm that it's doing
+what you want it to do.
+>> Exactly. The things
+that are in here,
+these are just nice helpers.
+Here, we can tell that it's
+using equality compares.
+It's actually setting
+property changes,
+it's doing all the nice
+stuff that we want it to do,
+so it's figuring out
+all that hardness
+for us automatically,
+which is beautiful.
+Now, that's nice if you are
+using it where you can't
+inherit from another class.
+Maybe you had a base view model
+and you couldn't inherit
+from something else.
+Now, built into this is also
+something called an ObservableObject,
+and an ObservableObject actually has
+the base class of
+all that stuff that you would
+need all ahead of time.
+You can add that attribute or you
+can do ObservableObject which
+implements INotifyPropertyChanged
+and INotifyPropertyChanging.
+This is actually like
+really, really nice.
+Now we're not using
+source generators,
+but this gives you flexibility.
+You can inherit from the class or
+you can go ahead and add the
+attribute which will source generate.
+>> Okay.
+>> Now, you can tell things
+are upset. Things are mad.
+First name doesn't exist.
+Last name doesn't exist,
+anything like that, so we
+want to light that puppy up.
+What we're going do is we're going
+to add another attribute which
+is ObservableProperty onto this.
+Now notice first name,
+it exists somewhere, Robert.
+>> Wow.
+>> Yeah, because now
+it's very happy.
+That is there and that is because
+now, if we come over here,
+what we should see ideally is boom,
+our source generator of
+ObservableProperty is lit up
+and we're going to see
+that automatically.
+Look at this, this has
+been generated for
+us automagically, 100 percent.
+>> You've created a string
+in lowercase and it created
+a property in uppercase, literally?
+>> That is correct.
+Now, this is very, very smart.
+It has some things, so that
+if you did underscore,
+for example, it would generate
+the same code over here.
+See, look it right there.
+>> Yeah.
+>> Smart.
+>> Stunning.
+>> The team has went
+through and they said,
+what are common naming
+conventions that developers are
+using like m underscore
+underscore this and that?
+They figure that all out
+for you automatically.
+>> Nice.
+>> Now, some other
+cool things in here is
+that this looks really long.
+This OnPropertyChanging,
+OnChange, blah, blah, blah, blah.
+That is because the
+team actually optimizes
+by caching the property
+changed events.
+It's actually a really
+optimized code.
+Normally, you would create
+a new PropertyChanged event
+over and over and over
+again. They've optimized.
+That's why I like this,
+someone really smart figured
+out all this stuff and I
+just add one line of code,
+Robert, that's all I got
+to do. That's super cool.
+Now we got a first name,
+last name inside of here.
+Now, that's pretty rad,
+but if we run this,
+this is never going to
+update because we're never
+telling the full name to change.
+Remember, we set to
+call that manually.
+>> Yeah.
+>> Inside of here,
+there's other things that
+we can add. Let me zoom in.
+If I do Also,
+we can do AlsoBroadcastChange,
+NotifyCan,
+ExcecuteFor, so if
+we're having ICommands
+you can also do that and
+I love it they give you
+this huge sample that
+you can just see here.
+There's also AlsoNotifyChangeFor.
+That one we can say,
+"Hey also, do name of full name."
+Whenever we change this,
+also call on property
+change for this.
+Now, of course, you can line
+those up however you want.
+If you want one line, you a
+multiple line, and what you want.
+Now, we go back in that
+source generated code.
+Notice this file is
+open. It's just updates.
+Notice here that it's
+going to not only
+call changing for first name,
+but also full name, too.
+>> Very cool. Very cool.
+>> Now, you're probably saying,
+well, cool, we got that working.
+What about I commands?
+>> What about I commands?
+>> What if I just did, I
+command? Now, we're done?
+>> No way.
+>> Yeah, that's true.
+This is just about the coolest
+thing I've seen all year.
+Now, I can open up the
+source generator for this.
+>> All of last year too.
+>> Yeah. Low and behold,
+what we'll see is that they've
+generated tons of optimized code.
+They have their own relay command,
+and this will
+automatically On-Demand
+create the relay command
+for me, call the summit.
+All that stuff are good to go.
+Now, what you're probably
+saying, Robert, is,
+what if I have an asynchronous
+task in easing command?
+I'll just do ''Async
+task''. Save on there.
+Let's go back over here and
+let's see what our code
+looks like over here.
+Let's have it
+regenerate for us here.
+Async task. We've got to bring
+in the namespace. That'll work.
+I'm going to go and open
+up that ''Submit'' again.
+Now, check this out.
+I async relay command. Done.
+>> Beautiful.
+>> Now, Robert, you're
+probably saying, James.
+What if you have parameters?
+Sure. Let's do a string of name.
+Let's go in the generator code.
+Oh. Look at that.
+>> Unbelievable.
+>> Now you're saying,
+okay, it's generated
+submit commands,
+so it appends commands on the end.
+What if you did like submit async?
+What if you changed your name here?
+What if this was async, for example?
+>> Yeah.
+>> Well, it's generated a new
+file, so let's go over here.
+But it's generated
+submit async for us.
+>> Yeah.
+>> But here's the thing. It
+is calling submit async,
+but they still called
+it submit command.
+Because you don't want to be submit
+async command, doesn't
+make any sense.
+They chop off the async,
+but they're smart enough
+to know to call that
+for you automatically.
+>> Okay.
+>> That's all you need to do.
+Which is really, really neat.
+Now, if we just, like,
+let's move this back to
+the void, let's mimic here.
+We're going to get rid of our stuff.
+Right now, we're back to
+our old stuff over here. I'm
+just going to hit ''Run''.
+>> Does generated
+async file go away?
+>> Yeah. That one now the
+submit async went away,
+now it's just submit and it's
+generated a new code for us.
+Now, we're going to
+go ahead and we have
+our app running over
+here. Let me zoom in.
+There you go. Sure enough, I do.
+James Monte Mag now hit ''Submit''.
+>> That is so amazingly cool.
+>> Yeah. Now, like I said,
+this code that I have here is
+really going to fit
+just about on one line.
+We went from almost
+100 lines of code.
+Our own implementation
+down to, honestly,
+this right here is just,
+16, 17 lines of code.
+>> Well, you don't have to write
+this plumbing code anymore.
+I notify property changed.
+You obviously want commands.
+Why do you have to?
+Why can't you just attribute
+it, just hook it up?
+Why do you have to go
+and learn that code in
+the first place and then
+use some implementation that you
+may have found to basically
+do plumbing code?
+We're supposed to be focusing on
+the UI and the business logic and
+the whole purpose of the app.
+>> Yeah. I agree 100 percent.
+In the workshops, I actually
+have the workshop on me
+put up here inside
+the dynamic workshop,
+inside of this NVM,
+it's really quite fun
+because I have you write all
+of the plumbing code and then
+delete all of the plumbing code.
+>> Which is actually good, because
+it's good to learn what's happening.
+>> Exactly.
+>> It's good to not have
+to write it ever again.
+>> But to me,
+this is beautiful, and this
+is all I ever want to do.
+To me, this is the
+way of creating this.
+Now, that being said,
+the only thing with
+this generated code,
+is I think it does use
+C-sharp eight features.
+I do get this question a lot,
+which is I'm inside of
+a.NET it framework app,
+and it actually gives an error.
+It says you need to update that.
+Now, I'm here inside
+of a.NET six apps.
+There's going to be
+using C-sharp 10.
+You can always come in
+and say lang version.
+You can say 10.0 or
+you can say latest,
+and remember that these
+features of C-sharp,
+most of them are compiler features.
+The team that does the.NET
+community tool kit, they said,
+what's the maximum way of making
+sure that the code that they're
+generating is new and modern
+but offers the best
+backwards compatibility?
+You in a.NET framework app,
+you can use C-sharp 10.
+There's nothing stopping
+you from using it.
+Of course, there are going to be
+runtime features you can't use.
+But as far as the code,
+for example, this
+little question mark,
+question mark equals over here,
+this is a C-sharp 7 or 8 feature,
+you can just flip that
+on you'll be good to go.
+It's going to cause no errors
+at all because it's a compiler.
+You can compile it.
+>> Yeah. As long as you're
+targeting the right framework.
+>> Yeah. I mean, if you're in a.NET
+framework inside this
+repo, let me open this up.
+For example, I have
+another.NET, a WPF app.
+This is a framework app.
+The same application inside of here.
+I thought it was a
+little bit prettier.
+But if I actually go in and I say,
+unload this thing,
+look at this, 472.
+There's a big one in here,
+blah, blah, blah, blah.
+Now, in this instance,
+I'm using the old style as the case,
+that old style stuff.
+What I did, is I put this code
+into.NET Standard library,
+or you could put it into like a
+just standard class library there.
+This will totally work.
+You can see the same
+exact code till I get to
+go and, yeah, that'll work.
+I just flip on the language version
+and you're off to the race.
+>> Then your generated code
+is in that shared library.
+>> Exactly. Yeah. That
+means it's going to
+be nice and testable in general.
+Yeah. That's it.
+>> That is so fantastic.
+>> It truly is. That's all I
+got. That's all I got, Robert.
+>> That is just so cool.
+We will include links or even
+go get this and learn about it.
+Also, put up a link to the
+longer on.NET episode where you
+talk about additional things.
+But if you're doing mVM,
+you should just start
+using this immediately.
+>> Pretty much, yeah. Huge shout
+out to Sergio and the team.
+>> Yeah.
+>> They use this in production,
+in the Microsoft Windows
+Store itself is in there.
+It's like being used
+in production is cool.
+Sergio talks all about that and
+all the other features too.
+Definitely check out everything.
+All I did was use it
+and talk about it.
+I had nothing to do
+with their creation.
+Shout out to the team that
+actually builds the stuff.
+>> Well, thanks so much
+for coming on the show.
+This was awesome,
+and I hope you guys enjoyed that.
+We'll see you next time
+on Visual Studio Toolbox.
+[MUSIC]
