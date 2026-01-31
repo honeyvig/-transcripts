@@ -1,0 +1,250 @@
+hello everyone
+welcome to another interesting video by
+simply learn
+in this video
+we are going to discuss one of the major
+topics that drive the decision making
+that is analysis of variance
+we will begin this video by discussing
+what is anova and what are its types
+then we will move on to discuss some key
+terminologies to get a clear
+understanding of anova
+then we'll discuss the concept behind
+the working of anova
+after that we'll understand the term f
+statistics and example to understand how
+anova is really used
+so let's get started but before we begin
+if you love watching tech videos
+subscribe to our channel and hit the
+bell icon to never miss an update
+so what is analysis of variance
+anova is to test the differences among
+the means of the population by examining
+the amount of variation within each
+sample
+related to the amount of variation
+between the samples
+this technique was invented by r a
+fischer and is thus often referred to as
+the fischer's anova analyzing the
+variance test the hypothesis that the
+means of two or more populations are
+equal
+in a regression study analysts use the
+anova test to determine the impact of
+independent variable onto the dependent
+variable
+so
+what are its types
+there are basically two types of anova
+which is a one-way anova and a two-way
+anova
+when we are comparing more than three
+groups based on one factor variable
+then it is said to be a one-way analysis
+of variance
+for example
+if we want to compare whether or not
+mean output of three workers is the same
+based on the working hours of the three
+workers we'll use a one-way anova
+now let's move on to two-way anova
+when factor variables are more than two
+then it is said to be a two-way analysis
+of variance
+for example
+based on working conditions and working
+hours we can compare whether or not the
+mean output of three workers is the same
+now let's discuss some key terminologies
+used in anova
+we'll start with null hypothesis
+the null hypothesis is the assumption
+that an event will not occur
+a null hypothesis has no bearing on the
+study's outcome unless it is rejected
+alternative hypothesis
+the alternative hypothesis is a logical
+opposite of the null hypothesis
+the acceptance of the alternative
+hypothesis follows the reduction of the
+null hypothesis
+h1 is the symbol for it
+p-value
+in statistics the p-value also called
+probability value is a probability
+measure of finding the observed or more
+extreme results when the null hypothesis
+of a given statistical test is true
+the p-value is a primary value used to
+quantify the statistical significance of
+the result of a hypothesis test
+now let's move on to alpha value
+the alpha value is a criteria for
+determining whether test statistics is
+statistically significant or not
+this test provides a p-value which is
+the probability of observing results as
+extreme as those in the data
+assuming the results are truly due to
+chance alone
+an alpha value of five percent or lower
+is often considered to be statistically
+significant
+now let's try to understand this
+terminologies by taking an example
+let's assume that a new drug is
+developed with the goal of lowering the
+blood pressure more than the existing
+drug
+so in this case a null hypothesis will
+be that the new drug doesn't lower the
+blood pressure more than the existing
+drug
+the alternative hypothesis will be that
+a new drug does significantly lower the
+blood pressure more than the existing
+drug and the p-value will be the result
+from evidence like medical trials
+showing the positive results which will
+reject the null hypothesis
+the statistic will be the extent of
+difference between the means of
+different medical trials
+the sum of squares will be the variation
+from the mean of different medical
+trials
+and the mean will be the average of all
+the results from evidence like medical
+trials
+now let's understand the core concept
+between how the anova works
+the one way anova compares the means
+between the groups you are interested in
+and determines whether any of those
+means are statistically significant
+different from each other
+specifically test the null hypothesis
+if any of the group means is
+significantly different from the overall
+mean there the null hypothesis in this
+case will be rejected
+now let's discuss the term f statistics
+which is very much used in the
+analysis of variance
+f statistics or f ratio is a statistical
+measure that tells us about the extent
+of difference between the means of
+different samples
+lower the f ratio the closer are the
+samples to the means
+if you have three different data sets
+then this part will be the within group
+variance that is
+the variance between the
+samples this line will be the variance
+between the means of the different
+samples which is also called between
+group variance
+if the between group variance is large
+relative to the within group variance
+the f statistic will be comparatively
+large to the critical value and
+therefore will be statistically
+significant
+now that we have covered almost all the
+theory regarding the anova let's try to
+understand how this is used in a real
+world example
+suppose you are a marketing manager of
+the product company your team has
+recently learned three new
+advertisements and you want to know if
+the three different types of
+advertisements affect mean sales
+differently
+so how can you do that
+you will use each type of advertisements
+at 20 different stores for one month and
+then measure the total sales of each
+store for a month
+to observe if there's statistically
+significant differences in the mean
+sales between these three types of
+advertisements we'll conduct a one-way
+anova
+for calculating the anova you will use a
+type of advertisement as a factor and
+the sales is the response variable
+now that we have covered all the topics
+in anova and have understood how it is
+used in a real-world example
+let's see how you can run an anova test
+in excel
+suppose you are a research scientist and
+you want to perform clinical trials to
+study the effectiveness of three drugs
+developed by three healthcare companies
+to cure a certain disease the data below
+represents the time taken to cure the
+disease for different patients when they
+consume either drug a b or c
+the time is represented in terms of
+total hours and minutes
+at the 0.05 level of significance that
+is the alpha value we need to test
+whether the mean time for the three
+drugs to cure the disease are equal so
+how we can do that
+we'll first move on to the data tab
+and then click data analysis
+select the anova single factor
+and click ok
+now it is asking for input range
+select the data you have on the table
+we have the labels in our first row and
+alpha is 0.05
+for the output range
+we'll get the output here on the same
+page so select some cell in the same
+page and we'll click ok
+so you can see we have our analysis of
+variance table
+with the summary
+let's understand each term one by one
+the average time taken to cure the
+disease after consumption of three drugs
+are 1 0 7
+90 and 96 hours approximately
+the difference between the largest and
+the smallest mean is 17.47
+here one significant observation is that
+the f value is greater than f critical
+value
+so
+this means we can reject the null
+hypothesis
+it also means that the average time
+taken to cure the disease is not the
+same for all the three drugs
+using the paired compression we can
+conclude that the time taken by the drug
+a to cure the disease is more than time
+taken by drugsy
+and wait further is more time taken by
+drug be to cure the disease
+that's all about the anova i hope after
+this video you will have a clear
+understanding of what anoma is and what
+is the concept behind it
+if you have enjoyed this video don't
+forget to click the like button and
+subscribe to our channel thank you and
+keep learning
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

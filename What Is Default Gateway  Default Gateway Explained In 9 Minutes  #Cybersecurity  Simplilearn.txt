@@ -1,0 +1,232 @@
+welcome to the Intriguing world of
+default gateways the pivotal Junctions
+in the network communication landscape
+envision your home router not just as a
+device but as a digital Navigator
+directing each online action you take
+from sending an email to streaming media
+through the complex web of the internet
+this Gateway acts as your primary
+conduit to the Digital Universe
+definitely handling the traffic between
+your local network and the vast expanse
+of the global internet in broader
+networks like those in corporate or
+academic settings the role of the
+default gateway expands
+here it's a traffic conductor ensuring
+smooth internet data flow and secure
+access to external resources consider
+smart home devices all reliant on this
+gateway to reach out to the world for
+updates and synchronization even in a
+bustling CAF Wi-Fi network the default
+gateway is what allows your device to
+step into the online World am miss a sea
+of digital requests diving into the
+default gateways realm is more than a
+technical foray it's an exploration of
+the invisible yet critical force that
+binds the digital experiences it's a
+journey through the heart of network
+communication revealing the essential
+role these gateways play in keeping our
+world connected and efficient let's
+delve into the essential aspect of
+networking a Cornerstone that keeps our
+digital lives running seamlessly and
+before commencing just a quick info for
+you if you're are an aspiring cyber
+security professional looking for online
+training and certifications from
+prestigious universities and in
+collaboration with leading experts to
+enhance your credibility then search no
+more simply learn postgraduate program
+in cyber security from Mi University in
+collaboration with EC Council should be
+a right choice through this course you
+will gain knowledge and work ready
+expertise in skills like Advanced
+hacking Concepts Network packet analysis
+ethical hacking network security and
+over a dozen others if you are
+passionate about making your career in
+this field then check out the link in
+the pin comment and description box
+below so without any further Ado let's
+get started so let's start with the
+simple definition of default gateway so
+a default gateway in networking is
+analogous to a doorkeeper or guide in a
+vast comple comp Lex of buildings it
+serves as the primary access point data
+device in a network uses to interact
+with devices in other networks so we
+talk about the technical definition it's
+a note often a router or a network
+switch in a computer network that serves
+as an access point or routing Hub
+towards data to destinations outside the
+local network so as in the diagram you
+can see the definition has been depicted
+here now you see the role in netor
+communication that is the role of
+default gateway in netw communication so
+starting with the first role that is
+primary function the default gateway
+acts as an intermediary that routes the
+traffic from a local network to devices
+in another Network when a computer sends
+data to a device outside it local
+network it sends the data to the default
+gateway first and then comes the next
+role that is Network traffic management
+it examines the destinations IP address
+of the data and decides if the
+destination is within the local network
+or outside it if outside the Gateway
+forwards the data to the external
+network and then comes the next role
+that is routing and connectivity in most
+Home and Office networks the default
+gateway is responsible for connecting
+the internal Network to The Wider
+internet without a default gateway
+computers in a local network can
+communicate with each other but cannot
+access outside networks now coming to
+the next role that is dynamic host
+configuration protocol so the default
+gateway addresses is often assigned
+automatically to individual devices in
+the network by DHC
+which also assigns IP addresses to these
+devices and then comes the Internet
+Protocol addressing so the default
+gateway has its repeat so the default
+gateway has its own unique IP address
+which is configured in the network
+settings of each device in the network
+this address is used to direct outgoing
+traffic and receive incoming traffic
+from outside the network so these are
+the roles of default gateway in network
+communication and if we hear a analogy
+for better understanding so think of the
+default gateway as a post office in a
+town if you want to send a letter that
+is data packet to someone in another
+town that would be the external network
+you send it by the post office that will
+act as a default gateway here so the
+post office knows how to route your
+letter to reach the correct destination
+and we've seen the roles of default
+gateway in network communication so
+let's see the importance in network
+communication that is efficiency and
+order by having a designated route for
+external traffic the default gateway
+ensures efficient and orderly
+communication between Networks and the
+next is Network segmentation and
+security it can also act as a point of
+control and security managing and
+monitoring the data entering and leaving
+the network so this was about the role
+and the advantages of default gateway in
+network communication now moving to how
+default gateway
+works so let's see a scenario so we'll
+set up a home network here and we will
+have one router and one device that we
+will name as computer a and the external
+server so here the computer a will act
+as a user's personal computer and the
+router that will act as the default
+gateway and the external server it's a
+web server on the internet so now we'll
+assign the IP
+address for the computer a and the local
+IP public IP and subet mask for the
+default gateway and the IP address for
+the external server so let's start the
+communication process between these
+devices so if the computer a sends data
+to external server so computer a wants
+to send data to the external server that
+has the IP address 93.1 184.
+21634 so computer a checks if the
+destination IP is within its local
+network using its IP that is
+192.168.1.10 and it has a subnet mask as
+you can see
+255.255.255.0 so the local network range
+is from
+192.168.1.0 to
+192.168.1
+255 since 93.1 184. 21634 is outside its
+range that is the external server so
+computer a sends the data to the default
+gateway so the that is the router so the
+router handles the data here that is the
+default gateway so the router receives
+the data from computer a it uses Network
+address translation n to translate the
+private IP address of computer a to its
+public IP that is
+2030 .1 13.5 and forwards the data to
+the Internet so the router keeps a net
+table entry to track this specific data
+flow so it knows where to send the
+response back so data travels through
+the internet and the data packet travels
+through various networks and routers in
+the internet to reach the external
+server that is 93.8 4.21 6.34 so
+external server responding we'll see
+here so external server processes the
+request and sends a response back so the
+response is directed to the public IP of
+the router here that is
+2013.1 3.5 so the router receives and
+forwards response so the router will
+receive the response and uses its net
+table to find the corresponding private
+IP of computer a it then forwards the
+response to computer a within the local
+network and here computer a receives the
+response and computer a receives the
+response from the router and completes
+the communication process so this is the
+working of default gateway in a home
+network and with this we have come to
+the end of this video if you have any
+questions related to this video please
+ask in the comment section below and our
+team of experts will be happy to help
+you as soon as possible until then stay
+safe and keep learning staying ahead in
+your career requires continuous learning
+and upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know no
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click
+here

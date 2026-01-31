@@ -1,0 +1,574 @@
+hello everyone welcome to another video
+by simply learn in this video we will
+learn about arduino
+the arduino platform has grown in
+popularity among those just getting
+started with electronics and for good
+purpose
+in contrast to the majority of earlier
+programmable circuit boards to load new
+code onto the arduino you don't need a
+separate piece of hardware all you just
+need is a usb cable
+but before we begin make sure you have
+subscribed to our youtube channel and
+click on the bell icon so you never miss
+an update from simply that so without
+any further ado let's get started
+what is arduino
+arduino is an open source electronic
+gadget that treats input such as light
+on a sensor a finger on a button or a
+tweet and generates output based on
+those inputs such as turning on an led
+or activating a motor
+arduino was created at the design
+institute as a simple tool for students
+with no career experience with
+electronics or programming
+arduino boards are microcontrollers not
+entire computers with operating system
+of their own like the raspberry pi
+arduino just run c or c plus plus code
+that is stored in the firmware
+the arduino ide is free software that
+allows you to create and upload code on
+an arduino board
+why arduino
+arduino has been used in millions of
+projects and applications due to its
+simple and accessible user interface
+the arduino software is simple to use
+for beginners but it is customizable for
+advanced users
+it works on mac windows and linux
+systems
+arduino is a valuable tool for learning
+new skills anyone including youngsters
+amateurs artists and programmers can
+begin tinkering by simply following the
+step-by-step instructions
+it can be used by teachers and students
+to create low-cost scientific equipments
+to demonstrate chemistry and physics
+principles and to begin learning
+programming and robotics
+designers and architects create
+interactive prototypes
+while musicians and artists create
+installations and try out new
+instruments
+features of arduino
+arduino has microcontroller of at mega
+328 and the operating voltage is 5 volts
+whereas the input voltage is recommended
+to be from 7 to 12 volts and input
+voltage limits from 6 to 20 volts
+we have digital input output pins
+that is we have 14 pins
+and we have analog input 6 pins
+and we have dc current per input output
+pin 40 milli ampere
+and dc current for 3.3 volt pen is 50
+milliamperes and we have flash memory of
+32 kilobytes
+and we have sram of 2 kb
+and eep rom of 1 kb
+and we have clock speed of 16 megahertz
+now let us look at the different types
+of arduino boards present firstly we
+have arduino uno
+arduino uno includes everything you will
+need to get started it has 14 digital
+input output pins 6 analog input a usb
+port a power jack and a reset button
+among other features it comes with
+everything you will need to get started
+with the microcontroller plug into a
+computer with usb cable or power it with
+an ac to dc adapter or battery
+next we have lily pad arduino lily pad
+is variable e-textile device created by
+lee
+and designed in collaboration with
+sparkfun each lily pad was cleverly
+constructed with large connection pads
+and a flat back to sew conductive thread
+into garments
+in addition the daily pad features its
+own set of input output power and sensor
+boards designed exclusively for
+e-textiles and can even be washed
+arduino mega the arduino mega is the
+larger brother of arduino uno it
+contains many digital input output pins
+that is 54
+and 16 analog inputs a usb connection a
+power jack and a reset button it comes
+with everything you will need to get
+started with microcontroller plug it
+into a computer with usb cable or power
+it with ac to dc adapter or a battery
+red board arduino
+the arduino ide can program the red
+board over the use of mini b connector
+it will run on windows 8 without
+requiring changes to your security
+settings
+because of the usb chip we used it's
+more sturdy and it's fully flat on the
+back making it easier to integrate into
+your projects
+and we have arduino leonardo
+the leonardo is arduino's initial
+development board with a single
+microcontroller and usb port
+as a result it may be less expensive and
+easier additionally because the board
+handles usb directly code libraries are
+available that allow the board to
+imitate a computer keyboard mouse and
+other components
+now let us look at the advantages of
+arduino
+in comparison to the other
+microcontroller system arduino boards
+are comparatively affordable the
+arduino's module is cheapest version can
+be assembled by hand and even pre-made
+arduino module cost less than 50 dollars
+for windows macintosh os x and linux the
+arduino software ide is provided the
+vast majority of microcontroller systems
+are windows only compatible
+the arduino software is simple for
+beginners but it's also flexible enough
+for advanced users
+for experienced programmers the arduino
+software is available as an open source
+tool to extend
+people who want to learn more about the
+language can use c plus libraries and
+those who want to learn more about
+technicals specifics can switch from
+arduino to avrc programming language
+the arduino is an open source and has
+hardware that can be expanded the
+arduino board blueprints are made
+available under creative common license
+allowing experienced circuits designers
+to create their module version extending
+and upgrading it
+at last we will look at the
+disadvantages of arduino
+arduino cannot run multiple programs at
+a time
+no memory safety checks expensive for
+cpu power and memory
+it has lack of built-in communications
+lack of built-in peripherals
+the limited number of programming
+languages
+and a limited number of ides
+blocking projects using arduino
+frequently we need to secure a space in
+our home or business so that no one can
+enter without our permission and our
+valuable accessories and assets are
+protected from theft or loss
+there are many different types of
+security systems available today
+but they all rely on finger prints
+retina scanners iris scanners face id
+tongue scanners rfid readers password
+pins patterns and other biometrics for
+authentication
+the most cost effective solution is to
+utilize an arduino-based password or pin
+based system
+some of the locking projects using
+arduino are arduino door lock system
+rfid and keyboard lock system
+we have unlocked door with knock system
+push button lock system and gesture
+control dock using arduino
+then we have rover projects using
+arduino
+the arduino robot is the world's first
+arduino powered vehicle
+on each of robot's two boards there are
+two cpus the motor board is in charge of
+the motors while the control board is in
+charge of reading sensors and deciding
+how to run them
+each board is a complete arduino board
+that can be programmed using arduino ide
+using arduino we can create many rover
+projects like voice control rover
+line follower rover
+gesture control rover
+survey rover
+ir remote control rover
+and similarly
+we have autonomous rover
+and many more
+game projects using arduino
+some remarkable arduino-based game
+projects ranging from retro gaming
+played on a limited screen to more
+sophisticated projects requiring some
+assembly some of the arduino gaming
+projects are
+snake game
+then we have chess game
+pinball
+spaceship simulator
+and claw machine
+automation projects using arduino
+the robust characteristics of arduino
+are well suited to a popular section of
+applications that is automation
+the arduino board can be used to create
+a wide variety of automation
+applications
+automation has brought convenience to
+whole new level from controlling room
+lights with your smartphone to
+automatically organizing events
+instead of using mechanical switches you
+can now operate all of your home
+electronics from the palm of your hand
+some of the automation projects using
+arduino are
+home automation and sanitizer dispenser
+automated shower boiler
+automatic motion sensor trash
+and ir remote controller home appliances
+health projects using arduino
+any medical equipment that has internet
+connectivity and can measure one or more
+health data of a patient who is
+connected to the device such as
+heartbeat body temperature blood
+pressure ecg steps etc is referred to as
+arduino based patient health monitoring
+system
+if there is a rapid change in patient's
+health the equipment can record and
+transmit the data
+iot encompasses everything from smart
+watches to fitness tracker to hospital
+equipment that can link to the internet
+arduino-based health projects have been
+developed to create new medical gadgets
+it may be used to measure body factors
+such as ecg temperature moisture and
+heartbeat it also identifies the
+patient's physical state and location
+some of the health projects using
+arduino are
+smart bridge band smart bioware
+portable ecg
+ultrasonic site
+and smart health kit
+drone projects using arduino
+drone are airborne vehicles that range
+in size from micro to multi-rotor
+quadcopters a camera is sometimes
+included with a drone allowing the users
+to watch and record the bird's eye
+perspective a drone is made up of
+numerous parts one of the most
+significant of which is the flight
+controller which acts as the drone's
+brain
+the arduino development board is great
+for this purpose especially because
+there are variety of models available
+ranging from the tiny arduino nano to
+arduino mega all of which are small
+enough to fit into the design of a drone
+some of the drone projects using arduino
+are
+quadcopter
+autopilot drone
+mind control drone
+guide power drone
+and hover craft
+robotics project using arduino
+we can learn about electronics mechanics
+and software using the arduino robotics
+project it includes a number of project
+examples that you can easily copy as
+well as robust robotics platform that
+you may have to execute a variety of
+jobs
+some of the robotics projects are
+robotic arm
+drawing robot fire fighter robot ball
+tracking robot and spider robot
+if getting your learning started is half
+the battle what if you could do that for
+free visit scale up by simply learn
+click on the link in the description to
+know more
+audio projects using arduino
+if you enjoy working with both hardware
+and software arduino is the perfect
+hobby for you arduino is a programmable
+logical controller that can do a variety
+of cool things depending on your
+programming skills
+using the arduino to make music is a
+special genre of projects
+if you will some are straightforward to
+implement while others are more
+difficult
+so some of the arduino projects for
+audio are
+paper piano with arduino vfo or rf
+generator
+arduino mp3 player
+arduino uno guitar pedal and arduino
+beat detector and we even have mini
+vintage internet radio moscow
+using arduino and many more
+iot projects using arduino
+arduino iot cloud is a tool that allows
+creators to create connected products
+quickly easily and securely multiple
+devices can be linked together and data
+can be exchanged in real time you can
+also keep an eye on them using a simple
+user interface from anywhere
+some of the iot or bluetooth projects
+using arduino are
+iot bicycle radar iot pet feeder
+telegram bot
+arduino bluetooth camera and smart
+parking system
+sensor projects using arduino
+one of the aspects that make an arduino
+so valuable is the simplicity with which
+it can retrieve sensor information
+sensors are devices that transform a
+physical quantity into an electrical
+quantity such as light intensity or
+temperature
+the different types of sensors that are
+available are
+light sensor motion sensor temperature
+sensor magnetic field sensor gravity
+sensor humidity sensor moisture
+vibration and pressure sensor electrical
+field sensor sound sensor and position
+sensor
+manufacturing machinery aircraft
+vehicles medicine and robotics are just
+few of the use cases of these sensors
+so the different sensor projects that
+can be made using arduino are
+temperature monitoring
+smoke detection using gas sensor
+3d scanner
+smart plant incubator
+and water quality monitoring system
+what is arduino
+arduino is an open source electronic
+gadget that reads inputs such as light
+on a sensor a finger on a button or a
+tweet and generates output based on
+those inputs such as turning on the led
+or activating a motor
+arduino was created at a design
+institute as a simple tool for students
+with no prior experience with
+electronics and programming
+arduino boards are microcontrollers not
+entire computers with operating systems
+of their own like the raspberry pi
+arduino just run c c plus plus code that
+is stored in the firmware
+the arduino ide integrated development
+environment is free software that allows
+you to create and upload code to an
+arduino board
+now let us see what is raspberry pi
+raspberry pi is small low cost computer
+the size of a credit card that connects
+to a computer monitor or television and
+utilizes a conventional keyboard and a
+mouse
+raspberry pi can do everything a desktop
+computer does including accessing the
+internet
+using raspberry pi we can watch high
+definition videos access spreadsheets
+word processing and play games
+raspberry pi has a dedicated processor
+memory and a graphics driver just like a
+pc it also comes with its own operating
+system raspberry pi operating system
+which is a modified version of linux
+raspberry pi is also used in music
+machines parent detectors as well as
+weather stations and tweeting bird
+houses with infrared cameras
+let us look at the comparison between
+arduino versus raspberry pi first let us
+look at the control unit
+arduino is a member of atmega family of
+microcontrollers
+a microcontroller chip common on arduino
+uno boats is atmega328
+the 8-bit avr microcontroller family
+includes atmega328 microcontrollers
+a surface mount at mega chip is seen on
+some arduino uno boards
+the raspberry pi is an arm controller
+unit
+broadcom chips based on arms cortex a
+application processor have powered
+raspberry pi from its release
+the raspberry pi 3 is the latest version
+of the raspberry pi
+launched in february 2016.
+it has 1.2 gigahertz amp cortex a53 cpu
+making it compatible for the arm 63.
+it has 1.2 gigahertz arm cortex a53 cpu
+making it compatible for the arm 64
+architecture
+architecture
+the harvard architecture is used by
+arduino cpu which means that the program
+code and the program data have distinct
+memory
+it is made up of two types of memories
+program memory and data memory the data
+is saved in the data memory while the
+code is kept in the flash program memory
+whereas in raspberry pi raspberry pi
+contains a single core arm v6 processor
+running at 700 megahertz
+a video core 4 gpu and 512 mb of ram
+its operating system and data are stored
+on sd card
+raspbian a lightweight linux operating
+system based on debian is officially
+supported by the raspberry pi
+licensing
+arduino is an open source electronics
+platform that uses simple hardware and
+software to make it easy to use
+it's for everyone who wants to make
+interactive projects
+arduino perceives the environment by
+receiving data from a variety of sensors
+and actuators to influence its
+surroundings
+raspberry pi's hardware and software are
+both proprietary raspberry pi has never
+claimed to be open source
+many aspects of it particularly the
+software are open source but not all of
+it is
+the raspberry pi has been criticized for
+having close source components
+operating system
+arduino boards are single board
+microcontrollers with firmware and no
+operating system
+a firmware program is a piece of
+software that is installed on hardware
+device
+it doesn't have an operating system but
+it does have a firmware which can be
+programmed using several ides including
+the arduino ide
+raspberry pi operating system for pc and
+mac is dbn with raspberry pi desktop
+it installs a raspberry pi operating
+system desktop on pc or apple mac as
+well as most of the recommended software
+that comes with raspberry pi operating
+system
+now let us look at the specifications
+so we look at the specifications between
+arduino uno r3 and raspberry pi 3 model
+b plus
+so if you look at the system arduino has
+microcontroller system whereas raspberry
+pi has single boarded computer processor
+arduino has avr at mega 328p and
+raspberry pi has broadcom
+ram
+in arduino uno we have ram of 2 kb
+whereas in raspberry pi model 3 b plus
+we have 1gb ram
+clock speed 16 megahertz in arduino and
+1.4 gigahertz in raspberry pi
+execution in arduino single program can
+be executed at a time
+whereas in raspberry pi multiple
+programs can run at a time
+current
+current is 5 milli ampere in both
+arduino and raspberry pi and gpu io pins
+arduino has 20 and raspberry pi has 40.
+and power consumption in arduino is 175
+milliwatt and in raspberry pi it is 700
+milliwatt
+applications
+arduino is used in waving machines
+traffic light countdown timer parking
+lot counter embedded systems home
+automation industrial automation medical
+instrument and emergency light for
+railways
+whereas raspberry pi is used in desktop
+pc wireless usage game servers retro
+gaming machine robot controller stop
+motion camera and time lapse camera
+now let us look at the different types
+of arduino and raspberry pi
+in arduino we have arduino uno
+lily pad arduino arduino mega arduino
+leonardo arduino red board and arduino
+shields
+whereas in raspberry pi
+we have raspberry pi one model b
+raspberry pi one model a
+model b plus model a plus
+then we have raspberry pi zero raspberry
+pi 2 raspberry pi zero w and raspberry
+pi 3 model p
+and we know a raspberry pi which is
+better the arduino and raspberry pi have
+their own set of benefits and drawbacks
+the best option for you will be
+determined by the requirement of your
+project and your budget
+arduino is ideal for automating
+repetitive operations such as opening
+and closing doors turning on and off
+lights and so on
+arduino should be the first pick if your
+project has any repeating elements and
+just requires generating output
+depending on sensory inputs
+raspberry pi is ideally suited for
+complex activities such as controlling
+complex robots weather monitoring and
+internet publishing among others
+if your project necessitates advanced
+functionality as well as internet access
+then the raspberry pi is the option
+so with that we have reached the end of
+this video thank you so much for being
+here keep learning and stay tuned to
+simply learn
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

@@ -1,0 +1,235 @@
+welcome to the world of data
+transformation and integration in
+today's fast-paced digital landscape
+businesses face a daunting challenge
+extracting valuable insights from
+massive amounts of data enter the edl
+pipeline the backbone of data processing
+and analytics in this tutorial we will
+embark on an accelerating Journey
+unveiling the secrets of building a
+powerful ETL pipeline whether you are a
+seasoned data engineer or just starting
+your data driven Adventure this video is
+your gateway to unlocking the full
+potential of your data together we will
+demystify the edl process step by step
+we'll dive into the extract phase where
+we retrieve data from multiple sources
+ranging from databases to apis and then
+we'll seamlessly transition into the
+transformation phase where we clean
+validate and reshape the data into a
+consistent format but wait there's more
+we will explore Cutting Edge techniques
+for handling large data sets leveraging
+cloud-based Technologies and ensuring
+quality we aim to equip you with tools
+and knowledge to create robust and
+scalable ETL pipelines to handle any
+data challenge so buckle up and get
+ready to revolutionize your data
+workflow join us in this accelerating
+journey to master the art of ETL
+pipelines having said that if an
+aspiring data analyst looking for online
+training and certifications from
+prestigious universities and in
+collaboration with leading experts then
+search no more simply learns
+postgraduate program in data analytics
+from Purdue University in collaboration
+with IBM should be a right choice for
+more details use the link in the
+description box below with that in mind
+over to our training experts hey
+everyone so without further Ado let's
+get started the PTL pipeline so ETL
+basically stands for extract transform
+and row so ETL pipelines fall under the
+umbrella of data pipelines a data
+pipeline is simply a medium of data
+extraction filtration transformation
+exploiting and loading activities
+through which the data is delivered from
+producer to Consumer to make it a little
+simpler the data is produced in two type
+let's say you run a vehicle showroom and
+you are being a data producer so the
+data that you produce is very less and
+that could be basically fit into an
+Excel sheet this type of data might need
+update once in 24 hours or based on your
+audit cycle here we call it match data
+and this data is processed using the
+oltp model and batch processing tools
+but now let's say you're running an
+entire vehicle manufacturing plant now
+the data you're dealing with is
+voluminous and includes various types of
+data it can be structured data
+understood semi-structured data ranging
+from space inventory to all the way up
+to robotic assembly sensors data based
+on requirements this type of data needs
+updates maybe every hour every minute or
+even every second such type of data is
+called real-time data and needs
+real-time data streaming Frameworks and
+the data is processed using o l a p
+models now ETL is involved in both these
+approaches now let's dive in and
+understand what exactly is an ETL
+pipeline ETL stands basically for
+extract transform and load and
+representing these three core steps in
+data integration and transformation
+process let's dive into each phase and
+explore their significance firstly
+extract the first step in ETL pipeline
+is extracting data from various sources
+these sources can range from relational
+databases they data warehouses apis or
+even streaming platforms the goal is to
+gather raw data and bring it into
+centralized location for further
+processing tools like Apache Kafka
+Apache nifi or even custom scripts can
+be used to perform the extraction
+efficiently next is transform once the
+data is extracted it often requires a
+significant cleaning validation and
+restructuring this is transformation
+phase the transformation phase ensures
+that the data is consistent standardized
+and ready for analysis Transformations
+can include tasks such as data cleansing
+filtering aggregating joining or
+applying a complex and business rules
+tools like Apache spark Talent OR python
+libraries like pandas are commonly used
+with these Transformations lastly we
+have the load phase the final step is
+loading the transform data into Target
+systems such as data warehouse data lake
+or database optimized for analysis this
+allows business users and analysts to
+access and query the data easily loading
+can inboard batch processing or
+real-time streaming depending upon the
+requirements of the Business
+Technologies like Apache Hadoop Amazon
+redshift or Google bigquery are often
+employed for efficient data loading now
+that he understood the core phases let's
+explore some key Concepts and best
+practices for building robust ETL
+pipelines firstly data quality ensuring
+data quality is crucial for Reliable
+analysis implementing data validation
+checks handling missing values and
+resolving data and consistencies are
+vital to maintaining data Integrity
+throughout the pipeline next is
+scalability as data volumes grow
+exponentially scalability becomes
+essential distributed computing
+Frameworks like Apache spark enable
+processing lowest data setting value
+allowing the pipelines to handle
+increasing data loads efficiently
+thirdly we have error handling and money
+train robust error handling mechanisms
+such as retry logging and alerting
+should be implemented to handle failures
+gracefully additionally monitoring tools
+can provide real-time insights into
+pipeline performance allowing quick
+identification and resolution of issues
+next we have incremental loading for
+continuously evolving data sets
+incremental loading strategies can
+significantly improve pipeline
+efficiency rather than processing the
+entire data set each time only the new
+or modified data is extracted and
+transformed reducing processing time and
+resource consumption and lastly we have
+a data garments and security
+incorporating data gun statuses and
+adhering to security protocols is
+crucial for protecting sensitive data
+and ensuring compliance with regulations
+like gdpr or hip AAA now that we have
+covered what exactly is ETL and ATF
+stages and also the best practices for
+18 pipelines less proceeding with
+understanding the popular ETL tools so
+the first one amongst the popular ETL
+tools is the Apache airflow Apache
+airflow is an open source platform that
+allows you to schedule Monitor and
+manage complex workflows Apache airflow
+provides a red set of operators and
+connectors enabling seamless integration
+with various data sources and
+destinations next is Talent a
+comprehensive ETL tool that offers a
+visual interface for Designing data
+integration workflows Talent provides a
+vast array of pre-built connectors
+Transformations and data quality
+features making an ideal choice for
+Enterprises and lastly we have
+Informatica Informatica is a widely used
+Enterprise grade ETL tool that supports
+complex data integration scenarios Power
+Center offers a robust set of features
+like metadata management data profiling
+and the data lineage and powering
+organizations and with that we have
+reached to the end of the session on ETL
+pipeline should you have any queries or
+concerns regarding any of the topics
+discussed in the session or if you
+require the resources like PPD or any
+other resources function pre-learn then
+please feel free to let us know in the
+comment section below and our team of
+experts will be more than happy to
+resolve all your queries at the earliest
+until next time thank you for watching
+stay tuned for more from Simply learn we
+have reached the end of your session on
+the full data analytics course should
+you need any assistance PPT project code
+and other resources used in this session
+please let us know in the comment
+section below and a team of experts will
+be happy to help you as soon as possible
+until next time thank you and keep
+learning stay tuned for more from Simply
+learn
+staying ahead in your career requires
+continuous learning and upskilling
+whether you're a student aiming to learn
+today's top skills or a working
+professional looking to advance your
+career we've got you covered explore our
+impressive catalog of certification
+programs in Cutting Edge domains
+including data science cloud computing
+cyber security AI machine learning or
+digital marketing designed in
+collaboration with leading universities
+and top corporations and delivered by
+industry experts choose any of our
+programs and set yourself on the path to
+Career Success click the link in the
+description to know more
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
+foreign

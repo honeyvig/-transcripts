@@ -1,0 +1,172 @@
+hi everyone welcome to the simplyland
+youtube channel this session will be
+about see python before we begin if you
+love watching tech videos subscribe to
+our channel and hit the bell icon to
+never miss an update
+in this session you will learn about
+what c python is
+next you will come to know whether
+python is interpreted or compiled
+language
+further you will know about the history
+of c python and learn about the basics
+of source code of c python
+you will understand the working of c
+python and know why c python written in
+c and not python
+let's start with c python
+the default implementation of the python
+programming language is c python and it
+is one of the python runtimes
+it is directly downloaded from
+python.oig in programming language c and
+it also executes the programming
+language python let's know about its
+history
+so the first version of c python was
+released in 1994 by the python developer
+community
+now let's brush up some basic concepts
+first one is the python programming
+language it is a high level general
+purpose programming language if we talk
+in general the programming language only
+describes how to express yourself to the
+interpreter
+that is the program which accepts the
+python code
+the next is implementation
+it is all about how the interpreter was
+written specifically in what language
+and what it ends up doing the next is
+machine code machine code it is set of
+instructions that directly gets executed
+by the cpu
+almost all the high level languages such
+as c translate the source code into
+executable machine code with the help of
+compilers loaders and linkers
+the next concept we'll learn is bytecode
+bytecode it's the code that is processed
+by a program usually referred to as a
+virtual machine rather than the real
+computer machine
+and moreover the machine code is much
+faster as compared to bytecode but
+bytecode is portable and secure as
+compared to machine code
+now let's get to know whether python is
+interpreted or compiled language
+we have read that python is an
+interpreted language but the truth is
+that it is both compiled and interpreted
+language
+before moving ahead let's brush up the
+concepts of compilation and
+interpretation first we'll start with
+compilation
+it's the process in which the source
+code is translated into the machine
+readable code or it serves as the input
+to another compiler or interpreter it
+takes whole code file as an input the
+code is translated once into object code
+and can be run many times it will not
+execute the machine readable code it
+produced
+the next we'll learn about is
+interpretation
+interpretation it's the process that
+takes a single line of code at a time
+and executes it
+interpreter executes the instructions
+specified in the source code while the
+program gets executed now we will see
+both compilation and interpretation in
+one diagram
+many programming languages don't compile
+to actual machine code but to a byte
+code
+the compiler first compiles the source
+code to an intermediate language called
+bytecode which is the low level platform
+independent representation of the source
+code
+the virtual machine that is interpreter
+then takes the byte code and executes it
+now let's move ahead and see some basic
+concepts of source code of c python
+the c python source distribution comes
+with a whole range of tools libraries
+and components
+to compile c python from the source code
+you need a c compiler and some build
+tools according to your os
+to download a copy of the c python
+source code you can use git to pull the
+latest version to a working copy locally
+now let's understand the working of c
+python c python ends up producing byte
+code
+which is python specific and then it
+executes it
+the reason to convert python code to
+bytecode is because it's easier to
+implement an interpreter if it's look
+like machine instructions
+but it isn't necessary to produce some
+byte code prior to execution
+so we will understand this with the help
+of an example
+first the compiler receives the source
+code it then checks the syntax of each
+line in the source code if the compiler
+encounters an error it holds the
+translation process with an error
+message else if the transaction is well
+formatted then it translates the python
+source code into a special low-level
+intermediary language called bytecode
+this byte code is stored in dot pyc
+files that is hidden in a directory and
+cached for execution and only understood
+by c python bytecode is sent to the
+python virtual machine that is pvm
+python virtual machine is the part of
+the python system that actually runs the
+python code
+that is in the format of white code it
+takes the bytecode instructions one by
+one and executes its section
+bytecode along with its input and
+library modules is given as the input to
+the pvm that is python virtual machine
+python virtual machine executes the byte
+code and if any error occurs it displays
+an error message that would be the
+runtime error otherwise if there is no
+error in execution it results in the
+output now let's see why c python is
+written in c and not in python
+as c python follows source to source
+compiler model
+these source to source compiler models
+are first written in another language
+which is already possessing a compiler
+we have a very good example of go
+language first co-compiler was based on
+c programming language as when go could
+be compiled the compiler was rewritten
+in go
+with that we have come to the end of
+this session i hope it was interesting
+and informative if you liked it please
+let us know in the comment section below
+also do subscribe to our channel and
+stay tuned for more from
+simple hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

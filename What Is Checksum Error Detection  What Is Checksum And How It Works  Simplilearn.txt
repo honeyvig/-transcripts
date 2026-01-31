@@ -1,0 +1,159 @@
+foreign
+between multiple devices over the
+network channel we need algorithm to
+control the error and the Damage Done to
+the data being transferred over the
+network channel
+where check some place an important role
+hi guys and welcome to yet another
+interesting video by simply learn but
+before we begin if you love watching
+Tech videos subscribe to our Channel and
+hit the Bell icon to miss an update from
+us
+now without further Ado let's take a
+look at the agenda for today's session
+to begin with we will look into what is
+checksum
+continuing with why to apply checksum
+method in a data Exchange
+continuing with working steps involved
+in the checksum
+and in the end we will look at a solved
+example for the same
+now let's take a look at the first
+setting that is checksum
+the checksum is one of the most applied
+error detection method in the network
+channel
+and is a bit based format detection
+method
+the checksum uses checksum generator on
+the sender side to form the checksum
+method and the checksum checker on the
+receiver side to check whether this an
+error in the data or not
+let's continue with the next setting
+that is why to apply checksum method
+using the checksum method at the center
+side the checksum value is added to the
+original data to being transferred as an
+error detection method whereas at the
+receiver side it decodes the incoming
+data from the sender side according to
+the checksum method
+to detect any changes in the given data
+now let's move on to the working steps
+involved in the checksum method
+there are various steps involved in the
+checksum method let's take a look at the
+first step that is the first step begins
+at the sender site where we divide the
+original data into K Paths of n Bits
+continuing with adding all the cave
+blocks we have obtained
+then the addition result is complemented
+using one's complement
+the data now obtained is known as the
+checksum value
+next let's look at the step two
+data transmission after we have received
+the checksum value from the checksum
+method we will add it to the front of
+the original data and transfer it to the
+network channel to the receiver site
+now step three
+step three begins at the receiver site
+that is
+it will divide that is the receiver side
+will divide the obtained original data
+plus each XM value into clay box
+and then add all the K blocks using
+addition
+after that we will complement the
+obtained data
+if the complement of 1 comes out to be
+0.
+that is no errors are received in the
+data
+and the receiver will accept the data
+whereas for case 2 if the result is not
+0 the received data is damaged
+so the receiver will discard this data
+and request for re-transmission of data
+from the sender side
+now after understanding all the points
+regarding working
+of the checksum method let's take a look
+at a solved example to better understand
+all the points
+the question is for the given data
+perform the checksum method
+this is how we divided all the four
+parts
+each of these represents a key block
+that is four blocks and eight bits in
+each of the block that is n Bits
+now for the first step that is at the
+sender side
+we will add all the given data
+so the value would come out to be one
+zero zero zero that would be 1
+0 1 0 0 would be one
+0 0 1 1 would be one carry 0 so 1 carry
+plus one means zero plus one carry again
+one carry plus one means zero and one
+carry again
+one zero one that is one carry 0 plus 1
+plus 0 means one so one carry is over
+this side
+one plus zero is one one plus one is one
+carry zero zero plus zero zero zero plus
+zero is zero and zero and we have one
+carry over here
+so the obtained data would be 1 0 with
+extra bit as this
+now to resolve this issue we will now
+add the extra carry to the obtained data
+from the addition part that would be
+1 0 1 0 0 1 0 0. now
+add the sender side we will do one's
+complement for the obtained addition
+value that would come out to be one one
+zero one one zero one zero that is the
+checksum value
+now this value addition to the original
+data will be shared to the receiver side
+where at the receiver side we will again
+perform the addition method
+and the value comes out to be
+this along with two digits of extra bit
+that is the carry again similarly we
+will add this carry to the addition
+value and get the new data that is all
+ones now again going by the steps we
+have to perform one complement for this
+value obtained that comes out to be all
+zeros that means the checksum value is 0
+at the receiver side which indicates
+that there are no errors in the received
+data by the receiver side
+with this we have completed all the
+points regarding working of the checksum
+method now to better understand all the
+steps let's take up a quiz
+that is for the given data find the
+checksum value
+where the given options can be one of
+them you can give your answers in the
+comment section
+if you have any questions regarding the
+topic you can ask them in the comment
+section
+thank you for watching
+[Music]
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

@@ -1,0 +1,337 @@
+hey everyone welcome to simply learn's
+youtube channel in this session we will
+discuss what is an algorithm but before
+we begin let me tell you guys that we
+have daily updates on multiple
+technologies if you're a tech geek in a
+continuous hunt for latest technological
+trends then consider getting subscribed
+to our youtube channel and don't forget
+to hit that bell icon to never miss an
+update from simply done
+now without further ado let's get
+started with the agenda for today's
+session
+first we will get started with what is
+an algorithm
+followed by that we will look into the
+characteristics of algorithm
+next we will learn how to write an
+algorithm
+moving ahead we will look at algorithm
+analysis and algorithm complexities
+after that we will discuss the
+advantages and disadvantages of
+algorithms and finally we will see some
+differences between algorithms and
+programming
+i hope i made myself clear with the
+agenda now let's get started with the
+first point that is what exactly is an
+algorithm
+how does algorithm work in real life
+so we'll have a use case here
+on my screen we have a lady and she is
+shreya shreya wants to make some tea and
+for that she is following some steps
+so the first step is she'll take a pan
+and fill it with water and place it on a
+gas stove
+followed by that the second step is
+she'll make sure that the water comes to
+a nice boil and then she adds some tea
+leaves and sugar followed by step 2 we
+have step 3 where she'll allow the leaf
+to be fully expanded and she'll add some
+milk after that
+next we have the stefo where she will
+wait for the tea to come for a good
+decent boil
+next we have step 5 where she'll turn
+off the gas and she'll take the pan off
+from the stove and the tea is ready to
+get filtered and lastly we have the step
+6 where she is all set with the tea
+in computer science an algorithm is a
+method or set of rules that we must be
+following to perform some specific
+calculations or other problem solving
+operations
+as a result an algorithm is a collection
+of rules or instructions that govern how
+a work needs to be conducted step by
+step to achieve the desired results to
+accomplish a task
+we first provide some input and then
+follow a sequence of steps to acquire
+the required outcome of the input so
+that is the fundamental definition of an
+algorithm and we also had a use case and
+now we will move ahead and understand
+the characteristics of algorithms
+so basically we have six characteristics
+of algorithm so the first one is it
+should be clear and unambiguous the
+second one is that it has to be well
+defined inputs and the third one is that
+it has to be having well-defined outputs
+as well the fourth property of an
+algorithm is its feasibility followed by
+that
+finiteness and finally we have language
+independence
+now we will look into each one of the
+characteristics in detail so first we
+have clear and unambiguous so this
+statement is the one which states that
+the algorithm should be straightforward
+simple and easily readable
+each one of its steps should be distinct
+in every way and lead it to a single
+conclusion
+so the next one is it should be having
+well-defined inputs so this means that
+an algorithm should indicate what output
+can be expected as well as the input
+should be properly well-defined now we
+have the third one similarly we should
+also have well-defined outputs so the
+well-defined output characteristics of
+an algorithm means that the algorithm
+must clearly indicate what output can be
+expected as well as the output should
+also be well defined followed by the
+third characteristic we have the fourth
+characteristic that is the finiteness of
+algorithm so the finiteness of algorithm
+says that the algorithm must be finite
+and it must not result in infinite loops
+or similar situations
+so followed by the fourth one we have
+the fifth characteristic that defines
+about the feasibility of an algorithm
+so feasibility of an algorithm states
+that the algorithm must be really simple
+generic and practical
+it must be able to be executed with
+resources available
+now the last characteristic of the
+algorithm is being independent of the
+language
+so it means that the algorithm should be
+defined in such a way that it is
+completely independent of the language
+it must be simple instructions that can
+be implemented using any programming
+language
+so these were the six major
+characteristics of algorithm now let's
+move ahead and understand how to write
+an algorithm
+writing an algorithm does not have any
+hard and fast rules
+next algorithms are never created to
+support a specific programming language
+as we all know algorithm should be
+capable enough to support the
+conditional statements such as if if
+else switch etc
+an algorithm should be capable enough to
+execute some of the conditional
+statements such as if if else switch etc
+and also it must be capable to execute
+the iterative statements such as for
+loop while loop do while loop etc
+we usually create algorithms in a
+step-by-step manner however this isn't
+always the case
+after the problem domain has been well
+defined algorithm writing is a procedure
+that is carried out
+we build an algorithm to find a solution
+to a problem a problem can be resolved
+in a variety of ways let's look at an
+example of how to write an algorithm
+consider the following scenario we need
+to create an algorithm to determine the
+largest number among the three given
+numbers x y and z as a result the
+initial solution to the problem can be
+written in this manner so we begin with
+reading all the three numbers and in the
+second step we will have a condition
+that says if x is greater than y we will
+proceed to step four else we will
+proceed to step 5.
+next in step 4 we establish a condition
+that if x is greater than z then x is
+the largest of the three numbers
+otherwise z is the largest
+if y is greater than z z will be the
+greatest number otherwise y will be the
+largest number amongst all the three in
+step five
+and the procedure will be terminated
+let's have a look at what the next
+solution has to offer in this algorithm
+we begin by reading all the three
+variables then compare all the three
+numbers in the third step to determine
+the largest number which is if x is
+greater than y then there is another if
+else statement that states that if x is
+greater than y then x is largest
+otherwise z is the largest
+then this if else statement which says
+that if y is greater than z then y is
+greater otherwise z is the greatest of
+the three numbers so this is how we have
+multiple solutions to the same problem
+so after discussing these solutions we
+will move ahead and understand algorithm
+analysis
+the algorithm may be studied in two
+levels first before it is made and then
+after it is created the two analysis of
+an algorithm are as follows the first
+one is priori analysis and the second
+one is the post analysis so first we
+will talk about the priori analysis
+priori analysis refers to the
+theoretical analysis of an algorithm
+performed before its implementation
+before implementing the algorithm other
+parameters such as processor speed might
+be considered
+which does not affect the implementation
+component next we will talk about post
+analysis
+a practical analysis of an algorithm is
+called as posterior analysis and it
+utilizes any computer language to build
+the algorithm the purpose of this
+analysis is to determine how much time
+and space the algorithm takes to operate
+now after being understood the algorithm
+analysis we will be able to comprehend
+the algorithm complexity two methods can
+be used to assess the algorithm
+complexity the first one is time
+complexity which states that the amount
+of time required to finish an
+algorithm's execution is known as its
+time complexity
+followed by time complexity the other
+one is the space complexity which is
+calculated by the quantity of space
+required to solve a problem and produce
+an output of space complexity of an
+algorithm
+let's take a closer look at these
+complexities
+now we will begin with time complexity
+of an algorithm the big o notation is
+used to express an algorithm's time
+complexity the asymptomatic notation is
+used to depict temporary complexity of
+big o notation
+the time complexity is mainly determined
+by counting the number of steps required
+to complete the task
+let's take a look at an example to
+understand this time complexity in a
+much better way
+if we want to find out a multiplication
+of n numbers we can do it by executing a
+loop from 1 to n then calculating
+multiplication when the loop ends then
+multiplication holds the n numbers
+multiplication and last we return the
+calculated multiplication
+the loop statements time complexity will
+be at least n and when the number of n
+increases the time complexity will also
+increase
+while the code's complexity that is
+returns multiplication will remain
+constant because its value is unaffected
+by the value of n and it will obtain the
+result in every single step
+next we will discuss about space
+complexity which is expressed with big o
+notation just as time complexity
+these four items are stored in space
+complexity it initially saves program
+instructions then stores constant values
+then stores variable values and finally
+it keeps track of function cells jumping
+statements and so on the sum of
+auxiliary space and input size is used
+to calculate space complexity the extra
+space or temporary space used by an
+algorithm is referred to an auxiliary
+space after learning about algorithm
+complexity we will look at some of the
+algorithms pros and cons so let's start
+with the advantages of algorithms
+firstly algorithms are easy to
+understand
+next algorithms are step-by-step
+representation of a solution and lastly
+the problem is broken down into smaller
+bits or steps in an algorithm making it
+easier for the programmer now an
+algorithm also have various drawbacks
+one of which being it takes long time to
+write hence it is time consuming
+second con of the algorithm is
+algorithms make it harder to demonstrate
+branching and looping statements
+so followed by the advantages and
+disadvantages of algorithms we now enter
+into the final segment where we discuss
+the differences between algorithms and
+programming so the first difference is
+that
+an algorithm is a type of programming on
+the other hand a program is more
+directly associated with the computer
+performing one or more tasks but an
+algorithm is more of a notation a
+technique for solving a problem
+now let us discuss the second difference
+an algorithm can be decoded or run by a
+human whereas the program is only run or
+decoded by a set of compilers of the
+computer
+now the third difference
+basically an algorithm is a design of
+the solution to the problem
+here we can only analyze the solution
+but we can never run it
+but whereas on the other hand
+programming is completely a different
+ballgame here you can directly implement
+a certain phase or an entire program and
+test the programs and get an output
+so the fourth and the last difference
+between an algorithm and programming is
+an algorithm is written using natural
+human vocabulary
+whereas programs are written using any
+programming language such as c c plus
+plus java python etc
+now with that we have come to an end of
+this tutorial on what is an algorithm if
+you have any queries regarding the
+topics covered in this session then
+please feel free to let us know in the
+comment section below and our team of
+experts will be happy to resolve all
+your queries until next time thank you
+stay safe and keep learning
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

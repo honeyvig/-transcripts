@@ -1,0 +1,298 @@
+do you know Once Upon a Time Tesla the
+electric car company faced the challenge
+with their production processes they
+were building incredible electric cars
+but managing their vast Fleet of servers
+and machines was becoming a nightmare
+every time they needed to update
+software or configure new systems it was
+tedious and errorr process then they
+discovered anible a magical tool for
+automating tasks with anible Tesla could
+write simple scripts to Define how they
+wanted their servers to be set up and
+managed it was like having a digital
+Army of robots doing all their work so
+guys whenever Tesla needed to deploy new
+software or make changes to their
+infrastructure they simply ran their
+anible scripts and everything was done
+automatically what an amazing in demand
+automation tool nowadays companies are
+looking for candidates who have
+knowledge of anible and they are also
+paying them very good amount of money so
+considering this we'll be covering
+anible in today's tutorial now before we
+move on and learn more about it I
+request you guys that do not forget to
+hit the Subscribe button and click the
+Bell icon for further
+updates craving a career upgrade
+subscribe like and comment
+below dive into the link in the
+description to FastTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back just a quick info guys if you are
+interested in cloud computing and devops
+then simply learn has got you covered we
+have a professional certificate program
+in cloud computing and devops in
+partnership with e ICT Academy IIT ghati
+so with our professional certificate
+program in cloud computing and devop
+you'll be learning about Cloud
+infrastructure devops and also hands-on
+experience on various real world
+projects
+so hurry up now and join the course link
+the course link is mentioned in the
+description box understand the agenda
+for our today's session so guys first we
+are going to start with what is anible
+moving ahead we will discuss about how
+does anible works then we will discuss
+about benefits of using anible and then
+we are going to conclude our session by
+installing anible on Docker so this is
+agenda for our today's session so let's
+move on so guys as you can see all over
+here I am on the official anible
+documentation but the question is why
+have I opened this documentation so
+right this is official documentation by
+the team of anible and I would always
+want you to refer this documentation
+while learning anible guys anible is a
+versatile automation tool tailored for
+it professionals which enables tasks
+such as application deployment
+workstation serw updates Cloud
+provisioning configuration management
+and inra service orchestration notably
+stands out for the agentless nature
+requiring no additional security
+infrastructure for deployment which
+simplifies its use and management now
+what are the benefits of using anible if
+I talk about the benefits of using
+anible anible offers several benefits
+the first one is agentless architecture
+anible doesn't require agents to be
+installed on managed nodes thus reducing
+complexity and potential security
+vulnerabilities this agentless approach
+simpli FES deployment and management
+moving ahead we will also discuss about
+what are manage nodes and control nodes
+then there is a crossplatform support
+anible can manage diverse environments
+including Linux Unix and windows
+subsystem as well as network devices and
+Cloud platforms providing unified
+solution for automation across different
+infrastructures third one is scalability
+whether managing handful of servers or
+large scale infrastructure and scales
+effectively it can handle thousands of
+node with A's allowing organizations to
+automate task across their entire
+environment fourth one is integration
+anible integrates seamlessly with
+existing tools and Technologies
+including Version Control Systems like G
+Monitoring Solutions and continuous
+integration delivery pipelines enhancing
+the overall automation workflow now You'
+be wondering how does anible works so
+guys in anible there are two main types
+of computers the first one is control
+node and second one is manage nodes the
+control node is where anible is
+installed and operated it's essential to
+have one control node though having a
+backup control node is also possible on
+the other hand manage nodes are the
+devices or systems controlled and
+managed by the control node anible
+operates by establishing connection to
+these nodes whether they are servers
+clients or other entities you are
+configuring it then sends small programs
+known as anible modules to these nodes
+these modules are executed over SSH
+which stands for secured server shell
+and are also removed after the
+completion the key requirement for this
+process is that anible control node has
+a login access to the managed nodes
+while SSH keys are commonly used for
+Access and other authentication methods
+now we are going to install anible on
+the docker so guys to install anible
+within a docker the first thing that you
+need is a vs code so guys to install a
+text editor you can go directly to the
+vs
+code so guys you can see this is
+official website of the vs code and from
+here you can download your favorite text
+editor it runs very smooth and later on
+what you have to do guys you have to go
+to the docker's official website so you
+can see this is the first link of the
+official Docker and from here you can
+download Docker desktop on your system
+so guys if you don't know how to install
+Docker you will see a video in the link
+just click on that and you will be very
+easily navigated to installing Docker on
+your Windows system now after you have
+installed vs code and Docker The Next
+Step comes up installing anible within
+Docker container so it's certain thing
+like you are installing a package or a
+virtual machine and our virtual machine
+is acting as a container which is on a
+Docker platform so guys as you can see
+all over here so here's a file I have
+created so this is the folder anible and
+inside this I have created the docker
+file so your first step would be to
+create a Docker file now after this you
+have to ensure that a Docker is
+installed on your host machine okay then
+after creating a Docker file you have to
+specify the instructions for building
+your anible container so here's a basic
+example like here you can see from
+Ubuntu latest so I have added install
+dependencies app.get update app. get
+install app. wi software properties
+common add repository yes update PPA
+anible and app get installed by so as
+you can see guys I have written the
+script all over here okay now let us try
+to understand this script so you can see
+all over here the first thing that is
+from one to latest what does it mean
+this sets the base image for the docker
+file it indicates that the docker image
+being built will be based on the latest
+version of Ubuntu operating system
+available on the docker Hub next thing
+is run appt get update so guys this line
+runs the app get update command inside
+the docker container to update the
+package list from the repositories and
+the and and symbol which you are seeing
+is a line continuation character in the
+docker file which allows a command to
+span up to multiple lines third command
+as you can see all over here is written
+apt get install by software so basically
+what's it's doing this line install the
+software properties common package using
+App get this package provides an
+abstraction of used app repositories it
+often requires for adding PPS which
+means that personal package archives to
+the system in the next line you can see
+I have written apt ad repository yes you
+have to update the PPA anible and anible
+and add so this basically what it does
+it adds the anible PPA means anible
+personal package archive to the system
+ppas are kind of additional software
+repositories for Ubuntu this particular
+PPA provides the latest stable release
+of anible and you can see there's a yes
+flag which automatically answers yes to
+the prompts and update and ensures that
+the package lists are updated after
+adding to the repository the app get
+install why anible this line installs
+anible using appg anible is a
+configuration management and automation
+tool so guys this line installs anible
+using appkit now after all anible is a
+configuration management and automation
+tool so after building the docker image
+using the docker file now we have to run
+this container using the docker run
+command and it follows with the it flag
+okay so let me show you so guys as you
+can see I have already been navigated to
+my directory of anible so you can see
+docker build t t is argument okay and a
+container a container is a name so let
+us say a name as uh demo container now
+we are going to build our image first so
+I'm typing this Command right click on
+this and let me show you what is
+happening so as you can see it started
+building our anible container all over
+here inside the docker now we have
+install the anible all over here now the
+next step is to run our Docker container
+which has installed anible image so just
+type this command Docker run and it
+anible container bin bash let me explain
+you this command so guys after building
+the docker image using this Docker file
+you can run a container from it using
+the docker run command the it flag
+allocates the pseudo TTY and keeps the
+STD in open even if not attached
+allowing you to interact with the
+container shell /bin/bash this specifies
+that you want to start a bash shell
+session inside the container now when
+you're inside the container you can
+verify that anible is installed by
+running anible version now we'll also do
+that but before that let's run our
+container so you can see now we are
+inside a bash container or bash sh and I
+want to check whether our anible is
+installed or not so
+I'm going to type anable version so you
+can see that our latest version is
+3.12 and you can see the python version
+it's also saying
+3.12.0 so guys congratulations we have
+successfully installed our anible in the
+docker so guys this was just a basic
+overview of anible and what it has the
+capabilities for you can do a lot of
+things with anible and automate a lot of
+processes like configuration management
+you can create your playbooks and just
+run it so in that way it automates your
+process and it makes your workflow kind
+of easier so guys thank you for watching
+this video that was all for today's
+video I hope so you would have enjoyed
+our today's video on an staying ahead in
+your career requires continuous learning
+and upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in Cutting Edge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

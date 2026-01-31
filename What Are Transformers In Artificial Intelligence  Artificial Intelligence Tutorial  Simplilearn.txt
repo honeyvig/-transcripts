@@ -1,0 +1,419 @@
+hello everyone and welcome to today's
+video on Transformers in artificial
+intelligence at simply learn in this
+tutorial we are going to explore one of
+the most groundbreaking Innovations in
+artificial intelligence which is the
+Transformer model these models have
+revolutionized natural language
+processing enabling remarkable
+advancements in tasks like text
+generation translation and question
+answering throughout this tutorial we
+will unravel the architecture and
+mechanisms behind Transformers but
+before we move on I request you guys
+that do not forget to hit the Subscribe
+button and click the Bell icon for
+further updates now before we move on
+and learn more about Transformers there
+is just Quick Info guys craving a career
+upgrade subscribe like and comment
+below dive into the link in the
+description to FasTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back you can boost your career with this
+a and ml postgraduate program in
+collaboration with Perdue University and
+IBM you're going to learn in demand
+skills such as machine learning deep
+learning NLP computer vision
+reinforcement learning generative Ai and
+many more so hurry up now and join the
+course the course link is mentioned in
+the description box so guys let's start
+with what is Transformer imagine
+Transformer like a supercharged version
+of the productive text feature on your
+phone while your phone may suggest words
+like solely based on last few typed a
+Transformer considers entire context of
+what's being written this means it can
+generate text that makes sense rather
+than just predicting the next word in
+the isolation so while your phone may
+offer certain suggestions that don't
+always create coherent sentences a
+Transformer keeps a track of bigger
+picture producing text that flows
+naturally and make sense think of a
+transformer like a really smart version
+of the predictive text feature on your
+phone when you are typing a message your
+phone suggests words based only on what
+you have typed recently but a
+Transformer goes beyond that it looks at
+the whole message you are writing
+understanding the context and suggesting
+words that fit well together so while
+your phone suggestions might sometimes
+feel random or out of place a
+Transformer helps you to write messages
+that make sense and sounds natural so
+guys you would be wondering what is your
+technical definition of Transformer a
+Transformer model is like a super smart
+neural network that can change one type
+of input into another it got its name
+from a 2017 Google paper where
+researchers found a way to teach neural
+network to translate English into French
+really accurately and much faster than
+other methods but what's cool is that
+Transformers turned out to be way more
+useful than just for translation they
+can create text images and even
+instructions for robots they are great
+at understanding relationships between
+different types of data like turning
+spoken instructions into pictures or
+robot commands Transformers are the
+backbone of the big language models like
+chat GPT Google search d and Microsoft
+co-pilot basically anytime you are using
+application that understands human
+language chances are it's using
+Transformer and the secret Source behind
+Transformer is something called
+attention it's like when you pay extra
+attention to certain words in a sentence
+because they help you to understand
+what's going on so guys Transformers use
+attention to focus on important words
+and pieces of data and helping them to
+understand the context better now let us
+move on and understand the architecture
+of Transformer now guys I totally
+understand that you would feel quite
+surprised about how Transformers build
+text word by word especially considering
+that it's not how humans typically form
+sentences or how other machine learning
+models work usually when we are
+communicating we start with basic idea
+then refine it as we go along adding
+more detail and nuances similarly in
+image generation neural network models
+often start with a rough draft and
+gradually improve it until it's just
+right however Transformers take a
+different approach and there's a good
+reason for it it works incredibly well
+despite being different from Human
+thought processes and other machine
+learning method building text word by
+word using Transformers has proven to be
+highly effective one of the main reasons
+of this success is that Transformers are
+exceptionally skilled at keeping track
+of the context they understand the
+overall meaning and flow of the text
+allowing them to choose the preferred
+next word to continue the idea
+seamlessly so even though it might seem
+quite unconventional at first building
+text word by word with Transformers
+yield impressive results because of
+their unparalleled ability to grasp
+context and maintain coherence in the
+generated text but you'll be wondering
+how Transformers are trained the answer
+is with a lot of data all the data on
+the internet in fact so when you are
+typing a sentence hello how are you into
+the Transformer it simply knows that the
+based on the text in the internet the
+best next word is you and if you are to
+give it a more complicated command say
+write a story it may figure out that the
+good next word to use is once then it
+adds this word to the command and
+figures out the next word is upon and so
+on and word by word it will continue
+until it writes a story so let me show
+you an example so guys suppose imagine
+here's a
+command okay say write a
+story so its first response
+will be
+once next command you can say We'll copy
+this then the response will be once
+upon
+similarly it would be expecting right a
+story so the response would
+be once
+Upon a Time okay so a would be there
+then similarly it is going to build the
+word so suppose it's going to expect the
+next
+command and the response would
+be once upon a time
+so you could see first we gave the
+command write a story then we are
+expecting that the response is once next
+command it again gives right a story
+then the response is Once Upon so guys
+as you can see it is building word by
+word and this is how Transformers really
+work now that we know what Transformers
+do let's get started to the architecture
+first time the architecture may seem
+little bit complex but fear not let's
+break it down into its essential
+component the first one that we have all
+over here is tokenization so guys next
+one we have all over here is embedding
+third one we have all over here is
+positional encoding and finally we have
+the Transformer block now let us
+understand each one of them one by one
+so guys let's start with
+tokenization tokenization is indeed a
+fundamental step in natural language
+processing it involves breaking down a
+piece of text such such as a sentence or
+document into smaller units called
+tokens these tokens Can Be individual
+words subwords or even characters
+depending upon the specific tokenization
+strategy used once the input has been
+tokenized it's time to turn words into
+numbers for this we use embedding if two
+pieces of the text are similar then the
+numbers in their corresponding vectors
+are component wise meaning each pair of
+the numbers in the same positions are
+similar otherwise the two pieces of the
+textt are different then the numbers in
+the corresponding vectors are also
+different so suppose we take example in
+this so we see that for right we have
+given a matrix something like this then
+a has a certain Matrix like this then
+story has a certain Matrix like this
+okay so this is how we are storing this
+in a vector format and we are basically
+seeing that the numbers in their
+corresponding vectors should be similar
+to each other you know like like
+component wise which means that each
+pair of the numbers in the same
+positions has have to be similar
+otherwise if two pieces of the text are
+different then the numbers in their
+corresponding vectors are also said to
+be different so this is how the
+embedding works so finally guys we have
+the vectors for each word in a sentence
+and we need to combine them into a
+single Vector to process and in this way
+we will do this by adding them up that
+is called as emitting this this is the
+usual way to do this by adding them up
+one by one for example if we have
+vectors 1 and two and three and four and
+adding them the component gives 1 + 3
+and 2 + 4 which equals to 4 and 6
+something like this
+suppose there's a world called right
+okay and its vectors are something like
+this and a has a vector of say three and
+four now if order to construct the
+sentences we have to sum it up
+so 1 +
+3 2 +
+4 which equals
+to 4 comma
+6 and we could assign something like
+this so the overall Matrix for this
+would
+be okay so this is how Transformers are
+working so this is a usual way basically
+which you can do this okay but here's a
+tricky part if you add the vectors in
+different order we'll also get the same
+result so the sentence is with the same
+word in different order will end up with
+the same Vector representation to fix
+this we use something called positional
+encoding this involves adding a set of
+predefined vectors to the word vectors
+these extra vectors carry information
+about the position of each word in the
+sentence by doing this each sentence
+gets a unique Vector representation even
+if the words are same but in a different
+order for example if you have the words
+like write a story and their vectors are
+adjusted with position informations like
+one A2 and Story 3 so in this way even
+if the words are rearranged the
+resulting vectors will be different
+ensuring that each sentence is
+represented uniquely let me show you
+what I meant so so suppose right has
+given the positional encoding of say
+one okay A has something called
+two and story
+has a positional encoding of
+three right a story okay now so in this
+way like if the words are also
+rearranged the resulting vectors will be
+different ensuring that each sentence is
+represented uniquely so this is how we
+uh tackle that problem okay so position
+encoding is a solution now guys next
+comes attention which addresses a
+critical challenge in this context
+it's common for the same word to have
+different meanings also leading to
+confusion for language models emings map
+words to the vectors without considering
+their specific context so attention is a
+powerful technique that helps language
+models grasp the context consider these
+two sentences say we have the first
+sentence
+as the bank of the
+river okay
+and second word is money in the
+bank now both the sentences contain word
+bank but with different meanings in the
+first sentence it refers to the land
+beside the river while in the second it
+refers to the financial
+institution the computer lacks this
+understanding so we need a way to inject
+context into it other words in the
+sentence can come to our eight in the
+first sentence the and of don't provide
+much of the context similarly in the
+second sentence money helps us to
+understand the context of bank as a
+financial institution in essence
+attention brings words in a sentence
+closure together in a word embedding
+space for instance in the sentence money
+in the bank the word bank would move
+closely to the money similarly in the
+Bank of the river bank would move nearer
+to the river the adjustment allows
+modified word Bank in each sentence to
+capture some context from neighboring
+words however Transformer models utilize
+a more advanced form of attention known
+as multi-head attention here multiple
+embeddings are employed to enhance
+vectors and provide richer context
+multi-head attention significantly boost
+the effectiveness of language models in
+processing and generating text in a
+Transformer comprised of multiple layers
+of Transformer blocks each with an
+attention and feed forward layer it
+functions as a large neural network
+predicting the subsequent word in the
+sentence the Transformer generates a
+score for all the words with higher
+scores indicating greater likelihood of
+being the next word the final stage of
+the Transformer involves soft Max layer
+converting these scores into
+probabilities that's sum of to one the
+words with the highest score correspond
+to the highest probabilities from these
+probabil we can randomly select the next
+word so guys for instance
+say
+if once has a probability of say
+0.5 and
+somewhere has a probability of
+0.3
+and
+there say is a probability of
+0.2 okay so we might need to select the
+next word so guys we can see the
+probability of each word is given so
+once has 0.5 somewhere has 0.3 and there
+is 0.2 so the word with the highest
+probability we are going to select those
+word this becomes the output of the
+Transformer after generating the initial
+text once upon a time there was a by
+repeatedly inputting partial sentences
+into the processes to develop a complete
+story as for post trining despite
+understanding how Transformers function
+there still work has to be done consider
+this scenario you inquire what is the
+capital of Algeria ideally the
+Transformer would promptly respond with
+alers and move forward however since
+Transformers are trained on vast data
+sets like internet they might encounter
+incomplete or irrelevant information for
+instance following the question about
+the algeria's capital Capital the
+subsequent sentence could be another
+inquiry like what is the population of
+Algeria or what is the capital of Bina
+Faso unlike humans who deliberate over
+responses Transformers simply mimic what
+they have learned from their training
+data without considering the
+appropriateness of their answers so how
+do we ensure accurate responses from
+Transformers guys the solution lies in
+post trining similar to teaching a
+person new skills Transformers can
+undergo addition training to excel at
+specific tasks by training Transformers
+on extensive data sets containing
+question and answers we can fine-tune
+their abilities to provide accurate
+responses post training isn't limited to
+question answering task it's also
+beneficial for enhancing performance in
+various other application for instance
+post training can enable Transformers to
+function effectively as chatbots so guys
+that was all for today's video thank you
+for watching this video on what is
+Transformers I hope so you would have
+got a brief idea like how it works and
+what exactly it does till then stay
+updated and keep
+learning staying ahead in your career
+requires continuous learning and
+upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in Cutting Edge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click
+here

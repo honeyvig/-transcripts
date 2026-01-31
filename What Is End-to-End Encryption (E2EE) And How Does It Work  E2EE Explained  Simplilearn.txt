@@ -1,0 +1,226 @@
+hi everyone welcome to Simply Lear have
+you ever noticed how WhatsApp says every
+message is end to endend encrypted but
+do you really know what that means when
+you send a message on WhatsApp it says
+it's protected by end to end encryption
+but what does that actually mean for
+your privacy we'll find this out in this
+tutorial and in today's world data
+security is more important than ever for
+example did you know that in 2020 or 37
+ion records were exposed in data
+breaches imagine all your private chats
+emails and files being open for anyone
+to see scary right that's where end to
+end encryption or E2 comes in it's a
+technology that keeps your communication
+safe from prying eyes even big companies
+like WhatsApp signal and proton mail use
+E2 to make sure only you and the person
+you are talking to can videoo messages
+in this tutorial we'll dive into what
+endtoend encryption is how it works and
+why so crucial for your privacy let's
+get started and learn how E2 keeps your
+Digital Life
+secure craving a career upgrade
+subscribe like and comment
+below dive into the link in the
+description to FastTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back and before we start guys just a
+quick info for you if you are an
+aspiring C C security professional
+looking for online training and
+certification from the prestigious
+universities and in collaboration with
+leading experts to enhance your
+credibility then search no more simply
+learns postgraduate program in cyber
+security from Mi University in
+collaboration with EC Council should be
+your right choice for more details you
+can use the link in the description box
+and B comment so let's get started so
+let's get started with what is
+encryption so encryption is like turning
+your data into secret code to prevent
+unauthorized access so imagine you're
+sending a postcard with a message to a
+friend and that message could be hello
+how are you so anyone who handles the
+post card can read what's written on it
+or if you're sending a message through a
+social media messenger app that can also
+be read but with encryption this message
+is transformed into something unreadable
+like the secret code that is shown on
+the screen so this coded message looks
+like giberish to anyone who intercepts
+it only someone with the right key can
+turn it back into the original message
+so think of the key as a special decoder
+ring and without this ring the message
+remains a jumble of random characters
+this ensures that even if someone
+intercepts your data while it's being
+sent over the Internet they can't
+understand it an encryption it is used
+everywhere in emails messaging apps
+online shopping and banking to keep your
+personal information safe from prying
+eyes and it's like sending a postcard
+inside a loged box that only you and
+your friend can open so now we will
+understand what is end to end encryption
+so end to end encryption or E2 that
+ensures that only the sender and
+receiver can read the messages imagine
+you are sending a secret note to your
+friend you put the note inside a log box
+and only you and your friend have the
+keys to open it as the note travels from
+you to your friend no one else can
+unlock the box and read it not even the
+mailman with end to end encryption your
+message is encrypted on your device
+before it sent this means it turns into
+a code that can't be read by anyone else
+the encrypted message travels securely
+over the internet and can only be
+decrypted by the friend's device which
+has the right key to unlock it even the
+service providers like the company that
+runs the messaging app can't access the
+encrypted data this way your
+communication stays private and secure
+just between you and the person you're
+talking to so now we'll see how end to
+end encryption works so end to end
+encryption uses a system of public and
+private keys to secure messages so now
+we'll see the public key encryption so
+this is when you want to send a message
+and your device uses the recept an's
+public key to encrypt it imagine you
+have a special Lo that anyone can use to
+lock a box but only you have the key to
+unlock it the public key is like this
+lock anyone can use it to encrypt a
+message but only the intended recipent
+can decrypted with your private key and
+then comes the message transmission the
+encrypted message is now jumble of
+unreadable characters that is sent over
+the internet and during transmission
+even if someone intercepts the message
+they can't read it because they don't
+have the private key and now comes the
+private key decryption so when the
+message reaches the recipent the device
+uses the private key to decrypt it the
+private key is like the unique key that
+can unlock the box and reveal the
+original message this process ensures
+that your communication stays secure
+from start to finish even the service
+providers or hackers who intercept the
+message can't read it without the
+private key so your message remains
+private and secure just between you and
+the recipent so now we'll see some of
+the examples of end to end encryption
+services so many popular services use
+endtoend encryption to secure their
+communication for example messaging apps
+like WhatsApp and Signal messenger
+ensure that only you and the person you
+are chatting with can read your messages
+and email providers like proton mail
+uses end to end encryption to keep your
+emails private and the cloud storage
+services like trro protect your files
+from unauthorized access now we'll see
+the benefits of end to end encryption
+end to end encryption provides enhanced
+privacy and security by protecting your
+data from hackers and unauthorized
+access imagine your communication is
+intercepted by someone with ENT
+encryption they can't read your messages
+because they don't have the decryption
+key this level of security ensures that
+your personal information stay safe and
+private Beyond keeping your messages
+secret and to end encryption protect
+sensitiv data like financial information
+personal documents and private photos
+for example when you use WhatsApp to
+send a bank account number or password
+and to an encryption ensures only the
+intended recipent can see it and in a
+world with increasing cyber threats and
+to an encryption acts as a critical
+sheet maintaining trust and Security in
+a digital communication and it's a
+powerful tool that gives you control
+over your privacy in an Ever connected
+world now we see the challenges in
+implementing and to end encryption so
+implementing end to end encryption comes
+with several challenges it involves
+technical complexities that require
+robust cryptographic algorithms and
+secure Key Management additionally end
+to end encryption can impact the
+performance of services as encrypting
+and decrypting data requires extra
+processing power so service providers
+need to balance strong security measures
+with a smooth user experience and now
+we'll have a look on the limitations of
+end to end encryption so while end to
+end encryption protects the content of
+your messages it doesn't protect
+metadata such as who you are
+communicating with the time of
+communication and the frequency of
+messages this information can still be
+accessible to service providers and
+potentially to malicious actors
+additionally there are legal and
+Regulatory considerations as some
+governments and agencies seek access to
+encrypted Communications for security
+purposes so it's important to be aware
+of these limitations when relying on end
+to end encryption for for privacy so
+with that guys we have come to the end
+of this session if you like this session
+please like share and subscribe and you
+have any doubts you can comment down in
+the comment section below till then stay
+safe and keep learning staying ahead in
+your career requires continuous learning
+and upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos turn ner up and get certified
+click here

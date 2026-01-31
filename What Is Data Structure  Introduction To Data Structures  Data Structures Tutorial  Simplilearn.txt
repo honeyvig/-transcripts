@@ -1,0 +1,213 @@
+we live in an information age which
+means data and information are the heart
+of everything we do the id sector in
+which we work requires a lot of data and
+information which is widespread and can
+be stored anywhere as a result the
+question arises as how do we store this
+data so that we can retrieve it quickly
+for the further use so hello everyone
+welcome to the simply learn youtube
+channel in this session we are going to
+discuss an introduction to data
+structures but before we begin let me
+tell you guys that we have daily updates
+on multiple technologies so if you are a
+tech geek in a continuous hunt for
+latest technological trends then
+consider getting subscribed to our
+youtube channel and don't forget to hit
+that bell icon to never miss an update
+from simply learn so without any further
+ado let's get started with the agenda
+for today's session
+first we look at the definition of data
+structures after that we will understand
+why we need data structures later we
+will discuss the different types of data
+structures finally we will look at the
+importance of data structures hope i
+made myself clear with the agenda now
+let's get started with our first concept
+that is what are data structures
+data is an information that has been
+translated into a form that is efficient
+to movement or processing in computing
+as it relates to trades computers and
+transmission media data is an
+information that has been converted into
+binary digital form
+the term raw data refers to the data in
+its most basic digital format after
+defining data let's look at what data
+structure entails a data structure is a
+data organization management and storage
+format in computer science that allows
+for efficient access and modification or
+a data structure is an algebraic
+structure about data that contains a
+collection of data values their
+relationships and their functions or
+operations that can be applied to the
+data
+we will now understand why exactly we
+need data structures now that we have
+already defined what is a data structure
+so let us have a look at some of the
+data structure characteristics the first
+one is each data structure allows data
+to be stored differently following that
+the data structure allows for more
+efficient data search and retrieval then
+specific data structures are chosen to
+solve specific problems last but not the
+least it enables the management of large
+amounts of data such as large databases
+and indexing services such as hash
+tables
+let us now look at some real-world
+examples of data structures
+first and the foremost we have the
+dictionary assume that we're looking for
+the word simply learn in the dictionary
+and we know it begins with the letter s
+so we can search for this word beginning
+with the letter s and then this is an
+example of array data structure
+as a result this dictionary can also
+function like an array data structure
+following by that we have a music player
+example
+if you have a playlist with three songs
+the second song will play after the
+first and the third will play after the
+second so these will be played without
+any interruption because all these three
+songs are linked with each other using
+linked list type of data structure so
+followed by linked list the next example
+we have is the data structures
+the stack of books analogy is a perfect
+example of the real-time working of the
+stack data structure subsequent to that
+assume there is a line of people at a
+ticket window and the person who comes
+first gets the ticket
+this particular movie window queue is an
+example for the real real-time
+implementation of queue data structure
+last but not the least google maps
+google map is the graph data structure
+in which all the cities and states are
+connected if we want to go from one
+place to another there may be many ways
+to do so so we can use some algorithms
+to find the shortest path
+as a result the google map is a perfect
+example for the graph data structure
+working analogy
+following that we will look at some
+different types of data structures in
+this tutorial
+so the first type is the linear data
+structure
+the elements in the linear data
+structure are arranged subsequently one
+after the other they are simple to
+implement because the elements are
+arranged in specific order
+followed by the first type the second
+type is the non-linear data structure
+which we will be discussing a bit later
+so in linear data structures we have
+four different types the first one is
+the array data structure memory elements
+are arranged in a continuous order in
+arrays
+and arrays elements are of same type the
+software program also determines the
+type of elements that can be stored in
+arrays so followed by arrays we have
+linked list link lists are completely
+similar to data structures data elements
+in linked list data structure are linked
+together by a series of nodes
+furthermore each node contains the data
+items as well as the address to the next
+node
+the third data structure is the stack
+data structure elements in a stack data
+structure are stored using lifo
+principle in other words the last
+element stored in the stack is remote
+first in stack operations can only be
+performed in one end namely the top
+and the last data structure is the queue
+data structure
+unlike stack queue data structure
+operates in the fifo principle which
+states that the first element stored in
+the queue is remote first in a queue
+insertion and deletion are carried out
+from opposite ends now we will discuss
+the second type of data structures which
+are the non-linear data structures
+the non-linear data structure is the
+second type of data structure non-linear
+data structures do not have elements in
+any order as opposed to the linear data
+structures instead they are arranged in
+hierarchical order with one element
+connected to one or more others
+so the first one in the non-linear data
+structures is the tree data structure a
+tree data structure is built using nodes
+and edges each element in the tree data
+structure is called as node or vertex
+each vertex or node is connected to the
+other nodes or other vertices using
+edges
+and the second one in the list is the
+graph data structure a graph data
+structure is completely like a tree data
+structure it also has the vertices and
+edges each vertex in a graph data
+structure is connected using edges the
+only difference between a tree and graph
+is that in tree you can have n number of
+vertices but in graph you will have only
+two vertices
+after discussing the graph data
+structure we will move ahead into the
+last segment of this tutorial that is
+importance of data structures so the
+first one data structures are widely
+used in almost every aspect of computer
+science both for simple and complex
+computations
+next data structures are used in all
+areas of computer science including
+artificial intelligence graphics big
+data operating systems and much more
+after that the data structures are an
+essential component of many computer
+algorithms because they allow
+programmers to manage data efficiently
+lastly a proper data structure of
+selection can improve the efficiency of
+a computer program or algorithm so with
+this we have come to an end of this
+session on introduction to data
+structures if you have any queries
+regarding any of the topics covered in
+this particular tutorial then please
+feel free to let us know in the comment
+sections below and our team of experts
+will be happy to resolve all your
+queries until next time thank you stay
+safe and keep learning
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

@@ -1,0 +1,261 @@
+hello everyone and welcome to this video
+on Border Gateway protocol by simply
+learn if you visit the website internet
+hyphenmap.net you will be able to see a
+network of websites scattered over plane
+with Blobs of spheres representing each
+website present on the internet with the
+Advent of Internet revolution in the
+early 2000s approximately 175 new
+websites are created every minute so
+around 2 lakh 52 000 new websites are
+created every day worldwide the users of
+the internet are obviously spread across
+the globe and for someone sitting in
+North Thailand trying to access a
+website whose server is set up in Mexico
+it is very important that the access to
+this site in milliseconds but because of
+the geographical distance and latency it
+is very difficult to achieve this still
+when you type a website in your browser
+search console and click enter you are
+redirected to that website in less than
+a second how do you think that happens
+how is it made possible that no matter
+your geographical location if you try to
+access a website thousands of miles away
+you are able to do it in space 8 seconds
+well this is where border Gateway
+protocol comes into play and before we
+begin if you are someone who is
+interested in building a career in cyber
+security by graduating from the best
+universities or a professional who
+elicits to switch careers with cyber
+security by learning from the experts
+then try giving a short to Simply learn
+postgraduate program in cyber security
+with modules from MIT Schwartzman
+College of Engineering the course link
+is mentioned in the description box
+below that will navigate you to the
+course page where you can find a
+complete area of the program being
+offered and if these are the types of
+videos you would like to watch then hit
+the Subscribe button like and press on
+the Bell icon to know me some further
+content so stay with us until the end of
+this video as well we'll transfers
+through the workings of Border Gateway
+protocol so let's get started so let's
+start this video with what is border
+Gateway protocol or bgp bgp is a
+protocol used by routers on the internet
+to figure out the best way to send data
+between different Networks it helps
+routers exchange information and make
+decisions on the most efficient parts to
+send data packets across the internet
+The Internet Is Lost and the amount of
+data that Glides through the internet is
+gigantic so how does bgp Works in that
+so let's understand the working of
+Border Gateway protocol
+the Border Gateway protocol or bgp is
+the internet's routing protocol that
+connects networks worldwide while it may
+seem simple at first but bgp is actually
+complex in a flat local area Network
+online devices can communicate using
+local network addresses and can easily
+connect with each other however when an
+organization has multiple lengths they
+need to interconnect them to connect
+different lens routers are used to
+forward requests between them for
+example if node a wants to reach node C
+on a different Lan the request must go
+through the router that can forward the
+request to the network where node C is
+located this type of routing is
+relatively straightforward and relies on
+internal routing protocols including
+internal bgp within the organization
+however large organizations and isps
+manage connectivity for multiple Network
+sites and location after forming an
+autonomous system while individual
+networks within Nas handle routing for
+their own local traffic a bgp router is
+responsible for directing all the
+inbound and outbound traffic between the
+As and the internet
+the internet consists of numerous
+autonomous systems and bgp ensures that
+packets are properly forwarded between
+them when a bgp router connects to a
+neighboring as router known as external
+bgp it possesses routing tables
+containing information about the
+available paths on the global internet
+so border Gateway protocol offers
+several key benefits that make it an
+indispensable part of the internet
+infrastructure so let's take a closer
+look at these advantages of Border
+Gateway protocol
+the first one is efficient routing bgp
+enables efficient routing by determining
+the best path for data packets to reach
+their destinations it takes into account
+factors like Network performance cost
+and policies set by Network
+administrators
+this ensures that data takes most
+optimal route resulting in faster and
+more reliable communication
+scalability bgp is highly scalable
+allowing the internet to accommodate the
+immense growth of networks and users
+with bgp the internet can seamlessly
+handle the increasing number of
+connected devices and networks ensuring
+smooth operations even as that internet
+expands
+multi-homed connectivity bgp supports
+multi-home connectivity which means that
+an organization can connect to multiple
+internet service providers
+simultaneously
+this provides redundancy and load
+balancing as bgp can automatically
+select the best part for data based on
+factors like available bandwidth and
+network conditions multi-homed
+connectivity enhances Network
+reliability and enables organizations to
+distribute traffic efficiently internet
+traffic control bgp gives organizations
+control over their internet traffic they
+can influence the flow of data by
+setting policies and preferences in the
+routing decisions this allows them to
+prioritize certain paths avoid congested
+routes or direct traffic through
+specific isps or network links with bgp
+organizations have the flexibility to
+optimize their Network performance and
+ensure efficient data transmission
+internet resilience bgp enhances
+internet resilience by quickly adapting
+to network changes and failures if a
+link or a route becomes unavailable or
+congested pgp can reroute traffic
+through alternative paths this Dynamic
+routing capability helps maintain
+connectivity even in the face of network
+disruptions or field use ensuring an
+interrupted communication Global
+connectivity one of the most significant
+benefits of bgp is its role in enabling
+Global connectivity bgp allows networks
+from different countries isps and
+organizations to interconnect and
+exchange routing information this
+collaboration facilitates seamless
+communication and data transfer across
+borders making the internet a truly
+Global Network in conclusion border
+Gateway protocol offers numerous
+benefits that make it an essential
+component of the internet it ensures
+efficient routing scalability multi-home
+connectivity traffic control resilience
+and and of course Global connectivity
+while it's true that bgp offers the
+number of benefits to the user but there
+are a number of issues present with
+border Gateway protocol now let's
+discuss some of the challenges or issues
+that can arise with border Gateway
+protocol
+security risk bgp can be vulnerable to
+security threats such as root hijacking
+or malicious attacks leading to
+potential disruptions or unauthorized
+traffic diversion
+root flap dampening in some cases BJP
+routers may experience root flapping
+where Roots continuously alternate
+between available and unavailable States
+this can impact Network stability and
+routing decisions configuration
+complexity bgp configurations can be
+complex requiring expertise and careful
+planning to ensure proper implementation
+and optimal routing lack of
+standardization although bgp itself is a
+standard protocol there can be variation
+in its implementations across different
+vendors and network devices leading to
+potential interoperability challenges
+lack of centralized control bgp operates
+on a decentralized Model where routing
+decisions are made autonomously by
+routers this lack of centralized control
+can make it challenging to enforce
+Global routing policies or address
+routing inconsistencies and this was all
+for this tutorial hope you guys found it
+informative and helpful let's take a
+minute to hear from our Learners who
+have experienced massive success in
+their careers hi I'm Philip I'm 61 years
+old and last year iobscale was simply
+learns post program at cyber security
+after working 30 years in the IIT sector
+in various different profiles I'm happy
+to tell you that I was able to clear and
+pass my cissp and ccsp certification
+exams on the first attempt after taking
+the course course I must say was packed
+with practical examples it was led by
+highly skilled certified instructors I
+worked with many companies before the
+security analysts and the architect on a
+contract basis but I needed some
+stability which I got with the job I
+just started with Infosys as a cyber
+security consultant happened after I
+took the course but first and foremost
+I've been a learner be a learner first
+if you like this session then like share
+and subscribe if you have any questions
+then you can drop them in the comment
+section below thanks for watching and
+stay tuned for more from Simply learn
+staying ahead in your career requires
+continuous learning and upskilling
+whether you're a student aiming to learn
+today's top skills or a working
+professional looking to advance your
+career we've got you covered explore our
+impressive catalog of certification
+programs in Cutting Edge domains
+including data science cloud computing
+cyber security AI machine learning or
+digital marketing designed in
+collaboration with leading universities
+and top corporations and delivered by
+industry experts choose any of our
+programs and set yourself on the path to
+Career Success click the link in the
+description to know more
+thank you
+hi there if you like this video
+subscribe to the simply learning YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

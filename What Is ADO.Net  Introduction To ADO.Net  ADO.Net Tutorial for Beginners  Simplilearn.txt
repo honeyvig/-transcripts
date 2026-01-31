@@ -1,0 +1,299 @@
+hey everyone i am viva khandalwal and i
+welcome you all to our simply learned
+youtube channel today we'll be going
+over the ado.net and its architecture
+but first let me remind you that we have
+our daily updates on numerous
+technologies so if you are a tech geek
+looking for the latest technological
+innovation then try subscribing to our
+youtube channel and don't forget to hit
+the bell icon so you never miss an
+update on simply learn
+so now without any further ado let's get
+started with the agenda for today's
+session
+we will begin a session with the
+discussion on what is ada.net
+then we will have a brief discussion on
+ado.net architecture following that we
+will go into more practical explanation
+of ada.net with the help of a demo
+finally we will end this session with a
+few pointers on ado.net
+so now let's get started with the
+discussion on what is ado.net
+first
+ado.net which stands for activex data
+object is a database access technology
+developed by
+microsoft as a part of its.net framework
+that can connect to any type of data
+source
+next it is a collection of object
+oriented classes that provides rich data
+set assets for the development of high
+performance table
+and expandable databases
+systems for client server application as
+well as distributed environments across
+the internet and internet
+then we have adio.net reads writes
+updates and deletes data from a data
+source using sql queries and stored
+procedures
+at last we have sql queries are executed
+using the ado.net command object
+which yields data in the form of either
+data reader or dataset objects
+next let's go over an
+architecture
+now this is what an adr.net architecture
+would look like it comprises of two
+parts a data provider and a dataset
+then the data provider then gets divided
+into four classes
+they interact with the database
+we have
+a connection class
+a command class a data reader class and
+a data adapter class
+let's go over them in detail
+first connection class
+we utilize these connection classes in
+area.net to access the database
+transaction and collection
+cooling are also managed by these
+connection types a connection object
+connects a data source to a data adapter
+via command class
+when you make a connection you need to
+provide a data provider and a data
+source
+next we have command class
+the command class has methods for
+storing and implementing
+sql statements as well as stored
+procedures sql queries
+can be executed to return data to a data
+set and a data reader object
+then we have the data reader
+to retrieve data we utilize the data
+reader
+it works with the command class run a s
+sql
+select query and then retrieve the
+results
+the data reader object delivers a robust
+read-only forward-only approach
+for retrieving data from a data store
+as a
+data stream
+while remaining connected to the data
+source
+then at last we have the data adapter
+the data adapter object is a link
+between the data source and this data
+set
+the data adapter is aware of the data
+set and how to update it
+the adapter is also aware of the data
+source connection
+it may also be used to manage the
+connection between your application and
+the underlining database table
+views and stored procedures
+now
+let's address the next part of the
+ado.net architecture
+the data set let's address the next part
+of adr dotted architecture a data set
+this comprises of a data table
+collection and a data relation
+collection
+let's discuss them in detail
+adio.net heart is a dataset the data set
+is nothing more than a collection of
+data table object each object in turn
+comprises of collection of data column
+and data row object
+the data set additionally has a relation
+collection for defining the
+relationships between data table and
+object
+now
+let's go to our visual studio and try to
+create one of these entity data models
+now let's start by creating
+a new
+project we will select an asp.net web
+application
+we hit next
+we will name it
+adio.net
+demo
+make sure to select
+dotnet framework 4.7.2
+and create
+we will choose mvc
+and click create
+now let's start connecting to a database
+we'll go here
+then for server name we will use
+local
+db
+um sql
+local
+tv
+and for the database name
+i will use
+simply
+adiod net
+demo
+and i'll click ok
+now it is asking us to attempt to create
+it
+because it thinks either it does not
+exist or i don't have a permission so
+let's create it
+and now here is our data
+if you look closely we don't have any
+table yet
+so let's
+make a table
+so
+let's right click
+and select add new table
+let us name this table as student
+we can also use this side
+so
+let's name this a student id
+since it is it will be our primary key
+this key represent primary key
+so we won't allow any nulls
+next we will have a student name
+it can be a null
+as for the person we can use
+nvr care 50
+then we can have student fees
+peace
+we will give it
+at last let's have a student city
+this will also be nvr care 50.
+these are all gonna be a null
+so now let's update this
+yes
+this will create
+everything now update was successful
+next
+let's add a and you get package
+so i will right click here and just
+select manage and you get packages
+now i will go to browse
+and search
+for entity framework
+here it is
+i will use
+5.0.0
+and i'll hit click
+click ok
+i accept
+and it's installed
+let's build this one
+okay it's built
+now add an adr.net data entity model
+for which what we are gonna do here
+so we will
+let's close this first
+now we will right click on our project
+name
+we will go to add
+then new item
+here we will go to data and we will
+select ado.net entity data model
+we can name it
+adio net
+demo
+model
+now click add
+we will use ef designer from database
+because we are already creating the
+database
+so we'll click next
+we'll select this
+we can keep this as is or we can
+name it
+anything
+let's keep it as is
+since we are using 5.0 so 5.0 next
+we will go ahead and select all of all
+these tables
+okay
+then
+we will click on finish
+this will create an area.net
+data entity
+let's wait a minute
+and here it is this is our area.net data
+entity model
+if we had created more
+uh tables then this navigation
+properties will have another table here
+now let's get back to our slides
+finally let's conclude this session with
+some pointers on ado.net
+first
+ado.net provides a unified collection of
+object oriented classes
+there are several data providers that
+operates with various data sources but
+the programming methodology for all of
+these data providers is the same so if
+you know how to deal with one data
+supplier you should have no trouble
+working with others
+it's as simple as modifying the class
+names with connection strings
+next we have ato.net which provide a
+coherent collection of object oriented
+classes
+there are several data providers that
+operate with various data sources but
+the programming methodology for all of
+these data providers is the same so if
+you know how to deal with one data
+supplier then you should have no trouble
+working with others it's as simple as
+modifying the class names and connection
+string
+next
+data is cached and sent in xml format
+via ado.net
+this data may be shared by all
+components and apps and it can be sent
+via various protocols such as http or
+https
+at last when designing a web-based
+application
+and service to significant consideration
+of performance and scalability because
+of connection capacity restriction and
+continually rising traffic transferring
+data from one source to another via the
+internet is an expensive process
+using disconnected cache data in xml
+solves both of these issues
+and this was all for today's session
+hope you guys found it informative and
+helpful if you liked this session then
+like share and subscribe if you have any
+question then you can drop them in the
+comment section below thanks for
+watching and stay tuned for more from
+simply learn
+[Music]
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

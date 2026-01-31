@@ -1,0 +1,393 @@
+hello everyone welcome to simply learns
+youtube channel
+today we will be discussing about
+dynamic programming paradigm in data
+structure but before we begin let me
+tell you guys that we have daily updates
+on multiple technologies so if you are a
+tech geek in a continuous hunt for
+latest technological advancements then
+consider getting subscribe to our
+youtube channel and don't forget to hit
+that bell icon to never miss an update
+from simply learn
+now without any further audio let's get
+started with the agenda for today's
+discussion
+we'll start this discussion by
+understanding the real-life example of
+dynamic programming following that we'll
+go over the dynamic programming
+introduction
+advancing ahead we'll deal with the
+dynamic programming interpretation of
+fibonacci series program
+here we'll cover the complexity analysis
+of a simple recursive program and how we
+can reduce it using dynamic programming
+finally utilizing the fibonacci sequence
+program will learn how dynamic
+programming works
+i hope i made myself clear with the
+agenda
+so let's get started with our first
+topic that is real life example of
+dynamic programming
+meet rachel
+she enjoys tackling puzzles because they
+allow her to develop new emerging skills
+in a fun way
+that is why she buys puzzle books from
+time to time
+one day while reading through one of her
+puzzle books she came across a
+two-player tic-tac-toe game
+she discovered one weird fact while
+reading the rules of this tic-tac-toe
+game
+there are 2 lakh 55
+168 weights to make a single move in
+this puzzle game
+this fact captivated her interest
+encouraging her to begin playing this
+tic-tac-toe puzzle game
+rachel began playing this game with her
+friend alex who already knew how to play
+this game
+as a result of her repeated failures
+rachel became frustrated and started to
+question how she could go on a winning
+streak
+after a few games rachel started
+remembering the outcomes of each of her
+moods which contributed to her failure
+in previous games
+by using those memories of her previous
+games she started getting hold of the
+logic behind object placement in
+tic-tac-to-puzzle
+rachel's ability to memorize things
+helped her decide where to place an
+object on the tic-tac-toe board as a
+result of her hard work and commitment
+to learn from her experiences she went
+on a winning streak against alex
+to solve complicated permutation issues
+the dynamic programming paradigm employs
+a similar concept of memorization
+furthermore this dynamic programming
+paradigm is completely based on the
+philosophical idea that people who do
+not remember the past are condemned to
+repeat it
+the dynamic programming principle states
+that if we can solve smaller sub
+problems then their learnings can be
+memorized to solve the larger problems
+this fundamental notion is acknowledged
+as a foundation of dynamic programming
+moving ahead let's look at the broader
+picture of what is dynamic programming
+dynamic programming is defined as
+algorithmic paradigm that solves a given
+complex problem by breaking it into
+several sub problems and storing the
+result of those sub problems to avoid
+the computation of same sub problem over
+and over again
+the divide and conquer strategy is quite
+similar to the dynamic programming
+approach
+we solve problems in each of these
+paradigms by combining the solutions of
+smaller sub problems however in divide
+and conquer the subproblems do not
+repeat themselves whereas in dynamic
+programming the condition is entirely
+opposite
+well that means dynamic programming has
+different properties than the divide and
+conquer approach
+and the problems which abide by those
+properties can only be solved using
+dynamic programming technique
+so moving forward let's discover the
+properties of dynamic programming
+the first property that we have is
+optimal substructure
+if we can establish a recurrence
+relation for a given problem then it is
+said to have an optimal substructure
+to understand this property let's have a
+look at an example
+the example that we are going to discuss
+is called the coin change problem which
+is one of the most famous dp problems in
+this problem we have to construct a coin
+combination with the least potential
+number of coins resulting in the desired
+final amount
+let's say we have a limitless supply of
+dollar fifty dollar twenty dollar ten
+and dollar five coins and the amount for
+which we need the least possible number
+of coins is 85 dollars
+so to formulate the solution we'll have
+to traverse through all possible
+permutations of coins
+the most logical solution to this
+problem is to add the coin of largest
+value at each iteration which does not
+take us past the expected amount that is
+dollar 85
+that means we break this problem into
+several iterations by choosing the coin
+of highest value at each iteration
+this conversion of larger problem into
+smaller sub problems is known as optimal
+substructure
+the next problem we have is an
+overlapping subproblem
+if the sub problems recur while
+implementing a solution to the broader
+problem then that problem is said to
+have an overlapping sub problems
+formulating recurring relation is the
+sole technique to determine if a given
+problem has an optimal sub problem or
+not
+to understand this better we'll have a
+look at an example of a fibonacci series
+program
+but before we get into details of that
+we would like to ask you what dynamic
+programming or competitive programming
+topic would you like us to address next
+you can mention the topics which you
+have doubts about in the comments
+section below and will surely create an
+exciting video about it in the next few
+days so guys make sure you post a
+comment with the dp or competitive
+programming topics you'd like us to
+cover in upcoming videos
+now coming back to dynamic programming
+we'll cover the mathematical
+interpretation of fibonacci series
+program if getting your learning started
+is half the battle what if you could do
+that for free
+visit scale up by simply learn click on
+the link in the description to know more
+the fibonacci sequence is a group of
+numbers that frequently appears in
+nature
+each number in this series is the sum of
+two previous number that come before it
+the sequence goes like 0 1 1 2 3 5 8 13
+and so on
+let's say the n is iterator element to
+calculate consecutive fibonacci numbers
+and for the first two iterations that
+are 0 and 1 the resultant fibonacci
+values will be simultaneously 0 and 1.
+otherwise the fibonacci values will be
+the sum of previous two fibonacci
+numbers in the sequence
+that means when the value of an iterator
+element becomes 2 the consecutive
+fibonacci number for it will be the sum
+of previous two numbers in the sequence
+that is 0 and 1 so the resulting
+fibonacci number will be 1.
+now when the iterator element n becomes
+equal to 3 the consecutive fibonacci
+numbers for 8 will become 2
+for the next iteration n is equal to 4
+the fibonacci values will be the sum of
+1 and 2 that is 3.
+when n becomes equal to 5 the resultant
+fibonacci numbers will be 5 and
+similarly the further numbers in
+sequence can be calculated
+and now if you observe the fibonacci
+problem closely you'll see that the
+breakdown of bigger problem is done into
+smaller sub problems in previous slide
+this means the fibonacci sequence
+problem has an optimal substructure and
+the program for the fibonacci sequence
+also represents the same
+this highlighted statements are
+representing the recurrence relation in
+our fibonacci program
+now what about the overlapping sub
+problems
+well a problem is said to have an
+overlapping sub problems if any
+subproblem repeats while implementing
+the solution to the broader or larger
+problem
+let's say we want to calculate a
+fibonacci number for n is equal to 5.
+the first activation record that will
+enter the memory stack will be fib of 5
+and to calculate the fibonacci value for
+number 5 our recursive program will call
+function 5 4 and 5th 3.
+further to calculate fib 4 the idea will
+invoke fifth three and fifth two
+next it will calculate the sum of fifth
+two and fib one to calculate the value
+of fifth three and further it will
+invoke fib one and fifth zero to
+contemplate the value of fifth two now
+we have generated the right side of our
+call stack tree hierarchy similarly the
+other missing pieces will get calculated
+by the compiler with the help of
+recursive calls now if you observe this
+activation hierarchy you will get that
+few sub problems are repeated in this
+problem
+the fifth three has been calculated
+twice
+and the fifth two has been calculated
+three times in our program
+this repetition of the same sub problem
+while solving more significant problem
+is called as overlapping subproblem
+property
+due to the multiple calls the
+computational complexity of recursive
+programs almost increases exponentially
+and those calculations are entirely
+unnecessary but before we understand how
+to avoid all unnecessary computation
+let's try to figure out the time
+complexity of our fifth function
+look at the time complexity relation
+written over here
+this says that the time taken to
+calculate five n will be equal to the
+time taken to calculate five of n minus
+one plus time taken to calculate five of
+n minus two plus the time taken to add
+these numbers together
+clearly for n is less than or equal to 1
+the fib of n is going to be big o of 1
+as we are not going to make any
+recursive calls for them also
+intuitively we can say that t of n will
+take big o of 2 to the power n
+we can contemplate this from the
+recursion tree drawn on the left side
+for n is equal to 5 we get a binary tree
+of depth 5
+for n is equal to 4 we get the binary
+tree of def 4 and so on
+this implies that the time complexity of
+our algorithm grows at an exponential
+rate and graph shown on your screens
+depicts that
+moving ahead we'll try to understand how
+we can reduce this computational
+complexity using dynamic programming
+the computational complexity can be
+removed by memorizing the result of sub
+problems
+in terms of computer science we can
+refrain from doing unnecessary
+computations by utilizing the memory to
+store the results of sub problems in
+dynamic programming we calculate the
+result for sub problems and store it in
+memory allocated by an operating system
+when that same sub problems get
+activated in our call stack we access
+the memory in order to return the result
+that we have calculated previously
+now you must be thinking about how we
+can store the result in memory
+well we can store the results in two
+ways the first one is memorization and
+the second one is tabulation
+in the case of memorization we store the
+result in memory whenever we solve a
+particular sub problem for the first
+time
+whereas in the case of tabulation we per
+compute the solution in a linear fashion
+and store them in a tabular format
+memorization is also known as top-down
+approach whereas tabulation is known as
+the bottom-up approach in general these
+names are assigned to these methods
+based on how they approach problem
+solving
+the first one says result in memory
+based on call stack occurrences
+the second one on other hand solves the
+sub problem in sequential manner
+for the top down approach we maintain a
+lookup table when we compute any sub
+problem we store results in lookup table
+and when the recurrence of this sub
+problem happen we directly fetch its
+value from our lookup table whereas in
+the case of bottom down approach the
+solution is built from the bottom most
+case
+in addition the memorization process is
+recursive however the tabulation process
+becomes iterative
+if we implement the fibonacci series
+program using top down approach then the
+code for function 5 will look something
+like this
+and this one additional step
+n is equal to res will do the
+memorization job for us
+if we develop a fibonacci sequence
+program using bottom-up approach our
+program will look something like this
+this highlighted for loop part
+calculates solution to all sub problems
+from the base case
+i hope you guys are clear with both
+methods of dynamic programming now
+moving ahead we'll discuss when to
+implement dynamic programming solution
+for any given problem
+remember guys you can solve any problem
+using dynamic programming which abides
+by the properties of dynamic programming
+most frequently you will come across the
+minimization and maximization problems
+which are readily recursive in nature
+if you need exhaustive solution for
+these problems then you can solve them
+using the dynamic programming paradigm
+the permutation combination problems can
+also be solved using dynamic programming
+the problem statement beginning with
+find the number of weights are the
+famous permutation problems that can be
+solved using dynamic programming
+approach
+i hope that you guys have understood how
+dynamic programming works now in the
+upcoming sessions we'll discuss some
+trickier and famous problems of dynamic
+programming so if you have any doubts
+about the concept covered in this video
+on dynamic programming then let us know
+in the comments section below and will
+surely help you get them resolved thank
+you so much for being here and do watch
+out for more videos from simply learn
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

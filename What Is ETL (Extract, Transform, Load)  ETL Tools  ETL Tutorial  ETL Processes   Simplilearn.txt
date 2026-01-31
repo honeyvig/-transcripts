@@ -1,0 +1,270 @@
+imagine having the power to transform
+chaos into Clarity in today's datadriven
+world that's exactly what ATL which is
+extract transform load let you do
+picture this data pouring in from all
+the direction databases apps Cloud
+systems and just with few smart moves
+you can transform it into clean
+organized insights ready to fuel big
+business's decisions learning ETL is
+like becoming a data wizard pulling
+together scattered pieces and making
+them work like magic and here's the
+exciting part ETL is an in demand skill
+that can open doors to endless
+opportunities in some of the fastest
+growing Fields out there today I'll walk
+you through what ETL is and why is it
+such a game changer in today's
+datadriven world I'll break down a real
+world scenario to show you how things
+work with and without ETL explore
+popular ETL tools and wrap up with the
+common challenges businesses face when
+implementing ETL so buckle up by the end
+you will have a solid grasp of ETL and
+why it matters a lot without causing any
+further delay let's get into the video
+first things first let us understand
+what ETL is ETL basically stands for
+extract transform and load it is a
+process which is used in data management
+to help businesses collect data from
+various sources clean and organize it
+and and then stored it in a central
+location like a database or data
+warehouse First Data is extracted from
+different systems or files then it is
+transformed by cleaning filtering and
+formating it to ensure it's consistent
+and ready for use finally the data is
+loaded into a system where it can be
+easily accessed for analysis or
+reporting ETL is essential for companies
+to turn raw data into useful insights
+that support better decision making so
+after we have basic ideas on ETL let us
+now understand why is it so important to
+understand ETL in today's world so
+understanding ETL is necessary in
+today's world because businesses rely
+more than ever on data to make informed
+decisions improve operations and stay
+competitive with data coming from so
+many different sources websites apps
+social media and many more Eed provides
+a way to gather clean and organize all
+this information efficiently without ETL
+data would remain messy inconsistent and
+difficult to use making it harder for
+businesses to extract valuable insights
+in a data driven world where quick and
+accurate decisions are critical knowing
+how etail Works help companies unlock
+the full potential of their data for
+growth Innovation and success before
+moving forward just a quick information
+if you are really interested in
+launching a successful career in data
+engineering simply learns professional
+certificate program in data engineering
+by po University is the perfect
+opportunity in just 32 weeks this live
+interactive course will equip you with
+Advanced skills aligned with AWS Azure
+and snowflake certifications to land in
+demand roles you'll earn a prestigious
+certificate gain access to produce
+alumini Association and receive career
+assistance to help you stand out to
+recruiters check out the link in the
+description box and in the pin comment
+now to make sure you understand better
+about ETL let us understand it with the
+help of a real world example let let's
+imagine you're running an online store
+that sell clothes you have data coming
+from multiple sources sales data from
+your website customer reviews from
+social media and inventory details from
+your Warehouse system now you want to
+analyze this data to figure out what
+products are selling the most which
+customers are returning and what items
+need restocking here's what happens with
+and without ETL with the help of ETL you
+collect and extract all the sales data
+from your website side customer feedback
+from social media and inventory
+information from the warehouse system
+the data is cleaned and organized
+duplicate entries are removed different
+formats are standardized and any missing
+or incorrect data is fixed you also
+combine all this data into a single
+format that's easy to work with the
+cleaned ready to use data is loaded into
+a central system like a data warehouse
+now you can analyze everything in one
+place whether you want to know which
+products are TR depending who your most
+loyal customers are or what inventory
+needs to be restocked you can quickly
+generate reports and gain insights in
+real time thanks to edl you can now have
+a clear organized view of your entire
+business you can make informed decisions
+for Trends and act fast now imagine the
+same scenario but without edn your sales
+data is in one system customer reviews
+are in another and inventory details are
+stored separately the data is messy some
+formats don't match and there is
+duplicate entries combining all this
+data manually is time consuming and
+error prone every time you need a report
+or Insight you have to spend hours or
+even days pulling the data from
+different sources cleaning it up and
+organizing it by yourself by the time
+you figure which products are selling
+the most the trend might already be over
+without detail you're just stuck doing
+manual work and important insights are
+delayed or missed
+decision making becomes slower and you
+lose out and opportunities to optimize
+your business in short ETS saves times
+reduce errors and gives you the power to
+make faster smarter decisions some
+things that's crucial for any businesses
+in today's fast-paced world by now
+you're probably wondering which ETL
+tools are trending and what companies
+are using to manage their massive data
+workloads well the wait is over ETL tool
+can be grouped into two main types first
+we have traditional ETL tools and second
+we have cloud-based ETL tools each
+serves a unique purpose in handling and
+transforming data depending on the needs
+of their business let's dive into what
+makes each business stand out let's talk
+about the first old traditional etail
+tools these tools have been around for a
+while and are widely used in on premise
+systems they are trusted by Enterprises
+for handling large scale complex data
+transformation and integration task some
+of the common tools used are Informatica
+Power Center which is a strong etail
+tool for big companies known for
+handling large data efficiently then we
+have Microsoft ssis a popular ail tool
+that works well with Microsoft SQL
+server for data task then we have Talon
+which is an easy to ous open-source
+etail tool which is great for cloud and
+Big Data projects next we have pentaho
+with a simple eail tool with a drag and
+drop interface for transforming data IBM
+infosphere data stage is a powerful tool
+for integrating large Data Systems into
+big organizations talking about Oracle
+data integrator which is fast reliable
+ETL tool made for working with Oracle
+databases now that we have discuss the
+old traditional ETL tools let's now move
+on to the cloud-based ETL tools unlike
+traditional tools they are designed for
+cloudbased environments offering
+scalability flexibility and integration
+with cloud data warehouses they are
+perfect for businesses transitioning to
+or already operating in the cloud some
+of the common tools used are AWS glue
+which is a serverless ETL tool by Amazon
+that makes it easy to prepare and load
+data for analysis then we have Google
+cloud data flow which is a realtime ETL
+tool for processing large data sets on
+Google Cloud five Tran is a simple
+automated ETL tool that quickly sets up
+data pipelines with minimal effort
+next we have Matan which is a cloud
+native eil tool that integrates easily
+with platforms like AWS Azure and Google
+Cloud Stitch is a straightforward ETL
+tool that helps move data to your data
+warehouse quickly heo dat is a no code
+ET tool which is designed for automating
+data integration across Cloud platforms
+let us now see some common challenges
+businesses face while implementing eil
+processes at first we have data quality
+it's hard to make sure that the data
+collected from different sources is
+clean accurate and consistent bad data
+can lead to wrong decisions then we have
+scalability as businesses grow and
+collect more data it becomes tough to
+manage larger amounts of data without
+slowing things down realtime processing
+many eail systems work with batches of
+data but today businesses often need
+data processed instantly which makes
+things more complicated the next
+challenge is integration with different
+system systems getting data from many
+different platforms like databases apps
+or files and making it work together can
+cause compatibility issues error
+handling while something goes wrong in
+the ETL process like a failed data load
+it can be tricky to detect and fix those
+errors quickly then we have data
+security keeping sensitive information
+safe during the ETF process and
+following legal requirements like gdpr
+can be challenging especially when using
+cloud services etail can throw a few
+curveballs your way but don't let that
+freak you out think of those challenges
+as stepping stones to turn your or data
+into absolute gold once you have nailed
+down a smooth e process the payoff is
+incredible faster decisions sharper
+insights and A major datadriven
+advantage over your competitors and yes
+it takes a bit of effort but once you
+have conquered the ETL game your data
+will become one of the most powerful
+business assets so that's a wrap up guys
+if you have found the video helpful do
+like share and subscribe to our Channel
+and I'll see you in the next video till
+then keep learning with simply loar
+staying ahead in your career requires
+continuous learning and upskilling
+whether you're a student aiming to learn
+today's top skills or a working
+professional looking to advance your
+career we've got you covered explore our
+impressive catalog of certification
+programs in Cutting Edge domain domains
+including data science cloud computing
+cyber security AI machine learning or
+digital marketing designed in
+collaboration with leading universities
+and top corporations and delivered by
+industry experts choose any of our
+programs and set yourself on the path to
+Career Success click the link in the
+description to know
+[Music]
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

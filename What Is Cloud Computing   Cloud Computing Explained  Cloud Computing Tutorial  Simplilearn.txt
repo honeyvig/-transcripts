@@ -1,0 +1,4323 @@
+hey everyone welcome to Simply learn
+today we will learn the fundamentals of
+cloud computing and cloud computing
+service models that said if these are
+the types of videos you would like to
+watch then hit the like And subscribe
+button and the bell icon to get notified
+and just a quick info for you if you
+want to upskill yourself and master
+cloud computing skills and landar your
+dream job to grow in your career then
+you must explore simply learns cohort of
+various cloud computing programs simply
+learn offers various certifications and
+postgraduate programs in collaboration
+with some of the world's leading
+universities like celtech it guati AWS
+and many more through our courses you
+will gain knowledge and work ready
+expertise in skills like serverless
+Computing containerization and
+orchestration VPC design and
+implementation and over a dozen others
+and that's not all you also get the
+opportunity to work on multiple projects
+and learn from industry experts that is
+is working in top pair product companies
+and academicians from top universities
+after completing these courses thousands
+of Learners have transitioned into a
+cloud computing role as a fresher or
+moved on to a higher paying job and
+profile if you are passionate about
+making your career in this field then
+make sure to check out the link in the
+pin comment and description box below to
+find a cloud computing program that fits
+your experience and areas of Interest
+before cloud computing existed if we
+need any it servers or application let's
+say a basic web server it does not come
+easy now here is an owner of a business
+and I know you would have guessed it
+already that he's running a successful
+business by looking at the hot and fresh
+brewed coffee in his desk and lots and
+lots of paper work to review and approve
+now he had a smart not only smart
+looking but a really smart worker in his
+office called Mark and on one fine day
+he called Mark and said that he would
+like to do business online in other
+words he would like like to take his
+business online and for that he needed
+his own website as the first thing and
+Mark puts all his knowledge together and
+comes up with this requirement that his
+boss would need lots of servers uh
+database and softwares to get his
+business online which means a lot of
+investment and Mark also adds that his
+boss will need to invest on acquiring
+technical expertise to manage the
+hardware and software that they will be
+purchasing and also to monitor the
+infrastructure and after hearing all
+this his boss was close to dropping his
+plan to go online but before he made a
+decision he chose to check if there are
+any alternatives where he don't have to
+spend a lot of money and don't have to
+spend acquiring technical expertise now
+that's when Mark opened this discussion
+with his boss and he explained his boss
+about cloud computing and he explained
+his boss the same thing that I'm going
+to explain to you in sometime now about
+what is cloud computing what is cloud
+computing cloud computing is the use of
+a network of remote servers hosted on
+the internet to store manage and process
+data rather than having all that locally
+and using local server for that cloud
+computing is also storing our data in
+the internet from anywhere and accessing
+our data from anywhere throughout the
+internet and the companies that offer
+those services are called Cloud
+providers cloud computing is also being
+able to deploy and manage our
+applications services and network
+throughout the globe and manage them
+through the web management or
+configuration portal in other words
+cloud computing service providers give
+us the ability to manage our
+applications and services through a
+Global Network or Internet example of
+such providers are Amazon web servers
+and Microsoft Azure now that we have
+known what cloud computing is let's talk
+about the benefits of cloud computing
+now I need to tell you the cloud
+benefits is what is driving Cloud
+adoption like anything in the recent
+days if you want an IT resource or a
+service now with Cloud it's available
+for me almost instantaneously and it's
+ready for production almost the same
+time now this reduces the goal live date
+and the product and the service hit the
+market almost instantaneously compared
+to the Legacy environment and because of
+this the companies have started to
+generate Revenue almost the next day if
+not the same day planning and buying the
+right siiz Hardware has always been a
+challenge in Legacy environment and if
+you're not careful when doing this we
+might need to live with a hardware
+that's undersized for the rest of our
+lives with Cloud we do not buy any
+hardware but we use the hardware and pay
+for the time we use it if that Hardware
+does not fit our requirement release it
+and start using a better configuration
+and pay only for the time you use that
+new and better configuration in Legacy
+environments forecasting demand is an
+full-time job but with Cloud you can let
+the monitoring and automation tool to
+work for you and to rapidly scale up and
+down the resources based on the need of
+that R not only that the resources
+Services data can be accessed from
+anywhere as long as we are connected to
+the internet and even there are tools
+and techniques now available which will
+let you to work offline and will sync
+whenever the internet is available
+making sure the data is stored in
+durable storage and in a secure fashion
+is the talk of the business and Cloud
+answers that million dooll question with
+Cloud the data can be stored in an
+highly durable storage and replicated to
+multiple regions if you want and uh the
+data that we store is encrypted and
+secured in a fashion that's beyond what
+we can imagine in local data centers now
+let's bleed into the discussion about
+the types of cloud computing very lately
+there are multiple ways to categorize
+cloud computing because because it's
+ever growing now we have more categories
+out of all these six sort of stand out
+you know categorizing cloud based on
+deployments and categorizing cloud based
+on services and again under deployments
+categorizing them based on how they have
+been implemented you know is it private
+is it public or is it hybrid and again
+categorizing them based on the service
+it provides is it infrastructure as a
+service or is it platform as a service
+or is it software as a service let's
+look at them one by one let's talk about
+the different types of cloud based on
+the deployment models first in public
+Cloud everything is stored and accessed
+in and through the internet and um any
+internet users with proper permissions
+can be given access to some of the
+applications and resources and in public
+Cloud we literally own nothing be it the
+hardware or software everything is
+managed by the provider AWS Azure and
+Google are some examples of public Cloud
+private Cloud on the other hand with
+private Cloud the infrastructure is
+exclusively for an single organization
+the organizations can choose to run
+their own cloud locally or choose to
+Outsource it to a public cloud provider
+as manag services and when this is done
+the service the infrastructure will be
+maintained on a private Network some
+examples are wmware cloud and some of
+the AWS products are very good example
+for private Cloud hybrid cloud has taken
+things to the whole new level with
+hybrid Cloud we get the benefit of both
+public and private Cloud organizations
+will choose to keep some of their
+applications locally and some of the
+application will be present in the cloud
+one good example is NASA it uses hybrid
+Cloud it uses private Cloud to store
+sensitive data and uses public Cloud to
+store and share data which are not
+sensitive or confidential let's now
+discuss about cloud based on servers
+model the first and the broad category
+is infrastructure as a service uh here
+we would rent the servers network
+storage and we'll pay for them in an
+early basis but we will have access to
+the resources we provision and for some
+we will have root level access as well
+ec2 in AWS is a very good example it's a
+Wim for which we have root level access
+to the OS and admin access to the
+hardware the next type of service model
+would be platform as a service now in
+this model the providers will give me a
+pre-built platform where we can deploy
+our codes and our applications and they
+will be up and running we only need to
+manage the codes and not the
+infrastructure here in software as a
+service the cloud providers sell the end
+product which is a software or an
+application and we directly buy the
+software on an subscription basis it's
+not the infra or the platform but the
+end product or the software or a fun
+functioning application and we pay for
+the hours we use the software and in
+here the client maintains full control
+of the software and does not maintain
+any equipment Amazon and Azure also sell
+products that are software as service
+this chart sort of explains the
+difference between the four models
+starting from on premises to
+infrastructure as a service to platform
+as a service to software as a service
+this is self-explanatory that uh the
+resource man managed by us are huge in
+on premises that towards your left as
+you watch and it's little less in
+infrastructure as a service as we move
+further towards the ride and further
+reduced in platform as a service and
+there's really nothing to manage when it
+comes to software as a service because
+we buy the software not any
+infrastructure component attached to it
+now let's talk about the life cycle of
+the cloud computing solution the very
+first thing in the life cycle of a
+solution or a cloud solution is to get a
+proper understanding of the requirement
+I didn't say get the requirement but
+said get a proper understanding of the
+requirement it is very vital because
+only then we will be able to properly
+pick the right service offered by the
+provider getting a sound understanding
+the next thing would be to define the
+hardware meaning choose the compute
+service that will provide the right
+support where you can resize the compute
+capacity in the cloud to run application
+programs getting a sound and
+understanding of the requirement helps
+in picking the right Hardware one size
+does not fit all there are different
+services and Hardwares for different
+needs you might have like ec2 if you're
+looking for is and Lambda if you're
+looking for serverless computing and ECS
+that provides containerized servers so
+there are a lot of Hardwares available
+pick the right Hardware that suits your
+requirement the third thing is to define
+the storage choose the apprpriate
+storage service where you can backup
+your data and a separate storage service
+where you can archive your data locally
+within the cloud or from the internet
+and choose the appropriate storage there
+is one separately for backup called S3
+and there's one separately for archival
+that's for Glacier so you know you
+knowing the difference between them
+really helps in picking the right
+service for the right kind of need
+Define the network Define the network
+that securely delivers data video and
+applications Define and identify the
+Network Services properly for example
+VPC for Network Route 53 for DNS and
+direct connection for private P2P line
+from your office to the AWS data center
+set up the right Security Services IM am
+for authentication and authorization and
+KMS for uh data encryption at rest so
+there are variety of security products
+available we got to pick the right one
+that suits our need and there are
+variety of deployment and Automation and
+monitoring tools that you can pick from
+for example Cloud watch is for
+monitoring Autos scaling is for being
+elastic and Cloud formation is Define
+the management process and tools you can
+have complete control of your Cloud
+environment if you define the management
+tools which monitors your AWS resources
+and are the custom applications running
+on AWS platform there are variety of
+deployment Automation and monitoring
+tools you can pick from like Cloud watch
+for monitoring Auto scaling for
+Automation and cloud formation for a
+deployment so knowing them will help you
+in defining the life cycle of the cloud
+computer in solution properly and
+similarly there are a lot of tools for
+testing a process like code star and
+code build and code pipeline these are
+tools with which you can build test and
+deploy your code quickly and finally
+once everything is set and done pick the
+analytic service for analyzing and
+visualizing the data using the analytics
+Services where we can start quering the
+data instantly and get a result now if
+you want to visually view the happenings
+in your environment you can pick atena
+and other tool tools for analytics are
+EMR and uh which is elastic map produce
+and Cloud search thanks guys now we have
+Samuel and Rahul to take us through the
+full course in which they will explain
+basic framework of Amazon web services
+and explore all of its important
+services like ec2 Lambda S3 IM am and
+cloud formation we'll also talk about
+Azure and some of its popular Services
+hello everyone let me introduce myself
+as Sam a multiplatform cloud architect
+and trainer and I'm so glad and I'm
+equally excited to talk and walk you
+through this session about what AWS is
+and talk to you about some services and
+offerings and about how companies get
+benefited by migrating their
+applications and infra into AWS so
+what's AWS let's talk about that now
+before that let's talk about how life
+was without any cloud provider and in
+this case how life was without aw so
+let's walk back and picture how things
+were back in 2000 which is not so long
+long ago but lot of changes lot of
+changes for better had happened since
+that time now back in 2000 a request for
+a new server is not an happy thing at
+all because lot of uh money lot of
+validations lot of planning are involved
+in getting a server online or up and
+running and even after we've finally got
+the server it's not all said and done
+there a lot of optimization that needs
+to be done on that server to make it
+worth it and get a good good return on
+investment from that server and uh even
+after we have optimized for a good
+return on investment the work is still
+not done there will often be a frequent
+increase and decrease in the capacity
+and you know even news about our website
+getting popular and getting more hits
+It's still an Bittersweet experience
+because now I need to add more servers
+to the environment which means that it's
+going to cost me even more but thanks to
+the present day Cloud technology if the
+same situation were to happen today my
+new server it's almost ready and it's
+ready instantaneously and with the Swift
+tools and technologies that Amazon is
+providing of in provisioning my server
+instantaneously and adding any type of
+workload on top of it and making my
+storage and server secure you know
+creating a durable storage where data
+that I store in the cloud never gets
+lost with all that features Amazon has
+got our back so let's talk about what is
+AWS there are a lot of definitions for
+it but uh I'm going to put together a
+simple and a precise definition as much
+as possible now let me iron that out
+Cloud still runs on and Hardware right
+and uh there are certain features in
+that infrastructure in that cloud
+infrastructure that makes cloud cloud or
+that makes AWS a cloud provider now we
+get all the services all the
+Technologies all the features and all
+the benefits that we get in our local
+data center like you know security and
+compute capacity and uh databases and in
+fact you know we get even more cool
+features like uh content caching in
+various global locations around the
+planet but again out of all the features
+the best part is that I get or we get
+everything on a pay as we go model the
+less I use the less I pay and the more I
+use the less I pay per unit very
+attractive isn't it right and that's not
+all the applications that we provision
+in AWS are very reliable because they
+run on an reliable infrastructure and
+it's very scalable because it runs on an
+ond demand infrastructure and it's very
+flexible because of the designs and
+because of the design options available
+for me in the cloud let's talk about how
+all this happened AWS was launched in uh
+20 2 after the Amazon we know as the
+online retail store wanted to sell their
+REM remaining or unused infrastructure
+as a service or as an offering for
+customers to buy and use it from them
+you know sell infrastructure as a
+service the idea sort of clicked and AWS
+launched their first product first
+product in 2006 that's like 4 years
+after the idea launch and in 2012 they
+held a big-sized customer even to gather
+inputs and concerns from customers and
+they were very dedicated in making those
+requests happen and that habit is still
+being followed it's still being followed
+as U reinvent by AWS and at 2015 Amazon
+announced its Revenue to be 4.6 billion
+and in 2015 through 2016 AWS launched
+products and services that help migrate
+customer services into AWS well they web
+products even before but this is when a
+lot of focus was given on developing
+migrating services and in the same year
+that's in 2016 Amazon's revenue was 10
+billion and not but not the least as we
+speak Amazon has more than 100 products
+and services available for customers and
+get benefited from all right let's talk
+about the uh services that are available
+in Amazon let's start with this product
+called S3 now s 3 is a great tool for
+internet backup and it's it's the
+cheapest storage option in the object
+storage category and not only that the
+data that we put in S3 is retriable from
+the internet S3 is really cool and we
+have other products like migration and
+data collection and data transfer
+products and here we can not only
+collect data seamlessly but also in a
+realtime way monitor the data or analyze
+the data that's being received that the
+cool products like uh AWS data transfers
+available that helps achieve that and
+then we have products like uh ec2
+elastic compute Cloud that's an
+resizable computer where we can anytime
+anytime alter the size of the computer
+based on the need or based on the
+forecast then we have SIMPLE
+notification Services systems and tools
+available in Amazon to update us with
+notifications through email or through
+SMS now anything anything can be send
+through email or through SMS if you use
+that service it could be alarms or uh it
+could be service notifications if you
+want stuff like that and then we have
+some security tools like KMS key
+management system which uses AES 256bit
+encryption to encrypt our data at rest
+then we have Lambda a service for which
+we pay only for the time in seconds
+seconds it takes to execute our code and
+uh we're not paying for the
+infrastructure here it's just the
+seconds the program is going to take to
+execute the codee if it's a short
+program we'll be paying in milliseconds
+if it's a bit bigger program we'll be
+probably paying in uh 60 seconds or 120
+seconds but that's lot cheap lot simple
+and lots cost effective as against
+paying for service on an odly basis
+which a lot of other services are well
+that's cheap but using Lambda is a lot
+cheaper than that and then we have
+services like uh Route 53 at DNS service
+in the cloud now I do not have to
+maintain an DNS account somewhere else
+and my cloud environment with AWS I can
+get both in the same place all right let
+me talk to you about um how AWS makes
+life easier or how companies got
+benefited by using AWS as their it
+provider for their applications or for
+the infrastructure now unil is a company
+and um they had a problem right and they
+had a problem and they picked AWS as a
+solution to their problem right now this
+company was sort of spread across 190
+countries R and they were relying on a
+lot of digital marketing for promoting
+their products and their existing
+environment their legacy local
+environment proved not to support their
+changing it demands and they could not
+standardize their old environment now
+they chose to move part of their
+applications to AWS because they were
+not getting what they wanted in their
+local environment and since then you
+know roll outs were easy provisioning
+new applications became easy and even
+provisioning infrastr structure became
+easy and they were able to do all that
+in push button scaling and uh needless
+to talk about uh backups that are safe
+and backups that can be securely
+accessed from the cloud as needed now
+that company is growing along with AWS
+because of their Swift speed in rolling
+out deployments and uh being able to
+access secure backups from various
+places and generate reports and in fact
+useful reports out of it that helps
+their business now now on the same lines
+let me also talk to you about kogs and
+how they got benefited by using Amazon
+now kogs had a different problem it's
+one of its kind now their business model
+was very dependent on an INF that will
+help to analyze data really fast right
+because they were running promotions
+based on the analyzed data that they get
+so they being able to respond to the
+analyzed data as soon as possible was
+critical or vital in their environment
+and luckily sap running on Hannah
+environment is what they needed and uh
+you know they picked that service in the
+cloud and that's sort of solve the
+problem now the company does not have to
+deal with maintaining their legacy infra
+and maintaining their heavy compute
+capacity and maintaining their database
+locally all that is now moved to the
+cloud or they are using Cloud as their
+it service provider and and now they
+have a greater and Powerful it
+environment that very much complement
+their business hi there I'm Samuel a
+multiplatform cloud architect and I'm
+very excited and honored to walk you
+through this learning series about AWS
+let me start the session with this
+scenario let's imagine how life would
+have been without Spotify for those who
+are hearing about Spotify for the first
+time uh Spotify is an online music
+service offering and it offers instant
+access to over 16 million licensed songs
+Spotify now uses AWS Cloud to store the
+data and sh with their customers but
+prior to AWS they had some issues
+imagine using spotify before AWS let's
+talk about that back then users were
+often getting errors because Spotify
+could not keep up with the increased
+demand for storage every new day and
+that led to users getting upset and
+users canceling the subscription the
+problem Spotify was facing at that time
+was their users were present globally
+and were accessing it from everywhere
+and uh they had different latency in
+their applications and and Spotify had a
+demanding situation where they need to
+frequently catalog the songs released
+yesterday today and in the future and
+this was changing every new day and the
+songs coming in rate was about 20,000 a
+day and back then they could not keep up
+with this requirement and needless to
+say they were badly looking for way to
+solve this problem and that's when they
+got introduced to AWS and it was a
+perfect fit and match for their problem
+AWS offered a dynamically increasing
+storage and that's what they needed AWS
+also offered tools and techniques like
+storage life cycle management and
+trusted advisor to properly utilize the
+resource so we always get the best out
+of the resource used AWS address their
+concerns about easily being able to
+scale yes you can scale the AWS
+environment very easily how easily one
+might ask it's just a few button clicks
+and AWS solved spotify's problem let's
+talk about how it can help you with your
+organization problem let's talk about
+what is AWS first and then let's bleed
+into how AWS became so successful and
+the different types of services that AWS
+provides and what's the future of cloud
+and AWS in specific let's talk about
+that and finally we'll talk about a use
+case where you will see how easy it is
+to create a web application with AWS all
+right let's talk about what is AWS AWS
+or Amazon web services is a secure cloud
+service platform is also pay as youo
+type billing model where there is no
+upfront or Capital cost we'll talk about
+how soon the service will be available
+well the service will be available in a
+matter of seconds with AWS you can also
+do identity and access management that
+is authenticating and authorizing a user
+or a program on the flight and almost
+all the services are available on demand
+and most of them are available
+instantaneously and as we speak Amazon
+offers 100 plus services and this list
+is growing growing every new week now
+that would make you wonder how AWS
+became so successful of course it's
+their customers let's talk about the
+list of well-known companies that has
+their it environment in AWS Adobe adob
+uses AWS to provide multi- terabyte
+operating environments for its customers
+by integrating its system with AWS Cloud
+adob can focus on deploying and
+operating its own software instead of
+trying to you know deploy and manage the
+infrastructure Airbnb is another company
+it's an Community Marketplace that
+allows property owners and travelers to
+connect each other for the purpose of
+renting unique vacation spaces around
+the world and the rbnb community users
+activities are conducted on the website
+and through iPhones and Android
+applications Airbnb has a huge
+infrastructure in AWS and they're almost
+using all the services in AWS and are
+getting benefited from it another
+example would be Autodesk Autodesk
+develops software for engineering
+designing and entertainment Industries
+using services like Amazon RDS or
+rational database servers and Amazon S3
+or Amazon simple storage servers
+Autodesk can focus on deploying or
+developing its machine learning tools
+instead of spending that time on
+managing the infrastructure AOL or
+American online uses AWS and using AWS
+they have been able to close data
+centers and decommission about 14,000
+in-house and collocated servers and move
+Mission critical workload to the cloud
+and extend its Global reach and save
+millions of dollars on energy resources
+Bit Defender is an internet security
+software firm and their portfolio of
+softwares include antivirus and anti
+spyware products Bit Defender uses ec2
+and they're currently running few
+hundred instances that handle about 5
+terab of data and they also use elastic
+load balancer to load balance the
+connection coming in to those instances
+across availability zones and they
+provide seamless Global delivery of
+service because of that the BMW group it
+uses AWS for its new connected Car
+application that collects sensor data
+from BMW 7 Series cars to give drivers
+dynamically updated map information
+canons offers Imaging products division
+benefits from faster deployment times
+lower cost and Global reach by using AWS
+to deliver cloud-based services such as
+Mobile Print the office Imaging products
+division uses AWS such as Amazon S3 and
+Amazon Route 53 Amazon cloudfront and
+Amazon IM for their testing development
+and Production Services Comcast it's the
+world's largest cable company and the
+leading provider of internet service in
+the United States Comcast uses AWS in a
+hybrid environment out of all the other
+Cloud providers Comcast CH AWS for its
+flexibility and scalable hybrid
+infrastructure Docker is a company
+that's helped helping redefine the way
+developers build ship and run
+applications this company focuses on
+making use of containers for this
+purpose and in AWS the service called
+the Amazon ec2 container service is
+helping them achieve it the esa or
+European Space Agency although much of
+esa's work is done by satellites some of
+the programs data storage and Computing
+infrastructure is built on Amazon web
+services Esh chose AWS because of its
+economical pay as eego system as well as
+its quick startup time the Guardian
+newspaper uses AWS and it uses a wide
+range of AWS services including Amazon
+Kinesis Amazon red shift that power an
+analytic dashboard which editors used to
+see how stories are trending in real
+time Financial Times FD is one of the
+world's largest leading business news
+organization and they used Amazon red
+shift to perform their analysis A Funny
+Thing Happened Amazon red shift performs
+so quickly that some analysists thought
+it was malfunctioning they were used to
+running queries overnight and they found
+that the results were indeed correct
+just as much faster by using Amazon red
+Shi FD is supporting the same business
+functions with costs that are 80% lower
+than what was before general electric GE
+is at the moment as we speak migrating
+more than 9,000 workloads including 300
+desperate Erp systems to AWS while
+reducing its data center footprint from
+34 to 4 over the next 3 years similarly
+Howard Medical School HTC IMDb
+McDonald's NASA Kelloggs and a lot more
+are using the services Amazon provides
+and are getting benefited from it and
+this huge Sues and customer portfolio is
+just the tip of the iceberg and if we
+think why so many adapt AWS and if we
+let AWS answer that question this is
+what AWS would say people are adapting
+AWS because of the security and durab
+ility of the data and endtoend privacy
+and encryption of the data and storage
+experience we can also rely on aw's way
+of doing things by using the AWS tools
+and techniques and suggested best
+practices built upon the years of
+experience it has gained flexibility
+there is a greater flexibility in AWS
+that allows us to select the OS language
+and database easy to use swiftness in
+deploying we can host our applications
+quickly in AWS be it a new application
+or migrating an existing application
+into AWS scalability the application can
+be easily scaled up or scaled down
+depending on the user requirement cost
+saving we only pay for the compute power
+storage and other resources you use and
+that to without any long-term
+commitments now let's talk about the
+different types of services that AWS
+provides the services that we talk about
+fall in any of the following categories
+you see like you know compute storage
+database Security customer engagement
+desktop and Swit streaming Mission
+learning developers tools stuff like
+that and if you do not see the service
+that you're looking for it's probably is
+because AWS is creating it as we speak
+now let's look at some of them that are
+very commonly used within Computer
+Services we have Amazon ec2 Amazon
+elastic bean stock Amazon light sale and
+Amazon Lambda Amazon ec2 provides
+compute capacity in the cloud now this
+capacity is secure and it is resizable
+based on the user's requirement now look
+at this the requirement for the web
+traffic keeps changing and behind the
+scenes in the cloud ec2 can expand its
+environment to three instances and
+during no load it can shrink its
+environment to just one resource elastic
+beanock it helps us to scale and deploy
+web applications and it's made with a
+number of programming languages elastic
+beanock is also an easy to ous service
+for deploying and scaling web
+applications and services deployed a be
+in Java net PHP nodejs python Ruby doer
+and a lot other familiar services such
+as Apache passenger and IIs we can
+simply upload our code and elastic bean
+stock automatically handles the
+deployment from capacity provisioning to
+load balancing to Auto scaling to
+application Health monitoring and Amazon
+lightell is a virtual private server
+which is easy to launch and easy to
+manage Amazon lightell is the easiest
+way to get started with AWS for
+developers who just need a virtual
+private server lightell includes
+everything you need to launch your
+project quickly on a virtual machine
+like SSD based storage a virtual machine
+tools for data transfer DNS management
+and a static IP and that to for a very
+low and predictable price AWS Lambda has
+taken Cloud Computing Services to a
+whole new level it allows us to pay only
+for the compute time no need for
+provisioning and managing servers and
+AWS Lambda is a compute service that
+lets us run code without provisioning or
+managing servers Lambda executes your
+code only when needed and and scales
+automatically from few requests per day
+to thousands per second you pay only for
+the compute time you consume there is no
+charge when your code is not running
+let's look at some storage services that
+Amazon provides like Amazon S3 Amazon
+Glacier Amazon EBS and Amazon elastic
+file system Amazon S3 is an object
+storage that can store and retrive data
+from anywhere websites mobile apps iot
+sensors and so on can easily use Amazon
+S3 to store and retrive data it's an
+object storage built to store and drive
+any amount of data from anywhere with
+its features like flexibility in
+managing data and the durability it
+provides and the security that it
+provides Amazon simple storage service
+or S3 is a storage for the internet and
+Glacier Glacier is a cloud storage
+service that's used for archiving data
+and long-term backups and this Glacier
+is an secure durable and extremely
+lowcost cloud storage service for data
+archiving and long-term backups Amazon
+EBS Amazon elastic Block store provides
+Block store volumes for the instances of
+ec2 and this elastic Block store is
+highly available and a reliable storage
+volume that can be attached to any
+running instance that is in the same
+availability Zone ABS volumes that are
+attached to the E instances are exposed
+as storage volumes that persistent
+independently from the lifetime of the
+instance and Amazon elastic file system
+or EFS provides an elastic file storage
+which can be used with AWS cloud service
+and sources that are on premises an
+Amazon elastic file system it's an
+simple it's scalable it's an elastic
+file storage for use with Amazon cloud
+services and for on premises resources
+it's easy to use and offers a simple
+interface that allows you to create and
+configure file systems quickly and
+easily Amazon file system is built to
+elastically scale on demand without
+disturbing the application growing and
+shrinking automatically as you add and
+remove files so your application have
+the storage they need and when they need
+it now let's talk about databases the
+two major database flavors are Amazon
+auds and Amazon red shift Amazon auds it
+really easers the process involved in
+setting up operating and scaling a
+rational database in the cloud Amazon
+audius provides cost efficient and
+resizable capacity while automating time
+consuming administrative tasks such as
+Hardware provisioning database setup
+patching and backups it sort of frees us
+from managing the hardware and sort of
+helps us to focus on the application
+it's also cost effective and resizable
+and it's also optimized for memory
+performance and input and output
+operations not only that it also
+automates most of the services like
+taking backups you know monitoring stuff
+like that it automates most of those
+Services Amazon rad shift Amazon red
+shift is a data warehousing service that
+enables users to analyze the data using
+SQL and other business intelligent tools
+Amazon R shift is an fast and fully
+managed data warehouse that makes it
+simple and and costeffective analyze all
+your data using standard SQL and your
+existing business intelligent tools it
+also allows you to run complex analytic
+queries against terabyte or structured
+data using sophisticated query
+optimizations and most of the results
+they generally come back in seconds all
+right let's quickly talk about some more
+services that AWS offers there are a lot
+more services that AWS provides but
+we're going to look at some more
+services that are widely used AWS
+application Discovery Services help
+Enterprise customers plan migration
+projects by gathering information about
+their on premises data centers in a
+planning a data center migration can
+involve thousands of workloads they are
+often deeply interdependent server
+utilization data and dependency mapping
+are important early first step in
+migration process and this AWS
+application Discovery service collects
+and presents configuration usage and
+behavior data from your servers to help
+you better understand your workloads
+rout 53 it's a network and content
+delivery service it's an highly
+available and scalable Cloud domain name
+system or DNS service and Amazon Route
+53 is fully compliant with IPv6 as well
+elastic load balancing it's also a
+network and content delivery service
+elastic load balancing automatically
+distributes incoming application traffic
+across multiple targets such as Amazon
+ec2 instance containers and IP addresses
+it can handle the varing load of your
+application traffic in a single
+availability zones and also across
+availability zones a is auto scaling it
+monitors your application and
+automatically adjusts the capacity to
+maintain steady and predictable
+performance at a lowest possible cost
+using AWS Autos scaling it's easy to set
+up application scaling for multiple
+resources across multiple services in
+minutes Auto scaling can be applied to
+web services and also for DB Services
+AWS identity and access management it
+enables you to manage access to AWS
+services and resources securely using IM
+you can create and manage AWS users and
+groups and and use permissions to allow
+and deny their access to AWS resources
+and moreover it's a free service now
+let's talk about the future of AWS well
+let me tell you something cloud is here
+to stay here's what in store for AWS in
+the future as years pass by we're going
+to have variety of cloud applications
+Bor like iot artificial intelligence
+business intelligence serverless
+Computing and so on cloud will also
+expand into other markets like
+healthcare banking space automated cars
+and so on as I was mentioning some time
+back lot or greater Focus will be given
+to artificial intelligence and
+eventually because of the flexibility
+and advantage that cloud provides we're
+going to see a lot of companies moving
+into the cloud all right let's now talk
+about how easy it is to deploy an web
+application in the cloud so the scenario
+here is that our users like a product
+and we need to have a mechanism to
+receive input from them about their
+likes and dislikes and uh you know give
+them the appropriate product as per
+their need all right though the setup
+and the environment it sort of looks
+complicated we don't have to worry
+because AWS has tools and Technologies
+which can help us to achieve it now
+we're going to use services like Route
+53 services like cloudwatch E2 S3 and
+lot more and all these put together are
+going to give an application that's
+fully functionable and an application
+that's going to receive the information
+uh like using the services like Route 53
+Cloud watch ec2 and S3 we're going to
+create an application and that's going
+to meet our need so back to our original
+requirement all I want is to deploy a
+web application for a product that keeps
+our users updated about the happenings
+and the new comings in the market and to
+fulfill this requirement here is all the
+services we would need ec2 here is used
+for provisioning the computational power
+needed for this application and ec2 has
+a vast variety of family and types that
+we can pick from for the types of
+workloads and also for the intents of
+the workloads we're also going to use S3
+for storage and S3 provides any
+additional storage requirement for the
+resources or any additional storage
+requirement for the web applications and
+we are also going to use cloudwatch for
+monitoring the environment and
+cloudwatch monitors the application and
+the environment and it uh provides
+trigger for scaling in and scaling out
+the infrastructure and we're also going
+to use Route 53 for DNS and Route 53
+helps us to register the domain name for
+our web application and with all the
+tools and Technology Oles together all
+of them put together we're going to make
+an application a perfect application
+that CS our need all right so I'm going
+to use elastic beant stock for this
+project and the name of the application
+is going to be as you see GSG signup and
+the environment name is GSG signup
+environment 1 let me also pick a name
+let me see if this name is available yes
+that's available that's the domain name
+so let me pick that and the application
+that I have is going to run on node.js
+so let me pick that platform and launch
+now as you see elastic beant stock this
+is going to launch an instance it's
+going to launch the monitoring setup or
+the monitoring environment it's going to
+create a load balancer as well and it's
+going to take care of all the security
+features needed for this
+application
+all right look at that I was able to go
+to that URL which is what we gave and
+it's now having an default page shown up
+meaning all the dependencies for the
+software is installed and it's just
+waiting for me to upload the code or in
+specific the page required so let's do
+that let me upload the code I already
+have the code saved
+here that's my code and that's going to
+take some time all right it has done its
+thing and now if I go to the same URL
+look at that I'm being thrown an
+advertisement page all right so if I
+sign up with my name email and stuff
+like that you know it's going to receive
+the information and it's going to send
+an email to the owner saying that
+somebody had subscribed to your service
+that's the default feature of this app
+look at that email to the owner saying
+that somebody had subscribed to your app
+and this is their email address stuff
+like that not only that it's also going
+to create an entry in the database and
+Dynamo DB is the service that this
+application uses to store data there's
+my Dynamo DB and if I go to tables right
+and go to items I'm going to see that a
+user with name Samuel and email address
+so and so has said okay or has shown
+interest in the preview of my site or
+product so this is where or this is how
+I collect those information right and
+some more things about the
+infrastructure itself is it is running
+behind an load balancer look at that it
+had created a load balancer it had also
+created an autoscaling group now that's
+the feature of elastic load balancer
+that we have chosen it has created an
+Autos Skilling group and now let's put
+this URL you see this it's it's not a
+fancy URL all right it's an Amazon given
+URL a dynamic URL so let's put this URL
+behind our DNS let's do that so go to
+Services go to rout
+53 go to hostage Zone and there we can
+find the the DNS name right so that's a
+DNS name all
+right all right let's create an
+entry and map that URL to our load
+balancer right and create now
+technically if I go to this URL it
+should take me to that application all
+right look at that I went to my custom
+URL and now that's pointed to my
+application previously my applic apption
+was having a random URL and now it's
+having a custom URL so what did we learn
+we started the session with what is AWS
+we looked at features and tools
+Technologies products that AWS provides
+and we also looked at how AWS became
+very successful again we looked into the
+benefits and features of AWS in depth
+and we also looked at some of the
+services that AWS provides in random and
+then we picked particular services and
+we talked about them like ec2 elastic
+beant stock light sale Lambda storage
+stuff like that then we also looked at
+the future of AWS what AWS holds in the
+store for us we looked at that and then
+finally we looked at a lab in which we
+created an application using elastic
+beant stock and all that we had to do
+was a couple of clicks and boom an
+application was there available that was
+connected to um the database and that
+was connected to the simple notification
+system that was connected to Cloud watch
+that was connected to storage stuff like
+that what is azure what's the big cloud
+service provider all about so Azure is a
+cloud computing platform provided by
+Microsoft now it's basically an online
+portal through which you can access and
+manage resources and services now
+resources and services are nothing but
+you know you can store your data and you
+can transform the data using services
+that Microsoft provides again all you
+need is the internet and being able to
+connect to the Azo portal then you get
+access to all of the resources and their
+services in in case you want to know
+more about how it's different from its
+rival which is AWS I suggest you click
+on the top right corner and watch the
+AWS versus AO video so that you can
+clearly tell how both these cloud
+service providers are different from
+each other now here are some things that
+you need to know about as year it was
+launched in February 1st 2010 which is
+significantly later than when AWS was
+launched it's free to start and has a
+pay per use model which means like I
+said before you need to pay for the
+services you use through aor and one of
+the most important selling points is
+that 80% of Fortune 500 companies use
+Azure Services which means that most of
+the bigger companies of the world
+actually recommend using AZ and then
+azir supports a wide variety of
+programming languages the cop nodejs
+Java and so much more another very
+important selling point of aure is the
+amount of data centers it has across the
+world now it's important for a cloud
+service provider to have many data
+centers around the world because it
+means that they can provide their
+services to a wider audience now Azor
+has 42 which is more than any cloud
+service provider has at the moment it
+expects to have 12 more in a period of
+time which brings its total number of
+regions it covers to 54 now let's talk
+about Azure Services now Azure Services
+have 18 categories and more than 200
+services so we clearly can't go through
+all of them it has services that cover
+compute a and machine learning
+integration management tools identity
+devops web and so much more you're going
+to have a hard time trying to find a
+domain that Azure doesn't cover and if
+it doesn't cover it now you can be
+certain they're working on it as we
+speak so first let's start with the
+compute Services first virtual machine
+with this service what you're getting to
+do is to create a virtual machine of
+Linux or Windows operating system it's
+easily configurable you can add RAM you
+can decrease RAM you can add storage
+remove it all of it is possible in a
+matter of seconds now let's talk about
+the second service cloud service now
+with this you can create a application
+within the cloud and all of the work
+after you deploy it deploying the
+application that is is taken care of by
+aor which includes you know provisioning
+the application load balancing ensuring
+that the application is in good health
+and all of the other things are handled
+by aure next up let's talk about service
+fabric now with service fabric the
+process of developing a micros service
+is great simplified so you might be
+wondering what exactly is a micros
+service now a microservice is basically
+an application that consists of smaller
+applications coupled together next up
+functions now with functions you can
+create applications in any programming
+language that you want another very
+important part is that you don't have to
+worry about any hardware components you
+don't have to worry what Ram you require
+or how much storage you require all of
+that is taken care of by Azure all you
+need is to provide the code to azure and
+it'll execute it and you don't have to
+worry about anything else now let's talk
+about some networking Services first up
+we have Azor CDN or the content delivery
+Network now the AZ CDN service is
+basically for delivering web content to
+users now this content is of high
+bandwidth and can be transferred or can
+be delivered to any person across the
+world now these are actually a network
+of servers that are placed in strategic
+positions across the world so that the
+customers can obtain this data as fast
+as possible next up we have expess R now
+with this you can actually connect your
+on promise Network onto the Microsoft
+cloud or any of the services that you
+want through a private connection so the
+only communication that happens is
+between your unpromised network and the
+service that you want then you have
+virtual Network now with virtual Network
+you can have any of the Azure Services
+communicate with each other in a secure
+manner in a private manner next we have
+azard DNS so azur DNS is a hosting
+service which allows you to host their
+DNS or domain name system domains in
+Azure so you can host your application
+using Azure DNS now for the storage
+Services first up we have dis storage
+with dis storage you're given a
+costeffective option of choosing HDD or
+solid state drives to go along with your
+virtual machines based on your
+requirements then you have blob storage
+now this is actually optimized to ensure
+that they can store massive amounts of
+unstructured data which can include Text
+data or even binary data next you have
+file storage which is a managed file
+storage and can be accessible via the SB
+protocol or the server message block
+protocol and finally you have q storage
+now with Q storage you can provide
+durable message queuing for an extremely
+large workload and the most important
+part is that this can be accessed from
+anywhere in the world now let's talk
+about how a y can be used firstly for
+application development it could be any
+application mostly web applications then
+you can test the application see how
+well it works you can host the
+application on the internet you can
+create virtual machines like I mentioned
+before with the service you can create
+these virtual Machines of any size or
+Ram that you want you can integrate and
+Sync features you can collect and store
+metrices for example how the data Works
+how the current data is how you can
+improve upon it all of that is possible
+with these services and you have virtual
+hard drives which is an extension of the
+virtual machines where these services
+are able to provide you a large amount
+of storage where data can be stored talk
+about Azure in great length and breadth
+and if you're looking for a video that
+talks and walks you through all the
+services and Azure then this could be
+one of the best video you could find in
+the internet and without any further
+delay let's get started everybody likes
+stories it so let's get started with a
+story in a city not so far away a CEO
+had plans to expand his company globally
+and called one of his it personel for an
+IT opinion and this guy has been in the
+company for a long time and is very
+seasoned with the company's infra and he
+nicely answered the questions with what
+he foresaw and he said I have a good
+news and a bad news for us to go Global
+and he starts with the good news he said
+sir we're well on our way to become one
+of the world's largest shipping company
+and the bad news is however our data
+centers have almost run run out of space
+and setting up new ones around the world
+would be too expensive and very time
+consuming now the IT personnel let's
+call him Mike now he explains the
+situation from how he saw it but the CEO
+had done some homework about how he was
+going to do it and he answered Mike
+saying don't worry about that Mike I've
+come up with a solution for a problem
+and it's called Microsoft Azure well
+Mike is an hardworking and harnessed IT
+professional working for that company
+but he did not spend time on learning
+the latest Technologies and he asked
+this question very honestly oh how does
+it solve a problem and the CEO begins to
+explain Azure to Mike and he starts with
+what is cloud computing and then he goes
+on and talks about Azure and the service
+is offered by Azure and why Azure is
+better than the other Cloud providers
+and what are the great compan companies
+that uses Azure and how they got
+benefited out of it and then he winds it
+all up with the use cases of azure so he
+begins his explanation saying Microsoft
+Azure is known as the cloud service
+provider and it works on the basis of
+cloud computing now Microsoft Azure is
+formerly known as Windows Azure and it's
+a Microsoft's public cloud computing
+platform it also provides a range of
+cloud services including some of them
+are compute analytics storage and
+networking we can always pick and choose
+from these services to develop and scale
+our applications or even plan on running
+existing applications in the public
+Cloud Microsoft Azure is both a platform
+as a service and infrastructure as a
+service let's now fit their conversation
+out and let's talk about what is cloud
+computing azure services offered by
+Azure how is azure leading when compared
+to other cloud service providers and
+what are the companies that are using
+Azure let's talk about that in simple
+terms cloud computing is being able to
+access compute services like servers
+storage database networking software
+analytics intelligence and a lot more
+over the Internet which is the cloud
+with the uh flexibility of the resources
+that we use like anytime I want a
+resource I can use one and it becomes
+available immediately and anytime if I
+want to retire and resource I can simply
+retire at resource and not pay for it
+and we also typically pay only for the
+services that we use and this helps
+greatly with our operating cost to run
+our infrastructure more efficiently and
+scale our environment up or down
+depending on the business needs and
+change changes and all the servers and
+storages and databases and networking
+all that are accessed through the
+network of remote systems or remote
+computers hosted in the internet
+typically in the providers data center
+which is azure in this case now we don't
+use any physical server or an on
+premises server here well we still use
+physical servers and VMS you know hosted
+on a hardware or a physical server but
+they're all in the provider's
+environment and none of them sit on
+premises or in our data center we only
+access them remotely it looks and feels
+the same except for the fact that they
+are in a remote location we access them
+remotely do all the work remotely and
+when we're done we can shut it down and
+not pay for them so some of the use
+cases some of the use cases of cloud
+computing are creating applications and
+services the other use cases are storing
+or using Cloud for storage alone if
+there is one thing that ever grows in an
+organization is the storage every new
+day there is a new storage requirement
+and it's very Dynamic it's very hard to
+predict and if we go out and buy a big
+storage capacity up front and until we
+use the storage capacity fully the empty
+storages you know we're wasting money on
+them so instead I can go for a storage
+which scales dynamically that's in the
+cloud put storage or put data in the
+cloud and pay only for what you're
+storing and for the next month if you
+have deleted or flushed out some files
+or data pay less for it so it's a very
+Dynamic storage in the cloud and a lot
+of companies are getting benefited from
+storing data in the cloud because of its
+uh dynamic in nature and the cost that
+comes along with it the cheap cost that
+comes along with it and also they give a
+lot of the providers like Azure they
+give a data replication for free they
+promise an SLA along with the data we
+store in the cloud so there's an SL
+attached to it and they also provide
+data recoveries as well if in case
+something goes wrong with the physical
+disk where our data is stored Azure
+automatically makes our data available
+from the Redundant or other places where
+it had stored our data because of the SL
+they wanted to keep the other use case
+for Azure is hosting websites and
+running blogs using the compute service
+be it storing music and letting your
+users stream the music Azure is a good
+place to store music and stream the
+music with the benefit of U CDN content
+delivery Network which allows us to
+stream a video or audio files with great
+speed you know with that with Azure our
+audio or video application works
+seamlessly because they are provided to
+the client with very low latency and
+that improves the customer experience
+for our application Azure compute
+service is a good place for delivering
+software on demand there are a lot of
+softwares embed softwares that we can
+buy using Azure and everything on a pay
+asigo service model so anytime we need a
+software we can go out and immediately
+buy the software for the next one hour
+or 2 hour let's say and use them and
+then return it back we not bound to any
+yearly licensing cost by that aure
+Computing Services has analytic
+available for us with which we can
+analyze ize get a good visualization of
+what's going on in a network be it logs
+be it the performance be the metrics you
+know instead of looking at logs and
+searching logs and trying to do manual
+things over the heaps and heaps of logs
+that we have saved Azure analytics
+Services helps us to get a good visual
+of what's going on in the network where
+have we dropped where have we increased
+what's causing what's the major driver
+what is the top 10 errors that we get in
+the server in the application stuff like
+that those can be easily gathered from
+the Azure analytic Services now cloud is
+really a very cool term for the internet
+a good analogy would be looking back
+anytime we look at a diagram when we do
+not know how things are transferred we
+simply draw a cloud right for example a
+mail gets sent from a person in one
+country to a person in the other country
+there a lot of things happening in
+between from the time you hit the send
+button and the time the other person
+hits the read button right and we the
+simple and the easiest way of putting it
+in a picture is simply draw a cloud and
+on the one end one person will be
+sending the email and on the other end
+the other person will be reading the
+email so cloud is a really cool term for
+the internet now that's some Basics
+about cloud computing now now that we've
+understood about cloud computing in
+general let's talk about Microsoft Azure
+as a cloud service now Microsoft Azure
+is a set of cloud services to build
+manage and deploy applications on a
+network with the help of Microsoft
+azures Frameworks now Microsoft Azure is
+a Computing service created by Microsoft
+basically for building testing deploying
+and managing applications and services
+through a Global Network of Microsoft
+managed data centers now Microsoft Azure
+provides SAS which is software as a
+service and PAs which is platform as a
+service and IAS infrastructure as a
+service and they support many different
+programming languages tools and
+framework and those tools and framework
+include both Microsoft specific and
+thirdparty software now let me pick and
+talk about a specific service for
+example management Azure automation
+provides a way for us to automate the
+manual long running and frequently
+repeated tasks that are commonly
+performed tasks both in cloud and
+Enterprise environment it saves a lot of
+time and increases the reliability and
+it kind of gives a good administrative
+control and even schedules the task
+automatically to be performed on a
+regular basis to give you a quick
+history of Microsoft Azure it was
+launched on 1st February
+2010 and it was awarded or it was called
+an industry leader for infrastructure
+and platform as a service by Gartner now
+Gartner is the world's leading research
+and advisory company this Microsoft
+Azure supports a number of programming
+languages like C Java and python all
+these School Services we get to use and
+pay only for how much we use for example
+if we use for an R we only get to pay
+for an R even the costliest system
+available if you use them for an hour we
+only pay for that particular hour and
+then we're done no more billing on the
+resource that we have used Microsoft
+Azure has spread itself more than 50
+regions around the world so it's quite
+easy for us to pick a region and you
+know start provisioning and running our
+applications probably from day one
+because the infrastructure and the tools
+and Technologies needed to run our
+application are already available all
+that we have to do is come at the code
+in that particular region or build an
+application and launch it in that
+particular region and they become live
+starting day one now because we have 50
+regions around the world we can very
+carefully design our environment to
+provide load latency services to our
+customers all right instead of In
+traditional data center let's say you
+know customers will have to or their
+request will have to travel all the way
+around the globe to reach a data center
+which lives in the other side of the
+planet and this adds more latency to it
+and it is really not feasible to build a
+data center uh near each customer
+location because of the cost involved
+but with Azure it's possible Azure
+already has data centers around the
+world and all that we have to do is just
+pick a data center build an environment
+there they're available starting day one
+number one and also the cost is
+considerably saved because we are using
+a public Cloud instead of an physical
+infrastructure to serve those customers
+from a very local location and these
+services that as your is offering is
+ever increasing as of now as we speak we
+have like 200 plus services offered and
+uh they span through different domain or
+different platform or different
+Technologies available within the Azure
+console portal now we're going to talk
+about that later in this section so hold
+your breath till we talk about it but
+for now just know that we have like 200
+plus services offered by Azure let's now
+talk about different services and aure
+starting with artificial intelligence
+plus machine learning
+where we have a lot of tools and
+Technologies so the wide variety of
+services available on Azure includes
+artificial intelligence plus machine
+learning plus analytic services to get
+an or to give us a good visual of how
+the data or how the application is
+performing or the type of the category
+of data stored and to read from the logs
+and variety of compute Services
+different VMS with different size in
+different operating systems different
+containers available different type of
+databases available a lot of developer
+tools that are available for us and
+identity service to manage our users in
+the Azure cloud and those users can be
+integrated or Federated with let's say
+Google Facebook you know LinkedIn so
+they are some external Federation
+Services they can be used to integrate
+with our ident system iots iot Services
+iot tools and Technologies available and
+management tools to manage the users you
+know creating identities one and then
+managing them on top of it is a totally
+different thing and we have tools
+Technologies to manage the uh users cool
+services for data migration data
+migration is now made simple tools and
+Technologies available for mobile
+application uh development and I can
+plan my own network in the cloud with
+the networking Services I can Implement
+my own security both Azure provider and
+third party Security Services on Azure
+Cloud that's now possible and lot of
+storage options available in the cloud
+so these are just a glimpse of the big
+list of services available in Azure
+Cloud so that was a glimpse of what's
+available in the cloud let's talk about
+the services in a specific specific
+let's take compute for example you know
+whenever we're building a new
+application or deploying existing ones
+the Azure compute service provides the
+infrastructure we need to run and
+maintain our application we can easily
+tap in the capacity that Azure cloud
+service has and we can scale our compute
+requirement on demand we can also
+containerize our application we have the
+option of choosing windows or Linux wi
+machine and take the advantage of the
+flexible options Azure provides for us
+to migrate our VMS to Azure and lot more
+and these compute Services also include
+a full-fledged identity solution meaning
+integration with active directory in the
+cloud or in on premises and lot more
+let's look at some of the services that
+this compute domain provides provides
+some of the services the computer domain
+provides are virtual machines and this
+Azure virtual machines gives us the
+ability to develop and manage a virtual
+computer environment or a virtualized
+environment inside azures Cloud
+environment that to in a virtual private
+Network now we will talk about virtual
+private Network at a later point but as
+of now just know that there are a lot of
+service is available in Azure compute
+service that we can get benefited from
+we can always choose from a very wide
+range of uh computer options for example
+you know we have an option to choose the
+operating system we have the option to
+choose whether the system should be in
+on premises or in the cloud or do we
+want to maintain the environment both in
+on premises and in the cloud we have the
+option of choosing the operating system
+whether we want to use our own operating
+system syst with some software attached
+to it or do we want to go and buy the
+operating system from the cloud from
+Azure Marketplace and these are just a
+few of the options available for us when
+we want to buy the compute environment
+and these computer environments are
+easily scalable meaning we can easily
+scale our VM instances from one instance
+to thousands of virtual machines in a
+matter of minutes or simply put in a
+couple of button clicks and all these
+services are available on a pay for what
+we use model meaning there is no upfront
+cost we use the service and then pay for
+the services that we have used there's
+no literal long-term commitment when it
+comes to using virtual machines in the
+cloud and these most of the services are
+built on a pay per minute billing basis
+all right and at no point because of the
+pay per minute billing model at no point
+we will be overpaying for any of the
+services that's that's attractive isn't
+it now let's talk about batch service
+now bat service is always independent
+regardless of whether you choose windows
+or Linux it's going to run fairly well
+and with bat servers we can take
+advantage of the environment's unique
+features and not only that in short the
+bat service helps us to manage the whole
+batch environment and also it helps to
+schedule the jobs now this Azure batch
+service is actually runs on a large
+scale parallel and high performance
+Computing because of that batch jobs are
+highly efficient in Azure and when we
+run batch services this Azure batch
+creates a pool of computer nodes and uh
+installs the needed applications that we
+want to run and then it schedules jobs
+to those individual nodes in those pools
+as a customer there is there's no need
+for us to install a cluster or there is
+no need for us to install a software
+that actually schedules the jobs or even
+to manage or even to scale those
+infrastructure or the software because
+everything is managed by Azure and this
+bat service is a platform as a service
+there is no additional charge for using
+this batch service except for I mean the
+only charges that we'll be paying is for
+the virtual machines that the service
+uses and uh the storage that we will be
+using of course and uh the networking
+services that we will be using for this
+batch service let's summarize this batch
+service we have a choice of operating
+system that we can pick and use and it
+scales by itself now the alternative for
+the batch would be cues but in cues
+we'll have to pre-provision and pay for
+the infrastructure even if we're not
+using it but with a batch we only pay
+for what we use and this batch service
+helps us to manage
+the application manage the scheduling as
+a whole as if they are just one thing as
+next thing in compute domain let's talk
+about this fabric service now this
+fabric service is actually a distributed
+system platform that helps us to package
+deploy and manage a scalable and a very
+reliable microservice and containers and
+what does it help this Azure fabric
+service helps us or it helps the
+developer and administrators so they can
+avoid the complex infrastructure
+problems and they can focus only on
+implementing workloads or taking care of
+their development taking care of their
+application instead of spending time on
+infrastructure so what's service fabric
+service fabric it provides runtime
+capabilities and uh life cycle
+management to applications that are
+composed of microservices no
+infrastructure management at all and
+with service fabric we can easily scale
+the application to tens or hundreds or
+even to thousands of machines here
+machines represent containers as next
+thing in compute domain let's talk about
+virtual machine scale set now this
+virtual machine scale set it lets us to
+create a group of identical load
+balanced VMS I just want to mention it
+again it helps us to manage a group
+identical and load balanced VMS the
+number of instances or the number of VM
+instances in an in a scale set can
+increase or decrease in response to uh
+the demand or in response to a schedule
+that we Define you know the resources
+needed on a Monday morning is not the
+same as that would be required on a
+Saturday or a Sunday morning all right
+and even within the day the resources
+that would be needed in the beginning of
+the business hour is not the resources
+that would be needed at noon or you know
+after 8 or 9 in the evening so the
+demands could actually vary in the
+environment and the scale set helps us
+to take care of the varing demand or
+take care of the uh different
+infrastructure requirement at a
+different schedule throughout the day
+throughout the week throughout the month
+or could be throughout the year as well
+the scal set also allows us to provide
+High availability to our applications
+and it helps us to uh centrally manage
+configure and update a large number of
+VMS as if they they are just one thing
+now you might ask well virtual machine
+are enough why would we need a virtual
+machine scale set just like I said this
+virtual machine scale set helps us with
+a greater redundancy and improved
+performance for our applications and
+those applications can be accessed
+through a load balancer that actually
+distributes uh the requests to the
+application instances so in a nutshell
+this virtual machine scale set it helps
+us to create a large number of identical
+virtual machines number one and with
+scale set we can increase or decrease
+the virtual machines with virtual
+machine scale set we can centrally
+manage and configure and update a big
+group of VMS and it's a great use case
+when it comes to Big Data or container
+workloads as next thing in compute
+domain uh let's talk about cloud
+services now this Azure cloud service is
+actually a platform as a service and
+it's very friendly in fact it is
+designed for applications that support
+scalability or an application that
+requires scalability or reliab
+and and on top of it you want them to be
+very inexpensive to operate so Azure
+cloud service provides all these so
+where would this cloud service run well
+it runs on a VM but it's a platform as a
+service VMS are infrastructure as a
+service and when we run applications on
+VM through cloud service it becomes
+platformed as a service so here is how
+you got to be thinking with
+infrastructure as a service like VMS we
+first create and configure the
+environment and then we run application
+on top of it let's look at the
+responsibility the responsibility for us
+in VM is that we manage everything end
+to end like uh you know deploying new
+patches picking the versions of the
+operating system and making sure they
+are uh intact and all that stuff it's
+all managed by us but on the contrary
+with platform as a service it's I mean
+it's as if the environment is already
+ready all that you have to do is deploy
+your application in it and manage the
+platform I mean manage the platform not
+as an administrator because all the
+administration is taken care by Azure
+like know deploying new versions of the
+operating system it's all handled by the
+Azure so we deploy the application and
+we manage the application that's it
+infrastructure management is handled by
+Azure so what does cloud service provide
+this cloud service provides a platform
+uh where we can uh write the uh
+application code and we don't have to
+worry about Hardware simply hand over
+the code and cloud service takes care of
+of it so no worry on the hardware at all
+so responsibilities like patching what
+do we do if something uh crashes how do
+I update the infrastructure how do I
+manage uh the maintenance or the
+downtime in the underlying
+infrastructure all that is handled by
+Azure it also provides an good testing
+environment for us you know we can
+simply run the code test it before it's
+actually released to the production I
+want to expand a bit on the testing
+applications so this Azure cloud service
+it actually gives us an staging
+environment for testing a new release
+without it affecting the existing
+release which actually reduces the
+customer downtime so we can run the
+application tested and anytime that's
+ready for production all that's needed
+for us to do to move it to production is
+simply to swap the staging environment
+into the production environment and the
+old production environment will now
+become from the new staging environment
+where we can uh add more to it and then
+swap it back at a later point so it it
+kind of gives us an swapable environment
+for testing our applications and not
+only that it gives us Health monitoring
+alerts it helps us to monitor the health
+and availability of our application
+there is a dashboard we can benefit from
+uh when we use Azure cloud services and
+that shows the key statistics all in one
+place and we can also set up realtime
+alerts one when a service availability
+or a certain metrics that we are
+concerned about degrades as next thing
+in computer domain let's talk about
+functions now functions are serverless
+Computing now many time if you heard
+about Azure being serverless a lot of
+time they are referencing or the person
+who's talking to you is referencing to
+serverless uh Computing or Azure
+functions which is a serverless
+Computing service hosted on Microsoft
+Azure the main motive of a function is
+to accelerate and simplify application
+development functions helps us to run
+code on demand without we need to
+pre-provision or manage any Azure
+infrastructure so Azure functions are
+script or a piece of code that gets run
+in response to an event that you want to
+handle so in short we can just write a
+code that you need for a problem at hand
+without actually worrying about the
+whole application or the infrastructure
+that will be running uh that code and
+the best of all the best is when we use
+functions we only pay for the time that
+our code runs so what does functions
+provide or what does Azure functions
+provide Azure functions allow users to
+build applications using serverless uh
+simple functions with a programming
+language of our choice so the current
+programming languages that are supported
+is c f nodejs Java and PHP so here we
+really don't have to worry about
+provisioning or uh maintaining servers
+if a code requires more resource yes
+Azure functions handles or it provides
+the additional resources needed by the
+code and the best part is we only pay
+for the amount of time the functions are
+running not the resources but the amount
+of time the function is running as next
+thing and moving to the new domain let's
+talk about the container domain in Azure
+now the container domain or the
+container service it allows us to
+quickly deploy a production ready
+kubernetes or a Docker swamp cluster now
+what's a container a container is a
+standard unit of software that packages
+of code and all its dependencies so the
+applications run quickly and reliably
+from one Computing environment to
+another it could be testing uh to
+staging to developing development
+environment to staging to production or
+from one production to another
+production or on premises to cloud or
+one Cloud to another Cloud vice versa
+now imagine we had an option not to
+worry about the VM and just focus on the
+application well that's exactly what
+containers helps us achieve so these
+container instances enable us to focus
+on applications and not worrying about
+managing VMS or not worrying about the
+Laing the new tools required to manage
+the VMS or even the deployment and our
+applications that we create they run in
+a container and running in a container
+is what helps us to achieve all these
+not being able to manage or not needing
+to manage the virtual machines so these
+containers uh they can be deployed into
+the cloud using a single command if
+you're using command line interface and
+a couple of button clicks if we are
+using the Azure portal and these
+containers are kept lightweight but they
+are equally secure as virtual machines
+let's talk about container service as
+next thing uh the container service or U
+sometimes called as Azure kubernetes
+service it helps us to manage the
+containers container is one thing and a
+service that's used to manage the
+container is another thing now this
+kubernetes service or ACS it helps us to
+manage the containers so let's expand on
+this a bit so this Azure container
+service or ACS it it actually provides a
+way uh to simplify the creation
+configuration and management of a
+cluster of virtual machines that are
+preconfigured to run containerized
+applications on top of them and
+deploying them deploying these
+containers might take like 15 to 20
+minutes or deploying the virtual
+machines that run containers in it might
+take 15 to 20 minutes and once they are
+provisioned we can actually manage them
+by using simple SSH tunnel into them and
+this ACS when it runs application it
+runs applications from Docker images
+what does that mean a Docker image
+makes sure that the applications the
+container runs are fully portable images
+are portable and ACS also helps us to or
+orchestrate the container environment
+not only that it also helps us to ensure
+that these applications that we run in
+containers can be scaled to thousands or
+even tens of thousands of containers so
+in a nutshell managing an existing
+application into a container and running
+it using AKs or ACS is really easy or
+that's what it is all about to make the
+application management or migration easy
+now managing the container based
+architecture and we discussed that
+containers could be tens or even tens of
+thousands of containers so managing them
+is Made Simple using this container
+services and even training of model
+using a large data set in a complex and
+resource intensive uh environment this
+AKs helps us to simplify that uh
+environment all right as next thing in
+container domain let's talk about
+container registry we spoke about
+registry a little bit when we spoke
+about Docker images so container
+registry is a single place where we can
+store our images which are Docker images
+when we use when we use containers it's
+it's Docker images that we use for our
+image purposes so these container images
+are a central registry that can be used
+to ease container development by easing
+the storage
+and management of container images so
+there we can store all kind of images
+like U Docker swamp or the images used
+in Docker swarm or in kubernetes
+everything can be stored in container
+registry in Azure now anytime we store a
+container image it provides us an option
+for geo replication what that means is
+that we can efficiently manage a single
+registry replicated across multiple
+regions now this Geo replication it
+actually enables us to manage Global
+deployments assuming we are having an
+environment that requires a global
+deployment so it helps us to manage
+Global deployments as one entity because
+we are Geor replicating we would be
+updating we would be editing one image
+and that image gets replicated
+throughout the global uh replication
+centers we would have set up and so just
+one editing would have actually edited
+the global images and those global
+images would have provisioned the global
+application so one edit replication and
+then provisioning of the applications
+globalwide and this replication also
+helps us to helps us Network latency
+because you know anytime an application
+needs to deploy it does not have to rely
+on a single source which which can be
+reached only through high latency
+Network because we have Global
+replications around the world anytime
+the application wants to check back it
+would check back uh the application
+which is in a very nearby location for
+the application itself Global
+replication means that we are managing
+it as a single entity that's being
+replicated across the multiple regions
+in the globe as next thing in a learning
+let's talk about um Azure databases now
+this Azure databases are rational in
+fact they have uh many flavors in them
+uh we're going to look at uh different
+flavors no SQL no SQL cache type of
+database that Azure offers so we're
+going to learn one at a time or we're
+going to learn one by one so this Azure
+SQL database is a rational database in
+fact it's a rational database as a
+service it's managed by Azure we don't
+get to do a lot of management in it so
+it's a rational database as a service uh
+based on Microsoft uh SQL Server
+database engine and this database is a
+high performance database it is very
+reliable and uh it's very secure as well
+and this High reliability high
+performance and for this high security
+we really don't have to do anything it
+comes along with it and uh it's managed
+by Azure and there are two things that I
+definitely need to mention about Azure
+SQL database that is it's an intelligent
+service number one it's fully managed by
+Azure and it also has this one good
+thing which is it has built-in
+intelligence that learns app patterns
+and adapts to maximize performance and
+reliability and data protection of the
+application that's something that's not
+found in uh many of the other Cloud
+providers that I'm aware of so I thought
+I'll mention it so it uses built-in
+intelligence to learn about um the
+user's database patterns and helps
+improve performance and protection and
+migration or importing data is very easy
+when it comes to Azure SQL database so
+it can be readily or immediately used
+for analytic reporting and uh
+intelligent applications in Azure as
+next thing let's talk about Azure cosmod
+DB now Azure cosmod DB is a database
+service that is for no SQL type and uh
+it's it's created to provide low latency
+and uh an application that scales
+dynamically or that scales rapidly now
+this Azure cosmod DB is an a globally
+distributed service
+and it's a multimodel database this can
+be provisioned in a click off a button
+that's all we got to do if we need to
+provision and Azure Cosmo DB in the
+Azure it helps with scaling the database
+know we can elastically and
+independently scale throughput and
+storage across this database and in any
+of the Azure geographic regions it
+provides a good throughput it provides
+good latency it provides good
+availability and um it provides or Azure
+promises a a comprehensive SLA that no
+other database can offer that's the best
+part about cosmod DB so this cosmod DB
+was built with global distribution in
+mind and it's built uh with the
+horizontal scale in mind and all this we
+can use by only paying for what we have
+used and remember the difference between
+Azure cosmod DB and the SQL database is
+that Azure cosmod DB CS no SQL whereas
+SQL doesn't all right few other things
+about Azure cosmod DB is it allows users
+to use key value graph a column family
+and document data it also gives users a
+number of AP options like SQL JavaScript
+mongod DB and and few others that you
+might want to check in the document at
+at the time of reading and the best part
+here is that all that we mentioned we
+get to use only by paying for the amount
+of storage and throughput that are
+required and the storage and the
+throughput can be elastically scaled
+based on the requirement of the r all
+right let's talk about um redis cache
+discussion about Azure database won't be
+complete without we talking about redis
+cache now reddis cache is a secure data
+cache it's also called it's also
+sometimes called as messaging broker
+that provides high throughput and low
+latency access to data for the
+applications now redis cache is based on
+an a popular open-source caching product
+which is that is sometimes called as L
+is cache now what's the use case it's
+typically used to Cache to improve the
+performance and scalability of a system
+that rely heavily on backend data stores
+now performance when we use redis cache
+is improved by temporarily copying the
+frequently accessed data to a fast
+storage located very close to the
+application now with redis cache this
+fast storage is located in memory with
+redis cache instead of being loaded from
+the actual dis in the database itself
+now this redis Cache can also be used as
+an in-memory data structure store not
+only that it can be used as an
+distributed non-relational database and
+a message broker so there are variety of
+uh use cases for this redis cache and by
+using RIS cach the application
+performance is improved by taking
+advantage of the low latency and the
+high throughput performance that this
+redis cache engine provides so to
+summarize this redis cache when we use
+redis cache data is stored in the memory
+instead of the disk to ensure that there
+is high throughput and low latency when
+the application needs to read the data
+it provides various levels of scaling
+without any downtime or interference now
+this redis cach is actually backed by
+Red server and it supports u a string
+hashes linked list and various other
+data structures now let's talk about
+security and identity Services now ident
+identity management in specific is a
+process of authenticating first and then
+authorizing using security principles
+and not only that identity management
+involves controlling information about
+those principle identities you might ask
+now what's an principal identity now
+Identity or principal identity are
+Services applications users groups and a
+lot more the speciality about this
+identity management is that it not only
+helps authenticate and authorize
+principles in Cloud it also helps
+authenticate and authorize principles or
+resources on premises especially when
+you run an hybrid Cloud environment so
+all these services and features that
+this identity management helps us to get
+additional level of validation like
+identity management can provide
+multiactor authentication it can provide
+access policies based on condition a
+permit or deny based on condition it can
+also monitor suspicious activity and not
+only that it can also report it it can
+also help generate alerts for potential
+security issues and in a way to mitigate
+it can send us an alert so we can get
+involved and prevent an security
+accident from happening so let's talk
+more about identity management so some
+of the services under security an
+identity management or Azure security
+center now this Azure security Center
+provides Security Management and threat
+protection across the workloads in both
+cloud and in the hybrid environment it
+helps control user access and
+application control to stop any
+malicious activity if present it helps
+us to find and fix vulnerabilities
+before they can be even exploited it
+integrates very well with analytic
+methods that helps us to identify or it
+gives us the intelligent to identify or
+deduct attacks and prevent them before
+it can actually happen and it also works
+seamlessly with hybrid environments so
+you don't have to have one policy for on
+premises and one policy for the cloud
+it's now a Unified Service both for on
+premises and the cloud the next service
+in security and identity would be keyal
+now a keyal is a service or a feature
+that helped safegard the cryptographic
+keys and any other Secrets used by the
+cloud applications and the services in
+other words this Azure keyal is a tool
+for securely storing and accessing the
+secrets of the environment I mean the
+secret Keys now a secret is anything
+that you really want to have a very
+tight control access like the
+certificates like the passwords stuff
+like that now if I tell you what keyal
+actually solves that would actually
+explain what keyal is now keyal is used
+in Secrets management it's helped in
+securely storing The Tokens The
+passwords the certificates it helps in
+Key Management you know it really helps
+in creating and controlling the
+encryption keys that we would use to
+encrypt data it helps in certificate
+management talking about certification
+management it helps us to easily
+provision manage and employ public and
+private SSL TLS certificates in Azure
+and a lot more so in a nutshell this key
+wall it provides users the ability to
+provision new walls and keys in just a
+matter of minutes all that in a single
+command or all that in a couple of
+button clicks it also helps users to
+centrally manage their Keys Secrets and
+policies next in the list let's talk
+about Azure active directory now Azure
+active directory it helps us to create
+intelligent driven access policies to
+limit resource usage and manage user
+identities what what does that mean now
+this Azure active directory is a
+cloudbased active directory and identity
+management service now Azure active
+directory combines and it's actually a
+combination of the core directory
+Services Plus application access
+management plus identity protection
+and one good thing about this Azure in
+fact there are a lot of good things but
+especially when you're running hybrid
+environments you might wonder well how
+this Azure active directory is going to
+behave now this Azure active directory
+is built to work on on premises and
+Cloud environment as well not only that
+it also works seamlessly with mobile
+applications as well so in a nutshell
+this Azure active directory it acts as
+an central point of identity and access
+management for our Cloud environment it
+also provides good Security Solutions
+that protect against unauthorized access
+of our app and the data now that we have
+discussed about security and identity
+let's talk about the management tools
+that Azure has to offer Azure provides
+builtin management and account
+governance tools that helps
+administrators and developers that helps
+them to keep their sources secure and
+very compliant and again it helps both
+in on premises and in the cloud
+environment and these management tools
+help us to monitor the infrastructure
+monitor the applications it also helps
+in provisioning and configuring
+resources it also helps in updating apps
+it helps in analyzing threats taking
+backup of the resources build uh
+disaster recoveries it also helps in
+applying policies and conditions s to
+automate our environment we use Azure
+management tools and it's also used in
+cost control methods so this Azure
+management plays a wide role across the
+Azure services and in the management
+tools first comes the Azure advisor now
+this Azure advisor it acts as a guide to
+educate us about Azure best practices it
+throws recommendations that we can
+select on the basis of the category of
+servers and it also provides the impact
+it can have or the impact that would
+happen in our environment if we follow
+the recommendations given and
+recommendations are first one is the
+recommendations are kind of templatized
+and it throws um the templatized
+recommendations not only that it also
+provides customized recommendations on
+the basis of the configuration on the
+basis of our usage patterns and these
+recommendations are not hard it's not
+like something that it recommends and
+then just leaves us hanging there these
+recommendations provided are very easy
+to follow very easy to implement and see
+results you can think of azure advisor
+as an a Very personalized Cloud
+consultant that helps you to follow best
+practices to optimize our deployments it
+kind of analyzes our resources our
+configurations our usage and then it
+recom mends a solution for us that
+really helps in improving the cost
+Effectiveness improving the performance
+improving High availability and
+improving Security in our Azure
+environment so with this Azure advisor
+we can get a proactive actionable and
+personalized best practice
+recommendations now you don't have to be
+an expert just follow the Azure advisor
+and your environment is going to be good
+it also helps and improve the
+performance security High availability
+of our environment and also it helps in
+bringing down the overall Azure spend
+and the best part is it's a free service
+that analyzes our Azure usage and
+provides recommendations how we can
+optimize our Azure resource to reduce
+cost and reduce cost at the same time
+boost the performance helps in
+strengthening the security and improve
+the overall reliability of our
+environment next in the list would be
+Network watch ER now this network
+Watcher helps users identify and gain
+insights in the overall Network
+performance and the health of the
+overall environment now these Azure
+Watchers provides enough tools to
+monitor to diagnose to view the metrics
+and to enable or disable logs which
+means you know generate and collect the
+logs for resources in the Azure virtual
+Network so with network Watcher can
+monitor and diagnose issues in
+networking without even logging into the
+virtual machines with just a logs which
+are real time we can actually come to a
+conclusion what could be wrong in a
+certain resource in a VM or in a
+database you know but just looking at
+the logs and not only that it's used for
+analytic or to gain some intelligence of
+what's happening in our Network we can
+gain a lot of insight to the current
+Network traffic pattern using the
+security group flow logs that this
+network Watcher offers it also helps in
+investigating VPN connectivity issues
+using detailed logs now you might or
+might not know that you know VPN
+troubleshooting requires both parties or
+it involves two parties and other person
+the network administrator on this side
+and the network administrator on the
+other side and they will have to check
+logs in their end and we'll have to
+check logs in our end stuff like that
+but with the network Watcher it kind of
+takes it to the next level the logs
+itself we could easily identify which
+side is having the issue and suggest an
+appropriate fix and the next in the list
+would be Microsoft Azure portal now this
+Microsoft Azure portal it provides a
+single unified console to perform
+various number of activities like
+building not only building managing and
+monitoring the web applications that we
+build now this portal can be used to
+organize our environment or the
+appearance of the environment or the
+visual of the environment based on our
+workstyle and using Azure portal users
+can control who gets to manage or access
+the resources all from the Azure portal
+and this Azure portal gives a very good
+visibility on the spins that happen on
+each resource right and if we can
+customize it we can also identify spend
+based on on team spends based on days
+spends based on Department stuff like
+that so it kind of gives us a good
+visual of where the money is spending or
+where is the bill consumed within the
+Azure environment next in the list would
+be Azure resource manager now Azure
+resource manager enables us to manage
+the usage of the application resources
+now we use resource manager to deploy
+Monitor and manage solution resources as
+a group as if it's one single entity now
+the infrastructure of our application is
+typically made of various components
+which includes virtual machine storage
+virtual Network web app database servers
+some other third party services that we
+might use in our environment and they
+are by nature separate services but with
+Azure resource manager we don't see them
+as different components or different
+entities instead we see them as related
+services in a group that supports an
+application now we kind of get the
+relation between them instead of you
+know letting them spread Azure resource
+manager identifies the relation between
+them and helps us to visually see them
+all as one or single entity not only
+that Azure resource manager helps or it
+ensures that the resources that we
+provision or deploy at a constant rate
+along with the other application it also
+helps users to visually see their
+resources and how they are connected and
+that helps in managing the resources a
+lot better resource Group also is used
+to control who can access the resources
+within the user's organization kind of
+gives you the fine grained control over
+who gets to access and who does not get
+access and the last one in the
+management tools would be automation aut
+and this automation gives us the ability
+to automate configure and install
+upgrades across hybrid environments it
+provides a cloud-based Automation and
+configuration service not only that this
+can be applied for non aure environments
+as well which is on premises so some of
+the automation we could do is process
+automation update management automation
+configuration features automation stuff
+like that and this Azure automation
+provides complete heat control during
+the deployment operation and also during
+the decommissioning of the workloads and
+resources with automation we can
+actually automate uh time consuming or
+mundane or any task that's error prone
+because of uh human errors those things
+can be automated so irrespective of how
+many times you run it it's going to run
+the same way and that really helps in
+reducing the overall time and also the
+overhead cost because a lot of the
+things are automated which means it's
+human error free which means the
+application is not going to break and
+keep running for a longer time with
+automation we can actually build a good
+inventory of operating system resources
+and configuration items all in one place
+with ease and this really helps in
+tracking the changes and investigating
+the issue let's say something happened
+because we have automation because it's
+logging the configuration changes is
+it's easy to track easy to identify easy
+to identify what has changed lately that
+has broken the environment go back and
+fix it or kind of roll it back that
+solves the problem and that actually
+summarizes the Azure management tools or
+Management Services now let's talk about
+the networking tools or the networking
+services available in Azure there are
+variety of services especially
+networking services that Azure offers
+and I'm sure it's going to be an
+interesting one let's begin our
+discussion with content delivery Network
+now the content delivery Network in
+short CDN it allows us to perform secure
+and a very reliable content delivery not
+only that it also helps in accelerating
+the delivery time or in other words
+reducing the delivery time also called
+as load times it also helps in Saving
+bandwidth and increases in respons iess
+to the application let's expand on this
+the content delivery network is actually
+a distributed network of servers that
+can efficiently deliver web content to
+users now cdns we're going to use the
+word CDN here CDN store cached content
+on global Edge servers also called as uh
+pops point of presence locations that
+are very close to the end users so the
+latency is minimized it's like taking a
+copy of the data or taking a multiple
+copy of the data and storing it in
+different parts of the world and whoever
+is requesting it the data gets delivered
+to them from a server which is very
+locally to them so this CDN offers
+developers a global solution for rapidly
+delivering high bandwidth content to
+users by caching the content in a
+strategically placed location which is
+very near to them so these content
+delivery networks it really helps in
+handling that's one advantage you get
+for Content delivery Network that's we
+can handle spikes and heavy loads very
+efficiently and we can also run analytic
+against the logs that gets generated in
+content delivery Network which helps in
+gaining good Insight on the workflow and
+what would be the future business need
+for that application and this just like
+a lot of other services this is on a pay
+as you go type so you use the resource
+first and then you only pay for what you
+have used the next one in networking
+would be express route now express route
+is actually a circuit or a link that
+provides an a direct private connection
+to Azure and because it's direct it
+gives low latency link to Azure it gives
+good speed and reliability for the Azure
+data transfer it could be on premises to
+Azure so it gives very good speed it
+gives increased reliability and low
+latency for that connection let's expand
+on this a bit now this express route is
+an service that actually provides an
+private connection between Microsoft
+Data Center and infrastructure in our
+premises or in a different cocation
+facility that we might have now these
+Express routes do not go over the public
+internet and because they don't go over
+the public internet they offer a high
+security reliability and speed and low
+latency compared to the connections
+which are in the internet because it's
+fast because it's reliable because it it
+has low latency it can be used as an
+extension of our existing data center
+you know users are not going to feel the
+difference whether they are accessing
+services from an on premises or in the
+cloud environment because latency is
+minimized as much as possible you users
+are really not going to see the
+difference and because it's a private
+line and not an public internet line it
+can be used to build hybrid applications
+without compromising privacy or the
+performance now these virtual private
+Cloud these Express routes can be used
+for taking backups if Zoom a backup
+going through the internet that would be
+a nightmare if you use express route for
+backups that's going to be fast and
+imagine recovering a data through the
+internet from the cloud through the
+internet to the on premises in a time of
+disaster that would be the worst
+nightmare so these Express routes can be
+used not only to backup but also to
+recover the data because it provides
+good speed low latency recovering the
+data is going to be lot sooner the next
+product or service we're going to
+discuss in networking is azure DNS now
+Azure DNS allows us to host domain name
+in Azure and and these domain names come
+with an exceptional performance and
+availability now Azure DNS is used to
+set up and manage DNS zones and records
+for our domain name in the cloud now
+this Azure DNS is a service for DNS just
+like the name says and it provides name
+resolution by using azures
+infrastructure and uh by using this
+domain we can actually manage the DNS
+ourselves through the Azure portal with
+the same credential imagine having a DNS
+provider which does not even belong in
+our it imagine that environment you know
+we would have a separate portal to
+manage the DNS environment now those are
+gone and now we can actually manage the
+DNS in the very same Azure portal where
+we use the rest of the other services
+and this Azure DNS very much integrates
+with other DNS service providers it uses
+a Global Network of name servers to
+provide fast response to DNS queries and
+these domains are having additional
+availability compared to the other uh
+domain service providers availability
+promises these are going to have more
+availability than the rest because most
+of the servers are maintained by
+Microsoft and it helps resolve sooner it
+helps resyncing let's say a server fails
+it kind of helps resyncing with the rest
+of the servers so all the Microsoft's
+environment all the Microsoft's Global
+Network of name servers kind of ensures
+that our domain names are resolved
+properly not only properly but also are
+available most of the time right next in
+the list in networking Services is
+virtual Network I'm sure this is going
+to be very interesting and I'm sure
+you're going to like it so this
+networking or virtual networking in
+Azure it actually allows us to set up
+our own private fit cloud in the public
+Cloud it gives us an isolated and highly
+secure environment for our application
+let's expand on this and this Azure
+virtual Network helps us to provision
+Azure virtual machines and uh it helps
+us to securely communicate with other on
+premises and internet networks it also
+helps in controlling the traffic that
+flows through or Flows In and Out of
+This virtual net Network to other
+virtual networks and to the internet now
+this Azure virtual Network sometimes
+called as wiet is actually a
+representation of our own network in the
+cloud it's actually a logical isolation
+of the Azure Cloud dedicated to our
+subscription all our environments are
+provisioned in a vnet that is separate
+from another customer's vets that way we
+have that logical separation there so
+this virtual Network can also be used to
+provision of vpns in the cloud so we can
+connect the cloud and the on premises uh
+infrastructure and a lot more especially
+in a environment where we have hybrid
+environment surely we will be using
+virtual Network because that's going to
+require VPN for secure data transfer in
+and out of the cloud and in and out of
+the on premises environment all right so
+it kind of gives us an boundary for all
+the resources so all the traffic between
+the Azure resources they kind of
+logically stay in between or logically
+stay within the Azure virtual Network
+and here we can design the network it's
+given over to us you know you can pick
+the IP you can pick the routing you can
+pick the subnet and a lot of freedom is
+given or I would say a lot of control on
+how the networ is designed it's not like
+something that's already cooked and we
+only get to use it no we can actually
+build the network from the scratch we
+can pick the IP address that we like we
+can pick you know which subnet needs to
+communicate with the other subnet stuff
+like that and like I said if you are
+using hybrid environment you definitely
+would be requiring a virtual Network
+because it helps connect the on premises
+and the cloud in a secure fashion using
+VPN the last product we're going to
+discuss in networking is a load balancer
+this load balancer actually provides
+application a good a availability and a
+good Network performance so how does it
+work it actually works by load balancing
+the traffic to and from the virtual
+machine and the cloud resources not only
+that it also load balances between cloud
+and cross premises virtual networks with
+azured load balancer we can actually
+scale our application and create high
+availability for our services which
+means Our obligation will be available
+most of the time if any of the server
+goes dead the server does not get
+traffic what happens if the server gets
+traffic user is going to experience
+downtime what happens if the server does
+not get traffic user won't experience
+any downtime the connection is shifted
+to an healthy service so the user
+experiences up time all the time so this
+load balancer supports inbound and
+outbound scenarios and it provides low
+latency it gives high throughput of the
+data transfer and we can actually scale
+up the flow of the TCP and UDP
+connections from hundreds to thousands
+to even Millions because we have a load
+balancer now in between the user and the
+application so how does it operate this
+load balancer actually receives the
+traffic and it load balances the traffic
+to the backend pool of instances
+connected to it according to the rule
+and the health probe that we set that's
+how it maintains High availability so
+what does load balancer help it helps in
+creation of high a aable scalable
+application in the cloud in minutes it
+can be used to automatically scale the
+environment with the increasing
+application traffic and one feature of
+load balancer is to check the health of
+the user's application instance and it
+removes or it stops sending the request
+to the unhealthy instance and kind of
+shifts that connection to the healthy
+instance that way a user or a connection
+does not get stuck with an instance
+That's not healthy that's all that you
+need to know about the networking
+Services now let's talk about the
+storage services or the storage domain
+in Azure now Azure storage in general is
+a a Microsoft manage service providing
+cloud storage which basically is highly
+available secure durable scalable and
+redundant because it's all managed by
+Azure we don't get to manage a lot of it
+and these Azure storages are a group of
+storage Services they C different needs
+and the storage products include Azure
+blobs which is actually an object
+storage it includes um Azure data Lake
+it includes Azure files as you see it it
+includes Azure cues it includes Azure
+tables and lot more but let's start our
+discussion with Azure store simple Azure
+store simple is an hybrid cloud storage
+solution that actually lowers the cost
+off storage to nearly 60% of how much
+you would be actually spending without
+using it so Azure simple storage or
+store simple is an integrated storage
+solution that manages the storage task
+between on premises and the cloud
+storage what I really like about Azure
+is that it's built around a hybrid
+environment in mind there are a lot of
+other Cloud providers that are there
+where running and hybrid environment is
+a big challenge you know it has some
+compatibility you won't be able to find
+an hybrid or a on premises and Cloud
+solution for your need stuff like that
+but with the Azure especially when it
+comes to storage a lot of the things
+that we're going to see it clearly is
+designed with hybrid environment in mind
+all right so let's come back and talk
+about store simple so store simple is an
+very efficient cost effective and a very
+easily manageable sand storage area
+networking solution in the cloud I
+thought I'll throw in this information
+the reason why it got store simple is
+really because it uses store simple 8000
+series device which are used in Azure
+Data Center and this uh store simple or
+simple storage it comes along with
+storage steering to manage the stored
+data across the various storage media so
+the current the very current data is
+actually stored in on premises on solid
+state drives and data that is used less
+frequently is stored in uh hdds or hard
+disk drives and the data that requires
+archived or that needs to be archived
+very old data let's say less frequently
+use data candidate for archive they are
+actually pushed to the cloud so you see
+how this storage steering automatically
+happens in store simple and one another
+cool feature of store simple is that it
+enables us to create an OnDemand and
+scheduled backups of data and and then
+store the data locally or in the cloud
+and these backups are actually taken in
+the form of incremental snapshot which
+means that they can be created and
+restored quickly it's not a complete
+backup it's an incremental backup and
+these Cloud snapshots they can be
+critically important when there is a
+disaster and when there is a disaster
+recovery scenario because these
+snapshots can be called in and they can
+be put on storage systems and then they
+become the actual data so recovering is
+faster if you have proper scheduled
+backups or if you have frequent backups
+and this storage simple it really helps
+in easing our backup mechanism which
+means it kind of eases our Disaster
+Recovery steps or procedures as well so
+this store simple it can be used to
+automate data management data migration
+data movement data teering across the
+Enterprise both in cloud and on premises
+it actually improves the compliance and
+accelerates the disaster recovery for
+our environment and if there is one
+thing that's increasing every new day in
+our environment that would be storage
+and this store simple addresses that
+need and we really don't have to
+pre-plan or or think in deep or having a
+proper storage because now we have a
+simple storage available in the cloud
+and moreover it's on a pay as you go
+type so not much pre-planning on storage
+is needed yes there would be a need but
+not as much as I would without the cloud
+or without the simple storage and the
+next servers under storage that we would
+like to discuss is the data Lake store
+this data Lake store or storage it's a
+coste effective solution for big data
+analytics in specific so let's expand
+this so this data Lake storage is an
+enterprise-wide repository for big data
+analytic workload now that's the major
+service that's dependent on this data
+Lake store and this data Lake enables us
+to capture data of any size of any type
+and of any injection speed and it kind
+of collects them in one single space or
+in one one single place for operational
+efficiency I mean operational efficiency
+and for analytic purpose Hado in Azure
+is very dependent on this data Lake
+storage and this uh data Lake store is
+designed with performance for analytics
+in mind so anytime you think of or
+anytime you're using analytic in the
+cloud or anytime you're using Hado in
+the cloud in Azure we are definitely
+using or we will be to the most part or
+the noral procedure or the Right Storage
+to pick would be data L store in Azure
+it's designed with security in mind so
+anytime we use Azure storage we can be
+rest assured that we are using storage
+from within a data center which has or
+which was built with security in mind so
+this data store also uses Azure blob
+storage behind the scenes for global
+scale durability and for performance
+let's talk about blob storage now blob
+storage provides large amount of storage
+and scalability now this blob storage is
+the object storage solution for Azure
+Cloud let's expand a bit on blob storage
+Azure blob storage is Microsoft offering
+for object storage now this blob storage
+is optimized for storing massive amount
+of unstructured data which could be text
+or binary data it's designed and it's
+optimized for Rapid reads if I explain
+to you on what scenarios we would be
+using blob storage that might help you
+get a good understanding of what blob
+storage is so it's help or it's designed
+as of now it's being used in many it
+environments to serve images or
+documents directly to the browser it
+helps in storing files for distributed
+access a lot of Fetchers can fetch data
+from Azure blob storage and it currently
+helping users stream video and audio
+it's currently being used for writing
+log file FES it's currently being used
+to store data as backup and restore at a
+later point in times of Disaster
+Recovery it also is used as an archiving
+storage in a lot of cloud it
+environments it's widely used in storing
+analytic data not only storing but also
+running analytic query against the data
+stored in it so that's a wide use case
+for blob storage not only that in
+addition to all that we mentioned uh it
+also supports versioning so anytime
+somebody updates and data a new version
+gets created which means at any point I
+can roll back as in when needed and it
+provides a lot of flexibility on
+optimizing the users's storage need it
+also supports tearing of the data So
+based on need when I actually explore I
+would find a lot of options I can pick
+from that uh you know suits to my unique
+storage environment or unique storage
+need and like I said it stores
+unstructured data and this unstructured
+data is available for customers through
+rest based object storage environment
+the next product and storage service
+would be Q storage now Q storage
+provides durable qes for large volume
+cloud services it's a very simple and a
+cost effective durable messaging queue
+for large workloads let's expand this Q
+storage for a moment now this Q storage
+is a service for storing large amount of
+messages that can be accessed from
+anywhere in the world through HTTP and
+https calls a single queue or a single
+CU message can be up to like 24 KB in
+size and a single Q can contain millions
+of such 24 KB in size messages and how
+much can it hold it can hold up to the
+total capacity of the storage account
+itself so that's kind of easy to
+translate How much would it hold and
+this Azure Q storage it provides an
+messaging solution between applications
+and components in the cloud what does it
+help it helps in designing an
+application for scale it helps in
+decoupling the application so you know
+it's not very dependent or sometimes
+it's not at all dependent on the other
+application because now we have a Que in
+between which kind of translates or
+which kind of connects or which kind of
+decouples both the environment now we
+have a queue in between both the
+environment can scale up or scale down
+independently the next in the storage
+service would be file storage let's talk
+about file storage now these Azure files
+provide secure simple and managed Cloud
+file shares now with file share in the
+cloud it actually extends the user
+servers on premises performance and
+capacity and lot of familiar tools for
+the cloud file share management can be
+used along along with the file storage
+that we're talking about so let's expand
+a bit on file storage now this Azure
+files or Azure file storage offers a
+fully managed file shares in the cloud
+that can be accessed via the uh SMB
+protocol server message block protocol
+now this Azure file shares can be
+mounted concurrently by cloud or in on
+premises deployments a lot of operating
+systems are compatible with it windows
+are compatible Linux is compatible MACC
+OS is compatible in in addition to all
+these being able to run on on premises
+and on the cloud or being able to access
+from on premises and on the cloud it can
+also offer cache for caching uh the data
+and keeping it locally so it's
+immediately available when needed so
+that's some additional feature I would
+say that's some Advanced feature that it
+offers compared to the other file shares
+available in the market let's talk about
+table storage let's talk about table
+storage now table storage is a nosql key
+value pair storage for quick deployments
+with the large semi-structured data sets
+the difference between one important
+thing to note with table storage is that
+it has a flexible data schema and also
+it's highly available let's expand a bit
+on table storage so anytime you want to
+pick a schema less a no SQL type table
+storage is the one will end up picking
+it provides an key pair attribute
+storage with a schema less design this
+table storage is very fast and very cost
+effective for many of the applications
+and for the same amount of uh data it's
+lot cheaper when you compare it with the
+traditional SQL data or data storage so
+some of the things that we can store in
+the table storage are of course they're
+going to be flexible data sheets uh such
+as user data for web application address
+books device information and other types
+of metadata for our service requirements
+and it can have any number of tables up
+to the capacity limit of the storage
+account now this is not possible with
+SQL this is only possible with no SQL
+especially with table storage in Azure
+explanation of storage really concluded
+the length and breadth of the
+explanation this CEO was giving his uh
+it personal but this ID personal is not
+done with it yet he still has a question
+even after this lengthy discussion and
+his question was well there are a lot of
+other Cloud providers available what
+made you specifically choose Azure I
+mean from the kind of question that he
+asked we can say that he is very curious
+and uh he definitely had asked an very
+thoughtful question so his CEO went on
+and started to explain about the uh
+other capabilities of Azure or how it
+kind of outruns the rest of the cloud
+providers so he started or he again
+started his discussion but from a
+different angle now so he started to
+explain what are the capabilities or how
+Azure is better than uh the competitor
+so he started with explaining the
+platform as a service capabilities and
+I'm going to tell you what the CEO told
+his ID person so this platform as a
+service or in platform as a service the
+INF structure management is completely
+taken care by uh Microsoft allowing
+users to focus completely on the
+innovation no more infrastructure
+management responsibilities go and focus
+on Innovation that's that's a fancy way
+of saying it when we buy platform as a
+service that's what we get we can
+contribute our time on Innovation and
+not just maintaining the infrastructure
+and uh Azure especially is U net
+friendly Azure supports the net
+programming language and um it has or it
+is built or designed or it is optimized
+to work with old and new applications
+deployed using net programming framework
+so if your application isnet most of the
+time you would end up picking Azure I
+mean if you try to compare most of the
+time you would end up picking Azure as
+your cloud service provider and the
+security offerings that Azure offers is
+it's designed based on the security
+development life cycle which is an
+industry-leading assurance process when
+we buy services from Azure it aures that
+the environment is designed based on
+security development life cycle and like
+I mentioned many times in the past and I
+would like to mention it again Azure has
+well thought about the hybrid
+environments which a lot of other Cloud
+providers have failed so it's very easy
+to set up an hybrid environment to
+migrate the data or not to migrate the
+data and still run a hybrid environment
+they work seamlessly with the Azure
+because Azure provides seamless
+connection across on premises data
+centers and the public Cloud it also has
+a very gentle learning curve if you look
+at the uh documentation it's picture
+rich and the documentations are neat and
+clear would really it would encourage
+you to learn more it would encourage you
+to think and imagine and try easily get
+get a grasp of how Services work so it
+has a very gentle learning curve Azure
+allows the utilization of technologies
+that several business have used for
+years so there is a big history behind
+it it has a very gentle learning curve
+the the certifications the
+documentations the stage-by-stage
+certification levels it's all very
+gentle learning curve which is generally
+missing in other cloud service providers
+now this would really impress the CTO or
+or people working in finance and
+budgeting if an organization is already
+using Microsoft software they can
+definitely go and Avail or be bold and
+ask for a discount that can reduce the
+overall Azure spending in other words
+overall pricing of the Azure so that's
+what helped or they are the information
+that helped the CEO pick Azure as his
+cloud service provider and then the CEO
+goes on and talks about the different
+companies that are currently using azure
+and they are definitely using Azure for
+a reason like Pixar Boeing Samsung
+EasyJet Xerox BMW 3M they are major
+multinational multi-billion companies
+they rely run operate their it in Azure
+and this CEO has a thought that his it
+person is still not very convinced
+unless and until he shows him a visual
+of how easy things are in Azure so he
+goes on and explains about a practical
+application of azure which is what
+exactly I'm going to show you as well
+all right a quick project on building an
+Azure app using or building a net
+application in Azure web app and making
+it connect to anql database will
+solidify all the knowledge that we have
+gained so far so this is what we're
+going to do I have an Azure account open
+as you see logged in and everything is
+fresh here let me go to Resource Group
+there's nothing in there it's it's kind
+of fresh all right I'm logged in and
+this is what we're going to do so we're
+going to create an application like this
+which is nothing but an to-do
+application a to-do list application we
+is going to run from the web app get
+information from us and save it in the
+database that's connected to it so you
+can already see it's a two-tier
+application web and DB all right so let
+me go back to my Azure account the first
+first thing is to create an Resource
+Group let's give it an a meaningful name
+let's call it Azure simply Lear all
+right and it's going to be a free trial
+and the location pick one that's nearest
+to you or you know wherever you want to
+launch your application now for this use
+case I'm going to pick Central us and
+create it's going to take a while to get
+created there you go it's created it's
+called azure simply learn now what do we
+need we need an web app and an a
+separate SQL database let's first get
+our web app running so go to app
+services and then click on ADD it's not
+the web app plus SQL that we want we
+want web app alone for this uh example
+so let's create an web app uh give it a
+quick name let's call it uh Azure simply
+learn the subscription is free trial and
+I'm going to use my existing Resource
+Group a resource Group that we created
+some time back it's going to run out of
+Windows and we're going to publish the
+code all set we can create it all right
+while this is running uh let me create
+my uh
+database right SQL database create a
+database give it a name let's call it
+Azure simply learn
+DB put it in our existing Resource Group
+that that we created it's going to be a
+blank database all right and it's going
+to require some uh settings like the
+name of the server and the admin login
+the password that goes along and in
+which location this is going to be
+created the server name is going to be
+Azure simply learn DB that's the server
+name and the admin login can be what can
+be the admin login name let's see so
+let's call it simply La that's my admin
+login name and let me pick a
+password click on create so what have we
+done so far we have created an web app
+and we have created an a database in the
+resource Group that we have created so
+if I go to Resource Group it's going to
+take some time before things show up so
+if I go to my Resource Group I only have
+one Resource Group as of now as you
+simply learn and there I have a bunch of
+resources being created you know it's
+still being created right in the
+meantime I have my application right
+here that's running out of uh or that's
+in Visual Studio as of now right so once
+the infrastructure is set and ready in
+the Azure console uh we're going to go
+back to visual studio a feed these
+inputs in the visual studio so the code
+knows what the database is the the
+credentials to log into the database
+stuff like that so we're going to feed
+those information in Visual Studio by
+that we're actually feeding it into the
+application and then we're going to run
+it from there deploying this application
+takes uh quite a while we really got to
+be patient all right now we have all the
+resources that we need for the
+application to run here is my uh
+database and here is my app service
+there's one more thing we need to do
+that is um create an firewall exception
+rule so one more thing needed is to
+create an firewall exception uh rule
+right so the application is going to run
+from my local desktop and it's going to
+connect to the uh uh database right so
+let's add an exception rule by simply
+adding the client IP it's going to pick
+my IP the IP of laptop I'm using as of
+now and it's going to create an
+exception to access the database so
+that's done now we can go back to our
+Visual Studio I already have a couple of
+um apps running or couple of uh
+configurations pushed from Visual Studio
+I'm going to clean that up if you're
+doing it for the first time you you may
+not uh need to do
+this all right so let's start from the
+scratch this is very similar to how you
+would be doing in your environment all
+right so we're going to uh select an
+existing Azure app service now before
+that I have logged in as you can see I
+have logged in with my credential so
+it's going to pull few things
+automatically from my Azure account so
+in this case I'm going to use an
+existing Azure app so select existing
+and then click on
+publish all right if you recall these
+are the very same resources that we
+created a while
+back right we have clicked on Save and
+it's it's running kind of validating the
+code and it's going to come up with an
+URL now initially the URL is uh not
+going to work because we haven't mapped
+the application to the database that
+would be the next
+thing
+all right so the app has been published
+and it's running from my a web app as of
+now it's going to throw an error like
+you see it's throwing an error that's
+because we haven't mapped the app and
+the DB together so let's do
+that all right let's do that so let's go
+to server Explorer uh this is where uh
+we're going to see our uh databases that
+we have created now let's quickly verify
+that go back to uh the resource Group
+right appropriate Resource Group which
+is right here and uh here I have my U
+database Azure simply learn
+database
+all right it has some issues connecting
+uh to my database give me a quick moment
+let's fix
+it
+all right so we'll have to map
+the database into this application all
+right so let's go to the solution
+Explorer click on
+publish and a page like this get shown
+and from here we can go to
+configure here is our web app all right
+with all its uh credentials let's
+validate the connection number
+one all right and then click on
+next this is my DB connection string
+right which the app is going to use to
+connect to my DB now if you recall rdb
+was uh Azure simply learn DB and that's
+not being shown here so let's fix
+that right so let's fix
+that click on configure and here uh
+let's put our DB servers uh URL now
+before that let's change this to SQL
+Server all right and then in here uh put
+the DB's URL so go back to Azure here is
+my DB or server's name put that
+here right the username to connect to
+the server that's right here put that in
+and the
+password to connect to the server let's
+put that
+in all right right it's trying to
+connect to our Azure portal or the Azure
+infrastructure and here is my database
+if you recall it's Azure sldb that's the
+name of the database Let's test the
+connection connection is good click on
+okay so now it's showing up correctly
+Azure simply learn DB that's the name of
+uh the database that we created now it's
+configured
+all right let's modify the data
+connections
+right let's map it to the appropriate
+database again all right so our name of
+the database is azure simply Lear
+DB and then uh it's going to be SQL
+Server that's the data source the
+uh username is simply learn and the
+password is what we have given in the
+beginning all right let's validate the
+connection it's good click
+okay now we're all set and ready to
+publish our application again now the
+application knows how to connect uh to
+the database we have educated it with
+the um the correct connection strings
+the DNS name the username and the
+password for the application to connect
+to the
+database so visual studi is building
+this project and once it is up and
+running we'll be prompted with an URL uh
+to connect and anytime we put or we give
+inputs to the URL that's going to
+receive the input and save it in the
+database
+all right so here is my uh to-do list
+app and uh I can start uh creating to-do
+list for myself all right so I have the
+items already listed I can create an
+entry and these entries get stored in
+the U in the database I can create
+another entry and I'll take the dog for
+a while walk that's going to get stored
+I can create another entry uh book
+tickets for uh scientific uh
+exhibition and that's going to receive
+and put that in the database and that
+concludes our session so through this
+session we saw how I can use Azure
+services to create web app and connect
+that to the DB instance and how those
+two Services which are decoupled by
+default def which are separate by
+default how I can you know use the
+connection strings to make connection
+between the app server and the database
+and be able to create an working app hi
+guys I'm rul from Simply learn and today
+I'd like to welcome you all to the
+greatest debate of the century today I'm
+joined by two giants of the cloud
+computing industry they'll be going
+head-to-head with each other to decide
+who amongst them is better it's going to
+be one hell of fight now let's meet our
+candidates on my left we have AWS who
+voiced by AA hi guys and on my right we
+have Microsoft AO who is voiced by
+Angeli hey there so today we'll be
+deciding who's better on the basis of
+their origin and the features they
+provide their performance on the present
+day and comparing them on the basis of
+pricing market share and options free
+tier and instance configuration now
+let's listen to their opening statements
+let's start with AWS launched in 2006
+AWS is one of the most commonly used
+cloud computing platforms across the
+world companies like Adobe Netflix
+Airbnb HTC Pinterest and Spotify have
+put their faith in AWS for their proper
+functioning it also dominates the cloud
+computing domain with almost 40% of the
+entire market share so far nobody's even
+gotten close to beating that number AWS
+also provides a wide range of services
+that covers a great number of domains
+domains like compute networking storage
+migration and so much more now let's see
+what Azor has to say about that Azor was
+launched in 2010 and is trusted by
+almost 80% of all Fortune 500 companies
+the best of the best companies in the
+world choose to work only with Azure
+Azure also provides its services to more
+regions than any other cloud service
+provider in the world Azure covers 42
+regions already and 12 more are being
+planned to be made AA also provides more
+than 100 Services spanning a variety of
+domains now that the opening statements
+are done let's have a look at the
+current market status of each of our
+competitors this is the performance
+round here we have the stats for the
+market share of AWS Azo and other cloud
+service providers this is for the early
+2018 period Amazon web services takes up
+a whopping 40% of the market share
+closely followed by aor at 30% and other
+cloud services adding 30% this 40%
+indicates most organizations clear
+interest in using aw us we are number
+one because of our years of experience
+and Trust we've created among our users
+sure you're the market leader but we are
+not very far behind let me remind you
+more than 80% of the Fortune 500
+companies trust Azure with their cloud
+computing needs so it's only a matter of
+time before Azure takes the lead the
+rest of the 30% that is in AWS or Azure
+accounts to the other cloud service
+providers like Google Cloud platform
+Rackspace IBM software and so on
+now for our next round the comparison
+round first we'll be comparing pricing
+we'll be looking at the cost of a very
+basic instance which is a virtual
+machine of two virtual CPUs and 8 GBS of
+RAM for AWS this will cost you
+approximately
+0.098 per hour and for the same instance
+in aor it will cost you approximately
+0.096 per hour next up let's compare
+market share and options as I mentioned
+before AWS is the Undisputed market
+leader when it comes to the cloud
+computing domain taking up 40% of the
+market share by 2020 AWS is also
+expected to produce twice its current
+Revenue which comes close to $44 billion
+not to mention AWS is constantly
+expanding its already strong roster of
+more than 100 services to fulfill the
+shifting business requirements of
+organizations all that is great really
+good for you but the research company
+Gardner has released a magic quadrant
+that you have to see you see the
+competition is now neck to neck between
+Azure and AWS it's only a matter of time
+before Azure can increase from its 30%
+market share and surpass AWS this
+becomes more likely considering how all
+companies are migrating from AWS to
+Azure to help satisfy their business
+needs Azure is not far behind AWS when
+this comes to Services as well azure's
+service offerings are constantly updated
+and improved on to help users satisfy
+their cloud computing requirements now
+let's compare AWS and azor's free
+offerings AWS provides a significant
+number of his services for free helping
+users get hands-on experience with the
+platform products and services the free
+tier Services fall under two categories
+services that will remain free forever
+and the others that are valid only for
+one year the always free category offers
+more than 20 services for example Amazon
+SNS sqs cloud watch Etc and the valid
+for a year category offers approximately
+20 services for example Amazon S3 ec2
+elastic cache Etc both types of services
+have limits on the usage for example
+storage number of requests compute time
+Etc but users are only charged for using
+services that fall under the valid for a
+year category after a year of their
+usage a sh provides a free tier as well
+it also provides services that belong to
+the categories of free for a year and
+always free there are about 25 plus
+always free services provided by aure
+these include app service functions
+container service active directory and
+lots more and as of the valid for a year
+there are eight services offered there's
+Linux or Windows Virtual machines blob
+storage SQL database and few more Azure
+also provides the users with credits of
+$200 to access all their services for 30
+days now this is a unique feature that
+Azure provides where its users can use
+their credits to utilize any service of
+a choice for the entire month now let's
+compare instance configuration the
+largest instance that AWS offers is that
+of a warping 256 GBS of RAM and 16
+virtual CPUs the largest that aure
+offers isn't very far behind either 224
+GBS of RAM and 16 virtual CPUs and now
+for the final round now each of our
+contestants will be shown facts and they
+have to give explanations for these
+facts we call it the rapid fire round
+first we have features in which AWS is
+good and azur is better AWS does not cut
+down on the features it offers its users
+however it requires slightly more
+Management on the users part Azure goes
+slightly deeper with the services that
+fall under certain categories like
+platform as a service and infrastructure
+as a service next we have hybrid Cloud
+where AWS is good and Azure is better
+okay although AWS did not emphasize on
+hybrid Cloud earlier they are focusing
+more on technology now Azure has always
+emphasized on hybrid cloud and has
+features supporting it since the days of
+its inception for developers AWS is
+better and Azure is good of course it's
+better because AWS supports integration
+with third party applications well Azure
+provides access to data centers that
+provide a scalable architecture for
+pricing both AWS and aure are at the
+same level it's good for AWS because it
+provides a competitive and constantly
+decreasing pricing model and in the case
+of azure it provides offers that are
+constantly experimented upon to provide
+its users with the best experience and
+that's it our contestants have finished
+giving their statements now let's see
+who won surprisingly nobody each cloud
+computing platform has its own pros and
+cons choosing the right one is based
+entirely on your organization's
+requirements hi guys guys today we' got
+something very special in store for you
+we're going to talk about the best cloud
+computing platform available Amazon web
+services uh Rahul I think you said
+something wrong here the best cloud
+computing platform is obviously Google
+Cloud platform no it isn't AWS is more
+than 100 services that span a variety of
+domains all right but Google Cloud
+platform has cheaper instances what do
+you have to say about that well I guess
+there's only one place we can actually
+discuss this a boxing ring so guys I'm
+AA and I I will be Google Cloud platform
+and I'm Rahul I'll be AWS so welcome to
+fight night this is AWS versus gcp the
+winner will be chosen on the basis of
+their origin and the features they
+provide their performance in the present
+day and comparing them on the basis of
+pricing market share and options the
+things they give you for free and
+instance configuration now first let's
+talk about AWS AWS was launched in 2004
+and is a cloud service platform that
+helps businesses grow and scale by
+providing them services in a number of
+different domains these domains include
+compute database storage migration
+networking and so on a very important
+aspect about AWS is its years of
+experience now AWS has been in the
+market a lot longer than any other cloud
+service platform which means they know
+how businesses work and how they can
+contribute to the business growing also
+AWS has over $5.1 billion of Revenue in
+the last quarter this is a clear
+indication of how much faith and trust
+people have in AWS they occupy more than
+40% of the market which is a significant
+chunk of the cloud computing Market they
+have at least 100 services that are
+available at the moment which means just
+about every issue that you have can be
+solved with an AWS service now that was
+great but now can we talk about gcp I
+hope you know that gcp was launched very
+recently in 2011 and it is already
+helping businesses significantly with a
+suite of intelligent secure and flexible
+Cloud Computing Services it lets you
+build deploy and scale applications
+websites services on the same
+infrastructure as Google the intuitive
+user user experience that gcp provides
+with dashboards Wizards is way better in
+all the aspects gcp has just stepped in
+the market and it is already offering a
+modest number of services and the number
+is rapidly increasing and the cost for a
+CPU instance or Regional storage that
+gcp provides is a whole lot cheaper and
+you also get a multi-regional cloud
+storage now what do you have to say on
+that I'm so glad you asked let's look at
+present day in fact let's look at the
+cloud market share of the fourth quarter
+of 2017 this will tell you once and for
+all that ad is the leader when it comes
+to cloud computing Amazon web services
+contributes 47% of the market share
+others like Rackspace or Verizon cloud
+contribute 36% Microsoft aure
+contributes 10% the Google Cloud
+platform contributes 4% and IBM software
+contributes 3% 47% of the market share
+is contributed by AWS do you need me to
+convince you anymore wait wait wait all
+that is fine but we only started a few
+years back and have already grown so
+much in such a less span of time time
+haven't you heard the latest news our
+revenue is already a billion dollar per
+quarter wait for a few more years and
+the world shall see and AWS makes $5.3
+billion per quarter it's going to take a
+good long time before you can even get
+close to us yes yes we'll see now let's
+compare a few things for starters let's
+compare prices for AWS a computer
+instance of 2 CPUs and 8 GB ram costs
+approximately $68 us now a computer
+instance is a virtual machine in which
+you can specify what operating system
+Ram or storage you want to have for
+cloud storage it costs 2.3 cents per GB
+per month with AWS you really want to do
+that because gcp wins this hands down
+let's take the same compute instance of
+two CPUs with 8 GB Ram it will cost
+approximately $50 per month with gcp and
+as for my calculations that's a 25%
+annual cost reduction when compared to
+AWS talking about cloud storage cost it
+is only 2 cents per GB per month with
+gcp what else do you want me to say
+let's talk about market share and
+options now AWS is the current market
+leader when it comes to cloud computing
+now as you remember we contribute at
+least 47% of the entire market share AWS
+also has at least 100 services available
+at the moment which is a clear
+indication of how well AWS understands
+businesses and helps them grow yeah
+that's true but you should also know
+that gcp is steadily growing we have
+over 60 services that are up and running
+as you can see here and a lot more to
+come it's only a matter of time but and
+we will have as many services as you do
+many companies have already started
+adopting gcp as a cloud service provider
+now let's talk about things you get for
+free with AWS you get access to almost
+all the services for an entire year with
+usage limits now these limits include an
+hourly or by the minute basis for
+example with Amazon ec2 you get 750
+hours per month you also have limits on
+the number of requests to services for
+example with AWS Lambda you have 1
+million requests per month now after
+these limits are crossed you get sh
+standard rates with gcp you get access
+to all Cloud platform products like
+Firebase the Google Maps API and so on
+you also get $300 in credit to spend
+over a 12 Monon period on all the cloud
+platform products and interestingly
+after the free trial ends you won't be
+charged unless you manually upgrade to a
+paid account now there is also the
+always free version for which you will
+need an upgraded billing account here
+you get to use a small instance for free
+and find 5 GB of cloud storage any usage
+above this always free usage limits will
+be automatically built at standard rates
+now let's talk about how you can
+configure instances with AWS the largest
+instance that's offered is of 128 CPUs
+and 4 TVs of ram now other than the on
+man method like I mentioned before you
+can also use spot instances now these
+are for situations where your
+application is more fall tolerant and
+can handle an interruption now you pay
+for the spot price which is effective at
+a particular hour now these spot prices
+do fluctuate but are adjusted over a
+period of time the largest instance
+offered with Google cloud is 160 CPUs
+and 3.75 TBS Ram like spot instances of
+AWS Google Cloud offers shortlived
+compute instances suitable for bad jobs
+and fall tolerant workloads they are
+called as preemptable instances so these
+instances are available at 80% off on on
+demand price hence theyve reduce your
+compute engine cost significantly and
+unlike AWS these at a fixed price Google
+Cloud platform is a lot more flexible
+when it comes to instance configuration
+you simply choose your CPU and RAM
+combination of course you can even
+create your own instance types this way
+before we wrap it up let's compare on
+some other things as well Telemetry it's
+a process of automatically collecting
+periodic measurements from remote
+devices for example GPS gcp is obviously
+better because they have Superior
+Telemetry tools which help in analyzing
+services and providing more opportun
+these for improvement when it comes to
+application support AWS is obviously
+better since they have years of
+experience under their bet AWS provides
+the best support that can be given to
+the customers containers are better with
+GCB a container is a virtual process
+running in user space as kubernetes was
+originally developed by Google gcp has
+full native support for the tool other
+cloud services are just fine-tuning a
+way to provide cuberes as a service also
+the containers help with abstracting
+applications from their environment they
+originally run the applications can be
+deployed easily regardless of their
+environment when it comes to geographies
+AWS is better since they have a head
+start of a few years AWS in this span of
+time has been able to cover a larger
+market share and geographical locations
+now it's time for the big decision so
+who's it going to be yeah who is it
+going to be gcp or AWS I think I'm going
+to go for choosing the right cloud
+computing platform is the decision
+that's made on the basis of the user or
+the organization's requirement AWS aure
+and gcp are three of the world's largest
+cloud service providers but how are they
+different from each other let's find out
+hey guys I'm Rahul and I'll be
+representing Amazon web services I'm
+chinay and I'll be representing
+Microsoft Azure and I'm shuti and I'll
+be representing Google Cloud platform so
+welcome to this video on AWS versus
+Azure versus gcp talking about market
+share Amazon web services leads with
+around 32% of the worldwide public cloud
+share aour owns up to 16% of the
+worldwide Market share and gcp owns
+around 9% of the world's market share
+let's talk about each of these service
+providers in detail AWS provides
+services that enable users to create and
+deploy applications over the cloud these
+services are accessible via the Internet
+AWS being the oldest of the lot was
+launched in the year 2006 aure launched
+in 2010 is a Computing platform that
+offers a wide range of services to build
+manage and deploy applications on the
+network using tools and Frameworks
+launched in the year 2008 gcp offers
+application development and integration
+services for its end users in addition
+to Cloud management it also offers
+services for Big Data machine learning
+and iot now let's talk about
+availability zones these are isolated
+locations within data center regions
+from which public cloud services
+originate and operate talking about AWS
+they have 69 availability zones within
+22 geographical regions this includes
+regions in the United States South
+America Europe and Asia Pacific they are
+also predicted to have 12 more additions
+in the future azour available in 140
+countries has over 54 regions worldwide
+grouped into six geographies these
+geographical locations have more than
+100 data centers gcp is available in 200
+plus countries across the world as of
+today gcp is present in 61 zones and 20
+regions with Osaka and Zurich being the
+newly added regions now let's talk about
+pricing these Services follow the pay as
+you go approach you pay only For The
+Individual Services you need for AOW
+long as you use them without requiring
+long-term contracts or complex licensing
+now on screen you can see the pricing
+for each of these cloud service
+providers with respect to various
+instances like general purpose compute
+optimized memory optimized and GPU now
+let's talk about the compute services
+offered first off we have virtual
+servers for AWS we have ec2 it is a web
+service which eliminates the need to
+invest in Hardware so that you can
+develop and deploy applications in a
+faster manner it provides virtual
+machines in which you can run on your
+applications azor's virtual machines is
+one of the several types of computing
+resources that azour offers azour gives
+the user the flexibility to deploy and
+manage a virtual environment inside a
+virtual Network gcps VM service enables
+users to build deploy and manage virtual
+machines to run workloads on the cloud
+now let's talk about the pricing of each
+of these Services awcc 2 is free to try
+it is packaged as part of aws's free
+tier that lasts for 12 months and
+provides 750 hours per month of both
+Linux and Windows Virtual machines Azure
+virtual machine service is a part of the
+free tier that offers the service for
+about 750 hours per month for a year the
+user gets access to Windows and Linux
+virtual machines gcps VM service is a
+part of a free tier that includes micro
+instance per month for up to 12 months
+now let's talk about platform as a
+service or past services for AWS elastic
+bean stock is an easy to use service for
+deploying and scaling web applications
+and services developed with Java net
+nodejs Python and much more it is used
+for maintaining capacity provisioning
+load balancing Auto scaling and
+application Health monitoring the pass
+backbone utilizes virtualization
+techniques where the virtual machine is
+independent of the actual Hardware that
+hosts it hence the user can write
+application code without worrying about
+the underlying Hardware Google app
+engine is a cloud computing platform as
+a service which is used by Developers
+for hosting and building apps in Google
+data centers the app engine requires the
+apps to be written in Java or Python and
+store data in Google big table and use
+the Google query language for this next
+let's talk about virtual private server
+Services AWS provides light sale it
+provides everything you need to build an
+application or website along with the
+cost effective monthly plan and minimum
+number of configurations in simple words
+VM image is a more comprehensive image
+for Microsoft Azure virtual machines it
+helps the user create many identical
+virtual machines in a matter of minutes
+unfortunately gcp does not offer any
+similar service next up we have
+serverless Computing Services AWS has
+Lambda it is a serverless compute
+service that lets you run your code
+without facilitating and managing
+servers you only pay for the compute
+time you use it is used to execute
+backend code and scales automatically
+when required Azure functions is a
+serverless compute service that lets you
+run even triggered code without having
+to explicitly provision or manage
+infrastructure this allows the users to
+build applications using serverless
+simple functions with the program
+programming language of their choice gcp
+Cloud functions make it easy for
+developers to run and scale code in the
+cloud and build event-driven serverless
+applications it is highly available and
+fall tolerant now let's talk about
+storage services offered by each of
+these service providers First off we
+have object storage AWS provides S3 it
+is an object storage that provides
+industry standard scalability data
+availability and performance it is
+extremely durable and can be used for
+storing as well as recovering
+information or data from anywhere over
+the Internet blob storage is an Azure
+feature that lets developers store
+unstructured data in Microsoft's Cloud
+platform along with storage it also
+offers scalability it stores the data in
+the form of tiers depending on how often
+data is being accessed Google Cloud
+Storage is an online storage web service
+for storing and accessing data on Google
+Cloud platform infrastructure unlike the
+Google Drive Google Cloud Storage is
+more suitable for Enterprises it also
+stores objects that are organized into
+bu markets Amazon provides EBS or
+elastic Block store it provides high
+performance block storage and is used
+along with E2 instances for workloads
+that are transaction or throughput
+intensive Azure manage dis is a virtual
+hard disk you can think of it like a
+physical dis in an on- premises server
+but virtualized these managed discs
+allow the users to create up to 10,000
+VM discs in a single subscription
+persistent storage is a data storage
+device that retains data after power to
+the device is shut off Google persistent
+disk is durable and high performance
+block storage for gcp persistent disk
+provides storage which can be attached
+to instances running in either Google
+compute engine or cuetes engine next up
+we have Disaster Recovery Services AWS
+provides a cloud-based recovery service
+that ensures that your it infrastructure
+and data are recovered while minimizing
+the amount of downtime that could be
+experienced site recovery helps ensure
+business continuity by keeping business
+apps and workloads running during
+outages it allows recovery by
+orchestrating and automating the
+replication process of azure virtual
+machines between regions unfortunately
+gcp has no disaster recovery service
+next let's talk about database Services
+first off for AWS we have RDS or
+relational database service it is web
+service that's cost- effective and
+automates administration tasks basically
+it simplifies the setup operation and
+scaling of a relational database
+Microsoft Azure SQL database is a
+software as a service platform that
+includes built-in intelligence that
+learns app patterns and adapts to
+maximize performance reliability and
+data protection it also eases the
+migration of SQL Server databases
+without changing the users's
+applications cloudsql is a fully managed
+databased service which is easy to set
+up maintain and administer relational
+post SQL MySQL and SQL Server databases
+in the cloud hosted on gcp cloudsql
+provides a database infrastructure for
+app applications running anywhere next
+we have no SQL database Services AWS
+provides Dynamo DB which is a managed
+durable database that provides security
+backup into the store and inmemory
+caching for applications it is well
+known for its low latency and scalable
+performance Azure Cosmos DB is
+Microsoft's globally distributed
+multimodel database service it natively
+supports nosql it natively supports no
+SQL created for low latency and scalable
+applications gcp cloud data store is a
+nosql database service offered by Google
+on the gcp it handles replication and
+scales automatically to your
+applications load with cloud data stores
+interface data can easily be accessed by
+any deployment Target now that we know
+what cloud computing is let's look at
+the types of cloud computing service
+models for a better understanding let's
+consider a scenario consider baking
+lasagna you have four options you can
+either bake it at home or you can go to
+a restaurant to eat lasagna or walk into
+an event and bake or get it delivered to
+your doorstep but how is this related to
+cloud computing well let's take a look
+we have four boxes we have the
+traditional method we have the
+infrastructure as a service we have
+platform as a service and we have
+software as a service in the traditional
+method everything is made at home and
+all the components are managed by us
+that is Kitchen electricity microwave
+lasagna sheets then toppings meat and
+cooking the lasagna but when it comes to
+infrastructure service the main kitchen
+appliances are managed by the vendor and
+the other things are managed by us so
+basically the infrastructure is managed
+by the vendor when we look at platform
+as a service the infrastructure and the
+main ingredient for the software is
+managed by the vendor and the other
+things are managed by us but when we
+look at software as a service everything
+from the infrastructure till the end
+product is managed by the vendor now
+let's get into brief of all this when we
+look at the traditional method
+everything is done from the scratch from
+choosing the right ingredients to the
+mode of preparation and you have the
+full control of the toppings this is
+similar to traditional method where all
+the hardware and software components are
+built by our choice of requirements when
+we look at infrastructure as a service
+we can say kitchen electricity and
+microwave is the infrastructure and this
+is where the code runs the next step is
+to alter the software as per our
+requirements when you look at platform
+as a service uh it's similar to going to
+event and baking so you have the main
+ingredient that is the lasagna sheet and
+then you have all the appliances that is
+Kitchen electricity and microwave and
+the rest is managed by us you can either
+put toppings or you don't want to put
+meat or you want it to be wed it's all
+up to us so the components are altered
+as per our requirements finally in
+software as a service the entire thing
+is modeled by the vendor so this is
+where you just given your requirements
+and you get the software delivered to
+you it's basically where the deployment
+and framework of the project is already
+set now that we have a brief of all
+these Services let's dive deep into each
+one of them first we have infrastructure
+as a service infrastructure cloud
+provider gives a variety of
+infrastructures such as storage Services
+Network hardware and so on it also
+maintains and supports these
+infrastructures customers can access
+these resources over the Internet next
+let's look at the benefits of
+infrastructure as a service so the first
+feature is that these resources can can
+easily be scaled up and down next the
+cost depends on the consumption so
+basically it's a pay as you go pricing
+and you pay for what you use you pay for
+the services you use a single piece of
+server can give out a lot of information
+to many users and finally the client has
+complete control over the architecture
+now let's look at the pros of
+infrastructure as a service model
+firstly it is highly flexible this is
+because only the infrastructure is
+provided and the rest depends on the
+customer requirements next like I said
+before it is cost effective and you pay
+for what you use it is easy to use as
+all the updates are deployed and all the
+hardware is deployed automatically
+management tasks are virtualized so that
+the other employees have time for other
+tasks now let's look at few of its call
+it is a multi-tenant architecture due to
+this there is an issue with data
+security when a new infrastructure is
+introduced team training is required to
+learn all about this new infrastructure
+and and it consumes a lot of time if in
+case the server crashes at the vendor
+side the customers cannot access the
+data for a while and they would have to
+wait for a quite a lot of time until the
+vendor fixes this issue now that we know
+what infrastructure as a service is
+let's look at platform as a service
+platform as a service cloud computing
+platform is a developer programming
+platform which is used for the
+programmers to develop test and run and
+manage the applications a developer
+writes the applications and deploys it
+directly into this layer here all the
+infrastructure to run the applications
+will be over the Internet let's look at
+the benefits now firstly the resources
+can be scaled Up and Down based on the
+requirements of the user multiple users
+can access the same application it
+allows for testing and hosting apps in
+the same environment the web services
+and databases and servers are integrated
+into one and finally the teams can
+collaborate very easily next let's look
+at the pros of paas firstly the
+development process is quick and easy as
+it is a developer programming platform
+it is coste efficient you only pay for
+the services you use when you use
+platform as a service the coding is done
+by the developer before so less coding
+is required and then the migration to
+hybrid cloud is very easy next let's
+look at few of the cons of platform as a
+service similar to IAS data security is
+an issue because it has a multi-tenant
+architecture there's a compatibility
+issue with the existing infrastructure
+pass is dependent on the vendor speed
+reliability and support now that we know
+about platform as a service let's go
+ahead and dive deep into software as a
+service in software as a service
+everything is done by the vendors the
+endusers are only responsible to give
+their requirements and everything is
+done by the providers now let's go ahead
+and look at its benefits the
+installations and updations are done by
+the providers resources are scaled Up
+and Down based on the requirements of
+the users the only requirement is that
+there has to be a strong network
+connectivity and finally the provider is
+responsible for everything now let's go
+ahead and look at the pros of SAS
+upgrades are automatic firstly then next
+it is again a pay as you go model it is
+easier to customize in SAS rather than
+the other service models it is
+accessible from any location the only
+constraint is that you need to have a
+strong internet connectivity let's see
+the cons of SAS the provider has entire
+control the end users only have the
+control of giving the requirements there
+are only few solutions for software
+crashes the devices should always be
+connected for better performance now
+that we've seen all the three models
+let's see few of the companies providing
+these service models the famous IAS
+providers are Amazon web services
+Rackspace digital ocean lenoe and
+Microsoft AO these are only a few there
+are many more apart from these Amazon
+offers many features such as Auto
+scaling Cloud monitoring and load
+balancing features when it comes to
+Rackspace the cloud computing platform
+vendor focuses primarily on Enterprise
+level hosting Services when you look at
+Famous past providers you have hero
+Apache Stratos open shift Microsoft
+Azure and many other providers going
+ahead in SAS providers the most
+important one is Google Apps then
+there's Salesforce there's Cisco WebEx
+there's Dropbox and many more finally
+let's look at the end end users of the
+cloud computing service models we can
+picture this as a pyramid so in IAS the
+end users are system admins who are
+responsible for maintaining everything
+except the infrastructure then in past
+the end users are the developers who
+code on the platform provided by the
+vendors in SAS the end users are the
+customers who give only the requirements
+and the software is built based on those
+requirements by the vendors we have
+reached the end of this session on cloud
+computing fundamentals and cloud
+computing service models should you need
+any assistance PP and other resources
+used in this session please let us know
+in the comment section below and our
+team of experts will be happy to help
+you as soon as possible until next time
+thank you and keep learning stay tuned
+for more from Simply learn staying ahead
+in your career requires continuous
+learning and upscaling whether you're a
+student aiming to learn today's top
+skills or a working professional looking
+to advance your career we've got you
+covered EXP explore our impressive
+catalog of certification programs in
+Cutting Edge domains including data
+science cloud computing cyber security
+AI machine learning or digital marketing
+designed in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click
+here

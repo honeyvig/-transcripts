@@ -1,0 +1,324 @@
+hello everyone welcome to this video by
+simply learn have you ever felt
+overwhelmed by the sheer amount of data
+your company collects customer
+information sales record and website
+analytics can all become a jumbled mess
+without any clear structure or
+organization that's where data modeling
+comes in data modeling is the process of
+creating a blueprint that shows how
+different pieces of data relate to each
+other it's like having a map to navigate
+the landscape of your company's data let
+me demonstrate with a story ran is a
+marketing Analyst at a rapidly growing
+e-commerce company his boards gave him
+the important job of using the company's
+data and finding insights from the data
+which will help the company grow and
+increase sales ran soon finds himself
+drowning in an ocean of data from his
+company no matter how hard he tries he
+cannot make sense of it at all that's
+when his Sophia introduced him to the
+concept of data modeling by creating a
+data model for sales and customer data
+they identified key entities like
+customers products and orders and Define
+the relationship between them suddenly
+the chaotic data starts to make sense
+and patterns emerge with the data model
+as a guide ran could now easily analyze
+customer behaviors identify Trends and
+uncover opportunities he presented
+valuable insights to his boss who
+recognized the power of data modeling
+data modeling allows you to understand
+and organize your data effectively it's
+the foundation for extracting meaningful
+insights that drive better decision
+making and business growth so if you're
+feeling lost in your company's data
+remember that data modeling is the map
+that can guide you through the Maze and
+unlock the true potential of your data
+assets all right let's get started in
+this video I will break down everything
+you need to know about data modeling and
+Analysis and provide a comprehensive
+study of data modeling and Analysis we
+will also explore carrier paths in data
+related roles and the scope of becoming
+a data
+analyst craving a career upgrade
+subscribe like and comment
+below dive into the link in the
+description to FastTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back if you are interested in a
+professional certificate course in data
+analytics
+begin your Learning Journey with simply
+learn an IIT compos data analytics
+certificate course explore our learning
+management system track your progress
+and meet completion requirements join
+the professional certificate course in
+data analytics recognize as a top PG
+data program by aim learn to understand
+data and enhance your analytics skills
+through live sessions and Industry
+experts Hands-On labs and master classes
+by IIT count faculty you can check out
+the link men mentioned in the
+description box below and the pin
+comment start learning today and unlock
+endless opportunities in data analytics
+so without further Ado let's get started
+all right let's get started data
+modeling my friends it's all about
+defining the structure of your database
+imagine you've got this raw data coming
+from an API or maybe some sales
+information it's usually a bit of mess
+right just a bunch of numbers letters
+and codes representing transactions
+customer details and whatnot well data
+modeling helps you bring all to that CHS
+by aligning the data and integrating it
+into your existing database think of it
+like this suppose you are an architect
+designing a blueprint for your data you
+decide how different pieces of
+information relate to each other like
+how payment connects to orders or how
+customer details link to their purchase
+history it visually represents the
+different data elements and how they
+relate to each other following certain
+predefined rules and guidelines but why
+bother with all of this you might ask
+well data modeling is a foundation for
+everything you do with your data it
+ensures data integrity and accuracy
+making sure your machine learning models
+aren just training on garbage data or
+giving you nonsensical predictions
+moreover it aids in database design
+application development and data
+analysis allowing you to extract
+valuable insights from your organized
+information and let's not forget about
+data governance having a clear
+understanding of where your data lives
+what types of of data you're storing and
+the security measures is the key to
+compliance with those pesky regulations
+and standards now let's talk about the
+different types of data models out there
+at first we've got a good old model
+which is the relational model this uses
+tables to store data and establish
+relationships between them it's
+relatively simple to set up and has
+powerful query capabilities making it a
+popular choice then we've got the
+objectoriented model which combines data
+and operation s into a single model
+these are great for applications with
+complex relationship and operations like
+maybe modeling the robotics of a car
+factory but probably not an AI model
+that wouldn't make much sense right
+we've got also network data models which
+are an extension of hierarchial models
+it allows for multiple parent records
+for each child representing more complex
+relationship and let's not forget about
+the entity relationship model which
+gives you a clear logical View of your
+data by mapping out entities attributes
+and relationship it's like a giant web
+of connections making it easy to
+understand how data flows from one point
+to another now when it comes to
+implementing data modeling you've got a
+bunch of tools at your disposal from
+dedicated Solutions like er studio and
+DB schema to open source options like PG
+modeler and MySQL workbench you've also
+got collaborative online tools like
+usage chart which is perfect for teams
+working together on data models and
+let's not forget the good old Oracle SQL
+data modeler and IBM infosphere data
+architect for those who are in business
+intelligence and analytics game but wait
+there's more the data modeling process
+itself is a journey first you start with
+the conceptual modeling where you get a
+high level understanding of the data
+you're working with and what your
+stakeholders need from it it's like the
+rough draft of your data blueprint then
+we move on to the logical data model
+where we get technical details
+attributes primary Keys foreign Keys
+relationship between tables next we have
+physical modeling this is where we
+design our database schema and optimize
+it for performance indexing and
+partioning to make sure your data runs
+like a well oiled machine after that you
+finally create the database and start
+ingesting your business data but the
+fund doesn't stop there you've got to
+keep maintaining and updating your data
+model as your needs change cap uring
+those data changes over time and making
+adjustments to keep everything run
+smoothly and there you have it data
+modeling is the backbone of your data
+Universe ensuring that your application
+analytics and decision making process
+are built on solid foundation of well
+structured and organized information
+after establishing a robust data model
+the next step is to delve into the
+fascinating world of data analysis this
+is where the real magic happens data
+analysis empowers you to uncover hidden
+pattern PS Trends and relationship
+within your meticulously organized data
+through data analysis you can transform
+raw information into actionable
+intelligence that drives ined decision
+making it's like uncovering a treasure
+drove of knowledge buried within your
+data waiting to be exploded and
+leveraged for strategic Advantage now
+let's switch gears and talk about data
+analysis well data analysis is all about
+evaluating the data itself it's like
+being a detective looking for Clues and
+patterns in the data to tell a
+compelling story you might run reports
+create custom queries or even merge data
+from multiple sources to get a complete
+picture it's like piecing together
+puzzle but with numbers and information
+instead of colorful pieces we will now
+discuss the several types of data
+analysis each serving a different
+purpose at first we have descriptive
+analysis which help you to see what has
+already happened by looking at the past
+data then we have the diagnostic
+analysis to determine why something
+happened by examining the data
+predictive analysis uses past data to
+predict what might happen in the future
+and finally prescriptive analysis
+combines all others to make
+recommendations for the future where
+does a data analyst fit into this
+intricate web of data modeling well a
+data analyst is the master architect
+designing the blueprints that bring
+order to the chaos of raw data they
+Define how different pieces of
+information relate to each other
+following predefined rules and
+guidelines it's like creating a massive
+catalog for your organization data
+assets ensuring everything is accounted
+for and organized to be a master of data
+analysis you just need two crucial
+skills first you need to have a solid
+understanding of the business what the
+data means and how it impacts the
+organization operation but that's not
+all you also need some serious technical
+chops you need to know your way around
+databases business intelligence systems
+and the tools needed to extract and
+analyze the precious data and let's not
+forget the demand for skilled data
+analyst is soaring according to the
+industry reports the average data
+analyst salary in the US projected to
+reach around
+$75,000 with the opportunities for
+experienced professionals to earn well
+over six figures now you might be
+thinking are in data modeling and
+Analysis two different Skillets well
+you're not wrong but here's when it's
+get interesting data analysis and data
+modeling data modeling and data analysis
+often overlap to truly understand how
+data moves from one system to another or
+how different field maps together you
+might need to flex your data analysis
+and dive into the raw data itself this
+Synergy has led to the rise of combined
+business intelligence and business
+analysis role a dynamic duo where data
+modeling and data analysis Joint Forces
+to create powerful business insights and
+intelligence it's like having a
+superhero team from where each skill set
+compliments the other now you might be
+thinking but wait aren't there still
+opportunities for more General
+functional business analysis roles while
+dedicated business intelligence is in
+high demand there's still a thriving
+market for those who prefer a more
+broad-based approach let us now discuss
+the career paths in data related rules
+the key thing to understand is that data
+modeling and data analysis go hand in
+hand good modeling ensures you have
+accurate structured data skilled
+analysis that allows you to truly unlock
+the value in the data through insights
+companies need expertise in both areas
+for a comprehensive data strategy if you
+really enjoy digging into Data to find
+hidden insights a dedicated business
+intelligence analyst role could be
+perfect but there are also General
+business analyst role available that
+still requires good data modeling skills
+whichever path you choose having skills
+in both data analysis and modeling is
+very valuable with strong abilities in
+these areas your data projects are much
+more likely to succeed and that's all
+for this video If you really like this
+session then please like And subscribe
+I'll see you in the next video staying
+ahead in your career requires continuous
+learning and upskilling whether you're a
+student aiming to learn today's top
+skills or a working professional looking
+to advance your career we've got you
+covered explore our impressive catalog
+of certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

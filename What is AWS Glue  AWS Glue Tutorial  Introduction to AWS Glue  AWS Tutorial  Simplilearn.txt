@@ -1,0 +1,220 @@
+welcome back tech Enthusiast today we
+have an exciting topic to explore
+together AWS glue have you ever wondered
+how to make your data preparation
+process in the cloud faster easier and
+more efficient well look no further
+because AWS glue is here to
+revolutionize your data analytics
+pipeline in this video we'll dive deep
+into the world of AWS glue and cover its
+features and understand why it's a game
+changer for data professionals like you
+so let's get started but before that do
+subscribe to our YouTube channel for
+more such interesting videos and hit the
+Bell icon to never miss an update from
+Simply learn so if you want to want more
+about cloud computing platforms Cloud
+Computing Services and its various other
+interesting in-depth Concepts then a
+caltic postgraduate program in cloud
+computing will be the right choice for
+you this cloud computing postgraduate
+program will help you become an expert
+in Azure AWS and gcp this in-depth cloud
+computing certification course lets you
+master key architectural principles and
+develop the skills needed to become a
+cloud expert so do check out the course
+link mentioned in the description
+introduction to AWS glue before we delve
+into the wonders of ews glue let's set
+the stage with some crisp data did you
+know that as of 2022 more than 90 of the
+world's data had been generated in the
+past two years alone mind boggling right
+this explosion of data means that
+organizations need powerful tools to
+process and analyze it effectively and
+that's where AWS glue comes in but the
+question is what is AWS glue well AWS
+glue is a fully managed extract
+transform and load it simplifies the
+process of preparing and loading data
+for analytics purposes making it easier
+for businesses to derive valuable
+insights from their data let's break
+down its key features that make it stand
+out from the crowd first is data catalog
+now imagine having a centralized
+metadata repository that automatically
+discovers and catalogs your data sources
+AWS glues data catalog does just that it
+acts as a centralized metadata store
+enabling you to easily find track and
+manage your data assets with the data
+catalog you can effortlessly search for
+specific data sets understand their
+structure and establish relationships
+between different data sources the
+streamlines the entire data preparation
+process saving you valuable time and
+effort second is data crawlers now let's
+talk about AWS glues data crawlers these
+powerful creatures automatically scan
+your data sources such as Amazon S3
+bucket or relational databases to infer
+the schema and populate the data catalog
+imagine the time you'll save by not
+having to manually Define and update
+schemas for ever growing data sets the
+data crawlers take care of the heavy
+lifting leaving you with more time to
+focus on analyzing the data and
+extracting insights now AWS close ETL
+jobs are the heart and soul of the
+service they enable you to build
+sophisticated data transformation
+workflows using a visual interface or
+code powered by apache's part with ETL
+jobs you can effortlessly transform your
+data from one format to another apply
+complex business logic and cleanse the
+data to ensure its quality and integrity
+AWS load takes care of the underlying
+infrastructure automatically scaling the
+resources to handle large data sets and
+parallel processing it's a true game
+changer for data engineers and analysts
+alike then comes serverless architecture
+now AWS clue operates on a serverless
+architecture meaning you don't have to
+worry about provisioning or managing
+servers it dynamically scales resources
+based on your data processing needs
+ensuring optimal performances and cost
+efficiency this serverless approach
+frees you from infrastructure management
+and allows you to focus solely on your
+data and Analysis is code generation and
+job orchestration now AWS glue offers
+two ways to create edl workflows visual
+interface and code generation for those
+who prefer a visual approach AWS glue
+provides an intuitive graphical
+interface where you can visually design
+your ETL workflows by connecting data
+sources applying transformation and
+defining output destinations on the
+other hand if you're more comfortable
+with coding AWS glue generates python or
+Scala code that you can customize to fit
+your specific requirements so now let's
+take a closer look at how AWS Loop work
+it's magic when you create an AWS blue
+ETL job it generates an ETL job under
+the hood AWS glue leverages the
+scalability and performance of ETL tools
+to process your data efficiently now
+here's a simplified representation of
+the AWS blue workflow first AWS glow
+extract data from your specific sources
+which can include databases data lakes
+or streaming platforms then it applies
+transformation to the database is on
+your defined logic now these
+transformation could involve filtering
+aggregating joining or even applying
+machine learning algorithms to derive
+insights from the data finally AWS glue
+loads the transom data into a desired
+Target destination such as data
+warehouse data lake or bi tool now let's
+talk about data versioning and lineage
+AWS loot doesn't just stop at data
+preparation it also provides powerful
+data versioning and lineage capabilities
+with data versioning you can track
+changes to your data set over time
+allowing you to access and revert to
+previous versions if needed data lineage
+on the other hand helps you understand
+the original and transformation history
+of your data ensuring data quality and
+compliance so now let's discuss a very
+popular use case of azure glue that is
+real-time analytics imagine you're
+working for a retail company that wants
+to analyze customer behavior in real
+time using AWS glue you can extract data
+from various sources such as your
+transactional database web logs and
+social media fields and transform it
+into a unified format this Consolidated
+data can then be seamlessly loaded into
+analytics tools like Amazon redshift or
+Amazon Athena for further analysis but
+AWS clue we can unlock valuable insights
+identified Trends and make data-driven
+decision faster than ever before and
+there you have it folks a glimpse into
+the power and potential of AWS glue also
+to help you understand the demand of
+cloud computing its Concepts like AWS
+glue and the impact of accounting
+postgraduate program in cloud computing
+is a success story of one of our
+Learners to boost your confidence do
+watch this video
+and I am currently living in Algeria I
+wanted to experience what is like to
+live I also realized that to get a new
+job I needed to have a professional
+certification in cloud computing so last
+year I started the postgraduate program
+in cloud computing in association with
+Caltech constant video that with this
+course I had the choice to study while I
+continue and that is how I got this new
+job offer with 60 percent salary high in
+Finland I will be leading the cloud
+computing unit of my new company we
+cannot wait to start our new life in
+Finland we are also remember in today's
+data driven World efficiency is key and
+AWS glue empowers you to harness the
+true potential of your data without
+getting caught up in the intricacies of
+ETL so go ahead and give AWS glue a try
+your data analytics pipeline will thank
+you also if you like this video then
+please do give it a thumbs up and share
+it with your friends and if you have any
+questions related to this video then
+please feel free to ask away in the
+comment section our team will reach out
+to you as soon as possible thank you and
+keep learning staying ahead in your
+career requires continuous learning and
+upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in Cutting Edge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
+foreign

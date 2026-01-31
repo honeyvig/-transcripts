@@ -1,0 +1,337 @@
+hello everyone and welcome to today's
+video on Transformers at simply Lear do
+you know friends that Transformers have
+revolutionized the natural language
+processing and deep learning task by
+offering a more efficient way to handle
+range of dependencies in data sequences
+unlike traditional models like recurrent
+neural networks which processes input
+sequentially Transformers process the
+entire sequences simultaneously well in
+this tutorial we will dive into the
+architecture of Transformers breaking
+down the key Concepts like self
+attention multi-head attention and the
+roles of encoder and decoder by the end
+of this tutorial guys you will have a
+comprehensive understanding of how
+Transformers work and why they are the
+foundation of modern NLP models like
+bird and Char GPD craving a career
+upgrade subscribe like and comment
+below dive into the link in the
+description to FasTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back so guys before to move on just a
+quick info guys simply learn has got
+postgraduate program in AI machine
+learning it is a rank one AI ml course
+you can boost your career with this AI
+ml course which is delivered in
+collaboration with P University and IBM
+you will learn in demand skills such as
+machine learning deep learning NLP
+computer vision reinforcement learning
+generative AI and many more so hurry up
+now and join the course the course link
+is mentioned in the description box so
+guys let's get started so guys let us
+start by understanding what are exactly
+Transformers so guys basically
+Transformers are a groundbreaking
+innovation in natural language
+processing they were basically
+introduced to make it easier to handle
+long range dependencies in sequences
+like sentences or paragraphs unlike the
+older models such as recurent neural
+networks and contion neural networks
+which processes the input sequentially
+Transformers uses a mechanism called
+self attention to analyze the entire
+input at once this shift allows them to
+handle large amounts of data more
+efficiently and understand relationships
+between distant words in a sequence
+better now you would be wondering why
+would be needing the Transformers so
+guys before Transformers models
+struggled with long sentences or
+sequences traditional models like RNN
+processed words one after another which
+made them slow and often forgetful when
+dealing with longer context while
+attention mechanisms improved these
+models by allowing them to focus on
+specific words there was still a room
+for improvement Transformers solve this
+problem by completely relying on
+attention specifically self attention
+and dropping the sequential processing
+using rnm this makes Transformers faster
+and more accurate for task like language
+translation Tech sumar ization and many
+more we are going to discuss about these
+mechanisms like attention mechanism and
+self attention mechanism but I hope so
+you have got some brief idea Regarding
+why Transformers were exactly needed now
+let us understand some of the core
+concept before understanding the
+Transformers so guys the first one is
+what is attention imagine you are
+reading a long sentence to understand it
+fully you don't read it word by word in
+isolation you relate the words to each
+other to make sense of sentence as a
+whole attention helps the model to do
+this by focusing on most important words
+in the input sequence when generating
+the output for example guys if you are
+translating the sentence I see the red
+house into French the model needs to
+focus on the word house to translate it
+into the masan attention ensures that
+the model gives importance to the right
+word at the right time now what is self
+attention guys self attention takes his
+idea way more further instead of just
+focusing on the relationship between
+input and output sequences it focuses on
+the relationship within the input
+sequence itself this is useful because
+in many sentences words are related to
+each other in complex ways consider this
+sentence I poured water from the bottle
+into the cup until it was full here it
+refers to the cup now look at the next
+sentence I poured water from the bottle
+into the cup until the cup was empty so
+in this case it refers to the bottle so
+self attention helps a model understand
+these subtle differences by looking at
+the whole sentences and identifying the
+relationship between the words now let
+us move ahead and try to understand the
+three types of attentions in
+Transformers the first one that we have
+all over here is encoder decoder
+attention this attention focuses on
+relationship between input which is the
+English sentence and the output which is
+a translated French sentence it helps
+the model align with the input and the
+output making translation more accurate
+next one we have all over here is self
+attention on input sequence this attends
+to all the words in the input sequence
+and helps the model understand the
+context of each word in relation to
+others in the same sentence now self
+attention on the output sequence so guys
+in this scenario while generating the
+output like translating a sentence the
+model uses this attention to look at the
+words it has already predicted and
+prevent it from looking at the future
+words this is done using masking when
+only certain words are visible at each
+step of the process now let us try to
+understand queries keys and value which
+is the heart of self attention so guys
+in this diagram it illustrates the self
+attention in the context of Transformer
+architecture and how queries keys and
+values interact with the soft Mac
+function to calculate the output so as
+you can see in this diagram it
+illustrates the self attention in
+context of Transformer architecture and
+how queries keys and values interact
+with this softmax function to calculate
+the output now let us break down this
+diagram so you can see query all over
+here okay 0 1 2 uh this orange column
+labeled as Q contains the value that
+represents query Vector for each word
+taken in the input sequence each row
+corresponds to a word or token and its
+full value represents how much focus
+should be placed on that particular word
+when calculating self attention next one
+we have all over here is key the yellow
+column labeled K contains values
+representing the key Vector keys are
+used to determine which words in the
+input sequence the correct query should
+attend to the dot product of the query
+and keys value is calculated which is
+shown by the multiplication dot between
+q and K next we have the softmax
+function the result of the dot product
+between query and key is passed through
+a soft Max function which is basically a
+gray column to convert these values into
+probabilities softmax takes the result
+of dot product and ensures that this sum
+up to one making them probabilities that
+indicate how much attention each word
+should receive the fourth one is value
+the blue column label V represents the
+value vectors which holds actual
+information in the input sequence that
+needs to be waited based on the
+attention scores after applying the soft
+Max weights to the value vectors the
+model focuses on the relevant parts of
+the input and finally we have the output
+the final green column labeled output is
+a result of multiplying the soft Max
+scores which are the tension weights by
+the value vectors V the soft Max
+distribution ensures that more important
+words those with higher weights
+contribute more to the output outut
+while less relevant words contribute
+less as shown in the diagram some values
+in the output are larger or highlighted
+as bigger value While others are smaller
+indicating their relative importance to
+the sentence now you would be wondering
+what exactly is a soft Max function the
+soft Max function is a mathematical
+operation which is used to convert a set
+of raw scores like the result of dot
+products between queries and keys into
+probabilities so for example here you
+have the input so the raw scores in this
+case from the dotproduct of the queries
+and keys Vector then you have the
+exponentiation the softmax function
+exponentiate each score okay making sure
+all the values are positive and finally
+you have the normalization where it
+normalizes these value by dividing each
+exponentiated value by the sum of all
+exponentiated value this ensures that
+all the values add up to one making them
+valid probabilities so guys you can see
+the softmax formula all over here so
+attention query keys and values equal to
+soft Max q k to ^ t under root K of K
+denominator and V so this is a general
+formula for calculating the attention
+now let us move ahead and try to
+understand the multi-head attention
+which enhances the power of self
+attention so guys in Transformers
+multi-head attention allows the model to
+perform self attention several times in
+parallel each attention heads looks at
+the different parts of the sentence
+sequence okay and by doing this the
+model can capture multiple types of
+relationships at the same time so the
+benefit instead of relying on just one
+set of queries keys and values the model
+has multiple sets or heads and each head
+processes the input side differently and
+then the outputs from all the heads are
+combined and processed further this
+gives the model A much richer
+understanding of the sequence now let us
+try to understand the Transformer
+architecture so first one we have the
+encoder stack okay so guys as you can
+see in this diagram this is the encoder
+stack the encoder takes the input
+sequence suppose a sentence in English
+and creates the representation let's
+call it as Zed that summarizes all the
+important information about the sequence
+the encoder is made up of two components
+the multi-ad self attention this looks
+at the input sequence and finds a
+relationship between words using self
+attention then you have the feed forward
+Network this processes the output from
+the self attention mechanism to further
+refine the information next you have the
+encoder the encoder doesn't change the
+length of the input sequence it just
+transform it into the input into a
+format that decoder can work with next
+we have the decoder stack the decoder
+takes a representation from the encoder
+and uses it to generate the output
+sequence means the translated sentences
+in French each decorder has three main
+components The Marked multi-hit self
+attention which ensures the model can
+only look at words it has already
+predicted preventing it from cheating by
+looking ahead then you have the encoder
+decoder attention the this attends the
+encoder's output to help decoder focus
+on the relevant parts of the input
+sequence and then you have the feed
+forward Network which further processes
+the output of the attention layers to
+refine the predictions both encoder and
+decoder are repeated multiple times in a
+stack of in six layers to improves the
+model's ability to understand and
+generate complex sequences now finally
+we have the positional encoding which
+adds the order to the sequence
+Transformers processes the input
+sequence all at once not word by word so
+they need a way to understand the order
+of the words in which the sentence since
+word order matters in most languages
+they do this by adding a special
+positioning encoding Vector to each word
+in the sequence this encoding tells a
+model where each word appears in the
+sentence the positional encoding uses s
+and cosine functions to generate these
+position specific vectors which are
+added to the word embeddings the
+numerical representation of each word
+and in this way the Transformer knows
+where each word is even though it's
+process in the sequence in parallel so
+guys this architecture makes Transformer
+fast efficient and reliable and Powerful
+for the task like translation text
+generation summarization and many others
+they found the backbone of the advanced
+models like bird GPT and T5 which are
+used widely in NLP today so guys that
+was all for today's session I hope so
+you would have enjoyed our today's
+session on Transformers thank you guys
+for watching this video staying ahead in
+your career requires continuous learning
+and Skilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by IND history experts choose
+any of our programs and set yourself on
+the path to Career Success click the
+link in the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

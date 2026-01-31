@@ -1,0 +1,193 @@
+hello everyone welcome to another
+interesting video by simply learn what
+is one of the most important and core
+concept of Statistics that enable us to
+do productive modeling and yet it is
+often confused by aspiring data
+scientists yes I'm talking about the
+central limit theorem so in this video
+we'll discuss all there is to know about
+the central limit theorem so let's start
+by discussing the agenda for today we'll
+start with the definition of central
+limit theorem and then discuss the mean
+and standard deviation associated with
+it then we'll take a real life example
+to understand where you can use a
+central limit theorem then we'll discuss
+some assumptions that are taken for
+Effective use of central limit theorem
+we'll end this tutorial with the
+demonstration of the central limit
+theorem in Python so without further Ado
+let's get started so what is the central
+limit theorem the central limit theorem
+is a statistical concept that states
+that the sample means of the
+distribution of a random variable will
+approach to a normal distribution if the
+sample sizes are large respective of the
+shape of the orizal population
+distribution we take the population and
+we take the sample out of them let's
+discuss the mean and standard deviation
+associated with it suppose we are
+sampling from a population with mean mu
+and a standard deviation Sigma let X be
+the random variable representing the
+sample mean of and independently drawn
+observations then we can say that the
+mean of the sampling distribution of the
+sample means is equal to the population
+mean which is mux bar is equal to Mu
+where mux bar represents the mean of the
+sample means and mu represents the
+population mean on other hand the
+standard devation of the sampling
+distribution will be equal to the
+population of the total standard
+deviation upon the under root of sample
+size let's understand this more clearly
+by taking a real world example suppose
+you are a digital manager of
+pharmaceutical company in charge of 200
+stores across the region and you are in
+charge of weekly medicine restocking at
+all of them you need to know how many
+cases to order weekly for each store in
+order to reduce the amount of inventory
+that expires the plot on the right hand
+side shows the distribution of all the
+200 stores and average medicine cases
+required by each of the stores in the
+week the red line represents the average
+cases required which is equal to 34 you
+know there has to be a better way to
+arrive at a reasonable answer that
+doesn't entail visiting every single
+store in your area and obtaining their
+weekly sales figure you can apply the
+central limit theorem to this problem
+not that you understand the concept you
+already knew the central limit theorem
+when applied to reable problems AIDS in
+balancing the time and cost of gathering
+the data required to draw the
+conclusions about the data so here you
+can see the plot on the right hand side
+shows the distribution of sample means
+of the sufficiently large Subs taken
+from the population sample size greater
+than 30 will be sufficient enough to get
+the normal Bill curve the mean of all
+the samples taken from that population
+mean is equal to 34 which is equal to
+the sample mean of the subsets if you
+plot the sample means you'll get a
+normal distribution which is in form of
+bell curve if these samples meet the
+central limit theorem criteria you can
+assume the distribution of the sample
+means can be approximated to normal
+distribution now you know how to apply
+the central limit theorem in a real
+world problem let's discuss some
+assumptions behind the central limit
+theorem the first one is the
+randomization condition the data must be
+sampled at randomly and it must add to
+the randomization rule the second one is
+the independence assumption the sample
+value must be independent of each other
+this means that the occurrence of one
+event has no influence on the next event
+usually if we know that people or items
+were selected randomly we can assume
+that the independence assumption is met
+the third and the last one is the 10%
+condition this states that when the
+sample is drawn without replacement the
+sample size which is n should be no more
+than the 10% of the population let's now
+discuss some application of the central
+limit theorem political and election
+polling is a great example to show how
+you can use a central limit theorem
+these po results are used to estimate
+the number of people who support a
+specific candidate to calculate the
+confidence interval which is shown on
+the news channel the central limit
+theorem is very useful in this
+one more place where you can use a
+central limit theorem is a sensus data
+you use the central limit theorem to
+calculate the various population details
+such as family income electricity
+consumption individual salaries and so
+on now that we have a good understanding
+of the central limit theorem is theories
+and application let's see a demo in
+Python to understand it more clearly
+here we are on an online compiler we'll
+discuss the CLT by taking a dice example
+a dice is a different number on each
+side ranging from 1 to six each number
+has a one in six chances of appearing on
+on a role given all the equal likelihood
+the dispersion of the numbers that come
+up from the dice role is uniform let's
+start by importing some necessary
+libraries we'll import the numpy first
+from numpy do random we'll import the
+randid function which will be used to
+generate the random
+integers we'll also import the mean
+function from the numai we'll set the
+seed to one now we'll write the function
+to generate the random
+numbers the randid function will
+generate a number ranging from 1 to six
+we have taken the 100 because the
+example will generate the print the
+samples of 100 dice rows along with the
+mean print the rows and then we'll print
+the mean of the rules so when you run
+this code you'll get the following
+result you see we have the 100 numbers
+and the mean of this number is 3.38 now
+we'll repeat the process thousand times
+this will give you the result of
+thousand sample means according to the
+CLT the result of the sample means will
+be goian so we'll change this code from
+here means will be equal Al to mean of
+this random integers we'll take from 1A
+7A 100 and this will be four in range of
+1,000 now we'll plot this distribution
+we'll use the P plot function we'll get
+the graph as a histogram graph so we'll
+plot it in that means and P plot do
+show let's recheck our code we have the
+random inter function we have the feed
+okay we have imported them mean we have
+not imported the Matt plot Library so
+from Matt plot Library we'll import By
+plot now I think everything is in place
+and let's try to run this
+code yep you can see this graph is a
+histogram graph in the shape of a bell
+curve and if you see closely the mean is
+closely to
+3.4 so that's it for this tutorial thank
+you for being here and watch out for
+more videos from us if you have any
+doubts and queries regarding the central
+limit theorem you can post your that in
+the comment section until then keep
+learning and stay tuned to Simply
+learn hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

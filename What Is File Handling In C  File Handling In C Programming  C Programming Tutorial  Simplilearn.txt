@@ -1,0 +1,260 @@
+hey guys welcome back to another video
+by simply learn in today's video we're
+gonna be learning all about file
+handling and see but before we begin if
+you haven't subscribed to our channel
+already make sure to hit the subscribe
+button and the bell icon to never miss
+an update
+so now without any further delay let's
+begin
+this session will help you to understand
+what file handling in c is
+then fine handling operations and
+functions associated with it
+and finally the file opening modes in c
+so now let's begin with what is file
+handling in c
+as we all know to maintain or organize
+the data we use files to understand in a
+better way wi-fi handling is used let's
+consider an example of our program's
+input and output so what happens is that
+we store value in the variables and that
+data will be stored for time being in
+grammar the data will be lost whenever
+the program is terminated or when the
+system is switched off
+so when we want our results to be stored
+permanently in the secondary device we
+use file handling functions
+this means that the data is stored in a
+file using a program known as file
+handling
+the main objectives of the file handling
+are to create
+read write and update the files
+in file handling a file pointer is used
+to fetch and access the file in the
+program to perform operations on it in
+general a file pointer is a variable
+used to reference the files in the
+program
+in c programming we declare variables to
+hold a value right for example in ta
+comma b
+this means the variable a and b hold a
+value of type integer
+similarly in file handling and c the
+declaration is pi
+asterisk and followed by file pointer
+name
+in the following declaration file acts
+similar to data type which means that
+the file pointer variable is of the type
+file
+in file handling every file is
+represented with a unique file pointer
+variable to access the file and perform
+certain operations
+the general syntax to open a file is
+file asterisk and followed by the file
+pointer name
+then to open a file we use the function
+if open and specify the file name and
+import which will be assigned to the
+file pointer variable all right
+now let's have a look at the file
+handling operations in sync
+to do any operations on the file we
+first create a file and then perform
+operations
+but if the file already exists we open
+an existing file and perform the task
+and once after the creation or opening a
+file we read from a file
+or write to a file or if required we
+perform both the operations
+and the next operation we have is to
+move a file to the specified location
+if required we can move a file otherwise
+the last operation is to close the file
+so whenever we open a file it's
+compulsory to close the file
+therefore we have a set of functions to
+perform operations on the file
+so now let's see what those file
+handling functions are
+we have so many functions to handle
+files and see but in this session we
+will understand a few basic and
+important functions
+and the functions are given below
+as discussed before to perform any
+operation the first thing is to open an
+existing file and then perform the task
+so basically if open function is used to
+open an existing file and if the file is
+not present in the system it will return
+a null
+the following function we have is f
+close
+whenever we open a file and complete the
+operations on it finally we must close a
+file
+in addition to this there is a limit to
+opening many files at a time so the
+unnecessary files must be closed when
+the task is completed
+next fprintf function is similar to
+printer function as we all know printf
+function is used to print the output or
+we can say it is used to print the
+result on the console
+whereas fprintf function is used to
+write values in the specified file
+up next we have f scanf function which
+is similar to scanf function
+again we know that scanf function is
+used to take inputs from the user
+whereas f scan a function is used to
+read data or information from the
+specified file next we have f puts and
+fgts function used to write and read
+strings from files respectively
+following we have f6 function so
+whenever we want to write or read
+something on a specific part of the file
+we need to set the pointer to that
+particular position and to do this we
+use f6 function
+then we have rewind function that is
+used to set the current position to the
+start of the file that means the pointer
+is set to the beginning of the file
+and finally we have remove function
+hence the remove function is used to
+delete the file
+so i think you got a good understanding
+of all the file handling functions of c
+okay so let us move on to the file
+opening modes of c language
+these opening modes specify on what
+basis the file is opened for example
+suppose you want to write something on
+the file we open an existing file using
+f open function and specify the mode
+either to read or write the file and
+that is done using the following file
+opening modes
+first let's start with mode r it is used
+to open existing text file to read only
+and mode w creates and opens the file
+for writing but if the file already
+exists then it will overwrite its
+content
+next is yeti which is used to append the
+data at the end of the existing file
+append is nothing but adding up the data
+for writing only
+then rt plus where r stands for reading
+and t stands for text file so this mode
+opens the existing file to read and
+write
+next the wt plus
+this mode creates and opens the file for
+reading and writing but if the file
+exists it will overwrite the content or
+empty the content of the existing file
+and then eap plus we'll append the data
+at the end of the existing file and open
+it for reading and writing
+following we have rb where b stands for
+binary files so basically it is used to
+open an existing binary file for reading
+only
+wb
+this mode is used to create and open an
+existing binary file for writing
+a b mode appends at the end of the
+existing binary file
+next rbplus opens an existing binary
+file for reading and writing wb plus
+creates and opens a binary file for
+reading and writing and finally we have
+eab plus
+this mode is used to append to the end
+of the existing binary file for reading
+and writing so now let's have a look at
+the declaration
+let's see how the functions and modes
+are used in file handling
+for the file opening operation we have
+the following declaration file and
+followed by file pointer name the
+pointer variable will contain the
+address of the file structure so as
+discussed before to perform any
+operation on the file we must open a
+file so for that we have the f open
+function assigned to a file pointer
+variable
+specified with the file name and remote
+so in this example the file is open to
+perform the write operation
+the following declaration is based on a
+reading of file therefore if scanf
+function is used to read from a file we
+can also use the f gets function
+next
+write a file
+so first we open an existing file and
+specify the file name and the mode w
+that is the right mode
+the fprintf function is followed to
+write data on a specified file
+finally
+after performing the operations on the
+file we must close the file and to close
+the file we use fclose function the
+function parameter is the pointer name
+now let us understand this operation
+using a simple program
+if getting your learning started is half
+the battle what if you could do that for
+free
+visit skill up by simply learn click on
+the link in the description to know
+more
+in this program we're gonna perform the
+write and read operation so for that
+let's first open a file named file1.c
+and the next step is to write on the
+open file
+and once we write the content into the
+open file we're gonna read from the file
+and at last we will close the file so
+now let's run it
+enter the file content
+okay
+and once you write the data into the
+file the next step is to read data from
+the file
+reading content of your file hey guys
+welcome you all to simply learn and it's
+printed successfully
+so now let's open the file and see if
+the data is written into the file
+so this is the file and it's written
+successfully
+so with this we have come to the end of
+this session on the file handling in c
+programming i hope this session was
+informative and interesting until next
+time thank you stay safe and keep
+learning
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

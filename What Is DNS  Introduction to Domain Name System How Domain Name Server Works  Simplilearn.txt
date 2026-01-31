@@ -1,0 +1,342 @@
+welcome back to our Channel today we are
+diving into a fundamental concept of the
+internet that you might have heard of
+but might not fully understand the anus
+that's right we are demystifying DNS and
+breaking down what it is and how it
+works so if you have ever wondered how
+you are able to reach your favorite
+websites with just a click this video is
+for you let's get started and before we
+begin if you are someone who is
+interested in building a career in cyber
+security by graduating from the best
+universities or a professional who are
+decides to switch careers with cyber
+security while learning from the experts
+then try giving a show to Simply learns
+postgraduate program in cyber security
+with modules from MIT schwarzman College
+of Engineering the course link is
+mentioned in the description box that
+will navigate you to the course page
+where you can find a complete overview
+of the program being offered and if
+these are the types of videos you would
+like to watch then hit the Subscribe
+button like and press on the Bell icon
+to never miss on future content so stay
+tuned with us until the end of this
+video and don't forget to register your
+opinion in the comment section below so
+now starting with what is DNS so what
+actually is DNS so DNS stands for domain
+name system and it's like the internet's
+address book just like how you use names
+to identify people instead of their
+phone numbers DNS helps you access
+websites using human readable names like
+www.example.com instead of complex IP
+addresses imagine you want to visit a
+website like www.example.com computers
+though don't understand words like we do
+they use numbers called IP addresses to
+find websites this is where DNS comes in
+it's like a translator that converts the
+website name into an IP address where
+computer knows where to go so this is
+what sdns domain name system now moving
+on to how does DNS work that is a great
+question and let's break down the
+process step by step so the first step
+is request initiation when you type a
+website's name in your browser and hit
+enter your computer sends a request to a
+DNS resolver or DNS server often
+provided by your internet service
+provider ISP let's see how this works
+with a real life example imagine you
+want to visit www.google.com you type
+www.google.com into a browser and hit
+enter your computer doesn't know where
+www.google.com is so it asks a special
+server called a DNS server or resolver
+for help Step 2 recursive DNS resolver
+the DNS resolver is like a librarian who
+knows where all the books or websites
+are kept it checks if it is already
+knows the IP address for www.google.com
+if not it goes on a quest to find it and
+step 3 iterative queries the resolver
+starts asking other DNS servers starting
+from the root DNS or root server then
+moving to the top level domain server
+TLD servers and finally to the
+authoritative DNS servers that are
+responsible for the specific domain you
+are looking for this is called iterative
+query the DNS resolver starts asking
+other servers like the root server and
+the top level domain server do you know
+where www.google.com or www.example.com
+is they might not know either but they
+will direct the resolver to the right
+place and then there comes the step 4
+that is authoritative DNS server when
+the authoritative DNS server is found it
+provides the IP address for the
+requested domain name step 5 caching the
+resolver not only Returns the IP address
+to your computer but also stores it for
+a certain period in its cache this
+caching helps speed up future request
+for the same domain step 6 loading the
+website r with the IP address your
+computer can now contact the web server
+where the website is hosted requesting
+the content and Bola the website loads
+in your browser so this was how DNS
+works and now moving on to DNS records
+but how does the authoritative DNS
+server know which IP address corresponds
+to a domain name that's what DNS reports
+comes in and now we'll see the types of
+DNS reports so these are the types of
+DNS records so the first record is a
+record that Maps a domain name to an
+ipv4 address then comes the IPv6 address
+record that Maps a domain name to an
+IPv6 address when comes the canonical
+name recorder that creates an Lis for a
+domain name then comes the mail
+exchanger record that specifies main
+servers responsible for receiving email
+and in the process of loading a web page
+there are four key DNA servers that play
+different roles and the four different
+DNS servers are DNS recursor the
+librarian then we have root name server
+the library index then we have TLD name
+server a specific rack of
+and then all creative name server the
+dictionary now we will see them one by
+one and in an elaborative manner the
+first is DNS recursor the librarian so
+think of the DNS recursor as a helpful
+librarian when you the reader want to
+find a specific book in a boss Library
+you ask the librarian for assistance
+similarly the DNS recursor is like a
+server that listens to request from your
+computer usually through web browsers or
+other applications its job is to find
+the answer to your question if it
+doesn't know the answer it embarks on a
+quest to find it for you so this was
+about DNS recursion now we will move to
+another DNS server that is root name
+server the library index so picture the
+root server as the index in the library
+it doesn't have all the books but it
+knows where to look for them when you
+ask the librarian DNS recursor for a
+book that is IP address they first check
+the index root names server to get a
+clue about where to find it the root
+server directs The Librarian to more
+specific locations when we go to the
+next DNA server that is TLD name server
+a specific rack of books imagine the top
+level domain TRD server has a specific
+rack of books in the library this rack
+is dedicated to a particular category of
+books in the DNS world it's the next
+step in the search for an IP address for
+example if you are looking for a book
+that is IP address related to
+example.com the TLD server is like the
+rack labeled.com it takes you one step
+closer to finding the right book that is
+IP address and then we have
+authoritative name server the dictionary
+so now feature the authoritative name
+server as a dictionary owner rack of
+books this dictionary translates
+specific book names into their
+definitions IP addresses It's the final
+stop in your quest for information when
+the librarian or DNS recursor reaches
+the authoritative name server it's like
+finding the exact dictionary that holds
+the answer if the authoritative name
+server has the requested information it
+gladly shares the IP addresses with the
+DNS recursor a librarian who then passes
+it on to you so these four DNS servers
+work together just like a librarian an
+index a rack of books and a dictionary
+to help you find and access websites on
+the internet and I have an announcement
+for you guys that is if you want to
+Kickstart your career as a cyber
+security professional in six months then
+try doing a show to Simply learn skeltex
+cyber security bootcamp the course link
+or the bootcampling is mentioned in the
+description box it will navigate you to
+the bootcampage you can find a complete
+overview of the program being offered
+and now moving on to the three types of
+DNS queries so there are three types of
+DNS queries the first one is recursive
+query the second is iterative query and
+the third is non-recursive query so we
+will have a little information about all
+the three queries so starting with the
+recursive query imagine you are asking
+for directions and you insist that the
+person you are asking must provide you
+with the exact location you are looking
+for similarly in a recursive query a DNS
+client like your GPS asks a DNS server
+typically a DNS recursive resolver to
+either give it the exact information
+it's seeking that is the requested
+resource record or tell it if the
+information isn't available by returning
+an error message so this was about
+requested query then we have iterative
+query now think of you asking for
+directions but this time you are open to
+getting the best possible advice in an
+iterative query the DNS client allows a
+DNS server to provide the best answer it
+can find if the first DNS Server queried
+doesn't have the information you need it
+doesn't leave you stranded instead it
+gives you directions to another person
+that is DNS server who might know more
+about the place you are looking for this
+process continues until you reach
+someone who can help or until you run
+out of options and then we have known
+recursive query lastly picture a
+scenario where you are asking someone
+for directions and you already know they
+have the information they are not asking
+them to go out of their way you just
+want them to share what they already
+know in a non-recursive query a DNS
+resolver client asks a DNS server for
+information that the server already has
+access to this could be because the
+server is authorative for the
+information like the local expert or
+because it has saved the information in
+its memory like your notes this approach
+is efficient because it prevents
+unnecessary work and reduces the load on
+other servers so these are the types of
+DNS queries now moving on to DNS
+security and challenges so DNS domain
+name system is a fundamental part of the
+internet but like any system it has its
+share of security concerns and
+challenges let's explore these issues
+the first is DNS spoofing that is DNS
+cache poisoning this is like some one
+sneaking a fake address into your
+address book DNS spoofing happens when
+an attacker tricks a DNS resolver or DNS
+server into associating a legitimate
+domain name with the malicious IP
+address and its impact is it can
+redirect users to fraudulent websites
+leading to phishing attacks or malware
+downloads number two distributed denial
+of service tdos attacks for DDOS attacks
+flood DNA servers with an overwhelming
+amount of traffic causing them to become
+slow or unavailable it's like jamming
+all the roads leading to a place so no
+one can get there and this impact like
+this can disrupt online services and
+make websites inaccessible then we have
+DNS EC there it is DNS security
+extensions so DNS security extensions
+adds an extra layer of security by
+digitally signing DNS data it's like
+putting a seal on a letter to ensure it
+hasn't been tampered with and it
+benefits or it helps prevent DNS
+spoofing and ensures the Integrity of
+DNS responses then we have cash
+poisoning mitigation to counter cache
+poisoning DNS servers use various
+techniques like Source port
+randomization and query ID randomization
+to make it harder for attackers to
+predict the response and it benefits
+these measures enhance DNA security then
+we have Zone transfers Zone transfers
+are part of DNS replication between
+authoritative DNA servers if not
+properly secured they can be exploited
+by attackers to gain information about a
+domain's infrastructure so mitigation
+about this is that is implementing
+access controls and securing Zone
+transfers can prevent unauthorized
+access then we have DNS tunneling DNS
+tunneling is a technique used by malware
+to bypass security measures it disguises
+malicious data within DNS queries and
+responses impact it allows malware to
+communicate convertly or covertly with
+command and control servers now let's
+take a minute to hear from our Learners
+who have experienced massive success in
+their careers hi I'm Philip I'm 61 years
+old and last year I upskilled with
+simply Learners postgraduate program in
+cyber security after working 30 years in
+the I.T sector in various different
+profiles I'm happy to tell you that I
+was able to clear and pass my cissp and
+ccsp certification exams on the first
+attempt after taking the course of
+course I must say was packed with
+practical examples it was led by highly
+skilled certified instructors with many
+companies before the security analysts
+and the architect on a contract basis
+but I needed some stability which I got
+with the job I just started with Infosys
+as a cyber security consultant happened
+on the first and if these are the types
+of videos you would like to watch then
+hit the Subscribe button like and press
+the Bell icon to not miss on future
+content staying ahead in your career
+requires continuous learning and
+upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in Cutting Edge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
+foreign

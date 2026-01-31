@@ -1,0 +1,469 @@
+hello everyone
+welcome to Simply learns YouTube channel
+in this session
+we will discuss a very widely used term
+in statistics that is correlation and we
+will see what is the significance of
+correlation and where it is used so
+let's discuss the agenda for today's
+session
+we'll start this tutorial by
+understanding what is correlation
+then we'll move on to discuss the two
+types of correlation
+and correlation coefficient after that
+we'll see the limitations of correlation
+and some real life applications of
+correlation
+so let's get started
+what is correlation
+correlation refers to a statistical
+relationship between the two entities
+it measures the extent to which the two
+variables are linearly related
+for example the price and demand of a
+product is in correlation they are
+linearly related
+the value of correlation always lies
+between minus one two plus one
+there are mainly two types of
+correlation the first one is positive
+correlation
+a positive correlation means that the
+linear relationship is positive
+and the two variables increases or
+decreases in the same direction
+the number of trees cut down and the
+probability of erosion are in
+correlation when one increases other
+also increases and vice versa
+negative correlation
+a negative correlation is just the
+opposite the relationship line has a
+negative slope and the variables change
+in opposite directions
+for example if you decrease the speed of
+the car the time taken to reach the
+destination increases this is a negative
+correlation
+correlation coefficient
+the correlation coefficient which is
+denoted by R gives us a measure of the
+strength of the linear relationship
+between the two variables
+the values denoted by the letter R and
+it ranges from minus 1 to plus one
+if it is less than 0 it implies that
+there is a negative correlation the
+minus 1 indicates there is a strong
+negative correlation between the
+variables
+if R is greater than 0 it implies there
+is a positive correlation and plus one
+is the strongest point of a positive
+correlation
+when R is equal to 0 we can say that
+there is no correlation between the
+variables
+there are also some limitations of
+correlation
+the first one is correlation does not
+give you every Insight on the data mean
+and standard deviation are still the
+important parameters to get the Insight
+of a data
+the second one is the data will not
+produce a straight line every time and
+it will be difficult to predict the
+value of R just with the straight line
+or the slope of the graph
+now let's see some real life
+applications of correlation
+if you take any e-commerce company whose
+website is accessed by millions of users
+all over the world the company can look
+at all the data and they can measure how
+much time was spent by the customer and
+the respective money spent by the
+customer
+we can also predict the unique users
+that visited the website and how it
+affected the sales in a day
+the third application can be the patient
+blood pressure and the medication used
+the level of patient blood pressure and
+the effect of medication on it can be in
+a correlation now let's jump on to excel
+workbook to see how you can calculate
+the correlation coefficient
+so here we are on Excel workbook if you
+see we have the temperature in degree
+celsius such as 20 25 30 40 50 and 60
+and the corresponding sales of ice cream
+in the units to calculate the
+correlation we'll use the Corel function
+now we have array 1 and array 2 so we'll
+select the array one that is temperature
+in degree celsius and the array 2 will
+be our sales of ice cream
+so you can see there is a very strong
+correlation between the temperature of a
+day and the sales of ice cream unit
+if the temperature increases the sales
+of ice cream unit increases and if the
+temperature decreases the sales of ice
+cream and it decreases there are many
+three categories of correlation
+the first one is positive correlation
+and negative correlation
+the second one is linear and non-linear
+correlation
+and the third one is simple multiple and
+partial correlation
+let's discuss each of them one by one
+positive correlation
+a positive correlation means that a
+linear relationship is positive and the
+two variables increases or decreases in
+the same direction as you can see from
+the graph
+for example
+the calories you burn is directly
+proportional to the amount of time you
+run on a treadmill on the other hand a
+negative correlation is just the
+opposite
+the relationship line has a negative
+slope and the variable changes in the
+opposite direction that is one variable
+decreases while the other increases
+an example can be a student who has many
+absence has a decrease in grades now
+let's move on to discuss linear and
+non-linear correlation
+when we change the value of a variable
+which leads to a constant ratio change
+in other variable then that relation is
+said to be linear
+for example
+the factory doubles its output by
+doubling the number of workers on the
+other hand correlation is said to be
+non-linear when the amount of change in
+one variable is not in constant ratio to
+the change in the other variable
+for example
+the change in radius of the sphere and
+the change in volume of the sales sphere
+does not happen to be in the same ratio
+now let's discuss simple multiple and
+partial correlation when studying the
+relationship between the variables well
+only two variables are involved the
+correlation is said to be simple
+in the multiple correlation we measure
+the degree of association between one
+variable on the one side and all the
+variables together on the other side
+and for the partial correlation we study
+the relationship of one variable with
+one of the other variables presuming
+that all the variables remains constant
+now that we know all the types of
+correlation
+let's discuss the two major types to
+calculate the correlation coefficient
+the first one is PSS correlation PSS
+correlation coefficient is the test
+statistics that measures the statistical
+relationship between the two continuous
+variables the PSS coercion coefficient
+is often denoted by R and the formula to
+calculate the Pearson's relation
+coefficient is Sigma x i minus X bar
+into y i minus y bar divided by under
+root Sigma x i minus X bar whole square
+and y i minus y bar whole Square
+but R is the coefficient of correlation
+XY is the mean of X variable and Y Bar
+is the mean of Y variable and x i and y
+y denotes the samples of variable X and
+Y respectively
+the PSS coefficient coefficient is the
+best method to measure the association
+between two variables
+of interest because it gives information
+about the magnitude of the association
+or correlation shape as well as the
+direction of the relationship between
+the two variables
+the second best method is PS1 rank
+correlation
+this Pearson Ram correlation is used to
+discover the strength of a link between
+the two sets of data
+the formula to calculate this prison
+rank correlation coefficient is rho is
+equal to 1 minus 6 Sigma d i whole
+Square divided by n bracket n Square
+minus 1. where rho is this P has been
+rank correlation coefficient d i has a
+difference between the two ranks of each
+observations what is regression
+regression analysis like most
+multivariate statistics allows you to
+infer that there is a relationship
+between two or more variables
+these relationships are seldom exact
+because there's a variation caused by
+many variables not just the variables
+being studied
+in regression analysis there are two
+types of variable one is dependent
+variable and other is the independent
+variable
+let's discuss what the boot variable
+represents a dependent variable is a
+variable whose values influenced or to
+be predicted the dependent variable is
+often denoted by Y and is also known as
+a predicted variable
+whereas independent variable which is
+denoted by X is a variable which
+influences the value or is used for
+prediction
+the independent variable is also known
+as a predictive variable the line of
+regression the regression line is a line
+which is used to describe the behavior
+of a set of data in other words it gives
+the best trend of the given data
+regression lines are useful in
+forecasting procedures its purpose is to
+describe their interrelationship between
+the dependent variable and independent
+variable
+the regression equation of Y and X
+describes a change in the value of y for
+given changes in the value of x and vice
+versa
+in the regression line equation X and Y
+are the variables of interest in our
+data with Y the unknown or dependent
+variable and X the known or the
+independent variable
+let's discuss the two key terms in this
+graph the first one is slope slope is
+the ratio of the vertical and horizontal
+distances between the two points on a
+line
+and you can see y-intercept which is the
+coordinate of the point at which the
+curve intersects an axis
+there are some assumptions we take to
+create the regression model the first
+one is the dependent variable is assumed
+to be normally distributed
+the values of the dependent variable are
+statistically independent
+this means that when we select the
+sample of a particular X it does not
+depend on any other value of y
+and the third one is error values are
+statistically independent
+now let's discuss a simple regression
+model
+a simple regression model is used to
+depict a relationship between variables
+which are proportional to each other
+meaning the dependent variable increases
+decreases with the independent variable
+the equation of a simple regression
+model is y is equal to B naught plus b
+One X Plus e
+where Y is dependent variable X is
+independent variable B naught and B1
+represents y-intercept and the slope of
+the line respectively and E is the error
+variable
+now let's move on to excel to calculate
+the regression coefficient of a given
+data
+VR on our Excel workbook
+in front of us we have the data of
+temperature of the day and sales of the
+ice cream on that day
+let's try to understand this regression
+analysis and summary output using this
+data
+so the first step is to
+go to the data Tab and select data
+analysis
+then select regression and click ok
+we'll get this table select the Y range
+as the ice cream sales
+this y range is predictable variable
+also called as dependent variable
+for the input X range
+we'll select the temperature in degree
+Celsius
+this is the explanatory variable also
+called as the independent variable
+one thing you should keep in mind
+is that both the X and Y column must be
+adjacent to each other
+we have the label so we'll check the
+label and we'll select the output range
+from G5
+check the residuals and click ok
+Excel produces the following output
+let's analyze some key data
+we got the asker value to be 0.9676
+which is very good this shows that a 96
+percent of the variation in ice cream
+sales is explained by the temperature of
+the day
+closer to the one the better the
+regression line fits the data
+now let's move little more and analyze
+this coefficient
+if you look at the coefficient you will
+get the equation of the regression line
+in our case it is minus
+176.33 plus 27.68 into temperature of
+the day
+substituting the temperature of the day
+for any given day we can find the sales
+of the ice cream
+with our discussion we can conclude that
+there is a big difference between the
+correlation and regression although
+these are studied together
+correlation is used to study whether the
+variables under study are correlated
+whereas
+regression is used to establish the
+functional relationship between the two
+variables
+the equation of the regression line is a
+form Y is equal to f x plus c
+correlation is used to stabulate the
+strength of the association between the
+two variables that are being studied
+whereas regression is used to make the
+future predictions on the any given
+event
+monotonic function
+the term monotonic relationship is a
+statistical definition that is used to
+describe a scenario in which the size of
+one variable increases as the other
+variable also increases or where the
+size of one variable increases as the
+other variable also decreases
+the rate at which an increase or
+decrease occurs does not necessarily
+have to be the same for both the
+variables that is to say that a
+monotonic relationship can be a linear
+relationship such that it increases or
+decreases for both the variables
+now let's discuss three types of
+monotonic function
+monotonically increasing in this
+function as the variable X increases the
+variable y never decreases as seen in
+the graph
+monotonically decreasing function here
+as a variable X increases the variable y
+number increases
+and the last one is non-monotonic as the
+variable X increases the Y variable
+sometimes decrease or sometime increases
+now we'll discuss previous rank
+correlation
+this placement rank correlation is
+calculated to check the agreement on the
+ranking of the results between the two
+groups
+without the consideration of normality
+or equal variance of data the spearm and
+rank correlation coefficient focuses on
+the differences in the rank orders of
+data rather than the differences in the
+means
+the formula to calculate the rank
+coefficient is shown here where rho is
+this placement rank correlation
+coefficient d i is the difference
+between the two ranks of each
+observations and N is the number of
+observations
+the value of the coefficient will always
+be in the range of plus 1 to minus 1
+where the Plus One will show the perfect
+Association of the rank and a minus in
+will show the negative association of
+the rank if the value comes out to be 0
+it means that there is no association
+between the ranks
+now let's move on to an example to
+understand this concept better
+consider the height and weight of the
+sample of 5 students as shown here
+the first step would be to rank the data
+in the descending order the highest one
+will get a rank of 1 and the lowest Mark
+will get a rank of 5.
+now we'll calculate difference between
+the ranks as you can see the student a
+has a difference of minus 2 which is
+calculated by subtracting 5 from 3.
+similarly you can calculate the value of
+all the D and then Square the D value to
+obtain the positive value of the
+differences
+the 16 here is the sum of the value of
+the D Square
+now that we have all the required value
+we'll substitute the values in this
+formula where rho is equal to 1 minus 6
+Sigma d i Square divided by n n Square
+minus 1. where d i is the summation of D
+Square value
+and N is the number of observation
+so substituting this value
+we'll get the value
+to be 0.2 which shows that there is no
+association between the ranks
+using the same formula you can calculate
+the association between the ranks of the
+any given data
+so with this we come to an end of this
+session on Spaceman rank correlation we
+hope you enjoyed it if you have any
+questions feel free to put them in the
+comment section of this video thank you
+again and happy learning staying ahead
+in your career requires continuous
+learning and upskilling whether you're a
+student aiming to learn today's top
+skills or a working professional looking
+to advance your career we've got you
+covered explore our impressive catalog
+of certification programs in Cutting
+Edge domains including data science
+cloud computing cyber security AI
+machine learning or digital marketing
+designed in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
+foreign

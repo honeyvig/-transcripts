@@ -1,0 +1,258 @@
+welcome to this video tutorial on golang
+by simply learn
+in this session we'll learn about the
+most promising language golem we'll
+start with what is going and learn about
+the history of collect
+further we will see why to learn golang
+and explore its features
+we will look into uses of co-lang in
+various industries
+after that we'll look into most popular
+ids used for golang and at last we will
+get to know about companies using golang
+so hey everyone i am abhisaruja from
+simply learn and welcome to this video
+on what is calling but before we begin
+if you love watching tech videos
+subscribe to our channel and hit the
+bell icon to never miss an update
+now we will look into what is going
+go also known as golang is an open
+source programming language developed by
+google it is a statically typed compiled
+language
+moreover go supports concurrent
+programming that is it allows running
+multiple processes simultaneously
+this is achieved using channels go
+routines etc
+go language has garbage collection which
+does memory management and allows the
+deferred execution of functions
+it also supports networked and
+multi-core computing
+you can run your first code without any
+setup on the playground provided at
+colland.org
+we'll look into the history of colling
+the gop programming language was born
+due to the complexity of managing the
+infrastructure and code bases within
+google
+the language creators all from google
+had a clear goal design a programming
+language that would be easy to use but
+still be able to cover the main
+challenges while working with the
+company's intricate systems
+go was designed by robert christmer
+roe pike and ken thompson
+and was designed at google in 2007 and
+was announced to the public in 2009 and
+it was made open source in 2012
+with the release of version 1.0
+the most remarkable release that is
+golang 1.5 was presented in august 2015
+and it included considerable changes the
+compiler tool chain has been converted
+from c to go entirely
+and at this stage golang took the form
+to which its authors aspired
+now we will be knowing why to learn go
+link
+first reason that is easy to use and
+learn golang is easy to use and
+understand it has gained popularity in
+the top 20 programming languages
+go has a linear learning curve that
+appeals to novice programmers
+if someone already has hands-on c-sharp
+or c-plus plus
+learning go for them should be more
+accessible due to its striking
+similarities to c
+next point we consider is community and
+documentation
+you can find the documentation on the
+official website that is
+golang.org
+go has solid and easy to read
+documentation apart from documentation
+go also has a supportive and active
+community
+you can use the hashtag golank whenever
+got stuck on twitter to reach out to the
+community
+impressive standard library
+go users have a standard library packed
+with the language which reduces
+importing complex secondary libraries
+google's standard library is vast but
+not confusing that is without the issue
+of conflicting function names
+one of go's best contributions to
+programming is
+it offers a more straightforward way of
+integrating data structures into code
+blocks
+next reason to learn golang is strong
+security
+simple code is safe and more secure than
+complicated code as go is a statically
+typed language go users don't have to
+debug a lot of errors
+which is the case with many dynamic
+languages and their number of variable
+types
+plus the inclusion of a garbage
+collector also helps prevent memory
+leaks and the last reason to learn
+golang is attractive wages
+according to a survey conducted by
+stackoverflow co-developers are the
+third highest paid after pearl and scala
+due to goes increasing popularity every
+year this figure will continue to rise
+now we'll look into the features offered
+by golem
+first that is flexible
+because of the language design and its
+roots from c
+colang is easy to learn and understand
+with simple syntax
+next concurrency
+go allows multiple processes to run
+simultaneously
+its ability to take advantage of
+multi-core processor architectures
+and efficient memory is one of the
+reasons
+why go code is today running some of the
+most heavily used applications that can
+scale
+next is the fast output
+go comes with a very quick compilation
+time
+in the golang development environment
+there is no virtual machine the code is
+directly compiled to machine code making
+the compilation process faster and more
+effective
+besides the compiler produces only one
+executable file after compilation this
+file does not suffer from dependency and
+can be uploaded and run anywhere this
+makes the code execution process faster
+the next is library
+go comes with a powerful standard
+library
+distributed as packages which also
+reduces importing complex secondary
+libraries
+the next feature is
+garbage collection
+this is goes one of the key features it
+controls memory allocation and has
+significantly reduced latency in the
+newer versions
+developers need not worry about freeing
+up pointers or the situation associated
+with
+dangling pointers
+now we'll see the uses of colon
+go was originally built for programs
+related to networking and infrastructure
+intended to replace popular
+high-performance server-side languages
+like java and c-plus plus
+kolang's support for concurrency makes
+it an excellent choice for handling
+borderlands that prevent scalability
+today go is used for a variety of
+applications
+who is popular for cloud-based or
+server-side applications
+concurrency and networking features
+align with its high portability across
+various platforms make go an exceptional
+language for cloud computing
+as a matter of fact many standout cloud
+platforms like kubernetes are built with
+co google cloud also uses co to enhance
+scalability and performance
+devops and site reliability automation
+are also popular ways to use co
+many command line tools are written in
+go
+also go is used in the world of
+artificial intelligence and data science
+some uses go for microcontroller
+programming robotics and games
+go shines the most when it comes to
+infrastructure today some of the most
+popular infrastructure tools are written
+in go such as kubernetes docker and
+prometheus
+now we will see some popular ids used by
+golang programmers golend
+coland is an ide by jetbrains to provide
+an ergonomic environment for goal
+development
+sublime text
+it is a commercial source code editor
+that supports many programming languages
+and markup languages
+you have to install go sublime plugin
+through package control that provides go
+code completion and other ide like
+features
+go clips it is an eclipse extension that
+adds ide functionality for the go
+programming language
+vimgo
+vim is often called a programmer's
+editor
+plugins adds go language support for web
+visual studio code using the go
+extension for visual studio code you get
+features like intellisense code
+navigation symbol search testing
+debugging and many more that will help
+you in core development
+you can install the go extension from
+the vs code marketplace
+now we'll see some companies using
+golang uber
+a ride-hailing platform that uses go
+within its microservices
+kubernetes kubernetes is an open source
+container orchestration system used to
+automate software deployment scaling and
+management
+google designed kubernetes but the cloud
+native computing foundation currently
+maintains it
+dropbox dropbox is a file hosting
+service that has migrated some major
+components from python to go
+netflix netflix is the most popular ot
+platform and has used go to develop its
+server architecture twitch
+which is a live video streaming platform
+that uses core for many busiest systems
+soundcloud
+it uses go to perform static analysis in
+real time which is possible due to
+static typing and fast compilation
+with that we have come to the end of
+this session i hope it was interesting
+and informative if you liked it please
+let us know in the comment section below
+also subscribe to our channel and stay
+tuned for more from simply learn
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn nerd up and get certified
+click here

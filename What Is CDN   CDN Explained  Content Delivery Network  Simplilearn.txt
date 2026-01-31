@@ -1,0 +1,249 @@
+hello everyone and welcome to this super
+amazing and informative video on content
+delivery Network or in short CDN if you
+have ever experienced slow website
+loading times or if you have wondered
+why some web pages take longer to access
+than others than you are in the right
+place in this video we are going to
+explain what content delivery networks
+are how they work and why they are so
+important cdns are Global networks of
+servers that work together to deliver
+content to user faster and more
+efficiently the commonly used by
+websites and applications to offer the
+workload from there on web servers which
+can lead to improved performance and
+scalability by Distributing content
+across numerous servers and locations
+cdns can provide rapid access to users
+worldwide regardless of their
+geographical location wait but how
+exactly do syrians work well when a user
+requests content from a website or any
+application the request is routed to the
+nearest server on the CDN the server
+then delivers the content directly to
+the user resulting in Faster loading
+times and because cdns are used multiple
+servers they can handle large amounts of
+traffic and Ensure High availability and
+latency even during times of high demand
+so why should you care about syrians
+well they're becoming increasingly
+critical to businesses and organizations
+that rely on web-based content cdns can
+help you improve your performance
+achieve faster loading times and reduce
+the cost of delivering content and with
+many syrians offering cost-effective
+Solutions there's really no reason why
+you shouldn't be using one so grab onto
+your seats and stay tuned with us until
+the end of the session as we teach you
+more about how syrians work and how you
+can use them in your own business and
+organizations let's dive into the agenda
+of this session and before we begin if
+you are someone who is interested in
+building a career in cyber security by
+graduating from the best universities
+for a professional who elicits to switch
+careers with cyber security by learning
+from the experts then try giving a show
+to Simply learn postgraduate program in
+cyber security with modules from MIT
+schwarzman College of Engineering the
+link is mentioned in the description box
+that will navigate you to the course
+page where you can find a complete audio
+of the program being offered and if
+these are the types of videos you would
+like to watch then hit the Subscribe
+button like and press the Bell icon to
+never miss on any updates and now we'll
+see the agenda for today so first we'll
+have an introduction to cdns and then
+we'll see what is CDN then we'll see the
+working of CDN and then we'll see why we
+should use cdns and then the reliability
+and redundancy of cdns so now let's get
+started today's topic is very exciting
+as these are the content delivery
+networks or cdns so starting with have
+you ever wondered how websites like
+Facebook Netflix and Amazon manage to
+deliver their content so quickly well
+the answer is cdns or content delivery
+networks so let's Dive Right In and
+explore what cdns are all about so
+content delivery Network or CDN is a
+geographically distributed network of
+servers that caches content close to end
+users it's like having multiple copies
+of a website stored in different
+locations worldwide cdns help in
+delivering internet content such as HTML
+Pages JavaScript files style sheets
+images and videos quickly and
+efficiently and cdns work by placing
+servers at strategic locations around
+the world open at internet exchange
+points these points are where different
+internet providers connect to exchange
+traffic by being closer to users cdns
+reduce latency and improve website load
+times so this is how exactly does a CDN
+improve website load times so you can
+see the origin server here and this is
+the CDN server it's also called add
+server so the users can just type in and
+search for any content and they can
+fetch it from the ad server that is the
+static content once a time the CDN
+server it fetches the content from the
+origin server and it caches that data so
+when a user like runs a query or search
+for the content so it will get to the
+CDN and it will fetch the static content
+so after some time these static content
+they also being fetched by the origin
+server so if there's an update in the
+origin server so CDM will after some
+time they will also get that update so
+this is how CDN works now we'll see why
+we should use cdns or how they can
+improve the website load times so first
+is the minimize latency but before that
+so cdns or content delivery networks are
+like super fast highways on the internet
+they store copies of all the words
+pictures and videos You See online in
+special servers spread across the world
+that is called ad servers in this way
+when you want to see something cdns
+bring it to you from a nearby server
+instead of the original far away place
+so this is how CDN work now we'll see
+why you should use cdns so the first
+reason is that it minimize latency so
+cdns minimize latency by reducing the
+distance between users and website
+resources instead of connecting to our
+website's origin server users connect to
+a nearby data center within the CDN the
+shorter distance results in Faster
+service secondly cdns employ various
+hardware and software optimizations they
+use efficient load balancing techniques
+and solid state hard drives to ensure
+data reaches the user as quickly as
+possible thirdly CDN schedules file
+sizes through tactics like minification
+and file compression smaller file sizes
+mean quicker load times benefiting both
+users and website owners lastly cdns
+optimize TLS SSN certificates which
+ensures security while speeding of
+websites techniques like connection
+reuse and TLS faults start make TLS or
+SSL encrypted sites load faster now
+let's talk about the reliability and
+redundancy provided by cdns so cdns
+distribute Network traffic evenly across
+multiple servers ensuring scalability
+during sudden spikes in traffic this
+load balancing feature improves
+reliability and prevents server from
+becoming overwhelmed moreover cdns
+employ intelligent failover mechanisms
+if one or more servers go offline due to
+Hardware malfunctions the traffic is
+automatically redirected to other
+operational servers ensuring
+uninterrupted service in the rare event
+of an entire data center experiencing
+technical difficulties cdns use anycast
+routing this technology transfers the
+traffic to another available data center
+guaranteeing continuous website
+accessibility next is security it's a
+top priority for cdns let's explore how
+cdns protect data cdns enhance website
+security by providing fresh SSL TLS
+certificates these certificates ensures
+strong authentication encryption and
+integrity safeguarding user data and
+maintaining a secure browsing experience
+lastly let's talk about how cdns reduce
+bandwidth cost for website owners cdns
+minimize bandwidth consumption by
+reducing the number of requests made by
+the origin server by caching content at
+the network Edge CDN serve content
+directly from the servers reducing the
+load on the original server and cutting
+down hosting cost and there you have it
+a Content delivery Network or CDN is a
+powerful tool that enhances website
+performance reduces bandwidth cost and
+show reliability and improves security
+whether you are a website owner or an
+internet user cdns play a crucial role
+in delivering a fast and seamless
+browsing experience we hope you enjoyed
+this video and gain a better
+understanding of cdns if you found this
+information helpful don't forget to like
+And subscribe to our channel for more
+exciting Tech related content as always
+thank you for watching and with that we
+have reached the end of this tutorial
+and let's take a minute to hear from our
+Learners who have experienced massive
+success in their careers hi I'm Philip
+I'm 61 years old and last year I upscale
+was simply learns postgraduate program
+in cyber security after working 30 years
+in the IIT sector in various different
+profiles I'm happy to tell you that I
+was able to clear and pass my cissp and
+ccsp certification exams on the first
+attempt after taking the course of
+course I must say was packed with
+practical examples it was led by highly
+skilled certified instructors with many
+companies before the security analysts
+and the architect on a contract basis
+but I needed some stability which I got
+with the job I just started with Infosys
+as a cyber security consultant happened
+on the first and if you have any
+questions please feel free to comment
+and we'll have it answered for you as
+soon as possible until next time thank
+you for watching stay safe keep learning
+and get ahead
+staying ahead in your career requires
+continuous learning and upskilling
+whether you're a student aiming to learn
+today's top skills or a working
+professional looking to advance your
+career we've got you covered explore our
+impressive catalog of certification
+programs in Cutting Edge domains
+including data science cloud computing
+cyber security AI machine learning or
+digital marketing designed in
+collaboration with leading universities
+and top corporations and delivered by
+industry experts choose any of our
+programs and set yourself on the path to
+Career Success click the link in the
+description to know more
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

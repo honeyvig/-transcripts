@@ -1,0 +1,543 @@
+hello everyone and welcome to today's
+video on Docker file tutorial at simply
+learn do you know friends that in 2010
+solman hikes founded do Cloud a platform
+as a service company do Cloud faced
+significant challenges with scalability
+consistency and managing dependency
+across diverse customer environments to
+address these issues hikes and his team
+developed a tool to isolate applications
+in containers ensuring they ran same
+regardless of the underlying
+infrastructure this Innovation led to
+the creation of what we know as Docker
+today which was open- sourced in 2013
+revolutionizing software development
+within its efficiency and aase of use so
+guys in this video we will learn the
+concept behind creating a Docker file
+and moreover we will understand why and
+in which situations we need to create
+Docker file now before we move on just a
+quick info guys craving a career upgrade
+subscribe like and comments
+below dive into the link in the
+description to FastTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back simply learn has got a devops
+engineer certification course which is
+developed in collaboration with IBM and
+it will help help you refine your skills
+simply learns Blended learning approach
+integrates live online classes with
+interactive Labs so you can dive into
+Docker cubes anible terraform Prometheus
+Jenkins Microsoft Azure and the list
+goes on so why are you waiting now so
+hurry up and join the course the course
+link is mentioned in the description box
+now before we move on I request you guys
+that do not forget to hit the Subscribe
+button and click the Bell icon for
+further updates so let's get started so
+guys let's start with what is a Docker
+file guys docer file is a text document
+that specifies a docka image so by using
+a Docker file you can create a
+personalized Docker image which
+effectively sets up a custom environment
+taed for use within Docker container now
+before we delve more into Docker file
+there are some primary concepts of
+Docker let's try to revise it so guys if
+I talk about Docker so docker's primary
+goal is to provide consistent runtime
+environments that can be replicated on
+any machine running in Docker so what's
+the use of it basically it eliminates
+the common problem of it by WorkOne
+machine okay so what's that mean by a
+phrase it ensures that Docker containers
+can deliver the same environment across
+all machines now in order to follow this
+tutorial there are two basic concepts
+that one should know the first one is
+containers so what what exactly are
+containers so guys containers serve as a
+runtime environment where typically one
+main process runs per Docker container
+think of each Docker container as
+providing a single service within your
+project for instance say you launch one
+container for a mySQL database and
+another for a WordPress server so
+connecting them to set up a WordPress
+project now here you will require
+containers so in the Aros containers can
+be used to run a wide range of
+Technologies including databases web
+servers web Frameworks test servers Big
+Data scripts and shell scripts now this
+was the first part of one concept that
+everyone should be awared of now what is
+a Docker image so guys Docker containers
+are initiated by running a Docker image
+a Docker image is essentially a
+preconfigured environment for a
+specified technology or service it is
+not a runtime itself but rather a bundle
+of files libraries and configuration
+files that builds up the environment the
+primary source for Docker images online
+is a Docker store simply search for a
+desired technology component and you can
+pull the image using Docker pull command
+that you are already and then you're
+ready to launch your containers now
+containers are created from images using
+the docker run command an image present
+in the container is a layered
+representation of your environment
+containing the necessary files and
+configuration so say when you start a
+container with dock Run Okay
+so say you want to
+start your
+container so you'll be following the
+docker run
+command okay now Docker adds an extra
+read write layer on the top of the read
+only image layers now the most important
+questions now comes up why and when you
+need to create a dog file think about it
+and based on the above instances I've
+told you if you get an idea then try to
+relate after pausing the video now when
+existing images don't meet your project
+requirements so you will need to create
+your own Docker file suppose say your
+Project's requirement has a node js14
+version okay but your system is not
+supporting that okay so in that scenario
+you can use a containerized platform
+like Docker and you can create your
+image from the docker file of that
+respective version so this is a common
+scenario which makes it crucial to
+understand that Docker file creation is
+an essential aspect of working with
+Docker the docker file includes a series
+of instructions that Docker follows when
+you run the docker build command so your
+workflow will typically look like this
+so first of all what you'll
+do so first step would be create a
+Docker file and specify the steps to
+construct your image so this is step one
+okay now basically in this step you
+creating a Docker file and you
+specifying what are the steps that
+should construct your image after that
+what you have to do you have to run the
+docker build command to generate Docker
+image from your Docker file so in this
+step two what we are going to do we are
+going to run
+[Music]
+[Music]
+now in the third step you're going to
+use this image okay and to start the
+container with the docker run command so
+now typically you begin your search for
+Docker images on the docker store so
+I'll show you where you're going to get
+the docker
+store okay guys so you can see I have a
+Docker desktop okay and here I can
+search for various images containers
+what I have created so I was talking
+about nodejs okay so see I can create a
+nodejs image okay so you see here we we
+are getting the node and we can pull
+this uh image from here and we can
+include in our project similarly mango
+Express or let me show you one more like
+suppose I want jdk okay seven okay let's
+see does it have Java okay they have
+Java okay and
+says these are tags okay this is
+jdk7 okay what if I write jdk 8 okay let
+me see okay so this has a jdk8 instance
+but I don't think so it's correct so
+it's basically the real official one is
+Java of this one and it says it has a
+tag of six so either you can pull this
+or you can run this okay so this is
+basically a Docker store where you are
+going to get all your instances for your
+images which you want to apply in your
+project so additionally like GitHub also
+host numerous repositories containing
+Docker files so also you can share your
+Docker images within your team or
+organization just by setting up your own
+Docker registry so if you can't find the
+precise Docker image required for a
+project like I couldn't find right now
+jdk 6 so you have to create your own
+Docker images in that instances and this
+is a common because many are generic and
+might not fit your specific needs so
+simply create a text file named Docker
+file with no extension and Define your
+image within it it's a standard practice
+to create custom images for most of the
+projects including sandboxes and
+playgrounds now let us try to understand
+some of the docker files
+Basics so guys as I have told you
+earlier that Docker file serves as a
+blue blueprint for building Docker
+images so here are some of the key
+points that you should remember the
+first one that is text file with
+instructions so basically Docker file is
+a text file primarily containing
+instructions AK to command line actions
+for creating image then there are
+step-by-step instructions you know so
+Docker file also provides a sequence of
+instruction detailing the steps needed
+to construct the image then there are
+standard instructions so Docker files
+offers a set of standard instructions
+for Docker file including from copy run
+EnV expose CMD and among many others
+which define various aspects of the
+image then the fourth one is automatic
+image building Docker automatically
+constructs a Docker image by paring and
+executing instructions from the docker
+file the fifth one is describing the
+build steps from a developer or a user
+standpoint Docker file describes the
+build process for the envirment M
+building the image from Docker file also
+allows to start the containers then in
+terms of Technology context you have to
+understand Docker file instructions
+alone isn't sufficient you need to
+comprehend the technology context you
+are building for for instance crafting
+Docker file for PHP project necessitates
+the PHP specific knowledge like
+configuration methods extensions and
+environment settings the next one is
+leveraging the existing images utilize
+the pre-build images because it's going
+to save time especially when you're are
+experimenting with the new technologies
+you can start by deploying images
+prepared by others without delving into
+the integrate details immediately over
+the time as you tackle more complex task
+you can enhance your understanding by
+studying and learning from other Docker
+files so this is iterative process which
+allows for gradual accumulation of
+knowledge and expertise in Docker and
+the specific Technologies so guys let's
+let us create our first Docker
+application now you can see I have
+written certain code in the docker file
+so no need to worry about that I'm going
+to explain you line by line each one of
+them but let me show you how you have to
+proceed for creating your first image
+okay now the first thing that step that
+I want you to do is that create a
+directory say I want to create a Docker
+application so say I'll choose this
+directory mkd and say it would be my
+Docker app okay
+so let us see and we can see that this
+directory has been created so if you do
+LS okay to check whether it exists or
+not you could see that my Docker app
+exists and it is created at this point
+of time okay pretty good now what I want
+to do is that you have to create a
+Docker file so I'm using visual studio
+code as my text editor you can also use
+the same and you can also see that in
+Docker file there is no extensions
+involved okay now after this just type
+my Alpine latest and run the application
+and just complete this thing so guys
+after that what you have to do you have
+to build your Docker image in the
+terminal so for that the following
+command is there so I'm going to type
+Docker
+okay
+Docker build okay
+and it would be the T flag okay and let
+us skip the name as my Hello World
+okay and give a DOT and let us build
+this image basically and you could see
+now my Docker application is built up
+okay and in this there is a text file
+now guys let us try to run our Docker
+application now what you have to do next
+type this command Docker run and say my
+hello world because this is the name of
+the basically file which we have given
+so
+my now if we try to run this command we
+could see a hello world printing out
+here and this has completed our
+execution now let's try to understand
+these code one by one so we can see it
+has written all over here from Alpine
+latest so what does it means so
+basically it uses the latest version of
+Alpine Linux as the base image okay now
+in the next command you can see it's
+written run mkd SL app so basically what
+it does is that it creates a directory
+SL app inside the container the third
+thing is run Echo hello world so
+basically and there is a SL app /hello
+text uh directory that has been
+mentioned so it writes hello world into
+a file name. hello.txt inside the slab
+directory then you could see it has
+written workd slash app so basically it
+is setting the working directory to the
+slash app and finally we are seeing that
+it is written CMD and double comma cat
+and then hello.txt basically it
+specifies the command to run when the
+container starts which outputs the
+content of the hell next when you build
+and run this Docker image it will
+display hello world and in the terminal
+because CMD instructions run cat
+hello.txt command which reads and
+outputs the content of
+hello.txt so that's why you are seeing
+hello world right over here so this was
+a very basic program that we have done
+right now and in this way we will do one
+more to make our Concepts more clearer
+so guys in the next example we are going
+to create a Lo a file for a python flask
+web application now we all know that
+flask is a popular micro framework for
+building web applications in Python and
+this example is going to demonstrate how
+you can build a Docker image for a flask
+application and run it as a container
+now you need to follow step by step now
+first what we need to do is let us
+create a working directory so all over
+here uh let us go to our terminal and we
+can say mkd and we are going to
+create my flask okay so we can see that
+this directory has been created now let
+us dive into this
+directory okay now step two is you need
+to create an app.py file but how you
+you're going to do this now for the same
+purpose what we are going to do so let
+me just open that folder first so we can
+see my FL ask is this and I'm going to
+select it so you can see under this
+directory it's showing yes that I've
+created my directory and let us create a
+file named
+app.py okay pretty simple next file
+would be your requirements.txt
+so in this basically file what I'm going
+to tell that what version of flask I'm
+going to be using so that's why I have
+named it and third would be our Docker
+file
+pretty fine now it seems bit Justified
+right now now let us fill the content of
+our python flask file now if you are
+aware of the flask application then it's
+great and if not you can just ignore the
+process but uh I'm creating certain of a
+flask application so it would be very
+synonymous if you have a bit of idea
+regarding Python and it's a wonderful
+framework for working in the back end
+and I would suggest you to learn it now
+let us see it now as you can see in our
+apppi file uh it's written from flask
+import flask basically this is importing
+the flask library and here I'm defining
+app variable with underscore name name
+to read this application then I'm giving
+a route and I'm defining a function for
+the same that whenever I'm going to this
+route it displays a hello world a simple
+backend application that would also do
+the same task like if you're creating a
+nodejs application and the way we are
+routing up or a spring boot application
+where we are giving the route and just
+trying to run the application so same
+process all over here and it says run on
+the port 5,000 okay and if the host is
+0.0.0 so that's our address name
+basically now you can this a very basic
+code for flask it's uh not a rocket
+science so you can understand it if you
+have a little bit of a coding idea and
+even also you can ignore this because if
+you are given a task just to run this
+container then you don't need to require
+to learn about all this backend stuff
+now we have populated our app.py file
+now in our Docker file let us populate
+this now you have to understand the the
+structure folder structure so everything
+is there inside the my flas directory so
+please make sure that so app.py Docker
+file and requirements.txt should be
+there so now as you can see this code
+guys so this is our Docker file and it
+has set of instructions written all way
+here to give command to our computer
+that what it needs to do to set up a
+configuration for our environment so you
+can see we are using python runtime like
+uh as python as our parent image so
+python 3.9 slim is being used all over
+here now next thing what we are doing
+basically uh so you can see that the
+first code that is written all over here
+that is python 3.9 Slim So basically
+what does it tell this line specifies
+the base image for our Docker image so
+we are using python 3.9 slim image which
+is a lightweight version of the Python
+runtime then we are setting up work dr/
+app so basically what it does it is
+setting the working directory inside the
+container to slash app okay last time
+also we did it the same then what we are
+telling it to copy the requirements.txt
+file so basically this line is copying
+the requirements.txt file from The Host
+machine to the working directory in the
+docker image okay I'll repeat once again
+so it is basically copying the contents
+of the requirements.txt okay from the
+host machine to the working directory in
+the docker image now I'm running the Run
+pip install no cache
+d/r requirements.txt so basically what
+it is telling it is pretty evident that
+we are installing python packages is
+specified in the requirements.txt file
+so we are using the PIP and the no cach
+a DI option ensures that pip does not
+cache the packages okay keeping the
+images smaller and finally we have the
+copy so this line copies the rest of our
+application code from the host machine
+to the working directory in the docker
+image and finally we are exposing the
+port 5,000 so this line basically tells
+that the container listens on the port
+5000 and it does not actually publish
+the port but informs the docker and the
+user that the application expects to use
+this port then we have EnV flas cap
+equals to app.py so basically this line
+is very very important and it is telling
+or basically setting up an environment
+variable flask app to app.py now flask
+uses this environment variable to find
+the application okay and finally we are
+putting CMD flask run host
+0.0.0 and Port 5000 so basically this
+line specifies the default command to
+run when the container starts a tell
+flask to start the application making it
+accessible on all the network interfaces
+so that's why I have written
+00 and on Port 5000 okay so this is what
+our Docker file is looking like all over
+here okay so you can go through this
+file and uh you would understand that
+this is how an application like when we
+are doing a backend stuff so this is how
+we write our Docker file now we have
+completed our app.py file we have
+completed our Docker file and
+requirements.txt is still missing now
+you can see that I have written flask
+equal to 2.0.1 so that's our
+requirements. text file so have
+specified the version of flask which I
+want to use now let us go to our
+terminal okay now let us try to run the
+command so let us first uh build the
+image okay
+okay so as you can see let us build our
+application for the same purpose I'm
+using Docker build /t my flash command
+so let us run this and it is building
+our Docker application and is copying
+the requirements text and finally it is
+on the ninth step now we have built our
+application now the next would be
+running our application so in order to
+run this container I'm going to type
+talker run then /d/ p on the port 5,000
+and 5,000 my flask so you can see we
+have used certain flasks like/
+d/p and uh we are publishing it on the
+port 5000 and this is our working
+directory my flask so let us run this
+and you can easily see that our
+application is our container is finally
+running and we are getting some
+encrypted code all over here so just
+leave it so in this way we are basically
+setting our environment for our any
+application like we are building a front
+end or a backend application so we can
+include a Docker file and which is going
+to set up our environment for our given
+application so that was all for today's
+video guys I hope so you would have
+enjoyed our today's video on Docker file
+tutorial at simply learn staying ahead
+in your career requires continuous
+learning and upscaling whether you're
+student aiming to learn today's top
+skills or a working professional looking
+to advance your career we've got you
+covered explore our impressive catalog
+of certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to ner up and get certified click
+here

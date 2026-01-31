@@ -1,0 +1,285 @@
+do you know that every day more than
+30,000 websites face cyber attacks
+showing the critical need for strong
+network security in this video we will
+explore Fireballs key tool in defending
+against these threats you will learn
+what firewalls do the different types
+available and how they protect networks
+from harmful attacks stay with us to
+strengthen your understanding of network
+security and learn how to protect your
+own digital spaces so let's start with
+what is a firewall so a firewall is
+essentially a system designed to prevent
+unauthorized access to or from a private
+Network you can think of it as a barrier
+that separates your internal network
+from the external internet allowing only
+traffic that meets a defined set of
+security criteria to pass through let's
+understand this with the help of an
+example imagine your computer network as
+your home the firewall acts like the
+main door where it checks everyone at
+the entrance and only lets in guest who
+meet your strict criteria so this is the
+example craving a career upgrade
+subscribe like and comment
+below dive into the link in the
+description to FasTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back now before commencing with types of
+firewalls just a quick info for you if
+you are an aspiring cyber security
+professional looking for online training
+and certification from prestigious
+universities and in collaboration with
+leading experts to enhance your
+credibility then search no more simply
+Lars postgraduate program in cyber
+security from MIT University in
+collaboration with EC Council should be
+a right choice for more details you can
+use the link in the description box and
+pin comment so after understanding that
+a firewall acts as a protective barrier
+for your network controlling access
+based on network rules it's important to
+recognize that not all Fireballs are
+created equal there are several types of
+firewalls each designed to fit different
+security needs and network environments
+so let's explore the most common types
+to see how they vary and what makes each
+of them unique in defending our digital
+spaces so let's start with number one
+that is Packet filtering firewalls so
+these are the simplest types of
+firewalls that make decisions based on
+the packets or small chunks of data that
+attempt to enter the network they check
+information such as the intended receipt
+and senders IP address packet type port
+number and more against a set of rules
+next comes the stateful inspection
+firewall these are more sophisticated
+because they remember the context of
+previously allowed traffic which enables
+them to make more informed decisions
+about which packets to allow or deny
+then comes proxy firewalls acting as an
+intermediary between your network and
+the internet these firewalls evaluate
+request from an external network at the
+application Level they are known for
+providing high levels of privacy and
+security then comes the Next Generation
+firewalls ngfw these combine the
+capabilities of the aforementioned
+firewalls with additional features such
+as encrypted traffic inspection
+intrusion prevention systems and
+advanced identity management they
+provide comprehensive security Now
+understanding this with the help of an
+example so consider a scenario where a
+packet filtering firewall acts as a
+bouncer at a club's entrance checking
+IDs while a ngfw is more like a VIP host
+offering details scrunity and added
+security features so understanding the
+diverse types of firewalls from simple
+packet filtering to advanc Next
+Generation systems shows us their unique
+roles in network protection now proper
+configuration is crucial to maximize
+their potential and now we'll shift the
+focus to how we can effectively set up
+these firewalls and correct
+configuration is an ongoing task vital
+for adapting to new threats and ensuring
+robust network security next we will
+delve into the Essen steps to configure
+and maintain your firewall to meet
+specific security needs so starting with
+configuration and setup the number one
+step you have to do is Define security
+policies so establish guidelines based
+on your Network's needs for example
+restrict access to risky Geographic
+locations or block social media during
+work hours then comes setting firewall
+rules Implement technical rules to
+enforce policies like blocking
+unencrypted incoming connections to
+protect sensitive data then comes
+segmenting your network Network divide
+the network into zones with tailored
+security rules to isolate and protect
+different types of data and services
+then comes managing access controls use
+authentication and access control list
+ACLS to ensure only authorized users
+access specific network resources then
+comes testing and monitoring after
+configuring test the fire Vol to ensure
+it works correctly and continuously
+monitor Network traffic for suspicious
+activity and then we have updating it
+regularly so keep keep the firewall
+software and rules updated to guard
+against new threats and vulnerabilities
+so now understand this with the help of
+an example how we can configure it so
+configuring a firewall is a ke to
+setting up a security system in your
+house you want it tight enough to keep
+burglers out but not so tight that your
+family members can't enter so having
+established how to configure and set up
+firewalls to suit your specific security
+needs We Now understand that these are
+critical First Steps in defending our
+networks however the real test of a
+firewalls Effectiveness comes when it
+faces actual Network threats so let's
+explore some of the common threats on
+networks encounter and discuss how
+well-configured Fireballs act as the
+first line of defense against these
+potential changes so in this Digital
+World networks face a variety of threats
+that can compromise data Integrity
+privacy and functionality so now we'll
+have a concise overview of common
+Network threats and how Fireballs
+provide crucial protection starting with
+number one that is viruses and bombs so
+these malicious programs can disrupt
+operations steal information and spread
+across the network firewalls help
+prevent their spread by blocking
+unauthorized excess and harmful
+downloads then comes troan horses so
+these appear Banning but perform
+malicious activities discreetly
+firewalls scan incoming traffic to
+detect and block these threats before
+the infiltrate the network then comes
+the ransomware so this malware locks
+away critical data demanding a ransom
+for release firewalls reduce the risk by
+preventing connections to risky IPS and
+websites known for hosting rare and then
+we have the fishing attacks Fishers use
+deceitful emails or links to extract
+sensitive information Fireballs with
+integrated email security can filter out
+such threats by scanning emails for
+malicious links and attachments then
+comes dose and Doos attacks denial of
+service that is do and distributed
+denial of service so these attacks
+overwhelm the network making it
+available firewalls mitigate these
+attacks by limiting the rate of incoming
+request and filtering out traffic from
+suspicious resources so now understand
+this with the help of an example so
+let's imagine firewalls protect against
+threats like viruses which can come
+disguised as inconscious downloads so
+they inspect incoming files and block
+those that match known viruses similar
+to how a security officer might check
+bags at the entrance of prohibited items
+so while firewalls are crucial for Ving
+of common Network threats like viruses
+rare and fishing attacks the evolving
+landscape of cyber threats require even
+more robust defenses so this is where
+Advanced Fireball features come into
+play next we will delve into these
+sophisticated capabilities such as
+intrusion detection and prevention
+systems which are designed to enhance
+the protective measures provided by
+traditional firewalls so now we'll see
+the advanced firewall features so modern
+firewalls come equipped with a suit of
+advanced features designed to provide
+deeper security and handle sophisticated
+threats number one is intrusion
+detection systems IDs these systems
+monitor Network traffic for suspicious
+activity that may indicate a security
+breach IDs alerts administrators about
+potential threats allowing for Swift
+action then comes intrusion prevention
+systems IPS building on IDs capabilities
+IPS not only detects threats but also
+takes immediate action to block them
+before they can cause harm this
+proactive approach ensures that
+potential attacks are stopped in their
+tracks then comes DVI that is D packet
+inspection unlike basic firewalls that
+only check packet headers DPA examines
+the data within the packet to uncover
+malicious content or code that standard
+inspections might miss this allows for a
+more thorough analysis and better
+security now we have application control
+this feature allows firewalls to control
+application access based on specific
+policies ensuring that only safe and
+necessary applications are allowed to
+communicate or the network then we have
+VPN support Advanced firewalls provide
+VPN features to ensure secure and
+encrypted connections between remote
+users and the network protecting data
+transmitted or the public internet now
+we understand this with the help of an
+example so imagine if a firewall with
+IDs and IPS were a bodyguard IDs would
+whisper in your ear about a Potential
+Threat while IPS would block the threat
+from approaching you so think point for
+you guys maintaining a firewall is like
+maintaining your car it needs regular
+checks and tuneups to function optimally
+and protect you reliably so that's a
+wrap on firewalls and how they protect
+networks from various threats remember
+the strength of a network security lies
+not just in having a firewall but in how
+well it is configured and maintained if
+you found this video helpful please like
+subscribe and share with friends who
+might be interested in learning about
+network security till then stay safe and
+keep learning staying ahead in your
+career requires continuous learning and
+upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to ner up and get certified click
+here

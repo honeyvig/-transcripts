@@ -1,0 +1,294 @@
+hey everyone welcome back to the channel
+today we are diving into the complex yet
+fascinating world of crite scripting
+commonly known as xss this isn't just
+any Tech topic it's a critical security
+issue that's affected 40% of the
+websites at some point according to
+recent cyber security reports but what
+exactly is xss well imagine you are
+shopping online and suddenly without
+clicking anything a popup appears or you
+find yourself d to another site that's
+xss a hacker has injected malicious code
+into what looked like a harmless web
+page now let me tell you a quick story a
+few years back a major retail website
+was hit by an xss attack right during
+their busy holiday season hackers
+managed to slip malicious scripts into
+the product review sections and the
+script ran automatically when other
+Shoppers viewed the reviews the result
+thousands of customers had the personal
+information stolen right under their
+noses the beach not only caused millions
+in Damages but also the trust of the
+customers so whether you are a buring
+web developer a cybercity Enthusiast or
+just someone who shops online
+understanding xss is crucial today we
+are going to break down how these
+attacks happen show you real examples of
+xss in action and most importantly share
+you how you can protect your websites
+and personal information from these
+attacks we've got a lot to cover so make
+sure you like subscribe and hit that
+Bell icon to stay updated let's jump
+right into understanding and preventing
+xss and ensure you are armed with the
+knowledge to safeguard your digital
+presence craving a career upgrade
+subscribe like and comment
+below dive into the link in the
+description to FastTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back and before you commence guys if
+you're an aspiring cyber security
+professional looking for online training
+and certification from prestigious
+universities and in collaboration with
+leading experts to enhance your
+credibility then search no more simply
+Larch postgraduate program in cyber
+security from Mi University in
+collaboration with EC Council should be
+right choice for more details you can
+find the link in the description box and
+pin comment so stay tuned with us until
+the end of this video and don't forget
+to register your opinion in the comment
+section below so let's get started so
+guys let's start with what is crite
+scripting so xss is a security flow in
+web applications where attackers inject
+malicious scripts into web pages that
+other users View and interact with this
+allows attackers to execute scripts in
+the victim's browser potentially
+stealing information impersonating them
+or altering web page content so let's
+have a look at brief history and
+evolution of xss vulnerabilities these
+vulnerabilities are discovered in the
+1990s and the xss has evolved from a
+minor annoyance to a major threat as the
+internet became more integral to daily
+and business activities despite
+advancements in web security xss remains
+a prevalent issue due to the complex
+nature of modern web applications so
+let's say an example for the xss suppose
+a website has a search function that
+directly displays user input in the
+search results page without proper
+sanitization an attacker crafts a URL
+that includes a search term like as you
+can see on the screen that is script
+alert xss detected so when another user
+Clicks in this link or enters this
+script in the search box the m script
+runs in the browser displaying an alert
+box so this is how a xss attack happens
+now we move to the types of attacks so
+the number one on the list is reflected
+accss that occurs when malicious scripts
+are embedded in a URL which executes
+when the URL is visited and the common
+insights that reflect user input like
+search engines next on the list is
+stored xss that happens when malicious
+scripts are permanently stored on target
+servers such as in comment sections or
+forums the script is then served to
+users who view the infected content then
+comes the do based accss this involves
+client side code vulnerability where the
+document object model that is dome
+environment is manipulated to execute
+unwanted actions without needing to
+communicate with the server so these are
+the types of accss attacks now moving to
+how xss attacks work so xss attacks
+manipulate web applications to execute m
+ious scripts on the users browser
+attackers craft inputs that are
+incorrectly trusted and executed as code
+by the web application so let's
+understand this with the help of an
+example let's imagine a simple example
+of a stored xss attack and we will
+imagine a scenario on a social media
+website first we'll see how we can post
+a comment let's suppose someone let's
+call them Alex post a comment on an
+article but Alex command isn't just text
+it includes a hidden snippet of code
+that looks like less text but actually
+has a script embedded in it now we'll
+see the website doesn't check it and the
+comments are not checked that contain
+anything dangerous like scripts so it
+saves Alex command with the script in it
+just like any other command now when
+other users like Bob or Charlie or any
+one person read the article they see
+Alex comment so without knowing when Bob
+and charie view the comment the hidden
+script in the comment runs automatically
+on the browsers the script Secret sends
+Bobs and Charlie information like the
+cookies which can keep track of who they
+are on the website back to Alex Alex can
+now potentially access BS and Charlie's
+accounts without the passwords this
+example shows why websites need to check
+and clean up any data like commands
+submitted by users to prevent such
+attacks this checking process is called
+sanitizing by sanitizing inputs websites
+can make sure no harmful scripts are
+stored and later executed so this is the
+best example for the accs attack now
+we'll move to the common methods of xss
+injection so the number one on the list
+is user input attackers May inject
+scripts via form fields or URL
+parameters for instance adding a script
+tag in a command field that executes
+when other users view the comment next
+is malicious content posting scripts in
+user generated content areas like
+commands forums or user profiles an
+example is a user posting a malicious
+script in an online Forum that steals
+cookies from every visitor who use the
+post the next is third party components
+using third party scripts or plugins
+that contain vulnerabilities an attacker
+might exploit a vulnerable plugin to
+inject malicious scripts into a website
+that uses it so these are the common
+methods of accss injection now we see
+the impacts of xss so xss attacks can
+allow attackers to steal cookies session
+tokens or other sensitive information
+that can be used to impersonate the
+victim attackers can manipulate or
+defense the website content seen by
+users which can damage the website's
+reputation and Trust accss can be used
+to deliver malware to users potentially
+leading to further exploit such as
+ransomware or spyware now we'll see the
+real world consequences and examples of
+major accesses attacks so the number one
+consequence is financial damage
+companies might face significant
+financial losses due to stolen data or
+FR along with cost related to securing
+the breach and potential fines for data
+protection failures the next is
+reputation damage a successful accesses
+attack can damage a company's reputation
+leading to Lost customers and decreased
+trust in the brand then comes the legal
+consequences businesses May face legal
+actions if customer data is compromised
+especially under regulations like gdpr
+now we see an example of a major access
+attack so we'll not name the website but
+a welln social media platform
+experienced an accss attack where
+malicious scripts were inserted into
+profile pages
+this script automatically executed
+whenever the profile was viewed
+spreading the tag across the user base
+it led to widespread unauthorized access
+to personal information and was a major
+privacy breach so now moving to
+detecting and mitigating accss
+vulnerabilities starting with the
+detecting so starting with detecting xss
+vulnerabilities so the number one on the
+list is tools for identification use
+automated security tools like oap zap BB
+suit and xss scanners that can help
+detect potential X ACC vulnerabilities
+in web applications by simulating
+attacks the next on the list is manual
+testing Security Experts often perform
+manual testing alongside automated tools
+to catch nuances that machines might
+miss the next is common science frequent
+unexplained redirects or unusual popups
+on a site can be indicative of access's
+vulnerabilities the next on the list is
+code review regularly review and audit
+source code for potential accss
+vulnerabilities focusing on how user
+inputs are handled then comes security
+headers use HTTP security headers like X
+content type options and X accss
+protection to enhance protection against
+xss so these were the detecting options
+for xss vulnerabilities now we'll see
+prevention and mitigating them so the
+number one on the list is coding best
+practices employees secure coding
+standards that include escaping user
+input using safe API functions and
+applying least privilege principles the
+next is security measures Implement
+content security policy CSP which helps
+implementing xss by restricting the
+sources from which scripts can be loaded
+the next is input sanitization validate
+and sanitize all user inputs to ensure
+that Mala scripts are not executed
+Frameworks like react automatically
+Escape outputs reducing the risk of
+excesses the next is output encoding
+always encode output not just input to
+ensure that special characters are not
+executed as code and the next is use of
+security libraries Implement libraries
+and Frameworks that are designed to
+defend against accss by providing
+functions that handle escaping and
+sanitizing these methods form the core
+of a robust strategy to detect prevent
+and mitigate accss attacks ensuring that
+web applications are secure against this
+common and dangerous type of cyber
+threat and with that guys we have come
+to the end of this session if you like
+this session please like share and
+subscribe if you have any doubts comment
+down in the comment section below thanks
+for watching stay tuned for more from
+Simply learn staying ahead in your
+career requires continuous learning and
+upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to no
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

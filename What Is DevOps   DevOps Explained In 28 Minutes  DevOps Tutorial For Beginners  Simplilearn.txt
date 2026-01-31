@@ -1,0 +1,649 @@
+hello everyone and welcome to today's
+tutorial on devops for beginners at
+simply you know back in the day when
+Netflix was just starting to hit it
+stride they faced serious challenges
+managing their growing infrastructure
+keeping millions of people happy
+streaming movies and shows without
+interruption it was not an easy task
+initially Netflix struggled with scaling
+issues monolithic architecture problems
+and and deployments bottlenecks their
+infrastructure couldn't keep up with
+their increasing user demand leading to
+frequent downtimes the monolithic
+architectures made it difficult to
+update or scale parts of the system
+without affecting the whole deploying
+new features were slow and risky and
+often causing service
+disruptions and that's when they
+discovered microservices which allowed
+them to break the application into
+smaller and more manageable pieces this
+meant that they could tweak and Tinker
+with different parts of the service
+independently and greatly improving
+flexibility and reliability
+complimenting microservices with devops
+practices like continuous integration
+and deployment Netflix transformed their
+operation ensuring seamless streamings
+for users worldwide so next time when
+you Bene watch remember this Epic
+Journey they took to get there now
+before we move on and learn more about
+devops I request you guys that do not
+forget to hit the Subscribe button and
+click the Bell icon for further updates
+so here's the agenda for our today's
+session we are going to start our
+session with an introduction to what is
+devops then we will learn about why
+devops moving ahead we will discuss
+principle of devops and phases of devops
+then we will Deep dive into devop tools
+and finally we are going to conclude our
+session with a handson craving a career
+upgrade subscribe like and comment
+below dive into the link in the
+description to fast track your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back before we move on just a quick info
+guys simply learn has got a professional
+certified program in cloud computing and
+devops in partnership with en ICT
+Academy IIT ghati with this professional
+certificate program in the cloud
+computing and devops you will learn
+Azure AWS devops Cloud infrastructure
+and design so you'll gain hands-on
+experience through the real world
+projects and through the premium sandbox
+lab so hurry up now and join the course
+link the course link is mentioned in the
+description box so guys let's start with
+what is
+devops guys devops is an Innovative
+approach to software development and it
+operations that emphasizes collaboration
+Automation and continuous Improvement
+the goal is to bridge the gap between
+developers who write the code and
+operations who deploy and manage it
+leading to faster more efficient
+production cycles and deployments so
+this was a basic definition of devops
+now I hope so you have got a brief idea
+regarding this now let's move on and
+understand why devops so guys
+understanding its impact on traditional
+software development and shift to
+microservices devops has become an
+essential methodology in modern software
+development primarily addressing many of
+the inefficiencies found in traditional
+development and operation model these
+traditional models often feature sloid
+structure where development and
+operation teams have distinct separate
+roles and
+responsibilities this oparation can lead
+to various challenges like the slow
+production Cycles with development and
+operations working separately the
+transition from code completion to
+deployment can be slow and combersome
+there is a lack of integration between
+these teams and often result in longer
+release Cycles next issue with the
+traditional setup was the deployment
+issues when developers and operations
+work independently there is a higher
+chance of encountering problems during
+deployment such as configuration errors
+environment discrepancies and unexpected
+behavior in production and also they had
+limited feedback loops like in the
+traditional setups feedback from the
+operation teams regarding application
+performance user issues or system
+failures might not rest developers
+quickly and thus delaying the necessary
+fix and Improvement now there was an
+introduction of microservices where we
+got enhanced scalability increased
+development velocity and flexibility
+when compared to traditional setups now
+let's look at a case study of a
+financial firm and how devolves help
+them so guys consider a financial firm
+who is struggling with the deployment
+cycles and poor feedback mechanism in
+their traditional development setup
+leading to delayed product updates and
+frequent outages so what's the solution
+as we have discussed earlier
+microservices in devop culture so as a
+solution they implemented a devop
+culture fostering closer collaboration
+between developers and operation and
+also establishing a continuous
+integration and continuous deployment
+pipeline by the adoption of
+microservices they split their large
+cumbersome Financial processing system
+into smaller and manageable
+microservices and what's the outcome
+guys the continuous Improvement the cicd
+pipelines allowed for regular updates
+and minimal downtime each microservice
+could be updated independently and
+facilitating faster and safer
+deployments there was enhanced feedback
+loops so monitoring tools specific to
+each microservice provided rapid
+feedback directly to the respective
+development teams which allowed for
+quicker responses to the issues and more
+informed decision making so this was the
+overall benefits of of applying a devop
+sculture in a financial form and they
+had two success outcomes the first one
+was they adopted a devop sculture which
+help them a faster delivery and there
+was adoption of
+microservices which help their
+applications succeed and also improved
+the user experience now let's move on
+and try to understand that what are the
+principles of devops so guys the core
+principle of devops are laid as follows
+initially is founded on several key
+principles that streamline and enhance
+the processes involved in software
+development and operations the first one
+is automation second one is cicd and the
+third one is rapid feedback now let's
+understand each one of them one by one
+now if I talk about automation guys so
+Automation in devops covers everything
+from code deployment to environment
+setup and network configuration for
+example using a tool like anible you can
+automate the deployment of application
+across hundreds of servers eliminating
+manual setup and ensuring consistency
+across your
+infrastructure next one we have is
+continuous integration and continuous
+delivery let us first discuss about
+continuous integration so here
+developers merge their changes back to
+the main branch of the project as often
+as possible these changes are validated
+by creating a build and running
+automated test against them for example
+example using genkins a CI server which
+automatically tests the build whenever
+new commits are pushed to the main
+repository ensuring that new code
+integrates well with the existing code
+base now if I talk about the continuous
+delivery guys it extends a continuous
+integration by automatically preparing
+and tracking a release to the production
+this ensures that you can release new
+changes to your customers quickly in a
+sustainable way for example travisci can
+be configured to deploy applications
+automatically to the production
+environments whever the build stage in
+the CI process is successful it is
+provided by all the test that it has
+passed now let us discuss about the
+third one that is rapid feedback so guys
+what does it involves it involves
+implementing feedback mechanisms quickly
+and identifying and addressing issues in
+the development of production
+environments for example we have New
+Relic which can be used to monitor
+applications in real time providing
+immediate feedback to developers if
+performance degrades or an error occurs
+so these were some of the basic
+principles of devops I hope so you got
+an idea regarding this now let's move on
+and discuss one of the most important
+points that is phases of devops so guys
+if we discuss the phases of devop
+understanding the life cycle in devorce
+is crucial to grasp how it benefits the
+software development and operation
+process and you should understand one
+thing that devops is not a tool devops
+is a practice that we apply in our
+software development so the first one is
+plan the planning phase involves
+defining the project scope identifying
+resources and scheduling timelines for
+example jira for task management and
+Sprint planning which helps in tracking
+the progress and prioritizing the work
+items next we have all over here is code
+developers write code in small
+manageable chunks to ensure that
+integration is simpler and more frequent
+for example we are using GitHub a
+Version Control System where developers
+can collaborate to track changes and
+rever to previous States if necessary
+the third one is build the build phase
+involves transforming code written by
+developers into a runnable instance of
+the application for example Gradle or
+Marvin which can compile code and manage
+the dependencies the fourth one is
+testing phase automated tests are run to
+ensure the application behaves as
+expected for example selenium for
+automated web testing and ensuring that
+user experience is consistent across
+different devices and browsers next one
+we have is release so guys the release
+phase involves activities related to
+deploying the software to production
+ensuring that the software is released
+in a controlled manner for example
+Docker which can package the application
+and its environment into a container
+that can be deployed consistently in any
+environment the next phase is deploying
+the actual deployment of the application
+to a production environment where it can
+be accessed by the users for example we
+use tools like kubernetes which
+automates the deployment scaling and
+management of the containerized
+applications seventh one is operate
+ongoing maintenance and regular updates
+of the application are happening at this
+stage for example we have anible for
+configuration management ensuring that
+all systems are consistent and
+maintained in the desired stage and
+finally it's monitoring continuous
+monitoring of the application to ensure
+it performs optimally and to detect and
+resolve issues as they arise for example
+we have Prometheus for monitoring
+application performance and grafana for
+visualizing the data collected so these
+were some of the phases of devops so
+guys in the interviews someone can ask
+it so just keep a Thor note of this now
+let us move on ahead and understand
+DeVos tools and their capabilities for
+example we have the Version Control
+System Version Control Systems like git
+allow the teams to track changes and
+rever to previous version of their work
+and manage code with a minimal conflict
+between the concurrent efforts for
+example we have the tool like get which
+allows to do Version Control System next
+we have cicd tools so guys we have cicd
+tools like genkins Circle ey GitHub
+actions which automate the stages of CCD
+facilitating the frequent and reliable
+code changes by automatically compiling
+testing and deploying the code then we
+have the configuration management where
+we have tools like puppet chef and
+anible which automate the provisioning
+and management of your Computing
+infrastructure and application they
+ensure environments are set up
+consistently and are repeatable moving
+ahead we have monitoring and logging so
+guys tools like elastic search lock
+stash and kibana and also Splunk collect
+analyze and visualize machine generated
+data to provide insights into
+application performance and health so
+Guys these were some of the DeVos tools
+and I hope so you have got a brief idea
+like how they are Incorporated in devops
+now let's move ahead and do a small
+handson and let us see how can we
+incorporate these tools into DeVos
+practices so guys let us create a
+Hands-On beginner DeVos tutorial where
+we are going to set up a basic
+continuous integration and continuous
+deployment pipeline using GitHub actions
+and in this Tut tutorial we are going to
+show you how you can automate the
+testing and the deployment of a simple
+hello world python application now there
+are certain prerequisites for this you
+need to have a GitHub account and have a
+little bit basic familiarity with Git
+and python you can access any text
+editor like vs code or Sublime Text Now
+let us go on to the step number one let
+us first create a new repository on
+GitHub okay so I have logged into my
+account okay and here I'm I'm going to
+click on the new so here is our new
+repository and our repository name is
+going to be let's say hello world cicd
+so hello world cicd is our get
+repository now make sure that you make
+it public okay that's very very
+important because now initialize a
+repository with a readme file so here
+you can add a readme file all over here
+and also you can set up a description
+that this is a demo cic CD project
+project okay now since we have done all
+this thing just click on create
+repository so our new repository is
+going to be created okay so it says the
+world is not familiar okay we are going
+to change the name say hello world okay
+now let us create the repository pretty
+fine so you can see our repository is
+created now let us do one thing now we
+are going to set up our local
+environment for that you need to have a
+get bash in your system now let us clone
+the repository okay so what we are going
+to do so let us copy this okay and let
+us go to our bash and here uh let us
+first create a directory
+so so let us create mkd and let us give
+a name of cicd or we can say it demo
+okay then let's move to that
+directory okay pretty good now in this I
+want to clone it up so for cloning you
+need to do just add get clone
+okay and add the given link pretty fine
+now just click on into it and you can
+see it has started cloning the given
+directory now let us move to this
+directory which is Hello World okay so
+I'm just going to copy this and say
+CD let's paste this
+okay now you you can see we are in our
+main branch now all over here so as you
+can see we have navigated to this
+directory this is our main and CD hello
+world is our main parent Branch now
+after that what you have to do let us
+create a basic python application okay
+so I have already created that for you
+so you can see there are two files uh
+first one is a app.py and second one is
+test
+app.py so this is a hello world cicd
+okay but uh we need some different
+directories so let us open the folder
+first okay let us
+see okay we can see demo
+here okay so you can see we have opened
+our directory hello world all over here
+and here we are going to create a file
+name app.py inside this repository so no
+worries just click on this folder and
+click
+app.py okay and this is our app.py and
+inside this let us write a python code
+so basically let's create a function say
+def hello old okay a function that just
+prints hello
+world and inside this I want to say
+let's
+return hello
+world pretty fine now let's move ahead
+and let us write our function so this is
+very
+basic so if
+name let's say
+it's it's equal
+to
+say
+main
+okay and we can print the hello world so
+let us call our function hello world now
+we have created a basic app.py file now
+the next thing what we are going to we
+are going to commit okay so let us add
+this file so let us open our G bash and
+say get okay and say get
+add
+app.py so this file has been added and
+let us commit a message okay so get
+commit
+and
+M and let us say add add hello world
+okay so this is our
+message now finally moving ahead what
+I'm going to do so you can see uh
+committer my name is given and your name
+and email address configured
+automatically B on your username and
+host name so it says and after doing
+this uh this has been commented now let
+us push this so get push
+so you can see it's easily being pushed
+up now the fourth part is testing so we
+are going to create a test file all over
+here so basically in this we are going
+to do a unit test and which is going to
+test the hello world function so if you
+are aware of unit testing it's fine and
+if not you can check uh on our channel
+uh there are a lot of videos regarding
+unit testing it might help you out so
+guys here let us create
+this there
+app.py
+okay and here I'm just going to paste
+this so it is unit test you can see I'm
+importing our application app and here
+is hello world is imported from this
+file and here the class test app is
+there and here basically we are doing a
+unit test so in this I'm asserting that
+hello world is whenever we are calling
+this function it prints up the hello
+world and finally we are defining our
+main function we easy and U after this
+let us add commit to this file okay
+basically to our repository so what we
+are going to do we are going to add this
+file in our repo so let us control
+pretty fine now let us get add and we
+can
+test
+app.py okay it's says our app file is
+not named like this let me check so test
+app.py okay is it inside this
+directory okay something is wrong so no
+worries I have
+okay now in here I'm going
+to okay guys so my file was out of the
+repository so I included in this okay
+now let us go to our terminal okay and
+let us retry to add
+okay now you you can see this would be
+easily
+committed now and after this let us
+commit it so get
+comment M and let's say
+ADD
+test
+for hello world
+application okay and let's just click on
+it and you can say this is committed and
+find we'll push it
+up so you can see it has been easily
+pushed up onto our repository now the
+step five would be creating a GitHub
+action for cicd so let us navigate to
+our repository first and uh if you
+refresh
+this we could see we have added a read
+me file app.py test app.py okay now in
+this repository we have to navigate to
+the actions tab and click and create a
+new workflow okay so here you can see
+this actions button just click on this
+so in this let us set up our new
+workflow okay so basically we are going
+to create like the file would be main.
+yml and yml file that you have to put
+all over here so let me share you with
+this so guys as you can see this is our
+main. yml file okay
+and the content inside this looks
+something like this okay so you can see
+all over here now let us try to
+understand this file so basically you
+can see the name of this application is
+python application cicd so we have
+created a workflow file for this so it
+says on so basically on defines the
+event that is going to trigger the
+workflow then you can see there is push
+basically this workflow will trigger on
+the push events to the main branch then
+you can see there is a pull request and
+the workflow will also trigger on the
+pull request to the main branch so
+basically these triggers are going to
+ensure that every push and pull request
+to the main branch initiates the
+workflow which is common practice to
+ensure that the main branch remains
+stable and Deployable now you can see
+all over here there are jobs okay so
+like build yml copy code jobs and uh
+these things are there so basically jobs
+defines a set of jobs that the workflow
+will execute jobs run in parallel by the
+default unless it is specified now you
+can see build this is a single job and
+it is identified by the key build it
+includes several steps that this job
+will execute then you can see runs on
+okay so this specifies the type of
+virtual machine to run the job on so
+here we can see uh that here is the
+machine is UB to latest it basically
+indicates the latest2 runner which is
+provided by the GitHub action then there
+are steps so inside the steps you can
+see uh we have uh the users written
+actions SL checkout at V2 Nam set up
+Python and there are users action set up
+python we do with python version 3.8 now
+here you are going to install your
+dependencies then you are going to run
+and finally we are installing python M
+pip install upgrade pip so basically
+steps what does it means it's a sequence
+of task that will be executed as a part
+of the job okay in the uses action
+checkout at V2 basically this step uses
+the checkout action to check out the
+repository code so that the workflow can
+access it okay then we are setting up
+python 3.8 and it uses the action setup
+at theate python version V2 basically it
+is initializing the setup python action
+to set up a python environment with
+specified parameters to pass the action
+such as the version is
+3.8 so this overall sets up the python
+version 3.8 then we are installing the
+dependencies so there is a run command
+so basically it executes a command using
+the Shell in the runner
+environment and this script updates the
+PIP and install the unit test module
+although which is typically unit test is
+a part of python standard library and it
+does not require installation via pip
+okay that's one additional thing I want
+you to know and finally we are testing
+our application with the unit test okay
+so this step runs the Python's unit test
+module in a discovery mode to find and
+run the test then there are V flag which
+is for the verbos output and which is
+going to display all the test being run
+on their results so this configuration
+ensures that every change that we are
+pushing to the main branch or made in a
+pull request is automatically tested and
+it is maintaining the codes integrity
+and functionality the cicd pipeline
+helps automate the testing and the
+deployment it is very essential practice
+for efficient and reliable software
+development and which is generally
+followed in the industry so I hope so
+you have got a brief idea regarding this
+now we have completed our setup so
+what's the next thing we have to do so
+we have to go all over here and just
+click on Commit changes so it says
+create V main. yml and we can see that
+we have created this so guys as you can
+see in this main. yml you can see we
+have created our workflow all over here
+and we have created our cicd pipeline
+using the GitHub actions for the simple
+python application this pipeline
+automatically runs your test every time
+the changes are pushed to your
+repository demonstrating a foundational
+devops practice this fundamental step
+towards more complex devops processes
+involves larger applications and more
+integrated testing and deployment
+environments so guys this was a basic
+cicd setup I hope so you have got a
+brief idea regarding this if not you can
+comment on this and our team of experts
+are going to reach out to you so thank
+you guys for watching this video I hope
+so you have enjoyed our today's tutoral
+tutorial on
+devops staying ahead in your career
+requires continuous learning and
+upscaling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know
+more hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

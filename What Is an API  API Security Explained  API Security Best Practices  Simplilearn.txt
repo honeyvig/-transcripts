@@ -1,0 +1,281 @@
+hey everyone welcome to Simply learn in
+this video we will explore API security
+so let's talk about a real world example
+remember Facebook and the Cambridge
+analytica Scandal Facebook had apis that
+allowed thirdparty apps to access user
+data and these apis weren't properly
+secured so Cambridge analytica managed
+to Hardware data from millions of users
+without their consent this breach of
+trust led to a mive public outcry and
+Regulatory scrutiny in this video we
+will look at common threats like
+injection attacks and broken logs that
+is authentication and share practical
+tips to keep your apis secure so grab
+your favorite treat sit back and let's
+dive into the world of API security
+together craving a career upgrade
+subscribe like and comment
+below dive into the link in the
+description to FastTrack your Ambitions
+whether you're making a switch or aiming
+higher simply learn has your
+back so guys before commencing let's
+have a quick in for for you if you are
+an aspiring cyber security professional
+looking for online training and
+certification from the best universities
+and in collaboration with leading
+experts to enhance your credibility then
+search no more simply learn postgraduate
+program in cyber security from MIT
+University in collaboration with EC
+Council should be a right choice for
+more details you can use the link in the
+description box and pin comment so let's
+get started and the first thing we have
+on the list is what is an API so all
+right let's break it down imagine you
+are at a restaurant you are hungry and
+ready to order some food you tell the
+waiter what you want and the waiter
+takes the order to the kitchen the chef
+in the kitchen Cooks up your meal and
+hands it back to the waiter who brings
+it to your table in this scenario the
+waiter is like an API application
+programming interface the API takes your
+request tells the server in this case
+that is the kitchen what you need and
+then brings back the response in Tech
+terms an API allows different software
+systems to communicate and share data
+for example when you use an app on your
+phone to check the weather that app uses
+an API to request weather data from a
+remote server the server sends back the
+weather information and the app displays
+it for you so this is how API works now
+we see why is API security important
+think about your house you lock your
+door doors and windows to keep Intruders
+out right the same goes for apis they
+need to be secured to prevent
+unauthorized access if someone breaks
+into your house they can steal your
+valuables similarly if someone gains
+unauthorized access to your API they can
+steal sensitive data or even take
+control of your system take the Facebook
+Cambridge analytical Scandal for example
+insecure apis allowed the harvesting of
+personal data from millions of users
+without their consent this shows how
+crucial it is to secure apis to protect
+user data and maintain trust so this was
+about why API security is important now
+moving to Common API security threats
+and the number one on the list is
+injection attacks so now that we have
+understand why securing API is essential
+let's dive into some common threats
+first up is injection attack imagine you
+give a recipe to a chef but someone
+sneaks in and add harmful ingredients
+without you knowing that's an injection
+Attack One common type is SQL injection
+where an attacker inserts malicious code
+into an API request for example if a
+user enters colon drop table users colon
+hyphen iph instead of their username and
+the API doesn't validates this input the
+database might execute it and delete
+import and data so to prevent this
+always validate and sanitize user inputs
+now move to the next that is broken
+authentication so let's talk about
+broken authentication so think of
+authentication as the lock on your front
+door if your lock is weak or easy to
+pick anyone can walk in broken
+authentication means your API
+authentication mechanisms aren't strong
+enough making it easy for attackers to
+pretend to be legitimate users for
+instance if an API uses predictable
+tokens hackers can guess them and gain
+unauthorized access use strong
+unpredictable tokens and Implement
+multiactor authentication to strengthen
+security so now we move to number third
+that is sensitive data Expos exposure so
+let's consider sensitive data exposure
+imagine sending a postcard with all your
+bank details written on it anyone who
+intercepts it can read your information
+similarly if your API sends data without
+proper encryption anyone who intercepts
+it can see the data for example if an
+API transmits passwords in plain text
+it's like handing over your secrets on a
+silver plate always use https to encrypt
+data in transit and encrypt sensitive
+data at rest so moving to the next that
+is State limiting and Doos attacks so
+another threat to be aware of is DDOS
+attacks picture a popular store on Black
+Friday sale with thousands of customers
+flooding in all at once the staff can't
+keep up and the store gets overwhelmed
+that's a Doos that is distributed denial
+of service attack attackers flood your
+API with so many requests that it
+crashes or becomes unresponsive
+implementing rate limiting like allowing
+only a certain number of request per
+minute can help manage the traffic and
+prevent such attacks now move to the
+next that is man in the middle attacks
+so imagine having a private conversation
+but someone is secretly listening and
+can even alter your words that's a man
+in the middle attack if an attacker
+intercepts the communication between
+your API and the client they can read or
+modify the data being transmitted so
+using https or TLS ensures that the data
+is encrypted making it much harder for
+attackers to e drop or tamper with the
+information next on the list list is API
+spoofing so let's discuss about it so
+think of API spoofing as someone setting
+up a fake ATM machine it looks real but
+it's actually stealing your card
+information attackers create fake apis
+to trick users into providing sensitive
+data always verify API end points and
+use secure authentication methods to
+ensure you are interacting with
+legitimate apis now we'll see the best
+practices for securing apis so the
+number one on the list is authentication
+and authorization so we have looked at
+some common threats now we'll dive into
+the best practices for securing up and
+the first we look up is authentication
+and authorization so think of
+authorization 2.0 as a special access
+pass that only authorized users can get
+it ensures that only users with the
+right pass can access the data open ID
+connect adds an extra layer by verifying
+the users's identity comparing API keys
+to basic passwords that is tokens just
+like J WTS are more secure because they
+include user specific data and have an
+expiration time now move to the next
+best practice that is encryption so
+always use https which is like sending
+loged packages that only recipent can
+open it ensures that the data being
+transmitted is encrypted and secure
+additionally encrypt sensitive data at
+rest just like storing valuables in a
+safe so it protects it from unauthorized
+access next is input validation so let's
+consider input validation and you should
+always use clean user inputs to prevent
+malicious data from sneaking in for
+instance if a user enters a script tag
+that is script and sanitize it to
+prevent xss that is cross site scripting
+attacks so using parameterized queries
+is like using prepared ingredients in
+cooking ensuring that the input is safe
+and expected now moving to the next that
+is rate limiting and throttling so
+moving on to rate limiting and
+throttling that limits the number of
+requests a user can make it's like
+settling a limit on how many times
+someone can knock on your door tools
+like Cloud Fair can help filter out
+malicious traffic and keep your API
+running smoothly protecting against DDOS
+attacks now move to the next one that is
+logging and monitoring so keep a record
+of all AP request to support unusual
+activity it's like having a CCTV camera
+to monitor who's coming and going tools
+like promus and graph can help you
+monitor API health and alert you to
+potential issues the next next we have
+is API Gateway and security so API
+gateways act as bouncers controlling
+access and adding security features like
+rate limiting and IP whistling look for
+features like request validation Thro
+link and data encryption to enhance
+security so these were all the best
+practices for securing apis now we'll
+see tools and Technologies so the number
+one is Postman that's a grade for
+testing apis and ensuring they handle
+request properly without exposing
+vulnerabilities the next is oap zap and
+BB suit they are like ethical hackers
+simulating attacks to identify security
+flows so now let's look at API
+management platforms for API management
+platforms like apig AWS API Gateway and
+Azure API management that offer buil-in
+security features making it easier to
+manage and secure your apis now we'll
+see some real world case studies so the
+number one notable API breaches case
+study is the Facebook Cambridge
+analytica Scandal that is a laring
+example where insecure apis led to
+massive data misuse it's a reminder of
+why API security is crucial similarly in
+20121 T-Mobile suffered a breach where
+attackers accessed customer data through
+insecure apis highlighting the
+importance of robust security practices
+and then we have some successful API
+security implementations that is Google
+employees strict authentication rate
+limiting and encryption practices
+setting a standard for secure API usage
+so stripe uses strong encryption and
+secure authentication methods ensuring
+that sensitive financial data is well
+protected so with that guys we have come
+to the end of this session if you like
+this session please like share and
+subscribe if you have any doubts comment
+down in the comment section below till
+then stay safe and keep learning staying
+ahead in your career requires continuous
+learning and upskilling whether you're a
+student aiming to learn today's top
+skills or a working professional looking
+to advance your career we've got you
+covered explore our impressive catalog
+of certification programs in cuttingedge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here
