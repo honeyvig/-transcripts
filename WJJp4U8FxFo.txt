@@ -1,0 +1,2023 @@
+1
+00:00:00,160 --> 00:00:02,080
+so hello there and welcome to another
+
+2
+00:00:02,080 --> 00:00:04,000
+tutorial my name is tammy bakshi and
+
+3
+00:00:04,000 --> 00:00:04,720
+today
+
+4
+00:00:04,720 --> 00:00:06,560
+we're gonna be going over well the third
+
+5
+00:00:06,560 --> 00:00:08,559
+episode in the learn deep learning from
+
+6
+00:00:08,559 --> 00:00:09,840
+scratch series
+
+7
+00:00:09,840 --> 00:00:11,360
+now today's episode is actually really
+
+8
+00:00:11,360 --> 00:00:13,040
+exciting because we're finally gonna get
+
+9
+00:00:13,040 --> 00:00:14,000
+to take a look
+
+10
+00:00:14,000 --> 00:00:16,000
+at some code of course first episode was
+
+11
+00:00:16,000 --> 00:00:17,039
+an introduction
+
+12
+00:00:17,039 --> 00:00:18,880
+last episode was all about derivatives
+
+13
+00:00:18,880 --> 00:00:20,720
+and how function optimization works
+
+14
+00:00:20,720 --> 00:00:22,720
+and now we finally get to cover actually
+
+15
+00:00:22,720 --> 00:00:24,480
+implementing that function optimization
+
+16
+00:00:24,480 --> 00:00:26,320
+in python and i'm going to be showing
+
+17
+00:00:26,320 --> 00:00:28,240
+you some actual use cases
+
+18
+00:00:28,240 --> 00:00:30,160
+for technologies like gradient descent
+
+19
+00:00:30,160 --> 00:00:32,559
+it's gonna be really interesting stuff
+
+20
+00:00:32,559 --> 00:00:34,239
+uh now before we begin i do just want to
+
+21
+00:00:34,239 --> 00:00:35,760
+say that if you enjoy content like this
+
+22
+00:00:35,760 --> 00:00:36,960
+and you want to see more of it please do
+
+23
+00:00:36,960 --> 00:00:38,640
+consider subscribing to the channel as
+
+24
+00:00:38,640 --> 00:00:39,440
+it really has helped
+
+25
+00:00:39,440 --> 00:00:41,520
+a lot and please make sure to like the
+
+26
+00:00:41,520 --> 00:00:43,360
+video as that does help out too
+
+27
+00:00:43,360 --> 00:00:44,879
+of course any questions feel free to put
+
+28
+00:00:44,879 --> 00:00:46,800
+them down in the comments section below
+
+29
+00:00:46,800 --> 00:00:48,239
+and i'll get back to you as soon as i
+
+30
+00:00:48,239 --> 00:00:50,559
+can alright so now to begin today
+
+31
+00:00:50,559 --> 00:00:52,480
+as you may recall from the last episode
+
+32
+00:00:52,480 --> 00:00:53,920
+i had shown you
+
+33
+00:00:53,920 --> 00:00:57,039
+an example of a couple of different um
+
+34
+00:00:57,039 --> 00:00:59,039
+a couple of different functions that we
+
+35
+00:00:59,039 --> 00:01:01,359
+use gradient descent to optimize
+
+36
+00:01:01,359 --> 00:01:03,280
+so what that meant was we wanted to
+
+37
+00:01:03,280 --> 00:01:05,519
+reduce the value of the output of the
+
+38
+00:01:05,519 --> 00:01:06,240
+function
+
+39
+00:01:06,240 --> 00:01:07,760
+and therefore we actually found the
+
+40
+00:01:07,760 --> 00:01:09,280
+derivative of the function
+
+41
+00:01:09,280 --> 00:01:12,000
+with respect to its input and using that
+
+42
+00:01:12,000 --> 00:01:12,880
+derivative
+
+43
+00:01:12,880 --> 00:01:15,280
+we were able to reduce the value that
+
+44
+00:01:15,280 --> 00:01:16,960
+came out from the function by changing
+
+45
+00:01:16,960 --> 00:01:18,640
+that input a little bit
+
+46
+00:01:18,640 --> 00:01:19,759
+now we're going to be doing something
+
+47
+00:01:19,759 --> 00:01:21,200
+similar today and we're going to
+
+48
+00:01:21,200 --> 00:01:23,439
+actually implement a perceptron
+
+49
+00:01:23,439 --> 00:01:25,920
+in tensorflow specifically we're going
+
+50
+00:01:25,920 --> 00:01:27,280
+to implement what i call
+
+51
+00:01:27,280 --> 00:01:29,119
+the number negator we're going to
+
+52
+00:01:29,119 --> 00:01:31,040
+implement a super simple perceptron
+
+53
+00:01:31,040 --> 00:01:33,520
+that all it does is takes a number and
+
+54
+00:01:33,520 --> 00:01:34,479
+gives us back
+
+55
+00:01:34,479 --> 00:01:37,040
+the negated input let's get started now
+
+56
+00:01:37,040 --> 00:01:38,320
+quickly before we begin
+
+57
+00:01:38,320 --> 00:01:40,799
+just to recap if you remember from the
+
+58
+00:01:40,799 --> 00:01:42,320
+last episode i had shown you that
+
+59
+00:01:42,320 --> 00:01:43,439
+perceptrons
+
+60
+00:01:43,439 --> 00:01:46,320
+are very simple units they take an input
+
+61
+00:01:46,320 --> 00:01:48,240
+and they figure out their output by
+
+62
+00:01:48,240 --> 00:01:50,079
+multiplying the input by a certain
+
+63
+00:01:50,079 --> 00:01:51,119
+weight
+
+64
+00:01:51,119 --> 00:01:52,880
+now the thing about perceptrons is that
+
+65
+00:01:52,880 --> 00:01:54,320
+we don't really know what the value of
+
+66
+00:01:54,320 --> 00:01:55,439
+the weight should be
+
+67
+00:01:55,439 --> 00:01:57,600
+right we know what input we can provide
+
+68
+00:01:57,600 --> 00:01:59,600
+and we know what output we expect
+
+69
+00:01:59,600 --> 00:02:02,079
+but we don't know what value of a weight
+
+70
+00:02:02,079 --> 00:02:03,840
+to provide to make it so when we give
+
+71
+00:02:03,840 --> 00:02:05,840
+new input where we don't know the output
+
+72
+00:02:05,840 --> 00:02:07,840
+the perceptron can predict the output
+
+73
+00:02:07,840 --> 00:02:08,399
+for us
+
+74
+00:02:08,399 --> 00:02:10,399
+we don't know how to figure that out but
+
+75
+00:02:10,399 --> 00:02:12,000
+with the power of some mathematics
+
+76
+00:02:12,000 --> 00:02:13,520
+specifically the same function
+
+77
+00:02:13,520 --> 00:02:14,720
+optimization that you learned in the
+
+78
+00:02:14,720 --> 00:02:15,680
+last episode
+
+79
+00:02:15,680 --> 00:02:17,680
+you can actually figure out that weight
+
+80
+00:02:17,680 --> 00:02:19,200
+automatically
+
+81
+00:02:19,200 --> 00:02:20,720
+now i'm going to be showing you how to
+
+82
+00:02:20,720 --> 00:02:22,800
+implement this exact same concept
+
+83
+00:02:22,800 --> 00:02:24,400
+in tensorflow so let's take a look at
+
+84
+00:02:24,400 --> 00:02:26,560
+this code as you can see what i've gone
+
+85
+00:02:26,560 --> 00:02:27,280
+ahead and done
+
+86
+00:02:27,280 --> 00:02:29,599
+is i've pulled up google colab now
+
+87
+00:02:29,599 --> 00:02:30,640
+google call lab is
+
+88
+00:02:30,640 --> 00:02:32,160
+great environment where you can actually
+
+89
+00:02:32,160 --> 00:02:34,560
+run python code in the cloud
+
+90
+00:02:34,560 --> 00:02:35,680
+you know you don't have to have a you
+
+91
+00:02:35,680 --> 00:02:37,440
+know really fancy computer run all this
+
+92
+00:02:37,440 --> 00:02:37,760
+it
+
+93
+00:02:37,760 --> 00:02:39,120
+comes with a lot of dependencies
+
+94
+00:02:39,120 --> 00:02:41,599
+pre-installed and so just to
+
+95
+00:02:41,599 --> 00:02:43,120
+get started right off the bat and not
+
+96
+00:02:43,120 --> 00:02:44,720
+need to sit down and install your
+
+97
+00:02:44,720 --> 00:02:45,920
+dependencies and
+
+98
+00:02:45,920 --> 00:02:47,120
+set up your docker containers do
+
+99
+00:02:47,120 --> 00:02:48,879
+whatever um we're just going to be doing
+
+100
+00:02:48,879 --> 00:02:49,440
+this
+
+101
+00:02:49,440 --> 00:02:51,599
+um through collab in the future then
+
+102
+00:02:51,599 --> 00:02:53,120
+when we get to slightly more complex
+
+103
+00:02:53,120 --> 00:02:53,760
+examples
+
+104
+00:02:53,760 --> 00:02:55,040
+i will show you how to set up
+
+105
+00:02:55,040 --> 00:02:56,879
+environment locally to make it so you
+
+106
+00:02:56,879 --> 00:02:58,239
+don't actually need to
+
+107
+00:02:58,239 --> 00:03:01,200
+keep pulling a collab to run this code
+
+108
+00:03:01,200 --> 00:03:02,720
+now as you can see though we are already
+
+109
+00:03:02,720 --> 00:03:03,599
+in collab
+
+110
+00:03:03,599 --> 00:03:05,360
+and this entire first example for
+
+111
+00:03:05,360 --> 00:03:06,959
+today's tutorial is just
+
+112
+00:03:06,959 --> 00:03:10,319
+three cells of code um and i think it's
+
+113
+00:03:10,319 --> 00:03:12,000
+pretty incredible just how simple this
+
+114
+00:03:12,000 --> 00:03:14,959
+is and we start off of course with the
+
+115
+00:03:14,959 --> 00:03:15,519
+classic
+
+116
+00:03:15,519 --> 00:03:17,120
+import tensorflow as tf so we're
+
+117
+00:03:17,120 --> 00:03:18,720
+basically just importing the tensorflow
+
+118
+00:03:18,720 --> 00:03:19,519
+library
+
+119
+00:03:19,519 --> 00:03:21,200
+telling python that we can refer to it
+
+120
+00:03:21,200 --> 00:03:23,840
+as tf within the rest of our code
+
+121
+00:03:23,840 --> 00:03:25,760
+and then what i do is a little bit of
+
+122
+00:03:25,760 --> 00:03:26,879
+setup so
+
+123
+00:03:26,879 --> 00:03:28,319
+i'm first of all setting up some of the
+
+124
+00:03:28,319 --> 00:03:30,560
+inputs and outputs and the weight
+
+125
+00:03:30,560 --> 00:03:32,640
+for the perceptron now of course the
+
+126
+00:03:32,640 --> 00:03:33,920
+input can be anything
+
+127
+00:03:33,920 --> 00:03:35,440
+in this case i just gave it the number
+
+128
+00:03:35,440 --> 00:03:38,400
+three and the output is what we expect
+
+129
+00:03:38,400 --> 00:03:40,480
+the perceptron to give us if we were to
+
+130
+00:03:40,480 --> 00:03:41,920
+feed in this three
+
+131
+00:03:41,920 --> 00:03:44,000
+in this case that is negative three
+
+132
+00:03:44,000 --> 00:03:45,200
+remember we're doing the number
+
+133
+00:03:45,200 --> 00:03:47,840
+negator now technically if we were to
+
+134
+00:03:47,840 --> 00:03:49,680
+feed in negative 3 then the output would
+
+135
+00:03:49,680 --> 00:03:50,799
+be positive 3
+
+136
+00:03:50,799 --> 00:03:53,360
+because negative i and i is negative 3
+
+137
+00:03:53,360 --> 00:03:55,920
+so negative negative 3 is positive 3.
+
+138
+00:03:55,920 --> 00:03:57,840
+so the output would automatically become
+
+139
+00:03:57,840 --> 00:03:59,200
+positive 3. but in this case
+
+140
+00:03:59,200 --> 00:04:00,799
+we're just starting off with three going
+
+141
+00:04:00,799 --> 00:04:02,640
+to negative three but you know both of
+
+142
+00:04:02,640 --> 00:04:03,200
+them are
+
+143
+00:04:03,200 --> 00:04:05,439
+both ways uh the multiplication of the
+
+144
+00:04:05,439 --> 00:04:07,040
+perceptron would be mathematically
+
+145
+00:04:07,040 --> 00:04:08,080
+equivalent
+
+146
+00:04:08,080 --> 00:04:10,720
+uh so then what i've got to do though is
+
+147
+00:04:10,720 --> 00:04:11,439
+i've got to
+
+148
+00:04:11,439 --> 00:04:14,560
+start off with some sort of guess as to
+
+149
+00:04:14,560 --> 00:04:16,160
+what the weight for the perceptron
+
+150
+00:04:16,160 --> 00:04:17,040
+should be
+
+151
+00:04:17,040 --> 00:04:19,120
+this doesn't need to be a good guess of
+
+152
+00:04:19,120 --> 00:04:20,959
+course if it is a good guess it helps
+
+153
+00:04:20,959 --> 00:04:22,479
+but it doesn't need to be a good guess
+
+154
+00:04:22,479 --> 00:04:23,759
+it can just be a completely random
+
+155
+00:04:23,759 --> 00:04:24,240
+number
+
+156
+00:04:24,240 --> 00:04:25,919
+and in this case i decided to start with
+
+157
+00:04:25,919 --> 00:04:28,000
+just 0.5
+
+158
+00:04:28,000 --> 00:04:29,199
+again it doesn't really matter what it
+
+159
+00:04:29,199 --> 00:04:31,280
+is um but
+
+160
+00:04:31,280 --> 00:04:34,639
+in this case i did choose 0.5
+
+161
+00:04:34,639 --> 00:04:38,479
+now if you were to do 3 times 0.5 you
+
+162
+00:04:38,479 --> 00:04:40,160
+would get 1.5
+
+163
+00:04:40,160 --> 00:04:41,919
+but what we want the perceptron to
+
+164
+00:04:41,919 --> 00:04:43,680
+output is negative three so as you can
+
+165
+00:04:43,680 --> 00:04:44,080
+tell
+
+166
+00:04:44,080 --> 00:04:45,680
+the outputs vary off so we're going to
+
+167
+00:04:45,680 --> 00:04:47,759
+actually fix that in just a moment in
+
+168
+00:04:47,759 --> 00:04:49,600
+the next cell of code
+
+169
+00:04:49,600 --> 00:04:51,360
+and so what i'm going to do quickly here
+
+170
+00:04:51,360 --> 00:04:53,440
+is run this cell and just like that i
+
+171
+00:04:53,440 --> 00:04:55,600
+define my input output and the weight
+
+172
+00:04:55,600 --> 00:04:58,800
+for the perceptron now let me tell you
+
+173
+00:04:58,800 --> 00:05:00,800
+what this next cell does but before that
+
+174
+00:05:00,800 --> 00:05:01,520
+really quickly
+
+175
+00:05:01,520 --> 00:05:03,440
+just in the previous cell this last line
+
+176
+00:05:03,440 --> 00:05:05,120
+of code what that's doing
+
+177
+00:05:05,120 --> 00:05:08,160
+is it's taking i o and w three values
+
+178
+00:05:08,160 --> 00:05:10,320
+that we did or created
+
+179
+00:05:10,320 --> 00:05:11,919
+and it's converting them to floating
+
+180
+00:05:11,919 --> 00:05:13,440
+point values so they're no longer
+
+181
+00:05:13,440 --> 00:05:14,400
+integers
+
+182
+00:05:14,400 --> 00:05:16,400
+and then after they're all converted to
+
+183
+00:05:16,400 --> 00:05:17,759
+floating point values
+
+184
+00:05:17,759 --> 00:05:20,800
+um they are converted to tensors now a
+
+185
+00:05:20,800 --> 00:05:23,199
+tensor is essentially what tensorflow
+
+186
+00:05:23,199 --> 00:05:24,000
+uses to
+
+187
+00:05:24,000 --> 00:05:26,240
+wrap individual numbers or even arrays
+
+188
+00:05:26,240 --> 00:05:27,280
+of numbers
+
+189
+00:05:27,280 --> 00:05:29,120
+such that tensorflow can actually track
+
+190
+00:05:29,120 --> 00:05:30,800
+the operations that you run
+
+191
+00:05:30,800 --> 00:05:33,199
+on those numbers now why exactly
+
+192
+00:05:33,199 --> 00:05:34,720
+tensorflow needs to track them
+
+193
+00:05:34,720 --> 00:05:37,199
+i will show you in just a moment but for
+
+194
+00:05:37,199 --> 00:05:39,520
+now think of a tensorflow tensor
+
+195
+00:05:39,520 --> 00:05:42,960
+as almost like a numpy array except it
+
+196
+00:05:42,960 --> 00:05:44,720
+can be a scalar value so it can just be
+
+197
+00:05:44,720 --> 00:05:46,960
+a single you know the number three
+
+198
+00:05:46,960 --> 00:05:49,280
+or it could be an entire array or array
+
+199
+00:05:49,280 --> 00:05:50,080
+of arrays
+
+200
+00:05:50,080 --> 00:05:51,840
+or three-dimensional or four-dimensional
+
+201
+00:05:51,840 --> 00:05:53,360
+it's n-dimensional arrays
+
+202
+00:05:53,360 --> 00:05:55,440
+you have as many dimensions as you want
+
+203
+00:05:55,440 --> 00:05:56,560
+it to or even
+
+204
+00:05:56,560 --> 00:05:59,440
+none so scalar value um that's that's
+
+205
+00:05:59,440 --> 00:06:00,080
+for now
+
+206
+00:06:00,080 --> 00:06:01,680
+that's what your conception of a tensor
+
+207
+00:06:01,680 --> 00:06:03,919
+should be not 100 technically accurate
+
+208
+00:06:03,919 --> 00:06:05,680
+but we'll get to exactly what a tensor
+
+209
+00:06:05,680 --> 00:06:07,600
+is again at a later time
+
+210
+00:06:07,600 --> 00:06:09,520
+for now i want you to understand the
+
+211
+00:06:09,520 --> 00:06:11,520
+number negator
+
+212
+00:06:11,520 --> 00:06:14,479
+so going back uh to the example in the
+
+213
+00:06:14,479 --> 00:06:16,479
+next cell i'm doing something a little
+
+214
+00:06:16,479 --> 00:06:18,000
+interesting so first of all i've just
+
+215
+00:06:18,000 --> 00:06:20,560
+got a for loop from 1 to 40.
+
+216
+00:06:20,560 --> 00:06:22,240
+and you'll see why it's a for loop in a
+
+217
+00:06:22,240 --> 00:06:23,680
+moment but for now you can just sort of
+
+218
+00:06:23,680 --> 00:06:24,800
+ignore that
+
+219
+00:06:24,800 --> 00:06:27,600
+then what i'm doing is i'm creating a
+
+220
+00:06:27,600 --> 00:06:28,319
+new
+
+221
+00:06:28,319 --> 00:06:30,319
+instance of something called a
+
+222
+00:06:30,319 --> 00:06:32,639
+tensorflow gradient tape
+
+223
+00:06:32,639 --> 00:06:35,520
+and i'm defining a block of scope in
+
+224
+00:06:35,520 --> 00:06:37,280
+which that tape is valid and its
+
+225
+00:06:37,280 --> 00:06:38,479
+internal memory
+
+226
+00:06:38,479 --> 00:06:41,840
+is still fresh now what what i'm doing
+
+227
+00:06:41,840 --> 00:06:42,400
+here
+
+228
+00:06:42,400 --> 00:06:45,680
+is this gradient tape is going to allow
+
+229
+00:06:45,680 --> 00:06:46,160
+us
+
+230
+00:06:46,160 --> 00:06:49,360
+to tell tensorflow that hey look
+
+231
+00:06:49,360 --> 00:06:52,160
+i've got a tensor and i'm gonna run some
+
+232
+00:06:52,160 --> 00:06:54,240
+operations on this tensor
+
+233
+00:06:54,240 --> 00:06:57,360
+after i run my operations i want you to
+
+234
+00:06:57,360 --> 00:06:58,000
+give me
+
+235
+00:06:58,000 --> 00:07:00,319
+the gradient of the operations that i
+
+236
+00:07:00,319 --> 00:07:01,680
+ran all right
+
+237
+00:07:01,680 --> 00:07:04,319
+so if you go back to the last tutorial
+
+238
+00:07:04,319 --> 00:07:04,720
+uh
+
+239
+00:07:04,720 --> 00:07:07,759
+just you know last week you'll realize
+
+240
+00:07:07,759 --> 00:07:08,880
+that i had shown you
+
+241
+00:07:08,880 --> 00:07:12,400
+a plot of a function and that function's
+
+242
+00:07:12,400 --> 00:07:13,599
+derivative
+
+243
+00:07:13,599 --> 00:07:15,759
+now i had manually calculated that
+
+244
+00:07:15,759 --> 00:07:16,800
+derivative function
+
+245
+00:07:16,800 --> 00:07:19,360
+or rather i used tensorflow to help me
+
+246
+00:07:19,360 --> 00:07:20,960
+figure it out
+
+247
+00:07:20,960 --> 00:07:24,479
+but here's the thing with computers
+
+248
+00:07:24,479 --> 00:07:27,120
+when you're writing a complex function
+
+249
+00:07:27,120 --> 00:07:28,720
+you don't want to have to
+
+250
+00:07:28,720 --> 00:07:30,479
+manually write out the complex
+
+251
+00:07:30,479 --> 00:07:31,759
+derivative
+
+252
+00:07:31,759 --> 00:07:33,840
+so what you can do is you can simply
+
+253
+00:07:33,840 --> 00:07:35,599
+tell tensorflow all right
+
+254
+00:07:35,599 --> 00:07:38,720
+i'm doing these operations on my tensor
+
+255
+00:07:38,720 --> 00:07:41,360
+now i want you to give me the derivative
+
+256
+00:07:41,360 --> 00:07:42,639
+of these operations
+
+257
+00:07:42,639 --> 00:07:44,960
+as a function with respect to some
+
+258
+00:07:44,960 --> 00:07:45,680
+tensor in
+
+259
+00:07:45,680 --> 00:07:48,240
+as part of that operation so it's really
+
+260
+00:07:48,240 --> 00:07:49,360
+interesting the way this is
+
+261
+00:07:49,360 --> 00:07:51,039
+the way that this works and let me show
+
+262
+00:07:51,039 --> 00:07:52,879
+you what i mean
+
+263
+00:07:52,879 --> 00:07:55,280
+now after i create this gradient tape
+
+264
+00:07:55,280 --> 00:07:56,080
+what i'm doing
+
+265
+00:07:56,080 --> 00:07:58,720
+is i'm telling the tape to watch the
+
+266
+00:07:58,720 --> 00:07:59,520
+weight
+
+267
+00:07:59,520 --> 00:08:01,360
+all right so think about it the
+
+268
+00:08:01,360 --> 00:08:03,520
+perceptron function has two inputs
+
+269
+00:08:03,520 --> 00:08:04,879
+it has the input that we want to give
+
+270
+00:08:04,879 --> 00:08:06,879
+the perceptron and it has the weight and
+
+271
+00:08:06,879 --> 00:08:08,800
+the output is the input times the weight
+
+272
+00:08:08,800 --> 00:08:10,960
+now if we want the output to match what
+
+273
+00:08:10,960 --> 00:08:12,400
+we want it to
+
+274
+00:08:12,400 --> 00:08:13,919
+we can't change the input because that
+
+275
+00:08:13,919 --> 00:08:16,000
+doesn't make any sense right
+
+276
+00:08:16,000 --> 00:08:19,039
+instead we have to change the weight and
+
+277
+00:08:19,039 --> 00:08:21,280
+in order to optimize the function we
+
+278
+00:08:21,280 --> 00:08:22,240
+have to change
+
+279
+00:08:22,240 --> 00:08:25,199
+the inputs that we give it so we somehow
+
+280
+00:08:25,199 --> 00:08:26,319
+have to modify
+
+281
+00:08:26,319 --> 00:08:29,199
+the weight using function optimization
+
+282
+00:08:29,199 --> 00:08:30,319
+techniques
+
+283
+00:08:30,319 --> 00:08:32,240
+in order to make the output of the
+
+284
+00:08:32,240 --> 00:08:34,159
+perceptron closer to what we want it to
+
+285
+00:08:34,159 --> 00:08:34,880
+be
+
+286
+00:08:34,880 --> 00:08:37,360
+okay that's why we're telling the tape
+
+287
+00:08:37,360 --> 00:08:39,039
+to watch the weight
+
+288
+00:08:39,039 --> 00:08:40,959
+because when it's watching the weight it
+
+289
+00:08:40,959 --> 00:08:43,919
+can find the gradient of our operations
+
+290
+00:08:43,919 --> 00:08:47,440
+with respect to the weight telling us
+
+291
+00:08:47,440 --> 00:08:50,240
+how to move that weight in order to make
+
+292
+00:08:50,240 --> 00:08:51,760
+the perceptron output
+
+293
+00:08:51,760 --> 00:08:55,040
+what we want it to now then what i'm
+
+294
+00:08:55,040 --> 00:08:55,600
+doing
+
+295
+00:08:55,600 --> 00:08:57,600
+is i'm calculating a value known as a
+
+296
+00:08:57,600 --> 00:08:58,959
+loss now
+
+297
+00:08:58,959 --> 00:09:00,880
+what's a loss function you may ask well
+
+298
+00:09:00,880 --> 00:09:02,640
+a loss function is pretty simple a loss
+
+299
+00:09:02,640 --> 00:09:04,080
+value is pretty simple
+
+300
+00:09:04,080 --> 00:09:06,880
+it's basically just telling us how bad
+
+301
+00:09:06,880 --> 00:09:08,240
+is the neural network's output
+
+302
+00:09:08,240 --> 00:09:12,399
+so just how off is this neural network
+
+303
+00:09:12,399 --> 00:09:14,800
+now here's what's really interesting the
+
+304
+00:09:14,800 --> 00:09:16,800
+loss function
+
+305
+00:09:16,800 --> 00:09:19,040
+although you as a human can think of it
+
+306
+00:09:19,040 --> 00:09:20,000
+as how
+
+307
+00:09:20,000 --> 00:09:22,080
+off is my neural network or how bad is
+
+308
+00:09:22,080 --> 00:09:23,839
+my perceptron
+
+309
+00:09:23,839 --> 00:09:25,279
+really what the loss function is doing
+
+310
+00:09:25,279 --> 00:09:27,760
+mathematically is it's telling us
+
+311
+00:09:27,760 --> 00:09:30,160
+where should i move the weight in order
+
+312
+00:09:30,160 --> 00:09:31,440
+to make the neural network or the
+
+313
+00:09:31,440 --> 00:09:32,640
+perceptron
+
+314
+00:09:32,640 --> 00:09:35,680
+less bad or more good that's what it's
+
+315
+00:09:35,680 --> 00:09:36,000
+telling
+
+316
+00:09:36,000 --> 00:09:37,680
+us because take a look at this
+
+317
+00:09:37,680 --> 00:09:39,440
+mathematical little function that i've
+
+318
+00:09:39,440 --> 00:09:40,959
+put together
+
+319
+00:09:40,959 --> 00:09:43,600
+you might already start to see some of
+
+320
+00:09:43,600 --> 00:09:44,080
+the
+
+321
+00:09:44,080 --> 00:09:46,320
+you know patterns here for example i
+
+322
+00:09:46,320 --> 00:09:47,279
+times w
+
+323
+00:09:47,279 --> 00:09:49,279
+what is i it's the input what is w it's
+
+324
+00:09:49,279 --> 00:09:50,480
+the weight so this
+
+325
+00:09:50,480 --> 00:09:52,560
+is the perceptron prediction function
+
+326
+00:09:52,560 --> 00:09:54,000
+right over here right
+
+327
+00:09:54,000 --> 00:09:55,920
+that part is what the perceptron is
+
+328
+00:09:55,920 --> 00:09:57,360
+predicting according to the current
+
+329
+00:09:57,360 --> 00:09:59,440
+input and the current weight
+
+330
+00:09:59,440 --> 00:10:01,839
+then if you go ahead and take the output
+
+331
+00:10:01,839 --> 00:10:02,720
+and do output
+
+332
+00:10:02,720 --> 00:10:05,279
+minus the prediction suddenly you've got
+
+333
+00:10:05,279 --> 00:10:06,320
+the distance
+
+334
+00:10:06,320 --> 00:10:08,640
+between the output that you expected and
+
+335
+00:10:08,640 --> 00:10:11,600
+the actual output from the perceptron
+
+336
+00:10:11,600 --> 00:10:13,680
+now this can be a negative or a positive
+
+337
+00:10:13,680 --> 00:10:15,519
+number so what we do
+
+338
+00:10:15,519 --> 00:10:18,480
+is we square it and what this does is
+
+339
+00:10:18,480 --> 00:10:20,240
+first of all it increases the magnitude
+
+340
+00:10:20,240 --> 00:10:21,279
+of that error
+
+341
+00:10:21,279 --> 00:10:22,959
+but it also makes sure that it's always
+
+342
+00:10:22,959 --> 00:10:24,800
+positive all right
+
+343
+00:10:24,800 --> 00:10:27,200
+now what does that mean that means that
+
+344
+00:10:27,200 --> 00:10:28,720
+the lowest this value can
+
+345
+00:10:28,720 --> 00:10:30,800
+ever be is zero it can never be below
+
+346
+00:10:30,800 --> 00:10:33,200
+zero so what we want to do
+
+347
+00:10:33,200 --> 00:10:35,040
+is we want to bring that loss value to
+
+348
+00:10:35,040 --> 00:10:37,680
+zero because if the loss value is zero
+
+349
+00:10:37,680 --> 00:10:40,160
+that means that we did zero squared and
+
+350
+00:10:40,160 --> 00:10:42,000
+how can we get zero squared
+
+351
+00:10:42,000 --> 00:10:45,120
+only if the output is equal to the
+
+352
+00:10:45,120 --> 00:10:47,120
+prediction from the perceptron
+
+353
+00:10:47,120 --> 00:10:49,600
+therefore the same two values minus each
+
+354
+00:10:49,600 --> 00:10:50,320
+other
+
+355
+00:10:50,320 --> 00:10:52,959
+zero so if the output is equal to i
+
+356
+00:10:52,959 --> 00:10:53,680
+times w
+
+357
+00:10:53,680 --> 00:10:56,000
+then uh the output minus that value is
+
+358
+00:10:56,000 --> 00:10:57,360
+zero zero squared is zero
+
+359
+00:10:57,360 --> 00:10:59,519
+therefore the loss is zero and we have a
+
+360
+00:10:59,519 --> 00:11:00,959
+perfect percentron
+
+361
+00:11:00,959 --> 00:11:03,200
+so we want that loss value to be zero
+
+362
+00:11:03,200 --> 00:11:04,160
+but as you can tell
+
+363
+00:11:04,160 --> 00:11:06,000
+initially of course that's not going to
+
+364
+00:11:06,000 --> 00:11:07,200
+be the case
+
+365
+00:11:07,200 --> 00:11:09,120
+now here's what's really interesting
+
+366
+00:11:09,120 --> 00:11:10,880
+what we've done is we've defined this
+
+367
+00:11:10,880 --> 00:11:12,480
+as you know a bunch of operations that
+
+368
+00:11:12,480 --> 00:11:14,320
+we do on a tensor
+
+369
+00:11:14,320 --> 00:11:17,519
+but right after that tape goes out of
+
+370
+00:11:17,519 --> 00:11:19,279
+scope and we tell tensorflow all right
+
+371
+00:11:19,279 --> 00:11:21,440
+we're done running operations now
+
+372
+00:11:21,440 --> 00:11:24,000
+what i can do is i can say all right now
+
+373
+00:11:24,000 --> 00:11:25,920
+go back in the tape
+
+374
+00:11:25,920 --> 00:11:29,279
+and find the gradient of the loss
+
+375
+00:11:29,279 --> 00:11:32,480
+with respect to the weight now
+
+376
+00:11:32,480 --> 00:11:34,800
+it's actually giving me that gradient
+
+377
+00:11:34,800 --> 00:11:35,600
+value
+
+378
+00:11:35,600 --> 00:11:37,200
+and just like how it would do the
+
+379
+00:11:37,200 --> 00:11:39,040
+previous input plus
+
+380
+00:11:39,040 --> 00:11:40,560
+the derivative times the negative
+
+381
+00:11:40,560 --> 00:11:42,160
+learning rate i'm doing something
+
+382
+00:11:42,160 --> 00:11:43,200
+similar here
+
+383
+00:11:43,200 --> 00:11:45,760
+so i say that the weight is equal to
+
+384
+00:11:45,760 --> 00:11:47,040
+itself
+
+385
+00:11:47,040 --> 00:11:50,839
+plus the gradient multiplied by negative
+
+386
+00:11:50,839 --> 00:11:54,399
+0.01 so what i'm doing is i'm reducing
+
+387
+00:11:54,399 --> 00:11:56,800
+the magnitude of that gradient and i'm
+
+388
+00:11:56,800 --> 00:11:58,079
+making it less steep remember the
+
+389
+00:11:58,079 --> 00:11:59,360
+gradient's telling us how steep we're
+
+390
+00:11:59,360 --> 00:11:59,839
+moving
+
+391
+00:11:59,839 --> 00:12:01,920
+i'm making it less steep and then i'm
+
+392
+00:12:01,920 --> 00:12:03,600
+flipping it to the opposite direction
+
+393
+00:12:03,600 --> 00:12:06,160
+and by doing that i'm able to make it so
+
+394
+00:12:06,160 --> 00:12:07,600
+the gradient tells us where to go to
+
+395
+00:12:07,600 --> 00:12:08,720
+reduce the loss
+
+396
+00:12:08,720 --> 00:12:10,160
+not increase it right we want to do
+
+397
+00:12:10,160 --> 00:12:12,240
+gradient descent not gradient
+
+398
+00:12:12,240 --> 00:12:16,079
+ascent so by doing that i have a better
+
+399
+00:12:16,079 --> 00:12:17,519
+weight value
+
+400
+00:12:17,519 --> 00:12:20,639
+and then guess what all i do
+
+401
+00:12:20,639 --> 00:12:24,079
+is do the same thing another 39 times
+
+402
+00:12:24,079 --> 00:12:27,279
+and each time we update that loss value
+
+403
+00:12:27,279 --> 00:12:29,200
+each time we update that weight
+
+404
+00:12:29,200 --> 00:12:31,279
+we're getting better and better of a
+
+405
+00:12:31,279 --> 00:12:32,240
+perceptron
+
+406
+00:12:32,240 --> 00:12:34,480
+it's getting closer and closer to what
+
+407
+00:12:34,480 --> 00:12:37,680
+we want that value to actually be
+
+408
+00:12:37,680 --> 00:12:39,920
+now take a look at this when i run this
+
+409
+00:12:39,920 --> 00:12:41,839
+code it's going to continuously print
+
+410
+00:12:41,839 --> 00:12:43,279
+out the current loss
+
+411
+00:12:43,279 --> 00:12:45,600
+and the current weight after the update
+
+412
+00:12:45,600 --> 00:12:46,560
+from the loss
+
+413
+00:12:46,560 --> 00:12:48,240
+so at the beginning the loss is a huge
+
+414
+00:12:48,240 --> 00:12:50,320
+value it's 20.25
+
+415
+00:12:50,320 --> 00:12:54,560
+and the weight has gone from 0.5 to 0.23
+
+416
+00:12:54,560 --> 00:12:56,480
+all right and of course that weight
+
+417
+00:12:56,480 --> 00:12:58,800
+continues to get smaller and smaller
+
+418
+00:12:58,800 --> 00:13:01,279
+and the loss also gets closer and closer
+
+419
+00:13:01,279 --> 00:13:02,000
+to zero
+
+420
+00:13:02,000 --> 00:13:03,680
+you can see over here that the loss is
+
+421
+00:13:03,680 --> 00:13:06,639
+at 0.007
+
+422
+00:13:06,639 --> 00:13:09,120
+and over here the weight is starting to
+
+423
+00:13:09,120 --> 00:13:10,560
+approach negative one because that's
+
+424
+00:13:10,560 --> 00:13:12,320
+what we want it's a numbered gator
+
+425
+00:13:12,320 --> 00:13:15,200
+and so we scroll down and scroll down
+
+426
+00:13:15,200 --> 00:13:15,839
+and now
+
+427
+00:13:15,839 --> 00:13:19,519
+we're at 3.8 e minus six and the weight
+
+428
+00:13:19,519 --> 00:13:22,959
+is nearly at negative one
+
+429
+00:13:22,959 --> 00:13:26,240
+now it's not they're exactly sure but
+
+430
+00:13:26,240 --> 00:13:28,240
+really in deep learning and with deep
+
+431
+00:13:28,240 --> 00:13:29,920
+neural networks this kind of precision
+
+432
+00:13:29,920 --> 00:13:31,040
+doesn't really matter
+
+433
+00:13:31,040 --> 00:13:34,720
+if you're 0.001
+
+434
+00:13:34,720 --> 00:13:36,560
+percent less confident that this image
+
+435
+00:13:36,560 --> 00:13:38,079
+contains a cat or a dog
+
+436
+00:13:38,079 --> 00:13:40,160
+it's not the end of the world as a
+
+437
+00:13:40,160 --> 00:13:41,279
+matter of fact for the sake of
+
+438
+00:13:41,279 --> 00:13:42,800
+performance we usually do
+
+439
+00:13:42,800 --> 00:13:45,360
+sacrifice a lot of precision with our
+
+440
+00:13:45,360 --> 00:13:47,199
+floating point math
+
+441
+00:13:47,199 --> 00:13:48,320
+and so you really don't need to worry
+
+442
+00:13:48,320 --> 00:13:49,920
+about that but if you really really
+
+443
+00:13:49,920 --> 00:13:51,760
+wanted to push the limits i guess
+
+444
+00:13:51,760 --> 00:13:53,839
+sure you could give this a thousand
+
+445
+00:13:53,839 --> 00:13:55,279
+iterations and rerun it and you would
+
+446
+00:13:55,279 --> 00:13:56,000
+get like
+
+447
+00:13:56,000 --> 00:13:58,000
+super super super close but you're
+
+448
+00:13:58,000 --> 00:13:59,279
+always gonna hit a limit
+
+449
+00:13:59,279 --> 00:14:01,519
+it's floating point precision it's you
+
+450
+00:14:01,519 --> 00:14:02,800
+know it's one of the things that
+
+451
+00:14:02,800 --> 00:14:04,639
+programmers hate most
+
+452
+00:14:04,639 --> 00:14:07,839
+and so um you you can get close but
+
+453
+00:14:07,839 --> 00:14:08,959
+you're not really gonna get there
+
+454
+00:14:08,959 --> 00:14:09,600
+exactly
+
+455
+00:14:09,600 --> 00:14:11,839
+although that doesn't matter just to
+
+456
+00:14:11,839 --> 00:14:12,800
+sort of recap
+
+457
+00:14:12,800 --> 00:14:15,040
+what we did is we took that perceptron
+
+458
+00:14:15,040 --> 00:14:16,000
+sort of prediction
+
+459
+00:14:16,000 --> 00:14:18,399
+function and we wrapped that as part of
+
+460
+00:14:18,399 --> 00:14:19,920
+a larger function
+
+461
+00:14:19,920 --> 00:14:21,440
+which is differentiable meaning we can
+
+462
+00:14:21,440 --> 00:14:23,440
+find the derivative of this function
+
+463
+00:14:23,440 --> 00:14:25,440
+and this function was able to tell us
+
+464
+00:14:25,440 --> 00:14:27,440
+how off that prediction function which
+
+465
+00:14:27,440 --> 00:14:29,199
+was a component of it
+
+466
+00:14:29,199 --> 00:14:31,600
+was from what we expected and when we
+
+467
+00:14:31,600 --> 00:14:32,959
+find the derivative
+
+468
+00:14:32,959 --> 00:14:35,040
+of this larger error function with
+
+469
+00:14:35,040 --> 00:14:36,720
+respect to one of the components
+
+470
+00:14:36,720 --> 00:14:38,480
+uh from the predictor which in this case
+
+471
+00:14:38,480 --> 00:14:40,399
+was the weight we can figure out how to
+
+472
+00:14:40,399 --> 00:14:41,680
+optimize that weight
+
+473
+00:14:41,680 --> 00:14:43,760
+to make it so the output is what we
+
+474
+00:14:43,760 --> 00:14:45,519
+expect so
+
+475
+00:14:45,519 --> 00:14:48,959
+that is the power of gradient descent
+
+476
+00:14:48,959 --> 00:14:50,959
+in action but now that you've learned
+
+477
+00:14:50,959 --> 00:14:53,120
+about the world of perceptrons
+
+478
+00:14:53,120 --> 00:14:54,720
+i would like to invite you to join the
+
+479
+00:14:54,720 --> 00:14:56,240
+next episode of the series where i'm
+
+480
+00:14:56,240 --> 00:14:57,519
+actually going to be showing you just
+
+481
+00:14:57,519 --> 00:14:58,639
+before we get to the more
+
+482
+00:14:58,639 --> 00:15:00,480
+advanced neural networks and multi-layer
+
+483
+00:15:00,480 --> 00:15:02,639
+perceptrons how you can actually run
+
+484
+00:15:02,639 --> 00:15:04,959
+what's known as dimensionality reduction
+
+485
+00:15:04,959 --> 00:15:06,959
+as a real world example of where you
+
+486
+00:15:06,959 --> 00:15:08,639
+might want to use gradient descent
+
+487
+00:15:08,639 --> 00:15:10,000
+the number indicator was a pretty
+
+488
+00:15:10,000 --> 00:15:12,240
+contrived example just to help you learn
+
+489
+00:15:12,240 --> 00:15:13,839
+but this is something that you might
+
+490
+00:15:13,839 --> 00:15:15,519
+actually end up doing in real world
+
+491
+00:15:15,519 --> 00:15:16,959
+scenarios but it's also
+
+492
+00:15:16,959 --> 00:15:19,120
+not as complex as a real neural network
+
+493
+00:15:19,120 --> 00:15:20,160
+so it's going to be a great
+
+494
+00:15:20,160 --> 00:15:21,680
+learning experience apart from that
+
+495
+00:15:21,680 --> 00:15:22,959
+though if you do enjoy this content you
+
+496
+00:15:22,959 --> 00:15:24,079
+want to see more of it please do make
+
+497
+00:15:24,079 --> 00:15:26,320
+sure to subscribe to the channel as it
+
+498
+00:15:26,320 --> 00:15:28,000
+really does help out a lot and also make
+
+499
+00:15:28,000 --> 00:15:29,360
+sure to like the video
+
+500
+00:15:29,360 --> 00:15:30,959
+if you did enjoy it i would love to
+
+501
+00:15:30,959 --> 00:15:32,320
+answer any questions you may have down
+
+502
+00:15:32,320 --> 00:15:33,759
+in the comments section below
+
+503
+00:15:33,759 --> 00:15:35,040
+so feel free to leave them there and i
+
+504
+00:15:35,040 --> 00:15:36,639
+will get back to them as soon as i can
+
+505
+00:15:36,639 --> 00:15:37,920
+thank you very much for joining
+
+506
+00:15:37,920 --> 00:15:40,800
+goodbye

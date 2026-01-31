@@ -1,0 +1,1027 @@
+1
+00:00:09,280 --> 00:00:11,040
+so hello there and welcome to another
+
+2
+00:00:11,040 --> 00:00:13,559
+tutorial my name is hen Baki and this
+
+3
+00:00:13,559 --> 00:00:15,120
+time we're going to be going over my
+
+4
+00:00:15,120 --> 00:00:19,720
+first iot video so to begin what is iot
+
+5
+00:00:19,720 --> 00:00:21,480
+I will be releasing another video on the
+
+6
+00:00:21,480 --> 00:00:23,599
+topic really going into depth about what
+
+7
+00:00:23,599 --> 00:00:26,160
+iot is and what it means however I'm
+
+8
+00:00:26,160 --> 00:00:28,119
+just going to quickly explain it
+
+9
+00:00:28,119 --> 00:00:29,240
+Internet of Things is quite
+
+10
+00:00:29,240 --> 00:00:31,039
+self-explanatory
+
+11
+00:00:31,039 --> 00:00:32,800
+it's literally just lots of things
+
+12
+00:00:32,800 --> 00:00:34,360
+connected to the internet so they can
+
+13
+00:00:34,360 --> 00:00:36,040
+all they can take their data and get
+
+14
+00:00:36,040 --> 00:00:37,960
+them analyzed by something like IBM
+
+15
+00:00:37,960 --> 00:00:39,920
+Watson which uses machine learning in
+
+16
+00:00:39,920 --> 00:00:43,399
+order to benefit you or someone else or
+
+17
+00:00:43,399 --> 00:00:47,079
+something for example your exercise
+
+18
+00:00:47,079 --> 00:00:48,719
+machines like your treadmill could
+
+19
+00:00:48,719 --> 00:00:50,960
+connect to your Apple watch and it could
+
+20
+00:00:50,960 --> 00:00:53,199
+give Health Data or exercise data and
+
+21
+00:00:53,199 --> 00:00:54,520
+your Apple watch could then send that to
+
+22
+00:00:54,520 --> 00:00:57,000
+your iPhone and have that processed by
+
+23
+00:00:57,000 --> 00:01:00,199
+Watson algorithms and stuff and finally
+
+24
+00:01:00,199 --> 00:01:02,440
+give you output in the form of what
+
+25
+00:01:02,440 --> 00:01:04,640
+workouts you should do how many calories
+
+26
+00:01:04,640 --> 00:01:06,720
+you burnt how what sort of meals you
+
+27
+00:01:06,720 --> 00:01:08,119
+should have if you want something really
+
+28
+00:01:08,119 --> 00:01:09,920
+faing but least calories that sort of
+
+29
+00:01:09,920 --> 00:01:11,479
+thing how much have you exercised have
+
+30
+00:01:11,479 --> 00:01:13,240
+you gone over your goal are you going
+
+31
+00:01:13,240 --> 00:01:16,880
+under your goal stuff like that and so
+
+32
+00:01:16,880 --> 00:01:18,360
+again tradeoff analytics with another
+
+33
+00:01:18,360 --> 00:01:20,720
+Watson service would be great for that
+
+34
+00:01:20,720 --> 00:01:22,840
+but continuing that's basically what iot
+
+35
+00:01:22,840 --> 00:01:25,799
+is however today I'm going to be showing
+
+36
+00:01:25,799 --> 00:01:28,680
+you how to be how to create a starter
+
+37
+00:01:28,680 --> 00:01:32,640
+iot app in Blu miix and so actually I I
+
+38
+00:01:32,640 --> 00:01:35,439
+met up with uh Marcus van kempen uh who
+
+39
+00:01:35,439 --> 00:01:38,240
+is an executive architect at IBM a few
+
+40
+00:01:38,240 --> 00:01:41,000
+days ago uh and so we were discussing
+
+41
+00:01:41,000 --> 00:01:43,680
+things like uh Watson hardware and
+
+42
+00:01:43,680 --> 00:01:46,240
+especially iot because that's where he's
+
+43
+00:01:46,240 --> 00:01:49,520
+sort of um working uh and so you know he
+
+44
+00:01:49,520 --> 00:01:51,320
+taught me a bit about this iot stuff
+
+45
+00:01:51,320 --> 00:01:53,719
+with blue miix and so as part of my
+
+46
+00:01:53,719 --> 00:01:57,360
+knowledge sharing uh t bakshi uh slogan
+
+47
+00:01:57,360 --> 00:01:59,479
+uh I'm going to be sharing my knowledge
+
+48
+00:01:59,479 --> 00:02:02,280
+about this with you so let's begin uh
+
+49
+00:02:02,280 --> 00:02:04,680
+and so to start now first of all I'm
+
+50
+00:02:04,680 --> 00:02:08,000
+going to be uh bringing to your eyes
+
+51
+00:02:08,000 --> 00:02:09,560
+another device that you probably have
+
+52
+00:02:09,560 --> 00:02:13,239
+not yet heard of it's called the ti uh
+
+53
+00:02:13,239 --> 00:02:16,519
+you know what give me one second oh
+
+54
+00:02:16,519 --> 00:02:18,920
+never mind about that okay so
+
+55
+00:02:18,920 --> 00:02:22,640
+TI sendor
+
+56
+00:02:23,800 --> 00:02:26,480
+kit now the ti sensor kit is just a
+
+57
+00:02:26,480 --> 00:02:29,160
+little device sometimes if you get it in
+
+58
+00:02:29,160 --> 00:02:31,879
+a red case I mean it could look like
+
+59
+00:02:31,879 --> 00:02:34,879
+this but never mind that it looks
+
+60
+00:02:34,879 --> 00:02:37,160
+however but basically it's a the ti
+
+61
+00:02:37,160 --> 00:02:39,800
+Texas instrument sensor kit has 14
+
+62
+00:02:39,800 --> 00:02:42,920
+sensors on there including humidity
+
+63
+00:02:42,920 --> 00:02:46,000
+temperature accelerometer gyroscope
+
+64
+00:02:46,000 --> 00:02:50,560
+magnetometer and uh the light meter
+
+65
+00:02:50,560 --> 00:02:52,879
+um and lots of things like that
+
+66
+00:02:52,879 --> 00:02:55,959
+basically um and so you know it has 14
+
+67
+00:02:55,959 --> 00:02:58,560
+sensors on there uh and all of them are
+
+68
+00:02:58,560 --> 00:03:00,760
+accessible via via
+
+69
+00:03:00,760 --> 00:03:03,640
+Bluetooth also one more device you
+
+70
+00:03:03,640 --> 00:03:07,360
+probably have heard of your
+
+71
+00:03:07,360 --> 00:03:10,000
+phone is something you're probably may
+
+72
+00:03:10,000 --> 00:03:13,760
+be using right now but uh basically you
+
+73
+00:03:13,760 --> 00:03:15,720
+all know what a phone looks like and all
+
+74
+00:03:15,720 --> 00:03:17,920
+phone looks different but basically it
+
+75
+00:03:17,920 --> 00:03:21,640
+has one main sensor that no JS can
+
+76
+00:03:21,640 --> 00:03:26,959
+easily access which is the location
+
+77
+00:03:26,959 --> 00:03:30,599
+sensor okay and so B basically what
+
+78
+00:03:30,599 --> 00:03:31,680
+we're going to do is we're going to use
+
+79
+00:03:31,680 --> 00:03:35,080
+a node.js app coded by Marcus um and so
+
+80
+00:03:35,080 --> 00:03:37,000
+basically we're going
+
+81
+00:03:37,000 --> 00:03:40,560
+to use the location sensor on the phone
+
+82
+00:03:40,560 --> 00:03:42,799
+to Output stuff on node red which is a
+
+83
+00:03:42,799 --> 00:03:44,239
+Blu miix service and also something
+
+84
+00:03:44,239 --> 00:03:46,640
+created by IBM and then we're also going
+
+85
+00:03:46,640 --> 00:03:49,319
+to use later the sensor kit with node
+
+86
+00:03:49,319 --> 00:03:52,319
+red and output sensor data but then in
+
+87
+00:03:52,319 --> 00:03:54,200
+part two actually I'm going to be
+
+88
+00:03:54,200 --> 00:03:55,840
+describing to actually how to create
+
+89
+00:03:55,840 --> 00:03:58,159
+this stuff uh and then in part three I'm
+
+90
+00:03:58,159 --> 00:04:00,120
+going to be showing you a actual sort of
+
+91
+00:04:00,120 --> 00:04:03,680
+practical example okay let's
+
+92
+00:04:03,680 --> 00:04:07,040
+continue so now let's look at the blumi
+
+93
+00:04:07,040 --> 00:04:09,159
+side of things now in blue
+
+94
+00:04:09,159 --> 00:04:12,480
+miix all we're really going to do is
+
+95
+00:04:12,480 --> 00:04:15,320
+first of all um
+
+96
+00:04:15,320 --> 00:04:19,320
+deploy um
+
+97
+00:04:20,440 --> 00:04:25,240
+sorry we're going to
+
+98
+00:04:26,120 --> 00:04:30,120
+deploy Marcus
+
+99
+00:04:31,560 --> 00:04:35,360
+sample so basically um Marcus has
+
+100
+00:04:35,360 --> 00:04:37,479
+prepared some sample code for us to work
+
+101
+00:04:37,479 --> 00:04:39,400
+off of and so we're going to deploy that
+
+102
+00:04:39,400 --> 00:04:42,639
+to Blu miix and then we're going to
+
+103
+00:04:42,639 --> 00:04:45,280
+create a
+
+104
+00:04:45,280 --> 00:04:48,000
+node
+
+105
+00:04:48,000 --> 00:04:51,560
+red starter
+
+106
+00:04:51,759 --> 00:04:54,560
+app okay so a node red
+
+107
+00:04:54,560 --> 00:04:56,720
+starter so that's basically all we need
+
+108
+00:04:56,720 --> 00:04:59,919
+to do on the Bloomix side however
+
+109
+00:04:59,919 --> 00:05:01,560
+there's also going to you're going to
+
+110
+00:05:01,560 --> 00:05:04,039
+have to use another device called a
+
+111
+00:05:04,039 --> 00:05:06,880
+Macbook or a Mac actually just Mac OSX
+
+112
+00:05:06,880 --> 00:05:08,919
+the operating system and so basically
+
+113
+00:05:08,919 --> 00:05:10,720
+you have to have a Mac with Bluetooth
+
+114
+00:05:10,720 --> 00:05:14,520
+low energy uh enabled Hardware I mean
+
+115
+00:05:14,520 --> 00:05:16,080
+this could work for Windows and Linux
+
+116
+00:05:16,080 --> 00:05:18,759
+but I will I might be putting links in
+
+117
+00:05:18,759 --> 00:05:21,360
+the description uh that contain links to
+
+118
+00:05:21,360 --> 00:05:23,520
+repos that may help you uh with
+
+119
+00:05:23,520 --> 00:05:26,160
+connecting the ti sensor kit to uh Linux
+
+120
+00:05:26,160 --> 00:05:27,680
+or Windows but then again you have to
+
+121
+00:05:27,680 --> 00:05:29,759
+have Bluetooth low energy on your system
+
+122
+00:05:29,759 --> 00:05:32,120
+I'm not exactly sure if uh there are
+
+123
+00:05:32,120 --> 00:05:33,560
+scripts online for that but I will try
+
+124
+00:05:33,560 --> 00:05:34,960
+to find them and put them in the
+
+125
+00:05:34,960 --> 00:05:37,080
+description if they are
+
+126
+00:05:37,080 --> 00:05:39,440
+existing okay so now first of all what
+
+127
+00:05:39,440 --> 00:05:43,080
+our goal is is to take this phone sensor
+
+128
+00:05:43,080 --> 00:05:45,759
+data location sensor data
+
+129
+00:05:45,759 --> 00:05:48,039
+specifically and bring it over to Blue
+
+130
+00:05:48,039 --> 00:05:51,560
+miix and specifically debug it into node
+
+131
+00:05:51,560 --> 00:05:53,919
+red how are we going to do this let's
+
+132
+00:05:53,919 --> 00:05:57,800
+begin once we deploy Marcus's sample
+
+133
+00:05:57,800 --> 00:05:59,039
+this is essentially going to be
+
+134
+00:05:59,039 --> 00:06:02,039
+accessible from both node red and the
+
+135
+00:06:02,039 --> 00:06:03,560
+phone so what we're going to do is once
+
+136
+00:06:03,560 --> 00:06:05,960
+we have the sort of host name in Blu
+
+137
+00:06:05,960 --> 00:06:07,360
+miix I'm sure you've used Blu miix
+
+138
+00:06:07,360 --> 00:06:09,319
+before once we have a host name in Blu
+
+139
+00:06:09,319 --> 00:06:11,960
+miix uh then we're going to take that
+
+140
+00:06:11,960 --> 00:06:16,280
+host name and run that website on to our
+
+141
+00:06:16,280 --> 00:06:18,199
+phone so we're going
+
+142
+00:06:18,199 --> 00:06:21,599
+to open up the website on our phone now
+
+143
+00:06:21,599 --> 00:06:23,440
+it's going to ask uh first of all if
+
+144
+00:06:23,440 --> 00:06:25,840
+you're on iOS It'll ask you if you can I
+
+145
+00:06:25,840 --> 00:06:27,080
+think Android does this as well but
+
+146
+00:06:27,080 --> 00:06:29,599
+it'll ask you uh if you want if you like
+
+147
+00:06:29,599 --> 00:06:32,000
+to allow this website to access your
+
+148
+00:06:32,000 --> 00:06:34,280
+location sensors and probably say yes
+
+149
+00:06:34,280 --> 00:06:35,840
+because of course you want it to be able
+
+150
+00:06:35,840 --> 00:06:37,000
+to access your
+
+151
+00:06:37,000 --> 00:06:39,720
+location then uh It'll ask you to enter
+
+152
+00:06:39,720 --> 00:06:42,599
+a um unique identifier for your phone
+
+153
+00:06:42,599 --> 00:06:45,039
+which I mean anything tan May whatever
+
+154
+00:06:45,039 --> 00:06:47,240
+will work your name actually but it must
+
+155
+00:06:47,240 --> 00:06:50,280
+contain only letters and numbers uh no
+
+156
+00:06:50,280 --> 00:06:54,039
+spaces uh and so uh once that's done uh
+
+157
+00:06:54,039 --> 00:06:56,840
+this will start posting um location
+
+158
+00:06:56,840 --> 00:07:01,360
+sensor data into the uh cloud and DB
+
+159
+00:07:01,360 --> 00:07:05,560
+database uh on the app uh and so now
+
+160
+00:07:05,560 --> 00:07:08,520
+this also this app also contains a iot
+
+161
+00:07:08,520 --> 00:07:11,960
+starter Foundation kit Service uh and so
+
+162
+00:07:11,960 --> 00:07:14,680
+basically that uh service can be
+
+163
+00:07:14,680 --> 00:07:17,360
+connected with node red so let's just
+
+164
+00:07:17,360 --> 00:07:20,879
+say we have that iot service here and so
+
+165
+00:07:20,879 --> 00:07:22,160
+basically what I'm going to do is I'm
+
+166
+00:07:22,160 --> 00:07:25,440
+going to connect Marcus's deploy app
+
+167
+00:07:25,440 --> 00:07:27,960
+deployed app to this iot and then this
+
+168
+00:07:27,960 --> 00:07:31,639
+iot into no node red and then what we
+
+169
+00:07:31,639 --> 00:07:36,280
+can do is from node red print out stuff
+
+170
+00:07:36,280 --> 00:07:41,759
+so we can print out location sensor
+
+171
+00:07:43,000 --> 00:07:48,039
+data location data okay that's that
+
+172
+00:07:48,039 --> 00:07:50,720
+that's how we would get location sensor
+
+173
+00:07:50,720 --> 00:07:53,440
+data from our phone whether it be
+
+174
+00:07:53,440 --> 00:07:57,199
+Android iOS whatever we're going to take
+
+175
+00:07:57,199 --> 00:07:59,919
+this put it into Blu miix specifically
+
+176
+00:07:59,919 --> 00:08:01,800
+the app which goes to an iot Foundation
+
+177
+00:08:01,800 --> 00:08:05,520
+starter kit um Service uh come over here
+
+178
+00:08:05,520 --> 00:08:07,280
+uh and then goes into the node red
+
+179
+00:08:07,280 --> 00:08:09,159
+starter which will then print out
+
+180
+00:08:09,159 --> 00:08:12,520
+location data from the phone that's that
+
+181
+00:08:12,520 --> 00:08:15,159
+but how are we then going to connect our
+
+182
+00:08:15,159 --> 00:08:18,120
+sensor kit to Blu miix well this is how
+
+183
+00:08:18,120 --> 00:08:20,240
+do we do it how we do it first of all
+
+184
+00:08:20,240 --> 00:08:21,919
+we're going to configure some settings
+
+185
+00:08:21,919 --> 00:08:24,400
+in the iot we're going to um start
+
+186
+00:08:24,400 --> 00:08:27,080
+working here and stuff so nothing really
+
+187
+00:08:27,080 --> 00:08:28,440
+that I can explain right now we're going
+
+188
+00:08:28,440 --> 00:08:29,759
+to have to do that in the implementation
+
+189
+00:08:29,759 --> 00:08:32,120
+part which is the next part okay so in
+
+190
+00:08:32,120 --> 00:08:34,159
+the iot we're going to do some settings
+
+191
+00:08:34,159 --> 00:08:36,719
+fiddle around here and there uh so they
+
+192
+00:08:36,719 --> 00:08:40,320
+can actually recognize the sensor kit
+
+193
+00:08:40,320 --> 00:08:42,479
+however next what we're going to do is
+
+194
+00:08:42,479 --> 00:08:44,080
+pretend actually what we're going to do
+
+195
+00:08:44,080 --> 00:08:48,480
+is via Bluetooth low energy b l e
+
+196
+00:08:48,480 --> 00:08:51,880
+Bluetooth low energy uh we're going
+
+197
+00:08:51,880 --> 00:08:57,120
+to establish a sort of bir
+
+198
+00:08:57,120 --> 00:09:00,880
+directional communication protocol
+
+199
+00:09:00,880 --> 00:09:03,120
+which can essentially allow the sensor
+
+200
+00:09:03,120 --> 00:09:05,959
+kit and the Mac to communicate with each
+
+201
+00:09:05,959 --> 00:09:08,240
+other and then what we're going to do is
+
+202
+00:09:08,240 --> 00:09:09,360
+in a
+
+203
+00:09:09,360 --> 00:09:13,079
+nodejs I hope you can see this
+
+204
+00:09:13,079 --> 00:09:17,360
+node.js um thing in the nodejs script in
+
+205
+00:09:17,360 --> 00:09:21,480
+the Mac uh side we are actually going to
+
+206
+00:09:21,480 --> 00:09:25,040
+take this BL this uh TI sensor kit um
+
+207
+00:09:25,040 --> 00:09:27,240
+location data magnetometer data every
+
+208
+00:09:27,240 --> 00:09:29,440
+single for every single one of the 14
+
+209
+00:09:29,440 --> 00:09:32,440
+sensors on this uh little board we're
+
+210
+00:09:32,440 --> 00:09:35,440
+going to take that sensor data uh bring
+
+211
+00:09:35,440 --> 00:09:39,959
+it into node.js and then into straight
+
+212
+00:09:39,959 --> 00:09:42,480
+skip Marcus's app it's just going to go
+
+213
+00:09:42,480 --> 00:09:45,160
+straight into the iot service which of
+
+214
+00:09:45,160 --> 00:09:47,519
+course node red is already connected to
+
+215
+00:09:47,519 --> 00:09:51,240
+and so then finally we can print out
+
+216
+00:09:51,240 --> 00:09:54,680
+TI uh sensor kit SK
+
+217
+00:09:54,680 --> 00:09:59,720
+data now what is an example use of this
+
+218
+00:09:59,720 --> 00:10:02,240
+sensor kit well let me
+
+219
+00:10:02,240 --> 00:10:05,040
+explain now let's pretend now in this
+
+220
+00:10:05,040 --> 00:10:08,000
+example we're using location data so
+
+221
+00:10:08,000 --> 00:10:10,760
+since the sensor kit has acceler uh
+
+222
+00:10:10,760 --> 00:10:13,680
+acceleration uh and motion uh motion
+
+223
+00:10:13,680 --> 00:10:16,440
+location data let's say you're shaking
+
+224
+00:10:16,440 --> 00:10:19,240
+it really fast like just really shaking
+
+225
+00:10:19,240 --> 00:10:22,360
+it it'll start speaking I mean not
+
+226
+00:10:22,360 --> 00:10:23,440
+speaking because it doesn't have a
+
+227
+00:10:23,440 --> 00:10:25,279
+speaker on board but it can actually
+
+228
+00:10:25,279 --> 00:10:27,160
+print out to node red please stop
+
+229
+00:10:27,160 --> 00:10:30,120
+shaking me something like that how and
+
+230
+00:10:30,120 --> 00:10:32,040
+let's say you bring it down really low
+
+231
+00:10:32,040 --> 00:10:34,320
+it's going to use that location data and
+
+232
+00:10:34,320 --> 00:10:37,480
+print out to to node red please please
+
+233
+00:10:37,480 --> 00:10:40,160
+raise me up something like that and so
+
+234
+00:10:40,160 --> 00:10:42,560
+then you can continue on and say get the
+
+235
+00:10:42,560 --> 00:10:44,279
+magnet away from me if the magnet
+
+236
+00:10:44,279 --> 00:10:46,639
+magnetometer data is really high stuff
+
+237
+00:10:46,639 --> 00:10:50,399
+like that that's just an idea so now uh
+
+238
+00:10:50,399 --> 00:10:51,360
+in the next part we're going to be
+
+239
+00:10:51,360 --> 00:10:52,880
+talking about uh how to implement this
+
+240
+00:10:52,880 --> 00:10:54,920
+in blue mix and then some more practical
+
+241
+00:10:54,920 --> 00:10:57,200
+examples like please pick me up from the
+
+242
+00:10:57,200 --> 00:10:59,399
+ground that's going to be it for today I
+
+243
+00:10:59,399 --> 00:11:00,600
+hope you enjoyed if you did please
+
+244
+00:11:00,600 --> 00:11:03,079
+contact me via Twitter at tajim Manny if
+
+245
+00:11:03,079 --> 00:11:05,680
+you want to contact me on my email tajim
+
+246
+00:11:05,680 --> 00:11:08,000
+Manny gmail.com comment down below if
+
+247
+00:11:08,000 --> 00:11:09,680
+you have any more questions suggestions
+
+248
+00:11:09,680 --> 00:11:11,800
+or feedback you can also email me a
+
+249
+00:11:11,800 --> 00:11:14,600
+video question uh if you have uh a video
+
+250
+00:11:14,600 --> 00:11:15,639
+question of course and I might just
+
+251
+00:11:15,639 --> 00:11:17,440
+feature it in one of my next videos
+
+252
+00:11:17,440 --> 00:11:18,800
+that's going to be it GitHub 10 and
+
+253
+00:11:18,800 --> 00:11:21,000
+beond 3 hope you enjoyed the video If
+
+254
+00:11:21,000 --> 00:11:22,200
+You did leave a like please and
+
+255
+00:11:22,200 --> 00:11:24,680
+subscribe does really help out for me uh
+
+256
+00:11:24,680 --> 00:11:26,800
+and that's going to be it for this video
+
+257
+00:11:26,800 --> 00:11:29,800
+goodbye

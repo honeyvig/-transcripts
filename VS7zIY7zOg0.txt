@@ -1,0 +1,1555 @@
+1
+00:00:00,399 --> 00:00:02,159
+so hello there and welcome to another
+
+2
+00:00:02,159 --> 00:00:04,080
+tutorial my name is tanmay bakshi and
+
+3
+00:00:04,080 --> 00:00:04,480
+today
+
+4
+00:00:04,480 --> 00:00:05,680
+we're going to be taking a look at how
+
+5
+00:00:05,680 --> 00:00:07,680
+you can modify the python interpreter to
+
+6
+00:00:07,680 --> 00:00:09,760
+add your own custom functionality
+
+7
+00:00:09,760 --> 00:00:11,200
+this is a really interesting topic and
+
+8
+00:00:11,200 --> 00:00:12,960
+before i get into it i do want to start
+
+9
+00:00:12,960 --> 00:00:14,240
+off by saying that if you enjoy this
+
+10
+00:00:14,240 --> 00:00:15,679
+kind of content you want to see more of
+
+11
+00:00:15,679 --> 00:00:17,039
+it please do make sure to subscribe to
+
+12
+00:00:17,039 --> 00:00:18,400
+the channel as it really does help out a
+
+13
+00:00:18,400 --> 00:00:20,000
+lot and make sure to like the video if
+
+14
+00:00:20,000 --> 00:00:21,600
+you did enjoy it turn on notifications
+
+15
+00:00:21,600 --> 00:00:23,039
+so you know when i release content just
+
+16
+00:00:23,039 --> 00:00:24,320
+like this one today
+
+17
+00:00:24,320 --> 00:00:25,840
+and if you have any questions
+
+18
+00:00:25,840 --> 00:00:27,199
+suggestions or feedback feel free to
+
+19
+00:00:27,199 --> 00:00:28,320
+leave it down in the comment section
+
+20
+00:00:28,320 --> 00:00:28,880
+below
+
+21
+00:00:28,880 --> 00:00:30,960
+and i'd love to get in touch now diving
+
+22
+00:00:30,960 --> 00:00:32,239
+right into this first of all
+
+23
+00:00:32,239 --> 00:00:34,079
+why would you want to modify the python
+
+24
+00:00:34,079 --> 00:00:35,280
+interpreter well
+
+25
+00:00:35,280 --> 00:00:37,600
+i got into this when a couple of weeks
+
+26
+00:00:37,600 --> 00:00:39,840
+ago one of my friends reached out to me
+
+27
+00:00:39,840 --> 00:00:41,760
+they were working on an assignment and
+
+28
+00:00:41,760 --> 00:00:43,120
+as part of this assignment they wanted
+
+29
+00:00:43,120 --> 00:00:45,200
+to look at the performance of allocating
+
+30
+00:00:45,200 --> 00:00:46,399
+lists or arrays
+
+31
+00:00:46,399 --> 00:00:48,800
+within python and i thought well
+
+32
+00:00:48,800 --> 00:00:50,320
+wouldn't it be interesting to not only
+
+33
+00:00:50,320 --> 00:00:52,480
+take a look at the performance of lists
+
+34
+00:00:52,480 --> 00:00:54,640
+but also see what's happening internally
+
+35
+00:00:54,640 --> 00:00:56,160
+under the hood within the interpreter
+
+36
+00:00:56,160 --> 00:00:57,120
+whenever you want to
+
+37
+00:00:57,120 --> 00:00:59,920
+say append something to a list and so i
+
+38
+00:00:59,920 --> 00:01:01,600
+did and this led me to this whole
+
+39
+00:01:01,600 --> 00:01:03,280
+journey of modifying the python
+
+40
+00:01:03,280 --> 00:01:04,960
+interpreter to get it to do
+
+41
+00:01:04,960 --> 00:01:08,240
+what i want it to do now before i get
+
+42
+00:01:08,240 --> 00:01:09,840
+deeper into that though
+
+43
+00:01:09,840 --> 00:01:11,520
+i want to start off by explaining a
+
+44
+00:01:11,520 --> 00:01:13,200
+little bit more about how lists
+
+45
+00:01:13,200 --> 00:01:15,360
+work in programming languages in general
+
+46
+00:01:15,360 --> 00:01:16,560
+and then we'll get to modifying the
+
+47
+00:01:16,560 --> 00:01:17,840
+python interpreter
+
+48
+00:01:17,840 --> 00:01:20,320
+if you already know how how this works
+
+49
+00:01:20,320 --> 00:01:21,680
+you can skip over to the next chapter of
+
+50
+00:01:21,680 --> 00:01:22,320
+the video
+
+51
+00:01:22,320 --> 00:01:23,840
+where i actually explain how to modify
+
+52
+00:01:23,840 --> 00:01:25,520
+the python interpreter but first let me
+
+53
+00:01:25,520 --> 00:01:27,759
+explain how lists and sort of resizable
+
+54
+00:01:27,759 --> 00:01:30,240
+arrays work in general now let's just
+
+55
+00:01:30,240 --> 00:01:31,280
+say you're working with the c
+
+56
+00:01:31,280 --> 00:01:32,720
+programming language of course let's
+
+57
+00:01:32,720 --> 00:01:34,159
+just say you want to store a collection
+
+58
+00:01:34,159 --> 00:01:34,960
+of numbers
+
+59
+00:01:34,960 --> 00:01:36,400
+what you would usually do is you would
+
+60
+00:01:36,400 --> 00:01:38,400
+say run a malloc for a certain number of
+
+61
+00:01:38,400 --> 00:01:39,280
+integers
+
+62
+00:01:39,280 --> 00:01:41,280
+and your operating system your kernel
+
+63
+00:01:41,280 --> 00:01:43,200
+rather would give you a memory buffer
+
+64
+00:01:43,200 --> 00:01:44,720
+and within this memory buffer you're now
+
+65
+00:01:44,720 --> 00:01:45,439
+free
+
+66
+00:01:45,439 --> 00:01:48,560
+to store whatever data you want but
+
+67
+00:01:48,560 --> 00:01:49,680
+here's the thing
+
+68
+00:01:49,680 --> 00:01:52,159
+this memory buffer is technically not a
+
+69
+00:01:52,159 --> 00:01:54,560
+resizable array in the way that we think
+
+70
+00:01:54,560 --> 00:01:55,840
+of it in higher level programming
+
+71
+00:01:55,840 --> 00:01:57,920
+languages like javascript or python or
+
+72
+00:01:57,920 --> 00:01:58,560
+swift
+
+73
+00:01:58,560 --> 00:02:01,520
+it's a constant sized memory buffer so
+
+74
+00:02:01,520 --> 00:02:03,200
+you can't just append things to it
+
+75
+00:02:03,200 --> 00:02:05,200
+willy-nilly you have to use the contents
+
+76
+00:02:05,200 --> 00:02:06,799
+of the memory buffer that you were given
+
+77
+00:02:06,799 --> 00:02:07,360
+so
+
+78
+00:02:07,360 --> 00:02:08,879
+let's just say you start off having a
+
+79
+00:02:08,879 --> 00:02:10,879
+collection of just a single number
+
+80
+00:02:10,879 --> 00:02:12,720
+but now you want to add a second number
+
+81
+00:02:12,720 --> 00:02:14,560
+how do you do that exactly
+
+82
+00:02:14,560 --> 00:02:16,560
+well your kernel more than likely also
+
+83
+00:02:16,560 --> 00:02:18,239
+supports another operation
+
+84
+00:02:18,239 --> 00:02:21,200
+called a real lock what a real lock does
+
+85
+00:02:21,200 --> 00:02:22,959
+is it takes your original memory buffer
+
+86
+00:02:22,959 --> 00:02:24,800
+that you've already mallocked
+
+87
+00:02:24,800 --> 00:02:26,400
+and it effectively helps you increase
+
+88
+00:02:26,400 --> 00:02:28,080
+the size of that memory buffer
+
+89
+00:02:28,080 --> 00:02:29,680
+now internally within your kernel there
+
+90
+00:02:29,680 --> 00:02:31,200
+are two things that can happen
+
+91
+00:02:31,200 --> 00:02:34,080
+either a your kernel says this memory
+
+92
+00:02:34,080 --> 00:02:36,239
+buffer is already large enough so i'll
+
+93
+00:02:36,239 --> 00:02:37,920
+just say all right you can use one extra
+
+94
+00:02:37,920 --> 00:02:39,599
+space within it
+
+95
+00:02:39,599 --> 00:02:41,920
+or let's just say beside your memory
+
+96
+00:02:41,920 --> 00:02:43,599
+buffer there's a different buffer that's
+
+97
+00:02:43,599 --> 00:02:45,599
+being used either by a different program
+
+98
+00:02:45,599 --> 00:02:46,239
+or by
+
+99
+00:02:46,239 --> 00:02:48,560
+your own program somewhere else then
+
+100
+00:02:48,560 --> 00:02:50,080
+what the operating system will do is
+
+101
+00:02:50,080 --> 00:02:52,400
+it'll allocate an entirely new buffer
+
+102
+00:02:52,400 --> 00:02:54,319
+copy over your contents and then free
+
+103
+00:02:54,319 --> 00:02:55,440
+the existing one
+
+104
+00:02:55,440 --> 00:02:57,599
+and then it'll return to you that new
+
+105
+00:02:57,599 --> 00:02:59,440
+buffer effectively no matter what
+
+106
+00:02:59,440 --> 00:03:00,800
+happens under the hood
+
+107
+00:03:00,800 --> 00:03:03,200
+you now have a new memory buffer with
+
+108
+00:03:03,200 --> 00:03:04,239
+this new size
+
+109
+00:03:04,239 --> 00:03:06,080
+that you can use so now you can insert
+
+110
+00:03:06,080 --> 00:03:07,680
+your second element and you can keep
+
+111
+00:03:07,680 --> 00:03:09,120
+doing this every time you want to append
+
+112
+00:03:09,120 --> 00:03:10,319
+something you can run another you can
+
+113
+00:03:10,319 --> 00:03:11,200
+run another
+
+114
+00:03:11,200 --> 00:03:13,440
+reallocation request in a lot of the
+
+115
+00:03:13,440 --> 00:03:15,360
+cases these reallocation requests are
+
+116
+00:03:15,360 --> 00:03:16,400
+really really cheap
+
+117
+00:03:16,400 --> 00:03:18,159
+because you just want to add like say
+
+118
+00:03:18,159 --> 00:03:19,680
+one more set of four bytes
+
+119
+00:03:19,680 --> 00:03:21,360
+and therefore the operating system can
+
+120
+00:03:21,360 --> 00:03:23,519
+mostly just extend the size your memory
+
+121
+00:03:23,519 --> 00:03:24,480
+buffer
+
+122
+00:03:24,480 --> 00:03:26,400
+but there are some cases where it can't
+
+123
+00:03:26,400 --> 00:03:28,400
+do that and it's forced to allocate a
+
+124
+00:03:28,400 --> 00:03:30,879
+new buffer and copy over your contents
+
+125
+00:03:30,879 --> 00:03:33,440
+that is slow it's a very expensive
+
+126
+00:03:33,440 --> 00:03:34,400
+operation
+
+127
+00:03:34,400 --> 00:03:36,319
+so as a programmer you want to minimize
+
+128
+00:03:36,319 --> 00:03:37,760
+the number of allocations and
+
+129
+00:03:37,760 --> 00:03:39,599
+reallocations that you do
+
+130
+00:03:39,599 --> 00:03:41,040
+especially because then you've got a
+
+131
+00:03:41,040 --> 00:03:43,599
+copy over the memory buffer
+
+132
+00:03:43,599 --> 00:03:45,840
+now how do you do this exactly well one
+
+133
+00:03:45,840 --> 00:03:47,280
+of the most effective ways of
+
+134
+00:03:47,280 --> 00:03:49,599
+implementing resizable arrays like this
+
+135
+00:03:49,599 --> 00:03:51,840
+is by effectively increasing the amount
+
+136
+00:03:51,840 --> 00:03:53,920
+of capacity you reallocate every single
+
+137
+00:03:53,920 --> 00:03:55,599
+time so maybe you start off
+
+138
+00:03:55,599 --> 00:03:58,480
+with a capacity for a single element but
+
+139
+00:03:58,480 --> 00:03:58,879
+then
+
+140
+00:03:58,879 --> 00:04:01,280
+the next time you try to append you
+
+141
+00:04:01,280 --> 00:04:02,640
+actually now have capacity for
+
+142
+00:04:02,640 --> 00:04:04,640
+two elements again that's normal you've
+
+143
+00:04:04,640 --> 00:04:06,640
+added one extra
+
+144
+00:04:06,640 --> 00:04:08,879
+element to your buffer but now when you
+
+145
+00:04:08,879 --> 00:04:10,000
+try to append a third
+
+146
+00:04:10,000 --> 00:04:11,760
+you don't just allocate three spaces you
+
+147
+00:04:11,760 --> 00:04:13,360
+allocate four spaces total
+
+148
+00:04:13,360 --> 00:04:14,879
+so you double the size of your memory
+
+149
+00:04:14,879 --> 00:04:17,199
+buffer then when you're at four you're
+
+150
+00:04:17,199 --> 00:04:18,560
+trying to append a fifth
+
+151
+00:04:18,560 --> 00:04:20,400
+you don't just add a fifth you go to
+
+152
+00:04:20,400 --> 00:04:21,840
+eight again you
+
+153
+00:04:21,840 --> 00:04:23,199
+double the capacity of your memory
+
+154
+00:04:23,199 --> 00:04:24,400
+buffer even if you're only just
+
+155
+00:04:24,400 --> 00:04:25,520
+inserting a fifth
+
+156
+00:04:25,520 --> 00:04:27,120
+what that means is that your sixth
+
+157
+00:04:27,120 --> 00:04:29,040
+seventh and eighth insert operations are
+
+158
+00:04:29,040 --> 00:04:31,280
+now completely free they're 01 cost
+
+159
+00:04:31,280 --> 00:04:32,720
+right it's it's literally just the speed
+
+160
+00:04:32,720 --> 00:04:34,400
+of how quickly you can insert something
+
+161
+00:04:34,400 --> 00:04:37,520
+into a particular spot in ram and if you
+
+162
+00:04:37,520 --> 00:04:38,800
+just keep doing this
+
+163
+00:04:38,800 --> 00:04:40,960
+then you will effectively have amortized
+
+164
+00:04:40,960 --> 00:04:42,320
+01 cost
+
+165
+00:04:42,320 --> 00:04:44,720
+for appending to an array that is how
+
+166
+00:04:44,720 --> 00:04:46,000
+resizable arrays work in these
+
+167
+00:04:46,000 --> 00:04:47,280
+programming languages
+
+168
+00:04:47,280 --> 00:04:50,000
+and effectively what i wanted to do was
+
+169
+00:04:50,000 --> 00:04:50,560
+track
+
+170
+00:04:50,560 --> 00:04:54,000
+within python how many sort of
+
+171
+00:04:54,000 --> 00:04:56,960
+how many individual elements it actually
+
+172
+00:04:56,960 --> 00:04:58,800
+allocates in advance when you try to
+
+173
+00:04:58,800 --> 00:05:00,000
+append something new
+
+174
+00:05:00,000 --> 00:05:02,479
+to a list and then figure out if we can
+
+175
+00:05:02,479 --> 00:05:04,400
+actually spot where the reallocations
+
+176
+00:05:04,400 --> 00:05:05,919
+happen in a timing graph
+
+177
+00:05:05,919 --> 00:05:07,360
+based off of spikes in the amount of
+
+178
+00:05:07,360 --> 00:05:08,960
+time it takes to append
+
+179
+00:05:08,960 --> 00:05:11,120
+a certain value to a list and well it
+
+180
+00:05:11,120 --> 00:05:12,000
+turns out
+
+181
+00:05:12,000 --> 00:05:14,160
+you can do that and so i went ahead and
+
+182
+00:05:14,160 --> 00:05:15,759
+modified the python interpreter to add
+
+183
+00:05:15,759 --> 00:05:17,440
+that functionality that i required and
+
+184
+00:05:17,440 --> 00:05:18,960
+now let's get a little bit deeper into
+
+185
+00:05:18,960 --> 00:05:21,199
+how i did that now python is special
+
+186
+00:05:21,199 --> 00:05:22,880
+it's an interpreted programming language
+
+187
+00:05:22,880 --> 00:05:24,400
+that means it's not compiled
+
+188
+00:05:24,400 --> 00:05:26,479
+that actually makes our work quite a lot
+
+189
+00:05:26,479 --> 00:05:27,600
+easier in this case
+
+190
+00:05:27,600 --> 00:05:29,520
+because if python were like swift or c
+
+191
+00:05:29,520 --> 00:05:31,680
+for example then i would need to modify
+
+192
+00:05:31,680 --> 00:05:33,520
+the underlying assembly code that they
+
+193
+00:05:33,520 --> 00:05:35,919
+generate however in python's case it's
+
+194
+00:05:35,919 --> 00:05:37,919
+never generating any assembly code for
+
+195
+00:05:37,919 --> 00:05:38,720
+your code
+
+196
+00:05:38,720 --> 00:05:40,720
+all it's doing is it's a program looking
+
+197
+00:05:40,720 --> 00:05:42,000
+through the code you've written
+
+198
+00:05:42,000 --> 00:05:43,680
+and executing it quite literally
+
+199
+00:05:43,680 --> 00:05:45,199
+practically line by line
+
+200
+00:05:45,199 --> 00:05:46,960
+it's a bit more complex than that it can
+
+201
+00:05:46,960 --> 00:05:49,039
+do some level of just-in-time byte code
+
+202
+00:05:49,039 --> 00:05:50,639
+compilation but you really don't need to
+
+203
+00:05:50,639 --> 00:05:51,600
+worry about that as
+
+204
+00:05:51,600 --> 00:05:54,800
+it's very rarely actually used uh
+
+205
+00:05:54,800 --> 00:05:56,400
+now getting into how this python
+
+206
+00:05:56,400 --> 00:05:57,680
+interpreter works let's just say you
+
+207
+00:05:57,680 --> 00:05:59,039
+were to create a new list within the
+
+208
+00:05:59,039 --> 00:06:00,240
+python language
+
+209
+00:06:00,240 --> 00:06:02,000
+well what happens is internally what the
+
+210
+00:06:02,000 --> 00:06:04,240
+interpreter's done is it's created a
+
+211
+00:06:04,240 --> 00:06:06,560
+backing structure within the c language
+
+212
+00:06:06,560 --> 00:06:08,160
+and that structure contains information
+
+213
+00:06:08,160 --> 00:06:09,840
+like for example the capacity of this
+
+214
+00:06:09,840 --> 00:06:10,800
+list
+
+215
+00:06:10,800 --> 00:06:12,240
+how many things are actually within the
+
+216
+00:06:12,240 --> 00:06:14,160
+list how much capacity you're using
+
+217
+00:06:14,160 --> 00:06:15,600
+as well as the actual pointer to the
+
+218
+00:06:15,600 --> 00:06:17,199
+memory buffer that is backing the list
+
+219
+00:06:17,199 --> 00:06:18,720
+in and of itself
+
+220
+00:06:18,720 --> 00:06:21,120
+now that structure you don't have access
+
+221
+00:06:21,120 --> 00:06:22,560
+to within python because you don't
+
+222
+00:06:22,560 --> 00:06:24,560
+exactly have raw access to c structures
+
+223
+00:06:24,560 --> 00:06:25,919
+in general in python
+
+224
+00:06:25,919 --> 00:06:27,199
+when you access the list you're
+
+225
+00:06:27,199 --> 00:06:29,199
+accessing a python class
+
+226
+00:06:29,199 --> 00:06:31,360
+that is internally backed by that
+
+227
+00:06:31,360 --> 00:06:34,479
+structure within the interpreter itself
+
+228
+00:06:34,479 --> 00:06:36,479
+and so whenever you append something to
+
+229
+00:06:36,479 --> 00:06:37,680
+a list you're really
+
+230
+00:06:37,680 --> 00:06:39,759
+you know through the call stack calling
+
+231
+00:06:39,759 --> 00:06:41,280
+a c function that's that's
+
+232
+00:06:41,280 --> 00:06:43,520
+working on appending uh to the buffer
+
+233
+00:06:43,520 --> 00:06:45,919
+within that list's internal structure
+
+234
+00:06:45,919 --> 00:06:48,639
+so here's my idea within that append
+
+235
+00:06:48,639 --> 00:06:49,440
+function
+
+236
+00:06:49,440 --> 00:06:51,599
+there is a call to another function that
+
+237
+00:06:51,599 --> 00:06:53,919
+is responsible for resizing the list
+
+238
+00:06:53,919 --> 00:06:56,800
+should that become necessary so if i
+
+239
+00:06:56,800 --> 00:06:59,280
+were to modify the resizing function
+
+240
+00:06:59,280 --> 00:07:02,080
+to somehow set some kind of flag of some
+
+241
+00:07:02,080 --> 00:07:04,160
+sort within the actual structure
+
+242
+00:07:04,160 --> 00:07:06,479
+whenever a resize is done then there's a
+
+243
+00:07:06,479 --> 00:07:08,560
+way that i could potentially detect
+
+244
+00:07:08,560 --> 00:07:11,039
+that flag from within my python code and
+
+245
+00:07:11,039 --> 00:07:11,759
+i would know
+
+246
+00:07:11,759 --> 00:07:14,800
+when the list has been resized how did i
+
+247
+00:07:14,800 --> 00:07:16,880
+do this exactly well first of all
+
+248
+00:07:16,880 --> 00:07:18,800
+i took a look at where the actual list
+
+249
+00:07:18,800 --> 00:07:20,800
+structure within c was located i found
+
+250
+00:07:20,800 --> 00:07:22,240
+that within a header file and you can
+
+251
+00:07:22,240 --> 00:07:23,120
+see that
+
+252
+00:07:23,120 --> 00:07:26,319
+now then i added an extra variable to
+
+253
+00:07:26,319 --> 00:07:28,080
+the structure for python's list
+
+254
+00:07:28,080 --> 00:07:29,440
+structure
+
+255
+00:07:29,440 --> 00:07:32,160
+and i call this variable was resized
+
+256
+00:07:32,160 --> 00:07:34,080
+it's an integer but i really treat it as
+
+257
+00:07:34,080 --> 00:07:35,440
+a boolean value
+
+258
+00:07:35,440 --> 00:07:38,160
+its value is either going to be 0 or 1 0
+
+259
+00:07:38,160 --> 00:07:40,000
+if the list was never resized or 1 if
+
+260
+00:07:40,000 --> 00:07:41,680
+the last append operation caused or
+
+261
+00:07:41,680 --> 00:07:43,680
+resize internally
+
+262
+00:07:43,680 --> 00:07:45,759
+then what i go ahead and do is modify
+
+263
+00:07:45,759 --> 00:07:48,080
+the code where python creates a new list
+
+264
+00:07:48,080 --> 00:07:50,080
+to initialize that variable to zero in
+
+265
+00:07:50,080 --> 00:07:51,599
+the beginning when someone creates a new
+
+266
+00:07:51,599 --> 00:07:52,160
+list
+
+267
+00:07:52,160 --> 00:07:54,000
+this is important because it previously
+
+268
+00:07:54,000 --> 00:07:55,440
+may be filled with garbage memory
+
+269
+00:07:55,440 --> 00:07:57,039
+from whoever was using the memory buffer
+
+270
+00:07:57,039 --> 00:07:59,680
+before malloc decided to give it to us
+
+271
+00:07:59,680 --> 00:08:02,000
+then within the resize operation if we
+
+272
+00:08:02,000 --> 00:08:04,000
+do go ahead and call reallock
+
+273
+00:08:04,000 --> 00:08:06,560
+i then set the was resized flag of the
+
+274
+00:08:06,560 --> 00:08:08,319
+python list object structure
+
+275
+00:08:08,319 --> 00:08:10,800
+to 1. this can tell me within my python
+
+276
+00:08:10,800 --> 00:08:12,800
+code that the list was resized
+
+277
+00:08:12,800 --> 00:08:14,160
+now i can go ahead and recompile the
+
+278
+00:08:14,160 --> 00:08:15,599
+python interpreter and that's right you
+
+279
+00:08:15,599 --> 00:08:16,080
+just
+
+280
+00:08:16,080 --> 00:08:17,680
+recompiled it from scratch you've
+
+281
+00:08:17,680 --> 00:08:19,599
+created your own build of python which
+
+282
+00:08:19,599 --> 00:08:20,639
+is pretty incredible
+
+283
+00:08:20,639 --> 00:08:22,479
+and i can go ahead and run it now a
+
+284
+00:08:22,479 --> 00:08:23,840
+couple of things to note
+
+285
+00:08:23,840 --> 00:08:26,479
+first of all the python programming
+
+286
+00:08:26,479 --> 00:08:27,280
+language
+
+287
+00:08:27,280 --> 00:08:29,280
+isn't actually what you run on your
+
+288
+00:08:29,280 --> 00:08:30,960
+computer python is a programming
+
+289
+00:08:30,960 --> 00:08:32,959
+language is only a specification
+
+290
+00:08:32,959 --> 00:08:35,039
+more than likely when you run python in
+
+291
+00:08:35,039 --> 00:08:36,399
+your terminal you're running what's
+
+292
+00:08:36,399 --> 00:08:37,039
+known as c
+
+293
+00:08:37,039 --> 00:08:38,479
+python which is a specific
+
+294
+00:08:38,479 --> 00:08:40,880
+implementation of the python programming
+
+295
+00:08:40,880 --> 00:08:42,560
+language specification
+
+296
+00:08:42,560 --> 00:08:43,839
+c python is what we're actually
+
+297
+00:08:43,839 --> 00:08:45,600
+modifying today it's entirely open
+
+298
+00:08:45,600 --> 00:08:46,640
+source
+
+299
+00:08:46,640 --> 00:08:48,720
+but once again here's the thing i just
+
+300
+00:08:48,720 --> 00:08:50,399
+added a flag to the list object
+
+301
+00:08:50,399 --> 00:08:51,519
+structure
+
+302
+00:08:51,519 --> 00:08:53,040
+but i don't have access to that
+
+303
+00:08:53,040 --> 00:08:55,519
+structure within python so what do i do
+
+304
+00:08:55,519 --> 00:08:57,279
+well what i decided to do was actually
+
+305
+00:08:57,279 --> 00:08:59,040
+write another bit of c code
+
+306
+00:08:59,040 --> 00:09:00,959
+this other bit of c code had knowledge
+
+307
+00:09:00,959 --> 00:09:02,480
+of what the python's list object
+
+308
+00:09:02,480 --> 00:09:04,000
+structure is because i imported that
+
+309
+00:09:04,000 --> 00:09:04,800
+header
+
+310
+00:09:04,800 --> 00:09:06,560
+and what i did was i basically created a
+
+311
+00:09:06,560 --> 00:09:08,480
+very simple function all this function
+
+312
+00:09:08,480 --> 00:09:10,320
+does is it takes the pointer to the
+
+313
+00:09:10,320 --> 00:09:12,240
+internal list object structure
+
+314
+00:09:12,240 --> 00:09:14,240
+and it returns to me the value of the
+
+315
+00:09:14,240 --> 00:09:15,440
+was resized flag
+
+316
+00:09:15,440 --> 00:09:16,959
+meaning i don't need to try and access
+
+317
+00:09:16,959 --> 00:09:18,800
+that flag directly from python because
+
+318
+00:09:18,800 --> 00:09:19,440
+now
+
+319
+00:09:19,440 --> 00:09:22,000
+i can just call this c code from python
+
+320
+00:09:22,000 --> 00:09:24,399
+to access the structure for me
+
+321
+00:09:24,399 --> 00:09:26,959
+and here's what's really convenient if
+
+322
+00:09:26,959 --> 00:09:28,880
+the was resized flag was already set to
+
+323
+00:09:28,880 --> 00:09:29,200
+one
+
+324
+00:09:29,200 --> 00:09:31,360
+it will return one to me but first it
+
+325
+00:09:31,360 --> 00:09:32,880
+will reset the flag to zero
+
+326
+00:09:32,880 --> 00:09:34,560
+meaning that if in the future another
+
+327
+00:09:34,560 --> 00:09:36,240
+append operation does a resize
+
+328
+00:09:36,240 --> 00:09:38,240
+the flag has been reset and i can detect
+
+329
+00:09:38,240 --> 00:09:39,680
+that in the future as well
+
+330
+00:09:39,680 --> 00:09:41,440
+then i put together a very simple python
+
+331
+00:09:41,440 --> 00:09:43,360
+script all it does is it puts together a
+
+332
+00:09:43,360 --> 00:09:43,920
+list
+
+333
+00:09:43,920 --> 00:09:45,440
+and continuously pens a bunch of
+
+334
+00:09:45,440 --> 00:09:47,360
+elements to it and every single time a
+
+335
+00:09:47,360 --> 00:09:49,040
+resize operation is detected
+
+336
+00:09:49,040 --> 00:09:50,959
+through my c code it goes ahead and
+
+337
+00:09:50,959 --> 00:09:52,160
+resets a counter
+
+338
+00:09:52,160 --> 00:09:54,320
+and it creates effectively a list of how
+
+339
+00:09:54,320 --> 00:09:55,920
+many elements were elapsed
+
+340
+00:09:55,920 --> 00:09:58,800
+between resize operations now let's go
+
+341
+00:09:58,800 --> 00:10:00,240
+ahead and run this code and see if it
+
+342
+00:10:00,240 --> 00:10:00,800
+works
+
+343
+00:10:00,800 --> 00:10:03,600
+and as you can see the python script
+
+344
+00:10:03,600 --> 00:10:04,959
+goes ahead and prints out
+
+345
+00:10:04,959 --> 00:10:07,760
+the number of elements elapsed between
+
+346
+00:10:07,760 --> 00:10:09,760
+individual resize elements
+
+347
+00:10:09,760 --> 00:10:11,839
+resize operations and as you can see
+
+348
+00:10:11,839 --> 00:10:12,800
+over time
+
+349
+00:10:12,800 --> 00:10:15,519
+it takes more and more append operations
+
+350
+00:10:15,519 --> 00:10:17,760
+in order to trigger a resize
+
+351
+00:10:17,760 --> 00:10:20,000
+that is why the append operation can
+
+352
+00:10:20,000 --> 00:10:21,279
+effectively be thought of
+
+353
+00:10:21,279 --> 00:10:23,760
+as having 01 cost because it amortizes
+
+354
+00:10:23,760 --> 00:10:25,279
+over time it averages out
+
+355
+00:10:25,279 --> 00:10:28,079
+to effectively having 01 cost you don't
+
+356
+00:10:28,079 --> 00:10:28,880
+need to worry
+
+357
+00:10:28,880 --> 00:10:32,000
+about those few times it's doing resizes
+
+358
+00:10:32,000 --> 00:10:33,680
+and that is how you can modify the
+
+359
+00:10:33,680 --> 00:10:35,680
+python interpreter to add your own
+
+360
+00:10:35,680 --> 00:10:37,440
+custom functionality i do hope you
+
+361
+00:10:37,440 --> 00:10:38,720
+enjoyed this tutorial but then again
+
+362
+00:10:38,720 --> 00:10:40,079
+this is just the tip of the iceberg
+
+363
+00:10:40,079 --> 00:10:42,079
+there is so much more you can do
+
+364
+00:10:42,079 --> 00:10:43,920
+by modifying the internals of these
+
+365
+00:10:43,920 --> 00:10:45,360
+programming languages
+
+366
+00:10:45,360 --> 00:10:46,800
+to do some really interesting stuff as a
+
+367
+00:10:46,800 --> 00:10:48,079
+matter of fact if you want to see me
+
+368
+00:10:48,079 --> 00:10:49,839
+modify a specific language to do a
+
+369
+00:10:49,839 --> 00:10:50,640
+specific thing
+
+370
+00:10:50,640 --> 00:10:52,240
+please do feel free to leave that
+
+371
+00:10:52,240 --> 00:10:53,600
+request down in the comments section
+
+372
+00:10:53,600 --> 00:10:54,640
+below
+
+373
+00:10:54,640 --> 00:10:56,240
+i'd absolutely love to take a look at it
+
+374
+00:10:56,240 --> 00:10:58,240
+and potentially create another youtube
+
+375
+00:10:58,240 --> 00:11:00,160
+video on modifying some more programming
+
+376
+00:11:00,160 --> 00:11:01,040
+languages
+
+377
+00:11:01,040 --> 00:11:02,320
+once again i do hope you enjoyed that
+
+378
+00:11:02,320 --> 00:11:03,760
+tutorial if you did please do make sure
+
+379
+00:11:03,760 --> 00:11:05,120
+to leave a like subscribe to the channel
+
+380
+00:11:05,120 --> 00:11:06,240
+if you enjoy this kind of content and
+
+381
+00:11:06,240 --> 00:11:07,440
+turn on notifications so you know
+
+382
+00:11:07,440 --> 00:11:09,360
+whenever i release a new video
+
+383
+00:11:09,360 --> 00:11:11,279
+and uh leave any questions suggestions
+
+384
+00:11:11,279 --> 00:11:12,560
+or feedback down in the comment section
+
+385
+00:11:12,560 --> 00:11:14,160
+below or reach out to me via
+
+386
+00:11:14,160 --> 00:11:15,680
+email or social media once again i'd
+
+387
+00:11:15,680 --> 00:11:17,279
+love to get in touch thank you very much
+
+388
+00:11:17,279 --> 00:11:17,600
+and
+
+389
+00:11:17,600 --> 00:11:20,480
+goodbye everybody

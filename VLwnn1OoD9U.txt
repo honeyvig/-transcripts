@@ -1,0 +1,2127 @@
+1
+00:00:00,919 --> 00:00:03,159
+so hello there my name is Henry bakshi
+
+2
+00:00:03,159 --> 00:00:04,440
+and this time we're going to be going
+
+3
+00:00:04,440 --> 00:00:06,919
+over a question that someone sent me so
+
+4
+00:00:06,919 --> 00:00:08,519
+let's take a look at the question that
+
+5
+00:00:08,519 --> 00:00:09,519
+they sent
+
+6
+00:00:09,519 --> 00:00:12,559
+me hi tan it's Paige I have a question
+
+7
+00:00:12,559 --> 00:00:14,920
+for you today what is the binary number
+
+8
+00:00:14,920 --> 00:00:17,600
+system that is used in computers also
+
+9
+00:00:17,600 --> 00:00:19,600
+how do I convert from decimals to Binary
+
+10
+00:00:19,600 --> 00:00:22,160
+and binary to decimals thank you I'll be
+
+11
+00:00:22,160 --> 00:00:23,439
+waiting for your new video to learn
+
+12
+00:00:23,439 --> 00:00:26,439
+about it so yeah that was the question
+
+13
+00:00:26,439 --> 00:00:28,840
+that Paige asked me so now I'm going to
+
+14
+00:00:28,840 --> 00:00:30,160
+be trying my best to solve the that
+
+15
+00:00:30,160 --> 00:00:31,680
+answer and also make a video in the
+
+16
+00:00:31,680 --> 00:00:34,120
+process let's get started so as you can
+
+17
+00:00:34,120 --> 00:00:36,879
+see today's topic is interchanging
+
+18
+00:00:36,879 --> 00:00:39,680
+between binary and decimal
+
+19
+00:00:39,680 --> 00:00:41,879
+systems so this is going to be one of my
+
+20
+00:00:41,879 --> 00:00:45,079
+first uh just algorithm tutorials no IOS
+
+21
+00:00:45,079 --> 00:00:48,000
+app involved here sorry uh as you know
+
+22
+00:00:48,000 --> 00:00:50,760
+I've already created an IOS app for this
+
+23
+00:00:50,760 --> 00:00:52,680
+um and so a link to that will be down in
+
+24
+00:00:52,680 --> 00:00:54,680
+the description uh it's a YouTube video
+
+25
+00:00:54,680 --> 00:00:58,079
+on my page however I decided to create a
+
+26
+00:00:58,079 --> 00:01:00,600
+new video about this because back then I
+
+27
+00:01:00,600 --> 00:01:02,199
+didn't really explain the algorithm as
+
+28
+00:01:02,199 --> 00:01:04,239
+much as the code uh so now I'm going to
+
+29
+00:01:04,239 --> 00:01:07,360
+be explaining just the algorithm uh very
+
+30
+00:01:07,360 --> 00:01:10,960
+much in depth giving a few examples uh I
+
+31
+00:01:10,960 --> 00:01:13,439
+also made my own uh good way to describe
+
+32
+00:01:13,439 --> 00:01:15,520
+the algorithm which I'll also show you
+
+33
+00:01:15,520 --> 00:01:17,360
+and let's get started I'm going to be
+
+34
+00:01:17,360 --> 00:01:18,640
+starting off with a little bit of an
+
+35
+00:01:18,640 --> 00:01:21,439
+easier concept such which is uh as you
+
+36
+00:01:21,439 --> 00:01:24,400
+guessed it decimal to Binary
+
+37
+00:01:24,400 --> 00:01:28,040
+okay so uh just take
+
+38
+00:01:28,040 --> 00:01:31,560
+this okay as you can see here let's just
+
+39
+00:01:31,560 --> 00:01:34,200
+get started so let's just say oh I don't
+
+40
+00:01:34,200 --> 00:01:35,759
+know let's just choose a random integer
+
+41
+00:01:35,759 --> 00:01:36,920
+something like
+
+42
+00:01:36,920 --> 00:01:41,000
+25 so we take a random integer like 25
+
+43
+00:01:41,000 --> 00:01:44,360
+now what would this be in binary you may
+
+44
+00:01:44,360 --> 00:01:48,439
+ask so 25 and binary which if you didn't
+
+45
+00:01:48,439 --> 00:01:50,040
+know is just a collection of ones and
+
+46
+00:01:50,040 --> 00:01:52,840
+zeros that computers like to read like
+
+47
+00:01:52,840 --> 00:01:55,439
+uh us humans would use a 10 uh number
+
+48
+00:01:55,439 --> 00:01:57,280
+system but computers they only
+
+49
+00:01:57,280 --> 00:01:59,479
+communicate in zeros and ones ons and
+
+50
+00:01:59,479 --> 00:02:04,240
+offs uh yes a no stuff like that okay so
+
+51
+00:02:04,240 --> 00:02:06,439
+let's get started and our conventional
+
+52
+00:02:06,439 --> 00:02:09,280
+method is to use two operators the
+
+53
+00:02:09,280 --> 00:02:12,280
+modulus and the divide in case you
+
+54
+00:02:12,280 --> 00:02:13,879
+didn't know what modulus is let's just
+
+55
+00:02:13,879 --> 00:02:19,360
+give you an example for example
+
+56
+00:02:19,840 --> 00:02:22,239
+16 uh
+
+57
+00:02:22,239 --> 00:02:27,120
+modulus 2 is equal to let's see
+
+58
+00:02:27,120 --> 00:02:31,160
+here first of all modulus
+
+59
+00:02:31,160 --> 00:02:33,879
+means the
+
+60
+00:02:36,640 --> 00:02:40,040
+remainder the
+
+61
+00:02:40,519 --> 00:02:42,720
+remainder
+
+62
+00:02:42,720 --> 00:02:46,720
+of a
+
+63
+00:02:47,319 --> 00:02:49,200
+division
+
+64
+00:02:49,200 --> 00:02:52,599
+question a
+
+65
+00:02:53,840 --> 00:02:57,560
+question so as you can see uh modulus is
+
+66
+00:02:57,560 --> 00:02:59,080
+just the remainder of a division
+
+67
+00:02:59,080 --> 00:03:00,480
+question
+
+68
+00:03:00,480 --> 00:03:04,959
+so for example uh 16 / 2 the remainder
+
+69
+00:03:04,959 --> 00:03:08,280
+in this case would be zero and if you're
+
+70
+00:03:08,280 --> 00:03:10,720
+wondering how I calculated that so fast
+
+71
+00:03:10,720 --> 00:03:12,560
+is because the number on the end is a
+
+72
+00:03:12,560 --> 00:03:15,599
+two and whenever it's a two that you
+
+73
+00:03:15,599 --> 00:03:18,519
+just automatically assume check if this
+
+74
+00:03:18,519 --> 00:03:21,000
+number is even or odd if it's even then
+
+75
+00:03:21,000 --> 00:03:23,560
+it's a zero if it's odd then it's a one
+
+76
+00:03:23,560 --> 00:03:25,319
+because whenever you modulus something
+
+77
+00:03:25,319 --> 00:03:29,280
+by two oh wait sorry H yeah so whenever
+
+78
+00:03:29,280 --> 00:03:31,720
+you mod anything by
+
+79
+00:03:31,720 --> 00:03:35,720
+two then the remainder or the actual
+
+80
+00:03:35,720 --> 00:03:39,760
+answer could only be uh
+
+81
+00:03:39,760 --> 00:03:43,400
+either zero or
+
+82
+00:03:43,400 --> 00:03:45,400
+one there we
+
+83
+00:03:45,400 --> 00:03:48,640
+are so now let's get started with
+
+84
+00:03:48,640 --> 00:03:50,879
+actually converting this to
+
+85
+00:03:50,879 --> 00:03:53,439
+Binary let's get started the first thing
+
+86
+00:03:53,439 --> 00:03:56,959
+that we need to do is we need to take 25
+
+87
+00:03:56,959 --> 00:03:58,480
+as you can see here I'm just going to
+
+88
+00:03:58,480 --> 00:04:00,640
+say 25
+
+89
+00:04:00,640 --> 00:04:03,720
+okay 25 here let just write that nice
+
+90
+00:04:03,720 --> 00:04:06,519
+and dark for you so you can see
+
+91
+00:04:06,519 --> 00:04:09,400
+it okay so we have a 25
+
+92
+00:04:09,400 --> 00:04:12,360
+here now what we need to do is take
+
+93
+00:04:12,360 --> 00:04:15,640
+modulus by two now as you can see this
+
+94
+00:04:15,640 --> 00:04:18,880
+is an odd number so this will be
+
+95
+00:04:18,880 --> 00:04:22,240
+one our answer here is one then what we
+
+96
+00:04:22,240 --> 00:04:26,400
+need to do 25 actually divided by two
+
+97
+00:04:26,400 --> 00:04:30,400
+and you must know that this is 12.5
+
+98
+00:04:30,400 --> 00:04:33,199
+now all you uh now just before I
+
+99
+00:04:33,199 --> 00:04:35,520
+continue this needs to be an integer now
+
+100
+00:04:35,520 --> 00:04:37,360
+so all you smart people must be thinking
+
+101
+00:04:37,360 --> 00:04:39,680
+hm that's pretty easy uh take this round
+
+102
+00:04:39,680 --> 00:04:41,800
+it stuff and then we get 13 that's our
+
+103
+00:04:41,800 --> 00:04:44,720
+final answer correct you're
+
+104
+00:04:44,720 --> 00:04:46,680
+wrong in case you didn't know this
+
+105
+00:04:46,680 --> 00:04:48,560
+already and I'm sure some of you
+
+106
+00:04:48,560 --> 00:04:51,800
+do aner division doesn't mean rounding
+
+107
+00:04:51,800 --> 00:04:54,360
+this decimal it means just quite
+
+108
+00:04:54,360 --> 00:04:57,039
+literally chopping it off or you could
+
+109
+00:04:57,039 --> 00:04:59,039
+just say that you always round it down
+
+110
+00:04:59,039 --> 00:05:00,240
+in technical
+
+111
+00:05:00,240 --> 00:05:04,320
+terms so instead of it being
+
+112
+00:05:04,960 --> 00:05:08,440
+12.55 here instead of it being
+
+113
+00:05:08,440 --> 00:05:12,320
+12.5 well it's actually going to be is
+
+114
+00:05:12,320 --> 00:05:14,600
+just 12 because again we're just erasing
+
+115
+00:05:14,600 --> 00:05:18,360
+that little decimal part right
+
+116
+00:05:18,440 --> 00:05:22,960
+off let's continue now we take 12 as our
+
+117
+00:05:22,960 --> 00:05:27,120
+number okay so then what we do is
+
+118
+00:05:27,120 --> 00:05:31,039
+12 modulus 2 what would this be equal to
+
+119
+00:05:31,039 --> 00:05:33,919
+let's see 12 is an even number okay so
+
+120
+00:05:33,919 --> 00:05:35,919
+we know this will be
+
+121
+00:05:35,919 --> 00:05:38,560
+zero then we take
+
+122
+00:05:38,560 --> 00:05:43,400
+12 / 2 which is going to be equal to
+
+123
+00:05:43,400 --> 00:05:48,039
+6 perfect now we can take six as our new
+
+124
+00:05:48,039 --> 00:05:53,160
+answer anyway now we take 6 modulus
+
+125
+00:05:53,160 --> 00:05:55,880
+2 and let's just take this as zero again
+
+126
+00:05:55,880 --> 00:05:58,520
+because this is an even number then we
+
+127
+00:05:58,520 --> 00:06:01,360
+can say six actually divided by
+
+128
+00:06:01,360 --> 00:06:03,960
+2 is equal to
+
+129
+00:06:03,960 --> 00:06:06,560
+3 now we're getting into the odd numbers
+
+130
+00:06:06,560 --> 00:06:08,919
+again as you can see with three as our
+
+131
+00:06:08,919 --> 00:06:11,520
+number we say that
+
+132
+00:06:11,520 --> 00:06:16,440
+three modulus uh just a
+
+133
+00:06:18,840 --> 00:06:21,360
+second as you can see
+
+134
+00:06:21,360 --> 00:06:27,280
+here three modulus 2 will be one because
+
+135
+00:06:27,280 --> 00:06:29,720
+this is an odd number
+
+136
+00:06:29,720 --> 00:06:33,240
+however 3 / 2 will also be 1 and if you
+
+137
+00:06:33,240 --> 00:06:36,440
+don't realize how is because 3 / 2 is
+
+138
+00:06:36,440 --> 00:06:38,520
+actually
+
+139
+00:06:38,520 --> 00:06:43,039
+1.5 however since we want to do integer
+
+140
+00:06:43,039 --> 00:06:46,520
+division we just chop it right
+
+141
+00:06:46,520 --> 00:06:50,240
+off nice now we have one as our
+
+142
+00:06:50,240 --> 00:06:52,960
+number now here's a be uh here's a
+
+143
+00:06:52,960 --> 00:06:55,280
+mistake that lots of beginners make they
+
+144
+00:06:55,280 --> 00:06:58,000
+stop at the number one which is and
+
+145
+00:06:58,000 --> 00:07:00,039
+number one is completely valid number to
+
+146
+00:07:00,039 --> 00:07:02,840
+take is just that you could probably
+
+147
+00:07:02,840 --> 00:07:05,440
+just hard code this into the algorithm
+
+148
+00:07:05,440 --> 00:07:08,080
+but why not just actually calculate it
+
+149
+00:07:08,080 --> 00:07:09,599
+so this is completely valid what I'm
+
+150
+00:07:09,599 --> 00:07:13,919
+about to do which is 1 modul 2 which
+
+151
+00:07:13,919 --> 00:07:15,800
+will be one because it's
+
+152
+00:07:15,800 --> 00:07:20,599
+odd also sorry 1 / 2 which is equal to
+
+153
+00:07:20,599 --> 00:07:23,080
+0.5 but since we integer divide we just
+
+154
+00:07:23,080 --> 00:07:25,319
+chop off the decimal and we're left with
+
+155
+00:07:25,319 --> 00:07:27,479
+zero meaning that's the end of the line
+
+156
+00:07:27,479 --> 00:07:28,199
+quite
+
+157
+00:07:28,199 --> 00:07:30,280
+literally and you you must have noticed
+
+158
+00:07:30,280 --> 00:07:31,280
+a little
+
+159
+00:07:31,280 --> 00:07:38,039
+pattern computers they talk in zeros and
+
+160
+00:07:38,120 --> 00:07:41,680
+ones but when you modulus by
+
+161
+00:07:41,680 --> 00:07:44,759
+two you get a zero or a
+
+162
+00:07:44,759 --> 00:07:46,680
+one
+
+163
+00:07:46,680 --> 00:07:48,560
+so
+
+164
+00:07:48,560 --> 00:07:51,800
+theoretically these modulus answers are
+
+165
+00:07:51,800 --> 00:07:53,680
+is our
+
+166
+00:07:53,680 --> 00:07:55,680
+binary and you're
+
+167
+00:07:55,680 --> 00:07:58,199
+right the answers of these modulus
+
+168
+00:07:58,199 --> 00:08:00,879
+combined together become our binary so
+
+169
+00:08:00,879 --> 00:08:02,960
+the binary value for
+
+170
+00:08:02,960 --> 00:08:07,759
+25 is 1 0 0 1
+
+171
+00:08:07,759 --> 00:08:11,240
+1 wait a minute you might notice
+
+172
+00:08:11,240 --> 00:08:12,879
+something a little bit bad and that's
+
+173
+00:08:12,879 --> 00:08:17,120
+only if you actually convert this to
+
+174
+00:08:17,120 --> 00:08:19,319
+decimal you could actually just pause
+
+175
+00:08:19,319 --> 00:08:21,159
+this video and try it out right now go
+
+176
+00:08:21,159 --> 00:08:24,240
+to some online converter and find the
+
+177
+00:08:24,240 --> 00:08:26,120
+decimal value of this
+
+178
+00:08:26,120 --> 00:08:30,159
+binary are you back yet okay this won't
+
+179
+00:08:30,159 --> 00:08:33,320
+work it's because this binary is in
+
+180
+00:08:33,320 --> 00:08:35,680
+reverse order you have to reverse the
+
+181
+00:08:35,680 --> 00:08:38,440
+binary that you get and so in this case
+
+182
+00:08:38,440 --> 00:08:43,480
+it'll be 1 1 0 0 1 and this is our real
+
+183
+00:08:43,480 --> 00:08:47,080
+binary uh yeah so now you can actually
+
+184
+00:08:47,080 --> 00:08:50,040
+uh put this into some converter or
+
+185
+00:08:50,040 --> 00:08:52,000
+something uh and then you'll see that
+
+186
+00:08:52,000 --> 00:08:54,320
+this is actually 25 and again you can
+
+187
+00:08:54,320 --> 00:08:57,560
+use almost any number uh doesn't really
+
+188
+00:08:57,560 --> 00:09:01,880
+matter I just use 25 as an example let's
+
+189
+00:09:01,880 --> 00:09:04,760
+continue now and before we actually stop
+
+190
+00:09:04,760 --> 00:09:06,600
+this I'm going to first of all show you
+
+191
+00:09:06,600 --> 00:09:08,760
+my own uh cleaner method to do this
+
+192
+00:09:08,760 --> 00:09:10,360
+stuff and also then I'm going to show
+
+193
+00:09:10,360 --> 00:09:12,720
+you a quick a flowchart which will
+
+194
+00:09:12,720 --> 00:09:15,240
+really really explain how this algorithm
+
+195
+00:09:15,240 --> 00:09:16,399
+really
+
+196
+00:09:16,399 --> 00:09:19,880
+works okay as you can see this is a
+
+197
+00:09:19,880 --> 00:09:23,160
+pretty indecent way of doing this stuff
+
+198
+00:09:23,160 --> 00:09:26,360
+it's a little bit clunky as you can see
+
+199
+00:09:26,360 --> 00:09:28,720
+it wouldn't really fit on a paper that
+
+200
+00:09:28,720 --> 00:09:32,880
+nicely and it's just too much to look at
+
+201
+00:09:32,880 --> 00:09:35,399
+but I developed a little system which
+
+202
+00:09:35,399 --> 00:09:38,360
+will help us do it much much
+
+203
+00:09:38,360 --> 00:09:41,440
+cleaner so as you can see we want to get
+
+204
+00:09:41,440 --> 00:09:43,680
+to the result 1 1
+
+205
+00:09:43,680 --> 00:09:47,880
+01 and I'm also going to erase
+
+206
+00:09:51,279 --> 00:09:55,600
+this okay let's continue
+
+207
+00:09:55,600 --> 00:09:58,000
+now so first of all what I'm going to do
+
+208
+00:09:58,000 --> 00:10:00,000
+is as you know
+
+209
+00:10:00,000 --> 00:10:03,920
+we have 25 as our starting
+
+210
+00:10:03,920 --> 00:10:08,160
+decimal now when we modulus this by two
+
+211
+00:10:08,160 --> 00:10:12,200
+we actually get a one here and our next
+
+212
+00:10:12,200 --> 00:10:14,880
+number by dividing by doing integer
+
+213
+00:10:14,880 --> 00:10:19,040
+division by two we get
+
+214
+00:10:19,040 --> 00:10:23,880
+12 so my format is modulus 2 into the
+
+215
+00:10:23,880 --> 00:10:26,440
+division by two so now we can continue
+
+216
+00:10:26,440 --> 00:10:28,600
+this in an entire tree format and we
+
+217
+00:10:28,600 --> 00:10:31,000
+eventually get get our correct
+
+218
+00:10:31,000 --> 00:10:33,320
+answer so let's just continue this
+
+219
+00:10:33,320 --> 00:10:35,639
+really quickly because yeah so this will
+
+220
+00:10:35,639 --> 00:10:38,800
+be zero because it's even as you know uh
+
+221
+00:10:38,800 --> 00:10:42,279
+as modulus by two and then divide
+
+222
+00:10:42,279 --> 00:10:43,959
+six
+
+223
+00:10:43,959 --> 00:10:51,760
+0 3 1 1 1
+
+224
+00:10:51,760 --> 00:10:55,839
+zero correct so as you can see we get 1
+
+225
+00:10:55,839 --> 00:11:00,680
+1 0 0 1 1 1 0 0 1 which is our corect
+
+226
+00:11:00,680 --> 00:11:02,639
+binary as you can see this is a much
+
+227
+00:11:02,639 --> 00:11:04,160
+more elegant way of doing it this will
+
+228
+00:11:04,160 --> 00:11:07,320
+usually fit on a paper and it's just
+
+229
+00:11:07,320 --> 00:11:10,120
+overall better to read and if you really
+
+230
+00:11:10,120 --> 00:11:11,880
+want to you can write down the rule here
+
+231
+00:11:11,880 --> 00:11:14,800
+so anyone can understand it uh which is
+
+232
+00:11:14,800 --> 00:11:16,800
+integer
+
+233
+00:11:16,800 --> 00:11:20,680
+divide integer
+
+234
+00:11:20,839 --> 00:11:22,560
+divide
+
+235
+00:11:22,560 --> 00:11:26,279
+by two and over here we can write
+
+236
+00:11:26,279 --> 00:11:30,320
+modulus by two just let everyone knows
+
+237
+00:11:30,320 --> 00:11:32,200
+that this is what we're doing and then
+
+238
+00:11:32,200 --> 00:11:34,680
+we always as you know take it in reverse
+
+239
+00:11:34,680 --> 00:11:37,120
+order so same thing with this method
+
+240
+00:11:37,120 --> 00:11:39,079
+we're taking this entire thing in
+
+241
+00:11:39,079 --> 00:11:40,920
+reverse
+
+242
+00:11:40,920 --> 00:11:43,639
+order that's how that works let's take a
+
+243
+00:11:43,639 --> 00:11:46,639
+look at a full chart on my Mac let's go
+
+244
+00:11:46,639 --> 00:11:49,160
+over here for a second as you can see
+
+245
+00:11:49,160 --> 00:11:51,279
+this is a little flowchart as you'll see
+
+246
+00:11:51,279 --> 00:11:54,399
+in just a second done
+
+247
+00:11:54,399 --> 00:11:58,279
+yet yeah so as you can see this is a
+
+248
+00:11:58,279 --> 00:12:00,639
+little flowchart which explains exactly
+
+249
+00:12:00,639 --> 00:12:03,480
+uh how this method works and so uh just
+
+250
+00:12:03,480 --> 00:12:06,000
+a second because uh this isn't really
+
+251
+00:12:06,000 --> 00:12:08,760
+the method that's used to do it it's
+
+252
+00:12:08,760 --> 00:12:11,639
+actually this one uh this is the method
+
+253
+00:12:11,639 --> 00:12:15,079
+to convert uh any decimal to
+
+254
+00:12:15,079 --> 00:12:18,279
+Binary uh and let's get explaining so
+
+255
+00:12:18,279 --> 00:12:19,320
+first of all as you can see we're
+
+256
+00:12:19,320 --> 00:12:22,000
+starting our algorithm uh after that we
+
+257
+00:12:22,000 --> 00:12:24,079
+are declaring two variables the first
+
+258
+00:12:24,079 --> 00:12:26,760
+one is n which is equal to a new integer
+
+259
+00:12:26,760 --> 00:12:30,199
+that you input into the app or the um
+
+260
+00:12:30,199 --> 00:12:32,120
+algorithm then we're creating a new
+
+261
+00:12:32,120 --> 00:12:34,000
+array called binary and this is a blank
+
+262
+00:12:34,000 --> 00:12:35,720
+array currently but this will be full of
+
+263
+00:12:35,720 --> 00:12:37,160
+integers when it's
+
+264
+00:12:37,160 --> 00:12:39,040
+done then what we're doing is we're
+
+265
+00:12:39,040 --> 00:12:41,560
+doing a while loop and we're checking
+
+266
+00:12:41,560 --> 00:12:45,519
+while I is not I mean while n is not
+
+267
+00:12:45,519 --> 00:12:49,279
+equal to zero meaning while n is
+
+268
+00:12:49,279 --> 00:12:51,920
+basically not equal to zero so if n's 12
+
+269
+00:12:51,920 --> 00:12:55,199
+25 6 3 or 1 it'll keep on looping but
+
+270
+00:12:55,199 --> 00:12:57,519
+right as it gets to the zero State it'll
+
+271
+00:12:57,519 --> 00:13:00,480
+just stop looping and give us the result
+
+272
+00:13:00,480 --> 00:13:02,880
+so as you can see uh first of all while
+
+273
+00:13:02,880 --> 00:13:06,480
+it is looping it is going to append to
+
+274
+00:13:06,480 --> 00:13:11,040
+our binary array n modulus 2 so this
+
+275
+00:13:11,040 --> 00:13:14,440
+will take our uh first a binary digit
+
+276
+00:13:14,440 --> 00:13:17,199
+and append it to the end of our binary
+
+277
+00:13:17,199 --> 00:13:20,000
+array after that what we're doing uh is
+
+278
+00:13:20,000 --> 00:13:22,880
+we're saying n is equal to n / 2 so
+
+279
+00:13:22,880 --> 00:13:25,560
+we're basically having n and since n is
+
+280
+00:13:25,560 --> 00:13:27,480
+already an integer it'll automatically
+
+281
+00:13:27,480 --> 00:13:30,320
+do integer division for us
+
+282
+00:13:30,320 --> 00:13:32,440
+that's really helpful after that we keep
+
+283
+00:13:32,440 --> 00:13:35,120
+on looping until n is equal to zero once
+
+284
+00:13:35,120 --> 00:13:36,600
+it's equal to zero you should know the
+
+285
+00:13:36,600 --> 00:13:39,560
+rule we print the reverse value of that
+
+286
+00:13:39,560 --> 00:13:42,279
+binary and then we stop our app that's
+
+287
+00:13:42,279 --> 00:13:45,000
+basically how the algorithm works now
+
+288
+00:13:45,000 --> 00:13:48,199
+let's take a look at the algorithm for
+
+289
+00:13:48,199 --> 00:13:50,800
+binary to decimal so we're going to be
+
+290
+00:13:50,800 --> 00:13:53,240
+pretty excited with this because you're
+
+291
+00:13:53,240 --> 00:13:57,600
+about to see some interesting stuff so
+
+292
+00:13:57,600 --> 00:14:00,680
+let's get started uh and so this is a
+
+293
+00:14:00,680 --> 00:14:03,560
+little bit more complicated slight bit
+
+294
+00:14:03,560 --> 00:14:06,680
+but I mean it works at
+
+295
+00:14:06,680 --> 00:14:09,360
+least let's get started so what we're
+
+296
+00:14:09,360 --> 00:14:12,279
+going to do is let's just say our binary
+
+297
+00:14:12,279 --> 00:14:14,720
+value to start with I'll also do the 25
+
+298
+00:14:14,720 --> 00:14:16,560
+binary value but first let's do
+
+299
+00:14:16,560 --> 00:14:22,320
+something like 1 Z 1 0 sorry one
+
+300
+00:14:22,320 --> 00:14:26,160
+zero okay one 0 1 0 so now that you have
+
+301
+00:14:26,160 --> 00:14:28,399
+this uh let's just try to convert this
+
+302
+00:14:28,399 --> 00:14:32,000
+to an act ual decimal value spoiler
+
+303
+00:14:32,000 --> 00:14:35,560
+alert the actual decimal value of this
+
+304
+00:14:35,560 --> 00:14:37,000
+is
+
+305
+00:14:37,000 --> 00:14:42,000
+10 okay so now let's start and so what
+
+306
+00:14:42,000 --> 00:14:44,079
+we need to basically do the algorithm
+
+307
+00:14:44,079 --> 00:14:47,040
+for this
+
+308
+00:14:47,040 --> 00:14:50,199
+result or I'll just say res for now
+
+309
+00:14:50,199 --> 00:14:53,399
+result is equal to
+
+310
+00:14:53,399 --> 00:15:00,320
+result result times 2 plus uh the digit
+
+311
+00:15:00,720 --> 00:15:04,320
+so uh first of all uh whenever we start
+
+312
+00:15:04,320 --> 00:15:06,759
+we create a new digit or a new variable
+
+313
+00:15:06,759 --> 00:15:09,079
+called result which is going to be zero
+
+314
+00:15:09,079 --> 00:15:12,360
+over here so we're starting off at with
+
+315
+00:15:12,360 --> 00:15:16,000
+a zero as you can see then what we're
+
+316
+00:15:16,000 --> 00:15:19,320
+doing is we look at this first
+
+317
+00:15:19,320 --> 00:15:22,199
+digit okay so we're looking at this
+
+318
+00:15:22,199 --> 00:15:23,759
+first digit of
+
+319
+00:15:23,759 --> 00:15:26,800
+binary so our result is equal to our
+
+320
+00:15:26,800 --> 00:15:30,959
+result time 2 plus the digit and in this
+
+321
+00:15:30,959 --> 00:15:34,360
+case this is a one so in this case the
+
+322
+00:15:34,360 --> 00:15:37,319
+digit is a one the result is
+
+323
+00:15:37,319 --> 00:15:41,519
+zero and the yeah so result * 2 still
+
+324
+00:15:41,519 --> 00:15:44,560
+zero + 1 that would be one so our new
+
+325
+00:15:44,560 --> 00:15:48,680
+result is not zero it is one due to the
+
+326
+00:15:48,680 --> 00:15:51,480
+fact that we took zero which is our
+
+327
+00:15:51,480 --> 00:15:55,360
+result times 2 which is still 0o plus 1
+
+328
+00:15:55,360 --> 00:15:57,079
+which is the current edit we're on which
+
+329
+00:15:57,079 --> 00:15:59,440
+gave us a value of one
+
+330
+00:15:59,440 --> 00:16:03,519
+let's continue now we look at this
+
+331
+00:16:03,519 --> 00:16:06,800
+zero so what we do is our new uh let me
+
+332
+00:16:06,800 --> 00:16:12,560
+just rewrite this re is equal to Res * 2
+
+333
+00:16:12,560 --> 00:16:16,120
++ digit and so now I can fill in the
+
+334
+00:16:16,120 --> 00:16:19,319
+blanks so it's basically blank equal
+
+335
+00:16:19,319 --> 00:16:22,680
+blank *
+
+336
+00:16:22,680 --> 00:16:24,920
+2
+
+337
+00:16:24,920 --> 00:16:27,920
+blank okay so our
+
+338
+00:16:27,920 --> 00:16:30,600
+result will be equal to okay what's our
+
+339
+00:16:30,600 --> 00:16:35,600
+current result it's 1 1 * 2 + 0 so
+
+340
+00:16:35,600 --> 00:16:38,720
+what's 1 * 2 that would be two then a
+
+341
+00:16:38,720 --> 00:16:42,600
+zero still two so our new result is a
+
+342
+00:16:42,600 --> 00:16:47,440
+two amazing now we look at this
+
+343
+00:16:47,800 --> 00:16:50,759
+one let's take a look at this again so
+
+344
+00:16:50,759 --> 00:16:53,880
+basically it's 2 * 2 if you can't see
+
+345
+00:16:53,880 --> 00:16:59,399
+that I'll go over here 2 * 2
+
+346
+00:16:59,399 --> 00:17:03,199
+okay that would be uh
+
+347
+00:17:03,199 --> 00:17:06,160
+four then we say
+
+348
+00:17:06,160 --> 00:17:09,120
+four plus the digit we're on which is a
+
+349
+00:17:09,120 --> 00:17:11,319
+one gives us a
+
+350
+00:17:11,319 --> 00:17:15,000
+five okay so our new result will not be
+
+351
+00:17:15,000 --> 00:17:17,199
+a two but it will be a
+
+352
+00:17:17,199 --> 00:17:18,720
+five
+
+353
+00:17:18,720 --> 00:17:21,480
+amazing now we come over
+
+354
+00:17:21,480 --> 00:17:24,679
+here let's take a look at this again now
+
+355
+00:17:24,679 --> 00:17:29,240
+we are on digit four which is a zero
+
+356
+00:17:29,240 --> 00:17:31,600
+so then again as
+
+357
+00:17:31,600 --> 00:17:34,840
+always we
+
+358
+00:17:35,960 --> 00:17:41,760
+say sorry so our res our new res res is
+
+359
+00:17:41,760 --> 00:17:45,760
+equal to our old res times uh
+
+360
+00:17:45,760 --> 00:17:50,400
+2 uh plus 0 because that's the thing so
+
+361
+00:17:50,400 --> 00:17:55,720
+then uh so 5 * 2 so our new resol our
+
+362
+00:17:55,720 --> 00:17:59,080
+new result sorry is equal to 5 * 2 plus
+
+363
+00:17:59,080 --> 00:18:03,400
+0 what's 5 * 2 10+ 0 still 10 so then we
+
+364
+00:18:03,400 --> 00:18:06,240
+cross this out it's 10 there's no more
+
+365
+00:18:06,240 --> 00:18:08,400
+digits left that's our final decimal
+
+366
+00:18:08,400 --> 00:18:11,360
+answer as you can see we have gotten the
+
+367
+00:18:11,360 --> 00:18:17,559
+answer which is 10 amazing yay
+
+368
+00:18:17,559 --> 00:18:21,320
+but there is a bit cleaner way to do
+
+369
+00:18:21,320 --> 00:18:23,400
+this this is
+
+370
+00:18:23,400 --> 00:18:26,799
+still a pretty clunky method it's it
+
+371
+00:18:26,799 --> 00:18:28,919
+takes way too much space I mean I can
+
+372
+00:18:28,919 --> 00:18:30,799
+erase this because I'm on a
+
+373
+00:18:30,799 --> 00:18:35,240
+whiteboard but just for any sort of uh
+
+374
+00:18:35,240 --> 00:18:37,120
+thing it really wouldn't be the best of
+
+375
+00:18:37,120 --> 00:18:38,840
+most efficient way to do
+
+376
+00:18:38,840 --> 00:18:42,000
+this but a very nice and efficient way
+
+377
+00:18:42,000 --> 00:18:45,520
+is let's just say we had our our binary
+
+378
+00:18:45,520 --> 00:18:47,080
+one 0 1
+
+379
+00:18:47,080 --> 00:18:50,440
+0 Let's Start so we start our tree at
+
+380
+00:18:50,440 --> 00:18:52,840
+one because that's our first digit okay
+
+381
+00:18:52,840 --> 00:18:54,120
+so we start at
+
+382
+00:18:54,120 --> 00:18:59,000
+one and so this gives us a new result
+
+383
+00:18:59,000 --> 00:19:02,760
+from zero of one because as I have just
+
+384
+00:19:02,760 --> 00:19:05,600
+calculated with you uh the first uh
+
+385
+00:19:05,600 --> 00:19:08,400
+digit always gives us the one value as
+
+386
+00:19:08,400 --> 00:19:13,240
+long as it's one because 0 * 2 0 + 1
+
+387
+00:19:13,240 --> 00:19:15,679
+which is our digit 1 so that gives us
+
+388
+00:19:15,679 --> 00:19:19,799
+our new value or result as I call it
+
+389
+00:19:19,799 --> 00:19:22,320
+then we have another uh branch which is
+
+390
+00:19:22,320 --> 00:19:24,960
+our next digit which in this case is a
+
+391
+00:19:24,960 --> 00:19:27,919
+zero then we continue the tree onwards
+
+392
+00:19:27,919 --> 00:19:31,440
+until we find find a good result or
+
+393
+00:19:31,440 --> 00:19:34,200
+until the tree is over so now what we
+
+394
+00:19:34,200 --> 00:19:37,280
+already what we really need to do is say
+
+395
+00:19:37,280 --> 00:19:40,320
+okay what's our new result after zero 1
+
+396
+00:19:40,320 --> 00:19:46,080
+* 2 that's 2 + 0 still two so two then
+
+397
+00:19:46,080 --> 00:19:49,440
+what's our next digit this case it's a
+
+398
+00:19:49,440 --> 00:19:53,840
+one again we continue this 2 * 2 that
+
+399
+00:19:53,840 --> 00:19:57,640
+would be 4 + 1 5 next digit
+
+400
+00:19:57,640 --> 00:20:03,919
+zero * 2 10 + 0 still 10 10 and then we
+
+401
+00:20:03,919 --> 00:20:07,559
+are done our tree so then we find this
+
+402
+00:20:07,559 --> 00:20:11,320
+last uh value to be our correct answer
+
+403
+00:20:11,320 --> 00:20:12,360
+that's
+
+404
+00:20:12,360 --> 00:20:16,840
+it that was awesome now let's see what
+
+405
+00:20:16,840 --> 00:20:18,600
+uh flowchart could make this sort of an
+
+406
+00:20:18,600 --> 00:20:21,600
+algorithm work let's look at this for a
+
+407
+00:20:21,600 --> 00:20:25,360
+second so as you can see over here we
+
+408
+00:20:25,360 --> 00:20:28,840
+start uh then we say the binary is equal
+
+409
+00:20:28,840 --> 00:20:31,320
+to the input number so basically we're
+
+410
+00:20:31,320 --> 00:20:33,880
+inputting a number for the binary
+
+411
+00:20:33,880 --> 00:20:36,320
+however we store the binary as a
+
+412
+00:20:36,320 --> 00:20:39,960
+string then what we do is we go for I in
+
+413
+00:20:39,960 --> 00:20:43,919
+0 to binary. count minus
+
+414
+00:20:43,919 --> 00:20:47,720
+one what this will do uh is it will say
+
+415
+00:20:47,720 --> 00:20:50,520
+that okay we have till zero then how
+
+416
+00:20:50,520 --> 00:20:53,720
+many digits are there in binary uh for 1
+
+417
+00:20:53,720 --> 00:20:56,360
+0 1 0 there's four but we want to go one
+
+418
+00:20:56,360 --> 00:20:59,280
+minus that which is three so 0 three so
+
+419
+00:20:59,280 --> 00:21:01,400
+it'll execute four
+
+420
+00:21:01,400 --> 00:21:04,520
+times let's see what'll happen when it
+
+421
+00:21:04,520 --> 00:21:07,520
+executes when this Loop will execute
+
+422
+00:21:07,520 --> 00:21:09,840
+it'll say decimal times equals
+
+423
+00:21:09,840 --> 00:21:13,120
+2 but then we'll check if the binary is
+
+424
+00:21:13,120 --> 00:21:15,640
+one then we'll just add one to our
+
+425
+00:21:15,640 --> 00:21:17,600
+decimal
+
+426
+00:21:17,600 --> 00:21:20,840
+value however for our binary is not one
+
+427
+00:21:20,840 --> 00:21:22,960
+we'll just skip that part and continue
+
+428
+00:21:22,960 --> 00:21:25,039
+because plus Z doesn't really make sense
+
+429
+00:21:25,039 --> 00:21:27,159
+that's just for explaining in a simple
+
+430
+00:21:27,159 --> 00:21:29,640
+way uh but usually you would just say
+
+431
+00:21:29,640 --> 00:21:34,320
+okay if it's a one add or else nay okay
+
+432
+00:21:34,320 --> 00:21:36,559
+once it's done looping once it Finds Its
+
+433
+00:21:36,559 --> 00:21:37,760
+complete decimal
+
+434
+00:21:37,760 --> 00:21:40,000
+value we will print out the decimal
+
+435
+00:21:40,000 --> 00:21:43,039
+value and we will stop this Loop or stop
+
+436
+00:21:43,039 --> 00:21:44,200
+this uh
+
+437
+00:21:44,200 --> 00:21:46,880
+algorithm so that's how this algorithm
+
+438
+00:21:46,880 --> 00:21:50,080
+works so now back to the Whiteboard and
+
+439
+00:21:50,080 --> 00:21:51,679
+now I'm going to be explaining how to
+
+440
+00:21:51,679 --> 00:21:55,080
+convert the binary value of 25 back into
+
+441
+00:21:55,080 --> 00:21:58,039
+a decimal value now this is really going
+
+442
+00:21:58,039 --> 00:22:01,159
+to feel that little Gap and show to you
+
+443
+00:22:01,159 --> 00:22:04,159
+how you can actually convert a decimal
+
+444
+00:22:04,159 --> 00:22:05,919
+value to a binary value and then back
+
+445
+00:22:05,919 --> 00:22:09,120
+again so it just proves my point that
+
+446
+00:22:09,120 --> 00:22:11,279
+you can really convert back and
+
+447
+00:22:11,279 --> 00:22:15,080
+forth okay so let's get started here
+
+448
+00:22:15,080 --> 00:22:17,559
+first of all we're going to write out uh
+
+449
+00:22:17,559 --> 00:22:23,919
+1 1 0 0 1 okay now let's take a look at
+
+450
+00:22:23,919 --> 00:22:26,400
+each little digit and let's just use the
+
+451
+00:22:26,400 --> 00:22:27,840
+tree method that I explained to you
+
+452
+00:22:27,840 --> 00:22:29,159
+earlier
+
+453
+00:22:29,159 --> 00:22:31,080
+so we start with the first digit over
+
+454
+00:22:31,080 --> 00:22:32,799
+here
+
+455
+00:22:32,799 --> 00:22:36,000
+one now our starting result will always
+
+456
+00:22:36,000 --> 00:22:36,840
+be
+
+457
+00:22:36,840 --> 00:22:40,679
+zero so when we start with one we say 0
+
+458
+00:22:40,679 --> 00:22:45,039
+* 0 0 * 2 sorry is 0o add one because
+
+459
+00:22:45,039 --> 00:22:48,480
+that's our digit and it becomes a one
+
+460
+00:22:48,480 --> 00:22:50,679
+and then our next digit in this case
+
+461
+00:22:50,679 --> 00:22:53,039
+would be a one as you can
+
+462
+00:22:53,039 --> 00:22:56,279
+see then we continue and let's continue
+
+463
+00:22:56,279 --> 00:23:00,159
+together now so our new result will be 1
+
+464
+00:23:00,159 --> 00:23:03,600
+* 2 that's 2 plus one which is our digit
+
+465
+00:23:03,600 --> 00:23:06,559
+three so our new result is three
+
+466
+00:23:06,559 --> 00:23:10,600
+here then our next digit is zero and if
+
+467
+00:23:10,600 --> 00:23:13,559
+you just notice a slight pattern this
+
+468
+00:23:13,559 --> 00:23:15,039
+actually I'll tell you this when we're
+
+469
+00:23:15,039 --> 00:23:18,080
+done now with our next digit being zero
+
+470
+00:23:18,080 --> 00:23:24,200
+we just say 3 * 2 6 + 0 still 6 so six
+
+471
+00:23:24,200 --> 00:23:26,240
+right and then our next digit in this
+
+472
+00:23:26,240 --> 00:23:29,159
+case would be zero
+
+473
+00:23:29,159 --> 00:23:30,520
+so then we just say
+
+474
+00:23:30,520 --> 00:23:34,600
+zero so 6 * 2
+
+475
+00:23:34,600 --> 00:23:38,039
+12 okay then we take a look over here
+
+476
+00:23:38,039 --> 00:23:42,120
+and our next our final digit is a one uh
+
+477
+00:23:42,120 --> 00:23:44,159
+and so our next digit will anyway be
+
+478
+00:23:44,159 --> 00:23:46,120
+nothing so we can just draw that first
+
+479
+00:23:46,120 --> 00:23:49,240
+and our final result will be 12 * 2 uh
+
+480
+00:23:49,240 --> 00:23:51,840
+that would be 24 plus 1 because it's a
+
+481
+00:23:51,840 --> 00:23:54,919
+one there
+
+482
+00:23:55,120 --> 00:23:57,640
+25 now I'm just going to draw the tree
+
+483
+00:23:57,640 --> 00:23:59,279
+of converting 20
+
+484
+00:23:59,279 --> 00:24:02,880
+from binary to De from decimal to Binary
+
+485
+00:24:02,880 --> 00:24:05,080
+which is the opposite of this so you can
+
+486
+00:24:05,080 --> 00:24:08,159
+really see a pattern here and yeah so as
+
+487
+00:24:08,159 --> 00:24:10,679
+you can see we're going to take
+
+488
+00:24:10,679 --> 00:24:13,960
+25 this is the same tree that I just
+
+489
+00:24:13,960 --> 00:24:17,240
+drew uh not here uh for converting 25 to
+
+490
+00:24:17,240 --> 00:24:21,600
+a binary value so we have 25 over here
+
+491
+00:24:21,600 --> 00:24:24,320
+after that we're converting it uh to
+
+492
+00:24:24,320 --> 00:24:26,720
+this will be a one in our binary and
+
+493
+00:24:26,720 --> 00:24:28,440
+we're going to 12 I'm just going to rush
+
+494
+00:24:28,440 --> 00:24:29,640
+do this because I've already explained
+
+495
+00:24:29,640 --> 00:24:31,159
+it to you I'm just going to draw this
+
+496
+00:24:31,159 --> 00:24:33,600
+out so that uh you can really see what
+
+497
+00:24:33,600 --> 00:24:36,399
+my pattern is
+
+498
+00:24:41,640 --> 00:24:43,440
+here
+
+499
+00:24:43,440 --> 00:24:47,039
+okay as you can see that's done and now
+
+500
+00:24:47,039 --> 00:24:50,240
+our binary value is 1 1 01 just to prove
+
+501
+00:24:50,240 --> 00:24:52,960
+that this is the correct tree now if you
+
+502
+00:24:52,960 --> 00:24:54,159
+see a
+
+503
+00:24:54,159 --> 00:24:58,399
+pattern there's 25 here then there's a
+
+504
+00:24:58,399 --> 00:25:00,600
+12 here then there's a six here and
+
+505
+00:25:00,600 --> 00:25:01,919
+there's a three here and there's a one
+
+506
+00:25:01,919 --> 00:25:03,799
+there so it's basically the opposite of
+
+507
+00:25:03,799 --> 00:25:06,399
+what's Happening we're taking this zero
+
+508
+00:25:06,399 --> 00:25:07,720
+it's going
+
+509
+00:25:07,720 --> 00:25:11,159
+to if you take this for example here
+
+510
+00:25:11,159 --> 00:25:14,360
+we're starting at 12 here right after 25
+
+511
+00:25:14,360 --> 00:25:15,399
+comes our
+
+512
+00:25:15,399 --> 00:25:19,200
+12 but at the end over here we have a 12
+
+513
+00:25:19,200 --> 00:25:20,799
+then in the middle we have a six over
+
+514
+00:25:20,799 --> 00:25:22,799
+here in the middle we have a six over
+
+515
+00:25:22,799 --> 00:25:26,200
+here then over here we have a three over
+
+516
+00:25:26,200 --> 00:25:28,640
+here we have a three so that just really
+
+517
+00:25:28,640 --> 00:25:32,000
+proves that we're using the same numbers
+
+518
+00:25:32,000 --> 00:25:34,360
+to convert from our binary value to our
+
+519
+00:25:34,360 --> 00:25:36,559
+decimal value and also from our decimal
+
+520
+00:25:36,559 --> 00:25:39,640
+value to our binary value so that's why
+
+521
+00:25:39,640 --> 00:25:41,000
+there's actually a pattern in between
+
+522
+00:25:41,000 --> 00:25:43,000
+them and they're able to be
+
+523
+00:25:43,000 --> 00:25:45,159
+interchanged that was it for this video
+
+524
+00:25:45,159 --> 00:25:47,440
+I hope this answers your question page
+
+525
+00:25:47,440 --> 00:25:49,200
+uh and yeah subscribe to my channel if
+
+526
+00:25:49,200 --> 00:25:50,720
+you're new like the video if you liked
+
+527
+00:25:50,720 --> 00:25:53,120
+it comment if you have any suggestions
+
+528
+00:25:53,120 --> 00:25:56,200
+questions app ideas video ideas
+
+529
+00:25:56,200 --> 00:25:59,320
+algorithm explanation requests anything
+
+530
+00:25:59,320 --> 00:26:01,520
+of that sort if it's good I'll take a
+
+531
+00:26:01,520 --> 00:26:04,159
+look at it and we'll do it and yeah
+
+532
+00:26:04,159 --> 00:26:07,960
+that'll be it goodbye

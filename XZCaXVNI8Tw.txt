@@ -1,0 +1,1779 @@
+1
+00:00:00,210 --> 00:00:07,920
+[Music]
+
+2
+00:00:12,830 --> 00:00:15,330
+hello there and welcome to a special
+
+3
+00:00:15,330 --> 00:00:18,960
+video my name is ken devaki and today
+
+4
+00:00:18,960 --> 00:00:22,650
+i'm with two very special guests two of
+
+5
+00:00:22,650 --> 00:00:25,590
+my mentors Timothy Duncan and Thierry
+
+6
+00:00:25,590 --> 00:00:29,039
+you her let's begin today so but will we
+
+7
+00:00:29,039 --> 00:00:30,480
+actually get let me tell you a little
+
+8
+00:00:30,480 --> 00:00:32,579
+bit about what we're going to be covered
+
+9
+00:00:32,579 --> 00:00:34,860
+today now a lot of my subscribers send
+
+10
+00:00:34,860 --> 00:00:37,200
+in questions about platforms like IBM
+
+11
+00:00:37,200 --> 00:00:39,570
+bluemix Mannion's watson and a lot of
+
+12
+00:00:39,570 --> 00:00:41,579
+those questions are actually quite
+
+13
+00:00:41,579 --> 00:00:44,730
+redundant so today what I want to do is
+
+14
+00:00:44,730 --> 00:00:45,780
+I want to be getting some of those
+
+15
+00:00:45,780 --> 00:00:48,000
+questions to of course the experts of
+
+16
+00:00:48,000 --> 00:00:50,219
+those platforms themselves I'm not
+
+17
+00:00:50,219 --> 00:00:52,079
+seeing what Hans's they actually have
+
+18
+00:00:52,079 --> 00:00:55,230
+for us but actually again stop to enjoy
+
+19
+00:00:55,230 --> 00:00:57,960
+sex consultants yeah thanks am I am I to
+
+20
+00:00:57,960 --> 00:01:01,469
+the Duncan and I have been with IBM for
+
+21
+00:01:01,469 --> 00:01:03,780
+about 300 over three years now and the
+
+22
+00:01:03,780 --> 00:01:05,610
+last few years I have been specializing
+
+23
+00:01:05,610 --> 00:01:07,680
+and bloonan I am a bloomin specialist
+
+24
+00:01:07,680 --> 00:01:10,409
+and basically what I specialize in is
+
+25
+00:01:10,409 --> 00:01:13,500
+helping clients take ideas off their
+
+26
+00:01:13,500 --> 00:01:15,650
+brains and and deliver them as as
+
+27
+00:01:15,650 --> 00:01:19,350
+applications in the cloud I help them do
+
+28
+00:01:19,350 --> 00:01:21,659
+the value it can be a complex solution a
+
+29
+00:01:21,659 --> 00:01:23,400
+lot to take in when you first come into
+
+30
+00:01:23,400 --> 00:01:25,860
+something like Watson and bluemix so I
+
+31
+00:01:25,860 --> 00:01:27,810
+help coins break that down in efficient
+
+32
+00:01:27,810 --> 00:01:29,759
+manner understand what services they
+
+33
+00:01:29,759 --> 00:01:32,040
+might need to use internalize on ideas
+
+34
+00:01:32,040 --> 00:01:33,630
+and then develop those ideas on the
+
+35
+00:01:33,630 --> 00:01:35,369
+cloud by connecting them facilitating
+
+36
+00:01:35,369 --> 00:01:36,930
+connections with people like tiry tiry
+
+37
+00:01:36,930 --> 00:01:38,850
+would you like introduce yourself all
+
+38
+00:01:38,850 --> 00:01:42,000
+what a segue yes so let him say oh you
+
+39
+00:01:42,000 --> 00:01:44,220
+bet I'm the CEO of Darwin ecosystem and
+
+40
+00:01:44,220 --> 00:01:47,820
+I built cognitive solutions basically
+
+41
+00:01:47,820 --> 00:01:50,700
+based on Watson and bluemix and we
+
+42
+00:01:50,700 --> 00:01:52,829
+specialize on detectable tolerance and
+
+43
+00:01:52,829 --> 00:01:54,689
+what happens when the standard changes
+
+44
+00:01:54,689 --> 00:01:56,969
+but surely what we do so we're in the
+
+45
+00:01:56,969 --> 00:01:59,520
+heart of this in terms of the algorithm
+
+46
+00:01:59,520 --> 00:02:01,140
+and how we use this technology and what
+
+47
+00:02:01,140 --> 00:02:02,610
+it really means and we do this for
+
+48
+00:02:02,610 --> 00:02:04,350
+clients and we build micro
+
+49
+00:02:04,350 --> 00:02:06,840
+services we build solutions and we
+
+50
+00:02:06,840 --> 00:02:09,780
+augment people's ability to interact
+
+51
+00:02:09,780 --> 00:02:13,920
+with computers absolutely perfect so now
+
+52
+00:02:13,920 --> 00:02:16,620
+that you have been introduced to both my
+
+53
+00:02:16,620 --> 00:02:18,989
+mentors let's begin with the questions
+
+54
+00:02:18,989 --> 00:02:20,430
+that I subscribers understand again
+
+55
+00:02:20,430 --> 00:02:22,739
+first question but I actually received
+
+56
+00:02:22,739 --> 00:02:24,780
+quite a bit is actually questionable
+
+57
+00:02:24,780 --> 00:02:28,200
+what is blue all right I'm a bloomin
+
+58
+00:02:28,200 --> 00:02:29,840
+specialist I will answer that question
+
+59
+00:02:29,840 --> 00:02:32,250
+typically speaking the analogy I use
+
+60
+00:02:32,250 --> 00:02:35,220
+when describing bloom is to a client or
+
+61
+00:02:35,220 --> 00:02:38,370
+first-time user of the platform is first
+
+62
+00:02:38,370 --> 00:02:40,080
+my stones will look at the platform by
+
+63
+00:02:40,080 --> 00:02:41,790
+her trial fee like the others have a
+
+64
+00:02:41,790 --> 00:02:44,100
+chance to look at the UI but then once
+
+65
+00:02:44,100 --> 00:02:45,569
+you've a chance to experience that then
+
+66
+00:02:45,569 --> 00:02:47,760
+is good to hang on to an analogy
+
+67
+00:02:47,760 --> 00:02:49,590
+something very simple to break down that
+
+68
+00:02:49,590 --> 00:02:51,300
+concept in a way where you can hold on
+
+69
+00:02:51,300 --> 00:02:52,830
+to that while you're progressing through
+
+70
+00:02:52,830 --> 00:02:54,060
+this journey because there is a lot
+
+71
+00:02:54,060 --> 00:02:55,799
+taken as a lot of different sections a
+
+72
+00:02:55,799 --> 00:02:58,140
+lot of different types of services micro
+
+73
+00:02:58,140 --> 00:03:00,090
+services that you can use the
+
+74
+00:03:00,090 --> 00:03:02,519
+application development process I can
+
+75
+00:03:02,519 --> 00:03:03,540
+make your life a lot easier
+
+76
+00:03:03,540 --> 00:03:06,060
+so understanding the overall concept
+
+77
+00:03:06,060 --> 00:03:07,110
+before diving into them is very
+
+78
+00:03:07,110 --> 00:03:09,570
+important in the concepts and algae that
+
+79
+00:03:09,570 --> 00:03:13,820
+usually use is I describe bluemix as the
+
+80
+00:03:13,820 --> 00:03:17,239
+home depot of the IT world and vensim so
+
+81
+00:03:17,239 --> 00:03:20,280
+it's a place where developers can go and
+
+82
+00:03:20,280 --> 00:03:22,829
+began aqui that there are tools
+
+83
+00:03:22,829 --> 00:03:25,650
+available to them to build applications
+
+84
+00:03:25,650 --> 00:03:28,380
+much like a builder would go to Home
+
+85
+00:03:28,380 --> 00:03:30,450
+Depot to get maybe two boys to build
+
+86
+00:03:30,450 --> 00:03:32,549
+something but then I said and then some
+
+87
+00:03:32,549 --> 00:03:34,049
+and the reason why is that and then some
+
+88
+00:03:34,049 --> 00:03:36,720
+if you went own Depot as a builder and
+
+89
+00:03:36,720 --> 00:03:39,209
+then you have all the tools you compile
+
+90
+00:03:39,209 --> 00:03:40,410
+them all together that you needed to
+
+91
+00:03:40,410 --> 00:03:42,060
+build a certain project and then there
+
+92
+00:03:42,060 --> 00:03:43,950
+was a back door and you went outside
+
+93
+00:03:43,950 --> 00:03:46,230
+that back door and you had all of this
+
+94
+00:03:46,230 --> 00:03:49,320
+space to build your creations on top of
+
+95
+00:03:49,320 --> 00:03:50,880
+but not not only added space but
+
+96
+00:03:50,880 --> 00:03:53,070
+scalable space can be moved around it's
+
+97
+00:03:53,070 --> 00:03:54,180
+portable
+
+98
+00:03:54,180 --> 00:03:55,650
+there are all different types of
+
+99
+00:03:55,650 --> 00:03:57,030
+advantages to having on-demand
+
+100
+00:03:57,030 --> 00:04:00,150
+consumption and computing power that you
+
+101
+00:04:00,150 --> 00:04:04,530
+have on boom so very simply put it's a
+
+102
+00:04:04,530 --> 00:04:06,150
+place that houses a bunch of tools and
+
+103
+00:04:06,150 --> 00:04:07,590
+then you can take those tools to build
+
+104
+00:04:07,590 --> 00:04:10,230
+applications and host them and I an IBM
+
+105
+00:04:10,230 --> 00:04:13,480
+public cloud now iBM has a lot of
+
+106
+00:04:13,480 --> 00:04:14,830
+different technologies allow different
+
+107
+00:04:14,830 --> 00:04:17,049
+application and a lot of different
+
+108
+00:04:17,049 --> 00:04:20,739
+clouds that you can go into there is the
+
+109
+00:04:20,739 --> 00:04:24,250
+system Z cloud there is a quantum cloud
+
+110
+00:04:24,250 --> 00:04:25,900
+now there's a 50-quid constant cloud
+
+111
+00:04:25,900 --> 00:04:27,669
+that has just got released which will be
+
+112
+00:04:27,669 --> 00:04:28,990
+commercially available in the near
+
+113
+00:04:28,990 --> 00:04:31,840
+future so this particular cloud is ibm's
+
+114
+00:04:31,840 --> 00:04:33,910
+premier public cloud there are other
+
+115
+00:04:33,910 --> 00:04:34,930
+places where you can connect with
+
+116
+00:04:34,930 --> 00:04:36,850
+servers and host your hose or
+
+117
+00:04:36,850 --> 00:04:38,380
+applications but this this one in
+
+118
+00:04:38,380 --> 00:04:39,610
+particular which is bluemix
+
+119
+00:04:39,610 --> 00:04:42,550
+is the public is the generally available
+
+120
+00:04:42,550 --> 00:04:45,940
+public cloud that IBM had yeah so
+
+121
+00:04:45,940 --> 00:04:47,860
+hopefully that's a good name so clean up
+
+122
+00:04:47,860 --> 00:04:51,460
+the connect with a well as a visible
+
+123
+00:04:51,460 --> 00:04:54,220
+purpose over I built I built things like
+
+124
+00:04:54,220 --> 00:04:55,840
+the right cell design going to your shop
+
+125
+00:04:55,840 --> 00:04:58,150
+right that's what I do so
+
+126
+00:04:58,150 --> 00:05:01,570
+lumic's is it's really a platform as a
+
+127
+00:05:01,570 --> 00:05:03,250
+service I will need to have the
+
+128
+00:05:03,250 --> 00:05:06,550
+equipment on that machine anywhere from
+
+129
+00:05:06,550 --> 00:05:08,820
+the servers which are in the cloud
+
+130
+00:05:08,820 --> 00:05:10,870
+obviously so I don't have to have them
+
+131
+00:05:10,870 --> 00:05:13,479
+and for your audience try to understand
+
+132
+00:05:13,479 --> 00:05:15,729
+to break down like what it is right so I
+
+133
+00:05:15,729 --> 00:05:17,889
+have a served on top of that server I've
+
+134
+00:05:17,889 --> 00:05:19,500
+got the ability to build applications
+
+135
+00:05:19,500 --> 00:05:22,060
+mobile application web application
+
+136
+00:05:22,060 --> 00:05:24,430
+basically service in databases and then
+
+137
+00:05:24,430 --> 00:05:26,830
+I make sense of those databases right
+
+138
+00:05:26,830 --> 00:05:28,990
+and I can run statistics on them and
+
+139
+00:05:28,990 --> 00:05:31,840
+whatnot and here is where it's fun the
+
+140
+00:05:31,840 --> 00:05:34,389
+fun part of bluemix is that there is
+
+141
+00:05:34,389 --> 00:05:37,240
+these incredible cognitive services
+
+142
+00:05:37,240 --> 00:05:39,130
+it's incredible Watson it will talk
+
+143
+00:05:39,130 --> 00:05:40,870
+about Watson a little one right but
+
+144
+00:05:40,870 --> 00:05:43,000
+these services work I can make the
+
+145
+00:05:43,000 --> 00:05:45,639
+computer do things that humans do
+
+146
+00:05:45,639 --> 00:05:48,789
+naturally and this is a unique
+
+147
+00:05:48,789 --> 00:05:51,370
+environment a unique playground for
+
+148
+00:05:51,370 --> 00:05:54,610
+developers to experiment and bring more
+
+149
+00:05:54,610 --> 00:05:58,900
+intelligence to solution absolutely
+
+150
+00:05:58,900 --> 00:05:59,560
+perfect
+
+151
+00:05:59,560 --> 00:06:02,680
+now you mentioned about basically
+
+152
+00:06:02,680 --> 00:06:03,260
+different
+
+153
+00:06:03,260 --> 00:06:05,630
+cognitive services that Munich's
+
+154
+00:06:05,630 --> 00:06:08,540
+provides or need watson importance want
+
+155
+00:06:08,540 --> 00:06:09,770
+to continue and dive more into
+
+156
+00:06:09,770 --> 00:06:11,630
+Washington let's talk a little bit about
+
+157
+00:06:11,630 --> 00:06:14,240
+what types of services dmx actually
+
+158
+00:06:14,240 --> 00:06:16,730
+provide removal of that yeah that's good
+
+159
+00:06:16,730 --> 00:06:19,700
+good conversation of dive into so
+
+160
+00:06:19,700 --> 00:06:21,140
+there's generally three pieces in
+
+161
+00:06:21,140 --> 00:06:23,000
+bluemix they need to be aware of that is
+
+162
+00:06:23,000 --> 00:06:26,270
+categorizing and you have compute apps
+
+163
+00:06:26,270 --> 00:06:28,610
+and services so compute is your
+
+164
+00:06:28,610 --> 00:06:30,200
+infrastructures of service offerings
+
+165
+00:06:30,200 --> 00:06:32,810
+which the bare metal servers or via size
+
+166
+00:06:32,810 --> 00:06:37,370
+or networking or storage those you know
+
+167
+00:06:37,370 --> 00:06:40,160
+basic fundamental components you needing
+
+168
+00:06:40,160 --> 00:06:42,710
+application development process now you
+
+169
+00:06:42,710 --> 00:06:44,630
+progress up the stack a little bit and
+
+170
+00:06:44,630 --> 00:06:46,240
+you automate a little more of that
+
+171
+00:06:46,240 --> 00:06:49,130
+compute and process that needs to host
+
+172
+00:06:49,130 --> 00:06:50,840
+an application then you get what we call
+
+173
+00:06:50,840 --> 00:06:53,840
+the apps section now acts have compute
+
+174
+00:06:53,840 --> 00:06:56,540
+options such as docker containers IBM
+
+175
+00:06:56,540 --> 00:06:59,180
+Dugger containers while boundary and
+
+176
+00:06:59,180 --> 00:07:00,980
+then open with which is probably the
+
+177
+00:07:00,980 --> 00:07:03,230
+most progressive circle is computing
+
+178
+00:07:03,230 --> 00:07:05,780
+event driven model computing and then
+
+179
+00:07:05,780 --> 00:07:07,940
+you have a globe application so those
+
+180
+00:07:07,940 --> 00:07:10,070
+what we call the the title of apps and
+
+181
+00:07:10,070 --> 00:07:12,410
+what that means is that you're
+
+182
+00:07:12,410 --> 00:07:14,750
+progressing up up the stack and managing
+
+183
+00:07:14,750 --> 00:07:17,060
+less of the stack when hosting your
+
+184
+00:07:17,060 --> 00:07:18,380
+application do you have something you
+
+185
+00:07:18,380 --> 00:07:20,000
+want to add to that theory let's say
+
+186
+00:07:20,000 --> 00:07:22,550
+that one of the one of the modules which
+
+187
+00:07:22,550 --> 00:07:24,520
+are great when you say what it does is
+
+188
+00:07:24,520 --> 00:07:27,500
+the ability for instance to troll
+
+189
+00:07:27,500 --> 00:07:30,050
+TextEdit with your application and
+
+190
+00:07:30,050 --> 00:07:32,900
+receive the personality of the text the
+
+191
+00:07:32,900 --> 00:07:35,210
+sentiment of the text or through words
+
+192
+00:07:35,210 --> 00:07:37,610
+and get concepts so that you can expend
+
+193
+00:07:37,610 --> 00:07:39,320
+and build really cool solutions or even
+
+194
+00:07:39,320 --> 00:07:42,110
+sense to send like voice but let's say
+
+195
+00:07:42,110 --> 00:07:44,360
+we were taking this podcast and we would
+
+196
+00:07:44,360 --> 00:07:45,950
+throw it through the system and it could
+
+197
+00:07:45,950 --> 00:07:48,410
+tell you exactly where I spoke in what
+
+198
+00:07:48,410 --> 00:07:50,540
+concept by spoke and even analyze the
+
+199
+00:07:50,540 --> 00:07:52,700
+personality these are wonderful things
+
+200
+00:07:52,700 --> 00:07:54,710
+the two tools that you have no abilities
+
+201
+00:07:54,710 --> 00:07:57,260
+these incredible applications and those
+
+202
+00:07:57,260 --> 00:07:59,500
+tools are generally broken up into
+
+203
+00:07:59,500 --> 00:08:01,940
+categories so we just talked about
+
+204
+00:08:01,940 --> 00:08:04,550
+infrastructure we talked about apps now
+
+205
+00:08:04,550 --> 00:08:06,050
+let's talk about services a little bit
+
+206
+00:08:06,050 --> 00:08:08,550
+services you touch on micro services
+
+207
+00:08:08,550 --> 00:08:11,490
+go now IBM and other third parties have
+
+208
+00:08:11,490 --> 00:08:14,520
+micro services which are blocks of code
+
+209
+00:08:14,520 --> 00:08:16,919
+that performed work for people now there
+
+210
+00:08:16,919 --> 00:08:18,389
+are certain blocks of code that are very
+
+211
+00:08:18,389 --> 00:08:20,849
+useful so why reinvent the wheel over
+
+212
+00:08:20,849 --> 00:08:22,289
+and over again why don't we just make
+
+213
+00:08:22,289 --> 00:08:25,080
+that a micro service and app developers
+
+214
+00:08:25,080 --> 00:08:27,330
+can then embed that service into their
+
+215
+00:08:27,330 --> 00:08:28,860
+application now there's lots of
+
+216
+00:08:28,860 --> 00:08:31,620
+different types of micro services data
+
+217
+00:08:31,620 --> 00:08:36,779
+analytics blockchain IOT Watson is one
+
+218
+00:08:36,779 --> 00:08:38,849
+of them you want to talk about fuses of
+
+219
+00:08:38,849 --> 00:08:41,459
+the categories and more to spread in
+
+220
+00:08:41,459 --> 00:08:43,200
+some of those or you having you
+
+221
+00:08:43,200 --> 00:08:44,730
+mentioned you mentioned a major category
+
+222
+00:08:44,730 --> 00:08:46,829
+right I think this is where you write
+
+223
+00:08:46,829 --> 00:08:48,930
+the micro services a little black box
+
+224
+00:08:48,930 --> 00:08:50,640
+that does some magic and your
+
+225
+00:08:50,640 --> 00:08:52,529
+information into transforms it and it
+
+226
+00:08:52,529 --> 00:08:53,880
+gives you all these wonderful things you
+
+227
+00:08:53,880 --> 00:08:55,950
+are talking about IOT like HN I think
+
+228
+00:08:55,950 --> 00:08:58,290
+the ability to just through that blocks
+
+229
+00:08:58,290 --> 00:09:01,200
+on to bluemix connect objects smart
+
+230
+00:09:01,200 --> 00:09:02,730
+objects right and then analyze
+
+231
+00:09:02,730 --> 00:09:04,620
+information and look for patterns if
+
+232
+00:09:04,620 --> 00:09:06,959
+things different or how can i for
+
+233
+00:09:06,959 --> 00:09:09,029
+instance correlate what an object is
+
+234
+00:09:09,029 --> 00:09:11,010
+telling me with what somebody is telling
+
+235
+00:09:11,010 --> 00:09:13,350
+me this is like longer it off right and
+
+236
+00:09:13,350 --> 00:09:15,420
+I don't need to build it and that's
+
+237
+00:09:15,420 --> 00:09:17,010
+abuse I just need to connect them
+
+238
+00:09:17,010 --> 00:09:19,800
+together so we analytic services you
+
+239
+00:09:19,800 --> 00:09:21,510
+want to you want to be able to put a
+
+240
+00:09:21,510 --> 00:09:23,940
+whole bunch of data into the system and
+
+241
+00:09:23,940 --> 00:09:26,820
+text or give you projection for instance
+
+242
+00:09:26,820 --> 00:09:29,130
+things that would require complex
+
+243
+00:09:29,130 --> 00:09:31,470
+analytical skills and whatnot that you
+
+244
+00:09:31,470 --> 00:09:33,690
+can reject easily in your decision
+
+245
+00:09:33,690 --> 00:09:35,820
+Rachel Commerce I mean think about
+
+246
+00:09:35,820 --> 00:09:38,070
+understanding customers behavior what
+
+247
+00:09:38,070 --> 00:09:39,810
+would be reliable because like put the
+
+248
+00:09:39,810 --> 00:09:42,779
+data models into it and save a lot of
+
+249
+00:09:42,779 --> 00:09:45,899
+time coding with best practice services
+
+250
+00:09:45,899 --> 00:09:48,270
+and then span across so many different
+
+251
+00:09:48,270 --> 00:09:50,670
+ways of doing it so that's how we use
+
+252
+00:09:50,670 --> 00:09:52,230
+data finding is very powerful
+
+253
+00:09:52,230 --> 00:09:54,779
+yeah I agree and you know let's let's
+
+254
+00:09:54,779 --> 00:09:57,029
+let's take this back to the analogy we
+
+255
+00:09:57,029 --> 00:09:59,820
+use at the very front which is bluemix
+
+256
+00:09:59,820 --> 00:10:02,250
+being the home depot the IT world and
+
+257
+00:10:02,250 --> 00:10:03,899
+then some having all that capacity to
+
+258
+00:10:03,899 --> 00:10:06,149
+build on top of so what do we consider
+
+259
+00:10:06,149 --> 00:10:08,910
+services within Home Depot so if you
+
+260
+00:10:08,910 --> 00:10:11,100
+with the Home Depot and you bought some
+
+261
+00:10:11,100 --> 00:10:13,020
+tools that would be comparable to buying
+
+262
+00:10:13,020 --> 00:10:15,329
+services or compute options you wouldn't
+
+263
+00:10:15,329 --> 00:10:16,680
+expect to go to Home Depot
+
+264
+00:10:16,680 --> 00:10:19,050
+and build your services your tools from
+
+265
+00:10:19,050 --> 00:10:21,749
+scratch sprinkle build right look so IBM
+
+266
+00:10:21,749 --> 00:10:23,490
+has IBM and bluemix at the same
+
+267
+00:10:23,490 --> 00:10:25,290
+mentality where you can go into the
+
+268
+00:10:25,290 --> 00:10:27,240
+storefront and you can have to be
+
+269
+00:10:27,240 --> 00:10:28,740
+guaranteed those enterprise grade
+
+270
+00:10:28,740 --> 00:10:30,689
+tooling and you can count on to build
+
+271
+00:10:30,689 --> 00:10:33,629
+scalable innovative applications in the
+
+272
+00:10:33,629 --> 00:10:36,360
+cloud I'm going to wake up
+
+273
+00:10:36,360 --> 00:10:39,629
+yeah so now that were on the topic of
+
+274
+00:10:39,629 --> 00:10:42,029
+bluemix now say for services it provides
+
+275
+00:10:42,029 --> 00:10:44,970
+it wasn't Watson self-evident let's
+
+276
+00:10:44,970 --> 00:10:47,100
+check back a little Watson another
+
+277
+00:10:47,100 --> 00:10:49,439
+question a lot of people actually ask me
+
+278
+00:10:49,439 --> 00:10:52,429
+is what is the relationship between
+
+279
+00:10:52,429 --> 00:10:55,889
+Watson and lyrics I don't think that one
+
+280
+00:10:55,889 --> 00:10:59,339
+yeah all right okay so think of Watson a
+
+281
+00:10:59,339 --> 00:11:02,189
+single phrase like we all have right and
+
+282
+00:11:02,189 --> 00:11:05,100
+we were anything right so there's a
+
+283
+00:11:05,100 --> 00:11:06,660
+whole bunch of very smart people that
+
+284
+00:11:06,660 --> 00:11:09,540
+have taught Watson how to do certain
+
+285
+00:11:09,540 --> 00:11:13,559
+things and those particular things can
+
+286
+00:11:13,559 --> 00:11:16,170
+be accessible to lumix just that simple
+
+287
+00:11:16,170 --> 00:11:18,389
+so typing Swanson how to be a
+
+288
+00:11:18,389 --> 00:11:20,550
+psychologist and this is one of the
+
+289
+00:11:20,550 --> 00:11:22,759
+services right a personality analytics
+
+290
+00:11:22,759 --> 00:11:25,170
+whole bunch of psychologists went ahead
+
+291
+00:11:25,170 --> 00:11:27,509
+and say hey Watson you empty silly
+
+292
+00:11:27,509 --> 00:11:31,199
+brains can learn very well it was the
+
+293
+00:11:31,199 --> 00:11:33,329
+new empty filling brain can learn very
+
+294
+00:11:33,329 --> 00:11:38,100
+well I hear it was a fiery personality
+
+295
+00:11:38,100 --> 00:11:40,199
+looks like here is somebody who's really
+
+296
+00:11:40,199 --> 00:11:41,670
+smart what they look like when they
+
+297
+00:11:41,670 --> 00:11:43,740
+express themselves but if it what is the
+
+298
+00:11:43,740 --> 00:11:47,370
+evidence of emotionality and whatnot so
+
+299
+00:11:47,370 --> 00:11:49,199
+all these scientists and all these
+
+300
+00:11:49,199 --> 00:11:51,170
+experts psychologists marketing experts
+
+301
+00:11:51,170 --> 00:11:53,670
+Tom Watson house arranging like these
+
+302
+00:11:53,670 --> 00:11:56,189
+things LTS very complex and I couldn't
+
+303
+00:11:56,189 --> 00:11:57,929
+teach a system to do that you could not
+
+304
+00:11:57,929 --> 00:11:59,759
+teach us and them but these are generic
+
+305
+00:11:59,759 --> 00:12:02,910
+I would say assessment no they are in
+
+306
+00:12:02,910 --> 00:12:05,100
+Watson and then we have a lude service
+
+307
+00:12:05,100 --> 00:12:07,110
+that goes in and that's a difference and
+
+308
+00:12:07,110 --> 00:12:08,759
+basically I said to LuAnn you know what
+
+309
+00:12:08,759 --> 00:12:12,360
+take this text give it to Watson to
+
+310
+00:12:12,360 --> 00:12:14,730
+understand the personality of the tanks
+
+311
+00:12:14,730 --> 00:12:17,209
+and bring it back to me so I can use it
+
+312
+00:12:17,209 --> 00:12:19,339
+okay yeah so we'll be facing back to the
+
+313
+00:12:19,339 --> 00:12:21,499
+gate with the cake with the links it is
+
+314
+00:12:21,499 --> 00:12:23,839
+the interface between the brain and its
+
+315
+00:12:23,839 --> 00:12:26,209
+specialty and a service that has been
+
+316
+00:12:26,209 --> 00:12:28,699
+built elaborate and the size of the same
+
+317
+00:12:28,699 --> 00:12:29,089
+coin
+
+318
+00:12:29,089 --> 00:12:31,339
+exactly well yeah it says your brain
+
+319
+00:12:31,339 --> 00:12:32,929
+would be useless if we did eyes I
+
+320
+00:12:32,929 --> 00:12:35,689
+resolve and a mouth right and here to
+
+321
+00:12:35,689 --> 00:12:37,069
+receive information and express
+
+322
+00:12:37,069 --> 00:12:39,410
+information it's the same thing right
+
+323
+00:12:39,410 --> 00:12:42,649
+right completely and now that we're on
+
+324
+00:12:42,649 --> 00:12:45,379
+that topic of bloomix services not
+
+325
+00:12:45,379 --> 00:12:47,269
+limited what they are and how they work
+
+326
+00:12:47,269 --> 00:12:49,850
+one more question last question the
+
+327
+00:12:49,850 --> 00:12:52,369
+lawmen crabbers ask me how does the
+
+328
+00:12:52,369 --> 00:12:55,279
+typing wallet for writing for bloomin
+
+329
+00:12:55,279 --> 00:12:57,410
+okay so let's dive into that a little
+
+330
+00:12:57,410 --> 00:13:00,379
+bit so what's unique about clouds in
+
+331
+00:13:00,379 --> 00:13:02,749
+terms of pricing that you wouldn't get
+
+332
+00:13:02,749 --> 00:13:04,910
+over the past few decades from on print
+
+333
+00:13:04,910 --> 00:13:07,850
+pricing so I'd really look at that cafe
+
+334
+00:13:07,850 --> 00:13:10,779
+catback cost for object cons so
+
+335
+00:13:10,779 --> 00:13:12,619
+generally speaking over the last two
+
+336
+00:13:12,619 --> 00:13:15,110
+decades people would buy software
+
+337
+00:13:15,110 --> 00:13:16,939
+licenses and you would post those
+
+338
+00:13:16,939 --> 00:13:19,730
+licenses on print and generally those
+
+339
+00:13:19,730 --> 00:13:22,970
+licenses come with a sizeable feet now
+
+340
+00:13:22,970 --> 00:13:24,980
+within cloud that completely flips the
+
+341
+00:13:24,980 --> 00:13:26,869
+model on its head now you're only paying
+
+342
+00:13:26,869 --> 00:13:29,569
+for what you use you don't you don't you
+
+343
+00:13:29,569 --> 00:13:31,459
+don't have the license it's not on Krim
+
+344
+00:13:31,459 --> 00:13:34,189
+you're essentially renting it from IBM
+
+345
+00:13:34,189 --> 00:13:37,329
+or wherever your cloud provider is and
+
+346
+00:13:37,329 --> 00:13:40,610
+backpacking is on demand so the pricing
+
+347
+00:13:40,610 --> 00:13:43,970
+is an aggregate of everything you use
+
+348
+00:13:43,970 --> 00:13:46,699
+down to the visits to the smallest
+
+349
+00:13:46,699 --> 00:13:48,379
+decimal so for example using if you're
+
+350
+00:13:48,379 --> 00:13:49,759
+using a Watson ap on you would be
+
+351
+00:13:49,759 --> 00:13:52,100
+charged for watching speeches X you
+
+352
+00:13:52,100 --> 00:13:53,119
+would be charged for the number of
+
+353
+00:13:53,119 --> 00:13:55,100
+minutes that you process through that
+
+354
+00:13:55,100 --> 00:13:59,269
+API data analytics you use a database
+
+355
+00:13:59,269 --> 00:14:01,309
+you would be charged so the databases
+
+356
+00:14:01,309 --> 00:14:03,160
+are charged by how much stores you have
+
+357
+00:14:03,160 --> 00:14:06,170
+over a length of time that's also how
+
+358
+00:14:06,170 --> 00:14:08,480
+compute is also measured how much how
+
+359
+00:14:08,480 --> 00:14:10,459
+much computing capacity are you are you
+
+360
+00:14:10,459 --> 00:14:13,309
+dedicating to your application over the
+
+361
+00:14:13,309 --> 00:14:14,749
+amount of time so something like a
+
+362
+00:14:14,749 --> 00:14:16,639
+gigabyte an hour or that Cloud Foundry
+
+363
+00:14:16,639 --> 00:14:18,829
+operates on so the main thing about
+
+364
+00:14:18,829 --> 00:14:21,290
+pricing they got to be that you have to
+
+365
+00:14:21,290 --> 00:14:23,190
+key in on is your own
+
+366
+00:14:23,190 --> 00:14:25,170
+paying for what you use and nothing less
+
+367
+00:14:25,170 --> 00:14:29,570
+and you generally pay either monthly or
+
+368
+00:14:29,570 --> 00:14:32,130
+you can pay yearly because IBM deals
+
+369
+00:14:32,130 --> 00:14:33,630
+with enterprise customers so we
+
+370
+00:14:33,630 --> 00:14:35,790
+understand that many of our customers
+
+371
+00:14:35,790 --> 00:14:37,890
+have procurement systems so we have
+
+372
+00:14:37,890 --> 00:14:39,720
+flexible pricing models which can meet
+
+373
+00:14:39,720 --> 00:14:41,730
+variety of different use cases if you
+
+374
+00:14:41,730 --> 00:14:43,350
+like a credit card bank account we have
+
+375
+00:14:43,350 --> 00:14:45,930
+that option if you like an account that
+
+376
+00:14:45,930 --> 00:14:47,880
+sends you an invoice every month that
+
+377
+00:14:47,880 --> 00:14:49,290
+you can process with your procurement
+
+378
+00:14:49,290 --> 00:14:51,030
+system we have that option if you want
+
+379
+00:14:51,030 --> 00:14:53,340
+to budget upfront for a year's worth of
+
+380
+00:14:53,340 --> 00:14:55,830
+spending if you are a large enterprise
+
+381
+00:14:55,830 --> 00:14:58,260
+customer and you all you operate on a
+
+382
+00:14:58,260 --> 00:14:59,820
+yearly budget and go on a budget that
+
+383
+00:14:59,820 --> 00:15:01,890
+upfront we also have an option as you
+
+384
+00:15:01,890 --> 00:15:02,880
+can do that for it so we're very
+
+385
+00:15:02,880 --> 00:15:04,860
+flexible and how you pay for it
+
+386
+00:15:04,860 --> 00:15:07,200
+but how you're charged is an aggregate
+
+387
+00:15:07,200 --> 00:15:10,140
+of only what you use exactly exactly
+
+388
+00:15:10,140 --> 00:15:12,330
+in that time back into technology I
+
+389
+00:15:12,330 --> 00:15:13,800
+believe it would basically be like
+
+390
+00:15:13,800 --> 00:15:15,360
+instead of buying those tools you're
+
+391
+00:15:15,360 --> 00:15:17,280
+lending them out and paying for whatever
+
+392
+00:15:17,280 --> 00:15:20,190
+use those tools yeah so I mean you would
+
+393
+00:15:20,190 --> 00:15:21,960
+take those tools and immediately go back
+
+394
+00:15:21,960 --> 00:15:24,030
+in the back and build with them and then
+
+395
+00:15:24,030 --> 00:15:25,710
+when you're done I mean they would
+
+396
+00:15:25,710 --> 00:15:27,810
+operate if the tool was needed to
+
+397
+00:15:27,810 --> 00:15:30,090
+support the application or your house
+
+398
+00:15:30,090 --> 00:15:32,310
+out there and that real estate the tool
+
+399
+00:15:32,310 --> 00:15:35,250
+would stay there and support it but it
+
+400
+00:15:35,250 --> 00:15:36,930
+was still yes it was still chemically be
+
+401
+00:15:36,930 --> 00:15:39,360
+owned by Home Depot or IBM bluemix in
+
+402
+00:15:39,360 --> 00:15:42,450
+this case experiment completely and
+
+403
+00:15:42,450 --> 00:15:44,910
+those were the four questions that a lot
+
+404
+00:15:44,910 --> 00:15:47,610
+of my subscribers easily ask me about
+
+405
+00:15:47,610 --> 00:15:51,030
+bluemix and Watson in fact we do have
+
+406
+00:15:51,030 --> 00:15:53,130
+another positive video coming out very
+
+407
+00:15:53,130 --> 00:15:55,860
+soon about artificial intelligence as
+
+408
+00:15:55,860 --> 00:15:58,380
+well and so that's going to be it for
+
+409
+00:15:58,380 --> 00:16:01,440
+this video today so I really like to
+
+410
+00:16:01,440 --> 00:16:03,690
+thank both of my mentors for allowing to
+
+411
+00:16:03,690 --> 00:16:04,290
+be Miya
+
+412
+00:16:04,290 --> 00:16:06,420
+for grinning early to make my guests
+
+413
+00:16:06,420 --> 00:16:08,640
+today on the YouTube video and I'm sure
+
+414
+00:16:08,640 --> 00:16:10,470
+you love them in this video
+
+415
+00:16:10,470 --> 00:16:11,880
+all right so if you have any questions
+
+416
+00:16:11,880 --> 00:16:13,380
+for them you can send them to the
+
+417
+00:16:13,380 --> 00:16:15,750
+contact solution I will tell you in just
+
+418
+00:16:15,750 --> 00:16:17,880
+a moment and I will be glad all of those
+
+419
+00:16:17,880 --> 00:16:19,770
+questions to them and then direct them
+
+420
+00:16:19,770 --> 00:16:22,380
+back to you all right so thank you very
+
+421
+00:16:22,380 --> 00:16:25,050
+much for watching video that's perfect
+
+422
+00:16:25,050 --> 00:16:26,520
+today that's going to be a cool video
+
+423
+00:16:26,520 --> 00:16:28,200
+and importantly like the video please
+
+424
+00:16:28,200 --> 00:16:31,500
+make sure to even like a few things that
+
+425
+00:16:31,500 --> 00:16:31,880
+help
+
+426
+00:16:31,880 --> 00:16:33,050
+buddy else you know please do consider
+
+427
+00:16:33,050 --> 00:16:35,600
+sharing the video as well of course if
+
+428
+00:16:35,600 --> 00:16:37,670
+you have any more questions comments or
+
+429
+00:16:37,670 --> 00:16:40,250
+feedback really you can leave them down
+
+430
+00:16:40,250 --> 00:16:41,690
+in the comment section below in your
+
+431
+00:16:41,690 --> 00:16:44,060
+room to me at tagging on intercom or
+
+432
+00:16:44,060 --> 00:16:46,009
+tweet them to me attaching any even if
+
+433
+00:16:46,009 --> 00:16:47,300
+you have any questions where inventors
+
+434
+00:16:47,300 --> 00:16:49,310
+as I said you can send those to me and
+
+435
+00:16:49,310 --> 00:16:51,589
+all for them to them and I'll send those
+
+436
+00:16:51,589 --> 00:16:54,500
+into the answers back to you alright so
+
+437
+00:16:54,500 --> 00:16:55,670
+thank you very much for watching today
+
+438
+00:16:55,670 --> 00:16:57,529
+and snow of course you really like my
+
+439
+00:16:57,529 --> 00:16:59,089
+content you want to see more of a system
+
+440
+00:16:59,089 --> 00:17:00,380
+consider subscribing to the channel as
+
+441
+00:17:00,380 --> 00:17:04,429
+well and that purpose is yeah there you
+
+442
+00:17:04,429 --> 00:17:06,459
+go
+
+443
+00:17:06,640 --> 00:17:08,959
+alright thank you very much for watching
+
+444
+00:17:08,959 --> 00:17:09,559
+today
+
+445
+00:17:09,559 --> 00:17:11,949
+goodbye

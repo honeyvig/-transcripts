@@ -1,0 +1,2795 @@
+1
+00:00:00,100 --> 00:00:05,690
+[Music]
+
+2
+00:00:12,139 --> 00:00:14,759
+so go there and welcome to another
+
+3
+00:00:14,759 --> 00:00:17,310
+tutorial my name is Tammy Bakshi and
+
+4
+00:00:17,310 --> 00:00:18,949
+today we're gonna be going over a
+
+5
+00:00:18,949 --> 00:00:21,840
+fascinating subject that enables you to
+
+6
+00:00:21,840 --> 00:00:24,810
+standardize not only the data you feed
+
+7
+00:00:24,810 --> 00:00:27,119
+into your neural network but even the
+
+8
+00:00:27,119 --> 00:00:29,429
+hidden states of your neural networks
+
+9
+00:00:29,429 --> 00:00:30,359
+themselves
+
+10
+00:00:30,359 --> 00:00:33,300
+it's called batch normalization I'm sure
+
+11
+00:00:33,300 --> 00:00:35,550
+you've heard of it if not used it and it
+
+12
+00:00:35,550 --> 00:00:36,899
+helps you increase the training
+
+13
+00:00:36,899 --> 00:00:39,450
+efficiency of your neural networks many
+
+14
+00:00:39,450 --> 00:00:41,399
+fold today I'm gonna be showing you a
+
+15
+00:00:41,399 --> 00:00:42,840
+demo of how to implement batch
+
+16
+00:00:42,840 --> 00:00:45,120
+normalization in Swift retention flow
+
+17
+00:00:45,120 --> 00:00:46,890
+I'm showing you just how much of a
+
+18
+00:00:46,890 --> 00:00:49,469
+difference it can make even on a simple
+
+19
+00:00:49,469 --> 00:00:52,199
+data set like the endless data set let's
+
+20
+00:00:52,199 --> 00:00:54,239
+take a look but before we even get to
+
+21
+00:00:54,239 --> 00:00:56,550
+all that first you've gotta understand
+
+22
+00:00:56,550 --> 00:00:59,550
+what bath bubble ization is and before
+
+23
+00:00:59,550 --> 00:01:01,980
+we can do that let's go ahead and break
+
+24
+00:01:01,980 --> 00:01:04,799
+that word apart now first of all what
+
+25
+00:01:04,799 --> 00:01:07,950
+does normalization mean normalization is
+
+26
+00:01:07,950 --> 00:01:09,450
+something that you probably do with
+
+27
+00:01:09,450 --> 00:01:11,729
+almost every neural network that you
+
+28
+00:01:11,729 --> 00:01:14,100
+have trained for example let's just say
+
+29
+00:01:14,100 --> 00:01:16,170
+your training and the image classifier
+
+30
+00:01:16,170 --> 00:01:19,740
+the determine whether a digit is 0 1 2 3
+
+31
+00:01:19,740 --> 00:01:23,970
+4 5 6 7 8 or 9 and against data set now
+
+32
+00:01:23,970 --> 00:01:27,180
+in this case you are going to have a 28
+
+33
+00:01:27,180 --> 00:01:30,810
+by 28 image and so for example let's
+
+34
+00:01:30,810 --> 00:01:33,210
+just say you were to take this 28 by 28
+
+35
+00:01:33,210 --> 00:01:37,049
+image and you were to feed it to the
+
+36
+00:01:37,049 --> 00:01:38,820
+neural network well you see there would
+
+37
+00:01:38,820 --> 00:01:40,770
+be a little bit of problem because you
+
+38
+00:01:40,770 --> 00:01:43,049
+need to define how many channels there
+
+39
+00:01:43,049 --> 00:01:45,240
+are in your image now in this case
+
+40
+00:01:45,240 --> 00:01:47,490
+you've just got a black and white image
+
+41
+00:01:47,490 --> 00:01:50,100
+this is a very very simple kind of image
+
+42
+00:01:50,100 --> 00:01:54,270
+and therefore you only have one color
+
+43
+00:01:54,270 --> 00:01:56,399
+channel at the end which is essentially
+
+44
+00:01:56,399 --> 00:01:58,590
+just an intensity value saying how
+
+45
+00:01:58,590 --> 00:02:01,829
+intense how white this pixel is the
+
+46
+00:02:01,829 --> 00:02:03,509
+lower the value the closer to black in
+
+47
+00:02:03,509 --> 00:02:06,299
+the middle it's gray but closer to 1 the
+
+48
+00:02:06,299 --> 00:02:09,810
+more white that pixel will be now what
+
+49
+00:02:09,810 --> 00:02:10,720
+if you would
+
+50
+00:02:10,720 --> 00:02:12,670
+in your image well let's just say you're
+
+51
+00:02:12,670 --> 00:02:14,950
+creating a dataset training a neural
+
+52
+00:02:14,950 --> 00:02:16,930
+network on the image that dataset
+
+53
+00:02:16,930 --> 00:02:20,460
+in this case we're gonna feed in say 224
+
+54
+00:02:20,460 --> 00:02:25,840
+by 224 images of the thing is you can't
+
+55
+00:02:25,840 --> 00:02:27,940
+just have one channel because you need
+
+56
+00:02:27,940 --> 00:02:30,310
+to define color and the way you define
+
+57
+00:02:30,310 --> 00:02:33,700
+color is by using the RGB standard red
+
+58
+00:02:33,700 --> 00:02:36,360
+green blue so you're gonna have three
+
+59
+00:02:36,360 --> 00:02:40,630
+color channels at the end here now the
+
+60
+00:02:40,630 --> 00:02:43,959
+thing is pixel values are always put
+
+61
+00:02:43,959 --> 00:02:46,870
+between or in the RGB standard in most
+
+62
+00:02:46,870 --> 00:02:50,230
+cases are put between the values 0 to
+
+63
+00:02:50,230 --> 00:02:54,550
+255 so that's a 256 value range so each
+
+64
+00:02:54,550 --> 00:02:57,280
+individual pixel has a value between 0
+
+65
+00:02:57,280 --> 00:02:58,000
+and 255
+
+66
+00:02:58,000 --> 00:03:00,520
+whether it's one channel or three
+
+67
+00:03:00,520 --> 00:03:03,880
+channels all pixels will be between this
+
+68
+00:03:03,880 --> 00:03:07,120
+value now there's a small problem with
+
+69
+00:03:07,120 --> 00:03:10,660
+this with values this large and this
+
+70
+00:03:10,660 --> 00:03:13,780
+varying neural networks don't do very
+
+71
+00:03:13,780 --> 00:03:15,790
+well they don't do very well with such
+
+72
+00:03:15,790 --> 00:03:18,100
+large values it's like for example if
+
+73
+00:03:18,100 --> 00:03:19,120
+you take a look at one of the most
+
+74
+00:03:19,120 --> 00:03:21,790
+popular activation functions the sigmoid
+
+75
+00:03:21,790 --> 00:03:24,400
+activation function it activates between
+
+76
+00:03:24,400 --> 00:03:27,940
+0 and 1 and thing is you have anything
+
+77
+00:03:27,940 --> 00:03:30,160
+more than for example a value of 2
+
+78
+00:03:30,160 --> 00:03:33,400
+you're gonna get so so close to 1 they
+
+79
+00:03:33,400 --> 00:03:35,019
+are basically not gonna have any
+
+80
+00:03:35,019 --> 00:03:37,150
+meaningful output from the neural
+
+81
+00:03:37,150 --> 00:03:39,030
+network after it's been activated
+
+82
+00:03:39,030 --> 00:03:42,190
+therefore what you do is you take every
+
+83
+00:03:42,190 --> 00:03:45,340
+single pixel value and you divide it by
+
+84
+00:03:45,340 --> 00:03:48,880
+the maximum value so for example let's
+
+85
+00:03:48,880 --> 00:03:50,739
+just say you're gonna have pixel value X
+
+86
+00:03:50,739 --> 00:03:54,459
+and you just divide this by 255 this is
+
+87
+00:03:54,459 --> 00:03:57,100
+your new pixel value Y and this is what
+
+88
+00:03:57,100 --> 00:03:58,840
+you're gonna use as your input to your
+
+89
+00:03:58,840 --> 00:04:01,120
+neural network very simple that's
+
+90
+00:04:01,120 --> 00:04:03,010
+normalization they do this for every
+
+91
+00:04:03,010 --> 00:04:05,830
+feature so for example if you've got the
+
+92
+00:04:05,830 --> 00:04:08,019
+iris dataset and you're feeding and
+
+93
+00:04:08,019 --> 00:04:10,209
+attributes of different flowers within
+
+94
+00:04:10,209 --> 00:04:12,370
+the iris species then you're gonna take
+
+95
+00:04:12,370 --> 00:04:14,830
+each feature and divided by its maximum
+
+96
+00:04:14,830 --> 00:04:17,410
+value and in doing so you have
+
+97
+00:04:17,410 --> 00:04:19,769
+standardized or normalized at
+
+98
+00:04:19,769 --> 00:04:21,389
+you you've gone from some arbitrary
+
+99
+00:04:21,389 --> 00:04:24,979
+range to a known range of zero to one
+
+100
+00:04:24,979 --> 00:04:26,970
+but then that brings us for the next
+
+101
+00:04:26,970 --> 00:04:30,479
+topic standardization that normalization
+
+102
+00:04:30,479 --> 00:04:32,849
+is great it really helps neural networks
+
+103
+00:04:32,849 --> 00:04:34,979
+and without it we wouldn't really have
+
+104
+00:04:34,979 --> 00:04:37,340
+much success with neural networks but
+
+105
+00:04:37,340 --> 00:04:39,569
+standardization takes this a step
+
+106
+00:04:39,569 --> 00:04:43,680
+further now imagine being able to Center
+
+107
+00:04:43,680 --> 00:04:47,639
+your input data on zero so for example I
+
+108
+00:04:47,639 --> 00:04:49,370
+mentioned the sigmoid activation
+
+109
+00:04:49,370 --> 00:04:53,130
+function so we've got the sigmoid but
+
+110
+00:04:53,130 --> 00:04:55,110
+there's also another very very popular
+
+111
+00:04:55,110 --> 00:04:59,389
+activation function called tan H Tenex
+
+112
+00:04:59,389 --> 00:05:01,740
+hyperbolic tangent that the hyperbolic
+
+113
+00:05:01,740 --> 00:05:04,259
+tangent is a type of sigmoid activation
+
+114
+00:05:04,259 --> 00:05:06,590
+function from a technical standpoint and
+
+115
+00:05:06,590 --> 00:05:09,000
+the only difference really is that
+
+116
+00:05:09,000 --> 00:05:13,500
+sigmoid goes from 0 to 1 and tan H goes
+
+117
+00:05:13,500 --> 00:05:17,550
+from negative 1 to positive 1 so just to
+
+118
+00:05:17,550 --> 00:05:19,949
+make this clear I'll say 0 to 1 and
+
+119
+00:05:19,949 --> 00:05:23,849
+negative 1 to positive 1 so if you take
+
+120
+00:05:23,849 --> 00:05:26,070
+a look at this it doesn't really seem
+
+121
+00:05:26,070 --> 00:05:27,000
+like there's that much of a difference
+
+122
+00:05:27,000 --> 00:05:30,659
+does it but on the average rule that for
+
+123
+00:05:30,659 --> 00:05:31,710
+example let's just say you're training
+
+124
+00:05:31,710 --> 00:05:33,570
+the iris dataset within their own
+
+125
+00:05:33,570 --> 00:05:36,479
+network now if you were to use the
+
+126
+00:05:36,479 --> 00:05:38,610
+sigmoid and tan h automation functions
+
+127
+00:05:38,610 --> 00:05:40,830
+you actually notice that when using the
+
+128
+00:05:40,830 --> 00:05:43,530
+tan h activation function you get at
+
+129
+00:05:43,530 --> 00:05:45,449
+least a little bit better performance
+
+130
+00:05:45,449 --> 00:05:47,039
+your neural network will learn quicker
+
+131
+00:05:47,039 --> 00:05:49,349
+it'll decrease loss quicker and they'll
+
+132
+00:05:49,349 --> 00:05:52,560
+get to a better result in the end why is
+
+133
+00:05:52,560 --> 00:05:54,930
+that it's not just because there's a
+
+134
+00:05:54,930 --> 00:05:56,849
+broader range on which to represent
+
+135
+00:05:56,849 --> 00:05:59,669
+values but it's also because of the
+
+136
+00:05:59,669 --> 00:06:02,340
+center of that value because the very
+
+137
+00:06:02,340 --> 00:06:05,219
+center between negative 1 and positive 1
+
+138
+00:06:05,219 --> 00:06:11,520
+is 0 ok so the center is 0 but with
+
+139
+00:06:11,520 --> 00:06:18,389
+sigmoid the center is 0.5 now if this
+
+140
+00:06:18,389 --> 00:06:20,219
+doesn't seem like much the problem does
+
+141
+00:06:20,219 --> 00:06:21,900
+it this is just a mathematical model
+
+142
+00:06:21,900 --> 00:06:24,509
+it'll learn to overcome that 0.5
+
+143
+00:06:24,509 --> 00:06:28,680
+centering well yes and no it does learn
+
+144
+00:06:28,680 --> 00:06:29,070
+to
+
+145
+00:06:29,070 --> 00:06:31,140
+recumbents but neural networks and other
+
+146
+00:06:31,140 --> 00:06:32,550
+machine learning techniques have been
+
+147
+00:06:32,550 --> 00:06:34,800
+built from the ground up assuming this
+
+148
+00:06:34,800 --> 00:06:37,410
+sort of zero centering and when you
+
+149
+00:06:37,410 --> 00:06:39,270
+Center your data on zero if your neural
+
+150
+00:06:39,270 --> 00:06:41,520
+network learns a lot quicker than it
+
+151
+00:06:41,520 --> 00:06:43,560
+would when it's centered on a different
+
+152
+00:06:43,560 --> 00:06:46,050
+arbitrary values that's what an H
+
+153
+00:06:46,050 --> 00:06:48,390
+activation function works so level and
+
+154
+00:06:48,390 --> 00:06:50,610
+now you can take this to another level
+
+155
+00:06:50,610 --> 00:06:53,040
+by actually standardizing your input
+
+156
+00:06:53,040 --> 00:06:54,330
+data itself
+
+157
+00:06:54,330 --> 00:06:57,120
+let me explain now let's go ahead and
+
+158
+00:06:57,120 --> 00:07:00,270
+take the activation functions here
+
+159
+00:07:00,270 --> 00:07:01,650
+forget actually well it's actually not
+
+160
+00:07:01,650 --> 00:07:03,360
+look at this active at the activation
+
+161
+00:07:03,360 --> 00:07:05,010
+functions for now let's just take a look
+
+162
+00:07:05,010 --> 00:07:08,520
+at our image now let's just say you've
+
+163
+00:07:08,520 --> 00:07:12,050
+got this to 24 22 24 by 3 image now
+
+164
+00:07:12,050 --> 00:07:15,390
+these three channels are your red your
+
+165
+00:07:15,390 --> 00:07:19,530
+green and your blue channels now let's
+
+166
+00:07:19,530 --> 00:07:22,380
+just say we were to move this axis up
+
+167
+00:07:22,380 --> 00:07:30,000
+here so it's 8 3 by 2 24 3 by 2 24 by 2
+
+168
+00:07:30,000 --> 00:07:34,470
+24 already love pixel that leaves now
+
+169
+00:07:34,470 --> 00:07:37,620
+after you have done the normalization
+
+170
+00:07:37,620 --> 00:07:40,800
+this is how you can do standardization
+
+171
+00:07:40,800 --> 00:07:44,100
+take every channel of input to your
+
+172
+00:07:44,100 --> 00:07:46,410
+neural network and separate it so now
+
+173
+00:07:46,410 --> 00:07:49,470
+we've got three different arrays the are
+
+174
+00:07:49,470 --> 00:07:53,160
+all right G array and B are a red green
+
+175
+00:07:53,160 --> 00:07:55,350
+and blue arrays now you're going to take
+
+176
+00:07:55,350 --> 00:07:57,810
+each one and you're gonna modify it a
+
+177
+00:07:57,810 --> 00:07:58,350
+little bit
+
+178
+00:07:58,350 --> 00:08:00,690
+how exactly well you're going to take
+
+179
+00:08:00,690 --> 00:08:02,670
+over for example and they're gonna say
+
+180
+00:08:02,670 --> 00:08:10,350
+that R is equal to then R minus the mean
+
+181
+00:08:10,350 --> 00:08:15,090
+value of R divided by the standard
+
+182
+00:08:15,090 --> 00:08:19,380
+deviation of our and what does it going
+
+183
+00:08:19,380 --> 00:08:21,720
+to do is essentially doing the same
+
+184
+00:08:21,720 --> 00:08:23,960
+thing that the 10h activation was doing
+
+185
+00:08:23,960 --> 00:08:27,420
+centering your data on 0 it might not
+
+186
+00:08:27,420 --> 00:08:29,280
+seem like it at first glance but this
+
+187
+00:08:29,280 --> 00:08:31,550
+improves neural network training speeds
+
+188
+00:08:31,550 --> 00:08:34,940
+many fault but there's another problem
+
+189
+00:08:34,940 --> 00:08:37,290
+your neural network doesn't just have
+
+190
+00:08:37,290 --> 00:08:38,950
+one layer it has
+
+191
+00:08:38,950 --> 00:08:41,830
+many layers it's not hidden layers so
+
+192
+00:08:41,830 --> 00:08:43,060
+for example let's just say we're
+
+193
+00:08:43,060 --> 00:08:45,580
+training a simple multi-layer perceptron
+
+194
+00:08:45,580 --> 00:08:49,120
+on the MS data set so you've got a dense
+
+195
+00:08:49,120 --> 00:08:53,290
+layer as as the first layer you're
+
+196
+00:08:53,290 --> 00:08:55,710
+feeding it into another dense layer and
+
+197
+00:08:55,710 --> 00:08:58,930
+you're feeding this into one final dense
+
+198
+00:08:58,930 --> 00:09:03,460
+layer which is fed into a softmax
+
+199
+00:09:03,460 --> 00:09:07,510
+activation now let's just say that
+
+200
+00:09:07,510 --> 00:09:10,060
+you're using a rectified linear unit
+
+201
+00:09:10,060 --> 00:09:13,390
+activity on both of your hidden layers
+
+202
+00:09:13,390 --> 00:09:17,200
+and of course they're getting a 28 on 28
+
+203
+00:09:17,200 --> 00:09:20,380
+on one image game okay so this is your
+
+204
+00:09:20,380 --> 00:09:23,020
+input you've got your M miss digit which
+
+205
+00:09:23,020 --> 00:09:25,720
+is your 28 by 28 by the one digit it's
+
+206
+00:09:25,720 --> 00:09:27,790
+being fed into a dense layer with a
+
+207
+00:09:27,790 --> 00:09:31,390
+rectified linear unit of asian and it's
+
+208
+00:09:31,390 --> 00:09:33,070
+going through your neural network until
+
+209
+00:09:33,070 --> 00:09:34,810
+you finally get to softmax which is your
+
+210
+00:09:34,810 --> 00:09:36,580
+probability matrix it's essentially
+
+211
+00:09:36,580 --> 00:09:38,710
+telling you which class is most likely
+
+212
+00:09:38,710 --> 00:09:42,100
+to be the actual digit now let's just
+
+213
+00:09:42,100 --> 00:09:45,180
+say that we would have this input
+
+214
+00:09:45,180 --> 00:09:48,010
+standardized so we've got these RGB
+
+215
+00:09:48,010 --> 00:09:50,890
+values or the grayscale values in this
+
+216
+00:09:50,890 --> 00:09:53,260
+case and let's just say we were to
+
+217
+00:09:53,260 --> 00:09:55,750
+standardize them sensor than one zero
+
+218
+00:09:55,750 --> 00:09:57,490
+and feed them into the neural network
+
+219
+00:09:57,490 --> 00:10:00,340
+now the first layer has a great time
+
+220
+00:10:00,340 --> 00:10:02,140
+with this because it's much easier for
+
+221
+00:10:02,140 --> 00:10:04,540
+it to learn these weights over here are
+
+222
+00:10:04,540 --> 00:10:07,650
+ways in the world but the second layer
+
+223
+00:10:07,650 --> 00:10:11,740
+outputs a certain matrix of values now
+
+224
+00:10:11,740 --> 00:10:14,470
+when it outputs these values and feeds
+
+225
+00:10:14,470 --> 00:10:16,360
+it to the next layer the next layer
+
+226
+00:10:16,360 --> 00:10:18,730
+doesn't have the same advantage that the
+
+227
+00:10:18,730 --> 00:10:21,580
+first layer had it doesn't have the same
+
+228
+00:10:21,580 --> 00:10:23,860
+zero centering at the first layer half
+
+229
+00:10:23,860 --> 00:10:26,260
+and similarly that continues down the
+
+230
+00:10:26,260 --> 00:10:27,820
+chain because none of them have that
+
+231
+00:10:27,820 --> 00:10:30,250
+advantage anymore it's only the first
+
+232
+00:10:30,250 --> 00:10:33,790
+layer that gets this advantage but now
+
+233
+00:10:33,790 --> 00:10:36,430
+with batch normalization you can
+
+234
+00:10:36,430 --> 00:10:38,470
+actually take the standardization effect
+
+235
+00:10:38,470 --> 00:10:40,990
+and bring it to all of your neural
+
+236
+00:10:40,990 --> 00:10:44,380
+network hidden States so by applying a
+
+237
+00:10:44,380 --> 00:10:47,650
+batch normalization layer between these
+
+238
+00:10:47,650 --> 00:10:49,660
+two dense layers over here so you're
+
+239
+00:10:49,660 --> 00:10:52,360
+gonna feed this into a batch realization
+
+240
+00:10:52,360 --> 00:10:53,950
+or B egg layer and they're gonna feed
+
+241
+00:10:53,950 --> 00:10:55,420
+this into another batch normalization
+
+242
+00:10:55,420 --> 00:10:55,720
+layer
+
+243
+00:10:55,720 --> 00:10:57,940
+you're essentially saying okay take this
+
+244
+00:10:57,940 --> 00:10:59,920
+dense layer see its output to match
+
+245
+00:10:59,920 --> 00:11:01,990
+normalization come back from it feed
+
+246
+00:11:01,990 --> 00:11:04,210
+that into a dense layer and feed its
+
+247
+00:11:04,210 --> 00:11:06,070
+output into a bachelor ization layer and
+
+248
+00:11:06,070 --> 00:11:08,590
+then back into the final dense layer but
+
+249
+00:11:08,590 --> 00:11:10,360
+I'm doing this all of your layers
+
+250
+00:11:10,360 --> 00:11:13,060
+actually benefit from having a zero
+
+251
+00:11:13,060 --> 00:11:17,170
+Center data now how exactly does it work
+
+252
+00:11:17,170 --> 00:11:20,140
+well it's got two parameters the beta
+
+253
+00:11:20,140 --> 00:11:22,660
+and the gamma parameters okay so we've
+
+254
+00:11:22,660 --> 00:11:29,890
+got beta and gamma okay now why exactly
+
+255
+00:11:29,890 --> 00:11:33,190
+does it have these two parameters it's
+
+256
+00:11:33,190 --> 00:11:35,650
+because when you're standardizing this
+
+257
+00:11:35,650 --> 00:11:38,380
+data batch normalization does this on a
+
+258
+00:11:38,380 --> 00:11:41,530
+per batch basis and the advantage of
+
+259
+00:11:41,530 --> 00:11:43,120
+batch normalization is that it doesn't
+
+260
+00:11:43,120 --> 00:11:47,080
+just standardize to Center on 0 using
+
+261
+00:11:47,080 --> 00:11:49,480
+gradient descent your neural network can
+
+262
+00:11:49,480 --> 00:11:52,660
+actually optimize these values and
+
+263
+00:11:52,660 --> 00:11:55,720
+change where exactly a data center so
+
+264
+00:11:55,720 --> 00:11:57,610
+for example let's just say that this
+
+265
+00:11:57,610 --> 00:12:00,820
+layer really wants 0 Center data but
+
+266
+00:12:00,820 --> 00:12:02,560
+this layer because of the weight so
+
+267
+00:12:02,560 --> 00:12:04,390
+because of any other values it thinks
+
+268
+00:12:04,390 --> 00:12:06,550
+you know what no I think this other
+
+269
+00:12:06,550 --> 00:12:08,680
+distribution is better for me by
+
+270
+00:12:08,680 --> 00:12:11,020
+changing the beta and gamma parameters
+
+271
+00:12:11,020 --> 00:12:12,850
+it can actually change which
+
+272
+00:12:12,850 --> 00:12:15,100
+distribution it's using it can change
+
+273
+00:12:15,100 --> 00:12:17,170
+whether it's centering on 0 or 1 or any
+
+274
+00:12:17,170 --> 00:12:20,590
+other arbitrary value and so this is how
+
+275
+00:12:20,590 --> 00:12:22,420
+batch trouble ization works it enables
+
+276
+00:12:22,420 --> 00:12:24,820
+all of your neural network to benefit
+
+277
+00:12:24,820 --> 00:12:27,820
+from standardization and now let's take
+
+278
+00:12:27,820 --> 00:12:29,560
+a look at how you can actually implement
+
+279
+00:12:29,560 --> 00:12:32,020
+batch realization in your neural net
+
+280
+00:12:32,020 --> 00:12:34,000
+which is a very simple way using Swift
+
+281
+00:12:34,000 --> 00:12:36,250
+for tensor flow it's just another layer
+
+282
+00:12:36,250 --> 00:12:38,740
+to call and by using it you can increase
+
+283
+00:12:38,740 --> 00:12:41,380
+training efficiency by a mind-boggling
+
+284
+00:12:41,380 --> 00:12:46,150
+amount let's take a look all right so
+
+285
+00:12:46,150 --> 00:12:48,040
+welcome back to the code of how you can
+
+286
+00:12:48,040 --> 00:12:49,810
+actually implement batch normalization
+
+287
+00:12:49,810 --> 00:12:51,820
+with Swift for tensor flow now if you
+
+288
+00:12:51,820 --> 00:12:53,830
+haven't already I highly recommend you
+
+289
+00:12:53,830 --> 00:12:55,720
+take a look at my tutorial on how you
+
+290
+00:12:55,720 --> 00:12:57,700
+can actually train an endless digit
+
+291
+00:12:57,700 --> 00:12:59,890
+classifier using Swift for tensor flow
+
+292
+00:12:59,890 --> 00:13:00,880
+it does
+
+293
+00:13:00,880 --> 00:13:02,589
+feature batch normalization because well
+
+294
+00:13:02,589 --> 00:13:04,509
+that's what we're gonna talk about today
+
+295
+00:13:04,509 --> 00:13:06,819
+in this tutorial again if you haven't
+
+296
+00:13:06,819 --> 00:13:08,019
+already there will be a link in the
+
+297
+00:13:08,019 --> 00:13:08,980
+description if you'd like to go check
+
+298
+00:13:08,980 --> 00:13:11,199
+that out because it will really help you
+
+299
+00:13:11,199 --> 00:13:13,209
+understand exactly what this code is
+
+300
+00:13:13,209 --> 00:13:14,889
+doing but without any further ado let's
+
+301
+00:13:14,889 --> 00:13:17,860
+begin as you can see on screen right now
+
+302
+00:13:17,860 --> 00:13:21,069
+I've got my google collab notebook ready
+
+303
+00:13:21,069 --> 00:13:23,230
+now the first cell for this google cloud
+
+304
+00:13:23,230 --> 00:13:25,480
+notebook is really simple it essentially
+
+305
+00:13:25,480 --> 00:13:27,850
+just has import tensorflow enable GPU
+
+306
+00:13:27,850 --> 00:13:30,579
+and import python this is gonna allow us
+
+307
+00:13:30,579 --> 00:13:32,620
+to use these packages and there we go
+
+308
+00:13:32,620 --> 00:13:36,100
+simple it runs successfully next we've
+
+309
+00:13:36,100 --> 00:13:38,079
+got a little bit more complex code we're
+
+310
+00:13:38,079 --> 00:13:40,930
+essentially in importing the OS numpy
+
+311
+00:13:40,930 --> 00:13:43,449
+and scikit-learn metrics packages from
+
+312
+00:13:43,449 --> 00:13:46,720
+Python into Swift and after that I check
+
+313
+00:13:46,720 --> 00:13:48,699
+if the endless datasets all even
+
+314
+00:13:48,699 --> 00:13:51,430
+downloaded if it has I do nothing if it
+
+315
+00:13:51,430 --> 00:13:53,380
+hasn't then I go ahead and download it
+
+316
+00:13:53,380 --> 00:13:57,190
+using W get from the OS package then
+
+317
+00:13:57,190 --> 00:13:59,589
+after that I go ahead and load the MS
+
+318
+00:13:59,589 --> 00:14:03,220
+dataset in to numpy by using NP load and
+
+319
+00:14:03,220 --> 00:14:05,439
+then I convert that numpy array or that
+
+320
+00:14:05,439 --> 00:14:08,199
+dictionary of numpy arrays into four
+
+321
+00:14:08,199 --> 00:14:09,880
+different tensors for both the input and
+
+322
+00:14:09,880 --> 00:14:12,610
+output for training and testing after
+
+323
+00:14:12,610 --> 00:14:14,350
+that I print out the shape just to make
+
+324
+00:14:14,350 --> 00:14:16,810
+sure everything's going nicely and from
+
+325
+00:14:16,810 --> 00:14:19,360
+there we've got the next cell now the
+
+326
+00:14:19,360 --> 00:14:21,910
+next cell we do something a little bit
+
+327
+00:14:21,910 --> 00:14:25,329
+unnecessary but convenience is really
+
+328
+00:14:25,329 --> 00:14:28,120
+what matters here so there is a Python
+
+329
+00:14:28,120 --> 00:14:29,889
+package called TQ diem which enables you
+
+330
+00:14:29,889 --> 00:14:32,019
+to plot out the progress of different
+
+331
+00:14:32,019 --> 00:14:34,120
+operations so for example let's just say
+
+332
+00:14:34,120 --> 00:14:36,519
+are you running a long-running operation
+
+333
+00:14:36,519 --> 00:14:38,380
+and you want to figure out how far along
+
+334
+00:14:38,380 --> 00:14:41,860
+you are in a for loop or in a map or in
+
+335
+00:14:41,860 --> 00:14:45,399
+a multi processing pool map then you can
+
+336
+00:14:45,399 --> 00:14:48,040
+essentially just wrap the iterator or
+
+337
+00:14:48,040 --> 00:14:50,889
+the sequence in T qdm and you will get a
+
+338
+00:14:50,889 --> 00:14:53,110
+progress bar automatically it's just as
+
+339
+00:14:53,110 --> 00:14:55,000
+simple as that now because you can
+
+340
+00:14:55,000 --> 00:14:57,970
+import Python code into Swift I'm using
+
+341
+00:14:57,970 --> 00:15:00,339
+that in order to create a very very thin
+
+342
+00:15:00,339 --> 00:15:03,490
+wrapper around Python T qdm in Swift so
+
+343
+00:15:03,490 --> 00:15:06,040
+you can actually pass this new Swift T
+
+344
+00:15:06,040 --> 00:15:08,709
+qdm type with any sequence and it'll
+
+345
+00:15:08,709 --> 00:15:11,290
+automatically create a progress bar for
+
+346
+00:15:11,290 --> 00:15:12,760
+you it's really nice you can pass it
+
+347
+00:15:12,760 --> 00:15:13,870
+ranges you can pass
+
+348
+00:15:13,870 --> 00:15:16,240
+arrays and we're going to use this to
+
+349
+00:15:16,240 --> 00:15:18,130
+make our life easier when training this
+
+350
+00:15:18,130 --> 00:15:19,780
+model so let's take a look at how this
+
+351
+00:15:19,780 --> 00:15:23,470
+works I start off by importing the TQ DM
+
+352
+00:15:23,470 --> 00:15:25,360
+package and then create a structure
+
+353
+00:15:25,360 --> 00:15:27,670
+called TQ DM progress bar this is
+
+354
+00:15:27,670 --> 00:15:31,360
+actually the wrapper around T qdm in
+
+355
+00:15:31,360 --> 00:15:33,190
+terms of upgrading the progress bar
+
+356
+00:15:33,190 --> 00:15:35,110
+itself the progress bar is a private
+
+357
+00:15:35,110 --> 00:15:36,850
+variable within the structure it's a
+
+358
+00:15:36,850 --> 00:15:39,750
+Python object and the total number of
+
+359
+00:15:39,750 --> 00:15:42,790
+elements in the sequence is an integer
+
+360
+00:15:42,790 --> 00:15:44,920
+we just initialize with the total number
+
+361
+00:15:44,920 --> 00:15:47,260
+of sequences there's an update or the
+
+362
+00:15:47,260 --> 00:15:48,460
+total number of elements in the sequence
+
+363
+00:15:48,460 --> 00:15:50,320
+and then there's an update function
+
+364
+00:15:50,320 --> 00:15:52,390
+which takes an amount to update by
+
+365
+00:15:52,390 --> 00:15:54,640
+updates the progress bar and then
+
+366
+00:15:54,640 --> 00:15:56,560
+there's also a close function to close
+
+367
+00:15:56,560 --> 00:15:59,530
+the progress bar and so that's exactly
+
+368
+00:15:59,530 --> 00:16:01,990
+how the TCD and progress bar structure
+
+369
+00:16:01,990 --> 00:16:04,300
+structure works but then after that
+
+370
+00:16:04,300 --> 00:16:05,710
+you've got to have the structure that
+
+371
+00:16:05,710 --> 00:16:08,440
+actually wraps around a sequence and
+
+372
+00:16:08,440 --> 00:16:12,010
+this called the T qdm structure it takes
+
+373
+00:16:12,010 --> 00:16:14,350
+a generic type called element and it is
+
+374
+00:16:14,350 --> 00:16:16,930
+of type sequence it conforms to the
+
+375
+00:16:16,930 --> 00:16:19,900
+sequence protocol now it has an internal
+
+376
+00:16:19,900 --> 00:16:22,210
+sequence which is an array of element
+
+377
+00:16:22,210 --> 00:16:23,950
+values and this is why we're using this
+
+378
+00:16:23,950 --> 00:16:27,420
+generic type and I also have initializer
+
+379
+00:16:27,420 --> 00:16:30,970
+with no keyword argument so this is the
+
+380
+00:16:30,970 --> 00:16:33,400
+key part here the reason I have this
+
+381
+00:16:33,400 --> 00:16:35,410
+initializer is because let's just say I
+
+382
+00:16:35,410 --> 00:16:41,860
+wanted to do for I in T qdm 1.5 and then
+
+383
+00:16:41,860 --> 00:16:46,390
+maybe println or a print hello
+
+384
+00:16:46,390 --> 00:16:53,250
+and then I all right now if I wanted to
+
+385
+00:16:53,250 --> 00:16:56,860
+have this code the thing is this
+
+386
+00:16:56,860 --> 00:16:59,950
+sequence needs to be passed to T qdm if
+
+387
+00:16:59,950 --> 00:17:02,080
+this underscore wasn't there you'd have
+
+388
+00:17:02,080 --> 00:17:03,670
+the unn you would have the ugly syntax
+
+389
+00:17:03,670 --> 00:17:07,120
+of T qdm sequence and then pass of the
+
+390
+00:17:07,120 --> 00:17:09,820
+sequence so to make it more Python like
+
+391
+00:17:09,820 --> 00:17:12,130
+and to make it more natural to use you
+
+392
+00:17:12,130 --> 00:17:15,280
+just wrap 1 to 5 and T to DM and just
+
+393
+00:17:15,280 --> 00:17:18,910
+like that you've got a progress bar now
+
+394
+00:17:18,910 --> 00:17:22,360
+after that there's also a make iterator
+
+395
+00:17:22,360 --> 00:17:24,220
+function and the make iterator function
+
+396
+00:17:24,220 --> 00:17:26,360
+will essentially run at route return
+
+397
+00:17:26,360 --> 00:17:29,360
+new structure the TQ DM iterator
+
+398
+00:17:29,360 --> 00:17:31,070
+structure the TQM
+
+399
+00:17:31,070 --> 00:17:33,590
+TDM iterator structure takes again the
+
+400
+00:17:33,590 --> 00:17:35,960
+generic type of element and it conforms
+
+401
+00:17:35,960 --> 00:17:38,420
+to iterator protocol essentially this is
+
+402
+00:17:38,420 --> 00:17:41,570
+what allows Maps and for loops and
+
+403
+00:17:41,570 --> 00:17:45,799
+filters to actually use this iterator so
+
+404
+00:17:45,799 --> 00:17:47,600
+now if we actually go ahead and take a
+
+405
+00:17:47,600 --> 00:17:49,280
+look at the inside it's very very simple
+
+406
+00:17:49,280 --> 00:17:50,840
+you've essentially got the internal
+
+407
+00:17:50,840 --> 00:17:52,730
+sequence which is the array of elements
+
+408
+00:17:52,730 --> 00:17:54,770
+which is again why we have that element
+
+409
+00:17:54,770 --> 00:17:57,350
+generic type you've got the index that
+
+410
+00:17:57,350 --> 00:17:59,450
+we're currently on within the iteration
+
+411
+00:17:59,450 --> 00:18:02,030
+and you've got the progress bar itself
+
+412
+00:18:02,030 --> 00:18:03,950
+which is the tqd and progress bar that
+
+413
+00:18:03,950 --> 00:18:06,559
+we defined up here now again this just
+
+414
+00:18:06,559 --> 00:18:08,419
+initialized is very very simple with a
+
+415
+00:18:08,419 --> 00:18:12,020
+sequence and it has a mutating function
+
+416
+00:18:12,020 --> 00:18:14,270
+called NEX which returns an optional
+
+417
+00:18:14,270 --> 00:18:16,640
+type of element now essentially what its
+
+418
+00:18:16,640 --> 00:18:17,870
+gonna do is it's gonna check if the
+
+419
+00:18:17,870 --> 00:18:20,990
+current index is within the bounds of
+
+420
+00:18:20,990 --> 00:18:23,630
+the sequence array if it is it'll update
+
+421
+00:18:23,630 --> 00:18:25,970
+the progress bar by one increase the
+
+422
+00:18:25,970 --> 00:18:29,360
+index and return the current value
+
+423
+00:18:29,360 --> 00:18:31,970
+within the sequence however if we've
+
+424
+00:18:31,970 --> 00:18:34,070
+reached an index outside of the array
+
+425
+00:18:34,070 --> 00:18:35,870
+it'll close the progress bar
+
+426
+00:18:35,870 --> 00:18:37,520
+automatically for us so we don't need to
+
+427
+00:18:37,520 --> 00:18:37,940
+do it
+
+428
+00:18:37,940 --> 00:18:40,640
+convenience and it'll also return nil
+
+429
+00:18:40,640 --> 00:18:43,370
+this is what tells for loops in Swift to
+
+430
+00:18:43,370 --> 00:18:46,340
+stop whenever you loop with a for loop
+
+431
+00:18:46,340 --> 00:18:48,740
+you are using an iterator when the for
+
+432
+00:18:48,740 --> 00:18:51,380
+loop reaches nil that's when it's going
+
+433
+00:18:51,380 --> 00:18:53,570
+to actually stop with a for loop that's
+
+434
+00:18:53,570 --> 00:18:55,340
+the internal working of the iterator
+
+435
+00:18:55,340 --> 00:18:58,580
+protocol at the for loop uses and so
+
+436
+00:18:58,580 --> 00:19:00,919
+this is just convenience not necessary
+
+437
+00:19:00,919 --> 00:19:02,809
+but it also allows us to figure out how
+
+438
+00:19:02,809 --> 00:19:05,690
+far along the model is in both training
+
+439
+00:19:05,690 --> 00:19:10,190
+and testing now after this we could take
+
+440
+00:19:10,190 --> 00:19:13,400
+a look at real model code now first of
+
+441
+00:19:13,400 --> 00:19:14,750
+all I start off with a very very simple
+
+442
+00:19:14,750 --> 00:19:16,820
+function called mini-batch this is
+
+443
+00:19:16,820 --> 00:19:19,100
+actually taken from the Swift models
+
+444
+00:19:19,100 --> 00:19:20,510
+example there will be a link to the
+
+445
+00:19:20,510 --> 00:19:22,040
+example down in the description below
+
+446
+00:19:22,040 --> 00:19:25,040
+and essentially just takes a tensor with
+
+447
+00:19:25,040 --> 00:19:28,760
+a scalar generic type and it returns a
+
+448
+00:19:28,760 --> 00:19:32,570
+mini batch mini batch at an index so for
+
+449
+00:19:32,570 --> 00:19:34,250
+example if you've got a batch size of 64
+
+450
+00:19:34,250 --> 00:19:38,450
+it'll return at that index plus the
+
+451
+00:19:38,450 --> 00:19:39,310
+batch size
+
+452
+00:19:39,310 --> 00:19:42,610
+so on and so forth and so that's how a
+
+453
+00:19:42,610 --> 00:19:44,980
+mini batching works very very simple
+
+454
+00:19:44,980 --> 00:19:47,320
+allows us to take the MS data set create
+
+455
+00:19:47,320 --> 00:19:49,140
+many batches that we can then train with
+
+456
+00:19:49,140 --> 00:19:52,600
+now after that is really the main part
+
+457
+00:19:52,600 --> 00:19:54,640
+that you've got to focus on this is the
+
+458
+00:19:54,640 --> 00:19:57,070
+EM nest model itself it can form to a
+
+459
+00:19:57,070 --> 00:20:00,100
+layer type or the layer protocol and it
+
+460
+00:20:00,100 --> 00:20:02,650
+has a few layers in it first of all
+
+461
+00:20:02,650 --> 00:20:05,020
+we've got two convolutional layers one
+
+462
+00:20:05,020 --> 00:20:07,540
+max pooling layer another convolutional
+
+463
+00:20:07,540 --> 00:20:10,450
+layer and then two dense layers now in
+
+464
+00:20:10,450 --> 00:20:11,950
+the initializer function you can take a
+
+465
+00:20:11,950 --> 00:20:14,140
+look at the actual parameters that go
+
+466
+00:20:14,140 --> 00:20:17,890
+behind these these layers so you can
+
+467
+00:20:17,890 --> 00:20:18,820
+take a look at the first two
+
+468
+00:20:18,820 --> 00:20:20,680
+convolutions they've got filter sizes of
+
+469
+00:20:20,680 --> 00:20:22,840
+three by three and at the end you get a
+
+470
+00:20:22,840 --> 00:20:25,810
+64 channel output and then after that
+
+471
+00:20:25,810 --> 00:20:28,090
+you can take a look at the pooling now
+
+472
+00:20:28,090 --> 00:20:30,040
+the pooling essentially enables you to
+
+473
+00:20:30,040 --> 00:20:32,920
+half the size of the image so from 24 by
+
+474
+00:20:32,920 --> 00:20:37,300
+24 by 64 to 12 by 12 by 64 we've got one
+
+475
+00:20:37,300 --> 00:20:39,540
+more convolution same number of channels
+
+476
+00:20:39,540 --> 00:20:42,400
+and same filter size three by three and
+
+477
+00:20:42,400 --> 00:20:44,350
+then two dense layers to bring it down
+
+478
+00:20:44,350 --> 00:20:49,030
+from 10 by 10 by 64 to 128 and then 128
+
+479
+00:20:49,030 --> 00:20:51,400
+to 10 and these are final outputs
+
+480
+00:20:51,400 --> 00:20:53,800
+finally there is a differentiable
+
+481
+00:20:53,800 --> 00:20:55,690
+function called applied to input in
+
+482
+00:20:55,690 --> 00:20:59,200
+context and essentially this is going to
+
+483
+00:20:59,200 --> 00:21:00,580
+take all your different layers it's
+
+484
+00:21:00,580 --> 00:21:02,320
+gonna feed your input through these
+
+485
+00:21:02,320 --> 00:21:05,500
+layers and it's going to get your output
+
+486
+00:21:05,500 --> 00:21:08,920
+and return it so again this is actually
+
+487
+00:21:08,920 --> 00:21:10,690
+limited to floats there's no you know
+
+488
+00:21:10,690 --> 00:21:13,240
+generic type here this is limited to
+
+489
+00:21:13,240 --> 00:21:15,190
+floating point input floating point
+
+490
+00:21:15,190 --> 00:21:17,140
+output it's essentially taking that
+
+491
+00:21:17,140 --> 00:21:18,250
+input feeding it to the first
+
+492
+00:21:18,250 --> 00:21:20,440
+convolutional layer running against a
+
+493
+00:21:20,440 --> 00:21:22,450
+rectified linear unit of a ssin doing
+
+494
+00:21:22,450 --> 00:21:23,590
+the same thing with the second layer
+
+495
+00:21:23,590 --> 00:21:25,840
+feeding it to the pooling layer and so
+
+496
+00:21:25,840 --> 00:21:27,400
+on and so forth throughout the neural
+
+497
+00:21:27,400 --> 00:21:30,460
+network model and so that's how the
+
+498
+00:21:30,460 --> 00:21:33,370
+actual model itself works now this code
+
+499
+00:21:33,370 --> 00:21:35,170
+over here essentially enables me to
+
+500
+00:21:35,170 --> 00:21:37,960
+calculate the loss and the accuracy of
+
+501
+00:21:37,960 --> 00:21:40,930
+the model just calculating the loss is
+
+502
+00:21:40,930 --> 00:21:43,120
+differentiable just calculating the
+
+503
+00:21:43,120 --> 00:21:45,070
+accuracy or calculating loss with
+
+504
+00:21:45,070 --> 00:21:46,900
+accuracy is not differential because
+
+505
+00:21:46,900 --> 00:21:48,760
+that's not a differentiable operation
+
+506
+00:21:48,760 --> 00:21:50,740
+you cannot find the derivative of that
+
+507
+00:21:50,740 --> 00:21:51,790
+op
+
+508
+00:21:51,790 --> 00:21:54,580
+and so these are the two functions if
+
+509
+00:21:54,580 --> 00:21:55,960
+you want to find out how exactly this
+
+510
+00:21:55,960 --> 00:21:57,640
+works in more detail I don't recommend
+
+511
+00:21:57,640 --> 00:21:59,380
+you take a look at my tutorial again on
+
+512
+00:21:59,380 --> 00:22:00,700
+these Swit for tensorflow
+
+513
+00:22:00,700 --> 00:22:03,670
+trading analyst model now after that
+
+514
+00:22:03,670 --> 00:22:05,590
+I've got a very very simple training
+
+515
+00:22:05,590 --> 00:22:07,809
+loop that's essentially going to loop
+
+516
+00:22:07,809 --> 00:22:09,240
+through the mini-batches
+
+517
+00:22:09,240 --> 00:22:11,760
+ten times it's gonna loop through each
+
+518
+00:22:11,760 --> 00:22:14,740
+individual batch in the mini batches ten
+
+519
+00:22:14,740 --> 00:22:17,530
+times of ten epochs and n number of
+
+520
+00:22:17,530 --> 00:22:18,880
+batches it'll loop through them and
+
+521
+00:22:18,880 --> 00:22:21,850
+actually train the model and at the same
+
+522
+00:22:21,850 --> 00:22:24,580
+time it's going to accumulate a training
+
+523
+00:22:24,580 --> 00:22:27,010
+and a testing loss and what this enables
+
+524
+00:22:27,010 --> 00:22:29,650
+us to do is plot it not just plot but
+
+525
+00:22:29,650 --> 00:22:32,590
+also print out of the actual loss values
+
+526
+00:22:32,590 --> 00:22:36,640
+at each epoch as well as accuracy now as
+
+527
+00:22:36,640 --> 00:22:40,480
+you can tell this model does not contain
+
+528
+00:22:40,480 --> 00:22:44,380
+batch mobilization okay but it does have
+
+529
+00:22:44,380 --> 00:22:47,290
+a regular old eminence model so let's go
+
+530
+00:22:47,290 --> 00:22:49,540
+ahead and take a look at how exactly
+
+531
+00:22:49,540 --> 00:22:51,460
+this code functions so I'm gonna go
+
+532
+00:22:51,460 --> 00:22:52,870
+ahead and run all the code first of all
+
+533
+00:22:52,870 --> 00:22:55,870
+let's go ahead and load the data over
+
+534
+00:22:55,870 --> 00:22:57,550
+here we can see the shape of the tensors
+
+535
+00:22:57,550 --> 00:23:01,120
+now let's go ahead and create our T qdm
+
+536
+00:23:01,120 --> 00:23:03,490
+great no errors and now let's go ahead
+
+537
+00:23:03,490 --> 00:23:05,260
+and actually train the model so I'm
+
+538
+00:23:05,260 --> 00:23:08,650
+gonna go command enter here and any
+
+539
+00:23:08,650 --> 00:23:10,900
+second now it shall start training the
+
+540
+00:23:10,900 --> 00:23:13,809
+model now remember we're using T qdm so
+
+541
+00:23:13,809 --> 00:23:14,920
+we can actually take a look at a
+
+542
+00:23:14,920 --> 00:23:17,530
+progress how many batches it's done in
+
+543
+00:23:17,530 --> 00:23:19,780
+the epoch how long it's going to take
+
+544
+00:23:19,780 --> 00:23:21,490
+and how many iterations are being
+
+545
+00:23:21,490 --> 00:23:23,890
+completed every single second so now
+
+546
+00:23:23,890 --> 00:23:25,740
+let's go ahead and give this around
+
+547
+00:23:25,740 --> 00:23:29,290
+three minutes and we should be done with
+
+548
+00:23:29,290 --> 00:23:31,420
+the first epoch right after that we'll
+
+549
+00:23:31,420 --> 00:23:33,460
+take a look at the accuracy and then
+
+550
+00:23:33,460 --> 00:23:34,960
+we'll actually implement Batchelor
+
+551
+00:23:34,960 --> 00:23:37,950
+ization to the exact same model and
+
+552
+00:23:37,950 --> 00:23:42,570
+let's see what kinds of metrics we get
+
+553
+00:23:51,500 --> 00:23:54,390
+all right so now as you can see we are
+
+554
+00:23:54,390 --> 00:23:58,320
+99% done only oh there we go so we get
+
+555
+00:23:58,320 --> 00:24:01,320
+the average training losses 1.75 not too
+
+556
+00:24:01,320 --> 00:24:03,840
+bad not too good and now it's evaluating
+
+557
+00:24:03,840 --> 00:24:05,520
+on the test set and our loss is one
+
+558
+00:24:05,520 --> 00:24:08,669
+point six two and the accuracy is at 83%
+
+559
+00:24:08,669 --> 00:24:10,440
+because if you were to go ahead and
+
+560
+00:24:10,440 --> 00:24:12,690
+multiply this by a hundred you would get
+
+561
+00:24:12,690 --> 00:24:15,150
+eighty three point five six percent so
+
+562
+00:24:15,150 --> 00:24:18,120
+again not really bad but it's not great
+
+563
+00:24:18,120 --> 00:24:19,830
+either of course if you were to continue
+
+564
+00:24:19,830 --> 00:24:22,110
+training for more epochs we would get
+
+565
+00:24:22,110 --> 00:24:24,779
+good results it's just that well we want
+
+566
+00:24:24,779 --> 00:24:27,330
+it faster because compute power is
+
+567
+00:24:27,330 --> 00:24:30,120
+limited and you want as fast results as
+
+568
+00:24:30,120 --> 00:24:33,210
+possible so let's go ahead and stop this
+
+569
+00:24:33,210 --> 00:24:35,490
+training run and let's take a look at
+
+570
+00:24:35,490 --> 00:24:38,760
+one o'clock with Bachelor realization so
+
+571
+00:24:38,760 --> 00:24:42,059
+I've got another notebook open here and
+
+572
+00:24:42,059 --> 00:24:44,190
+we've got the exact same code in all the
+
+573
+00:24:44,190 --> 00:24:47,429
+cells there's just one difference so if
+
+574
+00:24:47,429 --> 00:24:49,230
+I go ahead and restart the runtime so we
+
+575
+00:24:49,230 --> 00:24:53,549
+get a new RAM and new disk if I scroll
+
+576
+00:24:53,549 --> 00:24:55,549
+down as you can see here there are three
+
+577
+00:24:55,549 --> 00:24:58,049
+extra layers in the model and these are
+
+578
+00:24:58,049 --> 00:24:59,760
+all batch mobilization layers after
+
+579
+00:24:59,760 --> 00:25:02,370
+every convolutional layer comes a
+
+580
+00:25:02,370 --> 00:25:04,380
+bachelorville ization layer now there's
+
+581
+00:25:04,380 --> 00:25:07,470
+been a great debate going on online and
+
+582
+00:25:07,470 --> 00:25:09,840
+there's been for a long time about
+
+583
+00:25:09,840 --> 00:25:11,789
+whether bachelors ation should come
+
+584
+00:25:11,789 --> 00:25:14,159
+before or after the activation layer
+
+585
+00:25:14,159 --> 00:25:15,929
+rectified linear unit or whatever else
+
+586
+00:25:15,929 --> 00:25:18,510
+it may be now there are arguments on
+
+587
+00:25:18,510 --> 00:25:21,450
+both sides of the debate the original
+
+588
+00:25:21,450 --> 00:25:23,460
+author of the paper on bachelors ation
+
+589
+00:25:23,460 --> 00:25:24,779
+originally said it should come before
+
+590
+00:25:24,779 --> 00:25:26,760
+the activations but then change his mind
+
+591
+00:25:26,760 --> 00:25:29,610
+to after the activations most people
+
+592
+00:25:29,610 --> 00:25:31,980
+still put it before the activations but
+
+593
+00:25:31,980 --> 00:25:34,289
+I found in my limited testing that after
+
+594
+00:25:34,289 --> 00:25:35,820
+the activations works best but then
+
+595
+00:25:35,820 --> 00:25:37,200
+again you should really choose what
+
+596
+00:25:37,200 --> 00:25:38,820
+works best for your model in your
+
+597
+00:25:38,820 --> 00:25:40,559
+circumstance because everyone's model is
+
+598
+00:25:40,559 --> 00:25:42,029
+different everyone's data is different
+
+599
+00:25:42,029 --> 00:25:44,429
+and everyone's needs are different this
+
+600
+00:25:44,429 --> 00:25:46,500
+is in a way a Hydra parameter that you
+
+601
+00:25:46,500 --> 00:25:49,320
+can adjust as well all right so now
+
+602
+00:25:49,320 --> 00:25:51,330
+apart from just the initializer which is
+
+603
+00:25:51,330 --> 00:25:52,590
+where you actually initialize the
+
+604
+00:25:52,590 --> 00:25:54,840
+Batchelor realization layers over here i
+
+605
+00:25:54,840 --> 00:25:57,450
+basically instead of just applying the
+
+606
+00:25:57,450 --> 00:25:59,950
+input to the convolutional layers i then
+
+607
+00:25:59,950 --> 00:26:01,420
+the output of the convolutional layers
+
+608
+00:26:01,420 --> 00:26:04,720
+then apply the bachelors ation layers on
+
+609
+00:26:04,720 --> 00:26:08,140
+those in order to get the outputs and so
+
+610
+00:26:08,140 --> 00:26:09,880
+we've got essentially the same number of
+
+611
+00:26:09,880 --> 00:26:13,830
+lines in the applied to in context later
+
+612
+00:26:13,830 --> 00:26:17,410
+function but we have batch normalization
+
+613
+00:26:17,410 --> 00:26:21,640
+abilities applied here now so after that
+
+614
+00:26:21,640 --> 00:26:24,190
+we've got the exact same code remember
+
+615
+00:26:24,190 --> 00:26:25,840
+the only difference is that batch
+
+616
+00:26:25,840 --> 00:26:28,060
+normalization has been implemented now
+
+617
+00:26:28,060 --> 00:26:30,100
+if I go ahead and run this let's take a
+
+618
+00:26:30,100 --> 00:26:32,080
+look at the kinds of accuracy metrics we
+
+619
+00:26:32,080 --> 00:26:34,810
+get on the first epoch let's take a look
+
+620
+00:26:34,810 --> 00:26:42,130
+oh we first have to import tensor flow
+
+621
+00:26:42,130 --> 00:26:46,660
+and all Python packages and TQ DM and
+
+622
+00:26:46,660 --> 00:26:57,670
+then we can go ahead and run so there we
+
+623
+00:26:57,670 --> 00:26:58,990
+go let's go ahead and give that around
+
+624
+00:26:58,990 --> 00:27:01,030
+three and a half minutes and I'll be
+
+625
+00:27:01,030 --> 00:27:04,710
+right back to take a look at the results
+
+626
+00:27:10,830 --> 00:27:12,890
+you
+
+627
+00:27:13,850 --> 00:27:16,440
+all right so now let's see first of all
+
+628
+00:27:16,440 --> 00:27:18,600
+on the training set we've already got
+
+629
+00:27:18,600 --> 00:27:21,480
+better metrics we've got 1.5 average
+
+630
+00:27:21,480 --> 00:27:24,809
+laws and on the test set oh wow we've
+
+631
+00:27:24,809 --> 00:27:28,230
+got even better results 1.4 average loss
+
+632
+00:27:28,230 --> 00:27:34,259
+and 98.1 percent accuracy that is really
+
+633
+00:27:34,259 --> 00:27:36,179
+amazing so if I go ahead and stop this
+
+634
+00:27:36,179 --> 00:27:38,399
+let's take a moment to really understand
+
+635
+00:27:38,399 --> 00:27:40,619
+what happened here back when there was
+
+636
+00:27:40,619 --> 00:27:43,200
+no batch normalization on the first
+
+637
+00:27:43,200 --> 00:27:44,999
+epoch just the first epoch we got eight
+
+638
+00:27:44,999 --> 00:27:46,950
+and three percent accuracy which itself
+
+639
+00:27:46,950 --> 00:27:50,340
+is very very good metric although it's
+
+640
+00:27:50,340 --> 00:27:52,139
+not acceptable for most production
+
+641
+00:27:52,139 --> 00:27:54,600
+standards but if you take a look with
+
+642
+00:27:54,600 --> 00:27:57,359
+bass realization in just one individual
+
+643
+00:27:57,359 --> 00:27:59,549
+iteration the whole training set on the
+
+644
+00:27:59,549 --> 00:28:02,090
+test set we were able to achieve a
+
+645
+00:28:02,090 --> 00:28:07,230
+stunning 89% accuracy I go ahead and
+
+646
+00:28:07,230 --> 00:28:12,149
+open up the window here we were able to
+
+647
+00:28:12,149 --> 00:28:16,799
+get 98% accuracy that is really an
+
+648
+00:28:16,799 --> 00:28:19,259
+amazing metric and why is that it's
+
+649
+00:28:19,259 --> 00:28:21,480
+because you were able to take the hidden
+
+650
+00:28:21,480 --> 00:28:23,419
+states of that neural network and
+
+651
+00:28:23,419 --> 00:28:25,950
+optimize them to make it easier for the
+
+652
+00:28:25,950 --> 00:28:27,509
+neural network to deal with them and
+
+653
+00:28:27,509 --> 00:28:29,509
+best part is that not only are you
+
+654
+00:28:29,509 --> 00:28:32,070
+standardizing data according to the mean
+
+655
+00:28:32,070 --> 00:28:34,409
+the variance of the data but rather what
+
+656
+00:28:34,409 --> 00:28:36,059
+you're doing is you're saying all right
+
+657
+00:28:36,059 --> 00:28:39,720
+I can learn what distribution is best
+
+658
+00:28:39,720 --> 00:28:42,210
+for the neural network century of 0 may
+
+659
+00:28:42,210 --> 00:28:44,249
+be better for some data sets but worse
+
+660
+00:28:44,249 --> 00:28:46,799
+for some censoring at five might be
+
+661
+00:28:46,799 --> 00:28:48,330
+better for some types of layers but
+
+662
+00:28:48,330 --> 00:28:51,539
+worse for other types of layers just how
+
+663
+00:28:51,539 --> 00:28:54,330
+like for example the bias neuron enables
+
+664
+00:28:54,330 --> 00:28:55,919
+you to move the activation function
+
+665
+00:28:55,919 --> 00:28:58,409
+around depending on the scale of the
+
+666
+00:28:58,409 --> 00:29:00,869
+actual neuron Batchelor ization in a
+
+667
+00:29:00,869 --> 00:29:02,759
+similar sort of analogy of a very
+
+668
+00:29:02,759 --> 00:29:05,600
+bird's-eye view enables you to learn a
+
+669
+00:29:05,600 --> 00:29:08,580
+distribution of the data that works best
+
+670
+00:29:08,580 --> 00:29:10,799
+for that layer in the neural network
+
+671
+00:29:10,799 --> 00:29:13,320
+according to the data set and the values
+
+672
+00:29:13,320 --> 00:29:15,779
+are chosen by back propagation has just
+
+673
+00:29:15,779 --> 00:29:18,149
+another layer in your neural network and
+
+674
+00:29:18,149 --> 00:29:20,669
+that's how easy it is to implement this
+
+675
+00:29:20,669 --> 00:29:22,379
+kind of layer in sweep for tensor flow
+
+676
+00:29:22,379 --> 00:29:24,659
+so thank you very much everyone for
+
+677
+00:29:24,659 --> 00:29:26,249
+joining in today I really do hope you
+
+678
+00:29:26,249 --> 00:29:27,220
+enjoyed this tour
+
+679
+00:29:27,220 --> 00:29:29,500
+if you did please do make sure to leave
+
+680
+00:29:29,500 --> 00:29:31,690
+a like down below and also if you do
+
+681
+00:29:31,690 --> 00:29:33,070
+have any questions suggestions or
+
+682
+00:29:33,070 --> 00:29:34,450
+feedback make sure you leave them down
+
+683
+00:29:34,450 --> 00:29:36,460
+in the comments or you can email me at a
+
+684
+00:29:36,460 --> 00:29:38,560
+g-man each email com because I'd love to
+
+685
+00:29:38,560 --> 00:29:40,510
+answer any questions that you may have
+
+686
+00:29:40,510 --> 00:29:42,310
+apart from that if you really do like my
+
+687
+00:29:42,310 --> 00:29:43,540
+content you want to see more of it
+
+688
+00:29:43,540 --> 00:29:45,940
+please do make sure to subscribe to my
+
+689
+00:29:45,940 --> 00:29:47,290
+youtube channel as it really does help a
+
+690
+00:29:47,290 --> 00:29:49,540
+lot and turn on notifications if you'd
+
+691
+00:29:49,540 --> 00:29:51,190
+like to be notified whenever I release
+
+692
+00:29:51,190 --> 00:29:53,500
+new content but from that's the link to
+
+693
+00:29:53,500 --> 00:29:55,120
+the code and the collab notebooks will
+
+694
+00:29:55,120 --> 00:29:56,680
+be in a link in the description down
+
+695
+00:29:56,680 --> 00:29:59,890
+below as well as a video to my m nest
+
+696
+00:29:59,890 --> 00:30:02,860
+Swiffer dense flow training alright so
+
+697
+00:30:02,860 --> 00:30:04,060
+thank you very much everyone for joining
+
+698
+00:30:04,060 --> 00:30:05,530
+in today that's what I had for this
+
+699
+00:30:05,530 --> 00:30:09,030
+tutorial goodbye

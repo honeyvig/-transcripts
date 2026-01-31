@@ -1,0 +1,1247 @@
+1
+00:00:00,589 --> 00:00:02,580
+solo there and welcome to the tutorial
+
+2
+00:00:02,580 --> 00:00:04,770
+my name is Hannah Bakshi and this time
+
+3
+00:00:04,770 --> 00:00:06,029
+we're going to be going over a new
+
+4
+00:00:06,029 --> 00:00:08,370
+playlist which is called Tammy's tips
+
+5
+00:00:08,370 --> 00:00:10,950
+and this time as by the name suggests
+
+6
+00:00:10,950 --> 00:00:13,320
+I'm going to be telling you tips about
+
+7
+00:00:13,320 --> 00:00:15,809
+tutorials I have done previously or I am
+
+8
+00:00:15,809 --> 00:00:18,810
+yet to do and so these tips will include
+
+9
+00:00:18,810 --> 00:00:22,140
+stuff like frequently asked questions
+
+10
+00:00:22,140 --> 00:00:23,760
+questions that I got that are really
+
+11
+00:00:23,760 --> 00:00:26,130
+small but they are significant actually
+
+12
+00:00:26,130 --> 00:00:30,300
+lots of people do ask this question and
+
+13
+00:00:30,300 --> 00:00:32,669
+just basic stuff like that so let's get
+
+14
+00:00:32,669 --> 00:00:36,540
+started and so today my question comes
+
+15
+00:00:36,540 --> 00:00:39,750
+from VIN so actually he's working on a
+
+16
+00:00:39,750 --> 00:00:42,780
+bigger project which I might create a
+
+17
+00:00:42,780 --> 00:00:46,890
+part two on maybe but actually his main
+
+18
+00:00:46,890 --> 00:00:49,860
+question for this specific time was
+
+19
+00:00:49,860 --> 00:00:52,050
+first of all he can't that he doesn't
+
+20
+00:00:52,050 --> 00:00:56,340
+want to buy a hosting provider so
+
+21
+00:00:56,340 --> 00:01:00,149
+instead he wants to host locally and
+
+22
+00:01:00,149 --> 00:01:02,789
+because he's hosting locally how do I
+
+23
+00:01:02,789 --> 00:01:07,170
+make a DRI our testing device actually
+
+24
+00:01:07,170 --> 00:01:11,700
+connect to that local server so first of
+
+25
+00:01:11,700 --> 00:01:13,140
+all let's get started and let's just see
+
+26
+00:01:13,140 --> 00:01:17,570
+how a basic network would have worked if
+
+27
+00:01:17,570 --> 00:01:20,369
+we were to connect so first of all this
+
+28
+00:01:20,369 --> 00:01:22,650
+is your laptop or actually let's just
+
+29
+00:01:22,650 --> 00:01:24,030
+draw a desktop because it's easier to
+
+30
+00:01:24,030 --> 00:01:29,310
+draw um actually so we have a bit more
+
+31
+00:01:29,310 --> 00:01:30,840
+space because I'm going to be drawing
+
+32
+00:01:30,840 --> 00:01:32,460
+something here I'm going to erase this
+
+33
+00:01:32,460 --> 00:01:38,369
+you all know his name now and so yeah so
+
+34
+00:01:38,369 --> 00:01:39,930
+this is the desktop it's just saying
+
+35
+00:01:39,930 --> 00:01:45,689
+something here a power button okay so
+
+36
+00:01:45,689 --> 00:01:50,790
+this is our a specific level the desktop
+
+37
+00:01:50,790 --> 00:01:54,119
+here now that we have this desktop let's
+
+38
+00:01:54,119 --> 00:02:00,210
+just say we have our router here our
+
+39
+00:02:00,210 --> 00:02:02,479
+there
+
+40
+00:02:07,220 --> 00:02:10,250
+now that we have a router oh we can say
+
+41
+00:02:10,250 --> 00:02:13,580
+that this ah desktop is connected to
+
+42
+00:02:13,580 --> 00:02:19,100
+this router so now let's just do
+
+43
+00:02:19,100 --> 00:02:20,750
+something like okay we have another
+
+44
+00:02:20,750 --> 00:02:24,800
+iPhone testing device here now there are
+
+45
+00:02:24,800 --> 00:02:26,630
+a few exceptions to this rule that I'm
+
+46
+00:02:26,630 --> 00:02:30,770
+about to tell you and so this is your
+
+47
+00:02:30,770 --> 00:02:33,380
+iPhone and this is connected to your own
+
+48
+00:02:33,380 --> 00:02:43,570
+router and so on your other end however
+
+49
+00:02:43,570 --> 00:02:47,630
+you have some other users and these
+
+50
+00:02:47,630 --> 00:02:50,900
+users are users over here and so let's
+
+51
+00:02:50,900 --> 00:02:55,910
+just say this is number one user number
+
+52
+00:02:55,910 --> 00:03:05,750
+one user number 2 and user number 3 so I
+
+53
+00:03:05,750 --> 00:03:09,680
+can give you some examples now first of
+
+54
+00:03:09,680 --> 00:03:12,650
+all what would happen usually is first
+
+55
+00:03:12,650 --> 00:03:14,360
+of all you are running a server here on
+
+56
+00:03:14,360 --> 00:03:18,860
+your ah desktop here ah
+
+57
+00:03:18,860 --> 00:03:21,800
+and so this is connected to your router
+
+58
+00:03:21,800 --> 00:03:23,959
+and this means that if you were to
+
+59
+00:03:23,959 --> 00:03:27,590
+access from this I device of completing
+
+60
+00:03:27,590 --> 00:03:29,570
+work however before I continue let me
+
+61
+00:03:29,570 --> 00:03:31,040
+just tell you there are two different
+
+62
+00:03:31,040 --> 00:03:33,709
+types of IP addresses there's the public
+
+63
+00:03:33,709 --> 00:03:36,830
+and there's a private the private IP
+
+64
+00:03:36,830 --> 00:03:39,590
+address is the IP address that only you
+
+65
+00:03:39,590 --> 00:03:41,660
+and devices within your local network
+
+66
+00:03:41,660 --> 00:03:45,920
+can see and access however a public IP
+
+67
+00:03:45,920 --> 00:03:48,500
+address as the name suggests is an IP
+
+68
+00:03:48,500 --> 00:03:51,800
+address that both you locally and people
+
+69
+00:03:51,800 --> 00:03:54,560
+outside can access only if it's port
+
+70
+00:03:54,560 --> 00:03:56,750
+forwarded I'll explain what that means
+
+71
+00:03:56,750 --> 00:03:59,180
+in just a second so this means that this
+
+72
+00:03:59,180 --> 00:04:04,640
+specific um what you call it your server
+
+73
+00:04:04,640 --> 00:04:08,660
+has a private IP address and let's just
+
+74
+00:04:08,660 --> 00:04:15,440
+say it's 0.0.0.0 and this is like a
+
+75
+00:04:15,440 --> 00:04:17,660
+desktop local service local servers sort
+
+76
+00:04:17,660 --> 00:04:20,840
+of thing and so this has an IP a private
+
+77
+00:04:20,840 --> 00:04:23,360
+IP address of zero point zero point zero
+
+78
+00:04:23,360 --> 00:04:27,919
+point one now let's come over here again
+
+79
+00:04:27,919 --> 00:04:29,630
+these are not real IP addresses these
+
+80
+00:04:29,630 --> 00:04:31,389
+are just fake so you get the point and
+
+81
+00:04:31,389 --> 00:04:34,490
+let's just say our public IP address now
+
+82
+00:04:34,490 --> 00:04:36,169
+let me just tell you all devices will
+
+83
+00:04:36,169 --> 00:04:38,210
+have the same public IP address as long
+
+84
+00:04:38,210 --> 00:04:39,199
+as they're connected to the same router
+
+85
+00:04:39,199 --> 00:04:42,889
+because this router assigns them this IP
+
+86
+00:04:42,889 --> 00:04:45,710
+address so let's just say it's one point
+
+87
+00:04:45,710 --> 00:04:51,970
+one point one point one now of course a
+
+88
+00:04:51,970 --> 00:04:54,290
+private IP addresses would start with
+
+89
+00:04:54,290 --> 00:04:59,540
+something like 192.168 and stuff but I'm
+
+90
+00:04:59,540 --> 00:05:02,030
+just giving this as a little example for
+
+91
+00:05:02,030 --> 00:05:05,389
+now and so just to give it as a little
+
+92
+00:05:05,389 --> 00:05:08,030
+clearer demonstration so now as you can
+
+93
+00:05:08,030 --> 00:05:09,800
+see we have the phone we have the server
+
+94
+00:05:09,800 --> 00:05:11,300
+and we have our router all with
+
+95
+00:05:11,300 --> 00:05:14,510
+respective IP addresses and so now let's
+
+96
+00:05:14,510 --> 00:05:19,880
+just say that our iPhone over here wants
+
+97
+00:05:19,880 --> 00:05:26,570
+to access 0.0.0.0 now first of all we
+
+98
+00:05:26,570 --> 00:05:29,630
+have seen that this is a private IP
+
+99
+00:05:29,630 --> 00:05:33,440
+address what this means is that it's in
+
+100
+00:05:33,440 --> 00:05:36,289
+its our it's in it it's sorry it is in
+
+101
+00:05:36,289 --> 00:05:38,840
+our own local network we do not need to
+
+102
+00:05:38,840 --> 00:05:41,169
+go searching for it elsewhere and so
+
+103
+00:05:41,169 --> 00:05:46,070
+this iPhone will send a request to the
+
+104
+00:05:46,070 --> 00:05:53,630
+router over here then what's going to
+
+105
+00:05:53,630 --> 00:05:55,580
+happen is the router will process this
+
+106
+00:05:55,580 --> 00:05:59,360
+and it will send a request to your
+
+107
+00:05:59,360 --> 00:06:03,500
+desktop or local server and it will go
+
+108
+00:06:03,500 --> 00:06:06,380
+through the server then your server will
+
+109
+00:06:06,380 --> 00:06:09,610
+process and get whatever is required and
+
+110
+00:06:09,610 --> 00:06:15,830
+then continue back then again your
+
+111
+00:06:15,830 --> 00:06:18,590
+router will process this and this will
+
+112
+00:06:18,590 --> 00:06:21,650
+go back again I'm not exactly telling
+
+113
+00:06:21,650 --> 00:06:23,810
+you like point by point whatever is
+
+114
+00:06:23,810 --> 00:06:26,599
+happening inside this is not exactly
+
+115
+00:06:26,599 --> 00:06:30,560
+what's happening for for sure but this
+
+116
+00:06:30,560 --> 00:06:32,780
+is just a simple demonstration of how
+
+117
+00:06:32,780 --> 00:06:33,900
+this works
+
+118
+00:06:33,900 --> 00:06:35,520
+just go through the router as a little
+
+119
+00:06:35,520 --> 00:06:39,210
+bridge come back and go back it's that
+
+120
+00:06:39,210 --> 00:06:44,600
+simple and so now let's just say our
+
+121
+00:06:44,600 --> 00:06:48,030
+user number one wanted to access our
+
+122
+00:06:48,030 --> 00:06:51,150
+server how would we do this
+
+123
+00:06:51,150 --> 00:06:53,970
+well first of all as we know how the
+
+124
+00:06:53,970 --> 00:06:55,560
+internet works let's just say there's a
+
+125
+00:06:55,560 --> 00:07:00,919
+few nodes here here here here here here
+
+126
+00:07:00,919 --> 00:07:03,810
+here here you don't need to really care
+
+127
+00:07:03,810 --> 00:07:06,510
+about these these are just little dots
+
+128
+00:07:06,510 --> 00:07:09,270
+where some nodes are and these all have
+
+129
+00:07:09,270 --> 00:07:11,430
+IP addresses then these will link us to
+
+130
+00:07:11,430 --> 00:07:14,130
+get to this router so let's just say
+
+131
+00:07:14,130 --> 00:07:15,960
+user number 2 I'm not going to start
+
+132
+00:07:15,960 --> 00:07:17,270
+with user number 1 yet
+
+133
+00:07:17,270 --> 00:07:21,210
+goes and tries to access this server to
+
+134
+00:07:21,210 --> 00:07:24,870
+get some information first of all he's
+
+135
+00:07:24,870 --> 00:07:29,720
+going to need this public IP address and
+
+136
+00:07:29,720 --> 00:07:32,039
+there's one major flaw with this which
+
+137
+00:07:32,039 --> 00:07:34,289
+I'll tell you so he's trying to connect
+
+138
+00:07:34,289 --> 00:07:40,740
+to one point one point one point one now
+
+139
+00:07:40,740 --> 00:07:42,900
+how will he do this first of all of
+
+140
+00:07:42,900 --> 00:07:44,400
+course this DNS will take care of
+
+141
+00:07:44,400 --> 00:07:46,169
+everything and stuff and then he's going
+
+142
+00:07:46,169 --> 00:07:48,389
+to start to connect from here to here to
+
+143
+00:07:48,389 --> 00:07:51,810
+here they here to here to here and then
+
+144
+00:07:51,810 --> 00:07:54,510
+finally to the router again this is not
+
+145
+00:07:54,510 --> 00:07:58,250
+a cure just a random depiction of this
+
+146
+00:07:58,250 --> 00:08:03,900
+and so what would happen is now this is
+
+147
+00:08:03,900 --> 00:08:05,030
+accessing the router
+
+148
+00:08:05,030 --> 00:08:09,180
+however our router first of all it does
+
+149
+00:08:09,180 --> 00:08:12,479
+not know where it needs to go it doesn't
+
+150
+00:08:12,479 --> 00:08:14,370
+know if it needs to go to this iPhone it
+
+151
+00:08:14,370 --> 00:08:15,900
+doesn't need to know if it needs to go
+
+152
+00:08:15,900 --> 00:08:17,220
+to the server doesn't need to know if it
+
+153
+00:08:17,220 --> 00:08:19,139
+goes if it needs to go to another device
+
+154
+00:08:19,139 --> 00:08:20,970
+it doesn't know this because we haven't
+
+155
+00:08:20,970 --> 00:08:23,070
+given a port which I will talk about
+
+156
+00:08:23,070 --> 00:08:26,099
+later but let's just assume that it knew
+
+157
+00:08:26,099 --> 00:08:30,990
+that it had to go to the server then it
+
+158
+00:08:30,990 --> 00:08:32,669
+would actually try it's best to go
+
+159
+00:08:32,669 --> 00:08:37,459
+however it has a little wall in between
+
+160
+00:08:37,459 --> 00:08:40,560
+which will prevent us from going forward
+
+161
+00:08:40,560 --> 00:08:43,829
+and so our connection is invalid and
+
+162
+00:08:43,829 --> 00:08:47,270
+user number 2 is not able to
+
+163
+00:08:47,540 --> 00:08:50,310
+however there is something called port
+
+164
+00:08:50,310 --> 00:08:53,029
+forwarding what is port forwarding mask
+
+165
+00:08:53,029 --> 00:08:55,440
+let's take this little blank area to
+
+166
+00:08:55,440 --> 00:08:57,779
+explain first of all let's just draw a
+
+167
+00:08:57,779 --> 00:09:07,579
+router here okay and this is draw a few
+
+168
+00:09:07,579 --> 00:09:14,070
+boxes maybe for now there are actually
+
+169
+00:09:14,070 --> 00:09:16,019
+actually first let me explain there's
+
+170
+00:09:16,019 --> 00:09:22,260
+ports 1 2 3 & 4 and so what's happening
+
+171
+00:09:22,260 --> 00:09:27,180
+now uh is that first of all ports go
+
+172
+00:09:27,180 --> 00:09:30,540
+from a few hundred a few ten thousand to
+
+173
+00:09:30,540 --> 00:09:32,820
+a few utter hunt at ten thousand these
+
+174
+00:09:32,820 --> 00:09:35,510
+are not accurate ports just as a
+
+175
+00:09:35,510 --> 00:09:38,070
+demonstration again and again port
+
+176
+00:09:38,070 --> 00:09:39,810
+forwarding varies from router to router
+
+177
+00:09:39,810 --> 00:09:43,709
+it doesn't strip set of rules that you
+
+178
+00:09:43,709 --> 00:09:45,420
+can follow for every single router to
+
+179
+00:09:45,420 --> 00:09:47,370
+port forward so unfortunately you can't
+
+180
+00:09:47,370 --> 00:09:49,079
+do that however this is the basics of
+
+181
+00:09:49,079 --> 00:09:52,560
+how it works so let's just say someone
+
+182
+00:09:52,560 --> 00:09:54,959
+tries to access port 1 this will be
+
+183
+00:09:54,959 --> 00:09:59,310
+denied because port 1 is closed port 2
+
+184
+00:09:59,310 --> 00:10:02,639
+is also closed port 3 is also closed and
+
+185
+00:10:02,639 --> 00:10:07,829
+4 4 is also closed now let's just say we
+
+186
+00:10:07,829 --> 00:10:10,350
+were to send requests to each one they
+
+187
+00:10:10,350 --> 00:10:12,660
+would all deny it and we would get no
+
+188
+00:10:12,660 --> 00:10:16,199
+result now let's just say we were
+
+189
+00:10:16,199 --> 00:10:22,380
+unblock number 3 now if we were to send
+
+190
+00:10:22,380 --> 00:10:25,079
+a request it would go through on to our
+
+191
+00:10:25,079 --> 00:10:28,620
+router our router will process this and
+
+192
+00:10:28,620 --> 00:10:32,160
+it will say ok 4 3 is open on this
+
+193
+00:10:32,160 --> 00:10:35,670
+server and so what that means is I have
+
+194
+00:10:35,670 --> 00:10:38,970
+to go to the server make it process send
+
+195
+00:10:38,970 --> 00:10:42,000
+it back through this entire network so
+
+196
+00:10:42,000 --> 00:10:46,420
+how do we make this work well let's see
+
+197
+00:10:46,420 --> 00:10:48,320
+first of all what we're going to do in
+
+198
+00:10:48,320 --> 00:10:51,410
+order to make this work and so this is a
+
+199
+00:10:51,410 --> 00:10:53,270
+example without port forwarding without
+
+200
+00:10:53,270 --> 00:10:54,500
+port forwarding this is a complete
+
+201
+00:10:54,500 --> 00:10:58,310
+message jumble however if I were to port
+
+202
+00:10:58,310 --> 00:11:01,310
+forward and if a more smart number one
+
+203
+00:11:01,310 --> 00:11:03,920
+user were to access for example okay
+
+204
+00:11:03,920 --> 00:11:06,500
+let's just go over here and for this
+
+205
+00:11:06,500 --> 00:11:08,960
+specific computer we have unlocked port
+
+206
+00:11:08,960 --> 00:11:12,530
+number I don't know eight zero zero one
+
+207
+00:11:12,530 --> 00:11:17,150
+dot so now what we're going to do is
+
+208
+00:11:17,150 --> 00:11:18,530
+we're going to come over to user number
+
+209
+00:11:18,530 --> 00:11:21,230
+one and let's just say he tries to
+
+210
+00:11:21,230 --> 00:11:24,590
+access one point one point one point one
+
+211
+00:11:24,590 --> 00:11:27,170
+but wait how do we tell it that we have
+
+212
+00:11:27,170 --> 00:11:30,830
+to access port eight zero zero one well
+
+213
+00:11:30,830 --> 00:11:34,270
+to do that we just write a colon eight
+
+214
+00:11:34,270 --> 00:11:41,180
+zero zero one or the port number and so
+
+215
+00:11:41,180 --> 00:11:42,410
+what this is going to do is it's going
+
+216
+00:11:42,410 --> 00:11:44,960
+to tell us exactly where we need to go
+
+217
+00:11:44,960 --> 00:11:47,840
+and exactly how to get there and how to
+
+218
+00:11:47,840 --> 00:11:52,250
+come back and so since eight zero zero
+
+219
+00:11:52,250 --> 00:11:54,590
+one has been opened the router will
+
+220
+00:11:54,590 --> 00:11:56,150
+actually allow this connection so let's
+
+221
+00:11:56,150 --> 00:11:58,490
+just say number one goes from here to
+
+222
+00:11:58,490 --> 00:12:02,780
+here to here to here and then to here
+
+223
+00:12:02,780 --> 00:12:04,910
+and then here and then it reaches the
+
+224
+00:12:04,910 --> 00:12:07,910
+router actually let me just erase number
+
+225
+00:12:07,910 --> 00:12:10,130
+twos path so that you can actually see
+
+226
+00:12:10,130 --> 00:12:13,040
+number ones path it's a bit confusing
+
+227
+00:12:13,040 --> 00:12:20,250
+isn't it confusing for me as well
+
+228
+00:12:20,250 --> 00:12:23,250
+okay
+
+229
+00:12:24,120 --> 00:12:26,079
+okay
+
+230
+00:12:26,079 --> 00:12:28,769
+so now
+
+231
+00:12:29,980 --> 00:12:35,650
+as you can see not only one has made its
+
+232
+00:12:35,650 --> 00:12:38,970
+way to the rubber no surprise however
+
+233
+00:12:38,970 --> 00:12:44,830
+there is still a wall but within that
+
+234
+00:12:44,830 --> 00:12:48,130
+wall there is a gap and this gaps name
+
+235
+00:12:48,130 --> 00:12:57,340
+is eight zero zero one and so what this
+
+236
+00:12:57,340 --> 00:13:01,290
+means is that eight zero zero 1
+
+237
+00:13:01,980 --> 00:13:04,810
+corresponds to specifically this server
+
+238
+00:13:04,810 --> 00:13:10,150
+and so since we have sent a request from
+
+239
+00:13:10,150 --> 00:13:13,930
+user number one over here with port 8 0
+
+240
+00:13:13,930 --> 00:13:20,290
+0 1 where we've sent the request with 4
+
+241
+00:13:20,290 --> 00:13:24,100
+8 0 0 1 and what this means is it will
+
+242
+00:13:24,100 --> 00:13:28,210
+travel all the way to our router and it
+
+243
+00:13:28,210 --> 00:13:30,310
+will find the gap in the wall that says
+
+244
+00:13:30,310 --> 00:13:35,260
+8 0 0 1 and so once it finds this little
+
+245
+00:13:35,260 --> 00:13:38,320
+gap it's going to go through it's going
+
+246
+00:13:38,320 --> 00:13:40,060
+to go through this little server it's
+
+247
+00:13:40,060 --> 00:13:43,260
+going to process its information go back
+
+248
+00:13:43,260 --> 00:13:47,290
+through this little tunnel back this
+
+249
+00:13:47,290 --> 00:13:50,710
+entire path and user number 1 will have
+
+250
+00:13:50,710 --> 00:13:55,630
+gotten his data that's exactly how that
+
+251
+00:13:55,630 --> 00:14:00,070
+works now let's see user number 3 why
+
+252
+00:14:00,070 --> 00:14:02,860
+did I choose 3 users you may ask well
+
+253
+00:14:02,860 --> 00:14:07,000
+let's just see why it's actually quite
+
+254
+00:14:07,000 --> 00:14:09,910
+interesting why it's because I wanted to
+
+255
+00:14:09,910 --> 00:14:14,170
+show you something which is if you were
+
+256
+00:14:14,170 --> 00:14:17,100
+to access a different port for example
+
+257
+00:14:17,100 --> 00:14:19,930
+maybe if we were to access port number
+
+258
+00:14:19,930 --> 00:14:23,680
+oh I know 80 which is actually most
+
+259
+00:14:23,680 --> 00:14:26,080
+actually not 80 that's a really common
+
+260
+00:14:26,080 --> 00:14:30,840
+port let's just go with um 3000 okay
+
+261
+00:14:30,840 --> 00:14:34,090
+let's go with for 3000 we're trying to
+
+262
+00:14:34,090 --> 00:14:36,670
+access port 3000 and so let's just say
+
+263
+00:14:36,670 --> 00:14:39,520
+for 3000 is right here
+
+264
+00:14:39,520 --> 00:14:41,560
+that's the gap that's the part of the
+
+265
+00:14:41,560 --> 00:14:47,980
+wall that is labeled 3000 so when to
+
+266
+00:14:47,980 --> 00:14:50,589
+happen user number 3 is going to start
+
+267
+00:14:50,589 --> 00:14:53,260
+he's going to connect he's going to go
+
+268
+00:14:53,260 --> 00:14:56,410
+through this entire map and he reaches
+
+269
+00:14:56,410 --> 00:15:01,300
+our router now what's going to happen is
+
+270
+00:15:01,300 --> 00:15:04,660
+since their quest was sent from 2 to
+
+271
+00:15:04,660 --> 00:15:07,660
+access port number 3000 it's going to
+
+272
+00:15:07,660 --> 00:15:11,890
+search for 3000 ok 3000 Oh 3000 now see
+
+273
+00:15:11,890 --> 00:15:14,140
+this is blocked it cannot break through
+
+274
+00:15:14,140 --> 00:15:17,050
+this wall so it goes back and says that
+
+275
+00:15:17,050 --> 00:15:19,600
+sorry the request was not able to be
+
+276
+00:15:19,600 --> 00:15:21,120
+handled
+
+277
+00:15:21,120 --> 00:15:25,270
+however user number three's problem can
+
+278
+00:15:25,270 --> 00:15:28,660
+be solved either by also opening the
+
+279
+00:15:28,660 --> 00:15:33,700
+port 3000 but also it can be sold and
+
+280
+00:15:33,700 --> 00:15:35,350
+are not exactly sure if all routers have
+
+281
+00:15:35,350 --> 00:15:37,029
+this but there is an option where you
+
+282
+00:15:37,029 --> 00:15:40,660
+can forward all ports actually open all
+
+283
+00:15:40,660 --> 00:15:43,600
+ports at once which actually does he'll
+
+284
+00:15:43,600 --> 00:15:46,209
+help in some situations if you're trying
+
+285
+00:15:46,209 --> 00:15:47,620
+to open all your ports at once if you're
+
+286
+00:15:47,620 --> 00:15:49,029
+having trouble with port forwarding or
+
+287
+00:15:49,029 --> 00:15:50,440
+something which is actually quite common
+
+288
+00:15:50,440 --> 00:15:52,300
+thing with Balor's then you can just
+
+289
+00:15:52,300 --> 00:15:54,910
+open up all your reports at once and
+
+290
+00:15:54,910 --> 00:15:57,850
+then it will do exactly what it says
+
+291
+00:15:57,850 --> 00:15:59,709
+open all the ports at once and no matter
+
+292
+00:15:59,709 --> 00:16:03,010
+which port you access it will always go
+
+293
+00:16:03,010 --> 00:16:05,260
+to this computer however you can only
+
+294
+00:16:05,260 --> 00:16:07,060
+turn that mode on for one computer at a
+
+295
+00:16:07,060 --> 00:16:09,190
+time or else of course the router won't
+
+296
+00:16:09,190 --> 00:16:11,649
+know whether whether to direct you to
+
+297
+00:16:11,649 --> 00:16:15,459
+this or this doesn't know pretty simple
+
+298
+00:16:15,459 --> 00:16:20,800
+and yeah that was pretty much the video
+
+299
+00:16:20,800 --> 00:16:23,470
+bin I hope that's really helped I really
+
+300
+00:16:23,470 --> 00:16:24,839
+hope this helped all of you as well
+
+301
+00:16:24,839 --> 00:16:27,100
+again if you have any questions leave it
+
+302
+00:16:27,100 --> 00:16:28,630
+down in the comments like the view if
+
+303
+00:16:28,630 --> 00:16:29,980
+you liked it and also subscribe to my
+
+304
+00:16:29,980 --> 00:16:31,480
+channel if you like my cotton you want
+
+305
+00:16:31,480 --> 00:16:33,550
+to see more of it also consider
+
+306
+00:16:33,550 --> 00:16:35,380
+following me on Twitter at Taji mani
+
+307
+00:16:35,380 --> 00:16:37,360
+the link will be down the description
+
+308
+00:16:37,360 --> 00:16:38,230
+everything will be down in the
+
+309
+00:16:38,230 --> 00:16:39,910
+description even a little bit more
+
+310
+00:16:39,910 --> 00:16:42,520
+simplified version of what I just
+
+311
+00:16:42,520 --> 00:16:44,829
+explained and that's going to be it good
+
+312
+00:16:44,829 --> 00:16:47,010
+bye

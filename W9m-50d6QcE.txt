@@ -1,0 +1,819 @@
+1
+00:00:00,030 --> 00:00:02,190
+so hello there and welcome to another
+
+2
+00:00:02,190 --> 00:00:04,500
+tutorial my name is Taylor Bakshi and
+
+3
+00:00:04,500 --> 00:00:06,509
+today I'm joined by Sanjeev thank you
+
+4
+00:00:06,509 --> 00:00:07,440
+for joining today
+
+5
+00:00:07,440 --> 00:00:09,000
+I'd say would you like to quickly
+
+6
+00:00:09,000 --> 00:00:11,250
+introduce ourselves sure thanks for
+
+7
+00:00:11,250 --> 00:00:12,480
+having me of course
+
+8
+00:00:12,480 --> 00:00:15,120
+my name is Sanjeev and I'm going to blow
+
+9
+00:00:15,120 --> 00:00:18,119
+for advocate at IBM I work on creating
+
+10
+00:00:18,119 --> 00:00:20,970
+old patents so your parents are
+
+11
+00:00:20,970 --> 00:00:23,010
+basically a complete application that
+
+12
+00:00:23,010 --> 00:00:27,539
+solves real programming challenges by
+
+13
+00:00:27,539 --> 00:00:30,630
+integrating IBM services even through I
+
+14
+00:00:30,630 --> 00:00:34,860
+am cloud it's code Adam has detailed
+
+15
+00:00:34,860 --> 00:00:37,800
+information about how to run the
+
+16
+00:00:37,800 --> 00:00:40,290
+application not only locally but also in
+
+17
+00:00:40,290 --> 00:00:42,090
+the onion cloud yes
+
+18
+00:00:42,090 --> 00:00:44,579
+and integrate those services so that way
+
+19
+00:00:44,579 --> 00:00:48,110
+any developer can come in and some start
+
+20
+00:00:48,110 --> 00:00:51,510
+running that application if you want to
+
+21
+00:00:51,510 --> 00:00:53,460
+know more about old patents you can go
+
+22
+00:00:53,460 --> 00:00:56,100
+to the developer I am calm this last
+
+23
+00:00:56,100 --> 00:00:58,859
+code and you'll get well for patterns
+
+24
+00:00:58,859 --> 00:01:01,800
+that start off that's perfect thank you
+
+25
+00:01:01,800 --> 00:01:04,140
+very much Sanjeev now more specifically
+
+26
+00:01:04,140 --> 00:01:06,360
+today we're talking about an iOS
+
+27
+00:01:06,360 --> 00:01:08,520
+platform technology it's in fact a
+
+28
+00:01:08,520 --> 00:01:10,049
+compound that you send you've developed
+
+29
+00:01:10,049 --> 00:01:12,600
+of course and so today we're talking
+
+30
+00:01:12,600 --> 00:01:14,909
+about how you can integrate IBM Watson
+
+31
+00:01:14,909 --> 00:01:16,799
+visual recognition with augmented
+
+32
+00:01:16,799 --> 00:01:20,100
+reality experiences on an AR kit so
+
+33
+00:01:20,100 --> 00:01:21,479
+Julie to quickly tell us a little bit
+
+34
+00:01:21,479 --> 00:01:22,740
+more about the code pattern that we're
+
+35
+00:01:22,740 --> 00:01:23,460
+gonna see today
+
+36
+00:01:23,460 --> 00:01:28,020
+sure so the for pattern uses gate which
+
+37
+00:01:28,020 --> 00:01:30,030
+is part of I was 11 I think they
+
+38
+00:01:30,030 --> 00:01:34,230
+introduced size 11 on June
+
+39
+00:01:34,230 --> 00:01:38,400
+yeah so it makes use of a Orkut and also
+
+40
+00:01:38,400 --> 00:01:41,460
+uses face recognition to identify a
+
+41
+00:01:41,460 --> 00:01:44,310
+person using the picture of the face
+
+42
+00:01:44,310 --> 00:01:48,270
+yes so on either side we use Watson
+
+43
+00:01:48,270 --> 00:01:50,880
+visual recognition and for the data that
+
+44
+00:01:50,880 --> 00:01:53,490
+gets displayed on the screen we use a
+
+45
+00:01:53,490 --> 00:01:56,970
+database called Cloudant database that's
+
+46
+00:01:56,970 --> 00:01:57,690
+perfect
+
+47
+00:01:57,690 --> 00:02:00,300
+that's great all right so in essence and
+
+48
+00:02:00,300 --> 00:02:02,460
+the components basically an opulent
+
+49
+00:02:02,460 --> 00:02:04,320
+reality resume I guess you could call it
+
+50
+00:02:04,320 --> 00:02:06,600
+where basically again we're using lots
+
+51
+00:02:06,600 --> 00:02:08,369
+of visual recognition for facial
+
+52
+00:02:08,369 --> 00:02:10,920
+recognition and so with an augmented
+
+53
+00:02:10,920 --> 00:02:12,210
+reality experience you can basically
+
+54
+00:02:12,210 --> 00:02:13,890
+hold up your phone to anyone's face
+
+55
+00:02:13,890 --> 00:02:15,330
+that's in the system right it'll
+
+56
+00:02:15,330 --> 00:02:16,800
+recognize their face search of their
+
+57
+00:02:16,800 --> 00:02:19,170
+contacts in the database and display it
+
+58
+00:02:19,170 --> 00:02:21,600
+in the real world on your phone yeah
+
+59
+00:02:21,600 --> 00:02:24,750
+that's great let's dive into the code
+
+60
+00:02:24,750 --> 00:02:27,540
+and understand how we can combine air
+
+61
+00:02:27,540 --> 00:02:30,660
+kit and visual recognition to create an
+
+62
+00:02:30,660 --> 00:02:33,480
+augmented reality app that can identify
+
+63
+00:02:33,480 --> 00:02:37,470
+a person using face revolution there are
+
+64
+00:02:37,470 --> 00:02:40,290
+six steps first we create an augmented
+
+65
+00:02:40,290 --> 00:02:42,959
+reality app using Xcode then we
+
+66
+00:02:42,959 --> 00:02:45,060
+configure and run our session using the
+
+67
+00:02:45,060 --> 00:02:47,880
+ARCIC framework that we are using we add
+
+68
+00:02:47,880 --> 00:02:51,000
+3d content to the detected plane we use
+
+69
+00:02:51,000 --> 00:02:54,239
+vision API for face detection will be
+
+70
+00:02:54,239 --> 00:02:56,910
+using IBM visual recognition API and ml
+
+71
+00:02:56,910 --> 00:03:00,840
+model to classify the face and display
+
+72
+00:03:00,840 --> 00:03:02,760
+the information of the person in the
+
+73
+00:03:02,760 --> 00:03:06,090
+augmented reality bill to create an
+
+74
+00:03:06,090 --> 00:03:08,820
+augmented reality app let's create a new
+
+75
+00:03:08,820 --> 00:03:11,730
+project from Xcode and select the type
+
+76
+00:03:11,730 --> 00:03:14,790
+as augmented reality you can go to file
+
+77
+00:03:14,790 --> 00:03:19,620
+new project and you can see an option
+
+78
+00:03:19,620 --> 00:03:23,010
+saying augmented reality app and once
+
+79
+00:03:23,010 --> 00:03:27,090
+that's created you will have a project
+
+80
+00:03:27,090 --> 00:03:30,390
+setup that uses in our kit and you can
+
+81
+00:03:30,390 --> 00:03:33,930
+utilize all the api's that yagi provides
+
+82
+00:03:33,930 --> 00:03:36,200
+to create your augmented reality app
+
+83
+00:03:36,200 --> 00:03:39,330
+once the project is set up we need to
+
+84
+00:03:39,330 --> 00:03:41,299
+configure and run the error session
+
+85
+00:03:41,299 --> 00:03:43,829
+there is a scene we already set up in
+
+86
+00:03:43,829 --> 00:03:45,360
+the main story board as you can
+
+87
+00:03:45,360 --> 00:03:48,450
+here the air season object manager is
+
+88
+00:03:48,450 --> 00:03:51,240
+motion tracking and image processing and
+
+89
+00:03:51,240 --> 00:03:54,000
+to run this lesson we need to add air
+
+90
+00:03:54,000 --> 00:03:55,980
+wall tracking configuration to the
+
+91
+00:03:55,980 --> 00:04:00,960
+session the following code sets of the
+
+92
+00:04:00,960 --> 00:04:03,080
+system with the configuration and run
+
+93
+00:04:03,080 --> 00:04:06,930
+the error code add plane detection
+
+94
+00:04:06,930 --> 00:04:08,700
+conviction to the horizontal and runs
+
+95
+00:04:08,700 --> 00:04:12,990
+the session as you can see here you
+
+96
+00:04:12,990 --> 00:04:15,959
+create a object of air world tracking
+
+97
+00:04:15,959 --> 00:04:18,269
+configuration and add horizontal as a
+
+98
+00:04:18,269 --> 00:04:20,790
+plane detection and you add that to the
+
+99
+00:04:20,790 --> 00:04:24,060
+session and run the configuration we'll
+
+100
+00:04:24,060 --> 00:04:25,919
+also need to configure cloud in no
+
+101
+00:04:25,919 --> 00:04:28,050
+sequel database which stores information
+
+102
+00:04:28,050 --> 00:04:31,470
+about the face and visual recognition to
+
+103
+00:04:31,470 --> 00:04:34,590
+train and classify faces the following
+
+104
+00:04:34,590 --> 00:04:37,470
+method reads credentials from the pedis
+
+105
+00:04:37,470 --> 00:04:40,290
+file and creates instances of Cloudant
+
+106
+00:04:40,290 --> 00:04:43,680
+and VR api Cloudland instance is used to
+
+107
+00:04:43,680 --> 00:04:45,300
+get information about the face from the
+
+108
+00:04:45,300 --> 00:04:48,360
+database and visual recognition instance
+
+109
+00:04:48,360 --> 00:04:50,669
+is used to classify cropped image of the
+
+110
+00:04:50,669 --> 00:04:53,570
+face that is captured from the camera
+
+111
+00:04:53,570 --> 00:04:56,280
+now let's set up face detection using
+
+112
+00:04:56,280 --> 00:04:59,550
+the visit API the vision API will detect
+
+113
+00:04:59,550 --> 00:05:02,400
+the face drop the face and send the file
+
+114
+00:05:02,400 --> 00:05:04,919
+to IBM visual recognition API to
+
+115
+00:05:04,919 --> 00:05:07,229
+classify the face the following camp
+
+116
+00:05:07,229 --> 00:05:10,040
+code gets the image from the camera
+
+117
+00:05:10,040 --> 00:05:12,390
+categorizes the image as being faced
+
+118
+00:05:12,390 --> 00:05:15,450
+observation if the face is not detected
+
+119
+00:05:15,450 --> 00:05:17,700
+in the image the app continues to look
+
+120
+00:05:17,700 --> 00:05:20,520
+for face but the face is detected the
+
+121
+00:05:20,520 --> 00:05:22,440
+face is captured and cropped to the
+
+122
+00:05:22,440 --> 00:05:24,890
+rectangle that generates the face and
+
+123
+00:05:24,890 --> 00:05:27,510
+next step is to send that cropped image
+
+124
+00:05:27,510 --> 00:05:32,040
+to be our API for classification using
+
+125
+00:05:32,040 --> 00:05:33,930
+IBM visual recognition API you can
+
+126
+00:05:33,930 --> 00:05:36,750
+upload a cropped face and API will
+
+127
+00:05:36,750 --> 00:05:40,350
+classify and send you a JSON response to
+
+128
+00:05:40,350 --> 00:05:42,780
+use IBM Watson visualization API you can
+
+129
+00:05:42,780 --> 00:05:45,450
+register to IBM bluemix console and
+
+130
+00:05:45,450 --> 00:05:48,720
+create a visual recruiting service then
+
+131
+00:05:48,720 --> 00:05:52,229
+you can create credentials which you can
+
+132
+00:05:52,229 --> 00:05:54,690
+use while calling the API you can use
+
+133
+00:05:54,690 --> 00:05:57,419
+the Watson Swift SDK in your app to use
+
+134
+00:05:57,419 --> 00:05:58,520
+the biz
+
+135
+00:05:58,520 --> 00:06:01,550
+revolution api's since the vir API also
+
+136
+00:06:01,550 --> 00:06:03,919
+supports core ml model you can actually
+
+137
+00:06:03,919 --> 00:06:07,159
+download the model from IBM cloud and
+
+138
+00:06:07,159 --> 00:06:09,830
+use the model locally into your app this
+
+139
+00:06:09,830 --> 00:06:11,930
+way you can classify the images locally
+
+140
+00:06:11,930 --> 00:06:14,060
+without having to make a round trip to
+
+141
+00:06:14,060 --> 00:06:14,720
+the server
+
+142
+00:06:14,720 --> 00:06:16,970
+the following code actually gets the
+
+143
+00:06:16,970 --> 00:06:20,659
+craft emails and classifies the emails
+
+144
+00:06:20,659 --> 00:06:23,539
+locally using the ml model once the face
+
+145
+00:06:23,539 --> 00:06:25,520
+is classified by the visual reference in
+
+146
+00:06:25,520 --> 00:06:28,750
+API the response of the API is the JSON
+
+147
+00:06:28,750 --> 00:06:31,930
+the response of the visual
+
+148
+00:06:31,930 --> 00:06:35,030
+representation ID which is then used to
+
+149
+00:06:35,030 --> 00:06:36,530
+get more information about the
+
+150
+00:06:36,530 --> 00:06:38,090
+classification from the IBM Cloudant
+
+151
+00:06:38,090 --> 00:06:41,180
+database the data is retrieved using the
+
+152
+00:06:41,180 --> 00:06:44,349
+classification ID and the JSON response
+
+153
+00:06:44,349 --> 00:06:52,009
+looks like this so it has the primary
+
+154
+00:06:52,009 --> 00:06:55,430
+keys and classification ID and there are
+
+155
+00:06:55,430 --> 00:06:57,860
+other information that is used to
+
+156
+00:06:57,860 --> 00:07:01,819
+display it on the AR view the following
+
+157
+00:07:01,819 --> 00:07:05,449
+code makes a call to the cloud and REST
+
+158
+00:07:05,449 --> 00:07:09,020
+API and once it retrieves the JSON the
+
+159
+00:07:09,020 --> 00:07:11,509
+jason is used to now update the scene
+
+160
+00:07:11,509 --> 00:07:13,819
+view with the information by creating
+
+161
+00:07:13,819 --> 00:07:18,289
+series of nodes called sen node SA node
+
+162
+00:07:18,289 --> 00:07:21,279
+is a structural element of a scene graph
+
+163
+00:07:21,279 --> 00:07:24,259
+representing a position and a transform
+
+164
+00:07:24,259 --> 00:07:27,800
+in a 3d coordinate space to which you
+
+165
+00:07:27,800 --> 00:07:31,870
+can attach geometry lights cameras or
+
+166
+00:07:31,870 --> 00:07:35,960
+any other display of content for each
+
+167
+00:07:35,960 --> 00:07:38,569
+side node we need to define its font
+
+168
+00:07:38,569 --> 00:07:42,050
+alignment and its material material
+
+169
+00:07:42,050 --> 00:07:44,090
+interest properties for 3d content like
+
+170
+00:07:44,090 --> 00:07:47,479
+diffuse content color specular contents
+
+171
+00:07:47,479 --> 00:07:51,110
+color double sided etc to display the
+
+172
+00:07:51,110 --> 00:07:53,990
+information received as a JSON to the
+
+173
+00:07:53,990 --> 00:07:57,590
+node we need to create a new of type Sen
+
+174
+00:07:57,590 --> 00:08:01,069
+node in this case we'll be creating a CN
+
+175
+00:08:01,069 --> 00:08:04,509
+text as the display only involves text
+
+176
+00:08:04,509 --> 00:08:06,979
+then we configure the text with things
+
+177
+00:08:06,979 --> 00:08:09,409
+like fonts and materials the following
+
+178
+00:08:09,409 --> 00:08:11,900
+selected code creates a node of
+
+179
+00:08:11,900 --> 00:08:14,930
+as in text and configures it to display
+
+180
+00:08:14,930 --> 00:08:18,710
+in DAR view so this is done all right
+
+181
+00:08:18,710 --> 00:08:20,420
+status we have to show in this tutorial
+
+182
+00:08:20,420 --> 00:08:22,190
+today thank you very much sandy for
+
+183
+00:08:22,190 --> 00:08:24,200
+joining in if you do have any questions
+
+184
+00:08:24,200 --> 00:08:26,210
+suggestions or feedback you can reach
+
+185
+00:08:26,210 --> 00:08:28,280
+out to either me or say to you but seems
+
+186
+00:08:28,280 --> 00:08:30,380
+you how can people contact you um you
+
+187
+00:08:30,380 --> 00:08:33,260
+can contact me at my IBM's email thanks
+
+188
+00:08:33,260 --> 00:08:37,730
+Sanjeev Dottie me ray at IBM calm down
+
+189
+00:08:37,730 --> 00:08:39,410
+to the right day exactly I will put your
+
+190
+00:08:39,410 --> 00:08:41,120
+email down in the description below as
+
+191
+00:08:41,120 --> 00:08:43,130
+well as my contact but if you do have
+
+192
+00:08:43,130 --> 00:08:44,510
+any questions you can also leave them
+
+193
+00:08:44,510 --> 00:08:46,100
+down in the comment section below and
+
+194
+00:08:46,100 --> 00:08:47,960
+Sanji where i would be would love to get
+
+195
+00:08:47,960 --> 00:08:49,910
+back to you so that's what we have to
+
+196
+00:08:49,910 --> 00:08:51,200
+show for this tutorial today thank you
+
+197
+00:08:51,200 --> 00:08:52,580
+very much everyone for joining in today
+
+198
+00:08:52,580 --> 00:08:54,860
+if you do enjoy these kinds of tutorials
+
+199
+00:08:54,860 --> 00:08:56,480
+please do make sure you subscribe to my
+
+200
+00:08:56,480 --> 00:08:58,190
+channel and Sam Hughes channel that will
+
+201
+00:08:58,190 --> 00:09:00,140
+be a link to it down in the description
+
+202
+00:09:00,140 --> 00:09:01,790
+below again thank you very much everyone
+
+203
+00:09:01,790 --> 00:09:02,990
+for joining in today that's what we have
+
+204
+00:09:02,990 --> 00:09:03,650
+for this tutorial
+
+205
+00:09:03,650 --> 00:09:06,790
+good bye thanks
